@@ -1,0 +1,49 @@
+{
+  "originalSourceCommit": "523d82d389d60e5d84a638ff9f7fe00ac920f8c9",
+  "originalSourcePath": "posti/valoseppa-codex-iss-havainnekuvat-20261016.md",
+  "originalSourceBlob": "9f0aeafa824bb6cfb059d439c5393a963293ca24",
+  "currentSourceCommit": "eb0a035476e78a3b7631c03ed8ffc6f73bf1d905",
+  "currentSourceBlob": "cea8d1f83ea66e9036afec64959e74c6e4d7d385",
+  "addenda": [
+    {
+      "sourceCommit": "eb0a035476e78a3b7631c03ed8ffc6f73bf1d905",
+      "sourcePath": "posti/valoseppa-codex-iss-havainnekuvat-20261016.md",
+      "sourceBlob": "cea8d1f83ea66e9036afec64959e74c6e4d7d385",
+      "sha256": "3ee98fb9e8591aa978d2d9a1a9618b27196b7503a0b5e1a7af62b220eb89cbac",
+      "bytes": 4786,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359-addendum-s1/valoseppa-codex-iss-havainnekuvat-20261016.md",
+      "sourceReadInFull": true,
+      "readAt": "2026-10-16T05:52:20.973090+00:00",
+      "change": "One flash only, thin branching horizontal spider lightning on one cloud, same nine-call cap",
+      "callsBeforeReading": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "noS1CallYet": true
+    }
+  ],
+  "actualReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "allTenImagesPersonallyViewed": true,
+  "formatAndD2Discrepancies": {
+    "referenceActualDimensions": [
+      2064,
+      2752
+    ],
+    "referenceEXIFOrientation": null,
+    "referenceOrientation": "portrait",
+    "textDescribes2752Wide": true,
+    "d2ReferenceHasNoVisibleDockingPort": true,
+    "optionalOwnerPreferencesRequested": true,
+    "defaultIfNoReplyAfterReasonableOpportunity": "Preserve upright camera; d2 text requirement with near port; declare geometric invention explicitly",
+    "formatDefaultAppliedAt": "2026-10-16T05:52:20.993835+00:00",
+    "formatDefault": "3:4 portrait preserves actual reference; no pixel upscaling",
+    "d2Default": "near port per text; addition explicitly conceptual"
+  },
+  "ownerAnswersReceivedBeforeProduction": false,
+  "referencesAlreadyInMailbox": "posti/valoseppa-iss-havainne9-pelikulmat/"
+}

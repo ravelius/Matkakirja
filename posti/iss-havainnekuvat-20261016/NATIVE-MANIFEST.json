@@ -1,0 +1,161 @@
+{
+  "createdAt": "2026-10-16T06:00:45.964536+00:00",
+  "format": "PNG native 1086x1448, 3:4 portrait",
+  "images": [
+    {
+      "angle": "r1",
+      "taskNumber": 351,
+      "filename": "havainne-r1.png",
+      "sha256": "9e6bb4220c27f01f7eec36dcc042570527dd4a5cce844088d8d86dd2a680ae6d",
+      "bytes": 2444667,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "arvioehdokas",
+      "qaFindingsFI": "Yö, märkä betoni, keinovalo ja höyry onnistuvat. Valonheittimien asemat, rantamaaston yksityiskohdat ja kaapelit ovat keksittyjä.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "r2",
+      "taskNumber": 352,
+      "filename": "havainne-r2.png",
+      "sha256": "fceb84f9e905262caa84c25f866378c59f0e9db120795ac88e704d2045e343b7",
+      "bytes": 2294053,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "hylkäyssuositus",
+      "qaFindingsFI": "Raketti näyttää jo irronneen alustasta: T+1/alustalla-ehto ei täyty. Savun sisäinen valo ja valkohehkuinen ydin ovat hyödyllisiä erillisinä valotavoitteina.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "r3",
+      "taskNumber": 353,
+      "filename": "havainne-r3.png",
+      "sha256": "07d61e228d799a58b592dfd71f557b1fbf77da4704a6f4bf5ec5500bd457a07b",
+      "bytes": 1969108,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "arvioehdokas varauksin",
+      "qaFindingsFI": "Laaja takaa-ajokamera ja pieni raketti säilyvät. Maiseman yleisvalo, tähtien yhtäaikainen näkyvyys ja pitkän savuvanan valaistus ovat elokuvamaisia, eivät varmennettua fysiikkaa.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "r4",
+      "taskNumber": 354,
+      "filename": "havainne-r4.png",
+      "sha256": "178f8dbb43d6968cbdf0e2ffa5718c7eaad152816882961b75be77a555e23488",
+      "bytes": 1870770,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "arvioehdokas varauksin",
+      "qaFindingsFI": "Pitkä liekki ja savuvana ovat pääosassa; raketti on hieman suurempi/ylempänä kuin lähteessä. Etäisen savun laaja oranssi hehku on valotusvaraus.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "a1",
+      "taskNumber": 355,
+      "filename": "havainne-a1.png",
+      "sha256": "85d003a2b086eca2a0da93ce8f78bc6c358389159ec3302232f6a039fb4347f8",
+      "bytes": 2009091,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "arvioehdokas varauksin",
+      "qaFindingsFI": "Yksi Cupolan ikkuna, fyysinen kehys ja konsoli säilyvät; pieni aurinko ja ohut horisontti. Tähdet ja kaupunkivalot jäävät liian kirkkaiksi, vaakajuova on toivottua heikompi. Ei sellaisenaan valotusmalliksi.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "s1",
+      "taskNumber": 356,
+      "filename": "havainne-s1.png",
+      "sha256": "68412d25c750fb68fc0cb3b1c0d57a7c4582da9f7f45861a14d578b0c24713d5",
+      "bytes": 1958237,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "hylkäyssuositus",
+      "qaFindingsFI": "Alasolu sisältää pyydetyn ohuen haarautuvan vaakasalamakanavan. Myös ylävasen solu on paikallisesti sinivalkoinen ja valaistunut: vain yksi välähdys koko näkymässä EI toteudu luotettavasti.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "t1",
+      "taskNumber": 357,
+      "filename": "havainne-t1.png",
+      "sha256": "5309c73b71d17fb3f7dfe48a67fe1feed68cb8be5e2d6310b8fe51dbf44ad2be",
+      "bytes": 1966091,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "arvioehdokas varauksin",
+      "qaFindingsFI": "Kolme ohutta rinnakkaista vinoa meteoria sijoittuu kuvassa Maan kaaren alapuolelle; päät ja ohenevat vanat näkyvät. Korkeutta tai radianttia ei yhdestä kuvasta todenneta. Valotus ja maantiede ovat keksittyjä.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "d1",
+      "taskNumber": 358,
+      "filename": "havainne-d1.png",
+      "sha256": "4407e0e52311a076f176bca2cc6eb7341721eb32215d0acb620f1cd56bd9d5aa",
+      "bytes": 2521108,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "arvioehdokas varauksin",
+      "qaFindingsFI": "Ulkoinen lähestymiskamera ja päämoduulien sommittelu säilyvät. Aurinkopaneelien suunnat ja yksityiskohtainen ISS-topologia muuttuvat; ei rakennemallinnuksen lähteeksi. Kirkas päivä-Maa ja näkyvät tähdet ovat valotusvaraus.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    },
+    {
+      "angle": "d2",
+      "taskNumber": 359,
+      "filename": "havainne-d2.png",
+      "sha256": "b5cc625a990bf30ebc2e9f23ca08fc2d1bb27f96bd5be56bb3a89a4d1a3d3c68",
+      "bytes": 2302888,
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true,
+      "qaDisposition": "vain käsitteellinen arvioehdokas",
+      "qaFindingsFI": "Portti lisättiin tekstiohjeen mukaan, vaikka lähdereferenssissä ei näy porttia. Cupolan kehys, konsoli ja Maa säilyvät. Portti, salvat, työkohdevalot ja niiden suhde Cupolaan ovat keksittyjä: eivät nykyisen peligeometrian tai oikean telakoinnin todiste.",
+      "requested2752WideFulfilled": false,
+      "ownerAccepted": false
+    }
+  ],
+  "resolutionDeviation": "Not 2752px wide, not 16:10. Actual source is upright2064x2752; preserved framing/aspect. No upscaling/cropping/warping.",
+  "allImagesAreReviewCandidatesNotGameAssets": true
+}

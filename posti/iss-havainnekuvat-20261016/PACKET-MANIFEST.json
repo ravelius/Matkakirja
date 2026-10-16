@@ -1,0 +1,95 @@
+{
+  "createdAt": "2026-10-16T06:00:46.371495+00:00",
+  "files": [
+    {
+      "path": "GENERATION-CALLS.json",
+      "sha256": "83dbf8f24d553e31a0e77bc85654506edcbd126bec776302ad1b603f6b6752d4",
+      "bytes": 38181
+    },
+    {
+      "path": "INDEPENDENT-QA-FI.md",
+      "sha256": "ed5c8f1e31d7375ee308ba9c9129a99db27c161fecf155fadf527ba5af168151",
+      "bytes": 11100
+    },
+    {
+      "path": "INDEPENDENT-QA.json",
+      "sha256": "28ac29812b57fb57b5ac5e7a0b13a9b4652e50d5117e31a813aaedd2e282274c",
+      "bytes": 29644
+    },
+    {
+      "path": "NATIVE-MANIFEST.json",
+      "sha256": "d6c6aefc216e31d6456d4ba90bcd395585b6db672a9f55efcd43a3464c6106c4",
+      "bytes": 6306
+    },
+    {
+      "path": "PROMPTS.json",
+      "sha256": "3199fee052b0f4e2f7c3cab71814fe06043369676168fff465134602d58950a7",
+      "bytes": 25177
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "165ce4016e90bdf44cc8ca5b47f5bee73b2d3c20dc74e12d77cc0585aad10322",
+      "bytes": 4819
+    },
+    {
+      "path": "REVIEW-BOARD.jpg",
+      "sha256": "8c32edb7cbe9f552eaa78d8f479795bf734cb85f4fe17d87909f656fce8e422b",
+      "bytes": 566254
+    },
+    {
+      "path": "SOURCE-VERSIONS.json",
+      "sha256": "2f9e38ea81948130b8913c9c913dd54b5e7189aac7de86f21f4086e035c610b1",
+      "bytes": 2121
+    },
+    {
+      "path": "havainne-a1.png",
+      "sha256": "85d003a2b086eca2a0da93ce8f78bc6c358389159ec3302232f6a039fb4347f8",
+      "bytes": 2009091
+    },
+    {
+      "path": "havainne-d1.png",
+      "sha256": "4407e0e52311a076f176bca2cc6eb7341721eb32215d0acb620f1cd56bd9d5aa",
+      "bytes": 2521108
+    },
+    {
+      "path": "havainne-d2.png",
+      "sha256": "b5cc625a990bf30ebc2e9f23ca08fc2d1bb27f96bd5be56bb3a89a4d1a3d3c68",
+      "bytes": 2302888
+    },
+    {
+      "path": "havainne-r1.png",
+      "sha256": "9e6bb4220c27f01f7eec36dcc042570527dd4a5cce844088d8d86dd2a680ae6d",
+      "bytes": 2444667
+    },
+    {
+      "path": "havainne-r2.png",
+      "sha256": "fceb84f9e905262caa84c25f866378c59f0e9db120795ac88e704d2045e343b7",
+      "bytes": 2294053
+    },
+    {
+      "path": "havainne-r3.png",
+      "sha256": "07d61e228d799a58b592dfd71f557b1fbf77da4704a6f4bf5ec5500bd457a07b",
+      "bytes": 1969108
+    },
+    {
+      "path": "havainne-r4.png",
+      "sha256": "178f8dbb43d6968cbdf0e2ffa5718c7eaad152816882961b75be77a555e23488",
+      "bytes": 1870770
+    },
+    {
+      "path": "havainne-s1.png",
+      "sha256": "68412d25c750fb68fc0cb3b1c0d57a7c4582da9f7f45861a14d578b0c24713d5",
+      "bytes": 1958237
+    },
+    {
+      "path": "havainne-t1.png",
+      "sha256": "5309c73b71d17fb3f7dfe48a67fe1feed68cb8be5e2d6310b8fe51dbf44ad2be",
+      "bytes": 1966091
+    },
+    {
+      "path": "review.html",
+      "sha256": "30cdd876f746fb5bea483b67141d5b0b004a3cbe4f502f321475f6fc78a8c775",
+      "bytes": 3161
+    }
+  ]
+}

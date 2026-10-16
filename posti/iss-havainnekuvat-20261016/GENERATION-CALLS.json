@@ -1,0 +1,299 @@
+{
+  "maximumAuthorized": 9,
+  "actualIssued": 9,
+  "completed": 9,
+  "retries": 0,
+  "order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "a1",
+    "s1",
+    "t1",
+    "d1",
+    "d2"
+  ],
+  "method": "built-in image_gen; whole new images; no partial repairs; no API fallback",
+  "calls": [
+    {
+      "angle": "r1",
+      "taskNumber": 351,
+      "issuedAt": "2026-10-16T05:47:51.971546+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "3c1f3c276a5e36ecf2c3d0215b313c84dfd0e9b697d9a89cfdf165e095594c56",
+      "referenceSHA256": "4e317cd360563e9579f5aa4a5113eefd3ca5630138073d99b42562a366c95168",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nScene: coastal rocket launch pad at true deep NIGHT under artificial floodlights ONLY, prior to ignition. Preserve the elevated downward oblique pad camera: slender upright white rocket at x50%, tip y32%, base y65%; dark launch gantry just behind it, lightning masts and supporting cables around it, pad in lower half, irregular coastline and dark sea to the right and upper right. This camera looks down at land and sea, so do not invent a new eye-level horizon. Unlit land and sea are truly near black, never daylight, twilight or moonlight. Tightly directed white floodlights illuminate the rocket and small wet concrete areas, visible beams in humid air, delicately venting cryogenic tank steam, gantry mostly a dark silhouette, glints reflected in wet concrete. A restrained blue horizontal flare from a bright floodlight. Rocket engines completely OFF, no flame or launch smoke. Keep the reference rocket design and its scale, no writing or emblems.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/r1-alusta-yo.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:48:30.579622+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6309db17-56b4-4520-b963-3b41dcbfb43c.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-r1.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-r1.png",
+      "sha256": "9e6bb4220c27f01f7eec36dcc042570527dd4a5cce844088d8d86dd2a680ae6d",
+      "bytes": 2444667,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "r2",
+      "taskNumber": 352,
+      "issuedAt": "2026-10-16T05:48:32.416774+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "0c4e81b9a54934a724076fbff31d754ec41d66a7ccf6f92f3514cee69605ba09",
+      "referenceSHA256": "4e317cd360563e9579f5aa4a5113eefd3ca5630138073d99b42562a366c95168",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nScene: rocket ignition at T+1 on the coastal launch pad at NIGHT. Exactly the elevated oblique camera and geometry of the supplied r2/r1 pad reference: upright white rocket centered x50%, tip y32%, engine base y65%, launch gantry directly behind, lightning masts, coastline and sea to right. Rocket remains on the pad; do not lift it. Artificial floodlights and ignition are the only light. The engine exhaust has a dazzling WHITE-HOT compact core, a large bright flame striking the flame trench, dense huge lobed steam and smoke rolling sideways from the trench along the ground; flame illuminates their interior deep warm orange with strong physically motivated falloff. Wet concrete reflects the hot light, rocket and gantry edges lit by the flame. Smoke stays voluminous rather than a flat orange screen. Land and sea elsewhere dark. Fine sparks near the trench only, not a shower across the frame. No writing or branding.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/r2-syttyminen.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:49:26.719911+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-06ee15df-85ee-4056-ba89-5a095239ddca.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-r2.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-r2.png",
+      "sha256": "fceb84f9e905262caa84c25f866378c59f0e9db120795ac88e704d2045e343b7",
+      "bytes": 2294053,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "r3",
+      "taskNumber": 353,
+      "issuedAt": "2026-10-16T05:49:27.966356+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "cef62bbe1c1c4f510c0dd22ad6ab4b669b227956aa3bf585757372989d1df60e",
+      "referenceSHA256": "05d2bbb0c3f0b4d282f6eddb3aa893e9fa9e070c0ef5e5f8f625d248d320ed94",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nScene: rocket in flight T+27 seconds, approximately 2.5 km high. Match this very WIDE aerial trailing camera looking toward a tiny upright rocket at x50%, y44–52%, with hills and patches of coastal water filling the lower frame and a distant horizon near y18%. Keep the rocket the SAME SMALL scale; never enlarge it into a close-up. Render the entire scene as NIGHT, dark atmospheric sky and a few plausible ground lights. The small brilliant white-core exhaust flame and long billowing luminous smoke trail are the principal bright visual events, tracing down toward the distant launch pad far below. Pad smoke vents laterally, a small warm glow and faint reflected light at the distant tower only at physically plausible scale. Terrain stays mostly dark, illuminated locally around pad and plume, no sunlit green landscape. Convincing altitude and perspective. No text, metrics or inset.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/r3-irtoaminen.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:50:33.390151+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-77a3de5d-cbdb-476c-b754-3f40323b3d74.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-r3.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-r3.png",
+      "sha256": "07d61e228d799a58b592dfd71f557b1fbf77da4704a6f4bf5ec5500bd457a07b",
+      "bytes": 1969108,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "r4",
+      "taskNumber": 354,
+      "issuedAt": "2026-10-16T05:50:34.680814+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "eb551d14af1f2b135b8da0df9c7f1211866a180523e80e47f8dd2a08a9d8ca16",
+      "referenceSHA256": "2768ff0849e5a5d1f31aaf51516a2802c6ca1f1d0c17a47a6ecba2a2e9bb77ee",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nScene: rocket ascending at T+66 seconds, approximately 14 km high. Match the very WIDE trailing aerial reference camera: small upright rocket centered x50%, roughly y44–51%, coastal terrain far below, distant horizon near y23%. Preserve the small rocket scale and exact viewing direction. Deep NIGHT atmosphere and black sky above, sparse dim ground lights far below. Long dramatic exhaust with WHITE incandescent core and long luminous flame, voluminous plume lit from inside by the engine and fading naturally into darkness toward the ground. Exhaust and smoke supply the dominant composition; no invented giant fireball or close rocket hero view. Physically plausible local orange illumination on ground beneath, dark distant sea and land; far terrain atmospheric, no daylight. No UI or writing.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/r4-nousu.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:51:22.736892+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d4df80fa-36d9-4e31-82cc-1d52668e20ba.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-r4.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-r4.png",
+      "sha256": "178f8dbb43d6968cbdf0e2ffa5718c7eaad152816882961b75be77a555e23488",
+      "bytes": 1870770,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "a1",
+      "taskNumber": 355,
+      "issuedAt": "2026-10-16T05:52:42.670746+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "8ca783f53d46c01f551773a100a83f03c27eb79c626071648c6cab3a6a0f2f7f",
+      "referenceSHA256": "6dc4d4c9dc37e328739ac2a1b9e683bf2a8392a4094252179c7bbed6988a92bc",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nReference composition: a SINGLE large nearly circular Cupola window opening fills the picture; its heavy metal seal and curved rim stay along the top arch and both outer sides, without adding a flower of smaller panes or central struts. A physical rectangular console stays at lower center, roughly x24–76%, y84–98%, with screen, red button, joystick and screws, in shadow; its screen is unlabelled and dark. Keep Earth, horizon and window frame at reference positions. The physical window rim naturally occludes space but is not a vignette. No labels, no UI, no inset globe, no portrait captions.\nScene: first instant of orbital sunrise at about 400 km altitude, Earth limb near y38–42% and dark night Earth with broad geographic coast shapes below. A THIN atmospheric arc follows the gentle large-radius Earth curvature, green airglow high above a narrow blue / orange limb. At a single sunrise point near x62%, the SMALL just-emerging sun has a dazzling tiny white core, fine starburst and restrained strongest HORIZONTAL blue/warm anamorphic streak; weak lens ghosts only. Never a huge sun disk or thick glowing Earth stripe. Exposure is pulled down by the sun, so stars and city lights become dim and few, ground still a dark detailed surface. Physically plausible warm grazing light touches the upper/side window rim and console edges; do not fill the cabin with unrelated light. No storm or meteor effects.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/a1-auringonnousu.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:53:38.179658+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8bc9dade-1151-42d5-bf7b-f80b673c7671.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-a1.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-a1.png",
+      "sha256": "85d003a2b086eca2a0da93ce8f78bc6c358389159ec3302232f6a039fb4347f8",
+      "bytes": 2009091,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "s1",
+      "taskNumber": 356,
+      "issuedAt": "2026-10-16T05:53:40.600435+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "62d180f6ba36aadbe80201d99413c38259f7a86c3d31e4f25dea5e6fad0bfa34",
+      "referenceSHA256": "26f3beabb5678f41b3fd99344d40cf0658425276eeddc76d852bc40452074f5a",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nReference composition: a SINGLE large nearly circular Cupola window opening fills the picture; its heavy metal seal and curved rim stay along the top arch and both outer sides, without adding a flower of smaller panes or central struts. A physical rectangular console stays at lower center, roughly x24–76%, y84–98%, with screen, red button, joystick and screws, in shadow; its screen is unlabelled and dark. Keep Earth, horizon and window frame at reference positions. The physical window rim naturally occludes space but is not a vignette. No labels, no UI, no inset globe, no portrait captions.\nScene: nighttime thunderstorms on Earth seen down through the window from about 400 km. Preserve the reference very downward camera with dark Earth filling the window, no new giant bright horizon. Several separated cumulonimbus storm cells at differing ranges and sizes over ocean and a few dim golden coastal city lights. EXACTLY ONE storm cell, in the lower middle around x49%,y64%, is caught during a lightning flash: a brief bright blue-white internal glow reveals its billowing cauliflower-like cloud domes and small surrounding cloud folds. Every OTHER storm cell remains DARK or only extremely dim ambient silhouette, including a much smaller distant cell near x35%, y20%. Do not duplicate a simultaneous second flash and do not light all Earth. Owner addendum 08:49: in that SAME single flashing cell, show a restrained, thin blue-white branching HORIZONTAL spider-lightning channel along the cloud top or edge, brightest at one core, light spilling onto nearby cloud domes. The branches belong to one connected discharge within that ONE cell. No second flash, no long vertical bolt and no lightning shooting through space. Frame and console dark except very weak local reflections. Rich black but spatial detail around the one illuminated cloud.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/s1-salamat.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:54:47.377099+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f63e4ed9-3875-4131-8567-8425afda381d.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-s1.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-s1.png",
+      "sha256": "68412d25c750fb68fc0cb3b1c0d57a7c4582da9f7f45861a14d578b0c24713d5",
+      "bytes": 1958237,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "t1",
+      "taskNumber": 357,
+      "issuedAt": "2026-10-16T05:54:49.061267+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "a39cbc5ae0d070780f028d542b2c504abc519f4609db894b76eec2440155c79f",
+      "referenceSHA256": "973d2afce21cd8f0dd66c2a13a97a6875fe562dfd72c0e633c9892dd69505b61",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nReference composition: a SINGLE large nearly circular Cupola window opening fills the picture; its heavy metal seal and curved rim stay along the top arch and both outer sides, without adding a flower of smaller panes or central struts. A physical rectangular console stays at lower center, roughly x24–76%, y84–98%, with screen, red button, joystick and screws, in shadow; its screen is unlabelled and dark. Keep Earth, horizon and window frame at reference positions. The physical window rim naturally occludes space but is not a vignette. No labels, no UI, no inset globe, no portrait captions.\nScene: Perseid meteor shower seen BELOW the ISS at about 400 km, through the same window. Gentle Earth horizon near y34–37%; a thin green airglow follows it; dark land and subtle golden city networks fill lower Earth. Only a few delicate thin diagonal approximately parallel meteor tracks are visible WITHIN the atmosphere projected above the Earth surface in the middle of the frame, not in the black outer-space star field. Each has one tiny brilliant white head and a short tapering fading trail, consistent diagonal orientation, no vertical thick raindrops, laser beams or huge fiery comets. Sparse dim stars above the horizon; scene and physical console remain night-dark. Preserve Earth curve and source camera. Restrained cinematic delicate luminosity rather than fantasy spectacle.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/t1-perseidit.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:56:00.990622+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-08c01b5d-2a95-40d8-abd2-90ac55050e68.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-t1.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-t1.png",
+      "sha256": "5309c73b71d17fb3f7dfe48a67fe1feed68cb8be5e2d6310b8fe51dbf44ad2be",
+      "bytes": 1966091,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "d1",
+      "taskNumber": 358,
+      "issuedAt": "2026-10-16T05:56:02.749632+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "da4f0152b926901171daa1bbcf3a6447e6f2e9befb8dbc0a6b59a3d1f011ce78",
+      "referenceSHA256": "ebf5f52676fe767a56c28d70ce910a1584027e63483b4e92054e2fbb254f4551",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nScene: external spacecraft final approach to ISS at about 400 km, camera looking almost along the station docking axis with a slightly elevated oblique view. Match supplied framing: black space above; station occupies the middle/lower frame, a horizontal structural truss crosses near y36–43%, cluster of cylindrical modules below it, the nearest round docking connector centered around x51%,y62%; large solar panel areas extend to both sides and the Earth limb is low near y73%, blue ocean and clouds beneath. Convert blocky gray game geometry to finely detailed plausible ISS hardware while preserving its overall silhouette, scale and placement. Side solar arrays catch angled sunlight, with black / blue cell grids and warm reflections, actual thermal blankets and metallic rings, small navigation lights, hard directional sunlight and deep space shadows with blue Earth bounce. Preserve the small reference EVA astronaut to the lower right of the nearest docking assembly, realistic size, tether attached, no logos or inscriptions. This is EXTERNAL: no Cupola frame, no console overlay, no invented cockpit. No fog in vacuum, no dramatic gas beams in space.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/d1-lahestyminen.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:57:03.821286+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-3ec1e11e-9a31-4a3b-ab09-882db0a02da4.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-d1.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-d1.png",
+      "sha256": "4407e0e52311a076f176bca2cc6eb7341721eb32215d0acb620f1cd56bd9d5aa",
+      "bytes": 2521108,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    },
+    {
+      "angle": "d2",
+      "taskNumber": 359,
+      "issuedAt": "2026-10-16T05:57:05.388199+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "0ccede76b95a50e3fbbc8ae74ab4ef9fd0b9a0187d023063878f0fd286640050",
+      "referenceSHA256": "8a210b91edfd033b906c05473164d8922bea2a522bdb3c28c68c48f527fa08a4",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism.\nAsset: one single cinematic photographic target image for a spaceflight game, NOT a collage or screenshot. Generate a completely NEW image. The supplied game image is a CAMERA / COMPOSITION reference only, never an edit target, never a source of photographic surface texture.\nVisual language: very high-end space cinema, convincing physical materials and light, rich fine detail, dramatic controlled contrast and depth, restrained cool-shadow/warm-light palette, subtle horizontal anamorphic light streaks only when a bright real light motivates them. More beautiful than a documentary photograph, but plausible physical scale and illumination.\nFraming: upright PORTRAIT 3:4, same camera location, viewing direction, field of view and normalized object positions as the supplied upright reference. Preserve reference camera; do NOT change to a conventional hero camera. Aim for high-resolution 2064 x 2752 or the largest available native portrait output.\nExclude ALL on-screen interfaces, controls drawn as overlays, typography, map labels, numbers, captions, black caption strip, inset globe, watermarks, logos and flag markings. Reconstruct the real scene beneath overlays. Actual physical spacecraft frames and consoles remain where specified. No readable writing anywhere. Absolutely NO added vignette or arbitrary darkened corners; darkness must come from the physical scene, never post-production corner shading.\n\nReference composition: a SINGLE large nearly circular Cupola window opening fills the picture; its heavy metal seal and curved rim stay along the top arch and both outer sides, without adding a flower of smaller panes or central struts. A physical rectangular console stays at lower center, roughly x24–76%, y84–98%, with screen, red button, joystick and screws, in shadow; its screen is unlabelled and dark. Keep Earth, horizon and window frame at reference positions. The physical window rim naturally occludes space but is not a vignette. No labels, no UI, no inset globe, no portrait captions.\nScene: docking CAPTURE cinematic target, prioritizing the text requirement for a near docking port although the attached game shot currently omits that hardware. Preserve the window rim, lower center console, viewing direction, and broad Earth limb around y38–42%, blue day Earth and ocean below. Introduce a nearby metallic docking-port mating ring just outside the window, extending into upper-middle foreground, with plausible multilayer circular latch hardware and insulated hull continuing out of frame; the Earth's limb remains clearly visible behind and below it. One physically attached work floodlight glints on the ring and nearby metal, restrained blue horizontal flare at its source, realistic reflections, mechanical latch contact/capture, no giant ISS city or free-floating ring. The port is a conceptual addition, not an assertion of the present game's camera geometry. No readable labels or logos. No lens vignette.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/sources/task351-359/d2-telakointi.jpg"
+        ],
+        "transparent_background": false
+      },
+      "completedAt": "2026-10-16T05:58:18.367789+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-57626a20-722a-432e-9395-38f9ea17daa8.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-d2.png",
+      "mirroredPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/images/havainne-d2.png",
+      "sha256": "b5cc625a990bf30ebc2e9f23ca08fc2d1bb27f96bd5be56bb3a89a4d1a3d3c68",
+      "bytes": 2302888,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "imageBytesUnedited": true,
+      "qaStatus": "awaiting-personal-and-independent-review",
+      "requested2752WideFulfilled": false,
+      "referenceAspectRatioFulfilled": true
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_visual_review",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T06:00:23.701780+00:00",
+  "scope": "ISS/raketti #351–359; henkilökohtainen lähde–tulosvertailu view_image-työkalulla; ei generointia eikä kuvamuutoksia",
+  "brief": "sources/task351-359/valoseppa-codex-iss-havainnekuvat-20261016.md",
+  "state": "review_complete_9_of_9_not_approved",
+  "approval": {
+    "owner": false,
+    "runtime": false,
+    "game_integration": false,
+    "meaning": "Kaikki ovat PT/omistaja-arvioehdokkaita. 9/9 katsottu tarkoittaa tarkistuksen valmistumista, ei kuvien hyväksyntää.",
+    "owner_status": "not_obtained",
+    "runtime_status": "not_tested",
+    "batch_qa_approved": false
+  },
+  "global_findings": [
+    "Lähteet ovat 2064×2752 pystykuvia. Tulokset ovat native-PNG 1086×1448; 3:4-rajaus säilyy. Tilausasiakirjan 2752 px leveystavoite ei täyty; kuvia ei skaalattu tai muokattu.",
+    "r1- ja r2-lähde ovat tavutasolla sama kuva (sama SHA-256), vaikka r2:n tekstivaatimus on sytytys T+1 alustalla. r2 arvioidaan sekä lähdekameraa että tekstin tapahtumaa vasten.",
+    "Yhden kuvan perusteella ei todenneta animaation ajoitusta, dynaamista valotusta, välähdysten vuorottelua, fyysistä korkeutta tai runtime-toteutusta.",
+    "s1-täydennys luettu kokonaan: koko näkymässä vain yksi salama; pilven pinnalla/reunalla hienovarainen vaakasuora haarautuva hämähäkkisalama, ei pelkkä diffuusi hehku. Tämä tarkennus ohittaa taulukon vanhemman 1–2-solun sanamuodon.",
+    "Lähteiden pohjatekstit eivät aina vastaa HUD-aikaa: r3:n alateksti viittaa T+1:een mutta HUD on T+0:27 / 2,5 km; r4:n alateksti viittaa T+5:een mutta HUD on T+1:06 / 14,2 km. Tässä arvioinnissa noudatettiin tehtävänannon osoittamaa todellista kameranäkymää/HUD-vaihetta."
+  ],
+  "images": [
+    {
+      "id": "r1",
+      "source": "sources/task351-359/r1-alusta-yo.jpg",
+      "candidate": "images/havainne-r1.png",
+      "assessment": "reviewed_candidate_with_minor_caveats",
+      "camera_composition_scale": {
+        "finding": "Korkea viisto alustanäkymä, raketti keskellä, tornit/ukkossuojat, laukaisutaso ja rannikko vastaavissa paikoissa. Raketin korkeus kuvassa sekä nokan ja jalustan sijainti ovat silmämääräisesti lähellä lähdettä. Pystyrajaus säilyy.",
+        "severity": "minor"
+      },
+      "night_light": {
+        "finding": "Maisema ja meri ovat selvästi yötilassa. Valonheittimet, punaiset estevalot, säiliöhöyry ja märän betonin heijastukset tukevat tavoitetta; valo kohdistuu alustan lähelle. Valokeilat ovat melko hillityt. Meren oikean reunan hopeinen heijastus ei yhdisty yksiselitteisesti näkyvään valaisimeen.",
+        "severity": "minor"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä, tunnistettavaa logoa tai selkeää kuvan päälle lisättyä vinjettiä. Reunat tummenevat pääosin yömaiseman ja paikallisen valon mukaisesti.",
+        "severity": "none_observed"
+      },
+      "specific_constraints": {
+        "cupola": "not_applicable",
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": "not_applicable"
+      },
+      "invented_elements": [
+        "Tarkka rannikko-, kallio-, metsä- ja vesipintojen yksityiskohtaistus.",
+        "Lamppujen tarkka sijoittelu ja määrä, kosteus, höyryn muoto ja märkä pinta ovat havainnollistavia lisäyksiä."
+      ],
+      "target_for_game": [
+        "Yötaustan tummuus suhteessa paikalliseen valoon.",
+        "Paikalliset valokeilat höyryssä ja raketin rungolla sekä märän alustan heijastukset."
+      ],
+      "limits": [
+        "Ei maantieteen tai laitteiden rakennuspiirustus."
+      ],
+      "source_sha256": "4e317cd360563e9579f5aa4a5113eefd3ca5630138073d99b42562a366c95168",
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "candidate_sha256": "9e6bb4220c27f01f7eec36dcc042570527dd4a5cce844088d8d86dd2a680ae6d",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "r2",
+      "source": "sources/task351-359/r2-syttyminen.jpg",
+      "candidate": "images/havainne-r2.png",
+      "assessment": "reviewed_candidate_with_material_event_deviation",
+      "camera_composition_scale": {
+        "finding": "Alustan kameran suunta ja keskitys säilyvät hyvin. Raketti näyttää lähdettä hieman lyhyemmältä: nokka on lähes samassa kuvakohdassa, mutta moottoripää ylempänä. Savu peittää osan tukirakenteista.",
+        "severity": "material"
+      },
+      "night_light": {
+        "finding": "Yö, valkohehkuinen liekin ydin, oranssina valaistu paksu sivuille pullistuva savu ja märän alustan heijastukset toteutuvat näyttävästi. Savu valaistuu lähinnä purkautumisen kohdalta.",
+        "severity": "none_observed"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä tai selkeää vinjettiä. Rungon oikealla sivulla on hyvin pieni sinivalkoinen yksityiskohta, jota ei tästä katselusta voi varmistaa logoksi tai tekniseksi osaksi.",
+        "severity": "minor_uncertainty"
+      },
+      "specific_constraints": {
+        "ignition_on_pad": {
+          "finding": "Moottorisuuttimien ja alustan renkaan välissä on näkyvä pitkä valkoinen liekkiväli. Kuvan raketti näyttää jo ilmassa olevalta, joten sytytys T+1 alustalla ei toteudu luotettavasti.",
+          "severity": "material"
+        },
+        "cupola": "not_applicable",
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": "not_applicable"
+      },
+      "invented_elements": [
+        "Rannikon yksityiskohdat, savun geometria ja lamppujen tarkka määrä.",
+        "Raketin näkyvä nousukorkeus suhteessa alustaan on ristiriidassa tekstin tapahtumatavoitteen kanssa."
+      ],
+      "target_for_game": [
+        "Liekin valkoinen ydin ja liekin paikallinen oranssi valo savuun, torniin ja maahan.",
+        "Paksu savu, joka purkautuu alustan sivuille."
+      ],
+      "limits": [
+        "Tätä kuvaa ei tule käyttää raketin T+1-sijainnin tai moottori–alusta-etäisyyden mallina."
+      ],
+      "source_sha256": "4e317cd360563e9579f5aa4a5113eefd3ca5630138073d99b42562a366c95168",
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "candidate_sha256": "fceb84f9e905262caa84c25f866378c59f0e9db120795ac88e704d2045e343b7",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "r3",
+      "source": "sources/task351-359/r3-irtoaminen.jpg",
+      "candidate": "images/havainne-r3.png",
+      "assessment": "reviewed_candidate_with_lighting_caveat",
+      "camera_composition_scale": {
+        "finding": "Laaja korkea takaa-ajonäkymä säilyy: horisontti kuvan yläviidenneksessä, pieni raketti keskiviivalla ja pitkä savuvana alas lähtöalueelle. Raketin koko ja kuvapaikka ovat lähteen lähellä. Ei muutosta lähikuvaksi.",
+        "severity": "none_observed"
+      },
+      "night_light": {
+        "finding": "Taivas on tumma ja liekki paikallisesti kirkas. Vuoret, metsät ja järvet ovat kuitenkin laajasti ja yksityiskohtaisesti valaistuja, samalla kun paljon tähtiä näkyy. Näkyvässä kuvassa ei ole koko maiseman valaisevaa valonlähdettä; vaikutelma on vahvasti elokuvamainen, valotuksen ja yöambientin suhde vaatii harkintaa. Savuvanan alaosa on lähtöalueen valossa, mutta yläosan valo ei selvästi seuraa pientä liekkiä.",
+        "severity": "moderate"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä, tunnistettavaa logoa tai selkeää päälle lisättyä vinjettiä.",
+        "severity": "none_observed"
+      },
+      "specific_constraints": {
+        "source_event": "Arvioitu lähteen T+0:27 / 2,5 km laajan kameran perusteella. Tornin lähi-irtoamista ei tästä laajasta kuvasta todenneta.",
+        "cupola": "not_applicable",
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": "not_applicable"
+      },
+      "invented_elements": [
+        "Yksityiskohtainen lumivuoristo, kaupungit/tiet ja rannat ovat havainnollistavia maastolisäyksiä.",
+        "Yhtenäinen savuvana ja tarkka lähtöalueen valaistus eivät tule suoraan lähdekuvan geometriasta."
+      ],
+      "target_for_game": [
+        "Säilyvä pieni raketti ja laaja maisema; valaiseva liekin ydin ja luettava savuvana.",
+        "Savun sivulle leviävä lähtöalue ja syvyys maisemassa."
+      ],
+      "limits": [
+        "Maiseman yleisvaloa tai kaupunkien maantiedettä ei tule kopioida fyysisesti todennettuna yötilana.",
+        "Kipinöitä tai tornin yksityiskohtien valaistusta ei voi tämän mittakaavan kuvasta luotettavasti arvioida."
+      ],
+      "source_sha256": "05d2bbb0c3f0b4d282f6eddb3aa893e9fa9e070c0ef5e5f8f625d248d320ed94",
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "candidate_sha256": "07d61e228d799a58b592dfd71f557b1fbf77da4704a6f4bf5ec5500bd457a07b",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "r4",
+      "source": "sources/task351-359/r4-nousu.jpg",
+      "candidate": "images/havainne-r4.png",
+      "assessment": "reviewed_candidate_with_lighting_and_scale_caveats",
+      "camera_composition_scale": {
+        "finding": "Laaja korkea takaa-ajonäkymä ja pieni raketti keskiviivalla säilyvät. Horisontin korkeus on lähteen lähellä. Raketin nokka näyttää siirtyneen hieman ylemmäs ja runko on silmämääräisesti hieman suurempi; lisätty pitkä liekki ja savu hallitsevat kuvan alapuoliskoa tarkoituksen mukaisesti.",
+        "severity": "minor_to_moderate"
+      },
+      "night_light": {
+        "finding": "Yötaivas, valkoinen liekin ydin, pitkä liekki ja valo savussa toteutuvat. Savuvanan suuret oranssit osat jatkuvat kauas alaspäin kuin itsevalaisevina, vaikka näkyvä moottori on ylhäällä; koko vanan valomäärä on elokuvallinen liioittelu. Vuoriston yleisvalo on huomattava ja tähdet näkyvät samanaikaisesti, joten valotus/ambientti on fyysisen mallinnuksen kannalta avoin.",
+        "severity": "moderate"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä, tunnistettavaa logoa tai selkeää lisättyä vinjettiä.",
+        "severity": "none_observed"
+      },
+      "specific_constraints": {
+        "source_event": "Lähteen T+1:06 / 14,2 km kameran sommittelu on tunnistettava. Staattinen kuva ei todista korkeutta.",
+        "cupola": "not_applicable",
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": "not_applicable"
+      },
+      "invented_elements": [
+        "Rannat, lumihuiput, tie- ja kaupunkivalojen verkostot ovat maantieteellisesti todentamattomia lisäyksiä.",
+        "Laaja lämmin valo pitkän savuvanan alaosassa on efektihavainnollistus."
+      ],
+      "target_for_game": [
+        "Valkoinen kirkas liekki ja jatkuvan savuvanan visuaalinen paino laajassa kamerassa.",
+        "Paikallinen lämmön värinen valo savussa ja tumman yömaiseman syvyys."
+      ],
+      "limits": [
+        "Koko savuvanan oranssia hehkua, maiseman yleisvalaistusta tai keksittyjä kaupunkeja ei tule kopioida fysikaalisesti todennettuna mallina."
+      ],
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "source_sha256": "2768ff0849e5a5d1f31aaf51516a2802c6ca1f1d0c17a47a6ecba2a2e9bb77ee",
+      "candidate_sha256": "178f8dbb43d6968cbdf0e2ffa5718c7eaad152816882961b75be77a555e23488",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "a1",
+      "source": "sources/task351-359/a1-auringonnousu.jpg",
+      "candidate": "images/havainne-a1.png",
+      "assessment": "reviewed_candidate_with_exposure_and_flare_caveats",
+      "camera_composition_scale": {
+        "finding": "Sama yksi fyysinen suuri Cupolan ikkuna: ei lisäikkunoita tai uusia poikkipuita. Yläkehyksen kaari, Maan horisontti, auringon nousukohta ja alakeskikonsolin paikka/koko ovat hyvin lähellä lähdettä.",
+        "severity": "none_observed"
+      },
+      "night_light": {
+        "finding": "Aurinko on pieni häikäisevä valkoinen ydin horisontilla, tähtisäteet näkyvät, horisontin oranssi/sininen värikaari ja vihreä hehku erottuvat. Kehys saa lämmintä valoa, heikot linssiheijastumat näkyvät auringon yläpuolella. Tähdet sekä kaupunkivalot ovat silti hyvin näkyviä samassa valotuksessa. Erillinen vahva anamorfinen vaakajuova ei erotu yhtä selvästi kuin tähtisäteet ja horisontin kaari.",
+        "severity": "moderate"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä, tunnistettavaa logoa tai lisättyä vinjettiä. Konsoli on fyysinen blankolla näytöllä, ei päälle piirretty UI.",
+        "severity": "none_observed"
+      },
+      "specific_constraints": {
+        "cupola": {
+          "finding": "Yksi fyysinen ikkuna ja alakeskikonsoli säilyvät.",
+          "severity": "none_observed"
+        },
+        "exposure_drop": {
+          "finding": "Yksi staattinen kuva ei todenna valotuksen putoamista auringon tullessa esiin. Tähtien ja kaupunkivalojen samanaikainen voimakas näkyvyys on valotusvaraus, ei näyttö pyydetystä himmenemisestä.",
+          "severity": "moderate"
+        },
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": "not_applicable"
+      },
+      "invented_elements": [
+        "Kaupunkiverkon, pilvien ja rannikon yksityiskohdat ovat havainnollistusta.",
+        "Linssiheijastumien, tähtisäteiden ja koko kehyksen lämpimän valon tarkka voimakkuus on elokuvallinen valinta."
+      ],
+      "target_for_game": [
+        "Ohut kaareva värikerros ja pieni auringon ydin nousukohdassa.",
+        "Lämmin valo fyysiseen kehykseen sekä maltilliset linssiheijastumat."
+      ],
+      "limits": [
+        "Valotuksen muuttuminen ja tähtien/kaupunkien himmeneminen on edelleen tarkistettava animaatiossa.",
+        "Yksittäinen renderi ei todenna kiertoradan korkeutta tai Maan kaaren geometriaa numeerisesti."
+      ],
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "source_sha256": "6dc4d4c9dc37e328739ac2a1b9e683bf2a8392a4094252179c7bbed6988a92bc",
+      "candidate_sha256": "85d003a2b086eca2a0da93ce8f78bc6c358389159ec3302232f6a039fb4347f8",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "s1",
+      "source": "sources/task351-359/s1-salamat.jpg",
+      "candidate": "images/havainne-s1.png",
+      "assessment": "reviewed_candidate_with_material_single_lightning_violation",
+      "camera_composition_scale": {
+        "finding": "Alas yölliseen Maahan katsova Cupola-kamera ja yksi fyysinen kehys säilyvät. Alakeskikonsoli pysyy samassa paikassa ja vastaavan kokoisena. Ukkosalueet ovat edelleen etu- ja taka-alalla; alaosan pääsolu on laajempi ja selvästi yksityiskohtaisempi kuin lähteen hehkupallo.",
+        "severity": "minor"
+      },
+      "night_light": {
+        "finding": "Muutoin tumma meri/maa, pilvikummut ja kaupunkivalot tukevat yötilaa. Alasuuren solun ohut sinivalkoinen vaakasuora haarautuva kanava näkyy pilven pinnalla/reunalla ja valaisee kuohuvat kuvut. Ylävasemmalla on kuitenkin toinen itsenäisenä sinivalkoisena kirkastumana erottuva pilvisolu.",
+        "severity": "material"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä, tunnistettavaa logoa tai lisättyä vinjettiä. Yksi ikkuna ja fyysinen blankko konsoli.",
+        "severity": "none_observed"
+      },
+      "specific_constraints": {
+        "cupola": {
+          "finding": "Yksi fyysinen ikkuna ja alakeskikonsoli säilyvät.",
+          "severity": "none_observed"
+        },
+        "single_lightning_cell": {
+          "finding": "Ehto ei täyty luotettavasti: päävälähdyksen lisäksi noin x=35 %, y=20 % on toinen sinivalkoisena sisältä valaistunut solu. Se on selvästi kirkkaampi kuin ympäröivät tummat pilvet; sitä ei voi rehellisesti käsitellä vain tummana taustakumpuna.",
+          "severity": "material",
+          "observed_lit_cells": 2
+        },
+        "spider_channel": {
+          "finding": "Pääsolussa näkyy yksi yhtenäinen haarautuva, pääosin vaakasuora ohut kanavaverkko. Tämä täydennyksen muotovaatimus toteutuu siinä hyvin.",
+          "severity": "none_observed"
+        },
+        "meteors_in_atmosphere": "not_applicable"
+      },
+      "invented_elements": [
+        "Pilvien tarkka muoto, kaupungit/rannikko ja salamakanavan geometria ovat havainnollistusta.",
+        "Toinen valaistunut taustasolu on pyynnön vastainen tapahtuma, ei tavoiteltava lisä."
+      ],
+      "target_for_game": [
+        "Pääsolun näkyvä haarautuva kanava ja paikallinen valo pilven kuohukupuihin.",
+        "Muiden solujen tumma reliefi ja yöpuolen kaupunkivalot."
+      ],
+      "limits": [
+        "Kuvaa ei tule hyväksyä yhden salaman kokonaisreferenssiksi; vain pääsolun muoto on käyttökelpoinen osaehdokas.",
+        "Yksi kuva ei todenna animaation välähdysten vuorottelua."
+      ],
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "source_sha256": "26f3beabb5678f41b3fd99344d40cf0658425276eeddc76d852bc40452074f5a",
+      "candidate_sha256": "68412d25c750fb68fc0cb3b1c0d57a7c4582da9f7f45861a14d578b0c24713d5",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "t1",
+      "source": "sources/task351-359/t1-perseidit.jpg",
+      "candidate": "images/havainne-t1.png",
+      "assessment": "reviewed_candidate_with_exposure_caveat",
+      "camera_composition_scale": {
+        "finding": "Yksi suuri fyysinen Cupolan ikkuna, kehyksen kaari, alakeskikonsoli ja Maan horisontin korkeus säilyvät lähteen lähellä. Lähteen oikean alareunan tumma etualan hahmo/esine on säilynyt. Kolme meteoria sijaitsevat edelleen Maan yllä näkymän keskialueella, mutta pyynnön mukaisesti vinoina.",
+        "severity": "none_observed"
+      },
+      "night_light": {
+        "finding": "Tumma avaruus, yöpuolen kaupunkivalot ja vihreä ilmahehkun kaari erottuvat. Maiseman yksityiskohtainen yleisvalo, kirkkaat kaupunkivalot ja runsaat tähdet samassa valotuksessa ovat elokuvallinen valotusvalinta.",
+        "severity": "minor_to_moderate"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä, tunnistettavaa logoa tai lisättyä vinjettiä. Konsolin näyttö on blankko.",
+        "severity": "none_observed"
+      },
+      "specific_constraints": {
+        "cupola": {
+          "finding": "Yksi fyysinen ikkuna ja alakeskikonsoli säilyvät.",
+          "severity": "none_observed"
+        },
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": {
+          "finding": "Kolme ohutta keskenään lähes rinnakkaista vinoa viivaa ovat Maan kaaren alapuolella projektiossa Maan yllä; kirkas valkoinen pää on alavasemmassa ja lyhyt oheneva vana jatkuu yläoikealle. Näkyvä sijoittelu tukee ilmakehässä tarkkailijan alapuolella kulkevia meteoreja, ei avaruuden tähtitaivaalle piirrettyjä ratoja. Yksittäinen 2D-kuva ei todista tarkkaa korkeutta.",
+          "severity": "none_observed"
+        }
+      },
+      "invented_elements": [
+        "Meteorien tarkka määrä, sijainti, pituus ja ajoitus ovat havainnollistusta.",
+        "Kaupunkiverkko, maaston yksityiskohdat ja ilmahehkun voimakkuus eivät ole varmennettua maantieteellistä tai fotometristä aineistoa."
+      ],
+      "target_for_game": [
+        "Kolme ohutta vinoa rinnakkaista meteoria Maan puolella, valkoinen pää ja lyhyt kapeneva vana.",
+        "Vihreän ilmahehkun kaari ja fyysisen Cupolan rakenteen säilyttäminen."
+      ],
+      "limits": [
+        "Perseidien radianttia, esiintymistiheyttä, liikkeen nopeutta tai meteorien korkeutta ei todenneta tästä kuvasta.",
+        "Tähtien, kaupunkivalojen ja maan valotussuhde on tarkistettava toteutuksessa."
+      ],
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "source_sha256": "973d2afce21cd8f0dd66c2a13a97a6875fe562dfd72c0e633c9892dd69505b61",
+      "candidate_sha256": "5309c73b71d17fb3f7dfe48a67fe1feed68cb8be5e2d6310b8fe51dbf44ad2be",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "d1",
+      "source": "sources/task351-359/d1-lahestyminen.jpg",
+      "candidate": "images/havainne-d1.png",
+      "assessment": "reviewed_candidate_with_material_panel_geometry_deviation",
+      "camera_composition_scale": {
+        "finding": "Asemarungon keskiosan, vaakaristikon, etuluukun, oikeanpuoleisen pienen astronautin sekä Maan reunan kuvapaikat ja asemarungon kuvakoko säilyvät hyvin. Suuret aurinkopaneelit ovat kuitenkin siirtyneet lähteen alaosan suurista tasopinnoista kuvan reunoihin korkeiksi pystysuuntaisiksi kaistaleiksi, jotka ulottuvat myös yläreunaan. Tämä on merkittävä geometrian ja siluetin muutos.",
+        "severity": "material"
+      },
+      "night_light": {
+        "finding": "Tumma avaruus, valossa olevat metallipinnat ja aurinkopaneelit sekä Maa alla ovat luettavia. Auringon suunnan mukaiset kirkkaat reunat ja tummemmat alapuoliskot luovat syvyyttä. Kirkkaan päivä-Maan ja runsaan tähtikentän samanaikainen näkyvyys on elokuvallinen valotusvalinta. Erillisiä kulkuvaloja ei voi varmasti erottaa heijastavista yksityiskohdista.",
+        "severity": "moderate"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua UI:ta, luettavaa tekstiä, tunnistettavaa logoa tai lisättyä vinjettiä.",
+        "severity": "none_observed"
+      },
+      "specific_constraints": {
+        "cupola": "not_applicable_external_camera",
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": "not_applicable",
+        "docking_geometry": {
+          "finding": "Paneelien suunta ja sijoitus poikkeavat lähteestä olennaisesti. Keskiaseman kuvakoon säilyminen ei tee koko rakenteesta mallinnusreferenssiä.",
+          "severity": "material"
+        }
+      },
+      "invented_elements": [
+        "Aurinkopaneelien uusi sijoitus ja suunta kuvan reunoissa.",
+        "Moduulien peitteet, pinnat, luukkujen/kaapelien yksityiskohdat ja paneelisolujen tarkka geometria.",
+        "Maan kartta/pilvet ja astronautin yksityiskohtainen asu/turvaköysi."
+      ],
+      "target_for_game": [
+        "Tumma avaruus, paikallinen lämmin reunaheijastus ja moduulien uskottava materiaalikontrasti.",
+        "Aseman, pienen astronautin ja Maan välinen syvyys alkuperäisessä kamerassa."
+      ],
+      "limits": [
+        "Ei koko aseman, paneelien tai telakointijärjestelyn mallinnusreferenssiksi.",
+        "Kulkuvalojen toimivuutta, telakointilinjaa tai lähestymisen liikettä ei todenneta tästä kuvasta."
+      ],
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "source_sha256": "ebf5f52676fe767a56c28d70ce910a1584027e63483b4e92054e2fbb254f4551",
+      "candidate_sha256": "4407e0e52311a076f176bca2cc6eb7341721eb32215d0acb620f1cd56bd9d5aa",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    },
+    {
+      "id": "d2",
+      "source": "sources/task351-359/d2-telakointi.jpg",
+      "candidate": "images/havainne-d2.png",
+      "assessment": "reviewed_candidate_with_material_invented_docking_geometry",
+      "camera_composition_scale": {
+        "finding": "Cupolan yksi fyysinen ikkuna, ylä-/alakehys, alakeskikonsoli, oikeanpuoleinen tumma etualan hahmo/esine sekä Maan kaaren korkeus säilyvät lähteen lähellä. Yläosan tyhjän avaruusnäkymän täyttävä suuri läheinen telakointiportti on kokonaan uusi sommitteluelementti, jota lähdekuvassa ei ole.",
+        "severity": "material_invented_addition"
+      },
+      "night_light": {
+        "finding": "Läheisen portin vasemmalla puolella oleva valonheitin, metallin heijastukset ja ohut sininen vaakasuora linssijuova ovat näkyviä ja paikallisen valon kannalta luettavia. Maa on päiväpuolella; kirkkaan Maan ja näkyvien tähtien yhteisvalotus on elokuvallinen valinta.",
+        "severity": "minor_to_moderate"
+      },
+      "clean_image": {
+        "finding": "Ei havaittua luettavaa tekstiä, tunnistettavaa logoa tai selvää lisättyä UI:ta/vinjettiä. Portin keskiön rengas/ristikuvio näyttää luukun fyysiseltä yksityiskohdalta, mutta sen todellista tarkoitusta ei voi kuvasta varmistaa. Konsolin näyttö on blankko.",
+        "severity": "minor_uncertainty"
+      },
+      "specific_constraints": {
+        "cupola": {
+          "finding": "Yksi fyysinen ikkuna ja alakeskikonsoli säilyvät.",
+          "severity": "none_observed"
+        },
+        "single_lightning_cell": "not_applicable",
+        "meteors_in_atmosphere": "not_applicable",
+        "docking_geometry": {
+          "finding": "Lähdekuvassa ei näy porttia. Kuvan portti, sen koko/paikka, salvat, valaistus ja koko telakointijärjestely ovat tekstipyynnön perusteella keksitty havainnollistus. Ne eivät todista pelin nykygeometriaa, Harmonyn todellista rakennetta tai telakoinnin kamerajärjestelyä.",
+          "severity": "material_invented_addition"
+        }
+      },
+      "invented_elements": [
+        "Koko läheinen telakointiportti, salvat, luukku, peitteet, valonheitin ja niiden sijainti suhteessa Cupolaan.",
+        "Maan rannikon, pilvien ja heijastuksen tarkka muoto sekä tähtikenttä."
+      ],
+      "target_for_game": [
+        "Läheisen metallipinnan paikallinen valo ja heijastukset.",
+        "Maapallon kaari taustalla sekä fyysisen Cupolan ja konsolin säilyminen."
+      ],
+      "limits": [
+        "Ei pelin nykyisen portin, Harmonyn rakenteen tai Cupola–telakointi-tilasuhteen todisteeksi tai suoraan mallinnusreferenssiksi.",
+        "Staattinen kuva ei todenna salvojen lukittumista, kontaktia tai telakointianimaatiota."
+      ],
+      "source_dimensions": {
+        "width": 2064,
+        "height": 2752,
+        "aspect_ratio": "3:4"
+      },
+      "source_sha256": "8a210b91edfd033b906c05473164d8922bea2a522bdb3c28c68c48f527fa08a4",
+      "candidate_sha256": "b5cc625a990bf30ebc2e9f23ca08fc2d1bb27f96bd5be56bb3a89a4d1a3d3c68",
+      "native_dimensions": {
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4",
+        "resized_or_edited_for_review": false
+      }
+    }
+  ],
+  "pending": [],
+  "addenda_read": [
+    "sources/task351-359-addendum-s1/valoseppa-codex-iss-havainnekuvat-20261016.md"
+  ],
+  "summary": {
+    "personally_viewed_source_candidate_pairs": 9,
+    "review_complete": true,
+    "batch_approved": false,
+    "material_requirement_rejections": [
+      "r2: raketti näyttää jo irronneen alustalta, vaikka T+1-sytytyksen pitää tapahtua alustalla.",
+      "s1: päävälähdyksen lisäksi toinen sinivalkoisena valaistu ukkossolu; yhden salaman ehto ei täyty luotettavasti."
+    ],
+    "material_geometry_caveats": [
+      "d1: suuret aurinkopaneelit muuttivat paikkaa ja suuntaa; ei koko geometrian mallinnusreferenssiksi.",
+      "d2: lähteestä puuttuva portti ja koko telakointijärjestely on keksitty lisäys; ei nykygeometrian todisteeksi."
+    ],
+    "other_caveats": [
+      "r3/r4: laaja yömaiseman yleisvalo ja savuvanan valaistus ovat fyysisesti avoimia elokuvallisia valintoja.",
+      "a1: valotuksen pudotusta ei todenneta; tähdet/kaupunkivalot ovat kirkkaita ja erillinen anamorfinen vaakajuova heikko.",
+      "t1: näkyvä sijainti ja suunta tukevat vaadittua meteoriefektiä, mutta valotus on elokuvallinen."
+    ],
+    "cupola": "a1/s1/t1/d2: yksi fyysinen ikkuna ja alakeskikonsoli säilyvät henkilökohtaisen visuaalisen vertailun perusteella.",
+    "meteors": "t1: ohuet vinot lähes rinnakkaiset meteorit näkyvät Maan puolella; tarkkaa korkeutta ei todenneta 2D-kuvasta.",
+    "clean_image": "Ei havaittua luettavaa tekstiä, selvää päälle lisättyä UI:ta tai vinjettiä. r2:n pieni sinivalkoinen yksityiskohta ja d2:n portin keskiö jäivät tarkoitukseltaan epäselviksi.",
+    "size": "Kaikki 9 ehdokasta 1086×1448 native-PNG, 3:4. Pyydetty 2752 px leveys ei täyty; ei skaalausta tai kuvamuutoksia QA:ssa."
+  }
+}
