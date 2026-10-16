@@ -1,0 +1,18 @@
+{
+  "sourceCommit": "addcc8ac14ddc4c2aeaef16261ba81fbbfa6a34b",
+  "sourcePath": "posti/linssiseppa-codex-peking361-362-aloita-20261016.md",
+  "sourceBlob": "607a0c51bea367fef8a0d7c62b9259da17f946f1",
+  "bytes": 2968,
+  "sha256": "cd3bccc99aea44b62064af089db176ed7688bf8dcb1772e7e47eec1fd3c48420",
+  "wholeSourceRead": true,
+  "noNewAttachments": true,
+  "V6Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+  "V6ManifestSHA256": "1ae73f93a31de1102dccf506bd5c506b1ee582476a6dc3195a6755e1e0d261a5",
+  "receiverV6ReadAcknowledgedBySource": true,
+  "receiverV6GameTestStartedBySource": true,
+  "receiverV6GameResultNotYetAccepted": true,
+  "tasks361362StartedInParallelBefore360Result": true,
+  "pilotOnly": "peking_2_3",
+  "expansionRequiresGameImageAcceptance": true,
+  "createdAtUTC": "2026-10-16T15:19:52.520256+00:00"
+}

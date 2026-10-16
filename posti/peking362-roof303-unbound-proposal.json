@@ -1,0 +1,20 @@
+{
+  "status": "UNBOUND_ROOF303_CLARIFICATION_PROPOSAL_NOT_APPLIED",
+  "baselineSource": "V6 gold303 material and RGB image remain immutable",
+  "variantCount": 6,
+  "scalarOffsetsProposed": [
+    -0.075,
+    -0.045,
+    -0.015,
+    0.015,
+    0.045,
+    0.075
+  ],
+  "areaWeightedMeanMustEqualBaseline": true,
+  "maximumMagnitude": 0.08,
+  "roughnessAroundBaseline": 0.53,
+  "sourceRGBBytesNeverEdited": true,
+  "newWholeGeneratedOrMaterialBakedMapsOnly": true,
+  "buildingAssignmentNotYetApplied": true,
+  "requiresReceiverClarificationBeforeAnyRoofBinding": true
+}
