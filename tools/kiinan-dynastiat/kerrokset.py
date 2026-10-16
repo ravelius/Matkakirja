@@ -68,7 +68,8 @@ def kerrokset():
                   **({'huom': huom} if huom else {}), koko_kiina=milj)
     for t in K.TAISTELUT:
         lisaa('taistelu', 'piste', t['nimi'], t['vuosi'], LOPPU, [[t['lon'], t['lat']]], VARIT['taistelu'], arvo=None,
-              voittaja=t['voittaja'], havio=t['havio'], seuraus=t['seuraus'])
+              voittaja=t['voittaja'], havio=t['havio'], seuraus=t['seuraus'], vuosi=t['vuosi'],
+              **{k: True for k in ('epavarma', 'tausta') if t.get(k)})
     for avain, vuosi, a, b in K.SIIRROT:
         lisaa('siirto', 'virtaus', f'{a} → {b}', vuosi, LOPPU, tihenna(kaari(K._P[a], K._P[b])), VARIT['siirto'],
               leveydet=[round(0.25 + 0.75 * i / 23, 2) for i in range(24)], dynastia=avain)
@@ -80,7 +81,7 @@ LAHTEET = {
         'reitit ja siirtojäljet: omat piirrokset (Matkakirja, CC0) julkisista paikkakoordinaateista, tarkkuus ~20 km.',
     'vaesto': 'Väkiluvut historiallisista väestölaskennoista (Han 140, Sui 609, Yuan 1290, Qing 1762) ja tutkimusarvioista '
         '(arvio = true). Alueosuudet ovat Karttasepän arvio väestön painopisteen siirtymästä etelään.',
-    'taistelut': 'Paikat ja vuodet yleisesti tunnetuista lähteistä (faktat).'}
+    'taistelut': 'Paikat ja vuodet Sisältökirjurin tarkistuksesta 17.10.2026 (epavarma = paikka kiistanalainen; tausta = ennen linssin alkua 221 eaa, näytetään alusta). Changping, Punainen kallio ja Fei-joki epävarmoja.'}
 
 
 if __name__ == '__main__':

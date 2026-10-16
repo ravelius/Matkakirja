@@ -118,15 +118,15 @@ VAESTO = [(-221, 20, True, 'han', ''), (-200, 18, True, 'han', ''), (-100, 35, T
 
 # --- viisi ratkaisevaa taistelua -------------------------------------------------------------------------------------
 TAISTELUT = [
-    dict(avain='changping', nimi='Changping', vuosi=-260, lon=112.85, lat=35.8, voittaja='qin', havio='zhao',
+    dict(avain='changping', nimi='Changping', vuosi=-260, lon=112.92, lat=35.80, epavarma=True, tausta=True, voittaja='qin', havio='zhao',
          seuraus='Qin murskaa Zhaon ja yhdistää Kiinan 221 eaa'),
-    dict(avain='punainen-kallio', nimi='Punainen kallio', vuosi=208, lon=113.9, lat=29.9, voittaja='wu', havio='wei',
+    dict(avain='punainen-kallio', nimi='Punainen kallio', vuosi=208, lon=113.62, lat=29.87, epavarma=True, voittaja='wu', havio='wei',
          seuraus='Cao Caon tappio jakaa Kiinan kolmeksi kuningaskunnaksi'),
-    dict(avain='fei-joki', nimi='Fei-joki', vuosi=383, lon=116.8, lat=32.6, voittaja='jin', havio='entinen-qin',
+    dict(avain='fei-joki', nimi='Fei-joki', vuosi=383, lon=116.78, lat=32.58, epavarma=True, voittaja='jin', havio='entinen-qin',
          seuraus='Etelä pysyy omana valtionaan kahden vuosisadan ajan'),
-    dict(avain='yamen', nimi='Yamen', vuosi=1279, lon=113.1, lat=22.2, voittaja='mongol', havio='song',
-         seuraus='Songin viimeinen laivasto tuhoutuu ja Yuan hallitsee koko Kiinaa'),
-    dict(avain='shanhain-sola', nimi='Shanhain sola', vuosi=1644, lon=119.75, lat=40.0, voittaja='qing', havio='shun',
+    dict(avain='yamen', nimi='Yamen', vuosi=1279, lon=113.08, lat=22.27, voittaja='mongol', havio='song',
+         seuraus='Songin viimeinen laivasto tuhoutuu (Lin\'an kaatui jo 1276) ja Yuan hallitsee koko Kiinaa'),
+    dict(avain='shanhain-sola', nimi='Shanhain sola', vuosi=1644, lon=119.77, lat=39.98, voittaja='qing', havio='shun',
          seuraus='Mantšut pääsevät muurin läpi Pekingiin'),
 ]
 
