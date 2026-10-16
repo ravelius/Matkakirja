@@ -12,7 +12,10 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus -20261016-iltapaiva: teh
 - Testit (proto-worktreen juuressa): `sh Linssit-testit/kaanna.sh`, `sh Linssit-testit/unity-tarkistus.sh`. Ajotyökalut
   /Users/Shared/Claude/proto-3d/tyokalut/pelikoodari-ajot/. Oma simu iPhone 96044270-92AA-4BD3-BE2D-772C8495AB19. _tyo/pelikoodari: ≤ 2 .app.
 
-## 1. ENSIMMÄISENÄ: LIIKEPOHJA (omistaja 20.54) + museo ensimmäisenä käyttäjänä (omistaja 19.56–19.57 + 20.47), juna 197 (ei ehdi → sano PT:lle heti → 198)
+## 1. ENSIMMÄISENÄ: LIIKEPOHJA (omistaja 20.54) + museo ensimmäisenä käyttäjänä (omistaja 19.56–19.57 + 20.47), JUNA 198
+**PT 22.0x:** 9b61757d8 EI mene erillisenä junaan 197 (20.54: ei väliaikaista paikallista korjausta). Tee samat korjaukset (zoomin alun hyppy,
+0,45 s:n liuku, kävelyn mutkat ja katseen hypyt) LIIKEPOHJAN päälle junaan 198. Pohja: juna-198 **4b6ef2395**, NUI:n lasipohja-198
+**a25eb9122** (Tyylikirja.Liikkeet/Kayrat). Video 9b61757d8:sta silti PT:lle vertailuksi, jos JU:n käännös valmistuu.
 Omistaja 20.54 "Kyllä, kaikki yhtä aikaa": pehmeä liike yhteiseksi pohjaksi kuten lasikortit; parannus pohjaan leviää kaikkiin linsseihin ja
 peleihin; uudet vain pohjilla; ei väliaikaisia paikallisia korjauksia. PT: älä tee erillistä paikallista pehmennystä museoon.
 - **Avaimet päätetty** (PT, NUI:n ehdotus): tyylikirja.json `liike.liikkeet` = kavely {2500 vähimmäiskesto, pehmea}, liuku {1200, pehmea},
@@ -41,7 +44,7 @@ peleihin; uudet vain pohjilla; ei väliaikaisia paikallisia korjauksia. PT: äl�
 - JU:lla jonossa käännös 9b61757d8:stä (L2 seis levyn takia, käynnistyy > 26 Gi) → _tyo/pelikoodari/museo-pehmea-197-app. Kun KÄÄNNETTY tulee,
   aja "ennen-pohjaa"-video halutessasi: `SHA=<käännös> UDID=96044270-92AA-4BD3-BE2D-772C8495AB19 zsh .../pelikoodari-ajot/ajo-museo-pehmea-197.zsh`
   (skenaario sk-museo-pehmea-197.txt: Punainen kabinetti, 3 teosta, Auto Zoom + kävely, ääni) → SIMU VAPAA JU:lle. Ennen-video = juna 196 -käännös.
-- Lopuksi: video ennen/jälkeen PT:lle → KK, NS:lle junakärki vasta videon jälkeen, valmis-rivi PT:lle ≤ 3 riviä.
+- Lopuksi: video ennen/jälkeen PT:lle → KK, NS:lle junakärki (juna 198) vasta videon jälkeen, valmis-rivi PT:lle ≤ 3 riviä.
 
 ## 2. Prahan ja Ateenan historiaosiot peliin (PT 21.xx, omistaja 19.51 + PT:n tarkistus), juna 197 jos ehtii, muuten 198
 Äänittäjä uusi 2 Prahan osiota v3-nimillä: aanet/pallokierros-praha-v2/historia-heittoikkuna-v3.mp3, historia-venceslauksen-aukio-v3.mp3,
@@ -64,4 +67,4 @@ ajat-historia-v3.json (ämpärissä); loput ennallaan. Etsi kytkentäkohta (grep
 ## Aloitusviesti uudelle Pelikoodarille
 "Olet Pelikoodari (Opus, high). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2, docs/moduulit/yhteiset-pohjat.md ja
 docs/raportit/viesti-pelikoodari-luovutus-20261016-ilta.md (haara pelikoodari-luovutus-20261014-paiva). Ensin LIIKEPOHJA ja museo sen
-ensimmäisenä käyttäjänä (NUI 0048e60e6 pohjana, analyysi 9b61757d8), juna 197 tai sano PT:lle 198."
+ensimmäisenä käyttäjänä (juna-198 4b6ef2395 + NUI a25eb9122 ja 0048e60e6 pohjana, analyysi 9b61757d8), juna 198."
