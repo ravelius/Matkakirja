@@ -1,0 +1,26 @@
+{
+  "status": "ALLOW_SEAM_CANDIDATE2_AS_PRIVATE_LIMITED_NEXT_FLIGHT_TEST_ONLY",
+  "seamOnlyPrivateFlightCandidateAllowed": true,
+  "curtainIncluded": false,
+  "candidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/seam-candidate2",
+  "candidate1TechnicalRejectedNotDelivered": true,
+  "technicalSeamScopeConclusion": "Rajattu offline-tekninen PASS: kaikki72GLB/suojaukset/LOD/budjetti, koko uuden/vanhan maaleikkausten alaraja,833aiemmanpoikkeaman korjaus,15984pisteen rako-otos ja vesirajaus läpäisevät; ei runtimehyväksyntää.",
+  "visualSeamScopeConclusion": "Rajattu kuvaportti PASS: kuusi vakionäkymää ja neljä lähikuvaa säilyttävät arkkitehtuurin sekä vesivaraukset, kolme geometriarakoa sulkeutuu. Pystysaumaan jää kapea tumma hiusviiva; se ja syvin Jingshan-apupinta tarkistetaan matalassa vinossa/liikkuvassa pelinäkymässä.",
+  "reviewFilePins": {
+    "visible-session-sol-task347-candidate2-audit.md": "cd49e23399a14cf2d1d0a33ec9d74b186652d8ee2847f0dd8c0919ef43ac316e",
+    "visible-session-sol-task347-candidate2-audit.json": "9ef22a23410b9b96574e5c98b9b6d7fa99fdd75af6c5ade87a509e65480ecff1",
+    "visible-session-astra-task347-candidate2-review.md": "1c9277fc075eb5ac37e3a96943983e2992b3f299ccf259c933c7f5301ea71397",
+    "visible-session-astra-task347-candidate2-review.json": "7b278b8802a42a433db78440e8228cb1713878c56e8fcc3d91109d5e9838c939"
+  },
+  "producerImageReviewScope": "Parent inspected new general and palace/curtain-adjacent close views; Astra inspected all16newimages",
+  "residualDarkVerticalHairlineAcceptedOnlyForLimitedTest": true,
+  "oldHorizontalPavingStepStillOpenAndUnchanged": true,
+  "actualDeviceKTX2MovingLODWaterDayEveningRequired": true,
+  "noOldLandRaisedLoweredOrMoved": true,
+  "allOriginalV4BINAndMaterialsPreserved": true,
+  "task348OldIonPlus030mSuperseded": true,
+  "task346EffectiveGetCartographicPointsAndCurtainRedesignStillOpen": true,
+  "wholeCityAndHumanOwnerAccepted": false,
+  "ownerQualityGoalReached": false,
+  "createdAtUTC": "2026-10-16T04:25:33.411768+00:00"
+}

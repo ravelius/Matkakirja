@@ -1,0 +1,62 @@
+{
+  "status": "THREE_CANDIDATE2_ACTUAL_ROOT_SEAM_HOLES_CLOSED",
+  "frames": [
+    {
+      "file": "seam1-before.png",
+      "sha256": "d05586e34075ec93f47da3342a65d4635b2a623f7fe9f442997267ddd7439c7a",
+      "after": false,
+      "allMagentaPixels": 8192,
+      "centralMagentaPixels": 7168,
+      "maxRowWidth": 8
+    },
+    {
+      "file": "seam2-before.png",
+      "sha256": "52a352483d3b2ebce5006db52b321c3d63769ef91b5966315c6afdece101bf2c",
+      "after": false,
+      "allMagentaPixels": 8192,
+      "centralMagentaPixels": 7168,
+      "maxRowWidth": 8
+    },
+    {
+      "file": "seam3-before.png",
+      "sha256": "dcbb4e5c4073addad00a58f6eaa54f53012d129f6c7dcde410f640c280597206",
+      "after": false,
+      "allMagentaPixels": 6144,
+      "centralMagentaPixels": 5376,
+      "maxRowWidth": 6
+    },
+    {
+      "file": "seam1-after.png",
+      "sha256": "28c549e17dfb63bbbcbbec67a7b7084ddabfb582afd5df3b043b0da72410f3fa",
+      "after": true,
+      "allMagentaPixels": 0,
+      "centralMagentaPixels": 0,
+      "maxRowWidth": 0
+    },
+    {
+      "file": "seam2-after.png",
+      "sha256": "f9d78efccbb09498b39ed526a9a64384cbd170d27e8ff3a4942226b1c65c0362",
+      "after": true,
+      "allMagentaPixels": 0,
+      "centralMagentaPixels": 0,
+      "maxRowWidth": 0
+    },
+    {
+      "file": "seam3-after.png",
+      "sha256": "a53204bb5586427d16e355a26ab6f6cdf250d776fbd184056e7e8b2ffe184779",
+      "after": true,
+      "allMagentaPixels": 0,
+      "centralMagentaPixels": 0,
+      "maxRowWidth": 0
+    }
+  ],
+  "centralROIPixels": [
+    64,
+    64,
+    960,
+    960
+  ],
+  "diagnosticMaterialNotGameAppearance": true,
+  "noRasterEdits": true,
+  "sourceProofSHA256": "52c559f5ea418d0b019880502089798917cea9136b868a6c3dd8026cbf59df42"
+}

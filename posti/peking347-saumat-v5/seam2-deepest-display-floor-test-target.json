@@ -1,0 +1,55 @@
+{
+  "status": "EXACT_TEST_TARGET_FOR_DEEPEST_NEW_AUXILIARY_FLOOR_NOT_OLD_LAND",
+  "target": {
+    "plannedAuxiliaryDownwardChangeM": 12.495566432902603,
+    "sourceCandidate1TriangleToken": [
+      "peking_1_5",
+      0,
+      26,
+      4
+    ],
+    "tileIndex": 11,
+    "latLon": [
+      39.92310104151555,
+      116.39081547172542
+    ],
+    "oldAuxiliaryECEF": [
+      -2177228.4717651634,
+      4387764.234748692,
+      4071485.354978461
+    ],
+    "plannedNewAuxiliaryECEF": [
+      -2177224.2122330344,
+      4387755.650522014,
+      4071477.3358375267
+    ],
+    "oldAuxiliaryEllipsoidH": 68.9522277712822,
+    "plannedNewAuxiliaryLatLonH": [
+      39.92310104151555,
+      116.39081547172542,
+      56.45666124019772
+    ],
+    "sourceCommonENU": [
+      0.12581853717892955,
+      800.0066627043776,
+      31.001926660500366
+    ],
+    "nearestSavedAuxiliaryVertexECEF": [
+      -2177224.2122216946,
+      4387755.650524155,
+      4071477.335839997
+    ],
+    "nearestSavedAuxiliaryVertexLatLonH": [
+      39.923101041550666,
+      116.39081547159547,
+      56.4566604308784
+    ],
+    "nearestSavedVertexErrorM": 1.180159285923631e-05,
+    "savedGLB": "peking_1_5_lod0.glb",
+    "savedGLBSHA256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb"
+  },
+  "noAssetOrOldLandChanges": true,
+  "capPlanningReplayedInMemoryOnlyNoGeneratorOutputStageRun": true,
+  "requiresLowObliqueMovingRuntimeCamera": true,
+  "notRuntimeOrWholeCityAcceptance": true
+}

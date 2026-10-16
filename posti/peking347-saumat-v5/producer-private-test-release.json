@@ -1,0 +1,33 @@
+{
+  "task": 347,
+  "status": "PRIVATE_SEAM_ONLY_NEXT_FLIGHT_CANDIDATE_NOT_RUNTIME_ACCEPTANCE",
+  "GLBCount": 72,
+  "bytesGLB72": 157667960,
+  "trianglesGLB72": 1385100,
+  "addedTrianglesAllLODs": 7917,
+  "all72SavedGLBsStructurallyRead": true,
+  "allOldV4BINBytesPreserved": true,
+  "noOldLandRaisedOrMoved": true,
+  "curtain346Included": false,
+  "sourceSeamIntervals": 1332,
+  "sampledCoverage": {
+    "samples": 11988,
+    "oldGapCoveredBySavedAppendGeometry": 9324,
+    "excludedWaterReservation": 675,
+    "alreadyCoveredByUnchangedOldGround": 1989
+  },
+  "sampledCoverageNotContinuousProof": true,
+  "actualRootHoleDiagnosticPairs": 3,
+  "allTenOriginalMaterialActualRootViewsReviewed": true,
+  "source350Own379IsPlaceholderNeverUsedForSeam": true,
+  "oldIonPlus030mConditionSupersededByTask348": true,
+  "task346CurtainStillUnderRedesign": true,
+  "effectiveMaskGetCartographicPointsAndRasterStillReceiverVerification": true,
+  "currentV5KTX2PortVerified": false,
+  "currentV5GameRuntimeVerified": false,
+  "currentV5DeviceMovingLODMemoryFPSVerified": false,
+  "waterGameShaderAnd221ContactsNotNewlyVerified": true,
+  "wholeCityHumanOwnerAccepted": false,
+  "ownerQualityGoalReached": false,
+  "createdAtUTC": "2026-10-16T04:25:48.063654+00:00"
+}

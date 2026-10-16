@@ -1,0 +1,18 @@
+{
+  "task": 347,
+  "sourceCanonicalNativeRound": 51,
+  "newCanonicalNativeRoundProduced": false,
+  "baseAcceptedV4Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-puut-v4",
+  "baseAcceptedV4ManifestSHA256": "8c1a1ecdf69f75d6fa5d74e9106d720ab374682588565ed5b9af9d74fbdc29cd",
+  "baseV4ReceiverFeedbackCommit": "e81e898fe5a7b3c9516dde0b3b9de60238ec94f0",
+  "baseV4TreeColorAcceptedScope": "receiver iPad A26BC7D0 t196-k4 13/18 tree color only",
+  "candidateSourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/seam-candidate2",
+  "candidateProofSHA256": "8f4337d6d5c4069e9c925aeb7bf6c6bba4b344bff5c282351b0e1cfbe0da5a69",
+  "allOldV4BINBytesMaterialsImagesPrimitivesNodesPreserved": true,
+  "oldSourceHeightsDEMOriginsAndGold303Preserved": true,
+  "noOldLandRaisedOrMoved": true,
+  "curtain346Included": false,
+  "hutong342TrialIncluded": false,
+  "masksAll12PartsByteExactToV4": true,
+  "createdAtUTC": "2026-10-16T04:25:48.063654+00:00"
+}
