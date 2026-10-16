@@ -426,3 +426,6 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 01.2x: siirto 6 **2e47edc13** SeikkailuTyrmaAanet (pohja 2D + ohikulun askeleet 3D) + uusi **SeikkailuKuulija.Pohja** (3D-pohjatehdas
   kuulokehyksessä; vanhat Lahde-kutsujat siirtyvät siihen yksi kerrallaan, Lahde poistetaan viimeisenä → SeikkailuKuulija pois listalta). Lista 26.
 - 01.2x: siirto 7 **36fa2f5a8** PalloAanimaisemaSoitin (kerta-äänet + omat silmukat, pallo; pohjan väistö pois, oppaan väistö tasossa). Lista 25.
+- 01.2x: **56e469f33** SaumatonSilmukka + AaniKaappaus vahdin apureiksi (AanipohjaVahti.Pohja, perustelu koodissa), pois listalta. Lista 23.
+  Haaran siirtoseppa/siirto-198-1 kärki 56e469f33 (fdfb5f6dd + 8 committia), Linssit 1935/1935, unity 0. PT:lle kerrottu; laitemittaus odottaa vuoroa.
+  Seuraavaksi: IhmisenMatka2Maisema (209), ElavaAaniPankki, RadioAanet, SeikkailuHistoria; SeikkailuKuulija-kutsujat SeikkailuKuulija.Pohjaan.
