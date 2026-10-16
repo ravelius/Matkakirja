@@ -519,8 +519,7 @@ export const RAAMATTU = {
           + 'vertailukuvat → rakentaja → arvioija → Valoseppä → kuvakierros → juna; VALMIIN MÄÄRITELMÄ (definition of done) = pohjan lopun tarkistuslista, paketti ei ole valmis ennen sitä; '
           + 'RETROSPEKTIIVI = jokaisen työn lopussa kirjattava "mikä toimi, mikä hidasti, mikä muuttuu pohjassa"; JATKUVA PARANTAMINEN (kaizen) = jokainen työ parantaa pohjaa; '
           + 'KULTAINEN POLKU (golden path) = pohjan oletustapa, poikkeaminen vain PT:n hyväksynnällä, ja poikkeama joko kirjataan uudeksi poluksi tai jätetään pois. '
-          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJAT UUSIEN ASIOIDEN RAKENTAMISELLE (16.10.2026 klo 23.41), #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJIEN SANASTO (16.10.2026 klo 23.58). '
-          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56); docs/raamattu-loki/paatokset-2026-09.md #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
+          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56), #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJAT UUSIEN ASIOIDEN RAKENTAMISELLE (16.10.2026 klo 23.41), #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJIEN SANASTO (16.10.2026 klo 23.58); docs/raamattu-loki/paatokset-2026-09.md #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
           + 'PANEELEILLE (14.10.2026 klo 23.34), #KARSINTA 7.1 ANIMAATIOPOIKKEUKSET 14.10.2026 '
           + '(14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: ANIMAATIOT ALLE 250 MS (14.10.2026 klo 22.55).',
         'TYÖSKENTELYTAVAT AINA RAAMATTUUN (omistaja 14.10.2026 klo 20.3x, SITOVA: "tällaiset työskentelytavat on todella tärkeä kirjata, koska muuten seuraava tili ei osaa käyttää tätä '
