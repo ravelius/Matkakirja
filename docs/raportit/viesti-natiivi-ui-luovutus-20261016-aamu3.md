@@ -24,6 +24,8 @@ SIMUT 123B4B25 + F7513985 ovat NUI:n käytössä lataus4-ketjuun asti → ilmoit
 - Levykierros: ~3,7 Gi (omat .app-kopiot, kelaus-196-worktree, 9 vanhaa todistuslokia). Kuitattu Postivahdille.
 
 ## JONO
+PT 10.3x: ENSIMMÄISEKSI latauskuvan 0738085fc kuvat → PT (JUNA 196 ODOTTAA TÄTÄ). Toiseksi vihjeiden säätö omistajan palautteen
+mukaan (kuvat ovat KK:lla; palaute PT:ltä). Kolmanneksi ISS-lasin vastaus.
 1) LATAUSKUVAN NIMI LUETTAVAKSI (PT 09.3x: iPhone vaakana "Andøyan" a haalistui liekin päälle; "Nimen pitää erottua kaikilla
    taustoilla ja kaikissa latauskuvissa"; pohjan omat keinot, ei uutta tyyliä) – junaan 196. Haara natiivi-ui/lataus-nimi-196:
    0bfc7340e Latauskuva.Luettava (kierroksen sumea varjo 14 px + 0,8 ääriviiva) EI NÄKYNYT (Kone-kirjasimessa ääriviiva ei piirry);
@@ -33,7 +35,9 @@ SIMUT 123B4B25 + F7513985 ovat NUI:n käytössä lataus4-ketjuun asti → ilmoit
    rajaus (natiivi-ui-ajot/rajaa.py kuva ulos 700 880 1900 1100): erottuuko a liekistä. Jos ei → seuraava pohjan keino: kaupunkikortin LIUSKA-nimivarjo (mk-liuska__nimivarjo,
    Kuviot.Pysty KorttiNimivarjo 0→0,85) nimen taakse kuvan alaosaan (AstronautinNakyma.NaytaRaketinKuva; museo, linna). Kuvat PT:lle
    (iPhone vaaka + iPad) → NS:lle "junaan 196 natiivi-ui/lataus-nimi-196 <sha>" (NS:lle sanottu: odota kuittausta).
-2) PT:n vastaukset ISS-lasiin (Pulun taulun rivit? kytkentä) ja vihjeiden karttapiirrokseen (juna 197) → toteuta.
+2) VIHJEIDEN SÄÄTÖ omistajan palautteen mukaan (karttapiirros natiivi-ui/vihjeet-kartta-197 6c1b03312, worktree
+   /Users/Shared/Claude/wt/proto-natiivi-ui-vihjeet-kartta-197; kuvat KK:lla, palaute PT:ltä) → uusi kuvapari PT:lle. Juna 197.
+3) PT:n vastaus ISS-lasiin (Pulun taulun rivit? kytkentä) → toteuta.
 
 ## Opit
 - Kone-kirjasimessa (mk-astroavaus__nimi) -unity-text-outline ei piirry; sumea iso varjo ei näy kirkkaalla taustalla.
