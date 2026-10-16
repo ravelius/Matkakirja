@@ -11,7 +11,7 @@ from shapely.ops import unary_union
 import rajat
 
 K = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ALUE = box(68, 12, 145, 58)
+ALUE = box(60, 12, 145, 58)
 maa = unary_union([shape(f['geometry']) for f in json.load(open(f'{K}/lahteet/ne/ne_50m_land.geojson'))['features']]).intersection(ALUE.buffer(5))
 joet = [shape(f['geometry']) for f in json.load(open(f'{K}/lahteet/ne/ne_50m_rivers_lake_centerlines.geojson'))['features']]
 joet = [j for j in joet if j.intersects(ALUE)]
@@ -50,7 +50,12 @@ def piirra(vuosi, vertailu=False, ax=None):
         for l in getattr(j, 'geoms', [j]):
             x, y = l.xy; ax.plot([a * KX for a in x], y, color='#7f9bb0', lw=0.6, alpha=0.8)
     for nimi, avain, tyyppi, g in al:
-        for p in polut(g): ax.add_patch(PathPatch(p, fc=rajat.VARIT[avain], ec='#3b2f25', lw=0.9, alpha=0.62))
+        for p in polut(g):
+            if tyyppi == 'protektoraatti':  # vaaleampi ja pisteviivoitettu
+                ax.add_patch(PathPatch(p, fc=rajat.VARIT[avain], ec='#3b2f25', lw=0.7, ls='--', alpha=0.3))
+                ax.add_patch(PathPatch(p, fc='none', ec='#3b2f25', hatch='..', lw=0.0, alpha=0.35))
+            else:
+                ax.add_patch(PathPatch(p, fc=rajat.VARIT[avain], ec='#3b2f25', lw=0.9, alpha=0.62))
         if avain in rajat.KOTISEUDUT:
             k = Polygon(rajat.KOTISEUDUT[avain]).intersection(maa)
             for p in polut(k): ax.add_patch(PathPatch(p, fc='none', ec='#3b2f25', hatch='////', lw=0.0, alpha=0.45))
@@ -62,7 +67,7 @@ def piirra(vuosi, vertailu=False, ax=None):
                 if abs(px - cx) < 4 and abs(py - cy) < 1.5:
                     p2 = g.intersection(box(px - 30, py - 30, px + 30, py - 1.8)).representative_point() if g.intersects(box(px - 30, py - 30, px + 30, py - 1.8)) else None
                     if p2 is not None and not p2.is_empty: cx, cy = p2.x, p2.y
-            ax.text(cx * KX, cy, nimi, ha='center', va='center', fontsize=15 if tyyppi == 'kiina' else 12,
+            ax.text(cx * KX, cy, nimi, ha='center', va='center', fontsize=15 if tyyppi == 'kiina' else 11 if tyyppi == 'protektoraatti' else 12,
                     fontweight='bold', color='#2b211a', family='serif')
     for kn in v['paakaupungit']:
         x, y = rajat.KAUPUNGIT[kn]
@@ -72,7 +77,7 @@ def piirra(vuosi, vertailu=False, ax=None):
         for f in d['features']:
             for p in polut(shape(f['geometry'])):
                 ax.add_patch(PathPatch(p, fc='none', ec='#222', lw=0.8, ls='--'))
-    ax.set_xlim(70 * KX, 142 * KX); ax.set_ylim(14, 56); ax.set_aspect('equal'); ax.set_xticks([]); ax.set_yticks([])
+    ax.set_xlim(64 * KX, 142 * KX); ax.set_ylim(14, 56); ax.set_aspect('equal'); ax.set_xticks([]); ax.set_yticks([])
     ax.set_title(v['otsikko'], fontsize=20, family='serif', loc='left')
     return al
 
