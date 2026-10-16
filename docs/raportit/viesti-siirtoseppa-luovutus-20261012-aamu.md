@@ -439,3 +439,7 @@ kun 9fa3b99f1 on juna-196:ssa).
   PallokisaOhjain, ShakkiNakyma, ElavaKaupunki, RakettiAanet, DioraamaAanet, KaupunkiAanimaisemaSoitin, OpasSovitin.
 - 01.4x: siirrot 13–15: **42e15a658** PalloKori (kerta-äänet), **4a079c1a7** Paljastus (aarremusiikki), **048f59c4f** AvaruuskavelyNakyma
   (tehosteet, hengitys, Pulu puhe-ryhmässä). Lista 14. Kärki 048f59c4f.
+- 02.0x: siirto 16 **d02d72c5f**: seikkailun 3D-lähteet (SeikkailuAanet, -Esineet, -Kappeli voudin askeleet, -Repliikit, -Vartijat) SeikkailuKuulija.Pohjaan,
+  vanha SeikkailuKuulija.Lahde poistettu. Lista 13. Linssit 1935/1935, unity 0, tarkista.sh 0. Opit: OlavinlinnaTekstitTestit ei tunnista
+  Pohja(...)-kutsun nimeä olion nimeksi → "// kieli: ei (äänilähteen olion nimi)". Jäljellä 13: AjattelijatSovitin, DioraamaAanet, ElavaKaupunki,
+  KaupunkiAanimaisemaSoitin, OpasSovitin, RakettiAanet, Aanisoitin, PallokisaOhjain, PeliKomennot, Puhe, PuluRealtime, UI/Aanet, ShakkiNakyma.
