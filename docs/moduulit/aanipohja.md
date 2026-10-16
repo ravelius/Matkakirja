@@ -13,7 +13,7 @@ tehdään vain pohjalla. Tämä on äänipohjan suunnitelma (Siirtoseppä). Tote
   itse ja häivyttää omalla tavallaan. Vain osa kuuntelee kertojaa omalla koodillaan (dioraama, kupoli, raketti,
   museo). Esimerkiksi museon askeleet ja sisäänmeno soivat kertojan päällä täysillä.
 
-## Pohja: `AaniPohja` + `PohjaLahde` (Linssit/Unity/Aanipohja/)
+## Pohja: `AaniPohja` + `PohjaLahde` (Linssit/Unity/AaniPohja.cs, ydin Linssit/Ydin/Aanet/Aanipohja.cs)
 
 1. **Luonti yhdellä kutsulla**: `AaniPohja.Lahde(isanta, ryhma, id, nimi, 3d: false)` luo AudioSourcen oletuksineen,
    rekisteröi äänen mikseriin (konteksti seuraa näkymää kuten nyt) ja palauttaa `PohjaLahde`-komponentin.
@@ -37,9 +37,9 @@ tehdään vain pohjalla. Tämä on äänipohjan suunnitelma (Siirtoseppä). Tote
 
 ## Vahti (automaattinen)
 
-- **Testi** `Linssit-testit/AanipohjaVahti`: lukee lähdekoodin ja listaa tiedostot, jotka kutsuvat
-  `AddComponent<AudioSource>` pohjan ulkopuolella. Nykyiset 34 ovat siirtolistalla
-  (`Aanipohja/siirtolista.txt`). Uusi tiedosto listan ulkopuolelta kaataa testin. Kun tiedosto on siirretty, se
+- **Testi** `AanipohjaTestit.LahdekoodiNoudattaaPohjaa`: lukee lähdekoodin ja listaa tiedostot, jotka kutsuvat
+  `AddComponent<AudioSource>` pohjan ulkopuolella. Vanhat 32 (34 miinus museon kaksi) ovat siirtolistalla
+  (`Linssit-testit/aanipohja-siirtolista.txt`). Uusi tiedosto listan ulkopuolelta kaataa testin. Kun tiedosto on siirretty, se
   poistetaan listalta; jos siirretty tiedosto palaa listalle, testi kaatuu.
 - **Ajonaikainen**: `ui aanet vahti` listaa lisäksi soivat AudioSourcet, joilla ei ole `PohjaLahdetta`.
 
