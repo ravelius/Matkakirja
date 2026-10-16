@@ -189,7 +189,9 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   assert.deepEqual(OPAS_AINEISTOT.esittely.slice(0, 6), ['pariisi', 'praha', 'wien', 'rooma', 'lontoo', 'koopenhamina']);
   // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v3:ssa (8.10. avaukseen pallovirke).
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
-  assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
+  // 16.10.: 7 pääkaupunkia saavat esittelyn ennen kuin ne avataan sallituiksi (Karttaseppä #4713); sallitut ∪ ODOTTAVAT = esittelyt.
+  const ODOTTAVAT = ['monaco', 'bern', 'belgrad', 'zagreb', 'bratislava', 'tirana', 'podgorica'];
+  assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), [...new Set([...OPAS_SALLITUT.sallitut.map((x) => x.id), ...ODOTTAVAT])].sort());
   // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta, v3c Stortorget (juna 183).
   // LS1 11.10.: Bryssel ja Firenze v2a (korkeus_m tornillisille rakennuksille, natiivin kierroksen esteet).
   const AANELLISET = { tukholma: 'opas/esittely-v3c/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
@@ -272,7 +274,9 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     islanti: 'esittely/islanti-v3/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
     sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json' });
   // Kaikki 37 esittelykaupunkia (6 äänellistä + 31 äänetöntä) saavat yksityiskohtakuvat.
-  assert.deepEqual(Object.keys(OPAS_AINEISTOT.yksityiskohdat_polut).sort(), [...OPAS_AINEISTOT.esittely].sort());
+  // 16.10.: 7 pääkaupungin esittelyillä ei ole vielä yksityiskohtaluetteloa eikä havainnekuvia (erillinen erä).
+  const ILMAN_YKSITYISKOHTIA = ['monaco', 'bern', 'belgrad', 'zagreb', 'bratislava', 'tirana', 'podgorica'];
+  assert.deepEqual(Object.keys(OPAS_AINEISTOT.yksityiskohdat_polut).sort(), [...OPAS_AINEISTOT.esittely].filter((x) => !ILMAN_YKSITYISKOHTIA.includes(x)).sort());
 });
 
 test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani_pcm- eikä kesto_s-kenttiä; R2:n ääni soi, jos on', async () => {
