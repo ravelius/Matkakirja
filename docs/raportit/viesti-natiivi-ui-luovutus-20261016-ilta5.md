@@ -55,6 +55,12 @@ todistus-vihjeet-heilunta-{ennen,jalkeen}-ipad-198-*. Vertaa, tee video/kuvapari
 (local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4) kääntää ja kuvaa itse; odota kuvat. Esittelyteksti nyt Tiedot.Lyhyt (pidempi = SK/PT).
 
 ## Muuta
+- SISÄLTÖKIRJURI 22.4x (#4736 main bb19c7dff): i-kortin aukot täytetty: lyhyt 64/64 + 51/51, 40 muotokuvaa (uusi paolo-veronese.jpg),
+  13 tekijää null (tyhjä ympyrä), rivien "huom"-kenttä ohitetaan. Tuo ikortti-haaraan samalla skriptillä kuin fc640b1bf
+  (Natiivi-UI:n scratchpad tuo_museo.py: git show origin/main:docs/kohtaukset/museoteokset/… → Resources/Museo/muotokuvat/ + .meta
+  kg.jpg.meta-pohjasta uudella guidilla, taiteilijat.json { kuva: "Museo/muotokuvat/<slug>" }, lyhyt_fi = faktat yhdistettynä); lisää
+  ranskan aliakset uudelleen (Tiziano "(ent. Giorgione)", "Rembrandt Harmensz. van Rijn", "Jean-Antoine Watteau",
+  "Anne-Louis Girodet de Roucy-Trioson") ja LAHTEET.md-rivi Veronesesta.
 - Sisältökirjurin #4733 kuvatekstit: alankomaat 3 korjattu (679e1e361 / 16d688e5f); ranskan teoksissa ei kuvateksti/kertoja-kenttiä.
 - Museo-nimi-197-kuvapari lähetetty ja hyväksytty (proto-3d/_tyo/natiivi-ui/pari-museo-nimi-197/, LUE.md).
 - Opit: aja Linssit-testit pohjasta (`git worktree add --detach`) ennen kuin päättelet, mitkä FAILit ovat omia; iPhone vaaka = matala
