@@ -56,3 +56,10 @@ Menetelmä: docs/kohtaukset/museoteokset/tyokalut/ohje-kohdat.txt (6 Sonnet-agen
 - **orsay-rf-2027**: museon_tietue oli null: Orsayn sivu löytyi hakutuloksesta https://www.musee-orsay.fr/en/artworks/clownesse-cha-u-kao-724 (403, tiedot tiivistelmästä; Joyant 1895 ja signeeraus sieltä). Nauha-peruukki ja peilimiehen arvailu Courtauldin sivun hakutiivistelmästä, ei suoraan avattu.
 - **orsay-rf-1975-19**: Orsayn sivu 403. Otava-väite Wikipediasta (Van Gogh katsoi lounaaseen); tähtien paikka (oikea yläkulma) arvioitu kuvasta. Keltaisen talon kävelymatka tuli hakutuloksen tiivistelmästä; ei vahvistettu Orsayn tekstistä, harkitse poistoa.
 - **orsay-rf-1951-42**: Orsayn sivu 403, väitteet hakutuloksen tiivistelmästä (ainoa maalaus kirkosta, kaksi polkua, hahmoteltu hahmo). Tornin ikä Wikipedia fr (valmis ennen 1170); Orsay antaa kirkolle 1200-luvun, ristiriita vältetty rajaamalla väite torniin.
+
+## Riippumaton tarkistus (Sisältökirjuri 17.10.2026, PT:n pyyntö)
+
+5 Sonnet-agenttia (omat haut, kuvapaikat Commons-kuvista) kävi läpi kaikki 152 ympyrää: 91 OK, 61 muutettu (52 teksti/otsikko, 9 pelkkä paikka; osassa molemmat). Ei poistoja: varmistumattomat väitteet korvattiin kuvasta nähtävällä tai lähteen sanamuodolla, jotta jokaisella teoksella säilyy 2–4 ympyrää. Muutetuille teksteille lisätty lähteet (title alkaa "Tarkistus:"). Tarkistettu: teksti 70–150, otsikko ≤ 32, etäisyys ≥ 0,12.
+
+Merkittävimmät: rf-1975-19 (Arles-ympyrän kävelymatka ja Otava rajattu Van Goghin kirjeeseen), Orsay 1984 ("suunnittelivat näyttelyä" ja karahvin sisältö pois), Louvre 4885 (Christien esityövaite pois), Louvre 142 (muusikoiden tunnistus perinteeksi), Orsay 1976 (Mérante-väite pois, Jules Perrot), Orsay 2738 (Renoir–Rivière-tarina pois), Louvre 71 (Giorgione-tunnistus attribuoitu), Louvre 3823/Orsay 1999/Louvre 3820 (paikkojen siirrot).
+Yhä heikommat: Orsayn sivut antoivat 403 (väitteet hakutiivistelmistä + Wikipedia); Louvre 3699 vaakuna ja Orsay 2027 Joyant-osto yhden lähteen varassa mutta attribuoitu. Koordinaatit tarkistettu Commons-kuvista; jos pelin kuva on rajattu eri tavalla, paikat katsottava uudelleen (Linssiseppä).
