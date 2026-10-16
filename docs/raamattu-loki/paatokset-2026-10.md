@@ -359,3 +359,13 @@ Omistajan ehdotus klo 23.35 (KK:n chat, sanatarkasti): "pitäisikö erityyppisil
 ## OMISTAJAN PÄÄTÖS: TUOTANTOPOHJIEN SANASTO (16.10.2026 klo 23.58)
 
 Omistaja klo 23.41 (KK:n chat, sanatarkasti): "nuo kaikki termit on hyvä ottaa käytäntöön ja kirjata ylös" (KK:n klo 23.38 luettelemat termit). Tuotantopohja = pelikirja (playbook) / vakiotoimintamalli (SOP); tuotantoputki (production pipeline) = tyypin vaiheketju rooleineen (esim. 3D-maamerkki: vertailukuvat → rakentaja → arvioija → Valoseppä → kuvakierros → juna); valmiin määritelmä (definition of done) = pohjan lopun tarkistuslista; retrospektiivi = työn lopussa "mikä toimi, mikä hidasti, mikä muuttuu pohjassa"; jatkuva parantaminen (kaizen) = jokainen työ parantaa pohjaa; kultainen polku (golden path) = pohjan oletustapa, poikkeama vain PT:n hyväksynnällä ja joko uudeksi poluksi tai pois. Termit käyttöön viesteissä, luovutuksissa ja Asemataululla.
+
+## OMISTAJAN PAATOKSET 17.10. YO: JULKAISU, KIINAN DYNASTIAT, KEHYS-KAARO (17.10.2026 klo 01.28)
+
+Klo 01.03 (omistaja, KK:n välittämä sanatarkasti): "Menen nukkumaan. Hyväksy kaikki puolestani ja yritä saada kaikki joko ensimmäiseen tai viimeistään toiseen junaan ja julkaise ne" = juna 197
+lukitaan ja julkaistaan heti ehtojen täytyttyä, tämän illan pyynnöt junaan 198 (kesken jäävä erä ei pidätä junaa), KK hyväksyy yön esikatselut omistajan puolesta. Klo 01.25 (sanatarkasti): "Pidä
+kiinan dynastiat työn alla niiden referenssi ideoittesi pohjalta ja yritä tehdä valmiiksi" = KK:n 16.10. referenssit pohjaksi (Kings and Generals -karttakerronta, Minardin 1869 virtausnuolet, valta
+leviää kuin muste, pääkaupunkien jäljet, viisi ratkaisevaa taistelua, muuri, Keltaisen joen uoma 1128 ja 1855, Suuri kanava, Silkkitie, Marco Polo, Zheng He, väestö, keksinnöt Eurooppaan; ulkoiset
+hallitsijat viileät, kiinalaiset lämpimät). UI-POHJAT, KK:n päätös yövaltuutuksella klo 01.3x: dynastian sinettileima tehdään olemassa olevalla iss-sinetti-leimapohjalla; uusi tyylikirjan pohja
+KEHYS-KÄÄRÖ (NUI tekee kertaalleen, myös muiden historialinssien käyttöön): vain ohuet puurullat ylä- ja alareunassa ja paperin reuna, ei koristeita, kartta näkyy kokonaan, avautuminen alle 250 ms.
+Jos käärö ei valmistu tai ei läpäise tarkistusta, linssi valmistuu lasipohjalla. Omistaja näkee kuvaparin (lasipohja | käärö) aamulla.
