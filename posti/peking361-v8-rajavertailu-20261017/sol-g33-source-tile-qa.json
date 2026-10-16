@@ -1,0 +1,1211 @@
+{
+  "status": "REJECT_DIRECT_PERIODIC_USE_APPEARANCE_REFERENCE_ONLY_NOT_BOUND_OR_APPROVED",
+  "createdUTC": "2026-10-16T21:33:26.816276+00:00",
+  "source": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g33.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "sha256": "3f850f72328a5faf7bb9b4908385199f303ea6ed50f9f6b4c05faa85370e4052",
+    "receiptMatches": true,
+    "originalNASFileCurrentlyMatches": true,
+    "originalAndCopyNeverEdited": true,
+    "nativeImagePersonallyInspected": true
+  },
+  "nativeVisualFindings": [
+    "Natural mineral/grain/edge variation is visibly richer than analytic flat rectangles; supports appearance-reference discussion, not automatic PBR approval.",
+    "Rows are near-horizontal with irregular/chipped joints; visually about10..11long stones across and29courses, different from prompt16x32.",
+    "Top/bottom repeat seam and variable boundary-column phase are not seamless; ordinary stone grain/dark features can be mistaken for grout."
+  ],
+  "periodicEligibility": {
+    "directRepeatRejected": true,
+    "reasons": [
+      "Top/bottom border differences are elevated and grout/stone phase does not close reliably.",
+      "Horizontal wrap yields short/long seam stones relative to ordinary interior stone widths.",
+      "Square physical sampling cannot simultaneously preserve the nominal.95x.50stone scale from this pixel aspect.",
+      "Prompt request for seamless16x32 courses is not measured source geometry."
+    ],
+    "seams": {
+      "top_bottom": {
+        "meanAbsRGB8": 31.68686868686869,
+        "RGB8Quantiles50_90_95_99": [
+          30.0,
+          61.0,
+          70.0,
+          88.0
+        ],
+        "interiorAdjacentMeanAbsRGB8": 12.828361321451588,
+        "interiorAdjacentQuantiles50_90_95_99": [
+          8.0,
+          27.0,
+          43.0,
+          83.0
+        ],
+        "meanSeamToOrdinaryAdjacencyRatio": 2.470063626433869
+      },
+      "left_right": {
+        "meanAbsRGB8": 12.237639553429027,
+        "RGB8Quantiles50_90_95_99": [
+          9.5,
+          25.0,
+          33.0,
+          48.0
+        ],
+        "interiorAdjacentMeanAbsRGB8": 9.27015609109111,
+        "interiorAdjacentQuantiles50_90_95_99": [
+          7.0,
+          19.0,
+          25.0,
+          46.0
+        ],
+        "meanSeamToOrdinaryAdjacencyRatio": 1.3201114882186025
+      }
+    }
+  },
+  "sourceGeometryEstimate": {
+    "highConfidenceHorizontalJointRowsY": [
+      40,
+      82,
+      125,
+      168,
+      211,
+      254,
+      297,
+      340,
+      384,
+      427,
+      470,
+      514,
+      557,
+      600,
+      643,
+      686,
+      729,
+      773,
+      816,
+      860,
+      903,
+      946,
+      989,
+      1032,
+      1075,
+      1118,
+      1161,
+      1205,
+      1248
+    ],
+    "courseCount": 29,
+    "cyclicCourseHeightQuantiles": [
+      42.0,
+      43.0,
+      46.0
+    ],
+    "strongVerticalJointCountsByCourseCount": {
+      "10": 15,
+      "11": 14
+    },
+    "ordinaryStoneWidthQuantiles10_50_90Px": [
+      117.0,
+      122.0,
+      126.5
+    ],
+    "ordinaryPixelAspectMedian": 2.8213716108452953,
+    "wrapStoneWidthQuantiles0_50_100Px": [
+      28.5,
+      150.0,
+      165.5
+    ],
+    "wrapWidthToOrdinaryMedianQuantiles0_50_100": [
+      0.23217922606924643,
+      1.236734693877551,
+      1.3621399176954732
+    ],
+    "physicalCalibrationFromMedian": {
+      "horizontalPeriodM": 9.764754098360655,
+      "verticalPeriodM": 14.5,
+      "mPerPixel": [
+        0.007786885245901639,
+        0.011562998405103669
+      ],
+      "meaning": "Illustrative calibration of ordinary median stone width and29courses. Not an approved seamless physical period. Direct wrap introduces short/long seam stones."
+    },
+    "physicalCalibrationFromCourseCounts": {
+      "meanStrongJointCount": 10.482758620689655,
+      "horizontalPeriodM": 9.958620689655172,
+      "verticalPeriodM": 14.5,
+      "meaning": "Alternative whole-course count calibration; counts alternate10/11 so no exact uniform stone period is established."
+    },
+    "courses": [
+      {
+        "course": 0,
+        "horizontalJointBeforeY": 40,
+        "horizontalJointAfterY": 82,
+        "cyclicHeightPixels": 42,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          86.5,
+          204.0,
+          326.5,
+          453.0,
+          576.5,
+          698.5,
+          819.0,
+          943.5,
+          1065.0,
+          1185.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          117.5,
+          122.5,
+          126.5,
+          123.5,
+          122.0,
+          120.5,
+          124.5,
+          121.5,
+          120.0
+        ],
+        "wrapStoneWidthPixels": 155.5,
+        "ordinaryMedianStoneWidthPixels": 122.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.2745901639344261
+      },
+      {
+        "course": 1,
+        "horizontalJointBeforeY": 82,
+        "horizontalJointAfterY": 125,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          32.0,
+          143.0,
+          268.5,
+          389.0,
+          512.0,
+          635.0,
+          752.0,
+          874.0,
+          998.5,
+          1118.5,
+          1245.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          111.0,
+          125.5,
+          120.5,
+          123.0,
+          123.0,
+          117.0,
+          122.0,
+          124.5,
+          120.0,
+          127.0
+        ],
+        "wrapStoneWidthPixels": 40.5,
+        "ordinaryMedianStoneWidthPixels": 122.5,
+        "wrapWidthDividedByOrdinaryMedian": 0.3306122448979592
+      },
+      {
+        "course": 2,
+        "horizontalJointBeforeY": 125,
+        "horizontalJointAfterY": 168,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          82.5,
+          204.5,
+          327.5,
+          443.5,
+          571.0,
+          694.0,
+          814.5,
+          940.5,
+          1056.0,
+          1181.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          122.0,
+          123.0,
+          116.0,
+          127.5,
+          123.0,
+          120.5,
+          126.0,
+          115.5,
+          125.0
+        ],
+        "wrapStoneWidthPixels": 155.5,
+        "ordinaryMedianStoneWidthPixels": 123.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.2642276422764227
+      },
+      {
+        "course": 3,
+        "horizontalJointBeforeY": 168,
+        "horizontalJointAfterY": 211,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          19.0,
+          142.0,
+          267.5,
+          386.5,
+          506.5,
+          629.5,
+          753.5,
+          871.5,
+          1001.5,
+          1120.5,
+          1241.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          123.0,
+          125.5,
+          119.0,
+          120.0,
+          123.0,
+          124.0,
+          118.0,
+          130.0,
+          119.0,
+          120.5
+        ],
+        "wrapStoneWidthPixels": 32.0,
+        "ordinaryMedianStoneWidthPixels": 121.75,
+        "wrapWidthDividedByOrdinaryMedian": 0.26283367556468173
+      },
+      {
+        "course": 4,
+        "horizontalJointBeforeY": 211,
+        "horizontalJointAfterY": 254,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          90.0,
+          206.0,
+          324.0,
+          447.5,
+          569.5,
+          691.0,
+          812.5,
+          932.0,
+          1054.0,
+          1178.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          116.0,
+          118.0,
+          123.5,
+          122.0,
+          121.5,
+          121.5,
+          119.5,
+          122.0,
+          124.5
+        ],
+        "wrapStoneWidthPixels": 165.5,
+        "ordinaryMedianStoneWidthPixels": 121.5,
+        "wrapWidthDividedByOrdinaryMedian": 1.3621399176954732
+      },
+      {
+        "course": 5,
+        "horizontalJointBeforeY": 254,
+        "horizontalJointAfterY": 297,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          17.0,
+          140.0,
+          263.5,
+          388.0,
+          510.0,
+          633.5,
+          754.5,
+          875.5,
+          998.0,
+          1116.5,
+          1242.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          123.0,
+          123.5,
+          124.5,
+          122.0,
+          123.5,
+          121.0,
+          121.0,
+          122.5,
+          118.5,
+          126.0
+        ],
+        "wrapStoneWidthPixels": 28.5,
+        "ordinaryMedianStoneWidthPixels": 122.75,
+        "wrapWidthDividedByOrdinaryMedian": 0.23217922606924643
+      },
+      {
+        "course": 6,
+        "horizontalJointBeforeY": 297,
+        "horizontalJointAfterY": 340,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          96.5,
+          211.0,
+          339.5,
+          454.5,
+          576.0,
+          692.5,
+          820.0,
+          941.0,
+          1064.5,
+          1193.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          114.5,
+          128.5,
+          115.0,
+          121.5,
+          116.5,
+          127.5,
+          121.0,
+          123.5,
+          129.0
+        ],
+        "wrapStoneWidthPixels": 157.0,
+        "ordinaryMedianStoneWidthPixels": 121.5,
+        "wrapWidthDividedByOrdinaryMedian": 1.2921810699588476
+      },
+      {
+        "course": 7,
+        "horizontalJointBeforeY": 340,
+        "horizontalJointAfterY": 384,
+        "cyclicHeightPixels": 44,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          26.5,
+          143.0,
+          264.0,
+          387.0,
+          508.5,
+          638.0,
+          759.5,
+          887.5,
+          1006.0,
+          1127.5,
+          1246.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          116.5,
+          121.0,
+          123.0,
+          121.5,
+          129.5,
+          121.5,
+          128.0,
+          118.5,
+          121.5,
+          119.0
+        ],
+        "wrapStoneWidthPixels": 34.0,
+        "ordinaryMedianStoneWidthPixels": 121.5,
+        "wrapWidthDividedByOrdinaryMedian": 0.27983539094650206
+      },
+      {
+        "course": 8,
+        "horizontalJointBeforeY": 384,
+        "horizontalJointAfterY": 427,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          85.5,
+          210.0,
+          333.0,
+          453.5,
+          578.0,
+          695.5,
+          812.0,
+          933.5,
+          1056.5,
+          1181.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          124.5,
+          123.0,
+          120.5,
+          124.5,
+          117.5,
+          116.5,
+          121.5,
+          123.0,
+          124.5
+        ],
+        "wrapStoneWidthPixels": 158.5,
+        "ordinaryMedianStoneWidthPixels": 123.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.2886178861788617
+      },
+      {
+        "course": 9,
+        "horizontalJointBeforeY": 427,
+        "horizontalJointAfterY": 470,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          25.5,
+          142.5,
+          269.0,
+          387.5,
+          510.5,
+          635.5,
+          756.5,
+          881.5,
+          1001.5,
+          1120.5,
+          1244.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          117.0,
+          126.5,
+          118.5,
+          123.0,
+          125.0,
+          121.0,
+          125.0,
+          120.0,
+          119.0,
+          123.5
+        ],
+        "wrapStoneWidthPixels": 35.5,
+        "ordinaryMedianStoneWidthPixels": 122.0,
+        "wrapWidthDividedByOrdinaryMedian": 0.29098360655737704
+      },
+      {
+        "course": 10,
+        "horizontalJointBeforeY": 470,
+        "horizontalJointAfterY": 514,
+        "cyclicHeightPixels": 44,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          87.5,
+          209.5,
+          332.5,
+          453.5,
+          578.0,
+          694.5,
+          816.5,
+          942.5,
+          1064.5,
+          1185.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          122.0,
+          123.0,
+          121.0,
+          124.5,
+          116.5,
+          122.0,
+          126.0,
+          122.0,
+          120.5
+        ],
+        "wrapStoneWidthPixels": 156.5,
+        "ordinaryMedianStoneWidthPixels": 122.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.2827868852459017
+      },
+      {
+        "course": 11,
+        "horizontalJointBeforeY": 514,
+        "horizontalJointAfterY": 557,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          25.5,
+          150.0,
+          273.0,
+          396.0,
+          514.0,
+          639.0,
+          760.5,
+          880.5,
+          1002.0,
+          1122.0,
+          1248.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          124.5,
+          123.0,
+          123.0,
+          118.0,
+          125.0,
+          121.5,
+          120.0,
+          121.5,
+          120.0,
+          126.5
+        ],
+        "wrapStoneWidthPixels": 31.0,
+        "ordinaryMedianStoneWidthPixels": 122.25,
+        "wrapWidthDividedByOrdinaryMedian": 0.25357873210633947
+      },
+      {
+        "course": 12,
+        "horizontalJointBeforeY": 557,
+        "horizontalJointAfterY": 600,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          87.5,
+          204.5,
+          326.5,
+          453.0,
+          576.5,
+          697.5,
+          816.5,
+          943.5,
+          1061.5,
+          1181.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          117.0,
+          122.0,
+          126.5,
+          123.5,
+          121.0,
+          119.0,
+          127.0,
+          118.0,
+          120.0
+        ],
+        "wrapStoneWidthPixels": 160.0,
+        "ordinaryMedianStoneWidthPixels": 121.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.322314049586777
+      },
+      {
+        "course": 13,
+        "horizontalJointBeforeY": 600,
+        "horizontalJointAfterY": 643,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          30.0,
+          147.0,
+          268.5,
+          389.0,
+          510.5,
+          633.5,
+          756.5,
+          875.0,
+          1002.0,
+          1119.5,
+          1247.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          117.0,
+          121.5,
+          120.5,
+          121.5,
+          123.0,
+          123.0,
+          118.5,
+          127.0,
+          117.5,
+          128.0
+        ],
+        "wrapStoneWidthPixels": 36.5,
+        "ordinaryMedianStoneWidthPixels": 121.5,
+        "wrapWidthDividedByOrdinaryMedian": 0.3004115226337449
+      },
+      {
+        "course": 14,
+        "horizontalJointBeforeY": 643,
+        "horizontalJointAfterY": 686,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          90.0,
+          209.0,
+          332.5,
+          453.5,
+          575.0,
+          695.0,
+          817.5,
+          934.5,
+          1060.0,
+          1181.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          119.0,
+          123.5,
+          121.0,
+          121.5,
+          120.0,
+          122.5,
+          117.0,
+          125.5,
+          121.0
+        ],
+        "wrapStoneWidthPixels": 163.0,
+        "ordinaryMedianStoneWidthPixels": 121.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.3471074380165289
+      },
+      {
+        "course": 15,
+        "horizontalJointBeforeY": 686,
+        "horizontalJointAfterY": 729,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          26.5,
+          147.0,
+          269.0,
+          392.5,
+          512.5,
+          642.5,
+          762.5,
+          883.5,
+          1007.0,
+          1130.5,
+          1246.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          120.5,
+          122.0,
+          123.5,
+          120.0,
+          130.0,
+          120.0,
+          121.0,
+          123.5,
+          123.5,
+          115.5
+        ],
+        "wrapStoneWidthPixels": 34.5,
+        "ordinaryMedianStoneWidthPixels": 121.5,
+        "wrapWidthDividedByOrdinaryMedian": 0.2839506172839506
+      },
+      {
+        "course": 16,
+        "horizontalJointBeforeY": 729,
+        "horizontalJointAfterY": 773,
+        "cyclicHeightPixels": 44,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          90.5,
+          218.0,
+          332.5,
+          458.0,
+          584.5,
+          699.5,
+          819.0,
+          943.5,
+          1062.5,
+          1182.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          127.5,
+          114.5,
+          125.5,
+          126.5,
+          115.0,
+          119.5,
+          124.5,
+          119.0,
+          119.5
+        ],
+        "wrapStoneWidthPixels": 162.5,
+        "ordinaryMedianStoneWidthPixels": 119.5,
+        "wrapWidthDividedByOrdinaryMedian": 1.3598326359832635
+      },
+      {
+        "course": 17,
+        "horizontalJointBeforeY": 773,
+        "horizontalJointAfterY": 816,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          28.5,
+          147.5,
+          276.5,
+          397.5,
+          516.5,
+          637.5,
+          763.5,
+          887.5,
+          1007.0,
+          1127.5,
+          1251.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          119.0,
+          129.0,
+          121.0,
+          119.0,
+          121.0,
+          126.0,
+          124.0,
+          119.5,
+          120.5,
+          123.5
+        ],
+        "wrapStoneWidthPixels": 31.5,
+        "ordinaryMedianStoneWidthPixels": 121.0,
+        "wrapWidthDividedByOrdinaryMedian": 0.2603305785123967
+      },
+      {
+        "course": 18,
+        "horizontalJointBeforeY": 816,
+        "horizontalJointAfterY": 860,
+        "cyclicHeightPixels": 44,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          81.0,
+          206.0,
+          328.5,
+          453.0,
+          577.5,
+          694.0,
+          818.5,
+          940.5,
+          1064.0,
+          1181.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          125.0,
+          122.5,
+          124.5,
+          124.5,
+          116.5,
+          124.5,
+          122.0,
+          123.5,
+          117.0
+        ],
+        "wrapStoneWidthPixels": 154.0,
+        "ordinaryMedianStoneWidthPixels": 123.5,
+        "wrapWidthDividedByOrdinaryMedian": 1.2469635627530364
+      },
+      {
+        "course": 19,
+        "horizontalJointBeforeY": 860,
+        "horizontalJointAfterY": 903,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          25.5,
+          146.5,
+          268.5,
+          392.0,
+          510.5,
+          640.5,
+          751.5,
+          874.0,
+          999.5,
+          1120.0,
+          1243.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          121.0,
+          122.0,
+          123.5,
+          118.5,
+          130.0,
+          111.0,
+          122.5,
+          125.5,
+          120.5,
+          123.0
+        ],
+        "wrapStoneWidthPixels": 36.5,
+        "ordinaryMedianStoneWidthPixels": 122.25,
+        "wrapWidthDividedByOrdinaryMedian": 0.2985685071574642
+      },
+      {
+        "course": 20,
+        "horizontalJointBeforeY": 903,
+        "horizontalJointAfterY": 946,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          90.0,
+          210.0,
+          334.5,
+          451.5,
+          579.0,
+          697.5,
+          814.5,
+          944.0,
+          1057.5,
+          1181.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          120.0,
+          124.5,
+          117.0,
+          127.5,
+          118.5,
+          117.0,
+          129.5,
+          113.5,
+          123.5
+        ],
+        "wrapStoneWidthPixels": 163.0,
+        "ordinaryMedianStoneWidthPixels": 120.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.3583333333333334
+      },
+      {
+        "course": 21,
+        "horizontalJointBeforeY": 946,
+        "horizontalJointAfterY": 989,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          33.5,
+          148.0,
+          273.5,
+          396.5,
+          515.5,
+          639.0,
+          762.5,
+          888.5,
+          1005.5,
+          1128.0,
+          1250.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          114.5,
+          125.5,
+          123.0,
+          119.0,
+          123.5,
+          123.5,
+          126.0,
+          117.0,
+          122.5,
+          122.5
+        ],
+        "wrapStoneWidthPixels": 37.0,
+        "ordinaryMedianStoneWidthPixels": 122.75,
+        "wrapWidthDividedByOrdinaryMedian": 0.3014256619144603
+      },
+      {
+        "course": 22,
+        "horizontalJointBeforeY": 989,
+        "horizontalJointAfterY": 1032,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          87.5,
+          209.0,
+          329.0,
+          454.0,
+          577.0,
+          694.0,
+          818.0,
+          940.5,
+          1064.0,
+          1177.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          121.5,
+          120.0,
+          125.0,
+          123.0,
+          117.0,
+          124.0,
+          122.5,
+          123.5,
+          113.0
+        ],
+        "wrapStoneWidthPixels": 164.5,
+        "ordinaryMedianStoneWidthPixels": 122.5,
+        "wrapWidthDividedByOrdinaryMedian": 1.3428571428571427
+      },
+      {
+        "course": 23,
+        "horizontalJointBeforeY": 1032,
+        "horizontalJointAfterY": 1075,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          22.5,
+          142.5,
+          265.5,
+          393.0,
+          510.0,
+          633.5,
+          757.0,
+          875.0,
+          999.0,
+          1121.5,
+          1241.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          120.0,
+          123.0,
+          127.5,
+          117.0,
+          123.5,
+          123.5,
+          118.0,
+          124.0,
+          122.5,
+          120.0
+        ],
+        "wrapStoneWidthPixels": 35.0,
+        "ordinaryMedianStoneWidthPixels": 122.75,
+        "wrapWidthDividedByOrdinaryMedian": 0.285132382892057
+      },
+      {
+        "course": 24,
+        "horizontalJointBeforeY": 1075,
+        "horizontalJointAfterY": 1118,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          82.0,
+          203.5,
+          326.5,
+          449.0,
+          572.5,
+          694.5,
+          814.5,
+          936.5,
+          1058.0,
+          1181.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          121.5,
+          123.0,
+          122.5,
+          123.5,
+          122.0,
+          120.0,
+          122.0,
+          121.5,
+          123.0
+        ],
+        "wrapStoneWidthPixels": 155.0,
+        "ordinaryMedianStoneWidthPixels": 122.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.2704918032786885
+      },
+      {
+        "course": 25,
+        "horizontalJointBeforeY": 1118,
+        "horizontalJointAfterY": 1161,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          28.5,
+          150.0,
+          273.5,
+          394.0,
+          515.5,
+          639.0,
+          762.5,
+          881.0,
+          1004.5,
+          1127.5,
+          1246.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          121.5,
+          123.5,
+          120.5,
+          121.5,
+          123.5,
+          123.5,
+          118.5,
+          123.5,
+          123.0,
+          119.0
+        ],
+        "wrapStoneWidthPixels": 36.0,
+        "ordinaryMedianStoneWidthPixels": 122.25,
+        "wrapWidthDividedByOrdinaryMedian": 0.294478527607362
+      },
+      {
+        "course": 26,
+        "horizontalJointBeforeY": 1161,
+        "horizontalJointAfterY": 1205,
+        "cyclicHeightPixels": 44,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          85.5,
+          213.0,
+          330.5,
+          450.5,
+          577.0,
+          696.5,
+          817.5,
+          940.5,
+          1061.5,
+          1189.5
+        ],
+        "ordinaryStoneWidthsPixels": [
+          127.5,
+          117.5,
+          120.0,
+          126.5,
+          119.5,
+          121.0,
+          123.0,
+          121.0,
+          128.0
+        ],
+        "wrapStoneWidthPixels": 150.0,
+        "ordinaryMedianStoneWidthPixels": 121.0,
+        "wrapWidthDividedByOrdinaryMedian": 1.2396694214876034
+      },
+      {
+        "course": 27,
+        "horizontalJointBeforeY": 1205,
+        "horizontalJointAfterY": 1248,
+        "cyclicHeightPixels": 43,
+        "strongVerticalJointCount": 11,
+        "strongJointCentersX": [
+          26.0,
+          144.0,
+          272.5,
+          394.5,
+          516.5,
+          641.5,
+          763.5,
+          887.0,
+          1007.0,
+          1130.5,
+          1245.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          118.0,
+          128.5,
+          122.0,
+          122.0,
+          125.0,
+          122.0,
+          123.5,
+          120.0,
+          123.5,
+          114.5
+        ],
+        "wrapStoneWidthPixels": 35.0,
+        "ordinaryMedianStoneWidthPixels": 122.0,
+        "wrapWidthDividedByOrdinaryMedian": 0.28688524590163933
+      },
+      {
+        "course": 28,
+        "horizontalJointBeforeY": 1248,
+        "horizontalJointAfterY": 40,
+        "cyclicHeightPixels": 46,
+        "strongVerticalJointCount": 10,
+        "strongJointCentersX": [
+          34.5,
+          146.5,
+          270.5,
+          392.5,
+          515.0,
+          643.0,
+          762.5,
+          886.5,
+          1008.5,
+          1137.0
+        ],
+        "ordinaryStoneWidthsPixels": [
+          112.0,
+          124.0,
+          122.0,
+          122.5,
+          128.0,
+          119.5,
+          124.0,
+          122.0,
+          128.5
+        ],
+        "wrapStoneWidthPixels": 151.5,
+        "ordinaryMedianStoneWidthPixels": 122.5,
+        "wrapWidthDividedByOrdinaryMedian": 1.236734693877551
+      }
+    ],
+    "confidence": "29course bands and10/11strong vertical joints are stable across .55/.70/.80 row-persistence thresholds; exact chipped mortar segmentation is unverified. Topmostdarkline is an image-border artifact candidate and excluded from stronghorizontal-band count."
+  },
+  "segmentation": {
+    "runtimeLibraries": {
+      "numpy": true,
+      "PIL": true,
+      "scipy": false,
+      "cv2": false,
+      "skimage": false,
+      "noInstalls": true
+    },
+    "method": "Luma; GaussianBlur3 minus luma dark residual; luma<155 for binary-mask trials; periodic closing MaxFilter/MinFilter3or5; connected white components via scanline-run union-find with top/bottom and left/right wrap joins. All masks/components exist in memory only; no RGB image or asset was changed.",
+    "experiments": [
+      {
+        "darkResidualThreshold": 8,
+        "closeKernel": 3,
+        "mortarFraction": 0.3649832497729753,
+        "componentCount": 4274,
+        "stoneSizedComponents1000To12000px": 274,
+        "mergedComponentsAbove12000px": 0,
+        "maxComponentAreaPx": 7140
+      },
+      {
+        "darkResidualThreshold": 12,
+        "closeKernel": 3,
+        "mortarFraction": 0.21276413085781004,
+        "componentCount": 680,
+        "stoneSizedComponents1000To12000px": 249,
+        "mergedComponentsAbove12000px": 6,
+        "maxComponentAreaPx": 25963
+      },
+      {
+        "darkResidualThreshold": 16,
+        "closeKernel": 3,
+        "mortarFraction": 0.12856721330657367,
+        "componentCount": 222,
+        "stoneSizedComponents1000To12000px": 148,
+        "mergedComponentsAbove12000px": 27,
+        "maxComponentAreaPx": 37492
+      },
+      {
+        "darkResidualThreshold": 12,
+        "closeKernel": 5,
+        "mortarFraction": 0.41071251421289195,
+        "componentCount": 3603,
+        "stoneSizedComponents1000To12000px": 252,
+        "mergedComponentsAbove12000px": 0,
+        "maxComponentAreaPx": 4741
+      }
+    ],
+    "conclusion": "Naive adaptive dark-mortar thresholding is not reliable: grain breaks stones at low thresholds and broken joints merge stones at high thresholds. Torus merging does not cure nonperiodic source geometry and can falsely join unrelated boundary stones.",
+    "feasibleNext": "Row-aware high-confidence grout seeds and persistent vertical-joint seeds could guide an image-registered segmentation; uncertain gaps require review. Closed-component filling is acceptable for analysis masks only. No segmentation labels are accepted here.",
+    "doNotReuseOldAnalyticCellMasks": true
+  },
+  "registeredPBR": {
+    "normal": "Use only validated G33 mortar/stone boundaries for artistic height/bevel normal inference; match all map and collar UV coordinates. RGB grain/dark marks do not prove geometric height; avoid deriving full height from brightness.",
+    "roughness": "Use same validated labels for modest per-stone/mortar roughness; roughness values remain inferred, not measured from this single RGB image.",
+    "wholeCellMix": "A whole-stone mix mask must use G33 registered wrapped labels only after seam/label issues are solved. C7 analytic31/32/33column masks do not match this network and would cut source stones.",
+    "approval": "No normal/MR map, mesh binding, component mask or whole-cell transition approved or authored."
+  },
+  "nextOptions": [
+    "Share the immutable image as an appearance-reference candidate with exact measured seam/count caveats; no ready3Dasset claim.",
+    "If pursuing G33 donors, investigate UV resynthesis/registered per-stone donors read from source without direct image wrap; a newly derived complete material recipe and all registered maps would need independent validation. This is a proposal only.",
+    "If direct periodic input is required, request another complete generation with verified course/edge phase and scale; preserve G33 unchanged.",
+    "Do not partially repair/repaint original G33 or bind old analytic normals/MR/masks to it."
+  ],
+  "sourcePins": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g33.png",
+      "bytes": 3668173,
+      "sha256": "3f850f72328a5faf7bb9b4908385199f303ea6ed50f9f6b4c05faa85370e4052"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g33-prompt.json",
+      "bytes": 1879,
+      "sha256": "4777232813c740bbbb2c0412b06b5756010dbfe327b1d9086fc9a2d0a04a28c0"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g33-receipt.json",
+      "bytes": 1010,
+      "sha256": "94925bc98aac228c472a89f5247ada8d38968f514fd85876df9989f707b1d72c"
+    }
+  ],
+  "execution": "Only this authorized MD/JSON pair written via external wrapper. No asset editing, rendering, image generation, Git, receiver messages or delegation."
+}

@@ -1,0 +1,1934 @@
+{
+  "status": "V8_PERIODIC7_ACTUAL_IMPORT_AMBIENT_DIAGNOSTICS_COMPLETE",
+  "frames": [
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "ilma",
+      "file": "ambient-diagnostic-ilma.png",
+      "sha256": "877faab92e5683b16b0995d304bfb981eda22b2eac42d32c9deda95a13ba8c69",
+      "seconds": 2.5967998749692924,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "taihedian",
+      "file": "ambient-diagnostic-taihedian.png",
+      "sha256": "dae4cb291662c92c6318b8f7f6d63f63913898f590a95687685df3b3f3f310d0",
+      "seconds": 1.6495115829748102,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "aukio",
+      "file": "ambient-diagnostic-aukio.png",
+      "sha256": "0f92e6a13e70a423536577630bb984ac4903e5d1e65cfca0bebc03f22792e3a1",
+      "seconds": 1.6876963749527931,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "beihai",
+      "file": "ambient-diagnostic-beihai.png",
+      "sha256": "095b239cad7c06c8a7927c74aa4183bbd0d8c7ba404a124c297094f780a019b4",
+      "seconds": 1.7971845419961028,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "jingshan",
+      "file": "ambient-diagnostic-jingshan.png",
+      "sha256": "446e7c78d31bb00b22fea402ad13f144112b4c71c4a3ec8d1bf864d7bf251560",
+      "seconds": 1.7929173749871552,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "hutong_ilma",
+      "file": "ambient-diagnostic-hutong_ilma.png",
+      "sha256": "94db28e7632dec0042b3c31acd86ce9b80d80e29baafe388a0932273e4134c26",
+      "seconds": 1.7058257079916075,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "boundary-wide",
+      "file": "ambient-diagnostic-boundary-wide.png",
+      "sha256": "1e05c9a06187b6ca7fc792bb5335ed85f22ad35a516c670bf0ed0772b3c35472",
+      "seconds": 1.8437551670358516,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "boundary-close",
+      "file": "ambient-diagnostic-boundary-close.png",
+      "sha256": "9ab372286809faa787382686ec3bf20b5d87957e38320982ef62c34d1ec30bc9",
+      "seconds": 1.5473679170245305,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "boundary-side",
+      "file": "ambient-diagnostic-boundary-side.png",
+      "sha256": "84a680641baafed164f4a81c7faeaf1e6a06d5c7a8b852f40544bb3415ae5c9a",
+      "seconds": 1.5337910000234842,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "north-boundary",
+      "file": "ambient-diagnostic-north-boundary.png",
+      "sha256": "114b6ddf714b64c39c7aeca9d99f5759db4ce9ff37ad1bd4642de1265aa62f63",
+      "seconds": 1.569701750006061,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "south-boundary",
+      "file": "ambient-diagnostic-south-boundary.png",
+      "sha256": "e6d05a89be4eab3acbd46a19223b60f45f86c453f280b903a8b3066fcdd46b0f",
+      "seconds": 3.328437042015139,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "northwest-corner",
+      "file": "ambient-diagnostic-northwest-corner.png",
+      "sha256": "e41bf0916488bf4eb69026d08d16bc2814499f6fe5bc5c5d92651bc7461c0356",
+      "seconds": 1.6512608750490472,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "southwest-corner",
+      "file": "ambient-diagnostic-southwest-corner.png",
+      "sha256": "7b1dee6cc20fd94c46c8695b52d7563a675e33f5d63e5041dee2c04a10da0428",
+      "seconds": 1.580877749947831,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "paving-top-repeat",
+      "file": "ambient-diagnostic-paving-top-repeat.png",
+      "sha256": "9c7e1f1a41f3f89deddcd0381e32b119ea5e6a3e0efe53e0a747be5cc39b6d70",
+      "seconds": 1.5759390000021085,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "interior-regression",
+      "file": "ambient-diagnostic-interior-regression.png",
+      "sha256": "7c4001beab04cd957abd73cb0346c1c1ad18642946172af5c7edb3ed02a6b7f5",
+      "seconds": 1.7298745830194093,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "ilma",
+      "file": "ambient-diagnostic-ilma.png",
+      "sha256": "72a289dbe797aebdfe91ee9379efff77abce159b672cff7efa5abe7ca098903d",
+      "seconds": 2.2637844170094468,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "taihedian",
+      "file": "ambient-diagnostic-taihedian.png",
+      "sha256": "e43d9f824b038377cf6f91ae19e4ce964d1b758bf52bc25e50a37ca6d1fd4dfb",
+      "seconds": 1.6250345830339938,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "aukio",
+      "file": "ambient-diagnostic-aukio.png",
+      "sha256": "f3b920105cc3f6d5133221124922109e2af691d15bfcdbd7b828d9b55704aba6",
+      "seconds": 1.5671040409943089,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "beihai",
+      "file": "ambient-diagnostic-beihai.png",
+      "sha256": "3033517bbf73bb635cd6c4fc5f11f7c8406152f85806d68b57d827c979305c86",
+      "seconds": 1.611957207962405,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "jingshan",
+      "file": "ambient-diagnostic-jingshan.png",
+      "sha256": "98828df7cf4718a387f225c3047208afcb14db2e4c5a5392b9852c8593adf5c6",
+      "seconds": 1.7899892079876736,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "hutong_ilma",
+      "file": "ambient-diagnostic-hutong_ilma.png",
+      "sha256": "f4b0ae5c5d6a561ae6ef7bf7205785ce5800f3f800c8368a3ef03dcc6611ae59",
+      "seconds": 1.6945281670195982,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "boundary-wide",
+      "file": "ambient-diagnostic-boundary-wide.png",
+      "sha256": "87d0adf4e871ce3fb66ad3c13b80c9851f93bbc7bf075f8940923cda670bd03f",
+      "seconds": 1.5995094579993747,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "boundary-close",
+      "file": "ambient-diagnostic-boundary-close.png",
+      "sha256": "6a6ca208136147224e7e7175277570c8e4bbe9815c3b71d4a9771361674701ee",
+      "seconds": 1.5827457080013119,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "boundary-side",
+      "file": "ambient-diagnostic-boundary-side.png",
+      "sha256": "bc4d4cbaacddc1253d8fded867e4613222161b649cce4e4f9a538d6d31aee194",
+      "seconds": 1.632243833038956,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "north-boundary",
+      "file": "ambient-diagnostic-north-boundary.png",
+      "sha256": "e84c89c0f7fdfd84ce4f280410884e88ce70a557c923100bbe32271ebafd9a35",
+      "seconds": 1.6636249580187723,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "south-boundary",
+      "file": "ambient-diagnostic-south-boundary.png",
+      "sha256": "563eb1859bfe444f5217859c0e9822e2be394d7f4d536bd54e5b4200497f353a",
+      "seconds": 1.6012174999923445,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "northwest-corner",
+      "file": "ambient-diagnostic-northwest-corner.png",
+      "sha256": "f2670545a8e17e1e70a8d8d43cb6c8405a93cd1f711f9f5efbda3cf54f817d72",
+      "seconds": 1.7600460830144584,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "southwest-corner",
+      "file": "ambient-diagnostic-southwest-corner.png",
+      "sha256": "603a71ad624943a8bbcd66c06b841baea16e33e5e3056c5e8fd682e3d42a1998",
+      "seconds": 1.7111794580123387,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "paving-top-repeat",
+      "file": "ambient-diagnostic-paving-top-repeat.png",
+      "sha256": "8e6b3b09e4b8761661ca6f728703fe41468ead9703fecaa158ec826d5a33f8a1",
+      "seconds": 1.7210126670543104,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "interior-regression",
+      "file": "ambient-diagnostic-interior-regression.png",
+      "sha256": "6d2524b60d0d073edea20ff0158e3bc0e5f594daa4e4d945526e0ff897fdef77",
+      "seconds": 1.7406353750266135,
+      "resolution": [
+        1600,
+        900
+      ]
+    }
+  ],
+  "imports": [
+    {
+      "stage": "before-v7",
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "6e4f06070b1c9d030d7d07cbd8c259537234f520872fdd668738ff009222bdec",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.28503637713255797,
+          -0.340870829088273,
+          -2177134.523316276
+        ],
+        [
+          -0.444340700827845,
+          -0.574676333123376,
+          0.6872470107142629,
+          4389431.612772191
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "bf687f20d346e193824ed613e83e42ce5974a3e2368c6fd2202aeee998c653b4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2850631670438187,
+          -0.34084842556058315,
+          -2176991.9977017995
+        ],
+        [
+          -0.444340700827845,
+          -0.5747303456256498,
+          0.6872018418229398,
+          4389144.259633875
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "a2e1d3b5691f146a54feed7e24861e883c6c5c89332fbbdd5a549cb468161d88",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2850899551347028,
+          -0.3408260199771631,
+          -2176849.458898259
+        ],
+        [
+          -0.444340700827845,
+          -0.5747843544577699,
+          0.6871566687869545,
+          4388856.8799044145
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "1ba6b8db2fd8b0c484211fc51d936f3b5beeba95c3eb4d59eb81d26f0232e50a",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2851167415240195,
+          -0.34080361223864086,
+          -2176706.906273448
+        ],
+        [
+          -0.444340700827845,
+          -0.5748383598592735,
+          0.6871114914059582,
+          4388569.472309189
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "4ae9c9bbf3f29f86f1dfb746b28536d31b72125a981b63e0c7b6bcd2a8dbd3d5",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2851435261521141,
+          -0.3407812023949077,
+          -2176564.340144739
+        ],
+        [
+          -0.444340700827845,
+          -0.5748923617098874,
+          0.687066309780539,
+          4388282.037488068
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "b0ade05cbe4cc3902ae119452f3a9bee723f5c1d6ac0bc199bd9b3a01fd51fe0",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2851703089593475,
+          -0.34075879049587376,
+          -2176421.7608296247
+        ],
+        [
+          -0.444340700827845,
+          -0.5749463598893705,
+          0.6870211240113233,
+          4387994.576081166
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "aa9c46dbff78adcb62d820f38e8ed56c54aa7a982bc281457466a375e93c085d",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28510089688404167,
+          -0.3409479873141881,
+          -2177627.3312161095
+        ],
+        [
+          -0.4444412801008483,
+          -0.5746443271597643,
+          0.6872087352511034,
+          4389187.148226887
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "fa85f39dddcca6053fa48943a700347f079efcfc061f5f28c02377edb5c45811",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.2851276928593649,
+          -0.3409255787153208,
+          -2177484.7733400767
+        ],
+        [
+          -0.4444412801008483,
+          -0.5746983366538715,
+          0.6871635688754117,
+          4388899.811092387
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "3e7d7a7f61efa76ca17481fcb531b74d804e31d1c349f1f2b2c9a030eb17108b",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.2851544870138995,
+          -0.34090316806025805,
+          -2177342.2022719937
+        ],
+        [
+          -0.4444412801008483,
+          -0.5747523424780294,
+          0.6871183983552889,
+          4388612.447368223
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "85f4e2a4adcea4c8c0cc4f2fa7604fb7c4d507636b8cf7f7bd4dadbba444fab4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28518127946648153,
+          -0.34088075524960526,
+          -2177199.617379512
+        ],
+        [
+          -0.4444412801008483,
+          -0.5748063448717617,
+          0.6870732234903968,
+          4388325.055779845
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "0890cb821a84e0548167e86312d342c3887f077f11f566738b5c7a399f5ed6b4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28520807015744276,
+          -0.34085834033326495,
+          -2177057.018980076
+        ],
+        [
+          -0.4444412801008483,
+          -0.5748603437148022,
+          0.6870280443813183,
+          4388037.63696709
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28523485902713064,
+          -0.3408359233611587,
+          -2176914.40739125
+        ],
+        [
+          -0.4444412801008483,
+          -0.5749143388869165,
+          0.6869828611286742,
+          4387750.191570033
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "71a6a7ae099021430336cc99f3549518744b32553f032b842a08bb066e1f9660",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.28516541304166204,
+          -0.3410251412422547,
+          -2178120.111665679
+        ],
+        [
+          -0.4445418537714098,
+          -0.5746123139524261,
+          0.6871704511252772,
+          4388942.62835332
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "d1c746bee22e99049ce22bb3b203e417bd56b8d4db8c61ecf38c677e7504fc95",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.28519221508071,
+          -0.3410027275724925,
+          -2177977.521529887
+        ],
+        [
+          -0.4445418537714098,
+          -0.5746663204376858,
+          0.6871252872657865,
+          4388655.307226258
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "0f5ed9c51b3b6c5c4428c72ec92d914ed4e2cd1e941824a1e8884c716e44c8d4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.2852190152985574,
+          -0.3409803118460695,
+          -2177834.9181990586
+        ],
+        [
+          -0.4445418537714098,
+          -0.5747203232532007,
+          0.6870801192620953,
+          4388367.959511014
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-glb-candidate6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.28524581381406705,
+          -0.3409578939635686,
+          -2177692.301040704
+        ],
+        [
+          -0.4445418537714098,
+          -0.574774322638481,
+          0.687034946913877,
+          4388080.583933108
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "7ebfea65f9d4a625e6a2363d42f59e76a8d169dff38abd0b72b8b72dc18433e6",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.2852726105675572,
+          -0.3409354739749038,
+          -2177549.670372338
+        ],
+        [
+          -0.4445418537714098,
+          -0.5748283184732674,
+          0.6869897703217088,
+          4387793.18113234
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "936e0a1f7fc37109a5ed1dd9036656ee09f70354e8a00001c9baa1a509367d84",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.2852994054993619,
+          -0.3409130519300078,
+          -2177407.026511598
+        ],
+        [
+          -0.4445418537714098,
+          -0.574882310637332,
+          0.6869445895862057,
+          4387505.751748752
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "726d58d14d48fc6b19d16baee390733608ea897b1602a74089ed84b956eaa52f",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.2852299256046064,
+          -0.3411022908715009,
+          -2178612.8646587767
+        ],
+        [
+          -0.44464242183826247,
+          -0.5745802935017645,
+          0.6871321583372668,
+          4388698.053154574
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "ecd644a0f93aab37a0446fdb195855f1fef1e28bbd9327f0e0fc0128ceeb34eb",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.28525673370704135,
+          -0.3410798721311263,
+          -2178470.2422650224
+        ],
+        [
+          -0.44464242183826247,
+          -0.574634296977496,
+          0.6870869969945462,
+          4388410.74803857
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "894319d2fd32684fe178427296d4673b6081dc82861fa47c0ab1b1f7dc469277",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.2852835399878636,
+          -0.3410574513336256,
+          -2178327.606673247
+        ],
+        [
+          -0.44464242183826247,
+          -0.574688296783687,
+          0.6870418315078562,
+          4388123.416335867
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "35700ee27e7ba7c6c1491b5976ab49a99452ff3e7cf68381d265c6eb465d114b",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.285310344565963,
+          -0.3410350283795593,
+          -2178184.9572508167
+        ],
+        [
+          -0.44464242183826247,
+          -0.5747422931598348,
+          0.6869966616768812,
+          4387836.056772055
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "c64abf98c866aaac92e59435656e2502a9594c75cb22cf3eb6067e15f09b4c76",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.28533714738164434,
+          -0.3410126033188526,
+          -2178042.294315319
+        ],
+        [
+          -0.44464242183826247,
+          -0.5747962859856866,
+          0.6869514876021926,
+          4387548.669986898
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "before-v7",
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.28536394837522805,
+          -0.34099017620144945,
+          -2177899.6181844627
+        ],
+        [
+          -0.44464242183826247,
+          -0.5748502751410209,
+          0.6869063093844002,
+          4387261.256620402
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "6e4f06070b1c9d030d7d07cbd8c259537234f520872fdd668738ff009222bdec",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.28503637713255797,
+          -0.340870829088273,
+          -2177134.523316276
+        ],
+        [
+          -0.444340700827845,
+          -0.574676333123376,
+          0.6872470107142629,
+          4389431.612772191
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "bf687f20d346e193824ed613e83e42ce5974a3e2368c6fd2202aeee998c653b4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2850631670438187,
+          -0.34084842556058315,
+          -2176991.9977017995
+        ],
+        [
+          -0.444340700827845,
+          -0.5747303456256498,
+          0.6872018418229398,
+          4389144.259633875
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "a2e1d3b5691f146a54feed7e24861e883c6c5c89332fbbdd5a549cb468161d88",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2850899551347028,
+          -0.3408260199771631,
+          -2176849.458898259
+        ],
+        [
+          -0.444340700827845,
+          -0.5747843544577699,
+          0.6871566687869545,
+          4388856.8799044145
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "1ba6b8db2fd8b0c484211fc51d936f3b5beeba95c3eb4d59eb81d26f0232e50a",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2851167415240195,
+          -0.34080361223864086,
+          -2176706.906273448
+        ],
+        [
+          -0.444340700827845,
+          -0.5748383598592735,
+          0.6871114914059582,
+          4388569.472309189
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "4ae9c9bbf3f29f86f1dfb746b28536d31b72125a981b63e0c7b6bcd2a8dbd3d5",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2851435261521141,
+          -0.3407812023949077,
+          -2176564.340144739
+        ],
+        [
+          -0.444340700827845,
+          -0.5748923617098874,
+          0.687066309780539,
+          4388282.037488068
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "b0ade05cbe4cc3902ae119452f3a9bee723f5c1d6ac0bc199bd9b3a01fd51fe0",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.89585788023984,
+          0.2851703089593475,
+          -0.34075879049587376,
+          -2176421.7608296247
+        ],
+        [
+          -0.444340700827845,
+          -0.5749463598893705,
+          0.6870211240113233,
+          4387994.576081166
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "aa9c46dbff78adcb62d820f38e8ed56c54aa7a982bc281457466a375e93c085d",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28510089688404167,
+          -0.3409479873141881,
+          -2177627.3312161095
+        ],
+        [
+          -0.4444412801008483,
+          -0.5746443271597643,
+          0.6872087352511034,
+          4389187.148226887
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "fa85f39dddcca6053fa48943a700347f079efcfc061f5f28c02377edb5c45811",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.2851276928593649,
+          -0.3409255787153208,
+          -2177484.7733400767
+        ],
+        [
+          -0.4444412801008483,
+          -0.5746983366538715,
+          0.6871635688754117,
+          4388899.811092387
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "3e7d7a7f61efa76ca17481fcb531b74d804e31d1c349f1f2b2c9a030eb17108b",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.2851544870138995,
+          -0.34090316806025805,
+          -2177342.2022719937
+        ],
+        [
+          -0.4444412801008483,
+          -0.5747523424780294,
+          0.6871183983552889,
+          4388612.447368223
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "85f4e2a4adcea4c8c0cc4f2fa7604fb7c4d507636b8cf7f7bd4dadbba444fab4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28518127946648153,
+          -0.34088075524960526,
+          -2177199.617379512
+        ],
+        [
+          -0.4444412801008483,
+          -0.5748063448717617,
+          0.6870732234903968,
+          4388325.055779845
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "0890cb821a84e0548167e86312d342c3887f077f11f566738b5c7a399f5ed6b4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28520807015744276,
+          -0.34085834033326495,
+          -2177057.018980076
+        ],
+        [
+          -0.4444412801008483,
+          -0.5748603437148022,
+          0.6870280443813183,
+          4388037.63696709
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8958079864247245,
+          0.28523485902713064,
+          -0.3408359233611587,
+          -2176914.40739125
+        ],
+        [
+          -0.4444412801008483,
+          -0.5749143388869165,
+          0.6869828611286742,
+          4387750.191570033
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "71a6a7ae099021430336cc99f3549518744b32553f032b842a08bb066e1f9660",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.28516541304166204,
+          -0.3410251412422547,
+          -2178120.111665679
+        ],
+        [
+          -0.4445418537714098,
+          -0.5746123139524261,
+          0.6871704511252772,
+          4388942.62835332
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "d1c746bee22e99049ce22bb3b203e417bd56b8d4db8c61ecf38c677e7504fc95",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.28519221508071,
+          -0.3410027275724925,
+          -2177977.521529887
+        ],
+        [
+          -0.4445418537714098,
+          -0.5746663204376858,
+          0.6871252872657865,
+          4388655.307226258
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "0f5ed9c51b3b6c5c4428c72ec92d914ed4e2cd1e941824a1e8884c716e44c8d4",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.2852190152985574,
+          -0.3409803118460695,
+          -2177834.9181990586
+        ],
+        [
+          -0.4445418537714098,
+          -0.5747203232532007,
+          0.6870801192620953,
+          4388367.959511014
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "7e7b3fecd883dc26db4212d3eb695c478b31c6300bbdfa33d9f866a4ef4afd6b",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.28524581381406705,
+          -0.3409578939635686,
+          -2177692.301040704
+        ],
+        [
+          -0.4445418537714098,
+          -0.574774322638481,
+          0.687034946913877,
+          4388080.583933108
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "7ebfea65f9d4a625e6a2363d42f59e76a8d169dff38abd0b72b8b72dc18433e6",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.2852726105675572,
+          -0.3409354739749038,
+          -2177549.670372338
+        ],
+        [
+          -0.4445418537714098,
+          -0.5748283184732674,
+          0.6869897703217088,
+          4387793.18113234
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "936e0a1f7fc37109a5ed1dd9036656ee09f70354e8a00001c9baa1a509367d84",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.8957580813174272,
+          0.2852994054993619,
+          -0.3409130519300078,
+          -2177407.026511598
+        ],
+        [
+          -0.4445418537714098,
+          -0.574882310637332,
+          0.6869445895862057,
+          4387505.751748752
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "726d58d14d48fc6b19d16baee390733608ea897b1602a74089ed84b956eaa52f",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.2852299256046064,
+          -0.3411022908715009,
+          -2178612.8646587767
+        ],
+        [
+          -0.44464242183826247,
+          -0.5745802935017645,
+          0.6871321583372668,
+          4388698.053154574
+        ],
+        [
+          0.0,
+          0.767138433308498,
+          0.6414815851924225,
+          4069701.267243201
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "ecd644a0f93aab37a0446fdb195855f1fef1e28bbd9327f0e0fc0128ceeb34eb",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.28525673370704135,
+          -0.3410798721311263,
+          -2178470.2422650224
+        ],
+        [
+          -0.44464242183826247,
+          -0.574634296977496,
+          0.6870869969945462,
+          4388410.74803857
+        ],
+        [
+          0.0,
+          0.7670880136020697,
+          0.6415418765661607,
+          4070084.8258152492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "894319d2fd32684fe178427296d4673b6081dc82861fa47c0ab1b1f7dc469277",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.2852835399878636,
+          -0.3410574513336256,
+          -2178327.606673247
+        ],
+        [
+          -0.44464242183826247,
+          -0.574688296783687,
+          0.6870418315078562,
+          4388123.416335867
+        ],
+        [
+          0.0,
+          0.7670375892691687,
+          0.6416021638430953,
+          4070468.3586232024
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "35700ee27e7ba7c6c1491b5976ab49a99452ff3e7cf68381d265c6eb465d114b",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.285310344565963,
+          -0.3410350283795593,
+          -2178184.9572508167
+        ],
+        [
+          -0.44464242183826247,
+          -0.5747422931598348,
+          0.6869966616768812,
+          4387836.056772055
+        ],
+        [
+          0.0,
+          0.7669871600861555,
+          0.6416624472906094,
+          4070851.8673680564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "c64abf98c866aaac92e59435656e2502a9594c75cb22cf3eb6067e15f09b4c76",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.28533714738164434,
+          -0.3410126033188526,
+          -2178042.294315319
+        ],
+        [
+          -0.44464242183826247,
+          -0.5747962859856866,
+          0.6869514876021926,
+          4387548.669986898
+        ],
+        [
+          0.0,
+          0.7669367261653118,
+          0.6417227267744484,
+          4071235.3511956874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "stage": "after-v8-periodic7",
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36",
+      "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+      "actualTileRootECEF": [
+        [
+          -0.895708164918577,
+          0.28536394837522805,
+          -0.34099017620144945,
+          -2177899.6181844627
+        ],
+        [
+          -0.44464242183826247,
+          -0.5748502751410209,
+          0.6869063093844002,
+          4387261.256620402
+        ],
+        [
+          0.0,
+          0.7668862876189617,
+          0.6417830021603932,
+          4071618.8092521923
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "notRuntimeOrWholeCityAcceptance": true
+}

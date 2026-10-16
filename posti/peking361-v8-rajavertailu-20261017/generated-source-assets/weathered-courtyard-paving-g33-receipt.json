@@ -1,0 +1,18 @@
+{
+  "createdUTC": "2026-10-16T21:30:08.066359+00:00",
+  "kind": "whole new built-in imagegen source generation",
+  "originalLogicalPath": "/Users/samireivinen/.codex/generated_images/01a136eb-438c-77b2-85f2-7ab55020e302/exec-3ceb7044-fd66-4cf4-89ec-d3c839013e9c.png",
+  "originalPhysicalPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a136eb-438c-77b2-85f2-7ab55020e302/exec-3ceb7044-fd66-4cf4-89ec-d3c839013e9c.png",
+  "workspaceSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g33.png",
+  "sha256": "3f850f72328a5faf7bb9b4908385199f303ea6ed50f9f6b4c05faa85370e4052",
+  "size": [
+    1254,
+    1254
+  ],
+  "originalAndCopyBothExternal": true,
+  "originalRGBNeverEdited": true,
+  "referenceImagesUsed": false,
+  "wholeNewImage": true,
+  "notYetBoundIn3D": true,
+  "sourceScaleAndSeamEligibilityPending": true
+}

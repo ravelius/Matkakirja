@@ -1,0 +1,575 @@
+{
+  "status": "REJECT_DIRECT_PERIODIC_USE_APPEARANCE_REFERENCE_ONLY_NOT_BOUND_OR_APPROVED",
+  "createdUTC": "2026-10-16T21:37:03.666897+00:00",
+  "source": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g34.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "sha256": "d797c83f8676ca6fe840da2eaa7a184d67f8a15e4bd609287aafc75073dc8fe4",
+    "receiptMatches": true,
+    "originalNASMatches": true,
+    "nativeImagePersonallyViewed": true,
+    "originalAndCopyUnchanged": true
+  },
+  "promptVsActual": {
+    "requestedWidthPeriods": 10,
+    "requestedCourses": 20,
+    "actualHorizontalPeriodEstimate": 6.0,
+    "actualWidthPeriodsApproximately": 6,
+    "strongInteriorHorizontalJoints": 17,
+    "visibleCoursePieces": 18,
+    "topPieceHeightPx": 61,
+    "bottomPieceHeightPx": 65,
+    "normalCoursePitchMedianPx": 70.5,
+    "strongHorizontalJointRows": [
+      61,
+      132,
+      203,
+      274,
+      344,
+      414,
+      485,
+      555,
+      626,
+      697,
+      767,
+      837,
+      908,
+      978,
+      1048,
+      1119,
+      1189
+    ],
+    "ordinaryStoneWidthMedianPx": 209.0,
+    "ordinaryStoneWidthQuantiles10_50_90": [
+      206.5,
+      209.0,
+      211.0
+    ],
+    "ordinaryPixelAspect": 2.9645390070921986,
+    "confidence": "Approximately6width periods and18visible rows, with17strong interior joints. This is not20courses/10periods. Edge joint duplicates/partial stones prevent claiming an exact accepted toroidal cell map."
+  },
+  "periodicEligibility": {
+    "directRepeatRejected": true,
+    "seams": {
+      "top_bottom": {
+        "meanAbsRGB8": 23.573099415204677,
+        "quantiles50_90_95_99": [
+          21.0,
+          48.0,
+          58.0,
+          75.0
+        ],
+        "ordinaryAdjacentMeanAbsRGB8": 10.426164446158566,
+        "ratio": 2.2609560339219463
+      },
+      "left_right": {
+        "meanAbsRGB8": 14.308878256246677,
+        "quantiles50_90_95_99": [
+          12.0,
+          30.0,
+          38.0,
+          51.0
+        ],
+        "ordinaryAdjacentMeanAbsRGB8": 8.609458299549448,
+        "ratio": 1.6619951869672789
+      }
+    },
+    "topBottomWrapCourseGapPx": 126,
+    "wrapGapDividedByOrdinaryCoursePitch": 1.7872340425531914,
+    "topBottomStrongJointNearestPhaseDistancesPx": [
+      103.0,
+      102.0,
+      95.0,
+      96.5,
+      98.5
+    ],
+    "topBottomMedianPhaseDistancePx": 98.5,
+    "leftRightHorizontalGroutPhase": [
+      {
+        "courseJointY": 61,
+        "leftBandPeakY": 61,
+        "rightBandPeakY": 61,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 132,
+        "leftBandPeakY": 132,
+        "rightBandPeakY": 132,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 203,
+        "leftBandPeakY": 203,
+        "rightBandPeakY": 202,
+        "rightMinusLeftPx": -1
+      },
+      {
+        "courseJointY": 274,
+        "leftBandPeakY": 273,
+        "rightBandPeakY": 273,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 344,
+        "leftBandPeakY": 344,
+        "rightBandPeakY": 343,
+        "rightMinusLeftPx": -1
+      },
+      {
+        "courseJointY": 414,
+        "leftBandPeakY": 414,
+        "rightBandPeakY": 414,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 485,
+        "leftBandPeakY": 484,
+        "rightBandPeakY": 485,
+        "rightMinusLeftPx": 1
+      },
+      {
+        "courseJointY": 555,
+        "leftBandPeakY": 555,
+        "rightBandPeakY": 555,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 626,
+        "leftBandPeakY": 625,
+        "rightBandPeakY": 625,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 697,
+        "leftBandPeakY": 696,
+        "rightBandPeakY": 696,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 767,
+        "leftBandPeakY": 768,
+        "rightBandPeakY": 766,
+        "rightMinusLeftPx": -2
+      },
+      {
+        "courseJointY": 837,
+        "leftBandPeakY": 837,
+        "rightBandPeakY": 837,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 908,
+        "leftBandPeakY": 908,
+        "rightBandPeakY": 907,
+        "rightMinusLeftPx": -1
+      },
+      {
+        "courseJointY": 978,
+        "leftBandPeakY": 978,
+        "rightBandPeakY": 977,
+        "rightMinusLeftPx": -1
+      },
+      {
+        "courseJointY": 1048,
+        "leftBandPeakY": 1049,
+        "rightBandPeakY": 1048,
+        "rightMinusLeftPx": -1
+      },
+      {
+        "courseJointY": 1119,
+        "leftBandPeakY": 1118,
+        "rightBandPeakY": 1118,
+        "rightMinusLeftPx": 0
+      },
+      {
+        "courseJointY": 1189,
+        "leftBandPeakY": 1189,
+        "rightBandPeakY": 1188,
+        "rightMinusLeftPx": -1
+      }
+    ],
+    "maxLeftRightGroutOffsetPx": 2,
+    "reason": "No strong horizontal grout at the image top/bottom join: preceding/following strong course joints are126px apart versus70..71px normally. Top and bottom vertical joints differ by roughly half a stone. This creates a double-height or broken stagger join, not a periodic running-bond course."
+  },
+  "physicalCalibration": {
+    "targetNominalStoneM": [
+      0.95,
+      0.5
+    ],
+    "illustrativePeriodFromOrdinaryMedianM": [
+      5.7,
+      8.893617021276595
+    ],
+    "rough18CourseCountPeriodM": [
+      5.699999999999999,
+      9.0
+    ],
+    "ifPrompt9p5x10MUsedThenOrdinaryStoneM": [
+      1.5833333333333333,
+      0.562200956937799
+    ],
+    "warning": "Calibration examples only, no approved physical period. Changing UV scale cannot create the missing wrap joint or repair edge phase. A square world period would preserve the wrong~3:1 pixel aspect."
+  },
+  "registeredPBR": {
+    "accepted": false,
+    "reason": "A future label/mortar map must register to this actualG34network; no complete toroidal segmentation is established. OldC7analytic masks/normals/MR or G33labels cannot be reused blindly.",
+    "normalAndMR": "Infer artistic bevel/roughness only from validated G34boundaries and common UV coordinates. Grain brightness is not measured height or roughness. Original RGB remains read-only.",
+    "wholeCellMask": "Only source-registered stone labels can justify whole-cell mixing. The top/bottom seam ambiguity must be resolved before wrap labels are accepted."
+  },
+  "appearanceReference": {
+    "eligibleForDiscussion": true,
+    "notAnApprovedTexture": true,
+    "observation": "Natural grain/chipped-edge reference with calmer source-photo style; exact style acceptance belongs to actual visual review, not these numeric gates.",
+    "next": "UseG33/G34asimmutableappearance references in feedback alongside the visibly rejectedC7. Registered per-stone donor/UV-resynthesis is a proposal requiring validation, not an accepted implementation. Do not continue blind generations or partial source repainting from this QA."
+  },
+  "rowMeasurements": [
+    {
+      "visibleCoursePiece": 0,
+      "yBounds": [
+        0,
+        61
+      ],
+      "heightPx": 61,
+      "strongJointCentersX": [
+        218.0,
+        426.5,
+        631.0,
+        841.0,
+        1051.5,
+        1253.5
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 1,
+      "yBounds": [
+        61,
+        132
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        114.0,
+        325.0,
+        530.5,
+        744.5,
+        954.0,
+        1163.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 2,
+      "yBounds": [
+        132,
+        203
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        211.0,
+        419.0,
+        628.5,
+        835.5,
+        1045.0,
+        1253.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 3,
+      "yBounds": [
+        203,
+        274
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        122.0,
+        333.0,
+        539.0,
+        750.0,
+        957.0,
+        1163.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 4,
+      "yBounds": [
+        274,
+        344
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        216.0,
+        427.0,
+        636.0,
+        846.0,
+        1055.0,
+        1253.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 5,
+      "yBounds": [
+        344,
+        414
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        109.0,
+        318.0,
+        525.0,
+        735.0,
+        944.0,
+        1152.5
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 6,
+      "yBounds": [
+        414,
+        485
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        207.0,
+        419.0,
+        626.0,
+        834.0,
+        1043.5,
+        1253.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 7,
+      "yBounds": [
+        485,
+        555
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        117.5,
+        330.0,
+        540.0,
+        747.0,
+        956.0,
+        1163.5
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 8,
+      "yBounds": [
+        555,
+        626
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        1.0,
+        211.0,
+        422.0,
+        631.0,
+        835.5,
+        1045.0,
+        1253.0
+      ],
+      "rawJointCentersCount": 7,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 9,
+      "yBounds": [
+        626,
+        697
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        111.0,
+        318.0,
+        527.0,
+        735.0,
+        946.0,
+        1155.5
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 10,
+      "yBounds": [
+        697,
+        767
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        210.0,
+        419.0,
+        626.0,
+        834.0,
+        1044.0,
+        1252.5
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 11,
+      "yBounds": [
+        767,
+        837
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        116.0,
+        325.0,
+        534.0,
+        745.0,
+        953.5,
+        1163.5
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 12,
+      "yBounds": [
+        837,
+        908
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        0.0,
+        218.0,
+        429.5,
+        636.0,
+        844.0,
+        1054.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 13,
+      "yBounds": [
+        908,
+        978
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        110.5,
+        320.5,
+        530.5,
+        737.0,
+        947.0,
+        1158.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 14,
+      "yBounds": [
+        978,
+        1048
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        1.0,
+        206.0,
+        416.0,
+        628.5,
+        835.0,
+        1045.0,
+        1251.5
+      ],
+      "rawJointCentersCount": 7,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 15,
+      "yBounds": [
+        1048,
+        1119
+      ],
+      "heightPx": 71,
+      "strongJointCentersX": [
+        117.0,
+        325.0,
+        535.0,
+        745.0,
+        954.5,
+        1163.5
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 16,
+      "yBounds": [
+        1119,
+        1189
+      ],
+      "heightPx": 70,
+      "strongJointCentersX": [
+        4.0,
+        217.0,
+        429.5,
+        640.0,
+        847.0,
+        1056.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    },
+    {
+      "visibleCoursePiece": 17,
+      "yBounds": [
+        1189,
+        1254
+      ],
+      "heightPx": 65,
+      "strongJointCentersX": [
+        115.0,
+        324.5,
+        536.0,
+        744.5,
+        953.0,
+        1163.0
+      ],
+      "rawJointCentersCount": 6,
+      "note": "Boundary-adjacent grout at x0/x1253 can appear as two detections of one wrapped line; do not count these as two physical joints."
+    }
+  ],
+  "sourcePins": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g34.png",
+      "bytes": 3559501,
+      "sha256": "d797c83f8676ca6fe840da2eaa7a184d67f8a15e4bd609287aafc75073dc8fe4"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g34-prompt.json",
+      "bytes": 1791,
+      "sha256": "195dddfc2ead7efd1308f1d61eb207f61d83d1c1d28838d4d1d5858a1d800346"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/generated-source-assets/weathered-courtyard-paving-g34-receipt.json",
+      "bytes": 1010,
+      "sha256": "9caadae71e651491d29d481912cd6b82947b52682f8ef883bedd462b2ba9d7db"
+    }
+  ],
+  "execution": "Read-only native view + NumPy/PIL analysis. Only authorized MD/JSON reports written. No assets/source edits, generation, Blender, Git, receiver message or delegation."
+}

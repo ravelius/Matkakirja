@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: photorealistic-natural. Asset type: entirely new square seamless PBR diffuse-source texture for a 3D courtyard. Create an orthographic photograph-like overhead scan of grey weathered limestone FLAGSTONE paving slabs. The slabs must look stout with an exact 2:1 length-to-width ratio, not long thin bricks. Arrange exactly 20 near-horizontal courses and 10 slab-width periods across the square canvas, stagger alternate courses by half a slab. Texture is an artistic reference; physical slab size will be calibrated after generation. Show natural fine mineral grain within every stone, subtle irregular edge wear, tiny chipped corners, narrow grey mortar gaps, restrained grey/warm-grey variation. Retain a cohesive calm surface with no distinctive focal stone. Opposite borders MUST join as a repeating torus: every horizontal grout line crosses left/right borders at exactly the same height; top and bottom match row spacing, staggering, color and grain; any stone cut by one border continues on the opposite border. Keep half-stone fragments at opposite horizontal edges complementary. Do not add an outer border, frame or extra grout strip. Uniform perfectly diffuse flat albedo illumination, no cast shadows, no ambient-occlusion halos, no perspective, no vignette, no reflections, no objects, no text. Avoid mosaic color patches, cartoon rectangles, moss, large cracks, broad stains and exaggerated dark joints. Highest available native square resolution. Generate the whole image from scratch, without editing or using any earlier image.",
+  "transparent_background": false,
+  "referenced_images": [],
+  "output_file": "weathered-courtyard-paving-g34.png",
+  "status": "FULL_NEW_SOURCE_IMAGE_NOT_YET_APPROVED_OR_BOUND_TO_3D"
+}
+

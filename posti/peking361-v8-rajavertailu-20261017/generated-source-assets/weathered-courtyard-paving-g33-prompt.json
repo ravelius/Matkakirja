@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: photorealistic-natural. Asset type: a completely new, seamless tileable diffuse/base-color source texture for the ground of a Beijing Forbidden City 3D game scene. Generate one square, high-resolution orthographic overhead image filling the entire canvas with authentic-looking weathered neutral grey limestone courtyard paving. Show approximately sixteen long rectangular stones across and thirty-two stone courses vertically, stone aspect ratio about 1.9:1, staggered running-bond courses, nominal individual stone size 0.95 by 0.50 metres. This is an artistic material source, not historical measurement. Material must look like actual photographed old paving, not flat colored rectangles: naturally irregular slightly worn/chipped edges, narrow subtle grey joints, finely resolved mineral texture, gentle per-stone grain and patina, modest cool/warm grey variation, small non-directional wear marks. Keep the tonal range calm and cohesive; avoid checkerboard, mosaic coloration, conspicuous dark stones, dirt islands, cracks spanning many stones, moss, vegetation, decorative marks or focal landmarks. Lighting must be perfectly diffuse and uniform, suitable for a PBR base-color texture: no cast shadows, no gradient lighting, no specular highlights, no baked ambient occlusion, no perspective, no frame, no objects, no text. Horizontal and vertical edges must join seamlessly in pattern, grain, tone and mortar. Stone rows must remain near-horizontal with restrained handmade irregularity. Aim for 2048x2048 or the highest available native square resolution. Create the entire image from scratch; do not edit any prior image.",
+  "transparent_background": false,
+  "referenced_images": [],
+  "output_file": "weathered-courtyard-paving-g33.png",
+  "status": "FULL_NEW_SOURCE_IMAGE_NOT_YET_APPROVED_OR_BOUND_TO_3D"
+}
+

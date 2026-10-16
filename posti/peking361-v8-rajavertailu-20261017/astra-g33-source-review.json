@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-17",
+  "status": "POSITIVE_APPEARANCE_DIRECTION_REJECT_DIRECT_PERIODIC_USE",
+  "source": "generated-source-assets/weathered-courtyard-paving-g33.png",
+  "nativeDimensions": [1254, 1254],
+  "personallyViewedAtOriginalDetail": true,
+  "sha256": "3f850f72328a5faf7bb9b4908385199f303ea6ed50f9f6b4c05faa85370e4052",
+  "sourceRGBImmutable": true,
+  "appearance": {
+    "referenceSuitableForReceiverDiscussion": true,
+    "improvementsOverC7": ["natural within-stone grain", "worn and chipped edges", "irregular registered joints", "restrained gray and warm-gray variation"],
+    "risks": ["dense grain at oblique or reduced sampling", "similar course and stone lengths", "dark joint edges may contain baked shading", "lighter neutral source palette needs same-lighting comparison"],
+    "shadowFreeAlbedoCertified": false,
+    "historicalAccuracyClaimed": false,
+    "receiverAppearanceAcceptance": false
+  },
+  "measurementsAttributedTo": "sol-g33-source-tile-qa.md",
+  "layout": {
+    "actualCourses": 29,
+    "verticalJointsPerCourse": [10, 11],
+    "medianOrdinaryStoneWidthPx": 122,
+    "meanCoursePitchPx": 43.241379,
+    "pixelAspectApprox": 2.8214,
+    "illustrativePhysicalPeriodM": [9.76475, 14.5],
+    "physicalPeriodApproved": false,
+    "prompt16x32Satisfied": false,
+    "inheritC7PeriodAllowed": false
+  },
+  "wrap": {
+    "directPeriodicApproved": false,
+    "topBottomMeanRGBDifference255": 31.6869,
+    "topBottomInternalAdjacentMean255": 12.8284,
+    "leftRightMeanRGBDifference255": 12.2376,
+    "leftRightInternalAdjacentMean255": 9.2702,
+    "inferredSeamStoneWidthRangePx": [28.5, 165.5],
+    "reason": "border joint phase and partial-stone widths fail continuity, especially top-bottom",
+    "promptSeamlessClaimIsEvidence": false,
+    "reviewerGeneratedTiledContactSheet": false
+  },
+  "recommendation": {
+    "immediate": "Share only as clearly labelled appearance reference beside matched C7 before-after images",
+    "afterAppearanceAgreement": "One registered read-only whole-stone donor resynthesis feasibility prototype; not direct whole-image wrap",
+    "ifSegmentationCannotBeValidated": "Another whole new masonry generation; never claim automatic closing repaired source continuity",
+    "requiresNewRegisteredPBRAndMasks": true,
+    "reuseC7AnalyticJointNetwork": false,
+    "sourcePixelEditsAllowed": false,
+    "newOutputMapsMustBeWholeNewVersion": true,
+    "segmentationReady": false,
+    "generationGuaranteesSeamlessness": false,
+    "rawByteCeilingWaived": false
+  },
+  "rejectionCriteriaForFutureCandidate": ["visible joint cuts", "distinctive repeating donor marks", "flat-cell regression", "grain shimmer", "source-to-interior material-character jump", "physical period inconsistent with actual stone counts"],
+  "acceptance": {
+    "C7VisualGate": false,
+    "G33ProductionMaterial": false,
+    "G33GLBBinding": false,
+    "normalMR": false,
+    "runtime": false,
+    "KTX2": false,
+    "water": false,
+    "cut": false,
+    "drawCallsMemoryPerformance": false,
+    "owner": false
+  },
+  "actions": {
+    "onlyAssignedReportPairAdded": true,
+    "sourceAssetEdits": false,
+    "imageGeneration": false,
+    "blender": false,
+    "git": false,
+    "delegation": false,
+    "automationControls": false,
+    "receiverMessages": false
+  }
+}

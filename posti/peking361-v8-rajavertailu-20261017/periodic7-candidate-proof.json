@@ -1,0 +1,6342 @@
+{
+  "status": "BUILT_PRIVATE_PROTOTYPE_PENDING_REVIEWS",
+  "files": [
+    {
+      "file": "peking_2_3_lod0.glb",
+      "bytes": 12608540,
+      "sha256": "7e7b3fecd883dc26db4212d3eb695c478b31c6300bbdfa33d9f866a4ef4afd6b",
+      "sourceV6Bytes": 9289480,
+      "addedBytes": 3319060,
+      "triangles": 113754,
+      "addedCoplanarTriangles": 15712,
+      "losslessCompaction": {
+        "beforeBINBytes": 12883436,
+        "afterBINBytes": 12557728,
+        "removedBytes": 325708,
+        "beforeAccessorCount": 193,
+        "afterAccessorCount": 158,
+        "beforeBufferViewCount": 243,
+        "afterBufferViewCount": 208,
+        "allEmbeddedImagesKept": true,
+        "noImagePayloadReencoding": true,
+        "sourceFilesUnchanged": true
+      }
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "bytes": 5755160,
+      "sha256": "5133e940a6527740b9b00c289597bbe6edef4dc4255bca7deb334b7300604c89",
+      "sourceV6Bytes": 4403940,
+      "addedBytes": 1351220,
+      "triangles": 66350,
+      "addedCoplanarTriangles": 15712,
+      "losslessCompaction": {
+        "beforeBINBytes": 6031124,
+        "afterBINBytes": 5705416,
+        "removedBytes": 325708,
+        "beforeAccessorCount": 189,
+        "afterAccessorCount": 154,
+        "beforeBufferViewCount": 239,
+        "afterBufferViewCount": 204,
+        "allEmbeddedImagesKept": true,
+        "noImagePayloadReencoding": true,
+        "sourceFilesUnchanged": true
+      }
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "bytes": 4792324,
+      "sha256": "3777e8f506b3ce3e3a8e0c42ca6525d5ad96994c8b6c7e22bc2415d3920a2d34",
+      "sourceV6Bytes": 4034100,
+      "addedBytes": 758224,
+      "triangles": 65018,
+      "addedCoplanarTriangles": 15712,
+      "losslessCompaction": {
+        "beforeBINBytes": 5068296,
+        "afterBINBytes": 4742588,
+        "removedBytes": 325708,
+        "beforeAccessorCount": 189,
+        "afterAccessorCount": 154,
+        "beforeBufferViewCount": 239,
+        "afterBufferViewCount": 204,
+        "allEmbeddedImagesKept": true,
+        "noImagePayloadReencoding": true,
+        "sourceFilesUnchanged": true
+      }
+    }
+  ],
+  "projectedAll72Bytes": 164084512,
+  "rawByteCeiling": 164326250,
+  "rawBudgetPassed": true,
+  "projectedAll72Triangles": 1432236,
+  "sourceV6FilesAndAllImagePayloadsAndOldMaterialsPreserved": true,
+  "allNonPavingGeometryAttributesByteExact": true,
+  "pavingPositionsNormalsAndAOAreBarycentricSubdivisionsOfSameSourceSurfaces": true,
+  "pavingUV0ChangedForNewTwoMaterialSurface": true,
+  "AOOnOriginalUV1": true,
+  "noHeightDisplacement": true,
+  "onlyPilotTile2_3Changed": true,
+  "V8Excludes362": true,
+  "groundPBRProofSHA256": "10011a5379cb1a0cfd65370d6e57ff4867db80367cfe5f725d9478451fcdc907",
+  "atlasLayoutSHA256": "1316870156ff281e9faedf4d8367ff29cd900876fb56797e75555a466ebc2f8b",
+  "splits": [
+    {
+      "lod": 0,
+      "primitives": [
+        {
+          "sourcePrimitive": 28,
+          "role": "interior",
+          "sourceTriangles": 1540,
+          "outputTriangles": 14556,
+          "vertices": 12969,
+          "maxPlaneDistanceM": 3.2685412185554246e-07,
+          "sourceAreaM2": 137713.73824099198,
+          "combinedOutputAreaM2": 137713.7387561667,
+          "maxPerSourceAreaPartitionErrorM2": 7.444877353490753e-11,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod0-primitive28-interior-map.npz",
+          "degenerateZoneFallbackSourceFaces": [],
+          "discardedF32DegenerateOrInvertedSlivers": [],
+          "discardedPrecastAreaM2": 0
+        },
+        {
+          "sourcePrimitive": 28,
+          "role": "collar",
+          "sourceTriangles": 1540,
+          "outputTriangles": 431,
+          "vertices": 799,
+          "maxPlaneDistanceM": 3.2685412185554246e-07,
+          "sourceAreaM2": 137713.73824099198,
+          "combinedOutputAreaM2": 137713.7387561667,
+          "maxPerSourceAreaPartitionErrorM2": 7.444877353490753e-11,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod0-primitive28-collar-map.npz",
+          "degenerateZoneFallbackSourceFaces": [],
+          "discardedF32DegenerateOrInvertedSlivers": [],
+          "discardedPrecastAreaM2": 0
+        },
+        {
+          "sourcePrimitive": 29,
+          "role": "interior",
+          "sourceTriangles": 741,
+          "outputTriangles": 2793,
+          "vertices": 4076,
+          "maxPlaneDistanceM": 3.735839629128676e-07,
+          "sourceAreaM2": 50709.07011155262,
+          "combinedOutputAreaM2": 50709.070076491116,
+          "maxPerSourceAreaPartitionErrorM2": 8.015925700988191e-10,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod0-primitive29-interior-map.npz",
+          "degenerateZoneFallbackSourceFaces": [
+            470
+          ],
+          "discardedF32DegenerateOrInvertedSlivers": [
+            {
+              "sourceFace": 15,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.31999999999999995,
+                  -0.0,
+                  0.68
+                ],
+                [
+                  0.36279673029943305,
+                  2.305957377757295e-07,
+                  0.6372030391048292
+                ],
+                [
+                  0.3627966308593751,
+                  3.0517578125e-07,
+                  0.6372030639648437
+                ]
+              ],
+              "precastAreaM2": 9.976050826423313e-07,
+              "actualCastAreaM2": 2.2546869358961328e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 39,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ],
+                [
+                  0.5967936374491944,
+                  2.122792852787825e-07,
+                  0.4032061502715203
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 6.635736842953775e-05,
+              "actualCastAreaM2": 5.261777049880638e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 86,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -8.881784197001252e-16,
+                  0.18695889424564685,
+                  0.813041105754354
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  2.1725496734958938e-08,
+                  0.1869588261067257,
+                  0.8130411521677776
+                ]
+              ],
+              "precastAreaM2": 3.187002753597732e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 120,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.611540853740366,
+                  0.38845914625963457
+                ],
+                [
+                  4.440892098500626e-16,
+                  0.6115408301563096,
+                  0.38845916984369
+                ],
+                [
+                  0.5582903572008071,
+                  0.06684910984850251,
+                  0.37486053295069033
+                ]
+              ],
+              "precastAreaM2": 6.891029221533555e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 123,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  -2.220446049250313e-16,
+                  0.7477141078286487,
+                  0.2522858921713516
+                ],
+                [
+                  7.810391444706966e-08,
+                  0.9999999218960856,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.2227066794862062e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 127,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.49692311046570137,
+                  2.0551327156240404e-16,
+                  0.5030768895342984
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999218960856,
+                  7.810391447745727e-08,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.077710504330094e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 138,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9328818358579536,
+                  0.06711816414204537,
+                  9.96291991245783e-16
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  -2.886579864025407e-15,
+                  0.9999994183638466,
+                  5.816361561706203e-07
+                ]
+              ],
+              "precastAreaM2": 5.522519411609126e-06,
+              "actualCastAreaM2": 1.4748666051768006e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 151,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.5624631817393133,
+                  0.4375368182606873
+                ],
+                [
+                  1.1102230246251565e-15,
+                  0.5624631348106583,
+                  0.4375368651893406
+                ],
+                [
+                  0.22633633357170457,
+                  0.7736636664282954,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.7319876701354e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 153,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.1731355797905962e-07,
+                  0.999999882686442,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 3.783044298046057e-06,
+              "actualCastAreaM2": 2.7230974362824272e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 158,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.5132885623562443e-16,
+                  0.9999999999999999
+                ],
+                [
+                  3.1583034465487714e-07,
+                  0.9999996841696553,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 3.152807690130924e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 161,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -3.783221405890611e-17
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999996841696553,
+                  3.158303445848453e-07
+                ]
+              ],
+              "precastAreaM2": 3.482494336189615e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 168,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.7644620681966151,
+                  0.23553793180338534,
+                  -4.719692124686887e-16
+                ],
+                [
+                  -1.3322676295501878e-15,
+                  0.6961100942728683,
+                  0.3038899057271331
+                ],
+                [
+                  0.7644620696223327,
+                  0.23553793037766788,
+                  -5.138564800752849e-16
+                ]
+              ],
+              "precastAreaM2": 5.528787164649834e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 189,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  4.440892098500626e-16,
+                  0.9459471813352472,
+                  0.05405281866475236
+                ],
+                [
+                  0.2899148891296437,
+                  0.7100851108703564,
+                  -6.439825701277176e-17
+                ],
+                [
+                  0.28991488832421686,
+                  0.7100851116757834,
+                  -1.931947710383153e-16
+                ]
+              ],
+              "precastAreaM2": 1.0052349977407148e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 198,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.5206689071655273,
+                  3.814697265625e-08,
+                  0.47933105468750004
+                ],
+                [
+                  0.32000000000000006,
+                  1.1368683772161603e-15,
+                  0.6799999999999988
+                ],
+                [
+                  0.5206689094094669,
+                  1.0658141036401502e-15,
+                  0.4793310905905321
+                ]
+              ],
+              "precastAreaM2": 2.3924395171553084e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 203,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -1.3322676295501878e-15,
+                  0.999997621657654,
+                  2.378342347237358e-06
+                ],
+                [
+                  0.999999811783342,
+                  -0.0,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 8.038958632302164e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 207,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.3853809472693683e-14,
+                  1.5283310724799295e-07,
+                  0.9999998471668489
+                ]
+              ],
+              "precastAreaM2": 2.2248865231243667e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9999996304752986,
+                  3.6952470143747187e-07,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  0.9999995601147861,
+                  7.275716112827282e-15,
+                  4.398852066181633e-07
+                ]
+              ],
+              "precastAreaM2": 2.96066600815457e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  5.594481100601456e-09,
+                  0.9999999944055189,
+                  -0.0
+                ],
+                [
+                  -8.881784197001252e-16,
+                  0.9999998471668718,
+                  1.5283312900542521e-07
+                ]
+              ],
+              "precastAreaM2": 4.4823522979796135e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  3.695247013935088e-07,
+                  0.9999996304752986,
+                  0.0
+                ],
+                [
+                  9.325873406851315e-15,
+                  0.9999996726442829,
+                  3.273557077969754e-07
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 3.091501508506896e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999944055189,
+                  5.5944811536983765e-09,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 4.680432219718967e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 213,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.8005062130121985e-07,
+                  0.999999819949374,
+                  4.621629028016446e-15
+                ],
+                [
+                  1.3322676295501878e-15,
+                  0.9999998562630554,
+                  1.4373694323319994e-07
+                ],
+                [
+                  1.1102230246251565e-16,
+                  -2.342596686279421e-17,
+                  0.9999999999999999
+                ]
+              ],
+              "precastAreaM2": 5.001711169946346e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 226,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999968102474557,
+                  3.189752544398258e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.667969678623524e-06,
+              "actualCastAreaM2": 3.5972161644226616e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 238,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.9999999025722593,
+                  6.626487590171395e-16,
+                  9.742774000408138e-08
+                ]
+              ],
+              "precastAreaM2": 1.1757584978126122e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 241,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  1.9984014443252818e-15,
+                  0.9999987459970976,
+                  1.25400290037413e-06
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.88480263561961e-06,
+              "actualCastAreaM2": 1.24902081187474e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 243,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -2.220446049250313e-16,
+                  0.9999997455351968,
+                  2.544648033888902e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1419022682979119e-07,
+                  0.999999885809772,
+                  1.2375340446875234e-15
+                ]
+              ],
+              "precastAreaM2": 1.4602100894891661e-05,
+              "actualCastAreaM2": 1.197773629751775e-05,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 245,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.2540029005192466e-06,
+                  0.9999987459970998,
+                  -3.056828136636677e-16
+                ]
+              ],
+              "precastAreaM2": 1.0839325956672148e-05,
+              "actualCastAreaM2": 7.18587803830765e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 246,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999998117833421,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 4.4350587027093374e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 250,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.7794781470570342e-07,
+                  0.9999998220521853,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 8.557898947198913e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ],
+                [
+                  0.6675954940950226,
+                  0.21920461814782227,
+                  0.11319988775715517
+                ],
+                [
+                  0.6503063787924642,
+                  0.34969362120753594,
+                  -1.4521860562333807e-16
+                ]
+              ],
+              "precastAreaM2": 4.690343168769354e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -2.234132394205201e-17
+                ],
+                [
+                  0.0,
+                  0.999999890442259,
+                  1.0955774107095403e-07
+                ],
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ]
+              ],
+              "precastAreaM2": 3.423246193713491e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 273,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999968102474557,
+                  0.0,
+                  3.189752544348081e-06
+                ]
+              ],
+              "precastAreaM2": 6.990145840388682e-07,
+              "actualCastAreaM2": 3.2793592530579894e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 275,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.24643783524547058,
+                  3.4979448696066965e-15,
+                  0.7535621647545259
+                ],
+                [
+                  5.551115123125783e-16,
+                  0.23862521958707503,
+                  0.7613747804129244
+                ],
+                [
+                  6.661338147750939e-16,
+                  0.23862521885617596,
+                  0.7613747811438234
+                ]
+              ],
+              "precastAreaM2": 1.899362131786197e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 285,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  3.3978359026409777e-07,
+                  0.9999996602164097,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.174579311934393e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 287,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.9999996602164098,
+                  3.397835902199091e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 4.545269833957156e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 301,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.0955774110144034e-07,
+                  0.9999998904422589,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 9.109575723170443e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 595,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  4.9960036108132044e-15,
+                  0.9999995877699022,
+                  4.1223009281440354e-07
+                ],
+                [
+                  0.2513358773420411,
+                  0.7486641226579596,
+                  -6.475308489460465e-16
+                ]
+              ],
+              "precastAreaM2": 7.118651871355462e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 640,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999998871950052,
+                  2.0938370864281887e-15,
+                  1.1280499267923578e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.349774818613054e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 680,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.05882352963089943,
+                  0.9411764703691006,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.235857093205258e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 715,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  8.652033894146293e-19
+                ],
+                [
+                  2.3314683517128287e-15,
+                  0.9999983340237474,
+                  1.6659762502987727e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 1.1949464349225388e-06,
+              "actualCastAreaM2": 3.996371297645957e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 719,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.665976250175838e-06,
+                  0.9999983340237601,
+                  -1.0313850162472505e-14
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.655597542547615e-07,
+              "actualCastAreaM2": 8.881167787950843e-09,
+              "zeroArea": false,
+              "negativeWinding": true
+            }
+          ],
+          "discardedPrecastAreaM2": 0.0001615707582514292
+        },
+        {
+          "sourcePrimitive": 29,
+          "role": "collar",
+          "sourceTriangles": 741,
+          "outputTriangles": 213,
+          "vertices": 511,
+          "maxPlaneDistanceM": 3.735839629128676e-07,
+          "sourceAreaM2": 50709.07011155262,
+          "combinedOutputAreaM2": 50709.070076491116,
+          "maxPerSourceAreaPartitionErrorM2": 8.015925700988191e-10,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod0-primitive29-collar-map.npz",
+          "degenerateZoneFallbackSourceFaces": [
+            470
+          ],
+          "discardedF32DegenerateOrInvertedSlivers": [
+            {
+              "sourceFace": 15,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.31999999999999995,
+                  -0.0,
+                  0.68
+                ],
+                [
+                  0.36279673029943305,
+                  2.305957377757295e-07,
+                  0.6372030391048292
+                ],
+                [
+                  0.3627966308593751,
+                  3.0517578125e-07,
+                  0.6372030639648437
+                ]
+              ],
+              "precastAreaM2": 9.976050826423313e-07,
+              "actualCastAreaM2": 2.2546869358961328e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 39,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ],
+                [
+                  0.5967936374491944,
+                  2.122792852787825e-07,
+                  0.4032061502715203
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 6.635736842953775e-05,
+              "actualCastAreaM2": 5.261777049880638e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 86,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -8.881784197001252e-16,
+                  0.18695889424564685,
+                  0.813041105754354
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  2.1725496734958938e-08,
+                  0.1869588261067257,
+                  0.8130411521677776
+                ]
+              ],
+              "precastAreaM2": 3.187002753597732e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 120,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.611540853740366,
+                  0.38845914625963457
+                ],
+                [
+                  4.440892098500626e-16,
+                  0.6115408301563096,
+                  0.38845916984369
+                ],
+                [
+                  0.5582903572008071,
+                  0.06684910984850251,
+                  0.37486053295069033
+                ]
+              ],
+              "precastAreaM2": 6.891029221533555e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 123,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  -2.220446049250313e-16,
+                  0.7477141078286487,
+                  0.2522858921713516
+                ],
+                [
+                  7.810391444706966e-08,
+                  0.9999999218960856,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.2227066794862062e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 127,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.49692311046570137,
+                  2.0551327156240404e-16,
+                  0.5030768895342984
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999218960856,
+                  7.810391447745727e-08,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.077710504330094e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 138,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9328818358579536,
+                  0.06711816414204537,
+                  9.96291991245783e-16
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  -2.886579864025407e-15,
+                  0.9999994183638466,
+                  5.816361561706203e-07
+                ]
+              ],
+              "precastAreaM2": 5.522519411609126e-06,
+              "actualCastAreaM2": 1.4748666051768006e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 151,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.5624631817393133,
+                  0.4375368182606873
+                ],
+                [
+                  1.1102230246251565e-15,
+                  0.5624631348106583,
+                  0.4375368651893406
+                ],
+                [
+                  0.22633633357170457,
+                  0.7736636664282954,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.7319876701354e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 153,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.1731355797905962e-07,
+                  0.999999882686442,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 3.783044298046057e-06,
+              "actualCastAreaM2": 2.7230974362824272e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 158,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.5132885623562443e-16,
+                  0.9999999999999999
+                ],
+                [
+                  3.1583034465487714e-07,
+                  0.9999996841696553,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 3.152807690130924e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 161,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -3.783221405890611e-17
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999996841696553,
+                  3.158303445848453e-07
+                ]
+              ],
+              "precastAreaM2": 3.482494336189615e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 168,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.7644620681966151,
+                  0.23553793180338534,
+                  -4.719692124686887e-16
+                ],
+                [
+                  -1.3322676295501878e-15,
+                  0.6961100942728683,
+                  0.3038899057271331
+                ],
+                [
+                  0.7644620696223327,
+                  0.23553793037766788,
+                  -5.138564800752849e-16
+                ]
+              ],
+              "precastAreaM2": 5.528787164649834e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 189,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  4.440892098500626e-16,
+                  0.9459471813352472,
+                  0.05405281866475236
+                ],
+                [
+                  0.2899148891296437,
+                  0.7100851108703564,
+                  -6.439825701277176e-17
+                ],
+                [
+                  0.28991488832421686,
+                  0.7100851116757834,
+                  -1.931947710383153e-16
+                ]
+              ],
+              "precastAreaM2": 1.0052349977407148e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 198,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.5206689071655273,
+                  3.814697265625e-08,
+                  0.47933105468750004
+                ],
+                [
+                  0.32000000000000006,
+                  1.1368683772161603e-15,
+                  0.6799999999999988
+                ],
+                [
+                  0.5206689094094669,
+                  1.0658141036401502e-15,
+                  0.4793310905905321
+                ]
+              ],
+              "precastAreaM2": 2.3924395171553084e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 203,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -1.3322676295501878e-15,
+                  0.999997621657654,
+                  2.378342347237358e-06
+                ],
+                [
+                  0.999999811783342,
+                  -0.0,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 8.038958632302164e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 207,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.3853809472693683e-14,
+                  1.5283310724799295e-07,
+                  0.9999998471668489
+                ]
+              ],
+              "precastAreaM2": 2.2248865231243667e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9999996304752986,
+                  3.6952470143747187e-07,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  0.9999995601147861,
+                  7.275716112827282e-15,
+                  4.398852066181633e-07
+                ]
+              ],
+              "precastAreaM2": 2.96066600815457e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  5.594481100601456e-09,
+                  0.9999999944055189,
+                  -0.0
+                ],
+                [
+                  -8.881784197001252e-16,
+                  0.9999998471668718,
+                  1.5283312900542521e-07
+                ]
+              ],
+              "precastAreaM2": 4.4823522979796135e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  3.695247013935088e-07,
+                  0.9999996304752986,
+                  0.0
+                ],
+                [
+                  9.325873406851315e-15,
+                  0.9999996726442829,
+                  3.273557077969754e-07
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 3.091501508506896e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999944055189,
+                  5.5944811536983765e-09,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 4.680432219718967e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 213,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.8005062130121985e-07,
+                  0.999999819949374,
+                  4.621629028016446e-15
+                ],
+                [
+                  1.3322676295501878e-15,
+                  0.9999998562630554,
+                  1.4373694323319994e-07
+                ],
+                [
+                  1.1102230246251565e-16,
+                  -2.342596686279421e-17,
+                  0.9999999999999999
+                ]
+              ],
+              "precastAreaM2": 5.001711169946346e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 226,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999968102474557,
+                  3.189752544398258e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.667969678623524e-06,
+              "actualCastAreaM2": 3.5972161644226616e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 238,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.9999999025722593,
+                  6.626487590171395e-16,
+                  9.742774000408138e-08
+                ]
+              ],
+              "precastAreaM2": 1.1757584978126122e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 241,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  1.9984014443252818e-15,
+                  0.9999987459970976,
+                  1.25400290037413e-06
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.88480263561961e-06,
+              "actualCastAreaM2": 1.24902081187474e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 243,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -2.220446049250313e-16,
+                  0.9999997455351968,
+                  2.544648033888902e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1419022682979119e-07,
+                  0.999999885809772,
+                  1.2375340446875234e-15
+                ]
+              ],
+              "precastAreaM2": 1.4602100894891661e-05,
+              "actualCastAreaM2": 1.197773629751775e-05,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 245,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.2540029005192466e-06,
+                  0.9999987459970998,
+                  -3.056828136636677e-16
+                ]
+              ],
+              "precastAreaM2": 1.0839325956672148e-05,
+              "actualCastAreaM2": 7.18587803830765e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 246,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999998117833421,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 4.4350587027093374e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 250,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.7794781470570342e-07,
+                  0.9999998220521853,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 8.557898947198913e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ],
+                [
+                  0.6675954940950226,
+                  0.21920461814782227,
+                  0.11319988775715517
+                ],
+                [
+                  0.6503063787924642,
+                  0.34969362120753594,
+                  -1.4521860562333807e-16
+                ]
+              ],
+              "precastAreaM2": 4.690343168769354e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -2.234132394205201e-17
+                ],
+                [
+                  0.0,
+                  0.999999890442259,
+                  1.0955774107095403e-07
+                ],
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ]
+              ],
+              "precastAreaM2": 3.423246193713491e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 273,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999968102474557,
+                  0.0,
+                  3.189752544348081e-06
+                ]
+              ],
+              "precastAreaM2": 6.990145840388682e-07,
+              "actualCastAreaM2": 3.2793592530579894e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 275,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.24643783524547058,
+                  3.4979448696066965e-15,
+                  0.7535621647545259
+                ],
+                [
+                  5.551115123125783e-16,
+                  0.23862521958707503,
+                  0.7613747804129244
+                ],
+                [
+                  6.661338147750939e-16,
+                  0.23862521885617596,
+                  0.7613747811438234
+                ]
+              ],
+              "precastAreaM2": 1.899362131786197e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 285,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  3.3978359026409777e-07,
+                  0.9999996602164097,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.174579311934393e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 287,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.9999996602164098,
+                  3.397835902199091e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 4.545269833957156e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 301,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.0955774110144034e-07,
+                  0.9999998904422589,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 9.109575723170443e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 595,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  4.9960036108132044e-15,
+                  0.9999995877699022,
+                  4.1223009281440354e-07
+                ],
+                [
+                  0.2513358773420411,
+                  0.7486641226579596,
+                  -6.475308489460465e-16
+                ]
+              ],
+              "precastAreaM2": 7.118651871355462e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 640,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999998871950052,
+                  2.0938370864281887e-15,
+                  1.1280499267923578e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.349774818613054e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 680,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.05882352963089943,
+                  0.9411764703691006,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.235857093205258e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 715,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  8.652033894146293e-19
+                ],
+                [
+                  2.3314683517128287e-15,
+                  0.9999983340237474,
+                  1.6659762502987727e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 1.1949464349225388e-06,
+              "actualCastAreaM2": 3.996371297645957e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 719,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.665976250175838e-06,
+                  0.9999983340237601,
+                  -1.0313850162472505e-14
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.655597542547615e-07,
+              "actualCastAreaM2": 8.881167787950843e-09,
+              "zeroArea": false,
+              "negativeWinding": true
+            }
+          ],
+          "discardedPrecastAreaM2": 0.0001615707582514292
+        }
+      ]
+    },
+    {
+      "lod": 1,
+      "primitives": [
+        {
+          "sourcePrimitive": 27,
+          "role": "interior",
+          "sourceTriangles": 1540,
+          "outputTriangles": 14556,
+          "vertices": 12969,
+          "maxPlaneDistanceM": 3.2685412185554246e-07,
+          "sourceAreaM2": 137713.73824099198,
+          "combinedOutputAreaM2": 137713.7387561667,
+          "maxPerSourceAreaPartitionErrorM2": 7.444877353490753e-11,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod1-primitive27-interior-map.npz",
+          "degenerateZoneFallbackSourceFaces": [],
+          "discardedF32DegenerateOrInvertedSlivers": [],
+          "discardedPrecastAreaM2": 0
+        },
+        {
+          "sourcePrimitive": 27,
+          "role": "collar",
+          "sourceTriangles": 1540,
+          "outputTriangles": 431,
+          "vertices": 799,
+          "maxPlaneDistanceM": 3.2685412185554246e-07,
+          "sourceAreaM2": 137713.73824099198,
+          "combinedOutputAreaM2": 137713.7387561667,
+          "maxPerSourceAreaPartitionErrorM2": 7.444877353490753e-11,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod1-primitive27-collar-map.npz",
+          "degenerateZoneFallbackSourceFaces": [],
+          "discardedF32DegenerateOrInvertedSlivers": [],
+          "discardedPrecastAreaM2": 0
+        },
+        {
+          "sourcePrimitive": 28,
+          "role": "interior",
+          "sourceTriangles": 741,
+          "outputTriangles": 2793,
+          "vertices": 4076,
+          "maxPlaneDistanceM": 3.735839629128676e-07,
+          "sourceAreaM2": 50709.07011155262,
+          "combinedOutputAreaM2": 50709.070076491116,
+          "maxPerSourceAreaPartitionErrorM2": 8.015925700988191e-10,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod1-primitive28-interior-map.npz",
+          "degenerateZoneFallbackSourceFaces": [
+            470
+          ],
+          "discardedF32DegenerateOrInvertedSlivers": [
+            {
+              "sourceFace": 15,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.31999999999999995,
+                  -0.0,
+                  0.68
+                ],
+                [
+                  0.36279673029943305,
+                  2.305957377757295e-07,
+                  0.6372030391048292
+                ],
+                [
+                  0.3627966308593751,
+                  3.0517578125e-07,
+                  0.6372030639648437
+                ]
+              ],
+              "precastAreaM2": 9.976050826423313e-07,
+              "actualCastAreaM2": 2.2546869358961328e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 39,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ],
+                [
+                  0.5967936374491944,
+                  2.122792852787825e-07,
+                  0.4032061502715203
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 6.635736842953775e-05,
+              "actualCastAreaM2": 5.261777049880638e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 86,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -8.881784197001252e-16,
+                  0.18695889424564685,
+                  0.813041105754354
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  2.1725496734958938e-08,
+                  0.1869588261067257,
+                  0.8130411521677776
+                ]
+              ],
+              "precastAreaM2": 3.187002753597732e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 120,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.611540853740366,
+                  0.38845914625963457
+                ],
+                [
+                  4.440892098500626e-16,
+                  0.6115408301563096,
+                  0.38845916984369
+                ],
+                [
+                  0.5582903572008071,
+                  0.06684910984850251,
+                  0.37486053295069033
+                ]
+              ],
+              "precastAreaM2": 6.891029221533555e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 123,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  -2.220446049250313e-16,
+                  0.7477141078286487,
+                  0.2522858921713516
+                ],
+                [
+                  7.810391444706966e-08,
+                  0.9999999218960856,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.2227066794862062e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 127,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.49692311046570137,
+                  2.0551327156240404e-16,
+                  0.5030768895342984
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999218960856,
+                  7.810391447745727e-08,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.077710504330094e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 138,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9328818358579536,
+                  0.06711816414204537,
+                  9.96291991245783e-16
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  -2.886579864025407e-15,
+                  0.9999994183638466,
+                  5.816361561706203e-07
+                ]
+              ],
+              "precastAreaM2": 5.522519411609126e-06,
+              "actualCastAreaM2": 1.4748666051768006e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 151,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.5624631817393133,
+                  0.4375368182606873
+                ],
+                [
+                  1.1102230246251565e-15,
+                  0.5624631348106583,
+                  0.4375368651893406
+                ],
+                [
+                  0.22633633357170457,
+                  0.7736636664282954,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.7319876701354e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 153,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.1731355797905962e-07,
+                  0.999999882686442,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 3.783044298046057e-06,
+              "actualCastAreaM2": 2.7230974362824272e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 158,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.5132885623562443e-16,
+                  0.9999999999999999
+                ],
+                [
+                  3.1583034465487714e-07,
+                  0.9999996841696553,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 3.152807690130924e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 161,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -3.783221405890611e-17
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999996841696553,
+                  3.158303445848453e-07
+                ]
+              ],
+              "precastAreaM2": 3.482494336189615e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 168,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.7644620681966151,
+                  0.23553793180338534,
+                  -4.719692124686887e-16
+                ],
+                [
+                  -1.3322676295501878e-15,
+                  0.6961100942728683,
+                  0.3038899057271331
+                ],
+                [
+                  0.7644620696223327,
+                  0.23553793037766788,
+                  -5.138564800752849e-16
+                ]
+              ],
+              "precastAreaM2": 5.528787164649834e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 189,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  4.440892098500626e-16,
+                  0.9459471813352472,
+                  0.05405281866475236
+                ],
+                [
+                  0.2899148891296437,
+                  0.7100851108703564,
+                  -6.439825701277176e-17
+                ],
+                [
+                  0.28991488832421686,
+                  0.7100851116757834,
+                  -1.931947710383153e-16
+                ]
+              ],
+              "precastAreaM2": 1.0052349977407148e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 198,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.5206689071655273,
+                  3.814697265625e-08,
+                  0.47933105468750004
+                ],
+                [
+                  0.32000000000000006,
+                  1.1368683772161603e-15,
+                  0.6799999999999988
+                ],
+                [
+                  0.5206689094094669,
+                  1.0658141036401502e-15,
+                  0.4793310905905321
+                ]
+              ],
+              "precastAreaM2": 2.3924395171553084e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 203,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -1.3322676295501878e-15,
+                  0.999997621657654,
+                  2.378342347237358e-06
+                ],
+                [
+                  0.999999811783342,
+                  -0.0,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 8.038958632302164e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 207,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.3853809472693683e-14,
+                  1.5283310724799295e-07,
+                  0.9999998471668489
+                ]
+              ],
+              "precastAreaM2": 2.2248865231243667e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9999996304752986,
+                  3.6952470143747187e-07,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  0.9999995601147861,
+                  7.275716112827282e-15,
+                  4.398852066181633e-07
+                ]
+              ],
+              "precastAreaM2": 2.96066600815457e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  5.594481100601456e-09,
+                  0.9999999944055189,
+                  -0.0
+                ],
+                [
+                  -8.881784197001252e-16,
+                  0.9999998471668718,
+                  1.5283312900542521e-07
+                ]
+              ],
+              "precastAreaM2": 4.4823522979796135e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  3.695247013935088e-07,
+                  0.9999996304752986,
+                  0.0
+                ],
+                [
+                  9.325873406851315e-15,
+                  0.9999996726442829,
+                  3.273557077969754e-07
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 3.091501508506896e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999944055189,
+                  5.5944811536983765e-09,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 4.680432219718967e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 213,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.8005062130121985e-07,
+                  0.999999819949374,
+                  4.621629028016446e-15
+                ],
+                [
+                  1.3322676295501878e-15,
+                  0.9999998562630554,
+                  1.4373694323319994e-07
+                ],
+                [
+                  1.1102230246251565e-16,
+                  -2.342596686279421e-17,
+                  0.9999999999999999
+                ]
+              ],
+              "precastAreaM2": 5.001711169946346e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 226,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999968102474557,
+                  3.189752544398258e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.667969678623524e-06,
+              "actualCastAreaM2": 3.5972161644226616e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 238,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.9999999025722593,
+                  6.626487590171395e-16,
+                  9.742774000408138e-08
+                ]
+              ],
+              "precastAreaM2": 1.1757584978126122e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 241,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  1.9984014443252818e-15,
+                  0.9999987459970976,
+                  1.25400290037413e-06
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.88480263561961e-06,
+              "actualCastAreaM2": 1.24902081187474e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 243,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -2.220446049250313e-16,
+                  0.9999997455351968,
+                  2.544648033888902e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1419022682979119e-07,
+                  0.999999885809772,
+                  1.2375340446875234e-15
+                ]
+              ],
+              "precastAreaM2": 1.4602100894891661e-05,
+              "actualCastAreaM2": 1.197773629751775e-05,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 245,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.2540029005192466e-06,
+                  0.9999987459970998,
+                  -3.056828136636677e-16
+                ]
+              ],
+              "precastAreaM2": 1.0839325956672148e-05,
+              "actualCastAreaM2": 7.18587803830765e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 246,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999998117833421,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 4.4350587027093374e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 250,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.7794781470570342e-07,
+                  0.9999998220521853,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 8.557898947198913e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ],
+                [
+                  0.6675954940950226,
+                  0.21920461814782227,
+                  0.11319988775715517
+                ],
+                [
+                  0.6503063787924642,
+                  0.34969362120753594,
+                  -1.4521860562333807e-16
+                ]
+              ],
+              "precastAreaM2": 4.690343168769354e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -2.234132394205201e-17
+                ],
+                [
+                  0.0,
+                  0.999999890442259,
+                  1.0955774107095403e-07
+                ],
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ]
+              ],
+              "precastAreaM2": 3.423246193713491e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 273,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999968102474557,
+                  0.0,
+                  3.189752544348081e-06
+                ]
+              ],
+              "precastAreaM2": 6.990145840388682e-07,
+              "actualCastAreaM2": 3.2793592530579894e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 275,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.24643783524547058,
+                  3.4979448696066965e-15,
+                  0.7535621647545259
+                ],
+                [
+                  5.551115123125783e-16,
+                  0.23862521958707503,
+                  0.7613747804129244
+                ],
+                [
+                  6.661338147750939e-16,
+                  0.23862521885617596,
+                  0.7613747811438234
+                ]
+              ],
+              "precastAreaM2": 1.899362131786197e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 285,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  3.3978359026409777e-07,
+                  0.9999996602164097,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.174579311934393e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 287,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.9999996602164098,
+                  3.397835902199091e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 4.545269833957156e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 301,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.0955774110144034e-07,
+                  0.9999998904422589,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 9.109575723170443e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 595,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  4.9960036108132044e-15,
+                  0.9999995877699022,
+                  4.1223009281440354e-07
+                ],
+                [
+                  0.2513358773420411,
+                  0.7486641226579596,
+                  -6.475308489460465e-16
+                ]
+              ],
+              "precastAreaM2": 7.118651871355462e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 640,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999998871950052,
+                  2.0938370864281887e-15,
+                  1.1280499267923578e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.349774818613054e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 680,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.05882352963089943,
+                  0.9411764703691006,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.235857093205258e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 715,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  8.652033894146293e-19
+                ],
+                [
+                  2.3314683517128287e-15,
+                  0.9999983340237474,
+                  1.6659762502987727e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 1.1949464349225388e-06,
+              "actualCastAreaM2": 3.996371297645957e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 719,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.665976250175838e-06,
+                  0.9999983340237601,
+                  -1.0313850162472505e-14
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.655597542547615e-07,
+              "actualCastAreaM2": 8.881167787950843e-09,
+              "zeroArea": false,
+              "negativeWinding": true
+            }
+          ],
+          "discardedPrecastAreaM2": 0.0001615707582514292
+        },
+        {
+          "sourcePrimitive": 28,
+          "role": "collar",
+          "sourceTriangles": 741,
+          "outputTriangles": 213,
+          "vertices": 511,
+          "maxPlaneDistanceM": 3.735839629128676e-07,
+          "sourceAreaM2": 50709.07011155262,
+          "combinedOutputAreaM2": 50709.070076491116,
+          "maxPerSourceAreaPartitionErrorM2": 8.015925700988191e-10,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod1-primitive28-collar-map.npz",
+          "degenerateZoneFallbackSourceFaces": [
+            470
+          ],
+          "discardedF32DegenerateOrInvertedSlivers": [
+            {
+              "sourceFace": 15,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.31999999999999995,
+                  -0.0,
+                  0.68
+                ],
+                [
+                  0.36279673029943305,
+                  2.305957377757295e-07,
+                  0.6372030391048292
+                ],
+                [
+                  0.3627966308593751,
+                  3.0517578125e-07,
+                  0.6372030639648437
+                ]
+              ],
+              "precastAreaM2": 9.976050826423313e-07,
+              "actualCastAreaM2": 2.2546869358961328e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 39,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ],
+                [
+                  0.5967936374491944,
+                  2.122792852787825e-07,
+                  0.4032061502715203
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 6.635736842953775e-05,
+              "actualCastAreaM2": 5.261777049880638e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 86,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -8.881784197001252e-16,
+                  0.18695889424564685,
+                  0.813041105754354
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  2.1725496734958938e-08,
+                  0.1869588261067257,
+                  0.8130411521677776
+                ]
+              ],
+              "precastAreaM2": 3.187002753597732e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 120,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.611540853740366,
+                  0.38845914625963457
+                ],
+                [
+                  4.440892098500626e-16,
+                  0.6115408301563096,
+                  0.38845916984369
+                ],
+                [
+                  0.5582903572008071,
+                  0.06684910984850251,
+                  0.37486053295069033
+                ]
+              ],
+              "precastAreaM2": 6.891029221533555e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 123,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  -2.220446049250313e-16,
+                  0.7477141078286487,
+                  0.2522858921713516
+                ],
+                [
+                  7.810391444706966e-08,
+                  0.9999999218960856,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.2227066794862062e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 127,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.49692311046570137,
+                  2.0551327156240404e-16,
+                  0.5030768895342984
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999218960856,
+                  7.810391447745727e-08,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.077710504330094e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 138,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9328818358579536,
+                  0.06711816414204537,
+                  9.96291991245783e-16
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  -2.886579864025407e-15,
+                  0.9999994183638466,
+                  5.816361561706203e-07
+                ]
+              ],
+              "precastAreaM2": 5.522519411609126e-06,
+              "actualCastAreaM2": 1.4748666051768006e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 151,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.5624631817393133,
+                  0.4375368182606873
+                ],
+                [
+                  1.1102230246251565e-15,
+                  0.5624631348106583,
+                  0.4375368651893406
+                ],
+                [
+                  0.22633633357170457,
+                  0.7736636664282954,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.7319876701354e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 153,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.1731355797905962e-07,
+                  0.999999882686442,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 3.783044298046057e-06,
+              "actualCastAreaM2": 2.7230974362824272e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 158,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.5132885623562443e-16,
+                  0.9999999999999999
+                ],
+                [
+                  3.1583034465487714e-07,
+                  0.9999996841696553,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 3.152807690130924e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 161,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -3.783221405890611e-17
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999996841696553,
+                  3.158303445848453e-07
+                ]
+              ],
+              "precastAreaM2": 3.482494336189615e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 168,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.7644620681966151,
+                  0.23553793180338534,
+                  -4.719692124686887e-16
+                ],
+                [
+                  -1.3322676295501878e-15,
+                  0.6961100942728683,
+                  0.3038899057271331
+                ],
+                [
+                  0.7644620696223327,
+                  0.23553793037766788,
+                  -5.138564800752849e-16
+                ]
+              ],
+              "precastAreaM2": 5.528787164649834e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 189,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  4.440892098500626e-16,
+                  0.9459471813352472,
+                  0.05405281866475236
+                ],
+                [
+                  0.2899148891296437,
+                  0.7100851108703564,
+                  -6.439825701277176e-17
+                ],
+                [
+                  0.28991488832421686,
+                  0.7100851116757834,
+                  -1.931947710383153e-16
+                ]
+              ],
+              "precastAreaM2": 1.0052349977407148e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 198,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.5206689071655273,
+                  3.814697265625e-08,
+                  0.47933105468750004
+                ],
+                [
+                  0.32000000000000006,
+                  1.1368683772161603e-15,
+                  0.6799999999999988
+                ],
+                [
+                  0.5206689094094669,
+                  1.0658141036401502e-15,
+                  0.4793310905905321
+                ]
+              ],
+              "precastAreaM2": 2.3924395171553084e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 203,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -1.3322676295501878e-15,
+                  0.999997621657654,
+                  2.378342347237358e-06
+                ],
+                [
+                  0.999999811783342,
+                  -0.0,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 8.038958632302164e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 207,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.3853809472693683e-14,
+                  1.5283310724799295e-07,
+                  0.9999998471668489
+                ]
+              ],
+              "precastAreaM2": 2.2248865231243667e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9999996304752986,
+                  3.6952470143747187e-07,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  0.9999995601147861,
+                  7.275716112827282e-15,
+                  4.398852066181633e-07
+                ]
+              ],
+              "precastAreaM2": 2.96066600815457e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  5.594481100601456e-09,
+                  0.9999999944055189,
+                  -0.0
+                ],
+                [
+                  -8.881784197001252e-16,
+                  0.9999998471668718,
+                  1.5283312900542521e-07
+                ]
+              ],
+              "precastAreaM2": 4.4823522979796135e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  3.695247013935088e-07,
+                  0.9999996304752986,
+                  0.0
+                ],
+                [
+                  9.325873406851315e-15,
+                  0.9999996726442829,
+                  3.273557077969754e-07
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 3.091501508506896e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999944055189,
+                  5.5944811536983765e-09,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 4.680432219718967e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 213,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.8005062130121985e-07,
+                  0.999999819949374,
+                  4.621629028016446e-15
+                ],
+                [
+                  1.3322676295501878e-15,
+                  0.9999998562630554,
+                  1.4373694323319994e-07
+                ],
+                [
+                  1.1102230246251565e-16,
+                  -2.342596686279421e-17,
+                  0.9999999999999999
+                ]
+              ],
+              "precastAreaM2": 5.001711169946346e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 226,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999968102474557,
+                  3.189752544398258e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.667969678623524e-06,
+              "actualCastAreaM2": 3.5972161644226616e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 238,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.9999999025722593,
+                  6.626487590171395e-16,
+                  9.742774000408138e-08
+                ]
+              ],
+              "precastAreaM2": 1.1757584978126122e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 241,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  1.9984014443252818e-15,
+                  0.9999987459970976,
+                  1.25400290037413e-06
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.88480263561961e-06,
+              "actualCastAreaM2": 1.24902081187474e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 243,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -2.220446049250313e-16,
+                  0.9999997455351968,
+                  2.544648033888902e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1419022682979119e-07,
+                  0.999999885809772,
+                  1.2375340446875234e-15
+                ]
+              ],
+              "precastAreaM2": 1.4602100894891661e-05,
+              "actualCastAreaM2": 1.197773629751775e-05,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 245,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.2540029005192466e-06,
+                  0.9999987459970998,
+                  -3.056828136636677e-16
+                ]
+              ],
+              "precastAreaM2": 1.0839325956672148e-05,
+              "actualCastAreaM2": 7.18587803830765e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 246,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999998117833421,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 4.4350587027093374e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 250,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.7794781470570342e-07,
+                  0.9999998220521853,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 8.557898947198913e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ],
+                [
+                  0.6675954940950226,
+                  0.21920461814782227,
+                  0.11319988775715517
+                ],
+                [
+                  0.6503063787924642,
+                  0.34969362120753594,
+                  -1.4521860562333807e-16
+                ]
+              ],
+              "precastAreaM2": 4.690343168769354e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -2.234132394205201e-17
+                ],
+                [
+                  0.0,
+                  0.999999890442259,
+                  1.0955774107095403e-07
+                ],
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ]
+              ],
+              "precastAreaM2": 3.423246193713491e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 273,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999968102474557,
+                  0.0,
+                  3.189752544348081e-06
+                ]
+              ],
+              "precastAreaM2": 6.990145840388682e-07,
+              "actualCastAreaM2": 3.2793592530579894e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 275,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.24643783524547058,
+                  3.4979448696066965e-15,
+                  0.7535621647545259
+                ],
+                [
+                  5.551115123125783e-16,
+                  0.23862521958707503,
+                  0.7613747804129244
+                ],
+                [
+                  6.661338147750939e-16,
+                  0.23862521885617596,
+                  0.7613747811438234
+                ]
+              ],
+              "precastAreaM2": 1.899362131786197e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 285,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  3.3978359026409777e-07,
+                  0.9999996602164097,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.174579311934393e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 287,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.9999996602164098,
+                  3.397835902199091e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 4.545269833957156e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 301,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.0955774110144034e-07,
+                  0.9999998904422589,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 9.109575723170443e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 595,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  4.9960036108132044e-15,
+                  0.9999995877699022,
+                  4.1223009281440354e-07
+                ],
+                [
+                  0.2513358773420411,
+                  0.7486641226579596,
+                  -6.475308489460465e-16
+                ]
+              ],
+              "precastAreaM2": 7.118651871355462e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 640,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999998871950052,
+                  2.0938370864281887e-15,
+                  1.1280499267923578e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.349774818613054e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 680,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.05882352963089943,
+                  0.9411764703691006,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.235857093205258e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 715,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  8.652033894146293e-19
+                ],
+                [
+                  2.3314683517128287e-15,
+                  0.9999983340237474,
+                  1.6659762502987727e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 1.1949464349225388e-06,
+              "actualCastAreaM2": 3.996371297645957e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 719,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.665976250175838e-06,
+                  0.9999983340237601,
+                  -1.0313850162472505e-14
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.655597542547615e-07,
+              "actualCastAreaM2": 8.881167787950843e-09,
+              "zeroArea": false,
+              "negativeWinding": true
+            }
+          ],
+          "discardedPrecastAreaM2": 0.0001615707582514292
+        }
+      ]
+    },
+    {
+      "lod": 2,
+      "primitives": [
+        {
+          "sourcePrimitive": 27,
+          "role": "interior",
+          "sourceTriangles": 1540,
+          "outputTriangles": 14556,
+          "vertices": 12969,
+          "maxPlaneDistanceM": 3.2685412185554246e-07,
+          "sourceAreaM2": 137713.73824099198,
+          "combinedOutputAreaM2": 137713.7387561667,
+          "maxPerSourceAreaPartitionErrorM2": 7.444877353490753e-11,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod2-primitive27-interior-map.npz",
+          "degenerateZoneFallbackSourceFaces": [],
+          "discardedF32DegenerateOrInvertedSlivers": [],
+          "discardedPrecastAreaM2": 0
+        },
+        {
+          "sourcePrimitive": 27,
+          "role": "collar",
+          "sourceTriangles": 1540,
+          "outputTriangles": 431,
+          "vertices": 799,
+          "maxPlaneDistanceM": 3.2685412185554246e-07,
+          "sourceAreaM2": 137713.73824099198,
+          "combinedOutputAreaM2": 137713.7387561667,
+          "maxPerSourceAreaPartitionErrorM2": 7.444877353490753e-11,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod2-primitive27-collar-map.npz",
+          "degenerateZoneFallbackSourceFaces": [],
+          "discardedF32DegenerateOrInvertedSlivers": [],
+          "discardedPrecastAreaM2": 0
+        },
+        {
+          "sourcePrimitive": 28,
+          "role": "interior",
+          "sourceTriangles": 741,
+          "outputTriangles": 2793,
+          "vertices": 4076,
+          "maxPlaneDistanceM": 3.735839629128676e-07,
+          "sourceAreaM2": 50709.07011155262,
+          "combinedOutputAreaM2": 50709.070076491116,
+          "maxPerSourceAreaPartitionErrorM2": 8.015925700988191e-10,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod2-primitive28-interior-map.npz",
+          "degenerateZoneFallbackSourceFaces": [
+            470
+          ],
+          "discardedF32DegenerateOrInvertedSlivers": [
+            {
+              "sourceFace": 15,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.31999999999999995,
+                  -0.0,
+                  0.68
+                ],
+                [
+                  0.36279673029943305,
+                  2.305957377757295e-07,
+                  0.6372030391048292
+                ],
+                [
+                  0.3627966308593751,
+                  3.0517578125e-07,
+                  0.6372030639648437
+                ]
+              ],
+              "precastAreaM2": 9.976050826423313e-07,
+              "actualCastAreaM2": 2.2546869358961328e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 39,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ],
+                [
+                  0.5967936374491944,
+                  2.122792852787825e-07,
+                  0.4032061502715203
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 6.635736842953775e-05,
+              "actualCastAreaM2": 5.261777049880638e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 86,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -8.881784197001252e-16,
+                  0.18695889424564685,
+                  0.813041105754354
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  2.1725496734958938e-08,
+                  0.1869588261067257,
+                  0.8130411521677776
+                ]
+              ],
+              "precastAreaM2": 3.187002753597732e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 120,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.611540853740366,
+                  0.38845914625963457
+                ],
+                [
+                  4.440892098500626e-16,
+                  0.6115408301563096,
+                  0.38845916984369
+                ],
+                [
+                  0.5582903572008071,
+                  0.06684910984850251,
+                  0.37486053295069033
+                ]
+              ],
+              "precastAreaM2": 6.891029221533555e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 123,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  -2.220446049250313e-16,
+                  0.7477141078286487,
+                  0.2522858921713516
+                ],
+                [
+                  7.810391444706966e-08,
+                  0.9999999218960856,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.2227066794862062e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 127,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.49692311046570137,
+                  2.0551327156240404e-16,
+                  0.5030768895342984
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999218960856,
+                  7.810391447745727e-08,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.077710504330094e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 138,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9328818358579536,
+                  0.06711816414204537,
+                  9.96291991245783e-16
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  -2.886579864025407e-15,
+                  0.9999994183638466,
+                  5.816361561706203e-07
+                ]
+              ],
+              "precastAreaM2": 5.522519411609126e-06,
+              "actualCastAreaM2": 1.4748666051768006e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 151,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.5624631817393133,
+                  0.4375368182606873
+                ],
+                [
+                  1.1102230246251565e-15,
+                  0.5624631348106583,
+                  0.4375368651893406
+                ],
+                [
+                  0.22633633357170457,
+                  0.7736636664282954,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.7319876701354e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 153,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.1731355797905962e-07,
+                  0.999999882686442,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 3.783044298046057e-06,
+              "actualCastAreaM2": 2.7230974362824272e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 158,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.5132885623562443e-16,
+                  0.9999999999999999
+                ],
+                [
+                  3.1583034465487714e-07,
+                  0.9999996841696553,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 3.152807690130924e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 161,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -3.783221405890611e-17
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999996841696553,
+                  3.158303445848453e-07
+                ]
+              ],
+              "precastAreaM2": 3.482494336189615e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 168,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.7644620681966151,
+                  0.23553793180338534,
+                  -4.719692124686887e-16
+                ],
+                [
+                  -1.3322676295501878e-15,
+                  0.6961100942728683,
+                  0.3038899057271331
+                ],
+                [
+                  0.7644620696223327,
+                  0.23553793037766788,
+                  -5.138564800752849e-16
+                ]
+              ],
+              "precastAreaM2": 5.528787164649834e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 189,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  4.440892098500626e-16,
+                  0.9459471813352472,
+                  0.05405281866475236
+                ],
+                [
+                  0.2899148891296437,
+                  0.7100851108703564,
+                  -6.439825701277176e-17
+                ],
+                [
+                  0.28991488832421686,
+                  0.7100851116757834,
+                  -1.931947710383153e-16
+                ]
+              ],
+              "precastAreaM2": 1.0052349977407148e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 198,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.5206689071655273,
+                  3.814697265625e-08,
+                  0.47933105468750004
+                ],
+                [
+                  0.32000000000000006,
+                  1.1368683772161603e-15,
+                  0.6799999999999988
+                ],
+                [
+                  0.5206689094094669,
+                  1.0658141036401502e-15,
+                  0.4793310905905321
+                ]
+              ],
+              "precastAreaM2": 2.3924395171553084e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 203,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -1.3322676295501878e-15,
+                  0.999997621657654,
+                  2.378342347237358e-06
+                ],
+                [
+                  0.999999811783342,
+                  -0.0,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 8.038958632302164e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 207,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.3853809472693683e-14,
+                  1.5283310724799295e-07,
+                  0.9999998471668489
+                ]
+              ],
+              "precastAreaM2": 2.2248865231243667e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9999996304752986,
+                  3.6952470143747187e-07,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  0.9999995601147861,
+                  7.275716112827282e-15,
+                  4.398852066181633e-07
+                ]
+              ],
+              "precastAreaM2": 2.96066600815457e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  5.594481100601456e-09,
+                  0.9999999944055189,
+                  -0.0
+                ],
+                [
+                  -8.881784197001252e-16,
+                  0.9999998471668718,
+                  1.5283312900542521e-07
+                ]
+              ],
+              "precastAreaM2": 4.4823522979796135e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  3.695247013935088e-07,
+                  0.9999996304752986,
+                  0.0
+                ],
+                [
+                  9.325873406851315e-15,
+                  0.9999996726442829,
+                  3.273557077969754e-07
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 3.091501508506896e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999944055189,
+                  5.5944811536983765e-09,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 4.680432219718967e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 213,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.8005062130121985e-07,
+                  0.999999819949374,
+                  4.621629028016446e-15
+                ],
+                [
+                  1.3322676295501878e-15,
+                  0.9999998562630554,
+                  1.4373694323319994e-07
+                ],
+                [
+                  1.1102230246251565e-16,
+                  -2.342596686279421e-17,
+                  0.9999999999999999
+                ]
+              ],
+              "precastAreaM2": 5.001711169946346e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 226,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999968102474557,
+                  3.189752544398258e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.667969678623524e-06,
+              "actualCastAreaM2": 3.5972161644226616e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 238,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.9999999025722593,
+                  6.626487590171395e-16,
+                  9.742774000408138e-08
+                ]
+              ],
+              "precastAreaM2": 1.1757584978126122e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 241,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  1.9984014443252818e-15,
+                  0.9999987459970976,
+                  1.25400290037413e-06
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.88480263561961e-06,
+              "actualCastAreaM2": 1.24902081187474e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 243,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -2.220446049250313e-16,
+                  0.9999997455351968,
+                  2.544648033888902e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1419022682979119e-07,
+                  0.999999885809772,
+                  1.2375340446875234e-15
+                ]
+              ],
+              "precastAreaM2": 1.4602100894891661e-05,
+              "actualCastAreaM2": 1.197773629751775e-05,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 245,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.2540029005192466e-06,
+                  0.9999987459970998,
+                  -3.056828136636677e-16
+                ]
+              ],
+              "precastAreaM2": 1.0839325956672148e-05,
+              "actualCastAreaM2": 7.18587803830765e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 246,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999998117833421,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 4.4350587027093374e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 250,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.7794781470570342e-07,
+                  0.9999998220521853,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 8.557898947198913e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ],
+                [
+                  0.6675954940950226,
+                  0.21920461814782227,
+                  0.11319988775715517
+                ],
+                [
+                  0.6503063787924642,
+                  0.34969362120753594,
+                  -1.4521860562333807e-16
+                ]
+              ],
+              "precastAreaM2": 4.690343168769354e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -2.234132394205201e-17
+                ],
+                [
+                  0.0,
+                  0.999999890442259,
+                  1.0955774107095403e-07
+                ],
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ]
+              ],
+              "precastAreaM2": 3.423246193713491e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 273,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999968102474557,
+                  0.0,
+                  3.189752544348081e-06
+                ]
+              ],
+              "precastAreaM2": 6.990145840388682e-07,
+              "actualCastAreaM2": 3.2793592530579894e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 275,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.24643783524547058,
+                  3.4979448696066965e-15,
+                  0.7535621647545259
+                ],
+                [
+                  5.551115123125783e-16,
+                  0.23862521958707503,
+                  0.7613747804129244
+                ],
+                [
+                  6.661338147750939e-16,
+                  0.23862521885617596,
+                  0.7613747811438234
+                ]
+              ],
+              "precastAreaM2": 1.899362131786197e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 285,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  3.3978359026409777e-07,
+                  0.9999996602164097,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.174579311934393e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 287,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.9999996602164098,
+                  3.397835902199091e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 4.545269833957156e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 301,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.0955774110144034e-07,
+                  0.9999998904422589,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 9.109575723170443e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 595,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  4.9960036108132044e-15,
+                  0.9999995877699022,
+                  4.1223009281440354e-07
+                ],
+                [
+                  0.2513358773420411,
+                  0.7486641226579596,
+                  -6.475308489460465e-16
+                ]
+              ],
+              "precastAreaM2": 7.118651871355462e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 640,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999998871950052,
+                  2.0938370864281887e-15,
+                  1.1280499267923578e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.349774818613054e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 680,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.05882352963089943,
+                  0.9411764703691006,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.235857093205258e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 715,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  8.652033894146293e-19
+                ],
+                [
+                  2.3314683517128287e-15,
+                  0.9999983340237474,
+                  1.6659762502987727e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 1.1949464349225388e-06,
+              "actualCastAreaM2": 3.996371297645957e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 719,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.665976250175838e-06,
+                  0.9999983340237601,
+                  -1.0313850162472505e-14
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.655597542547615e-07,
+              "actualCastAreaM2": 8.881167787950843e-09,
+              "zeroArea": false,
+              "negativeWinding": true
+            }
+          ],
+          "discardedPrecastAreaM2": 0.0001615707582514292
+        },
+        {
+          "sourcePrimitive": 28,
+          "role": "collar",
+          "sourceTriangles": 741,
+          "outputTriangles": 213,
+          "vertices": 511,
+          "maxPlaneDistanceM": 3.735839629128676e-07,
+          "sourceAreaM2": 50709.07011155262,
+          "combinedOutputAreaM2": 50709.070076491116,
+          "maxPerSourceAreaPartitionErrorM2": 8.015925700988191e-10,
+          "UV0ChangedForNewSurface": true,
+          "AO_UV1BarycentricallyPreserved": true,
+          "allNewVerticesOnOriginalTrianglePlanes": true,
+          "subdivisionMap": "lod2-primitive28-collar-map.npz",
+          "degenerateZoneFallbackSourceFaces": [
+            470
+          ],
+          "discardedF32DegenerateOrInvertedSlivers": [
+            {
+              "sourceFace": 15,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.31999999999999995,
+                  -0.0,
+                  0.68
+                ],
+                [
+                  0.36279673029943305,
+                  2.305957377757295e-07,
+                  0.6372030391048292
+                ],
+                [
+                  0.3627966308593751,
+                  3.0517578125e-07,
+                  0.6372030639648437
+                ]
+              ],
+              "precastAreaM2": 9.976050826423313e-07,
+              "actualCastAreaM2": 2.2546869358961328e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 39,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ],
+                [
+                  0.5967936374491944,
+                  2.122792852787825e-07,
+                  0.4032061502715203
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 6.635736842953775e-05,
+              "actualCastAreaM2": 5.261777049880638e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 86,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -8.881784197001252e-16,
+                  0.18695889424564685,
+                  0.813041105754354
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  2.1725496734958938e-08,
+                  0.1869588261067257,
+                  0.8130411521677776
+                ]
+              ],
+              "precastAreaM2": 3.187002753597732e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 120,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.611540853740366,
+                  0.38845914625963457
+                ],
+                [
+                  4.440892098500626e-16,
+                  0.6115408301563096,
+                  0.38845916984369
+                ],
+                [
+                  0.5582903572008071,
+                  0.06684910984850251,
+                  0.37486053295069033
+                ]
+              ],
+              "precastAreaM2": 6.891029221533555e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 123,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  -2.220446049250313e-16,
+                  0.7477141078286487,
+                  0.2522858921713516
+                ],
+                [
+                  7.810391444706966e-08,
+                  0.9999999218960856,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.2227066794862062e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 127,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.49692311046570137,
+                  2.0551327156240404e-16,
+                  0.5030768895342984
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999218960856,
+                  7.810391447745727e-08,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.077710504330094e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 138,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9328818358579536,
+                  0.06711816414204537,
+                  9.96291991245783e-16
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  -2.886579864025407e-15,
+                  0.9999994183638466,
+                  5.816361561706203e-07
+                ]
+              ],
+              "precastAreaM2": 5.522519411609126e-06,
+              "actualCastAreaM2": 1.4748666051768006e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 151,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -6.661338147750939e-16,
+                  0.5624631817393133,
+                  0.4375368182606873
+                ],
+                [
+                  1.1102230246251565e-15,
+                  0.5624631348106583,
+                  0.4375368651893406
+                ],
+                [
+                  0.22633633357170457,
+                  0.7736636664282954,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.7319876701354e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 153,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.1731355797905962e-07,
+                  0.999999882686442,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 3.783044298046057e-06,
+              "actualCastAreaM2": 2.7230974362824272e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 158,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.5132885623562443e-16,
+                  0.9999999999999999
+                ],
+                [
+                  3.1583034465487714e-07,
+                  0.9999996841696553,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 3.152807690130924e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 161,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -3.783221405890611e-17
+                ],
+                [
+                  1.1102230246251565e-16,
+                  0.9999996841696553,
+                  3.158303445848453e-07
+                ]
+              ],
+              "precastAreaM2": 3.482494336189615e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 168,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.7644620681966151,
+                  0.23553793180338534,
+                  -4.719692124686887e-16
+                ],
+                [
+                  -1.3322676295501878e-15,
+                  0.6961100942728683,
+                  0.3038899057271331
+                ],
+                [
+                  0.7644620696223327,
+                  0.23553793037766788,
+                  -5.138564800752849e-16
+                ]
+              ],
+              "precastAreaM2": 5.528787164649834e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 189,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  4.440892098500626e-16,
+                  0.9459471813352472,
+                  0.05405281866475236
+                ],
+                [
+                  0.2899148891296437,
+                  0.7100851108703564,
+                  -6.439825701277176e-17
+                ],
+                [
+                  0.28991488832421686,
+                  0.7100851116757834,
+                  -1.931947710383153e-16
+                ]
+              ],
+              "precastAreaM2": 1.0052349977407148e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 198,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.5206689071655273,
+                  3.814697265625e-08,
+                  0.47933105468750004
+                ],
+                [
+                  0.32000000000000006,
+                  1.1368683772161603e-15,
+                  0.6799999999999988
+                ],
+                [
+                  0.5206689094094669,
+                  1.0658141036401502e-15,
+                  0.4793310905905321
+                ]
+              ],
+              "precastAreaM2": 2.3924395171553084e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 203,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -1.3322676295501878e-15,
+                  0.999997621657654,
+                  2.378342347237358e-06
+                ],
+                [
+                  0.999999811783342,
+                  -0.0,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 8.038958632302164e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 207,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.3853809472693683e-14,
+                  1.5283310724799295e-07,
+                  0.9999998471668489
+                ]
+              ],
+              "precastAreaM2": 2.2248865231243667e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.9999996304752986,
+                  3.6952470143747187e-07,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  0.9999995601147861,
+                  7.275716112827282e-15,
+                  4.398852066181633e-07
+                ]
+              ],
+              "precastAreaM2": 2.96066600815457e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 208,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  5.594481100601456e-09,
+                  0.9999999944055189,
+                  -0.0
+                ],
+                [
+                  -8.881784197001252e-16,
+                  0.9999998471668718,
+                  1.5283312900542521e-07
+                ]
+              ],
+              "precastAreaM2": 4.4823522979796135e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  3.695247013935088e-07,
+                  0.9999996304752986,
+                  0.0
+                ],
+                [
+                  9.325873406851315e-15,
+                  0.9999996726442829,
+                  3.273557077969754e-07
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 3.091501508506896e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 212,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.9999999944055189,
+                  5.5944811536983765e-09,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 4.680432219718967e-08,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 213,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.8005062130121985e-07,
+                  0.999999819949374,
+                  4.621629028016446e-15
+                ],
+                [
+                  1.3322676295501878e-15,
+                  0.9999998562630554,
+                  1.4373694323319994e-07
+                ],
+                [
+                  1.1102230246251565e-16,
+                  -2.342596686279421e-17,
+                  0.9999999999999999
+                ]
+              ],
+              "precastAreaM2": 5.001711169946346e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 226,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999968102474557,
+                  3.189752544398258e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 7.667969678623524e-06,
+              "actualCastAreaM2": 3.5972161644226616e-07,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 238,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.9999999025722593,
+                  6.626487590171395e-16,
+                  9.742774000408138e-08
+                ]
+              ],
+              "precastAreaM2": 1.1757584978126122e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 241,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  1.9984014443252818e-15,
+                  0.9999987459970976,
+                  1.25400290037413e-06
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.88480263561961e-06,
+              "actualCastAreaM2": 1.24902081187474e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 243,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  -2.220446049250313e-16,
+                  0.9999997455351968,
+                  2.544648033888902e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1419022682979119e-07,
+                  0.999999885809772,
+                  1.2375340446875234e-15
+                ]
+              ],
+              "precastAreaM2": 1.4602100894891661e-05,
+              "actualCastAreaM2": 1.197773629751775e-05,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 245,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.1102230246251565e-16,
+                  0.9999999999999999,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.2540029005192466e-06,
+                  0.9999987459970998,
+                  -3.056828136636677e-16
+                ]
+              ],
+              "precastAreaM2": 1.0839325956672148e-05,
+              "actualCastAreaM2": 7.18587803830765e-06,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 246,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  0.9999998117833421,
+                  1.8821665802826173e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 4.4350587027093374e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 250,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.7794781470570342e-07,
+                  0.9999998220521853,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ]
+              ],
+              "precastAreaM2": 8.557898947198913e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ],
+                [
+                  0.6675954940950226,
+                  0.21920461814782227,
+                  0.11319988775715517
+                ],
+                [
+                  0.6503063787924642,
+                  0.34969362120753594,
+                  -1.4521860562333807e-16
+                ]
+              ],
+              "precastAreaM2": 4.690343168769354e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 255,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -2.234132394205201e-17
+                ],
+                [
+                  0.0,
+                  0.999999890442259,
+                  1.0955774107095403e-07
+                ],
+                [
+                  0.6503063779301181,
+                  0.3496936220698818,
+                  5.585330985513003e-17
+                ]
+              ],
+              "precastAreaM2": 3.423246193713491e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 273,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999968102474557,
+                  0.0,
+                  3.189752544348081e-06
+                ]
+              ],
+              "precastAreaM2": 6.990145840388682e-07,
+              "actualCastAreaM2": 3.2793592530579894e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 275,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.24643783524547058,
+                  3.4979448696066965e-15,
+                  0.7535621647545259
+                ],
+                [
+                  5.551115123125783e-16,
+                  0.23862521958707503,
+                  0.7613747804129244
+                ],
+                [
+                  6.661338147750939e-16,
+                  0.23862521885617596,
+                  0.7613747811438234
+                ]
+              ],
+              "precastAreaM2": 1.899362131786197e-09,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 285,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  3.3978359026409777e-07,
+                  0.9999996602164097,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.174579311934393e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 287,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.9999996602164098,
+                  3.397835902199091e-07
+                ],
+                [
+                  1.0,
+                  -0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 4.545269833957156e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 301,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.0955774110144034e-07,
+                  0.9999998904422589,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 9.109575723170443e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 595,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  4.9960036108132044e-15,
+                  0.9999995877699022,
+                  4.1223009281440354e-07
+                ],
+                [
+                  0.2513358773420411,
+                  0.7486641226579596,
+                  -6.475308489460465e-16
+                ]
+              ],
+              "precastAreaM2": 7.118651871355462e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 640,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ],
+                [
+                  0.9999998871950052,
+                  2.0938370864281887e-15,
+                  1.1280499267923578e-07
+                ],
+                [
+                  1.0,
+                  0.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.349774818613054e-06,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 680,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                [
+                  0.05882352963089943,
+                  0.9411764703691006,
+                  -0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  -0.0
+                ]
+              ],
+              "precastAreaM2": 1.235857093205258e-07,
+              "actualCastAreaM2": 0.0,
+              "zeroArea": true,
+              "negativeWinding": false
+            },
+            {
+              "sourceFace": 715,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  1.0,
+                  8.652033894146293e-19
+                ],
+                [
+                  2.3314683517128287e-15,
+                  0.9999983340237474,
+                  1.6659762502987727e-06
+                ],
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 1.1949464349225388e-06,
+              "actualCastAreaM2": 3.996371297645957e-08,
+              "zeroArea": false,
+              "negativeWinding": true
+            },
+            {
+              "sourceFace": 719,
+              "role": "interior",
+              "barycentricWeights": [
+                [
+                  0.0,
+                  -0.0,
+                  1.0
+                ],
+                [
+                  1.665976250175838e-06,
+                  0.9999983340237601,
+                  -1.0313850162472505e-14
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ]
+              ],
+              "precastAreaM2": 2.655597542547615e-07,
+              "actualCastAreaM2": 8.881167787950843e-09,
+              "zeroArea": false,
+              "negativeWinding": true
+            }
+          ],
+          "discardedPrecastAreaM2": 0.0001615707582514292
+        }
+      ]
+    }
+  ],
+  "albedoDecodedPixelCountRatioToV7": 0.7265625,
+  "normalMRDecodedPixelCountRatioToV7": 0.9140625,
+  "twoOpaquePBRMaterials": true,
+  "artisticMaterialZoneBoundarySimplificationM": 0.005,
+  "sourceBuildingAndGroundFootprintsNeverSimplified": true,
+  "onlyMicroscopicCastZeroOrInvertedSliversRemoved": true,
+  "zoneRasterUsesOriginalLayoutWithinItsOwnTexelFootprint": true,
+  "notRuntimeQualityAcceptance": true,
+  "createdUTC": "2026-10-16T21:23:45.802676+00:00"
+}

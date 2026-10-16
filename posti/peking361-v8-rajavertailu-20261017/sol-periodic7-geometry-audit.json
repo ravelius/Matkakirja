@@ -1,0 +1,1602 @@
+{
+  "status": "C7_BOUNDED_SOURCE_GEOMETRY_AND_RAW_BUDGET_PASS_NOT_VISUAL_RUNTIME_OR_OWNER_ACCEPTANCE",
+  "createdUTC": "2026-10-16T21:25:05.611217+00:00",
+  "rawBudget": {
+    "projected72Bytes": 164084512,
+    "ceiling": 164326250,
+    "headroom": 241738,
+    "passed": true
+  },
+  "lods": [
+    {
+      "lod": 0,
+      "sha256": "7e7b3fecd883dc26db4212d3eb695c478b31c6300bbdfa33d9f866a4ef4afd6b",
+      "bytes": 12608540,
+      "triangles": 113754,
+      "droppedSliversComparedToC6": 40,
+      "allSurvivingOrderedCornerAttributesBitExactToC6": true,
+      "allNPZSurvivingSourceWeightsZonesSegmentsExactToC6": true,
+      "allV6ImagesMaterialsNodesTreesAndNonpavingProtected": true,
+      "sourceFacesAccounted": true,
+      "zeroAreaFaces": 0,
+      "negativeWindingFaces": 0,
+      "roleFaceCounts": {
+        "interior": 17349,
+        "collar": 644
+      },
+      "images": [
+        {
+          "file": "interior-albedo-lod0.jpg",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 125457,
+          "role": "interior",
+          "slot": "albedo"
+        },
+        {
+          "file": "interior-normal-lod0.png",
+          "size": [
+            512,
+            512
+          ],
+          "bytes": 24213,
+          "role": "interior",
+          "slot": "normal"
+        },
+        {
+          "file": "interior-MR-lod0.png",
+          "size": [
+            512,
+            512
+          ],
+          "bytes": 11955,
+          "role": "interior",
+          "slot": "MR"
+        },
+        {
+          "file": "collar-albedo-lod0.jpg",
+          "size": [
+            4096,
+            2720
+          ],
+          "bytes": 2232733,
+          "role": "collar",
+          "slot": "albedo"
+        },
+        {
+          "file": "collar-normal-lod0.png",
+          "size": [
+            1024,
+            680
+          ],
+          "bytes": 167586,
+          "role": "collar",
+          "slot": "normal"
+        },
+        {
+          "file": "collar-MR-lod0.png",
+          "size": [
+            1024,
+            680
+          ],
+          "bytes": 208997,
+          "role": "collar",
+          "slot": "MR"
+        }
+      ]
+    },
+    {
+      "lod": 1,
+      "sha256": "5133e940a6527740b9b00c289597bbe6edef4dc4255bca7deb334b7300604c89",
+      "bytes": 5755160,
+      "triangles": 66350,
+      "droppedSliversComparedToC6": 40,
+      "allSurvivingOrderedCornerAttributesBitExactToC6": true,
+      "allNPZSurvivingSourceWeightsZonesSegmentsExactToC6": true,
+      "allV6ImagesMaterialsNodesTreesAndNonpavingProtected": true,
+      "sourceFacesAccounted": true,
+      "zeroAreaFaces": 0,
+      "negativeWindingFaces": 0,
+      "roleFaceCounts": {
+        "interior": 17349,
+        "collar": 644
+      },
+      "images": [
+        {
+          "file": "interior-albedo-lod1.jpg",
+          "size": [
+            512,
+            512
+          ],
+          "bytes": 34689,
+          "role": "interior",
+          "slot": "albedo"
+        },
+        {
+          "file": "interior-normal-lod1.png",
+          "size": [
+            256,
+            256
+          ],
+          "bytes": 10073,
+          "role": "interior",
+          "slot": "normal"
+        },
+        {
+          "file": "interior-MR-lod1.png",
+          "size": [
+            256,
+            256
+          ],
+          "bytes": 9332,
+          "role": "interior",
+          "slot": "MR"
+        },
+        {
+          "file": "collar-albedo-lod1.jpg",
+          "size": [
+            2048,
+            1360
+          ],
+          "bytes": 620560,
+          "role": "collar",
+          "slot": "albedo"
+        },
+        {
+          "file": "collar-normal-lod1.png",
+          "size": [
+            512,
+            340
+          ],
+          "bytes": 55699,
+          "role": "collar",
+          "slot": "normal"
+        },
+        {
+          "file": "collar-MR-lod1.png",
+          "size": [
+            512,
+            340
+          ],
+          "bytes": 72777,
+          "role": "collar",
+          "slot": "MR"
+        }
+      ]
+    },
+    {
+      "lod": 2,
+      "sha256": "3777e8f506b3ce3e3a8e0c42ca6525d5ad96994c8b6c7e22bc2415d3920a2d34",
+      "bytes": 4792324,
+      "triangles": 65018,
+      "droppedSliversComparedToC6": 40,
+      "allSurvivingOrderedCornerAttributesBitExactToC6": true,
+      "allNPZSurvivingSourceWeightsZonesSegmentsExactToC6": true,
+      "allV6ImagesMaterialsNodesTreesAndNonpavingProtected": true,
+      "sourceFacesAccounted": true,
+      "zeroAreaFaces": 0,
+      "negativeWindingFaces": 0,
+      "roleFaceCounts": {
+        "interior": 17349,
+        "collar": 644
+      },
+      "images": [
+        {
+          "file": "interior-albedo-lod2.jpg",
+          "size": [
+            256,
+            256
+          ],
+          "bytes": 12379,
+          "role": "interior",
+          "slot": "albedo"
+        },
+        {
+          "file": "interior-normal-lod2.png",
+          "size": [
+            128,
+            128
+          ],
+          "bytes": 4519,
+          "role": "interior",
+          "slot": "normal"
+        },
+        {
+          "file": "interior-MR-lod2.png",
+          "size": [
+            128,
+            128
+          ],
+          "bytes": 5953,
+          "role": "interior",
+          "slot": "MR"
+        },
+        {
+          "file": "collar-albedo-lod2.jpg",
+          "size": [
+            1024,
+            680
+          ],
+          "bytes": 159303,
+          "role": "collar",
+          "slot": "albedo"
+        },
+        {
+          "file": "collar-normal-lod2.png",
+          "size": [
+            256,
+            170
+          ],
+          "bytes": 10538,
+          "role": "collar",
+          "slot": "normal"
+        },
+        {
+          "file": "collar-MR-lod2.png",
+          "size": [
+            256,
+            170
+          ],
+          "bytes": 17445,
+          "role": "collar",
+          "slot": "MR"
+        }
+      ]
+    }
+  ],
+  "C5Rejected": true,
+  "C6RequiresCleanup": true,
+  "sourcePins": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/glb-v4/peking_2_3_lod0.glb",
+      "bytes": 12608540,
+      "sha256": "7e7b3fecd883dc26db4212d3eb695c478b31c6300bbdfa33d9f866a4ef4afd6b"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/glb-v4/peking_2_3_lod0-proof.json",
+      "bytes": 342419,
+      "sha256": "8cf049b0719dbe414558010aca29604286a5aae6b88913adccd6391786474075"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod0-primitive28-interior-map.npz",
+      "bytes": 300669,
+      "sha256": "a64178da7f5ba8523f53f942d6b4ae00e8228aa91dcf8b5273e47d77e395f1f9"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod0-primitive29-interior-map.npz",
+      "bytes": 61550,
+      "sha256": "34ab0f03608347b5419579466c1907de10d746a7516f7cf3da15171dddabcd92"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod0-primitive28-collar-map.npz",
+      "bytes": 14172,
+      "sha256": "8f984c1a8bea208446da16fd38f0c52163f7dff85403ad99a99bc8f8bb5fc274"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod0-primitive29-collar-map.npz",
+      "bytes": 7936,
+      "sha256": "422e014d42929ec804c70597f3312a4a39979262601f89e5f1d63f9552c32538"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-albedo-lod0.jpg",
+      "bytes": 125457,
+      "sha256": "419576f4204e61f1467e9cc17d63f064f38d91850e8cdcd4941df6a4aed9b321"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-normal-lod0.png",
+      "bytes": 24213,
+      "sha256": "67021c3443cc84fdbb6a7a82b5d519ddf617cf1a54bbe183e7879abe782c56ef"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-MR-lod0.png",
+      "bytes": 11955,
+      "sha256": "64b7240beef7c934b1839b6acbc0096f7baee86783ef76a886a131782ce6f653"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-albedo-lod0.jpg",
+      "bytes": 2232733,
+      "sha256": "c5d6887558e1c9a7b5ef953d173dfae1dd125afeb239263be85033178805c4fd"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-normal-lod0.png",
+      "bytes": 167586,
+      "sha256": "a35cfb6acdbb523b0a93b75394c320298932dde0cc7422a5c4e8dcd8efa751f2"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-MR-lod0.png",
+      "bytes": 208997,
+      "sha256": "ca614c6b5d1cccf7a9202cbc5ee9b245477813e2dfc20a83849504977f953374"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/glb-v4/peking_2_3_lod1.glb",
+      "bytes": 5755160,
+      "sha256": "5133e940a6527740b9b00c289597bbe6edef4dc4255bca7deb334b7300604c89"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/glb-v4/peking_2_3_lod1-proof.json",
+      "bytes": 695660,
+      "sha256": "517b3213a856743abbc7ac69e51810fd4f0ad6b7dc7b417dbe66ce1da2e51abb"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod1-primitive27-interior-map.npz",
+      "bytes": 300669,
+      "sha256": "a64178da7f5ba8523f53f942d6b4ae00e8228aa91dcf8b5273e47d77e395f1f9"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod1-primitive28-interior-map.npz",
+      "bytes": 61550,
+      "sha256": "34ab0f03608347b5419579466c1907de10d746a7516f7cf3da15171dddabcd92"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod1-primitive27-collar-map.npz",
+      "bytes": 14172,
+      "sha256": "8f984c1a8bea208446da16fd38f0c52163f7dff85403ad99a99bc8f8bb5fc274"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod1-primitive28-collar-map.npz",
+      "bytes": 7936,
+      "sha256": "422e014d42929ec804c70597f3312a4a39979262601f89e5f1d63f9552c32538"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-albedo-lod1.jpg",
+      "bytes": 34689,
+      "sha256": "77838b024330a0463614432bac1356690b5d38ec27ba541b368ef33ff0852b65"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-normal-lod1.png",
+      "bytes": 10073,
+      "sha256": "25306bf1566863c799137a7e2ef1a064708e723ff7aacd26a3da5f6d55e93167"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-MR-lod1.png",
+      "bytes": 9332,
+      "sha256": "2bc4cec87779d60f87c1609712215aa02b2aab598a8921ab3a3b412dee828a8e"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-albedo-lod1.jpg",
+      "bytes": 620560,
+      "sha256": "836c2bea9feeb288977c2bb8fffe11e2cce843972f136e92bb388d0240f5020d"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-normal-lod1.png",
+      "bytes": 55699,
+      "sha256": "d5ee639fa5a5b08431dd10f08e23ef7027b085a5309f987b9c0d36609e2aaf37"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-MR-lod1.png",
+      "bytes": 72777,
+      "sha256": "e1f768ff81a392e3423c7c4a6d083e2aa570dba6102686117069715c4b454ab5"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/glb-v4/peking_2_3_lod2.glb",
+      "bytes": 4792324,
+      "sha256": "3777e8f506b3ce3e3a8e0c42ca6525d5ad96994c8b6c7e22bc2415d3920a2d34"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/glb-v4/peking_2_3_lod2-proof.json",
+      "bytes": 688515,
+      "sha256": "8d321b3da2f36f00ece459d0eedfab4356f7bb6c5f6c5b823e252aa9e6b437e2"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod2-primitive27-interior-map.npz",
+      "bytes": 300669,
+      "sha256": "a64178da7f5ba8523f53f942d6b4ae00e8228aa91dcf8b5273e47d77e395f1f9"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod2-primitive28-interior-map.npz",
+      "bytes": 61550,
+      "sha256": "34ab0f03608347b5419579466c1907de10d746a7516f7cf3da15171dddabcd92"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod2-primitive27-collar-map.npz",
+      "bytes": 14172,
+      "sha256": "8f984c1a8bea208446da16fd38f0c52163f7dff85403ad99a99bc8f8bb5fc274"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/lod2-primitive28-collar-map.npz",
+      "bytes": 7936,
+      "sha256": "422e014d42929ec804c70597f3312a4a39979262601f89e5f1d63f9552c32538"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-albedo-lod2.jpg",
+      "bytes": 12379,
+      "sha256": "e48e778414f1e15a31fac9c2e9b94311388916f36b4b6fd773c8b0f74efdfc62"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-normal-lod2.png",
+      "bytes": 4519,
+      "sha256": "6c1908ce9286a506edbbf26ab5fd60ab1b39ddc0fe4aa1a1f3198a25c4799e74"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/interior-MR-lod2.png",
+      "bytes": 5953,
+      "sha256": "c4671f41a636fe4ef21f7587c82cdde270e186a05971765731c23f40d4f7c784"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-albedo-lod2.jpg",
+      "bytes": 159303,
+      "sha256": "4d1ddd5541a1271a808383eefe9b6c2d44e6dd9d100e9f2289477930ff3b6b59"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-normal-lod2.png",
+      "bytes": 10538,
+      "sha256": "d82d60e5f66f835baee866cdde64541ee0ebafad8b8463d56c1708703f1d63fc"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/collar-MR-lod2.png",
+      "bytes": 17445,
+      "sha256": "aaf2dc619fd48bcb73f3d1f3fc01d4e1f864ae40e43ce8961214e2e7e957e13e"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/generate-task361-v8-periodic-surface2.py",
+      "bytes": 11228,
+      "sha256": "b7287c0599be4e81bcc205ac64d2c498225557f640476e5a47af745d2e6f70a0"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/build-task361-v8-periodic7.py",
+      "bytes": 20235,
+      "sha256": "07373fbcfefae4556a2eb763dda033d6b0a816c2050eb4d3903066ef32063697"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/material-proof.json",
+      "bytes": 8121,
+      "sha256": "10011a5379cb1a0cfd65370d6e57ff4867db80367cfe5f725d9478451fcdc907"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/periodic-surface-candidate2/atlas-layout.json",
+      "bytes": 12410,
+      "sha256": "1316870156ff281e9faedf4d8367ff29cd900876fb56797e75555a466ebc2f8b"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/boundary-glb-candidate7/candidate-proof.json",
+      "bytes": 184964,
+      "sha256": "ce74e20106ff2b4de3be8857cbf16ad22232e0db0582bb6b977e9e7babcbb2ee"
+    }
+  ],
+  "limits": [
+    "Source render preflight only, not game/receiver/visual/owner acceptance.",
+    "Exact actual C7 survivor geometry equals audited C6 with only measured40 bad faces perLOD removed.",
+    "Current shader normal-frame acceptance remains conditional on receiver UV/image/V-flip and exact build verification.",
+    "No exact unrounded perfect partition claim after discarding slivers: pre-cast removed area and actualF32 union-loss differ and are both reported.",
+    "No end-to-end receiver conversion/game, actual normal-frame build pin, visual seam/mip/stone quality, motion/LOD/FPS/device/owner acceptance.",
+    "Only pilot2_3 source overlay reviewed;362 excluded."
+  ],
+  "cleanupToleranceFromActualC6SurvivorMatch": {
+    "badFaces": [
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 15,
+        "role": "interior",
+        "outputFace": 62,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 9.976050826423313e-07,
+          "maxEdgeM": 1.5133221797939511,
+          "minimumAltitudeM": 1.3184305311353618e-06
+        },
+        "actualF32": {
+          "areaM2": 2.2546869358961328e-08,
+          "maxEdgeM": 1.5133199828518251,
+          "minimumAltitudeM": 2.9797887577579128e-08
+        },
+        "maxCornerRoundingDistanceM": 2.5625130852743522e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 39,
+        "role": "interior",
+        "outputFace": 92,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 6.635736842953775e-05,
+          "maxEdgeM": 35.36224765323329,
+          "minimumAltitudeM": 3.7530062613805868e-06
+        },
+        "actualF32": {
+          "areaM2": 5.261777049880638e-07,
+          "maxEdgeM": 35.36224765323329,
+          "minimumAltitudeM": 2.9759290763858082e-08
+        },
+        "maxCornerRoundingDistanceM": 4.69187569233249e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 86,
+        "role": "interior",
+        "outputFace": 603,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 3.187002753597732e-08,
+          "maxEdgeM": 0.507116167974183,
+          "minimumAltitudeM": 1.2569123032811608e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 0.5071161608272394,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 4.448281211478233e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 120,
+        "role": "interior",
+        "outputFace": 821,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 6.891029221533555e-07,
+          "maxEdgeM": 5.813215729067467,
+          "minimumAltitudeM": 2.3708148958163596e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 5.8132167197639095,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 5.269641897184282e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 123,
+        "role": "interior",
+        "outputFace": 834,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 1.2227066794862062e-06,
+          "maxEdgeM": 2.761758747065313,
+          "minimumAltitudeM": 8.854550968910467e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 2.7617652956593473,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 6.68912497186679e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 127,
+        "role": "interior",
+        "outputFace": 860,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 2.077710504330094e-06,
+          "maxEdgeM": 4.692973072369485,
+          "minimumAltitudeM": 8.8545596673584e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 4.692970071404252,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 3.63983850565397e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 138,
+        "role": "interior",
+        "outputFace": 887,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 5.522519411609126e-06,
+          "maxEdgeM": 3.9591605794659133,
+          "minimumAltitudeM": 2.789742573338164e-06
+        },
+        "actualF32": {
+          "areaM2": 1.4748666051768006e-08,
+          "maxEdgeM": 3.959158756652381,
+          "minimumAltitudeM": 7.45040396623982e-09
+        },
+        "maxCornerRoundingDistanceM": 3.106718517514919e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 151,
+        "role": "interior",
+        "outputFace": 1003,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 7.7319876701354e-07,
+          "maxEdgeM": 3.6750415701519414,
+          "minimumAltitudeM": 4.207836848939767e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 3.675041543666207,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 7.623015119387823e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 153,
+        "role": "interior",
+        "outputFace": 1014,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 3.783044298046057e-06,
+          "maxEdgeM": 4.874062930773712,
+          "minimumAltitudeM": 1.5523165588038619e-06
+        },
+        "actualF32": {
+          "areaM2": 2.7230974362824272e-08,
+          "maxEdgeM": 4.874062930773712,
+          "minimumAltitudeM": 1.1173829615901824e-08
+        },
+        "maxCornerRoundingDistanceM": 1.702882295530868e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 158,
+        "role": "interior",
+        "outputFace": 1048,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 3.152807690130924e-06,
+          "maxEdgeM": 3.636981498243188,
+          "minimumAltitudeM": 1.7337496446731226e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 3.636980842340077,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 1.8536712932134738e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 161,
+        "role": "interior",
+        "outputFace": 1071,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 3.482494336189615e-06,
+          "maxEdgeM": 4.0173574825738925,
+          "minimumAltitudeM": 1.7337238975100646e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 4.0173574825738925,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 1.8536712932134738e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 168,
+        "role": "interior",
+        "outputFace": 1155,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 5.528787164649834e-09,
+          "maxEdgeM": 6.986704966235005,
+          "minimumAltitudeM": 1.582659405648035e-09
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 6.986701862147151,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 7.213443986686103e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 189,
+        "role": "interior",
+        "outputFace": 1347,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 1.0052349977407148e-09,
+          "maxEdgeM": 1.7216357792414123,
+          "minimumAltitudeM": 1.1677673174097737e-09
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 1.7216358664844136,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 2.3232481994849934e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 198,
+        "role": "interior",
+        "outputFace": 1484,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 2.3924395171553084e-06,
+          "maxEdgeM": 7.09475226418067,
+          "minimumAltitudeM": 6.744251040967381e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 7.094752264156595,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 8.995667596556231e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 203,
+        "role": "interior",
+        "outputFace": 1494,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 8.038958632302164e-06,
+          "maxEdgeM": 21.028729631755684,
+          "minimumAltitudeM": 7.645691178759992e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 21.028729600906054,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 5.8130960965620755e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 207,
+        "role": "interior",
+        "outputFace": 1503,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 2.2248865231243667e-08,
+          "maxEdgeM": 0.6444639713347935,
+          "minimumAltitudeM": 6.904611032068253e-08
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 0.6444639713347935,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 2.634182326949513e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 208,
+        "role": "interior",
+        "outputFace": 1504,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 2.96066600815457e-06,
+          "maxEdgeM": 14.50409916038787,
+          "minimumAltitudeM": 4.082523120416112e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 14.504099300779528,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 7.818415626870269e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 208,
+        "role": "interior",
+        "outputFace": 1505,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 4.4823522979796135e-08,
+          "maxEdgeM": 1.723567616684654,
+          "minimumAltitudeM": 5.2012491469311585e-08
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 1.7235676886077587,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 2.634182312538939e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 212,
+        "role": "interior",
+        "outputFace": 1594,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 3.091501508506896e-06,
+          "maxEdgeM": 16.750871581139734,
+          "minimumAltitudeM": 3.6911530167632623e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 16.750871353981832,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 4.264378358788173e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 212,
+        "role": "interior",
+        "outputFace": 1596,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 4.680432219718967e-08,
+          "maxEdgeM": 1.3558581708491035,
+          "minimumAltitudeM": 6.904014476363491e-08
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 1.3558581150665738,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 8.875940734623292e-08
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 213,
+        "role": "interior",
+        "outputFace": 1597,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 5.001711169946346e-06,
+          "maxEdgeM": 21.24303325064537,
+          "minimumAltitudeM": 4.709036709523949e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 21.243032493770613,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 7.78788373279048e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 226,
+        "role": "interior",
+        "outputFace": 1750,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 7.667969678623524e-06,
+          "maxEdgeM": 8.050874046500837,
+          "minimumAltitudeM": 1.9048788080236493e-06
+        },
+        "actualF32": {
+          "areaM2": 3.5972161644226616e-07,
+          "maxEdgeM": 8.050869942867928,
+          "minimumAltitudeM": 8.936217303098651e-08
+        },
+        "maxCornerRoundingDistanceM": 4.525660261236255e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 238,
+        "role": "interior",
+        "outputFace": 1770,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 1.1757584978126122e-06,
+          "maxEdgeM": 4.431057103851804,
+          "minimumAltitudeM": 5.306898422909313e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 4.431057103851804,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 7.832590312554101e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 241,
+        "role": "interior",
+        "outputFace": 1776,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 1.88480263561961e-06,
+          "maxEdgeM": 0.8948001010013137,
+          "minimumAltitudeM": 4.212790395330639e-06
+        },
+        "actualF32": {
+          "areaM2": 1.24902081187474e-06,
+          "maxEdgeM": 0.8947975321912838,
+          "minimumAltitudeM": 2.791739509643021e-06
+        },
+        "maxCornerRoundingDistanceM": 7.460171806427926e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 243,
+        "role": "interior",
+        "outputFace": 1779,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 1.4602100894891661e-05,
+          "maxEdgeM": 17.17510443412059,
+          "minimumAltitudeM": 1.7003798667893602e-06
+        },
+        "actualF32": {
+          "areaM2": 1.197773629751775e-05,
+          "maxEdgeM": 17.175106395349896,
+          "minimumAltitudeM": 1.3947787014304241e-06
+        },
+        "maxCornerRoundingDistanceM": 3.0942678724479353e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 245,
+        "role": "interior",
+        "outputFace": 1783,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 1.0839325956672148e-05,
+          "maxEdgeM": 5.144735209758761,
+          "minimumAltitudeM": 4.213754650039767e-06
+        },
+        "actualF32": {
+          "areaM2": 7.18587803830765e-06,
+          "maxEdgeM": 5.144735209758761,
+          "minimumAltitudeM": 2.793488000967342e-06
+        },
+        "maxCornerRoundingDistanceM": 7.460171806509469e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 246,
+        "role": "interior",
+        "outputFace": 1785,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 4.4350587027093374e-07,
+          "maxEdgeM": 1.1601476230232215,
+          "minimumAltitudeM": 7.645679937096359e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 1.1601476196195362,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 7.645755710160813e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 250,
+        "role": "interior",
+        "outputFace": 1799,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 8.557898947198913e-07,
+          "maxEdgeM": 0.6922178893602224,
+          "minimumAltitudeM": 2.472602652644095e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 0.6922178893602224,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 3.957013851864645e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 255,
+        "role": "interior",
+        "outputFace": 1846,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 4.690343168769354e-09,
+          "maxEdgeM": 2.1991955564193555,
+          "minimumAltitudeM": 4.265508044592439e-09
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 2.1991903045588437,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 3.146317228812902e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 255,
+        "role": "interior",
+        "outputFace": 1873,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 3.423246193713491e-06,
+          "maxEdgeM": 3.7132221112259005,
+          "minimumAltitudeM": 1.8438143968626344e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 3.713219077404697,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 3.1433776651744795e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 273,
+        "role": "interior",
+        "outputFace": 1993,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 6.990145840388682e-07,
+          "maxEdgeM": 0.7339362843576462,
+          "minimumAltitudeM": 1.9048372425152897e-06
+        },
+        "actualF32": {
+          "areaM2": 3.2793592530579894e-08,
+          "maxEdgeM": 0.7339362843576462,
+          "minimumAltitudeM": 8.936359525890293e-08
+        },
+        "maxCornerRoundingDistanceM": 4.525660289657877e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 275,
+        "role": "interior",
+        "outputFace": 1997,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 1.899362131786197e-09,
+          "maxEdgeM": 1.0111596418637998,
+          "minimumAltitudeM": 3.756799724097445e-09
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 1.011159932495486,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 4.592687500241229e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 285,
+        "role": "interior",
+        "outputFace": 2023,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 1.174579311934393e-06,
+          "maxEdgeM": 1.258928814187599,
+          "minimumAltitudeM": 1.8659979797068388e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 1.258928814187599,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 1.9927019455285945e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 287,
+        "role": "interior",
+        "outputFace": 2027,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 4.545269833957156e-06,
+          "maxEdgeM": 4.8720406258172595,
+          "minimumAltitudeM": 1.865858757363999e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 4.872039926223348,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 1.992701945532871e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 301,
+        "role": "interior",
+        "outputFace": 2108,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 9.109575723170443e-07,
+          "maxEdgeM": 0.9880719913924462,
+          "minimumAltitudeM": 1.8439093107644355e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 0.9880719913924462,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 2.177741372281947e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 595,
+        "role": "interior",
+        "outputFace": 2598,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 7.118651871355462e-07,
+          "maxEdgeM": 0.6132152140750241,
+          "minimumAltitudeM": 2.3217466585832383e-06
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 0.613207292753506,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 7.1135757185957735e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 640,
+        "role": "interior",
+        "outputFace": 2669,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 1.349774818613054e-06,
+          "maxEdgeM": 4.968144527825288,
+          "minimumAltitudeM": 5.433718004994885e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 4.968144527825288,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 1.256038026473604e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 680,
+        "role": "interior",
+        "outputFace": 2749,
+        "kind": "zero",
+        "preCast": {
+          "areaM2": 1.235857093205258e-07,
+          "maxEdgeM": 0.3665020023823618,
+          "minimumAltitudeM": 6.744067345727192e-07
+        },
+        "actualF32": {
+          "areaM2": 0.0,
+          "maxEdgeM": 0.3665020023823618,
+          "minimumAltitudeM": 0.0
+        },
+        "maxCornerRoundingDistanceM": 8.993545377707669e-07
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 715,
+        "role": "interior",
+        "outputFace": 2797,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 1.1949464349225388e-06,
+          "maxEdgeM": 1.4307493623572205,
+          "minimumAltitudeM": 1.6703784273631458e-06
+        },
+        "actualF32": {
+          "areaM2": 3.996371297645957e-08,
+          "maxEdgeM": 1.4307498016480207,
+          "minimumAltitudeM": 5.5864013303272236e-08
+        },
+        "maxCornerRoundingDistanceM": 1.7310275014493054e-06
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 719,
+        "role": "interior",
+        "outputFace": 2802,
+        "kind": "negative",
+        "preCast": {
+          "areaM2": 2.655597542547615e-07,
+          "maxEdgeM": 0.3179624002133256,
+          "minimumAltitudeM": 1.6703846371557992e-06
+        },
+        "actualF32": {
+          "areaM2": 8.881167787950843e-09,
+          "maxEdgeM": 0.3179624002133256,
+          "minimumAltitudeM": 5.586300633026004e-08
+        },
+        "maxCornerRoundingDistanceM": 1.731027501451097e-06
+      }
+    ],
+    "perSourceFaceDroppedUnion": [
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 15,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 39,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 86,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 120,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 123,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 127,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 138,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 151,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 153,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 158,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 161,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 168,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 189,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 198,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 203,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 207,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 208,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 212,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 213,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 226,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 238,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 241,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 243,
+        "lostXYUnionM2": 4.475371679149576e-12,
+        "symmetricDifferenceM2": 4.555283976222951e-12
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 245,
+        "lostXYUnionM2": 1.8856889926486056e-11,
+        "symmetricDifferenceM2": 1.8856889926486056e-11
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 246,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 250,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 255,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 273,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 275,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 285,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 287,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 301,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 595,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 640,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 680,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 715,
+        "lostXYUnionM2": 0.0,
+        "symmetricDifferenceM2": 0.0
+      },
+      {
+        "sourcePrimitive": 29,
+        "sourceFace": 719,
+        "lostXYUnionM2": 3.870954121479309e-15,
+        "symmetricDifferenceM2": 3.870954121479309e-15
+      }
+    ],
+    "maxMeasuredAnyC6CornerRoundingDistanceM": 1.5239643261745588e-05,
+    "precastAreaSumOfDroppedM2": 0.0001615707582514292,
+    "actualAreaSumOfDroppedM2": 2.1444699452199014e-05,
+    "droppedXYUnionAreaSumM2": 2.333613255975711e-11,
+    "maxDroppedXYUnionPerSourceFaceM2": 1.8856889926486056e-11,
+    "scope": "Virtual suppression only, no assets modified. Actual cleaned candidate requires audit."
+  },
+  "artisticMaterialZoneApproximation": {
+    "toleranceM": 0.005,
+    "coordinatesBefore": 17992,
+    "coordinatesAfter": 6631,
+    "sumOriginalZoneSymmetricDifferenceM2": 4.439243135176254,
+    "materialAssignmentChangedWithinPavingMiddleM2": 4.105005508152337,
+    "maxReassignedAngleDifferenceDegrees": 13.089429868108336,
+    "maxRawZoneHausdorffM": 0.005639830732255059,
+    "sameZoneAngles": true,
+    "hierarchyPriorityPreserved": true
+  },
+  "normalFrameAnalysis": {
+    "currentShaderPath": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Resources/Varjostimet/OmaMalli.shader",
+    "currentShaderSHA256": "49561b132e675e97e65e7e66fc931905a1ec877afb1aba7e0e9da854287337a6",
+    "runtimeBuildPinVerified": false,
+    "sourceComment": "Cesium flips V and image together; green sampled unchanged",
+    "currentShader": "Kartoitettu uses derivative cotangent T/B, raw RGB*2-1 and scale. No additional green inversion in shader.",
+    "ifUVUnflipped": "Interior UV=(u/P,-v/P) gives tangent green basis -v; generated(-dhE,-dhN) would have a green sign discrepancy. This is not a verified target-runtime condition.",
+    "ifDeclaredCesiumUVFlip": "Imported V flip makes interior green basis+v. Recipe(-dhE,-dhN) is then consistent. West axes(E,N), north(-N,E), south(N,-E); code north(-y,x), south(y,-x) are the correct rotations for this declared basis.",
+    "oldSource": "Source-affine UV0 and sampled old normal use same declared V-flipped E/N basis approximately; source affine residual and actual loader transform still need runtime confirmation.",
+    "Blender": "Blender glTF importer/display may use a different V/normal mapping from OmaMalli; no Blender runtime executed here. Do not convert one-frame result into target acceptance.",
+    "acceptance": "Conditional source-frame consistency only. Exact active receiver loader/image/V handling and actual shader build must be pinned before normal direction acceptance."
+  },
+  "actualGeneration2CollarNormalAndRoughnessReconstruction": {
+    "all72SlotsChecked": true,
+    "maxNormalByteError": 1,
+    "normalByteErrorsBySide": {
+      "west": 0,
+      "north": 0,
+      "south": 1
+    },
+    "maxRoughnessByteError": 1,
+    "rotationInterpretation": "All72 slots reproduce independent recipe normal/roughness reconstruction within1 byte. Recipe rotates worldE/N normals into slot frames conditional on declared Cesium V flip; runtime convention remains unverified."
+  },
+  "generation2PeriodicityIndependent": [
+    {
+      "shift": [
+        30.4,
+        0
+      ],
+      "colourHeightRoughMaxErrors": [
+        0.0,
+        1.784163095042146e-15,
+        2.020605904817785e-14
+      ],
+      "finiteDifferenceHeightDerivativeErrorsEN": [
+        1.0308587317098272e-11,
+        7.649436639667329e-13
+      ]
+    },
+    {
+      "shift": [
+        0,
+        32
+      ],
+      "colourHeightRoughMaxErrors": [
+        0.0,
+        3.720981855970251e-16,
+        3.219646771412954e-15
+      ],
+      "finiteDifferenceHeightDerivativeErrorsEN": [
+        1.3003487175922146e-14,
+        1.0234868508263162e-11
+      ]
+    }
+  ],
+  "generation2NormalMRIdenticalToGeneration1": [
+    {
+      "file": "collar-MR-lod0.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "collar-MR-lod1.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "collar-MR-lod2.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "collar-normal-lod0.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "collar-normal-lod1.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "collar-normal-lod2.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "interior-MR-lod0.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "interior-MR-lod1.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "interior-MR-lod2.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "interior-normal-lod0.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "interior-normal-lod1.png",
+      "byteIdenticalToGeneration1": true
+    },
+    {
+      "file": "interior-normal-lod2.png",
+      "byteIdenticalToGeneration1": true
+    }
+  ],
+  "pixelBudgetIndependent": {
+    "actualLOD0Pixels": {
+      "albedo-sRGB": 12189696,
+      "normal-linear": 958464,
+      "MR-linear-Grough-Bmetal0": 958464
+    },
+    "normalMRRatioToV7": 0.9140625,
+    "albedoRatioToV7": 0.7265625,
+    "total18ImageBytes": 3784208
+  },
+  "discardRecordAccounting": [
+    {
+      "lod": 0,
+      "rawDuplicatedLeafRecords": 80,
+      "deduplicatedDiscardCount": 40,
+      "precastDiscardedAreaM2": 0.0001615707582514292,
+      "actualDiscardedAreaM2": 2.1444699452199014e-05,
+      "leafPartitionAreaSemantics": "maxPerSourceAreaPartitionError includes discarded precast triangles; it is not perfect stored-face coverage. Actual survivor equality and measured union-loss bound are the relevant acceptance evidence."
+    },
+    {
+      "lod": 1,
+      "rawDuplicatedLeafRecords": 80,
+      "deduplicatedDiscardCount": 40,
+      "precastDiscardedAreaM2": 0.0001615707582514292,
+      "actualDiscardedAreaM2": 2.1444699452199014e-05,
+      "leafPartitionAreaSemantics": "maxPerSourceAreaPartitionError includes discarded precast triangles; it is not perfect stored-face coverage. Actual survivor equality and measured union-loss bound are the relevant acceptance evidence."
+    },
+    {
+      "lod": 2,
+      "rawDuplicatedLeafRecords": 80,
+      "deduplicatedDiscardCount": 40,
+      "precastDiscardedAreaM2": 0.0001615707582514292,
+      "actualDiscardedAreaM2": 2.1444699452199014e-05,
+      "leafPartitionAreaSemantics": "maxPerSourceAreaPartitionError includes discarded precast triangles; it is not perfect stored-face coverage. Actual survivor equality and measured union-loss bound are the relevant acceptance evidence."
+    }
+  ],
+  "nominalStonePitchVsActualPeriod": {
+    "periodM": [
+      30.4,
+      32
+    ],
+    "rows": 64,
+    "rowColumnCounts": {
+      "31": 17,
+      "32": 21,
+      "33": 26
+    },
+    "nominalPitchM": [
+      0.95,
+      0.5
+    ],
+    "meanAcrossAllRowsStonesWidthM": 0.9458434613514827,
+    "widthPer31_32_33ColumnsM": [
+      0.9806451612903225,
+      0.95,
+      0.9212121212121211
+    ],
+    "interpretation": "0.95m is nominal; exact finite-tile mean follows the sampled row-count distribution, not a survey. Local row pitch also varies slightly under periodic warp."
+  },
+  "survivingC6InterpolationErrorBounds": {
+    "maxPositionComponentErrorM": 1.5239628282870399e-05,
+    "maxNormalComponentError": 2.220446049250313e-16,
+    "maxAOUV1ComponentError": 2.979900215471787e-08,
+    "maxPlaneDistanceM": 3.7358396291679883e-07,
+    "meaning": "Conservative inherited bounds; all actualC7 survivors were independently proven corner-bit-exact toC6."
+  }
+}
