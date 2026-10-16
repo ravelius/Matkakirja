@@ -1,0 +1,16 @@
+OHJE: MUSEON i-NAPIN YMPYRÄT (kohdat.json, Ranska; Matkakirja, Sisältökirjuri 17.10.2026; PT 00.3x, malli: Alankomaat/kohdat.json, 176 kohtaa 64 teoksessa)
+
+Pelissä teoksen i-nappi näyttää maalauksen päällä pieniä ympyröitä; ympyrän napautus avaa lyhyen tekstin kuvan yksityiskohdasta. Sinä tuotat jokaiselle syötetiedoston teokselle 2–4 ympyrää (yleensä 3).
+
+TYÖTAPA
+1. Lataa teoksen kuva katsottavaksi: Commons API (curl -A 'MatkakirjaBot/1.0 (vvi@vvi.fi)'): action=query&prop=imageinfo&iiprop=url&iiurlwidth=1400&titles=<commons_tiedosto> → thumburl → lataa scratchpadiin (oma alikansio) ja KATSO kuva Read-työkalulla. Ympyrän paikka määritetään kuvasta, ei arvaamalla.
+2. Valitse 2–4 mielenkiintoista, KUVASSA NÄKYVÄÄ yksityiskohtaa (hahmo, esine, kasvot, ele, tausta, signeeraus, restaurointijälki, symboli). Yksityiskohdat saavat olla samoja, joihin kertojan_teksti viittaa ("Katso …"), mutta TEKSTI EI SAA TOISTAA kertojan_teksti- eikä kuvateksti_fi-kentän sanoja tai lukuja; kerro jotain uutta (mitä se on, miksi siinä on, mitä museo kertoo).
+3. Jokaiselle ympyrälle: x ja y = ympyrän keskipiste suhteellisina koordinaatteina KOKO MAALAUKSEN kuvasta (0,0 = vasen ylä, 1,1 = oikea ala; kehystä ei ole kuvassa), kolmen desimaalin tarkkuudella (esim. 0.485). Varmista katsomalla, että piste osuu yksityiskohdan keskelle. Ympyrät vähintään 0.12 etäisyydellä toisistaan.
+4. otsikko: enintään 32 merkkiä. teksti: 1–2 virkettä suomeksi, 70–150 merkkiä, asiallinen, nuorille (13+) ja aikuisille; ei tulkintaa, ei hehkutusta. Kun väite on tunnistus tai fakta (kuka, mikä, milloin), perusta se museon omaan tietueeseen (museon_tietue-kenttä; "Louvren mukaan …", "Orsayn mukaan …") ja lisää toinen lähde (Wikipedia, Britannica, Google Arts, toinen museo/tutkimus). Pelkkä kuvassa näkyvän kuvaus ei tarvitse lähdettä, mutta ympyrällä on silti vähintään yksi lähde (museon tietue).
+5. lahteet: lista {"url","title"}; museon tietue ensin. Jos WebFetch antaa 403, käytä hakutuloksen tiivistelmää ja kirjaa huom-kenttään.
+6. Älä arvaa. Jos tunnistus (esim. keitä hahmot ovat) on kiistanalainen, kirjoita "on arveltu" tai jätä pois.
+7. ALASTOMUUS JA VÄKIVALTA: älä sijoita ympyrää alastomaan vartaloon äläkä kuvaile alastomuutta tai väkivaltaa; valitse muu yksityiskohta (tausta, esine, kasvot, signeeraus, tekniikka). Sardanapalos, Olympia, Aamiainen ruohikolla ym.: vain turvalliset yksityiskohdat.
+8. Ei elokuvia, ei mainostekstiä, ei hintoja.
+
+TULOS: JSON-olio, avaimena teoksen id: {"<id>": [ {"x":0.485,"y":0.490,"otsikko":"…","teksti":"…","lahteet":[{"url":"…","title":"…"}]}, … ], …} + toinen avain "_huom": {"<id>":"lyhyt huomio, jos jokin jäi epävarmaksi"}. Kirjoita VAIN omaan tulostiedostoosi (polku annettu), 3 teosta kerrallaan (Write ensimmäisille, sitten Edit/uusi Write koko tiedostolle; JSON pysyy kelvollisena) ja tarkista lopuksi `python3 -I -c "import json;json.load(open('<polku>'))"`.
+Vastaa lopuksi 3 rivillä: montako teosta/ympyrää, huomautukset, mitä jäi tekemättä. Älä kirjoita repoon.
