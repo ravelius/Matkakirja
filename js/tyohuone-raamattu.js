@@ -514,7 +514,12 @@ export const RAAMATTU = {
           + '"pelaaja pääsee sisään"). Pohjan omistaa tyypin rakentaja, PT hyväksyy muutokset. PT ei hyväksy uutta pakettia ilman pohjaa; paketti on valmis vasta, kun sen opit on viety '
           + 'pohjaan; automaattinen tarkistus valvoo pohjat kuten dokumenttikartan. Pohjat kootaan nykyisistä ohjeista (TAVOITELUUPPI, tarinakaari.md, Firenzen resepti, museon monistettava '
           + 'runko) ja luovutusten opeista; tekijät kirjoittavat ne junan 197 jälkeen. Ensimmäinen oppi: Ranskan museolta puuttui pelaajan reitti sisään (avattiin Pariisista 16.10.). '
-          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJAT UUSIEN ASIOIDEN RAKENTAMISELLE (16.10.2026 klo 23.41). '
+          + 'TUOTANTOPOHJIEN SANASTO (omistaja 16.10.2026 klo 23.41 "nuo kaikki termit on hyvä ottaa käytäntöön ja kirjata ylös"; käytetään myös viesteissä, luovutuksissa ja Asemataululla): '
+          + 'TUOTANTOPOHJA = meidän nimemme pelikirjalle (playbook) eli vakiotoimintamallille (SOP); TUOTANTOPUTKI (production pipeline) = tyypin vaiheketju rooleineen, esim. 3D-maamerkki: '
+          + 'vertailukuvat → rakentaja → arvioija → Valoseppä → kuvakierros → juna; VALMIIN MÄÄRITELMÄ (definition of done) = pohjan lopun tarkistuslista, paketti ei ole valmis ennen sitä; '
+          + 'RETROSPEKTIIVI = jokaisen työn lopussa kirjattava "mikä toimi, mikä hidasti, mikä muuttuu pohjassa"; JATKUVA PARANTAMINEN (kaizen) = jokainen työ parantaa pohjaa; '
+          + 'KULTAINEN POLKU (golden path) = pohjan oletustapa, poikkeaminen vain PT:n hyväksynnällä, ja poikkeama joko kirjataan uudeksi poluksi tai jätetään pois. '
+          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJAT UUSIEN ASIOIDEN RAKENTAMISELLE (16.10.2026 klo 23.41), #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJIEN SANASTO (16.10.2026 klo 23.58). '
           + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56); docs/raamattu-loki/paatokset-2026-09.md #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
           + 'PANEELEILLE (14.10.2026 klo 23.34), #KARSINTA 7.1 ANIMAATIOPOIKKEUKSET 14.10.2026 '
           + '(14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: ANIMAATIOT ALLE 250 MS (14.10.2026 klo 22.55).',
