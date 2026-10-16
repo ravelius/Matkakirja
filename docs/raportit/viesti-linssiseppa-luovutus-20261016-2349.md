@@ -39,6 +39,11 @@ ja todistus-pariisimuseo197-iphone-*. Ajon jälkeen SIMU VAPAA Julkaisijalle.
 Kuvat ja videot _valmiit/<aihe>-20261016/ → PT (3 riviä) → PT:n kuittauksella 8aed785c3 NS:lle junaan 197. Jos jokin osa on rikki: vain
 se osa pois (git revert), ei väliaikaisia poikkeamia.
 
+SIMU 17.10. 01.01–01.21 (e66dc74de): VAPAALENTO HYLÄTTY — OpasTapit TypeInitializationException (kaasuvipu 7cbf392fb: NopeusVipu = LueVipu()
+luki Askeleet-taulukkoa ennen sen alustusta) → opaslinssi ei auennut, 51 546 poikkeusta. Korjaus 9096ff5d2 (vapaalento-197 kärki; louvre-pariteetti
+rebasettu 4c8f93fd5). Museon maa OK → _valmiit/museomaa-197-20261017/. SEURAAVAKSI: Julkaisijan vuorolla ajo-vapaalento197.zsh uudelleen
+(nohup) → SIMU NYT → touch simu-vapaalento.nyt → kuvat _valmiit/vapaalento-20261017/ → PT. Löydös NUI:lle PT:n kautta: otsikko "RIJKSMUSEU/M".
+
 ## 2. SEURAAVA JUNA
 - LOUVREN PARITEETTIERÄ, ASKELEET (PT 01.1x, EI junaan 197): Äänittäjän sora- ja kivi_hiekka-askeleet ämpärissä aanet/taidemuseo-askeleet-v3/,
   TEHTY 66fb8b7fc (ääniportti 24/24, PT 01.2x "vapaasti"): proto linssiseppa/louvre-pariteetti (vapaalento-197:n päällä, worktree
