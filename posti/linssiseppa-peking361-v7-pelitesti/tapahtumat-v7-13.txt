@@ -1,0 +1,30 @@
+sisältö: osoitin välimuistista (sisalto/1/v758/), tuore haetaan taustalla
+jakelu: Kehitys (muisti), apuraha näkyy
+alue: maa USA (appstore-välimuisti), piilotuksia 0 (sovellus)
+ui kuva: muistiraja 300 Mt (iPad)
+linnamuisti: vapaa ei tiedossa, budjetti -, taso kuori huippu, pinnat täydet, kevennykset pois, normaalit päällä (tarve ~1344 Mt, laiteluokka (vapaa muisti ei tiedossa); kysely, iPad17,4, RAM 65536 Mt)
+elävät elementit: päällä; meri - (0 kohtaa): ei lajeja; myllyt ei näkyvissä, 220 kolmiota, nopeus 0,00, seuraava tauko 269 s; karuselli ei näkyvissä, 1629 kolmiota, nopeus 0,00, seuraava tauko 59 s; gondolit ei 
+peli-komento: 3.76 ui kierto vaaka → VIRHE tuntematon komento [Kartta]
+linssit: opas: pallon latauskuva muistissa latauskuva-pallo-ipad-pysty.png (2048×2732, 0,1 s)
+nappula: tila (aseta (kartta auki / saapuminen)) olio aktiivinen, renderer päällä, kerros näkyy, materiaali ok, kone ei, liike ei, sijainti 51.5070, -0.1280, kaupunki -, ruutu 968,2048 z 9750523 (ruudulla), pinossa k
+ui saapuminen: musiikki esiladattu pariisi 14,033 (verkosta 1134 ms, purku 200 ms, 2,1 Mt pakattuna muistiin)
+linssit: kaupunki: muisti vapaa ei tiedossa, näyttö 2064×2752 (kerroin 1,71) → SSE-kerroin 1,71, välimuisti 256 Mt
+linssit: opas: piilokaupunki peking auki (ilman Googlen laattoja, vapaa pallolento)
+linssit: opas: piilokaupunki peking → True
+linssit: omat mallit: 24 kohdetta (peking_0_0, peking_0_1, peking_0_2, peking_0_3, peking_0_4, peking_0_5, peking_1_0, peking_1_1, peking_1_2, peking_1_3, peking_1_4, peking_1_5, peking_2_0, peking_2_1, peking_2_2, pekin
+linssit: opas: piilovalo kytkin True (piilokaupunki auki), utu 0,3 1500–7000 m, pomppu 0,3, luotain 0,8 (karheus < 0,45), ionin peitto pois aukko 15 m: ei piirretty; varjot päällä, ruutu 33,3 ms
+linssit: opas: kamera: oma maanpinta ei muistissa, katsekorkeus 0 m (ellipsoidi)
+linssit: kerros peking_2_3 0: 0 piilotettu ()
+linssit: kerros Omat 0: 0 piilotettu ()
+linssit: kerros Omat 1: 0 palautettu
+linssit: kerros peking_2_3 1: 0 palautettu
+linssit: opas: kamera: oma maanpinta ei muistissa, katsekorkeus 0 m (ellipsoidi)
+linssit: opas: kamera: oma maanpinta ei muistissa, katsekorkeus 0 m (ellipsoidi)
+linssit: kerros peking_2_3 0: 0 piilotettu ()
+linssit: kerros Omat 0: 0 piilotettu ()
+linssit: kerros Omat 1: 0 palautettu
+linssit: kerros peking_2_3 1: 0 palautettu
+linssit: opas: kamera: oma maanpinta ei muistissa, katsekorkeus 0 m (ellipsoidi)
+linssit: opas: kamera: oma maanpinta ei muistissa, katsekorkeus 0 m (ellipsoidi)
+linssit: opas: kamera: oma maanpinta ei muistissa, katsekorkeus 0 m (ellipsoidi)
+linssit: opas: piilovalo kytkin True (piilokaupunki auki), utu 0,3 1500–7000 m, pomppu 0,3, luotain 0,8 (karheus < 0,45), ionin peitto pois aukko 15 m: ei piirretty; varjot päällä, ruutu 63,9 ms
