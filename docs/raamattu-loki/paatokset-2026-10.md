@@ -342,3 +342,7 @@ Omistaja 16.10.2026 klo 21.38 (KK, sanatarkasti): "Millä pohjalla tuo grafiikka
 ## OMISTAJAN PÄÄTÖS: MUSEON I-KORTIN MUOTOKUVARIVI (16.10.2026 klo 21.54)
 
 Omistajan kortti Keskustelukanavassa 16.10.2026 klo 21.54, sanatarkasti: "Pyöreä kuva yläriville (Suositus)". Uusi pohja (UI-POHJAT): i-kortin ylärivillä pieni pyöreä muotokuva kuten linssivalitsimen rivikuva (mk-linssirivi__kuva), vieressä tekijä ja elinvuodet, alla teoksen lyhyet tiedot; tuntemattomalla tekijällä sama rivi ilman kuvaa. Natiivi-UI lisää tyylikirjaan.
+
+## PAATOKSET 16.10.2026 klo 22.24: YKSI JUNA (16.10.2026 klo 22.25)
+
+Omistaja (KK:n chat, sanatarkasti, pysyvä): "kerää aina kaikki vain yhteen junaan". Auki on vain yksi juna kerrallaan; juna 198:n jono (museon liikepohja, i-kortti ja muotokuvat, pienoismallit, yhteiset pohjat, kertojan korjaukset) yhdistetään junaan 197. Juna lähtee vain omistajan julkaisupyynnöstä. Raamattu C) JUNA päivitetty.
