@@ -1,0 +1,46 @@
+{
+  "createdAt": "2026-10-16T07:17:08.082667+00:00",
+  "nativeDimensions": [
+    1588,
+    991
+  ],
+  "nativeImageSHA256": "9104e280d195fb6e9e0767198c8230b3da000d6d0a67f779699871965b6ebe2e",
+  "nativeBytesUnedited": true,
+  "files": [
+    {
+      "path": "GENERATION-kori-k1.json",
+      "sha256": "0f39d9351e246feba1a713cfc9cc8b3ce835be0dfe518f7a378220429c1c64e7",
+      "bytes": 4394
+    },
+    {
+      "path": "INDEPENDENT-QA-kori-k1-FI.md",
+      "sha256": "f86419ac578f4604e2aa71bb34583aae98b4478688ef4b6ababb64e1c82a886c",
+      "bytes": 4288
+    },
+    {
+      "path": "INDEPENDENT-QA-kori-k1.json",
+      "sha256": "7619c069c2798034aca3577f496f7ba1f0ddaf9b862baa20c1898307cc93603e",
+      "bytes": 9942
+    },
+    {
+      "path": "PROMPT-kori-k1.json",
+      "sha256": "45639ac15360719dd28b473b0c74453c3ea74c072c3f5b8fc1e3f5d520b9e352",
+      "bytes": 3421
+    },
+    {
+      "path": "QA-kori-k1-FI.md",
+      "sha256": "42700e963f1efc2ef08ef5975141a596cfd7622665c1e63cbc33cb8ff40e88d9",
+      "bytes": 2212
+    },
+    {
+      "path": "SOURCE-kori-k1.json",
+      "sha256": "2317e6ee94726210e8c4aa24a138e39d9e9dbb06a03d66aec59c93277c93aa01",
+      "bytes": 1528
+    },
+    {
+      "path": "havainne-kori-k1.png",
+      "sha256": "9104e280d195fb6e9e0767198c8230b3da000d6d0a67f779699871965b6ebe2e",
+      "bytes": 2633095
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "sourceCommit": "c35130fe550b9d110f5cb663fddee9fd77c62fd7",
+  "sourcePath": "posti/fable-codex-kori-koydet-havainne-20261016.md",
+  "sourceBlob": "ca11ee997aea6178375943bde2411519ba46f631",
+  "sourceReadInFull": true,
+  "referencePersonallyViewed": true,
+  "files": [
+    {
+      "sourceCommit": "c35130fe550b9d110f5cb663fddee9fd77c62fd7",
+      "sourcePath": "posti/fable-codex-kori-koydet-havainne-20261016.md",
+      "sourceBlob": "ca11ee997aea6178375943bde2411519ba46f631",
+      "sha256": "8b1d9578bd7a38b77741f48a4def3cf396f09bf363e84fa02126ebeda8ddedb0",
+      "bytes": 1377,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kori-koydet-havainne-20261016/sources/fable-codex-kori-koydet-havainne-20261016.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "c35130fe550b9d110f5cb663fddee9fd77c62fd7",
+      "sourcePath": "posti/kori-koydet-20261016/kori-koydet-nyt-20261016.jpg",
+      "sourceBlob": "3837d534326ef11481fbdd00b2001d03d6e47900",
+      "sha256": "dd07a81b3c0c2e99d5ccaea0410147baf150d75bafb7c661e4d2ef2b66824cf0",
+      "bytes": 55709,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kori-koydet-havainne-20261016/sources/kori-koydet-nyt-20261016.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "dimensions": [
+        902,
+        560
+      ],
+      "EXIFOrientation": null,
+      "personallyViewedAt": "2026-10-16T07:10:05.512808+00:00"
+    }
+  ]
+}

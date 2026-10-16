@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_visual_review",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T07:16:12.240274+00:00",
+  "scope": "Erillinen yhden kuvan koriköysien havainnereferenssi #374. Vain tämän scopen QA-tiedostojen kirjoitus.",
+  "state": "review_complete_1_of_1_owner_and_recipient_acceptance_separate",
+  "brief": {
+    "path": "sources/fable-codex-kori-koydet-havainne-20261016.md",
+    "sha256": "8b1d9578bd7a38b77741f48a4def3cf396f09bf363e84fa02126ebeda8ddedb0",
+    "read_completely": true
+  },
+  "source": {
+    "path": "sources/kori-koydet-nyt-20261016.jpg",
+    "sha256": "dd07a81b3c0c2e99d5ccaea0410147baf150d75bafb7c661e4d2ef2b66824cf0",
+    "width": 902,
+    "height": 560,
+    "format": "JPEG",
+    "personally_viewed_with": "view_image"
+  },
+  "candidate": {
+    "path": "images/havainne-kori-k1.png",
+    "sha256": "9104e280d195fb6e9e0767198c8230b3da000d6d0a67f779699871965b6ebe2e",
+    "width": 1588,
+    "height": 991,
+    "format": "PNG",
+    "native_file": true,
+    "personally_viewed_with": "view_image",
+    "edited_resized_or_regenerated_in_qa": false
+  },
+  "read_full_viewed_evidence": {
+    "brief_read_in_full": true,
+    "source_personally_viewed": true,
+    "candidate_personally_viewed": true,
+    "visual_review_method": "view_image on the saved source JPEG and saved native PNG",
+    "pixel_dimensions_method": "JPEG SOF and PNG IHDR read from saved files",
+    "hash_method": "SHA-256 of exact saved file bytes"
+  },
+  "left_attachment": {
+    "visual_assessment": "visible_attachment_supported",
+    "contact": {
+      "observed": true,
+      "finding": "Vasen pääköysi tulee alas sidontakohtaan korireunan ylä-/etupinnan kohdalle; köysi, sidonta ja reunaa kiertävä osa koskettavat toisiaan ilman selvää irrallista väliä."
+    },
+    "loop_around_rim": {
+      "observed": true,
+      "finding": "Paksu lenkkimäinen köyden osa kulkee näkyvästi alas etupintaa ja kiertää nahalla peitetyn reunan muotoa. Näkyvä etuosan kaari antaa selkeän reunan ympäri sitomisen vaikutelman."
+    },
+    "lashing_knot_braid": {
+      "observed": true,
+      "finding": "Pääköydessä näkyy luonnonkuidun kierteinen säierakenne ja kiinnityskohdan yläpuolella solmumainen/kierretty sidonta. Sivussa on lyhyt sidonnan pää; sitä ei tulkita tyhjään jatkuvaksi erilliseksi pääköydeksi."
+    },
+    "wicker_penetration": {
+      "observed": false,
+      "finding": "Suoraa läpivientiä pajupunoksen läpi ei näy. Kuvan ratkaisu havainnollistaa reunan ympäri kiertävää sidontaa, joka on tehtävänannon sallima vaihtoehto."
+    },
+    "leather_guard": {
+      "observed": true,
+      "finding": "Kiinnityksen kohdalla erottuu tumma nahkainen kaulus/suojus ja tikatut reunat. Köysi kulkee suojuksen päältä; alla näkyy pajupunosta."
+    },
+    "loose_continuation_into_empty_space": {
+      "observed": false,
+      "finding": "Pääköysi ei näkyvästi jatku pitkänä irrallisena korin eteen tai tyhjään. Näkyvät lyhyet päät liittyvät sidontaan."
+    },
+    "limits": [
+      "Lenkin koko paluureitti ja solmun sisäinen topologia peittyvät osin nahkasuojuksen/reunan taakse. Näkyvä sidonta ei todista mekaanista kantavuutta tai oikein rakennettua solmua."
+    ]
+  },
+  "right_attachment": {
+    "visual_assessment": "visible_attachment_supported",
+    "contact": {
+      "observed": true,
+      "finding": "Oikea pääköysi kohtaa solmumaisen sidonnan ja korireunan nahkasuojuksen. Selkeää pääköyden ja reunan välistä irti jäävää tyhjää väliä ei näy."
+    },
+    "loop_around_rim": {
+      "observed": true,
+      "finding": "Köysilenkki laskeutuu reunan etupuolelle ja kaartuu tiiviisti nahalla peitetyn reunan ympäri. Lenkin paluu häviää osin sidonnan/reunan taakse."
+    },
+    "lashing_knot_braid": {
+      "observed": true,
+      "finding": "Kierretyt säikeet ja vaakasuuntaiset sidontakierrokset/solmumainen paksunnos näkyvät. Oikealle osoittaa lyhyt sidonnan pää, joka päättyy kiinnityksen lähellä."
+    },
+    "wicker_penetration": {
+      "observed": false,
+      "finding": "Pajupunoksen läpi menevää avointa läpivientiä ei voi nähdä; kyseessä on näkyvän vaikutelman perusteella reunan ympäri sidottu lenkki."
+    },
+    "leather_guard": {
+      "observed": true,
+      "finding": "Oikean ankkurikohdan ympärillä erottuu tikattu nahkasuojus/kaulus. Reunan nahka suojaa näkyvää köyden kosketuskohtaa."
+    },
+    "loose_continuation_into_empty_space": {
+      "observed": false,
+      "finding": "Pääköysi päätyy näkyvään kiinnitykseen eikä jatku vapaana alas tyhjään. Lyhyt oikealle osoittava pää kuuluu sidontaan."
+    },
+    "limits": [
+      "Lenkin koko paluureitti ja solmun sisäinen topologia peittyvät osin nahkasuojuksen/reunan taakse. Näkyvä sidonta ei todista mekaanista kantavuutta tai oikein rakennettua solmua."
+    ]
+  },
+  "camera_background_style": {
+    "camera": {
+      "finding": "Korkea alaspäin katsova sama korikamera tunnistuu: köydet kuvan laidoissa, korireuna alhaalla, fyysinen kompassi vasemmalla. Rajaus ja kuvakulma ovat lähteen lähellä; tuloksen kuvasuhde on noin 1,6024 ja lähteen noin 1,6107, eli pieni kuvasuhdepoikkeama on olemassa.",
+      "material_camera_deviation_observed": false,
+      "minor_aspect_ratio_difference_observed": true
+    },
+    "beijing_background": {
+      "finding": "Lähteen Peking-taustan keltaiset katot/punaiset seinät vasemmalla, vaalea porrastettu palatsitasanne yläoikealla, aukio ja niiden varjot ovat samoissa sommittelun pääpaikoissa. Materiaalien sekä arkkitehtuurin pienet yksityiskohdat on havainnollistettu uudestaan; kuva ei ole täsmällisen peligeometrian tai historiallisen arkkitehtuurin todiste.",
+      "material_composition_deviation_observed": false
+    },
+    "rope_count_and_scale": {
+      "observed_main_ropes": 2,
+      "finding": "Kaksi paksua kierrettyä pääköyttä vastaavat lähteen kahden laidaköyden asetelmaa. Köysien, paksun korireunan ja näkyvän pajupunoksen suhteet muodostavat yhtenäisen vaikutelman. Lenkkejä ja lyhyitä solmunpäitä ei lasketa uusiksi erillisiksi ripustusköysiksi. Todellisia mittoja tai kantavuutta ei voi todentaa tästä kuvasta.",
+      "material_scale_issue_observed": false
+    },
+    "style": {
+      "finding": "Kulunut nahka, luonnonkuitu ja pajupunos tukevat vanhaa matkakirjaestetiikkaa. Etualan materiaalit ovat lähdepelikuvaa huomattavasti yksityiskohtaisempia; lopullinen tyylin yhteensopivuus on arvioitava natiivissa näkymässä.",
+      "native_style_match_verified": false
+    }
+  },
+  "physical_compass_and_overlays": {
+    "physical_compass_preserved": true,
+    "pseudo_marks_observed": true,
+    "new_hud_overlay_observed": false,
+    "material_obstacle_for_rope_reference": false,
+    "finding": "Fyysisen kompassin kehällä näkyy epämääräisiä kirjain-/numeromerkkejä. Ne ovat esineen pinnassa, eivät uusi HUD-overlay. Ne eivät peitä köysikiinnityksiä tai estä tämän sidontareferenssin käyttöä, mutta kompassin asteikko ei sovi luettavan/kalibroidun mittarin malliksi. Lähteen alakeskinen taukopainike ei näy tuloskuvassa."
+  },
+  "clean_image": {
+    "new_readable_text_overlay_observed": false,
+    "new_hud_overlay_observed": false,
+    "clear_added_vignette_observed": false,
+    "finding": "Ei havaittua uutta HUD:ia, luettavaa päälle lisättyä tekstiä tai selkeää vinjettiä. Fyysisen kompassin pseudomerkit on kirjattu erikseen."
+  },
+  "invented_elements": [
+    "Molempien solmujen/sidontojen tarkka geometria ja osittain piilossa olevat paluureitit.",
+    "Nahkakaulusten, koko pehmustetun reunapinnan, tikkausten ja kuitujen tarkka rakenne/kuluminen.",
+    "Taustan pienet arkkitehtuuri-/materiaalimuodot ja fyysisen kompassin pseudomerkit."
+  ],
+  "summary": {
+    "personally_reviewed_candidates": 1,
+    "review_complete": true,
+    "visible_attachment_supported_left": true,
+    "visible_attachment_supported_right": true,
+    "leather_guards_observed_both": true,
+    "main_ropes_continue_loose_into_empty_space": false,
+    "mechanical_or_hidden_topology_proof": false,
+    "recommendation": "Perusteltu PT/omistaja-arvioehdokas näkyvän köysi–korireuna-sidonnan havainnollistamiseen. Ei suora tekninen solmu- tai kantavuuspiirustus eikä peli-/runtime-hyväksyntä."
+  },
+  "limitations": [
+    "Kuva ei todista sidonnan mekaanista kantavuutta, köysien kuormitusta, solmun täydellistä topologiaa tai piilopintojen rakennetta.",
+    "Kuva ei todista, että köydet ja kori liikkuvat samassa tahdissa; animaation synkka vaatii runtime-/natiivitarkistuksen.",
+    "Havainnekuva ei todista mallin integrointia peliin tai lopullisen vanhan matkakirjatyylin hyväksyntää."
+  ],
+  "acceptance": {
+    "owner": "not_obtained_in_this_review",
+    "recipient": "not_obtained_in_this_review",
+    "game": "not_verified",
+    "runtime": "not_tested"
+  },
+  "preserved_prior_qa_sha256": {
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/qa/independent-review.json": "28ac29812b57fb57b5ac5e7a0b13a9b4652e50d5117e31a813aaedd2e282274c",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/qa/INDEPENDENT-QA-FI.md": "ed5c8f1e31d7375ee308ba9c9129a99db27c161fecf155fadf527ba5af168151",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/qa/independent-review.json": "dfaff5e373338df7b875b9607d71bd731288fc19caf1fe6f210cf8c585261e33",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/qa/INDEPENDENT-QA-FI.md": "0eacad7a5deae892af11f8c4164c4ad3898acfa9c8e9a82f4cf6baeb0fe5a763"
+  },
+  "scope_mutations": [
+    "qa/independent-review.json",
+    "qa/INDEPENDENT-QA-FI.md"
+  ],
+  "pending": []
+}
