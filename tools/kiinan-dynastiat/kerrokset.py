@@ -30,56 +30,65 @@ def kaari(a, b, kaarevuus=0.18):
     return [(ax + dx * t + nx * kaarevuus * 4 * t * (1 - t), ay + dy * t + ny * kaarevuus * 4 * t * (1 - t)) for t in (i / 23 for i in range(24))]
 
 
-def viivat(lista):
-    ulos = []
-    for x in lista:
-        y = {k: v for k, v in x.items() if k != 'osat'}
-        y['osat'] = [{'p': tihenna(o)} if not isinstance(o, dict) else
-                     {**{k: v for k, v in o.items() if k != 'p'}, 'p': tihenna(o['p'])} for o in x['osat']]
-        ulos.append(y)
-    return ulos
-
-
-def vaesto():
-    ulos = []
-    for vuosi, milj, arvio, kausi, huom in K.VAESTO:
-        osuudet = K.OSUUDET[kausi]; assert abs(sum(osuudet) - 1) < 1e-6, kausi
-        r = {'vuosi': vuosi, 'milj': milj, 'arvio': arvio,
-             'pisteet': [[lon, lat, round(milj * o, 1)] for (_, lon, lat), o in zip(K.ALUEET, osuudet)]}
-        if huom: r['huom'] = huom
-        ulos.append(r)
-    return ulos
-
-
-def siirrot():
-    ulos = []
-    for avain, vuosi, a, b in K.SIIRROT:
-        pa, pb = K._P[a], K._P[b]
-        ulos.append({'avain': avain, 'vuosi': vuosi, 'mista': {'nimi': a, 'lon': pa[0], 'lat': pa[1]},
-                     'mihin': {'nimi': b, 'lon': pb[0], 'lat': pb[1]}, 'p': tihenna(kaari(pa, pb))})
-    return ulos
+VARIT = {'muuri': '#6b3a2a', 'joki': '#3b6ea8', 'joki-vanha': '#8fb0d6', 'kanava': '#2f8f8a', 'silkkitie': '#b5832f',
+         'marco-polo': '#7d4fa0', 'zheng-he': '#b0306a', 'siirto': '#5a5a5a', 'taistelu': '#a01818', 'vaesto': '#4a3a32',
+         'pysakki': '#7d4fa0'}
+LOPPU = 1912   # linssin viimeinen avainvuosi: loppu null → 1912
 
 
 def kerrokset():
-    return {
-        'muuri': viivat(K.MUURIT), 'joet': viivat(K.JOET), 'kanavat': viivat(K.KANAVAT), 'reitit': viivat(K.REITIT),
-        'vaesto': vaesto(), 'alueet': [n for n, _, _ in K.ALUEET], 'taistelut': K.TAISTELUT, 'siirrot': siirrot(),
-        'lahteet': {
-            'muuri, joet, kanavat, reitit, siirrot': 'Omat piirrokset (Matkakirja, CC0) julkisista paikkakoordinaateista; '
-                'Keltaisen joen uomat (602 eaa – 1128 pohjoinen, 1128–1855 Huai-joen kautta, 1855– nykyinen) yleisen historiallisen '
-                'hydrografian mukaan, tarkkuus ~20 km.',
-            'vaesto': 'Väkiluvut historiallisista väestölaskennoista (Han 140, Sui 609, Yuan 1290, Qing 1762) ja tutkimusarvioista '
-                '(arvio = true). Alueosuudet ovat Karttasepän arvio väestön painopisteen siirtymästä etelään (Han → Tang → Song → Qing).',
-            'taistelut': 'Paikat ja vuodet yleisesti tunnetuista lähteistä (faktat).'},
-    }
+    """LS:n muoto 17.10.2026 (juureen, vuosista erillään): [{avain, laji viiva|virtaus|piste, alku, loppu, nimi, pisteet
+    [[lon,lat],...], leveys | leveydet, vari, arvo}]; lisäkentät (voittaja, havio, seuraus, huom) kulkevat mukana."""
+    r = []
+    def lisaa(avain, laji, nimi, alku, loppu, pisteet, vari, **lisa):
+        r.append({'avain': avain, 'laji': laji, 'alku': alku, 'loppu': LOPPU if loppu is None else loppu, 'nimi': nimi,
+                  'pisteet': pisteet, 'vari': vari, **lisa})
+    for x in K.MUURIT:
+        for o in x['osat']: lisaa('muuri', 'viiva', x['nimi'], x['alku'], x['loppu'], tihenna(o), VARIT['muuri'], leveys=0.6)
+    for x in K.JOET:
+        for o in x['osat']:
+            lisaa('joki', 'viiva', x['nimi'], x['alku'], x['loppu'], tihenna(o),
+                  VARIT['joki' if x['avain'] == 'huanghe-nyky' else 'joki-vanha'], leveys=0.8, uoma=x['avain'])
+    for x in K.KANAVAT:
+        for o in x['osat']: lisaa('kanava', 'viiva', x['nimi'], x['alku'], x['loppu'], tihenna(o), VARIT['kanava'], leveys=0.5)
+    for x in K.REITIT:
+        for i, o in enumerate(x['osat']):
+            laji = 'virtaus' if x['avain'] in ('silkkitie', 'zheng-he') else 'viiva'
+            lev = 1.0 if (x['avain'] != 'silkkitie' or i == 0) else 0.6   # Silkkitie: Hexi-käytävä täysi, haarat ohuemmat
+            lisaa(x['avain'], laji, x['nimi'], o.get('alku', x['alku']), o.get('loppu', x['loppu']), tihenna(o['p']),
+                  VARIT[x['avain']], leveys=lev)
+        for q in x.get('pysakit', []):
+            lisaa('pysakki-' + x['avain'], 'piste', q['nimi'], q.get('vuosi', x['alku']), x['loppu'], [[q['lon'], q['lat']]],
+                  VARIT['pysakki'])
+    vuodet = [v[0] for v in K.VAESTO]
+    for j, (vuosi, milj, arvio, kausi, huom) in enumerate(K.VAESTO):
+        seur = vuodet[j + 1] if j + 1 < len(vuodet) else LOPPU
+        for (alue, lon, lat), o in zip(K.ALUEET, K.OSUUDET[kausi]):
+            lisaa('vaesto', 'piste', alue, vuosi, seur, [[lon, lat]], VARIT['vaesto'], arvo=round(milj * o, 1), arvio=arvio,
+                  **({'huom': huom} if huom else {}), koko_kiina=milj)
+    for t in K.TAISTELUT:
+        lisaa('taistelu', 'piste', t['nimi'], t['vuosi'], LOPPU, [[t['lon'], t['lat']]], VARIT['taistelu'], arvo=None,
+              voittaja=t['voittaja'], havio=t['havio'], seuraus=t['seuraus'])
+    for avain, vuosi, a, b in K.SIIRROT:
+        lisaa('siirto', 'virtaus', f'{a} → {b}', vuosi, LOPPU, tihenna(kaari(K._P[a], K._P[b])), VARIT['siirto'],
+              leveydet=[round(0.25 + 0.75 * i / 23, 2) for i in range(24)], dynastia=avain)
+    return r
+
+
+LAHTEET = {
+    'viivat': 'Muurit, Keltaisen joen uomat (602 eaa – 1128 pohjoinen, 1128–1855 Huai-joen kautta, 1855– nykyinen), Suuri kanava, '
+        'reitit ja siirtojäljet: omat piirrokset (Matkakirja, CC0) julkisista paikkakoordinaateista, tarkkuus ~20 km.',
+    'vaesto': 'Väkiluvut historiallisista väestölaskennoista (Han 140, Sui 609, Yuan 1290, Qing 1762) ja tutkimusarvioista '
+        '(arvio = true). Alueosuudet ovat Karttasepän arvio väestön painopisteen siirtymästä etelään.',
+    'taistelut': 'Paikat ja vuodet yleisesti tunnetuista lähteistä (faktat).'}
 
 
 if __name__ == '__main__':
     polku = sys.argv[1]
     d = json.load(open(polku))
-    d['kerrokset'] = kerrokset()
+    d['kerrokset'] = kerrokset(); d['kerrokset_lahteet'] = LAHTEET
     s = json.dumps(d, ensure_ascii=False, separators=(',', ':'))
     with open(polku + '.tmp', 'w') as f: f.write(s)
     os.replace(polku + '.tmp', polku)
-    k = d['kerrokset']
-    print({x: len(k[x]) for x in ('muuri', 'joet', 'kanavat', 'reitit', 'vaesto', 'taistelut', 'siirrot')}, os.path.getsize(polku), 'tavua')
+    from collections import Counter
+    print(dict(Counter(x['avain'] for x in d['kerrokset'])), os.path.getsize(polku), 'tavua')

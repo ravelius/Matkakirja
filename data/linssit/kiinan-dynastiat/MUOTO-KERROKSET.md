@@ -4,26 +4,24 @@ Omistajan päätös 17.10.2026 klo 01.25 PT:n kautta: "Pidä kiinan dynastiat ty
 ja yritä tehdä valmiiksi". Hyväksytty pohja (KK 16.10.): Kings and Generals -karttakerronta, Minardin virtauskuvat, valta
 leviää kuin muste, pääkaupungin siirroista jää jälki, viisi ratkaisevaa taistelua. Tämä on datan muoto; piirto LS.
 
-Lukittu `kiinan-dynastiat.json` (MUOTO.md) pysyy ennallaan. Lisäys on uusi päätason avain `kerrokset` samaan
-tiedostoon (skeema `matkakirja-linssi/kiinan-dynastiat/1` + `kerrokset`, vanha lukija ohittaa sen). WGS84 [lon, lat],
-3 desimaalia, alue 60–145° I, viivat tihennetty ≤ 0,25°. Aikaväli `alku`–`loppu` vuosina (eaa negatiivisena, `loppu`
-null = yhä olemassa): kerros näkyy, kun linssin vuosi on välillä. Lisenssi CC0 (omat piirrokset), lähteet `lahteet`-kentissä.
+Lukittu `kiinan-dynastiat.json` (MUOTO.md) pysyy ennallaan. Lisäys on uusi päätason lista `kerrokset` (LS:n muoto
+17.10.2026 01.3x, vuosista erillään) ja `kerrokset_lahteet`. WGS84 [lon, lat], 3 desimaalia, viivat tihennetty ≤ 0,25°.
+Kerros näkyy, kun linssin vuosi on `alku`–`loppu` (eaa negatiivisena; yhä olemassa → 1912). Lisenssi CC0.
 
 ```
-"kerrokset": {
-  "muuri":   [ { "avain": "ming", "nimi": "Mingin muuri", "alku": 1368, "loppu": 1644, "osat": [ { "p": [[lon,lat],...] }, ... ] } ],
-  "joet":    [ { "avain": "huanghe-pohjoinen" | "huanghe-etela" | "huanghe-nyky", "nimi": "Keltainen joki", "alku", "loppu", "osat" } ],
-  "kanavat": [ { "avain": "sui" | "yuan", "nimi": "Suuri kanava", "alku", "loppu", "osat" } ],
-  "reitit":  [ { "avain": "silkkitie" | "marco-polo" | "zheng-he", "nimi", "alku", "loppu",
-                 "osat": [ { "alku": 1271, "loppu": 1275, "p": [...] }, ... ],      // osan oma aika valinnainen
-                 "pysakit": [ { "nimi": "Khanbaliq", "lon": .., "lat": .., "vuosi": 1275 } ] } ],
-  "vaesto":  [ { "vuosi": 1100, "milj": 100, "arvio": true, "huom": "...", "pisteet": [[lon, lat, milj], ...] } ],
-  "alueet":  [ "Guanzhong", ... ],                                      // vaesto.pisteet samassa järjestyksessä
-  "taistelut": [ { "avain", "nimi", "vuosi", "lon", "lat", "voittaja", "havio", "seuraus" } ],
-  "siirrot": [ { "avain": "song", "vuosi": 1127, "mista": { "nimi", "lon", "lat" }, "mihin": {...}, "p": [[lon,lat],...] } ],
-  "lahteet": { "<kerrokset>": "..." }
-}
+"kerrokset": [ { "avain": "muuri" | "joki" | "kanava" | "silkkitie" | "marco-polo" | "zheng-he" | "siirto"
+                          | "taistelu" | "vaesto" | "pysakki-<reitti>",
+                 "laji": "viiva" | "virtaus" | "piste", "alku": -214, "loppu": -206, "nimi": "Qinin muuri",
+                 "pisteet": [[lon, lat], ...], "vari": "#6b3a2a",
+                 "leveys": 0.6,                 // tai "leveydet": [0–1 per piste] (siirto: kapea → leveä)
+                 "arvo": 12.5,                  // piste: väestö milj. (taistelu: null, joukkoja ei arvata)
+                 ...lisäkentät: uoma (joki), arvio/huom/koko_kiina (vaesto), voittaja/havio/seuraus (taistelu), dynastia (siirto) } ],
+"kerrokset_lahteet": { "viivat": "...", "vaesto": "...", "taistelut": "..." }
 ```
+
+Määrät: muuri 6 osaa (4 muuria), joki 3 uomaa, kanava 4, silkkitie 5 haaraa (Hexi leveys 1, muut 0,6), marco-polo 4 osaa
+(kukin oma aika), zheng-he 1 virtaus, pysäkit 15, väestö 19 vuotta × 10 aluetta (piste näkyy seuraavaan avainvuoteen asti),
+taistelut 5, siirrot 8.
 
 - `muuri`: Qin (214 eaa), Han (Hexi-käytävä ja Yumen 100 eaa), Pohjois-Qi/Sui (550–610), Ming (1368–1644). Aikaväli on
   rakennus- ja käyttöaika; muuri jää himmeänä näkyviin (piirron päätös).
@@ -46,4 +44,4 @@ null = yhä olemassa): kerros näkyy, kun linssin vuosi on välillä. Lisenssi C
 Lähteet: omat piirrokset (CC0) julkisista koordinaateista; Keltaisen joen nykyuoma Natural Earth 10m (PD); väkiluvut
 historiallisista laskennoista (faktat, ei tekijänoikeutta; lähde `lahteet`-kentässä). Ei OSM:ää (ODbL).
 
-TOTEUTETTU 17.10. 01.3x (tools/kiinan-dynastiat/kerrokset.py + kerrokset_data.py, +52 kt). Kysymykset LS:lle: (1) sopiiko `kerrokset` samaan tiedostoon, vai oma `kiinan-dynastiat-kerrokset.json`? (2) Reitin osilla on oma aika (Marco Polo 4 osaa); riittääkö, vai haluatko ajan per pistettä?
+TOTEUTETTU 17.10. 01.4x LS:n muodossa (tools/kiinan-dynastiat/kerrokset.py + kerrokset_data.py, +85 kt).
