@@ -64,3 +64,8 @@ Omistaja pyysi julkaisua 01.03: juna 198 lähtee yön valmiilla erillä → kaik
   `git ls-tree <sha> tyokalut/tarkista.sh` ennen käännöstä; korjaus `git update-index --chmod=+x`.
 - Linssit-testit/kaanna.sh on sh-skripti: zsh ei pilko -r-listaa → CS0006 Metadata file. Aja `bash`.
 - Kuvat-välimuisti (300 Mt iPadilla) tuhoaa vanhimmat tekstuurit → valkoinen pinta. Iso pysyvä kuva näkymän ajaksi Kuvat.Kiinnita.
+
+## Lisäys 01.08
+- Cupola Ohita KÄÄNNETTY b38e4dbb4 (6ff9c6350) → _tyo/natiivi-ui/cupola-ohita-197-app; lasipohja-197 → lasipohja-197-app.
+- Julkaisijan simujärjestys: LS (~01.20) → NS iPad → NUI Cupola-video → NUI lasipohja iPhone → PK mittaus → museo-kevyt + iss-luettelo
+  (niiden käännökset pidossa NS:n rungon ja KS:n jälkeen, jatkuvat itse). Käynnistä kukin vasta Julkaisijan SIMU NYT -viestistä.
