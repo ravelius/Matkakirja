@@ -23,6 +23,11 @@ L2-käännökset: Julkaisija järjestää vuorot (lukko on mkdir-kilpa): kysy/il
   `zsh proto-3d/tyokalut/natiivi-ui-ajot/ajo-minipallo-paakaupungit-196.zsh <app-kansio>` (skenaario odottaa v2-perilla; P9 perillä-kuva)
   → kuva PT:lle (ei vinoa laattarajaa P9:ssä; lokista kevyt pallo ulos -rivi). Jos Valoseppä haluaa Yokuorin puolen itse: poista se commitista.
 
+- LISÄYS 04.3x: Valoseppä kuittasi Yokuori-muutoksen OK. Osa 1 = linssiseppa2/kelaus-esihaku-196 a726e22a2 (6405bd562 + a726e22a2, sama
+  pohja e68faa906). Seuraavaksi: merge a726e22a2 kelaus-196:een → käännös L2 → yhdistetty kuva-ajo (Valoseppä perui oman iPad-ajonsa).
+  Lokit "cupolan kelausesihaku <id>: N laattaa … valmis X s". Valinnainen: lisää KevytOdottaa-ehtoon CupolaEnnakko.KelausOsuus < 1
+  (0…1, 1 = valmis/ei hakua), jos laattamittari näyttää valmista liian aikaisin.
+
 ## AVOIMET
 - Aloitusvihjeet (kytkin pois): iPhone vaakana oikean reunan kortit hipovat toisiaan ja Pulu peittää yhtä; iPadilla vihjeet kartan rajauksen
   takia ruudun ulkopuolella (kerrottu PT:lle).
