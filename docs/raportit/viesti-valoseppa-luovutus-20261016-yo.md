@@ -15,7 +15,11 @@ Orpo simu (ei ohjaavaa skriptiä, oma appi) saa sammuttaa; muiden ajoja ei.
 1) **Louvre k55s** (LR 21.2x): `zsh $D/louvre1/k55-kaikki.zsh` (leivonta lahde-k55 md5 4ef1700d/99ba6bff/27d8a0fb → v6k18-lv2f-k55s →
    k55-kuvat.zsh: L1b/L2/L2lahi × vpA 300° | ats135) → louvre1/lahi-L1-L3/k55s/arkki.jpg + mittaukset k55-kuvat.out → LR (+ PT 135°-arvio).
    Jos leivonta valmis (rakenna-k55s.log VALMIS), aja vain k55-kuvat.zsh.
-2) **Valas-agentti** (Opus, juna 197): worktree wt/proto-linssiseppa2-valas, haara linssiseppa2/valas-197 (k1–k4, viimeisin 11a815681,
+2) **Valas k1 VALMIS 21.3x** (agentti päättyi): haara linssiseppa2/valas-197 11a815681, käännös 9dd0409d, 1932/1932, arkki valas-havainne/k1/arkki.jpg +
+   valas-k1.mp4 → PT (EI junaan vielä). Puutteet: kruunu valkoisina 'hampaina' (Codexissa läpikuultava verho), vaahto harmaa levy 2–3 s,
+   usva/renkaat eivät erotu, alustakamerassa isku alareunassa tekstin alla, valaan vatsa kameraan (Codex: tumma selkä). VAT 3,9 Mt repoon.
+   valas-blender/ 53 Mt. Seuraava kierros k5 näistä. (Alla vanha rivi:)
+   2) **Valas-agentti** (Opus, juna 197): worktree wt/proto-linssiseppa2-valas, haara linssiseppa2/valas-197 (k1–k4, viimeisin 11a815681,
    käännös 9dd0409d); loki $D/valas-havainne/AGENTTI-valas-k1.md (21.19 kuvaus alkoi). Jos kuoli: lue loki, jatka k4a-kuvauksesta
    (oleta-uusi), arkki valas-havainne/k1/arkki.jpg → PT. valas-blender/ ≤ 4 Gt.
 3) **Valopohja V0–V2 -agentti** (Opus, juna 198): worktree wt/proto-linssiseppa2-valopohja, haara linssiseppa2/valopohja:
