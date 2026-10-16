@@ -322,3 +322,7 @@ Omistaja kysyi 19.3x "pitäisisö Juoksu olla taka yläviistosta kuvattu ennemmi
 ## PAATOKSET 16.10.2026 klo 19.19: KIINAN DYNASTIAT -LINSSI KARTTAPALLOLLE (16.10.2026 klo 19.42)
 
 Omistaja kysyi välikuvasta "Pitäisikö olla nykyisen karttapallon päälle tehty?"; KK vastasi kyllä. Linssi piirretään pelin omalle karttapallolle Isoisän linssin 1873 pohjalla (UI-POHJAT); litteä kuva oli vain rajojen ja värien luonnos. Tiibet ja Mongolia 1760 Qingin vaaleampana sävynä. Qingin väri avoin, kysytään ensimmäisen pallokuvan kanssa. Työnjako: Karttaseppä rajadata (GeoJSON), Linssiseppä pallokuva pelistä.
+
+## PAATOKSET 16.10.2026 klo 19.51: PÄÄKAUPUNKIEN ESITTELYT ARVIOIDAAN ITSE (16.10.2026 klo 19.53)
+
+Omistaja KK:n chatissa vastauksena TOIMI-kohtaan "pääkaupunkien esittelyt": "Älä kysy näistä minulta: pääkaupunkien esittelyt. Osaat itse arvioida nämä". PT arvioi 7 esittelyä (Monaco, Bern, Bratislava, Podgorica, Tirana, Belgrad, Zagreb) sekä Prahan ja Ateenan historiaosiot 8+8 (kertojan pysyvä lupa) itse riippumattomalla tarkistuksella (tosiasiat, kaanon, Williamin ääni, pituus), korjataan ja avataan ilman omistajan rastia; sama jatkossa kaikille pääkaupunkien esittelyille. Asemataululta pois omistajan odotus; omistajalle yksi rivi kun kaupungit auki.
