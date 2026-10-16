@@ -130,11 +130,11 @@ valmiiksi). Kun juna on TF:ssä, PT muuttaa junarivin TF-riviksi ja tyhjentää 
 - KATSOJAN SYKE: näkyvissä oleva sivu kirjoittaa `talo/katsoja.ts` 2 min välein ja esiin tullessaan;
   mittareiden vienti ei riipu sykkeestä (Boost korvaa sykkeen, 14.10. klo 23.39).
 
-## Google-palkki (omistaja 16.10.2026 klo 14.02, "pelkkä google")
+## Google-rivi (omistaja 16.10.2026 klo 14.18, "Pelkkä kuun summa")
 
-Laitteet-osion alla koko levyinen palkki: kuluvan kuukauden Google-kulut (Gemini, Maps, 3D-laatat ym.) laskutusviennistä.
-Haku kerran päivässä: `.github/workflows/hae-google-kulut.yml` → `tools/kulut/hae-google.mjs` → artifakti `google.json`, jonka
-Päätoimittaja vie tauluun dokumenttina `google` (`{ts, kk, kulut_usd, palvelut[], krediitti{summa_usd, kaytetty_usd, nollautuu}, budjetti_usd}`).
-Krediitin koko, nollautumispäivä ja budjetti annetaan repon muuttujina `GOOGLE_KREDIITTI_USD`, `GOOGLE_KREDIITTI_NOLLAUTUU`,
-`GOOGLE_BUDJETTI_USD` (laskutusviennistä ne eivät selviä); palkki = krediitin käytetty osuus, muuten budjetti, muuten pelkät dollarit.
-Claude ja OpenAI jätetty pois. Avaimia ei tauluun, lokiin eikä repoon.
+Laitteet-osiossa ElevenLabs-palkin alla yksi rivi "Google lokakuu 4,10 €": kuluvan kuun todellinen veloitus laskutusviennistä,
+ei rajaa eikä prosenttia. Haku Macilla kerran päivässä: `tools/kulut/hae-google.mjs <tiedosto>` → dokumentti `google`
+(`{ts, kk, summa, valuutta}`), jonka Asemataulun hoitaja vie tauluun. Avain: palvelutilin JSON ~/.config/matkakirja/google-laskutus.json
+(ei repoon eikä lokiin); taulu etsitään itse (`gcp_billing_export_v1_*`). Jos avainta tai taulua ei ole, dokumentti on
+`{odottaa:true}` ja rivi näyttää "odottaa laskutusvientiä". Ei GitHub Actions -työnkulkua. Toteutuslinja: Keskustelukanavan
+scratchpad google-palkki-20261016.md.
