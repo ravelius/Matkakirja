@@ -101,12 +101,13 @@ Varma = kaksi riippumatonta lähdettä. Merkinnät [EPÄVARMA] ja [LEGENDA] eiv�
   tekoäly on yksinkertainen (seuraa rataa, hidastuu kynnyksillä).
 - Ääni ja repliikit tarvitsevat generointiluvan (määrä ja tekstit omistajalle).
 
-## 8. Avoimet (PT → omistaja tarvittaessa)
-1. **Vuodenaika.** Suositus: myöhäissyksy. Ammeiden täkit tulevat juuri paikoilleen (piilo täkin alle), ja katot ovat
-   vielä keltaiset ilman lunta.
-2. **Kulmatornin näköala.** Juoksu tapahtuu 1914, mutta kartta elää nykyajassa (AIKA). Suositus: vuoden 1914 Peking
-   (harmaat hutong-katot, Jingshan, Beihain valkoinen dagoba) ja horisontti usvassa. Havainnekuva 3 tilataan näin.
-3. Pelin paikka ja avaus: Peking-linssin kohde vai kesän 1923 seikkailun rinnakkaisvalinta.
+## 8. Ratkaistut ja avoimet
+1. **Vuodenaika: kesä** (PT 16.10.2026 klo 18.3x, oletus; omistaja voi muuttaa havainnekuvien yhteydessä). Ammeet ovat
+   ilman täkkejä, joten piiloudutaan ammeen taakse.
+2. **Kulmatornin näköala: vuoden 1914 Peking** (PT 16.10.2026 klo 18.3x). AIKA koskee karttaa, mutta juoksupeli on
+   historiallinen kohtaus, kuten videopelit. Näköalassa ovat harmaat hutong-katot, Jingshan ja Beihain valkoinen dagoba,
+   ja horisontti on usvassa ilman nykyrakennuksia.
+3. Avoin: pelin paikka ja avaus. Vaihtoehdot ovat Peking-linssin kohde tai kesän 1923 seikkailun rinnakkaisvalinta.
 
 ## Havainnekuvat
 Codex-tilaus (TASAN 3 kuvaa, omistajan lupa 18.18): `posti/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md`
