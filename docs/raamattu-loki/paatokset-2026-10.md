@@ -326,3 +326,7 @@ Omistaja kysyi välikuvasta "Pitäisikö olla nykyisen karttapallon päälle teh
 ## PAATOKSET 16.10.2026 klo 19.51: PÄÄKAUPUNKIEN ESITTELYT ARVIOIDAAN ITSE (16.10.2026 klo 19.53)
 
 Omistaja KK:n chatissa vastauksena TOIMI-kohtaan "pääkaupunkien esittelyt": "Älä kysy näistä minulta: pääkaupunkien esittelyt. Osaat itse arvioida nämä". PT arvioi 7 esittelyä (Monaco, Bern, Bratislava, Podgorica, Tirana, Belgrad, Zagreb) sekä Prahan ja Ateenan historiaosiot 8+8 (kertojan pysyvä lupa) itse riippumattomalla tarkistuksella (tosiasiat, kaanon, Williamin ääni, pituus), korjataan ja avataan ilman omistajan rastia; sama jatkossa kaikille pääkaupunkien esittelyille. Asemataululta pois omistajan odotus; omistajalle yksi rivi kun kaupungit auki.
+
+## PAATOKSET 16.10.2026 klo 20.35: QINGIN VÄRI VIILEÄ (16.10.2026 klo 20.45)
+
+Omistaja valitsi KK:n kortilta (pallokuvat 1–3 + vertailu-qing-vari-koko.jpg) "Viileä sininen (Suositus)": Qing #41709c. Värisääntö Kiinan dynastiat -linssissä: ulkoiset hallitsijat viileillä, kiinalaiset dynastiat lämpimillä väreillä; Jin ja Qing sukulaisvärein. Tiibet 1760 Qingin vaaleampana sävynä.
