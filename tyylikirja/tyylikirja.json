@@ -582,7 +582,10 @@
       "Luku": [["Iowan Old Style", "Roman"], ["Iowan Old Style", "Regular"], ["Charter", "Roman"], ["Palatino", "Regular"], ["Georgia", "Regular"]],
       "LukuLihava": [["Iowan Old Style", "Bold"], ["Charter", "Bold"], ["Palatino", "Bold"], ["Georgia", "Bold"]],
       "LukuKursiivi": [["Iowan Old Style", "Italic"], ["Charter", "Italic"], ["Palatino", "Italic"], ["Georgia", "Italic"]],
-      "Kauno": [["Snell Roundhand", "Regular"], ["Savoye LET", "Plain"], ["Bradley Hand", "Bold"]], "Moderni": [["SF Pro Text", "Regular"], ["SF Pro", "Regular"], [".SF UI Text", "Regular"], ["Helvetica Neue", "Regular"], ["Helvetica", "Regular"]], "ModerniLihava": [["SF Pro Display", "Semibold"], ["SF Pro", "Semibold"], [".SF UI Display", "Semibold"], ["Helvetica Neue", "Medium"], ["Helvetica Neue", "Bold"], ["Helvetica", "Bold"]], "_moderni": "MODERNI ja MODERNILIHAVA (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro VAIN nykyajan näkymiin (elävä opas), ei muualle peliin."
+      "Kauno": [["Snell Roundhand", "Regular"], ["Savoye LET", "Plain"], ["Bradley Hand", "Bold"]], "Moderni": [["SF Pro Text", "Regular"], ["SF Pro", "Regular"], [".SF UI Text", "Regular"], ["Helvetica Neue", "Regular"], ["Helvetica", "Regular"]], "ModerniLihava": [["SF Pro Display", "Semibold"], ["SF Pro", "Semibold"], [".SF UI Display", "Semibold"], ["Helvetica Neue", "Medium"], ["Helvetica Neue", "Bold"], ["Helvetica", "Bold"]],
+      "Museo": [["EB Garamond", "Regular"]],
+      "MuseoLihava": [["EB Garamond", "SemiBold"]],
+      "_museo": "MUSEO (omistaja 16.10.2026 22.26 PT:n kautta: 'fontti ei näytä taidegalleriaan sopivalle'; hyväksytty KK:n kautta 16.10. ~23.5x, juna 197): taidemuseon tekstit (nimi ja tekijärivi seinällä, salikortti, teoskortti, i-kortti, ympyräkortti) EB Garamondilla; nimi SemiBold 600, muut Regular 400. Natiivissa kiinteät painot projektin muuttuvasta OFL-fontista (UI/Resources/Fontit/EBGaramond-Regular.ttf ja -SemiBold.ttf, fontTools instancer), ei järjestelmäfontti.", "_moderni": "MODERNI ja MODERNILIHAVA (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro VAIN nykyajan näkymiin (elävä opas), ei muualle peliin."
     }
   },
   "mitat": {
