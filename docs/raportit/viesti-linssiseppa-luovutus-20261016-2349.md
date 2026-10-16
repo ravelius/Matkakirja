@@ -28,7 +28,7 @@ Haara proto linssiseppa/vapaalento-197 = juna-197 + 6 committia, kärki 8aed785c
   (sk-pariisimuseo-197-iphone.txt tekee sen). Ajot käynnistetty uudelleen 23.54 tällä kärjellä (edelliset olivat kuolleet jonossa).
 - 259bdbecb LOUVREN LÄHESTYMISTEKSTI SK:lta (main 198ac9aee, #4741; 412 merkkiä, Orsay + Rodin, Marmottan pois), luonnos true edelleen.
   PT 00.4x: Pariisin museovideo EI tarpeen junaan 197 → ajo-pariisimuseo197.zsh pysäytetty; vain vapaalento-skenaario ajetaan.
-TILA 00.1x (17.10.): ajo-vapaalento197.zsh (kärki 259bdbecb) PYSÄYTETTY: Julkaisijan mukaan L2-järjestys KS → PK → SS → LS; käynnistä
+TILA 00.1x (17.10.): ajo-vapaalento197.zsh (kärki da98b2e4a) PYSÄYTETTY: Julkaisijan mukaan L2-järjestys KS → PK → SS → LS; käynnistä
   uudelleen nohupilla VASTA, kun Julkaisija ilmoittaa "SS lukossa" (jonossa PK:n intro ja SS; Julkaisija pitää odottajaa SIGSTOPissa, jatkuu itse).
 Loki ajo-vapaalento197.log / kaanna-vapaalento.out. Museoskenaariota EI ajeta junaan 197 (PT 00.4x).
 Jos prosessit puuttuvat (`pgrep -fl vapaalento`), käynnistä nohupilla uudelleen: ensin ajo-vapaalento197.zsh, sitten ajo-pariisimuseo197.zsh.
@@ -44,6 +44,13 @@ se osa pois (git revert), ei väliaikaisia poikkeamia.
   TEHTY 66fb8b7fc (ääniportti 24/24, PT 01.2x "vapaasti"): proto linssiseppa/louvre-pariteetti (vapaalento-197:n päällä, worktree
   wt/proto-linssiseppa-louvre), MuseoAskeleet.LataaV2(juuri) lukee v2:n ja v3:n manifestit; ämpärin manifest tarkistettu (24 ääntä,
   lattiat = Ranskan salien sora ja kivi_hiekka). Ei käännetty; käännös ja simutarkistus Louvren pariteettierän mukana.
+- LOUVREN PARITEETTIERÄ, KOHDAT (PT 02.0x): dcac520d2 Museo/ranska/kohdat.json SK:lta (main 8d1feff05, #4743; 152 ympyrää / 51 teosta,
+  kaikki id:t teokset.json:ssa, x,y 0..1, luonnos true → näkyy vain QA:lla `linssi museo kohdat luonnos 1`). MuseoKohdat 5/5, MuseoMaa 8/8.
+  TARKISTA ympyröiden paikat simulla, kun vapaalento-197 on ajettu (Ranskan sali, luonnos 1, kuva per teos → PT/SK).
+  Haara rebasettu: louvre-pariteetti = vapaalento-197 (da98b2e4a) + 857905fce askeleet + dcac520d2 kohdat.
+- da98b2e4a (vapaalento-197, JUNA 197): Pariisin merkki vaihtaa maan → MuseoSovitin.MaaVaihtui() (kuvajuuri + kohdat.json seuraavat maata);
+  ennen QA-reitti olisi avannut Ranskan salin Alankomaiden kuvilla. AVOIN pariteettierään: linssivalitsimesta avattu museo ei palauta maata
+  Alankomaiksi, jos Pariisi avattiin ensin → ratkaise ennen Pariisin avausta (esim. valitsin = Alankomaat).
 - LOUVREN AVAUS PARITEETIN JÄLKEEN: kun PT ilmoittaa SK:n (kohdat.json + lähestyminen) ja Äänittäjän (askeläänet) valmiiksi ja Ranskan
   museon Alankomaiden tasolle, oletus PariisiMuseoAuki = true (KaupunkiPallot.cs) + houkutin samaan erään, kuvat PT:lle, sitten NS.
 - Pariisin museon houkutin PALLON VIEREEN (avauksen yhteydessä, ei ennen): proto linssiseppa/pariisi-houkutin 7266f0ae1 (8aed785c3:n päällä; worktree wt/proto-linssiseppa-houkutin): vapaa piste
