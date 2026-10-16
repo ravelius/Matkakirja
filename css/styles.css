@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 23ffcec670d2 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 2c1b5cad0b2a */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
