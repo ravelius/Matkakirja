@@ -382,3 +382,4 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 22.0x: L2 seis levyn takia (17,6 Gi, Postivahti) → 198c-odottaja pysäytetty, liput pois. Kun Julkaisija ilmoittaa levy > 26: käynnistä
   `H=b9d629780 ERA=aanipohja-198c nohup zsh tyokalut/siirtoseppa-ajot/ajo-aanipohja-197.zsh` + pyydä KÄÄNNÖS NYT + SIMU NYT.
   Poistettu omat vanhat: _tyo/siirtoseppa/meri2-196-app, lokit/siirtoseppa-app/raketti-valo-191, lokit/siirtoseppa-raketti-valo/{nyk,uusi} (191-kuvat).
+- 22.2x: OMISTAJAN PÄÄTÖS 22.24 (PT): juna 198 = juna 197 → äänipohja junaan 197 (b9d629780 yhdistyy juna-197 4b6ef2395:een puhtaasti; haaranimet -197 ja -198 samassa).
