@@ -106,12 +106,12 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 | Sisältö | Hyväksyjä | Perusta |
 |---|---|---|
 | Pääkaupunkien esittelyt (kartta, opas) ja niihin liittyvät historiaosiot | PT riippumattoman tarkistuksen jälkeen, ilman omistajan rastia | Raamattu, PÄÄKAUPUNKIEN ESITTELYT ARVIOIDAAN ITSE (omistaja 16.10. 19.51); omistajalle yksi rivi, kun kaupungit ovat auki |
-| Pulun repliikit ja uudet isoisän tekstit | omistaja (Tekstit-osasto, "Odottaa hyväksyntääsi") | ei pysyvää lupaa; Pulu ja uudet isoisän tekstit vaativat aina rastin |
+| Pulun repliikit ja uudet isoisän tekstit | omistaja (Tekstit-osasto, "Odottaa hyväksyntääsi") | ei pysyvää lupaa; vaativat rastin, paitsi Pulun rivin sanatarkka toisinto (vain kaupungin nimi vaihtuu, ks. alla) |
 | Äänet | omistaja (lupa KK:n "OMISTAJAN PÄÄTÖS" -rivillä) | `kertojan-teksti-ja-aani.md` luku 2, kohta 4 |
 | Uusi sääntö tai poikkeus kaanoniin | PT → omistaja | Raamattu, vain Päätoimittaja kirjaa |
 
 Tekstit-osasto (äänisivu) on näyttöteksti: tunnus, teksti ja tila. Hyväksytty teksti viedään dataan vasta hyväksynnän jälkeen.
-**AVOIN (PT päättää):** tarvitseeko avatun kaupungin oppaan Pulu-rivi omistajan rastin, jos se on vain jo hyväksytyn rivin toisinto.
+**Pulun rivin toisinto (PT 17.10.):** sanatarkka toisinto jo hyväksytystä rivistä, jossa vain kaupungin nimi vaihtuu, ei tarvitse uutta rastia; viittaus alkuperäisen rivin hyväksyntään riittää. Mikä tahansa muu sanamuodon muutos vaatii omistajan rastin.
 
 ## 6. Tyypilliset virheet (tarkistajan lista)
 
