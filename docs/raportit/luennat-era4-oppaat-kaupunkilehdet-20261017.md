@@ -16,3 +16,9 @@ nostot 4 062, kohtaamiset 88, nähtävyydet 1 371 täsmäävät kaikki v4:ään 
 - Ylitys vaatii KK:n suoran "OMISTAJAN PÄÄTÖS klo …" -rivin (kehyksen kasvatus tai osajoukko). Aja: `EI_MAA` pois, `kuiva.py lehdet era5 --aja` (RAJA=<mrk> ympäristöstä).
 - Vanhan replikan arvio (lehdet EU 132 k) oli liian pieni: todellinen EU-lehtien tarve oli 590 k.
 - i-kortin faktat (134 kpl, 13 415 mrk) edelleen ehdolliset Natiivi-UI:n vahvistukselle.
+
+## Päivitys 02.30: erä 5 (maalehtien osajoukko, PT:n pyyntö)
+- Maat FRA, DEU, ITA, ESP, NLD, AUT, GRC (pääkaupunkikierrosten maat): 256 luentaa, 105 845 mrk, 23 890 kr. Vienti 257 tiedostoa, virheitä 0.
+- Manifesti **v6** (kumulatiivinen, 8 410 palaa) → `aanet/luennat/v6/manifest.json` (200). Käytössä uusin; vaihto: Siirtoseppä.
+- Kehys: 520 349 / 566 895 mrk. Luentoja yhteensä 1 255 + 256 = **1 511 (kattoa 1 505 ylitetty 6:lla)**: kuivan ajon määrä (246) oli arvio ennen v5-vertailua; mrk-raja piti, lukumäärän tarkistus puuttui ajosta. Ilmoitettu PT:lle.
+- Jäljellä maalehdet 831 palaa / 369 643 mrk (32 maata + GBR 87 palaa): odottavat omistajan päätöstä kehyksen kasvatuksesta.
