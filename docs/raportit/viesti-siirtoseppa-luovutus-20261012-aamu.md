@@ -451,3 +451,5 @@ kun 9fa3b99f1 on juna-196:ssa).
   ilman tätä siirretyt silmukat olisivat jääneet hiljaisiksi). **fd2f26e59** KaupunkiAanimaisemaSoitin (kerrokset, varat, raitiovaunu, suhina,
   kellot). Lista 9: AjattelijatSovitin, DioraamaAanet, OpasSovitin, RakettiAanet, PuluRealtime + PT:n kysymys (Aanisoitin, Puhe, UI/Aanet,
   PeliKomennot). Kärki fd2f26e59, Linssit 1935/1935, tarkista.sh 0.
+- 02.4x: siirto 20 **8b0b4c02d** DioraamaAanet (8 lähdettä omiksi pohjaolioiksi; PlayScheduled, tauko, GetOutputData pohjan AudioSourcella). Lista 8:
+  AjattelijatSovitin, OpasSovitin, RakettiAanet, PuluRealtime + Aanisoitin, Puhe, UI/Aanet, PeliKomennot (PT:n vastaus kesken). Kärki 8b0b4c02d.
