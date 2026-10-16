@@ -347,5 +347,37 @@
  "Hercules Segers (mahdollisesti)": null,
  "Adriaen Coorte (Rijks: ”mainittu teoksessa”)": null,
  "Meindert Hobbema": null,
- "Aelbert Cuyp (Rijks: ”mainittu teoksessa”)": null
+ "Aelbert Cuyp (Rijks: ”mainittu teoksessa”)": null,
+ "Anne-Louis Girodet de Roucy-Trioson": {
+  "commons": "File:Girodet Autoportrait.JPG",
+  "lisenssi": "Public domain",
+  "tekija_kuvaan": "Anne-Louis Girodet",
+  "tiedosto": "anne-louis-girodet.jpg",
+  "tyyppi": "omakuva",
+  "sivu": "https://commons.wikimedia.org/wiki/File:Girodet_Autoportrait.JPG"
+ },
+ "Jean-Antoine Watteau": {
+  "commons": "File:Antoine Watteau by François Boucher.jpg",
+  "lisenssi": "Public domain",
+  "tekija_kuvaan": "François Boucher",
+  "tiedosto": "antoine-watteau.jpg",
+  "tyyppi": "muotokuva (François Boucher)",
+  "sivu": "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_by_Fran%C3%A7ois_Boucher.jpg"
+ },
+ "Rembrandt Harmensz. van Rijn": {
+  "commons": "File:Rembrandt van Rijn - Self-Portrait - Google Art Project.jpg",
+  "lisenssi": "Public domain",
+  "tekija_kuvaan": "Rembrandt",
+  "tiedosto": "rembrandt-van-rijn.jpg",
+  "tyyppi": "omakuva",
+  "sivu": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg"
+ },
+ "Tiziano Vecellio (ent. Giorgione)": {
+  "commons": "File:Vecellio di Gregorio Tiziano - autoritratto.jpg",
+  "lisenssi": "Public domain",
+  "tekija_kuvaan": "Titian",
+  "tiedosto": "tiziano-vecellio.jpg",
+  "tyyppi": "omakuva",
+  "sivu": "https://commons.wikimedia.org/wiki/File:Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg"
+ }
 }
