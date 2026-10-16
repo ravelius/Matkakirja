@@ -26,8 +26,10 @@ Haara proto linssiseppa/vapaalento-197 = juna-197 + 6 committia, kärki 8aed785c
   samalla tasolla kuin Alankomaat ("Kun puutteet on korjattu"; puutteet: SK kohdat.json + lähestyminen, Äänittäjä askeläänet). Nimi "Louvre".
   Reitti (d6a90e813 + 8aed785c3) mukana junassa 197, mutta KaupunkiPallot.PariisiMuseoAuki = false; QA avaa `linssi museo pariisi 1`
   (sk-pariisimuseo-197-iphone.txt tekee sen). Ajot käynnistetty uudelleen 23.54 tällä kärjellä (edelliset olivat kuolleet jonossa).
-TILA 23.54: ajo-vapaalento197.zsh (kärki b9acbc66a) odottaa käännöslukkoa (jonossa PK:n intro ja SS; Julkaisija pitää odottajaa SIGSTOPissa, jatkuu itse).
-Loki ajo-vapaalento197.log / kaanna-vapaalento.out. Perään odottaa ajo-pariisimuseo197.zsh (ajaa museoskenaarion heti "SIMU ALAS":n jälkeen).
+- 259bdbecb LOUVREN LÄHESTYMISTEKSTI SK:lta (main 198ac9aee, #4741; 412 merkkiä, Orsay + Rodin, Marmottan pois), luonnos true edelleen.
+  PT 00.4x: Pariisin museovideo EI tarpeen junaan 197 → ajo-pariisimuseo197.zsh pysäytetty; vain vapaalento-skenaario ajetaan.
+TILA 23.57: ajo-vapaalento197.zsh (kärki 259bdbecb) odottaa käännöslukkoa (jonossa PK:n intro ja SS; Julkaisija pitää odottajaa SIGSTOPissa, jatkuu itse).
+Loki ajo-vapaalento197.log / kaanna-vapaalento.out. Museoskenaariota EI ajeta junaan 197 (PT 00.4x).
 Jos prosessit puuttuvat (`pgrep -fl vapaalento`), käynnistä nohupilla uudelleen: ensin ajo-vapaalento197.zsh, sitten ajo-pariisimuseo197.zsh.
 Kun lokissa "VAPAALENTO VALMIS <sha>": SIMU NYT Julkaisijalta iPhone BD64C8E4 (kaksi skenaariota, ~15 min) → `touch .../simu-vapaalento.nyt`.
 Skenaariot sk-vapaalento-197-iphone.txt (V0 nimi, K1/K2 kompassi päivä/yö, V1/V2 vipu, V3 matala, video vapaalento-matala) ja
