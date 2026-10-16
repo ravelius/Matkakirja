@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "task": "#375 owner photo-surface correction",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T09:33:22.781953+00:00",
+  "state": "review_complete_2_of_2_with_residual_surface_caveats",
+  "authority": {
+    "path": "owner-authority.json",
+    "sha256": "c4656910552041803486459c06f9565655250f8eb8c534bce49b2005b547d141",
+    "read_completely": true,
+    "owner_feedback_supersedes_previous_candidate_recommendation": true
+  },
+  "prompt": {
+    "path": "prompt-common.txt",
+    "sha256": "002aae4cc740e2185a09bc6896c3de877ee3fd94cd3be026672c4ea312e02eb0",
+    "read_completely": true
+  },
+  "references": [
+    {
+      "path": "sources/rejected-surface-landscape.png",
+      "sha256": "0f44212e0d83767b10ee050a893b87ddd45d6363367f371e68fc15ba127f2916",
+      "width": 1536,
+      "height": 1024,
+      "native": true,
+      "viewed_with": "view_image",
+      "view_detail": "original"
+    },
+    {
+      "path": "sources/original-portrait.png",
+      "sha256": "54b64fa33d7287f3b1f89efb7176bbba84e8c87eb62b6b112218da2cf2076436",
+      "width": 1024,
+      "height": 1536,
+      "native": true,
+      "viewed_with": "view_image",
+      "view_detail": "original"
+    }
+  ],
+  "images": [
+    {
+      "id": "landscape",
+      "candidate": {
+        "path": "images/raketti-andoya-vaaka-v2.png",
+        "sha256": "66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+        "width": 1536,
+        "height": 1024,
+        "native": true,
+        "viewed_with": "view_image",
+        "view_detail": "original"
+      },
+      "surface": {
+        "water": "Aallot ovat hylättyä vaakaa monikokoisempia: pidempien aaltojen lomassa pienempiä väreitä ja pehmeämpiä pintoja; heijastukset katkeilevat. Pienissä harjanteissa on yhä paikallista rytmikkyyttä ja aaltopinta voi vaikuttaa paikoin siloitellulta/synteettiseltä.",
+        "rock": "Laajemmat epäsäännölliset kalliomuodot ja vihreät rinteet erottuvat ilman aiemman pinnan yhtä hallitsevaa hienorakeista kaiverrusvaikutelmaa. Kivien/ruohon yksityiskohtainen rytmi näyttää silti paikoin generoidulta.",
+        "smoke": "Pehmeämpiä valo-varjosiirtymiä ja erikokoisia savupoimuja; ei selkeää muovikiiltoa. Etenkin savupilven yläreunassa on edelleen siistejä pyöreitä kukkakaalimaisia palloja, joten volyymi ei ole kauttaaltaan spontaanin valokuvallinen.",
+        "sky": "Sininen liukuma on sileä ja pilvenreunat vaihtelevat. Ei havaittua koko kuvaa peittävää kangas-/paperiraetta.",
+        "clarity_CGI": "Ei selvää vahvaa teroitushaloa taivaan ja harjanteen rajalla tai laajaa CGI-kiiltoa. Yksittäisten aaltojen siistiä kiiltoa ja pilvimuotojen puhtautta jää."
+      },
+      "composition": "Valkoinen kapea raketti, vasen ristikkotorni, liekki, savu, rannikon maa sekä matala vasen ja korkeampi oikea harjanne näkyvät. Laukaisuryhmä on hylättyä vaakaa suurempi kuvassa ja merikaista hieman matalampi, mutta sinistä taivasta ja merta näkyy runsaasti. Aurinko jää vasempaan reunaan ilman aiemman jättimäistä tähtipurkausta."
+    },
+    {
+      "id": "portrait",
+      "candidate": {
+        "path": "images/raketti-andoya-pysty-v2.png",
+        "sha256": "2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+        "width": 1024,
+        "height": 1536,
+        "native": true,
+        "viewed_with": "view_image",
+        "view_detail": "original"
+      },
+      "surface": {
+        "water": "Etualan aallonkoot, välimatkat ja rikkonaiset glintit vaihtelevat alkuperäistä paremmin. Suurempien muotojen välissä on pehmeämpää vettä. Pienimpien aaltoharjanteiden samankaltainen terävä rytmi ei ole kokonaan poistunut.",
+        "rock": "Mikrokontrasti on hillitympi kuin alkuperäisessä; valo ja varjo rakentavat suurempia kallio-/kasvillisuusmuotoja. Oikean harjanteen hieno juovitus ja terävä geologinen koristelu korostuvat silti paikoin ja voivat edelleen näyttää synteettisiltä.",
+        "smoke": "Valo jakautuu pehmeästi ja savussa on kerroksia, mutta toistuvan pyöreät siistit kuhmut ja puhdas kirkkaus jäävät näkyviksi synteettisiksi vihjeiksi. Täydellistä luonnollista turbulenssia ei väitetä.",
+        "sky": "Sileä sininen taivas ja vaihtelevat pilvikerrokset, ei havaittua globaalia kangasgrainia.",
+        "clarity_CGI": "Ei selviä laajoja clarityhaloja tai muovista kiiltoa; pieniä korostuneita kivijuovia ja veden harjanteita jää."
+      },
+      "composition": "Pystyn alkuperäinen keskitetty laukaisumotiivi, vasen torni, meri etualalla ja suuri sininen ylätaivas säilyvät. Koko raketti, liekki, savu ja laukaisumaa näkyvät. Lämmin vasen valo jää sinisen taivaan/meren rinnalle aksentiksi."
+    }
+  ],
+  "evidence": {
+    "authority_and_prompt_read_in_full": true,
+    "all_four_images_personally_viewed": true,
+    "view_tool": "view_image",
+    "view_detail": "original",
+    "native_candidate_sha256_verified": true,
+    "generation_editing_or_resizing_in_QA": false
+  },
+  "pair_assessment": {
+    "improvement_observed": true,
+    "complete_camera_photorealism_confirmed": false,
+    "finding": "Molemmissa vesi ja kallio ovat aiempaa vähemmän tasaisen kaiverrettuja/yliteräviä, ja sininen meri/taivas säilyvät. Savun puhtaat pyöreät muodot, kallion juovitus ja pienaaltojen paikallinen rytmikkyys jäävät. Valokuvallisuutta ei voi hyväksyä automaattisesti.",
+    "paired_scene_identity": "Yhtenäinen laukaisumotiivi ja viileä sininen/lämmin aksentti; pilvet, maasto ja pinnat ovat uusia eivätkä pikseli-identtisiä.",
+    "name_space": "Alakeskellä merta molemmissa, mutta aaltoja ja heijastuksia on. Nimen/varjon kontrasti ja lopullinen rajaus vaativat UI-tarkistuksen.",
+    "clean_image": "Ei havaittua tekstiä, logoja, lippuja, UI:ta, reunusta tai selvää vinjettiä."
+  },
+  "recommendation": "Pintakäsittely on parantunut, mutta pari jää uuteen PT/omistaja-arvioon yllä olevin varauksin. Ei täydellisen valokuvallisuuden lupausta.",
+  "acceptance": {
+    "owner": "not_obtained",
+    "recipient": "not_obtained_in_this_review",
+    "game_connection": "not_verified",
+    "runtime": "not_tested",
+    "prior_rejected_landscape": "not_rehabilitated_by_this_review"
+  },
+  "provenance": "AI-havainnekuvat, eivät dokumentaarisia valokuvia todellisesta laukaisusta. QA ei väitä uutta R2-toimitusta tai lähetettyä postia.",
+  "prior_qa_unchanged_sha256": {
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/qa/independent-review.json": "28ac29812b57fb57b5ac5e7a0b13a9b4652e50d5117e31a813aaedd2e282274c",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/qa/INDEPENDENT-QA-FI.md": "ed5c8f1e31d7375ee308ba9c9129a99db27c161fecf155fadf527ba5af168151",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/qa/independent-review.json": "dfaff5e373338df7b875b9607d71bd731288fc19caf1fe6f210cf8c585261e33",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/qa/INDEPENDENT-QA-FI.md": "0eacad7a5deae892af11f8c4164c4ad3898acfa9c8e9a82f4cf6baeb0fe5a763",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kori-koydet-havainne-20261016/qa/independent-review.json": "40c4addc05958f3db698c3f8794dbc95889ec4c0b91524b8730c972a478560f6",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kori-koydet-havainne-20261016/qa/INDEPENDENT-QA-FI.md": "f60b8bccd95365d1cd9b7d13ce0a6b4f2b93bddbc00ea2c6f6b6011a60db09df",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/andoya-vaaka-v2-20261016/qa/independent-review.json": "a0d94a9154e74063572830c75849dda0494ffd4d656baea0f2ce94e916754603",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/andoya-vaaka-v2-20261016/qa/INDEPENDENT-QA-FI.md": "b2053b5e115d85cacabd7e960c0d965a24082f3117e124eaf59629ba887c0db5"
+  },
+  "scope_mutations": [
+    "qa/independent-review.json",
+    "qa/INDEPENDENT-QA-FI.md"
+  ],
+  "pending": []
+}

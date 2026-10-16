@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-16T09:26:49.522590+00:00",
+  "source": "direct human user in this chat",
+  "verbatim": "kuvassa näkyy outo pintarakenne, saisiko kuvan oikean valokuvan näköiseksi pinnaltaan. tee samalla tavalla myös pystykuva tarvittaessa",
+  "taskRelation": 375,
+  "priorSingleCallSourceAlreadyConsumed": true,
+  "newAuthority": "One fresh whole landscape correction and one fresh whole portrait correction if needed",
+  "portraitCorrectionNeeded": true,
+  "basis": "Personally inspected both exact natives at original detail: engraved/even synthetic-looking water and rock microtexture occurs in both",
+  "newCallsPlanned": 2,
+  "partialImageRepairsForbiddenByStandingOwnerPreference": true,
+  "oldFilesAndR2ObjectPreserved": true,
+  "oldLandscapeR2URLNotFinalApproved": true,
+  "ownerReviewBeforeGameIntegration": true
+}

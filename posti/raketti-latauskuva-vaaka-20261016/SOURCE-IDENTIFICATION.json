@@ -1,0 +1,38 @@
+{
+  "matchedAsset": "raketti-pysty task239",
+  "assetManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/raketti-andoya-latauskuva-20261014/raketti-pysty/asset.json",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/raketti-andoya-latauskuva-20261014/raketti-pysty/native.png",
+  "nativeSHA256": "54b64fa33d7287f3b1f89efb7176bbba84e8c87eb62b6b112218da2cf2076436",
+  "deliveredPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/raketti-andoya-latauskuva-20261014/raketti-pysty/raketti-andoya-pysty.png",
+  "deliveredSHA256": "b0a52f8b4eed5a620bad47840282828fc0fe933afe3d0647cc865bcd5292e25c",
+  "nativeAndDeliveredRGBPixelsIdentical": true,
+  "nativeDimensions": [
+    1024,
+    1536
+  ],
+  "screenshotDimensions": [
+    1179,
+    2556
+  ],
+  "comparison": "Aspect-fill central crop predicted from native, ROI excludes phone island and title overlay",
+  "scale": 1.6640625,
+  "scaledSize": [
+    1704,
+    2556
+  ],
+  "cropXY": [
+    262,
+    0
+  ],
+  "roi": [
+    0,
+    260,
+    1179,
+    1900
+  ],
+  "meanAbsoluteRGBError": 9.672012591627189,
+  "RGBPearsonCorrelation": 0.9281836301014332,
+  "visualMatchPersonallyVerified": true,
+  "rejectedReference": "14Oct raketti-andoya-vaaka.png is NOT used",
+  "originalsPreserved": true
+}

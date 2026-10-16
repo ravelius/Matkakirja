@@ -1,0 +1,248 @@
+{
+  "wide": {
+    "format": "wide",
+    "at": "2026-10-16T09:31:29.788987+00:00",
+    "r2Key": "julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-vaaka-v2.png",
+    "url": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-vaaka-v2.png?sha256=66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+    "canonicalUrl": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-vaaka-v2.png?sha256=66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+    "baseUrl": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-vaaka-v2.png",
+    "baseUrlState": {
+      "http": 404,
+      "byteExact": false,
+      "headers": {
+        "content-type": "text/html",
+        "access-control-allow-origin": "https://matkakirja.app",
+        "cache-control": "max-age=14400",
+        "cf-cache-status": "HIT",
+        "age": "2",
+        "etag": null
+      }
+    },
+    "nativeSHA256": "66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+    "sha256": "66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+    "bytes": 2341386,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "readbacks": [
+      {
+        "url": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-vaaka-v2.png?sha256=66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+        "http": 200,
+        "bytes": 2341386,
+        "sha256": "66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "headers": {
+          "content-type": "image/png",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "public, max-age=31536000, immutable",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": "\"b67761e307883d59fb0ea6802b1b8d8c\""
+        },
+        "history": [
+          {
+            "at": "2026-10-16T09:31:29.161266+00:00",
+            "http": 200,
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "url": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-vaaka-v2.png?sha256=66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e&verify=1792143088657837000",
+        "http": 200,
+        "bytes": 2341386,
+        "sha256": "66bb95fe9aad7126d9ca1756d829b32f3c0de5ab8a1a8526ce796f4732d83a6e",
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "headers": {
+          "content-type": "image/png",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "public, max-age=31536000, immutable",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": "\"b67761e307883d59fb0ea6802b1b8d8c\""
+        },
+        "history": [
+          {
+            "at": "2026-10-16T09:31:29.729626+00:00",
+            "http": 200,
+            "byteExact": true
+          }
+        ]
+      }
+    ],
+    "byteExactReadback": true,
+    "mimeVerified": true,
+    "corsVerified": true,
+    "conditionalIfNoneMatch": "*",
+    "putHTTP": 200,
+    "oldObjectOverwritten": false,
+    "preflight": [
+      {
+        "http": 404,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "access-control-allow-origin": null,
+          "cache-control": null,
+          "cf-cache-status": "DYNAMIC",
+          "age": null,
+          "etag": null
+        },
+        "method": "HEAD"
+      },
+      {
+        "http": 404,
+        "headers": {
+          "content-type": "text/html",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "max-age=14400",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": null
+        },
+        "method": "GET"
+      },
+      {
+        "http": 404,
+        "headers": {
+          "content-type": "text/html",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "max-age=14400",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": null
+        },
+        "method": "GET"
+      }
+    ],
+    "ownerAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  "portrait": {
+    "format": "portrait",
+    "at": "2026-10-16T09:31:31.908868+00:00",
+    "r2Key": "julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-pysty-v2.png",
+    "url": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-pysty-v2.png?sha256=2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+    "canonicalUrl": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-pysty-v2.png?sha256=2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+    "baseUrl": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-pysty-v2.png",
+    "baseUrlState": {
+      "http": 404,
+      "byteExact": false,
+      "headers": {
+        "content-type": "text/html",
+        "access-control-allow-origin": "https://matkakirja.app",
+        "cache-control": "max-age=14400",
+        "cf-cache-status": "HIT",
+        "age": "1",
+        "etag": null
+      }
+    },
+    "nativeSHA256": "2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+    "sha256": "2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+    "bytes": 2406674,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "readbacks": [
+      {
+        "url": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-pysty-v2.png?sha256=2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+        "http": 200,
+        "bytes": 2406674,
+        "sha256": "2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "headers": {
+          "content-type": "image/png",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "public, max-age=31536000, immutable",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": "\"af82b711b1e2fb625bcaa75663050bdc\""
+        },
+        "history": [
+          {
+            "at": "2026-10-16T09:31:31.424991+00:00",
+            "http": 200,
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "url": "https://media.matkakirja.app/julisteet/raketti/andoya/20261016/pintakorjaus/raketti-andoya-pysty-v2.png?sha256=2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c&verify=1792143090770145000",
+        "http": 200,
+        "bytes": 2406674,
+        "sha256": "2291ae78351e63a19bd41c9c709f3e7a81c6cf40a7cd67c9610c33321075259c",
+        "byteExact": true,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "headers": {
+          "content-type": "image/png",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "public, max-age=31536000, immutable",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": "\"af82b711b1e2fb625bcaa75663050bdc\""
+        },
+        "history": [
+          {
+            "at": "2026-10-16T09:31:31.827037+00:00",
+            "http": 200,
+            "byteExact": true
+          }
+        ]
+      }
+    ],
+    "byteExactReadback": true,
+    "mimeVerified": true,
+    "corsVerified": true,
+    "conditionalIfNoneMatch": "*",
+    "putHTTP": 200,
+    "oldObjectOverwritten": false,
+    "preflight": [
+      {
+        "http": 404,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "access-control-allow-origin": null,
+          "cache-control": null,
+          "cf-cache-status": "DYNAMIC",
+          "age": null,
+          "etag": null
+        },
+        "method": "HEAD"
+      },
+      {
+        "http": 404,
+        "headers": {
+          "content-type": "text/html",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "max-age=14400",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": null
+        },
+        "method": "GET"
+      },
+      {
+        "http": 404,
+        "headers": {
+          "content-type": "text/html",
+          "access-control-allow-origin": "https://matkakirja.app",
+          "cache-control": "max-age=14400",
+          "cf-cache-status": "MISS",
+          "age": null,
+          "etag": null
+        },
+        "method": "GET"
+      }
+    ],
+    "ownerAccepted": false,
+    "gameIntegrationVerified": false
+  }
+}
