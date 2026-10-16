@@ -11,3 +11,5 @@ Palkkitarkistus: `tools/astro-palkki.mjs tarkista` → puhdas (0 px) kaikille ne
 
 ## EI MUKANA: Reykjanes (ISS070, joulukuu 2023)
 Kuvatunnusta ei löytynyt: Gatewayn tietokanta (photo.pl) palautti 15.10.2026 virheen "SQL failed" jopa tunnetuille kuville, eikä NASAn kuvakirjasto, Earth Observatory eikä Commons tunne ISS070-kuvaa Reykjanesin purkauksesta (kaikki löydetyt ovat satelliitti-, lento- tai maakuvia). Pyydä Valosepältä tunnus tai valitse vaihtoehto (esim. Fagradalsfjall 2021 ISS-kuva, jos sellainen löytyy Gatewaysta kun se on taas pystyssä).
+
+Uusi yritys 16.10.2026 klo 20.5x: Gatewayn photo.pl palauttaa yhä "SQL failed" myös tunnetulle kuvalle (ISS059-E-119250, Raikoke); Commonsin haku (ISS070, Reykjanes, Sundhnúkur, Fagradalsfjall + ISS) ja NASAn kuvakirjasto-API palauttivat 0 osumaa. Tila: ei löydetty, yritetään uudelleen kun Gateway toimii.
