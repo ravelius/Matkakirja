@@ -392,3 +392,4 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 01.1x: ajo 197d (0ecaaaceb) valmis → PT:lle: kippi ja mylly katkaisevat luennan (nakyma.wav −12 dB, loki), museo ennallaan, askelten väistö vain testeissä. Tulos lokit/todistus-aanipohja-197d-20261017-0052/TULOS-AANIPOHJA.md. Odottaa PT:n kuittausta → SHA 9db0288e9 NS:lle (juna 197). Myöhemmin: Aanisoittimen/Puheen klipit rekisteröimättä äänivahdissa; siirtolista vuorollaan.
 - 01.2x: PT kuittasi → **9db0288e9 NS:lle junaan 197** (yhdistyy f4908018a:han puhtaasti). SEURAAVA ERÄ (juna 198, PT): äänivahdin rekisteröinnit (Aanisoittimen URL-klipit, MatkakirjaPuhe, sali-belgrad, sello) + siirtolista vuorollaan.
 - 01.3x: äänivahti siirtoseppa/aanivahti-198 **fdfb5f6dd** (9db0288e9 päällä, worktree wt/proto-siirtoseppa-aanipohja nyt tällä haaralla): Aanisoitin/Puhe ryhmätasolla. PT:ltä kysytty: siirtolista seuraavaksi?
+- 01.4x: NS: 9db0288e9 rungossa 197 = 40c54d8c8 (tarkista 0).
