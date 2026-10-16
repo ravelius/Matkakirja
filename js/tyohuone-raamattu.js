@@ -1702,7 +1702,7 @@ export const RAAMATTU = {
           + '~/.zshrc` samaan komentoon ennen generointia; omistaja ei anna avainta erikseen), XAI_API_KEY ja POLLO_KEHITTAJAKOODI = ~/.matkakirja-avaimet-koodaus.zsh; 2) GITHUB ACTIONS SECRETS '
           + '(repo ravelius/Matkakirja; kaytto vain tyonkulkujen kautta workflow_dispatchilla, esim. generoi-pyramidi.yml, patinoi-fokus.yml, savuke-pollo.yml, aani- ja kuvatyonkulut): '
           + 'R2_ACCOUNT_ID, R2_BUCKET, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, ANTHROPIC_API_KEY, ANTHROPIC_ADMIN_KEY, OPENAI_API_KEY, OPENAI_ADMIN_KEY, '
-          + 'ELEVEN_API_KEY (ElevenLabs-luennat), GOOGLE_API_KEY, GOOGLE_BILLING_PROJECT/TAULU/TOKEN, EUROPEANA_API, FLICKR_API_KEY, FREESOUND(_API/_API_KEY/_AVAIN/_TOKEN), EHDOTUS_AVAIN, '
+          + 'ELEVEN_API_KEY (ElevenLabs-luennat), GOOGLE_API_KEY (Googlen laskutusvientiä EI ole secreteissä; Asemataulun Google-palkin palvelutiliavain vain Macilla ~/.config/matkakirja/google-laskutus.json, 16.10.2026), EUROPEANA_API, FLICKR_API_KEY, FREESOUND(_API/_API_KEY/_AVAIN/_TOKEN), EHDOTUS_AVAIN, '
           + 'EHDOTUS_BUCKET, POLLO_KEHITTAJAKOODI, SAHKE_TIETOKANTA, SAMIREIVINEN_DRIVE_API, TEAM_ID, ASC_ISSUER_ID, ASC_KEY_ID, ASC_KEY_P8 (App Store Connect); 3) gh-token keyringissa (git push, '
           + 'PR:t, workflow run). CLAUDE-API CONSOLE-KREDIITEILLÄ (omistaja 11.10.2026 klo 10.3x, kortti "Nyt iPadilla (suositus)"): Claude-API:n käyttö (Pulun live-chat workerissa ja muut API-ajot) '
           + 'laskutetaan omistajan Claude Consolen krediittiorganisaatiosta: omistaja luo sinne avaimen ja tallentaa sen itse GitHub-salaisuuteen ANTHROPIC_API_KEY (avainta ei pyydetä chattiin), '
