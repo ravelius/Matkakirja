@@ -389,17 +389,17 @@ kun 9fa3b99f1 on juna-196:ssa).
   Ajo 197d odottaa lippuja (loki lokit/siirtoseppa-aanipohja-197d.log; skenaarioon lisätty luenta → kippi → hiljaisuus, luenta → mylly → kartalle).
   Valmis → SIMU VAPAA, verhokäyrät (museo-pohja.wav, nakyma.wav) → PT 1 rivi + SHA NS:lle junaan 197 (tavoite ennen ~01.45).
 - 23.4x: 9db0288e9-käännös keskeytetty levyhätään (Julkaisija jonottaa uudelleen PK:n intron jälkeen; ÄLÄ käynnistä itse). Kun KÄÄNNÖS NYT + SIMU NYT: `H=9db0288e9 ERA=aanipohja-197d nohup zsh tyokalut/siirtoseppa-ajot/ajo-aanipohja-197.zsh`. PT:lle tila kerrottu 23.4x.
-- 01.1x: ajo 197d (0ecaaaceb) valmis → PT:lle: kippi ja mylly katkaisevat luennan (nakyma.wav −12 dB, loki), museo ennallaan, askelten väistö vain testeissä. Tulos lokit/todistus-aanipohja-197d-20261017-0052/TULOS-AANIPOHJA.md. Odottaa PT:n kuittausta → SHA 9db0288e9 NS:lle (juna 197). Myöhemmin: Aanisoittimen/Puheen klipit rekisteröimättä äänivahdissa; siirtolista vuorollaan.
-- 01.2x: PT kuittasi → **9db0288e9 NS:lle junaan 197** (yhdistyy f4908018a:han puhtaasti). SEURAAVA ERÄ (juna 198, PT): äänivahdin rekisteröinnit (Aanisoittimen URL-klipit, MatkakirjaPuhe, sali-belgrad, sello) + siirtolista vuorollaan.
-- 01.3x: äänivahti siirtoseppa/aanivahti-198 **fdfb5f6dd** (9db0288e9 päällä, worktree wt/proto-siirtoseppa-aanipohja nyt tällä haaralla): Aanisoitin/Puhe ryhmätasolla. PT:ltä kysytty: siirtolista seuraavaksi?
-- 01.4x: NS: 9db0288e9 rungossa 197 = 40c54d8c8 (tarkista 0).
+- 01.0x: ajo 197d (0ecaaaceb) valmis → PT:lle: kippi ja mylly katkaisevat luennan (nakyma.wav −12 dB, loki), museo ennallaan, askelten väistö vain testeissä. Tulos lokit/todistus-aanipohja-197d-20261017-0052/TULOS-AANIPOHJA.md. Odottaa PT:n kuittausta → SHA 9db0288e9 NS:lle (juna 197). Myöhemmin: Aanisoittimen/Puheen klipit rekisteröimättä äänivahdissa; siirtolista vuorollaan.
+- 01.0x: PT kuittasi → **9db0288e9 NS:lle junaan 197** (yhdistyy f4908018a:han puhtaasti). SEURAAVA ERÄ (juna 198, PT): äänivahdin rekisteröinnit (Aanisoittimen URL-klipit, MatkakirjaPuhe, sali-belgrad, sello) + siirtolista vuorollaan.
+- 01.0x: äänivahti siirtoseppa/aanivahti-198 **fdfb5f6dd** (9db0288e9 päällä, worktree wt/proto-siirtoseppa-aanipohja nyt tällä haaralla): Aanisoitin/Puhe ryhmätasolla. PT:ltä kysytty: siirtolista seuraavaksi?
+- 01.0x: NS: 9db0288e9 rungossa 197 = 40c54d8c8 (tarkista 0).
 
-## PÄIVITYS 17.10. 01.4x — NOLLAUS (Postivahti, kova raja 36 %): SEURAAJAN ENSIMMÄINEN ERÄ = ÄÄNIPOHJAN SIIRTOLISTA
+## PÄIVITYS 17.10. 01.0x — NOLLAUS (Postivahti, kova raja 36 %): SEURAAJAN ENSIMMÄINEN ERÄ = ÄÄNIPOHJAN SIIRTOLISTA
 
 **Valmis:** äänipohja + museo + "kaikki ääni pois linssin/pelin avautuessa" **9db0288e9** junan 197 rungossa 40c54d8c8 (NS). Äänivahti
 **fdfb5f6dd** (siirtoseppa/aanivahti-198) NS:llä junaan 198. Suunnitelma docs/moduulit/aanipohja.md PT:n PR #4727:ssä.
 
-**SEURAAJAN ERÄ (PT 01.4x): siirtolista pieninä erinä, commit + luovutusrivi + push jokaisesta.**
+**SEURAAJAN ERÄ (PT 01.0x): siirtolista pieninä erinä, commit + luovutusrivi + push jokaisesta.**
 - Worktree /Users/Shared/Claude/wt/proto-siirtoseppa-aanipohja, nyt haaralla siirtoseppa/aanivahti-198 (fdfb5f6dd). Tee uusi haara
   siirtoseppa/siirto-198-<n> sen päältä (tai natiiviseppa/juna-198:n, kun NS avaa sen).
 - Lista: Linssit-testit/aanipohja-siirtolista.txt (32). Pienimmät ensin: SeikkailuKuulija (53 riviä), LuentaSoitin (98), SeikkailuLoppumusiikki,
