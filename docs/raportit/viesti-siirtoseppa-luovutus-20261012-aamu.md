@@ -360,7 +360,7 @@ parannus pohjaan leviää kaikkiin linsseihin ja peleihin, uudet vain pohjilla. 
 (kytkentä myöhemmin PuluChat.IssVastaukset-malliin + kohokohdat.json kysymykset). Worktree wt/proto-siirtoseppa-meri2 (mergettävissä/poistettavissa
 kun 9fa3b99f1 on juna-196:ssa).
 
-## PÄIVITYS 16.10. 21.3x — ÄÄNIPOHJA: SUUNNITELMA PT:LLÄ, POHJA + MUSEO KÄÄNNÖSJONOSSA
+## PÄIVITYS 16.10. 21.1x — ÄÄNIPOHJA: SUUNNITELMA PT:LLÄ, POHJA + MUSEO KÄÄNNÖSJONOSSA
 
 - Suunnitelma: verkkorepo haara **siirtoseppa-aanipohja e3e829b24** (docs/moduulit/aanipohja.md). Ei mergetty: dokumenttitesti vaatii
   Raamatun karttarivin → PT lisää ja mergeää (PT:lle kerrottu 20.59).
@@ -369,6 +369,6 @@ kun 9fa3b99f1 on juna-196:ssa).
   (AaniPohja.Lahde → PohjaLahde), museon askeleet + sisäänmeno pohjalla, siirtolista Linssit-testit/aanipohja-siirtolista.txt (32),
   `ui aanet vahti` + "pohjan ohi". Linssit-testit 1935/1935, unity-tarkistus 0, tarkista.sh 0.
 - Ajo: odottaja (tyokalut/siirtoseppa-ajot/ajo-aanipohja-197.zsh, loki lokit/siirtoseppa-aanipohja-197.log, skenaario sk-aanipohja-197.txt)
-  odottaa Julkaisijan lippuja kaannos-aanipohja.nyt + simu-aanipohja.nyt (pyydetty 21.2x). Valmis → SIMU VAPAA Julkaisijalle, aani/museo-pohja.wav
+  odottaa Julkaisijan lippuja kaannos-aanipohja.nyt + simu-aanipohja.nyt (pyydetty 21.0x). Valmis → SIMU VAPAA Julkaisijalle, aani/museo-pohja.wav
   verhokäyrä (askeleet kertojan alla vs. ilman; sello ennallaan) → PT. Sitten SHA NS:lle junaan 197 PT:n kuittauksella; siirtolista vuorollaan.
 - Meri2-worktree poistettu (9fa3b99f1 on juna-197:ssä).
