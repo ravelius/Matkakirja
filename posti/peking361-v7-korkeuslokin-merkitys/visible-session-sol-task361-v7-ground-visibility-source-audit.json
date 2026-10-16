@@ -1,0 +1,544 @@
+{
+  "status": "SOURCE_AUDIT_COMPLETE_NO_PRODUCER_METADATA_CAUSE_FOUND_RUNTIME_VISIBILITY_OPEN",
+  "sourceSnapshots": [
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/CesiumOmatMallit.cs",
+      "bytes": 36303,
+      "sha256": "dc5d2901744694c4226c7aa9e16e0c0de238a747bfdf814729dc25f9de3a7bde",
+      "lines": 508
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/LinssiOhjain.cs",
+      "bytes": 227352,
+      "sha256": "a1ddc565219302f7a860deba3de9c7d52b257eee2a1eb94b911cf49511aa344e",
+      "lines": 3019
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/OpasSovitin.cs",
+      "bytes": 249870,
+      "sha256": "f08414acecec3016683fd58b90629a9cba314b7196409f7bb13e9356bf79ece3",
+      "lines": 3552
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/PiiloValo.cs",
+      "bytes": 10609,
+      "sha256": "13169730e92cd24211b8337444e05c922114c1f7945b4a5b9f9ede5608d6d67f",
+      "lines": 146
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/OmatVarjot.cs",
+      "bytes": 6372,
+      "sha256": "cb18f53d52b1d33336d2e9eea3a04de7b9bb805b8a5f198507fc5ac191744419",
+      "lines": 90
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/CesiumKaupunki.cs",
+      "bytes": 94279,
+      "sha256": "bfb75abfc208f1c42695261383703680edafda0b8e13ab6c90604adb16e229e7",
+      "lines": 1363
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Kehityskaupungit.cs",
+      "bytes": 3473,
+      "sha256": "30e783e6281d71f6a2dff5c673d595dad5c54b3df8d043adbf6e6de9ef7be283",
+      "lines": 52
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Kierros/OmaKorkeus.cs",
+      "bytes": 8821,
+      "sha256": "0fdc3d8a367e7f89383437f5101b4bbea205ec1c3fc89119f292ee98f102fc2e",
+      "lines": 151
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Kierros/OmatMallit.cs",
+      "bytes": 6584,
+      "sha256": "fcfe551959b127d261d9578bb36f87ec9aa13ef363b7f59397c0a7639d8a160d",
+      "lines": 104
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_instanssit.mjs",
+      "bytes": 6989,
+      "sha256": "507cb23d8e3942cf7e04d13525b518c181cdeb6d366322dc3e7a0e717a4f80f1",
+      "lines": 92
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_ktx2.py",
+      "bytes": 18008,
+      "sha256": "36798f120bc06151da9d183dfc7b3187c9add82e2f20e313dfcd26099e649b21",
+      "lines": 258
+    }
+  ],
+  "currentSourcesNotVerifiedAsBuild196OrEa938": true,
+  "noGitUsed": true,
+  "interimSource": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-game-interim-20261016/source-review.md",
+    "bytes": 3073,
+    "gitBlobSHA1": "350c523495e36f7444dd2a48f612d0546e136783",
+    "sourceCommit": "95e6956d101e034639f20465decdb446ca810706",
+    "sha256": "8b02bbe92b31873bd19bc5ca905578e3feeaeba2b2445c803528f4980b8390af",
+    "notAcceptedOrRejected": true,
+    "hideMatchedRenderers": 0,
+    "hideExperimentInvalid": true,
+    "receiverReportedFix": "ea938f67f",
+    "fixNotVerifiedInCurrentReadSources": true
+  },
+  "metadataComparison": [
+    {
+      "file": "peking_2_3_lod0.glb",
+      "V6SHA256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c",
+      "C6SHA256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846",
+      "nodeAndMeshNamesExact": true,
+      "V6": {
+        "nodes": [
+          {
+            "name": "peking_2_3-buildings-static",
+            "mesh": 0
+          },
+          {
+            "name": "test284-merged-trees",
+            "mesh": 1
+          }
+        ],
+        "meshes": [
+          {
+            "name": "rakennukset",
+            "primitiveCount": 38
+          },
+          {
+            "name": "test284 native-tree cards",
+            "primitiveCount": 4
+          }
+        ],
+        "topLevelRoles": [
+          {
+            "primitive": 33,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 34,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 35,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 36,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 37,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "nestedSourceRoles": [],
+        "paving": [
+          {
+            "primitive": 28,
+            "materialIndex": 34,
+            "materialName": "stage5_paving_owner360_groundAO_probe"
+          },
+          {
+            "primitive": 29,
+            "materialIndex": 34,
+            "materialName": "stage5_paving_owner360_groundAO_probe"
+          }
+        ]
+      },
+      "C6": {
+        "nodes": [
+          {
+            "name": "peking_2_3-buildings-static",
+            "mesh": 0
+          },
+          {
+            "name": "test284-merged-trees",
+            "mesh": 1
+          }
+        ],
+        "meshes": [
+          {
+            "name": "rakennukset",
+            "primitiveCount": 34
+          },
+          {
+            "name": "test284 native-tree cards",
+            "primitiveCount": 4
+          }
+        ],
+        "topLevelRoles": [
+          {
+            "primitive": 31,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 32,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 33,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "nestedSourceRoles": [
+          {
+            "primitive": 25,
+            "sourcePrimitive": 33,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 26,
+            "sourcePrimitive": 36,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "paving": [
+          {
+            "primitive": 27,
+            "materialIndex": 35,
+            "materialName": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+          }
+        ]
+      }
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "V6SHA256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e",
+      "C6SHA256": "65ec98b55dfe04b2b1b8d7706d8ed544d815bcb60f94f9df86ca14205e4a21e4",
+      "nodeAndMeshNamesExact": true,
+      "V6": {
+        "nodes": [
+          {
+            "name": "peking_2_3-buildings-static",
+            "mesh": 0
+          },
+          {
+            "name": "test284-merged-trees",
+            "mesh": 1
+          }
+        ],
+        "meshes": [
+          {
+            "name": "rakennukset",
+            "primitiveCount": 37
+          },
+          {
+            "name": "test284 native-tree cards",
+            "primitiveCount": 4
+          }
+        ],
+        "topLevelRoles": [
+          {
+            "primitive": 32,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 33,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 34,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 35,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 36,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "nestedSourceRoles": [],
+        "paving": [
+          {
+            "primitive": 27,
+            "materialIndex": 33,
+            "materialName": "stage5_paving_owner360_groundAO_probe"
+          },
+          {
+            "primitive": 28,
+            "materialIndex": 33,
+            "materialName": "stage5_paving_owner360_groundAO_probe"
+          }
+        ]
+      },
+      "C6": {
+        "nodes": [
+          {
+            "name": "peking_2_3-buildings-static",
+            "mesh": 0
+          },
+          {
+            "name": "test284-merged-trees",
+            "mesh": 1
+          }
+        ],
+        "meshes": [
+          {
+            "name": "rakennukset",
+            "primitiveCount": 33
+          },
+          {
+            "name": "test284 native-tree cards",
+            "primitiveCount": 4
+          }
+        ],
+        "topLevelRoles": [
+          {
+            "primitive": 30,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 31,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 32,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "nestedSourceRoles": [
+          {
+            "primitive": 24,
+            "sourcePrimitive": 32,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 25,
+            "sourcePrimitive": 35,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "paving": [
+          {
+            "primitive": 26,
+            "materialIndex": 34,
+            "materialName": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+          }
+        ]
+      }
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "V6SHA256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158",
+      "C6SHA256": "26f9858e580e835f28bfcc55855febe78c8deccb7b7641aca7e2a6bf6984f28b",
+      "nodeAndMeshNamesExact": true,
+      "V6": {
+        "nodes": [
+          {
+            "name": "peking_2_3-buildings-static",
+            "mesh": 0
+          },
+          {
+            "name": "test284-merged-trees",
+            "mesh": 1
+          }
+        ],
+        "meshes": [
+          {
+            "name": "rakennukset",
+            "primitiveCount": 37
+          },
+          {
+            "name": "test284 native-tree cards",
+            "primitiveCount": 4
+          }
+        ],
+        "topLevelRoles": [
+          {
+            "primitive": 32,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 33,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 34,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 35,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 36,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "nestedSourceRoles": [],
+        "paving": [
+          {
+            "primitive": 27,
+            "materialIndex": 33,
+            "materialName": "stage5_paving_owner360_groundAO_probe"
+          },
+          {
+            "primitive": 28,
+            "materialIndex": 33,
+            "materialName": "stage5_paving_owner360_groundAO_probe"
+          }
+        ]
+      },
+      "C6": {
+        "nodes": [
+          {
+            "name": "peking_2_3-buildings-static",
+            "mesh": 0
+          },
+          {
+            "name": "test284-merged-trees",
+            "mesh": 1
+          }
+        ],
+        "meshes": [
+          {
+            "name": "rakennukset",
+            "primitiveCount": 33
+          },
+          {
+            "name": "test284 native-tree cards",
+            "primitiveCount": 4
+          }
+        ],
+        "topLevelRoles": [
+          {
+            "primitive": 30,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 31,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 32,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "nestedSourceRoles": [
+          {
+            "primitive": 24,
+            "sourcePrimitive": 32,
+            "role": "below-ground-seam-cover"
+          },
+          {
+            "primitive": 25,
+            "sourcePrimitive": 35,
+            "role": "below-ground-seam-cover"
+          }
+        ],
+        "paving": [
+          {
+            "primitive": 26,
+            "materialIndex": 34,
+            "materialName": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+          }
+        ]
+      }
+    }
+  ],
+  "concreteFindings": [
+    {
+      "id": "HEIGHT_LOG_IS_SEPARATE_DTM_DSM_CACHE",
+      "type": "CODE_DEPENDENCY",
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/LinssiOhjain.cs",
+      "line": 2271,
+      "chain": "camera maa command ->OpasSovitin.OmaMaanpinta ->KorkeusId+maaMallit ->fallbackOmaMaa+korkeusMallit ->OmaKorkeus.Korkeus; NaN ->camera target0/log",
+      "consequence": "No GLB mesh/material/displayRole/node lookup in this path. Warning is not evidence paving mesh absent, unloaded or hidden."
+    },
+    {
+      "id": "HEIGHT_QUERY_CAN_RETURN_NAN_WITH_RENDERED_GLB",
+      "type": "CODE_DEPENDENCY",
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/OpasSovitin.cs",
+      "line": 2971,
+      "conditions": [
+        "no matching height cityID",
+        "no cached DTM/DSM",
+        "sample outsideheight raster orNoData"
+      ],
+      "note": "Current KorkeusId also falls back toKehityskaupungit.Lahella, which includes opened hiddenPeking; no claim Peking deliberately excluded. Camera query itself only reads cache and does not initiateLataaKorkeus."
+    },
+    {
+      "id": "HIDE_FILTER_IS_TRANSFORM_PATH",
+      "type": "CODE_DEPENDENCY",
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/LinssiOhjain.cs",
+      "line": 2887,
+      "chain": "FindObjectsByType<Renderer>(Inactive.Exclude)->skip disabled->KerrosPolku fullparentnames substring OrdinalIgnoreCase->enabled=false",
+      "consequence": "Material name/primitive extras are not direct selection inputs. GLTF node names can affect descendant path; raw V6/C6 node names are identical. App creates parentsOmat mallit/Oma malli+k.Id."
+    },
+    {
+      "id": "PREPROCESS_CAN_RENAME_CHILD_NODES",
+      "type": "CODE_DEPENDENCY",
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_instanssit.mjs",
+      "line": 79,
+      "detail": "Shared-material merge names newglTF node/mesh frommaterial.name; V6 preprocessedchildhierarchy may differ fromC6 even thoughrawnode names equal.",
+      "limit": "Final runtimehierarchy not inspected. BroadOmat andtileID tests should still matchappancestors ifCesiumdescendants remainundercreatedtilesetparent. Not a demonstrated0renderer cause."
+    },
+    {
+      "id": "MOVED_ROLES_UNUSED_IN_CHECKED_PATHS",
+      "type": "CODE_DEPENDENCY",
+      "detail": "No displayRole/sourceExtras/sourcePrimitiveFaceBlocks/stage5_paving reader found in checked height/hide/app creation paths. Top seam-cover roles5->3 with2 preservedinmergedfaceblocks, peractualGLB."
+    },
+    {
+      "id": "PIILOVALO_COUNT_DEPENDENCY_ONLY_WHEN_MASK_ENABLED",
+      "type": "CODE_DEPENDENCY",
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/PiiloValo.cs",
+      "line": 67,
+      "detail": "OptionalPeitto selects allMeshRenderers underownroot andusesrenderer count forrefresh; no material-role/namefilter. Merge can change renderer count butPeitto=false default andinterim log saysoff. Not camera heightquery or0hide proof."
+    }
+  ],
+  "runtimeHypothesesNotProven": [
+    "Receiverattributeszero hide count toDontSave enumeration; currentreadsourceusesFindObjectsByType butno runtimeHideFlags/enumeratedpaths orfixbuildpin verified here.",
+    "Inactive/disabled renderer oractualhierarchy/path differences can also producezero; rawC6 metadata doesnotprove importedhierarchy.",
+    "Texture/streaming/memory/terrain height/clip/Ion ownership not diagnosed by this sourceaudit or screenshots."
+  ],
+  "scope": "Only assigned reportMD/JSON written; read-only source+V6/C6metadata, PythonexternalT7wrappernice15; noUnity/Blender/Git/asset/code changes, no receiver/watch messages and no delegation.",
+  "decision": "No new concrete producer-side metadata defect found. New actionable interpretation: camera warning reads separateheightcache, not actualGLBground visibility. Wait for valid receivervisibility retest; no production rerun or acknowledgement cycle requested.",
+  "closingSourceVerification": [
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/CesiumOmatMallit.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/LinssiOhjain.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/OpasSovitin.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/PiiloValo.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/OmatVarjot.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/CesiumKaupunki.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Kehityskaupungit.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Kierros/OmaKorkeus.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Kierros/OmatMallit.cs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_instanssit.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_ktx2.py",
+      "unchanged": true
+    }
+  ]
+}
