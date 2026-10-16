@@ -372,3 +372,6 @@ kun 9fa3b99f1 on juna-196:ssa).
   odottaa Julkaisijan lippuja kaannos-aanipohja.nyt + simu-aanipohja.nyt (pyydetty 21.0x). Valmis → SIMU VAPAA Julkaisijalle, aani/museo-pohja.wav
   verhokäyrä (askeleet kertojan alla vs. ilman; sello ennallaan) → PT. Sitten SHA NS:lle junaan 197 PT:n kuittauksella; siirtolista vuorollaan.
 - Meri2-worktree poistettu (9fa3b99f1 on juna-197:ssä).
+- PT 21.1x: suunnitelma hyväksytty (koodimikseri säilyy), PT:n PR #4727 (fable-yhteiset-pohjat) karttarivin kanssa → oma haara jää mergeämättä
+  (PT:tä pyydetty ottamaan e3e829b24:n polut). **KYTKENTÄ JUNAAN 198, ei 197**: proto-haara rebase natiiviseppa/juna-198:n päälle, kun NS avaa sen.
+  Julkaisija antoi liput 21.1x (L2:ssa ensin 231437410).
