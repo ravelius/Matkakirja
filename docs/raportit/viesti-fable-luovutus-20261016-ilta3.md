@@ -10,7 +10,7 @@ Kuitattu NS:lle: savu k7 c5b6dcd1a (omistaja 18.57), varjopuoli 32c2ee110 (KORVA
 Odottaa:
 - MUSEO-NIMI (omistaja 19.44 "Junaan 197, iPhone korjattuna" + 19.56 lasikortit + 20.04 "Älä näytä nimeä kun suurennetaan… nimi omalle paikalleen"): NUI 0048e60e6 (T4-väli, lista ±1 häivytetyin reunoin, lasikortit, Auto Zoom alkaa 2,5 s jälkeen = 196:n "nimi ei näy" -syy). Ajo L2-jonossa → lasikortin kuvapari PT:lle → KK:lle (00.18-linja: kuvapari ennen kytkentää) → SHA NS:lle.
 - MUSEON PEHMEÄ LIIKE (omistaja 19.56–19.57 "Auto zoom liian nykivä, ease in out" + kävely): Pelikoodari (kova raja, luovuttaa vuoron jälkeen). Video PT:lle → KK ennen kytkentää.
-- LOUVRE-K53: kysytty omistajalta 20.4x (KK), suositus kyllä → jos kyllä, k53 (LR, md5 0b91241f luuppi-viennissä) Julkaisijalle R2 ja osoitin lukituksessa k48/v6k20:n tilalle.
+- LOUVRE-K53: omistaja 20.44 "Kyllä, junaan 197" → Julkaisija vie k53 R2:een, lukituksessa osoitin v6k19 → k53 (ei v6k20). LR:n seuraava kierros: Kellopaviljongin kello/karyatidit/päätykolmio + syvennyspatsaat, L2-lattian ylivalotus ja varjokaista, L3-laatoitus lämpimäksi.
 - Prahan/Ateenan historiaosiot: Pelikoodari kytkee (Äänittäjä uusi 2 Prahan osiota v3), 197 jos ehtii, muuten 198.
 Lukitus ja TF vain "OMISTAJA PYYSI JULKAISUA".
 
