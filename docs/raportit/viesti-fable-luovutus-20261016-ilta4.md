@@ -24,7 +24,7 @@ Lukitus ja TF vain "OMISTAJA PYYSI JULKAISUA".
 Yhteiset pohjat; museon i-kortti (omistaja 21.51 "Kyllä, teksti ja puhe" + 21.54 "Pyöreä kuva yläriville"): NUI rakentaa kortin kehyksen yläpuolelle (pyöreä muotokuva + tekijä + elinvuodet, tiedot alla) ja ympyrän tekstin kehyksen alle; Sisältökirjuri muotokuvat (Commons PD) + lyhyet tiedot; kuvapari iPhone + iPad → KK. NUI: leveät teokset, lasipohjan 4 puuttujaa. Louvre 135°. Äänipohja.
 
 ## 5. Louvre-luuppi
-LR k56 (md5 bd4080fb): kivi ×0,65 + Horlogen reliefitaustat tummiksi. PT päätti: 135° (Codex-vastaavuus) + kirkkaus VAIN albedolla, ei EV:tä (Valoseppä tietää). Odottaa Valosepän k56-kuvausta 135°-deltalla → PT tarkistaa → yksi pari k56 vs Codex KK:lle.
+LR k56 (md5 bd4080fb): kivi ×0,65 + Horlogen reliefitaustat tummiksi. PT päätti: 135° (Codex-vastaavuus) + kirkkaus VAIN albedolla, ei EV:tä (Valoseppä tietää). k56s kuvattu 22.0x: kirkkaus oikea (L2 137,120,107 vs Codex 126,110,91), mutta kivi harmaa/viileä → LR:lle k57 lämmin kullanruskea sävy (kirkkaus ennallaan) → Valosepän 135°-kuvaus → PT tarkistaa → yksi pari k57 vs Codex KK:lle.
 
 ## 6. Muut
 - Kiinan dynastiat: data #4720 mergetty 1bad6c16b (aukot 589/790/950/1100/1142 tarkistettu). LS integroi; Kiina3-kuvaus mitätön (kuorma) → uusinta Pekingin jälkeen, kuvat PT:lle ~22.10.
