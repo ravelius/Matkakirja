@@ -31,6 +31,8 @@ export const OPAS_AINEISTOT = Object.freeze({
     'edinburgh', 'firenze', 'granada', 'helsinki', 'islanti', 'kosice', 'krakova', 'kreeta', 'lissabon',
     'ljubljana', 'luxemburg', 'madrid', 'marseille', 'oslo', 'sevilla', 'sisilia', 'sofia', 'tampere', 'tukholma',
     'valletta', 'venetsia', 'vilna',
+    // 16.10. (PT, Sisältökirjuri): 7 sallittua pääkaupunkia, äänettömät, opas/esittely-v2 (vienti opas-esittely-v2-paakaupungit-7-vienti-20261016)
+    'monaco', 'bern', 'belgrad', 'zagreb', 'bratislava', 'tirana', 'podgorica',
   ],
   // Poikkeavat esittelypolut (ämpäri muuttumaton): Praha ja Wien avauksen ja kierros-kentän kanssa 7.10. (-20261007c).
   // Worker ja natiivi käyttävät tätä polkua, jos id on tässä, muuten opas/esittely-v1/<id>.json.
@@ -69,6 +71,13 @@ export const OPAS_AINEISTOT = Object.freeze({
     valletta: 'opas/esittely-v2/valletta.json',
     venetsia: 'opas/esittely-v2/venetsia.json',
     vilna: 'opas/esittely-v2/vilna.json',
+    monaco: 'opas/esittely-v2/monaco.json',
+    bern: 'opas/esittely-v2/bern.json',
+    belgrad: 'opas/esittely-v2/belgrad.json',
+    zagreb: 'opas/esittely-v2/zagreb.json',
+    bratislava: 'opas/esittely-v2/bratislava.json',
+    tirana: 'opas/esittely-v2/tirana.json',
+    podgorica: 'opas/esittely-v2/podgorica.json',
   },
   // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
   // 10.10. (Päätoimittajan kuittaus 09.3x): 63 uutta Codex-havainnekuvaa 20 kaupunkiin (paketit opas-havainnekuvat-vienti-20261010 ja opas-havainnekuvat-7okt-vienti-20261010: + Pariisi 5, Praha 1, Wien 1, Kööpenhamina 1 kuvaa 7.10. toimituksista; Sevilla perässä, kun Codex toimittaa).
