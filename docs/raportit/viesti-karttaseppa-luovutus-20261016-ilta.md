@@ -8,6 +8,16 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
 > Olet Karttaseppä (Opus, high). Aja git fetch origin, lue CLAUDE.md ja `git show <SHA>:docs/raportit/viesti-karttaseppa-luovutus-20261016-ilta.md`
 > KOKONAAN (haara karttaseppa-tyo-20260922). Viestit send_messagella id:llä (osoitekirja.md), PT:lle ≤ 3 riviä. JATKA KOHDASTA 1.
 
+## 0. ENSIN: OMISTAJA 16.10. klo 19.19 (KK → PT 19.2x)
+
+- Linssi piirretään **pelin omalle karttapallolle Isoisän linssin 1873 pohjalla** (UI-POHJAT, muisti `indeksi-kuvat-ui`). Litteä
+  matplotlib-kuva oli vain luonnos; sitä ei viedä peliin.
+- Rajadata jatkuu: loput 14 vuotta, **GeoJSON pallolle sopivaksi** (WGS84 lon/lat, antimeridiaani ei ylity; tarkista Isoisä 1873
+  -linssin rajadatan muoto ja tiheys natiivista Linssit/Ydin/Isoisa ja käytä samaa).
+- **1760: Tiibet ja Mongolia Qingin vaaleampana sävynä** (nyt vain Tiibet pisteillä → lisää Ulko-Mongolia samaan tyyliin, ilman
+  pisteitä jos pallon tyyli niin vaatii).
+- **Qingin väri AVOIN:** KK suosittaa viileää; kysytään omistajalta ensimmäisen pallokuvan kanssa (älä päätä itse).
+
 ## 1. AVOIN: Kiinan dynastiat -linssin rajat (PT:n tilaus 16.10. 18.5x), 4/18 vuotta
 
 - Suunnitelma ja lähteet mergetty #4716 (f5433f200): `docs/suunnitelmat/linssi-kiinan-dynastiat.md` (18 avainvuotta, tarinarivit,
