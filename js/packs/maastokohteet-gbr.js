@@ -651,5 +651,27 @@ export const MAASTOKOHTEET_GBR = [
     lahde: 'en-Wikipedia "Canterbury Cathedral", johdanto, "History" ja "Architecture" '
       + '(tarkistettu 30.9.2026).',
   },
+  {
+    id: 'englannin-kanaali',
+    nimi: 'Englannin kanaali',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Kuka lensi Englannin kanaalin yli ensimmäisenä lentokoneella?',
+      'Kuinka syvällä Kanaalitunneli kulkee?',
+    ],
+    nappi: 'Kapea meri Britannian edessä',
+    // -2 E / 50 N — ulappa kanaalin keskiosassa Dorsetin ja Normandian välissä
+    laudat: {
+      maailmankartta: { x: 5766.7, y: 1390.2 },
+      europe: { x: 172.8, y: 578.6 },
+    },
+    teksti: 'Englannin kanaali on Atlantin haara, joka erottaa Englannin Ranskasta ja jatkuu '
+      + 'Doverin salmen kautta Pohjanmerelle. Salmi on kapeimmillaan vain runsaat 30 kilometriä '
+      + 'leveä. Meren alla kulkee Kanaalitunneli, jonka noin 50 kilometristä noin 38 on veden '
+      + 'alla; se on maailman pisin merenalainen tunneliosuus.',
+    lahde: 'en-Wikipedia "English Channel" ja "Channel Tunnel", johdanto-osat; Store norske '
+      + 'leksikon "Den engelske kanal"; Eurotunnel "The Channel Tunnel - interesting facts" '
+      + '(tarkistettu 16.10.2026).',
+  },
 ];
 

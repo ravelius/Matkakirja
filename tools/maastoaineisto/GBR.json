@@ -12,7 +12,9 @@
         "Mikä on felsenmeer?",
         "Millainen on Ben Neviksen pohjoisseinämä talvella?"
       ],
-      "korostukset": ["felsenmeer|felsenmeer"],
+      "korostukset": [
+        "felsenmeer|felsenmeer"
+      ],
       "teksti": "Ben Nevis on Skotlannin, Yhdistyneen kuningaskunnan ja koko Brittein saarten korkein vuori: huippu on 1 345 metriä merenpinnasta, eikä mihinkään suuntaan ole 739 kilometriin korkeampaa maata. Huippu itsessään on kivinen tasanne, felsenmeer, ja pohjoisseinämän seitsemänsataametriset kalliot ovat Skotlannin tärkein jääkiipeilypaikka. Vuorella on juostu kilpaa vuodesta 1898.",
       "lahde": "en-Wikipedia \"Ben Nevis\", johdanto-osa (tarkistettu 29.8.2026)."
     },
@@ -27,7 +29,9 @@
         "Mitä nimi Yr Wyddfa tarkoittaa?",
         "Miten jäätiköt muotoilivat Snowdonin?"
       ],
-      "korostukset": ["arête|arêtet"],
+      "korostukset": [
+        "arête|arêtet"
+      ],
       "teksti": "Snowdon eli kymrinkielisellä nimellään Yr Wyddfa kohoaa 1 085 metriin ja on Walesin korkein vuori sekä Brittein saarten korkein Skotlannin ylämaiden eteläpuolella. Kalliot syntyivät tulivuorenpurkauksissa ordovikikaudella, ja jäätiköt veistivät niistä pyramidihuipun ja terävät harjanteet eli arêtet Crib Gochin ja Y Lliweddin. Vuorta on kutsuttu Yhdistyneen kuningaskunnan vilkkaimmaksi: vuonna 2022 sen nousi 543 541 kävelijää.",
       "lahde": "en-Wikipedia \"Snowdon\", johdanto-osa (tarkistettu 29.8.2026)."
     }
@@ -58,6 +62,19 @@
       ],
       "teksti": "Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.",
       "lahde": "en-Wikipedia \"Irish Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Englannin kanaali",
+      "lon": -2,
+      "lat": 50,
+      "lahdeKoordinaatti": "ulappa kanaalin keskiosassa Dorsetin ja Normandian välissä",
+      "nappi": "Kapea meri Britannian edessä",
+      "kysymykset": [
+        "Kuka lensi Englannin kanaalin yli ensimmäisenä lentokoneella?",
+        "Kuinka syvällä Kanaalitunneli kulkee?"
+      ],
+      "teksti": "Englannin kanaali on Atlantin haara, joka erottaa Englannin Ranskasta ja jatkuu Doverin salmen kautta Pohjanmerelle. Salmi on kapeimmillaan vain runsaat 30 kilometriä leveä. Meren alla kulkee Kanaalitunneli, jonka noin 50 kilometristä noin 38 on veden alla; se on maailman pisin merenalainen tunneliosuus.",
+      "lahde": "en-Wikipedia \"English Channel\" ja \"Channel Tunnel\", johdanto-osat; Store norske leksikon \"Den engelske kanal\"; Eurotunnel \"The Channel Tunnel - interesting facts\" (tarkistettu 16.10.2026)."
     }
   ],
   "joet": [

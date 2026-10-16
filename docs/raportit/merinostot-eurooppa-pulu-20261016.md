@@ -775,3 +775,248 @@ Jokien tuoma maa-aines täyttää sen pohjaa. Meri on suurimmillaankin vain noin
 
 Huom (kirjoittaja): Keskisyvyys 7–8 m lähteestä riippuen. · Syy-yhteys perustuu pääosin Wikipediaan; Encyclopedia of Ukraine ei selitä syytä. Maailman matalimpana merenä pitäminen perustuu Wikipediaan ja Britannicaan (hakutulos).
 
+## 4. Uudet merinostot ja niiden Pulun vastaukset (11 merta, 22 kysymystä; PT:n omistajan 23.56 linja)
+
+Muoto kuten osio 3. Nostot ovat tiedostoissa tools/maastoaineisto/<ISO>.json ja js/packs/maastokohteet-<iso>.js; lähteet ja tarkistukset JSON-tiedostoissa docs/kohtaukset/merinostot/uusi-meri-1..3.json.
+
+### Nosto: Englannin kanaali (gbr/englannin-kanaali)
+
+*Kapea meri Britannian edessä* · Englannin kanaali on Atlantin haara, joka erottaa Englannin Ranskasta ja jatkuu Doverin salmen kautta Pohjanmerelle. Salmi on kapeimmillaan vain runsaat 30 kilometriä leveä. Meren alla kulkee Kanaalitunneli, jonka noin 50 kilometristä noin 38 on veden alla; se on maailman pisin merenalainen tunneliosuus.
+
+### 82. Kuka lensi Englannin kanaalin yli ensimmäisenä lentokoneella?
+
+Ranskalainen Louis Blériot lensi kanaalin yli ensimmäisenä lentokoneella. Hän nousi ilmaan aamulla ennen viittä 25. heinäkuuta 1909 Calais'n seudulta ja lensi yksitasoisellaan noin 40 kilometrin matkan Doveriin, ja lento kesti noin 36 minuuttia. Palkinnoksi hän sai Daily Mail -lehden tuhannen punnan summan. Lento osoitti, että lentokone selviää merenkin yli.
+
+*49 sanaa · kohteet: gbr/englannin-kanaali*
+
+Huom (kirjoittaja): NASM-sivun suora WebFetch antoi 404; tieto vain hakutuloksen tiivistelmästä. Museums Victoria antaa 37 min, siksi 'noin 36'. · Dollarisumma on sama palkinto toisessa valuutassa.
+
+### 83. Kuinka syvällä Kanaalitunneli kulkee?
+
+Syvimmillään noin 75 metriä merenpinnan alapuolella. Keskimäärin tunneli kulkee noin 45 metriä merenpohjan alla. Se on noin 50 kilometriä pitkä, ja siitä noin 38 kilometriä on meren alla. Tunneli yhdistää Folkestonen ja Ranskan Calais'n lähellä sijaitsevan Coquellesin terminaalin, ja se avattiin virallisesti 6. toukokuuta 1994.
+
+*45 sanaa · kohteet: gbr/englannin-kanaali*
+
+Huom (kirjoittaja): Lähteet eroavat (40 vs 45), joten käytetty haarukkaa.
+
+Noston huom (kirjoittaja): Lähteet antavat 30-34 km; tekstissä 'runsaat 30'. Kanaalin pituus ja leveimmän kohdan leveys jätettiin pois: Wikipedia 560/240 km, SNL 640/160 km (ristiriita).
+
+### Nosto: Kattegat (dnk/kattegat)
+
+*Kissan reikä Tanskan ja Ruotsin välissä* · Kattegat on Tanskan ja Ruotsin välinen meri, jota rajaavat lännessä Jylland ja etelässä Tanskan salmet; pohjoisessa se jatkuu Skagerrakiin. Nimi on hollantilaista perua ja ilmestyy lähteisiin 1600-luvun puolivälin tienoilla: se tarkoittaa suunnilleen kissan reikää tai porttia, viittauksena ahtaaseen väylään. Kattegat on Pohjanmeren ja Itämeren välinen siirtymävyöhyke.
+
+### 84. Miksi Kattegatin vesi on kahdessa kerroksessa?
+
+Itämeren vähäsuolainen vesi virtaa Tanskan salmista jatkuvasti Kattegatille ja kelluu raskaamman, suolaisemman Pohjanmeren veden päällä. Pintavesi on siis selvästi vähäsuolaisempaa kuin pohjan vesi. Kerrosten raja on noin 15-20 metrin syvyydessä, ja pohjan lähellä vesi on yli 30 promillea suolaista. Kattegat kertoo, missä kaksi merta kohtaa toisensa.
+
+*46 sanaa · kohteet: dnk/kattegat*
+
+Huom (kirjoittaja): Käytetty haarukkaa. · Wikipedian Hydrology-osio antaa prosentteina ristiriitaiset luvut (3-3,5 %), siksi vain 'yli 30 promillea'.
+
+### 85. Miksi Kattegatilla vuorovesi on niin pieni?
+
+Vedenkorkeus vaihtelee Kattegatilla vuorovesi-ilmiön takia alle puoli metriä. Alue on Pohjanmeren, jossa vuorovesi on selvästi suurempi, ja lähes vuorovedettömän Itämeren välinen siirtymävyöhyke. Siksi rannat eivät kuivu ja täyty samalla tavalla kuin Pohjanmeren Vattimerellä. Myrskytuuli voi muuttaa vedenkorkeutta enemmän kuin vuorovesi. Kattegat kertoo, miten yksi meri vaimenee toiseksi.
+
+*47 sanaa · kohteet: dnk/kattegat*
+
+Huom (kirjoittaja): Pohjanmeren 1-4 m on vain Lex.dk:ssa, joten vastaukseen jäi vain 'selvästi suurempi'. Myrskyjen aiheuttama jopa 2 metrin vedenkorkeuden vaihtelu jätettiin pois (yksi lähde). · Johtopäätös pienestä vuorovedestä; tuulen sekoittavaa vaikutusta ei enää väitetä. · Vain yksi lähde; muotoiltu 'noin parisen metriä'. Heikosti tuettu; voi pudottaa.
+
+Noston huom (kirjoittaja): Pinta-ala jätetty pois: Wikipedia 24 000 km2, Lex.dk 30 000 km2 (ristiriita). · Lex.dk huomauttaa, että on epävarmaa, mihin osaan merta nimi alun perin viittasi. Viking Ship Museum -sivun WebFetch ei ulottunut kyseiseen osioon, joten tieto vain hakutuloksen tiivistelmästä.
+
+### Nosto: Skagerrak (dnk/skagerrak)
+
+*Pohjanmeren ja Kattegatin yhdistäjä* · Skagerrak on Norjan, Ruotsin ja Tanskan välinen merialue, joka yhdistää Pohjanmeren Kattegatiin. Se on noin 240 kilometriä pitkä, ja Norjan rannikon edustalla syvyys ylittää 700 metriä. Nimi on hollantilaista perua: rak tarkoittaa suoraa vesiväylää, ja ensimmäinen osa viittaa Tanskan pohjoiskärjessä sijaitsevaan Skageniin.
+
+### 86. Mitä Skagerrakin suulla ja Jyllannin edustalla tapahtui vuonna 1916?
+
+Siellä käytiin ensimmäisen maailmansodan suurin meritaistelu 31. toukokuuta - 1. kesäkuuta 1916 Pohjanmerellä Jyllannin rannikon edustalla. Britannian ja Saksan laivastot ottivat yhteen noin 250 aluksella, ja yli 8 600 miestä kuoli. Britit kutsuvat taistelua Jyllannin taisteluksi, saksalaiset Skagerrakin taisteluksi. Kumpikin osapuoli julisti voittaneensa, eikä taistelu ratkaissut sotaa.
+
+*47 sanaa · kohteet: dnk/skagerrak*
+
+Huom (kirjoittaja): RMG:n ja IWM:n omille sivuille ei päästy (IWM 403), joten toinen lähde on heikko (hakutulos, kirjan esittelyteksti ja uutissivu). · Lähteiden kuolleiden luvut vaihtelevat (yli 8 000 - 8 648), siksi 'yli 8 600'. Hakutulosten tiivistelmät, ei suoraa WebFetchiä. · Saksalaisia museo- tai arkistolähteitä ei löytynyt; molemmat lähteet ovat käytännössä Wikipedian artikkeleita.
+
+### 87. Missä Skagerrak ja Kattegat kohtaavat?
+
+Tanskan Skagenin niemen kärjessä, hiekkasärkkä Grenenillä. Kahden meren aallot törmäävät siellä toisiinsa ja ovat rakentaneet kaarevan särkän, joka on kasvanut noin kilometrin viime vuosisadan aikana. Virtaukset ovat voimakkaita, joten uiminen on kielletty. Matkailijat voivat seistä siellä kahden meren rajalla, ja Grenen kertoo, että meret kohtaavat maalta nähtävässä pisteessä.
+
+*48 sanaa · kohteet: dnk/skagerrak*
+
+Huom (kirjoittaja): Lex.dk:n 'spansk sø' -ilmiön nimeä ei käytetty (yksi lähde).
+
+Noston huom (kirjoittaja): Syvimmän kohdan tarkka luku vaihtelee lähteittäin (700-730 m), siksi 'yli 700'.
+
+### Nosto: Juutinrauma (dnk/juutinrauma)
+
+*Salmi, jonka yli rakennettiin silta* · Juutinrauma eli tanskaksi Øresund on Tanskan ja Ruotsin rajalla oleva salmi, joka erottaa Själlannin Skånesta. Se on 118 kilometriä pitkä, mutta kapeimmillaan Helsingørin ja Helsingborgin välillä vain noin neljän kilometrin levyinen. Salmen yli kulkee Kööpenhaminan ja Malmön yhdistävä silta- ja tunneliyhteys, joka avattiin 1. heinäkuuta 2000.
+
+### 88. Miksi laivojen piti maksaa tulli Juutinrauman läpi?
+
+Tanskan kruunu vaati maksua ulkomaisilta aluksilta, jotka halusivat purjehtia salmen läpi Itämerelle. Aluksen piti pysähtyä Helsingørissä ja maksaa, ennen kuin se sai jatkaa matkaa. Tulli perittiin vuodesta 1429 vuoteen 1857, ja se tuotti kruunulle valtavat tulot. Se päättyi, kun merenkulkumaat maksoivat Tanskalle kertakorvauksen. Salmi oli siis vuosisatoja Tanskan kruunun tärkeä tulonlähde.
+
+*51 sanaa · kohteet: dnk/juutinrauma*
+
+Huom (kirjoittaja): Kertakorvauksen summa (33,5 milj. riikintaaleria) ja kaksi kolmasosaa valtion tuloista ovat yhden lähteen lukuja eikä niitä käytetty.
+
+### 89. Mitä Tycho Brahe teki Hvenin saarella?
+
+Tanskalainen tähtitieteilijä Tycho Brahe sai Hvenin saaren läänityksenä kuningas Fredrik II:lta vuonna 1576. Saari on nykyään Ruotsin puolella, mutta oli silloin Tanskan alaisuudessa. Hän rakennutti sinne Uraniborgin observatoriolinnan, joka valmistui noin 1580, ja myöhemmin maanalaisen Stjerneborgin. Hän lähti saarelta 1597 ja jätti jälkeensä tarkan tähtiluettelon.
+
+*45 sanaa · kohteet: dnk/juutinrauma*
+
+Huom (kirjoittaja): Britannican sivu antoi 403, ja läänityksen vuosi 1576 perustuu hakutulokseen. · Tähtiluettelon syntyyn Venillä ei ole toista itsenäistä lähdettä haetuilla sivuilla; heikosti tuettu.
+
+Noston huom (kirjoittaja): Täsmällinen päivämäärä: en.wikipedia Øresund; Lex.dk antaa vain vuoden 2000. Sillan pituus jätettiin pois (ei Lex.dk:ssa).
+
+### Nosto: Riianlahti (lva/riianlahti)
+
+*Itämeren sisäinen lahti* · Riianlahti on Itämeren lahti Latvian ja Viron välissä, ja sen läntistä reunaa rajaa Saarenmaa. Pinta-ala on noin 18 000 neliökilometriä, mutta keskisyvyys vain noin 26 metriä. Suurimpia lahteen laskevia jokia on Väinäjoki eli Daugava, joka päättyy mereen Riiassa. Ankarina talvina koko lahti voi jäätyä umpeen.
+
+### 90. Mikä Irbensalmi on?
+
+Irbensalmi on Riianlahden pääyhteys Itämereen. Se sijaitsee Saarenmaan Sõrven niemimaan ja Latvian Kuurinmaan niemimaan välissä, ja sen leveys on noin 27 kilometriä. Salmen kynnyssyvyys on vain noin 25 metriä. Valtaosa (noin 70–80 %) lahden ja Itämeren vedenvaihdosta kulkee tämän salmen kautta, joten kapea portti pitää lahden melko eristettynä Itämerestä.
+
+*49 sanaa · kohteet: lva/riianlahti*
+
+Huom (kirjoittaja): Leveys 24-27 km, siksi 'noin 25'. Preprintin PDF-tiedot vain hakutuloksen tiivistelmästä. · Prosenttilukua ei käytetty, koska se on yhden hakutuloksen lukema. Heikosti tuettu.
+
+### 91. Mikä joki tuo eniten vettä Riianlahteen?
+
+Väinäjoki eli Daugava. Se saa alkunsa Venäjän Valdain kukkuloilta, virtaa Valko-Venäjän ja Latvian halki ja laskee lahteen Riiassa. Virtaama on keskimäärin noin 670 kuutiometriä sekunnissa. Joki on yli tuhat kilometriä pitkä ja tuo noin 70 prosenttia lahteen virtaavasta jokivedestä. Yksi joki tuottaa siis suurimman osan lahden makeasta vedestä.
+
+*48 sanaa · kohteet: lva/riianlahti*
+
+Huom (kirjoittaja): Preprintti vain hakutuloksen tiivistelmästä. · Pituus (1 020 km) vain en.wikipediassa, mutta tekstissä vain 'yli tuhat'. Heikosti tuettu. · Lukujen väli 660-678, siksi noin 670.
+
+Noston huom (kirjoittaja): Pinta-ala vaihtelee määritelmän mukaan (16 330-18 000), siksi 'noin 18 000'. Suurin syvyys jätettiin pois: en.wikipedia antaa 54 ja 66 m, fi.wikipedia 60 m, SNL 66 m.
+
+### Nosto: Vienanmeri (rus/vienanmeri)
+
+*Valkoinen meri pohjoisessa* · Vienanmeri on Barentsinmeren etelään työntyvä lahti Venäjän luoteisrannikolla, ja sitä rajaa vain Venäjä. Pinta-ala on noin 90 000 neliökilometriä, keskisyvyys 60-70 metriä ja syvin kohta yli 300 metriä. Meri jäätyy talveksi, mutta jäänmurtajat pitävät väylät auki. Venäjäksi se on Valkoinen meri.
+
+### 92. Mikä Solovetskin saaristo on?
+
+Solovetskin saaristo on Vienanmeren Äänisenlahden suulla sijaitseva saariryhmä, jonka tunnetuin kohde on Solovetskin luostari. Luostari perustettiin jo 1400-luvulla. Vuonna 1923 sen tiloihin perustettiin vankileiri, jota pidetään Gulagin esikuvana ja ensimmäisenä. Saaret erottavat Äänisenlahden Vienanmeren pääaltaasta. Saaristo otettiin Unescon maailmanperintöluetteloon 1992, ja se kertoo sekä pyhiinvaelluksen että pakkotyön historiasta.
+
+*48 sanaa · kohteet: rus/vienanmeri*
+
+Huom (kirjoittaja): UNESCO-sivun suora WebFetch antoi 403; tieto hakutuloksen tiivistelmästä. Vuosi 1436 jätettiin pois (yksi lähde). · en.wikipedian runko-osa antaa myös vuoden 1921, joten päivämäärä on lähteissä ristiriitainen; 1923 on kolmen lähteen yhteinen luku.
+
+### 93. Mikä Vienanmeren kanava on?
+
+Vienanmeri-Itämeri-kanava eli Belomorkanal on 227 kilometriä pitkä vesiväylä, joka yhdistää Vienanmeren Äänisjärveen ja sitä kautta Itämereen. Vangit kaivoivat sen vuosina 1931-1933, ja kanava avattiin elokuussa 1933. Virallisten lukujen mukaan yli 12 000 vankia kuoli, arvioiden mukaan jopa 25 000. Väylä on vain noin 3,5 metriä syvä, joten merialukset eivät mahdu siihen. Kanava kertoo Stalinin ajan pakkotyöstä.
+
+*56 sanaa · kohteet: rus/vienanmeri*
+
+Huom (kirjoittaja): Kuolleiden määrä vaihtelee 8 700 - 25 000+, siksi pelkkä 'tuhansia'. · Tarkka 3,5 m vain en.wikipediassa (1970-luvulla nostettu 4 m); heikosti tuettu, voi pudottaa 'noin 3,5 metriä'.
+
+Noston huom (kirjoittaja): Syvimmän kohdan luvut 330-343 m, siksi 'yli 300'.
+
+### Nosto: Keltienmeri (irl/keltienmeri)
+
+*Meri Irlannin eteläpuolella* · Keltienmeri on Atlantin osa Irlannin eteläpuolella, ja sitä rajaavat Irlanti, Britannia ja Ranska. Pinta-ala on noin 300 000 neliökilometriä, ja meren pohja on osa Euroopan mannerjalustaa. Nimen ehdotti tutkija E. W. L. Holt vuonna 1921 Dublinin kalastusasiantuntijoiden kokouksessa; aiemmin pohjoisosaa pidettiin St. George's Channelin osana.
+
+### 94. Mitä Lusitanialle tapahtui vuonna 1915?
+
+Brittiläisen matkustajalaivan RMS Lusitanian upotti saksalainen sukellusvene U-20 7. toukokuuta 1915 Old Head of Kinsalen edustalla Irlannin etelärannikolla. Laivalla oli noin 1 960 ihmistä. Se upposi alle 20 minuutissa, ja noin 1 200 kuoli, heistä 128 amerikkalaisia. Tapaus järkytti maailmaa ja vaikutti siihen, että Yhdysvallat liittyi ensimmäiseen maailmansotaan 1917.
+
+*49 sanaa · kohteet: irl/keltienmeri*
+
+Huom (kirjoittaja): Etäisyys rannasta vaihtelee (RMG 15 mailia, Wikipedia 11,5 mpk), joten sitä ei mainittu. · Kuolleiden luku 1 197-1 198, siksi 'noin 1 200'. 128 amerikkalaista RMG:n mukaan ja Wikipedia-peilin hakutuloksessa. · Muotoiltu varovasti 'vaikutti'.
+
+### 95. Mikä Fastnet Rock on?
+
+Fastnet Rock on pieni kallio Irlannin lounaisrannikon edustalla, noin 6-7 kilometriä Cape Clearin saaresta lounaaseen. Sen päällä on Irlannin korkein majakka, noin 54 metriä, joka valmistui 1904. Kallion lempinimi on Irlannin kyynel, koska se oli viimeinen osa Irlantia, jonka 1800-luvun siirtolaiset Amerikkaan matkatessaan näkivät. Ensimmäinen majakka syttyi kalliolla 1. tammikuuta 1854.
+
+*51 sanaa · kohteet: irl/keltienmeri*
+
+Huom (kirjoittaja): Haarukka 6-7 km. · Korkeus riippuu mittaustavasta (torni 45 m, lyhdyn kanssa 54 m); Boatnews ei anna korkeutta. Suurimmat luvut hakutuloksista. Heikosti tuettu. · Boatnews ei toista siirtolaisselitystä; hakutuloksissa (Southern Star, Afloat) selitys sama. Afloatin WebFetch antoi 403.
+
+Noston huom (kirjoittaja): Etelä- ja länsiraja on epätarkka (WorldAtlas), siksi sijainti annettu yleisesti. · WorldAtlas ja AM Nautical toistavat osin Wikipedian sisältöä.
+
+### Nosto: Lioninlahti (fra/lioninlahti)
+
+*Mistralin ja tramontanen lahti* · Lioninlahti on Välimeren laaja lahti Ranskan etelärannikolla; se ulottuu lännessä Espanjan Katalonian rannikolle ja idässä Toulonin tienoille. Alue tunnetaan kylmistä, puuskaisista tuulista, mistralista ja tramontanesta. Nimi mainitaan jo keskiajalla, ja sen arvellaan viittaavan äkillisten, rajujen tuulten leijonamaiseen vaaraan.
+
+### 96. Mikä on mistral-tuuli?
+
+Mistral on kylmä, kuiva luoteistuuli, joka puhaltaa Etelä-Ranskasta Lioninlahdelle. Rhônen laaksossa se voi ylittää 90 kilometriä tunnissa. Kerrallaan se voi kestää muutamasta tunnista yli viikkoon, ja se on voimakkaimmillaan talvella ja keväällä. Se kirkastaa taivaan ja antaa Provencelle aurinkoisen ilmaston. Mistral kertoo, miksi lahden nimen arvellaan viittaavan sen äkillisiin, leijonamaisiin tuuliin.
+
+*51 sanaa · kohteet: fra/lioninlahti*
+
+Huom (kirjoittaja): SNL sanoo 'pohjoistuuli', Wikipedia 'luoteistuuli'; 'luoteistuuli' pidetty (Wikipedia), heikompi tuki. · SNL ei mainitse Provencen aurinkoisuutta erikseen; heikosti tuettu.
+
+### 97. Mikä Camargue on?
+
+Camargue on Rhônen suistoalue Etelä-Ranskassa, Grand Rhônen ja Petit Rhônen haarojen välissä, ja sen pinta-ala on yli 900 neliökilometriä. Alue on vanhaa laidunmaata, jossa kasvatetaan hevosia ja härkiä, ja luonnonsuojelualueella elää runsaasti lintuja, kuten flamingoja. Pohjoisosassa viljellään riisiä ja viiniä. Camargue kertoo, mitä Rhône rakentaa Lioninlahden laidalle: laajan, luonnonvaraisen suiston.
+
+*50 sanaa · kohteet: fra/lioninlahti*
+
+Huom (kirjoittaja): Lukujen väli 930-950, siksi 'yli 900'. · 'Vanhaa laidunmaata' perustuu Lex.dk:n ja SNL:n kuvaukseen entisestä laidunalueesta.
+
+Noston huom (kirjoittaja): Lähteet antavat lahden rajauksen eri laajuisena (en.wikipedia ulottaa Katalonian rannikolle ja Toulonin suuntaan), PT 16.10.: teksti korjattu en.wikipedian rajaukseen (Begur–Toulon). · SNL mainitsee vain mistralin; tramontane perustuu en.wikipedian kahteen artikkeliin. Heikosti tuettu. · Nimen alkuperä on arvelu; teksti sanoo 'arvellaan'.
+
+### Nosto: Bosporinsalmi (tur/bosporinsalmi)
+
+*Istanbulin halki kulkeva salmi* · Bosporinsalmi on Turkin salmi, joka yhdistää Mustanmeren Marmaranmereen ja kulkee Istanbulin halki Euroopan ja Aasian välistä. Se on noin 30 kilometriä pitkä ja kapeimmillaan vain noin 700–750 metriä leveä. Salmen yli on rakennettu kolme siltaa, joista vanhin avattiin vuonna 1973, ja sen alitse kulkee kaksi tunnelia. Nimi tulee kreikasta, ja kreikkalaiset tulkitsivat sen tarkoittavan härän kulkuväylää.
+
+### 98. Montako siltaa ja tunnelia Bosporin ylittää?
+
+Bosporin ylittää kolme siltaa ja kaksi tunnelia. Sillat avattiin vuosina 1973, 1988 ja 2016. Salmen alla kulkevat Marmaray-rautatietunneli, joka avattiin vuonna 2013 ja jonka meren alainen osa on yli 50 metrin syvyydessä, sekä Euraasian maantietunneli vuodelta 2016. Yhdessä nämä viisi ylitystä sitovat saman kaupungin Euroopan- ja Aasian-puolen toisiinsa.
+
+*48 sanaa · kohteet: tur/bosporinsalmi*
+
+Huom (kirjoittaja): Lähteiden luvut 55–60 m, siksi vain 'yli 50 metriä'.
+
+### 99. Miksi Bosporissa vesi virtaa kahteen suuntaan?
+
+Bosporissa virtaa vettä kahdessa kerroksessa vastakkaisiin suuntiin. Pinnalla Mustanmeren vähäsuolaisempi vesi virtaa etelään kohti Marmaranmerta, ja syvemmällä Välimeren raskaampi, suolaisempi vesi virtaa pohjoiseen Mustaamerta kohti. Suolaisuusero pitää kerrokset erillään, koska suolainen vesi on tiheämpää ja jää alas. Salmi toimii siis kuin kaksikaistainen tie, jossa pinta ja pohja kulkevat eri suuntiin.
+
+*50 sanaa · kohteet: tur/bosporinsalmi*
+
+Huom (kirjoittaja): Virtausmääriä ei kerrottu, koska lähteiden luvut poikkeavat (16 000/11 000 m3/s vs 18,5/6,5 tuhatta m3/s).
+
+Noston huom (kirjoittaja): Kaksi mittapaikkaa, siksi vaihteluväli. · Vanhin silta avattiin lokakuussa 1973.
+
+### Nosto: Dardanellit (tur/dardanellit)
+
+*Muinainen Hellespontos* · Dardanellit on Turkin salmi, joka yhdistää Egeanmeren Marmaranmereen. Se on noin 61 kilometriä pitkä, noin 1,2–6 kilometriä leveä ja syvimmillään noin 100 metriä. Pohjoispuolella on Gallipolin niemimaa, jonka mukaan salmea kutsutaan myös Gallipolin salmeksi. Muinaiset kreikkalaiset kutsuivat sitä Hellespontokseksi. Maaliskuussa 2022 salmen ylitse avattiin 1915 Çanakkalen silta.
+
+### 100. Mitä Gallipolin sotaretkellä tapahtui?
+
+Gallipolin sotaretki oli liittoutuneiden vuonna 1915 tekemä yritys pakottaa Dardanellit auki ja vallata Konstantinopoli. Laivaston hyökkäys 18. maaliskuuta pysähtyi miinoihin, ja joukot nousivat maihin 25. huhtikuuta. Taistelut juuttuivat asemasotaan, ja retki päättyi tammikuun 1916 alussa liittoutuneiden vetäytymiseen. Konstantinopoli, nykyinen Istanbul, jäi valtaamatta, ja uhreja (kaatuneita, haavoittuneita ja sairastuneita) kertyi yli puoli miljoonaa.
+
+*52 sanaa · kohteet: tur/dardanellit*
+
+Huom (kirjoittaja): Ei tarkistettu täysin, kaksi toisistaan riippumatonta luettua lähdettä vain osittain. · Uhri = kaatunut tai haavoittunut; kirjattu 'noin'.
+
+### 101. Miten Kserkes ylitti Hellespontoksen?
+
+Persian kuningas Kserkes rakennutti vuonna 480 eaa. salmen yli kaksi siltaa, joiden kantajina olivat rinnakkain sidotut laivat. Herodotoksen mukaan myrsky tuhosi ensimmäiset sillat, ja Kserkes antoi ruoskia merta sekä heittää siihen kahleet. Uudet sillat olivat yli kilometrin pituiset. Tarina kertoo, miten vallanpitäjä yritti komentaa jopa luontoa.
+
+*46 sanaa · kohteet: tur/dardanellit*
+
+Huom (kirjoittaja): Vuosiluku 480 eaa. tukeutuu Wikipediaan (sekä Dardanelles-artikkeliin) ja Herodotoksen aikamääreeseen. · Kerrottu 'Herodotoksen mukaan'; muut todisteet puuttuvat. · Lähteiden arviot 1,1–2,5 km, siksi vain 'yli kilometrin'.
+
+Noston huom (kirjoittaja): Ylärajassa 0,5 km ero, siksi 'noin'. · Pohjoispuolen maininta tukeutuu Wikipediaan ja hakutulokseen.
+
+### Nosto: Gibraltarinsalmi (esp/gibraltarinsalmi)
+
+*Herkuleen patsaiden salmi* · Gibraltarinsalmi yhdistää Atlantin ja Välimeren. Sen pohjoisrannalla ovat Espanja ja Britannian Gibraltar, eteläpuolella Marokko ja Espanjan Ceuta. Kapeimmillaan salmi on noin 13–14 kilometriä leveä, ja syvyys vaihtelee noin 300 metristä 900 metriin. Antiikissa salmen kahta kallioniemeä sanottiin Herkuleen patsaiksi.
+
+### 102. Mitä Herkuleen patsaat ovat?
+
+Herkuleen patsaat ovat antiikin nimi Gibraltarinsalmen kahdelle kallioniemelle. Pohjoinen patsas on tunnistettu Gibraltarin kallioksi, mutta eteläisen sijainti on epävarma: ehdokkaina ovat Jebel Musa Marokossa ja Monte Hacho Ceutassa. Myytin mukaan Herakles halkaisi vuoren ja avasi salmen. Perimätiedon mukaan patsaissa luki varoitus "Non plus ultra", ei pidemmälle, sillä ne merkitsivät tunnetun maailman länsireunaa.
+
+*52 sanaa · kohteet: esp/gibraltarinsalmi*
+
+Huom (kirjoittaja): Diodoros kertoo toisin (kavensi salmea); vastaus sanoo 'myytin mukaan'. · Tulkinta, ei sanatarkka väite. · Perimätieto, ei historiallinen fakta; vastaus sanoo 'perimätiedon mukaan'.
+
+### 103. Mitä Trafalgarin taistelussa tapahtui?
+
+Trafalgarin taistelu käytiin 21. lokakuuta 1805 Espanjan Atlantin-rannikolla, lähellä salmen länsipäätä. Britannian 27 linjalaivaa löi ranskalais-espanjalaisen 33 linjalaivan laivaston. Amiraali Nelson haavoittui kuolettavasti lippulaivansa Victoryn kannella ja kuoli saman päivän aikana. Ranskalais-espanjalaisia kuoli noin 4 400, brittejä alle 500, ja voitto vahvisti Britannian asemaa merellä.
+
+*45 sanaa · kohteet: esp/gibraltarinsalmi*
+
+Huom (kirjoittaja): RMG ei anna alusmääriä. · History.com antaa epätarkemman ajan; vastaus sanoo vain 'saman päivän aikana'. · RMG toteaa voitolla olleen vähän vaikutusta sodan kulkuun; muotoilu pidetty yleisenä.
+
+Noston huom (kirjoittaja): Mittapisteet vaihtelevat, siksi vaihteluväli.

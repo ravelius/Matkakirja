@@ -1,0 +1,463 @@
+[
+ {
+  "id": "bosporinsalmi",
+  "maa": "TUR",
+  "nimi": "Bosporinsalmi",
+  "lon": 29.06,
+  "lat": 41.1,
+  "lahdeKoordinaatti": "salmen keskiosa Istanbulin kohdalla",
+  "nappi": "Istanbulin halki kulkeva salmi",
+  "kysymykset": [
+   "Montako siltaa ja tunnelia Bosporin ylittää?",
+   "Miksi Bosporissa vesi virtaa kahteen suuntaan?"
+  ],
+  "teksti": "Bosporinsalmi on Turkin salmi, joka yhdistää Mustanmeren Marmaranmereen ja kulkee Istanbulin halki Euroopan ja Aasian välistä. Se on noin 30 kilometriä pitkä ja kapeimmillaan vain noin 700–750 metriä leveä. Salmen yli on rakennettu kolme siltaa, joista vanhin avattiin vuonna 1973, ja sen alitse kulkee kaksi tunnelia. Nimi tulee kreikasta, ja kreikkalaiset tulkitsivat sen tarkoittavan härän kulkuväylää.",
+  "lahde": "en-Wikipedia \"Bosporus\", johdanto-osa ja Geography-osa; New World Encyclopedia \"Bosporus\"; Britannica \"Bosporus\" (hakutulos); CNN Style / KTVZ 26.12.2022 (tarkistettu 16.10.2026).",
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bosporus",
+    "title": "Bosporus - Wikipedia"
+   },
+   {
+    "url": "https://www.newworldencyclopedia.org/entry/Bosporus",
+    "title": "Bosporus - New World Encyclopedia"
+   },
+   {
+    "url": "https://www.britannica.com/place/Bosporus",
+    "title": "Bosporus - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://ktvz.com/entertainment/cnn-style/2022/12/26/the-gigantic-tunnels-and-bridges-linking-asia-to-europe/",
+    "title": "The gigantic tunnels and bridges linking Asia to Europe - CNN Style via KTVZ"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Salmi yhdistää Mustanmeren ja Marmaranmeren Istanbulin kohdalla",
+    "lahde1": "Wikipedia, Bosporus",
+    "lahde2": "Britannica (hakutulos) / NWE: Istanbul kahden mantereen välillä",
+    "huom": ""
+   },
+   {
+    "vaite": "Pituus noin 30 km",
+    "lahde1": "Wikipedia: 30 km (31 km rajapisteistä)",
+    "lahde2": "Britannica (hakutulos) ja New World Encyclopedia: noin 30 km",
+    "huom": ""
+   },
+   {
+    "vaite": "Kapeimmillaan noin 700–750 m",
+    "lahde1": "Wikipedia: 700 m (Kandilli–Aşiyan), 750 m (Rumelihisarı–Anadoluhisarı)",
+    "lahde2": "Britannica (hakutulos): 750 m; NWE: 700 m ja 750 m",
+    "huom": "Kaksi mittapaikkaa, siksi vaihteluväli."
+   },
+   {
+    "vaite": "Kolme siltaa (1973, 1988, 2016) ja kaksi tunnelia",
+    "lahde1": "Wikipedia: sillat 30.10.1973, 3.7.1988, 26.8.2016; Marmaray 2013, Eurasia-tunneli 2016",
+    "lahde2": "CNN Style: kolme siltaa, kaksi tunnelia, samat avausvuodet",
+    "huom": "Vanhin silta avattiin lokakuussa 1973."
+   },
+   {
+    "vaite": "Nimi kreikasta Bosporos, tulkittu härän kulkuväyläksi",
+    "lahde1": "Wikipedia: kansanetymologia boûs + póros",
+    "lahde2": "New World Encyclopedia: bous (härkä) + poros (kulkuväylä)",
+    "huom": ""
+   }
+  ],
+  "vastaukset": [
+   {
+    "kysymys": "Montako siltaa ja tunnelia Bosporin ylittää?",
+    "vastaus": "Bosporin ylittää kolme siltaa ja kaksi tunnelia. Sillat avattiin vuosina 1973, 1988 ja 2016. Salmen alla kulkevat Marmaray-rautatietunneli, joka avattiin vuonna 2013 ja jonka meren alainen osa on yli 50 metrin syvyydessä, sekä Euraasian maantietunneli vuodelta 2016. Yhdessä nämä viisi ylitystä sitovat saman kaupungin Euroopan- ja Aasian-puolen toisiinsa.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Bosporus",
+      "title": "Bosporus - Wikipedia"
+     },
+     {
+      "url": "https://ktvz.com/entertainment/cnn-style/2022/12/26/the-gigantic-tunnels-and-bridges-linking-asia-to-europe/",
+      "title": "The gigantic tunnels and bridges linking Asia to Europe - CNN Style via KTVZ"
+     },
+     {
+      "url": "https://tunnelbuilder.com/News/Marmaray-tunnel-opens.aspx",
+      "title": "Marmaray tunnel opens - Tunnelbuilder (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Kolme siltaa, vuodet 1973, 1988, 2016",
+      "lahde1": "Wikipedia, Bosporus",
+      "lahde2": "CNN Style via KTVZ",
+      "huom": ""
+     },
+     {
+      "vaite": "Marmaray avattu 2013, Eurasia-tunneli 2016",
+      "lahde1": "Wikipedia, Bosporus",
+      "lahde2": "CNN Style via KTVZ",
+      "huom": ""
+     },
+     {
+      "vaite": "Marmarayn salmen alainen osa yli 50 m syvyydessä",
+      "lahde1": "Wikipedia: noin 55 m",
+      "lahde2": "Tunnelbuilder (hakutulos) / AP: yli 55 m; viranomaiset 60 m",
+      "huom": "Lähteiden luvut 55–60 m, siksi vain 'yli 50 metriä'."
+     }
+    ],
+    "sanoja": 48
+   },
+   {
+    "kysymys": "Miksi Bosporissa vesi virtaa kahteen suuntaan?",
+    "vastaus": "Bosporissa virtaa vettä kahdessa kerroksessa vastakkaisiin suuntiin. Pinnalla Mustanmeren vähäsuolaisempi vesi virtaa etelään kohti Marmaranmerta, ja syvemmällä Välimeren raskaampi, suolaisempi vesi virtaa pohjoiseen Mustaamerta kohti. Suolaisuusero pitää kerrokset erillään, koska suolainen vesi on tiheämpää ja jää alas. Salmi toimii siis kuin kaksikaistainen tie, jossa pinta ja pohja kulkevat eri suuntiin.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Bosporus",
+      "title": "Bosporus - Wikipedia"
+     },
+     {
+      "url": "https://archive.iwlearn.net/bsepr.org/Text/ESP/Physics.htm",
+      "title": "Physical oceanography - Black Sea Environmental Programme, Bosphorus exchange flow"
+     },
+     {
+      "url": "https://research.itu.edu.tr/en/publications/flow-through-the-bosphorus/",
+      "title": "Flow through the Bosphorus - Istanbul Technical University (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Pintavirta etelään (Musta meri -> Marmara), pohjavirta pohjoiseen",
+      "lahde1": "Wikipedia, Bosporus: pinnalla etelään, pohjan lähellä pohjoiseen",
+      "lahde2": "Black Sea Environmental Programme: yläkerros lounaaseen, alakerros pohjoiseen Mustaanmereen",
+      "huom": ""
+     },
+     {
+      "vaite": "Mustanmeren pintavesi vähäsuolaisempaa, Välimeren vesi suolaisempaa ja tiheämpää",
+      "lahde1": "Black Sea Environmental Programme: noin 18 ‰ vs noin 36 ‰",
+      "lahde2": "Hakutulos (akateemiset artikkelit): 17–20 ‰ vs 38–39 ‰",
+      "huom": "Virtausmääriä ei kerrottu, koska lähteiden luvut poikkeavat (16 000/11 000 m3/s vs 18,5/6,5 tuhatta m3/s)."
+     }
+    ],
+    "sanoja": 50
+   }
+  ]
+ },
+ {
+  "id": "dardanellit",
+  "maa": "TUR",
+  "nimi": "Dardanellit",
+  "lon": 26.4,
+  "lat": 40.2,
+  "lahdeKoordinaatti": "salmen keskiosa Çanakkalen kohdalla",
+  "nappi": "Muinainen Hellespontos",
+  "kysymykset": [
+   "Mitä Gallipolin sotaretkellä tapahtui?",
+   "Miten Kserkes ylitti Hellespontoksen?"
+  ],
+  "teksti": "Dardanellit on Turkin salmi, joka yhdistää Egeanmeren Marmaranmereen. Se on noin 61 kilometriä pitkä, noin 1,2–6 kilometriä leveä ja syvimmillään noin 100 metriä. Pohjoispuolella on Gallipolin niemimaa, jonka mukaan salmea kutsutaan myös Gallipolin salmeksi. Muinaiset kreikkalaiset kutsuivat sitä Hellespontokseksi. Maaliskuussa 2022 salmen ylitse avattiin 1915 Çanakkalen silta.",
+  "lahde": "en-Wikipedia \"Dardanelles\", johdanto-osa (tarkistettu 16.10.2026); WorldAtlas \"Dardanelles Strait\"; CNN Style / KTVZ 26.12.2022.",
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Dardanelles",
+    "title": "Dardanelles - Wikipedia"
+   },
+   {
+    "url": "https://www.worldatlas.com/straits/dardanelles-strait.html",
+    "title": "Dardanelles Strait - WorldAtlas"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/1915_%C3%87anakkale_Bridge",
+    "title": "1915 %C3%87anakkale Bridge - Wikipedia"
+   },
+   {
+    "url": "https://ktvz.com/entertainment/cnn-style/2022/12/26/the-gigantic-tunnels-and-bridges-linking-asia-to-europe/",
+    "title": "The gigantic tunnels and bridges linking Asia to Europe - CNN Style via KTVZ"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Yhdistää Egeanmeren ja Marmaranmeren, Turkissa",
+    "lahde1": "Wikipedia, Dardanelles",
+    "lahde2": "WorldAtlas",
+    "huom": ""
+   },
+   {
+    "vaite": "Pituus noin 61 km",
+    "lahde1": "Wikipedia: 61 km",
+    "lahde2": "WorldAtlas: noin 61 km",
+    "huom": ""
+   },
+   {
+    "vaite": "Leveys noin 1,2–6 km",
+    "lahde1": "Wikipedia: 1,2–6 km",
+    "lahde2": "WorldAtlas: 1,2–6,5 km",
+    "huom": "Ylärajassa 0,5 km ero, siksi 'noin'."
+   },
+   {
+    "vaite": "Syvimmillään noin 100 m",
+    "lahde1": "Wikipedia: 103 m",
+    "lahde2": "WorldAtlas: 103 m",
+    "huom": ""
+   },
+   {
+    "vaite": "Gallipolin niemimaa pohjoispuolella, salmea sanotaan myös Gallipolin salmeksi",
+    "lahde1": "Wikipedia",
+    "lahde2": "WorldAtlas (salmen nimi) ja hakutulos (niemimaa pohjoispuolella)",
+    "huom": "Pohjoispuolen maininta tukeutuu Wikipediaan ja hakutulokseen."
+   },
+   {
+    "vaite": "Muinainen nimi Hellespontos",
+    "lahde1": "Wikipedia",
+    "lahde2": "WorldAtlas",
+    "huom": ""
+   },
+   {
+    "vaite": "1915 Çanakkalen silta avattu 18.3.2022",
+    "lahde1": "Wikipedia, 1915 Çanakkale Bridge",
+    "lahde2": "CNN Style via KTVZ: avattu 18.3.2022",
+    "huom": ""
+   }
+  ],
+  "vastaukset": [
+   {
+    "kysymys": "Mitä Gallipolin sotaretkellä tapahtui?",
+    "vastaus": "Gallipolin sotaretki oli liittoutuneiden vuonna 1915 tekemä yritys pakottaa Dardanellit auki ja vallata Konstantinopoli. Laivaston hyökkäys 18. maaliskuuta pysähtyi miinoihin, ja joukot nousivat maihin 25. huhtikuuta. Taistelut juuttuivat asemasotaan, ja retki päättyi tammikuun 1916 alussa liittoutuneiden vetäytymiseen. Konstantinopoli, nykyinen Istanbul, jäi valtaamatta, ja uhreja (kaatuneita, haavoittuneita ja sairastuneita) kertyi yli puoli miljoonaa.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Gallipoli_campaign",
+      "title": "Gallipoli campaign - Wikipedia"
+     },
+     {
+      "url": "https://www.awm.gov.au/articles/first-world-war/gallipoli-1915",
+      "title": "Gallipoli 1915 - Australian War Memorial"
+     },
+     {
+      "url": "https://encyclopedia.1914-1918-online.net/article/gallipoli-campaign-and-battle-of/",
+      "title": "Gallipoli, Campaign and Battle of - 1914-1918-online (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Tavoite: pakottaa Dardanellit ja vallata Konstantinopoli",
+      "lahde1": "Wikipedia: tavoitteena ottaa salmet haltuun ja saada Konstantinopoli ammuttavaksi",
+      "lahde2": "AWM: laivaston operaatio salmen pakottamiseksi ja pääkaupungin valtaamiseksi",
+      "huom": ""
+     },
+     {
+      "vaite": "Laivaston hyökkäys 18.3.1915 pysähtyi miinoihin",
+      "lahde1": "Wikipedia: miinat upottivat tai vaurioittivat useita aluksia, laivasto vetäytyi",
+      "lahde2": "Hakutulos (1914-1918-online / DVA): sama",
+      "huom": "Ei tarkistettu täysin, kaksi toisistaan riippumatonta luettua lähdettä vain osittain."
+     },
+     {
+      "vaite": "Maihinnousu 25.4.1915",
+      "lahde1": "Wikipedia",
+      "lahde2": "AWM",
+      "huom": ""
+     },
+     {
+      "vaite": "Vetäytyminen päättyi 9.1.1916 (tammikuun alku)",
+      "lahde1": "Wikipedia: sotaretki päättyi 9.1.1916",
+      "lahde2": "AWM: viimeiset joukot Helleksestä 9.1.1916",
+      "huom": ""
+     },
+     {
+      "vaite": "Uhreja noin puoli miljoonaa",
+      "lahde1": "Wikipedia: liittoutuneet 252 000–300 000 ja ottomaanit 255 000–289 000 uhria",
+      "lahde2": "1914-1918-online (hakutulos): arviolta puoli miljoonaa",
+      "huom": "Uhri = kaatunut tai haavoittunut; kirjattu 'noin'."
+     }
+    ],
+    "sanoja": 52
+   },
+   {
+    "kysymys": "Miten Kserkes ylitti Hellespontoksen?",
+    "vastaus": "Persian kuningas Kserkes rakennutti vuonna 480 eaa. salmen yli kaksi siltaa, joiden kantajina olivat rinnakkain sidotut laivat. Herodotoksen mukaan myrsky tuhosi ensimmäiset sillat, ja Kserkes antoi ruoskia merta sekä heittää siihen kahleet. Uudet sillat olivat yli kilometrin pituiset. Tarina kertoo, miten vallanpitäjä yritti komentaa jopa luontoa.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Xerxes%27_Hellespont_bridges",
+      "title": "Xerxes%27 Hellespont bridges - Wikipedia"
+     },
+     {
+      "url": "https://brians.wsu.edu/2016/11/10/herodotus-the-histories-xerxes-at-the-hellespont-mid-5th-century-bce/",
+      "title": "Herodotus: Xerxes at the Hellespont - Washington State University"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Kaksi laivasiltaa Hellespontoksen yli, 480 eaa.",
+      "lahde1": "Wikipedia: Xerxes' pontoon bridges, 480 eaa.",
+      "lahde2": "Herodotos (WSU-käännös): kaksi siltaa ja laivoja noin 360 + 314",
+      "huom": "Vuosiluku 480 eaa. tukeutuu Wikipediaan (sekä Dardanelles-artikkeliin) ja Herodotoksen aikamääreeseen."
+     },
+     {
+      "vaite": "Myrsky tuhosi ensimmäiset sillat, merta ruoskittiin 300 iskulla ja siihen heitettiin kahleet",
+      "lahde1": "Wikipedia: Herodotuksen kertomus",
+      "lahde2": "Herodotos (WSU-käännös)",
+      "huom": "Kerrottu 'Herodotoksen mukaan'; muut todisteet puuttuvat."
+     },
+     {
+      "vaite": "Sillan pituus yli kilometri",
+      "lahde1": "Wikipedia: noin 7 stadionia eli noin 1 300 m, modernit arviot 2,2–2,5 km",
+      "lahde2": "WSU-käännös: lähes kaksi kolmasosaa mailia; Structurae (hakutulos) 1 260 m",
+      "huom": "Lähteiden arviot 1,1–2,5 km, siksi vain 'yli kilometrin'."
+     }
+    ],
+    "sanoja": 46
+   }
+  ]
+ },
+ {
+  "id": "gibraltarinsalmi",
+  "maa": "ESP",
+  "nimi": "Gibraltarinsalmi",
+  "lon": -5.6,
+  "lat": 35.95,
+  "lahdeKoordinaatti": "salmen keskiosa Tarifan ja Tangerin välissä",
+  "nappi": "Herkuleen patsaiden salmi",
+  "kysymykset": [
+   "Mitä Herkuleen patsaat ovat?",
+   "Mitä Trafalgarin taistelussa tapahtui?"
+  ],
+  "teksti": "Gibraltarinsalmi yhdistää Atlantin ja Välimeren. Sen pohjoisrannalla ovat Espanja ja Britannian Gibraltar, eteläpuolella Marokko ja Espanjan Ceuta. Kapeimmillaan salmi on noin 13–14 kilometriä leveä, ja syvyys vaihtelee noin 300 metristä 900 metriin. Antiikissa salmen kahta kallioniemeä sanottiin Herkuleen patsaiksi.",
+  "lahde": "en-Wikipedia \"Strait of Gibraltar\", johdanto-osa ja Geography-osa (tarkistettu 16.10.2026); WorldAtlas \"Strait of Gibraltar\"; Livius \"Pillars of Heracles\".",
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Strait_of_Gibraltar",
+    "title": "Strait of Gibraltar - Wikipedia"
+   },
+   {
+    "url": "https://www.worldatlas.com/straits/strait-of-gibraltar.html",
+    "title": "Strait of Gibraltar - WorldAtlas"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Pillars_of_Hercules",
+    "title": "Pillars of Hercules - Wikipedia"
+   },
+   {
+    "url": "https://livius.org/articles/place/pillars-of-heracles",
+    "title": "Pillars of Heracles - Livius.org"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Yhdistää Atlantin ja Välimeren; rajanaapurit Espanja, Gibraltar, Marokko, Ceuta",
+    "lahde1": "Wikipedia",
+    "lahde2": "WorldAtlas",
+    "huom": ""
+   },
+   {
+    "vaite": "Kapeimmillaan noin 13–14 km",
+    "lahde1": "Wikipedia: 14,2 km (7,7 meripeninkulmaa)",
+    "lahde2": "WorldAtlas: noin 13 km",
+    "huom": "Mittapisteet vaihtelevat, siksi vaihteluväli."
+   },
+   {
+    "vaite": "Syvyys noin 300–900 m",
+    "lahde1": "Wikipedia: 300–900 m",
+    "lahde2": "WorldAtlas: 300–900 m",
+    "huom": ""
+   },
+   {
+    "vaite": "Kaksi kallioniemeä = Herkuleen patsaat",
+    "lahde1": "Wikipedia, Pillars of Hercules / Strait of Gibraltar: Fretum Herculeum",
+    "lahde2": "Livius",
+    "huom": ""
+   }
+  ],
+  "vastaukset": [
+   {
+    "kysymys": "Mitä Herkuleen patsaat ovat?",
+    "vastaus": "Herkuleen patsaat ovat antiikin nimi Gibraltarinsalmen kahdelle kallioniemelle. Pohjoinen patsas on tunnistettu Gibraltarin kallioksi, mutta eteläisen sijainti on epävarma: ehdokkaina ovat Jebel Musa Marokossa ja Monte Hacho Ceutassa. Myytin mukaan Herakles halkaisi vuoren ja avasi salmen. Perimätiedon mukaan patsaissa luki varoitus \"Non plus ultra\", ei pidemmälle, sillä ne merkitsivät tunnetun maailman länsireunaa.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Pillars_of_Hercules",
+      "title": "Pillars of Hercules - Wikipedia"
+     },
+     {
+      "url": "https://livius.org/articles/place/pillars-of-heracles",
+      "title": "Pillars of Heracles - Livius.org"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Charles_V,_Holy_Roman_Emperor",
+      "title": "Coat of arms of Charles V - Wikipedia (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Pohjoinen patsas = Gibraltarin kallio, eteläinen epävarma (Jebel Musa tai Monte Hacho)",
+      "lahde1": "Wikipedia, Pillars of Hercules",
+      "lahde2": "Livius: Calpe = Gibraltar, Abila epävarma, ehdokkaina Jebel Musa ja Monte Hacho",
+      "huom": ""
+     },
+     {
+      "vaite": "Herakles halkaisi vuoren ja avasi salmen",
+      "lahde1": "Wikipedia: roomalaiset kertomukset",
+      "lahde2": "Livius: Seneca ja Plinius vanhempi",
+      "huom": "Diodoros kertoo toisin (kavensi salmea); vastaus sanoo 'myytin mukaan'."
+     },
+     {
+      "vaite": "Patsaat merkitsivät tunnetun maailman länsireunaa",
+      "lahde1": "Wikipedia: Heraklesen matkan läntinen raja",
+      "lahde2": "Livius: Strabon ja muut antiikin lähteet sijoittavat patsaat salmen kärkiin",
+      "huom": "Tulkinta, ei sanatarkka väite."
+     },
+     {
+      "vaite": "Renessanssin perimätiedon mukaan patsaissa luki Ne plus ultra",
+      "lahde1": "Wikipedia, Pillars of Hercules",
+      "lahde2": "Hakutulos (Wikipedia-yhteenvedot, Charles V:n tunnuslause Plus Ultra)",
+      "huom": "Perimätieto, ei historiallinen fakta; vastaus sanoo 'perimätiedon mukaan'."
+     }
+    ],
+    "sanoja": 52
+   },
+   {
+    "kysymys": "Mitä Trafalgarin taistelussa tapahtui?",
+    "vastaus": "Trafalgarin taistelu käytiin 21. lokakuuta 1805 Espanjan Atlantin-rannikolla, lähellä salmen länsipäätä. Britannian 27 linjalaivaa löi ranskalais-espanjalaisen 33 linjalaivan laivaston. Amiraali Nelson haavoittui kuolettavasti lippulaivansa Victoryn kannella ja kuoli saman päivän aikana. Ranskalais-espanjalaisia kuoli noin 4 400, brittejä alle 500, ja voitto vahvisti Britannian asemaa merellä.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar",
+      "title": "Battle of Trafalgar - Wikipedia"
+     },
+     {
+      "url": "https://www.rmg.co.uk/stories/maritime-history/battle-trafalgar-timeline",
+      "title": "Battle of Trafalgar Timeline - Royal Museums Greenwich"
+     },
+     {
+      "url": "https://www.history.com/this-day-in-history/october-21/battle-of-trafalgar",
+      "title": "Battle of Trafalgar - History.com"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "21.10.1805, Trafalgarin niemen edustalla",
+      "lahde1": "Wikipedia",
+      "lahde2": "RMG",
+      "huom": ""
+     },
+     {
+      "vaite": "27 brittialusta vastaan 33 ranskalais-espanjalaista",
+      "lahde1": "Wikipedia: 27 vs 33 linjalaivaa",
+      "lahde2": "History.com: 27 vs 33",
+      "huom": "RMG ei anna alusmääriä."
+     },
+     {
+      "vaite": "Nelson haavoittui klo 13.15 ja kuoli klo 16.30",
+      "lahde1": "RMG: ammuttiin 13.15, kuoli 16.30",
+      "lahde2": "Wikipedia: kuoli noin kolme tuntia myöhemmin",
+      "huom": "History.com antaa epätarkemman ajan; vastaus sanoo vain 'saman päivän aikana'."
+     },
+     {
+      "vaite": "Ranskalais-espanjalaisia kuoli noin 4 400, brittejä alle 500",
+      "lahde1": "Wikipedia: 4 395 ja 458",
+      "lahde2": "RMG: 4 408 ja 449",
+      "huom": ""
+     },
+     {
+      "vaite": "Voitto vahvisti Britannian asemaa merellä",
+      "lahde1": "History.com: Nelsonin suurin voitto Ranskasta, päätti Napoleonin maihinnousuhaaveet",
+      "lahde2": "Wikipedia: osa Napoleonin maihinnousun suunnitelmaa",
+      "huom": "RMG toteaa voitolla olleen vähän vaikutusta sodan kulkuun; muotoilu pidetty yleisenä."
+     }
+    ],
+    "sanoja": 45
+   }
+  ]
+ }
+]
