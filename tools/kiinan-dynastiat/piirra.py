@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import PathPatch
 from matplotlib.path import Path
 from shapely.geometry import shape, Polygon, MultiPolygon, mapping, box
-from shapely.ops import unary_union
+from shapely.ops import unary_union, polylabel
 import rajat
 
 K = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -56,17 +56,11 @@ def piirra(vuosi, vertailu=False, ax=None):
                 ax.add_patch(PathPatch(p, fc='none', ec='#3b2f25', hatch='..', lw=0.0, alpha=0.35))
             else:
                 ax.add_patch(PathPatch(p, fc=rajat.VARIT[avain], ec='#3b2f25', lw=0.9, alpha=0.62))
-        if avain in rajat.KOTISEUDUT:
-            k = Polygon(rajat.KOTISEUDUT[avain]).intersection(maa)
+        k = kotiseutu(avain, al)
+        if k is not None:
             for p in polut(k): ax.add_patch(PathPatch(p, fc='none', ec='#3b2f25', hatch='////', lw=0.0, alpha=0.45))
-        c = g.representative_point() if not g.is_empty else None
-        if c is not None:
-            cx, cy = c.x, c.y
-            for kn in v['paakaupungit']:  # nimi pois pääkaupungin päältä
-                px, py = rajat.KAUPUNGIT[kn]
-                if abs(px - cx) < 4 and abs(py - cy) < 1.5:
-                    p2 = g.intersection(box(px - 30, py - 30, px + 30, py - 1.8)).representative_point() if g.intersects(box(px - 30, py - 30, px + 30, py - 1.8)) else None
-                    if p2 is not None and not p2.is_empty: cx, cy = p2.x, p2.y
+        if not g.is_empty:
+            cx, cy = nimen_paikka(g, v)
             ax.text(cx * KX, cy, nimi, ha='center', va='center', fontsize=15 if tyyppi == 'kiina' else 11 if tyyppi == 'protektoraatti' else 12,
                     fontweight='bold', color='#2b211a', family='serif')
     for kn in v['paakaupungit']:
@@ -81,6 +75,14 @@ def piirra(vuosi, vertailu=False, ax=None):
     ax.set_title(v['otsikko'], fontsize=20, family='serif', loc='left')
     return al
 
+def kotiseutu(avain, al):
+    """Kotiseutu näkyy vain, kun se on pääosin kansan omalla alueella (esim. Xianbein Dai on vuonna 140 Hanin maata)."""
+    if avain not in rajat.KOTISEUDUT: return None
+    k = Polygon(rajat.KOTISEUDUT[avain]).intersection(maa)
+    oma = unary_union([g for _, a, _, g in al if a == avain and not g.is_empty])
+    if oma.is_empty or k.intersection(oma).area < 0.6 * k.area: return None
+    return k.intersection(oma)
+
 def ilman_reikia(g, nimi):
     """Linssisepän muoto: peli kolmioi vain ulkorenkaat → reiät pois; varoitus, jos reikä on merkittävä."""
     osat = []
@@ -92,13 +94,15 @@ def ilman_reikia(g, nimi):
     return osat[0] if len(osat) == 1 else MultiPolygon(osat)
 
 def nimen_paikka(g, v):
-    """Nimi alueen sisään, pois pääkaupungin päältä (sama logiikka kuin kuvassa)."""
-    c = g.representative_point(); cx, cy = c.x, c.y
+    """Nimi alueen suurimman osan sisimpään kohtaan (polylabel), pääkaupunkien ympäristö (merkki ja nimi) väistettynä."""
+    vapaa = g
     for kn in v['paakaupungit']:
-        px, py = rajat.KAUPUNGIT[kn]; alas = box(px - 30, py - 30, px + 30, py - 1.8)
-        if abs(px - cx) < 4 and abs(py - cy) < 1.5 and g.intersects(alas):
-            p2 = g.intersection(alas).representative_point(); cx, cy = p2.x, p2.y
-    return round(cx, 2), round(cy, 2)
+        px, py = rajat.KAUPUNGIT[kn]
+        vapaa = vapaa.difference(box(px - 1.5, py - 1.2, px + 6, py + 1.5))
+    if vapaa.is_empty: vapaa = g
+    osa = max(getattr(vapaa, 'geoms', [vapaa]), key=lambda p: p.area if p.geom_type == 'Polygon' else 0)
+    c = polylabel(osa, tolerance=0.05)
+    return round(c.x, 2), round(c.y, 2)
 
 def vie(vu, al):
     """rajat-<vuosi>.geojson Linssisepän muodossa (16.10.2026): alueet + kotiseudut featureina, otsikko ja pääkaupungit ylätasolla."""
@@ -108,8 +112,10 @@ def vie(vu, al):
         lon, lat = nimen_paikka(g, v)
         f.append({'type': 'Feature', 'properties': {'nimi': n, 'avain': a, 'tyyppi': t, 'vari': rajat.VARIT[a], 'nimi_lon': lon, 'nimi_lat': lat},
                   'geometry': mapping(ilman_reikia(g.simplify(0.02), n))})
-    for a in dict.fromkeys(a for _, a, _, g in al if a in rajat.KOTISEUDUT and not g.is_empty):
-        k = Polygon(rajat.KOTISEUDUT[a]).intersection(maa).simplify(0.02)
+    for a in dict.fromkeys(a for _, a, _, g in al):
+        k = kotiseutu(a, al)
+        if k is None: continue
+        k = k.simplify(0.02)
         f.append({'type': 'Feature', 'properties': {'nimi': 'kotiseutu', 'avain': a, 'tyyppi': 'kotiseutu', 'vari': rajat.VARIT[a]},
                   'geometry': mapping(ilman_reikia(k, 'kotiseutu ' + a))})
     json.dump({'type': 'FeatureCollection', 'vuosi': vu, 'otsikko': v['otsikko'], 'lisenssi': 'CC0-1.0',

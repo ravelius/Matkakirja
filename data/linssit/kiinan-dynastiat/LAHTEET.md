@@ -9,4 +9,9 @@ Omat, käsin piirretyt monikulmiot (suunnitelma `docs/suunnitelmat/linssi-kiinan
   (lähdeselvitys `docs/raportit/kiinan-dynastiat-lahteet-20261016.md`).
 - **Ajo:** `piirra.py <vuodet> [--vertailu]` työkansiossa, jossa `lahteet/ne/` (ne_50m_land, rivers, lakes) ja
   vertailuun `viite/` (`poimi-viite.py`). Tulos `rajat-<vuosi>.geojson` (ominaisuudet nimi, avain, tyyppi kiina/ulkoinen, väri).
-- **Tila 16.10.2026:** luonnos 4/18 vuotta (221 eaa, 100 eaa, 1142, 1760), välikuva PT:lle.
+- **Osamoduulit:** vuodet_a.py (200 eaa – 500), vuodet_b.py (589–1100), vuodet_c.py (1280–1912); rajat.py yhdistää ne.
+  Kotiseutu näkyy vain, kun se on pääosin kansan omalla alueella (leikattu siihen).
+- **Pelin data:** `kiinan-dynastiat.json` (`vie.py`, muoto `MUOTO.md`, Linssiseppä lukitsi 16.10.2026): kaikki vuodet,
+  maarajat ilman rannikkoa (luokka 1 valtio, 2 protektoraatti), täytöt, kotiseudut, nimiöt ja pääkaupungit.
+  Per-vuosi-GeoJSONit jäävät vertailuun; peli ei käytä niitä.
+- **Tila 16.10.2026 ilta:** kaikki 19 vuotta (18 avainvuotta + loppu 1912). Qingin väri avoin (omistaja).
