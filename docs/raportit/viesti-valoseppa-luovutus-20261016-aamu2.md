@@ -30,6 +30,12 @@ SIMU A26BC7D0 (iPad) on Valosepällä; kun kaikki alla oleva on ajettu → "SIMU
 - Paketti peking284/p340v3i (portti 0). Arvioi ajo-p340i-kuvat (vertaa peking340-vs-284-klo13/18.jpg): maski (ei ionin taustaa palatsissa,
   vedet näkyvät), ilta (maa ja katot samassa valossa), ion-väli (alle 0,30 m määrä) → ARVIO-p340i.md → PT (≤ 3 riviä) → PT:n kuittauksella
   peking-ion-196 NS:lle junaan; Codexille palaute (puut edelleen harmaat? ion-väli-tulos) postilaatikkoon; vienti uusi versiokansio + uusin.json.
+- AJO VALMIS 05.3x (lokit/valoseppa-peking340i-13 ja -18, tapahtumat.txt): maski OK ("ionin maasto + ilmakuva piilotettu 12 alueelta").
+  ION-VÄLI LÖYDÖS: 593/593 näytettä, ioni oman pinnan YLÄPUOLELLA: mediaani −5,43 m, pienin −16,37 m (palatsimaa 39,915085 116,391867:
+  oma 37,14, ioni 53,51), alle 0,30 m 579/593; vesireuna-maa pienin −11,47. Hypoteesit: (1) ionin maasto on kaupungissa pintamalli
+  (rakennukset/puut mukana – suurimmat erot halleissa), (2) korkeusjärjestelmä (geoidi ~ −9 m Pekingissä) tai agentin oma_h-laskenta
+  (+37,9 m origo) väärin. Tarkista ensin (2) näytteistä tasaisilla aukioilla; sitten PT:lle ≤ 3 riviä + Codexille. Ion-vedet maskin
+  ulkopuolella voivat tämän takia nousta oman maan yläpuolelle – katso 13/18-kuvat vesireunoilta.
 ### c) ISS-kierrokset k3/k8 (ARVIO3) → seuraavat korjaukset iss-efektit-196:een (wt/proto-linssiseppa2-iss-efektit) ja testi-196:een.
 - Avoinna edelleen: salamat k3 ODOTTAA omistajan palautetta Eurooppa-videosta; revontulet k11 _Punainen 3→6 (Revontulet.cs r. 396).
 
