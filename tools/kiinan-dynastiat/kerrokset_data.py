@@ -121,8 +121,13 @@ TAISTELUT = [
     dict(avain='changping', nimi='Changping', vuosi=-260, lon=112.92, lat=35.80, epavarma=True, tausta=True, voittaja='qin', havio='zhao',
          seuraus='Qin murskaa Zhaon ja yhdistää Kiinan 221 eaa'),
     dict(avain='punainen-kallio', nimi='Punainen kallio', vuosi=208, lon=113.62, lat=29.87, epavarma=True, voittaja='wu', havio='wei',
+         # paikka kiistanalainen: Jangtse Baqiun (Yueyang) koillispuolelta Wuhanin lounaispuolelle; piste = Chibin kaupungin
+         # (ent. Puqi) muistomerkkipaikka, Cao Caon leiri Wulin vastarannalla (Honghu)
+         alue=dict(viiva=[(113.15, 29.47), (113.37, 29.65), (113.62, 29.84), (113.92, 29.98), (114.12, 30.32)], sade_km=12),
          seuraus='Cao Caon tappio jakaa Kiinan kolmeksi kuningaskunnaksi'),
     dict(avain='fei-joki', nimi='Fei-joki', vuosi=383, lon=116.78, lat=32.58, epavarma=True, voittaja='jin', havio='entinen-qin',
+         # Fei-joki (Dong Fei) laskee Huaihin Shouchunin (Shouxian) luona; joen 383 uoma ja taistelupaikka tuntematon
+         alue=dict(viiva=[(116.70, 32.66), (116.78, 32.58), (116.86, 32.45)], sade_km=15),
          seuraus='Etelä pysyy omana valtionaan kahden vuosisadan ajan'),
     dict(avain='yamen', nimi='Yamen', vuosi=1279, lon=113.08, lat=22.27, voittaja='mongol', havio='song',
          seuraus='Songin viimeinen laivasto tuhoutuu (Lin\'an kaatui jo 1276) ja Yuan hallitsee koko Kiinaa'),

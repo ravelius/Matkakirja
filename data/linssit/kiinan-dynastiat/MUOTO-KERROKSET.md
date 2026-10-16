@@ -38,6 +38,10 @@ taistelut 5, siirrot 8.
 - `taistelut` (viisi, kukin avainvuoden vaihdokseen): Changping 260 eaa (Qin–Zhao), Punainen kallio 208 (Cao Cao –
   Sun Quan ja Liu Bei), Fei-joki 383 (Itä-Jin – Entinen Qin), Yamen 1279 (Yuan – Song), Shanhain sola 1644 (Qing ja
   Wu Sangui – Li Zicheng). `voittaja`/`havio` = dynastian `avain`, kun se on aineistossa.
+  Kiistanalaisilla paikoilla (PT 17.10. 02.3x) lisäksi `alue` = mahdollisten paikkojen vyöhyke suljettuna renkaana
+  [[lon, lat], ...] ja `alue_km` = vyöhykkeen säde; piste pysyy yleisimmin mainitussa paikassa. Punainen kallio: Jangtse
+  Baqiusta (Yueyang) Wuhanin lounaispuolelle, 12 km; Fei-joki: Shouchunin (Shouxian) ympäristö Fei-joen varrella, 15 km.
+  Piirto voi näyttää alueen pisteen sijaan (tai sen ympärillä).
 - `siirrot`: pääkaupungin siirrot avainvuosien välissä (esim. Han Chang'an → Luoyang 25, Jin → Jiankang 317, Song
   Kaifeng → Lin'an 1127, Ming Nanjing → Peking 1421); `p` on kaari, jota pitkin "jälki" piirretään.
 
