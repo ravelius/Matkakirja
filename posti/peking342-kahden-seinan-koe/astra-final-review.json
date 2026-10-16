@@ -1,0 +1,258 @@
+{
+  "status": "SCOPED_LOCAL_VISUAL_FEEDBACK_CHECKPOINT_ACCEPTED_WITH_LIMITS",
+  "candidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel",
+  "scope": "Two visible wall experiment only; not a new72GLB flight packet or V3 replacement",
+  "personallyViewedOriginals": 20,
+  "all14CandidateAnd6BaselinePNGHashesVerified": true,
+  "frames": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/candidate1-before.png",
+      "sha256": "42d22ff8daf50d93d731df19fb7a5fba13a2d44ca262404c004689e8497cc281",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/candidate2-before.png",
+      "sha256": "620b1928630fe95912e15bf23305124b64d26e7caa5f9d2d439b9785d5b76f35",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/control1-before.png",
+      "sha256": "121124dc0e19f5aaccbee05eb6415573ffa4315ffd526b5d11a441e6b6d3a945",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/control2-before.png",
+      "sha256": "3a959bc1f52a1b325060c4bd2d10e54bac9944ed09c8815ab483557cb7891139",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/candidate1-after.png",
+      "sha256": "45535ef67fd4f7c3ac5c043960ad83a12b0e67f4cf628a50c8a732a647df7373",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/candidate2-after.png",
+      "sha256": "881cf0733dc4e56d13eee2590ec3b0dd7bc715b34c08f73d98898d92766650cb",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/control1-after.png",
+      "sha256": "607a969bc549aa29a9640edaeb3bdd3f49d6983d72066b1f2e8b3aa9ad32f245",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/control2-after.png",
+      "sha256": "ac69a46cfcf0a8247425f1e26283a39c48e42c91c927b72feda1d476d9692ba4",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/ilma-after.png",
+      "sha256": "aa8ec9cda7f4be9fc761a9123d35808cd932b1b6e2d85ecbfd34ca89b4c03b41",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/taihedian-after.png",
+      "sha256": "e6a90a18128e95538368f914b74a78ab8547095837d0537b01d9539495df2d25",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/aukio-after.png",
+      "sha256": "56ff5679e72b2624c5f923909f57c27529a34bd99b114484f3736d068c2c0cdf",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/beihai-after.png",
+      "sha256": "366b3dd27ffbd2b6c4a02b6013c1232e119353984b0597bbae4849e502b0da25",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/jingshan-after.png",
+      "sha256": "88e469e8efbfadedf23dc1727b61f651861b679df2a943f93c8e7d7ac5e8100c",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/hutong_ilma-after.png",
+      "sha256": "6e91cdd331ddad1eb702aafc9555b6dc2839087c775a2855bddc9fe78638b973",
+      "personallyViewed": true
+    }
+  ],
+  "baselineFrames": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-hutong_ilma.png",
+      "sha256": "1a8a69a12d167092c0f102644a4ad0dbc2515a3c6f1b5397a9228db570946107",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-ilma.png",
+      "sha256": "13b04dc5ee20e95ae3f8b12e4366d23ed10ee37e3afbbe0104910be59c7f4894",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-aukio.png",
+      "sha256": "d91cbb7ad066f335489165a358a982cb9e759719e3b069cf3eef1df5729f3aff",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-beihai.png",
+      "sha256": "05aef2084cdb1cab00f17e25908fc2c767b823be56926615d2ca31cf0eb3132b",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-jingshan.png",
+      "sha256": "e0fbd499068da1f501a3084ad57426b2a7d7345752b01a9394d470e55fbf90c8",
+      "personallyViewed": true
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-taihedian.png",
+      "sha256": "e812b4ea5e219c1ed3afeec8a0c38c6ae8631c4b4d5e0a212e19062f1b991faf",
+      "personallyViewed": true
+    }
+  ],
+  "glbFiles": [
+    {
+      "file": "peking_3_5_lod0.glb",
+      "candidateSHA256": "1bc8cdddcdbdcbe9b3725f1afc5471d67f88ba4793c9fd89295870710971fe95",
+      "baseSHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0"
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "candidateSHA256": "f936ef250436bd18eb611060e563c0f1c7e506e72920375f6e7d5a845c60a636",
+      "baseSHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9"
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "candidateSHA256": "3d23a9f78dd6a97a4b4793041202d067788eb655cd9d6c1737cac16c8654fe77",
+      "baseSHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9"
+    }
+  ],
+  "all3CandidateAndBaseGLBHashesVerified": true,
+  "actualLOD0ReimportPinVerified": true,
+  "beforeAfterCameraScaleResolutionMatch": true,
+  "fixedCamerasUnchangedProducerMetadata": true,
+  "viewOwnersMatchedToPilotProof": true,
+  "mappingAndSourceReplayPinsVerified": true,
+  "pairPixelMeasurements": {
+    "candidate1": {
+      "maxChannelDifference": 49,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 6539
+    },
+    "candidate2": {
+      "maxChannelDifference": 37,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 2165
+    },
+    "control1": {
+      "maxChannelDifference": 1,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    },
+    "control2": {
+      "maxChannelDifference": 1,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    }
+  },
+  "fixedViewPixelMeasurements": {
+    "hutong_ilma": {
+      "maxChannelDifference": 1,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    },
+    "ilma": {
+      "maxChannelDifference": 3,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    },
+    "aukio": {
+      "maxChannelDifference": 1,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    },
+    "beihai": {
+      "maxChannelDifference": 1,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    },
+    "jingshan": {
+      "maxChannelDifference": 1,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    },
+    "taihedian": {
+      "maxChannelDifference": 1,
+      "pixelsWithAnyChannelDifferenceAtLeast20": 0
+    }
+  },
+  "findings": [
+    {
+      "owner": "3dglobfp/13652",
+      "result": "Small visible local asymmetry; door left and window centre; no new visible stretching or duplicated panel. Existing ground burial remains."
+    },
+    {
+      "owner": "way/257208012",
+      "result": "Small visible local variation; door right and window centre. Wall ends remain occluded; only visible central region assessed."
+    },
+    {
+      "controls": "3dglobfp/379 and 3dglobfp/320",
+      "result": "Visually unchanged; pixel differences at most1."
+    },
+    {
+      "fixedSixViews": "hutong_ilma,ilma,aukio,beihai,jingshan,taihedian",
+      "result": "No visible local-wall change or demonstrated block-appearance improvement; no new visible regression against supplied V3 baseline."
+    }
+  ],
+  "parentTechnicalEvidenceReadNotIndependentlyRerun": {
+    "status": "SCOPED_SAVED_BYTES_GEOMETRY_AND_IMAGE_PINS_PASS",
+    "maxNormalOffsetDriftM": 4.9318387027597055e-06,
+    "originalMaximumM": 2e-05,
+    "all72V3AndSource51Unchanged": true,
+    "changedVerticesTotal": 48,
+    "newNonPlinthCrossings": 0,
+    "existingGroundCrossings": 2,
+    "doorGroundSummary": [
+      {
+        "owner": "3dglobfp/13652",
+        "groundUpperIntersectionBeforeM": 1.1919917333872214,
+        "groundUpperIntersectionAfterM": 1.136723309906483,
+        "upperIntersectionChangeM": -0.05526842348073835,
+        "existingPenetrationRemains": true
+      },
+      {
+        "owner": "way/257208012",
+        "groundUpperIntersectionBeforeM": 1.9857407265226006,
+        "groundUpperIntersectionAfterM": 1.9661080364364545,
+        "upperIntersectionChangeM": -0.0196326900861461,
+        "existingPenetrationRemains": true
+      }
+    ]
+  },
+  "supersededRejectedCandidate": {
+    "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2",
+    "rejectionEvidence": {
+      "status": "REJECTED_SUPERSEDED_NORMAL_OFFSET_GATE",
+      "source": "readback-task342-visible2.py",
+      "maxObservedNormalDriftM": 2.5585135517758317e-05,
+      "requiredMaxM": 2e-05,
+      "notReleased": true,
+      "notGameIntegrated": true,
+      "nextSeparateCandidate": "candidate-visible2-parallel"
+    },
+    "reviewStatus": "REJECTED; no approval carried forward",
+    "priorReportMD_SHA256": "609db78f5fffe5ec76f70cbb77e2ee609d0daacd20cbff0c2b164953899198fb",
+    "priorReportJSON_SHA256": "0e302fc209c73eaca45c266157c42d32a82326de45597b997cfd9d54d4fce192"
+  },
+  "localFeedbackCheckpointSupported": true,
+  "wholeWall2VisualAcceptance": false,
+  "fixedViewBenefitDemonstrated": false,
+  "fullPhysicsOrGroundBurialQualityAcceptance": false,
+  "new72GLBPacketApproval": false,
+  "gameDeliveryOrIntegrationApproval": false,
+  "native52Approval": false,
+  "runtimeIonMovingLODDeviceOwnerAcceptance": false,
+  "onlyLOD0VisuallyReviewed": true,
+  "noSourceModelRGBOrCameraEdits": true,
+  "evidenceSHA256": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/pilot-proof.json": "aa6acd680ec59d65033fbcae7c405152d2f40f08f21702f7a2708f035669d216",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/render-proof.json": "bbbaf9169c3f6b3e76ee40f53ac13f2afafced18e3a37c0957145f9d71de60f9",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/parent-saved-candidate-readback.json": "961a9668536974729f21c7d1c80977166dc6c888d310cc903fd7a098cc84d0ef",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/position-byte-ledger.json": "a12480fae099b9d54fa3bdc4f3e941d1ce7ef96d72108fc379599d3389d5f402",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/actual-static-surface-crossings-selected2.json": "eaf41d375634c9e5872961d3bf49b9157a1a66415f6b2739f9c7d8769cebaf27",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/parallel-panel-mapping.json": "e4583ae65f0b09d4221be9db2f476d6eac92414e7927a2c4a4f8c21a04135f97",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/current-lod-source-and-wall-replay.json": "85158c2e16eb72bb5734db29016e9c15451b88ea4072ffa8d1e9d9dabb817979",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/source-to-native-replay.json": "530b6b46a993a4317827a505e53c61e694f2afd45b9f062504b7f5eabec1ba46",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2/rejection.json": "7728664c958663a79e3bf81983539831e803778218e59caf3ff4506746e5df50",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/render-proof.json": "9ed0b09ea4fc63b81a966e3b17c516027f258040771e7be53e4376e979b48318"
+  }
+}

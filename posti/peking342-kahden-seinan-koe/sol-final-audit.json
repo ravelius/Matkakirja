@@ -1,0 +1,1504 @@
+{
+  "status": "LIMITED_PARALLEL_BYTE_NORMAL_AND_SELECTED_SURFACE_NON_REGRESSION_PASS; NO_BURIAL_QUALITY_GAME_OR_RELEASE_ACCEPTANCE",
+  "currentCandidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel",
+  "actualGLBFiles": 3,
+  "notANew72GLBPackage": true,
+  "selectedOwners": [
+    "3dglobfp/13652",
+    "way/257208012"
+  ],
+  "files": [
+    {
+      "file": "peking_3_5_lod0.glb",
+      "baselineSHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "candidateSHA256": "1bc8cdddcdbdcbe9b3725f1afc5471d67f88ba4793c9fd89295870710971fe95",
+      "bytes": 3924440,
+      "triangles": 29533,
+      "exclusiveChangedVertices": 16,
+      "changedBytes": 72,
+      "allOtherBytesAndJSONExact": true,
+      "accessorBoundsExact": true,
+      "ownYBitExact": true,
+      "ledgerRollbackInMemoryByteExact": true
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "baselineSHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "candidateSHA256": "f936ef250436bd18eb611060e563c0f1c7e506e72920375f6e7d5a845c60a636",
+      "bytes": 2544884,
+      "triangles": 28253,
+      "exclusiveChangedVertices": 16,
+      "changedBytes": 72,
+      "allOtherBytesAndJSONExact": true,
+      "accessorBoundsExact": true,
+      "ownYBitExact": true,
+      "ledgerRollbackInMemoryByteExact": true
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "baselineSHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "candidateSHA256": "3d23a9f78dd6a97a4b4793041202d067788eb655cd9d6c1737cac16c8654fe77",
+      "bytes": 2450740,
+      "triangles": 28253,
+      "exclusiveChangedVertices": 16,
+      "changedBytes": 72,
+      "allOtherBytesAndJSONExact": true,
+      "accessorBoundsExact": true,
+      "ownYBitExact": true,
+      "ledgerRollbackInMemoryByteExact": true
+    }
+  ],
+  "changedPositionRowsAllLODs": 48,
+  "changedBytesAll3Files": 216,
+  "projectionIndependentFromActualGLBNormal": [
+    {
+      "owner": "3dglobfp/13652",
+      "actualBaselineNormalENU": [
+        -0.9988522529602051,
+        -0.04789770767092705,
+        0.0
+      ],
+      "signedUnitTangentENU": [
+        0.047897707344173514,
+        -0.9988522461461314,
+        0.0
+      ],
+      "unprojectedCentreDeltaENU": [
+        -0.09844970703125,
+        2.052978515625,
+        0.0
+      ],
+      "projectedDeltaENU": [
+        -0.09844596445642993,
+        2.052978695091737,
+        -0.0
+      ],
+      "preQuantizationNormalComponentM": 1.3877787807814457e-17
+    },
+    {
+      "owner": "way/257208012",
+      "actualBaselineNormalENU": [
+        -0.9999802112579346,
+        -0.00629987521097064,
+        0.0
+      ],
+      "signedUnitTangentENU": [
+        0.006299874860271933,
+        -0.999980155591472,
+        0.0
+      ],
+      "unprojectedCentreDeltaENU": [
+        0.0155029296875,
+        -2.46484375,
+        0.0
+      ],
+      "projectedDeltaENU": [
+        0.015528514313871637,
+        -2.464843588816856,
+        0.0
+      ],
+      "preQuantizationNormalComponentM": 0.0
+    }
+  ],
+  "geometryReadback": {
+    "maximumNormalOffsetDriftM": 4.9318387027597055e-06,
+    "strictRequiredMaxNormalOffsetDriftM": 2e-05,
+    "maximumRequestedTranslationRoundingErrorM": 4.93295175336278e-06,
+    "maximumPairwiseDistanceErrorM": 0.0,
+    "allOwnHeightBitsUnchanged": true,
+    "panelRows": [
+      {
+        "file": "peking_3_5_lod0.glb",
+        "owner": "way/257208012",
+        "sourcePanelIndex": 176,
+        "normalOffsetDriftM": 4.9318387027597055e-06,
+        "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod0.glb",
+        "owner": "3dglobfp/13652",
+        "sourcePanelIndex": 4050,
+        "normalOffsetDriftM": 3.746875336219091e-06,
+        "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod0.glb",
+        "owner": "way/257208012",
+        "sourcePanelIndex": 179,
+        "normalOffsetDriftM": 4.9318387027597055e-06,
+        "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod0.glb",
+        "owner": "3dglobfp/13652",
+        "sourcePanelIndex": 4052,
+        "normalOffsetDriftM": 3.746875336219091e-06,
+        "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod1.glb",
+        "owner": "way/257208012",
+        "sourcePanelIndex": 176,
+        "normalOffsetDriftM": 4.9318387027597055e-06,
+        "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod1.glb",
+        "owner": "3dglobfp/13652",
+        "sourcePanelIndex": 4050,
+        "normalOffsetDriftM": 3.746875336219091e-06,
+        "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod1.glb",
+        "owner": "way/257208012",
+        "sourcePanelIndex": 179,
+        "normalOffsetDriftM": 4.9318387027597055e-06,
+        "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod1.glb",
+        "owner": "3dglobfp/13652",
+        "sourcePanelIndex": 4052,
+        "normalOffsetDriftM": 3.746875336219091e-06,
+        "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod2.glb",
+        "owner": "way/257208012",
+        "sourcePanelIndex": 176,
+        "normalOffsetDriftM": 4.9318387027597055e-06,
+        "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod2.glb",
+        "owner": "3dglobfp/13652",
+        "sourcePanelIndex": 4050,
+        "normalOffsetDriftM": 3.746875336219091e-06,
+        "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod2.glb",
+        "owner": "way/257208012",
+        "sourcePanelIndex": 179,
+        "normalOffsetDriftM": 4.9318387027597055e-06,
+        "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      },
+      {
+        "file": "peking_3_5_lod2.glb",
+        "owner": "3dglobfp/13652",
+        "sourcePanelIndex": 4052,
+        "normalOffsetDriftM": 3.746875336219091e-06,
+        "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+        "maxPairwiseDistanceErrorM": 0.0
+      }
+    ]
+  },
+  "all72DeliveredV3GLBSHAAndManifestUnchanged": true,
+  "all48LedgerRowsActualAndRollbackVerified": true,
+  "renderEvidenceReadOnly": {
+    "frames": 14,
+    "all14PNGSHA256Match": true,
+    "visualReviewPerformedHere": false,
+    "actualChangedLOD0ImportSHA256Verified": true,
+    "pairedCandidateAndControlCameraEqualityVerified": 4,
+    "onlyLOD0VisuallyRendered": true,
+    "visualAcceptanceNotPerformedHere": true
+  },
+  "historicalFailedDirectCentreCandidate": {
+    "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2",
+    "status": "REJECTED_NORMAL_OFFSET_GATE; BYTE_AND_SURFACE_NON_REGRESSION_EVIDENCE_ONLY; NOT_ACCEPTED",
+    "normalOffsetGate": {
+      "metric": "max abs(dot(actual storedPOSITIONdelta,baseline storedNORMAL))",
+      "requiredStrictMaxM": 2e-05,
+      "independentMaximumAllPanelsM": 2.5585135517758317e-05,
+      "failedPanelRows": 6,
+      "panelRows": [
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 166,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 171,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 176,
+          "normalOffsetDriftM": 2.5585135517758317e-05,
+          "requiredStrictMaxM": 2e-05,
+          "passed": false
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 181,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4050,
+          "normalOffsetDriftM": 3.746875336219091e-06,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4054,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4058,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4062,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 167,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 168,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 169,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 170,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 172,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 173,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 174,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 175,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 177,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 178,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 179,
+          "normalOffsetDriftM": 2.5585135517758317e-05,
+          "requiredStrictMaxM": 2e-05,
+          "passed": false
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 180,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 182,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 183,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 184,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 185,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4051,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4052,
+          "normalOffsetDriftM": 3.746875336219091e-06,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4053,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4055,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4056,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4057,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4059,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4060,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4061,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4063,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4064,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4065,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 166,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 171,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 176,
+          "normalOffsetDriftM": 2.5585135517758317e-05,
+          "requiredStrictMaxM": 2e-05,
+          "passed": false
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 181,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4050,
+          "normalOffsetDriftM": 3.746875336219091e-06,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4054,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4058,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4062,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 167,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 168,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 169,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 170,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 172,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 173,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 174,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 175,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 177,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 178,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 179,
+          "normalOffsetDriftM": 2.5585135517758317e-05,
+          "requiredStrictMaxM": 2e-05,
+          "passed": false
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 180,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 182,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 183,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 184,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 185,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4051,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4052,
+          "normalOffsetDriftM": 3.746875336219091e-06,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4053,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4055,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4056,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4057,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4059,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4060,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4061,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4063,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4064,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4065,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 166,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 171,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 176,
+          "normalOffsetDriftM": 2.5585135517758317e-05,
+          "requiredStrictMaxM": 2e-05,
+          "passed": false
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 181,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4050,
+          "normalOffsetDriftM": 3.746875336219091e-06,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4054,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4058,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4062,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 167,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 168,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 169,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 170,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 172,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 173,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 174,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 175,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 177,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 178,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 179,
+          "normalOffsetDriftM": 2.5585135517758317e-05,
+          "requiredStrictMaxM": 2e-05,
+          "passed": false
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 180,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 182,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 183,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 184,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "way/257208012",
+          "sourcePanelIndex": 185,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4051,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4052,
+          "normalOffsetDriftM": 3.746875336219091e-06,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4053,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4055,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4056,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4057,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4059,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4060,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4061,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4063,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4064,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "owner": "3dglobfp/13652",
+          "sourcePanelIndex": 4065,
+          "normalOffsetDriftM": 0.0,
+          "requiredStrictMaxM": 2e-05,
+          "passed": true
+        }
+      ],
+      "parentRejection": {
+        "status": "REJECTED_SUPERSEDED_NORMAL_OFFSET_GATE",
+        "source": "readback-task342-visible2.py",
+        "maxObservedNormalDriftM": 2.5585135517758317e-05,
+        "requiredMaxM": 2e-05,
+        "notReleased": true,
+        "notGameIntegrated": true,
+        "nextSeparateCandidate": "candidate-visible2-parallel"
+      },
+      "notLoosened": true
+    },
+    "rejectionSHA256": "7728664c958663a79e3bf81983539831e803778218e59caf3ff4506746e5df50",
+    "files": [
+      {
+        "file": "peking_3_5_lod0.glb",
+        "baselineSHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+        "candidateSHA256": "6331025ed115d8824951ef8ab0eb6d825eaf41508f672bfbf8cc6c6699a721f7",
+        "bytes": 3924440,
+        "triangles": 29533,
+        "exclusiveChangedVertices": 16,
+        "changedBytes": 72,
+        "JSONAndAllOtherBytesExact": true,
+        "excludedTwoOwnersRestoredToBaseline": true,
+        "ownYBitExact": true,
+        "actualBoundsExact": true,
+        "inMemoryRollbackByteExact": true
+      },
+      {
+        "file": "peking_3_5_lod1.glb",
+        "baselineSHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+        "candidateSHA256": "4db198dd8f111c04b688012d80d11890a217a21ca8116663e0d02ec24436dcdf",
+        "bytes": 2544884,
+        "triangles": 28253,
+        "exclusiveChangedVertices": 16,
+        "changedBytes": 72,
+        "JSONAndAllOtherBytesExact": true,
+        "excludedTwoOwnersRestoredToBaseline": true,
+        "ownYBitExact": true,
+        "actualBoundsExact": true,
+        "inMemoryRollbackByteExact": true
+      },
+      {
+        "file": "peking_3_5_lod2.glb",
+        "baselineSHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+        "candidateSHA256": "58f27375e65c52b9cb1047215bacf4a3b9e5759b0294004ebcc644c66e962c10",
+        "bytes": 2450740,
+        "triangles": 28253,
+        "exclusiveChangedVertices": 16,
+        "changedBytes": 72,
+        "JSONAndAllOtherBytesExact": true,
+        "excludedTwoOwnersRestoredToBaseline": true,
+        "ownYBitExact": true,
+        "actualBoundsExact": true,
+        "inMemoryRollbackByteExact": true
+      }
+    ],
+    "notAccepted": true,
+    "supersededByDistinctParallelRoot": true
+  },
+  "findings": [],
+  "evidenceSHA256": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/parallel-panel-mapping.json": "e4583ae65f0b09d4221be9db2f476d6eac92414e7927a2c4a4f8c21a04135f97",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/pilot-proof.json": "aa6acd680ec59d65033fbcae7c405152d2f40f08f21702f7a2708f035669d216",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/position-byte-ledger.json": "a12480fae099b9d54fa3bdc4f3e941d1ce7ef96d72108fc379599d3389d5f402",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/parent-saved-candidate-readback.json": "961a9668536974729f21c7d1c80977166dc6c888d310cc903fd7a098cc84d0ef",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/renders/render-proof.json": "bbbaf9169c3f6b3e76ee40f53ac13f2afafced18e3a37c0957145f9d71de60f9",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/build-task342-visible2-parallel.py": "5f52d2096891f77964a51f9d12b2b899914291cc4d6e8c31cfb4107909f745d1",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/check-task342-visible2-parallel-collisions.py": "91751cae9e8e5d3643a29eaa71421f17ff94dbe9e464c5137165d50e57b84557",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/ledger-task342-parallel.py": "170457280330dafe10f8e5ebedb68a457fc184104c20c75055d51dfbedc4c8d4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/readback-task342-visible2-parallel.py": "6b5f12cdfc83c4eca1f5a4da64bb975b22644dfe5180149dee6f21602b080f24",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-sol-task342-pilot-audit.json": "029092f772e264594826e60169f972875a2351264d9e662a25a7ada901ad50b2",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-pilot-review.md": "629bd2190625444da9c34da4d9037c740be71a491a7d77e873308c9c6a70239a",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel/actual-static-surface-crossings-selected2.json": "eaf41d375634c9e5872961d3bf49b9157a1a66415f6b2739f9c7d8769cebaf27",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2/rejection.json": "7728664c958663a79e3bf81983539831e803778218e59caf3ff4506746e5df50"
+  },
+  "independentSelected2SurfaceReadback": {
+    "scope": "Independent actualLOD0 panel-surface intersection and wall support only; no full physics/walkability/volume/camera/game claim",
+    "arithmetic": "float64 ENU placement from storedFLOAT32GLB local vertices, no extra globalFLOAT32 quantization",
+    "planeEpsilonM": 1e-07,
+    "interiorInsetM": 1e-05,
+    "results": [
+      {
+        "after": false,
+        "owner": "3dglobfp/13652",
+        "role": "door",
+        "sourcePanelIndex": 4050,
+        "panelBottomWorldZ": 0.7099999785423279,
+        "panelTopWorldZ": 2.9600000381469727,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": [
+          {
+            "material": "owner_hutong_ground",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              14,
+              41
+            ],
+            "kind": "crossing_length",
+            "measure": 1.5005573962134566,
+            "interiorMeasure": 1.5005373889837714,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              1.1516558183968302,
+              1.1919919818954083
+            ],
+            "withinOwnWallPlinthPrism": false
+          },
+          {
+            "material": "owner_hutong_plinth",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              22,
+              7108
+            ],
+            "kind": "crossing_length",
+            "measure": 0.7500075821691946,
+            "interiorMeasure": 0.7499975821691947,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              0.9899999499320984,
+              0.9899999499320984
+            ],
+            "withinOwnWallPlinthPrism": true
+          },
+          {
+            "material": "owner_hutong_plinth",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              22,
+              7109
+            ],
+            "kind": "crossing_length",
+            "measure": 0.7500075821691946,
+            "interiorMeasure": 0.7499975821691947,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              0.9899999499320984,
+              0.9899999499320984
+            ],
+            "withinOwnWallPlinthPrism": true
+          }
+        ]
+      },
+      {
+        "after": false,
+        "owner": "3dglobfp/13652",
+        "role": "window",
+        "sourcePanelIndex": 4052,
+        "panelBottomWorldZ": 1.5299999713897705,
+        "panelTopWorldZ": 2.7699999809265137,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": []
+      },
+      {
+        "after": false,
+        "owner": "way/257208012",
+        "role": "door",
+        "sourcePanelIndex": 176,
+        "panelBottomWorldZ": 1.8899999856948853,
+        "panelTopWorldZ": 4.139999866485596,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": [
+          {
+            "material": "owner_hutong_ground",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              14,
+              102
+            ],
+            "kind": "crossing_length",
+            "measure": 1.500077031983304,
+            "interiorMeasure": 1.500057031348882,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              1.9737929382990111,
+              1.9857408627681432
+            ],
+            "withinOwnWallPlinthPrism": false
+          },
+          {
+            "material": "owner_hutong_plinth",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              22,
+              148
+            ],
+            "kind": "crossing_length",
+            "measure": 0.7500147246862422,
+            "interiorMeasure": 0.7500047246862422,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              2.1700000762939453,
+              2.1700000762939453
+            ],
+            "withinOwnWallPlinthPrism": true
+          },
+          {
+            "material": "owner_hutong_plinth",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              22,
+              149
+            ],
+            "kind": "crossing_length",
+            "measure": 0.7500147246862422,
+            "interiorMeasure": 0.7500047246862422,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              2.1700000762939453,
+              2.1700000762939453
+            ],
+            "withinOwnWallPlinthPrism": true
+          }
+        ]
+      },
+      {
+        "after": false,
+        "owner": "way/257208012",
+        "role": "window",
+        "sourcePanelIndex": 179,
+        "panelBottomWorldZ": 2.7100000381469727,
+        "panelTopWorldZ": 3.950000047683716,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": []
+      },
+      {
+        "after": true,
+        "owner": "3dglobfp/13652",
+        "role": "door",
+        "sourcePanelIndex": 4050,
+        "panelBottomWorldZ": 0.7099999785423279,
+        "panelTopWorldZ": 2.9600000381469727,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": [
+          {
+            "material": "owner_hutong_ground",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              14,
+              41
+            ],
+            "kind": "crossing_length",
+            "measure": 1.5005573962134566,
+            "interiorMeasure": 1.5005373889837714,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              1.0963873949160918,
+              1.1367235584146695
+            ],
+            "withinOwnWallPlinthPrism": false
+          },
+          {
+            "material": "owner_hutong_plinth",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              22,
+              7109
+            ],
+            "kind": "crossing_length",
+            "measure": 1.5000151643383892,
+            "interiorMeasure": 1.4999951643383893,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              0.9899999499320984,
+              0.9899999499320984
+            ],
+            "withinOwnWallPlinthPrism": true
+          }
+        ]
+      },
+      {
+        "after": true,
+        "owner": "3dglobfp/13652",
+        "role": "window",
+        "sourcePanelIndex": 4052,
+        "panelBottomWorldZ": 1.5299999713897705,
+        "panelTopWorldZ": 2.7699999809265137,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": []
+      },
+      {
+        "after": true,
+        "owner": "way/257208012",
+        "role": "door",
+        "sourcePanelIndex": 176,
+        "panelBottomWorldZ": 1.8899999856948853,
+        "panelTopWorldZ": 4.139999866485596,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": [
+          {
+            "material": "owner_hutong_ground",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              14,
+              102
+            ],
+            "kind": "crossing_length",
+            "measure": 1.500077031983304,
+            "interiorMeasure": 1.500057031348882,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              1.9541602482128655,
+              1.9661081726819976
+            ],
+            "withinOwnWallPlinthPrism": false
+          },
+          {
+            "material": "owner_hutong_plinth",
+            "token": [
+              "peking_3_5_lod0.glb",
+              0,
+              22,
+              148
+            ],
+            "kind": "crossing_length",
+            "measure": 1.5000294493724844,
+            "interiorMeasure": 1.5000094493724845,
+            "boundaryOnly": false,
+            "intersectionWorldZ": [
+              2.1700000762939453,
+              2.1700000762939453
+            ],
+            "withinOwnWallPlinthPrism": true
+          }
+        ]
+      },
+      {
+        "after": true,
+        "owner": "way/257208012",
+        "role": "window",
+        "sourcePanelIndex": 179,
+        "panelBottomWorldZ": 2.7100000381469727,
+        "panelTopWorldZ": 3.950000047683716,
+        "actualBrickSupportMissingAreaWith03mmBoundaryToleranceM2": 0.0,
+        "hits": []
+      }
+    ],
+    "doorGroundAndPlinthSummary": [
+      {
+        "owner": "3dglobfp/13652",
+        "groundIntersectionBeforeZ": [
+          1.1516558183968302,
+          1.1919919818954083
+        ],
+        "groundIntersectionAfterZ": [
+          1.0963873949160918,
+          1.1367235584146695
+        ],
+        "groundUpperIntersectionChangeM": -0.05526842348073879,
+        "plinthIntersectionBeforeZ": [
+          0.9899999499320984,
+          0.9899999499320984
+        ],
+        "plinthIntersectionAfterZ": [
+          0.9899999499320984,
+          0.9899999499320984
+        ],
+        "allPlinthHitsWithinOwnWallPrism": true
+      },
+      {
+        "owner": "way/257208012",
+        "groundIntersectionBeforeZ": [
+          1.9737929382990111,
+          1.9857408627681432
+        ],
+        "groundIntersectionAfterZ": [
+          1.9541602482128655,
+          1.9661081726819976
+        ],
+        "groundUpperIntersectionChangeM": -0.019632690086145654,
+        "plinthIntersectionBeforeZ": [
+          2.1700000762939453,
+          2.1700000762939453
+        ],
+        "plinthIntersectionAfterZ": [
+          2.1700000762939453,
+          2.1700000762939453
+        ],
+        "allPlinthHitsWithinOwnWallPrism": true
+      }
+    ],
+    "staticTriangleCount": 467881,
+    "allStaticExceptTreeCards": true,
+    "parentReports": {
+      "actual-static-surface-crossings-selected2.json": {
+        "sha256": "eaf41d375634c9e5872961d3bf49b9157a1a66415f6b2739f9c7d8769cebaf27",
+        "status": "PASS_NO_NEW_STATIC_SURFACE_CROSSINGS"
+      }
+    },
+    "parentCollisionCodeSHA256AtReadback": "91751cae9e8e5d3643a29eaa71421f17ff94dbe9e464c5137165d50e57b84557"
+  },
+  "parentSelected2ReportAgreesWithIndependentNewGeometryReadback": true,
+  "all72Base3Parallel3Failed2And3Pilot4SHAStableAtClose": true,
+  "limitations": [
+    "Two original interior courtyard-ground penetrations andlowplinth contacts remain; loweredintersectionheight is notremoval",
+    "Staticpanel-plane readback onlyLOD0, nofullphysics/walkability/occlusion test; treecards excluded",
+    "LOD1/2verifiedbytes,geometry,normalgate; nomovingLODvisual/devicepass",
+    "Astraearlier4pilot showslocalcloseupvariation but no demonstratedfixedviewneighbourhoodbenefit; no newvisualapproval bySol",
+    "ThreeGLB localexperiment only; notnew72citypackage/canonical52/V3replacement/deliveryorpublication",
+    "Sourcewater12parts/221Ioncontacts,Ion0.3m,TBNbackface/daynight/FPSmemoryandowneracceptance remainreceivergates"
+  ],
+  "allowedPurpose": "LocalOFFGAME experiment feedback/checkpoint only; no mass196/171apply ornewgamepackage authorized"
+}

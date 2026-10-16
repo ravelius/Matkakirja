@@ -1,0 +1,548 @@
+{
+  "task": 342,
+  "frames": [
+    {
+      "file": "candidate1-before.png",
+      "sha256": "42d22ff8daf50d93d731df19fb7a5fba13a2d44ca262404c004689e8497cc281",
+      "after": false,
+      "view": "candidate1",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 4.769816167012323,
+      "camera": {
+        "positionENU": [
+          581.41796875,
+          1071.9222412109375,
+          2.259999990463257
+        ],
+        "lookAtENU": [
+          581.9174194335938,
+          1071.9461669921875,
+          2.259999990463257
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 19.33293145356733
+    },
+    {
+      "file": "candidate2-before.png",
+      "sha256": "620b1928630fe95912e15bf23305124b64d26e7caa5f9d2d439b9785d5b76f35",
+      "after": false,
+      "view": "candidate2",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 1.4703104999789502,
+      "camera": {
+        "positionENU": [
+          641.4100341796875,
+          1135.7562255859375,
+          3.440000057220459
+        ],
+        "lookAtENU": [
+          641.9100341796875,
+          1135.7593994140625,
+          3.440000057220459
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 22.884389192357208
+    },
+    {
+      "file": "control1-before.png",
+      "sha256": "121124dc0e19f5aaccbee05eb6415573ffa4315ffd526b5d11a441e6b6d3a945",
+      "after": false,
+      "view": "control1",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 1.4796123749983963,
+      "camera": {
+        "positionENU": [
+          488.5945129394531,
+          1226.0601806640625,
+          3.799999952316284
+        ],
+        "lookAtENU": [
+          488.5869140625,
+          1226.5601806640625,
+          3.799999952316284
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 11.136185270796362
+    },
+    {
+      "file": "control2-before.png",
+      "sha256": "3a959bc1f52a1b325060c4bd2d10e54bac9944ed09c8815ab483557cb7891139",
+      "after": false,
+      "view": "control2",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 1.6009172920021228,
+      "camera": {
+        "positionENU": [
+          421.1539001464844,
+          1175.071533203125,
+          3.759999990463257
+        ],
+        "lookAtENU": [
+          421.1376037597656,
+          1175.5712890625,
+          3.759999990463257
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 8.844262594188447
+    },
+    {
+      "file": "candidate1-after.png",
+      "sha256": "45535ef67fd4f7c3ac5c043960ad83a12b0e67f4cf628a50c8a732a647df7373",
+      "after": true,
+      "view": "candidate1",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 1.7982220830162987,
+      "camera": {
+        "positionENU": [
+          581.41796875,
+          1071.9222412109375,
+          2.259999990463257
+        ],
+        "lookAtENU": [
+          581.9174194335938,
+          1071.9461669921875,
+          2.259999990463257
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 19.33293145356733
+    },
+    {
+      "file": "candidate2-after.png",
+      "sha256": "881cf0733dc4e56d13eee2590ec3b0dd7bc715b34c08f73d98898d92766650cb",
+      "after": true,
+      "view": "candidate2",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 1.0154463749786373,
+      "camera": {
+        "positionENU": [
+          641.4100341796875,
+          1135.7562255859375,
+          3.440000057220459
+        ],
+        "lookAtENU": [
+          641.9100341796875,
+          1135.7593994140625,
+          3.440000057220459
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 22.884389192357208
+    },
+    {
+      "file": "control1-after.png",
+      "sha256": "607a969bc549aa29a9640edaeb3bdd3f49d6983d72066b1f2e8b3aa9ad32f245",
+      "after": true,
+      "view": "control1",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 1.176509334007278,
+      "camera": {
+        "positionENU": [
+          488.5945129394531,
+          1226.0601806640625,
+          3.799999952316284
+        ],
+        "lookAtENU": [
+          488.5869140625,
+          1226.5601806640625,
+          3.799999952316284
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 11.136185270796362
+    },
+    {
+      "file": "control2-after.png",
+      "sha256": "ac69a46cfcf0a8247425f1e26283a39c48e42c91c927b72feda1d476d9692ba4",
+      "after": true,
+      "view": "control2",
+      "resolution": [
+        960,
+        540
+      ],
+      "seconds": 1.0970404999970924,
+      "camera": {
+        "positionENU": [
+          421.1539001464844,
+          1175.071533203125,
+          3.759999990463257
+        ],
+        "lookAtENU": [
+          421.1376037597656,
+          1175.5712890625,
+          3.759999990463257
+        ],
+        "clipStartM": 0.05,
+        "clipEndM": 10000
+      },
+      "orthographicScaleM": 8.844262594188447
+    },
+    {
+      "file": "ilma-after.png",
+      "sha256": "aa8ec9cda7f4be9fc761a9123d35808cd932b1b6e2d85ecbfd34ca89b4c03b41",
+      "after": true,
+      "view": "ilma",
+      "resolution": [
+        1600,
+        900
+      ],
+      "seconds": 3.4711652499972843,
+      "camera": {
+        "positionENU": [
+          -750,
+          -2950,
+          1350
+        ],
+        "lookAtENU": [
+          0,
+          -250,
+          0
+        ],
+        "FOVDegrees": 45,
+        "id": "ilma",
+        "projection": "perspective",
+        "lensUnit": "FOV",
+        "resolution": [
+          1600,
+          900
+        ],
+        "upAxis": "Z",
+        "imageFacingAxis": "camera local -Z",
+        "clipStartM": 1,
+        "clipEndM": 8000,
+        "fixedAcrossAllIterations": true,
+        "exactSource": "v10 frozen lahde/rakenna.py esikatselu KAM; region[-1100,-1750,1100,1250]"
+      },
+      "orthographicScaleM": null
+    },
+    {
+      "file": "taihedian-after.png",
+      "sha256": "e6a90a18128e95538368f914b74a78ab8547095837d0537b01d9539495df2d25",
+      "after": true,
+      "view": "taihedian",
+      "resolution": [
+        1600,
+        900
+      ],
+      "seconds": 2.749949707998894,
+      "camera": {
+        "positionENU": [
+          0,
+          -260,
+          70
+        ],
+        "lookAtENU": [
+          0,
+          0,
+          20
+        ],
+        "FOVDegrees": 45,
+        "id": "taihedian",
+        "projection": "perspective",
+        "lensUnit": "FOV",
+        "resolution": [
+          1600,
+          900
+        ],
+        "upAxis": "Z",
+        "imageFacingAxis": "camera local -Z",
+        "clipStartM": 1,
+        "clipEndM": 8000,
+        "fixedAcrossAllIterations": true,
+        "exactSource": "v10 frozen lahde/rakenna.py esikatselu KAM; region[-1100,-1750,1100,1250]"
+      },
+      "orthographicScaleM": null
+    },
+    {
+      "file": "aukio-after.png",
+      "sha256": "56ff5679e72b2624c5f923909f57c27529a34bd99b114484f3736d068c2c0cdf",
+      "after": true,
+      "view": "aukio",
+      "resolution": [
+        1600,
+        900
+      ],
+      "seconds": 2.590512291993946,
+      "camera": {
+        "positionENU": [
+          420,
+          -1900,
+          160
+        ],
+        "lookAtENU": [
+          0,
+          -1350,
+          10
+        ],
+        "FOVDegrees": 50,
+        "id": "aukio",
+        "projection": "perspective",
+        "lensUnit": "FOV",
+        "resolution": [
+          1600,
+          900
+        ],
+        "upAxis": "Z",
+        "imageFacingAxis": "camera local -Z",
+        "clipStartM": 1,
+        "clipEndM": 8000,
+        "fixedAcrossAllIterations": true,
+        "exactSource": "v10 frozen lahde/rakenna.py esikatselu KAM; region[-1100,-1750,1100,1250]"
+      },
+      "orthographicScaleM": null
+    },
+    {
+      "file": "beihai-after.png",
+      "sha256": "366b3dd27ffbd2b6c4a02b6013c1232e119353984b0597bbae4849e502b0da25",
+      "after": true,
+      "view": "beihai",
+      "resolution": [
+        1600,
+        900
+      ],
+      "seconds": 2.436101041996153,
+      "camera": {
+        "positionENU": [
+          -420,
+          500,
+          120
+        ],
+        "lookAtENU": [
+          -670,
+          900,
+          30
+        ],
+        "FOVDegrees": 50,
+        "id": "beihai",
+        "projection": "perspective",
+        "lensUnit": "FOV",
+        "resolution": [
+          1600,
+          900
+        ],
+        "upAxis": "Z",
+        "imageFacingAxis": "camera local -Z",
+        "clipStartM": 1,
+        "clipEndM": 8000,
+        "fixedAcrossAllIterations": true,
+        "exactSource": "v10 frozen lahde/rakenna.py esikatselu KAM; region[-1100,-1750,1100,1250]"
+      },
+      "orthographicScaleM": null
+    },
+    {
+      "file": "jingshan-after.png",
+      "sha256": "88e469e8efbfadedf23dc1727b61f651861b679df2a943f93c8e7d7ac5e8100c",
+      "after": true,
+      "view": "jingshan",
+      "resolution": [
+        1600,
+        900
+      ],
+      "seconds": 3.026602083002217,
+      "camera": {
+        "positionENU": [
+          -20,
+          600,
+          90
+        ],
+        "lookAtENU": [
+          -25,
+          840,
+          50
+        ],
+        "FOVDegrees": 50,
+        "id": "jingshan",
+        "projection": "perspective",
+        "lensUnit": "FOV",
+        "resolution": [
+          1600,
+          900
+        ],
+        "upAxis": "Z",
+        "imageFacingAxis": "camera local -Z",
+        "clipStartM": 1,
+        "clipEndM": 8000,
+        "fixedAcrossAllIterations": true,
+        "exactSource": "v10 frozen lahde/rakenna.py esikatselu KAM; region[-1100,-1750,1100,1250]"
+      },
+      "orthographicScaleM": null
+    },
+    {
+      "file": "hutong_ilma-after.png",
+      "sha256": "6e91cdd331ddad1eb702aafc9555b6dc2839087c775a2855bddc9fe78638b973",
+      "after": true,
+      "view": "hutong_ilma",
+      "resolution": [
+        1600,
+        900
+      ],
+      "seconds": 2.8792855000065174,
+      "camera": {
+        "positionENU": [
+          680,
+          1080,
+          105
+        ],
+        "lookAtENU": [
+          750,
+          1190,
+          0
+        ],
+        "FOVDegrees": 50,
+        "id": "hutong_ilma",
+        "projection": "perspective",
+        "lensUnit": "FOV",
+        "resolution": [
+          1600,
+          900
+        ],
+        "upAxis": "Z",
+        "imageFacingAxis": "camera local -Z",
+        "clipStartM": 1,
+        "clipEndM": 8000,
+        "fixedAcrossAllIterations": true,
+        "exactSource": "PT255 permits hutong crop/tilt change; guide reads original v10 GLBs, no model edits.",
+        "PT255CameraChangeAuthorized": true,
+        "priorPositionENU": [
+          560,
+          1060,
+          70
+        ],
+        "priorLookAtENU": [
+          760,
+          1200,
+          0
+        ],
+        "purpose": "Focus downward on hutong courtyards; leave source height44.9m left mass outside this crop and retain remaining source mass heights."
+      },
+      "orthographicScaleM": null
+    }
+  ],
+  "views": [
+    {
+      "name": "candidate1",
+      "owner": "3dglobfp/13652",
+      "sourceWallFi": 0,
+      "sourceDoorPanelIndex": 4050,
+      "base": [
+        581.9174194335938,
+        1071.9461669921875,
+        0.7099999785423279
+      ],
+      "normal": [
+        -0.9988522529602051,
+        -0.047897595912218094,
+        0.0
+      ],
+      "length": 16.11077621130611,
+      "changed": true
+    },
+    {
+      "name": "candidate2",
+      "owner": "way/257208012",
+      "sourceWallFi": 15,
+      "sourceDoorPanelIndex": 176,
+      "base": [
+        641.9100341796875,
+        1135.7593994140625,
+        1.8899999856948853
+      ],
+      "normal": [
+        -0.9999801516532898,
+        -0.0062986440025269985,
+        0.0
+      ],
+      "length": 19.07032432696434,
+      "changed": true
+    },
+    {
+      "name": "control1",
+      "owner": "3dglobfp/379",
+      "sourceWallFi": 2,
+      "sourceDoorPanelIndex": 1660,
+      "base": [
+        488.5869140625,
+        1226.5601806640625,
+        2.25
+      ],
+      "normal": [
+        0.015192766673862934,
+        -0.9998846054077148,
+        0.0
+      ],
+      "length": 9.280154392330303,
+      "changed": false
+    },
+    {
+      "name": "control2",
+      "owner": "3dglobfp/320",
+      "sourceWallFi": 0,
+      "sourceDoorPanelIndex": 1518,
+      "base": [
+        421.1376037597656,
+        1175.5712890625,
+        2.2100000381469727
+      ],
+      "normal": [
+        0.03259528428316116,
+        -0.9994686245918274,
+        0.0
+      ],
+      "length": 7.370218828490372,
+      "changed": false
+    }
+  ],
+  "imports": [
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "1bc8cdddcdbdcbe9b3725f1afc5471d67f88ba4793c9fd89295870710971fe95",
+      "centerENU": [
+        825.0,
+        1000.0
+      ],
+      "actualReimport": true
+    }
+  ],
+  "baseActualGLBCityBlendSHA256": "ee6106bb029c089a9b7083b2ed93f85459036d0d534a01dba68ead4eb7ec7ef5",
+  "baseV3NotModified": true,
+  "actualChangedLOD0GLBReimported": true,
+  "unchangedFullCityContextAndOriginalLightingRetained": true,
+  "noObjectHidingOrNativeGeometryImported": true,
+  "closeupOrthographicFacadeDiagnostic": true,
+  "originalFixedCamerasUnchanged": true,
+  "samples": 64,
+  "device": "fresh Metal GPU",
+  "notGameRuntimeVerification": true
+}

@@ -1,0 +1,113 @@
+{
+  "task": 342,
+  "kind": "LOCAL_TRIAL_FEEDBACK_CHECKPOINT_NOT_GAME_PACKET",
+  "candidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel",
+  "baseV3Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti",
+  "sourceNativeRound": 51,
+  "newNative52": false,
+  "actualLocalChangedGLBFiles": [
+    {
+      "file": "peking_3_5_lod0.glb",
+      "baseSHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "sha256": "1bc8cdddcdbdcbe9b3725f1afc5471d67f88ba4793c9fd89295870710971fe95",
+      "bytes": 3924440,
+      "triangles": 29533,
+      "changedQuads": 4,
+      "changedExclusiveVertices": 16,
+      "changedBytes": 72,
+      "attributesOtherThanPositionByteIdentical": true,
+      "documentAndEmbeddedImagesByteIdentical": true
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "baseSHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "sha256": "f936ef250436bd18eb611060e563c0f1c7e506e72920375f6e7d5a845c60a636",
+      "bytes": 2544884,
+      "triangles": 28253,
+      "changedQuads": 4,
+      "changedExclusiveVertices": 16,
+      "changedBytes": 72,
+      "attributesOtherThanPositionByteIdentical": true,
+      "documentAndEmbeddedImagesByteIdentical": true
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "baseSHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "sha256": "3d23a9f78dd6a97a4b4793041202d067788eb655cd9d6c1737cac16c8654fe77",
+      "bytes": 2450740,
+      "triangles": 28253,
+      "changedQuads": 4,
+      "changedExclusiveVertices": 16,
+      "changedBytes": 72,
+      "attributesOtherThanPositionByteIdentical": true,
+      "documentAndEmbeddedImagesByteIdentical": true
+    }
+  ],
+  "notAll72GLBsInThisFolder": true,
+  "feedbackAttachments": {
+    "posti/peking342-kahden-seinan-koe/candidate1-before.png": {
+      "sha256": "42d22ff8daf50d93d731df19fb7a5fba13a2d44ca262404c004689e8497cc281",
+      "bytes": 740023
+    },
+    "posti/peking342-kahden-seinan-koe/candidate1-after.png": {
+      "sha256": "45535ef67fd4f7c3ac5c043960ad83a12b0e67f4cf628a50c8a732a647df7373",
+      "bytes": 739951
+    },
+    "posti/peking342-kahden-seinan-koe/candidate2-before.png": {
+      "sha256": "620b1928630fe95912e15bf23305124b64d26e7caa5f9d2d439b9785d5b76f35",
+      "bytes": 632198
+    },
+    "posti/peking342-kahden-seinan-koe/candidate2-after.png": {
+      "sha256": "881cf0733dc4e56d13eee2590ec3b0dd7bc715b34c08f73d98898d92766650cb",
+      "bytes": 631842
+    },
+    "posti/peking342-kahden-seinan-koe/hutong_ilma-after.png": {
+      "sha256": "6e91cdd331ddad1eb702aafc9555b6dc2839087c775a2855bddc9fe78638b973",
+      "bytes": 2615996
+    },
+    "posti/peking342-kahden-seinan-koe/taihedian-after.png": {
+      "sha256": "e6a90a18128e95538368f914b74a78ab8547095837d0537b01d9539495df2d25",
+      "bytes": 2687918
+    },
+    "posti/peking342-kahden-seinan-koe/producer-trial-decision.json": {
+      "sha256": "9959187638b18030a4d316d90ae70b4c6d4c1d75538a93dc7249454e1bffbabd",
+      "bytes": 2919
+    },
+    "posti/peking342-kahden-seinan-koe/parent-saved-candidate-readback.json": {
+      "sha256": "961a9668536974729f21c7d1c80977166dc6c888d310cc903fd7a098cc84d0ef",
+      "bytes": 7618
+    },
+    "posti/peking342-kahden-seinan-koe/position-byte-ledger.json": {
+      "sha256": "a12480fae099b9d54fa3bdc4f3e941d1ce7ef96d72108fc379599d3389d5f402",
+      "bytes": 27360
+    },
+    "posti/peking342-kahden-seinan-koe/actual-static-surface-crossings-selected2.json": {
+      "sha256": "eaf41d375634c9e5872961d3bf49b9157a1a66415f6b2739f9c7d8769cebaf27",
+      "bytes": 8449
+    },
+    "posti/peking342-kahden-seinan-koe/render-proof.json": {
+      "sha256": "bbbaf9169c3f6b3e76ee40f53ac13f2afafced18e3a37c0957145f9d71de60f9",
+      "bytes": 13429
+    },
+    "posti/peking342-kahden-seinan-koe/sol-final-audit.json": {
+      "sha256": "a39bcad9835af937e9bda1d74fa8eee42db600647c39f1e1eb42cd775ee3c065",
+      "bytes": 50150
+    },
+    "posti/peking342-kahden-seinan-koe/sol-final-audit.md": {
+      "sha256": "ae5cdfe25eb0aa2a4ad391345b036be3ea49d32c30e55ca81eb29f2c2b5fd8fe",
+      "bytes": 6801
+    },
+    "posti/peking342-kahden-seinan-koe/astra-final-review.json": {
+      "sha256": "020e271c0ce0bf1043b14cae9ea3771f348d902bcb2ea9f2089218c01defa8b9",
+      "bytes": 15369
+    },
+    "posti/peking342-kahden-seinan-koe/astra-final-review.md": {
+      "sha256": "80b3e2d8173dc32ba0c13ea0c6b687c7f1ad9e56643c163e3b29c318c4a69b4c",
+      "bytes": 4225
+    }
+  },
+  "all14LocalRenderImagesPinned": true,
+  "onlySixImagesCopiedToGitMail": true,
+  "producerDecisionSHA256": "9959187638b18030a4d316d90ae70b4c6d4c1d75538a93dc7249454e1bffbabd",
+  "createdAtUTC": "2026-10-16T01:10:59.364254+00:00"
+}

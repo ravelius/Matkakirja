@@ -1,0 +1,42 @@
+{
+  "task": 342,
+  "status": "LOCAL_TWO_WALL_TRIAL_REVIEWED_FOR_FEEDBACK_ONLY",
+  "currentCandidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task342-work/candidate-visible2-parallel",
+  "next72GLBGamePackageProduced": false,
+  "nextGamePackageDelivered": false,
+  "newNative52Produced": false,
+  "baseV3ImmutableAndStillFlightTestBaseline": true,
+  "selectedOwners": [
+    "3dglobfp/13652",
+    "way/257208012"
+  ],
+  "changedPanelsPerLOD": 4,
+  "changedPositionRowsAllLODs": 48,
+  "ownHeightsUVNormalsImagesMaterialsAndAllOtherGeometryUnchanged": true,
+  "GLBTrianglesAndBytesNotIncreased": true,
+  "fixedSixViewVisualBenefitDemonstrated": false,
+  "localVisibleFacadeBenefitOnly": true,
+  "massExpansionAuthorizedByThisTrial": false,
+  "oldGroundPenetrationsRemain": true,
+  "newStaticSurfaceCrossingsOrGroundPenetrationWorseningFound": false,
+  "notGameRuntimeOrIonOrOwnerQualityApproval": true,
+  "ownerQualityGoalReached": false,
+  "producerPersonallyViewedFinalCandidateCloseups2AndHutongFixed": true,
+  "producerPersonallyViewedAll14FinalPNGs": false,
+  "independentSolStatus": "LIMITED_PARALLEL_BYTE_NORMAL_AND_SELECTED_SURFACE_NON_REGRESSION_PASS; NO_BURIAL_QUALITY_GAME_OR_RELEASE_ACCEPTANCE",
+  "independentAstraStatus": "SCOPED_LOCAL_VISUAL_FEEDBACK_CHECKPOINT_ACCEPTED_WITH_LIMITS",
+  "independentReports": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-sol-task342-visible2-final-audit.json": "a39bcad9835af937e9bda1d74fa8eee42db600647c39f1e1eb42cd775ee3c065",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-sol-task342-visible2-final-audit.md": "ae5cdfe25eb0aa2a4ad391345b036be3ea49d32c30e55ca81eb29f2c2b5fd8fe",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-visible2-final-review.json": "020e271c0ce0bf1043b14cae9ea3771f348d902bcb2ea9f2089218c01defa8b9",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-visible2-final-review.md": "80b3e2d8173dc32ba0c13ea0c6b687c7f1ad9e56643c163e3b29c318c4a69b4c"
+  },
+  "remainingWork": [
+    "Valoseppa V3 actual game flight feedback",
+    "two inherited doorway ground penetrations are lower but remain",
+    "tree shading and moving LOD / day-evening / memory-FPS in game",
+    "measured Ion clearance and reserved-water contacts",
+    "separate improvement chosen from verified visual evidence; no automatic whole-area slot rollout"
+  ],
+  "createdAtUTC": "2026-10-16T01:10:59.364254+00:00"
+}

@@ -1,0 +1,303 @@
+{
+  "task": 342,
+  "status": "PASS_NO_NEW_STATIC_SURFACE_CROSSINGS",
+  "actualLOD0StaticTriangleCrossingsChecked": true,
+  "treesAreCardsNotSolidAndExcluded": true,
+  "preexistingLowContinuousPlinthCrossingsExempted": true,
+  "unchangedExistingCourtyardGroundCrossingsRetainedNotRepaired": [
+    {
+      "sourcePanelIndex": 4050,
+      "hit": {
+        "material": "owner_hutong_ground",
+        "triangleToken": [
+          "peking_3_5_lod0.glb",
+          0,
+          14,
+          41
+        ],
+        "kind": "crossing_length",
+        "measure": 1.5005573819400368,
+        "intersectionZIntervalM": [
+          1.0963876434242774,
+          1.136723309906483
+        ],
+        "panelBottomZ": 0.7099999785423279,
+        "preexistingContinuousPlinthEnvelope": false
+      }
+    },
+    {
+      "sourcePanelIndex": 176,
+      "hit": {
+        "material": "owner_hutong_ground",
+        "triangleToken": [
+          "peking_3_5_lod0.glb",
+          0,
+          14,
+          102
+        ],
+        "kind": "crossing_length",
+        "measure": 1.5000770290211942,
+        "intersectionZIntervalM": [
+          1.9541603844584088,
+          1.9661080364364545
+        ],
+        "panelBottomZ": 1.8899999856948853,
+        "preexistingContinuousPlinthEnvelope": false
+      }
+    }
+  ],
+  "normalPlaneEpsilonM": 1e-05,
+  "scope": "Panel surfaces against actual static triangles before/after; pre-existing same-triangle/non-worsening-height courtyard crossings explicitly retained, not a full game physics or walkability test; interval checks separately include conservative omitted-frame envelopes.",
+  "results": [
+    {
+      "after": false,
+      "sourceBuildingID": "3dglobfp/13652",
+      "sourcePanelIndex": 4050,
+      "role": "door",
+      "broadphaseTriangles": 12,
+      "crossings": [
+        {
+          "material": "owner_hutong_ground",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            14,
+            41
+          ],
+          "kind": "crossing_length",
+          "measure": 1.5005573819400368,
+          "intersectionZIntervalM": [
+            1.1516560669050158,
+            1.1919917333872214
+          ],
+          "panelBottomZ": 0.7099999785423279,
+          "preexistingContinuousPlinthEnvelope": false
+        },
+        {
+          "material": "owner_hutong_plinth",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            22,
+            7108
+          ],
+          "kind": "crossing_length",
+          "measure": 0.750007581712374,
+          "intersectionZIntervalM": [
+            0.9899999499320984,
+            0.9899999499320984
+          ],
+          "panelBottomZ": 0.7099999785423279,
+          "preexistingContinuousPlinthEnvelope": true
+        },
+        {
+          "material": "owner_hutong_plinth",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            22,
+            7109
+          ],
+          "kind": "crossing_length",
+          "measure": 0.750007581712374,
+          "intersectionZIntervalM": [
+            0.9899999499320984,
+            0.9899999499320984
+          ],
+          "panelBottomZ": 0.7099999785423279,
+          "preexistingContinuousPlinthEnvelope": true
+        }
+      ],
+      "otherStaticSurfaceCrossingCount": 1
+    },
+    {
+      "after": false,
+      "sourceBuildingID": "3dglobfp/13652",
+      "sourcePanelIndex": 4052,
+      "role": "window",
+      "broadphaseTriangles": 6,
+      "crossings": [],
+      "otherStaticSurfaceCrossingCount": 0
+    },
+    {
+      "after": false,
+      "sourceBuildingID": "way/257208012",
+      "sourcePanelIndex": 176,
+      "role": "door",
+      "broadphaseTriangles": 8,
+      "crossings": [
+        {
+          "material": "owner_hutong_ground",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            14,
+            102
+          ],
+          "kind": "crossing_length",
+          "measure": 1.5000770290211942,
+          "intersectionZIntervalM": [
+            1.9737930745445549,
+            1.9857407265226006
+          ],
+          "panelBottomZ": 1.8899999856948853,
+          "preexistingContinuousPlinthEnvelope": false
+        },
+        {
+          "material": "owner_hutong_plinth",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            22,
+            148
+          ],
+          "kind": "crossing_length",
+          "measure": 0.7500147242903409,
+          "intersectionZIntervalM": [
+            2.1700000762939453,
+            2.1700000762939453
+          ],
+          "panelBottomZ": 1.8899999856948853,
+          "preexistingContinuousPlinthEnvelope": true
+        },
+        {
+          "material": "owner_hutong_plinth",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            22,
+            149
+          ],
+          "kind": "crossing_length",
+          "measure": 0.7500147242903409,
+          "intersectionZIntervalM": [
+            2.1700000762939453,
+            2.1700000762939453
+          ],
+          "panelBottomZ": 1.8899999856948853,
+          "preexistingContinuousPlinthEnvelope": true
+        }
+      ],
+      "otherStaticSurfaceCrossingCount": 1
+    },
+    {
+      "after": false,
+      "sourceBuildingID": "way/257208012",
+      "sourcePanelIndex": 179,
+      "role": "window",
+      "broadphaseTriangles": 4,
+      "crossings": [],
+      "otherStaticSurfaceCrossingCount": 0
+    },
+    {
+      "after": true,
+      "sourceBuildingID": "3dglobfp/13652",
+      "sourcePanelIndex": 4050,
+      "role": "door",
+      "broadphaseTriangles": 12,
+      "crossings": [
+        {
+          "material": "owner_hutong_ground",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            14,
+            41
+          ],
+          "kind": "crossing_length",
+          "measure": 1.5005573819400368,
+          "intersectionZIntervalM": [
+            1.0963876434242774,
+            1.136723309906483
+          ],
+          "panelBottomZ": 0.7099999785423279,
+          "preexistingContinuousPlinthEnvelope": false
+        },
+        {
+          "material": "owner_hutong_plinth",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            22,
+            7109
+          ],
+          "kind": "crossing_length",
+          "measure": 1.500015163424748,
+          "intersectionZIntervalM": [
+            0.9899999499320984,
+            0.9899999499320984
+          ],
+          "panelBottomZ": 0.7099999785423279,
+          "preexistingContinuousPlinthEnvelope": true
+        }
+      ],
+      "otherStaticSurfaceCrossingCount": 1
+    },
+    {
+      "after": true,
+      "sourceBuildingID": "3dglobfp/13652",
+      "sourcePanelIndex": 4052,
+      "role": "window",
+      "broadphaseTriangles": 6,
+      "crossings": [],
+      "otherStaticSurfaceCrossingCount": 0
+    },
+    {
+      "after": true,
+      "sourceBuildingID": "way/257208012",
+      "sourcePanelIndex": 176,
+      "role": "door",
+      "broadphaseTriangles": 8,
+      "crossings": [
+        {
+          "material": "owner_hutong_ground",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            14,
+            102
+          ],
+          "kind": "crossing_length",
+          "measure": 1.5000770290211942,
+          "intersectionZIntervalM": [
+            1.9541603844584088,
+            1.9661080364364545
+          ],
+          "panelBottomZ": 1.8899999856948853,
+          "preexistingContinuousPlinthEnvelope": false
+        },
+        {
+          "material": "owner_hutong_plinth",
+          "triangleToken": [
+            "peking_3_5_lod0.glb",
+            0,
+            22,
+            148
+          ],
+          "kind": "crossing_length",
+          "measure": 1.5000294485806818,
+          "intersectionZIntervalM": [
+            2.1700000762939453,
+            2.1700000762939453
+          ],
+          "panelBottomZ": 1.8899999856948853,
+          "preexistingContinuousPlinthEnvelope": true
+        }
+      ],
+      "otherStaticSurfaceCrossingCount": 1
+    },
+    {
+      "after": true,
+      "sourceBuildingID": "way/257208012",
+      "sourcePanelIndex": 179,
+      "role": "window",
+      "broadphaseTriangles": 4,
+      "crossings": [],
+      "otherStaticSurfaceCrossingCount": 0
+    }
+  ],
+  "newNonPlinthCrossingCount": 0,
+  "newCrossings": [],
+  "afterNonPlinthCrossingCount": 2,
+  "baselineNonPlinthCrossingCount": 2
+}

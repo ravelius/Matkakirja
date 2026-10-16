@@ -1,0 +1,902 @@
+{
+  "task": 342,
+  "files": [
+    {
+      "file": "peking_3_5_lod0.glb",
+      "baseSHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "candidateSHA256": "1bc8cdddcdbdcbe9b3725f1afc5471d67f88ba4793c9fd89295870710971fe95",
+      "positionRows": [
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 52,
+          "vertexIndex": 56,
+          "fileByteOffset": 630128,
+          "original12BytesHex": "3c1837c385ebf13f688208c3",
+          "new12BytesHex": "421437c385ebf13f680b06c3",
+          "originalFloatXYZ": [
+            -183.09466552734375,
+            1.8899999856948853,
+            -136.5093994140625
+          ],
+          "newFloatXYZ": [
+            -183.07913208007812,
+            1.8899999856948853,
+            -134.0445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 52,
+          "vertexIndex": 57,
+          "fileByteOffset": 630140,
+          "original12BytesHex": "d41537c385ebf13f680207c3",
+          "new12BytesHex": "da1137c385ebf13f688b04c3",
+          "originalFloatXYZ": [
+            -183.08526611328125,
+            1.8899999856948853,
+            -135.0093994140625
+          ],
+          "newFloatXYZ": [
+            -183.06973266601562,
+            1.8899999856948853,
+            -132.5445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 52,
+          "vertexIndex": 58,
+          "fileByteOffset": 630152,
+          "original12BytesHex": "d41537c3e17a8440680207c3",
+          "new12BytesHex": "da1137c3e17a8440688b04c3",
+          "originalFloatXYZ": [
+            -183.08526611328125,
+            4.139999866485596,
+            -135.0093994140625
+          ],
+          "newFloatXYZ": [
+            -183.06973266601562,
+            4.139999866485596,
+            -132.5445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 52,
+          "vertexIndex": 59,
+          "fileByteOffset": 630164,
+          "original12BytesHex": "3c1837c3e17a8440688208c3",
+          "new12BytesHex": "421437c3e17a8440680b06c3",
+          "originalFloatXYZ": [
+            -183.09466552734375,
+            4.139999866485596,
+            -136.5093994140625
+          ],
+          "newFloatXYZ": [
+            -183.07913208007812,
+            4.139999866485596,
+            -134.0445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 52,
+          "vertexIndex": 2840,
+          "fileByteOffset": 663536,
+          "original12BytesHex": "581e73c38fc2353f006491c2",
+          "new12BytesHex": "8c3773c38fc2353f207f95c2",
+          "originalFloatXYZ": [
+            -243.1185302734375,
+            0.7099999785423279,
+            -72.6953125
+          ],
+          "newFloatXYZ": [
+            -243.21697998046875,
+            0.7099999785423279,
+            -74.748291015625
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 52,
+          "vertexIndex": 2841,
+          "fileByteOffset": 663548,
+          "original12BytesHex": "f00b73c38fc2353fe0648ec2",
+          "new12BytesHex": "242573c38fc2353f008092c2",
+          "originalFloatXYZ": [
+            -243.046630859375,
+            0.7099999785423279,
+            -71.197021484375
+          ],
+          "newFloatXYZ": [
+            -243.14508056640625,
+            0.7099999785423279,
+            -73.25
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 52,
+          "vertexIndex": 2842,
+          "fileByteOffset": 663560,
+          "original12BytesHex": "f00b73c3a4703d40e0648ec2",
+          "new12BytesHex": "242573c3a4703d40008092c2",
+          "originalFloatXYZ": [
+            -243.046630859375,
+            2.9600000381469727,
+            -71.197021484375
+          ],
+          "newFloatXYZ": [
+            -243.14508056640625,
+            2.9600000381469727,
+            -73.25
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 52,
+          "vertexIndex": 2843,
+          "fileByteOffset": 663572,
+          "original12BytesHex": "581e73c3a4703d40006491c2",
+          "new12BytesHex": "8c3773c3a4703d40207f95c2",
+          "originalFloatXYZ": [
+            -243.1185302734375,
+            2.9600000381469727,
+            -72.6953125
+          ],
+          "newFloatXYZ": [
+            -243.21697998046875,
+            2.9600000381469727,
+            -74.748291015625
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 80,
+          "vertexIndex": 368,
+          "fileByteOffset": 1403824,
+          "original12BytesHex": "301437c3a4702d4098fe05c3",
+          "new12BytesHex": "2a1837c3a4702d40987508c3",
+          "originalFloatXYZ": [
+            -183.078857421875,
+            2.7100000381469727,
+            -133.9945068359375
+          ],
+          "newFloatXYZ": [
+            -183.09439086914062,
+            2.7100000381469727,
+            -136.4593505859375
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 80,
+          "vertexIndex": 369,
+          "fileByteOffset": 1403836,
+          "original12BytesHex": "f01137c3a4702d40389804c3",
+          "new12BytesHex": "ea1537c3a4702d40380f07c3",
+          "originalFloatXYZ": [
+            -183.070068359375,
+            2.7100000381469727,
+            -132.5946044921875
+          ],
+          "newFloatXYZ": [
+            -183.08560180664062,
+            2.7100000381469727,
+            -135.0594482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 80,
+          "vertexIndex": 370,
+          "fileByteOffset": 1403848,
+          "original12BytesHex": "f01137c3cdcc7c40389804c3",
+          "new12BytesHex": "ea1537c3cdcc7c40380f07c3",
+          "originalFloatXYZ": [
+            -183.070068359375,
+            3.950000047683716,
+            -132.5946044921875
+          ],
+          "newFloatXYZ": [
+            -183.08560180664062,
+            3.950000047683716,
+            -135.0594482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 80,
+          "vertexIndex": 371,
+          "fileByteOffset": 1403860,
+          "original12BytesHex": "301437c3cdcc7c4098fe05c3",
+          "new12BytesHex": "2a1837c3cdcc7c40987508c3",
+          "originalFloatXYZ": [
+            -183.078857421875,
+            3.950000047683716,
+            -133.9945068359375
+          ],
+          "newFloatXYZ": [
+            -183.09439086914062,
+            3.950000047683716,
+            -136.4593505859375
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 80,
+          "vertexIndex": 9116,
+          "fileByteOffset": 1508800,
+          "original12BytesHex": "ec3673c30ad7c33f906595c2",
+          "new12BytesHex": "b81d73c30ad7c33f704a91c2",
+          "originalFloatXYZ": [
+            -243.21453857421875,
+            1.5299999713897705,
+            -74.6983642578125
+          ],
+          "newFloatXYZ": [
+            -243.1160888671875,
+            1.5299999713897705,
+            -72.6453857421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 80,
+          "vertexIndex": 9117,
+          "fileByteOffset": 1508812,
+          "original12BytesHex": "c42573c30ad7c33f909992c2",
+          "new12BytesHex": "900c73c30ad7c33f707e8ec2",
+          "originalFloatXYZ": [
+            -243.14752197265625,
+            1.5299999713897705,
+            -73.2999267578125
+          ],
+          "newFloatXYZ": [
+            -243.049072265625,
+            1.5299999713897705,
+            -71.2469482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 80,
+          "vertexIndex": 9118,
+          "fileByteOffset": 1508824,
+          "original12BytesHex": "c42573c3ae473140909992c2",
+          "new12BytesHex": "900c73c3ae473140707e8ec2",
+          "originalFloatXYZ": [
+            -243.14752197265625,
+            2.7699999809265137,
+            -73.2999267578125
+          ],
+          "newFloatXYZ": [
+            -243.049072265625,
+            2.7699999809265137,
+            -71.2469482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 80,
+          "vertexIndex": 9119,
+          "fileByteOffset": 1508836,
+          "original12BytesHex": "ec3673c3ae473140906595c2",
+          "new12BytesHex": "b81d73c3ae473140704a91c2",
+          "originalFloatXYZ": [
+            -243.21453857421875,
+            2.7699999809265137,
+            -74.6983642578125
+          ],
+          "newFloatXYZ": [
+            -243.1160888671875,
+            2.7699999809265137,
+            -72.6453857421875
+          ]
+        }
+      ],
+      "onlySelectedXZBytesDiffer": true,
+      "changedBytes": 72
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "baseSHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "candidateSHA256": "f936ef250436bd18eb611060e563c0f1c7e506e72920375f6e7d5a845c60a636",
+      "positionRows": [
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 56,
+          "fileByteOffset": 424168,
+          "original12BytesHex": "3c1837c385ebf13f688208c3",
+          "new12BytesHex": "421437c385ebf13f680b06c3",
+          "originalFloatXYZ": [
+            -183.09466552734375,
+            1.8899999856948853,
+            -136.5093994140625
+          ],
+          "newFloatXYZ": [
+            -183.07913208007812,
+            1.8899999856948853,
+            -134.0445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 57,
+          "fileByteOffset": 424180,
+          "original12BytesHex": "d41537c385ebf13f680207c3",
+          "new12BytesHex": "da1137c385ebf13f688b04c3",
+          "originalFloatXYZ": [
+            -183.08526611328125,
+            1.8899999856948853,
+            -135.0093994140625
+          ],
+          "newFloatXYZ": [
+            -183.06973266601562,
+            1.8899999856948853,
+            -132.5445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 58,
+          "fileByteOffset": 424192,
+          "original12BytesHex": "d41537c3e17a8440680207c3",
+          "new12BytesHex": "da1137c3e17a8440688b04c3",
+          "originalFloatXYZ": [
+            -183.08526611328125,
+            4.139999866485596,
+            -135.0093994140625
+          ],
+          "newFloatXYZ": [
+            -183.06973266601562,
+            4.139999866485596,
+            -132.5445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 59,
+          "fileByteOffset": 424204,
+          "original12BytesHex": "3c1837c3e17a8440688208c3",
+          "new12BytesHex": "421437c3e17a8440680b06c3",
+          "originalFloatXYZ": [
+            -183.09466552734375,
+            4.139999866485596,
+            -136.5093994140625
+          ],
+          "newFloatXYZ": [
+            -183.07913208007812,
+            4.139999866485596,
+            -134.0445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2840,
+          "fileByteOffset": 457576,
+          "original12BytesHex": "581e73c38fc2353f006491c2",
+          "new12BytesHex": "8c3773c38fc2353f207f95c2",
+          "originalFloatXYZ": [
+            -243.1185302734375,
+            0.7099999785423279,
+            -72.6953125
+          ],
+          "newFloatXYZ": [
+            -243.21697998046875,
+            0.7099999785423279,
+            -74.748291015625
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2841,
+          "fileByteOffset": 457588,
+          "original12BytesHex": "f00b73c38fc2353fe0648ec2",
+          "new12BytesHex": "242573c38fc2353f008092c2",
+          "originalFloatXYZ": [
+            -243.046630859375,
+            0.7099999785423279,
+            -71.197021484375
+          ],
+          "newFloatXYZ": [
+            -243.14508056640625,
+            0.7099999785423279,
+            -73.25
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2842,
+          "fileByteOffset": 457600,
+          "original12BytesHex": "f00b73c3a4703d40e0648ec2",
+          "new12BytesHex": "242573c3a4703d40008092c2",
+          "originalFloatXYZ": [
+            -243.046630859375,
+            2.9600000381469727,
+            -71.197021484375
+          ],
+          "newFloatXYZ": [
+            -243.14508056640625,
+            2.9600000381469727,
+            -73.25
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2843,
+          "fileByteOffset": 457612,
+          "original12BytesHex": "581e73c3a4703d40006491c2",
+          "new12BytesHex": "8c3773c3a4703d40207f95c2",
+          "originalFloatXYZ": [
+            -243.1185302734375,
+            2.9600000381469727,
+            -72.6953125
+          ],
+          "newFloatXYZ": [
+            -243.21697998046875,
+            2.9600000381469727,
+            -74.748291015625
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 368,
+          "fileByteOffset": 1059764,
+          "original12BytesHex": "301437c3a4702d4098fe05c3",
+          "new12BytesHex": "2a1837c3a4702d40987508c3",
+          "originalFloatXYZ": [
+            -183.078857421875,
+            2.7100000381469727,
+            -133.9945068359375
+          ],
+          "newFloatXYZ": [
+            -183.09439086914062,
+            2.7100000381469727,
+            -136.4593505859375
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 369,
+          "fileByteOffset": 1059776,
+          "original12BytesHex": "f01137c3a4702d40389804c3",
+          "new12BytesHex": "ea1537c3a4702d40380f07c3",
+          "originalFloatXYZ": [
+            -183.070068359375,
+            2.7100000381469727,
+            -132.5946044921875
+          ],
+          "newFloatXYZ": [
+            -183.08560180664062,
+            2.7100000381469727,
+            -135.0594482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 370,
+          "fileByteOffset": 1059788,
+          "original12BytesHex": "f01137c3cdcc7c40389804c3",
+          "new12BytesHex": "ea1537c3cdcc7c40380f07c3",
+          "originalFloatXYZ": [
+            -183.070068359375,
+            3.950000047683716,
+            -132.5946044921875
+          ],
+          "newFloatXYZ": [
+            -183.08560180664062,
+            3.950000047683716,
+            -135.0594482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 371,
+          "fileByteOffset": 1059800,
+          "original12BytesHex": "301437c3cdcc7c4098fe05c3",
+          "new12BytesHex": "2a1837c3cdcc7c40987508c3",
+          "originalFloatXYZ": [
+            -183.078857421875,
+            3.950000047683716,
+            -133.9945068359375
+          ],
+          "newFloatXYZ": [
+            -183.09439086914062,
+            3.950000047683716,
+            -136.4593505859375
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9116,
+          "fileByteOffset": 1164740,
+          "original12BytesHex": "ec3673c30ad7c33f906595c2",
+          "new12BytesHex": "b81d73c30ad7c33f704a91c2",
+          "originalFloatXYZ": [
+            -243.21453857421875,
+            1.5299999713897705,
+            -74.6983642578125
+          ],
+          "newFloatXYZ": [
+            -243.1160888671875,
+            1.5299999713897705,
+            -72.6453857421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9117,
+          "fileByteOffset": 1164752,
+          "original12BytesHex": "c42573c30ad7c33f909992c2",
+          "new12BytesHex": "900c73c30ad7c33f707e8ec2",
+          "originalFloatXYZ": [
+            -243.14752197265625,
+            1.5299999713897705,
+            -73.2999267578125
+          ],
+          "newFloatXYZ": [
+            -243.049072265625,
+            1.5299999713897705,
+            -71.2469482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9118,
+          "fileByteOffset": 1164764,
+          "original12BytesHex": "c42573c3ae473140909992c2",
+          "new12BytesHex": "900c73c3ae473140707e8ec2",
+          "originalFloatXYZ": [
+            -243.14752197265625,
+            2.7699999809265137,
+            -73.2999267578125
+          ],
+          "newFloatXYZ": [
+            -243.049072265625,
+            2.7699999809265137,
+            -71.2469482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9119,
+          "fileByteOffset": 1164776,
+          "original12BytesHex": "ec3673c3ae473140906595c2",
+          "new12BytesHex": "b81d73c3ae473140704a91c2",
+          "originalFloatXYZ": [
+            -243.21453857421875,
+            2.7699999809265137,
+            -74.6983642578125
+          ],
+          "newFloatXYZ": [
+            -243.1160888671875,
+            2.7699999809265137,
+            -72.6453857421875
+          ]
+        }
+      ],
+      "onlySelectedXZBytesDiffer": true,
+      "changedBytes": 72
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "baseSHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "candidateSHA256": "3d23a9f78dd6a97a4b4793041202d067788eb655cd9d6c1737cac16c8654fe77",
+      "positionRows": [
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 56,
+          "fileByteOffset": 395852,
+          "original12BytesHex": "3c1837c385ebf13f688208c3",
+          "new12BytesHex": "421437c385ebf13f680b06c3",
+          "originalFloatXYZ": [
+            -183.09466552734375,
+            1.8899999856948853,
+            -136.5093994140625
+          ],
+          "newFloatXYZ": [
+            -183.07913208007812,
+            1.8899999856948853,
+            -134.0445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 57,
+          "fileByteOffset": 395864,
+          "original12BytesHex": "d41537c385ebf13f680207c3",
+          "new12BytesHex": "da1137c385ebf13f688b04c3",
+          "originalFloatXYZ": [
+            -183.08526611328125,
+            1.8899999856948853,
+            -135.0093994140625
+          ],
+          "newFloatXYZ": [
+            -183.06973266601562,
+            1.8899999856948853,
+            -132.5445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 58,
+          "fileByteOffset": 395876,
+          "original12BytesHex": "d41537c3e17a8440680207c3",
+          "new12BytesHex": "da1137c3e17a8440688b04c3",
+          "originalFloatXYZ": [
+            -183.08526611328125,
+            4.139999866485596,
+            -135.0093994140625
+          ],
+          "newFloatXYZ": [
+            -183.06973266601562,
+            4.139999866485596,
+            -132.5445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndex": 59,
+          "fileByteOffset": 395888,
+          "original12BytesHex": "3c1837c3e17a8440688208c3",
+          "new12BytesHex": "421437c3e17a8440680b06c3",
+          "originalFloatXYZ": [
+            -183.09466552734375,
+            4.139999866485596,
+            -136.5093994140625
+          ],
+          "newFloatXYZ": [
+            -183.07913208007812,
+            4.139999866485596,
+            -134.0445556640625
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2840,
+          "fileByteOffset": 429260,
+          "original12BytesHex": "581e73c38fc2353f006491c2",
+          "new12BytesHex": "8c3773c38fc2353f207f95c2",
+          "originalFloatXYZ": [
+            -243.1185302734375,
+            0.7099999785423279,
+            -72.6953125
+          ],
+          "newFloatXYZ": [
+            -243.21697998046875,
+            0.7099999785423279,
+            -74.748291015625
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2841,
+          "fileByteOffset": 429272,
+          "original12BytesHex": "f00b73c38fc2353fe0648ec2",
+          "new12BytesHex": "242573c38fc2353f008092c2",
+          "originalFloatXYZ": [
+            -243.046630859375,
+            0.7099999785423279,
+            -71.197021484375
+          ],
+          "newFloatXYZ": [
+            -243.14508056640625,
+            0.7099999785423279,
+            -73.25
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2842,
+          "fileByteOffset": 429284,
+          "original12BytesHex": "f00b73c3a4703d40e0648ec2",
+          "new12BytesHex": "242573c3a4703d40008092c2",
+          "originalFloatXYZ": [
+            -243.046630859375,
+            2.9600000381469727,
+            -71.197021484375
+          ],
+          "newFloatXYZ": [
+            -243.14508056640625,
+            2.9600000381469727,
+            -73.25
+          ]
+        },
+        {
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndex": 2843,
+          "fileByteOffset": 429296,
+          "original12BytesHex": "581e73c3a4703d40006491c2",
+          "new12BytesHex": "8c3773c3a4703d40207f95c2",
+          "originalFloatXYZ": [
+            -243.1185302734375,
+            2.9600000381469727,
+            -72.6953125
+          ],
+          "newFloatXYZ": [
+            -243.21697998046875,
+            2.9600000381469727,
+            -74.748291015625
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 368,
+          "fileByteOffset": 1007120,
+          "original12BytesHex": "301437c3a4702d4098fe05c3",
+          "new12BytesHex": "2a1837c3a4702d40987508c3",
+          "originalFloatXYZ": [
+            -183.078857421875,
+            2.7100000381469727,
+            -133.9945068359375
+          ],
+          "newFloatXYZ": [
+            -183.09439086914062,
+            2.7100000381469727,
+            -136.4593505859375
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 369,
+          "fileByteOffset": 1007132,
+          "original12BytesHex": "f01137c3a4702d40389804c3",
+          "new12BytesHex": "ea1537c3a4702d40380f07c3",
+          "originalFloatXYZ": [
+            -183.070068359375,
+            2.7100000381469727,
+            -132.5946044921875
+          ],
+          "newFloatXYZ": [
+            -183.08560180664062,
+            2.7100000381469727,
+            -135.0594482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 370,
+          "fileByteOffset": 1007144,
+          "original12BytesHex": "f01137c3cdcc7c40389804c3",
+          "new12BytesHex": "ea1537c3cdcc7c40380f07c3",
+          "originalFloatXYZ": [
+            -183.070068359375,
+            3.950000047683716,
+            -132.5946044921875
+          ],
+          "newFloatXYZ": [
+            -183.08560180664062,
+            3.950000047683716,
+            -135.0594482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndex": 371,
+          "fileByteOffset": 1007156,
+          "original12BytesHex": "301437c3cdcc7c4098fe05c3",
+          "new12BytesHex": "2a1837c3cdcc7c40987508c3",
+          "originalFloatXYZ": [
+            -183.078857421875,
+            3.950000047683716,
+            -133.9945068359375
+          ],
+          "newFloatXYZ": [
+            -183.09439086914062,
+            3.950000047683716,
+            -136.4593505859375
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9116,
+          "fileByteOffset": 1112096,
+          "original12BytesHex": "ec3673c30ad7c33f906595c2",
+          "new12BytesHex": "b81d73c30ad7c33f704a91c2",
+          "originalFloatXYZ": [
+            -243.21453857421875,
+            1.5299999713897705,
+            -74.6983642578125
+          ],
+          "newFloatXYZ": [
+            -243.1160888671875,
+            1.5299999713897705,
+            -72.6453857421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9117,
+          "fileByteOffset": 1112108,
+          "original12BytesHex": "c42573c30ad7c33f909992c2",
+          "new12BytesHex": "900c73c30ad7c33f707e8ec2",
+          "originalFloatXYZ": [
+            -243.14752197265625,
+            1.5299999713897705,
+            -73.2999267578125
+          ],
+          "newFloatXYZ": [
+            -243.049072265625,
+            1.5299999713897705,
+            -71.2469482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9118,
+          "fileByteOffset": 1112120,
+          "original12BytesHex": "c42573c3ae473140909992c2",
+          "new12BytesHex": "900c73c3ae473140707e8ec2",
+          "originalFloatXYZ": [
+            -243.14752197265625,
+            2.7699999809265137,
+            -73.2999267578125
+          ],
+          "newFloatXYZ": [
+            -243.049072265625,
+            2.7699999809265137,
+            -71.2469482421875
+          ]
+        },
+        {
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndex": 9119,
+          "fileByteOffset": 1112132,
+          "original12BytesHex": "ec3673c3ae473140906595c2",
+          "new12BytesHex": "b81d73c3ae473140704a91c2",
+          "originalFloatXYZ": [
+            -243.21453857421875,
+            2.7699999809265137,
+            -74.6983642578125
+          ],
+          "newFloatXYZ": [
+            -243.1160888671875,
+            2.7699999809265137,
+            -72.6453857421875
+          ]
+        }
+      ],
+      "onlySelectedXZBytesDiffer": true,
+      "changedBytes": 72
+    }
+  ],
+  "vertexRows": 48,
+  "maxNormalOffsetDriftM": 4.9318387027597055e-06,
+  "normalOffsetGateM": 2e-05,
+  "onlyParallelTwoWallCandidate": true,
+  "notANew72GLBPackage": true,
+  "rollback": "Restore exact original bytes from immutable V3; do not subtract rounded delta."
+}

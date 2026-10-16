@@ -1,0 +1,232 @@
+{
+  "task": 342,
+  "status": "SCOPED_SAVED_BYTES_GEOMETRY_AND_IMAGE_PINS_PASS",
+  "scope": "Two visible wall translation trial, not a game or full-quality pass",
+  "changedBuildings": 2,
+  "changedPanelsPerLOD": 4,
+  "changedExclusiveVerticesTotalAllLODs": 48,
+  "source51AndAll72BaseV3GLBsAndManifestUnchanged": true,
+  "originalTargetsCamerasAndAllEmbeddedImagesUVNormalsMaterialsUnchanged": true,
+  "all14ActualCandidateRenderPinsVerified": true,
+  "only3ChangedGLBsPresent": true,
+  "notANew72GLBCityPacket": true,
+  "files": [
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "1bc8cdddcdbdcbe9b3725f1afc5471d67f88ba4793c9fd89295870710971fe95",
+      "baseSHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "jsonDocumentUnchanged": true,
+      "panels": [
+        {
+          "sourceBuildingID": "way/257208012",
+          "sourcePanelIndex": 176,
+          "positionAccessor": 52,
+          "vertexIndices": [
+            56,
+            57,
+            58,
+            59
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 4.9318387027597055e-06
+        },
+        {
+          "sourceBuildingID": "3dglobfp/13652",
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 52,
+          "vertexIndices": [
+            2840,
+            2841,
+            2842,
+            2843
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 3.746875336219091e-06
+        },
+        {
+          "sourceBuildingID": "way/257208012",
+          "sourcePanelIndex": 179,
+          "positionAccessor": 80,
+          "vertexIndices": [
+            368,
+            369,
+            370,
+            371
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 4.9318387027597055e-06
+        },
+        {
+          "sourceBuildingID": "3dglobfp/13652",
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 80,
+          "vertexIndices": [
+            9116,
+            9117,
+            9118,
+            9119
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 3.746875336219091e-06
+        }
+      ]
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "sha256": "f936ef250436bd18eb611060e563c0f1c7e506e72920375f6e7d5a845c60a636",
+      "baseSHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "jsonDocumentUnchanged": true,
+      "panels": [
+        {
+          "sourceBuildingID": "way/257208012",
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndices": [
+            56,
+            57,
+            58,
+            59
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 4.9318387027597055e-06
+        },
+        {
+          "sourceBuildingID": "3dglobfp/13652",
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndices": [
+            2840,
+            2841,
+            2842,
+            2843
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 3.746875336219091e-06
+        },
+        {
+          "sourceBuildingID": "way/257208012",
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndices": [
+            368,
+            369,
+            370,
+            371
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 4.9318387027597055e-06
+        },
+        {
+          "sourceBuildingID": "3dglobfp/13652",
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndices": [
+            9116,
+            9117,
+            9118,
+            9119
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 3.746875336219091e-06
+        }
+      ]
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "sha256": "3d23a9f78dd6a97a4b4793041202d067788eb655cd9d6c1737cac16c8654fe77",
+      "baseSHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "jsonDocumentUnchanged": true,
+      "panels": [
+        {
+          "sourceBuildingID": "way/257208012",
+          "sourcePanelIndex": 176,
+          "positionAccessor": 48,
+          "vertexIndices": [
+            56,
+            57,
+            58,
+            59
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 4.9318387027597055e-06
+        },
+        {
+          "sourceBuildingID": "3dglobfp/13652",
+          "sourcePanelIndex": 4050,
+          "positionAccessor": 48,
+          "vertexIndices": [
+            2840,
+            2841,
+            2842,
+            2843
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 3.746875336219091e-06
+        },
+        {
+          "sourceBuildingID": "way/257208012",
+          "sourcePanelIndex": 179,
+          "positionAccessor": 76,
+          "vertexIndices": [
+            368,
+            369,
+            370,
+            371
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 4.93295175336278e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 4.9318387027597055e-06
+        },
+        {
+          "sourceBuildingID": "3dglobfp/13652",
+          "sourcePanelIndex": 4052,
+          "positionAccessor": 76,
+          "vertexIndices": [
+            9116,
+            9117,
+            9118,
+            9119
+          ],
+          "ownHeightBitsUnchanged": true,
+          "maxRequestedTranslationErrorM": 3.742574820067568e-06,
+          "maxPairDistanceChangeM": 0.0,
+          "maxNormalOffsetDriftM": 3.746875336219091e-06
+        }
+      ]
+    }
+  ],
+  "proofSHA256": {
+    "pilot-proof.json": "aa6acd680ec59d65033fbcae7c405152d2f40f08f21702f7a2708f035669d216",
+    "position-byte-ledger.json": "a12480fae099b9d54fa3bdc4f3e941d1ce7ef96d72108fc379599d3389d5f402",
+    "actual-static-surface-crossings-selected2.json": "eaf41d375634c9e5872961d3bf49b9157a1a66415f6b2739f9c7d8769cebaf27",
+    "renders/render-proof.json": "bbbaf9169c3f6b3e76ee40f53ac13f2afafced18e3a37c0957145f9d71de60f9"
+  },
+  "remainingIssues": [
+    "two pre-existing courtyard-ground penetrations are lower but remain",
+    "no demonstrated fixed-six-view visual benefit",
+    "Blender normal basis differs from game; runtime checks remain open",
+    "LOD1/2 inspected structurally; only LOD0 visualized",
+    "no native52 or full private v4 package created"
+  ]
+}
