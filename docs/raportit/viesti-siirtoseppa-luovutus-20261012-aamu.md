@@ -446,3 +446,4 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 02.1x: siirto 17 **a8196acdf** shakki (humina, kello; lautapelit) + pallokisan poltin. Lista 11. PT:ltä kysytty: Aanisoitin, Puhe, UI/Aanet
   (ydinäänet ryhmätasolla) ja PeliKomennot (testisini) pohjan apureiksi vai siirtoon? Jatkan isoja: ElavaKaupunki, RakettiAanet, DioraamaAanet,
   KaupunkiAanimaisemaSoitin, OpasSovitin, AjattelijatSovitin, PuluRealtime.
+- 02.1x: siirto 18 **5a7b25000** ElavaKaupunki (lokit, kerta-äänet, 2D-kerta; UusiLahde/OmaKerroin). Lista 10. Kärki 5a7b25000.
