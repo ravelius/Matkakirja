@@ -7,6 +7,16 @@ Julkaisija local_5cb16c00-….
 D=/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2. Jono: $D/JONO.md (loppu "07.2x (nollauksen jälkeen 5)" →). Loki: $D/testi196-uusi.log.
 Simut T7-sarjassa (simusarja.sh); iPad A26BC7D0 on minun luuppini. ÄLÄ aja `zsh -x`. Skriptien odotus: pgrep omilla skriptinimillä.
 
+## PT:n JÄRJESTYS (09.0x, sitova)
+1) e8e6994e0-käännös (salamat3-video.zsh, t196-s3) → salama- ja auringonnousuvideo PT:lle (kohta 2 alla).
+2) Codex-havainnekuvat 9 + s1-täydennys (postilaatikko 523d82d38 / eb0a03547): seuraa vastausta, kuvat PT:lle HETI, sitten tavoiteluuppi. Juna 196 odottaa.
+3) Rae / kipin sävytys odottaa omistajan korttia KK:ssa (ei toimia ennen PT:n viestiä).
+4) Louvre v6k20 (juna 197) – kohta 4.
+5) k5 → k6 (perseidit/hurrikaani/vanat) junaan 197.
+6) Raketin yöalusta näkyy päivänvalossa (aurinko −12°) → luuppiin (r1).
+Haarat: PK pelikoodari/raketti-kamera-196 af52dcc6e (Nousu.KameraV2), LR linnanrakentaja/raketti-alusta-196 (37cd85cdc, kaataa
+ValaanValoTestit – LR:llä; 7b99eafbd mukana luuppihaarassa). Telakointi on Linssisepällä (1bd655ee1).
+
 ## 0. ENSIMMÄISENÄ: ISS-HAVAINNELUUPPI (omistaja 08.10–08.12, JUNA 196 ODOTTAA)
 - Codex-tilaus lähetetty: postilaatikko (origin/claude/postilaatikko) 523d82d38 + täydennys s1 eb0a03547:
   posti/valoseppa-codex-iss-havainnekuvat-20261016.md + posti/valoseppa-iss-havainne9-pelikulmat/ (9 kuvaa: r1–r4 raketti, a1 nousu,
