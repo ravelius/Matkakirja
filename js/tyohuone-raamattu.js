@@ -2368,6 +2368,7 @@ export const RAAMATTU = {
           + 'linjaukset pysyvät Raamatussa).',
         'docs/moduulit/huipennus-teksti.md — huipennuksen kaanoniteksti (kaikki unohdetut aarteet löytyivät): otsikko, Foggin merkintä, napit ja isoisän luentalause; sitova natiivissa ja webissä.',
         'docs/moduulit/yhteiset-pohjat.md — yhteiset liike-, ääni- ja valopohjat: mitä kukin sisältää, omistava rooli, ensimmäinen käyttäjä, tarkistus ja siirtojärjestys.',
+        'docs/moduulit/aanipohja.md — natiivin äänipohja (AaniPohja + PohjaLahde): luonti, taso mikserin kautta, häivytykset, väistö kertojan alla, askeleet alustan mukaan, vahti ja siirtojärjestys.',
         'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: kohde tunnistetaan sen omasta Commons-kategoriasta, generointi ankkuroidaan 2–4 vapaasti lisensoituun nykyvalokuvaan, ja '
           + 'generointiportti estää kuvan syntymisen jos viitteitä on alle kaksi tai tunnistus jää epävarmaksi.',

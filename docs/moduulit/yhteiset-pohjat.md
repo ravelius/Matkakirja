@@ -11,7 +11,7 @@ Väliaikaisia paikallisia korjauksia ei tehdä.
 | Pohja | Sisältö | Omistaja | Ensimmäinen käyttäjä |
 |---|---|---|---|
 | LIIKE | Nimetyt liikkeet: kävely, liuku, suurennus, katseen käännös, kortin avaus ja sulku. Pehmeä alku ja loppu (ease in/out). Kesto ja käyrä tyylikirjassa Keston vieressä. Pohjana pallokameran IKamera.Aja + siirtoajon pehmennys. | Pelikoodari (pohja), Natiivi-UI (tyylikirjan osa, korttien avaus ja sulku) | Museon kävely ja auto zoom (ensin koko teos ja nimi, sitten liuku lähemmäs) |
-| ÄÄNI | Yhteinen mikseri: puhe, musiikki, tehosteet, maisema. Tasot, pehmeät häivytykset, musiikin vaimennus kertojan alle, askeleet alustan mukaan. Jaetun mikserin kertoimet (worker /mikseri/tasot) säilyvät. | Siirtoseppä (koodi), Äänittäjä (tasot ja kuuntelu) | Museo: askeleet, kertoja, sellot |
+| ÄÄNI | Yhteinen mikseri: puhe, musiikki, tehosteet, maisema. Tasot, pehmeät häivytykset, musiikin vaimennus kertojan alle, askeleet alustan mukaan. Jaetun mikserin kertoimet (worker /mikseri/tasot) säilyvät. | Siirtoseppä (koodi), Äänittäjä (tasot ja kuuntelu); suunnitelma docs/moduulit/aanipohja.md (koodimikseri säilyy, AudioMixer liitetään vain tarvittaessa) | Museo: askeleet, kertoja, sellot |
 | VALO JA KUVA | Yhteiset valaistus-, varjo-, sävykäsittely- ja materiaaliprofiilit, joista linssit ja pelit valitsevat. | Valoseppä | Valosepän suunnitelman mukaan |
 
 ## Välineet (Keskustelukanavan lisäys 16.10.2026; kaikki ilmaisia tai jo projektissa, ei ostoja)
