@@ -27,10 +27,12 @@ VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
   lopuksi kamera käännetään taksin kohti seuraavaa maalausta, aivan kuin henkilö kävelisi sivuttain. näin voidaan välttää liika kameran
   kääntely oman akselinsa ympäri mikä on ikävän näköistä pelaajan katsoa."
   PT:n tavoite: (1) SUORA LINJA: napautus ja kierroksen siirrot suoraan teoksen eteen kaiteiden, penkkien, jalustojen ja kävijöiden läpi;
-      reitinhaku vain seinien/oviaukkojen takia; Mona Lisan eteen suoraan edestä. (2) NOPEUS: saman salin siirto ~1–1,5 s pehmein
-      kiihdytyksin, ei veny matkan mukaan. (3) VÄHÄN KÄÄNTÖÄ: eteneminen sivuttain/vinosti, käännös menosuuntaan vain ~15°, lopuksi
+      reitinhaku vain seinien/oviaukkojen takia; Mona Lisan eteen suoraan edestä. (2) NOPEUS — KORJATTU (omistaja 23.17: "siirtymä voi olla pidempi
+      kuin sekuntti. nyt se kesti noin 10sek mikä oli liian pitkä. aika voi vaihdella etäisyyden mukaan ja normaali kävelynopeus riittää,
+      tärkeintä että päästään kulkemaan suorinta reittiä ja kameraa ei tarvitse käännellä niin aikaa säästyy paljon"): "1–1,5 s" KUMOTTU;
+      kesto = suora etäisyys normaalilla kävelynopeudella, pehmeät lähdöt ja pysähdykset. (3) VÄHÄN KÄÄNTÖÄ: eteneminen sivuttain/vinosti, käännös menosuuntaan vain ~15°, lopuksi
       käännös kohti teosta; isossa suunnanmuutoksessa (vastakkainen seinä, toinen sali) musta välähdys (NÄYTTELYN VALINTA OVENSUULTA,
-      < 250 ms) pyörityksen sijaan. (4) Automaattinen testi siirron kokonaiskäännölle ja kestolle. < 1 min video täysikokoisena PT:lle.
+      < 250 ms) pyörityksen sijaan. (4) Automaattinen testi siirron kokonaiskäännölle ja kestolle (kesto ≈ suora etäisyys / kävelynopeus, ei kiertoreittiä). < 1 min video täysikokoisena PT:lle.
 - TÄYDENNYS (omistaja 23.16 PT:n kautta; korvaa kohdan (3) "ensimmäinen napautus vain tuo ‹ ⏸ ›"): museon ‹ ⏸ › eivät enää piiloudu kokonaan
   vaan himmenevät. Himmeässä tilassa napautus mihin tahansa muualle kuin nappiin (lattia, teos, alareuna, tuplanapautus) vain tuo napit
   esiin; näkyvässä tilassa napautukset toimivat suunnitellusti ja nollaavat 5 s ajastimen; vedot/nipistykset aina suoraan. Toteutus
