@@ -23,3 +23,7 @@ Puutteet: Himmelskibetille ja Gyldne Tårnille ei löytynyt omaa ääntä (vain 
 - CC BY -nimeämiset: `nimeamiset-ehdotus.json` paketissa (YleArkisto 513923, klankbeeld 192092) → kytkijä lisää `data/aanilahteet.json`:iin kytkettäessä. Paketti `_valmiit/tivoli-v1-vienti-20261017/`, työ `_tyo/tivoli-aanet-20261017/tee.py`.
 
 - **manifest-v2.json** (PT/LR 17.10.): karusellin urut → 55.67318 / 12.56807 (Svingkarrusellen); `https://media.matkakirja.app/aanet/tivoli-v1/manifest-v2.json` korvaa manifest.json:n (ämpäri ei ylikirjoita).
+
+## Isoisän Tivoli-lähitarina (omistajan päätös KK klo 11.08)
+- 1 luenta, 170 merkkiä (tivoli-lahitarinat-20261017.json lahitarinat[0], tunnus `tivoli-lahitarina-jarvi`), isoisän ääni (Viisas Kertoja, eleven_v3, yksi otto), 13,98 s, −15,1 LUFS, huippu −1,3 dBFS. Ei kuunneltu.
+- Ämpäri: `https://media.matkakirja.app/aanet/tivoli-v1/tivoli-lahitarina-jarvi.mp3` (200) + `manifest-isoisa.json`. Ääniportti läpi, virheitä 0. Krediittejä ~41 (170 mrk × 0,24).
