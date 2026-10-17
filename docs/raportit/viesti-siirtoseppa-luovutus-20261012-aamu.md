@@ -495,3 +495,6 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
   raketti + radio + Cupola, seikkailu botilla; aani-alku/-loppu osioittain m-*). Ajo ajo-aanipohja-mittaus.zsh (odottaja käynnissä, loki
   lokit/siirtoseppa-aanipohja-mittaus.log) odottaa lippua simu-mittaus.nyt (= Julkaisijan SIMU NYT) → ennen (aanipohja-197-app 9db0288e9) +
   jälkeen (siirto-198-1-app 0bfc62868), ~40 min. Julkaisijalle simu + kesto kerrottu. Valmis → SIMU VAPAA, verho.py (100 ms RMS) osioittain → PT.
+- 03.41: ennen-ajo käynnissä (03.32, 95EEDB48). Jälkeen-käännös 4c0c26727 (0bfc62868) valmis; **VÄLI NUI:lle**: app siirretty
+  _tyo/siirtoseppa/siirto-198-1-app.vali → odottaja ilmoittaa "SIMU VAPAA VALISSA" → Julkaisijalle SIMU VAPAA VÄLISSÄ. Julkaisijan seuraava
+  SIMU NYT: mv .vali takaisin siirto-198-1-app + touch tyokalut/siirtoseppa-ajot/simu-mittaus2.nyt → jälkeen-ajo (~20 min).
