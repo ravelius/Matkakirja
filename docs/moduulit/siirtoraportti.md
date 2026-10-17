@@ -102,6 +102,9 @@ Tärkeysjärjestyksessä, ei aikajärjestyksessä. Jokaisesta kohdasta:
 mitä on tehty, mitä puuttuu, mistä jatketaan (tiedosto, haara,
 komento). Kirjaa myös **keskeytyneet agentit ja se, onko niiden työ
 committoitu** — worktreet ja scratchpadit katoavat resetissä.
+Kirjaa myös **avoimet Codex-viestit** (posti/codex-<rooli>-*, joihin ei ole vastattu
+tiedostolla <rooli>-codex-<aihe>-*): tiedosto, SHA ja mitä vastaukseen tarvitaan
+(omistajan kortti 17.10.2026 klo 07.25).
 
 ### 3.6 Odottaa omistajan päätöstä
 Erillinen osio, ei kesken-listan sekaan. Jokaisesta: kysymys,

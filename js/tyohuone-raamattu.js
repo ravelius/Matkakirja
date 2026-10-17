@@ -840,7 +840,10 @@ export const RAAMATTU = {
         'CODEXIN TAHTI: EI PITKIÄ TAUKOJA (omistaja 16.10.2026 klo 18.05: "Pitä huolehtia, että kodeksille ei tule liian pitkiä taukoja ja että se työskentely etenee. '
           + 'Haluan päästä kokeilemaan Pekingiä kipillä heti, kun se on valmis."): Codexilla on aina 2–3 hyväksyttyä seuraavaa tehtävää jonossa; jokainen Codex-toimitus arvioidaan alle 30 minuutissa '
           + 'vapaalla roolilla (ei odoteta kiireistä roolia); Postivahti tarkistaa kierroksellaan ledger.jsonin ja postilaatikon ja hälyttää PT:lle, jos toimitus on odottanut yli 30 min tai Codexilla '
-          + 'ei ole tehtävää. Jokainen arvioitu Peking-paketti viedään ämpäriin ilman junaa omistajan piilotettuun kippiin ja siitä rivi KK:lle. Loki PAATOKSET 16.10.2026 klo 18.05.',
+          + 'ei ole tehtävää. Jokainen arvioitu Peking-paketti viedään ämpäriin ilman junaa omistajan piilotettuun kippiin ja siitä rivi KK:lle. Loki PAATOKSET 16.10.2026 klo 18.05. '
+          + 'CODEXIN VAHTI (omistajan kortti 17.10.2026 klo 07.25 "Kyllä (Suositus)": "Vahti seuraa kaikkia Codexin viestejä. Jos viestiin ei ole vastattu 30 minuutissa, Päätoimittaja vastaa itse tai antaa sen toiselle. Tunnin jälkeen asia näkyy Asemataululla, kunnes siihen on vastattu."): '
+          + 'S/Matkakirja-posti/codex-odottaa.py katsoo kaikki posti/codex-<rooli>-* -viestit ja vastaukset posti/<rooli>-codex-*; 30 min → PT, 60 min → KK + Asemataulun VAATII TOIMIA, kunnes vastattu. '
+          + 'Vastaus tai kuittaus aina tiedostonimellä <rooli>-codex-<aihe>-…, jotta vahti tunnistaa sen; avoimet Codex-viestit kirjataan roolin luovutukseen.',
         'TYONJAKO FABLE / CODEX SELKEYTETTY (omistaja 15.9.2026 klo 19.10 UTC; kortin tarkennukset "Kaanon Fablella, tekstit Codexilla" ja "Ei, Opus-kuvaputki jatkaa"): 1) CODEX: pelin TEKSTIT '
           + 'kaanonin mukaan (kaupunki- ja pulutekstit, luennat, selitteet, iskulauseet), AANIGENEROINTI kokonaan (tyonkulut, aaniviat, ElevenLabs-ajot, R2-vienti, kuitit), ANIMAATIOT (pulu, '
           + 'minipulu, eleet, hahmot) ja GENEROIDUT KUVAT (havainnekuvat, hahmokuvat); 2) FABLE: TARINAKAANON (docs/tarina.md, Isoisan raamattu, Fogg-suku, Grimshaw; hyvaksyy tekstien ristiriidat '
