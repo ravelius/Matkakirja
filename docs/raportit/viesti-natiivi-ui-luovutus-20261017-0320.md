@@ -15,7 +15,7 @@ Lähetä PT:lle kunkin kuva-arkin polku (lokit/todistus-<erä>-<laite>-198-*/kuv
    (V3 pienennetty | V4 laajennettu: CC BY -tekijärivi kokonaisena laajennettuna) → PT. VASTA PT:n kuittauksesta SHA e9a2852b4
    (natiivi-ui/lasipohja-197, käännös 230844ff8) Natiivisepälle junaan 198. Sitten SIMU VAPAA Julkaisijalle.
 
-## JÄLJELLÄ KÄÄNNÖSJONOSSA (Julkaisija vapauttaa; ÄLÄ käynnistä uudelleen)
+## KÄÄNNETTY 03.27, SIMUT SS:n mittauksen ja muiden 198-simujen jälkeen (Julkaisijan SIMU NYT): skanneri 324a0ca76, cupola-ohita2 6f0b8bceb, kehys-kaaro 2b258669e
 | erä | sha | haara | simu |
 |---|---|---|---|
 | skanneri-viivat-198 (KS 158e90cd9 päällä) | 5c2cb709b | natiivi-ui/skanneri-viivat-198 | ajo-skanneri-viivat-198 iPhone (Kiova, Marseille, Bergen) |
