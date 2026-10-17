@@ -10,6 +10,9 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md.
   `cat /tmp/matkakirja-kaannospalvelu-2.lukko/kuka` alkaa "PITO julkaisija". Poista myös `julkaisija-tyokalut/l2-pito.lippu`.
 - Käynnistä levyvahti uudelleen Monitorina (`zsh julkaisija-tyokalut/levyvahti-l2.zsh`, 30 min, uudelleen aina) ja
   25 Gi -vahti taustalle (`zsh julkaisija-tyokalut/levy25-vahti.zsh`; PT: 25 Gi → uudet videoajot seis + rivi PT:lle).
+- **25 Gi -vahti on SEURAAJAN vastuulla** (PT 14.3x): kun vapaa ≤ 25 Gi → älä anna SIMU NYT:ia videoajoille + yksi rivi PT:lle.
+- PT 14.3x: kaikki lokit/todistus-* yli 4 h → T7 (`siirra-4h-t7.zsh`, jokaiseen kansioon SIIRRETTY.txt); ajo käynnistetty 14.3x,
+  tarkista tulos ja aja uudelleen tarvittaessa (ohittaa jo siirretyt).
 - Levy 27 Gi (14.28). Swap ~18,6/19 Gi. Kasvu tulee todistusajojen videoista (KS:n Kiina-videot 2–3 G/ajo).
 
 ## 1. SIMUJONO (yksi kerrallaan; SIMU NYT viestillä, aina "SIMU VAPAA minulle")
