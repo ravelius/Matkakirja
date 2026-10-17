@@ -548,3 +548,7 @@ KYLLÄ → uusi proto-worktree juna-199:n päälle, Paikat-muutos + Linssit-test
 - 19.5x: PT KYLLÄ 1+2, EI 3. **fa6e55bdc** (siirtoseppa/historia-paikat-200, juna-200 62853a8b8 päällä, wt/proto-siirtoseppa-historia200,
   peili natiivi-backup) → NS junaan 200. Testi OpasHistoriaTestit.JokainenPysahdysSaaOsion; Linssit 2011/2011. Viimeinen pysähdys ei saa osiota
   (ei lentoa), joten Harrison/Kansallisteatteri eivät soi (PT:lle kerrottu). JONO TYHJÄ. Kun fa6e55bdc rungossa: poista worktree historia200.
+- 20.4x: historia200-worktree poistettu (fa6e55bdc rungossa 1b9031235). Uusi erä (omistaja 20.32 PT:n kautta): **kaupunkimaisema-v3 18b3accd3**
+  (siirtoseppa/kaupunkimaisema-v3-200, wt/proto-siirtoseppa-maisema200) → NS junaan 200. Kolmas manifesti PalloAanimaisemaSoitin.Juuret,
+  omat silmukat PalloAanimaisema.OmaTaso (0,45, kaskaat 0,30). AUKI: ÄÄ:n tasovahvistus (kysytty 20.3x) → poikkeama = OmaTaso-rivi + testi.
+  Kun rungossa: poista worktree maisema200.
