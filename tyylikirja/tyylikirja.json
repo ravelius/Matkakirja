@@ -693,6 +693,17 @@
       "kuvapino": "uusi elementti (omistaja 4.10.2026 klo 15.2x): vasemmassa alareunassa ohjaamopaneelin yläpuolella 10 pt, pikkukuva 52 × 65 pt (4:5), 2 pt reuna tumma-muste, kulma pieni; uusin päällimmäisenä, kaksi vanhempaa alla vinossa (−7° ja 6°); napautus avaa uusimman isoon ikkunaan",
       "peitto": "paneeli 128 pt (puhelimella noin 15 % korkeudesta), leveys ruutu − 24, enintään 560 pt"
     },
+    "LAITEPÖYTÄ": {
+      "_selite": "laitteen ohjauspöytä näkymän alareunaan (omistaja 17.10.2026 klo 16.08 \"Valmis pöytä tyylikirjaan laitepöydän pohjaksi\", luonnos 4 hyväksytty klo 17.06, junaan klo 19.09; ensimmäinen käyttäjä ISS-ohjauspöytä, natiivi UI/Linssit/IssOhjaamo.Ohjauspoyta.cs ja Pohjat/iss-ohjaamo.uss mk-issohjaamo__poyta-*). Malli Cupolan robotiikkatyöasema.",
+      "malli": "YKSI matala pöytä yhtenä 3D-mallina (Blender, oma tuotanto CC0; proto tyokalut/ohjauspoyta/poyta.py → jalki.py): matta harmaa metallilevy 30° yläviistosta, osat samasta ortokamerasta @3x kuvina, jolloin ne asettuvat päällekkäin; laatikot pt:nä poyta.json:ssa",
+      "koko": "393 × 78 pt ruudun alareunassa (puhelimella noin 1/9 korkeudesta, ≤ 1/8: omistaja 16.24 \"Ei saa olla noin korkea\"), iPadilla sama koko pisteinä keskellä; kosketusalueet läpinäkyvinä koko pöydän korkuisina, ≥ nappi.osuma",
+      "ohjaimet": "yhdessä rivissä vasemmalta: vaakavipu (kahva liukuu, valaistu nimi yllä ja asteikon päät alla), tilakytkin kahdella puoliskolla, näyttö, sauva yläviistosta (viisi asentoa kuvina)",
+      "tilat": "kaksoismerkitys (omistaja 16.33): tilakytkin vaihtaa valaistut tekstit, ei pöytää; esim. ISS LENTO (vipu NOPEUS 1×–1000×, näyttö PAIKKA · KOHTEET ›) ja KAMERA (vipu ZOOM LAAJA–TELE, näyttö VIIMEISIN · KUVAT ›, kuvan pikkukuva ja paikka)",
+      "nimet": "kiinteät nimet (TILA, SUUNTA) mustina kaiverruksina levyssä, ruudulla ~11 pt (Blender 21 ≈ 0,6 × pt × 0,87), irti ohjainten reunoista",
+      "valaistut": "vaihtuvat tekstit koodissa vihreinä LCD-ikkunoissa (Kirjasin.Mittari, lcd-muste lcd-pinnalla), 13–20 pt; näytössä otsikkorivi + yksi rivi (näyttö ~44 pt)",
+      "valittu": "valittu puolisko painuu ja palaa sisältä: tila vihreänä (LENTO), toiminto kultana (KUVAA = kulta #eab84e, tumma teksti; omistaja 17.10 \"Keltaiseksi\"); himmeä kun toiminto ei ole mahdollinen (KEHITETÄÄN…)",
+      "peitto": "pöydän päällä ei koskaan Ohita esittely -nappia, Pulua, etsintä eikä kaupunkien nimiä (omistaja 16.08); ne pöydän yläpuolelle"
+    },
     "KEHYS-KÄÄRÖ": {
       "_selite": "Historialinssien kehys kartan ympärille käärönä (PT 17.10.2026 01.3x: KK:n päätös yön valtuutuksella; omistajan 01.25 'Kiinan dynastiat valmiiksi', KK:n referenssi 'kehys käärönä'). Ensimmäinen käyttäjä Kiinan dynastiat; muut historialinssit samalla pohjalla. Vain natiivi: UI/KehysKaaro.cs.",
       "teemat": ["paperi"],
@@ -704,6 +715,6 @@
       "sijainti": "turva-alueen sisällä; linssin ylärivi ja alanauha rajaavat (rullat ylärivin alle ja nauhan yläpuolelle, KehysKaaro.AsetaRajat; simu 17.10. 11.28: rullat jäivät niiden alle); rullat 3 pt paperia leveämmät; ei kosketuksia, linssin paneelit kehyksen päällä",
       "liike": "avaus kuin kääritty kartta: rullat keskeltä reunoille liike.liikkeet kortti-avaus (220 ms), sulku takaisin kortti-sulku (200 ms); alle liike.maksimi"
     },
-    "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)", "MUOTOKUVARIVI/kuva": "muotokuva ympyränä: henkilön kuva, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja 16.10.2026 klo 21.54)" }
+    "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)", "MUOTOKUVARIVI/kuva": "muotokuva ympyränä: henkilön kuva, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja 16.10.2026 klo 21.54)", "LAITEPÖYTÄ/sauva": "sauvan rengas ja nuppi pyöreinä: laitteen fyysinen osa, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja hyväksyi luonnoksen 4 17.10.2026 klo 17.06)" }
   }
 }
