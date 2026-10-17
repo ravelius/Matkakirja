@@ -415,3 +415,31 @@ Omistaja 17.10.2026 klo 21.59 Keskustelukanavan kortilla "Miten vasen peukalo oh
 ## JUOKSUPELIN PITUUS: EPAREALISTISEN PITKA JUOKSU (17.10.2026 klo 22.03)
 
 Omistaja 17.10.2026 klo 22.02 Keskustelukanavan kautta (sanatarkasti; "kk" = Kielletty kaupunki): "Kielletty kaupunki eli kk voi olla epärealistisen pitkä juoksu pelissä". KK:n tavoite: juoksu kestää niin kauan kuin pelaaja pysyy karkuteillä; rata kootaan palatsin toistuvista paloista (portti, piha, katoton talo, muurikäytävä) aina uudessa järjestyksessä; välillä vastaan tulee oikea tunnettu paikka nimineen (esim. Korkeimman sopusoinnun halli, kulmatorni).
+
+## JUOKSUPELIN OMENAT (17.10.2026 klo 22.08)
+
+Omistaja 17.10.2026 klo 22.08 Keskustelukanavan kautta (sanatarkasti): "Pelaaja voi kerätä myös esim. Omenoita ja heittää niillä vartijoita ja sotkea niiden juoksua. Mitä mieltä? Mikä peli sopisi tähän esikuvaksi?" Kortti "Kyllä, napautus vartijaan (Suositus)": omenoita kerätään hyppäämällä talojen hyllyiltä ja pihojen puista, ja taskuun mahtuu vain muutama; napautus vartijaan heittää omenan, ja osuma saa vartijan liukastumaan hetkeksi; reitinvalinta ja liuku pysyvät pääasiana. KK:n esikuvat: Subway Surfers (ohjaus ja takaa-ajo) ja Disneyn Aladdin 1993 (omenoiden heitto palatsin vartijoita pakoillessa). Codex j8–j10 täydennys 4.
+
+## JUOKSUPELIN SPURTTI (17.10.2026 klo 22.13)
+
+Omistaja 17.10.2026 klo 22.13 Keskustelukanavan kautta (sanatarkasti): "Sitten voi olla vauhti viittoja millä saa spurtti energiaa jota voi käyttää painamalla vasemman ohjaimen vieressä olevaa nappia. Mitä mieltä?" Kortti "Kyllä, spurtti suojaa (Suositus)": vauhtiviitat täyttävät spurttimittarin; vasemman ohjaimen vieressä oleva nappi käynnistää spurtin, jolloin Puyi syöksyy hetkeksi eteenpäin viitta liehuen eivätkä kiinniottajat saa sinä aikana otetta (esikuva Temple Run 2:n vauhtimittari).
+
+## TIVOLIN CODEX-KUVAT EI KAYTETA (17.10.2026 klo 22.13)
+
+Omistaja 17.10.2026 klo 22.13 kortilla (Tivoli A2 + A1 + C3, sanatarkasti): "Ei näytä aidoille, ei käytetä". Codexin Tivoli-havainnekuvia A1–A2 ja C1–C6 ei käytetä missään; esityksessä pysyvät oikeat CC-valokuvat. Jos ilta- tai järvinäkymä puuttuu, LR hakee Commonsista tuoreen CC-valokuvan ja näyttää sen KK:lle ennen käyttöä. Opetus kuvien tarkistajille: todellisen nykypaikan kuvan pitää näyttää aidolta valokuvalta; ylikylläiset värit, liika valomäärä ja liian täydelliset istutukset paljastavat tekoälykuvan.
+
+## JUOKSUPELIN TUOTANTOPUTKI: HARMAA VERSIO ENSIN (17.10.2026 klo 22.18)
+
+Omistaja 17.10.2026 klo 22.17 kysyi (sanatarkasti) "Miten juoksu peli kannattaa tehdä ja kehittää? Millainen tuotantoputki?" ja valitsi kortilla "Kyllä, harmaa versio ensin (Suositus)": aloitetaan NYT, Codexin Pekingiä ei odoteta. KK:n tuotantoputki: 1) PT + PK pelikirja; 2) PK harmaa pelattava versio Kehittäjä › Kokeet › Juoksupeli + alle minuutin video KK:lle; 3) omistaja pelaa, hionta palautteella; 4) LR + VS palatsin palasarja yhteisellä pohjalla j8–j10-suuntaan; 5) hahmot ja liikkeet; 6) NUI pelinäyttö UI-pohjilla; 7) SS + Äänittäjä äänet, kertoja, faktakortit, generointiluvat kortilla; 8) Kielletyn kaupungin Pelaa-valinta Olavinlinnan mallin mukaan omistajan hyväksynnällä.
+
+## TIVOLIN ILTAKUVA (17.10.2026 klo 22.18)
+
+Omistaja 17.10.2026 klo 22.17 kortilla "Kyllä, pagodi ja järvi (Suositus)": Leif Jørgensenin "Tivoli at night - Det japanske tårn 02" (CC BY-SA 4.0, 2015) Tivolin esitykseen junaan 201 (200 lukittu); varakuva ei.
+
+## JUOKSUPELIN KATTOREITTI (17.10.2026 klo 22.19)
+
+Omistaja 17.10.2026 klo 22.18 Keskustelukanavan kautta (sanatarkasti): "Myös muurien reunojen ja kattojen päällä voisi juosta mutta siellä pysyminen edellyttäisi tarkkoja oikea aikaisia hyppyjä". KK:n tavoite: ylhäällä riskireitti; sinne pääsee portaista tai hypyllä muurin kulmasta; enemmän aarteita ja omenoita, vartijat eivät yllä; kattojen raot ylitetään ajoitetulla hypyllä (pyyhkäisy ylös); huti ei päätä peliä, Puyi putoaa pihalle lähemmäs kiinniottajia. Harmaaseen versioon yksi kattoreitti.
+
+## JUOKSUPELIN RUUDUKKO JA 90 ASTEEN KAANNOKSET (17.10.2026 klo 22.33)
+
+Omistaja 17.10.2026 klo 22.32 Keskustelukanavan kautta (sanatarkasti): "Juoksussa kääntyminen on aina 90 astetta jolloin koko peli kääntyy mukana. Pelaaja voi siis kääntyä juoksemaan myös takaisinpäin". KK:n tavoite: suorakulmainen ruudukko pihoja ja käytäviä; risteyksessä pyyhkäisy vasen/oikea kääntää 90 astetta, suoralla vaihtaa väylää; kamera kääntyy nopeasti ja pehmeästi Puyin taakse; takaisin kääntymällä kahdesti tai kiertämällä talon; kuljetut korttelit säilyvät hetken, uusia syntyy eteen; perässä juoksija seuraa ruudukossa, talon kiertäminen harhautuksena. Esikuvat Temple Run ja Pac-Man.
