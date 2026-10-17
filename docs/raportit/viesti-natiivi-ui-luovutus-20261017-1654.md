@@ -32,6 +32,11 @@ Ajot: /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ (ketjut-20261016/y
 - Apit _tyo/natiivi-ui: yhteis-pariisi-200d-app (8640682c0) ja -200f-app (cd9526ef1); c ja e poistettu. Yhteis-pariisi-200- ja -200b-app ovat tyhjiä kansioita.
 
 ## ENSIN
+0. **LUONNOS 4 (omistaja 16.56 luonnoksesta 3, sanatarkasti):** "Ota seuraa ja kohteet sekä kuvaa napit pois ja Suurenna näyttöä ja joystickia.
+   Kamera nappi muuttuu kuvaa napiksi kun kamera aktivoitu. Tekstit eivät tod näk näy riittävästi, niitä pitää suurentaa jotenkin"
+   PT: pöytä yhtä matala; jäljelle vipu (NOPEUS ↔ ZOOM), TILA LENTO | KAMERA (kameratilassa KAMERA-puolisko = KUVAA-laukaisin), iso näyttö
+   ja iso sauva vapautuneeseen tilaan; näytön napautus avaa lentotilassa kohdeluettelon, kameratilassa kuvat; tekstit ≥ ~11 pt iPhonella
+   (luonnoksessa 3 4–7 pt). Tee luonnos4.py luonnos3.py:stä → kooste iPhone + iPad → PT. Ei rakentamista.
 1. Odota PT:n viestiä luonnoksesta 3. Muutospyynnöt → luonnos3.py:n kopio luonnos4.py, render, kooste (ks. LUE.md:t; koostekoodi: vanha pöytä
    pois skaalaamalla näkymää ylhäältä vanhan pöydän yläreunaan (iPhone 2060 px, iPad 1990 px), pöytä alas keskelle).
 2. Hyväksynnän jälkeen rakentaminen: uusi IssOhjaamo-pöytä (kuvat Blenderistä: levy + osat tiloittain kuten ohjaamo.json, valaistut tekstit koodissa
