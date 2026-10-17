@@ -503,3 +503,5 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
   (puhe −20…−22 dB molemmissa; mediaanin +3,6 dB = puhetaukojen ajoitus; maisema p20 +1,4 dB). Museo ei vertailukelpoinen (jälkeen-ajossa
   "Siirry näyttelyyn" puuttui), seikkailu ei käynnistynyt kummassakaan ("Pelaa" puuttui). → PT:n kuittaus → 0bfc62868 NS:lle junaan 198.
   .vali-app palautettu. Skenaarion opit: museon lista ei aina tarjoa "Siirry näyttelyyn"; seikkailu tarvitsee oman ajon puhtaasta alusta.
+- 04.47: PT kuittasi mittauksen, lähetti 0bfc62868 NS:lle junaan 198; seikkailuajoa ei tarvita. **JONO TYHJÄ.** Auki NS:llä: c25ed3049 (v6) ja
+  0bfc62868 junaan 198 → kun rungossa, poista worktreet wt/proto-siirtoseppa-luennat6 ja wt/proto-siirtoseppa-aanipohja sekä _tyo/siirtoseppa/aanipohja-197-app.
