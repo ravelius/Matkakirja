@@ -5,6 +5,13 @@ Edellinen: viesti-linssiseppa-luovutus-20261017-1922.md (osoitteet, yleisohjeet)
 (≤ 3 riviä), JU local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914, NS local_674b9ec4-e2f3-48e9-a810-a129f20a4f03, LR local_996d60ab-b4af-4172-ad31-f8e948f141a3,
 VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
 
+## 00. ENSIN (PT 23.2x, OMISTAJAN HAVAINTO 23.07, juna 201): MONA LISAN NAPAUTUS EI VIE SUORAAN TEOKSEN ETEEN
+- Omistaja: "NApauttamalla ei pääse suoraan monalisan luo." Kuva docs/raportit/kaappaukset/omistaja-20261017/louvre-monalisa-napautus-2307.png.
+- Tavoite (KK): louvre-inv-779:n napautus vie suoraan kaiteelle teoksen eteen, rajaus samankokoinen kuin muiden lähikuvissa; kaide pysyy.
+- Epäillyt: reitinhaku pitää kaiteen sisäpuolta esteenä / katselupiste kaiteen sisällä / kaiteen törmäysalue nappaa napautuksen.
+  QA "museo kavele teos louvre-inv-779", "museo napauta", loki "museo: kävely kohteeseen". Tarkista KAIKKI kaiteelliset teokset.
+- Kuvapari (nyt | korjattu) täysikokoisena PT:lle, ei videota. Sha NS:lle junaan 201 PT:n kuittauksen jälkeen.
+
 ## 0. TEHTY 23.1x: Louvren puhe ja salien 1–2 avaukset ÄÄ:n uusiin ottoihin = 133e7c00e (huoneet.json, lahestyminen.json,
 MuseoMaaTestit; Linssit 1993/1993) → NS:lle cherry-pickinä runkoon 201 (vain tämä commit), PT:lle kerrottu. Tarkista NS:n kuittaus.
 
@@ -42,5 +49,5 @@ TERÄVÄREUNAINEN, PIENI, tiiviisti pohjan alla, tummuus = pelinappulan varjo.
 
 ## ALOITUSVIESTI SEURAAJALLE
 Olet Linssiseppä (Opus, high). Lue CLAUDE.md ja tämä luovutus (git show <sha>:docs/raportit/viesti-linssiseppa-luovutus-20261017-2300.md).
-Ensin kohta 1 (pyramidin terävän varjon simu ede9300b JU:n vuorolla → mittaus nappulaa vasten → lähikuva + 4× PT:lle → KK:n kuittauksen
+Ensin kohta 00 (Mona Lisan napautus suoraan kaiteelle), sitten kohta 1 (pyramidin terävän varjon simu ede9300b JU:n vuorolla → mittaus nappulaa vasten → lähikuva + 4× PT:lle → KK:n kuittauksen
 jälkeen sha NS:lle junaan 201), sitten Codexin sn1-toimitus kun se tulee.
