@@ -460,3 +460,7 @@ kokonaiskäännölle ja kestolle. Museo ensin (Linssiseppä, juna 201), muiden l
 ## KAMERA-AJOT: SIIRRON KESTO KAVELYNOPEUDELLA (TARKENNUS) (17.10.2026 klo 23.18)
 
 Omistaja 17.10.2026 klo 23.17 (sanatarkasti): "siirtymä voi olla pidempi kuin sekuntti. nyt se kesti noin 10sek mikä oli liian pitkä. aika voi vaihdella etäisyyden mukaan ja normaali kävelynopeus riittää, tärkeintä että päästään kulkemaan suorinta reittiä ja kameraa ei tarvitse käännellä niin aikaa säästyy paljon". Kumoaa 23.15-kirjauksen "~1–1,5 s": kesto = etäisyys normaalilla kävelynopeudella suorinta reittiä, pehmeät lähdöt ja pysähdykset.
+
+## CLAUDE-API: UUSI ORGANISAATIO KAYTOSSA, VANHA AVAIN POIS (17.10.2026 klo 23.49)
+
+Omistaja 17.10.2026 klo 23.46 ja 23.48 (sanatarkasti): "onko näitä avaimia nyt käytössä? haluaisin siirtää API käytön toiselle tilille" ja "tämä olisi se mitä jatkossa käytettäisiin" (Console, org Visuaaliviestinnän Inst., avain Matkakirja, luotu 11.10.). KK:n selvitys: GitHub-salaisuus ANTHROPIC_API_KEY päivitettiin uuteen avaimeen jo 11.10., ja pollo-julkaisu.yml vie sen workeriin joka ajossa (viimeksi 17.10., vihreä). Omistaja poistaa vanhan KLIK-organisaation matkakirja-avaimen, minkä jälkeen Julkaisija ajaa savuke-pollo.yml. Macin avaintiedoston ANTHROPIC_API_KEY on vanha eikä mikään työkalu käytä sitä. ANTHROPIC_ADMIN_KEY ennallaan.
