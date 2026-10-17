@@ -32,6 +32,11 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
 - **LISÄYS 01.05: v5 TARKISTETTU.** Video yhdistetty, ruudut `ruudut-v5/r01–r08.png`, pätkä `patka-omistajalle.mp4` (12–38 s) → PT 01.05.
   Ok: ei mustia reikiä, Wei/Wu eri värit, erillään iskussa, X + harmaa aaltorengas, kartta tasaiseksi. Puute: kummut pehmeitä läikkiä,
   ei selviä kukkuloita (matala kontrasti). ODOTTAA PT:n päätöstä: v6 (kontrasti/varjostus) vai pätkä omistajalle sellaisenaan.
+- **LISÄYS 01.2x: PT päätti v6** (kummut selviksi kukkuloiksi, kontrasti + varjo). v6 = 12193539c (rinnevalo suhteessa tasaiseen maahan
+  varjostimessa _Ylos/_Vahvuus 1,6, valo 30°, kumpu ×0,9, heittovarjo valosta poispäin), tarkista.sh 0, peili pushattu.
+  KÄÄNNÖSPYYNTÖ JU:lle → `_tyo/karttaseppa/kiina-taistelu-250-v6-app`; simu JU:n vuorolla junan 201 kuvien jälkeen.
+  SIMU NYT → taustalle `zsh …/kiina-koko-linssi/odota-taistelu-250-v6.zsh > …/odota-taistelu-250-v6.out` → SIMU VAPAA → yhdista-video → ruudut → patka → PT.
+  Tarkista v6:ssa: valoisa rinne vasen ylä, varjorinne + heittovarjo oikea ala (kukkula, ei kuoppa/rengas), Wu erottuu Wun alueesta.
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
