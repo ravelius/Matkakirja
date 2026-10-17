@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "running_dollhouse_three",
+  "independentOfImageProducer": true,
+  "reviewedAtUTC": "2026-10-17T18:31:19.211791+00:00",
+  "sourceReadInFull": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-tunnelma-20261017/sources/linnanrakentaja-codex-tivoli-era-a-20261017.md",
+  "sourceSHA256": "8c9467f887bd10bb8582b299e186362de1c979cd1836f6d1f3f9faadddae677e",
+  "images": {
+    "a1": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-tunnelma-20261017/images/tivoli-Q110289-a1-paiva.png",
+      "deliverySHA256": "02dd50f87d53c63a6b208517bdc48b03e075bdbeabb59d354ccac07985dc0ed4",
+      "nativeSHA256": "f9bf054d46885514d11c4545135895b417233cf111f0c7e675da69aaec7692d7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "originalViewPersonallyInspected": true,
+      "metadataAdditionPixelIdentical": true,
+      "aiDescriptionMetadataPresent": true,
+      "captionEndsHavainnekuva": true
+    },
+    "a2": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-tunnelma-20261017/images/tivoli-Q110289-a2-ilta.png",
+      "deliverySHA256": "51428e97a9d9961c48ed452a4db9af57649617880c3c32219d4f33c5a6f5d8be",
+      "nativeSHA256": "bf0f9de60dd8a5ba06b4a71d1f7f31362f9d0d4509e300dd7d2c50d428987ec7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "originalViewPersonallyInspected": true,
+      "metadataAdditionPixelIdentical": true,
+      "aiDescriptionMetadataPresent": true,
+      "captionEndsHavainnekuva": true
+    }
+  },
+  "visualFinding": "Two photographic-looking mood candidates; broadly matching day/blue-hour framing with seven approximate landmark cues; limited visualization QA, not survey validation",
+  "landmarkCuesCount": 7,
+  "approximateLayoutMatchesBrief": true,
+  "exactGeographicLayoutVerified": false,
+  "camera40mCoordinatesHeadingFOVVerified": false,
+  "sameCameraVisualMatch": "Very close framing and principal landmark silhouettes; not pixel-identical scene geometry",
+  "deviationsAndLimits": [
+    "Minor boats, foliage and small-detail differences between versions",
+    "Some bright outline bulbs visually merge into short luminous lines",
+    "Pagoda colored-bulb variety and exact lamp count unverified",
+    "Precise building identity, dimensions, positions and ride mechanics not validated from these generated images"
+  ],
+  "forbiddenElementsObserved": {
+    "readableText": false,
+    "logos": false,
+    "recognizableFaces": false,
+    "modernSkyscrapers": false,
+    "dragonTheming": false,
+    "visibleProtectedTheatreCurtain": false
+  },
+  "naturalSurfaces": "Predominantly camera-like foliage/water/material texture; no obvious pervasive engraved repeating surface artifact observed",
+  "qaScope": "Suitable for recipient/owner atmosphere assessment with stated limits; no formal owner approval",
+  "ownerAccepted": false,
+  "newBatchBAuthorizedByThisReview": false,
+  "gameIntegrated": false,
+  "published": false,
+  "imagesModified": false,
+  "gitLedgerMailModified": false
+}

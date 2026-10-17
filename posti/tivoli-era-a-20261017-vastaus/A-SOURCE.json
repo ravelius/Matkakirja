@@ -1,0 +1,30 @@
+{
+  "readSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+  "sourceFiles": [
+    {
+      "path": "posti/linnanrakentaja-codex-tivoli-era-a-20261017.md",
+      "blob": "b785a27e0fa14d8e7b67b19747dc788753cc4e3a",
+      "sha256": "8c9467f887bd10bb8582b299e186362de1c979cd1836f6d1f3f9faadddae677e",
+      "bytes": 4383,
+      "readInFull": true
+    },
+    {
+      "path": "posti/linnanrakentaja-codex-tivoli-era-a-muistutus-20261017.md",
+      "blob": "fdef780d86fe636166a68d78e26c758332761761",
+      "sha256": "b08de129c345fea27c958202bcbaaf63d54cebda8c60a6d6f9c8961845225e52",
+      "bytes": 1040,
+      "readInFull": true
+    },
+    {
+      "path": "posti/linnanrakentaja-codex-tivoli-era-c-20261017.md",
+      "blob": "926070157662b3b9161d7698261607146e312a76",
+      "sha256": "274705c74b1509330ce5c3e1340a705c947dd82d0dfedaf63f109ad75a2ade97",
+      "bytes": 4671,
+      "readInFull": true
+    }
+  ],
+  "originalOrderCommit": "58b6551df7",
+  "priorityReminder": "d77eb4d119",
+  "batchCSeparateSixCalls": true,
+  "batchBAndGLBCancelled": true
+}

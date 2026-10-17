@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "name": "A-GENERATION.json",
+      "bytes": 12203,
+      "sha256": "2a64eef32add2992e711d3792b6737bc74fe6c5d83d595349730ab186984baba"
+    },
+    {
+      "name": "A-INDEPENDENT-QA-FI.md",
+      "bytes": 1608,
+      "sha256": "740a73c6ab39bc2b3c8203ad6eab23719210d2a9cef00003cad04479f1c15a4f"
+    },
+    {
+      "name": "A-INDEPENDENT-QA.json",
+      "bytes": 3074,
+      "sha256": "922300a4c8823a5e942c02bf95ed2a4bf1b20a46d6ac9631e7f9a7aa36866d0c"
+    },
+    {
+      "name": "A-PROMPTS.json",
+      "bytes": 9580,
+      "sha256": "56e4615b65aa54bc869dabdd74b9dede7ae3a4b04c8702f0c2dc9712fad78a07"
+    },
+    {
+      "name": "A-QA-FI.md",
+      "bytes": 1894,
+      "sha256": "7026c2f27ae2d7c4847a30ea3a256754cbafe1b82e0914e4e653287a13eae44e"
+    },
+    {
+      "name": "A-REFERENCE-LICENSES.json",
+      "bytes": 25262,
+      "sha256": "5e314aec383c0f6a957b0820dc50f522b13b0cc2fce92b8cba98156cb2572622"
+    },
+    {
+      "name": "A-SOURCE.json",
+      "bytes": 1053,
+      "sha256": "5f977ee026e4a3b7fb38ce86ed4778099e1318d5a8217a6b97af18aa1e12b82b"
+    },
+    {
+      "name": "tivoli-Q110289-a1-paiva.png",
+      "bytes": 3182407,
+      "sha256": "02dd50f87d53c63a6b208517bdc48b03e075bdbeabb59d354ccac07985dc0ed4"
+    },
+    {
+      "name": "tivoli-Q110289-a2-ilta.png",
+      "bytes": 3018241,
+      "sha256": "51428e97a9d9961c48ed452a4db9af57649617880c3c32219d4f33c5a6f5d8be"
+    }
+  ]
+}

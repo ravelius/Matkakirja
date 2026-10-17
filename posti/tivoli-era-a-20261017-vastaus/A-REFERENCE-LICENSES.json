@@ -1,0 +1,303 @@
+[
+  {
+    "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-cc-20261017/references/c1/reference.jpg",
+    "referenceSHA256": "2d0a2555c54d636606a5c66b2785ca4b90143f8724461f31f95c63b3ba576822",
+    "personallyViewed": true,
+    "provenance": {
+      "id": "c1",
+      "expectedAuthor": "kallerna",
+      "expectedLicense": "CC BY-SA 4.0",
+      "filename": "tivoli-Q110289-c1-jarvi.png",
+      "commonsTitle": "File:Tivoli_Gardens_Copenhagen.jpg",
+      "checkedAt": "2026-10-17T18:22:38.554816+00:00",
+      "media": {
+        "url": "https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/00c32f5e4564d097.jpg",
+        "finalURL": "https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/00c32f5e4564d097.jpg",
+        "status": 200,
+        "headers": {
+          "Date": "Sat, 17 Oct 2026 18:22:38 GMT",
+          "Content-Type": "image/jpeg",
+          "Content-Length": "590682",
+          "Connection": "close",
+          "Cache-Control": "public, max-age=31536000, immutable",
+          "ETag": "\"2241f98630a43e553ba260fc6ed17dd6\"",
+          "Last-Modified": "Sat, 17 Oct 2026 11:16:11 GMT",
+          "Accept-Ranges": "bytes",
+          "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "Server": "cloudflare",
+          "cf-cache-status": "MISS",
+          "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FGEwLA%2B%2BtQFZSk7vhvwMsyMYrZY28tOfGtqk0PwiswAacEGg%2BbtyanKmYlpxGI1UywIpN0ufZfQNoj4eHenCo3W3dRgVm%2FfFI53VQ8aNXEafT5IuwFiZ0ZQ%2FNeUL%2BEg51ENOaLRMeg%3D%3D\"}]}",
+          "CF-RAY": "a4c154738fc05007-TLL"
+        },
+        "bytes": 590682,
+        "sha256": "2d0a2555c54d636606a5c66b2785ca4b90143f8724461f31f95c63b3ba576822"
+      },
+      "api": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&titles=File%3ATivoli_Gardens_Copenhagen.jpg",
+        "finalURL": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&titles=File%3ATivoli_Gardens_Copenhagen.jpg",
+        "status": 200,
+        "headers": {
+          "date": "Sat, 17 Oct 2026 18:22:39 GMT",
+          "server": "mw-api-ext.eqiad.main-5564d958dd-hbfvp",
+          "x-content-type-options": "nosniff",
+          "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+          "x-frame-options": "DENY",
+          "content-disposition": "inline; filename=api-result.json",
+          "expires": "Sat, 17 Oct 2026 19:22:39 GMT",
+          "cache-control": "max-age=3600, s-maxage=3600, public",
+          "content-type": "application/json; charset=utf-8",
+          "age": "0",
+          "accept-ranges": "bytes",
+          "x-cache": "cp3066 miss, cp3066 miss",
+          "x-cache-status": "miss",
+          "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+          "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+          "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+          "set-cookie": "WMF-Last-Access=17-Oct-2026;Path=/;HttpOnly;secure;Expires=Wed, 18 Nov 2026 12:00:00 GMT",
+          "x-client-ip": "176.72.168.224",
+          "vary": "Accept-Encoding,X-Subdomain,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization,User-Agent",
+          "content-length": "2417",
+          "x-request-id": "24a98ede-8179-4fbb-996c-ef1f4e2db663",
+          "x-analytics": "",
+          "server-timing": "cache;desc=\"miss\", host;desc=\"cp3066\",co_id;desc=\"71399646\"",
+          "connection": "close"
+        },
+        "bytes": 2417,
+        "sha256": "074f65b98ca0254fb05e335ae1936fcabebf3873321c48b047425507029cb2fb"
+      },
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_Copenhagen.jpg",
+      "page": {
+        "url": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_Copenhagen.jpg",
+        "finalURL": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_Copenhagen.jpg",
+        "status": 200,
+        "headers": {
+          "date": "Sat, 17 Oct 2026 09:59:33 GMT",
+          "server": "mw-web.eqiad.main-7df87d9897-x8z5s",
+          "x-content-type-options": "nosniff",
+          "content-language": "en",
+          "accept-ch": "",
+          "reporting-endpoints": "csp-report-to-endpoint='/w/api.php?action=cspreport&format=json';",
+          "content-security-policy": "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org 'unsafe-inline' auth.wikimedia.org; default-src 'self' data: blob: https://upload.wikimedia.org https://thumb.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org https://maps.wikimedia.org en.wikipedia.org en.wikibooks.org en.wikinews.org en.wikiquote.org en.wikisource.org en.wikiversity.org en.wikivoyage.org en.wiktionary.org www.mediawiki.org foundation.wikimedia.org incubator.wikimedia.org species.wikimedia.org wikimania.wikimedia.org www.wikidata.org www.wikifunctions.org auth.wikimedia.org; style-src 'self' data: blob: https://upload.wikimedia.org https://thumb.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org https://maps.wikimedia.org 'unsafe-inline'; object-src 'none'; report-uri /w/api.php?action=cspreport&format=json; report-to csp-report-to-endpoint",
+          "last-modified": "Sat, 03 Oct 2026 09:59:33 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "age": "30186",
+          "accept-ranges": "bytes",
+          "x-cache": "cp3066 hit, cp3066 miss",
+          "x-cache-status": "hit-local",
+          "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+          "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+          "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+          "set-cookie": "WMF-Last-Access=17-Oct-2026;Path=/;HttpOnly;secure;Expires=Wed, 18 Nov 2026 12:00:00 GMT",
+          "x-client-ip": "176.72.168.224",
+          "cache-control": "private, s-maxage=0, max-age=0, must-revalidate, no-transform",
+          "vary": "Accept-Encoding,X-Subdomain,Cookie,Authorization,User-Agent",
+          "transfer-encoding": "chunked",
+          "x-request-id": "bd81b6b5-ebb2-4bf3-83a4-127a218569ee",
+          "x-analytics": "",
+          "server-timing": "cache;desc=\"hit-local\", host;desc=\"cp3066\",co_id;desc=\"1711217260\"",
+          "connection": "close"
+        },
+        "bytes": 106762,
+        "sha256": "61f1cc56102561b894ca802fcf747e2696e5447a81ccf464afe5c023fc8a904a"
+      }
+    }
+  },
+  {
+    "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-cc-20261017/references/c3/reference.jpg",
+    "referenceSHA256": "3eec04cf4cd704ad030bf2c14ad6f9912379352d5119e6584581dd0d8db10493",
+    "personallyViewed": true,
+    "provenance": {
+      "id": "c3",
+      "expectedAuthor": "Alberto-g-rovi",
+      "expectedLicense": "CC BY 4.0",
+      "filename": "tivoli-Q110289-c3-nimb.png",
+      "commonsTitle": "File:Jardines_de_Tivoli_07.jpg",
+      "checkedAt": "2026-10-17T18:22:38.553239+00:00",
+      "media": {
+        "url": "https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/f4df427e194e889e.jpg",
+        "finalURL": "https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/f4df427e194e889e.jpg",
+        "status": 200,
+        "headers": {
+          "Date": "Sat, 17 Oct 2026 18:22:38 GMT",
+          "Content-Type": "image/jpeg",
+          "Content-Length": "592542",
+          "Connection": "close",
+          "Cache-Control": "public, max-age=31536000, immutable",
+          "ETag": "\"0a00d804e2b803af49722ed7d1c33039\"",
+          "Last-Modified": "Sat, 17 Oct 2026 11:16:16 GMT",
+          "Accept-Ranges": "bytes",
+          "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "Server": "cloudflare",
+          "cf-cache-status": "MISS",
+          "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=P1W2jet5op8pObIIwDeVHt8oz1Uvygda%2Bny6a1k7%2FxJIE7t4cvlMGewSElEZgvySudHl428oInLT15JnV%2B9sDayefRIeEyU8pmscm8A5PeC9T89frrIsYUUNwaQ52jCHfppWChikXg%3D%3D\"}]}",
+          "CF-RAY": "a4c154738fe932d6-TLL"
+        },
+        "bytes": 592542,
+        "sha256": "3eec04cf4cd704ad030bf2c14ad6f9912379352d5119e6584581dd0d8db10493"
+      },
+      "api": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&titles=File%3AJardines_de_Tivoli_07.jpg",
+        "finalURL": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&titles=File%3AJardines_de_Tivoli_07.jpg",
+        "status": 200,
+        "headers": {
+          "date": "Sat, 17 Oct 2026 18:22:39 GMT",
+          "server": "mw-api-ext.eqiad.main-5564d958dd-h8f2r",
+          "x-content-type-options": "nosniff",
+          "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+          "x-frame-options": "DENY",
+          "content-disposition": "inline; filename=api-result.json",
+          "expires": "Sat, 17 Oct 2026 19:22:39 GMT",
+          "cache-control": "max-age=3600, s-maxage=3600, public",
+          "content-type": "application/json; charset=utf-8",
+          "age": "0",
+          "accept-ranges": "bytes",
+          "x-cache": "cp3066 miss, cp3066 miss",
+          "x-cache-status": "miss",
+          "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+          "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+          "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+          "set-cookie": "WMF-Last-Access=17-Oct-2026;Path=/;HttpOnly;secure;Expires=Wed, 18 Nov 2026 12:00:00 GMT",
+          "x-client-ip": "176.72.168.224",
+          "vary": "Accept-Encoding,X-Subdomain,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization,User-Agent",
+          "content-length": "2144",
+          "x-request-id": "8856a014-2e8b-4383-aa6d-cbb032e3a470",
+          "x-analytics": "",
+          "server-timing": "cache;desc=\"miss\", host;desc=\"cp3066\",co_id;desc=\"3092366740\"",
+          "connection": "close"
+        },
+        "bytes": 2144,
+        "sha256": "807a6f27e67578962f8924ae44aa60daf499bcc29500d441adf995c91e0c6904"
+      },
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Jardines_de_Tivoli_07.jpg",
+      "page": {
+        "url": "https://commons.wikimedia.org/wiki/File:Jardines_de_Tivoli_07.jpg",
+        "finalURL": "https://commons.wikimedia.org/wiki/File:Jardines_de_Tivoli_07.jpg",
+        "status": 200,
+        "headers": {
+          "date": "Sat, 17 Oct 2026 09:59:34 GMT",
+          "server": "mw-web.eqiad.main-7df87d9897-x5x62",
+          "x-content-type-options": "nosniff",
+          "content-language": "en",
+          "accept-ch": "",
+          "reporting-endpoints": "csp-report-to-endpoint='/w/api.php?action=cspreport&format=json';",
+          "content-security-policy": "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org 'unsafe-inline' auth.wikimedia.org; default-src 'self' data: blob: https://upload.wikimedia.org https://thumb.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org en.wikipedia.org en.wikibooks.org en.wikinews.org en.wikiquote.org en.wikisource.org en.wikiversity.org en.wikivoyage.org en.wiktionary.org www.mediawiki.org foundation.wikimedia.org incubator.wikimedia.org species.wikimedia.org wikimania.wikimedia.org www.wikidata.org www.wikifunctions.org auth.wikimedia.org; style-src 'self' data: blob: https://upload.wikimedia.org https://thumb.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org 'unsafe-inline'; object-src 'none'; report-uri /w/api.php?action=cspreport&format=json; report-to csp-report-to-endpoint",
+          "last-modified": "Sat, 03 Oct 2026 09:59:34 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "age": "30186",
+          "accept-ranges": "bytes",
+          "x-cache": "cp3066 hit, cp3066 miss",
+          "x-cache-status": "hit-local",
+          "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+          "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+          "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+          "set-cookie": "WMF-Last-Access=17-Oct-2026;Path=/;HttpOnly;secure;Expires=Wed, 18 Nov 2026 12:00:00 GMT",
+          "x-client-ip": "176.72.168.224",
+          "cache-control": "private, s-maxage=0, max-age=0, must-revalidate, no-transform",
+          "vary": "Accept-Encoding,X-Subdomain,Cookie,Authorization,User-Agent",
+          "transfer-encoding": "chunked",
+          "x-request-id": "731c8b54-159e-4c48-8615-66325a7d164d",
+          "x-analytics": "",
+          "server-timing": "cache;desc=\"hit-local\", host;desc=\"cp3066\",co_id;desc=\"1666438815\"",
+          "connection": "close"
+        },
+        "bytes": 111716,
+        "sha256": "46cdb5a6d16cff2f976b040653246fefc719effdd98aeb6a5fe7e5b1adb43d2c"
+      }
+    }
+  },
+  {
+    "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-cc-20261017/references/a-himmelskibet/reference.jpg",
+    "referenceSHA256": "03a1d6b4c5e1da5e045be61f2afcd9bfa4ff1cad202ff4cecd93e9107c045a22",
+    "personallyViewed": true,
+    "provenance": {
+      "apiURL": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&titles=File%3AHimmelskibet+Tivoli.jpg",
+      "commonsPage": "https://commons.wikimedia.org/wiki/File:Himmelskibet_Tivoli.jpg",
+      "author": "AMPendrill",
+      "license": "CC BY-SA 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+      "imageInfo": {
+        "size": 2887047,
+        "width": 3264,
+        "height": 2448,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Himmelskibet_Tivoli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Himmelskibet_Tivoli.jpg",
+        "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=44706014",
+        "extmetadata": {
+          "DateTime": {
+            "value": "2015-11-02 06:18:34",
+            "source": "mediawiki-metadata",
+            "hidden": ""
+          },
+          "ObjectName": {
+            "value": "Himmelskibet Tivoli",
+            "source": "mediawiki-metadata"
+          },
+          "CommonsMetadataExtension": {
+            "value": 1.2,
+            "source": "extension",
+            "hidden": ""
+          },
+          "Categories": {
+            "value": "Himmelskibet (Tivoli Gardens)|Self-published work|Amusement parks in 2015|Images from European Science Photo Competition 2015 in Sweden|General category images from European Science Photo Competition 2015|Uploaded via Campaign:espc-se",
+            "source": "commons-categories",
+            "hidden": ""
+          },
+          "Assessments": {
+            "value": "",
+            "source": "commons-categories",
+            "hidden": ""
+          },
+          "ImageDescription": {
+            "value": "Himmelskibet ride at Tivoli Gardens, Copenhagen, illustrating the Equivalence principle",
+            "source": "commons-desc-page"
+          },
+          "DateTimeOriginal": {
+            "value": "2015-09-15 11:12:57",
+            "source": "commons-desc-page"
+          },
+          "Credit": {
+            "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+            "source": "commons-desc-page"
+          },
+          "Artist": {
+            "value": "<a href=\"//commons.wikimedia.org/wiki/User:AMPendrill\" title=\"User:AMPendrill\">AMPendrill</a>",
+            "source": "commons-desc-page"
+          },
+          "LicenseShortName": {
+            "value": "CC BY-SA 4.0",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "UsageTerms": {
+            "value": "Creative Commons Attribution-Share Alike 4.0",
+            "source": "commons-desc-page"
+          },
+          "AttributionRequired": {
+            "value": "true",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "LicenseUrl": {
+            "value": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "commons-desc-page"
+          },
+          "Copyrighted": {
+            "value": "True",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "Restrictions": {
+            "value": "",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "License": {
+            "value": "cc-by-sa-4.0",
+            "source": "commons-templates",
+            "hidden": ""
+          }
+        }
+      }
+    }
+  }
+]
