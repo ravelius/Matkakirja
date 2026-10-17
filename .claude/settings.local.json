@@ -27,6 +27,15 @@
       "Bash(gh run watch:*)",
       "Bash(/Users/Shared/Claude/julkaisija-tyokalut/vie-paketti.sh:*)",
       "Bash(zsh /Users/Shared/Claude/julkaisija-tyokalut/vie-paketti.sh:*)"
+    ],
+    "deny": [
+      "Workflow",
+      "SuggestPluginInstall",
+      "SuggestSkills",
+      "SearchPlugins",
+      "ReportFindings",
+      "SendUserFile",
+      "AskUserQuestion"
     ]
   }
 }

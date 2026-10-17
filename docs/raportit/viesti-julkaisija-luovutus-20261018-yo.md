@@ -17,6 +17,9 @@ Osoitekirja /Users/Shared/Claude/osoitekirja.md; viestit send_messagella session
   4db43cc36 (L2-odottaja, ratas-201-app; video + pari, NUI pyytää). Juna-appin Mona Lisa vain PT:n pyynnöstä (LS).
 - **Käännöksissä 00.35**: L1 pelikoodari/galleria-200 (peruttu, ks. yllä); L2 linssiseppa/orsay-valinnaiset-200 (00.24→);
   odottaja linssiseppa2/kohdevalikko-201 (Valoseppä, juna 201?) ja NUI ratas-201.
+- **LR louvre-kehykset-201 3aeac4c8d** (pyyntö 00.3x, juna 201, PT: Louvren kehykset + omistajan Mona Lisa -kuva): EI vielä aloitettu (PT: ei uusia töitä
+  ennen nollausta). Käännös linnanrakentaja/louvre-kehykset-201 (21d5712be:n päällä) → simu iPhone pysty,
+  `proto-3d/tyokalut/linnanrakentaja-ajot/sk-louvre-kehykset-201.txt` (3 kuvaa). Uusi varjostin (_PintaTapa 3) → tarkista varjostinvirheet lokista. Polku LR:lle.
 - **NS yöllä**: 2 laitekäännöstä (A = master 94a8a360c, B = haara) L1:lle + iPad Pro 13 -vuoro ~25 min (LampoMittari) klo 01.00 alkaen,
   kun omistaja ei käytä iPadia — vahvista aika NS:lle.
 - **PT: levy** — TF 201 -käännöksen JÄLKEEN siivoa omat simu-/käännöskansiot (_tyo/pelikoodari ym. omat: 2 uusinta + käytössä) → vapautunut Gi PT:lle.
