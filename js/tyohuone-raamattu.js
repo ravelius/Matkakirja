@@ -1492,7 +1492,7 @@ export const RAAMATTU = {
           + 'karttapohjiin animoidaan aikajanatekniikalla erilaisia näkökulmia.',
         'Toteutus: käsin tarkistettu data, pelin oma animaatio. Etusivulla kevyt vihjeanimaatio.',
         'KAMERA-AJOT (omistaja 24.8.2026): piirtomoottoriin kehitetään sulavat zoomausanimaatiot sisään ja ulos — zoomi kiihtyy ja hidastuu luontevasti alussa ja lopussa (easing). Tarvitaan paljon '
-          + 'jatkossa: linssien animaatiot (esim. Silkkitien reitit, ihmispopulaation leviäminen Afrikasta), joissa kartta liikkuu itsestään ja zoomautuu tarvittaessa.',
+          + 'jatkossa: linssien animaatiot (esim. Silkkitien reitit, ihmispopulaation leviäminen Afrikasta), joissa kartta liikkuu itsestään ja zoomautuu tarvittaessa. EI PYÖRITYSTÄ (omistaja 17.10.2026 klo 23.14, koskee KAIKKIA kamera-ajoja, ensin museo): "näkymän pyörittäminen on katsojalle ikävää, joten sitä pitää välttää kaikin mahdollisin keinoin"; kamera etenee sivuttain tai vinosti, kääntyy menosuuntaan vain vähän (~15°) ja lopuksi kohti seuraavaa kohdetta kuin sivuttain astuva ihminen; iso suunnanmuutos tehdään mustalla välähdyksellä (< 250 ms) pyörityksen sijaan. Siirrot oikovat esteiden (kaiteet, penkit, jalustat, kävijät) läpi suoraan kohteen eteen, reitinhaku vain seinien ja oviaukkojen takia; saman salin siirto ~1–1,5 s pehmein kiihdytyksin. Testi valvoo siirron kokonaiskäännön ja keston.',
         'AIKAJANA-AJO (omistaja 17.8.2026): animaatiolinsseillä yhteinen aikajanamoottori juoksevine vuosilukuineen — pelaajan käynnistämä, ele keskeyttää.',
         'LAVALINSSI (omistaja 17.8.2026): lähikuvakehyksen linssityyppi ilmiöille, jotka eivät erotu laudan mittakaavassa (esim. kaupungin kasvu; pilotti Rooma).',
       ],

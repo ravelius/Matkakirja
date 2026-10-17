@@ -447,3 +447,12 @@ Omistaja 17.10.2026 klo 22.32 Keskustelukanavan kautta (sanatarkasti): "Juoksuss
 ## AANIGENEROINTI: SUOMI AINA PAKOTETTUNA; LOUVREN ALUT UUSITAAN (17.10.2026 klo 23.05)
 
 Omistaja 17.10.2026 klo 22.54 (havainto): "oliko louvren esittelyssä käytössä "suomi" kertojan luennan generoinnissa? nyt alussa suomea äännetään ranskan aksentilla ens. lauseessa". Syy: ranska-louvre-puhe (_tyo/ranska-kertoja-20261013/tee.py) tehtiin ilman language_code fi. Klo 23.03: "uudestaan ei tarvitse nauhoittaa kuin alut louvressa" → 47 riskiottoa (24 411 merkkiä, docs/raportit/aksenttiriski-ilman-language-code-20261017.md) EIVÄT uusiudu; uusitaan vain Louvren lähestymispuhe (ranska-louvre-puhe-2) ja salien avaukset (ranska-sali1-avaus ym.), louvre-inv-* ennallaan, juna 201. Klo 23.04: "pidä huoli että jatkossa aina suomi pakotettuna" → jokainen suomenkielinen äänigenerointi language_code fi ilman poikkeuksia (multilingual-poikkeus pois kaikista kutsuista, aikaleimat v4_turbo /with-timestamps + fi, kielikoodia tukematon malli = virhe, automaattinen testi kaatuu jos fi puuttuu); toteutus Äänittäjä. Raamattu: SUOMI LUKITTU JA SUOMENKIELINEN ALKU.
+
+## KAMERA-AJOT: EI PYORITYSTA, SIIRROT OIKOVAT ESTEIDEN LAPI (MUSEO ENSIN) (17.10.2026 klo 23.15)
+
+Omistaja 17.10.2026 klo 23.14 (sanatarkasti): "kävely monalisan luo on liian hidas. peli voi aivan hyvin oikoa esteiden ohi. ei haittaa vaikka se ei olisi oikeasti mahdollista. näin saadaan
+järkevämmät lähestymiskulmat ja nopeampi siirtyminen. näkymän pyörittäminen on katsojalle ikävää, joten sitä pitää välttää kaikin mahdollisin keinoin. liikuttaessa museossa esim kahden vierekkäisen
+taulun välillä, riittää että kameraa käännetään hieman menosuuntaan, mutta ei kokonaan ja kamera voi edetä sivuttain ja lopuksi kamera käännetään taksin kohti seuraavaa maalausta, aivan kuin henkilö
+kävelisi sivuttain. näin voidaan välttää liika kameran kääntely oman akselinsa ympäri mikä on ikävän näköistä pelaajan katsoa." Toteutus (KK:n tavoite): suora linja kaiteiden, penkkien, jalustojen ja
+kävijöiden läpi, reitinhaku vain seinät ja oviaukot; saman salin siirto ~1–1,5 s; käännös menosuuntaan ~15°, lopuksi kohti teosta; iso suunnanmuutos mustalla välähdyksellä < 250 ms; testi
+kokonaiskäännölle ja kestolle. Museo ensin (Linssiseppä, juna 201), muiden linssien kamera-ajot tarkistetaan samalla periaatteella. Raamattu: KAMERA-AJOT, EI PYÖRITYSTÄ.
