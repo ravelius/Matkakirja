@@ -85,7 +85,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     pariisi: 'esittely/pariisi-v4/pariisi-yksityiskohdat.json',   // v4 11.10. (PT, suojatarkastus): Orsayn Aulenti-sisätila → tulvakuva 1910 (PD)
     praha: 'esittely/praha-v2/praha-yksityiskohdat.json', wien: 'esittely/wien-v2/wien-yksityiskohdat.json',
     rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
-    koopenhamina: 'esittely/koopenhamina-v6/koopenhamina-yksityiskohdat.json',   // v6 17.10. (LR, omistaja 12.20): Tivolin kierrostekstin kuvat (järvi 2026, Carstensen 1844, Pierrot)
+    koopenhamina: 'esittely/koopenhamina-v7/koopenhamina-yksityiskohdat.json',   // v7 17.10. (LR, omistaja 12.20; v6 vietiin ennen PT:n korjausta, ei käytössä): Tivolin kierrostekstin kuvat (järvi 2026, Carstensen 1844, Pierrot)
     // 31 äänetöntä (Sisältökirjuri 8.10., erät 1–2; ankkurit tarkistettu esittely-aaneton-v3:sta).
     venetsia: 'esittely/venetsia-v2/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v2/barcelona-yksityiskohdat.json',
     berliini: 'esittely/berliini-v3/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v2/amsterdam-yksityiskohdat.json',
