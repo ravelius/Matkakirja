@@ -75,7 +75,11 @@ testi TaisteluKaksiHuippuaLiikkuvat). KÄÄNNÖSPYYNTÖ JU:lle → `kiina-taiste
 **PT 21.5x:** taistelukoe linjan 2 kärjessä (omistaja odottaa); juna 200 lukitaan, koe → juna 201 (vasta hyväksynnän jälkeen). TYÖTAPA (KK): jokainen kuva ja
 videon ruutu katsotaan täysikokoisena kohta kohdalta ennen PT:lle lähettämistä (rajatut 1:1-kehykset kuten v3:ssa, ei vain arkkia).
 **PT 22.0x (omistaja 22.02 "nauhoitusta voisi vähentää"):** paikallaan pysyvä muutos → kuvapari; video vain liikkeestä, < 1 min pätkä muuttuneesta kohdasta
-(`zsh …/kiina-koko-linssi/patka.zsh <kansio> <alku s> <kesto s>` → patka-omistajalle.mp4); koko video vain omistajan pyynnöstä. Taistelukoe: pätkä taistelulauseen ajalta. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+(`zsh …/kiina-koko-linssi/patka.zsh <kansio> <alku s> <kesto s>` → patka-omistajalle.mp4); koko video vain omistajan pyynnöstä. Taistelukoe: pätkä taistelulauseen ajalta.
+**TILA 22.5x:** v4 ajettu 22.34–22.39 (todistus-kiina-taistelu-250-v4-20261017-2234), 1:1-ruudut: kaksi armeijaa liikkuu, aalto + X, tasainen ✓; kummut
+lähes mustia "reikiä" (valo 15° oikealta alhaalta), Wu ei erotu, kummut koskettivat → `0bf177c8b` (TaisteluValoKorkeus 45 / pohja 0,6 vasemmalta ylhäältä,
+VainTaisteluTumma 1, AaltoTumma 0,45, TaisteluValiKm 320). KÄÄNNÖSPYYNTÖ → `kiina-taistelu-250-v5-app`; SIMU NYT → `odota-taistelu-250-v5.zsh`;
+sitten 1:1-ruudut (13–36 s, crop 800×600 @ 500,250) ja `patka.zsh <kansio> 12 26` → PT. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
