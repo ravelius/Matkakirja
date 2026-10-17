@@ -20,6 +20,17 @@ VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
       ruudun); selvitä, onko syy kaide (kamera ei pääse) vai kohtazoom tekstuurin sisällä.
   (3) Kun ‹ ⏸ › ovat piilossa, ensimmäinen napautus vain tuo ne esiin eikä tee muuta (epäilty: piilonapin kohta laukaisee ALAREUNA
       TAAKSE -alueen, alin 18 %, liuku 3 m); himmeän napin painallus toimii suoraan. Kuvapari tai < 1 min video täysikokoisena PT:lle.
+- SAMAAN KORJAUKSEEN (OMISTAJAN PYYNTÖ 23.14 PT:n kautta, sanatarkasti): "kävely monalisan luo on liian hidas. peli voi aivan hyvin oikoa
+  esteiden ohi. ei haittaa vaikka se ei olisi oikeasti mahdollista. näin saadaan järkevämmät lähestymiskulmat ja nopeampi siirtyminen.
+  näkymän pyörittäminen on katsojalle ikävää, joten sitä pitää välttää kaikin mahdollisin keinoin. liikuttaessa museossa esim kahden
+  vierekkäisen taulun välillä, riittää että kameraa käännetään hieman menosuuntaan, mutta ei kokonaan ja kamera voi edetä sivuttain ja
+  lopuksi kamera käännetään taksin kohti seuraavaa maalausta, aivan kuin henkilö kävelisi sivuttain. näin voidaan välttää liika kameran
+  kääntely oman akselinsa ympäri mikä on ikävän näköistä pelaajan katsoa."
+  PT:n tavoite: (1) SUORA LINJA: napautus ja kierroksen siirrot suoraan teoksen eteen kaiteiden, penkkien, jalustojen ja kävijöiden läpi;
+      reitinhaku vain seinien/oviaukkojen takia; Mona Lisan eteen suoraan edestä. (2) NOPEUS: saman salin siirto ~1–1,5 s pehmein
+      kiihdytyksin, ei veny matkan mukaan. (3) VÄHÄN KÄÄNTÖÄ: eteneminen sivuttain/vinosti, käännös menosuuntaan vain ~15°, lopuksi
+      käännös kohti teosta; isossa suunnanmuutoksessa (vastakkainen seinä, toinen sali) musta välähdys (NÄYTTELYN VALINTA OVENSUULTA,
+      < 250 ms) pyörityksen sijaan. (4) Automaattinen testi siirron kokonaiskäännölle ja kestolle. < 1 min video täysikokoisena PT:lle.
 - NS (local_674b9ec4-…) tekee junaan 201 "koko ruudun UI peittää 3D:n" -lepotilan ja rekisteröinnin MuseoSovitin.cs:ään: sovi NS:n kanssa
   ennen MuseoSovitin.cs/MuseoNayttamo.cs-muutoksia (vastasin 23.2x: minulla ei kesken muutoksia niihin).
 
