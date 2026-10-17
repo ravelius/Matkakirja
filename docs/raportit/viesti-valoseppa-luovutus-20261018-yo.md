@@ -30,7 +30,11 @@ Valoseppä ei IssOhjaamoon eikä OpasValikkoon. → iPhone+iPad-pari täysikokoi
   NUI 00.4x: aba77f7e0 YHDISTETTY NUI:n haaraan natiivi-ui/ratas-201b a45af2f97 (konfliktit IssKohdevalikko.cs:ssä ratkaistu, IssSaadot +
   partial) ja KOHTEET › palaa tehty (AukiMuuttui → IssOhjaamo) → kohta (5) valmis. Säätönapit vain ⚙-paneelissa – ÄLÄ lisää koko näkymään.
   Jos haaraa muutetaan, uusi sha NUI:lle (yhdistää uudelleen). Simupari kannattaa kuvata NUI:n yhdistetyllä haaralla (sovi NUI:n kanssa).
-  (4) tyylikirja.json-merkintä PYSÄYTYSKUVA jätetty pois: proto-json on webin generoima (tarkista.sh TYYLIKIRJA-tarkistus) → vaatii
+  (4) VALOSEPÄN TYÖ (NUI 00.4x: PT pyysi uuden tyylikirjapohjan, NUI ei tee): web-PR tyylikirja.json pohjat.PYSÄYTYSKUVA (GALLERIAn perään;
+  teksti valmiina tämän luovutuksen tekijän kokeilusta: teemat harmaa, koostuu kuva + huntu himmennys-kevyt + sisältö ilman ikkunaa,
+  tummennus kevyt / ilman kuvaa tumma, sulku tyhjästä tai avaajasta) + `node tools/tyylikirja.mjs --natiivi <proto-worktree>` → proto-commit
+  kohdevalikko-201-haaraan → sha NUI:lle. Pöydän Rect = Kyyti.OhjaamoLaatikko (78 pt, NUI vahvisti).
+  Alkup.: tyylikirja.json-merkintä PYSÄYTYSKUVA jätetty pois: proto-json on webin generoima (tarkista.sh TYYLIKIRJA-tarkistus) → vaatii
   webin tools/tyylikirja.mjs --natiivi -ajon; kysytty NUI:lta. (5) NUI: KOHTEET-näytön palaminen AukiMuuttui-tapahtumasta.
 
 ## 1. TEHTY 17.10. 19.55 – 18.10. 00.3x
