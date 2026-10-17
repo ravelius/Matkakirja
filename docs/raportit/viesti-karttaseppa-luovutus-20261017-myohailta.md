@@ -61,7 +61,10 @@ Isoisä-1873 pyydetty NUI:lta samaan kytkimeen; jos SHA tulee ennen v5-pyyntöä
 dynastian värissä, isku aaltona, sitten tasainen). ENSIN koe vain 250 → JU → simu → PT → KK → omistaja; Changping, Fei-joki, Yamen, Shanhai vasta hyväksynnän
 jälkeen. Ei junaan. **TILA 20.2x:** toteutettu `38be1ca55` (KiinaVaestopintaKerros.VainTaistelu, KiinaKerros: Nouse taistelulauseen alussa), peili ok.
 KÄÄNNÖSPYYNTÖ JU:lle 38be1ca55 → `kiina-taistelu-250-v1-app`. SIMU NYT → `zsh …/kiina-koko-linssi/odota-taistelu-250-v1.zsh > …/odota-taistelu-250-v1.out`
-(skenaario `sk-taistelu-250.txt`: avaus suoraan 250:een, ~70 s) → SIMU VAPAA → yhdista-video.zsh → kuvat → PT 3 riviä. (v5 koko linssistä korvautuu tällä.) LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+(skenaario `sk-taistelu-250.txt`: avaus suoraan 250:een, ~70 s) → SIMU VAPAA → yhdista-video.zsh → kuvat → PT 3 riviä. (v5 koko linssistä korvautuu tällä.)
+**TILA 20.4x:** käännös 71eac8a7f (pohja 44529c734) → `kiina-taistelu-250-v1-app`. Ajo v1 20.41–20.45 EPÄONNISTUI: 250 avausvuotena ohittui ~2 s:ssa
+(taistelu ei näkynyt; todistus-kiina-taistelu-250-v1-20261017-2041). Skenaario korjattu alkamaan 140:stä → ajo **v2** samalla appilla:
+`odota-taistelu-250-v2.zsh` (→ ajo-taistelu-250-v2.out). SIMU-pyyntö JU:lle lähetetty (jonossa). Opin: avausvuosi ei ole pysäkki ajossa. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
