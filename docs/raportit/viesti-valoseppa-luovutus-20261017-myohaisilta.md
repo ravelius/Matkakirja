@@ -8,6 +8,10 @@ D=/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2. Päiväkirja: $D/JONO.md (kai
 SIMUT VAIN JU:n "SIMU NYT" -viestillä; heti vuoron jälkeen "SIMU VAPAA" JU:lle.
 
 ## 0. ENSIMMÄISENÄ (PT:n järjestys): Louvre k83 → valas k14 samalla simuvuorolla
+**PT:N JÄRJESTYS 19.5x (sitova, korvaa alla olevan):** 1) Louvre k83 → pari k82 | k83 PT:lle. 2) Kartan 3D-yhtenäistys PK:n galleriaan
+(varjostimet valmiina linssiseppa2/kartta-seepia 6a2659c59, kytkin KarttaSeepia.Aseta = PT:n "_KarttaYhtenainen"; auta PK:ta kytkennässä,
+Maamerkit-materiaali LR:n kanssa). 3) Valas k14 (käännetty) diagnoosi vasta sen jälkeen – k14:n voi kuvata samalla simuvuorolla kuin k83,
+mutta raportti PT:lle k83:n ja kartan jälkeen.
 1) **Louvre k83** (PT: "pyramidi hehkuu yöllä lämpimän kullanvalkoisena, ei huurteisen valkoisena"): koodi be5025541 haarassa
    linssiseppa2/louvre-k83 (EI junahaarassa), paketti louvre1/v6k18-lv2f-k83 (yoValo [3; 0,3; 26]). Käännös `louvre1/k83-kaanna.zsh`
    oli jonossa 19.49 (appi $D/t217-louvre-k83; tulos louvre1/k83-kaanna.out). Kun KÄÄNNETTY → "KÄÄNNÖS VALMIS <sha> k83" JU:lle.
