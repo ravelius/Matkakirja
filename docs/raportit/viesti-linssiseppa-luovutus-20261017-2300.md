@@ -5,21 +5,16 @@ Edellinen: viesti-linssiseppa-luovutus-20261017-1922.md (osoitteet, yleisohjeet)
 (≤ 3 riviä), JU local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914, NS local_674b9ec4-e2f3-48e9-a810-a129f20a4f03, LR local_996d60ab-b4af-4172-ad31-f8e948f141a3,
 VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
 
-## 0. ENSIN (PT 23.0x, omistajan havainto 22.54, juna 201): LOUVREN LÄHESTYMISPUHE ÄÄ:N UUTEEN OTTOON
-- Vaihda Louvren lähestymispuheen viittaus (nyt ranska-louvre-puhe.mp3, ks. MuseoLahestyminen / lähestymisen puhepolku) ÄÄ:n uuteen
-  ottoon aanet/taidemuseo-kertoja-v2/ranska/ranska-louvre-puhe-2.mp3 + ajat/ranska/…json + manifest-rivit-louvre-fi.json; suomi pakotettu.
-  Samaan orsay-valinnaiset-200-haaraan (tai junan 201 haaraan PT:n ohjeella), sha PT:lle yhdellä rivillä.
-  Käännös ja simu voi yhdistää kohdan 1 seuraavaan ajoon, jos 201c-simu on jo ajettu.
-- TÄYDENNYS (PT, omistaja 23.03): ÄÄ uusii myös Louvren salien avaukset (ranska-sali1-avaus ym.) suomi pakotettuna → vaihda nekin
-  viittaukset junaan 201, kun ÄÄ (local_16ee69c8-b917-4dcd-9060-3542c5e03e67) ilmoittaa polut; puheen ja salien vaihto samaan committiin, jos ehtii.
+## 0. TEHTY 23.1x: Louvren puhe ja salien 1–2 avaukset ÄÄ:n uusiin ottoihin = 133e7c00e (huoneet.json, lahestyminen.json,
+MuseoMaaTestit; Linssit 1993/1993) → NS:lle cherry-pickinä runkoon 201 (vain tämä commit), PT:lle kerrottu. Tarkista NS:n kuittaus.
 
 ## 1. ENSIMMÄISEKSI: LOUVREN PYRAMIDIN TERÄVÄ VARJO -SIMU (OMISTAJAN PÄÄTÖS 22.27 PT:n kautta)
 Omistaja 22.27 pyramidi v2.1:stä: "Pitää olla terävä mutta pieni varjo ei pehmeä. Muuten ok" → hyväksytty junaan 201, kun varjo on
 TERÄVÄREUNAINEN, PIENI, tiiviisti pohjan alla, tummuus = pelinappulan varjo.
 - Haara linssiseppa/orsay-valinnaiset-200, worktree /Users/Shared/Claude/wt/proto-linssiseppa-orsay. Uusin 22ce38984 (TeravaPeitto 0,8,
   TeravaSiirtoY 0,028). Edellinen simu f59dd7e7 (736739247, peitto 0,6): terävä ja kiinni, mutta ≈ RGB 160/145/110 vs. nappula 130/101/45.
-- Ajo ajo-louvreavaus201c.zsh (käännös L2, loki ajo-louvreavaus201c.log). Tarkista `pgrep -fl ajo-louvreavaus201c`; jos ei käynnissä eikä
-  logissa "LOUVREAVAUS201C VALMIS", käynnistä uudelleen (nohup zsh …). Valmis → JU:lle simuvuoropyyntö (iPhone BD64C8E4 ~4 min) → JU:n
+- KÄÄNNÖS VALMIS 23.11: ede9300b (sisältää 22ce38984; ajo ajo-louvreavaus201c.zsh odottaa .nyt-tiedostoa, `pgrep -fl ajo-louvreavaus201c`;
+  jos ajo on kuollut, käynnistä uudelleen, se kääntää ensin). Seuraavaksi → JU:lle simuvuoropyyntö (iPhone BD64C8E4 ~4 min) → JU:n
   SIMU NYT → `touch …/linssiseppa-ajot/simu-louvreavaus201c.nyt` → odota "SIMU ALAS" → "SIMU VAPAA" JU:lle.
 - Tarkista TÄYSIKOKOISENA (PT 21.5x työtapa): rajaus raaka-G1:stä (386,392,1110,1047) = lähikuva ja (560,800,860,1000) × 4 = pyramidi +
   nappula. Mittaa varjo (esim. x 650/710/780, y 940–962) vs. nappulan varjo (634,831) ≈ 130/101/45. Jos yhä selvästi vaaleampi: nosta
@@ -47,5 +42,5 @@ TERÄVÄREUNAINEN, PIENI, tiiviisti pohjan alla, tummuus = pelinappulan varjo.
 
 ## ALOITUSVIESTI SEURAAJALLE
 Olet Linssiseppä (Opus, high). Lue CLAUDE.md ja tämä luovutus (git show <sha>:docs/raportit/viesti-linssiseppa-luovutus-20261017-2300.md).
-Ensin kohta 0 (Louvren puhe ÄÄ:n uuteen ottoon), sitten kohta 1 (pyramidin terävän varjon simu 22ce38984 JU:n vuorolla → mittaus nappulaa vasten → lähikuva + 4× PT:lle → KK:n kuittauksen
+Ensin kohta 1 (pyramidin terävän varjon simu ede9300b JU:n vuorolla → mittaus nappulaa vasten → lähikuva + 4× PT:lle → KK:n kuittauksen
 jälkeen sha NS:lle junaan 201), sitten Codexin sn1-toimitus kun se tulee.
