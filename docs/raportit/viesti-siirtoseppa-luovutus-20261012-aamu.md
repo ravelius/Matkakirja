@@ -464,7 +464,7 @@ kun 9fa3b99f1 on juna-196:ssa).
   SEURAAVA: laitemittaus (verhokäyrä ennen fdfb5f6dd / jälkeen 0bfc62868; seikkailu, pallon kaupunki, radio, raketti+kupoli, museo) PT:n
   vuorolla → sitten SHA NS:lle junaan 198. Haaraa ei yhdistetä ennen PT:n kuittausta.
 
-## PÄIVITYS 17.10. 03.2x — NOLLAUS (Postivahti, kova raja 35 %): SEURAAJAN ENSIMMÄINEN ERÄ = LUENTAMANIFESTI v6
+## PÄIVITYS 17.10. 03.1x — NOLLAUS (Postivahti, kova raja 35 %): SEURAAJAN ENSIMMÄINEN ERÄ = LUENTAMANIFESTI v6
 
 **Valmis:** äänipohjan siirtolista tyhjä, **0bfc62868** (siirtoseppa/siirto-198-1, wt/proto-siirtoseppa-aanipohja). PT kuittasi apurit
 (Aanisoitin, Puhe, UI/Aanet, PeliKomennot = pohjan runkoa). Yhteenveto docs/raportit/siirtoseppa-aanipohja-siirtolista-20261017.md.
