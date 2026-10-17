@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 16.10.2026 07.00, nollaus)
+# Linnanrakentajan aloitusviesti (päivitetty 18.10.2026 00.40, tilinvaihto)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,6 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
+1. **NYT (18.10. 00.40, omistajan tilinvaihto):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261018-yo.md` KOKONAAN.
+   ENSIN Louvren kehykset (proto `linnanrakentaja/louvre-kehykset-201` 3aeac4c8d, juna 201): JU:n seuraaja ajaa simun
+   (`proto-3d/tyokalut/linnanrakentaja-ajot/sk-louvre-kehykset-201.txt`) → tarkista kuvat täysikokoisina → arkki PT:lle.
+   Sitten kartan 3D-yhtenäistyksen arkki 5 (LS:n pyramidi ffa433c76 → PK → JU) ja Tivolin Codex v2 (aitous edellä).
 1. **NYT (16.10. 07.00, nollaus kovalla rajalla 35 %):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261016-aamu.md` KOKONAAN.
    LOUVRE k35 viety 06.55 (kaikki 7 kulmaa ≥ 90 %, julkisivut, oma patsas, Googlen aukko siistitty). Ensin: arvioi Valosepän k35s-pari
    (pikkupyramidit, altaan reuna) → PT ≤ 3 riviä. Kirjanpito `proto-3d/_valmiit/louvre-v1/VERTAILU.md`. Pyramidi Googlelta.
