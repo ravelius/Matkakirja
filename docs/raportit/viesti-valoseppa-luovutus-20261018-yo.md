@@ -21,7 +21,8 @@ Valoseppä ei IssOhjaamoon eikä OpasValikkoon. → iPhone+iPad-pari täysikokoi
     kaappauksen epäonnistuessa --tk-himmennys-tumma; teema tk-teema-harmaa.
   - IssKohdevalikko.cs: partial, Ruutu → RuudunSisus (yhteinen sisus), Avaa/Sulje/Auki/LataaNakyvat koko-tilaan, testit
     `ui linssi kohdevalikko koko 1|0` ja `… vierita <pt>`.
-- PUUTTUU: (1) käännös linja 2 – `zsh $D/kohdevalikko-201/aja.zsh --kaanna` oli JONOSSA 00.35 (orsay-valinnaiset-200 edellä; tulos
+- KÄÄNNETTY 00.45: 461c6d977 (vain VS:n haara, ilman NUI:n KOHTEET-palamista), appi $D/t219-kohdevalikko – simua EI pyydetty (PT: ei uusia töitä).
+- PUUTTUU: (1) [TEHTY 00.45, ks. yllä] käännös linja 2 – `zsh $D/kohdevalikko-201/aja.zsh --kaanna` oli JONOSSA 00.35 (orsay-valinnaiset-200 edellä; tulos
   $D/kohdevalikko-201/kaanna.out ja JONO.md-rivi "KOHDEVALIKKO-201 KÄÄNNETTY …"; appi $D/t219-kohdevalikko). Ajoa ei tapettu – jos
   sessio nollautui, katso kaanna.out: jos vain "jonossa:", aja uudelleen. (2) JU:lle "KÄÄNNÖS VALMIS <sha> kohdevalikko-201" + SIMU-pyyntö
   (~15 min) → `zsh $D/kohdevalikko-201/aja.zsh --kuvat` (iPhone + iPad, skenaario sk.txt: k0 Cupola, k1 auki, k2 vierita 700, k3 kiinni;
