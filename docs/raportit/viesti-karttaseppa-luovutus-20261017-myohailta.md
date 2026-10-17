@@ -55,7 +55,13 @@ ei kartan vika (PT:lle kerrottu). KUN omistaja vastaa: KÄÄNNÖSPYYNTÖ JU:lle 
 **PT 20.0x:** Pulun "zZ" piiloon kaikissa historialinsseissä → pyydetty Natiivi-UI:lta (Pulu.cs on NUI:n, vastuukartta) kytkin kiina-paketti-200:n
 päälle; kun NUI antaa SHA:n, `git merge <sha>` kiina-paketti-200:aan ja se mukaan samaan v5-käännökseen.
 **20.1x:** NUI:n `05ce463ac` (Pulu.EiUnta: Kiina, Keksinnöt, Ihmisen matka) fast-forwardattu → kiina-paketti-200 = **05ce463ac** (peili ok) = v5:n käännös-SHA.
-Isoisä-1873 pyydetty NUI:lta samaan kytkimeen; jos SHA tulee ennen v5-pyyntöä, yhdistä sekin. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+Isoisä-1873 pyydetty NUI:lta samaan kytkimeen; jos SHA tulee ennen v5-pyyntöä, yhdistä sekin.
+
+**OMISTAJAN PÄÄTÖS 19.59 (PT 20.1x): "Kyllä, vain taisteluihin (Suositus)"** — väestöpinta POIS; korkeus vain taistelulauseen ajan (armeija huippuna
+dynastian värissä, isku aaltona, sitten tasainen). ENSIN koe vain 250 → JU → simu → PT → KK → omistaja; Changping, Fei-joki, Yamen, Shanhai vasta hyväksynnän
+jälkeen. Ei junaan. **TILA 20.2x:** toteutettu `38be1ca55` (KiinaVaestopintaKerros.VainTaistelu, KiinaKerros: Nouse taistelulauseen alussa), peili ok.
+KÄÄNNÖSPYYNTÖ JU:lle 38be1ca55 → `kiina-taistelu-250-v1-app`. SIMU NYT → `zsh …/kiina-koko-linssi/odota-taistelu-250-v1.zsh > …/odota-taistelu-250-v1.out`
+(skenaario `sk-taistelu-250.txt`: avaus suoraan 250:een, ~70 s) → SIMU VAPAA → yhdista-video.zsh → kuvat → PT 3 riviä. (v5 koko linssistä korvautuu tällä.) LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
