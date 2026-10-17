@@ -700,7 +700,7 @@
         "paperin reuna: kaistale rullan alla (6 pt) ja sivuilla (4 pt), teema paperi pinta, sisäreunassa hiusviiva reunus",
         "ei koristeita (ei nuppeja, tupsuja eikä kuvioita); kartta näkyy kokonaan kehyksen sisällä"
       ],
-      "sijainti": "turva-alueen sisällä; rullat 3 pt paperia leveämmät; ei kosketuksia, linssin paneelit kehyksen päällä",
+      "sijainti": "turva-alueen sisällä; linssin ylärivi ja alanauha rajaavat (rullat ylärivin alle ja nauhan yläpuolelle, KehysKaaro.AsetaRajat; simu 17.10. 11.28: rullat jäivät niiden alle); rullat 3 pt paperia leveämmät; ei kosketuksia, linssin paneelit kehyksen päällä",
       "liike": "avaus kuin kääritty kartta: rullat keskeltä reunoille liike.liikkeet kortti-avaus (220 ms), sulku takaisin kortti-sulku (200 ms); alle liike.maksimi"
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)", "MUOTOKUVARIVI/kuva": "muotokuva ympyränä: henkilön kuva, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja 16.10.2026 klo 21.54)" }
