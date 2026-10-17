@@ -439,3 +439,7 @@ Omistaja 17.10.2026 klo 22.17 kortilla "Kyllä, pagodi ja järvi (Suositus)": Le
 ## JUOKSUPELIN KATTOREITTI (17.10.2026 klo 22.19)
 
 Omistaja 17.10.2026 klo 22.18 Keskustelukanavan kautta (sanatarkasti): "Myös muurien reunojen ja kattojen päällä voisi juosta mutta siellä pysyminen edellyttäisi tarkkoja oikea aikaisia hyppyjä". KK:n tavoite: ylhäällä riskireitti; sinne pääsee portaista tai hypyllä muurin kulmasta; enemmän aarteita ja omenoita, vartijat eivät yllä; kattojen raot ylitetään ajoitetulla hypyllä (pyyhkäisy ylös); huti ei päätä peliä, Puyi putoaa pihalle lähemmäs kiinniottajia. Harmaaseen versioon yksi kattoreitti.
+
+## JUOKSUPELIN RUUDUKKO JA 90 ASTEEN KAANNOKSET (17.10.2026 klo 22.33)
+
+Omistaja 17.10.2026 klo 22.32 Keskustelukanavan kautta (sanatarkasti): "Juoksussa kääntyminen on aina 90 astetta jolloin koko peli kääntyy mukana. Pelaaja voi siis kääntyä juoksemaan myös takaisinpäin". KK:n tavoite: suorakulmainen ruudukko pihoja ja käytäviä; risteyksessä pyyhkäisy vasen/oikea kääntää 90 astetta, suoralla vaihtaa väylää; kamera kääntyy nopeasti ja pehmeästi Puyin taakse; takaisin kääntymällä kahdesti tai kiertämällä talon; kuljetut korttelit säilyvät hetken, uusia syntyy eteen; perässä juoksija seuraa ruudukossa, talon kiertäminen harhautuksena. Esikuvat Temple Run ja Pac-Man.
