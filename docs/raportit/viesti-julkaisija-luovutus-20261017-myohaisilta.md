@@ -11,8 +11,11 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt
   (kääntää uudelleen, jos app puuttuu). Kun **KS SIMU VAPAA** (taistelu v4, alkoi 22.35): `touch julkaisija-tyokalut/simu-vapaa-juoksupeli`.
   Tulos (kansio + arkki) → PK (local_7fcab04b-…).
 - Juoksupeli b bb34dd973 PERUTTU (omistaja 22.32: rata ruudukoksi) — älä aja. Ruudukkoversio tulee PK:lta uutena SHA:na.
-- **Galleria arkki 4b:** `pelikoodari-galleria200f-kaanna.zsh` (fa219040b → L2, `_tyo/pelikoodari/galleria-200-f-app`), sitten simu
+- **Galleria arkki 4b:** KÄÄNNETTY 22.56 (fa219040b → `_tyo/pelikoodari/galleria-200-f-app`, varjostimet 0 virhettä); aja simu
   `zsh pelikoodari-galleria200f-simu.zsh` juoksupelien jälkeen (8 kuvaa, vaaka, teksti-ylla-arkki) → PK + LR.
+- **KS taistelu-250-v5** (0bf177c8b, pyyntö 22.5x): EI vielä käynnistetty → `zsh julkaisija-tyokalut/karttaseppa-kiina-taistelu250-v5.zsh`
+  (L2, `_tyo/karttaseppa/kiina-taistelu-250-v5-app`), sitten KÄÄNNETTY + SIMU NYT KS:lle (iPad ~4 min).
+- Juoksupeli a3a481f99 ajettu 22.46 (`todistus-juoksupeli-harmaa-20261017-2246`): kuvat harmaita, juoksu ei alkanut → PK:lle kerrottu.
 - **Sitten L1 → PK:n esikatselu.sh** (lähetä PK:lle "NYT"; PK ilmoittaa kun L1 vapaa).
 - Levyvahti Monitorina (`zsh julkaisija-tyokalut/levyvahti-l2.zsh`, 30 min, aina uudelleen). Levy 77 Gi 22.10.
 
