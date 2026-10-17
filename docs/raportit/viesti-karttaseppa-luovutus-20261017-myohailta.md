@@ -71,7 +71,9 @@ KÄÄNNÖSPYYNTÖ JU:lle c0dac25d7 → `kiina-taistelu-250-v3-app`; SIMU NYT →
 **TILA 21.3x (PT 21.1x tarkensi: KAKSI selvää huippua Wei vs. Shu+Wu liikkeessä, selvä aalto + X, sitten tasainen; video PT:lle, PT tarkistaa ennen KK:ta):**
 v3 ajettu 21.16–21.20 (todistus-kiina-taistelu-250-v3-20261017-2116): Wei selvä kumpu + X, Sun–Liu himmeä/hukkui, aalto haalea → ei PT:lle.
 Korjaus `e1babe602` (KiinaVaestopinta.TaisteluKummut: oma kumpu per armeija, Erilleen ≥ 230 km, aalto AaltoTumma 0,55/peitto 0,9/6 km;
-testi TaisteluKaksiHuippuaLiikkuvat). KÄÄNNÖSPYYNTÖ JU:lle → `kiina-taistelu-250-v4-app`; SIMU NYT → `odota-taistelu-250-v4.zsh`; video PT:lle. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+testi TaisteluKaksiHuippuaLiikkuvat). KÄÄNNÖSPYYNTÖ JU:lle → `kiina-taistelu-250-v4-app`; SIMU NYT → `odota-taistelu-250-v4.zsh`; video PT:lle.
+**PT 21.5x:** taistelukoe linjan 2 kärjessä (omistaja odottaa); juna 200 lukitaan, koe → juna 201 (vasta hyväksynnän jälkeen). TYÖTAPA (KK): jokainen kuva ja
+videon ruutu katsotaan täysikokoisena kohta kohdalta ennen PT:lle lähettämistä (rajatut 1:1-kehykset kuten v3:ssa, ei vain arkkia). LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
