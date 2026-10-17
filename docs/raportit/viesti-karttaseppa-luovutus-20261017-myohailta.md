@@ -38,7 +38,12 @@ sitten SIMU NYT ~10 min. (v2-käännös e8b71772c oli kesken; sen simua ei tarvi
    Kuva-arkin "0 nimeä" on normaalia: nimet tulevat ~5 s pysäkin alusta musteen jälkeen.
 4. PT:lle 3 riviä: videon polku + mitä näkyy + puutteet.
 
-**PK (Pelikoodari) kallistus:** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
+**LISÄYS 19.3x:** PK:n kevyt taistelu 269f285d8 (selkeässä laaja kuva pysyy, kallistus 18° lyönnin hetkeen, `KiinaKertovaKamera.KevytKallistus`)
+fast-forwardattu kiina-paketti-200:aan, peili päivitetty. v3-käännös oli jo käynnissä (todennäköisesti 1af33ce7f) → JU:lta pyydetty
+269f285d8 → `kiina-selkea-19-v4-app` ja SIMU NYT vain v4:lle; ajo silloin `odota-selkea-19-v4.zsh` (muuten sama). Tarkista KÄÄNNETTY-viestin SHA:
+jos v3 sisältää 269f285d8:n, aja v3.
+
+**PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
 
 ## 2. Valmiit tällä vuorolla (kiina-paketti-200, ei junassa)
