@@ -173,7 +173,36 @@ ovat samat sanatarkasti.
 valmis. Faktatarkistus ja riippumaton tarkistus ajetaan agenteilla (vain Opus/Sonnet); levyhädän aikana ei agentteja.
 
 ### Äänittäjä
-*(kertoja ja äänimaisema linssille, ääniportti; ks. `kertojan-teksti-ja-aani.md`. Täydentää Äänittäjä.)*
+*(kertoja ja äänimaisema linssille, ääniportti; ks. `kertojan-teksti-ja-aani.md`. Täydentää Äänittäjä 17.10.2026; vain nykyisten ohjeiden ja Kiinan dynastiat -linssin (30 tekstiä) opit, ei uusia sääntöjä.)*
+
+Äänittäjän osuus alkaa vasta, kun Sisältökirjuri on viimeistellyt tekstit (vaihe 4) ja PT on hyväksynyt ne; Äänittäjä ei kirjoita tarinatekstiä eikä tee pelikytkentää.
+
+1. **Lukutarkistus ensin.** Kysy kytkijältä, lukeeko peli linssin kortit ja kertorivit jo suoralla lukijalla (`KortinLukija` →
+   `Puhe.Lue`, kertoja William). Jos lukee, esiäänitystä ei tehdä eikä lupaa pyydetä (`kertojan-teksti-ja-aani.md` kohta 2.1).
+   Tarvitaan vain, jos linssi soittaa tiedoston manifestista (kuten luennat tai kertoja-nauha).
+2. **Teksti = Tekstit-osaston `.json`-totuus.** Äänitettävä teksti otetaan sanatarkasti Tekstit-osastosta tunnuksilla
+   `<linssi>-<aihe>` (Kiina: 30 tekstiä, tunnukset `kiinan-dynastiat-*`), tilana "hyväksytty". Tilassa "odottaa KK:n
+   hyväksyntää" olevia ei äänitetä. Muuttunut teksti → vanha luenta `mykistetyt`-kenttään (kohta 9) ja uusi nimi (`-v2`).
+3. **Puhuttu muoto ja merkkimäärä.** Luvut sanoiksi, "eaa." = "ennen ajanlaskun alkua" (`\beaa\.`), nimien ääntämysvihjeet; kaikki
+   ENNEN merkkimäärän laskua. Lupapyynnön merkkimäärä lasketaan puhutusta muodosta (Kiina: laske kaikki 30 tekstiä yhtenä
+   lukuna ja lisää varaus uusintaan).
+4. **Lupa.** Kertojaäänellä (William, `eleven_v4_turbo`) on pysyvä lupa PT:n hyväksymiin teksteihin; muut äänet (musiikki,
+   äänimaisema, Pulu, isoisä) vain KK:n suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä, jossa on tekstit, leikemäärä ja
+   merkkimäärä. Jokainen lisäys tai ylitys vaatii uuden luvan.
+5. **Lukumäärän ja merkkien katto ajossa.** Aja generointi skriptillä, jossa on kaksi estoa: merkkiraja (`RAJA`) ja leikemäärän
+   katto (`KATTO`, viety + uudet). Ajo pysähtyy ENNEN ylitystä (luentaerät 17.10.: merkkiraja piti, mutta lukumäärää ei
+   tarkistettu ja katto ylittyi 6 kappaleella; `docs/raportit/luennat-era4-oppaat-kaupunkilehdet-20261017.md`). Kuiva ajo
+   ensin: kappaleet, puhutut merkit ja kustannus mitatulla hinnalla (n. 0,23 krediittiä/merkki, `curl /v1/user/subscription`
+   ennen ja jälkeen); vertaa manifestiin ja säilöön, ettei jo olemassa olevaa generoida uudelleen.
+6. **Pieninä erinä.** Jaa kappaleet pieniin eriin (kuiva → ajo → paketti → vienti), jotta omistajan kehys ja kattomäärä pitävät
+   ja virhe maksaa vain yhden erän. Raaka PCM talteen T7:lle (`Matkakirja-aanimasterit/`), ei poisteta.
+7. **Manifesti kumulatiivisena, uusi polku joka kerta.** Uusi manifesti = uusi versiopolku (`v5`, `v6`…) ja sisältää edelliset
+   rivit täysillä osoitteilla + uudet; peli lukee yhden manifestin. Ilmoita Siirtosepälle (tai kytkijälle) täsmällinen vaihto
+   (asetus ja URL) ja varmista ämpärin vastaus 200.
+8. **Ääniportti ja vienti.** `vie-paketti.sh` ajaa ääniportin (true peak, kovuus) ja kieltäytyy ylikirjoittamasta; paketissa
+   `LAHTEET.md` (lisenssi, malli, ääni, nopeus, omistajan päätöksen aikaleima) ja `SHA256SUMS`. Kuuntelu ei ole portti.
+9. **Raportti PT:lle.** Yksi rivi (3 riviä enintään): kappaleet, merkit, krediitit, manifestin URL, sha; yksityiskohdat
+   tiedostoon `docs/raportit/`.
 
 ## 8. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 
