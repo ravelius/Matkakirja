@@ -37,6 +37,9 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
   KÄÄNNÖSPYYNTÖ JU:lle → `_tyo/karttaseppa/kiina-taistelu-250-v6-app`; simu JU:n vuorolla junan 201 kuvien jälkeen.
   SIMU NYT → taustalle `zsh …/kiina-koko-linssi/odota-taistelu-250-v6.zsh > …/odota-taistelu-250-v6.out` → SIMU VAPAA → yhdista-video → ruudut → patka → PT.
   Tarkista v6:ssa: valoisa rinne vasen ylä, varjorinne + heittovarjo oikea ala (kukkula, ei kuoppa/rengas), Wu erottuu Wun alueesta.
+- **LISÄYS 01.3x: v6 simu 01.26 (todistus-kiina-taistelu-250-v6-20261018-0126, SIMU VAPAA kuitattu 01.30)** → valo väärin päin:
+  verkon kolmiot (a, etelä, itä) → normaalit alaspäin. **v7 = f1bc1d501** (varjostin kääntää normaalin ylös-puolelle), tarkista.sh 0,
+  peili pushattu, KÄÄNNÖSPYYNTÖ JU:lle → `kiina-taistelu-250-v7-app`; skriptit `odota-/ajo-taistelu-250-v7.zsh` valmiina. Sama ketju kuin v6.
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
