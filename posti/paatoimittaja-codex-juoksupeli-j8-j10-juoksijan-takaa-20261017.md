@@ -40,8 +40,14 @@ Vältä: putoamista, jyrkkää lapetta lapsen jalkojen alla, korkeaa pudotusta l
 `posti/juoksupeli-havainnekuvat-20261017b/havainne-j8.png`, `-j9.png`, `-j10.png`, lyhyt QA ja vastaus
 `posti/codex-paatoimittaja-juoksupeli-j8-j10-20261017.md`. Päätoimittaja vie kuvat omistajalle Keskustelukanavan kautta.
 
-## TÄYDENNYS (omistaja 17.10. klo 21.52, sanatarkasti): "Kiinniottajia voi myös harhauttaa talojen sisällä."
-Edelleen TASAN 3 kuvaa (ei lisäkuvia). Vähintään YHDESSÄ kolmesta kuvasta (sopii parhaiten j9:n kirjastoon tai j8:n
-vartiohuoneeseen) näkyy harhautushetki katottomassa huoneessa: Puyi livahtaa sermin tai verhon taakse tai vetää oven kiinni
-tai kaataa kirjarullapinon tielle, ja kiinniottaja juoksee väärään suuntaan samalla, kun Puyi poistuu huoneen toisesta ovesta.
-Leikkisä sävy, ei väkivaltaa. Jos olet jo ehtinyt aloittaa, tee täydennys niihin kuviin, joita ei vielä ole generoitu.
+## TÄYDENNYS 2 (KORVAA aiemman täydennyksen; omistaja 17.10. klo 21.52 ja 21.54, sanatarkasti)
+21.52: "Kiinniottajia voi myös harhauttaa talojen sisällä."
+21.54: "Koko ajan pitää juosta. Lähinnä pystyy valitsemaan eri reitin talon sisällä. Tästä tulee suhteellisen yksinkertainen
+reaktiopeli, ja kun kuvakulma on tarpeeksi ylhäällä, niin grafiikastakin tulee yksinkertaisempaa. Eli tässä on tärkeää nopeus."
+
+Edelleen TASAN 3 kuvaa. EI piiloutumista, sermiä, verhoa, ovien sulkemista eikä esteiden kaatamista.
+- Puyi JUOKSEE KOKO AJAN; harhautus syntyy reitinvalinnasta: katottomassa talossa on 2–3 kulkuväylää (huoneesta toiseen,
+  käytävä, sisäpiha) ja useampi uloskäynti. Vähintään yhdessä kuvassa kiinniottaja on selvästi valinnut väärän väylän.
+- KUVAKULMA KORKEALLA (selvästi ylempänä kuin j5–j7, lähes lintuperspektiivi juoksijan takaa), grafiikka SELKEÄÄ JA
+  PELKISTETTYÄ: reitit, kiinniottajat ja kerättävät esineet erottuvat heti; vähemmän pikkuyksityiskohtia.
+- VAUHDIN TUNTU vahva (liike-asennot, pölyä tai liikeviiva saa näkyä hillitysti).
