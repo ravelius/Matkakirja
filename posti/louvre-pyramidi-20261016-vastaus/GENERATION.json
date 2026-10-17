@@ -1,0 +1,249 @@
+{
+  "method": "built-in image_gen",
+  "newWholeImageGeneration": true,
+  "imageEditOrLocalComposite": false,
+  "callsAllowed": 9,
+  "callsIssued": 9,
+  "callsCompleted": 9,
+  "retries": 0,
+  "extraCalls": 0,
+  "views": {
+    "K1": {
+      "issuedAt": "2026-10-17T18:24:41.458451+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "aa78050468e45150942941eee37b2d4d77242b3a312b739a4fa6bf8425962746",
+      "referenceSHA256": [
+        "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+        "5ef2cb680f299c0ab1d10dfc5048abcfb66f62ef68dfd0832da9808fafda6aff",
+        "c796b73da92018ae0cd00f13d7d94f2b8630cdc38a0898244a2dfd80d83fbd2d",
+        "56042362dbfff3ba87bc731ec6968803d251644e87cd58578821c13cbf641e64"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:25:22.199842+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-200ea599-f6c2-4f8b-98d5-cb7682ac7421.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K1.png",
+      "nativeSHA256": "92b857335e4dcab99e03917f680c0ca8afcc5618b5df1e6b8a792c1ef007443c",
+      "bytes": 3239315,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "K2": {
+      "issuedAt": "2026-10-17T18:25:27.273881+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "cce62f5fff13dbfc49a96bb812fc18c8f9f9194bcfe5f775a43642d1d2c4151d",
+      "referenceSHA256": [
+        "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+        "bfafd21b4651fa0de17bcd9346d3b3a2023a058f10609d02f9d59a1ad598463f",
+        "3a6ee2c25e2f8e29af84177d3e7f6bb6e617092fbf927f0ae8ac0a0b1e59723c",
+        "8b662944dac750b5731e62725e960fb0506e71505c2e39b40d0d26a326004aa9"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:26:06.687968+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-8c482458-ec0c-4f72-b13b-eb65854a875a.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K2.png",
+      "nativeSHA256": "bd7ca98a1470eba36b28ae31ba0e4a91323a691d4c12de4f2f2ff88e8772c490",
+      "bytes": 3587622,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "K3": {
+      "issuedAt": "2026-10-17T18:26:13.567900+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "1abafd3c5ed23bd9a82c7b4ddf722c9384cfa272dbff6ee783b4fe539a367a61",
+      "referenceSHA256": [
+        "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443",
+        "f5596a8897989b791a3a4d3f3dae9d8f4fdc65585aa8cfe252571fe9fffa1964",
+        "7430a296510f3ef82b384a797a3addf2f967f588169d64adef00fbf5f9f8805d",
+        "1744d0fba98734c319e037fa43e770b4dd7e5b488f613b5453aecb973b140966"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:27:06.879530+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-af47aeb9-2372-4e68-8925-73244cb2444a.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K3.png",
+      "nativeSHA256": "99cc09aeecb1511b4f2fc15812936e086394d1bd18e31ede112d578154f1e60b",
+      "bytes": 3283184,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "K4": {
+      "issuedAt": "2026-10-17T18:27:12.427816+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "6ad725d7d2f1c1a8213cee9d65e53dc622c58aeb95085b98e8a8aff9c7399211",
+      "referenceSHA256": [
+        "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+        "f3ff4a322eb96ef32adeed7944accdba3b165b623603da22358bb690b8347792",
+        "1598efbc381f4521db97c7d59c55492759cde94708085ce8ce59d7edbfeaba26",
+        "55bf9afc70e8d1ce5169a1fc5ae1e224d6da9dfa0f4b444377c7ac06a6fc51d1"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:28:07.148431+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-30dda3cd-c069-4fec-a0cc-546b3c0154ce.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K4.png",
+      "nativeSHA256": "944285d35fc9d3a636383dedf65621eb7871f863b45d2cd14684630666f927ec",
+      "bytes": 3394560,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "K5": {
+      "issuedAt": "2026-10-17T18:28:16.612279+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "9720542feefefd9c6f0dc2b5a3c7bbaa6732757ed5636822034b3f29edf276a7",
+      "referenceSHA256": [
+        "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+        "5de5b28ba8cd4e380c1c726f3c31a0aa98db16030d1eaafd071ab31cb260759f",
+        "03b12275a5ec1f4e6bd6a5dddb9aa8f83597d5bc0e0b0207f79ae918b2a37b12",
+        "88ae859713b32d99b7d9fbe6a583285d927ac7efc08193106d964682ab51615f"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:28:56.184968+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-03b7f747-f72a-4fa2-bbfa-053d166ee3c4.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K5.png",
+      "nativeSHA256": "03ea5be8ff4558de008f0147c002304ec191f26ac464a23ea966ad0bd9732101",
+      "bytes": 2720701,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "K6": {
+      "issuedAt": "2026-10-17T18:29:02.341065+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "6b0eee5595daf56f9029a3505034c87771cbd893b946d71ced49a5c9ec5af9df",
+      "referenceSHA256": [
+        "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+        "950941c7a9af5765210fdba116a6332094355746b29276e0b1ff000cc018d612",
+        "6db48df6146a85d533e118945dd668ed35778167d60d508b509e112bf213b0d9",
+        "306852367d9c8d9beb3f8ead3a499a21ae73143b6d899fc374a99104112a8c45"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:29:44.740983+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-f4c36d60-64d3-4256-ae61-dd27b296e30d.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K6.png",
+      "nativeSHA256": "60b42b1cb82e8bb61709da01442f5b367d962081a60152ee454c5d7f3cbb8c7f",
+      "bytes": 3284957,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "K7": {
+      "issuedAt": "2026-10-17T18:29:51.344307+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "0469dec9b772eb36ebf7f1eae1ed46d66664369abcab8b9a67636324498fd947",
+      "referenceSHA256": [
+        "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+        "5dd1c1a3f3039a1fa5fbaf7d697b50dd3e625b5cd64f50b09dea7c30c97d6847",
+        "62882e8fd95c06e2d1dd48044b272db56a7c40b0b753b4e5812b91b64010b51a",
+        "ec0e986a8fe68734e36023e91d357efef2f01e52dd1d5c90c4799917e263836c"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:30:41.127646+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-734fa60b-bc77-49fe-a333-c4b270fc41d8.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K7.png",
+      "nativeSHA256": "ddaa02ce0141f34352c0ea99eab601f043834cd8de8baa9e77c03aa07dd12f15",
+      "bytes": 3437934,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "L1": {
+      "issuedAt": "2026-10-17T18:30:47.049923+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "1d441654d3de977dae4c591a44d3b7225e0fa52d57678df44ddb8e6b0d365495",
+      "referenceSHA256": [
+        "c3a0f1a5f4f500889c3a377a90a59d30c8a0f191e718f28dbbbdca6a6c92ca56",
+        "94d7c006ef76fcfcd0cf65a5438f54004b6c6a843da2e8f9c6f5f692960e83d9",
+        "b84a61c1cf7dd89040e8dfd24ba5c275c60ecec2a5f9ea0ff4a599c534bc4475",
+        "34bb020159eb4b72e79de88e0ec96829e6322625f09301b0115706c5071e12c2"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:31:29.930677+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-930ff14b-d31f-4dde-88ef-cb2dc06870a3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-L1.png",
+      "nativeSHA256": "6140ea198491d392db3d5eea6ce022aba2fc79f9e535e202576099cc59b32b01",
+      "bytes": 2819510,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    },
+    "L3": {
+      "issuedAt": "2026-10-17T18:31:36.071530+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "d85c1c922e525955a9d3141ddf47a52ce461d56010be14e11da1fe85dafe14ef",
+      "referenceSHA256": [
+        "d8dcd6267d00a1a2106f306d627f7c88221bae08fa6aea11ecd890a8f961757f",
+        "639dee29150ebfa2c260041d38f083c049a73cc95399fac2656feef8ac28bd40",
+        "85b8cf39520b9d8f5451744f790591c7067a3e947480bbeb398eb5ecba1c7722",
+        "640a769b38982d98759c04450a0c9c388406042670bd0fb59eced03e272e88e9"
+      ],
+      "method": "built-in image_gen, full new native generation",
+      "extraCallsAuthorized": false,
+      "completedAt": "2026-10-17T18:32:21.917193+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-57b4df38-6834-4d34-ad95-214aa1f51ca9.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-L3.png",
+      "nativeSHA256": "8011c58564981e16beedbd804432b77fea31a3ea69b092774b309b013269f643",
+      "bytes": 3117472,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "dimensionsRequiredMet": true
+    }
+  },
+  "nativePixelsUnmodified": true,
+  "allNatives1536x1024": true,
+  "L2Generated": false
+}

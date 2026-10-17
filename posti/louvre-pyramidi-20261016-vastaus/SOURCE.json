@@ -1,0 +1,312 @@
+{
+  "pinnedOrderCommit": "a1ac41f9e7ec6ea76d494eb639c6507b1157da1d",
+  "snapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+  "orderPath": "posti/linnanrakentaja-codex-louvre-pyramidi-20261016.md",
+  "orderBlob": "73d0b0941fa1f7a63fb201001971236d6a2d953c",
+  "inputFiles": [
+    {
+      "path": "posti/linnanrakentaja-codex-louvre-pyramidi-20261016.md",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/linnanrakentaja-codex-louvre-pyramidi-20261016.md",
+      "blob": "73d0b0941fa1f7a63fb201001971236d6a2d953c",
+      "sha256": "2e1cea3373851c35d17f56facc0c038cdd9b719e252a0b915d56faa4d6811834",
+      "bytes": 4492
+    },
+    {
+      "path": "posti/louvre-codex-tilaus.md",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-codex-tilaus.md",
+      "blob": "20ab0bdd25430718d260bcb37f814bf2650d3ebd",
+      "sha256": "74026ce85d1fed36210aaf23eedf384729d851f6fb8f663c3d1706074f2834c3",
+      "bytes": 6900
+    },
+    {
+      "path": "posti/louvre-lahikulmat-codex-tilaus.md",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikulmat-codex-tilaus.md",
+      "blob": "287689192bc8c2e96240e0f16b02471c1597f8da",
+      "sha256": "b28e27d5109483fe58bce57d153f914c3033feb59cd491534ed5196a142b7a62",
+      "bytes": 3923
+    },
+    {
+      "path": "posti/louvre-lahikulmat-codex-tilaus-2.md",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikulmat-codex-tilaus-2.md",
+      "blob": "77ed33060371261c62dd09fb93d83f65ca8097e5",
+      "sha256": "b68df9f6e42bc58817939bfb2672560529b4840ab03ce0486207989a554c4ac7",
+      "bytes": 2784
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K1-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-maski-k59.png",
+      "blob": "9261ddd365c52340a139944107e921a6b7bc282c",
+      "sha256": "56042362dbfff3ba87bc731ec6968803d251644e87cd58578821c13cbf641e64",
+      "bytes": 34494
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K1-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-oma-k59.png",
+      "blob": "2ebd1fadcd3cbe9598c0d3dcad2f6925b9dbec2b",
+      "sha256": "c796b73da92018ae0cd00f13d7d94f2b8630cdc38a0898244a2dfd80d83fbd2d",
+      "bytes": 631920
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K1-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-pyramidi-maski.png",
+      "blob": "2d589cd98decd83baf55d0affda1a5e534a745d0",
+      "sha256": "5ef2cb680f299c0ab1d10dfc5048abcfb66f62ef68dfd0832da9808fafda6aff",
+      "bytes": 213561
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K2-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-maski-k59.png",
+      "blob": "b4e3ab1c9bf78058d3cceb3e2b3963a0c74e7006",
+      "sha256": "8b662944dac750b5731e62725e960fb0506e71505c2e39b40d0d26a326004aa9",
+      "bytes": 29382
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K2-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-oma-k59.png",
+      "blob": "77d5f8da4f81984cdb197d462e827cc8c07ea280",
+      "sha256": "3a6ee2c25e2f8e29af84177d3e7f6bb6e617092fbf927f0ae8ac0a0b1e59723c",
+      "bytes": 493813
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K2-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-pyramidi-maski.png",
+      "blob": "8084106c7a3652e156aa0441666c40e2372c6df7",
+      "sha256": "bfafd21b4651fa0de17bcd9346d3b3a2023a058f10609d02f9d59a1ad598463f",
+      "bytes": 210036
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K3-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-maski-k59.png",
+      "blob": "6b3593f25a0bc319636d9935c80edcab329a5d66",
+      "sha256": "1744d0fba98734c319e037fa43e770b4dd7e5b488f613b5453aecb973b140966",
+      "bytes": 29432
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K3-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-oma-k59.png",
+      "blob": "2b81d6a832b99c0b5a986bb3a0137eb30280fbd7",
+      "sha256": "7430a296510f3ef82b384a797a3addf2f967f588169d64adef00fbf5f9f8805d",
+      "bytes": 457617
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K3-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-pyramidi-maski.png",
+      "blob": "12e88ba89edf4ca0dfdd888a2f28f4f842e1a2ea",
+      "sha256": "f5596a8897989b791a3a4d3f3dae9d8f4fdc65585aa8cfe252571fe9fffa1964",
+      "bytes": 210043
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K4-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-maski-k59.png",
+      "blob": "841cb4114e755bfc6f544f1218070c41b930f007",
+      "sha256": "55bf9afc70e8d1ce5169a1fc5ae1e224d6da9dfa0f4b444377c7ac06a6fc51d1",
+      "bytes": 35184
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K4-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-oma-k59.png",
+      "blob": "23483c0ec08117de80d67e84da0bc0d20d4c9852",
+      "sha256": "1598efbc381f4521db97c7d59c55492759cde94708085ce8ce59d7edbfeaba26",
+      "bytes": 700262
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K4-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-pyramidi-maski.png",
+      "blob": "9b44680ef162c65d5df2e7c381b5ac15c0a6d8d4",
+      "sha256": "f3ff4a322eb96ef32adeed7944accdba3b165b623603da22358bb690b8347792",
+      "bytes": 214047
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K5-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-maski-k59.png",
+      "blob": "ecad34be7afc0e17d93107e7fee824f86366a146",
+      "sha256": "88ae859713b32d99b7d9fbe6a583285d927ac7efc08193106d964682ab51615f",
+      "bytes": 29420
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K5-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-oma-k59.png",
+      "blob": "aa04fddb5a8ee490c19dd283378b23660b7e2c2e",
+      "sha256": "03b12275a5ec1f4e6bd6a5dddb9aa8f83597d5bc0e0b0207f79ae918b2a37b12",
+      "bytes": 610852
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K5-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-pyramidi-maski.png",
+      "blob": "2262d6d2774bb2bb4c37ccffb084c65f206a8b27",
+      "sha256": "5de5b28ba8cd4e380c1c726f3c31a0aa98db16030d1eaafd071ab31cb260759f",
+      "bytes": 216665
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K6-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-maski-k59.png",
+      "blob": "93e6228c224a24c2976615a3855f09e671c0c5dc",
+      "sha256": "306852367d9c8d9beb3f8ead3a499a21ae73143b6d899fc374a99104112a8c45",
+      "bytes": 35034
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K6-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-oma-k59.png",
+      "blob": "b11af9b3a3c05d6db97b148199777dc4373060fe",
+      "sha256": "6db48df6146a85d533e118945dd668ed35778167d60d508b509e112bf213b0d9",
+      "bytes": 1098307
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K6-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-pyramidi-maski.png",
+      "blob": "34084cbb9c9179a494d961c976b3ca5e97eabd47",
+      "sha256": "950941c7a9af5765210fdba116a6332094355746b29276e0b1ff000cc018d612",
+      "bytes": 227643
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K7-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-maski-k59.png",
+      "blob": "026ddb75f5d90443912cb060af19aef57578ebcc",
+      "sha256": "ec0e986a8fe68734e36023e91d357efef2f01e52dd1d5c90c4799917e263836c",
+      "bytes": 41798
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K7-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-oma-k59.png",
+      "blob": "a4736db77c594c16b86955a184e056f420cea1cf",
+      "sha256": "62882e8fd95c06e2d1dd48044b272db56a7c40b0b753b4e5812b91b64010b51a",
+      "bytes": 1130379
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-K7-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-pyramidi-maski.png",
+      "blob": "4b68ef8eb555c9485acca738deae2c64d7c59b9c",
+      "sha256": "5dd1c1a3f3039a1fa5fbaf7d697b50dd3e625b5cd64f50b09dea7c30c97d6847",
+      "bytes": 227745
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-L1-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-maski-k59.png",
+      "blob": "b32899130d608070edc6d91d5b55e6c0bed6b3af",
+      "sha256": "34bb020159eb4b72e79de88e0ec96829e6322625f09301b0115706c5071e12c2",
+      "bytes": 28955
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-L1-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-oma-k59.png",
+      "blob": "957db812627bc3d7b4cf0ef4034a24efd4d449c7",
+      "sha256": "b84a61c1cf7dd89040e8dfd24ba5c275c60ecec2a5f9ea0ff4a599c534bc4475",
+      "bytes": 886289
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-L1-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-pyramidi-maski.png",
+      "blob": "b334bb0ef17d586515bfa99f0633fcc1cbcd53fc",
+      "sha256": "94d7c006ef76fcfcd0cf65a5438f54004b6c6a843da2e8f9c6f5f692960e83d9",
+      "bytes": 233766
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-L3-maski-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-maski-k59.png",
+      "blob": "27804665b6d72f6c4243a87bb22ff2b3a368f1d4",
+      "sha256": "640a769b38982d98759c04450a0c9c388406042670bd0fb59eced03e272e88e9",
+      "bytes": 28048
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-L3-oma-k59.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-oma-k59.png",
+      "blob": "5464d1daf7daafe7ab1db1e7d9093ed7b3aae83c",
+      "sha256": "85b8cf39520b9d8f5451744f790591c7067a3e947480bbeb398eb5ecba1c7722",
+      "bytes": 699809
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-L3-pyramidi-maski.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-pyramidi-maski.png",
+      "blob": "f28017bf4bc183620c498a40565b5f8bf0833cf8",
+      "sha256": "639dee29150ebfa2c260041d38f083c049a73cc95399fac2656feef8ac28bd40",
+      "bytes": 229358
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-kulmat-natiivi.json",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-kulmat-natiivi.json",
+      "blob": "b8f18cb1e5410a4617204596b7da7f3a114fdc16",
+      "sha256": "43387231950e7fe58e7fff59a88c78cf28ccdf1ac6066e256d068fd6bf3d8e29",
+      "bytes": 4204
+    },
+    {
+      "path": "posti/louvre-pyramidi-20261016/louvre-lahikulmat.json",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-lahikulmat.json",
+      "blob": "799920ee4896396ba1b9755043a10974d683d3f9",
+      "sha256": "0e361c9b099e02adf49b1e01a8eed722f2ed2fc5b92b6872296b7217bb86ad1c",
+      "bytes": 2565
+    },
+    {
+      "path": "posti/louvre-havainne-v2/louvre-K1.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-v2/louvre-K1.png",
+      "blob": "90e85794d46b590bfc26f8d333dc012312d56f25",
+      "sha256": "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+      "bytes": 3368458
+    },
+    {
+      "path": "posti/louvre-havainne-K2-K7-20261015/louvre-K2.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K2.png",
+      "blob": "23bae3b3e2e987dc71505f1a2369eb28d4a19c99",
+      "sha256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+      "bytes": 3788199
+    },
+    {
+      "path": "posti/louvre-havainne-K2-K7-20261015/louvre-K3.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K3.png",
+      "blob": "f06c8ec0f6bb392b8874cfd7edbe70293275ec7d",
+      "sha256": "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443",
+      "bytes": 3449007
+    },
+    {
+      "path": "posti/louvre-havainne-K2-K7-20261015/louvre-K4.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K4.png",
+      "blob": "9004de4b4f8fccbe476bbe2dae543bd5e82f5deb",
+      "sha256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+      "bytes": 3728065
+    },
+    {
+      "path": "posti/louvre-havainne-K2-K7-20261015/louvre-K5.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K5.png",
+      "blob": "57afe42de04aa882525888468606d6bf7c46eb91",
+      "sha256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+      "bytes": 2774475
+    },
+    {
+      "path": "posti/louvre-havainne-K2-K7-20261015/louvre-K6.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K6.png",
+      "blob": "24026cb43b7fb457f43c89a4aabd178acde9baf3",
+      "sha256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+      "bytes": 3397229
+    },
+    {
+      "path": "posti/louvre-havainne-K2-K7-20261015/louvre-K7.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K7.png",
+      "blob": "0c208f3d0bb083bb2d0a2386e46f500204526678",
+      "sha256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+      "bytes": 3527890
+    },
+    {
+      "path": "posti/louvre-lahikuvat-L1-L3-v2/louvre-L1.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikuvat-L1-L3-v2/louvre-L1.png",
+      "blob": "79ea5a13178c1b20925bb69ce4dc1d63003f6169",
+      "sha256": "c3a0f1a5f4f500889c3a377a90a59d30c8a0f191e718f28dbbbdca6a6c92ca56",
+      "bytes": 2481882
+    },
+    {
+      "path": "posti/louvre-lahikuvat-L1-L3-v2/louvre-L3.png",
+      "local": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikuvat-L1-L3-v2/louvre-L3.png",
+      "blob": "096fe1de584465d1014f9793cc63b507289ffbbe",
+      "sha256": "d8dcd6267d00a1a2106f306d627f7c88221bae08fa6aea11ecd890a8f961757f",
+      "bytes": 3070601
+    }
+  ],
+  "inputImageCount": 36,
+  "all36PersonallyViewedBeforeCalls": true,
+  "allInstructionsReadInFull": true,
+  "callBudget": 9,
+  "ownerUpperLimit10ReserveNotAuthorized": true,
+  "L2ExcludedAndNotWritten": true,
+  "L2ExistingBlob": "49e1ce9da5e5a9e56ab1390316ba599cfe081d47",
+  "L2ExistingBytes": 2718283,
+  "textConflictResolution": "new no-text directive overrides older havainnekuva label; whole new generation owner instruction overrides request to preserve source pixels via local composite",
+  "noR2GameIntegrationOrPublication": true
+}

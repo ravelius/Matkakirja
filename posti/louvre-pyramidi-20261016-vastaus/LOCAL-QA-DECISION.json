@@ -1,0 +1,15 @@
+{
+  "status": "nine-calls-exhausted-nine-native-candidates-deliver-with-failure-evidence",
+  "acceptedTargetCount": 0,
+  "strictLockedPyramidGeometryMet": false,
+  "palacePixelInvarianceMet": false,
+  "coarseMaskMeasurementsDiagnosticOnly": true,
+  "allNominalThresholdsBelowRequired": true,
+  "contentDeviations": true,
+  "newAttemptAuthorized": false,
+  "ownerApproved": false,
+  "receiverAccepted": false,
+  "modelLoopsStarted": false,
+  "gameIntegrated": false,
+  "published": false
+}

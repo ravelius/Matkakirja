@@ -1,0 +1,525 @@
+{
+  "method": "direct native1536x1024, no warp/align/crop, masks frozen before target comparison",
+  "coarseMasks": true,
+  "typicalBoundaryUncertaintyPixels": {
+    "palace": 20,
+    "pyramidArea": 8
+  },
+  "strictUncertaintyBoundAvailable": false,
+  "generationCalls": 9,
+  "results": [
+    {
+      "view": "K1",
+      "nativeSHA256": "92b857335e4dcab99e03917f680c0ca8afcc5618b5df1e6b8a792c1ef007443c",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "eb49769409a4071de57f1902602be51a4b76fcd9ebeadc9b79bbcf236fd599b2",
+          "targetSHA256": "56042362dbfff3ba87bc731ec6968803d251644e87cd58578821c13cbf641e64",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 354525,
+          "targetPixels": 364994,
+          "intersectionPixels": 331030,
+          "unionPixels": 388489,
+          "iou": 0.8520961983479584,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.6926109439130915,
+            0.9414456959968912
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "5d7552933579c9d5ac58d8bfc272b6f62848c3049a99509270189440850763d0",
+          "targetSHA256": "5ef2cb680f299c0ab1d10dfc5048abcfb66f62ef68dfd0832da9808fafda6aff",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 34461,
+          "targetPixels": 15500,
+          "intersectionPixels": 10450,
+          "unionPixels": 39511,
+          "iou": 0.2644833084457493,
+          "requiredIoU": 0.9,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.14387288562835734,
+            0.5594053323504116
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 336981,
+        "anyChannelChangedPixels": 336758,
+        "maxChannelDifferenceOver10Pixels": 204151,
+        "meanAbsoluteChannelDifference": 16.256103459838982,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "K2",
+      "nativeSHA256": "bd7ca98a1470eba36b28ae31ba0e4a91323a691d4c12de4f2f2ff88e8772c490",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "481e578cd1dbbf3d0eb026c323a343862264dffe45aecdd7342841eba73219f1",
+          "targetSHA256": "8b662944dac750b5731e62725e960fb0506e71505c2e39b40d0d26a326004aa9",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 336914,
+          "targetPixels": 280103,
+          "intersectionPixels": 229771,
+          "unionPixels": 387246,
+          "iou": 0.5933463483160575,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.48125300260285336,
+            0.7048237363224507
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "d06e87ae8735d122b0ca1882ee4406ec1cc2b3da6af84c1d0f48e2c4d32142b5",
+          "targetSHA256": "bfafd21b4651fa0de17bcd9346d3b3a2023a058f10609d02f9d59a1ad598463f",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 18115,
+          "targetPixels": 4943,
+          "intersectionPixels": 1772,
+          "unionPixels": 21286,
+          "iou": 0.08324720473550691,
+          "requiredIoU": 0.8,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.023680404916847433,
+            0.24455669743947048
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 327085,
+        "anyChannelChangedPixels": 326921,
+        "maxChannelDifferenceOver10Pixels": 202975,
+        "meanAbsoluteChannelDifference": 14.671435050012484,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "K3",
+      "nativeSHA256": "99cc09aeecb1511b4f2fc15812936e086394d1bd18e31ede112d578154f1e60b",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "b72e3b7917276bcc94448a1fd419fd31fb40af397ee8cf2d953b33cda2091bc8",
+          "targetSHA256": "1744d0fba98734c319e037fa43e770b4dd7e5b488f613b5453aecb973b140966",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 333033,
+          "targetPixels": 267394,
+          "intersectionPixels": 94853,
+          "unionPixels": 505574,
+          "iou": 0.1876144738455696,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.14239616160835675,
+            0.24066889345666323
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "62da18c6c024cceb67a90dae9c4dbffb5d88be1bcb13f49570548877370d608a",
+          "targetSHA256": "f5596a8897989b791a3a4d3f3dae9d8f4fdc65585aa8cfe252571fe9fffa1964",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 14181,
+          "targetPixels": 5301,
+          "intersectionPixels": 0,
+          "unionPixels": 19482,
+          "iou": 0.0,
+          "requiredIoU": 0.8,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.0,
+            0.0
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 324957,
+        "anyChannelChangedPixels": 324716,
+        "maxChannelDifferenceOver10Pixels": 188121,
+        "meanAbsoluteChannelDifference": 13.708909178752881,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "K4",
+      "nativeSHA256": "944285d35fc9d3a636383dedf65621eb7871f863b45d2cd14684630666f927ec",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "819db32fd7d7716ab8c6214d5e4cd65ddd30e6a89474b57d50cc937fb08d6417",
+          "targetSHA256": "55bf9afc70e8d1ce5169a1fc5ae1e224d6da9dfa0f4b444377c7ac06a6fc51d1",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 434864,
+          "targetPixels": 422415,
+          "intersectionPixels": 386457,
+          "unionPixels": 470822,
+          "iou": 0.8208133859505291,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.6949679902858931,
+            0.9048674290932173
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "7aade4a3f96a6f863ca12ff244800cf138bbb6df18abb962367c40e4ff8391da",
+          "targetSHA256": "f3ff4a322eb96ef32adeed7944accdba3b165b623603da22358bb690b8347792",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 22679,
+          "targetPixels": 17200,
+          "intersectionPixels": 2511,
+          "unionPixels": 37368,
+          "iou": 0.06719653179190752,
+          "requiredIoU": 0.9,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.01271462283342827,
+            0.21011375236984103
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 419845,
+        "anyChannelChangedPixels": 419542,
+        "maxChannelDifferenceOver10Pixels": 234198,
+        "meanAbsoluteChannelDifference": 15.486712953590015,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "K5",
+      "nativeSHA256": "03ea5be8ff4558de008f0147c002304ec191f26ac464a23ea966ad0bd9732101",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "985b9e31ef2de67973a5b2b9d865b810ccd0976d22ce29bd428bbc7869d9ff97",
+          "targetSHA256": "88ae859713b32d99b7d9fbe6a583285d927ac7efc08193106d964682ab51615f",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 424701,
+          "targetPixels": 402520,
+          "intersectionPixels": 378714,
+          "unionPixels": 448507,
+          "iou": 0.8443881589362039,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.7361647255263397,
+            0.9287371529828706
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "ec5f518ca59a4e57819abb5f7f5840840147d8f4d732c7eb60fea8673077b108",
+          "targetSHA256": "5de5b28ba8cd4e380c1c726f3c31a0aa98db16030d1eaafd071ab31cb260759f",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 63596,
+          "targetPixels": 46357,
+          "intersectionPixels": 34582,
+          "unionPixels": 75371,
+          "iou": 0.45882368550238156,
+          "requiredIoU": 0.9,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.22425352849980873,
+            0.7670220645227965
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 387961,
+        "anyChannelChangedPixels": 387721,
+        "maxChannelDifferenceOver10Pixels": 206702,
+        "meanAbsoluteChannelDifference": 11.94064523667757,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "K6",
+      "nativeSHA256": "60b42b1cb82e8bb61709da01442f5b367d962081a60152ee454c5d7f3cbb8c7f",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "0ab3158a01edff72311072267f9114fe6014c8aff2f31407d234f6ce7b80f5dc",
+          "targetSHA256": "306852367d9c8d9beb3f8ead3a499a21ae73143b6d899fc374a99104112a8c45",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 879509,
+          "targetPixels": 873724,
+          "intersectionPixels": 831474,
+          "unionPixels": 921759,
+          "iou": 0.9020514038919066,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.8310041171088747,
+            0.9543575159839455
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "bbbe376ccbadfbbb32db37a6c0c7ccf0be4035bce5c7b376d83b4fc8a1568bb4",
+          "targetSHA256": "950941c7a9af5765210fdba116a6332094355746b29276e0b1ff000cc018d612",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 93892,
+          "targetPixels": 67290,
+          "intersectionPixels": 49923,
+          "unionPixels": 111259,
+          "iou": 0.44870976729972406,
+          "requiredIoU": 0.9,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.2788804981926202,
+            0.66532582461786
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 839990,
+        "anyChannelChangedPixels": 839506,
+        "maxChannelDifferenceOver10Pixels": 504309,
+        "meanAbsoluteChannelDifference": 16.219451422040738,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "K7",
+      "nativeSHA256": "ddaa02ce0141f34352c0ea99eab601f043834cd8de8baa9e77c03aa07dd12f15",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "c4f9f4fe188912c38c5e1415dce6d5e9970fcf828f2d471b6a9c35206ad71030",
+          "targetSHA256": "ec0e986a8fe68734e36023e91d357efef2f01e52dd1d5c90c4799917e263836c",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 681792,
+          "targetPixels": 689780,
+          "intersectionPixels": 600990,
+          "unionPixels": 770582,
+          "iou": 0.7799169978016616,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.6947666079259047,
+            0.8512664757061208
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "27dd403fe8beec3db32d3e62e36c244a5bdb20b8fbe36d751aa77723593f36f3",
+          "targetSHA256": "5dd1c1a3f3039a1fa5fbaf7d697b50dd3e625b5cd64f50b09dea7c30c97d6847",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 108414,
+          "targetPixels": 87648,
+          "intersectionPixels": 57588,
+          "unionPixels": 138474,
+          "iou": 0.4158759045019282,
+          "requiredIoU": 0.9,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.2585852373113358,
+            0.6270461774517494
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 624064,
+        "anyChannelChangedPixels": 623437,
+        "maxChannelDifferenceOver10Pixels": 328044,
+        "meanAbsoluteChannelDifference": 14.428602408300003,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "L1",
+      "nativeSHA256": "6140ea198491d392db3d5eea6ce022aba2fc79f9e535e202576099cc59b32b01",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "5ce5fc6b67533db746ea649354f95c262b3d6d0eb5a8c42b137c0e51fd62bb5a",
+          "targetSHA256": "34bb020159eb4b72e79de88e0ec96829e6322625f09301b0115706c5071e12c2",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 790595,
+          "targetPixels": 802734,
+          "intersectionPixels": 665175,
+          "unionPixels": 928154,
+          "iou": 0.7166644759382602,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.6676364075577315,
+            0.745902379704002
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "71e24b61ec2c46d630481c54deed253c6b25c2b37536cb1664ea8b68310c6f4d",
+          "targetSHA256": "94d7c006ef76fcfcd0cf65a5438f54004b6c6a843da2e8f9c6f5f692960e83d9",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 307910,
+          "targetPixels": 206943,
+          "intersectionPixels": 66034,
+          "unionPixels": 448819,
+          "iou": 0.14712835240932312,
+          "requiredIoU": 0.9,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.0997545256076797,
+            0.1937955065906722
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 563500,
+        "anyChannelChangedPixels": 563415,
+        "maxChannelDifferenceOver10Pixels": 332091,
+        "meanAbsoluteChannelDifference": 12.36242413487134,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    },
+    {
+      "view": "L3",
+      "nativeSHA256": "8011c58564981e16beedbd804432b77fea31a3ea69b092774b309b013269f643",
+      "measurements": {
+        "maski": {
+          "ownMaskSHA256": "1ab54dfed8b2b58aaf2aa95db0d714a523ad2e6988367c9ab31049b56aceed32",
+          "targetSHA256": "640a769b38982d98759c04450a0c9c388406042670bd0fb59eced03e272e88e9",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 467867,
+          "targetPixels": 474814,
+          "intersectionPixels": 451714,
+          "unionPixels": 490967,
+          "iou": 0.9200496163693282,
+          "requiredIoU": 0.95,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.8269784452571785,
+            0.9715862914014929
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        },
+        "pyramidi-maski": {
+          "ownMaskSHA256": "da6c17cdc7001ee2f4ecf56b89b9a312f5b3964b4c4e9456b76970f308810407",
+          "targetSHA256": "639dee29150ebfa2c260041d38f083c049a73cc95399fac2656feef8ac28bd40",
+          "targetBlobSourceSnapshot": "23488c7f37e155e4216a67de12e78d36967da1cd",
+          "ownPixels": 130631,
+          "targetPixels": 123087,
+          "intersectionPixels": 110890,
+          "unionPixels": 142828,
+          "iou": 0.776388383230179,
+          "requiredIoU": 0.9,
+          "nominalThresholdReached": false,
+          "morphologicalSensitivityPixels": 8,
+          "morphologicalSensitivityRange": [
+            0.491986098864049,
+            0.9321802706241816
+          ],
+          "strictBoundaryErrorBoundAvailable": false,
+          "reliableThresholdAcceptance": false,
+          "reason": "coarse native tracing, exact/robust acceptance not claimed"
+        }
+      },
+      "palacePixelPreservation": {
+        "scope": "new-photo traced palace pixels outside new pyramid/basin area, direct same-coordinate RGB comparison to approved reference photo",
+        "scopePixels": 381856,
+        "anyChannelChangedPixels": 381714,
+        "maxChannelDifferenceOver10Pixels": 237080,
+        "meanAbsoluteChannelDifference": 11.424254169110869,
+        "palacePixelInvarianceMet": false,
+        "notAlignmentCorrected": true,
+        "limitation": "new trace only, not correspondence/occlusion proof; full new generation changes texture and potentially geometry"
+      },
+      "overallAccepted": false
+    }
+  ]
+}

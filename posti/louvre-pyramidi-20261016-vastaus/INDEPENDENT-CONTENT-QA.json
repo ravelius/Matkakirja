@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "running_dollhouse_three",
+  "independentOfProducer": true,
+  "reviewedAtUTC": "2026-10-17T18:39:45.152928+00:00",
+  "reviewScope": "Visible content only. All nine generated native images, matching approved photo bases, source k59 placement renderings and source pyramid masks personally viewed at original size. No mask extraction, mask edits, numeric IoU, camera/metric acceptance or generation performed.",
+  "sourceOrderPinnedCommit": "a1ac41f9e7",
+  "sourceOrderBlobVerified": "73d0b0941fa1f7a63fb201001971236d6a2d953c",
+  "sourceOrderSnapshotUsedByProducer": "23488c7f37e155e4216a67de12e78d36967da1cd",
+  "sourceOrderSHA256": "2e1cea3373851c35d17f56facc0c038cdd9b719e252a0b915d56faa4d6811834",
+  "sourceReadCompletely": true,
+  "inheritedOrdersReadCompletely": [
+    "inputs/louvre-codex-tilaus.md",
+    "inputs/louvre-lahikulmat-codex-tilaus.md",
+    "inputs/louvre-lahikulmat-codex-tilaus-2.md"
+  ],
+  "snapshotConfirmation": {
+    "producerConfirmedAllNineFinal": true,
+    "producerConfirmedNoNativeChanges": true,
+    "producerConfirmedMaskFreezeBeforeFinalReviewWrite": true,
+    "maskFreezePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/masks/MASK-FREEZE.json",
+    "maskFreezeSHA256": "aab6779311fddfebc42616d197d666f9a8fb78acb47bb1f7cfd4d71c954613a7",
+    "confirmation": "Agent louvre_pyramid_nine confirmed final MASK-FREEZE and unchanged nine natives before this report; its mask approximation limits remain separate."
+  },
+  "reviewerComputedIoU": false,
+  "reviewerApprovedCameraOrMetricGeometry": false,
+  "allNineContentApproved": false,
+  "ownerAcceptedByThisReview": false,
+  "views": {
+    "K1": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K1.png",
+      "nativeSHA256": "92b857335e4dcab99e03917f680c0ca8afcc5618b5df1e6b8a792c1ef007443c",
+      "bytes": 3239315,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-v2/louvre-K1.png",
+        "sha256": "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-pyramidi-maski.png",
+        "sha256": "5ef2cb680f299c0ab1d10dfc5048abcfb66f62ef68dfd0832da9808fafda6aff",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-oma-k59.png",
+        "sha256": "c796b73da92018ae0cd00f13d7d94f2b8630cdc38a0898244a2dfd80d83fbd2d",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Main pyramid and basin assembly visibly larger than locked source-mask layout, reaching farther toward foreground",
+        "visibleSmallPyramids": 3,
+        "visibleSeparateWaterAreas": 4,
+        "defects": [
+          "Equestrian statue moves from the old central court position toward foreground",
+          "Front small pyramid replaces the source layout with a different visible arrangement",
+          "Only four distinct water triangles are clearly visible; requested seven-basin assembly not established"
+        ],
+        "glass": "Diamond grid visible, dark gray/brown glass with some pale interior forms; actual spiral stair and below-court hall not verified",
+        "palace": "Broad wing/pavilion composition closely resembles base; fine facade/roof and background details are regenerated rather than certified identical"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "K2": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K2.png",
+      "nativeSHA256": "bd7ca98a1470eba36b28ae31ba0e4a91323a691d4c12de4f2f2ff88e8772c490",
+      "bytes": 3587622,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K2.png",
+        "sha256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-pyramidi-maski.png",
+        "sha256": "bfafd21b4651fa0de17bcd9346d3b3a2023a058f10609d02f9d59a1ad598463f",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-oma-k59.png",
+        "sha256": "3a6ee2c25e2f8e29af84177d3e7f6bb6e617092fbf927f0ae8ac0a0b1e59723c",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Pyramid assembly visibly displaced to right and upward in image relative to locked source mask; more fully exposed instead of source occlusion by near roof",
+        "visibleSmallPyramids": 2,
+        "visibleSeparateWaterAreas": 4,
+        "defects": [
+          "Large displacement of pyramid and basin content from locked source area",
+          "Equestrian statue moves to right relative to approved base",
+          "Three small pyramids and seven-basin arrangement not established; foreground roof occlusion differs"
+        ],
+        "glass": "Fine dark lattice reads but pyramid is distant; clear glass and hall details cannot be certified",
+        "palace": "Broad court and roof silhouette resembles base; exact facade, roof and occlusion invariance not established"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "K3": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K3.png",
+      "nativeSHA256": "99cc09aeecb1511b4f2fc15812936e086394d1bd18e31ede112d578154f1e60b",
+      "bytes": 3283184,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K3.png",
+        "sha256": "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-pyramidi-maski.png",
+        "sha256": "f5596a8897989b791a3a4d3f3dae9d8f4fdc65585aa8cfe252571fe9fffa1964",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-oma-k59.png",
+        "sha256": "7430a296510f3ef82b384a797a3addf2f967f588169d64adef00fbf5f9f8805d",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Pyramid assembly much higher in image and more exposed than locked source mask; main apex approaches rear facade rather than target area behind near roof",
+        "visibleSmallPyramids": 2,
+        "visibleSeparateWaterAreas": 4,
+        "defects": [
+          "Large displacement and altered occlusion of pyramid/basin assembly",
+          "Source pyramid is partly hidden by near pavilion; generated assembly reads as exposed on another court band",
+          "Three small pyramids and seven-basin layout not established"
+        ],
+        "glass": "Dark reflective gray glass and tight lattice; hall/spiral stair not legible from this distance",
+        "palace": "Main palace masses and river panorama resemble base; pixel or detail invariance not certified"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "K4": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K4.png",
+      "nativeSHA256": "944285d35fc9d3a636383dedf65621eb7871f863b45d2cd14684630666f927ec",
+      "bytes": 3394560,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K4.png",
+        "sha256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-pyramidi-maski.png",
+        "sha256": "f3ff4a322eb96ef32adeed7944accdba3b165b623603da22358bb690b8347792",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-oma-k59.png",
+        "sha256": "1598efbc381f4521db97c7d59c55492759cde94708085ce8ce59d7edbfeaba26",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Entire pyramid/basin assembly visibly farther up the court than locked source-mask location",
+        "visibleSmallPyramids": 3,
+        "visibleSeparateWaterAreas": 4,
+        "defects": [
+          "Clear shift along court axis relative to locked source area",
+          "Front small pyramid arrangement differs from source projection",
+          "Four separate water triangles visible; requested seven-basin arrangement not established"
+        ],
+        "glass": "Pale gray/tan transparent-looking planes with dark lattice, but hall floor/stair not verifiable",
+        "palace": "Broad wing and courtyard structure resembles base; fine roof/facade detail and original pixels not certified unchanged"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "K5": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K5.png",
+      "nativeSHA256": "03ea5be8ff4558de008f0147c002304ec191f26ac464a23ea966ad0bd9732101",
+      "bytes": 2720701,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K5.png",
+        "sha256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-pyramidi-maski.png",
+        "sha256": "5de5b28ba8cd4e380c1c726f3c31a0aa98db16030d1eaafd071ab31cb260759f",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-oma-k59.png",
+        "sha256": "03b12275a5ec1f4e6bd6a5dddb9aa8f83597d5bc0e0b0207f79ae918b2a37b12",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Main pyramid approximately follows source central direction, while footprint/basins and small-pyramid arrangement deviate visibly",
+        "visibleSmallPyramids": 3,
+        "visibleSeparateWaterAreas": 4,
+        "defects": [
+          "Two equestrian statues: original remains in distant court and another is added large in foreground",
+          "Additional foreground small pyramid is absent from that part of locked source mask",
+          "Four basins rather than a verified seven-part arrangement; edges and footprint differ"
+        ],
+        "glass": "Glass appears somewhat transparent with pale forms below, but heavy blue-gray grid and actual Napoleon hall/spiral stair not certified",
+        "palace": "Broad camera and side pavilions resemble base; no exact camera or palace-pixel acceptance"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "K6": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K6.png",
+      "nativeSHA256": "60b42b1cb82e8bb61709da01442f5b367d962081a60152ee454c5d7f3cbb8c7f",
+      "bytes": 3284957,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K6.png",
+        "sha256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-pyramidi-maski.png",
+        "sha256": "950941c7a9af5765210fdba116a6332094355746b29276e0b1ff000cc018d612",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-oma-k59.png",
+        "sha256": "6db48df6146a85d533e118945dd668ed35778167d60d508b509e112bf213b0d9",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Main pyramid broadly central as source; surrounding water triangles and right small pyramid expand beyond source visible arrangement",
+        "visibleSmallPyramids": 3,
+        "visibleSeparateWaterAreas": 4,
+        "defects": [
+          "Extra visible small pyramid on right compared with source mask projection",
+          "Four large water triangles do not establish the prescribed seven basins",
+          "Statue position changes slightly relative to base; near roof details regenerate"
+        ],
+        "glass": "Dark slate-gray frame with strong white highlight and some pale interior shapes; hall and stair anatomy unverified",
+        "palace": "Large palace silhouette resembles base; near roof crest and small details not invariant or geometrically approved"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "K7": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-K7.png",
+      "nativeSHA256": "ddaa02ce0141f34352c0ea99eab601f043834cd8de8baa9e77c03aa07dd12f15",
+      "bytes": 3437934,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K7.png",
+        "sha256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-pyramidi-maski.png",
+        "sha256": "5dd1c1a3f3039a1fa5fbaf7d697b50dd3e625b5cd64f50b09dea7c30c97d6847",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-oma-k59.png",
+        "sha256": "62882e8fd95c06e2d1dd48044b272db56a7c40b0b753b4e5812b91b64010b51a",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Main pyramid near intended central court sector, but broader and water/small-pyramid arrangement visibly altered from mask",
+        "visibleSmallPyramids": 3,
+        "visibleSeparateWaterAreas": 5,
+        "defects": [
+          "Five separately visible water areas, not a verified seven-basin arrangement",
+          "Left small pyramid sits much higher than its partly roof-occluded source position",
+          "Water triangle outlines and gaps differ from source silhouette"
+        ],
+        "glass": "Clearly gridded but rather dark cool-gray surfaces; transparent underground hall and stair not legible",
+        "palace": "Broad diagonal palace composition preserved visually; exact geometry and pixel identity not certified"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "L1": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-L1.png",
+      "nativeSHA256": "6140ea198491d392db3d5eea6ce022aba2fc79f9e535e202576099cc59b32b01",
+      "bytes": 2819510,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikuvat-L1-L3-v2/louvre-L1.png",
+        "sha256": "c3a0f1a5f4f500889c3a377a90a59d30c8a0f191e718f28dbbbdca6a6c92ca56",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-pyramidi-maski.png",
+        "sha256": "94d7c006ef76fcfcd0cf65a5438f54004b6c6a843da2e8f9c6f5f692960e83d9",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-oma-k59.png",
+        "sha256": "b84a61c1cf7dd89040e8dfd24ba5c275c60ecec2a5f9ea0ff4a599c534bc4475",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Major violation: source shows cropped main pyramid only entering right edge; new image centers a huge complete pyramid across facade",
+        "visibleSmallPyramids": 3,
+        "visibleSeparateWaterAreas": null,
+        "defects": [
+          "Pyramid centered and fully visible instead of cropped at right; radically different occlusion of palace",
+          "Front small pyramid and broad water assembly occupy areas outside locked source layout",
+          "Seven distinct basins not countable; near rims appear merged/extended"
+        ],
+        "glass": "Blue-gray and dense overlapping lattice; supports look heavier than requested thin grid, some interior forms but no certified spiral-stair/hall detail",
+        "palace": "Large central facade section newly obscured; visible palace broadly resembles base but no unchanged-pixel claim"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    },
+    "L3": {
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/images/louvre-L3.png",
+      "nativeSHA256": "8011c58564981e16beedbd804432b77fea31a3ea69b092774b309b013269f643",
+      "bytes": 3117472,
+      "nativeOriginalPersonallyViewed": true,
+      "referencePhoto": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikuvat-L1-L3-v2/louvre-L3.png",
+        "sha256": "d8dcd6267d00a1a2106f306d627f7c88221bae08fa6aea11ecd890a8f961757f",
+        "originalPersonallyViewed": true
+      },
+      "sourcePyramidMask": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-pyramidi-maski.png",
+        "sha256": "639dee29150ebfa2c260041d38f083c049a73cc95399fac2656feef8ac28bd40",
+        "originalPersonallyViewed": true,
+        "modifiedByReviewer": false
+      },
+      "sourcePlacementRender": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-oma-k59.png",
+        "sha256": "85b8cf39520b9d8f5451744f790591c7067a3e947480bbeb398eb5ecba1c7722",
+        "originalPersonallyViewed": true
+      },
+      "findings": {
+        "placement": "Main pyramid silhouette and statue occlusion visually close to source intended sector, without numerical alignment approval",
+        "visibleSmallPyramids": 2,
+        "visibleSeparateWaterAreas": 5,
+        "defects": [
+          "Additional small pyramid at far right not present in source pyramid-mask projection",
+          "Several basin edges/foreground extents differ from source; seven-basin assembly not established",
+          "Greenish statue material inherited from base is not independently corrected or factually certified here"
+        ],
+        "glass": "Glass and palace reflections are evident; fairly dark cool-gray structural grid, hall floor and spiral stair not securely identifiable",
+        "palace": "Broad facade/camera and foreground statue closely resemble base; details are regenerated and exact geometry/pixel preservation not certified"
+      },
+      "status": "content-deviations-recorded-no-overall-approval",
+      "preciseDimensionsVerified": false,
+      "transparentHallAndSpiralStairVerified": false
+    }
+  }
+}

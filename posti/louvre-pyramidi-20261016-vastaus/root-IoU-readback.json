@@ -1,0 +1,59 @@
+{
+  "independentArithmeticReadback": true,
+  "comparisons": 18,
+  "sameGrid": [
+    1536,
+    1024
+  ],
+  "alignmentApplied": false,
+  "sourceReportSHA256": "64baa894408d29cb5d17b72af6c069f4cc4ad7582717b93e05072686f97a7b53",
+  "coarseNativeDerivedMasksNotCertifiedSegmentation": true,
+  "noThresholdPass": true,
+  "rows": [
+    {
+      "view": "K1",
+      "maskiIoU": 0.8520961983479584,
+      "pyramidi-maskiIoU": 0.2644833084457493
+    },
+    {
+      "view": "K2",
+      "maskiIoU": 0.5933463483160575,
+      "pyramidi-maskiIoU": 0.08324720473550691
+    },
+    {
+      "view": "K3",
+      "maskiIoU": 0.1876144738455696,
+      "pyramidi-maskiIoU": 0.0
+    },
+    {
+      "view": "K4",
+      "maskiIoU": 0.8208133859505291,
+      "pyramidi-maskiIoU": 0.06719653179190752
+    },
+    {
+      "view": "K5",
+      "maskiIoU": 0.8443881589362039,
+      "pyramidi-maskiIoU": 0.45882368550238156
+    },
+    {
+      "view": "K6",
+      "maskiIoU": 0.9020514038919066,
+      "pyramidi-maskiIoU": 0.44870976729972406
+    },
+    {
+      "view": "K7",
+      "maskiIoU": 0.7799169978016616,
+      "pyramidi-maskiIoU": 0.4158759045019282
+    },
+    {
+      "view": "L1",
+      "maskiIoU": 0.7166644759382602,
+      "pyramidi-maskiIoU": 0.14712835240932312
+    },
+    {
+      "view": "L3",
+      "maskiIoU": 0.9200496163693282,
+      "pyramidi-maskiIoU": 0.776388383230179
+    }
+  ]
+}

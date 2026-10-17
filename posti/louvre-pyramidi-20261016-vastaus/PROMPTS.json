@@ -1,0 +1,146 @@
+{
+  "K1": {
+    "promptPath": "prompts/K1.txt",
+    "promptSHA256": "aa78050468e45150942941eee37b2d4d77242b3a312b739a4fa6bf8425962746",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-v2/louvre-K1.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K1-maski-k59.png"
+    ]
+  },
+  "K2": {
+    "promptPath": "prompts/K2.txt",
+    "promptSHA256": "cce62f5fff13dbfc49a96bb812fc18c8f9f9194bcfe5f775a43642d1d2c4151d",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K2.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K2-maski-k59.png"
+    ]
+  },
+  "K3": {
+    "promptPath": "prompts/K3.txt",
+    "promptSHA256": "1abafd3c5ed23bd9a82c7b4ddf722c9384cfa272dbff6ee783b4fe539a367a61",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K3.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K3-maski-k59.png"
+    ]
+  },
+  "K4": {
+    "promptPath": "prompts/K4.txt",
+    "promptSHA256": "6ad725d7d2f1c1a8213cee9d65e53dc622c58aeb95085b98e8a8aff9c7399211",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K4.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K4-maski-k59.png"
+    ]
+  },
+  "K5": {
+    "promptPath": "prompts/K5.txt",
+    "promptSHA256": "9720542feefefd9c6f0dc2b5a3c7bbaa6732757ed5636822034b3f29edf276a7",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K5.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K5-maski-k59.png"
+    ]
+  },
+  "K6": {
+    "promptPath": "prompts/K6.txt",
+    "promptSHA256": "6b0eee5595daf56f9029a3505034c87771cbd893b946d71ced49a5c9ec5af9df",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K6.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K6-maski-k59.png"
+    ]
+  },
+  "K7": {
+    "promptPath": "prompts/K7.txt",
+    "promptSHA256": "0469dec9b772eb36ebf7f1eae1ed46d66664369abcab8b9a67636324498fd947",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-havainne-K2-K7-20261015/louvre-K7.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-K7-maski-k59.png"
+    ]
+  },
+  "L1": {
+    "promptPath": "prompts/L1.txt",
+    "promptSHA256": "1d441654d3de977dae4c591a44d3b7225e0fa52d57678df44ddb8e6b0d365495",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikuvat-L1-L3-v2/louvre-L1.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L1-maski-k59.png"
+    ]
+  },
+  "L3": {
+    "promptPath": "prompts/L3.txt",
+    "promptSHA256": "d85c1c922e525955a9d3141ddf47a52ce461d56010be14e11da1fe85dafe14ef",
+    "referenceRoles": [
+      "approvedPhotoExactCameraAndAppearance",
+      "pyramidPlusBasinImageFootprint",
+      "k59SpatialPlacementOnly",
+      "palacePlusPyramidSilhouette"
+    ],
+    "references": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-lahikuvat-L1-L3-v2/louvre-L3.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-pyramidi-maski.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-oma-k59.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-pyramidi-20261017/inputs/louvre-pyramidi-20261016/louvre-L3-maski-k59.png"
+    ]
+  }
+}

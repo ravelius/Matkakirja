@@ -1,0 +1,421 @@
+{
+  "folder": "posti/louvre-pyramidi-20261016-vastaus",
+  "nativeCount": 9,
+  "maskPairCount": 9,
+  "generationCalls": 9,
+  "allNativesUnmodified": true,
+  "localAcceptedTargetCount": 0,
+  "files": [
+    {
+      "path": "DELIVERY-MASK-FREEZE.json",
+      "bytes": 4182,
+      "sha256": "069f55a18c95fed97e2983788a40e68f18a5131dc12def6b3f4458bb3add87b1"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 11673,
+      "sha256": "ab8e7f87e918967ab85ad9a39facc8a35fee25c4fd5fc45ee9f8f7467d3d7caf"
+    },
+    {
+      "path": "INDEPENDENT-CONTENT-QA-FI.md",
+      "bytes": 1830,
+      "sha256": "0e894304fb55959b116b87af2905bba632acd6810a898ba53bc9ba84692a0bfe"
+    },
+    {
+      "path": "INDEPENDENT-CONTENT-QA.json",
+      "bytes": 22751,
+      "sha256": "419827c2a0594f094de8daf728b746bc12707295bd2970d469fd32270abb8133"
+    },
+    {
+      "path": "IoU-report.json",
+      "bytes": 23595,
+      "sha256": "64baa894408d29cb5d17b72af6c069f4cc4ad7582717b93e05072686f97a7b53"
+    },
+    {
+      "path": "LOCAL-QA-DECISION.json",
+      "bytes": 489,
+      "sha256": "af26679da26bf700f7256cd2e9080bd6be7060e79d5673be569a77fba2019c17"
+    },
+    {
+      "path": "MASK-DERIVATION.json",
+      "bytes": 51528,
+      "sha256": "a172b01fb3be2f25515e495fc5f053be39cce33b6146a9df9d26e4aa09d4c43c"
+    },
+    {
+      "path": "MASK-FREEZE.json",
+      "bytes": 3997,
+      "sha256": "aab6779311fddfebc42616d197d666f9a8fb78acb47bb1f7cfd4d71c954613a7"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 8675,
+      "sha256": "9269e8b86a7eb337c4f09b0042ccf05ce2780886f4a3858e0a264e52a3afef11"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3231,
+      "sha256": "b0f32081fb189532c379758967a401813b23f41fa2543df4bb112cc42ed3dc75"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 17952,
+      "sha256": "09ca8000a539dd3ed35f3e2144801c2605d2811a0ee229b4257a9894f901f434"
+    },
+    {
+      "path": "derive_masks.py",
+      "bytes": 15674,
+      "sha256": "bc6907df022dcf54b72d588eb04d1a105b13f00757ca4ded4aa5f1b5f8d2edb3"
+    },
+    {
+      "path": "diagnostics/louvre-K1-glass-only-DIAGNOSTIC.png",
+      "bytes": 2965,
+      "sha256": "0a3dce412290624160926d71a63050d1a3cd0cb7914a72286eee0e5fea4a3643"
+    },
+    {
+      "path": "diagnostics/louvre-K1-palace-only-DIAGNOSTIC.png",
+      "bytes": 7498,
+      "sha256": "4f5c23d347b885165aa48b289e47a6bad92a8586472b18e3aa8dfacfdd833d28"
+    },
+    {
+      "path": "diagnostics/louvre-K2-glass-only-DIAGNOSTIC.png",
+      "bytes": 2281,
+      "sha256": "146974e19d46ee2b9a562208a089b7f30cd721e05db4863074e8d1ad38e83930"
+    },
+    {
+      "path": "diagnostics/louvre-K2-palace-only-DIAGNOSTIC.png",
+      "bytes": 4658,
+      "sha256": "c356aa569b44d68482632663c913ee5601fa43ff2cd79a85a575b6a4216e6eac"
+    },
+    {
+      "path": "diagnostics/louvre-K3-glass-only-DIAGNOSTIC.png",
+      "bytes": 2518,
+      "sha256": "0df7f26ac9a5e20d32b3d0056ca2f9c525541bc30c4d92b799b09c137d8e21bc"
+    },
+    {
+      "path": "diagnostics/louvre-K3-palace-only-DIAGNOSTIC.png",
+      "bytes": 4931,
+      "sha256": "25253620eb23809a8d107ec9bc66e12e6c0be06fd493d1b30c33982cb21ecd7f"
+    },
+    {
+      "path": "diagnostics/louvre-K4-glass-only-DIAGNOSTIC.png",
+      "bytes": 2780,
+      "sha256": "2bf34346eb6ef815e339a1a91fcdbb47d854614b6b01b3256cb1f450a7ddcd09"
+    },
+    {
+      "path": "diagnostics/louvre-K4-palace-only-DIAGNOSTIC.png",
+      "bytes": 7078,
+      "sha256": "29757f161f880827866cbe85a175434eb1e371dd02697c5d9b40bf0a7cb18e4e"
+    },
+    {
+      "path": "diagnostics/louvre-K5-glass-only-DIAGNOSTIC.png",
+      "bytes": 3839,
+      "sha256": "4a000114d57b262b3ce07a1bbdfad92baecc361b3693a443f9d3562d0d061653"
+    },
+    {
+      "path": "diagnostics/louvre-K5-palace-only-DIAGNOSTIC.png",
+      "bytes": 6090,
+      "sha256": "7133f660806858d63f0f8d0613e65e778da82bea6c6048801361422d3ab0ed15"
+    },
+    {
+      "path": "diagnostics/louvre-K6-glass-only-DIAGNOSTIC.png",
+      "bytes": 3586,
+      "sha256": "05ac8d214c2ed2ec9eedd25c817d09b9a13ed94bc3a18fd406f69b9fe9693b95"
+    },
+    {
+      "path": "diagnostics/louvre-K6-palace-only-DIAGNOSTIC.png",
+      "bytes": 5909,
+      "sha256": "048c7265b75e752388401378aead982bf756e33bc07fc32e86a3c09acb759baa"
+    },
+    {
+      "path": "diagnostics/louvre-K7-glass-only-DIAGNOSTIC.png",
+      "bytes": 4313,
+      "sha256": "35f2c2472782bb458cbc56b9cd0c96e0abb287aa4a06a7aa1cb3b202f6f6327f"
+    },
+    {
+      "path": "diagnostics/louvre-K7-palace-only-DIAGNOSTIC.png",
+      "bytes": 9080,
+      "sha256": "a98a76c94707ee44d4909acbf9ddc3815180733b376021576d584fd538d4acb0"
+    },
+    {
+      "path": "diagnostics/louvre-L1-glass-only-DIAGNOSTIC.png",
+      "bytes": 6418,
+      "sha256": "72fa21764bd62b90f2a453588526865638db7b32f0e489bd24722621ae6f2bd8"
+    },
+    {
+      "path": "diagnostics/louvre-L1-palace-only-DIAGNOSTIC.png",
+      "bytes": 4036,
+      "sha256": "ab39029db81dd9387d30c2f0e60bc3e3f7c771101d92bfebbdccb341725c16ca"
+    },
+    {
+      "path": "diagnostics/louvre-L3-glass-only-DIAGNOSTIC.png",
+      "bytes": 4966,
+      "sha256": "0d9260be49f3d716b6ebe8d6c6b7c9f3a2077e7a1cec4e6a16753d49e4b68bff"
+    },
+    {
+      "path": "diagnostics/louvre-L3-palace-only-DIAGNOSTIC.png",
+      "bytes": 3553,
+      "sha256": "f9a29067517a8f3427d0e632e70d39d70cf035941c19e31358f9ee26d139d538"
+    },
+    {
+      "path": "louvre-K1-maski.png",
+      "bytes": 8342,
+      "sha256": "eb49769409a4071de57f1902602be51a4b76fcd9ebeadc9b79bbcf236fd599b2"
+    },
+    {
+      "path": "louvre-K1-pyramidi-maski.png",
+      "bytes": 3946,
+      "sha256": "5d7552933579c9d5ac58d8bfc272b6f62848c3049a99509270189440850763d0"
+    },
+    {
+      "path": "louvre-K1.png",
+      "bytes": 3239315,
+      "sha256": "92b857335e4dcab99e03917f680c0ca8afcc5618b5df1e6b8a792c1ef007443c"
+    },
+    {
+      "path": "louvre-K2-maski.png",
+      "bytes": 4976,
+      "sha256": "481e578cd1dbbf3d0eb026c323a343862264dffe45aecdd7342841eba73219f1"
+    },
+    {
+      "path": "louvre-K2-pyramidi-maski.png",
+      "bytes": 2804,
+      "sha256": "d06e87ae8735d122b0ca1882ee4406ec1cc2b3da6af84c1d0f48e2c4d32142b5"
+    },
+    {
+      "path": "louvre-K2.png",
+      "bytes": 3587622,
+      "sha256": "bd7ca98a1470eba36b28ae31ba0e4a91323a691d4c12de4f2f2ff88e8772c490"
+    },
+    {
+      "path": "louvre-K3-maski.png",
+      "bytes": 5414,
+      "sha256": "b72e3b7917276bcc94448a1fd419fd31fb40af397ee8cf2d953b33cda2091bc8"
+    },
+    {
+      "path": "louvre-K3-pyramidi-maski.png",
+      "bytes": 3143,
+      "sha256": "62da18c6c024cceb67a90dae9c4dbffb5d88be1bcb13f49570548877370d608a"
+    },
+    {
+      "path": "louvre-K3.png",
+      "bytes": 3283184,
+      "sha256": "99cc09aeecb1511b4f2fc15812936e086394d1bd18e31ede112d578154f1e60b"
+    },
+    {
+      "path": "louvre-K4-maski.png",
+      "bytes": 7838,
+      "sha256": "819db32fd7d7716ab8c6214d5e4cd65ddd30e6a89474b57d50cc937fb08d6417"
+    },
+    {
+      "path": "louvre-K4-pyramidi-maski.png",
+      "bytes": 3392,
+      "sha256": "7aade4a3f96a6f863ca12ff244800cf138bbb6df18abb962367c40e4ff8391da"
+    },
+    {
+      "path": "louvre-K4.png",
+      "bytes": 3394560,
+      "sha256": "944285d35fc9d3a636383dedf65621eb7871f863b45d2cd14684630666f927ec"
+    },
+    {
+      "path": "louvre-K5-maski.png",
+      "bytes": 7284,
+      "sha256": "985b9e31ef2de67973a5b2b9d865b810ccd0976d22ce29bd428bbc7869d9ff97"
+    },
+    {
+      "path": "louvre-K5-pyramidi-maski.png",
+      "bytes": 4749,
+      "sha256": "ec5f518ca59a4e57819abb5f7f5840840147d8f4d732c7eb60fea8673077b108"
+    },
+    {
+      "path": "louvre-K5.png",
+      "bytes": 2720701,
+      "sha256": "03ea5be8ff4558de008f0147c002304ec191f26ac464a23ea966ad0bd9732101"
+    },
+    {
+      "path": "louvre-K6-maski.png",
+      "bytes": 7238,
+      "sha256": "0ab3158a01edff72311072267f9114fe6014c8aff2f31407d234f6ce7b80f5dc"
+    },
+    {
+      "path": "louvre-K6-pyramidi-maski.png",
+      "bytes": 5303,
+      "sha256": "bbbe376ccbadfbbb32db37a6c0c7ccf0be4035bce5c7b376d83b4fc8a1568bb4"
+    },
+    {
+      "path": "louvre-K6.png",
+      "bytes": 3284957,
+      "sha256": "60b42b1cb82e8bb61709da01442f5b367d962081a60152ee454c5d7f3cbb8c7f"
+    },
+    {
+      "path": "louvre-K7-maski.png",
+      "bytes": 11273,
+      "sha256": "c4f9f4fe188912c38c5e1415dce6d5e9970fcf828f2d471b6a9c35206ad71030"
+    },
+    {
+      "path": "louvre-K7-pyramidi-maski.png",
+      "bytes": 6071,
+      "sha256": "27dd403fe8beec3db32d3e62e36c244a5bdb20b8fbe36d751aa77723593f36f3"
+    },
+    {
+      "path": "louvre-K7.png",
+      "bytes": 3437934,
+      "sha256": "ddaa02ce0141f34352c0ea99eab601f043834cd8de8baa9e77c03aa07dd12f15"
+    },
+    {
+      "path": "louvre-L1-maski.png",
+      "bytes": 6208,
+      "sha256": "5ce5fc6b67533db746ea649354f95c262b3d6d0eb5a8c42b137c0e51fd62bb5a"
+    },
+    {
+      "path": "louvre-L1-pyramidi-maski.png",
+      "bytes": 7245,
+      "sha256": "71e24b61ec2c46d630481c54deed253c6b25c2b37536cb1664ea8b68310c6f4d"
+    },
+    {
+      "path": "louvre-L1.png",
+      "bytes": 2819510,
+      "sha256": "6140ea198491d392db3d5eea6ce022aba2fc79f9e535e202576099cc59b32b01"
+    },
+    {
+      "path": "louvre-L3-maski.png",
+      "bytes": 5103,
+      "sha256": "1ab54dfed8b2b58aaf2aa95db0d714a523ad2e6988367c9ab31049b56aceed32"
+    },
+    {
+      "path": "louvre-L3-pyramidi-maski.png",
+      "bytes": 5617,
+      "sha256": "da6c17cdc7001ee2f4ecf56b89b9a312f5b3964b4c4e9456b76970f308810407"
+    },
+    {
+      "path": "louvre-L3.png",
+      "bytes": 3117472,
+      "sha256": "8011c58564981e16beedbd804432b77fea31a3ea69b092774b309b013269f643"
+    },
+    {
+      "path": "prompts/K1.txt",
+      "bytes": 3409,
+      "sha256": "aa78050468e45150942941eee37b2d4d77242b3a312b739a4fa6bf8425962746"
+    },
+    {
+      "path": "prompts/K2.txt",
+      "bytes": 3379,
+      "sha256": "cce62f5fff13dbfc49a96bb812fc18c8f9f9194bcfe5f775a43642d1d2c4151d"
+    },
+    {
+      "path": "prompts/K3.txt",
+      "bytes": 3356,
+      "sha256": "1abafd3c5ed23bd9a82c7b4ddf722c9384cfa272dbff6ee783b4fe539a367a61"
+    },
+    {
+      "path": "prompts/K4.txt",
+      "bytes": 3370,
+      "sha256": "6ad725d7d2f1c1a8213cee9d65e53dc622c58aeb95085b98e8a8aff9c7399211"
+    },
+    {
+      "path": "prompts/K5.txt",
+      "bytes": 3363,
+      "sha256": "9720542feefefd9c6f0dc2b5a3c7bbaa6732757ed5636822034b3f29edf276a7"
+    },
+    {
+      "path": "prompts/K6.txt",
+      "bytes": 3410,
+      "sha256": "6b0eee5595daf56f9029a3505034c87771cbd893b946d71ced49a5c9ec5af9df"
+    },
+    {
+      "path": "prompts/K7.txt",
+      "bytes": 3409,
+      "sha256": "0469dec9b772eb36ebf7f1eae1ed46d66664369abcab8b9a67636324498fd947"
+    },
+    {
+      "path": "prompts/L1.txt",
+      "bytes": 3451,
+      "sha256": "1d441654d3de977dae4c591a44d3b7225e0fa52d57678df44ddb8e6b0d365495"
+    },
+    {
+      "path": "prompts/L3.txt",
+      "bytes": 3454,
+      "sha256": "d85c1c922e525955a9d3141ddf47a52ce461d56010be14e11da1fe85dafe14ef"
+    },
+    {
+      "path": "qa/K1-native-derived-mask-overlay.jpg",
+      "bytes": 807417,
+      "sha256": "2199c3a9743b9e65583583e49c8389530b6aaa6d528b28d12c5ddbd770f90e1b"
+    },
+    {
+      "path": "qa/K2-native-derived-mask-overlay.jpg",
+      "bytes": 924473,
+      "sha256": "b4a3ab343fc715bce77ca10c20d10c14e6d6f2645048b1c97143922469ae3515"
+    },
+    {
+      "path": "qa/K3-native-derived-mask-overlay.jpg",
+      "bytes": 824499,
+      "sha256": "25d2154f587969887d7a02a1078a8d5ebc8b60fabf74ce6086cf88379e8fc3d4"
+    },
+    {
+      "path": "qa/K4-native-derived-mask-overlay.jpg",
+      "bytes": 851737,
+      "sha256": "969f5f47d7ddd7f7b312ead758680f55c513ad77433467c2e55ff929bcd11386"
+    },
+    {
+      "path": "qa/K5-native-derived-mask-overlay.jpg",
+      "bytes": 570968,
+      "sha256": "6e6c6d66b85ca5a3018d5e23d1099d33ba186c8b7ecf261a6f8a0bd2ce9dd7c1"
+    },
+    {
+      "path": "qa/K6-native-derived-mask-overlay.jpg",
+      "bytes": 730215,
+      "sha256": "12cf2e74d97f86d712a3ddb69b30b953f210a9b956b61629a31643744ce3459d"
+    },
+    {
+      "path": "qa/K7-native-derived-mask-overlay.jpg",
+      "bytes": 757708,
+      "sha256": "5a667057da737f7802c4fc386e8dd9c6f4fb30b768825ea11bb6580491911c4f"
+    },
+    {
+      "path": "qa/L1-native-derived-mask-overlay.jpg",
+      "bytes": 578433,
+      "sha256": "772a53b6d768f0fe96f6297c5b6bd431c69dff00a9f61188b42b7600dc04f419"
+    },
+    {
+      "path": "qa/L3-native-derived-mask-overlay.jpg",
+      "bytes": 701496,
+      "sha256": "1a908ca7e3236d98861a06d4da54d6274c8e4cc69eaf10b45898136d4fdb2e3d"
+    },
+    {
+      "path": "root-IoU-readback.json",
+      "bytes": 1371,
+      "sha256": "c975aad4177afa8ebf35fcf392b099354a3bf2de8a0a7f9ad89ded2f0eb89c41"
+    },
+    {
+      "path": "sources/linnanrakentaja-codex-louvre-pyramidi-20261016.md",
+      "bytes": 4492,
+      "sha256": "2e1cea3373851c35d17f56facc0c038cdd9b719e252a0b915d56faa4d6811834"
+    },
+    {
+      "path": "sources/louvre-codex-tilaus.md",
+      "bytes": 6900,
+      "sha256": "74026ce85d1fed36210aaf23eedf384729d851f6fb8f663c3d1706074f2834c3"
+    },
+    {
+      "path": "sources/louvre-kulmat-natiivi.json",
+      "bytes": 4204,
+      "sha256": "43387231950e7fe58e7fff59a88c78cf28ccdf1ac6066e256d068fd6bf3d8e29"
+    },
+    {
+      "path": "sources/louvre-lahikulmat-codex-tilaus-2.md",
+      "bytes": 2784,
+      "sha256": "b68df9f6e42bc58817939bfb2672560529b4840ab03ce0486207989a554c4ac7"
+    },
+    {
+      "path": "sources/louvre-lahikulmat-codex-tilaus.md",
+      "bytes": 3923,
+      "sha256": "b28e27d5109483fe58bce57d153f914c3033feb59cd491534ed5196a142b7a62"
+    },
+    {
+      "path": "sources/louvre-lahikulmat.json",
+      "bytes": 2565,
+      "sha256": "0e361c9b099e02adf49b1e01a8eed722f2ed2fc5b92b6872296b7217bb86ad1c"
+    }
+  ],
+  "finalSealedAt": "2026-10-17T18:43:55.587490+00:00"
+}
