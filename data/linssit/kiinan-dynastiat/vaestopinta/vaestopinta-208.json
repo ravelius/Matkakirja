@@ -1,0 +1,230 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 208,
+ "hila": {
+  "lon0": 100.0,
+  "lon1": 124.0,
+  "lat0": 20.0,
+  "lat1": 42.0,
+  "askel": 0.1,
+  "leveys": 240,
+  "korkeus": 220,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-208.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 121.7,
+  "p99": 66.2,
+  "summa_milj": 34.11,
+  "arvio": true
+ },
+ "omistus": {
+  "tiedosto": "omistus-208.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 250
+ },
+ "dynastiat": [
+  {
+   "avain": "shu",
+   "nimi": "Shu",
+   "vari": "#b5714d",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "wei",
+   "nimi": "Wei",
+   "vari": "#8f4a34",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "wu",
+   "nimi": "Wu",
+   "vari": "#c98a5a",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "xianbei",
+   "nimi": "Xianbeit",
+   "vari": "#3f7f7a",
+   "tyyppi": "ulkoinen"
+  }
+ ],
+ "vakiluku_milj": 34.4,
+ "aluejako": "jako",
+ "hetki": {
+  "nimi": "Punaiset kalliot",
+  "vuosi": 208,
+  "rajat_vuosi": 250,
+  "huom": "Omistusvärit vuoden 250 rajoista (Wei = Cao Caon Han-hovi, Wu = Sun Quan; Shun alue oli 208 vielä Liu Zhangin ja Liu Biaon perillisten). Taistelupaikka kiistanalainen (kerrokset: taistelu.alue).",
+  "armeijat": [
+   {
+    "avain": "cao-cao",
+    "nimi": "Cao Cao",
+    "dynastia": "wei",
+    "miehia": 220000,
+    "arvio": true,
+    "huom": "Lähteiden 800 000 on liioittelua; tutkijoiden arvio noin 220 000 (mukana Jingin provinssin laivasto).",
+    "keraus": [
+     {
+      "lon": 114.0,
+      "lat": 35.2,
+      "sade_km": 260,
+      "osuus": 0.65
+     },
+     {
+      "lon": 112.2,
+      "lat": 31.4,
+      "sade_km": 150,
+      "osuus": 0.35
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 114.35,
+      "lat": 36.3,
+      "paikka": "Ye"
+     },
+     {
+      "t": 0.18,
+      "lon": 113.82,
+      "lat": 34.03,
+      "paikka": "Xuchang"
+     },
+     {
+      "t": 0.28,
+      "lon": 112.15,
+      "lat": 32.02,
+      "paikka": "Xiangyang"
+     },
+     {
+      "t": 0.36,
+      "lon": 112.2,
+      "lat": 30.35,
+      "paikka": "Jiangling"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.5,
+      "lat": 29.95,
+      "paikka": "Wulin (leiri)"
+     }
+    ]
+   },
+   {
+    "avain": "sun-liu",
+    "nimi": "Sun Quan ja Liu Bei",
+    "dynastia": "wu",
+    "miehia": 50000,
+    "arvio": true,
+    "huom": "Zhou Yun 30 000 ja Liu Bein ja Liu Qin noin 20 000.",
+    "keraus": [
+     {
+      "lon": 117.0,
+      "lat": 30.4,
+      "sade_km": 180,
+      "osuus": 0.6
+     },
+     {
+      "lon": 114.3,
+      "lat": 30.5,
+      "sade_km": 90,
+      "osuus": 0.4
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.3,
+      "lon": 115.98,
+      "lat": 29.73,
+      "paikka": "Chaisang"
+     },
+     {
+      "t": 0.4,
+      "lon": 114.27,
+      "lat": 30.57,
+      "paikka": "Xiakou"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.62,
+      "lat": 29.87,
+      "paikka": "Punainen kallio"
+     }
+    ]
+   }
+  ],
+  "lyonnit": [
+   {
+    "t": 0.55,
+    "lon": 113.56,
+    "lat": 29.91,
+    "voittaja": "sun-liu",
+    "havio": "cao-cao",
+    "voima": 1.0,
+    "huom": "Tulilaivat polttavat Cao Caon kiinnitetyn laivaston; tauti ja vetäytyminen."
+   }
+  ],
+  "jalkeen": [
+   {
+    "armeija": "cao-cao",
+    "t0": 0.55,
+    "t1": 0.8,
+    "miehia": 90000,
+    "arvio": true,
+    "reitti": [
+     {
+      "t": 0.62,
+      "lon": 112.9,
+      "lat": 29.8,
+      "paikka": "Huarongin tie"
+     },
+     {
+      "t": 0.72,
+      "lon": 112.2,
+      "lat": 30.35,
+      "paikka": "Jiangling"
+     },
+     {
+      "t": 0.8,
+      "lon": 112.15,
+      "lat": 32.02,
+      "paikka": "Xiangyang"
+     }
+    ],
+    "huom": "Häviäjä valuu takaisin pinnaksi; tappiot (taistelu, tauti) madaltavat pintaa."
+   },
+   {
+    "armeija": "sun-liu",
+    "t0": 0.55,
+    "t1": 0.85,
+    "miehia": 45000,
+    "arvio": true,
+    "reitti": [
+     {
+      "t": 0.7,
+      "lon": 112.2,
+      "lat": 30.35,
+      "paikka": "Jiangling (piiritys)"
+     }
+    ],
+    "huom": "Voittajat etenevät Jianglingiin; joukot palaavat pinnaksi hitaasti."
+   }
+  ],
+  "toipuminen": {
+   "t0": 0.8,
+   "t1": 1.0,
+   "huom": "Maa toipuu hitaasti: keräysalueiden painuma palautuu, tappiot jäävät pois."
+  }
+ },
+ "lahteet": {
+  "tiheys": "ARVIO: kokonaisväki kerrokset_data.VAESTO (laskenta 140 ja arvio 250 lineaarisesti), alueosuudet OSUUDET, painotus matalikoille ETOPO1 (NOAA, PD) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-250.geojson (Matkakirja, CC0)",
+  "armeijat": "Armeijoiden koot ja reitit: yleisesti tunnetut faktat ja tutkijoiden arviot (Wikipedia: Battle of Red Cliffs; de Crespigny), paikat kerrokset_data.py:stä. Kaikki luvut arvioita."
+ }
+}
