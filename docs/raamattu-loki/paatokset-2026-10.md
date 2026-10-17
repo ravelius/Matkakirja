@@ -435,3 +435,7 @@ Omistaja 17.10.2026 klo 22.17 kysyi (sanatarkasti) "Miten juoksu peli kannattaa 
 ## TIVOLIN ILTAKUVA (17.10.2026 klo 22.18)
 
 Omistaja 17.10.2026 klo 22.17 kortilla "Kyllä, pagodi ja järvi (Suositus)": Leif Jørgensenin "Tivoli at night - Det japanske tårn 02" (CC BY-SA 4.0, 2015) Tivolin esitykseen junaan 201 (200 lukittu); varakuva ei.
+
+## JUOKSUPELIN KATTOREITTI (17.10.2026 klo 22.19)
+
+Omistaja 17.10.2026 klo 22.18 Keskustelukanavan kautta (sanatarkasti): "Myös muurien reunojen ja kattojen päällä voisi juosta mutta siellä pysyminen edellyttäisi tarkkoja oikea aikaisia hyppyjä". KK:n tavoite: ylhäällä riskireitti; sinne pääsee portaista tai hypyllä muurin kulmasta; enemmän aarteita ja omenoita, vartijat eivät yllä; kattojen raot ylitetään ajoitetulla hypyllä (pyyhkäisy ylös); huti ei päätä peliä, Puyi putoaa pihalle lähemmäs kiinniottajia. Harmaaseen versioon yksi kattoreitti.
