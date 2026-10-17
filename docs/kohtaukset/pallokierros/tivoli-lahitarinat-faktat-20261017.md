@@ -75,7 +75,7 @@ Teksti: "Himmelskibet, suomeksi Taivaslaiva, on 80 metriä korkea karuselli, jos
 Pois: "maailman korkein" (Tivolin oma markkinointi 2006–2008, ei itsenäistä varmistusta; Praterturm 117 m 2010 ym. ohittivat; nykyään Tivoli sanoo "yksi Pohjois-Euroopan korkeimmista"), valmistaja Funtime (voi lisätä), 24 paikkaa, kapasiteetti (480/h vs 960/h), kierron ja nousun nopeus.
 
 ## 7. Pulun kutsu `pulu-vapaalento-kutsu-koopenhamina`
-"Kööpenhamina on nyt sinun, ja ohjaimet ovat kädessäsi. Paina Mikä tämä on? -nappia ja napauta rakennusta, niin kerron, mitä tiedän siitä." (137 merkkiä, Pariisin kutsun malli `pulu-vapaalento-kutsu-pariisi`, tunne utelias ~0,4.) Jos kutsu soitetaan vasta Tivolin sisällä: korvaa ensimmäinen virke "Tivoli on nyt sinun, ja ohjaimet ovat kädessäsi." ja "rakennusta" → "rakennusta tai laitetta"; muu sanatarkka.
+"Kööpenhamina on nyt sinun, ja ohjaimet ovat kädessäsi. Paina Mikä tämä on -nappia ja napauta rakennusta, niin kerron, mitä tiedän siitä." (137 merkkiä, Pariisin kutsun malli `pulu-vapaalento-kutsu-pariisi`, tunne utelias ~0,4.) Jos kutsu soitetaan vasta Tivolin sisällä: korvaa ensimmäinen virke "Tivoli on nyt sinun, ja ohjaimet ovat kädessäsi." ja "rakennusta" → "rakennusta tai laitetta"; muu sanatarkka.
 
 **Tarkistus 17.10.:** kolme riippumatonta Sonnet-tarkistajaa (omat haut ennen liitettä): kaikki väitteet OK tai korjattu; 'lyhdyt' pois (ei lähdettä); lex.dk/trap/snl/ing/dr/tv2 kieltävät Clauden, vain hakutiivistelmiä. Tarkistajien raportit scratchpadissa (tivoli-tarkistus-1..3.md).
 
