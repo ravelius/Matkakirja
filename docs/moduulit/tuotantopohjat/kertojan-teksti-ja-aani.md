@@ -57,7 +57,11 @@ Sisältökirjuri: teksti (hyväksytty, faktat tarkistettu)
    - Pulu (`piI8Kku0DcvcL6TTSeQt`): `eleven_v4_turbo`, stability 0,5, `language_code fi`, −17,2 LUFS, ei ffmpeg-nopeutusta
      (`livia-aani.md`).
    - Kahden tai useamman äänen keskustelu yhtenä dialogiottona, ei repliikki kerrallaan.
-   - Kieli aina määritelty suomeksi. Raaka tallennetaan heti: uusintaa ei tehdä, jos raaka kelpaa.
+   - **Kieli aina pakotettu suomeksi: pyynnön rungossa `"language_code": "fi"` JOKAISELLE äänelle (William, isoisä, Pulu).**
+     Ilman sitä vieraat nimet (esim. "Louvre" ensimmäisessä lauseessa) vievät lukijan ranskaan ja suomi äännetään vieraalla
+     aksentilla (omistajan havainto 17.10.2026 klo 22.54; vanhat ranska-*-skriptit). Tarkista rungosta ennen ajoa.
+     Whisper-kielitunnistus ei erota aksenttia (suomi 0,99 myös aksentilliselle otolle), joten tarkistus on rungossa, ei äänessä.
+   - Raaka tallennetaan heti: uusintaa ei tehdä, jos raaka kelpaa.
 7. **Ääniportti ennen vientiä** (`proto-3d/tyokalut/aaniportti.py`, ajetaan `vie-paketti.sh`:ssa automaattisesti):
    true peak enintään 0 dBTP, lyhyiden kertaäänten kovuus. Puheelle ajetaan ilman `--puhe`-valitsinta (Whisper antaa
    suomelle vääriä hylkäyksiä).
