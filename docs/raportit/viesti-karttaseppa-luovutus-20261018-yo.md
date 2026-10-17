@@ -29,6 +29,9 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
   13–36 s (`crop=800:600:500:250`) → jos ok `patka.zsh <kansio> 12 26` → PT 3 riviä.
 - **LISÄYS 00.39: ajo VALMIS ja SIMU VAPAA kuitattu JU:lle.** Todistus `proto-3d/lokit/todistus-kiina-taistelu-250-v5-20261018-0034/`
   (PUUTE kaannos.txt = käännöspalvelun merge-sha 270832938 ⊇ 0bf177c8b, ok). Seuraaja: `yhdista-video.zsh` tähän kansioon → ruudut → pätkä → PT.
+- **LISÄYS 01.05: v5 TARKISTETTU.** Video yhdistetty, ruudut `ruudut-v5/r01–r08.png`, pätkä `patka-omistajalle.mp4` (12–38 s) → PT 01.05.
+  Ok: ei mustia reikiä, Wei/Wu eri värit, erillään iskussa, X + harmaa aaltorengas, kartta tasaiseksi. Puute: kummut pehmeitä läikkiä,
+  ei selviä kukkuloita (matala kontrasti). ODOTTAA PT:n päätöstä: v6 (kontrasti/varjostus) vai pätkä omistajalle sellaisenaan.
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
