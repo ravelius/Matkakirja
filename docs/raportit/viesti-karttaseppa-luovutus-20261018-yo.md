@@ -49,6 +49,10 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
   täysikokoisina → jos laki valtion sävyssä: pätkä SUORAAN KK:lle (local_febfd152-…) omistajalle + rivi PT:lle (PT 01.44).
 - **JUNA 202 Nuuk TEHTY 01.5x:** 37f37a530 (samassa karttaseppa/reykjavik-202) S2Maailma.Versio v2h; paketti `_valmiit/s2-indeksi-v2h-vienti-20261018`
   VIENTIPYYNTÖ JU:lla (oltava ämpärissä ennen TF 202). Generaattori `_tyo/karttaseppa/s2-nuuk-202/` + T7 `iss-s2-indeksi/v2h-gronlanti/`.
+- **LISÄYS 02.2x:** v8 ajo 02.06 epäonnistui kuormaan (3 simua, 250-pysäkki ohittui); uusinta yksin 02.13 ok (todistus-…-v8-20261018-0213),
+  mutta laki yhä vaalea. JUURISYY: lineaarinen väriavaruus, verteksiväri luettiin lineaarisena. **v9 = cd7b1daa4** (kumpu lineaarisena,
+  VainTaisteluTumma 1), KÄÄNNÖSPYYNTÖ JU:lla → `kiina-taistelu-250-v9-app`, skripti `ajo-taistelu-250-v9.zsh` (aja suoraan, simu YKSIN).
+  Tarkista r03/r06 täysikokoisina (laki Wun/Wein omassa sävyssä, ei kerma) → pätkä KK:lle omistajalle + rivi PT:lle.
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
