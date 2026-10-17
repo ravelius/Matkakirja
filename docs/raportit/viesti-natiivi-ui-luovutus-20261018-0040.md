@@ -66,3 +66,12 @@ tyhjät wt/natiivi-ui-tyylikirja-museo ja wt/proto-natiivi-ui-rakettikuva. Muut 
 Käännös valmis: **KÄÄNNETTY eefb79a01 a45af2f97** (_tyo/natiivi-ui/ratas-201-app). Nopein reitti: SIMU NYT heti tällä käännöksellä
 (`zsh ketjut-20261016/kehys-ratas-201-simu.zsh`: video + parit, KK:n kohdat 2 ja 3 näkyvät), samaan aikaan kohdan 1 osuma 44 pt
 (vain poyta.json-mitat) uudeksi commitiksi → NS:lle korjattu sha (osuma näkyy `poyta tila` -tulosteesta seuraavassa käännöksessä).
+
+## PÄIVITYS 01.18 (uusi tili, NUI local_e9fdc695-…)
+- **Toimitettu NS:lle: natiivi-ui/ratas-201b db3915373** = a45af2f97 + osuma 44 pt 301caa015 (poyta.json ratas {295, 44}, sauva {339, 54})
+  + Valosepän 0112f1274 (tyylikirjan PYSÄYTYSKUVA-pohja). tarkista.sh 0. PT 01.1x: EI omaa käännöstä; video + parit NS:n rungon 201 yhteiskäännöksestä.
+- Simu a45af2f97:llä 01.06–01.16 (lokit/todistus-kehys-ratas-{ipad,iphone}-201-20261018-0106/-0111): käyttökelvoton pariksi — rattaan
+  napautukset osuivat pöydän alle ja R4:n ikkunanapautus ei avaa kohdevalikkoa (avautuu KOHTEET-näytöstä), kööpenhamina-tunnus = kobenhavn.
+  Skenaariot korjattu (ratas iPhone 317 765, iPad 538 1138; näyttö iPhone 243 755, iPad 464 1127). iPhone: sauvan rengas ei leikkaudu kulmaan (R4 raaka).
+- SEURAAVAKSI: rungon 201 käännöksen jälkeen SIMU NYT → ajo-kehys-ratas-201.zsh <rungon app-kansio> → video < 1 min + parit (R1, R4, R5, R7, R8)
+  → PT:lle → KK täysikokoisena; kuvat Valosepälle tarkistettavaksi (pysäytyskuva pehmeä, nostojen vaakaveto).
