@@ -17,5 +17,5 @@ iss-johdanto-1-cupola, 4 × iss-raketti-fakta-* (alusta/nousu/toinen-vaihe/telak
 ## Tarkistus
 Whisper-small (puhuttu vs. tunnistettu): 27/31 ≥ 0,8. Kaksi heikompaa kuin vanha otto: `v1-auringonnousut-2` (0,61, "vuorokahodessa") ja `iss-loppu-vastaus-ohjaus-a-2` (0,71, "lennan minne haluet"); vanhat tunnistuivat puhtaasti. Oikeita ottoja ei kuunneltu. Uusintaotto kummastakin vaatii omistajan luvan (yksi otto kustakin) – mahtuu lupaan (6 ottoa / 860 mrk jäljellä), jos PT/KK kysyy.
 
-## Avoin löydös
-Raketin selostusraita (`raketti-selostus-v8.mp3`, Williamin osuudet: alusta…cupola) ei ollut KK:n listalla; tarkistan tee-skriptistä, onko fi pakotettu, ennen kuin ehdotan mitään.
+## Tarkistettu: raketin selostusraita
+Raketin koko käsikirjoitus (Williamin ja Pulun osuudet, `_tyo/raketti-lento-20261011/dialogi_v6.py`) tehtiin text-to-dialoguella, rungossa jo `language_code: fi` → ei uusintaa.
