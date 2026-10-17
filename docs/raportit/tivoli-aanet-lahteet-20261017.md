@@ -16,3 +16,8 @@ Luonnos, ei vientiä eikä kytkentää (tivoli-suunnitelma luku 4, vaihe 7). Kan
 | Järvi / puisto | 192092 City park summer evening, klankbeeld CC BY | 175273 city pond ducks, mdsn CC0 |
 
 Puutteet: Himmelskibetille ja Gyldne Tårnille ei löytynyt omaa ääntä (vain yleinen funfair-kirkuna); Freesoundin haku on konjunktiivinen, joten pitkät hakulauseet palauttivat 0 → lyhyet 1–2 sanan haut. Esikuuntelut ovat mp3-hq; lopullinen tiedosto tasoitetaan valinnan jälkeen (−30 LUFS maisema kertojan alle). Kuuntelematta minun puolestani (valinta on kuuntelupäätös).
+
+## Päivitys: tasoitus ja vienti (PT:n kuittaus, ei kytkentää)
+- Suositukset käyttöön; Himmelskibet = syntetisoitu tuulen suhina + kaukainen kirkuna (406824), Gyldne Tårn = pudotuksen kirkaisu (438420, 6 s yksittäinen).
+- Ämpäri: `https://media.matkakirja.app/aanet/tivoli-v1/manifest.json` (200; 8 ääntä: tivoli-rutschebanen-kolina, -daemonen, -himmelskibet, -gyldne-torn-pudotus, -vakijoukko, -soittokunta-kaukainen, -karusellin-urut, -jarvi-puisto). Manifestissa paikka, lat/lon, kantama_m, silmukka, taso. Taso −30 LUFS (soittokunta −34, torni −24), huippu −9,3…−19 dBFS. Ääniportti läpi, 10 tiedostoa, virheitä 0.
+- CC BY -nimeämiset: `nimeamiset-ehdotus.json` paketissa (YleArkisto 513923, klankbeeld 192092) → kytkijä lisää `data/aanilahteet.json`:iin kytkettäessä. Paketti `_valmiit/tivoli-v1-vienti-20261017/`, työ `_tyo/tivoli-aanet-20261017/tee.py`.
