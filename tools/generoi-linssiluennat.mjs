@@ -151,6 +151,7 @@
  * itsensä uudelleen lipun kanssa, kuten generoi-tehosteet.mjs.
  */
 
+import { kieliFi } from './elevenlabs-kieli.mjs';
 import { spawnSync } from 'node:child_process';
 import {
   mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
@@ -521,7 +522,7 @@ export function kokoaKertomusManifesti(kaari, kestot = new Map()) {
  *
  * VARAREITTI, JOS KOHDISTUS EI ONNISTU: aikaleimapääte
  * (`/v1/text-to-speech/{voice}/with-timestamps`), joka vastaa
- * `eleven_multilingual_v2`:lla — se generoi äänen ITSE ja korvaa v3:n
+ * `eleven_v4_turbo`:lla (language_code fi pakotettuna, kuten tee.py-pohjassa) — se generoi äänen ITSE ja korvaa v3:n
  * luennan, joten se on nimenomaan varareitti eikä oletus. Manifestiin
  * kirjataan kumpi reitti kulki (`aikaleimalahde`) ja millä mallilla ääni
  * syntyi (`malli`), jottei vaihto koskaan tapahdu hiljaa. `--malli`
@@ -530,7 +531,7 @@ export function kokoaKertomusManifesti(kaari, kestot = new Map()) {
  */
 
 /** Aikaleimojen varareitti: aikaleimapääte omalla mallillaan (ks. yllä). */
-export const AIKALEIMOJEN_MALLI = 'eleven_multilingual_v2';
+export const AIKALEIMOJEN_MALLI = 'eleven_v4_turbo';   // 17.10.2026: ei enää multilingual_v2 (ei tue language_code-kenttää → suomi aina pakotettu)
 
 /** Mistä aikaleimat tulivat — kirjataan manifestiin. */
 export const AIKALEIMAN_LAHTEET = {
@@ -875,7 +876,7 @@ async function haeApista(puhe, avain, kohde, { malli = MALLI, raakaKansio = null
     body: JSON.stringify({
       inputs: [{ text: puhe + LOPPUTAUKO, voice_id: AANI }],
       model_id: malli,
-      ...(String(malli).includes('multilingual') ? {} : { language_code: 'fi' }),   // suomi pakotettuna (omistaja 6.10.)
+      ...kieliFi(malli),   // suomi pakotettuna (omistaja 6.10.)
       settings: { stability: STABILITY },
     }),
     signal: AbortSignal.timeout(180000),
@@ -940,8 +941,8 @@ async function haeAikaleimoilla(teksti, avain, kohde, { malli = AIKALEIMOJEN_MAL
     body: JSON.stringify({
       text: teksti + LOPPUTAUKO,
       model_id: malli,
-      ...(String(malli).includes('multilingual') ? {} : { language_code: 'fi' }),   // multilingual_v2 ei tue (dokumentaatio)
-      voice_settings: { stability: STABILITY },
+      ...kieliFi(malli),   // suomi aina pakotettuna; tukematon malli → virhe
+      voice_settings: { style: 0 },   // kuten tee.py-pohjassa: oletusvakaus, style 0
     }),
     signal: AbortSignal.timeout(600000),
   });
