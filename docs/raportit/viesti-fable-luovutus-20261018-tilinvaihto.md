@@ -39,3 +39,21 @@ Avoin #4837 = Valosepän tyylikirja-PR (PYSÄYTYSKUVA-pohja).
 ## 4. Opit
 - Asemataulun HTML:n luku (820 riviä + diff) vei noin 60 k tokenia → seuraavalla kerralla Sonnet-ali-agentille.
 - `cd` Bash-komennossa vaihtaa sovelluksen työhakemiston → käytä absoluuttisia polkuja.
+
+## 5. Lisäys 01.2x (roolien viestit luovutuksen jälkeen; PT päätti ja välitti)
+- NS: runko 26264022d = 21d5712be + NUI ratas-201b a45af2f97 + LS monalisa-201 916c98c86 + LR louvre-kehykset-201 3aeac4c8d, testit
+  vihreät (Linssit 2024, Peli 607, Kartta 508, tarkista 0, peili 0). EI ffa433c76:ta (orsay-valinnaiset-200 tuo 23.46 poistetun ketjun)
+  → LS tekee tiiviin pyramidin puhtaaseen haaraan linssiseppa/pyramidi-201 rungon päälle.
+- KUVAKÄÄNNÖS KERRAN: NUI yhdistää Valosepän PYSÄYTYSKUVA 0112f1274 + rattaan osuma 44 pt ratas-201b:hen → NS päivittää rungon
+  (+ LS:n pyramidi) → JU kääntää rungon kerran (L2) → NUI (häivytysvideo + ratas- ja kohdevalikkoparit iPhone/iPad), LS (pyramidi
+  4× + lähikuva, Mona Lisan video < 1 min + zoom-still) ja LR (kehyskuvat) kuvaavat siitä → PT täysikokoisena → KK → LUKITSE 201.
+- JU:n jono: 1) rungon kuvakäännös, 2) KS:n Kiina v6 -simu, 3) NS:n laitekäännökset A/B + iPad (akku). Pois: PK:n esikatselu, LS:n
+  pyramidi v2.4. TF 201 vain PT:n luvalla.
+- KS: Kiina v5 -pätkä (proto-3d/lokit/todistus-kiina-taistelu-250-v5-20261018-0034/patka-omistajalle.mp4) ok paitsi kummut pehmeinä
+  läikkinä → v6 selvin kukkuloin → pätkä PT:lle → KK.
+- PK: editoriesikatselu ei käyttökelpoinen (batchmode 640×480 vs. UI 2752×2064; proto-3d/lokit/esikatselu-20261018-0105/ARVIO.md)
+  → TAUOLLA PK:n suosituksesta. KERRO KK:lle yhdellä rivillä (omistajalle sanottiin 23.4x, että esikatselu jatkuu TF 201:n jälkeen;
+  jatko vaatisi Ruutu-kerroksen ~8 pelitiedostoon). Arkki 5 odottaa tiivistä pyramidia.
+- Valoseppä: PYSÄYTYSKUVA-pohja web-PR #4837 (testit 32/0) → merge, kun KK on hyväksynyt kohdevalikkoparin. Lepo.
+- Sisältökirjuri ja Siirtoseppä: JONO TYHJÄ, lepo → anna työlistalta erä tai totea lepo (viikko 71 % klo 01.05, raja 99 %).
+- Levy 43 Gi ja laskee (Postivahti); < 25 Gi → poster-tyhjennys ja JU:n siivous.
