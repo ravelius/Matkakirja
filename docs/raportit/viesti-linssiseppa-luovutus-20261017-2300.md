@@ -37,6 +37,12 @@ VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
   vaan himmenevät. Himmeässä tilassa napautus mihin tahansa muualle kuin nappiin (lattia, teos, alareuna, tuplanapautus) vain tuo napit
   esiin; näkyvässä tilassa napautukset toimivat suunnitellusti ja nollaavat 5 s ajastimen; vedot/nipistykset aina suoraan. Toteutus
   yhdessä NUI:n kehysnappien häivytyksen kanssa (yksi yhteinen paikka; sovi NUI:n kanssa). Testi: himmeä + lattia → ei kävelyä.
+  NUI 23.2x: yhteinen toteutus valmis haarassa natiivi-ui/kehyshaivytys-201 ec5819d17 (juna-200-pohja, käännöksessä): KehysNapit
+  häivyttää kaikkien linssikerrosten mk-ohjausryhma-ryhmät (myös museon ‹ ⏸ ›) 5 s jälkeen 20 %:iin ja nielee UI-pintojen klikkaukset.
+  SINUN OSUUTESI: museon maailman napautuksiin (lattia → kävely, teos) irrotuksessa ennen toimintoa
+  `if (SyoteLukko.NapautusNielty(ruutuPx)) return;` (Scripts/Peli/SyoteLukko.cs; pikselit, origo vasen alakulma) — pallo, Kipin
+  Mikä tämä on, tehtäväkohteet ja dioraama tekevät jo niin. Museon oman automaattiesityksen inline-opacity voittaa NUI:n luokan (ei
+  ristiriitaa). NUI:n testi KehysHaivytysTestit.HimmeanaLattiaanEiKavelyaNakyvanaKavely. SyoteLukko on vain proto-gitin NUI-haarassa → pohjaksi se tai odota sen mergeä.
 - NS (local_674b9ec4-…) tekee junaan 201 "koko ruudun UI peittää 3D:n" -lepotilan ja rekisteröinnin MuseoSovitin.cs:ään: sovi NS:n kanssa
   ennen MuseoSovitin.cs/MuseoNayttamo.cs-muutoksia (vastasin 23.2x: minulla ei kesken muutoksia niihin).
 
