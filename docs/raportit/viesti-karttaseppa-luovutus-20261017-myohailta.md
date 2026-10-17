@@ -42,6 +42,8 @@ sitten SIMU NYT ~10 min. (v2-käännös e8b71772c oli kesken; sen simua ei tarvi
 fast-forwardattu kiina-paketti-200:aan, peili päivitetty. v3-käännös oli jo käynnissä (todennäköisesti 1af33ce7f) → JU:lta pyydetty
 269f285d8 → `kiina-selkea-19-v4-app` ja SIMU NYT vain v4:lle; ajo silloin `odota-selkea-19-v4.zsh` (muuten sama). Tarkista KÄÄNNETTY-viestin SHA:
 jos v3 sisältää 269f285d8:n, aja v3.
+**JU 19.2x VAHVISTI:** v3 EI sisällä 269f285d8:aa → v4 (269f285d8) odottajana heti v3:n perään → `kiina-selkea-19-v4-app`;
+SIMU NYT tulee VAIN v4:lle (~19.45). v3:a ei simuloida. `odota-selkea-19-v4.zsh` valmiina.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
