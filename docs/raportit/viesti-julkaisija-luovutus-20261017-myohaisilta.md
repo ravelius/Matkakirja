@@ -16,7 +16,7 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt
 - **KS taistelu-250-v5** (0bf177c8b, pyyntö 22.5x): EI vielä käynnistetty → `zsh julkaisija-tyokalut/karttaseppa-kiina-taistelu250-v5.zsh`
   (L2, `_tyo/karttaseppa/kiina-taistelu-250-v5-app`), sitten KÄÄNNETTY + SIMU NYT KS:lle (iPad ~4 min).
 - Juoksupeli a3a481f99 ajettu 22.46 (`todistus-juoksupeli-harmaa-20261017-2246`): kuvat harmaita, juoksu ei alkanut → PK:lle kerrottu.
-- **Juoksupeli RUUDUKKO 0b811328a** (PK 23.0x, korvaa a3a + bb34): muokkaa `pelikoodari-juoksupeli.zsh` sha + app-kansio (esim. juoksupeli-c-app,
+- **Juoksupeli RUUDUKKO 99a83b3d9** (PK 23.1x: oma varjostin harmaan ruudun korjaukseksi; EI 0b811328a, korvaa a3a + bb34): muokkaa `pelikoodari-juoksupeli.zsh` sha + app-kansio (esim. juoksupeli-c-app,
   era juoksupeli-ruudukko), L1, `touch simu-vapaa-juoksupeli` kun simu vapaa. Skenaario sama polku (siemen 7, ~55 s). Tulos PK:lle.
 - **Sitten L1 → PK:n esikatselu.sh** (lähetä PK:lle "NYT"; PK ilmoittaa kun L1 vapaa).
 - Levyvahti Monitorina (`zsh julkaisija-tyokalut/levyvahti-l2.zsh`, 30 min, aina uudelleen). Levy 77 Gi 22.10.
