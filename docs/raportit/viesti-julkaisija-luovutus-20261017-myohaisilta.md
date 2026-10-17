@@ -10,6 +10,10 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt
   Loki `julkaisija-tyokalut/pelikoodari-juoksupeli.log`. Jos taustatehtävä kuoli nollauksessa: tarkista loki; aja skripti uudelleen
   (kääntää uudelleen, jos app puuttuu). Kun **KS SIMU VAPAA** (taistelu v4, alkoi 22.35): `touch julkaisija-tyokalut/simu-vapaa-juoksupeli`.
   Tulos (kansio + arkki) → PK (local_7fcab04b-…).
+- **Juoksupeli b (kattoreitti, omistaja 22.18):** `pelikoodari-juoksupeli-b.zsh` (bb34dd973 → L1 heti a:n jälkeen, simu era juoksupeli-katto,
+  `simu-vapaa-juoksupeli-b` jo olemassa) → loki `pelikoodari-juoksupeli-b.log`. Tulos PK:lle.
+- **Galleria arkki 4b:** `pelikoodari-galleria200f-kaanna.zsh` (fa219040b → L2, `_tyo/pelikoodari/galleria-200-f-app`), sitten simu
+  `zsh pelikoodari-galleria200f-simu.zsh` juoksupelien jälkeen (8 kuvaa, vaaka, teksti-ylla-arkki) → PK + LR.
 - **Sitten L1 → PK:n esikatselu.sh** (lähetä PK:lle "NYT"; PK ilmoittaa kun L1 vapaa).
 - Levyvahti Monitorina (`zsh julkaisija-tyokalut/levyvahti-l2.zsh`, 30 min, aina uudelleen). Levy 77 Gi 22.10.
 
@@ -18,7 +22,8 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt
 - BUILD 200 = 94a8a360c, M = 795a0d97a. TF 200 39061485322 success 22.22 (1. ajo 39061284955 kaatui: L1-kopiossa 3518 irrallista .metaa
   UI/Resources/IssSkanneri → talteen `proto-3d/lokit/tf200-metat-2211`, poistettu; NS commitoi ne junaan 201, haara natiiviseppa/metat-201).
 - Sisäinen 22.25, ulkoinen 22.26, beta-arvio hyväksytty, vanhennus 22.27 (199 iOS + Mac).
-- **Mac 200** NS:llä: TF 39062841407 käynnissä 22.32 (Mac-testaajilla ei buildia ennen sitä). NS raportoi PT:lle.
+- **Mac 200** TF 39062841407 success 22.38, sisäisellä ryhmällä (Mac-workflow'n oma askel). Mac-buildeja EI jaeta ulkoisille
+  (testflight-ulkoinen.yml vain IOS 11.10. alkaen; muutos = PT:n linjaus). **JUNA 200 VALMIS**, rivi PT:lle lähetetty.
 
 ## 2. SIMUJONO / L2
 - Nyt simulla: **KS taistelu-250-v4** (e1babe602, ~4 min, 22.35→). Sitten juoksupeli (kohta 0). Muut: valmiusjärjestys.
