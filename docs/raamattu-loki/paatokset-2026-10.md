@@ -456,3 +456,7 @@ taulun välillä, riittää että kameraa käännetään hieman menosuuntaan, mu
 kävelisi sivuttain. näin voidaan välttää liika kameran kääntely oman akselinsa ympäri mikä on ikävän näköistä pelaajan katsoa." Toteutus (KK:n tavoite): suora linja kaiteiden, penkkien, jalustojen ja
 kävijöiden läpi, reitinhaku vain seinät ja oviaukot; saman salin siirto ~1–1,5 s; käännös menosuuntaan ~15°, lopuksi kohti teosta; iso suunnanmuutos mustalla välähdyksellä < 250 ms; testi
 kokonaiskäännölle ja kestolle. Museo ensin (Linssiseppä, juna 201), muiden linssien kamera-ajot tarkistetaan samalla periaatteella. Raamattu: KAMERA-AJOT, EI PYÖRITYSTÄ.
+
+## KAMERA-AJOT: SIIRRON KESTO KAVELYNOPEUDELLA (TARKENNUS) (17.10.2026 klo 23.18)
+
+Omistaja 17.10.2026 klo 23.17 (sanatarkasti): "siirtymä voi olla pidempi kuin sekuntti. nyt se kesti noin 10sek mikä oli liian pitkä. aika voi vaihdella etäisyyden mukaan ja normaali kävelynopeus riittää, tärkeintä että päästään kulkemaan suorinta reittiä ja kameraa ei tarvitse käännellä niin aikaa säästyy paljon". Kumoaa 23.15-kirjauksen "~1–1,5 s": kesto = etäisyys normaalilla kävelynopeudella suorinta reittiä, pehmeät lähdöt ja pysähdykset.
