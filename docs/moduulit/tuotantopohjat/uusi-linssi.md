@@ -150,8 +150,8 @@ historiaosuus: `historiapeli.md` luku 2.)*
    rivillä merkkimäärä ja tarkistustila "odottaa KK:n hyväksyntää"). Varmuuskopio ensin (`index.html.ennen-<aihe>-<pvm>`),
    julkaisu `zsh tools/tyotavat/julkaisija/aanisivu-julkaise.zsh`; skripti keskeyttää, ellei Access-suoja ole voimassa. Muutoksen
    jälkeen teksti, merkkimäärä ja tarkistustila päivitetään myös Tekstit-osastoon.
-6. **Ääni vasta luvalla** (Äänittäjä, ääniportti): ei äänitystä ennen KK:n/omistajan hyväksyntää eikä ennen generointilupaa.
-   Numerot kirjoitetaan sanoiksi ennen merkkimäärän laskemista; "eaa." kirjoitetaan "ennen ajanlaskun alkua".
+6. **Ääni** (Äänittäjä, ääniportti): kertojaäänillä on omistajan pysyvä lupa. Muissa generoinneissa (musiikki, äänimaisema, muut
+   äänet) määrä ja tekstit viedään ensin omistajalle KK:n kautta, eikä generoida ennen lupaa. Numerot kirjoitetaan sanoiksi ennen merkkimäärän laskemista; "eaa." kirjoitetaan "ennen ajanlaskun alkua".
 
 **Tekstin säännöt (poimittu Kiinan opeista):**
 - Pelitekstissä ei lyhenteitä "eaa."/"jaa."; vuosiluvut numeroina. Pelaaja on 13+ ja aikuinen: ei lastentekstiä, ei väkivallan
@@ -166,7 +166,7 @@ historiaosuus: `historiapeli.md` luku 2.)*
   versioita ole kolmea.
 
 **Tekstin valmiin määritelmä (täydentää lukua 3):** jokaisella avainvuodella tarinarivi; tarkistus tehty ja tallennettu;
-Tekstit-osastossa kaikki tekstit tilalla "odottaa hyväksyntää" tai "hyväksytty"; ääni vasta luvalla; `.md`, `.json` ja Tekstit-osasto
+Tekstit-osastossa kaikki tekstit tilalla "odottaa hyväksyntää" tai "hyväksytty"; ääni lupasääntöjen mukaan (kertoja pysyvä lupa, muu KK:n kautta); `.md`, `.json` ja Tekstit-osasto
 ovat samat sanatarkasti.
 
 **Aikataulu:** tekstit ehtivät rinnan koodin kanssa (vaiheet 3–5); aloita tarinariveistä heti, kun Karttasepän `MUOTO-*.md` on
