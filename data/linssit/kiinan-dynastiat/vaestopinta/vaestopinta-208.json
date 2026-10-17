@@ -66,9 +66,13 @@
     "avain": "cao-cao",
     "nimi": "Cao Cao",
     "dynastia": "wei",
-    "miehia": 220000,
+    "miehia": 200000,
+    "miehia_vali": [
+     150000,
+     240000
+    ],
     "arvio": true,
-    "huom": "Lähteiden 800 000 on liioittelua; tutkijoiden arvio noin 220 000 (mukana Jingin provinssin laivasto).",
+    "huom": "Noin 150 000–240 000 (Zhou Yun puhe, Sanguozhi 54 Pei; de Crespigny ~230 000 huoltoineen); pohjoisia enintään ~150 000, Jingzhoun antautuneita enintään ~70 000–80 000. 800 000 on Cao Caon oma propagandaluku.",
     "keraus": [
      {
       "lon": 114.0,
@@ -120,9 +124,13 @@
     "avain": "sun-liu",
     "nimi": "Sun Quan ja Liu Bei",
     "dynastia": "wu",
-    "miehia": 50000,
+    "miehia": 45000,
+    "miehia_vali": [
+     40000,
+     50000
+    ],
     "arvio": true,
-    "huom": "Zhou Yun 30 000 ja Liu Bein ja Liu Qin noin 20 000.",
+    "huom": "Noin 40 000–50 000: Zhou Yu noin 30 000 (Sanguozhi 54), Liu Bei ja Liu Qi noin 10 000–20 000.",
     "keraus": [
      {
       "lon": 117.0,
@@ -177,6 +185,7 @@
     "t1": 0.8,
     "miehia": 90000,
     "arvio": true,
+    "visuaalinen": true,
     "reitti": [
      {
       "t": 0.62,
@@ -197,14 +206,15 @@
       "paikka": "Xiangyang"
      }
     ],
-    "huom": "Häviäjä valuu takaisin pinnaksi; tappiot (taistelu, tauti) madaltavat pintaa."
+    "huom": "Häviäjä valuu takaisin pinnaksi; tappiot (tulipalo, tauti, nälkä, pakomatka) madaltavat pintaa. Tappioista EI ole lähteissä lukua: miehia on vain kuvan mittasuhde, ei esitetä lukuna."
    },
    {
     "armeija": "sun-liu",
     "t0": 0.55,
     "t1": 0.85,
-    "miehia": 45000,
+    "miehia": 42000,
     "arvio": true,
+    "visuaalinen": true,
     "reitti": [
      {
       "t": 0.7,
@@ -225,6 +235,6 @@
  "lahteet": {
   "tiheys": "ARVIO: kokonaisväki kerrokset_data.VAESTO (laskenta 140 ja arvio 250 lineaarisesti), alueosuudet OSUUDET, painotus matalikoille ETOPO1 (NOAA, PD) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
   "omistus": "rajat-250.geojson (Matkakirja, CC0)",
-  "armeijat": "Armeijoiden koot ja reitit: yleisesti tunnetut faktat ja tutkijoiden arviot (Wikipedia: Battle of Red Cliffs; de Crespigny), paikat kerrokset_data.py:stä. Kaikki luvut arvioita."
+  "armeijat": "Armeijoiden koot: Sisältökirjurin tietopohja docs/kohtaukset/kiinan-dynastiat/punaiset-kalliot-luvut.md (96692a25f; Sanguozhi, de Crespigny Wikipedian kautta); reitit tunnetuista paikoista (kerrokset_data.py). Kaikki luvut arvioita (pelissä \"noin\"); jälkeen-luvut ovat kuvan mittasuhteita, eivät tappiolukuja."
  }
 }

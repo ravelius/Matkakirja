@@ -16,9 +16,9 @@ Tiedostot kansiossa `vaestopinta/` (tuottaja `tools/kiinan-dynastiat/vaestopinta
 `hetki` (Punaiset kalliot, `tools/kiinan-dynastiat/vaestopinta_data.py`), aika `t` 0–1 hetken sisällä:
 - `armeijat` [{avain, nimi, dynastia, miehia, arvio, keraus [{lon, lat, sade_km, osuus}], reitti [{t, lon, lat, paikka}]}]:
   armeija kerää miehet keräysalueilta (pinta painuu, huippu kasvaa; huipun korkeus = miehiä) ja kulkee reittiä ajassa t.
-  Cao Cao ~220 000 (Ye → Xuchang → Xiangyang → Jiangling → Wulin), Sun Quan ja Liu Bei ~50 000 (Chaisang → Xiakou → Punainen kallio).
+  Cao Cao noin 150 000–240 000, piirrossa 200 000 (Ye → Xuchang → Xiangyang → Jiangling → Wulin), Sun Quan ja Liu Bei noin 40 000–50 000 (Chaisang → Xiakou → Punainen kallio).
 - `lyonnit` [{t, lon, lat, voittaja, havio, voima}]: pehmeä aalto kuin pisara vedessä (t 0,55).
-- `jalkeen` [{armeija, t0, t1, miehia, reitti}]: häviäjä valuu takaisin pinnaksi ja tappiot madaltavat (Cao Cao ~90 000 Huarongin
+- `jalkeen` [{armeija, t0, t1, miehia, reitti}]: häviäjä valuu takaisin pinnaksi ja tappiot madaltavat (tappioista ei lähteissä lukua: `visuaalinen` = vain kuvan mittasuhde; Cao Cao Huarongin
   tietä Jianglingiin ja Xiangyangiin); voittajat etenevät Jianglingiin.
 - `toipuminen` {t0, t1}: keräysalueiden painuma palautuu hitaasti; tappiot jäävät pois.
 
