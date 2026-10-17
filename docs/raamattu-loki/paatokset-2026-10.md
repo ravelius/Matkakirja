@@ -461,6 +461,17 @@ kokonaiskäännölle ja kestolle. Museo ensin (Linssiseppä, juna 201), muiden l
 
 Omistaja 17.10.2026 klo 23.17 (sanatarkasti): "siirtymä voi olla pidempi kuin sekuntti. nyt se kesti noin 10sek mikä oli liian pitkä. aika voi vaihdella etäisyyden mukaan ja normaali kävelynopeus riittää, tärkeintä että päästään kulkemaan suorinta reittiä ja kameraa ei tarvitse käännellä niin aikaa säästyy paljon". Kumoaa 23.15-kirjauksen "~1–1,5 s": kesto = etäisyys normaalilla kävelynopeudella suorinta reittiä, pehmeät lähdöt ja pysähdykset.
 
+## KESKENERÄISET AINA LINSSIT TAI PELIT › KESKENERÄISET, EI KEHITTÄJÄ › KOKEET (18.10.2026 klo 00.11)
+
+Omistaja 18.10.2026 klo 00.10 (KK:n välittämänä, sanatarkasti): "älä käytä näitä enää koskaan: Kehittäjä › Kokeet › Juoksupeli / siirrä kaikki aina keskeneräisten alle joko linsseihin tai peleihin. keskeneräiset näkyvät joka tapauksessa vain kehittäjälle". Linjaus: jokainen keskeneräinen löytyy samasta paikasta kuin valmis vastineensa: ☰ › Linssit › Keskeneräiset tai ☰ › Pelit › Keskeneräiset (kuten Olavinlinnan pala). Kehittäjä › Kokeet -rivejä ei tehdä; ohjeissa ja omistajalle polut aina tässä muodossa. Ensimmäinen siirto: juoksupeli (PK) Pelit › Keskeneräiset junaan 201.
+
+## SÄÄDÖT VAIN HAMMASRATTAASTA (⚙) (18.10.2026 klo 00.17)
+
+Omistaja 18.10.2026 klo 00.15 ja 00.17 (KK:n välittämänä, sanatarkasti): "siirrä hammaspyörä hampurilaisen viereen samanlaiselle nappipohjalle ja tyylille kuin hampurilainen ja poista hammasrattaan sisällön toiminnot näkyvistä kaikkialta muualta pelistä. eli vuorokaudenaikaa yms. säädetään jatkossa vain hammasrattaan kautta" / "tai jos hammasratas mahtuu nätisti itse ohjauspaneeliin, niin sen voi lisätä sinne ennemmin". Linjaus: vuorokaudenaika, vuodenaika, LIVE, nimet, pilvet ja sää säädetään koko pelissä vain ⚙-rattaasta; ratas ensisijaisesti ohjauspöydän sisällä pöydän nappityylillä, muuten ☰:n vieressä samalla ohjausnappipohjalla. Muut säätöpaikat poistetaan (ISS-kohdevalikko, ISS-ohjaamon laajennus, ISS-kyydin Olosuhteet, oppaan ☀ → ⚙). Pelkkä ajan näyttö (yläpalkki) saa jäädä.
+
+## JUNA 201 = KAIKKI; ISS-KOHDEVALIKKO KOKO RUUTU ILMAN IKKUNAA (18.10.2026 klo 00.19)
+
+Omistaja 18.10.2026 klo 00.18 (KK:n välittämänä, sanatarkasti): "julkaise kun nämä valmiit." / "eli kaikki junaan 201". Junaan 201 tulevat myös kehysnappien häivytys, ⚙-ratas ja ISS-kohdevalikko ilman ikkunaa; ei laitetestejä, KK hyväksyy kuvat omistajan puolesta. Kohdevalikko ilman ikkunaa (omistaja 22.59: "näkymä saa olla silloin pehmennetty ja tummennettu") on poikkeus 45 %:n peittosäännöstä; sumea ja tummennettu pysäytyskuva on uusi tyylikirjapohja omistajan pyynnöstä.
 ## CLAUDE-API: UUSI ORGANISAATIO KAYTOSSA, VANHA AVAIN POIS (17.10.2026 klo 23.49)
 
 Omistaja 17.10.2026 klo 23.46 ja 23.48 (sanatarkasti): "onko näitä avaimia nyt käytössä? haluaisin siirtää API käytön toiselle tilille" ja "tämä olisi se mitä jatkossa käytettäisiin" (Console, org Visuaaliviestinnän Inst., avain Matkakirja, luotu 11.10.). KK:n selvitys: GitHub-salaisuus ANTHROPIC_API_KEY päivitettiin uuteen avaimeen jo 11.10., ja pollo-julkaisu.yml vie sen workeriin joka ajossa (viimeksi 17.10., vihreä). Omistaja poistaa vanhan KLIK-organisaation matkakirja-avaimen, minkä jälkeen Julkaisija ajaa savuke-pollo.yml. Macin avaintiedoston ANTHROPIC_API_KEY on vanha eikä mikään työkalu käytä sitä. ANTHROPIC_ADMIN_KEY ennallaan.
