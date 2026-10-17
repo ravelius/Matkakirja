@@ -561,3 +561,11 @@ kaupunkimaisema-v3 18b3accd3 + 57d01c52b (runko 787e25499). Pallokierrosten web/
 **Ei keskeneräistä, ei ajoja käynnissä, ei omia worktreetä** (wt/siirtoseppa-aanipohja poistettu: sen docs/moduulit/aanipohja.md on mainissa sellaisenaan).
 Seuraaja: rivi PT:lle "JONO TYHJÄ: Siirtoseppä", ellei PT anna erää. Myöhempi jatko: kun Lontoon/Prahan/Ateenan äänikartat (aanikartta-v1) tulevat,
 katu/vanhakaupunki → PalloAanimaisema.Korvaa liikenne_hiljainen (ÄÄ:n ehdotus 17.10.).
+
+## PÄIVITYS 18.10. 01.4x — ISS-KERTOJA SUOMI PAKOTETTUNA (PT 01.2x, juna 202)
+
+Proto-haara **siirtoseppa/iss-fi-202** (juna-201 73bca3b3a päällä, wt/proto-siirtoseppa-issfi, peili natiivi-backup): **d7bebb546** (KupoliAanet.Manifestit v3 ensin,
+KupolinSelostus.LoppuManifestit v2 ensin, kameran polut iss-kamera-v2.json:sta (puuttuessa vanhat iss-192), kiinteät polut -2, RakettiAanet v14 ensin;
+VanhaOtto pitää kaksi heikkoa ottoa vanhoina) + **66c1f6fdf** (VanhaOtto tyhjä → heikot otot uusina; revert palauttaa). Linssit 2025/2025, unity-tarkistus 0. Web: ei viittauksia.
+Vientipaketti Julkaisijalle: proto-3d/_valmiit/raketti-aanet-v14-vienti-20261018 (kuiva ok). SHA:t PT:lle; NS:lle vasta PT:n kuittauksella.
+Kun rungossa: poista worktree issfi. Simuvuoro vasta junan 201 kuvien jälkeen (PT).
