@@ -411,3 +411,7 @@ aarteita ja saada lisää pisteitä." Ohjaustapa (yksi napautus vai pyyhkäisy a
 ## JUOKSUPELIN OHJAUS: ALAS LIUKU, YLÖS HYPPY (17.10.2026 klo 22.01)
 
 Omistaja 17.10.2026 klo 21.59 Keskustelukanavan kortilla "Miten vasen peukalo ohjaa liukua ja hyppyä?" valinta "Alas liuku, ylös hyppy (Suositus)": vasemmalla peukalolla pyyhkäisy alas liu'uttaa vartijan alta ja pyyhkäisy ylös hyppää aarteen luo; oikea peukalo vaihtaa reittiä pyyhkäisyllä vasemmalle tai oikealle.
+
+## JUOKSUPELIN PITUUS: EPAREALISTISEN PITKA JUOKSU (17.10.2026 klo 22.03)
+
+Omistaja 17.10.2026 klo 22.02 Keskustelukanavan kautta (sanatarkasti; "kk" = Kielletty kaupunki): "Kielletty kaupunki eli kk voi olla epärealistisen pitkä juoksu pelissä". KK:n tavoite: juoksu kestää niin kauan kuin pelaaja pysyy karkuteillä; rata kootaan palatsin toistuvista paloista (portti, piha, katoton talo, muurikäytävä) aina uudessa järjestyksessä; välillä vastaan tulee oikea tunnettu paikka nimineen (esim. Korkeimman sopusoinnun halli, kulmatorni).
