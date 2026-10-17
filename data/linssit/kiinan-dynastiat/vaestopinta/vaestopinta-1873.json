@@ -1,0 +1,46 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 1873,
+ "hila": {
+  "lon0": 78,
+  "lon1": 135,
+  "lat0": 18,
+  "lat1": 54,
+  "askel": 0.2,
+  "leveys": 285,
+  "korkeus": 180,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-1873.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 944.6,
+  "p99": 386.8,
+  "summa_milj": 359.9,
+  "arvio": true,
+  "korotus": 0.266
+ },
+ "omistus": {
+  "tiedosto": "omistus-1873.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 1873
+ },
+ "dynastiat": [
+  {
+   "avain": "qing",
+   "nimi": "Tiibet",
+   "vari": "#41709c",
+   "tyyppi": "protektoraatti"
+  }
+ ],
+ "vakiluku_milj": 360.0,
+ "aluejako": "qing_c",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-1873.geojson (Matkakirja, CC0)"
+ }
+}

@@ -1,0 +1,503 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 1644,
+ "hila": {
+  "lon0": 97,
+  "lon1": 135,
+  "lat0": 18,
+  "lat1": 54,
+  "askel": 0.15,
+  "leveys": 253,
+  "korkeus": 240,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-1644.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 324.4,
+  "p99": 190.6,
+  "summa_milj": 151.99,
+  "arvio": true,
+  "korotus": 0.469
+ },
+ "omistus": {
+  "tiedosto": "omistus-1644.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 1644
+ },
+ "dynastiat": [
+  {
+   "avain": "qing",
+   "nimi": "Qing",
+   "vari": "#41709c",
+   "tyyppi": "ulkoinen"
+  },
+  {
+   "avain": "shun",
+   "nimi": "Shun (Li Zicheng)",
+   "vari": "#8e8075",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "daxi",
+   "nimi": "Daxi (Zhang Xianzhong)",
+   "vari": "#a8968a",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "ming",
+   "nimi": "Eteläinen Ming",
+   "vari": "#9e2f36",
+   "tyyppi": "kiina"
+  }
+ ],
+ "vakiluku_milj": 150.0,
+ "aluejako": "qing_a",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-1644.geojson (Matkakirja, CC0)",
+  "armeijat": "Qing shi gao 218, 474; Ming shi 309 (Wikisource); Wikipedia: Battle of Shanhai Pass, Chronology of the Shunzhi reign; Wakeman 1985 Wikipedian kautta. Kaikki luvut arvioita."
+ },
+ "hetki": {
+  "nimi": "Shanhain sola",
+  "vuosi": 1644,
+  "rajat_vuosi": 1644,
+  "huom": "Taistelu 27.5.1644. Armeijoiden koot kiisteltyjä (Qing-kronikoiden 200 000 on propagandaa). Wu Sangui on Ming-kenraali taisteluun asti ja siirtyy Qingin puolelle sen jälkeen. Tappioita ei tiedetä; luvut ovat arvioita.",
+  "armeijat": [
+   {
+    "avain": "li-zicheng",
+    "nimi": "Li Zicheng (Shun)",
+    "dynastia": "shun",
+    "miehia": 80000,
+    "miehia_vali": [
+     60000,
+     100000
+    ],
+    "arvio": true,
+    "huom": "60 000 yleisin luku (Wakeman Wikipedian kautta), vaihteluväli 60 000-100 000. Qing shi gaon 200 000 on propagandaa; \"300 000\" koskee koko kevään marssia.",
+    "keraus": [
+     {
+      "lon": 108.95,
+      "lat": 34.27,
+      "sade_km": 250,
+      "osuus": 0.45
+     },
+     {
+      "lon": 112.55,
+      "lat": 37.87,
+      "sade_km": 200,
+      "osuus": 0.25
+     },
+     {
+      "lon": 116.4,
+      "lat": 39.9,
+      "sade_km": 120,
+      "osuus": 0.3
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.0,
+      "lon": 108.95,
+      "lat": 34.27,
+      "paikka": "Xi'an (Shunin julistus 8.2.1644)"
+     },
+     {
+      "t": 0.09,
+      "lon": 111.52,
+      "lat": 36.09,
+      "paikka": "Pingyang"
+     },
+     {
+      "t": 0.18,
+      "lon": 112.55,
+      "lat": 37.87,
+      "paikka": "Taiyuan"
+     },
+     {
+      "t": 0.24,
+      "lon": 113.3,
+      "lat": 40.09,
+      "paikka": "Datong"
+     },
+     {
+      "t": 0.29,
+      "lon": 115.04,
+      "lat": 40.6,
+      "paikka": "Xuanfu"
+     },
+     {
+      "t": 0.33,
+      "lon": 116.08,
+      "lat": 40.28,
+      "paikka": "Juyongguan"
+     },
+     {
+      "t": 0.34,
+      "lon": 116.23,
+      "lat": 40.22,
+      "paikka": "Changping"
+     },
+     {
+      "t": 0.35,
+      "lon": 116.4,
+      "lat": 39.9,
+      "paikka": "Peking (24.4.)"
+     },
+     {
+      "t": 0.46,
+      "lon": 116.4,
+      "lat": 39.9,
+      "paikka": "Peking (lähtö 18.5.)"
+     },
+     {
+      "t": 0.47,
+      "lon": 116.66,
+      "lat": 39.91,
+      "paikka": "Tongzhou"
+     },
+     {
+      "t": 0.48,
+      "lon": 118.16,
+      "lat": 39.83,
+      "paikka": "Fengrun"
+     },
+     {
+      "t": 0.49,
+      "lon": 118.88,
+      "lat": 39.89,
+      "paikka": "Yongping"
+     },
+     {
+      "t": 0.5,
+      "lon": 119.68,
+      "lat": 39.97,
+      "paikka": "Sha-joki (leiri solan länsipuolella)"
+     }
+    ]
+   },
+   {
+    "avain": "wu-sangui",
+    "nimi": "Wu Sangui (Ming-kenraali)",
+    "dynastia": "ming",
+    "miehia": 50000,
+    "miehia_vali": [
+     40000,
+     100000
+    ],
+    "arvio": true,
+    "huom": "Vakituisia n. 40 000-50 000; 100 000 sisältää miliisin ja Liaodongin asukkaat, eivät taistelijoita. Keräysosuudet arvioita. Siirtyy Qingin puolelle taistelun jälkeen.",
+    "keraus": [
+     {
+      "lon": 120.72,
+      "lat": 40.61,
+      "sade_km": 100,
+      "osuus": 0.6
+     },
+     {
+      "lon": 121.13,
+      "lat": 41.1,
+      "sade_km": 90,
+      "osuus": 0.2
+     },
+     {
+      "lon": 119.4,
+      "lat": 39.9,
+      "sade_km": 70,
+      "osuus": 0.2
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.27,
+      "lon": 120.72,
+      "lat": 40.61,
+      "paikka": "Ningyuan"
+     },
+     {
+      "t": 0.31,
+      "lon": 119.77,
+      "lat": 40.0,
+      "paikka": "Shanhain sola"
+     },
+     {
+      "t": 0.36,
+      "lon": 118.16,
+      "lat": 39.83,
+      "paikka": "Fengrun"
+     },
+     {
+      "t": 0.38,
+      "lon": 119.77,
+      "lat": 40.0,
+      "paikka": "Shanhain sola"
+     },
+     {
+      "t": 0.43,
+      "lon": 118.88,
+      "lat": 39.89,
+      "paikka": "Yongping"
+     },
+     {
+      "t": 0.46,
+      "lon": 119.77,
+      "lat": 40.0,
+      "paikka": "Shanhain sola"
+     },
+     {
+      "t": 0.5,
+      "lon": 119.77,
+      "lat": 39.99,
+      "paikka": "Shanhain sola (odottaa Qingiä)"
+     }
+    ]
+   },
+   {
+    "avain": "dorgon",
+    "nimi": "Dorgon (Qing, kahdeksan lippukuntaa)",
+    "dynastia": "qing",
+    "miehia": 80000,
+    "miehia_vali": [
+     60000,
+     100000
+    ],
+    "arvio": true,
+    "huom": "Qing shi gao ei anna lukua; Wikipedia 60 000, muut 90 000-100 000. Lippukuntien osuudet ja keräysosuudet ovat arvioita, eivät lähteestä. Marssi Shengjingistä 14.5.-27.5.",
+    "keraus": [
+     {
+      "lon": 123.43,
+      "lat": 41.8,
+      "sade_km": 180,
+      "osuus": 0.6
+     },
+     {
+      "lon": 123.17,
+      "lat": 41.27,
+      "sade_km": 100,
+      "osuus": 0.2
+     },
+     {
+      "lon": 122.3,
+      "lat": 43.6,
+      "sade_km": 250,
+      "osuus": 0.2
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.44,
+      "lon": 123.43,
+      "lat": 41.8,
+      "paikka": "Shengjing (Shenyang)"
+     },
+     {
+      "t": 0.46,
+      "lon": 122.0,
+      "lat": 41.8,
+      "paikka": "Wenghou (Liao-joen ylitys; ±40 km)"
+     },
+     {
+      "t": 0.47,
+      "lon": 121.5,
+      "lat": 41.4,
+      "paikka": "Xilatala (±50 km)"
+     },
+     {
+      "t": 0.48,
+      "lon": 120.86,
+      "lat": 40.76,
+      "paikka": "Lianshan"
+     },
+     {
+      "t": 0.49,
+      "lon": 120.3,
+      "lat": 40.35,
+      "paikka": "Shahe-asema (±30 km)"
+     },
+     {
+      "t": 0.5,
+      "lon": 119.8,
+      "lat": 40.0,
+      "paikka": "Shanhain sola"
+     }
+    ]
+   }
+  ],
+  "lyonnit": [
+   {
+    "t": 0.45,
+    "lon": 119.3,
+    "lat": 39.9,
+    "voittaja": "wu-sangui",
+    "havio": "li-zicheng",
+    "voima": 0.3,
+    "huom": "5.-10.5.: Wu Sangui voittaa Li:n lähettämän Tang Tongin joukot Yongpingin tienoilla. Pieni selkkaus."
+   },
+   {
+    "t": 0.53,
+    "lon": 119.97,
+    "lat": 40.1,
+    "voittaja": "dorgon",
+    "havio": "li-zicheng",
+    "voima": 0.3,
+    "huom": "26.5.: Qing-ruhtinaat voittavat Tang Tongin Yipianshissa solan koillispuolella. Koordinaatti ±20 km."
+   },
+   {
+    "t": 0.55,
+    "lon": 119.77,
+    "lat": 39.98,
+    "voittaja": "dorgon",
+    "havio": "li-zicheng",
+    "voima": 1.0,
+    "huom": "27.5.1644: Wu pidättelee, hiekkamyrsky, Qing-ratsuväki iskee Li:n vasempaan sivustaan ja Shun-rintama romahtaa (Wu Sangui taistelee Qingin rinnalla). Tappioita ei tiedetä."
+   }
+  ],
+  "jalkeen": [
+   {
+    "armeija": "li-zicheng",
+    "t0": 0.55,
+    "t1": 0.85,
+    "miehia": 40000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 119.77,
+      "lat": 39.98,
+      "paikka": "Shanhain sola"
+     },
+     {
+      "t": 0.57,
+      "lon": 118.88,
+      "lat": 39.89,
+      "paikka": "Yongping"
+     },
+     {
+      "t": 0.6,
+      "lon": 116.4,
+      "lat": 39.9,
+      "paikka": "Peking (kruunaus 3.6., pako 4.6.)"
+     },
+     {
+      "t": 0.64,
+      "lon": 115.0,
+      "lat": 38.78,
+      "paikka": "Qingdu"
+     },
+     {
+      "t": 0.68,
+      "lon": 114.57,
+      "lat": 38.15,
+      "paikka": "Zhengding"
+     },
+     {
+      "t": 0.72,
+      "lon": 113.8,
+      "lat": 37.85,
+      "paikka": "Guguan (±20 km)"
+     },
+     {
+      "t": 0.76,
+      "lon": 112.55,
+      "lat": 37.87,
+      "paikka": "Taiyuan"
+     },
+     {
+      "t": 0.8,
+      "lon": 111.52,
+      "lat": 36.09,
+      "paikka": "Pingyang"
+     },
+     {
+      "t": 0.85,
+      "lon": 108.95,
+      "lat": 34.27,
+      "paikka": "Xi'an (ajoitus arvio)"
+     }
+    ],
+    "huom": "40 000 on VISUAALINEN paikkamerkki (selvinneiden osuus), ei lähde eikä tappioluku. Tappioita ei tiedetä."
+   },
+   {
+    "armeija": "wu-sangui",
+    "t0": 0.55,
+    "t1": 0.62,
+    "miehia": 50000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 119.77,
+      "lat": 39.98,
+      "paikka": "Shanhain sola"
+     },
+     {
+      "t": 0.56,
+      "lon": 118.88,
+      "lat": 39.89,
+      "paikka": "Yongping"
+     },
+     {
+      "t": 0.58,
+      "lon": 118.16,
+      "lat": 39.83,
+      "paikka": "Fengrun"
+     },
+     {
+      "t": 0.62,
+      "lon": 116.66,
+      "lat": 39.91,
+      "paikka": "Tongzhou"
+     }
+    ],
+    "huom": "Wu Sangui siirtyy Qingin puolelle (hiukset ajeltiin 28.5.); joukot liittyvät Qingin pääarmeijaan. Qing shi gao: 10 000 ratsua + 10 000 jalkaa Li:n takaa-ajoon. Tässä koko joukko, ei tappiota."
+   },
+   {
+    "armeija": "dorgon",
+    "t0": 0.55,
+    "t1": 0.65,
+    "miehia": 80000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 119.77,
+      "lat": 39.98,
+      "paikka": "Shanhain sola"
+     },
+     {
+      "t": 0.57,
+      "lon": 118.5,
+      "lat": 39.8,
+      "paikka": "Xinhe-asema (±40 km)"
+     },
+     {
+      "t": 0.6,
+      "lon": 116.66,
+      "lat": 39.91,
+      "paikka": "Tongzhou (5.6.)"
+     },
+     {
+      "t": 0.62,
+      "lon": 116.4,
+      "lat": 39.9,
+      "paikka": "Peking (6.6.)"
+     }
+    ],
+    "huom": "Qingin pääarmeija etenee Pekingiin. Pieni takaa-ajoryhmä (Ajige, Tan Tai, Zhunta; noin 15 000, ei lähdettä) jatkaa länteen Qingduun ja Zhengdingiin; tässä yhdistetty yhdeksi vaiheeksi."
+   }
+  ],
+  "toipuminen": {
+   "t0": 0.8,
+   "t1": 1.0,
+   "huom": "Pohjois-Kiinan pinta toipuu: Qing hallitsee Pekingiä. Li:n valta romahtaa vasta 1645. Väestön lasku johtuu osin aiemmista sodista ja nälänhädästä, ei yksin tästä taistelusta."
+  },
+  "lahteet": "Qing shi gao 218, 474; Ming shi 309 (Wikisource); Wikipedia: Battle of Shanhai Pass, Chronology of the Shunzhi reign; Wakeman 1985 Wikipedian kautta. Kaikki luvut arvioita."
+ }
+}

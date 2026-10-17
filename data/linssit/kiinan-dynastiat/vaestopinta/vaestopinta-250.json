@@ -1,29 +1,30 @@
 {
  "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
  "lisenssi": "CC0-1.0",
- "vuosi": 208,
+ "vuosi": 250,
  "hila": {
-  "lon0": 100.0,
-  "lon1": 124.0,
-  "lat0": 20.0,
-  "lat1": 42.0,
-  "askel": 0.1,
-  "leveys": 240,
-  "korkeus": 220,
+  "lon0": 85,
+  "lon1": 128,
+  "lat0": 18,
+  "lat1": 50,
+  "askel": 0.15,
+  "leveys": 287,
+  "korkeus": 213,
   "rivi0": "pohjoinen",
   "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
  },
  "tiheys": {
-  "tiedosto": "vaestopinta-208.bytes",
+  "tiedosto": "vaestopinta-250.bytes",
   "tyyppi": "uint16 LE",
   "yksikko": "henkeä/km² × 10",
-  "max": 121.7,
-  "p99": 66.2,
-  "summa_milj": 34.11,
-  "arvio": true
+  "max": 86.3,
+  "p99": 32.6,
+  "summa_milj": 28.65,
+  "arvio": true,
+  "korotus": 1.924
  },
  "omistus": {
-  "tiedosto": "omistus-208.bytes",
+  "tiedosto": "omistus-250.bytes",
   "tyyppi": "uint8",
   "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
   "rajat_vuosi": 250
@@ -54,8 +55,13 @@
    "tyyppi": "ulkoinen"
   }
  ],
- "vakiluku_milj": 34.4,
+ "vakiluku_milj": 25.0,
  "aluejako": "jako",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-250.geojson (Matkakirja, CC0)",
+  "armeijat": "Armeijoiden koot: Sisältökirjurin tietopohja docs/kohtaukset/kiinan-dynastiat/punaiset-kalliot-luvut.md (96692a25f; Sanguozhi, de Crespigny Wikipedian kautta); reitit tunnetuista paikoista (kerrokset_data.py). Kaikki luvut arvioita (pelissä \"noin\"); jälkeen-luvut ovat kuvan mittasuhteita, eivät tappiolukuja. Taistelut -260, 383, 1279 ja 1644: taistelukohtaiset lähteet kunkin hetken lahteet-kentässä (vaestopinta-19/taistelut/*.md)."
+ },
  "hetki": {
   "nimi": "Punaiset kalliot",
   "vuosi": 208,
@@ -231,10 +237,5 @@
    "t1": 1.0,
    "huom": "Maa toipuu hitaasti: keräysalueiden painuma palautuu, tappiot jäävät pois."
   }
- },
- "lahteet": {
-  "tiheys": "ARVIO: kokonaisväki kerrokset_data.VAESTO (laskenta 140 ja arvio 250 lineaarisesti), alueosuudet OSUUDET, painotus matalikoille ETOPO1 (NOAA, PD) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
-  "omistus": "rajat-250.geojson (Matkakirja, CC0)",
-  "armeijat": "Armeijoiden koot: Sisältökirjurin tietopohja docs/kohtaukset/kiinan-dynastiat/punaiset-kalliot-luvut.md (96692a25f; Sanguozhi, de Crespigny Wikipedian kautta); reitit tunnetuista paikoista (kerrokset_data.py). Kaikki luvut arvioita (pelissä \"noin\"); jälkeen-luvut ovat kuvan mittasuhteita, eivät tappiolukuja."
  }
 }
