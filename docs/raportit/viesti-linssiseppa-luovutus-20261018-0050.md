@@ -36,7 +36,10 @@ PK local_7fcab04b-864c-4ec2-98bd-46e171326701. Juna 201 on auki ~06 asti (odotta
   _tyo/linssiseppa/pyramidi-app) → simu → lähikuva + 4× PT:lle. Pyramidi ei ole rungossa (NS:lle sha vasta KK:n kuittauksen jälkeen).
 
 ## 3. MUUT AVOIMET
-- KEHYS = LR (PT 00.4x; LR 3aeac4c8d): älä koske MuseoRakennus.cs:ään.
+- KEHYS = LR, valmis: proto linnanrakentaja/louvre-kehykset-201 3aeac4c8d (MuseoGeometria/MuseoRakennus.cs, MuseoValaistu.shader,
+  ranska/sali.json, pinnat/kehys-kultaveisto.png); ei yhteisiä tiedostoja monalisa-201:n kanssa (tarkistettu). Simu JU:n seuraajalla
+  (LR luovutus 1c309e97f). Älä koske MuseoRakennus.cs:ään.
+- PK: ffa433c76 kirjattu PK:n luovutukseen (c1a782be9); seuraava PK cherry-pickaa galleria-200:aan LR:n vahvistuksella.
 - Äänittäjän Louvre-puheviittaukset: Louvren puheet ÄÄ:n uusiin ottoihin, kun polut tulevat (Postivahdin aloitusviesti 23.2x).
 - PT:n havainto m0: Kaanaan häät (louvre-inv-142, keskipiste y 4,445) – yläosa vaalea, alaosa musta: kamera taulun korkeudella
   ~4,4 m, alla seinä pimeässä. Ei estä; korjaus myöhemmin (katsekorkeus/valo korkealle teokselle).
