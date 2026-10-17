@@ -8,7 +8,7 @@ Osoitekirja /Users/Shared/Claude/osoitekirja.md; viestit send_messagella session
   (`proto-3d/lokit/natiiviseppa-app-201-lukitus-sim/Matkakirja3D.app`, EI BUILD/TF). Lopullinen LUKITSE 201: NS lähettää
   KÄÄNNÖS NYT, kun NUI:n erät valmiit (ratas ~03.00, kohdevalikko ~05.00). Silloin: muut L1/L2-odottajat SIGSTOP (ei lukossa olevaa),
   malli `julkaisija-tyokalut/l1-varaus-ns.zsh` (pysäyttää uudet odottajat kunnes lukitse201-ketju saa L1:n; aikaraja muokattava).
-- **PK:n esikatselu ac414396f**: NYT annettu 00.41 (L1), PK ajaa itse.
+- **PK:n esikatselu ac414396f**: PK luovutti 00.41 eikä ajanut; seuraava PK pyytää NYT:n (L1 vapaa).
 - **Galleria arkki 5 89f6fa43a PERUTTU** (LR): käännös L1-lukossa 00.26→ ajetaan loppuun (ei tapeta); taustasilmukka lopettaa
   `pelikoodari-galleria200h.zsh`:n gatella → simua EI ajeta. Jos skripti yhä elossa KÄÄNNETTY-rivin jälkeen: `pkill -f pelikoodari-galleria200h.zsh`.
   Uusi galleria-sha tulee PK:lta (LS:n pyramidikorjaus yhdistettynä) → tee galleria200g.zsh:n mallilla uusi (i-app), simu sk-galleria-arkki4b.txt → PK + LR.
