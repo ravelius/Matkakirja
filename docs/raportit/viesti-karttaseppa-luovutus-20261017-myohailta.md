@@ -47,7 +47,11 @@ SIMU NYT tulee VAIN v4:lle (~19.45). v3:a ei simuloida. `odota-selkea-19-v4.zsh`
 **TILA 19.5x: KOHTA 1 TEHTY.** v4 ajettu 19.35–19.45 (käännös 3deebd6dc ⊇ 269f285d8), SIMU VAPAA JU:lle 19.45. Video PT:lle:
 `proto-3d/lokit/todistus-kiina-selkea-19-v4-20261017-1935/kiina-koko-omistajalle.mp4` (6.40). Puutteet (PT:lle kerrottu): 250 armeija/isku ei erotu,
 pinta ei laskeudu tasaiseksi ennen siirtoa, harmaat haamualueet lännessä; siirtymissä 166/296/441 läikikäs pinta; harha "e2"-teksti Taiwanin kohdalla 1100→.
-SEURAAVAKSI: odota PT:n/omistajan palautetta videosta. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+SEURAAVAKSI: odota PT:n/omistajan palautetta videosta.
+**TILA 20.0x (PT 19.5x: korjaa viat, v5 vasta omistajan vastauksen jälkeen, ei junaan):** viat korjattu `45da5a534` (kiina-paketti-200, peili ok):
+lasku + häivytys ennen siirtoa (PysakkiKesken odottaa `Laskee`, pinta pois kartalta), omistajaton maa näkymätön, armeija tummana (`ArmeijaTumma` 0,5)
+ja taistelun risti nimineen kokeessa (jono JonoValo), musteen rintama sileä selkeässä (KiinaAlue `_Kohina` 0,05 / `_Hieno` 0). "e2" = Pulun "zZ",
+ei kartan vika (PT:lle kerrottu). KUN omistaja vastaa: KÄÄNNÖSPYYNTÖ JU:lle `45da5a534` → `kiina-selkea-19-v5-app`, ajo kuten v4 (kopioi ajo/odota-v4 → v5). LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
