@@ -22,6 +22,10 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261017-iltapaiva.md` (f74
        varjostimessa. LR:n CPU-muuntaja `Seepiaramppi.cs.txt` jäi käyttämättä.
      - PK: galleria, kokosääntö, C-polku (Maamerkit → AjattelijaPaa) ja MaaVarjo kaikille.
      - LS: MaaVarjo-arvot (d4cd95e70).
+   - **Maavarjon voimakkuus sarjaan (PT 20.2x):** pyramidin varjo, noin 10 pt, tuskin näkyy, vaikka omistaja pyysi varjon. Arvioi arkista,
+     ja ehdota yhteinen voimakkuus (VihjeVarjo.Peitto 0,35 / Leveys 1,4 → esim. peitto 0,5, vähimmäisleveys pisteinä) LS:lle ja PK:lle, jotta
+     varjo näkyy kaikilla saman kokoisena.
+   - **VS:n KarttaSeepia-ramppi:** 6a2659c59 on gallerian yhtenäinen-tilan perusta. Tarkista arkista ramppi (seepia/okra/kerma) ja valo.
    - **Hyväksynnän jälkeen:** sääntö kirjataan 3D-maamerkki-pohjaan uutena lukuna "Kartan pienoismallit" (LR). Sen jälkeen juna:
      NS kokoaa haarat (VS kartta-seepia + PK:n sääntöosat ilman galleriaa, jos PT niin linjaa).
 2. **Codex, Tivolin erät A ja C (8 havainnekuvaa):**
