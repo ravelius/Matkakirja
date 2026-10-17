@@ -419,3 +419,11 @@ Omistaja 17.10.2026 klo 22.02 Keskustelukanavan kautta (sanatarkasti; "kk" = Kie
 ## JUOKSUPELIN OMENAT (17.10.2026 klo 22.08)
 
 Omistaja 17.10.2026 klo 22.08 Keskustelukanavan kautta (sanatarkasti): "Pelaaja voi kerätä myös esim. Omenoita ja heittää niillä vartijoita ja sotkea niiden juoksua. Mitä mieltä? Mikä peli sopisi tähän esikuvaksi?" Kortti "Kyllä, napautus vartijaan (Suositus)": omenoita kerätään hyppäämällä talojen hyllyiltä ja pihojen puista, ja taskuun mahtuu vain muutama; napautus vartijaan heittää omenan, ja osuma saa vartijan liukastumaan hetkeksi; reitinvalinta ja liuku pysyvät pääasiana. KK:n esikuvat: Subway Surfers (ohjaus ja takaa-ajo) ja Disneyn Aladdin 1993 (omenoiden heitto palatsin vartijoita pakoillessa). Codex j8–j10 täydennys 4.
+
+## JUOKSUPELIN SPURTTI (17.10.2026 klo 22.13)
+
+Omistaja 17.10.2026 klo 22.13 Keskustelukanavan kautta (sanatarkasti): "Sitten voi olla vauhti viittoja millä saa spurtti energiaa jota voi käyttää painamalla vasemman ohjaimen vieressä olevaa nappia. Mitä mieltä?" Kortti "Kyllä, spurtti suojaa (Suositus)": vauhtiviitat täyttävät spurttimittarin; vasemman ohjaimen vieressä oleva nappi käynnistää spurtin, jolloin Puyi syöksyy hetkeksi eteenpäin viitta liehuen eivätkä kiinniottajat saa sinä aikana otetta (esikuva Temple Run 2:n vauhtimittari).
+
+## TIVOLIN CODEX-KUVAT EI KAYTETA (17.10.2026 klo 22.13)
+
+Omistaja 17.10.2026 klo 22.13 kortilla (Tivoli A2 + A1 + C3, sanatarkasti): "Ei näytä aidoille, ei käytetä". Codexin Tivoli-havainnekuvia A1–A2 ja C1–C6 ei käytetä missään; esityksessä pysyvät oikeat CC-valokuvat. Jos ilta- tai järvinäkymä puuttuu, LR hakee Commonsista tuoreen CC-valokuvan ja näyttää sen KK:lle ennen käyttöä. Opetus kuvien tarkistajille: todellisen nykypaikan kuvan pitää näyttää aidolta valokuvalta; ylikylläiset värit, liika valomäärä ja liian täydelliset istutukset paljastavat tekoälykuvan.
