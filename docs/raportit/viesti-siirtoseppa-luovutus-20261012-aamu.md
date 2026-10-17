@@ -456,3 +456,6 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 02.4x: siirto 21 **6f10473a8** PuluRealtime (puhe, taso 1,0, striimi ilman kelausta). Lista 7: AjattelijatSovitin, OpasSovitin, RakettiAanet +
   Aanisoitin, Puhe, UI/Aanet, PeliKomennot (PT). Kärki 6f10473a8.
 - 02.5x: siirto 22 **f08681cbe** AjattelijatSovitin (LuoLahde → pohja, AsetaTaso; näytetarkka ajastus ennallaan). Lista 6. Kärki f08681cbe.
+- 03.0x: **9deaaa359** AaniPohja.VanhaLahde + AsetaTaso/LueTaso (mekaaninen siirto vanhalle AudioSource-koodille) + uusi klippi peruu kesken
+  olevan pysäytyshäivytyksen. **069d29408** OpasSovitin (kertoja, silta, ukkonen, jyrinä, kellot). Lista 5: RakettiAanet + Aanisoitin, Puhe,
+  UI/Aanet, PeliKomennot (PT). Kärki 069d29408, Linssit 1935/1935, tarkista.sh 0.
