@@ -538,3 +538,10 @@ ja äänivahdin aukko 0a3c4b09c (NS:n rungossa), Louvren lähestymisäänet **18
 **Seuraajalle:** ei avointa erää. Tarkista NS:ltä, onko 180761d6e ja f7977522a juna 199:n rungossa; kun ovat, poista omat worktreet
 (wt/proto-siirtoseppa-{luennat6,luennat7,aanipohja,todistusajo,aanivahti199,louvre-aanet,patsaslahteet}) ja _tyo/siirtoseppa/{aanipohja-197-app,siirto-198-1-app}.
 Sitten rivi PT:lle "JONO TYHJÄ: Siirtoseppä". Työkalut: tyokalut/siirtoseppa-ajot/{ajo-aanipohja-mittaus.zsh, verho.py, skenaariot/sk-aanipohja-mittaus.txt}.
+
+## PÄIVITYS 17.10. 19.30 — PALLOKIERROSTEN VERTAILU (Lontoo, Praha, Ateena) PT:LLÄ
+
+Worktreet ja _tyo-appit poistettu 07.5x (180761d6e + f7977522a juna-199:ssä). PT:n erä "Lontoon, Prahan ja Ateenan kierrosten hionta": web vs natiivi
+vertailtu, tulos /Users/Shared/Claude/proto-3d/lokit/siirtoseppa-pallokierrokset-vertailu-20261017.md. Ei suoria siirtoja ilman PT:tä.
+Odottaa PT:n KYLLÄ:ä: 1) Lontoo suuri-loyhka += "tower bridge", 2) Prahan historiakohdistus 8/8 (OpasHistoria.Paikat), 3) Lontoon Rajatut (suositus EI).
+KYLLÄ → uusi proto-worktree juna-199:n päälle, Paikat-muutos + Linssit-testi (8/8 osiota per kaupunki), SHA PT:lle → NS junaan 200.
