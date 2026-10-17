@@ -373,3 +373,11 @@ Jos käärö ei valmistu tai ei läpäise tarkistusta, linssi valmistuu lasipohj
 ## OMISTAJAN PÄÄTÖS: LASI VAIN LINSSEISSÄ JA PELEISSÄ, PERUSKARTALLA SEEPIAPOHJA (17.10.2026 klo 06.5x) (17.10.2026 klo 06.57)
 
 Omistaja KK:n kautta sanatarkasti: "Lasielementit kuuluvat vain linsseihin ja peleihin ei perus kartalle. Siellä vanha seepian sävyinen pohja on oikea, älä muuta sitä." Rajaa LASIPOHJAn (14.10.2026 klo 23.33). Juna 198 on jo käännetty, joten peruskartan lasimuutokset (mm. videopelikortin sininen lasi, Äänet, Pulun chat kartalla) palautetaan junaan 199 (Natiivi-UI). Samassa viestissä: Kipin kaasuvipu palautetaan vanhaan pystyliukuun (kahva hieman leveämpi, rata lyhyempi, ei tekstejä), kompassi näkyviin kun poltin ei ole käytössä (Linssiseppä); ISS-pikkupallon lentorata himmeämmäksi ja ruskea huppu läpinäkyväksi (Karttaseppä).
+
+## OMISTAJAN PÄÄTÖS: VAPAASSA LENNOSSA EI KIERROSLISTAA (17.10.2026 klo 07.06) (17.10.2026 klo 07.15)
+
+Kortin kysymys "Vapaan lennon kierroslista: pysyykö se ilman taustaa?" → omistajan oma vastaus: "Ei vapaassa lennossa pidä olla mitään listaa". Vapaassa lennossa vain maisema, vipu, kompassi ja Palaa kierrokselle; lista näkyy vain kierroksella (LS, juna 200). Samalla kortilla 07.06: kaikki 831 Euroopan maalehtiluentaa äänitetään ("Kyllä, kaikki 831 (Suositus)").
+
+## OMISTAJA PYYSI JULKAISUA: ISOISÄN UNI POIS, PIKAKORJAUS JUNA 199 (17.10.2026 klo 07.11–07.13) (17.10.2026 klo 07.15)
+
+Omistaja 07.11: "Ota uni heti pois, se ei toimi". Kortti 07.13 "Viedäänkö testaajille heti uusi versio, jossa peli alkaa ilman unta?" → "Kyllä, heti (Suositus)". Juna 199 = BUILD 198 d457a1034 + NUI 127fc3319 (IsoisanUni.Kaytossa = false); aamun muut työt junaan 200. Unta ei kytketä takaisin ilman omistajan uutta lupaa.
