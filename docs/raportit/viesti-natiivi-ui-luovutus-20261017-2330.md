@@ -35,7 +35,9 @@ Ajoskriptit: /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ (sk-*, ajo-
    ENSIN: PT:n hyväksyntä → fef47c0aa (haara natiivi-ui/maakunta-suoraan-201) NS:lle junaan 201 (lukitus 00.30; muuten juna 202).
 2. **Lasipohja-erä (juna 201, PT hyväksyi selitekortin ja Maapallon vuoden 21.2x):** natiivi-ui/lasipohja-201 kärki **00228d16d**
    (astrokuvan selite täysin peittävällä Tyylikirja.Lcd.Pinta). 87945e5ca:n (LasiAvaruus 90 %) pari _tyo/natiivi-ui/lasipohja-201-astro-2322/
-   hylätty itse: täysikokoisena päiväkirjakortin teksti kuulsi kortin alaosassa. Käännös 00228d16d → lasipohja-201-app alkoi 23.43.
+   hylätty itse: täysikokoisena päiväkirjakortin teksti kuulsi kortin alaosassa. **KÄÄNNETTY 23.54: 736740c32** (lasipohja-201-app).
+   Ketjun viimeinen vaihe (kehys ec5819d17) oli taustalla nollaushetkellä; jos kehyshaivytys-201b-app/kaannos.out ei näytä KÄÄNNETTY, aja
+   `zsh ketjut-20261016/kehyshaivytys-201b-kaannos.zsh ec5819d17` (odottaa itse muiden perään).
    ENSIN (luovutuksen jälkeen): kaannos.out = KÄÄNNETTY … 00228d16d → Julkaisijalta SIMU NYT → `zsh ketjut-20261016/lasipohja-201b-simu.zsh`
    (vain astro, ~8 min) → katso K2/K3 TÄYSIKOKOISINA (ei läpikuultoa) → pari kuten lasipohja-201-astro-2322 uuteen kansioon → PT →
    hyväksynnän jälkeen koko natiivi-ui/lasipohja-201 NS:lle (juna 201, jos ehtii 00.30; muuten 202).
