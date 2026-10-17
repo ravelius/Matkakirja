@@ -16,3 +16,6 @@ Lisenssi: CC0 1.0 / CC BY 4.0, lähde Freesound (API, Actions aanihaku.yml). Ei 
 - Ateena / kaskaat (kesä) / vara: [130543](https://freesound.org/s/130543/) athens_cicadas_crickets.wav — mmiron, CC BY 4.0, 56 s
 
 CC BY -nimeämiset (data/aanilahteet.json kytkiessä): ei suosituksissa.
+
+## Silmukat ja vienti (20.25, PT kuittasi suositukset)
+6 silmukkaa (82–90 s, −23 LUFS, 3 s ristihäivytys), kaikki CC0. Ämpäri (viety 7, virheitä 0): `aanet/kaupunkimaisema-v3/{lontoo/katu,lontoo/thames,praha/vanhakaupunki,praha/moldava,ateena/taverna,ateena/kaskaat}.mp3` + `manifest.json`. EI kytketty. Kuuntelu: `proto-3d/_valmiit/pallokierros-aanimaisemat-v1/silmukat/index.html`. Työ `proto-3d/_tyo/pallokierros-aanimaisemat-20261017/tee.py`, paketti `_valmiit/pallokierros-aanimaisemat-vienti-20261017`.
