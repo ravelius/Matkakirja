@@ -13,3 +13,7 @@ GBR 87/45 357, SVN 30/16 167, SWE 37/15 673, SVK 30/14 559, MLT 30/13 352, BEL 2
 (32 maata. Jo viety: FRA, DEU, ITA, ESP, NLD, AUT, GRC.)
 
 Ajon lukumäärän katto: ks. luennat-era4-oppaat-kaupunkilehdet-20261017.md (KATTO-tarkistus).
+
+## TOTEUTUNUT 17.10. klo 07.45 (omistajan päätös klo 07.06: kaikki 831)
+- 831 luentaa, 369 643 mrk puhuttuna (+5 224 [pause]-tagimerkkiä = 374 867 lähetettyä), yksi otto kutakin; krediittejä 90 067 (0,240/lähetetty merkki; arvio oli 83 500 hinnalla 0,226).
+- Manifesti **v7** (kumulatiivinen, 9 241 palaa) → `https://media.matkakirja.app/aanet/luennat/v7/manifest.json` (200); vienti 832 tiedostoa, virheitä 0. Luentoja yhteensä 2 342, Euroopan luentatyö valmis. Siirtoseppä vaihtaa `osoitteet.luennat-manifesti` v6 → v7.
