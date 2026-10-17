@@ -32,3 +32,7 @@ EI junaan: laitenapit v2 10bd4db1e + levymerkinnät 030c06621 (jäädytetty, omi
   (malli valmis: _valmiit/louvre-kartta-v1/glb/louvre_kartta.glb, pari pari-rijks-louvre.jpg ok; kytkentäkohta LS/NS) → LR:n pelikuva PT:lle.
 - Meren mittaus: Cupola itse ~22 kuvaa/s vanhalla iPadilla (GPU ~82 ms) merestä riippumatta – jatkoon PK:lle, ei kiire.
 - Lepo ilman erää: SS, ÄÄ (Praha/Ateena-osiot odottavat omistajan Tekstit-hyväksyntää), JU mittausten jälkeen.
+
+## 4. LISÄ 16.4x
+- SK:n Ranskan lähestymistekstit (#4814) PT:n HYVÄKSYMÄT kokonaan. ÄÄ äänittää Rodin-puheen (328 mrk) ja Orsayn uudelleenoton ("sen holvien alla"); KK:lle jälki-ilmoitus tehty.
+- LS kytkee tekstit, äänet ja LR:n pienoismallin, poistaa luonnos=true → simu → arkki PT:lle → PT tekee avauskortin omistajalle (portti kiinni siihen asti).
