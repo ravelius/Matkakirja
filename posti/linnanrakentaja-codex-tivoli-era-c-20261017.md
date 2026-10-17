@@ -24,7 +24,7 @@ Pohjakuvat ovat ämpärissä jo rajattuina, 1280 px:n kokoisina. Alkuperäinen t
 | C3 | `tivoli-Q110289-c3-nimb.png` | Nimbin maurilaistyylinen rakennus ja puutarha | https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/f4df427e194e889e.jpg | File:Jardines_de_Tivoli_07.jpg | Alberto-g-rovi, CC BY 4.0 |
 | C4 | `tivoli-Q110289-c4-lyhtykaytava.png` | Puistokäytävä ja riippuvat lyhdyt | https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/cdf8691dcdef9802.jpg | File:Tivoli_Promenade.jpg | Derek Williams, CC BY-SA 4.0 |
 | C5 | `tivoli-Q110289-c5-rutschebanen.png` | Rutschebanenin tekovuori, taustalla raatihuoneen torni | https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/5379e5f4ca4645e0.jpg | File:Sne_på_Rutschebanen_i_Tivoli.jpg | Leif Jørgensen, CC BY-SA 4.0 |
-| C6 | `tivoli-Q110289-c6-glyptotek.png` | Huvipuistolaite ja raatihuoneen torni Glyptotekin katolta | https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/621c18bd5476eb4f.jpg | File:Ny_Carlsberg_Glyptotek,_terrazza,_veduta_su_tivoli_e_torrse_del_municipio.jpg | Francesco Bini, CC BY-SA 4.0 |
+| C6 | `tivoli-Q110289-c6-glyptotek.png` | Fatamorgana-laite ja raatihuoneen torni Glyptotekin katolta | https://media.matkakirja.app/esittely/koopenhamina-v8/kuvat/621c18bd5476eb4f.jpg | File:Ny_Carlsberg_Glyptotek,_terrazza,_veduta_su_tivoli_e_torrse_del_municipio.jpg | Francesco Bini, CC BY-SA 4.0 |
 
 Suihkulähdettä ei käytetä (Tanskan tekijänoikeuslain 24 §: tekijää ei ole selvitetty). Sen paikalla on C6.
 
