@@ -545,3 +545,6 @@ Worktreet ja _tyo-appit poistettu 07.5x (180761d6e + f7977522a juna-199:ssä). P
 vertailtu, tulos /Users/Shared/Claude/proto-3d/lokit/siirtoseppa-pallokierrokset-vertailu-20261017.md. Ei suoria siirtoja ilman PT:tä.
 Odottaa PT:n KYLLÄ:ä: 1) Lontoo suuri-loyhka += "tower bridge", 2) Prahan historiakohdistus 8/8 (OpasHistoria.Paikat), 3) Lontoon Rajatut (suositus EI).
 KYLLÄ → uusi proto-worktree juna-199:n päälle, Paikat-muutos + Linssit-testi (8/8 osiota per kaupunki), SHA PT:lle → NS junaan 200.
+- 19.5x: PT KYLLÄ 1+2, EI 3. **fa6e55bdc** (siirtoseppa/historia-paikat-200, juna-200 62853a8b8 päällä, wt/proto-siirtoseppa-historia200,
+  peili natiivi-backup) → NS junaan 200. Testi OpasHistoriaTestit.JokainenPysahdysSaaOsion; Linssit 2011/2011. Viimeinen pysähdys ei saa osiota
+  (ei lentoa), joten Harrison/Kansallisteatteri eivät soi (PT:lle kerrottu). JONO TYHJÄ. Kun fa6e55bdc rungossa: poista worktree historia200.
