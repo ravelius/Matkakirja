@@ -7,7 +7,7 @@ Kaikki tiedostot ovat valmiita yhdistettäviksi protoon (Linssiseppä tai Siirto
 | `teokset-lisat.json` | 51 teokselle: `kuvateksti_fi` (41 tarkistuksessa korjattu, 10 OK), `krediitti`, `lahde_url`, `kuva_tiedot` (commons_tiedosto, tekija_kuvalle, commons_sha1, alkuperainen_px…), `tekija_wikidata`; louvre-inv-4935 `tekniikka` = "öljy kankaalle" | `ranska/teokset.json` teokset[id] (lisää kentät; ei muuta nimiä/mittoja) |
 | `huoneet-lisat.json` | 4 salin `selite_fi` ja `teksti_fi` (LS:n luonnosten tilalle; faktat tarkistettu) | `ranska/huoneet.json` huoneet[id] |
 | `veistokset-lahteet-lisa.json` | Nike (CC BY 4.0, nimeäminen pakollinen) ja Milon Venus (CC0) | `ranska/veistokset.json` lahteet[] |
-| `rodin-veistokset*.json` | Rodinin 8 veistoksen nimitiedot (vuosi, materiaali, mitat, lyhyt_fi, kuvateksti_fi) ja kertojan tekstit | veistosten nimitiedot / ÄÄ (kertojan teksti) |
+| `rodin-veistokset.json` | Rodinin 8 veistoksen nimitiedot (vuosi, materiaali, mitat, lyhyt_fi, kuvateksti_fi) ja kertojan tekstit (`kertojan_teksti`, `puhuttu` + `puhuttu_merkkeja`), riippumattomasti tarkistettu | veistosten nimitiedot (ranska/veistokset.json + sali.json teos) / ÄÄ äänittää kertojan tekstit pysyvällä luvalla |
 
 ## Huomiot
 - `kuvateksti_fi` lähti Linnanrakentajan 13.10. lähdetiedostosta (`taidemuseo-ranska-teokset-v2-vienti-20261013/…/teokset.v2.json`), jossa kenttä oli 51/51; riippumaton tarkistus (3 Sonnet-agenttia, omat haut) korjasi 41 (sääntörikkomukset: tekijän/koon toisto, "alasti", ympyröiden toisto; faktat: Mona Lisa, Poppies, Degas ym.). Orsayn sivut 403 → hakutiivistelmät. Géricaultin ensimmäinen Salonki-esiintyminen vain Wikipedia.
