@@ -498,3 +498,8 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
 - 03.41: ennen-ajo käynnissä (03.32, 95EEDB48). Jälkeen-käännös 4c0c26727 (0bfc62868) valmis; **VÄLI NUI:lle**: app siirretty
   _tyo/siirtoseppa/siirto-198-1-app.vali → odottaja ilmoittaa "SIMU VAPAA VALISSA" → Julkaisijalle SIMU VAPAA VÄLISSÄ. Julkaisijan seuraava
   SIMU NYT: mv .vali takaisin siirto-198-1-app + touch tyokalut/siirtoseppa-ajot/simu-mittaus2.nyt → jälkeen-ajo (~20 min).
+- 04.46: **ERÄ 2 VALMIS: laitemittaus** (ennen 9db0288e9 03.32, jälkeen 0bfc62868 / 4c0c26727 04.26, 95EEDB48, SIMU VAPAA 04.46 Julkaisijalle).
+  Tulos lokit/todistus-aanipohja-m-jalkeen-20261017-0426/TULOS-AANIPOHJA-MITTAUS.md: raketti+radio+Cupola sama (−0,1 dB), kaupunki+opas sama
+  (puhe −20…−22 dB molemmissa; mediaanin +3,6 dB = puhetaukojen ajoitus; maisema p20 +1,4 dB). Museo ei vertailukelpoinen (jälkeen-ajossa
+  "Siirry näyttelyyn" puuttui), seikkailu ei käynnistynyt kummassakaan ("Pelaa" puuttui). → PT:n kuittaus → 0bfc62868 NS:lle junaan 198.
+  .vali-app palautettu. Skenaarion opit: museon lista ei aina tarjoa "Siirry näyttelyyn"; seikkailu tarvitsee oman ajon puhtaasta alusta.
