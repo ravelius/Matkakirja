@@ -398,3 +398,12 @@ Klo 21.52: "Kiinniottajia voi myös harhauttaa talojen sisällä." Klo 21.54: "K
 reaktiopeli, ja kun kuvakulma on tarpeeksi ylhäällä, niin grafiikastakin tulee yksinkertaisempaa. Eli tässä on tärkeää nopeus." Linjaus: jatkuva juoksu, ei piiloutumista eikä esteiden kaatamista;
 harhautus reitinvalinnalla (katottomassa talossa 2–3 kulkuväylää ja useampi uloskäynti); kamera korkealla suoraan juoksijan takana; pelkistetty grafiikka; nopeus tärkeintä. Codex j8–j10 tilattu (TASAN
 3, postilaatikko b32c4903b).
+
+## JUOKSUPELIN PERUSLOGIIKKA: LIUKU, HYPPY JA SIVUVARTIJAT (17.10.2026 klo 22.00)
+
+Omistaja 17.10.2026 klo 21.59 Keskustelukanavan kautta (sanatarkasti): "Kiinniottajan pystyy väistämään myös liukumalla. Silloin kiinniottaja yrittää hypätä keisarin kiinni, mutta lapsi liukuukin
+kiinniottajan alta. Tässäkin on ajoitus tärkeää. Se pitää osua juuri oikeaan aikaan, jotta väistö onnistuu. Jos väistöä liian aikaisin tai myöhään kiinniottaja saa kiinni, idea on siis se, että takana
+tulee joku koko ajan perässä, mutta myös sivuilta tulee vartioita, jotka koettavat ottaa kiinni ja valitsemalla oikean reitin, voi päästä vartioita karkkuun. Mutta jos sekään ei onnistu, niin sitten
+voi yrittää sitä liukumista. Eli oikealla peukalalla voi pyyhkäistä oikealle tai vasemmalle valitakseen reitin ja vasemmalla peukalalla voi liukua. Kehitellään myös muitakin juttuja, mutta tämä olisi
+se peruslogiikka. Ehkä niitä kattoja voisi olla useampiakin auki lähietäisyydellä. Saitko ideasta kiinni? Sama liukunappi voisi toimia myös hyppynappina, millä taas keisari voisi kerätä talosta
+aarteita ja saada lisää pisteitä." Ohjaustapa (yksi napautus vai pyyhkäisy alas/ylös) omistajan kortilla. Codex j8–j10 täydennys 3 (46f732212), edelleen 3 kuvaa.
