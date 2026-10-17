@@ -1,7 +1,7 @@
 {
- "versio": 1,
- "laatija": "Sisältökirjuri 17.10.2026 (omistajan päätös 11.44, PT:n välittämä)",
- "huomio": "Williamin Kiinan dynastialinssin käsikirjoitus, noin 5 min. Ääntä EI generoida ilman PT:n hyväksyntää ja KK:n lupaa. Korvaa 30 tekstin kertojatekstit-20261017 -version (19 riviä, 5 taistelua, keksinnöt) linssin kertojana. Kesto = puhutun muodon merkit / 14,18 + 0,7 s per klipsi (kalibroitu 19 mitatulla rivillä, tempo 1,10).",
+ "versio": 2,
+ "laatija": "Sisältökirjuri 17.10.2026 (omistajan päätös 11.44, PT:n välittämä; v2: KK:n kolme korjausta)",
+ "huomio": "Williamin Kiinan dynastialinssin käsikirjoitus, noin 5 min. Ääntä EI generoida ilman PT:n hyväksyntää ja KK:n lupaa. Korvaa 30 tekstin kertojatekstit-20261017 -version linssin kertojana. Kesto = puhutun muodon merkit / 14,18 + 0,7 s per klipsi (kalibroitu 19 mitatulla rivillä, tempo 1,10).",
  "mrk_per_s": 14.18,
  "pysakit": [
   {
@@ -207,9 +207,9 @@
   {
    "vuosi": 669,
    "dynastia": "Tang",
-   "teksti": "Vuonna 669 Tang on kukistanut Goguryeon ja hallitsee Chang'anista. Steelen mukaan Alopen toi kristinuskon Chang'aniin vuonna 635. Tangin aikakirjat kirjaavat arabien lähetystön vuodelle 651.",
-   "mrk_puhuttuna": 267,
-   "sek_arvio": 19.5,
+   "teksti": "Vuonna 669 Tang on kukistanut Goguryeon ja hallitsee Chang'anista. Steelen mukaan Alopen toi kristinuskon Chang'aniin vuonna 635. Islamin tulo Kiinaan liitetään arabien lähetystöön, jonka Tangin aikakirjat kirjaavat vuodelle 651.",
+   "mrk_puhuttuna": 306,
+   "sek_arvio": 22.3,
    "alku_s": 124.1,
    "segmentit": [
     {
@@ -231,10 +231,10 @@
     {
      "laji": "uskonto",
      "valo": "islam",
-     "teksti": "Tangin aikakirjat kirjaavat arabien lähetystön vuodelle 651.",
-     "puhuttu": "Tangin aikakirjat kirjaavat arabien lähetystön vuodelle kuusisataaviisikymmentäyksi.",
-     "mrk": 84,
-     "sek_arvio": 5.9
+     "teksti": "Islamin tulo Kiinaan liitetään arabien lähetystöön, jonka Tangin aikakirjat kirjaavat vuodelle 651.",
+     "puhuttu": "Islamin tulo Kiinaan liitetään arabien lähetystöön, jonka Tangin aikakirjat kirjaavat vuodelle kuusisataaviisikymmentäyksi.",
+     "mrk": 123,
+     "sek_arvio": 8.7
     }
    ]
   },
@@ -244,7 +244,7 @@
    "teksti": "Vuonna 790 Tangin pääkaupunki on yhä Chang'an, mutta An Lushanin kapinan jälkeen Tiibet on vallannut Hexin, ja Tang on pienempi kuin ennen.",
    "mrk_puhuttuna": 166,
    "sek_arvio": 12.4,
-   "alku_s": 143.6,
+   "alku_s": 146.4,
    "segmentit": [
     {
      "laji": "perus",
@@ -262,7 +262,7 @@
    "teksti": "Vuonna 950 Kiina on pirstoutunut: Myöhempi Han hallitsee Kaifengista, ja kitaanien Liao nykyisen Pekingin seutua. Vuodelta 868 on vanhin päivätty painettu kirja, löydetty Mogaon luolista.",
    "mrk_puhuttuna": 243,
    "sek_arvio": 17.8,
-   "alku_s": 156.0,
+   "alku_s": 158.8,
    "segmentit": [
     {
      "laji": "perus",
@@ -285,10 +285,10 @@
   {
    "vuosi": 1100,
    "dynastia": "Pohjoinen Song",
-   "teksti": "Vuonna 1100 Pohjoinen Song hallitsee Kaifengista, ja kirjapaino ja paperiraha ovat arkea. Shen Kuo kuvasi magneettineulan noin vuonna 1088. Songin hovi kirjasi vuonna 1044 vanhimmat tunnetut ruutireseptit.",
-   "mrk_puhuttuna": 256,
-   "sek_arvio": 18.8,
-   "alku_s": 173.8,
+   "teksti": "Vuonna 1100 Pohjoinen Song hallitsee Kaifengista, ja kirjapaino ja paperiraha ovat arkea. Shen Kuo kuvasi kompassin magneettineulan noin vuonna 1088. Songin hovi kirjasi vuonna 1044 vanhimmat tunnetut ruutireseptit.",
+   "mrk_puhuttuna": 266,
+   "sek_arvio": 19.5,
+   "alku_s": 176.6,
    "segmentit": [
     {
      "laji": "perus",
@@ -301,10 +301,10 @@
     {
      "laji": "keksinto",
      "valo": "kompassi",
-     "teksti": "Shen Kuo kuvasi magneettineulan noin vuonna 1088.",
-     "puhuttu": "Shen Kuo kuvasi magneettineulan noin vuonna tuhatkahdeksankymmentäkahdeksan.",
-     "mrk": 76,
-     "sek_arvio": 5.4
+     "teksti": "Shen Kuo kuvasi kompassin magneettineulan noin vuonna 1088.",
+     "puhuttu": "Shen Kuo kuvasi kompassin magneettineulan noin vuonna tuhatkahdeksankymmentäkahdeksan.",
+     "mrk": 86,
+     "sek_arvio": 6.1
     },
     {
      "laji": "keksinto",
@@ -322,7 +322,7 @@
    "teksti": "Vuonna 1142 jurchenien Jin on vallannut Kaifengin jo vuonna 1127, ja Song jatkaa etelässä Lin'anista eli Hangzhousta.",
    "mrk_puhuttuna": 167,
    "sek_arvio": 12.5,
-   "alku_s": 192.6,
+   "alku_s": 196.1,
    "segmentit": [
     {
      "laji": "perus",
@@ -340,7 +340,7 @@
    "teksti": "Vuonna 1280 Kublai-kaanin Yuan hallitsee koko Kiinaa, pääkaupunkinaan Dadu. Songin viimeinen laivasto kaatui Yamenissa vuonna 1279. Paperi, kompassi ja ruuti kulkevat Eurooppaan; reitit ovat kiistanalaisia.",
    "mrk_puhuttuna": 270,
    "sek_arvio": 19.7,
-   "alku_s": 205.1,
+   "alku_s": 208.5,
    "segmentit": [
     {
      "laji": "perus",
@@ -371,10 +371,10 @@
   {
    "vuosi": 1421,
    "dynastia": "Ming",
-   "teksti": "Vuonna 1421 Mingin pääkaupunki on siirtynyt Nankingista Pekingiin, ja Kielletty kaupunki on valmistunut vuonna 1420.",
-   "mrk_puhuttuna": 168,
-   "sek_arvio": 12.5,
-   "alku_s": 224.8,
+   "teksti": "Vuonna 1421 Mingin pääkaupunki on siirtynyt Nankingista Pekingiin, ja Kielletty kaupunki on valmistunut vuonna 1420. Kolmisenkymmentä vuotta myöhemmin Gutenberg rakentaa Mainzissa kirjapainon – ilman todistettua yhteyttä Kiinaan.",
+   "mrk_puhuttuna": 281,
+   "sek_arvio": 20.5,
+   "alku_s": 228.3,
    "segmentit": [
     {
      "laji": "perus",
@@ -383,16 +383,24 @@
      "puhuttu": "Vuonna tuhatneljäsataakaksikymmentäyksi Mingin pääkaupunki on siirtynyt Nankingista Pekingiin, ja Kielletty kaupunki on valmistunut vuonna tuhatneljäsataakaksikymmentä.",
      "mrk": 168,
      "sek_arvio": 11.8
+    },
+    {
+     "laji": "silkkitie",
+     "valo": "kirjapaino-eu",
+     "teksti": "Kolmisenkymmentä vuotta myöhemmin Gutenberg rakentaa Mainzissa kirjapainon – ilman todistettua yhteyttä Kiinaan.",
+     "puhuttu": "Kolmisenkymmentä vuotta myöhemmin Gutenberg rakentaa Mainzissa kirjapainon – ilman todistettua yhteyttä Kiinaan.",
+     "mrk": 112,
+     "sek_arvio": 7.9
     }
    ]
   },
   {
    "vuosi": 1644,
    "dynastia": "Qing",
-   "teksti": "Vuonna 1644 kapinalliset valtaavat Pekingin ja Ming kaatuu. Mantšut pääsevät Shanhain solan kautta Pekingiin. Mainzissa Gutenberg rakensi kirjapainon 1450-luvulla, ilman todistettua yhteyttä Kiinaan.",
-   "mrk_puhuttuna": 251,
-   "sek_arvio": 18.4,
-   "alku_s": 237.4,
+   "teksti": "Vuonna 1644 kapinalliset valtaavat Pekingin ja Ming kaatuu. Mantšut pääsevät Shanhain solan kautta Pekingiin.",
+   "mrk_puhuttuna": 138,
+   "sek_arvio": 10.4,
+   "alku_s": 248.8,
    "segmentit": [
     {
      "laji": "perus",
@@ -409,14 +417,6 @@
      "puhuttu": "Mantšut pääsevät Shanhain solan kautta Pekingiin.",
      "mrk": 49,
      "sek_arvio": 3.5
-    },
-    {
-     "laji": "silkkitie",
-     "valo": "kirjapaino-eu",
-     "teksti": "Mainzissa Gutenberg rakensi kirjapainon 1450-luvulla, ilman todistettua yhteyttä Kiinaan.",
-     "puhuttu": "Mainzissa Gutenberg rakensi kirjapainon tuhatneljäsataaviisikymmentäluvulla, ilman todistettua yhteyttä Kiinaan.",
-     "mrk": 112,
-     "sek_arvio": 7.9
     }
    ]
   },
@@ -426,7 +426,7 @@
    "teksti": "Vuonna 1760 Qing on liittänyt Dzungarian ja Tarimin altaan valtakuntaansa, ja pääkaupunki on Peking.",
    "mrk_puhuttuna": 128,
    "sek_arvio": 9.7,
-   "alku_s": 255.8,
+   "alku_s": 259.2,
    "segmentit": [
     {
      "laji": "perus",
@@ -444,7 +444,7 @@
    "teksti": "Vuonna 1873, isoisän matkan vuonna, nuori Tongzhi-keisari aloittaa oman hallintonsa Pekingissä, ja Kanton on yksi avatuista satamista.",
    "mrk_puhuttuna": 171,
    "sek_arvio": 12.8,
-   "alku_s": 265.5,
+   "alku_s": 269.0,
    "segmentit": [
     {
      "laji": "perus",
@@ -462,7 +462,7 @@
    "teksti": "Vuonna 1912 kuusivuotias Puyi luopuu vallasta ja keisarikunta päättyy. Tasavalta julistettiin Nankingissa uudenvuodenpäivänä, ja keväällä pääkaupungiksi tulee Peking.",
    "mrk_puhuttuna": 191,
    "sek_arvio": 14.2,
-   "alku_s": 278.3,
+   "alku_s": 281.7,
    "segmentit": [
     {
      "laji": "perus",
@@ -475,6 +475,6 @@
    ]
   }
  ],
- "yhteensa_mrk": 3958,
- "yhteensa_s": 292.0
+ "yhteensa_mrk": 4007,
+ "yhteensa_s": 296.0
 }
