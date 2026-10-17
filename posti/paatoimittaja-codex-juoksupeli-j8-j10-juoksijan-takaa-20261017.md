@@ -66,3 +66,10 @@ taas keisari voisi kerätä talosta aarteita ja saada lisää pisteitä."
 - TOISESSA kuvassa (sopii j9:ään): Puyi HYPPÄÄ katottoman talon sisällä kohti hohtavaa aarretta (esim. pöydän tai matalan
   arkun yli), kiinniottajat väärällä väylällä.
 - Korkea kamera suoraan juoksijan takana, pelkistetty selkeä grafiikka ja vauhti kuten täydennyksessä 2.
+
+## TÄYDENNYS 4 (omistaja 17.10. klo 22.08), edelleen TASAN 3 kuvaa
+Omistaja sanatarkasti: "Pelaaja voi kerätä myös esim. Omenoita ja heittää niillä vartijoita ja sotkea niiden juoksua."
+Jako kolmeen kuvaan: j8 = LIUKU sivulta syöksyvän vartijan alta; j9 = HYPPY talon sisällä aarteen tai hyllyn omenoiden luo;
+j10 = OMENA: Puyi heittää omenan (omena ilmassa selvästi näkyvissä) ja osuman saanut vartija liukastuu leikkisästi
+(horjahtaa, ei kaadu rumasti, ei kipua). Omenoita näkyy myös pihan puissa tai talon hyllyllä. Kaikissa yhä: joku perässä,
+vartijoita sivuilta, useampi katoton talo, korkea kamera suoraan takaa, pelkistetty selkeä grafiikka, vauhti.
