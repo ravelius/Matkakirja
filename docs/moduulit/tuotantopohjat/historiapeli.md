@@ -13,8 +13,8 @@ rakennus ja ääni ovat omissa osissaan (luvut 7–9). Ei kata historiaa kertova
 faktatyö on tässä esimerkkinä) eikä kertojan tekstiä yleisesti (`kertojan-teksti-ja-aani.md`).
 
 **Rajaus:** työ etenee yksi kohde kerrallaan omistajan käskyllä. Olavinlinna on toistaiseksi tauolla (13.10.: vain viisi
-keittiön tasoista tilaa peliin, ei uusia tiloja); Kielletyn kaupungin juoksupelissä suunnitelma ensin ja rakentaminen vasta
-kun Codexin Peking on valmis; Giza vasta Olavinlinnan ja Kielletyn kaupungin jälkeen. Euroopan ulkopuoliset kohteet ovat omistajan
+keittiön tasoista tilaa peliin, ei uusia tiloja); Kielletyn kaupungin juoksupeli aloitetaan harmaasta pelattavasta
+versiosta heti (omistaja 17.10. 22.17, Codexin Pekingiä ei odoteta; tuotantoputki Raamatussa, JUOKSUPELIN LINJAUS); Giza vasta Olavinlinnan ja Kielletyn kaupungin jälkeen. Euroopan ulkopuoliset kohteet ovat omistajan
 nimetyt poikkeukset (VAIN EUROOPPA muuten); uutta kohdetta ei aloiteta ilman hänen päätöstään.
 
 ## 1. Tuotantoputki ja roolit
