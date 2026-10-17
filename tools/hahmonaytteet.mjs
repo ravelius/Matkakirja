@@ -18,6 +18,7 @@
  * Rajat: enintään 30 näytettä ja 4 000 merkkiä per ajo; maksullista ajoa ei uusita automaattisesti (GITHUB_RUN_ATTEMPT 1).
  * Whisper-tarkistus (OpenAI whisper-1, kieli fi) vain, jos OPENAI_API_KEY on asetettu; muuten lista kertoo "ei tarkistettu".
  */
+import { kieliFi } from './elevenlabs-kieli.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -146,7 +147,7 @@ export async function generoi(syote, { ymp = process.env } = {}) {
     const v = await fetch(`${API}/v1/text-to-speech/${n.voice_id}?output_format=${MUOTO}`, {
       method: 'POST', redirect: 'error', signal: AbortSignal.timeout(180000),
       headers: { 'xi-api-key': ymp.ELEVEN_API_KEY, 'content-type': 'application/json', accept: 'audio/mpeg' },
-      body: JSON.stringify({ text: n.teksti, model_id: n.malli ?? MALLI, ...(String(n.malli ?? MALLI).includes('multilingual') ? {} : { language_code: 'fi' }),
+      body: JSON.stringify({ text: n.teksti, model_id: n.malli ?? MALLI, ...kieliFi(n.malli ?? MALLI),
         ...(n.stability != null ? { voice_settings: { stability: n.stability } } : {}) }),
     });
     if (!v.ok) { rivit.push({ ...n, virhe: `HTTP ${v.status}` }); console.log(`${n.hahmo} ${n.ab}: HTTP ${v.status}`); continue; }

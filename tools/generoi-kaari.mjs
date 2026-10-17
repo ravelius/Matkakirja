@@ -19,6 +19,7 @@
  * tehdään ajon jälkeen käsin, kun tiedostot on tarkistettu.
  */
 
+import { kieliFi } from './elevenlabs-kieli.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -98,7 +99,7 @@ async function generoi(teksti, polku, nimi) {
       body: JSON.stringify({
         inputs: [{ text: teksti + LOPPUTAUKO, voice_id: AANI }],
         model_id: MALLI,
-        ...(String(MALLI).includes('multilingual') ? {} : { language_code: 'fi' }),   // suomi pakotettuna (omistaja 6.10.)
+        ...kieliFi(MALLI),   // suomi pakotettuna (omistaja 6.10.)
         settings: { stability: STABILITY },
       }),
       signal: AbortSignal.timeout(180000),

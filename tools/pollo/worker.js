@@ -291,6 +291,12 @@ export function elevenTagit(teksti) {
     .replace(/\s*<\/fast>/g, '');
 }
 
+/** Suomi aina pakotettuna (sama kuin tools/elevenlabs-kieli.mjs; worker on yksitiedostoinen). Tukematon malli → virhe. */
+function kieliFi(malli) {
+  if (/multilingual/i.test(String(malli ?? ''))) throw new Error(`malli ${malli} ei tue language_code-kenttää`);
+  return { language_code: 'fi' };
+}
+
 // vakaus: numero lähetetään stability-kenttänä (Pulu ja muut äänet 0,5); null jättää kentän pois (mallin oletus, William),
 // tyyli: style-kenttä jos annettu (William 0).
 async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI, vakaus = 0.5, tyyli, ulostulo = ELEVEN_ULOSTULO }) {
@@ -304,9 +310,8 @@ async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEV
       body: JSON.stringify({
         text: teksti,
         model_id: malli,
-        // Suomi pakotettuna (omistaja 6.10.: lyhyet leikkeet ääntyivät väärin, kun malli arvasi kielen). Dokumentaatio:
-        // ei-tuettu kielikoodi ohitetaan; multilingual_v2 ei tue kenttää lainkaan, joten sille sitä ei lähetetä.
-        ...(String(malli).includes('multilingual') ? {} : { language_code: 'fi' }),
+        // Suomi AINA pakotettuna (omistaja 6.10. ja 17.10. klo 23.04): kielikoodia tukematon malli on virhe, ei poikkeus.
+        ...kieliFi(malli),
         voice_settings: {
           ...(vakaus !== null ? { stability: vakaus } : {}),
           ...(tyyli !== undefined ? { style: tyyli } : {}),
