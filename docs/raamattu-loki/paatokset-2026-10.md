@@ -468,3 +468,7 @@ Omistaja 18.10.2026 klo 00.10 (KK:n välittämänä, sanatarkasti): "älä käyt
 ## SÄÄDÖT VAIN HAMMASRATTAASTA (⚙) (18.10.2026 klo 00.17)
 
 Omistaja 18.10.2026 klo 00.15 ja 00.17 (KK:n välittämänä, sanatarkasti): "siirrä hammaspyörä hampurilaisen viereen samanlaiselle nappipohjalle ja tyylille kuin hampurilainen ja poista hammasrattaan sisällön toiminnot näkyvistä kaikkialta muualta pelistä. eli vuorokaudenaikaa yms. säädetään jatkossa vain hammasrattaan kautta" / "tai jos hammasratas mahtuu nätisti itse ohjauspaneeliin, niin sen voi lisätä sinne ennemmin". Linjaus: vuorokaudenaika, vuodenaika, LIVE, nimet, pilvet ja sää säädetään koko pelissä vain ⚙-rattaasta; ratas ensisijaisesti ohjauspöydän sisällä pöydän nappityylillä, muuten ☰:n vieressä samalla ohjausnappipohjalla. Muut säätöpaikat poistetaan (ISS-kohdevalikko, ISS-ohjaamon laajennus, ISS-kyydin Olosuhteet, oppaan ☀ → ⚙). Pelkkä ajan näyttö (yläpalkki) saa jäädä.
+
+## JUNA 201 = KAIKKI; ISS-KOHDEVALIKKO KOKO RUUTU ILMAN IKKUNAA (18.10.2026 klo 00.19)
+
+Omistaja 18.10.2026 klo 00.18 (KK:n välittämänä, sanatarkasti): "julkaise kun nämä valmiit." / "eli kaikki junaan 201". Junaan 201 tulevat myös kehysnappien häivytys, ⚙-ratas ja ISS-kohdevalikko ilman ikkunaa; ei laitetestejä, KK hyväksyy kuvat omistajan puolesta. Kohdevalikko ilman ikkunaa (omistaja 22.59: "näkymä saa olla silloin pehmennetty ja tummennettu") on poikkeus 45 %:n peittosäännöstä; sumea ja tummennettu pysäytyskuva on uusi tyylikirjapohja omistajan pyynnöstä.
