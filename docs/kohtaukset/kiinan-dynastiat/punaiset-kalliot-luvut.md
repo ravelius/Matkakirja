@@ -45,7 +45,7 @@ Jingzhoun antautuneiden suora lukumäärä Zhou Yun lukua lukuun ottamatta; liit
 
 Käytännön linja: nimeä lähde CC BY -tavalla, jolloin lisenssiriidalla ei ole väliä.
 
-**Suositeltu polku: HYDE 3.2.1, DANS Data Station Archaeology** (ladattavissa ohjelmallisesti, ei kirjautumista).
+**Suositeltu polku: HYDE 3.2.1, DANS Data Station Archaeology** (tiedostot eivät ole rajoitettuja, ei kirjautumista). **HUOM robots.txt:** DANSin robots.txt kieltää kaikki botit (`User-agent: * Disallow: /`, vain hakukoneet sallittu), joten skriptattu haku EI ole sallittua (projektin linjaus: robots.txt ensin). Lataus selaimella käsin (omistaja/PT) tai pyydä lupa DANSilta. Tämän selvityksen agentti haki rajapinnasta noin 425 kB metatietoa ja tiedostolistaa ennen kuin tämä tarkistettiin; datatiedostoja ei ladattu repoon.
 - Tiedostot: `HYDE3_2_1-baseline.zip` 5,3 GB (id 5490328), `…general_supplementary.zip` 24 MB (id 5490327). Suora lataus: `https://archaeology.datastations.nl/api/access/datafile/<id>` (303 → allekirjoitettu osoite, voimassa 1 h).
 - Muoto ESRI ASCII grid, 5 kaariminuuttia (~85 km² päiväntasaajalla). Vuodet: "0AD" (= 1 jKr.), 100AD, **200AD**, 300AD …
 - Polut zipissä: `baseline/asc/200AD_pop/popc_200AD.asc` (väestö, 78,9 MB purettuna, 9,4 MB zipissä), `popd_`, `urbc_`, `rurc_`; `baseline/asc/200AD_lu/cropland200AD.asc`; maataulukot `baseline/txt/popc_c.txt`.
