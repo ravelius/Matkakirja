@@ -389,3 +389,12 @@ Omistaja kysyi 07.2x: "Miten jatkossa codex ei jää huomiotta?" Kortti "Codexin
 ## PAATOKSET 17.10.2026 klo 19.59: Kiinan historiakartan korkeus vain taisteluihin (17.10.2026 klo 19.59)
 
 Omistaja (kortti KK:lla): korkeusanimaatio vain taistelulauseen ajaksi (armeija liikkuvana huippuna dynastian värissä, isku pehmeänä aaltona, sitten kartta tasainen); väestöpinta pois. Ensin koe Punaisen kallion taistelusta, muut taistelut hyväksynnän jälkeen.
+
+## JUOKSUPELIN LINJAUS: JATKUVA JUOKSU JA REITINVALINTA (17.10.2026 klo 21.55)
+
+Omistaja 17.10.2026 Keskustelukanavan kautta j5–j7-kuvista. Klo 21.51 (sanatarkasti): "Suunta on oikea, mutta kamera saa olla ylempänä ja aina kohti suoraan juoksijan takana. Pelaaja näkee myös edestä
+päin ketkä tulossa ottamaan kiinni, jolloin pelaaja voi valita reitin niin, että häntä ei saada kiinni.  Huoneiden läpi voi juosta. Ja samalla kerätä sieltä asioita. Pyydän vielä uudet mallikuvat."
+Klo 21.52: "Kiinniottajia voi myös harhauttaa talojen sisällä." Klo 21.54: "Koko ajan pitää juosta. Lähinnä pystyy valitsemaan eri reitin talon sisällä. Tästä tulee suhteellisen yksinkertainen
+reaktiopeli, ja kun kuvakulma on tarpeeksi ylhäällä, niin grafiikastakin tulee yksinkertaisempaa. Eli tässä on tärkeää nopeus." Linjaus: jatkuva juoksu, ei piiloutumista eikä esteiden kaatamista;
+harhautus reitinvalinnalla (katottomassa talossa 2–3 kulkuväylää ja useampi uloskäynti); kamera korkealla suoraan juoksijan takana; pelkistetty grafiikka; nopeus tärkeintä. Codex j8–j10 tilattu (TASAN
+3, postilaatikko b32c4903b).
