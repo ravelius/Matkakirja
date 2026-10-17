@@ -4,6 +4,14 @@ Loki: `/Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt` (tail -120
 Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestiraja: SendMessage paussilla (11 viestiä ilman omistajaa) → varakanava
 `mcp__ccd_session_mgmt__send_message` (hook-ohje); käytä säästeliäästi, yhdistä KÄÄNNETTY + SIMU NYT samaan viestiin.
 
+## PT:N ENSIN-JONO (PT 18.5x, sitova järjestys)
+1) PK intro-korjaus 7e2e28368 iPad Pro Pariisi 2/2 (pitää junan 200 lukitusta) — kohta 0.
+2) LS Louvren avaus a9d86b242 simu (kartta + ☰) — uusi, LS lähettää pyynnön/appin.
+3) NUI ohjauspöytä 049b0ef6e+43439f3b5 (= 8fe92ebab) simu.
+4) VS Louvre k82 ja valas k13.
+5) KS Kiinan 19 pysäkin video (oli jo simulla ~18.46 → tarkista KS:ltä, valmistuiko; jos kesken, kesken jäänyt ajo saa päättyä).
+Juna 200: lukitusehto v6k24 (R2 17.03); EI lukitusta ennen omistajan pyyntöä ("OMISTAJA PYYSI JULKAISUA").
+
 ## 0. ENSIN (heti nollauksen jälkeen)
 - **iPad-ajo kesken:** `pariisi-intro-oletus.zsh` (PK 7e2e28368, sumennus 2,5 s oletuksena, juna 200 odottaa) ajaa iPad Pro 12.9:llä
   2 × Pariisi-alku → `proto-3d/lokit/pariisi-intro-oletus-ipad-20261017-1853/{1,2}` (konsoli, merkit, muisti-tarkka.log). Taustatehtävä kuolee
