@@ -26,6 +26,12 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus -20261017-1721 (de8fc420
   (Symbolimallit.Galleria.cs: 21 erikoismallia liikkuvine osineen, Tiger Moth, 15 arkkityyppiä, 14 kategoriaa; paikat ruudulta pallolle
   RuudultaPallolle). Kytkin Kartta/Karttaesineet.cs (Yhtenainen, Korkeus) – A (Symbolimallit.Paivita + galleria) ja C (Maamerkit.LateUpdate)
   lukevat lipun omissa poluissaan, B/D/E koko galleriassa. KaupunkiPalloKuva.Tuhoa() lisätty.
+- **PÄIVITYS 19.5x (LR): VS:n varjostimet valmiina linssiseppa2/kartta-seepia 6a2659c59 (pohja master 6339b1aec): kytkin
+  `Matkakirja.KarttaSeepia.Aseta(true/false)` ennen piirtoa, kattaa A, B ja E → yhdistä haara galleria-200:aan ja kutsu Aseta
+  Karttaesineet.Yhtenainen-kytkimestä. Kohdat b) ja c) alla KORVAUTUVAT tällä: EI _KarttaYhtenainen-globaalia itse, EI CPU-ramppia
+  (Seepiaramppi.cs.txt pois kokonaan, ramppi vain varjostimessa). Pelikoodarille jää: (1) C-polku: Maamerkit.cs:n materiaali
+  AjattelijaPaa-varjostimelle, kun Yhtenainen päällä (tekstuuri säilyy); (2) MaaVarjo-soikio kaikkien alle; (3) kokosääntö a).
+  Valmis sha + tarvittava ajo (simu sk-galleria) → LR, joka pyytää JU:lta vuoron.**
 - JÄLJELLÄ (järjestys):
   a) Koko LR:n sääntöön: Karttaesineet.Korkeus → KarttaesineKoko(Koko(kameran korkeus)) (A/C tarvitsevat kameran korkeuden: PalloKierto.korkeus).
   b) `Karttaesineet.Yhtenainen` propertyksi, joka asettaa `Shader.SetGlobalFloat("_KarttaYhtenainen", 0|1)` (VS:n KarttaSeepia.hlsl,
