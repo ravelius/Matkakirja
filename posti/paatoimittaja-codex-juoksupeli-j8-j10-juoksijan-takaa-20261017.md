@@ -51,3 +51,18 @@ Edelleen TASAN 3 kuvaa. EI piiloutumista, sermiä, verhoa, ovien sulkemista eik�
 - KUVAKULMA KORKEALLA (selvästi ylempänä kuin j5–j7, lähes lintuperspektiivi juoksijan takaa), grafiikka SELKEÄÄ JA
   PELKISTETTYÄ: reitit, kiinniottajat ja kerättävät esineet erottuvat heti; vähemmän pikkuyksityiskohtia.
 - VAUHDIN TUNTU vahva (liike-asennot, pölyä tai liikeviiva saa näkyä hillitysti).
+
+## TÄYDENNYS 3 (omistaja 17.10. klo 21.59, peruslogiikka; täydentää täydennystä 2), edelleen TASAN 3 kuvaa
+Omistaja sanatarkasti: "Kiinniottajan pystyy väistämään myös liukumalla. Silloin kiinniottaja yrittää hypätä keisarin kiinni,
+mutta lapsi liukuukin kiinniottajan alta. Tässäkin on ajoitus tärkeää. [...] takana tulee joku koko ajan perässä, mutta myös
+sivuilta tulee vartioita, jotka koettavat ottaa kiinni ja valitsemalla oikean reitin, voi päästä vartioita karkkuun. [...]
+Ehkä niitä kattoja voisi olla useampiakin auki lähietäisyydellä. [...] Sama liukunappi voisi toimia myös hyppynappina, millä
+taas keisari voisi kerätä talosta aarteita ja saada lisää pisteitä."
+
+- KAIKISSA kolmessa: lähietäisyydellä USEAMPI katoton talo (2–3), joku tulee koko ajan perässä (alareunassa), ja vartijoita
+  tulee myös SIVUILTA (ei vain edestä).
+- YHDESSÄ kuvassa (sopii j8:aan tai j10:een): vartija syöksyy sivulta loikaten Puyia kohti, ja Puyi LIUKUU sen alta
+  (matala liukuasento, vartija ilmassa hänen yllään). Leikkisä, ei väkivaltaa.
+- TOISESSA kuvassa (sopii j9:ään): Puyi HYPPÄÄ katottoman talon sisällä kohti hohtavaa aarretta (esim. pöydän tai matalan
+  arkun yli), kiinniottajat väärällä väylällä.
+- Korkea kamera suoraan juoksijan takana, pelkistetty selkeä grafiikka ja vauhti kuten täydennyksessä 2.
