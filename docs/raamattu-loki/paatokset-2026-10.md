@@ -460,3 +460,7 @@ kokonaiskäännölle ja kestolle. Museo ensin (Linssiseppä, juna 201), muiden l
 ## KAMERA-AJOT: SIIRRON KESTO KAVELYNOPEUDELLA (TARKENNUS) (17.10.2026 klo 23.18)
 
 Omistaja 17.10.2026 klo 23.17 (sanatarkasti): "siirtymä voi olla pidempi kuin sekuntti. nyt se kesti noin 10sek mikä oli liian pitkä. aika voi vaihdella etäisyyden mukaan ja normaali kävelynopeus riittää, tärkeintä että päästään kulkemaan suorinta reittiä ja kameraa ei tarvitse käännellä niin aikaa säästyy paljon". Kumoaa 23.15-kirjauksen "~1–1,5 s": kesto = etäisyys normaalilla kävelynopeudella suorinta reittiä, pehmeät lähdöt ja pysähdykset.
+
+## KESKENERÄISET AINA LINSSIT TAI PELIT › KESKENERÄISET, EI KEHITTÄJÄ › KOKEET (18.10.2026 klo 00.11)
+
+Omistaja 18.10.2026 klo 00.10 (KK:n välittämänä, sanatarkasti): "älä käytä näitä enää koskaan: Kehittäjä › Kokeet › Juoksupeli / siirrä kaikki aina keskeneräisten alle joko linsseihin tai peleihin. keskeneräiset näkyvät joka tapauksessa vain kehittäjälle". Linjaus: jokainen keskeneräinen löytyy samasta paikasta kuin valmis vastineensa: ☰ › Linssit › Keskeneräiset tai ☰ › Pelit › Keskeneräiset (kuten Olavinlinnan pala). Kehittäjä › Kokeet -rivejä ei tehdä; ohjeissa ja omistajalle polut aina tässä muodossa. Ensimmäinen siirto: juoksupeli (PK) Pelit › Keskeneräiset junaan 201.
