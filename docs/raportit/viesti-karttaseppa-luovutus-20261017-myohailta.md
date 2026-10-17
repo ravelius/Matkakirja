@@ -67,7 +67,11 @@ KÄÄNNÖSPYYNTÖ JU:lle 38be1ca55 → `kiina-taistelu-250-v1-app`. SIMU NYT →
 `odota-taistelu-250-v2.zsh` (→ ajo-taistelu-250-v2.out). SIMU-pyyntö JU:lle lähetetty (jonossa). Opin: avausvuosi ei ole pysäkki ajossa.
 **TILA 21.0x:** v2 ajettu 20.53–20.57 (todistus-kiina-taistelu-250-v2-20261017-2053): kartta tasainen, aalto renkaina, risti+nimi, lasku ✓; armeija vain pieni
 piste → `c0dac25d7` (TaisteluSileysKm 80, TaistelunKorkeusM 160 km/yks. 3, kumpu umpinaisena dynastian värissä, testi TaisteluKumpuNakyyLaajassaKuvassa).
-KÄÄNNÖSPYYNTÖ JU:lle c0dac25d7 → `kiina-taistelu-250-v3-app`; SIMU NYT → `odota-taistelu-250-v3.zsh`. Video PT:lle vasta v3:sta (PT tietää). LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+KÄÄNNÖSPYYNTÖ JU:lle c0dac25d7 → `kiina-taistelu-250-v3-app`; SIMU NYT → `odota-taistelu-250-v3.zsh`. Video PT:lle vasta v3:sta (PT tietää).
+**TILA 21.3x (PT 21.1x tarkensi: KAKSI selvää huippua Wei vs. Shu+Wu liikkeessä, selvä aalto + X, sitten tasainen; video PT:lle, PT tarkistaa ennen KK:ta):**
+v3 ajettu 21.16–21.20 (todistus-kiina-taistelu-250-v3-20261017-2116): Wei selvä kumpu + X, Sun–Liu himmeä/hukkui, aalto haalea → ei PT:lle.
+Korjaus `e1babe602` (KiinaVaestopinta.TaisteluKummut: oma kumpu per armeija, Erilleen ≥ 230 km, aalto AaltoTumma 0,55/peitto 0,9/6 km;
+testi TaisteluKaksiHuippuaLiikkuvat). KÄÄNNÖSPYYNTÖ JU:lle → `kiina-taistelu-250-v4-app`; SIMU NYT → `odota-taistelu-250-v4.zsh`; video PT:lle. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
