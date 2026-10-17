@@ -1,0 +1,26 @@
+# Sisältökirjurin luovutus 17.10.2026 päivä (Postivahdin kova raja 35 %)
+
+Rooli, checkout (/Users/Shared/Claude/Matkakirja-sisaltokirjuri), agenttisäännöt (vain Opus/Sonnet) ja osoitteet kuten edellisessä luovutuksessa
+(`git show ec3002eac:docs/raportit/viesti-sisaltokirjuri-luovutus-20261017-aamu.md`). Viestit AINA `send_message` id:llä
+(osoitekirja /Users/Shared/Claude/osoitekirja.md); PT local_5df52e10-10e4-4b72-9554-0049db300dfe (≤ 3 riviä), LR local_996d60ab-b4af-4172-ad31-f8e948f141a3,
+KS local_eec7f158-d9f3-4b93-9368-c50935bd19ab, NUI local_44392b3c-86ee-4873-9d76-82f9aaa6b832, Postivahti local_a24c43c0-8094-4141-b734-90b9555f5044.
+Uusi haara aina `git switch -c <nimi> origin/main`; docs-PR: `gh pr create`, ~6 s, `gh pr merge --squash --admin`. **robots.txt tarkistetaan ennen JOKAISTA hakua, myös rajapintaan** (PT 17.10.; DANS kieltää botit).
+
+## Valmista tässä vuorossa (kaikki mainissa)
+- **Punaisten kallioiden luvut + HYDE** (#4786 96692a25f, #4787 a7f9bd6a8): `docs/kohtaukset/kiinan-dynastiat/punaiset-kalliot-luvut.md`. HYDE 3.2.1 (DANS) valittu; DANS kieltää skriptatun haun → käsilataus vain jos omistaja hyväksyy kokeiluvideon (PT).
+- **Isoisän unen kuiskaukset** (#4789 5a7310001): `docs/raportit/isoisan-uni-kuiskaukset-20261017.md`; NUI käyttää sanatarkasti (uni v2). Uni on omistajan käskystä pois pelistä 17.10. 07.11; ei kytkentää ilman uutta lupaa.
+- **Tivolin vaihe 8** (#4794 b70c949a1, #4795 9863fa6f7): 6 lähitarinaa + Pulun kutsu `pulu-vapaalento-kutsu-koopenhamina`, `docs/kohtaukset/pallokierros/tivoli-lahitarinat-20261017.json` (+ faktaliite), julkaistu äänisivun Tekstit-osastoon (varmuuskopio `index.html.ennen-tivoli-lahitarinat-20261017`). Ääntä EI tehty; isoisän järviteksti vaatii omistajan luvan. Tornin nimi: "Japanilainen torni. Yli sata vuotta sitä kutsuttiin Kiinalaiseksi torniksi."
+- **Uni v3 -kaanon** (#4796 0e1633ebd, korjaus #4797 d1769c598): `docs/raportit/uni-v3-kaanon-20261017.md`; Kolmen veljeksen keskitimantti on TERÄVÄ, ei sininen (UT korjattu). Pyysin PT:tä tarkistamaan Codexin unikuvan.
+
+## KESKEN (seuraajalle): Kiinan keksinnöt ja uskonnot (PT 17.10., omistaja 11.38, KS vetää)
+Tilaus: keksinnöt (paperi, kompassi, ruuti, kirjapaino) ja uskonnot (kungfutselaisuus, taolaisuus, buddhalaisuuden, islamin, kristinuskon saapuminen), kullekin **syntypaikka/saapumispaikka koordinaatteineen, vuosi, lähde, Williamin yksi lause (≤ 20 sanaa)**, neutraalisti; lisäksi **19 pysäkin dynastianimet ja -vuodet tarkistettava**. Tiedosto `docs/kohtaukset/kiinan-dynastiat/`; tarkistajat → PT; koordinaatit KS:lle. Tähän mennessä:
+- Sonnet-tutkimukset valmiit ja kopioitu repoon kansioon `docs/kohtaukset/kiinan-dynastiat/tutkimus-20261017/`: `keksinnot-kungfutselaisuus-taolaisuus.md` (A: paperi, kompassi, ruuti, kirjapaino, kungfutselaisuus, taolaisuus; koordinaatit, vuodet, lähteet, William-lauseehdotukset; A:n agentti oli vielä viimeistelemässä, tarkista tiedoston loppu), `uskonnot-buddhalaisuus-islam-kristinusko.md` (B; Yi Cun 2 eaa. -väite ei käyttöön ilman primäärilähdettä) ja `19-pysakin-tarkistus.md` (riippumaton 19 pysäkin tarkistus).
+- **19 pysäkin tarkistuksen tulos:** KORJAA rivi 11 (Myöhempi Han 947–951, ei 947–950; romahti 1.–2.1.951, 950 vielä Kaifengissa; Kuusitoista prefektuuria: lupaus 936, luovutus 938) ja rivi 14 (Dadu: ei "rakennettu 1267–1272"; 1272 sai nimen Dadu ja tuli pääkaupungiksi, rakennus alkoi 1264/1267, palatsi 1274, valmis 1293). Sanamuototarkennukset: r2 (heqin 198 eaa. alkoi lahjat), r3 (Hexi 121 eaa., komennuskunnat 111 eaa.), r10 ("700-luvun lopulla", ei yhtä vuotta), r15 (Peking virallisesti 28.10.1420, virastot helmikuuhun 1421), r17 (Xinjiang-nimi vasta 1878, liitetty 1759), r18 (ei "Kanton-järjestelmää": se päättyi 1842), r19 (Yuan Shikai vannoi virkavalan Pekingissä 10.3.1912; huhtikuun päätös EPÄVARMA). Nämä korjaukset EIVÄT ole vielä viety `kertojatekstit-20261017.md/.json`:iin eikä äänisivun Tekstit-osastoon (kiinan-dynastiat-rivi-11 ja -14 sekä tarkennukset).
+- Jäljellä: koota yksi tiedosto `docs/kohtaukset/kiinan-dynastiat/keksinnot-uskonnot-paikat-20261017.md` (taulukko: kohde | paikka + lat,lon | vuosi | varmuus | 2 lähdettä | Williamin lause ≤ 20 sanaa), riippumaton tarkistus (3 tarkistajaa, omat haut), 19 pysäkin yllä mainittujen korjausten vienti tekstiin ja Tekstit-osastoon, sitten PT:lle SHA ja KS:lle koordinaatit.
+- Huom: keksinnöt Eurooppaan -kortit (paperi, kirjapaino, kompassi, ruuti) ovat jo `kertojatekstit-20261017.md`:ssä; uusi tiedosto lisää paikat ja uskonnot.
+
+## Huomiot
+- Committoimaton: `.claude/settings.local.json.*`, `.wrangler/` (ei omia, jätä).
+- Ali-agentit (Sonnet) kirjoittavat vain omaan tiedostoonsa scratchpadiin; tulokset kopioidaan repoon. Agentit ovat sortuneet robots.txt:ssä kahdesti tänään (cphpost.dk, DANS rajapinta): muistuta briefissä.
+- Äänisivun julkaisu: `git show origin/main:tools/tyotavat/julkaisija/aanisivu-julkaise.zsh > <scratchpad>/aanisivu-julkaise.zsh && zsh …` (varmuuskopio ensin `index.html.ennen-<aihe>-<pvm>`); uusi osio lisätään ennen kiinan-dynastiat-osiota, kokoelman `lkm` +1.
+- Pulun kutsun napin nimi ilman kysymysmerkkiä (puhesyöte).
