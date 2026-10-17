@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (200)",
+   "paiva": "2026-10-17",
+   "teksti": "Louvre avautuu Pariisin kartalta Rodinin, Niken, Venuksen ja van Goghin kera, ja yöllä pyramidi hehkuu. ISS:llä on uusi ohjauspöytä, ja raketin alla aaltoilee elävä meri. Lontoossa, Prahassa ja Ateenassa kuuluvat kaupungin äänet, ja Kööpenhaminan Tivolista on kuvat."
+  },
+  {
    "versio": "1.1 (199)",
    "paiva": "2026-10-17",
    "teksti": "Peli alkaa suoraan matkasta ilman isoisän unta, ja Kiinan dynastiat -linssi avautuu kaikille. Louvressa on Samothraken Nike ja Milon Venus, ja kaikki maalehdet luetaan ääneen. Kartta on taas seepiaa, ja ISS:n skanneri piirtää kaupungin oikean maaston."
