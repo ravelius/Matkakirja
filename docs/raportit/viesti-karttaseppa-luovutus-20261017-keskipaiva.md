@@ -38,8 +38,8 @@ Aika-arvio PT:lle annettu: koko linssin video ~20.30–21.
    → SIMU NYT → `zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kiina-koko-linssi/ajo-koko.zsh > ajo-1.out` (~9 min, skenaario sk-koko-linssi.txt)
    → katso kuvat A0–A13: pinta nousee joka pysäkillä, taistelut, valopisteet syttyvät ja himmenevät, juova 1280/1644, nimiöt näkyvät pinnan yllä?
    Korjaa, sitten väliraportti PT:lle (3 riviä).
-3. **NUI-lippu**: NUI teki `KehysKaaro.Ruudulla` (haara natiivi-ui/kaaro-rajat-200 c2a052bfa) — POISTA KiinaKerros.TekstiNakyy, kun
-   haarat yhdistetään (PK:lle kerrottu). Valopisteen merkki = kartan nimiö pääkaupunkityylillä (NUI 12.0x) — tehty IsoisaKerroksella.
+3. **NUI-lippu PERUTTU** (omistaja 11.55: vuosi ja dynastia vain yläpalkkiin, ei keskiotsikkoa; NUI revert bfe52e6e9):
+   KehysKaaro.Ruudulla EI ole olemassa → POISTA KiinaKerros.TekstiNakyy (käyttämätön; PK:lle kerrottu). Valopisteen nimiö on KS:n työ (tehty).
 4. **SK**: käsikirjoitus (19 pysäkkiä + valopisteet + juova, William) tulee SEURAAVALTA Sisältökirjurilta PT:lle, kopio KS:lle.
    Äänitys Äänittäjälle PT:n kautta.
 5. **PK**: kertova kamera tapahtumien varaan (pohja a8f5d8b90). Kun PK, NUI ja äänet valmiit → yhdistä, koko linssin video PT:lle,
