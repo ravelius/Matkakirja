@@ -1,0 +1,355 @@
+{
+ "huomio": "LUONNOS: Rodinin 8 veistoksen tekstit (kaksi Sonnet-tutkijaa 17.10.2026), riippumaton tarkistus kesken/erillinen tiedosto rodin-veistokset.json kun valmis. Älä käytä ennen tarkistusta.",
+ "veistokset": {
+  "rodin-suudelma": {
+   "nimi_fi": "Suudelma",
+   "nimi_fr": "Le Baiser",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "n. 1882",
+   "materiaali": "marmori",
+   "mitat_cm_kork_lev_syv": [
+    181.5,
+    112.5,
+    117
+   ],
+   "skannattu_versio_kohde": "Musée Rodin, Pariisi (suuri marmoriversio, huone 5; Migg-skannauksen tarkkaa versiota ei varmistettu)",
+   "lyhyt_fi": "Valtio tilasi marmorin 1888; veistäminen kesti lähes kymmenen vuotta. Marmorikopio peitettiin Lewesin kaupungintalolla vuonna 1914.",
+   "kertojan_teksti": "Tämän parin nimen antoi yleisö, ei tekijä. Rodin muovasi rakastavaiset ensin Dantea varten Helvetin porttien, suuren pronssiportaalin, vasempaan oveen Paolona ja Francescana, mutta otti ryhmän pois, koska sen onni ei sopinut portin synkkään aiheeseen. Kun se esiteltiin itsenäisenä teoksena vuonna 1887, katsojat alkoivat kutsua sitä Suudelmaksi. Katso miehen kädessä olevaa kirjaa: Dantella pari lukee rakkaustarinaa, kun Francescan aviomies yllättää heidät.",
+   "lahteet": [
+    {
+     "url": "https://musee-rodin.fr/en/musee/collections/oeuvres/kiss",
+     "mita_vahvistaa": "marmori, n. 1882, veistetty 1888–1898, valtion tilaus 1888, mitat 181,5×112,5×117 cm, Helvetin portit (vasen ovi, Ugolinon vastapuoli), poisto 1886, esillä 1887, yleisö antoi nimen"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/The_Kiss_(Rodin_sculpture)",
+     "mita_vahvistaa": "1882, mitat 181,5×112,5×117 cm, Paolo ja Francesca, Helvetin portit, kirja Paolon kädessä, valtion tilaus 1888, Salonki 1898, Lewesin kopio ja peittäminen 1914"
+    },
+    {
+     "url": "https://www.tate.org.uk/art/artists/auguste-rodin-1860/auguste-rodin-kiss",
+     "mita_vahvistaa": "Warrenin marmorikopio Lewesin kaupungintalolla 1914 (hakutuloksen tiivistelmästä)"
+    },
+    {
+     "url": "https://www.christies.com.cn/en/lot/lot-5790775",
+     "mita_vahvistaa": "valtion tilaus 1888, Brysselin Salonki 1887 (hakutuloksen tiivistelmästä)"
+    }
+   ],
+   "epavarmat": [
+    "Migg-skannauksen versio (marmori vs. muu) ei varmistettu; oletus Musée Rodinin suuri marmori",
+    "Luxembourgin museoon siirto 1900 vai 1901 (lähteet ristiriidassa) - jätetty pois",
+    "Ryhmän poisto Helvetin porteilta 1886 vai 1887 (lähteet ristiriidassa) - jätetty pois",
+    "Marmorinveistäjä Jean Turcan - vain hakutuloksissa, jätetty pois"
+   ],
+   "puhuttu": "Tämän parin nimen antoi yleisö, ei tekijä. Rodin muovasi rakastavaiset ensin Dantea varten Helvetin porttien, suuren pronssiportaalin, vasempaan oveen Paolona ja Francescana, mutta otti ryhmän pois, koska sen onni ei sopinut portin synkkään aiheeseen. Kun se esiteltiin itsenäisenä teoksena vuonna tuhatkahdeksansataakahdeksankymmentäseitsemän, katsojat alkoivat kutsua sitä Suudelmaksi. Katso miehen kädessä olevaa kirjaa: Dantella pari lukee rakkaustarinaa, kun Francescan aviomies yllättää heidät.",
+   "puhuttu_merkkeja": 500
+  },
+  "rodin-danaidi": {
+   "nimi_fi": "Danaïdi",
+   "nimi_fr": "La Danaïde",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "1889",
+   "materiaali": "terrakotta (poltettu savi)",
+   "mitat_cm_kork_lev_syv": [
+    20.2,
+    36.5,
+    27.5
+   ],
+   "skannattu_versio_kohde": "Nationalmuseum, Tukholma (NMSk 1854; pieni terrakottaversio)",
+   "lyhyt_fi": "Suunniteltu Helvetin porteille n. 1885, mutta jäi pois portista. Tämä pieni terrakotta on vuodelta 1889; marmori oli Salongissa 1890.",
+   "kertojan_teksti": "Rodin ei kuvaa tätä naista työssä vaan sen jälkeen, kun voimat ovat loppuneet. Kreikkalaisen myytin mukaan Danaoksen tyttäret tappoivat sulhasensa hääyönä, ja alamaailmassa heidän rangaistuksensa oli täyttää pohjatonta tynnyriä vedellä, työ joka ei koskaan valmistu. Rodinin hahmo on lysähtänyt maahan, eikä tynnyriä näy lainkaan. Katso kaatunutta vesiruukkua: vesi valuu siitä maahan, ja Musée Rodinin mukaan hiukset sulautuvat veteen. Veistos tunnetaan myös nimellä Lähde.",
+   "lahteet": [
+    {
+     "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/danaid",
+     "mita_vahvistaa": "suunniteltu Helvetin porteille n. 1885 ja jätetty pois, ajatus 1889, marmori 1890, Salonki 1890, myytti, asento, kaatunut ruukku, hiukset ja vesi, toinen nimi Lähde, marmorin mitat 36×71×53 cm"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Danaid_(Rodin)",
+     "mita_vahvistaa": "1885 Helvetin portit, 1889, Salonki 1890, toinen nimi La Source, myytti, asento"
+    },
+    {
+     "url": "https://collection.nationalmuseum.se/en/collection/item/27970",
+     "mita_vahvistaa": "terrakotta 1889, mitat 20,2×36,5×27,5 cm, NMSk 1854, kaatunut hahmo ja ylösalaisin kaatunut ruukku, Helvetin portit"
+    }
+   ],
+   "epavarmat": [
+    "Terrakotan mitat vain Nationalmuseumin omasta tietueesta (ei toista riippumatonta lähdettä); kenttä mitat_cm on silti otettu siitä, koska se on skannatun esineen oma museotietue",
+    "Antellin tilaama suurennettu marmori - vain Nationalmuseumin tietue, jätetty pois",
+    "Terrakotan osto 1964 - vain Nationalmuseum, jätetty pois",
+    "Camille Claudel mallina - epävarma, jätetty pois"
+   ],
+   "puhuttu": "Rodin ei kuvaa tätä naista työssä vaan sen jälkeen, kun voimat ovat loppuneet. Kreikkalaisen myytin mukaan Danaoksen tyttäret tappoivat sulhasensa hääyönä, ja alamaailmassa heidän rangaistuksensa oli täyttää pohjatonta tynnyriä vedellä, työ joka ei koskaan valmistu. Rodinin hahmo on lysähtänyt maahan, eikä tynnyriä näy lainkaan. Katso kaatunutta vesiruukkua: vesi valuu siitä maahan, ja Musée Rodinin mukaan hiukset sulautuvat veteen. Veistos tunnetaan myös nimellä Lähde.",
+   "puhuttu_merkkeja": 474
+  },
+  "rodin-ajattelija": {
+   "nimi_fi": "Ajattelija",
+   "nimi_fr": "Le Penseur",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "1880",
+   "materiaali": "pronssi",
+   "mitat_cm_kork_lev_syv": null,
+   "skannattu_versio_kohde": "Ny Carlsberg Glyptotek, Kööpenhamina (suuri pronssivalos)",
+   "lyhyt_fi": "Esillä itsenäisenä teoksena 1888; suurennettiin 1900-luvun alussa. Glyptotekin Rodin-kokoelma on Ranskan ulkopuolella merkittävimpiä.",
+   "kertojan_teksti": "Tämä hahmo ei alun perin ollut ajattelija vaan runoilija. Rodin sijoitti sen vuonna 1880 aloittamansa Helvetin porttien huipulle nimellä Runoilija, ja sen on arveltu esittävän Dantea, joka kumartuu tarkkailemaan alapuolellaan aukeavia helvetin piirejä ja pohtii samalla omaa teostaan. Katso, miten koko hahmo painuu eteenpäin kuin ajatuksen painosta; asennon on arveltu lainaavan Carpeaux'n Ugolino-ryhmää ja Michelangelon Lorenzo de' Medici -patsasta. Vasta irrotettuna portista hahmosta tuli kaikkien ajattelijoiden vertauskuva.",
+   "lahteet": [
+    {
+     "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/thinker",
+     "mita_vahvistaa": "suunniteltu 1880 Helvetin porttien kruunaavaksi hahmoksi, alkuperäinen nimi Runoilija, Dante, esillä itsenäisenä 1888, suurennos 1904, esikuvat Carpeaux ja Michelangelo"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/The_Thinker",
+     "mita_vahvistaa": "Helvetin portit 1880, Runoilija ja Dante, suurennos 1902, ensimmäinen pronssi 1884"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/List_of_The_Thinker_sculptures",
+     "mita_vahvistaa": "Glyptotekin valos on monumentaalinen pronssi 1904 (hakutuloksen mukaan 'kolmas Hébrard-kopio')"
+    },
+    {
+     "url": "https://cool.culturalheritage.org/jaic/articles/jaic37-02-002_appx.html",
+     "mita_vahvistaa": "Carl Jacobsen osti Kööpenhaminan valoksen 1906"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Ny_Carlsberg_Glyptotek",
+     "mita_vahvistaa": "Rodin-kokoelma Ranskan ulkopuolella merkittävin"
+    }
+   ],
+   "epavarmat": [
+    "Glyptotekin valoksen valuvuosi (1904 vs. osto 1906) ja valimo (Hébrard?) - vain yksi lähde, jätetty pois",
+    "Glyptotekin valoksen tarkka korkeus - ei löytynyt (monumentaalikoko n. 181–189 cm), mitat null",
+    "Suurennoksen vuosi 1902 (Wikipedia) vs. 1904 (Musée Rodin) - kirjoitettu 'alussa'",
+    "Rigsters-skannauksen yhteys Glyptotekin valokseen - Sketchfab-sivua ei saatu luettua",
+    "Dante-tulkinta kiistelty - kirjoitettu 'on arveltu'"
+   ],
+   "puhuttu": "Tämä hahmo ei alun perin ollut ajattelija vaan runoilija. Rodin sijoitti sen vuonna tuhatkahdeksansataakahdeksankymmentä aloittamansa Helvetin porttien huipulle nimellä Runoilija, ja sen on arveltu esittävän Dantea, joka kumartuu tarkkailemaan alapuolellaan aukeavia helvetin piirejä ja pohtii samalla omaa teostaan. Katso, miten koko hahmo painuu eteenpäin kuin ajatuksen painosta; asennon on arveltu lainaavan Carpeaux'n Ugolino-ryhmää ja Michelangelon Lorenzo de' Medici -patsasta. Vasta irrotettuna portista hahmosta tuli kaikkien ajattelijoiden vertauskuva.",
+   "puhuttu_merkkeja": 562
+  },
+  "rodin-balzac-monumentti": {
+   "nimi_fi": "Balzac-monumentti",
+   "nimi_fr": "Monument à Balzac",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "1897",
+   "materiaali": "pronssi",
+   "mitat_cm_kork_lev_syv": [
+    273,
+    120,
+    120
+   ],
+   "skannattu_versio_kohde": "Middelheim-museo, Antwerpen (Antwerpenin KMSKA:n pitkäaikaislaina; pronssivalos, ostettu Musée Rodinilta 1931)",
+   "lyhyt_fi": "Antwerpenin kuvataidemuseo osti yhden kahdesta ensimmäisestä valoksesta 1931. Pariisin Montparnassen risteykseen pronssi pystytettiin vasta 1939.",
+   "kertojan_teksti": "Rodin ei koskaan tavannut kuvaamaansa kirjailijaa: Balzac kuoli vuonna 1850, ja tilaus tuli Ranskan kirjailijayhdistykseltä vuonna 1891. Rodin lupasi kolmen metrin patsaan puolessatoista vuodessa mutta tarvitsi siihen noin seitsemän vuotta. Hän matkusti Balzacin kotiseudulle Tourainelle tutkimaan alueen ihmistyyppejä ja teki lukuisia tutkielmia. Katso aamutakkiin kietoutunutta hahmoa: pintaa ei ole silotettu, ja valo tuo esiin työn jäljet. Tilaaja piti teosta keskeneräisenä ja hylkäsi sen.",
+   "lahteet": [
+    {
+     "url": "https://en.wikipedia.org/wiki/Monument_to_Balzac",
+     "mita_vahvistaa": "tilaus 1891, Zola, kolme metriä 18 kuukaudessa (kesti n. 7 vuotta), Touraine, kipsi Salongissa 1898, hylkäys, ensimmäinen pronssi 1939 Pariisissa, Middelheim-valos"
+    },
+    {
+     "url": "https://kmska.be/nl/meesterwerk/de-schrijver-honore-de-balzac",
+     "mita_vahvistaa": "pronssi 273×120×120 cm, 1891–1898, KMSKA osti Musée Rodinilta 1931, yksi kahdesta ensimmäisestä pronssista"
+    },
+    {
+     "url": "https://collectie-in-het-park.middelheimmuseum.be/menselijkenatuur/balzac",
+     "mita_vahvistaa": "Middelheimin laina KMSKA:lta, pronssi vasta 1931, aamutakki, pinta ei silotettu, tilaajan hylkäys"
+    },
+    {
+     "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/monument-balzac",
+     "mita_vahvistaa": "valmis 1897, esillä 1898, hylkäys, aamutakin pinta, Pariisin valos H 270 cm"
+    },
+    {
+     "url": "https://middelheimmuseum.be/nl/activiteit/rodin-balzac-verhaal-van-een-meesterwerk",
+     "mita_vahvistaa": "laina KMSKA:lta on Middelheimin kokoelman lähtökohta, valmis 1897"
+    },
+    {
+     "url": "https://nl.wikipedia.org/wiki/Balzac_(Rodin)",
+     "mita_vahvistaa": "1891–1898, Kirjailijayhdistyksen hylkäys, sijainnit"
+    }
+   ],
+   "epavarmat": [
+    "Wikipedia sanoo mallin valetun pronssiin ensi kerran 1939, mutta KMSKA ja Musée Rodin mainitsevat varhaisemmat valokset (1931, 1935) - 1939 kirjoitettu vain Pariisin pystytyksenä",
+    "Antwerpenin valoksen valuvuosi (1930 vai 1931) ja valimo (Rudier?) - jätetty pois; vain osto 1931 varmistettu",
+    "Korkeus 273 cm (KMSKA, Middelheim-tietue) vs. 270 cm (Musée Rodinin Pariisin valos) - käytetty Antwerpenin 273 cm; sokkelin korkeus 122 cm erikseen",
+    "Rodinin lupaus 'puolessatoista vuodessa' ja 'seitsemän vuotta' - Wikipedia ja Drouot-huutokauppakatalogi, ei museolähdettä",
+    "Tilauksen tekijä: Wikipedia 'Société des Gens de Lettres'; Christie's mainitsee tilauksen jo 1885 Chapulle - jätetty pois"
+   ],
+   "puhuttu": "Rodin ei koskaan tavannut kuvaamaansa kirjailijaa: Balzac kuoli vuonna tuhatkahdeksansataaviisikymmentä, ja tilaus tuli Ranskan kirjailijayhdistykseltä vuonna tuhatkahdeksansataayhdeksänkymmentäyksi. Rodin lupasi kolmen metrin patsaan puolessatoista vuodessa mutta tarvitsi siihen noin seitsemän vuotta. Hän matkusti Balzacin kotiseudulle Tourainelle tutkimaan alueen ihmistyyppejä ja teki lukuisia tutkielmia. Katso aamutakkiin kietoutunutta hahmoa: pintaa ei ole silotettu, ja valo tuo esiin työn jäljet. Tilaaja piti teosta keskeneräisenä ja hylkäsi sen.",
+   "puhuttu_merkkeja": 557
+  },
+  "rodin-pronssikausi": {
+   "nimi_fi": "Pronssikausi",
+   "nimi_fr": "L'Âge d'airain",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "1876",
+   "materiaali": "Pronssi",
+   "mitat_cm_kork_lev_syv": [
+    182.2,
+    66.4,
+    47
+   ],
+   "skannattu_versio_kohde": "Cleveland Museum of Art, Cleveland (1918.328); pronssi, valettu 1916; mitat jalustan kanssa",
+   "lyhyt_fi": "Tämä pronssi valettiin 1916 Ralph Kingin tilauksesta. Rodin valvoi valua ja viimeisteli sen punaruskealla patinalla.",
+   "kertojan_teksti": "Rodinin patsasta epäiltiin huijaukseksi: kun se nähtiin Brysselissä tammikuussa 1877 ja pian Pariisin Salongissa, kriitikot väittivät sen valetun suoraan elävästä mallista. Mallina oli belgialainen sotilas Auguste Neyt, ja Rodin puolusti työtään tarkalla havainnoinnilla. Alun perin hahmo piti keihästä, jonka Rodin poisti. Katso, miten hahmon ele jää avoimeksi ilman asetta: sitä on kutsuttu sekä voitetuksi mieheksi että heräävän miehen kuvaksi. Kiista nosti Rodinin tunnetuksi, ja vuonna 1880 hän sai Helvetin porttien tilauksen.",
+   "puhuttu": "Rodinin patsasta epäiltiin huijaukseksi: kun se nähtiin Brysselissä tammikuussa tuhatkahdeksansataaseitsemänkymmentäseitsemän ja pian Pariisin Salongissa, kriitikot väittivät sen valetun suoraan elävästä mallista. Mallina oli belgialainen sotilas Auguste Neyt, ja Rodin puolusti työtään tarkalla havainnoinnilla. Alun perin hahmo piti keihästä, jonka Rodin poisti. Katso, miten hahmon ele jää avoimeksi ilman asetta: sitä on kutsuttu sekä voitetuksi mieheksi että heräävän miehen kuvaksi. Kiista nosti Rodinin tunnetuksi, ja vuonna tuhatkahdeksansataakahdeksankymmentä hän sai Helvetin porttien tilauksen.",
+   "lahteet": [
+    {
+     "url": "https://www.clevelandart.org/art/1918.328",
+     "mita_vahvistaa": "Clevelandin kappale: pronssi, 1875–76, mitat jalustan kanssa 182,2 x 66,4 x 47 cm, Ralph Kingin tilaama valos 1916, Rodin valvoi valua, punaruskea patina, malli Auguste Neyt, keihäs poistettu"
+    },
+    {
+     "url": "https://openaccess-api.clevelandart.org/api/artworks/?accession_number=1918.328",
+     "mita_vahvistaa": "Clevelandin avoin data: samat mitat, valmistaja A. Rudier, 1875–76, 1916 tilaus"
+    },
+    {
+     "url": "https://www.meudon.musee-rodin.fr/en/musee/collections/oeuvres/lage-dairain-meudon",
+     "mita_vahvistaa": "Musée Rodin: malli Auguste Neyt, Bryssel 1877, Salon-skandaali, keihäs poistettu, elävästä valamisen epäily, Helvetin porttien tilaus 1880, nimet Heräävä mies ja Voitettu"
+    },
+    {
+     "url": "https://www.christies.com.cn/lot/lot-193208",
+     "mita_vahvistaa": "Valmis joulukuussa 1876, Bryssel tammikuussa 1877 (L'homme vaincu), Pariisin Salonki toukokuussa 1877, valamisväite"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/The_Age_of_Bronze",
+     "mita_vahvistaa": "Mallinnettu 1876, esillä Brysselissä tammikuussa 1877 nimellä The Conquered Man, keihäs, valamisepäily, Neyt"
+    },
+    {
+     "url": "https://omeka.flo.org/fsu/s/food-study/item/9954",
+     "mita_vahvistaa": "Vuoden 1917 lehtileike: King lahjoitti täysikokoisen Age of Bronze -valoksen Clevelandille"
+    }
+   ],
+   "epavarmat": [
+    "Mitat 182,2 x 66,4 x 47 cm ovat Clevelandin nykyinen tietue (jalusta mukana); vanhempi AMICA/Rumsey-tietue antaa korkeudeksi 180,8 cm. Sama museo, joten mitat ovat todennäköisesti oikein mutta korkeuden poikkeama jäi selittämättä.",
+    "Rodinin 'henkilökohtainen valvonta' ja 'crushed grape' -patina: vain Clevelandin omat sivut (sivu, artikkeli); ei riippumatonta toista lähdettä. Ne ovat lyhyt_fi:ssä; poista jos tiukka kahden riippumattoman lähteen sääntö.",
+    "'Varhaisin säilynyt täysikokoinen veistos' (Cleveland): ei toista lähdettä, jätetty pois.",
+    "Teoksen sidonta Ranskan-Preussin sodan sankaruuteen ja kärsimykseen (Cleveland): ei toista lähdettä, jätetty pois."
+   ],
+   "puhuttu_merkkeja": 605
+  },
+  "rodin-suuri-puristunut-kasi": {
+   "nimi_fi": "Suuri puristunut käsi",
+   "nimi_fr": "Grande main crispée",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "n. 1885",
+   "materiaali": "Pronssi",
+   "mitat_cm_kork_lev_syv": null,
+   "skannattu_versio_kohde": "Fitzwilliam Museum, Cambridge (AAL.4-1981, lainakappale); pronssi, valettu 1902–1913",
+   "lyhyt_fi": "Mallinnettu n. 1884–86; tämä pronssi valettiin vuosien 1902 ja 1913 välillä. Se oli esillä Fitzwilliamin näyttelyssä 2021.",
+   "kertojan_teksti": "Rodin palasi käsiin toistuvasti koko uransa ajan: hän muotoili niitä sekä itsenäisiksi veistoksiksi että osiksi suurempia ryhmiä. Tässä puristunut käsi on irrotettu kokonaisuudesta ja saa kantaa tunteen yksin. Katso, miten sormet puristuvat nyrkkiin ja miten pinta on jätetty karheaksi, niin että työn jäljet pysyvät näkyvissä. Samanlaisen pronssikäden kiihtyneen vaikutelman on arveltu liittyvän Calais'n porvarien suunnitteluun, mutta teoksen tarkka asema Rodinin tuotannossa on jäänyt osin epäselväksi.",
+   "puhuttu": "Rodin palasi käsiin toistuvasti koko uransa ajan: hän muotoili niitä sekä itsenäisiksi veistoksiksi että osiksi suurempia ryhmiä. Tässä puristunut käsi on irrotettu kokonaisuudesta ja saa kantaa tunteen yksin. Katso, miten sormet puristuvat nyrkkiin ja miten pinta on jätetty karheaksi, niin että työn jäljet pysyvät näkyvissä. Samanlaisen pronssikäden kiihtyneen vaikutelman on arveltu liittyvän Calais'n porvarien suunnitteluun, mutta teoksen tarkka asema Rodinin tuotannossa on jäänyt osin epäselväksi.",
+   "lahteet": [
+    {
+     "url": "https://www.cam.ac.uk/stories/human-touch-fitzwilliam-museum",
+     "mita_vahvistaa": "Fitzwilliamin The Human Touch -näyttely 18.5.–1.8.2021: Grande main crispée (Mighty hand), Ranska n. 1884–86, valettu 1902–1913, pronssi, yksityiskokoelman lainassa"
+    },
+    {
+     "url": "https://www.artuk.org/discover/artworks/grande-main-crispee-267162",
+     "mita_vahvistaa": "Art UK (haun tiivistelmä, sivu 403): Grande main crispée, pronssi, 1902–1913, 46,3 x 27,2 x 24,6 cm, AAL.4-1981, lainassa, signeeraus edessä, valimomerkki takana"
+    },
+    {
+     "url": "https://cantorfoundation.org/large-clenched-left-hand/",
+     "mita_vahvistaa": "Large Clenched Hand mallinnettu n. 1885, pronssi; Rodin teki käsiä sekä itsenäisiksi veistoksiksi että osiksi suurempia teoksia"
+    },
+    {
+     "url": "https://www.inquirer.com/arts/rodin-museum-reinstallation-hands-philadelphia-20220223.html",
+     "mita_vahvistaa": "Rodin palasi käsiin toistuvasti uransa ajan ja käytti samoja käsiä eri teoksissa"
+    },
+    {
+     "url": "https://collections.vam.ac.uk/item/O111252/study-of-a-hand-statuette-rodin",
+     "mita_vahvistaa": "V&A:n pronssinen puristunut käsi, mallinnus mahdollisesti 1884–85: kiihtynyt vaikutelma viittaa yhteyteen Calais'n porvareihin"
+    },
+    {
+     "url": "https://www.famsf.org/artworks/the-mighty-hand-main-crispee",
+     "mita_vahvistaa": "San Franciscon valos 1913: rouheva mallinnus (haun tiivistelmä, sivu 403)"
+    }
+   ],
+   "epavarmat": [
+    "Mitat: vain Art UK (haun tiivistelmä) antaa 46,3 x 27,2 x 24,6 cm; Fitzwilliamin oma tietue ei hakeutunut, joten mitat jätetty null.",
+    "Skannatun kappaleen vastaavuus: oletus että Fitzwilliamin skannattu käsi on sama kuin AAL.4-1981 / vuoden 2021 näyttelyn lainakappale; ei suoraa vahvistusta.",
+    "Käden yhteys Calais'n porvareihin: V&A:n (toinen kappale) ja Fitzwilliamin näyttelytekstin (vain haun tiivistelmänä) varassa, ristiriitainen Christie'sin kanssa (Ugolino-yhteys); tekstissä vain 'on arveltu'.",
+    "Oikea vai vasen käsi: lähteet ristiriitaisia (Philadelphia: oikea; Sladmore: vasen); jätetty pois.",
+    "Rodinin 'satoja käsiä' -väite: ei varmistettu, jätetty pois."
+   ],
+   "puhuttu_merkkeja": 505
+  },
+  "rodin-calaisin-porvarit": {
+   "nimi_fi": "Calais'n porvarit",
+   "nimi_fr": "Les Bourgeois de Calais",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "1884",
+   "materiaali": "Pronssi",
+   "mitat_cm_kork_lev_syv": null,
+   "skannattu_versio_kohde": "Kunstmuseum Basel, sisäpiha; pronssivalos 1943, asennettu 1948",
+   "lyhyt_fi": "Calais tilasi muistomerkin 1884, ja se valmistui 1889. Baselin valos tehtiin 1943 ja se asennettiin 1948.",
+   "kertojan_teksti": "Rodin halusi Calais'n porvarien seisovan joko kadun kivetyksellä tai hyvin korkealla taivasta vasten, mutta kaupunki asetti ryhmän jalustalle, kun se pystytettiin vuonna 1895. Kuusi miestä lähti vuosina 1346 ja 1347 kestäneen piirityksen päätteeksi luovuttamaan kaupungin avaimet Englannin kuninkaalle. Katso heidän kaulaansa sidottuja köysiä ja käsissä pidettyjä avaimia: jokaisella on oma asentonsa, ja Musée Rodinin mukaan ne vaihtelevat epätoivosta alistumiseen. Ryhmän on kuvattu aloittavan hitaan, hautajaiskulkuetta muistuttavan marssin.",
+   "puhuttu": "Rodin halusi Calais'n porvarien seisovan joko kadun kivetyksellä tai hyvin korkealla taivasta vasten, mutta kaupunki asetti ryhmän jalustalle, kun se pystytettiin vuonna tuhatkahdeksansataayhdeksänkymmentäviisi. Kuusi miestä lähti vuosina tuhatkolmesataaneljäkymmentäkuusi ja tuhatkolmesataaneljäkymmentäseitsemän kestäneen piirityksen päätteeksi luovuttamaan kaupungin avaimet Englannin kuninkaalle. Katso heidän kaulaansa sidottuja köysiä ja käsissä pidettyjä avaimia: jokaisella on oma asentonsa, ja Musée Rodinin mukaan ne vaihtelevat epätoivosta alistumiseen. Ryhmän on kuvattu aloittavan hitaan, hautajaiskulkuetta muistuttavan marssin.",
+   "lahteet": [
+    {
+     "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/monument-burghers-calais-0",
+     "mita_vahvistaa": "Tilaus 1884, valmis 1889, asennettu Calais'ssa 1895; kuusi yksilöllistä hahmoa, köydet kaulassa, avaimet, hidas hautajaiskulkue; Rodin halusi korkealle tai kadun kivetykselle; Pariisin kappale H. 217 cm"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/The_Burghers_of_Calais",
+     "mita_vahvistaa": "Tilaus 1884, valmis 1889, 12 alkuperäistä valosta; Basel valettu 1943 ja asennettu 1948; Rodin halusi ilman jalustaa, Calais'n asennus 1895 suurella jalustalla; Froissart: köydet ja avaimet"
+    },
+    {
+     "url": "https://www.european-traveler.com/switzerland/visit-the-kunstmuseum-basel-switzerlands-top-art-museum/attachment/rodin-burghers-of-calais-in-basel",
+     "mita_vahvistaa": "Baselin valos valettu 1942/43, seitsemäs kahdestatoista, museon sisäpihalla"
+    },
+    {
+     "url": "https://sothebys.com/museum/kunstmuseum-basel",
+     "mita_vahvistaa": "Seitsemäs valos seisoo Kunstmuseum Baselin sisäpihalla"
+    },
+    {
+     "url": "https://www.nga.gov/artworks/1006-burgher-calais-jean-daire",
+     "mita_vahvistaa": "Hahmot paitasillaan, köysi kaulassa, kaupungin avaimet käsissä (haun tiivistelmä)"
+    }
+   ],
+   "epavarmat": [
+    "Baselin valoksen mitat: ei löytynyt; Pariisin kappale H 217 x L 255 x S 197 cm ja Wikipedia 201,6 x 205,4 x 195,9 cm eroavat toisistaan, joten null.",
+    "Baselin valoksen valimo ja lahjoitushistoria: ei löytynyt.",
+    "Valuvuosi: 1943 (Wikipedia) vs 1942/43 (matkaopas); käytetty 1943.",
+    "Asennusvuosi 1948: vain Wikipedia.",
+    "Lause 'kuvattu aloittavan marssin' perustuu Musée Rodinin omaan kuvaukseen; muuta riippumatonta lähdettä ei haettu.",
+    "Eustache de Saint-Pierre ja Jean de Vienne nimetty ei tekstissä; Jean de Vienne ei varmistettu."
+   ],
+   "puhuttu_merkkeja": 642
+  },
+  "rodin-kolme-haamua": {
+   "nimi_fi": "Kolme haamua",
+   "nimi_fr": "Les Trois Ombres",
+   "tekija": "Auguste Rodin (1840–1917)",
+   "vuosi": "n. 1886",
+   "materiaali": "Pronssi",
+   "mitat_cm_kork_lev_syv": null,
+   "skannattu_versio_kohde": "Cantor Arts Center, Stanford (Rodin Sculpture Garden); pronssi, tarkka kappale ja koko varmistamatta",
+   "lyhyt_fi": "Suunniteltu ennen vuotta 1886. Pronssivaluja on useissa museoissa, mm. Pariisissa ja Philadelphiassa.",
+   "kertojan_teksti": "Rodin kokeili useita yksittäisiä varjohahmoja, ennen kuin päätyi kolmeen samanlaiseen hahmoon, jotka kokoontuvat saman pisteen ympärille. Ryhmä tehtiin alun perin Helvetin porttien huipulle katsomaan alas katsojaan. Danten Jumalaisessa näytelmässä varjot ovat kadotettujen sieluja. Katso päiden asentoa: ne painuvat niin alas, että ryhmän ylälinja asettuu lähes vaakasuoraan. Myöhemmin Rodin teetti ryhmästä suurennoksen, josta tuli itsenäinen monumentti.",
+   "puhuttu": "Rodin kokeili useita yksittäisiä varjohahmoja, ennen kuin päätyi kolmeen samanlaiseen hahmoon, jotka kokoontuvat saman pisteen ympärille. Ryhmä tehtiin alun perin Helvetin porttien huipulle katsomaan alas katsojaan. Danten Jumalaisessa näytelmässä varjot ovat kadotettujen sieluja. Katso päiden asentoa: ne painuvat niin alas, että ryhmän ylälinja asettuu lähes vaakasuoraan. Myöhemmin Rodin teetti ryhmästä suurennoksen, josta tuli itsenäinen monumentti.",
+   "lahteet": [
+    {
+     "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/three-shades",
+     "mita_vahvistaa": "Useita tutkielmia, kolme samanlaista hahmoa saman pisteen ympärillä, aluksi Helvetin porttien huipulla katsomassa alas, myöhemmin suurennettu itsenäiseksi monumentiksi, Danten kadotetut sielut, ennen 1886, pään jyrkkä kallistus; Pariisin pronssi 97 x 91,3 x 54,3 cm, Alexis Rudier 1928"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/The_Three_Shades",
+     "mita_vahvistaa": "Kipsi 1886, Helvetin porttien huippu katsomassa alas, useita tutkielmia, päät roikkuvat alhaalla, pronssivaluja mm. Stanford, Philadelphia"
+    },
+    {
+     "url": "https://learn.ncartmuseum.org/artwork/the-three-shades",
+     "mita_vahvistaa": "Mallinnettu n. 1886, suurennettu n. 1901; kolme identtistä hahmoa, vasemmat käsivarret yhtyvät keskellä; suurennos 191,8 x 191,8 x 106,7 cm"
+    },
+    {
+     "url": "https://museum.stanford.edu/node/138",
+     "mita_vahvistaa": "Stanfordin Three Shades (Les Ombres) 1881–1886, pronssi, valettu 1978, 1998.360"
+    },
+    {
+     "url": "https://frenchsculpture.org/index.php/Detail/objects/33309",
+     "mita_vahvistaa": "Stanfordin 1998.360: 8/12, hiekkavalu, 38 1/2 x 35 1/2 x 17 3/4 tuumaa (haun tiivistelmä, sivu 403)"
+    }
+   ],
+   "epavarmat": [
+    "Skannattu kappale: Rodin Sculpture Gardenissa on Cantorin tietokannan mukaan suurennettu 'Three Large Shades' (1992.158, jälleenvalu 1979/80); 1998.360 on pienempi kappale (38 1/2 x 35 1/2 x 17 3/4 in = n. 97,8 x 90,2 x 45,1 cm). Mitat jätetty null koska kappale on varmistamatta; tarkista skannauksen kuvauksesta.",
+    "Dante: Jumalaisen näytelmän lause 'tekivät itsestään pyörän' inspiraationa (NCMA): vain yksi lähde, jätetty pois.",
+    "Yhteys Michelangelon Aatamiin (Musée Rodin) ja Metin 'pienoisversio Aatamista': lähteet ristiriitaisia, jätetty pois.",
+    "Suurennoksen vuosi n. 1901 vain NCMA; Musée Rodin ei anna vuotta, jätetty pois.",
+    "Vuosi: 'ennen 1886' (Musée Rodin), 1886 (Wikipedia, NCMA), 1881–86 (Stanford, Met); käytetty n. 1886."
+   ],
+   "puhuttu_merkkeja": 455
+  }
+ }
+}

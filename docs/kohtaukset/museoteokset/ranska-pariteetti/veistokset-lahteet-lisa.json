@@ -1,0 +1,23 @@
+{
+ "huomio": "Louvren veistosten (Pariisin museo) skannauslähteet pelin Tekijätietoihin: lisää proton ranska/veistokset.json lahteet[]-listaan (LR:n LAHTEET.md 17.10.2026). Nimeäminen pakollinen Nike (CC BY 4.0); Venus CC0, nimetään silti.",
+ "lahteet": [
+  {
+   "patsas": "louvre-ma-2369",
+   "teos": "Samothraken Nike (Winged Victory of Samothrace), kipsivalos, Skulpturhalle Basel",
+   "tekija": "Cosmo Wenman",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Skulpturhalle Basel (kipsivalos, skannattu 9/2013)",
+   "nimea": "Skannaus: Cosmo Wenman, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/winged-victory-of-samothrace-4edd6459f2834e7ab0b395e71cee2513"
+  },
+  {
+   "patsas": "louvre-ma-399",
+   "teos": "Milon Venus (Venus de Milo), kipsivalos KAS434/1",
+   "tekija": "SMK – National Gallery of Denmark",
+   "lisenssi": "CC0",
+   "kohde": "Kuninkaallinen valoskokoelma, SMK Kööpenhamina",
+   "nimea": "Skannaus: SMK – National Gallery of Denmark, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/venus-de-milo-aphrodite-of-milos-53082b5d6cef4c34a9701a2a24f58075"
+  }
+ ]
+}
