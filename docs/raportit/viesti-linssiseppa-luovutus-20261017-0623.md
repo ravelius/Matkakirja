@@ -5,7 +5,7 @@ Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto (paikalliset haarat, ei
 Viestit AINA send_message id:llä: PT local_5df52e10-10e4-4b72-9554-0049db300dfe (≤ 3 riviä), Julkaisija local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914,
 NS local_674b9ec4-e2f3-48e9-a810-a129f20a4f03. JU 05.48: junan 199 L2-käännökset vasta LUKITSE 198:n (~06.45) jälkeen.
 
-## 1. ENSIMMÄISEKSI: KAASUVIPU ODOTTAA KK:N OK:TA
+## 1. KAASUVIPU NS:LLÄ (päivitys 06.3x: KK OK, 792952911 lähetetty NS:lle junaan 199; PT:lle JONO TYHJÄ)
 - Haara linssiseppa/laivavipu-199 (worktree wt/proto-linssiseppa-vipu): a65421671 = luonnos (LaivaVipu.cs + OpasTapit + `ui opasvalikko
   laivavipu 1|0`), 792952911 = kytkin oletukseksi päälle. PT 06.2x: kuvapari OK, viety KK:lle. **Kun KK OK tulee (PT:n kautta):
   lähetä 792952911 NS:lle junaan 199.** Ennen sitä EI NS:lle.
@@ -33,4 +33,4 @@ NS local_674b9ec4-e2f3-48e9-a810-a129f20a4f03. JU 05.48: junan 199 L2-käännök
 
 ## ALOITUSVIESTI SEURAAJALLE
 Olet Linssiseppä (Opus, high). Lue CLAUDE.md ja tämä luovutus (git show <sha>:docs/raportit/viesti-linssiseppa-luovutus-20261017-0623.md).
-Ensin: kysy PT:ltä, onko KK hyväksynyt kaasuvivun → jos on, 792952911 NS:lle junaan 199. Sitten jono PT:ltä.
+Jono tyhjä (PT:lle ilmoitettu 06.3x) → odota PT:n seuraavaa erää.
