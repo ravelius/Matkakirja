@@ -23,3 +23,17 @@ Valmiina ovat Kiinan kartan nimiöt (Chang'an, HAN, XIONGNUT), jotka KiinaKerros
 ## Huomio
 
 KEHYS-KÄÄRÖ-pohjan "sijainti" on nyt "turva-alueen sisällä". Korjauksessa 152969190 rullat ovat linssin ylärivin ja filminauhan välissä, koska 11.28-simussa ne jäivät niiden alle. Teksti päivitetään tyylikirjaan, jos PT hyväksyy.
+
+## 3. Omistaja 11.55 kumosi 11.46:n: otsikko vain yläreunaan (UI-POHJAT-kysymys)
+
+VAIHDOS peruttu: proto natiivi-ui/kaaro-rajat-200 bfe52e6e9 = rullien rajat (152969190) + tyylikirjan sijainti, ei VAIHDOSta;
+web-PR #4803 vain sijainti.
+
+Yläpalkki nyt (AikajanaNakyma, Linssit.uss): kello = vuosi 21,6–30,4 pt (Kone) – riittää isoksi. Otsikkorivi = linssin nimi
+KIINAN DYNASTIAT typografia.kapiteeli 12 pt accent ja toinen rivi apuri; nimikyltti häivyttää molemmat ~3 s:n jälkeen.
+Dynastian nimi ei siis näy isona eikä pysyvästi ilman tyylimuutosta.
+
+**Suositus:** Kiinan linssissä otsikkorivin teksti = nykyinen päädynastia (esim. "Sui") typografialla otsikko (21 pt LukuLihava,
+olemassa oleva koko), teema tumma muste, pysyvästi näkyvissä (ei nimikyltin häivytystä tässä linssissä); linssin nimi pois palkista
+(esittelyssä ja valikossa se näkyy). Vaihtuessa uusi nimi tulee kortti-avauksella ja kartan sinettileima lyödään kuten nyt.
+Kello ennallaan. Uutta tyyliä ei tarvita, mutta otsikkorivin koko ja pysyvyys ovat aikajanapalkin variantti → hyväksyntä ensin.
