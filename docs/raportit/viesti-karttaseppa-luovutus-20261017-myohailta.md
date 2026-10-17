@@ -44,6 +44,10 @@ fast-forwardattu kiina-paketti-200:aan, peili päivitetty. v3-käännös oli jo 
 jos v3 sisältää 269f285d8:n, aja v3.
 **JU 19.2x VAHVISTI:** v3 EI sisällä 269f285d8:aa → v4 (269f285d8) odottajana heti v3:n perään → `kiina-selkea-19-v4-app`;
 SIMU NYT tulee VAIN v4:lle (~19.45). v3:a ei simuloida. `odota-selkea-19-v4.zsh` valmiina.
+**TILA 19.5x: KOHTA 1 TEHTY.** v4 ajettu 19.35–19.45 (käännös 3deebd6dc ⊇ 269f285d8), SIMU VAPAA JU:lle 19.45. Video PT:lle:
+`proto-3d/lokit/todistus-kiina-selkea-19-v4-20261017-1935/kiina-koko-omistajalle.mp4` (6.40). Puutteet (PT:lle kerrottu): 250 armeija/isku ei erotu,
+pinta ei laskeudu tasaiseksi ennen siirtoa, harmaat haamualueet lännessä; siirtymissä 166/296/441 läikikäs pinta; harha "e2"-teksti Taiwanin kohdalla 1100→.
+SEURAAVAKSI: odota PT:n/omistajan palautetta videosta. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
