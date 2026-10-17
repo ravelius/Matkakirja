@@ -29,7 +29,12 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt
 - **Mac 200** TF 39062841407 success 22.38, sisäisellä ryhmällä (Mac-workflow'n oma askel). Mac-buildeja EI jaeta ulkoisille
   (testflight-ulkoinen.yml vain IOS 11.10. alkaen; muutos = PT:n linjaus). **JUNA 200 VALMIS**, rivi PT:lle lähetetty.
 
-## 2. SIMUJONO / L2
+## 2. SIMUJONO / L2 (tila 23.15)
+- **Simulla nyt NUI** (omistajan pyyntö 22.52: maakunta-suoraan 65cb17d60 + lasipohja 87945e5ca, ~15 min, 23.06→); NUI kuittaa SIMU VAPAA.
+- **LS pyramidin terävä varjo** (omistaja 22.27): orsay-valinnaiset-200 22ce38984 → KÄÄNNETTY ede9300ba 23.11 (LS:n oma odottaja) → LS pyytää
+  SIMU NYT (iPhone BD64C8E4 ~4 min) → anna NUI:n jälkeen ENSIMMÄISENÄ (LS odottaa sitä ennen omaa luovutustaan).
+- L2 nyt: NUI kehyshaivytys-201 4c52e5b79 (omistajan ehdotus 23.02, 23.11→) → NUI pyytää < 1 min video (Kip + ISS).
+- Järjestys NUI:n jälkeen: LS pyramidi → galleria 4b (valmis) → juoksupeli 99a83b3d9 (L1, kääntämättä) → KS taistelu v5 (kääntämättä) → NUI kehysvideo valmiusjärjestyksessä.
 - Nyt simulla: **KS taistelu-250-v4** (e1babe602, ~4 min, 22.35→). Sitten juoksupeli (kohta 0). Muut: valmiusjärjestys.
 - L2: NUI lasipohja-201 e6b7efe36 (`lasipohja-201-perassa.zsh`, jonottaa vasta kun L2 tyhjä) → NUI pyytää SIMU NYT itse (~6 min).
 - LS ja VS pyytävät simuja itse; KS:n taistelukokeet eivät mene junaan.
