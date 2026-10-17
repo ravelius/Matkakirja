@@ -59,6 +59,23 @@ Erottelu: kysy PT:n kautta omistajalta näkyvätkö raketti, torni ja Pariisin p
 SEURAAVAKSI: korjaa ehdokas 1 (todennäköisin, halpa ja vaaraton: kuvan renderöinti varmaksi) + testi (Kartta-/Linssit-testi Askel-logiikalle
 tai simuajo levossa: odota ~10 s ilman liikettä ennen kuvaparia), kuvapari huntu | ilman 1:1 → PT. Kysy samalla PT:ltä erottelukysymys.
 
+**LISÄYS 23.3x — omistaja 23.09 (PT): TF 200:ssa raketti, Olavinlinnan torni ja Pariisin pallo NÄKYVÄT; vain muiden kohdekaupunkien pallot puuttuvat.**
+→ Ehdokas 3 (lista) kumottu: palvelin `/opas/aineistot` palauttaa ilman koodia 44 kaupunkia (curl otsakkeella `x-matkakirja-natiivi: app.matkakirja.proto3d`;
+koodilla/giza 46). Pariisi = kehityskaupunki (värillinen `kuva`, `Aina`), muut = kipsipallot (`kipsiKuva`, ja ne tulevat listaan vain
+`KaupunkiPalloMitat.Mukana(kehityskaupunki, Asetukset.Kehittaja)`-ehdolla, KaupunkiPallot.cs:173). Jäljelle jäävät:
+- **A (todennäköisin):** `Asetukset.Kehittaja` on TF:ssä epätosi Rakenna-hetkellä, vaikka omistaja on "kehittäjätilassa" — esim. **testaajakoodi**
+  (Asetukset.Testaaja: Paavalikko.Maailma = tosi → huntu/maailmanäkymä toimii, mutta Kehittaja = epätosi → Mukana suodattaa kipsipallot pois, ja
+  Himmea käyttää `pelaajanNakyma || kehittaja`). Simussa Kehittaja = Debug.isDebugBuild → aina tosi, joten simu ei näe tätä.
+- **B:** kipsikuvan renderöinti epäonnistuu vain releasessa (KaupunkiPalloKuva.cs kipsi: Harmaaksi + `_Savy` = AjattelijaPaat.Savy; kamera sammuu
+  3. Updatella, ks. ehdokas 1 yllä). Värillinen kuva toimii, joten B vaatisi kipsi-polun eron.
+Erottelu PT:n kautta: näkyykö omistajalla ☰ › Asetukset › Kehittäjä "päällä" ja Kehittäjätyökalut-rivi (A: testaaja → ei Kehittäjätyökaluja)?
+**Korjaus (molemmat halpoja, tee kumpikin):** (1) KaupunkiPallot.Rakenna/Ruutu: kipsipallot mukaan myös `Paavalikko.Maailma` (kattaa testaajan) —
+`Mukana(k, kehittaja || Paavalikko.Maailma)` ja Himmea-ehto `pelaajanNakyma || kehittaja || Paavalikko.Maailma`; tarkista että Tarkista() rakentaa
+uudelleen myös Maailma-muutoksesta; (2) KaupunkiPalloKuva: `kamera.Render()` kerran Rakennan lopussa (ehdokas 1). Testi Kartta-testeihin:
+Mukana/Himmea testaajalle (maailmatila ilman Kehittaja-lippua) + simuajo `ui pelaaja 1` -tyyppisellä pakotuksella, jos testaajan voi pakottaa.
+Huom. KaupunkiPallot.cs on UI/** (Natiivi-UI:n kansio): kerro NUI:lle yhdellä rivillä ennen committia.
+Macin TF-asennus (~/Library/Containers/app.matkakirja.proto3d) on 16.10. vanha eikä siinä ole kehittäjäavainta → ei todistetta omistajan iPadista.
+
 ## 2. KIINA: 250-taistelukoe (omistaja 19.59 "Kyllä, vain taisteluihin (Suositus)"; linja 2 kärki, juna 201)
 
 Tila: v5-käännös `0bf177c8b` kirjattu Julkaisijalle → `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kiina-taistelu-250-v5-app` (seuraaja kääntää).
