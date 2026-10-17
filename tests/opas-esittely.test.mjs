@@ -256,7 +256,7 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
   assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v4/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v2/praha-yksityiskohdat.json', wien: 'esittely/wien-v2/wien-yksityiskohdat.json',
     rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
-    koopenhamina: 'esittely/koopenhamina-v9/koopenhamina-yksityiskohdat.json',
+    koopenhamina: 'esittely/koopenhamina-v10/koopenhamina-yksityiskohdat.json',
     venetsia: 'esittely/venetsia-v2/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v2/barcelona-yksityiskohdat.json',
     berliini: 'esittely/berliini-v3/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v2/amsterdam-yksityiskohdat.json',
     madrid: 'esittely/madrid-v2/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v2/ateena-yksityiskohdat.json',
