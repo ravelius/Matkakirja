@@ -40,7 +40,7 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus -20261017-1721 (de8fc420
      Seepiaksi(Texture2D) KaupunkiPalloKuva.Harmaaksi():n viereen, kutsu Rakenna():ssa kun !kipsi && Karttaesineet.Yhtenainen ja malli
      raketti/torni/museo (ei ilmapallo, Louvren lasi ennallaan). Galleria luo B-kuvat uudelleen kytkimen vaihtuessa. POISTA, kun VS:n haara
      on mukana (ramppi vain yhdessä paikassa).
-  d) LR halusi kermataustan (230,216,186) + PNG:n: nykyinen galleria on oikean karttakameran päällä (todellinen ilme ja koko) – kerro LR:lle,
+  d) RATKAISTU (LR 19.5x): karttatausta parempi kuin kerma (todellinen ilme) → ei kermaa. (Alkuperäinen: LR halusi kermataustan (230,216,186) + PNG:n: nykyinen galleria on oikean karttakameran päällä (todellinen ilme ja koko) – kerro LR:lle,
      tarvitaanko kerma (esim. Cesium-laatat piiloon `pallo pohja paljas paalle` = Kartta/Komennot.cs, ei peli-komento).
   e) Uusi sha → JU: iPad-simukäännös + /Users/Shared/Claude/proto-3d/tyokalut/pelikoodari-ajot/sk-galleria.txt (simussa `kuva` tallentaa) →
      arkki-kuvapari LR:lle (LR vie PT:lle). JU:lle sanottu "d7ccd9e71 SEIS, uusi sha tulossa".
