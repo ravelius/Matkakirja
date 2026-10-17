@@ -505,3 +505,4 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
   .vali-app palautettu. Skenaarion opit: museon lista ei aina tarjoa "Siirry näyttelyyn"; seikkailu tarvitsee oman ajon puhtaasta alusta.
 - 04.47: PT kuittasi mittauksen, lähetti 0bfc62868 NS:lle junaan 198; seikkailuajoa ei tarvita. **JONO TYHJÄ.** Auki NS:llä: c25ed3049 (v6) ja
   0bfc62868 junaan 198 → kun rungossa, poista worktreet wt/proto-siirtoseppa-luennat6 ja wt/proto-siirtoseppa-aanipohja sekä _tyo/siirtoseppa/aanipohja-197-app.
+- 04.50: SEIKKAILU EI KÄYNNISTYNYT = AJURIN VIKA, ei pelin: peli avasi alun valinnan (olavinlinna-alku: valinta), mutta todistusajo.sh:208/219 tap-teksti ei poista vanhaa ui-puu.json:ia ja odottaa kiinteät 1,5 s → kuormassa luki edellisen puun (71 el. museosta 04.29; oikea 04.38 puu 31 el.); sama selittää museon puuttuvan "Siirry näyttelyyn". Korjaus NS:n työkaluun: rm -f + odota tiedostoa kuten rivit 283–284.
