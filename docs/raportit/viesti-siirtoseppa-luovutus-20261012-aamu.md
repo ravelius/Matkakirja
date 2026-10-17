@@ -550,5 +550,5 @@ KYLLÄ → uusi proto-worktree juna-199:n päälle, Paikat-muutos + Linssit-test
   (ei lentoa), joten Harrison/Kansallisteatteri eivät soi (PT:lle kerrottu). JONO TYHJÄ. Kun fa6e55bdc rungossa: poista worktree historia200.
 - 20.4x: historia200-worktree poistettu (fa6e55bdc rungossa 1b9031235). Uusi erä (omistaja 20.32 PT:n kautta): **kaupunkimaisema-v3 18b3accd3**
   (siirtoseppa/kaupunkimaisema-v3-200, wt/proto-siirtoseppa-maisema200) → NS junaan 200. Kolmas manifesti PalloAanimaisemaSoitin.Juuret,
-  omat silmukat PalloAanimaisema.OmaTaso (0,45, kaskaat 0,30). AUKI: ÄÄ:n tasovahvistus (kysytty 20.3x) → poikkeama = OmaTaso-rivi + testi.
+  omat silmukat PalloAanimaisema.OmaTaso (0,45, kaskaat 0,30). ÄÄ hyväksyi tasot; kärki 57d01c52b (katu/vanhakaupunki omina silmukoina: ei äänikarttaa → liikenne_hiljainen ei soi; kartan tultua Korvaa). PT kuittaa NS:lle.
   Kun rungossa: poista worktree maisema200.
