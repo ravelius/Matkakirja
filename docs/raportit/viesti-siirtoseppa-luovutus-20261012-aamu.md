@@ -528,3 +528,13 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
 - 07.47: **luentamanifesti v7 f7977522a** (siirtoseppa/luennat-v7-199, juna-199 0e530f7e9 päällä; worktree wt/proto-siirtoseppa-luennat7): ManifestiOletus → v7
   (ÄÄ 4727a55c7, 9 241 palaa), kultainen v7 (v6 pois); kaikki 8 574 pyyntöä osuvat (maalehdet 1 141/1 141). Peli 592/592, unity 0. PT + NS + ÄÄ. JONO TYHJÄ.
   Uusi versio: aja Peli-testit/Kultaiset/tee-valmisluennat-kultainen.mjs (vaihda versio skriptissä), päivitä ManifestiOletus + testin vakiot.
+
+## PÄIVITYS 17.10. 07.53 — NOLLAUS (Postivahti, kova raja 36 %): JONO TYHJÄ
+
+**Valmis tänä aamuna (kaikki PT:lle ja NS:lle ilmoitettu; omistaja 07.20 yhdisti junat → juna 199):**
+luentamanifesti v6 c25ed3049 (rungossa) ja **v7 f7977522a** (odottaa NS:ää), äänipohjan laitemittaus 0bfc62868 (rungossa), todistusajon tuore ui-puu d6578a2cc
+ja äänivahdin aukko 0a3c4b09c (NS:n rungossa), Louvren lähestymisäänet **180761d6e** (LS c8c6bff49 + 1), Alankomaiden patsaslähteet 70d25ff4f (rungossa 0e530f7e9).
+
+**Seuraajalle:** ei avointa erää. Tarkista NS:ltä, onko 180761d6e ja f7977522a juna 199:n rungossa; kun ovat, poista omat worktreet
+(wt/proto-siirtoseppa-{luennat6,luennat7,aanipohja,todistusajo,aanivahti199,louvre-aanet,patsaslahteet}) ja _tyo/siirtoseppa/{aanipohja-197-app,siirto-198-1-app}.
+Sitten rivi PT:lle "JONO TYHJÄ: Siirtoseppä". Työkalut: tyokalut/siirtoseppa-ajot/{ajo-aanipohja-mittaus.zsh, verho.py, skenaariot/sk-aanipohja-mittaus.txt}.
