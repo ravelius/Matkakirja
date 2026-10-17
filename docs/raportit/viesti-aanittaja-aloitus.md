@@ -49,3 +49,6 @@ Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261014.md (osio "PÄIVITYS 1
 
 ## Päivitys 15.10.2026 klo 16.3x (nollaus 27 %)
 Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261015.md (ja -20261014.md). Osoitteet: PT local_5df52e10…, Postivahti local_a24c43c0…, PK local_7fcab04b…, KK local_dfa7296a…. Ei uusia töitä ennen PT:n käskyä.
+
+## Päivitys 18.10.2026 klo 00.4x (luovutus -20261018)
+Ajantasainen tila ja säännöt: `viesti-aanittaja-luovutus-20261018.md`. Uusi pysyvä sääntö: ElevenLabs-runkoon aina `language_code: 'fi'` (tools/elevenlabs-kieli.mjs, testi tests/eleven-kielikoodi.test.mjs; omistaja 17.10. 23.04). Whisper-tarkistus venv-aaniluokitin + whisper-small (transformers).
