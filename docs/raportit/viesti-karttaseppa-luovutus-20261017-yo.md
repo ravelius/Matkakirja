@@ -1,58 +1,77 @@
-# Karttasepän luovutus 17.10.2026 klo 00.4x (Postivahti: kova raja 35 %)
+# Karttasepän luovutus 17.10.2026 klo 23.0x (Postivahti: kova raja 40 %)
 
 Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` session id:llä tiedostosta
-`/Users/Shared/Claude/osoitekirja.md`, PT:lle ≤ 3 riviä. Edellinen luovutus: `viesti-karttaseppa-luovutus-20261016-ilta2.md` (fe17c5285).
+`/Users/Shared/Claude/osoitekirja.md`, PT:lle ≤ 3 riviä. Edellinen luovutus: `viesti-karttaseppa-luovutus-20261017-myohailta.md`
+(sama haara; siinä koko illan TILA-rivit ja kaikki skriptipolut).
 
 ## Aloitusviesti uudelle sessiolle
 
 > Olet Karttaseppä (Opus, high). Lue CLAUDE.md ja `git show <SHA>:docs/raportit/viesti-karttaseppa-luovutus-20261017-yo.md`
 > KOKONAAN (haara karttaseppa-tyo-20260922). Viestit send_messagella id:llä (osoitekirja.md), PT:lle ≤ 3 riviä. JATKA KOHDASTA 1.
 
-PT jakoi yöllä NUI:n kuormaa Karttasepälle: natiivin proto-gitin haaroja (proto-3d/Matkakirja-proto, worktreet wt/proto-karttaseppa-*).
-Käännökset ja simut VAIN Julkaisijan vuorolla (KÄÄNNÖS NYT / SIMU NYT, yöllä 1 simu kerrallaan); ilmoita KÄÄNNETTY ja SIMU VAPAA.
-Junaan (Natiiviseppä local_674b9ec4-…) vasta omistajan ok:n jälkeen (PT ilmoittaa); NS tietää, että haarat odottavat.
+Käännökset ja simut VAIN Julkaisijan jonon kautta (KÄÄNNÖSPYYNTÖ → KÄÄNNETTY → SIMU NYT → SIMU VAPAA). Julkaisija nollautui ~23.00:
+**seuraajan id osoitekirjasta**. Proto-worktree: /Users/Shared/Claude/wt/proto-karttaseppa-iss-reitti-198 haaralla
+**karttaseppa/kiina-paketti-200** (peili `git push natiivi-backup karttaseppa/kiina-paketti-200:peili/proto/karttaseppa/kiina-paketti-200`).
+Testit: `bash Linssit-testit/kaanna.sh` (bash), `bash Kartta-testit/kaanna.sh`, tarkistus `zsh tyokalut/tarkista.sh`.
+Todistusajon PUUTE "kaannos.txt ≠ sha" on aina käännöspalvelun merge-sha (tarkista `git merge-base --is-ancestor`).
 
-## 1. AVOIN: pienoismallien maavarjo (omistajan bugi 16.10. 22.18; KK ei hyväksynyt 103105f6d:tä)
+TYÖTAPA (PT 21.5x / omistaja 22.02): jokainen ruutu katsotaan TÄYSIKOKOISENA (rajatut 1:1-kehykset, ei vain arkki) ennen PT:lle lähettämistä.
+Paikallaan pysyvä muutos → kuvapari; liike → < 1 min pätkä (`zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kiina-koko-linssi/patka.zsh
+<todistuskansio> <alku s> <kesto s>`); koko video vain omistajan pyynnöstä.
 
-- Haara `karttaseppa/vihjeet-198` (wt/proto-karttaseppa-vihjeet-198, natiivi-backupissa), kärki **cbd0ad793** = NUI 21a0e6f6f
-  (pienet kuin kuvamerkit, lähennys ≤ 1,45, kiinni kartassa KameranJalkeen + MaxSiirtoKartta 0) + oma varjokorjaus:
-  KK: "suorakulmainen laikku kovilla reunoilla" (Bagdad, Teheran). Syy: gaussinen reuna laskettiin ellipsin lyhyemmän akselin
-  mittakaavassa → vaakasuunnassa 3,6 × liian pitkä, leikkautui kuvan reunaan. Nyt gaussinen soikio (VihjeVarjo.Pehmeys 0,5,
-  Ulottuma 1,6) + reunaikkuna nollaan (Aloitusvihjeet.cs Piirros). tarkista.sh 0 virhettä. EI VIELÄ KÄÄNNETTY.
-- Julkaisija kääntää itse kääreellä `/Users/Shared/Claude/julkaisija-tyokalut/karttaseppa-yo-20261017.zsh` (älä jonota itse):
-  raketin jälkeen ensin vihjeet-198 → app `proto-3d/_tyo/karttaseppa/vihjeet-198-v2-app`, sitten iss-rajat-197.
-- Kun KÄÄNNETTY: pyydä Julkaisijan seuraajalta SIMU NYT F7513985 (~3 min) → aja
-  `zsh proto-3d/_tyo/karttaseppa/vihjeet-198/ajo-vihjeet-paikoilla-198.zsh <app-kansio> F7513985-C8BC-4E97-8D29-9C9BD420E962 ipad karttaseppa/vihjeet-198 jalkeen`
-  HUOM: skriptissä simuportti: luo ensin `_tyo/karttaseppa/vihjeet-198/simu-nyt-ipad` (on jo olemassa) ja `simu-nyt-iphone`
-  (on jo olemassa; jälkeen-ajo odottaa sitä vain jos haara.txt:ssä on "lasi" — poistettu 00.4x, ei odota).
-- Lähikuva SAMASTA rajauksesta kuin KK: V1-koko-alue (raaka 1668×2420), x 960–1260, y 1020–1220 (vrt. vanha
-  `proto-3d/lokit/todistus-vihjeet-paikoilla-jalkeen-ipad-198-20261017-0019/kuvat/raaka/V1-koko-alue.png`) → SUORAAN KK:lle
-  (local_dfa7296a-…) + PT:lle. Tavoite: pehmeä soikio, tummin juurella, ei suoria reunoja missään zoomissa.
-- Jos ei ehdi ennen lukitusta (~01.45): pienoismallit vanhalla varjolla tai seuraavaan junaan, EI väliaikaista poikkeamaa (PT).
-- Raportti ja videot: `proto-3d/_tyo/karttaseppa/vihjeet-198/RAPORTTI.md`. Koko pallossa Teheran ja Grönlanti piiloon (ei tilaa) —
-  kerrottu PT:lle; vihjeet.json ei tarvinnut muutoksia.
+## 1. ENSIN: OMISTAJAN PYYNTÖ 22.52 — kehittäjätilan kohdekaupunkipallot kadonneet (PT: ennen Kiinaa; juna 201)
 
-## 2. AVOIN: ISS-pienoispallon rajat (omistaja 17.10. 00.12 PT:n kautta)
+Omistaja: "kehittäjätilassa kohdekaupungit ovat taas kadonneet näkyvistä. pitäsi näkyä hunnulla ja ilman." Tavoite: kehittäjätilassa kaikki
+kohdekaupunkipallot aina näkyvissä, hunnulla (pelaajan näkymä) muiden maiden pallot himmeinä (napautus = maailmahyppy), ilman huntua täysinä
+(KaupunkiPalloMitat.Himmea/Nakyy; 184.1-korjaus a000eadfe + 14aa9f4aa 12.10.). PT: etsi syy BUILD 200:sta (01540e13a) + automaattinen testi,
+joka kaatuu jos pallot puuttuvat kehittäjätilassa hunnulla tai ilman; kuvapari (huntu | ilman) täysikokoisena PT:lle. Otettu Karttasepälle
+(Kaupungit-osio, pallokartta) — UI/KaupunkiPallot.cs on UI/**-polussa (Natiivi-UI:n kansio), joten korjaus voi vaatia NUI:n kuittauksen.
 
-- Haara `karttaseppa/iss-rajat-197` (wt/proto-karttaseppa-iss-rajat-197, juna-197 e846cd1a6:n päällä), kärki **2d0957ef6**:
-  Sijaintipallo.NaytaIssRajat (liikepohjan KatseenKaanto pystyyn päiväntasaajan suunnasta, rajat ±51,6°, läpikuultava ruskea
-  verho, paluu pehmeästi, tartunta keskeyttää), varjostimen _IssRaja/_Raja/_Verho, KupoliAanet.JaksoNyt/JaksoAikaNyt/JaksoKerta,
-  AstronautinNakyma.IssRajat: v1-lansi ≥ 17,5 s ("Napoihin asema ei yllä", Pelikoodarin sana-ajat) → pallo isoksi + rajat.
-  Testi `linssi astro pallo issrajat [s]`. tarkista.sh + liikevahti 0. NUI: ei päällekkäisiä muutoksia (Ohita esittely -nappi tulossa, kertoo ensin).
-- Julkaisija kääntää vihjeiden jälkeen → `proto-3d/_tyo/karttaseppa/iss-rajat-197-app`. Sitten SIMU NYT 123B4B25 →
-  `zsh proto-3d/_tyo/karttaseppa/iss-rajat-197/ajo-iss-rajat-197.zsh` (skenaario sk-iss-rajat-197.txt: testikomento + kertoja,
-  oleta 300 s). Video PT:lle; junaan 197 jos ehtii ja omistaja ok.
+**Selvitetty (ei syy):**
+- Juna 200:n koodi näyttää pallot simun DEBUG-käännöksessä: v4-taisteluajon loki "kaupunkipallot: 50 kaupunkia", "maa FRA, näkyvät: … ; himmeinä 39",
+  ja ensimmäisessä ruudussa (Ranska, huntu) Lontoo/Pariisi/Marseille täysinä + muut himmeinä (`proto-3d/lokit/todistus-kiina-taistelu-250-v4-20261017-2234`).
+  01540e13a ⊂ tämän ajon käännös 8ce15e84d.
+- KaupunkiPalloMitat-logiikka ja sen testit (Kartta-testit KaupunkiPallotTestit r. 55–78) ennallaan; KauppaAlue.OpasPiilotettu (481a73457) oli jo ennen 184.1:tä;
+  663953c51:n Kehityskaupungit-muutos vain kommentti; Paavalikko.Maailma/PelaajanNakyma ennallaan; ei pallopolkuun liittyviä MATKAKIRJA_APPSTORE-muutoksia.
+- Siis ero on TF-ympäristössä: release + MATKAKIRJA_APPSTORE (Rakennus.cs), kehittäjätila PlayerPrefsistä (Asetukset.Kehittaja), ei QA-komentoja.
 
-## 3. Valmiit tällä vuorolla
+**Avoimet ehdokkaat:** sallitut-listan haku (OpasSovitin.LataaSallitut vaatii LinssiOhjain.Instanssi; HaeSallitut "/opas/aineistot";
+levyvälimuisti opas-sallitut.json), KaupunkiPalloKuva (render texture, `!pk0.Valmis` piilottaa; Karttapaletti bfe4e843b), Louvre-muutokset
+(d6a90e813, b9acbc66a, da98b2e4a, 46a637393, 749a0bc57) — voiko poikkeus Rakenna/Ruutu-silmukassa piilottaa kaikki.
+Juurisyyagentin (Opus, vain luku) raportti lisätään alle, kun se valmistuu (ks. LISÄYS).
 
-| Erä | Toimitus |
-|---|---|
-| Kiinan dynastiat: aukot (turkit 589, uiguurit+Nanzhao 790, Dali 950/1100/1142, 950:n pääkaupungit) | 718bca80b, #4720 MERGED 1bad6c16b; LS sai SHA:n |
-| Saaret (Taiwan 1760/1873) | data oikein, PT perui (LS:n lähikuvat) |
-| Lasipohja iPhone-pari 103105f6d | 4 havaintoa → PT antoi korjaukset NUI:lle (uusi pari NUI:lta) |
-| Pienoismallit ennen/jälkeen-video 103105f6d | PT:lle; KK hylkäsi varjon → kohta 1 |
+**Testi:** logiikkatesti on jo; puuttuu integraatiotesti — todistusajon skenaario kehittäjätilassa `ui maailma`/pelaajan näkymä päälle/pois +
+`oleta` lokiriveille "kaupunkipallot: … himmeinä N" (N > 0 hunnulla) ja näkyvien määrä ilman huntua. Jos syy on release-only, testi tarvitsee
+release-kaltaisen ehdon (esim. Asetukset.PakotaPelaaja-tyyppinen kytkin tai Linssit/Kartta-testi Rakenna-polun puhtaalle osalle).
 
-## Muistiinpanot
+## 2. KIINA: 250-taistelukoe (omistaja 19.59 "Kyllä, vain taisteluihin (Suositus)"; linja 2 kärki, juna 201)
 
-- Karttaseppä EI sammuta eikä boottaa simuja itse; todistusajo.sh sammuttaa omansa. Pitkät ajot setsid-kaavalla.
-- Ketjun tappaminen, kun sen lapsi on SIGSTOPissa, tappaa lapsen (orpo prosessiryhmä saa SIGHUPin) → älä tapa; portita tiedostolla.
+Tila: v5-käännös `0bf177c8b` kirjattu Julkaisijalle → `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kiina-taistelu-250-v5-app` (seuraaja kääntää).
+KÄÄNNETTY → kirjoita `<app>/kaannos.out` "KÄÄNNETTY 0bf177c8b karttaseppa/kiina-paketti-200 (käännös-sha …)". SIMU NYT → taustalle
+`zsh …/kiina-koko-linssi/odota-taistelu-250-v5.zsh > …/odota-taistelu-250-v5.out` (skenaario `sk-taistelu-250.txt` alkaa 140:stä; avausvuosi
+ohittuu ajossa) → SIMU VAPAA heti → `yhdista-video.zsh <kansio>` → 1:1-ruudut 13–36 s (`crop=800:600:500:250`, 1 s välein, 3 rinnakkain)
+→ jos ok: `patka.zsh <kansio> 12 26` → PT 3 riviä (pätkän polku + mitä näkyy + puutteet).
+
+Tavoite (PT 21.1x): KAKSI selvää huippua dynastioiden väreissä (Wei vs. Sun–Liu/Wu) liikkuu kohti taistelupaikkaa, isku selvänä aaltona + X,
+sitten kartta tasaiseksi. Väestöpintaa EI (omistaja 19.59). Tarkista v5:ssä erityisesti: kummut värillisinä kukkuloina (ei mustia "reikiä"),
+Wu ja Wei eri väreissä, kummut erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
+
+Historia (kaikki kiina-paketti-200:ssa, ei junassa):
+| Versio | SHA | Tulos |
+|---|---|---|
+| 45da5a534 | v4-videon viat: lasku ennen siirtoa, haamualueet pois, sileä muste | ok |
+| 05ce463ac + 3fa8d8fe5 (NUI) → 71eac8a7f | Pulun "zZ" pois historialinsseissä (Kiina, Keksinnöt, Ihmisen matka, Isoisä 1873) | yhdistetty |
+| 38be1ca55 | VainTaistelu: ei väestöpintaa, pinta nousee taistelulauseessa | v1 epäonnistui (avausvuosi), v2: armeija piste |
+| c0dac25d7 | σ 80 km / 160 km kumpu | v3: Wei selvä, Wu hukkui |
+| e1babe602 | TaisteluKummut: oma kumpu per armeija, Erilleen 230 km, aalto tummemmaksi | v4: kaksi liikkuvaa, mutta mustia "reikiä" |
+| **0bf177c8b** | valo vasemmalta ylhäältä 45° / pohja 0,6, ei tummennusta, väli 320 km | **v5 odottaa** |
+
+Avainkohdat: `KiinaVaestopinta.TaisteluKummut/Erilleen/TaisteluSileysKm/TaisteluArmeijaM/TaisteluValiKm` (Ydin), `KiinaVaestopintaKerros.VainTaistelu/
+AsetaTaistelu/TaisteluValoKorkeus/AaltoTumma`, `KiinaKerros` (koe: Nouse taistelulauseen alussa, Laske hetken jälkeen, TaisteluHetki-risti JonoValo).
+Testit `KiinaVaestopintaTestit.TaisteluKaksiHuippuaLiikkuvat`. Hyväksynnän jälkeen: Changping, Fei-joki, Yamen, Shanhai (vasta sitten).
+
+## 3. Avoimet (ennallaan edellisestä luovutuksesta)
+
+- Main-data hyväksynnän jälkeen: ITÄTURKIT 589 44,3 N; NURGAN 1421 45,5/129,5; ETELÄINEN TANG 950 kahdelle riville; nykyinen-kiina.json nimiö;
+  kiina-puherivit.json. Lähde main `data/linssit/kiinan-dynastiat/`.
+- Paikallinen `.claude/settings.local.json` muutettu (ei omani, ei commitoida).
