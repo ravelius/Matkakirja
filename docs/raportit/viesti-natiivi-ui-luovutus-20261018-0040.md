@@ -75,3 +75,11 @@ Käännös valmis: **KÄÄNNETTY eefb79a01 a45af2f97** (_tyo/natiivi-ui/ratas-20
   Skenaariot korjattu (ratas iPhone 317 765, iPad 538 1138; näyttö iPhone 243 755, iPad 464 1127). iPhone: sauvan rengas ei leikkaudu kulmaan (R4 raaka).
 - SEURAAVAKSI: rungon 201 käännöksen jälkeen SIMU NYT → ajo-kehys-ratas-201.zsh <rungon app-kansio> → video < 1 min + parit (R1, R4, R5, R7, R8)
   → PT:lle → KK täysikokoisena; kuvat Valosepälle tarkistettavaksi (pysäytyskuva pehmeä, nostojen vaakaveto).
+
+## PÄIVITYS 01.40
+- Juna 201 bfc99a3d6 (Julkaisijan juna201-kuva-app) simu OK iPhone + iPad (lokit/todistus-kehys-ratas-*-201-20261018-013x): ratas ja
+  säädöt, KOHTEET, osuma 44 pt; parit + video _tyo/natiivi-ui/juna201-ratas-pari/ → PT 01.39. Puute: KÖÖPENHAMINA ei ehtinyt näyttöön.
+- JUNA 202 kuvaerä (omistaja 01.10 + 01.23, PT 01.2x/01.3x): proto natiivi-ui/kuva-kokoruutu-202 a36a00eac (worktree
+  wt/proto-natiivi-ui-kuva-kokoruutu-202, pohja juna-201 73bca3b3a): oma kuva suoraan KUVASUURENNOS-kokoruutuun (kortti pois, kytkin
+  IssOmatKuvat.Kokoruudussa), jaa + ✕ OHJAUSNAPIT, galleria kokoruutu, nipistys + kaksoisnapautus, tarkka kuva. Simu: sk-kuva-kokoruutu-202.txt
+  (ajoskripti tekemättä; malli ajo-kehys-ratas-201.zsh) käännöksestä, jossa haara on → pari PT:lle.
