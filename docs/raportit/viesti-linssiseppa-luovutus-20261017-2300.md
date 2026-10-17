@@ -10,6 +10,16 @@ VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
   pyramidin simu (kohta 1): sha + video/kuvat PT:lle VIIMEISTÄÄN 00.15. Mikä ei ehdi → juna 202 (kerro PT:lle heti, mitä jää).
 - Järjestys: pyramidi on jo käännetty (ede9300b) → pyydä JU:lta simuvuoro HETI alussa ja tee Mona Lisaa vuoroa odottaessa.
 
+## TILA 23.38 (LS jatkoi itse): Mona Lisa f7952e7b3 (proto linssiseppa/monalisa-201, worktree wt/proto-linssiseppa-monalisa, juna-201-pohja)
+- TEHTY: katseluasento kaiteen eteen (ohut este < 0,25 m teoksen ja katsojan välissä → 0,6 m kaiteen eteen, kuvakulma kapenee:
+  kaideIhanne/LaajaTavoite), V2-kesto = suora etäisyys / 1,3 m/s (V2SuoraMs, V2MaxMs, V2MinS 1,5 s), kääntö menosuuntaan ≤ 15°
+  (V2KulkuKaantoAste), vilkaisut pois (V2Vilkaisut). MuseoKaideTestit; pehmeän liikkeen raja 3 → 6 m/s². Linssit 2015/2015.
+- KÄÄNNÖS: ajo-monalisa201.zsh (linja 2, APP _tyo/linssiseppa/monalisa-app) → .nyt-tiedosto simu-monalisa201.nyt JU:n vuorolla;
+  skenaario sk-monalisa-201-iphone.txt (Kaanaan häät → Mona Lisa, kuvat m0–m2). PT:lle kerrottu 23.37 (kysytty: junaan testien perusteella?).
+- JUNAAN 202: kehys (Commons mallina), SuoraKierros-kytkin (pois: lyhyillä siirroilla 14 m/s², testi KierrosLiikkuuPehmeastiIlmanHyppyja),
+  musta välähdys isossa suunnanmuutoksessa, SyoteLukko-kutsu museon maailmanapautuksiin NUI:n haaran mergen jälkeen.
+- Pyramidin simu ede9300b: JU:lle simuvuoropyyntö 23.23 (jonossa).
+
 ## 00. ENSIN (PT 23.2x, OMISTAJAN HAVAINTO 23.07, juna 201): MONA LISAN NAPAUTUS EI VIE SUORAAN TEOKSEN ETEEN
 - Omistaja: "NApauttamalla ei pääse suoraan monalisan luo." Kuva docs/raportit/kaappaukset/omistaja-20261017/louvre-monalisa-napautus-2307.png.
 - Tavoite (KK): louvre-inv-779:n napautus vie suoraan kaiteelle teoksen eteen, rajaus samankokoinen kuin muiden lähikuvissa; kaide pysyy.
