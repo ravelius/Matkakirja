@@ -1,4 +1,4 @@
-# Kiinan dynastiat: väestöpinta (Karttaseppä → Pelikoodari ja Linssiseppä, KOKEILU 17.10.2026)
+# Kiinan dynastiat: väestöpinta, taistelut ja valopisteet (Karttaseppä → Pelikoodari, Natiivi-UI ja Linssiseppä, 17.10.2026)
 
 Omistaja 17.10.2026 klo 07.36 PT:n kautta: "Voisiko ihmisten ja sotajoukkojen määrää kuvata värillisellä korkeuskartalla?
 Niissä muutokset ja 'lyönnit' pitäisi kuvata pehmeillä animaatioilla." Päätös 07.37: "Kyllä, kokeilu videona (Suositus)".
@@ -32,3 +32,30 @@ muotoon, kun aineisto on ladattu (skriptihaku estetty: robots.txt ja Anubis; vaa
 rajoista (Wei = Cao Caon Han-hovi, Wu = Sun Quan; Shun alue oli 208 vielä Liu Zhangin).
 
 Esikatselu (matplotlib, ei pelin piirto): `vaestopinta_kuva.py vaestopinta 208 <ulos.png>`.
+
+## Kaikki 19 pysäkkiä (omistaja 17.10.2026 klo 11.32, 11.38 ja 11.44 PT:n kautta)
+
+"Käydäänkö siinä kaikki dynastia läpi? Pitää käydä": pinta jokaiselle linssin pysäkille, tiedostot nimetty **pysäkin vuodella**
+(`vaestopinta-<pysäkki>.json`, `vaestopinta-<pysäkki>.bytes`, `omistus-<pysäkki>.bytes`; 208:n kokeilu on nyt `-250`).
+Tuottaja `tools/kiinan-dynastiat/vaestopinta.py kaikki <rajat-kansio> <korkeus-kiina-005.npy> <ne-kansio> <ulos>`.
+
+- **Hila per pysäkki**: omistettujen alueiden rajaus ∪ ydin (lon 100–124, lat 20–42), leikattu lon 73–135 / lat 18–54; askel 0,1°,
+  isoilla alueilla 0,15–0,2° (≤ 90 000 solua; iPad laskee normaalit joka ruudussa hetken aikana).
+- **Tiheys**: `vaestopinta_data.VAESTO` (tarkistettu 17.10., lähteet `vaestopinta/lahteet/vaesto-alueittain.md`) ydinalueille
+  osuuksin `OSUUDET` (15 aikakautta) ja reuna-alueet `REUNAT` (Mantšuria, Yunnan–Guizhou, Guangxi, Gansu, Mongolia, Tiibet,
+  Xinjiang, Taiwan); kansalliseen lukuun sisältyvät reunat vähennetään ytimestä. Painotus matalikoille Copernicus GLO-90
+  (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA; vapaa käyttö), mosaiikki `korkeus_mosaiikki.py`.
+- **`tiheys.korotus`**: pysäkin korkeuskerroin (74 / p99)^0,8 (208:n kokeilussa hyväksytty 4000 m/(hlö/km²) kun p99 = 74, V0d
+  11.08): 25 milj. ja 420 milj. ovat molemmat luettavia; p99:n korkeus ~250 km (250) → ~415 km (1912).
+- **Taistelut** (`vaestopinta_data.HETKET`, pysäkki = `rajat_vuosi`): Changping −260 (pysäkki −221), Punaiset kalliot 208 (250),
+  Fei-joki 383 (440), Yamen 1279 (1280), Shanhain sola 1644 (1644). Lähteet ja varoitukset `vaestopinta/lahteet/taistelu-*.md`.
+  Armeijan dynastia, jolla ei ole aluetta pysäkin rajoissa (esim. Zhao), on `dynastiat`-listan lopussa (`alueeton`), väri kaikista
+  rajoista. Kaikki luvut arvioita, tappioista ei esitetä lukuja.
+
+## Valopisteet ja Silkkitie (`valopisteet.json`)
+
+`valopisteet` [{avain, laji keksinto|uskonto, nimi, vuosi, pysakki, paikka, lon, lat, epavarma, eurooppaan {vuosi, paikka}, lahde}]:
+paperi, kompassi, ruuti, kirjapaino; kungfutselaisuus, taolaisuus, buddhalaisuuden, islamin ja kristinuskon saapuminen (neutraalisti).
+`silkkitie` {pisteet [[lon, lat, paikka]], lahde}: Chang'anista Antiokiaan. Natiivi: KiinaKerros sytyttää pysäkin pisteet yksi
+kerrallaan (edellinen himmenee 40 %:iin, lopussa tähtikuvio) ja piirtää Silkkitien juovan, kun keksintö saapuu Eurooppaan
+pysäkkien välillä. Perustelut ja epävarmuudet `vaestopinta/lahteet/valopisteet.md`.

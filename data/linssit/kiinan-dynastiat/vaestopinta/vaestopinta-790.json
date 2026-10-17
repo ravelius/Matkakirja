@@ -1,0 +1,64 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 790,
+ "hila": {
+  "lon0": 73,
+  "lon1": 124,
+  "lat0": 18,
+  "lat1": 53,
+  "askel": 0.15,
+  "leveys": 340,
+  "korkeus": 233,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-790.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 141.2,
+  "p99": 59.0,
+  "summa_milj": 61.83,
+  "arvio": true,
+  "korotus": 1.199
+ },
+ "omistus": {
+  "tiedosto": "omistus-790.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 790
+ },
+ "dynastiat": [
+  {
+   "avain": "tang",
+   "nimi": "Tang",
+   "vari": "#c25a2c",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "tiibet",
+   "nimi": "Tiibetin valtakunta",
+   "vari": "#6b4f86",
+   "tyyppi": "ulkoinen"
+  },
+  {
+   "avain": "uiguurit",
+   "nimi": "Uiguurien kaganaatti",
+   "vari": "#3f8a84",
+   "tyyppi": "ulkoinen"
+  },
+  {
+   "avain": "dali",
+   "nimi": "Nanzhao",
+   "vari": "#5f8f6a",
+   "tyyppi": "ulkoinen"
+  }
+ ],
+ "vakiluku_milj": 55.0,
+ "aluejako": "tang2",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-790.geojson (Matkakirja, CC0)"
+ }
+}
