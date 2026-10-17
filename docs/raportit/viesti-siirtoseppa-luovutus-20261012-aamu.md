@@ -552,3 +552,12 @@ KYLLÄ → uusi proto-worktree juna-199:n päälle, Paikat-muutos + Linssit-test
   (siirtoseppa/kaupunkimaisema-v3-200, wt/proto-siirtoseppa-maisema200) → NS junaan 200. Kolmas manifesti PalloAanimaisemaSoitin.Juuret,
   omat silmukat PalloAanimaisema.OmaTaso (0,45, kaskaat 0,30). ÄÄ hyväksyi tasot; kärki 57d01c52b (katu/vanhakaupunki omina silmukoina: ei äänikarttaa → liikenne_hiljainen ei soi; kartan tultua Korvaa). PT kuittaa NS:lle.
   Kun rungossa: poista worktree maisema200.
+
+## PÄIVITYS 18.10. 00.35 — NOLLAUS (PT Postivahdin kautta): EI KESKENERÄISTÄ
+
+**Valmis 17.10. illalla (kaikki juna 200:n rungossa):** historiaosio jokaiselle pysähdykselle fa6e55bdc (runko 1b9031235) ja
+kaupunkimaisema-v3 18b3accd3 + 57d01c52b (runko 787e25499). Pallokierrosten web/natiivi-vertailu: proto-3d/lokit/siirtoseppa-pallokierrokset-vertailu-20261017.md
+(PT: Lontoon rajaukset EI, viimeisen pysähdyksen osio ennallaan; tarinakuvat odottavat omistajan generointilupaa, Prahan maamerkki LR:n jälkeen).
+**Ei keskeneräistä, ei ajoja käynnissä, ei omia worktreetä** (wt/siirtoseppa-aanipohja poistettu: sen docs/moduulit/aanipohja.md on mainissa sellaisenaan).
+Seuraaja: rivi PT:lle "JONO TYHJÄ: Siirtoseppä", ellei PT anna erää. Myöhempi jatko: kun Lontoon/Prahan/Ateenan äänikartat (aanikartta-v1) tulevat,
+katu/vanhakaupunki → PalloAanimaisema.Korvaa liikenne_hiljainen (ÄÄ:n ehdotus 17.10.).
