@@ -1,5 +1,9 @@
 # Tivoli: oma tarkempi osio, jossa voi lentää – suunnitelma ja havainnekuvatilaus (Linnanrakentaja, 17.10.2026)
 
+**HYVÄKSYTTY: omistaja 17.10. 09.59 "Kyllä (Suositus)"** – generointi enintään 18 kuvaa: erä A (2) tilattu Codexilta
+(postilaatikko 58b6551df), erä B (16) vasta kun omistaja on nähnyt A:n. Tornin nimi päätetty (KK 10.00, luku 8). Työkansio
+`/Users/Shared/Claude/proto-3d/_valmiit/tivoli-v1/`.
+
 Pyyntö: omistaja 09.46 "Tee tivolista oma tarkempi osio missä voi myös lentää" (PT:n paketti, LR vetäjänä).
 Pohjat: `docs/moduulit/tuotantopohjat/3d-maamerkki.md` ja `kuumailmapallokierros.md`. Vapaalle lennolle ei ole pohjaa,
 joten tämä suunnitelma toimii sen luonnoksena (luku 6). Linja 15.10.: uudet 3D-mallit tekee Codex, ja kytkennän,
@@ -21,7 +25,7 @@ Mitat on varmistettu lähteistä, ja puuttuvat mitataan LiDARista vaiheessa 2. K
 | # | Kohde | Q-id | lat, lon | Vuosi | Mitta (lähde) | Liike | Ilta | Huomio |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Tivolisøen + lyhdyt | Q64706701 | 55.67392, 12.56973 | 1887 (vallihaudan jäänne) | ala LiDAR/OSM | veden välke | lyhtyrivit, heijastukset | vesi = VS |
-| 2 | Kiinalainen torni | Q64706814 | 55.67308, 12.56974 | 1900 | ~24 m, 4 kerrosta | – | 2 800 värilamppua | **nimi: Wikidata "Det Japanske Tårn", ks. kysymys 2** |
+| 2 | Japanilainen torni (ent. Kiinalainen) | Q64706814 | 55.67308, 12.56974 | 1900 | ~24 m, 4 kerrosta | – | 2 800 värilamppua | nimi päätetty (luku 8) |
 | 3 | Pantomiimiteatteri | Q955226 | 55.6745, 12.5665 | 1874 (Dahlerup) | LiDAR | riikinkukkoverho | lamput reunoilla | **2024 verho suojattu**, ks. kohta 3 |
 | 4 | Nimb | Q7037576 | 55.67354, 12.56634 | 1909 | LiDAR | – | lamppuääriviivat kupoleissa | maurilainen palatsi |
 | 5 | Rutschebanen | Q2177877 | 55.67298, 12.567 | 1914 | 12 m, rata 720 m | juna 2 min 10 s, 50–60 km/h | radan lamput | vuoret (palautettu 2014). EI Q10658106 (Bakken) |
@@ -106,8 +110,8 @@ Generoituja kuvia tehdään yhteensä enintään 18, eikä yhtään ennen omista
 1. "Tivoli-osio näin: kamera laskeutuu pysäkillä 8, ja voit lentää vapaasti puiston yllä 6–120 metrissä. Kahdeksan
    tarkkaa mallia, liikkuvat laitteet, illan lamput, äänet ja Williamin 6 lähitarinaa. Kuvia generoidaan enintään 18
    (2 tunnelmakuvaa + 16 mallien tavoitekuvaa)." → Kyllä / Ei nyt
-2. Tornin nimi: Tivoli kutsuu tornia nykyään Japanilaiseksi torniksi (Wikidata "Det Japanske Tårn"). Ehdotus: William
-   sanoo "Kiinalainen torni, nykyään Japanilainen torni". SK varmistaa.
+2. Tornin nimi – PÄÄTETTY (KK 17.10. 10.00): **"Japanilainen torni – sata vuotta sitä kutsuttiin Kiinalaiseksi torniksi"**
+   (alkuperäinen nimi 1900 Japanese Pagoda). SK käyttää tätä Williamin tekstissä.
 
 ## 9. Riskit ja avoimet
 
