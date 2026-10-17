@@ -13,6 +13,7 @@ Edellinen: viesti-linssiseppa-luovutus-20261017-0623.md (yleisohjeet, osoitteet)
   jos ei käynnissä eikä logissa "VEISTOKSET200 VALMIS", käynnistä uudelleen taustalle. Kun JU lähettää SIMU NYT:
   `touch /Users/Shared/Claude/proto-3d/tyokalut/linssiseppa-ajot/simu-veistokset200.nyt` (~12 min, iPhone BD64C8E4, skenaario sk-veistokset-200-iphone.txt:
   V1 nimikyltti, V2 kortti, V3 Rodin-lista, V4 listavalinta, A1 Alankomaiden lista ennallaan). Valmis → JU:lle "SIMU VAPAA", kuvat + arvio PT:lle.
+  JU 08.2x: käännös ehti L2:een 08.21; EI muita junan 200 käännöksiä ennen NS:n LUKITSE 199 -käännöstä; simuvuoro Valosepän jälkeen.
   Skenaarion oleta-rivit arvattu lokimuodoista (museo: saapui veistos / kertoja rodin- / valinta veistos) — jos jokin kaatuu, katso konsoli-stdout.log.
 
 ## 2. JUNA 199 (kaikki NS:llä, PT kuittasi)
