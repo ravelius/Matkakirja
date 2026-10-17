@@ -641,7 +641,8 @@
       "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa: omistaja 2.10.2026 klo 08.2x. Tilapaneeli paperi (alkuperäinen) ja kaikki taustan elementit pehmennettyinä, myös tekstit: omistaja 2.10.2026 klo 11.0x (loki 11.01; tumma ja lasi hylätty)"
     },
     "GALLERIA": {
-      "teemat": ["paperi"],
+      "teemat": ["paperi", "lasi", "lasi-avaruus"],
+      "_teema": "LASIPINTA (omistaja 17.10.2026 klo 13.27 \"Kyllä, lasi linsseihin (Suositus)\"): linssien ja pelien sisällä galleria on LASIPOHJALLA isännän lasiteemalla (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; natiivi .mk-galleria--lasi, Lasipohja sumentaa taustan); peruskartan laukun julistegalleria pysyy paperilla (LASIPOHJA-rajaus 17.10. 06.5x)",
       "koostuu": ["PANEELI (ikkuna)", "OHJAUSNAPPI (✕ otsikkorivillä)", "KUVANÄKYMÄ (napautus)"],
       "otsikko": "kapiteeli + laskuri (esim. JULISTEET 116/116) muste-pehmeänä; rivi pysyy ylhäällä vierittäessä, alla ohut reunus-viiva",
       "osiot": "osion otsikko kapiteelina laskureineen (EUROOPPA 44/44), osioiden väli vali.m",
