@@ -28,6 +28,9 @@ tarkistaa, että haaran kärki on käännöksessä → älä siirrä sitä keske
 3. **Terävät seinämät ja kamera liian lähellä: odota omistajan väestökortin vastausta (PT välittää). ÄLÄ muuta huippujen muotoa ennen sitä.**
    Pinnan pehmeä katto a59345b2c PERUTTU (revert e84d113ca). Huiput Song/Qing jopa 999 km.
 
+**LISÄYS 14.5x: askeleet 1–2 TEHTY.** PK:n korjaus ecfbb9663 (= 324ebca0a + 87b23756b; lähikuva ≥ max(1200 km, 2,5 × KorkeinM)) yhdistetty,
+Kiina 38/38, tarkista.sh 0, kiina-vaestopinta-199 = ecfbb9663, KÄÄNNÖSPYYNTÖ JU:lle → `kiina-koko-linssi-v5-app`. JATKA kohdasta 2:n kaannos.out ja 3.
+
 **Seuraavat askeleet:**
 1. Odota PK:n kameran regressiokorjaus 324ebca0a:n päälle (PK:lle lähetetty 14.3x; v4 14.17 = katto + 17297a308 toi kameran pinnan
    sisään; ehdotus lähikuva ≥ max(2,5 × KorkeinM, 1200 km)). Yhdistä (`git merge` kiina-paketti-200:aan), Linssit-testit `sh kaanna.sh Kiina`,
