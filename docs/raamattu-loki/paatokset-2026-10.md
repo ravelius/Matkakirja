@@ -389,3 +389,21 @@ Omistaja kysyi 07.2x: "Miten jatkossa codex ei jää huomiotta?" Kortti "Codexin
 ## PAATOKSET 17.10.2026 klo 19.59: Kiinan historiakartan korkeus vain taisteluihin (17.10.2026 klo 19.59)
 
 Omistaja (kortti KK:lla): korkeusanimaatio vain taistelulauseen ajaksi (armeija liikkuvana huippuna dynastian värissä, isku pehmeänä aaltona, sitten kartta tasainen); väestöpinta pois. Ensin koe Punaisen kallion taistelusta, muut taistelut hyväksynnän jälkeen.
+
+## JUOKSUPELIN LINJAUS: JATKUVA JUOKSU JA REITINVALINTA (17.10.2026 klo 21.55)
+
+Omistaja 17.10.2026 Keskustelukanavan kautta j5–j7-kuvista. Klo 21.51 (sanatarkasti): "Suunta on oikea, mutta kamera saa olla ylempänä ja aina kohti suoraan juoksijan takana. Pelaaja näkee myös edestä
+päin ketkä tulossa ottamaan kiinni, jolloin pelaaja voi valita reitin niin, että häntä ei saada kiinni.  Huoneiden läpi voi juosta. Ja samalla kerätä sieltä asioita. Pyydän vielä uudet mallikuvat."
+Klo 21.52: "Kiinniottajia voi myös harhauttaa talojen sisällä." Klo 21.54: "Koko ajan pitää juosta. Lähinnä pystyy valitsemaan eri reitin talon sisällä. Tästä tulee suhteellisen yksinkertainen
+reaktiopeli, ja kun kuvakulma on tarpeeksi ylhäällä, niin grafiikastakin tulee yksinkertaisempaa. Eli tässä on tärkeää nopeus." Linjaus: jatkuva juoksu, ei piiloutumista eikä esteiden kaatamista;
+harhautus reitinvalinnalla (katottomassa talossa 2–3 kulkuväylää ja useampi uloskäynti); kamera korkealla suoraan juoksijan takana; pelkistetty grafiikka; nopeus tärkeintä. Codex j8–j10 tilattu (TASAN
+3, postilaatikko b32c4903b).
+
+## JUOKSUPELIN PERUSLOGIIKKA: LIUKU, HYPPY JA SIVUVARTIJAT (17.10.2026 klo 22.00)
+
+Omistaja 17.10.2026 klo 21.59 Keskustelukanavan kautta (sanatarkasti): "Kiinniottajan pystyy väistämään myös liukumalla. Silloin kiinniottaja yrittää hypätä keisarin kiinni, mutta lapsi liukuukin
+kiinniottajan alta. Tässäkin on ajoitus tärkeää. Se pitää osua juuri oikeaan aikaan, jotta väistö onnistuu. Jos väistöä liian aikaisin tai myöhään kiinniottaja saa kiinni, idea on siis se, että takana
+tulee joku koko ajan perässä, mutta myös sivuilta tulee vartioita, jotka koettavat ottaa kiinni ja valitsemalla oikean reitin, voi päästä vartioita karkkuun. Mutta jos sekään ei onnistu, niin sitten
+voi yrittää sitä liukumista. Eli oikealla peukalalla voi pyyhkäistä oikealle tai vasemmalle valitakseen reitin ja vasemmalla peukalalla voi liukua. Kehitellään myös muitakin juttuja, mutta tämä olisi
+se peruslogiikka. Ehkä niitä kattoja voisi olla useampiakin auki lähietäisyydellä. Saitko ideasta kiinni? Sama liukunappi voisi toimia myös hyppynappina, millä taas keisari voisi kerätä talosta
+aarteita ja saada lisää pisteitä." Ohjaustapa (yksi napautus vai pyyhkäisy alas/ylös) omistajan kortilla. Codex j8–j10 täydennys 3 (46f732212), edelleen 3 kuvaa.
