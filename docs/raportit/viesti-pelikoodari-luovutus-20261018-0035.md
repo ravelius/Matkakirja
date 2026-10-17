@@ -52,3 +52,7 @@ Rooli Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoo
 wt/proto-pelikoodari-galleria (arkki 5), -esikatselu (korjaus), -juoksupeli-pelit (juna 201), -juoksupeli (harmaa versio), -cupola-suoja
 (junassa 200 → poistettavissa mergen varmistuttua), -tivoli-vapaa-lento-200 + wt/pelikoodari-vapaa-lento-osio (Tivoli tauolla), wt/pelikoodari-posti.
 Esikatselun Unity-kopio /Users/Shared/Claude/proto-3d/Matkakirja-proto-esikatselu (pidetään; seuraavat ajot nopeita).
+
+## Lisäys 00.4x (luovutuksen jälkeen)
+- LS ilmoitti: pyramidi = **ffa433c76** (linssiseppa/orsay-valinnaiset-200, vain UI/KaupunkiPalloKuva.cs, cherry-pick yksin); PT nähnyt, KK:n kuittaus PT:n kautta. LR:n ehto oli lopullinen sha LR:n kautta PT:n kuittauksen jälkeen → varmista LR:ltä yhdellä rivillä, sitten cherry-pick galleria-200:aan (294d24f62) ja yksi JU-ajo.
+- JU antoi L1 NYT 00.41; en aloittanut (PT: ei uusia töitä). Pyydä uusi NYT esikatselulle.
