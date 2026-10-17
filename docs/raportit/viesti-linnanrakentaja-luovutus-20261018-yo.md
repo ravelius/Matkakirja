@@ -27,6 +27,8 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261017-ilta.md` (131170f8
        - Kehyksen sisäreunalla ei saa näkyä tummaa juovaa.
      - Säädettävät: `MuseoRakennus.LouvreKultaValo`, `VeistoVoima`, `VeistoSyvyysM` ja `VeistoJaksoKerroin`.
      - Kun kuvat ovat kunnossa: arkki (otsikot, commit + käännös) → PT → KK → NS.
+   - **LS rinnakkain:** `linssiseppa/monalisa-201` (liike + zoom) muuttaa vain MuseoKierros*, MuseoSovitin.cs ja testit, ei samoja
+     tiedostoja kuin 3aeac4c8d (tarkistettu 00.45), joten ne yhdistyvät ilman ristiriitaa. Pyramidi v2.4 ffa433c76: PT vie KK:lle.
    - **Mallikuva oikeasta kehyksestä:** Commons "Mona Lisa Louvre 12 2016 1174.jpg" (CC BY-SA 4.0). Kehys on tumma antiikkikulta,
      jossa on helminauha, soikiokartussit ja köysi.
 2. **KARTAN 3D-YHTENÄISTYS (arkki 5):**
