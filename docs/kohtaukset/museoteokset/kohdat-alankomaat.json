@@ -7,7 +7,7 @@
     "x": 0.485,
     "y": 0.49,
     "otsikko": "Kapteeni Frans Banninck Cocq",
-    "teksti": "Mustapukuinen kapteeni johtaa komppaniaa, ja maalauksen virallinen nimi mainitsee hänet. Rijksmuseon mukaan hän käskee luutnanttiaan panemaan miehet liikkeelle.",
+    "teksti": "Mustapukuinen kapteeni johtaa komppaniaa. Rijksmuseon mukaan hän käskee luutnanttiaan panemaan miehet liikkeelle.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5",
@@ -18,7 +18,7 @@
    {
     "x": 0.625,
     "y": 0.51,
-    "otsikko": "Luutnantti Willem van Ruytenburch",
+    "otsikko": "Luutnantti van Ruytenburch",
     "teksti": "Keltaiseen asuun ja valkoiseen vyöhön pukeutunut luutnantti kuuntelee kapteenin käskyä. Hänen vaalea asunsa erottuu kapteenin mustasta.",
     "lahteet": [
      {
@@ -66,7 +66,7 @@
    {
     "x": 0.335,
     "y": 0.37,
-    "otsikko": "Lipunkantaja Jan Visscher Cornelissen",
+    "otsikko": "Lipunkantaja Cornelissen",
     "teksti": "Vänrikki Jan Visscher Cornelissen pitää komppanian lippua ojennettuna vasemmassa yläosassa. Hänen nimensä on seinän nimikilvessä.",
     "lahteet": [
      {
@@ -107,7 +107,7 @@
     "x": 0.8,
     "y": 0.86,
     "otsikko": "Haukkuva koira",
-    "teksti": "Koiran malli on Adriaen van de Vennen piirros vuodelta 1619: pään asento ja kaulus vastaavat lähes täsmälleen. Rembrandt otti vaikutteita ja muokkasi ne omaksi tyylikseen.",
+    "teksti": "Koiran malli on Adriaen van de Vennen piirros vuodelta 1619: pään asento ja kaulus vastaavat lähes täsmälleen.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/the-night-watch-dog-up-close",
@@ -119,7 +119,7 @@
     "x": 0.07,
     "y": 0.74,
     "otsikko": "Juokseva ruutipoika",
-    "teksti": "Vasemmassa alakulmassa juoksee ruutipoika. Rijksmuseon rekonstruktiossa, jossa leikatut reunat on täydennetty, hän näyttää selvemmin juoksevan miliisin edellä.",
+    "teksti": "Rijksmuseon rekonstruktiossa, jossa leikatut reunat on täydennetty, ruutipoika näyttää selvemmin juoksevan miliisin edellä.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/press/press-releases/for-the-first-time-in-300-years-the-night-watch-is-complete-again",
@@ -151,7 +151,7 @@
     "x": 0.58,
     "y": 0.65,
     "otsikko": "Kapteenin käden varjo",
-    "teksti": "Kapteenin käden varjo lankeaa luutnantin viitalle niin, että Amsterdamin vaakuna jää peukalon ja sormien väliin. Rijksmuseon tulkinnan mukaan kaupunki on turvassa miliisin käsissä.",
+    "teksti": "Kapteenin käden varjo lankeaa luutnantin viitalle niin, että Amsterdamin vaakuna jää peukalon ja sormien väliin.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-rembrandt-s-night-watch",
@@ -209,7 +209,7 @@
     "x": 0.2,
     "y": 0.78,
     "otsikko": "Pieni koira",
-    "teksti": "Pieni koira nousee takajaloilleen ja kurottaa ylös lasta kohti.",
+    "teksti": "Ferdinand Bolin maalauksessa vasemmassa alakulmassa pieni koira nousee takajaloilleen ja kurottaa ylös lasta kohti.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-45",
@@ -457,6 +457,38 @@
       "title": "Rijksmuseum: Asetelma Meissen-vaasista ja laivamallista (RP-F-AB12278-AH)"
      }
     ]
+   },
+   {
+    "x": 0.777,
+    "y": 0.836,
+    "otsikko": "Ankkuri laivan keulassa",
+    "teksti": "Laivan keulassa roikkuu rengas ja ankkurin varsi. Pienoismallissakin on siis pieniä, tarkasti tehtyjä varusteita.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-AB12278-Z",
+      "title": "Rijksmuseo: Scheepsmodel, RP-F-AB12278-Z"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Scheepsmodel,_RP-F-AB12278-Z.jpg",
+      "title": "Wikimedia Commons: Scheepsmodel, RP-F-AB12278-Z.jpg"
+     }
+    ]
+   },
+   {
+    "x": 0.49,
+    "y": 0.86,
+    "otsikko": "Rungon valkoinen vyö",
+    "teksti": "Rungon valkoisessa vyössä on tummia suorakulmaisia aukkoja tasaisin välein. Niiden yläpuolella roikkuu köysiä ja pieniä rattaita.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-AB12278-Z",
+      "title": "Rijksmuseo: Scheepsmodel, RP-F-AB12278-Z"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Scheepsmodel,_RP-F-AB12278-Z.jpg",
+      "title": "Wikimedia Commons: Scheepsmodel, RP-F-AB12278-Z.jpg"
+     }
+    ]
    }
   ],
   "RP-F-AB12278-A": [],
@@ -489,7 +521,7 @@
     "x": 0.85,
     "y": 0.15,
     "otsikko": "Pienoiskartta ja Vermeer",
-    "teksti": "Oikean yläkulman pienoiskartta esittää Amsterdamin ympäristöä ja Zuiderzeetä. Saman tekijän Hollannin seinäkartan Vermeer maalasi taustaseinälle useaan tauluunsa.",
+    "teksti": "Oikean yläkulman pienoiskartta esittää Amsterdamin ympäristöä ja Zuiderzeetä. Saman tekijän Hollannin seinäkartta näkyy Vermeerin maalauksissa.",
     "lahteet": [
      {
       "url": "https://en.wikipedia.org/wiki/Balthasar_Florisz._van_Berckenrode",
@@ -666,7 +698,7 @@
    {
     "x": 0.08,
     "y": 0.36,
-    "otsikko": "Lipunkantaja, jota Van Gogh ihaili",
+    "otsikko": "Van Goghin ihailema lipunkantaja",
     "teksti": "Vasemmassa reunassa oranssin lipun vieressä seisoo harmaaseen asuun pukeutunut lipunkantaja. Van Gogh ihaili häntä kirjeessään Theolle vuonna 1885.",
     "lahteet": [
      {
@@ -827,7 +859,7 @@
     "x": 0.38,
     "y": 0.69,
     "otsikko": "Laihat koirat",
-    "teksti": "Aukiolla juoksentelee laihoja koiria edestakaisin.",
+    "teksti": "KMSKA:n mukaan Breitnerin vuoden 1890 maalauksessa aukiolla juoksentelee laihoja koiria edestakaisin.",
     "lahteet": [
      {
       "url": "https://kmska.be/en/masterpiece/evening-dam-square-amsterdam",
@@ -878,7 +910,7 @@
    {
     "x": 0.28,
     "y": 0.38,
-    "otsikko": "Amsterdamin kuninkaallinen palatsi",
+    "otsikko": "Kuninkaallinen palatsi",
     "teksti": "Vasemmalla on palatsi, joka rakennettiin 1600-luvulla kaupungintaloksi. Kuningas Ludvig Napoleon otti sen palatsikseen vuonna 1808.",
     "lahteet": [
      {
@@ -1045,7 +1077,7 @@
     "x": 0.2,
     "y": 0.38,
     "otsikko": "Punainen sänky",
-    "teksti": "Taustan punainen sängyn verhoilu oli 1600-luvulla kallis huonekalu. Osa tutkijoista pitää sänkyä eroottisena vihjeenä, toiset tulevan avioliiton merkkinä.",
+    "teksti": "Taustan punainen sänky oli 1600-luvulla kallis huonekalu. Osa tutkijoista pitää sitä eroottisena vihjeenä, toiset avioliiton merkkinä.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404",
@@ -1705,7 +1737,7 @@
     "x": 0.86,
     "y": 0.88,
     "otsikko": "Jalkojenlämmitin",
-    "teksti": "Reikäkantisessa puulaatikossa on hiilipata, joka lämmitti jalkoja kylmissä kodeissa. Sitä on tulkittu rakkauden vertauskuvaksi, mutta se on silti käytännöllinen esine.",
+    "teksti": "Reikäkantisessa puulaatikossa on hiilipata, joka lämmitti jalkoja. Sitä on tulkittu rakkauden vertauskuvaksi.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2344",
@@ -1803,7 +1835,7 @@
     "x": 0.085,
     "y": 0.865,
     "otsikko": "Odottajat ja proomu",
-    "teksti": "Rannalla matkustajat odottavat hevosen vetämää proomua.",
+    "teksti": "Rannalla odottavien matkustajien joukossa on tummiin pukeutuneita hattupäisiä miehiä ja valkolakkisia naisia. Proomua veti hevonen.",
     "lahteet": [
      {
       "url": "https://artsandculture.google.com/story/vQVxjoHjWi8xIQ",
@@ -1819,7 +1851,7 @@
     "x": 0.29,
     "y": 0.88,
     "otsikko": "Kaksi naista rannalla",
-    "teksti": "Kaksi naista seisoo juttelemassa, ja kuva tuntuu hiljaiselta.",
+    "teksti": "Kaksi valkolakkista naista seisoo rannalla kasvokkain. Toisella on käsivarrellaan kori ja yllään sininen esiliina.",
     "lahteet": [
      {
       "url": "https://artsandculture.google.com/story/vQVxjoHjWi8xIQ",
@@ -1945,7 +1977,7 @@
     "x": 0.38,
     "y": 0.4,
     "otsikko": "Palvelijatar ja kirje",
-    "teksti": "Palvelijatar on juuri ojentanut naiselle kirjeen.",
+    "teksti": "Rijksmuseon mukaan palvelijatar on juuri ojentanut kirjeen naiselle, jolla on sylissään cister. Nainen katsoo häntä odottavasti.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1595",
@@ -2011,7 +2043,7 @@
     "x": 0.4,
     "y": 0.27,
     "otsikko": "Piilotettu valonlähde",
-    "teksti": "Valo osuu kasvoihin, käsivarteen ja olkapäähän, mutta sen lähdettä ei näy. Rijksmuseon mukaan tällainen valaistus oli utrechtilaisten caravaggistien keksintö.",
+    "teksti": "Valo osuu kasvoihin ja olkapäähän, mutta lähdettä ei näy. Rijksmuseon mukaan tämä oli utrechtilaisten caravaggistien keksintö.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2326",
@@ -2049,7 +2081,7 @@
     "x": 0.85,
     "y": 0.385,
     "otsikko": "Tyhjä kannu",
-    "teksti": "Mies nauraa ja näyttää katsojalle tyhjää kannua.",
+    "teksti": "Mies nauraa ja nostaa katsojalle kannellista kannua, joka Rijksmuseon mukaan on tyhjä.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1685",
@@ -2061,7 +2093,7 @@
     "x": 0.27,
     "y": 0.92,
     "otsikko": "Tupakkaa ja tikut",
-    "teksti": "Pöydällä on tupakkaa ja kaksi puutikkua, jotka ulottuvat näennäisesti pöydän reunan yli katsojan tilaan. Rijksmuseon mukaan Leyster tunsi tuon ajan uudet asetelmat.",
+    "teksti": "Pöydän tupakka ja kaksi puutikkua ulottuvat näennäisesti reunan yli katsojan tilaan. Rijksmuseon mukaan Leyster tunsi ajan uudet asetelmat.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1685",
@@ -2250,6 +2282,38 @@
       "title": "Rachel Ruysch (Rijksmuseum, Dutch masters)"
      }
     ]
+   },
+   {
+    "x": 0.23,
+    "y": 0.856,
+    "otsikko": "Ruusu pöydän reunalla",
+    "teksti": "Yksi ruusu lepää kimpun alapuolella pöydän reunalla. Sen terälehdet kiertyvät kerroksittain, ja toinen puoli on punertava.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2338",
+      "title": "Rijksmuseo: Still Life with Flowers on a Marble Tabletop, SK-A-2338"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Still_Life_with_Flowers_on_a_Marble_Tabletop_1716_Rachel_Ruysch.jpg",
+      "title": "Wikimedia Commons: Still Life with Flowers on a Marble Tabletop 1716 Rachel Ruysch.jpg"
+     }
+    ]
+   },
+   {
+    "x": 0.547,
+    "y": 0.128,
+    "otsikko": "Kurjenmiekka kimpun huipulla",
+    "teksti": "Kimpun huipulla kukkii violetti kurjenmiekka, jonka terälehdissä on tummia raitoja. Sen ympärillä tausta on lähes musta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2338",
+      "title": "Rijksmuseo: Still Life with Flowers on a Marble Tabletop, SK-A-2338"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Still_Life_with_Flowers_on_a_Marble_Tabletop_1716_Rachel_Ruysch.jpg",
+      "title": "Wikimedia Commons: Still Life with Flowers on a Marble Tabletop 1716 Rachel Ruysch.jpg"
+     }
+    ]
    }
   ],
   "SK-A-354": [
@@ -2257,7 +2321,7 @@
     "x": 0.63,
     "y": 0.085,
     "otsikko": "Juovikas tulppaani",
-    "teksti": "Korkeimman tulppaanin terälehdissä on punaisia liekkijuovia. Tuohon aikaan ne johtuivat yleensä virustaudista, joka heikensi sipulia mutta tuotti halutun kuvion.",
+    "teksti": "Korkeimman tulppaanin punaiset liekkijuovat johtuivat tuolloin yleensä virustaudista, joka heikensi sipulia mutta tuotti halutun kuvion.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-A-354",
@@ -2457,7 +2521,7 @@
     "x": 0.53,
     "y": 0.36,
     "otsikko": "Kristus valossa",
-    "teksti": "Valo säteilee ylhäältä keskimmäisen ristin ympärille, ja Kristus erottuu väkijoukosta vaaleana hahmona. Rijksmuseon mukaan hän riippuu kahden ryövärin välissä.",
+    "teksti": "Valo säteilee ylhäältä keskimmäisen ristin ympärille. Rijksmuseon mukaan Kristus riippuu kahden ryövärin välissä.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-616",
@@ -2469,7 +2533,7 @@
     "x": 0.39,
     "y": 0.51,
     "otsikko": "Ratsumiehet ja sotilaat",
-    "teksti": "Ristin juurella ratsumiehet ja haarniskoidut sotilaat kokoontuvat hevosten ympärille. Rijksmuseon mukaan paikalla on myös apostoleja ja Jeesuksen äiti.",
+    "teksti": "Ristin juurella ratsumiehet ja sotilaat kokoontuvat hevosten ympärille. Rijksmuseon mukaan mukana on apostoleja ja Jeesuksen äiti.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-616",
@@ -2561,7 +2625,7 @@
     "x": 0.81,
     "y": 0.63,
     "otsikko": "Hansikkaat kädessä",
-    "teksti": "Oikeassa reunassa istuu tarkastajista nuorin, Jochem de Neve (1629–1681). Hänen kädessään olevaa esinettä luultiin pitkään leimasinpussiksi, mutta se on käsineet.",
+    "teksti": "Oikeassa reunassa istuu nuorin tarkastajista, Jochem de Neve. Hänen kädessään olevaa esinettä luultiin pitkään leimasinpussiksi, mutta se on käsineet.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-C-6",
@@ -2887,7 +2951,7 @@
     "x": 0.45,
     "y": 0.7,
     "otsikko": "Pieni metsästäjä",
-    "teksti": "Keskellä tiellä kulkee yksinäinen metsästäjä. Teoksen perinteinen nimi Het jagertje tarkoittaa pientä metsästäjää, ja hän onkin pieni suuren maiseman keskellä.",
+    "teksti": "Keskellä tiellä kulkee yksinäinen metsästäjä. Teoksen perinteinen nimi Het jagertje tarkoittaa pientä metsästäjää.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/RP-P-1961-1117",
@@ -2955,7 +3019,7 @@
     "x": 0.575,
     "y": 0.67,
     "otsikko": "Polut, jotka loppuvat",
-    "teksti": "Polut kääntyvät pois ja päättyvät äkkiä, kuin ne eivät veisi minnekään. Niitä on luettu kuoleman enteeksi, mutta Van Goghin museo pitää sitä sitkeänä myyttinä.",
+    "teksti": "Polut kääntyvät pois ja päättyvät äkkiä. Niitä on luettu kuoleman enteeksi, mutta Van Goghin museo pitää sitä sitkeänä myyttinä.",
     "lahteet": [
      {
       "url": "https://www.theartnewspaper.com/2021/09/03/van-goghs-mysterious-wheatfield-with-crowswhat-does-it-really-mean",
@@ -2973,7 +3037,7 @@
     "x": 0.45,
     "y": 0.22,
     "otsikko": "Lampun hehku",
-    "teksti": "Lamppu valaisee talonpoikien illallisen. Van Gogh kirjoitti veljelleen Theolle, että sen punakultainen hehku on selvästi kirkkaampi kuin maalauksen valkoiset kohdat.",
+    "teksti": "Lamppu valaisee talonpoikien illallisen. Van Gogh kirjoitti Theolle, että lampun punakultainen hehku on selvästi valkoisia kohtia kirkkaampi.",
     "lahteet": [
      {
       "url": "https://vangoghletters.org/vg/letters/let499/letter.html",
@@ -3091,7 +3155,7 @@
     "x": 0.71,
     "y": 0.75,
     "otsikko": "Kuka laiva on?",
-    "teksti": "Keräilijä luuli laivaa 1800-luvulla Michiel de Ruyterin lippulaivaksi. Rijksmuseo kuvaa sitä vain hollantilaiseksi sotalaivaksi, joka ampuu laukauksen tyynellä merellä.",
+    "teksti": "Keräilijä luuli laivaa 1800-luvulla Michiel de Ruyterin lippulaivaksi. Rijksmuseo kuvaa sitä vain hollantilaiseksi sotalaivaksi.",
     "lahteet": [
      {
       "url": "https://www.rijksmuseum.nl/en/collection/SK-C-244",
