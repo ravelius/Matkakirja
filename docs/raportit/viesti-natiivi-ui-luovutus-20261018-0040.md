@@ -61,3 +61,8 @@ tyhjät wt/natiivi-ui-tyylikirja-museo ja wt/proto-natiivi-ui-rakettikuva. Muut 
   (~1 min) → `python3 tyokalut/ohjauspoyta/jalki.py <ulos>/taysi <ulos>/res` → kopioi Resources/IssOhjauspoyta/ (uusille png:ille .meta lento-alas-mallista uudella guidilla).
 - Pohjavahti hylkää rgba-literaalit uss:ssä: läpinäkyvä = var(--lapinakyva).
 - Yksi käännös kaikille pinotuille erille (kärki sisältää alemmat) säästää linjan vuoron.
+
+## PÄIVITYS 00.52
+Käännös valmis: **KÄÄNNETTY eefb79a01 a45af2f97** (_tyo/natiivi-ui/ratas-201-app). Nopein reitti: SIMU NYT heti tällä käännöksellä
+(`zsh ketjut-20261016/kehys-ratas-201-simu.zsh`: video + parit, KK:n kohdat 2 ja 3 näkyvät), samaan aikaan kohdan 1 osuma 44 pt
+(vain poyta.json-mitat) uudeksi commitiksi → NS:lle korjattu sha (osuma näkyy `poyta tila` -tulosteesta seuraavassa käännöksessä).
