@@ -511,3 +511,6 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
 - 06.30: **ERÄ juna 199: äänivahdin aukko 0a3c4b09c** (siirtoseppa/aanivahti-199, natiiviseppa/juna-198 d7d9af99c päällä; worktree wt/proto-siirtoseppa-aanivahti199):
   3 PlayClipAtPointia (tyrmän askeleet 2, esineen kolahdus) → SeikkailuAanet.SoitaKlippi (pohja, kuulokehys: myös paikka korjautuu); vahti
   näkee PlayClipAtPoint + typeof(AudioSource). Linssit 1979/1979, unity 0, tarkista.sh 0. Ei simua. → PT → NS junaan 199.
+- 07.19: PT:n erä 200 (Pariisin lähestymisääni) = jo tehty LS:n **c8c6bff49** (linssiseppa/louvre-pariteetti, EI vielä rungossa): ulko/sisäänmeno maan
+  lahestyminen.json:sta (avaimet ulkoaani, sisaanmeno), puuttuva = Museumplein; sisäänmeno PohjaLahde, ulkosilmukka ympäristön Silmukka (Aanisoitin,
+  ryhmätaso). Ranskan json:issa ei kumpaakaan eikä Pariisille ole omaa ääntä → ÄÄ (PT:lle kerrottu). Ei omaa committia (ei päällekkäistä työtä).
