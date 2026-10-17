@@ -130,8 +130,47 @@ Karttaseppä.)*
 *(kehys (lasipohja, KEHYS-KÄÄRÖ alle 250 ms), aikaselain, nimikkeet ja sinettileima, iPhone pysty ja iPad. Täydentää Natiivi-UI.)*
 
 ### Sisältökirjuri
-*(tarinarivit avainvuosittain: yksi virke ja muutossarake, kolme tarkistajaa, merkinnät; ks. `historiapeli.md` luku 2. Täydentää
-Sisältökirjuri.)*
+*(TÄYDENTÄÄ: SK, 17.10.2026, Kiinan dynastiat -linssin tekstityön pohjalta; ei uusia sääntöjä. Tekstien yleinen tuotanto: `kertojan-teksti-ja-aani.md`,
+historiaosuus: `historiapeli.md` luku 2.)*
+
+**Tuotokset linssiä kohti (tässä järjestyksessä):**
+1. **Tarinarivit avainvuosittain** (vaihe 4): yksi virke per avainvuosi, taulukko `docs/kohtaukset/<linssi>/tarinarivit-<pvm>.md`
+   sarakkein vuosi, rivi, Muutos ("–" jos rivi säilyi). Pohjana Karttasepän `<linssi>.json` (pääkaupunki-sarake sen mukaan, ei
+   muistista) ja linssin suunnitelma. Pelitekstiin vain varmistetut faktat; [EPÄVARMA] pehmennetään tai jätetään pois.
+2. **Faktatarkistus ennen PT:tä:** kolme Sonnet-agenttia jakaa vuodet (Kiina: 19 vuotta → A/B/C), kukin hakee omat lähteensä
+   (kaksi riippumatonta per väite; 403-sivut luetaan hakutiivistelmästä, ei kierretä; AI-merkitty wikisivu ei ole todiste).
+   Tulos `docs/raportit/<linssi>-faktatarkistus-<pvm>.md` + `…-lahteet-<pvm>.md`; rivit hiotaan tuloksen mukaan.
+3. **Kertojatekstit** (jos linssi kertoo ääneen): rivit, taistelu- ja keksintökortit tarvittaessa, `docs/kohtaukset/<linssi>/
+   kertojatekstit-<pvm>.md` + `.json` (jokaisella kortilla lähteet; valmis teksti ja tarkistusmerkinnät samassa tiedostossa).
+4. **Riippumaton tarkistus kertojateksteille** ja korteille: eri agentti kuin kirjoittaja, ohje "oleta että jotain on pielessä",
+   omat haut ENNEN aineiston lukua, tuomio OK / KORJAA / EPÄVARMA ja täsmällinen korvaava teksti. Kokemus: kirjoittajan oma
+   tarkistus ei löydä kaikkea (Kiina 17.10.: 19 kertorivistä 7 vaati korjausta, 9 kortista 4); älä ohita tätä vaihetta.
+   Korjaukset tiedostoon ja tarkistuksen lähteet/koordinaattitarkkuudet `.json`:iin (`riippumaton_tarkistus_<pvm>`).
+5. **Tekstit-osasto omistajan hyväksyttäväksi:** teksti äänisivun Tekstit-osastoon (tunnus `<linssi>-<aihe>`, kertoja ehdotuksena,
+   rivillä merkkimäärä ja tarkistustila "odottaa KK:n hyväksyntää"). Varmuuskopio ensin (`index.html.ennen-<aihe>-<pvm>`),
+   julkaisu `zsh tools/tyotavat/julkaisija/aanisivu-julkaise.zsh`; skripti keskeyttää, ellei Access-suoja ole voimassa. Muutoksen
+   jälkeen teksti, merkkimäärä ja tarkistustila päivitetään myös Tekstit-osastoon.
+6. **Ääni vasta luvalla** (Äänittäjä, ääniportti): ei äänitystä ennen KK:n/omistajan hyväksyntää eikä ennen generointilupaa.
+   Numerot kirjoitetaan sanoiksi ennen merkkimäärän laskemista; "eaa." kirjoitetaan "ennen ajanlaskun alkua".
+
+**Tekstin säännöt (poimittu Kiinan opeista):**
+- Pelitekstissä ei lyhenteitä "eaa."/"jaa."; vuosiluvut numeroina. Pelaaja on 13+ ja aikuinen: ei lastentekstiä, ei väkivallan
+  kuvausta eikä hehkutusta; sama sävy kuin muissa kertojateksteissä.
+- Kiistanalainen tai yhden lähteen väite: "on arveltu" / "lähteiden mukaan" tai pois; älä väitä tarkempaa kuin lähde. Wikipedia
+  on yksi lähde, ei kaksi. Hyvin tunnettu legenda (Talas 751, romaanin olkiveneet) kerrotaan legendana tai jätetään pois.
+- Pääkaupungit, rajat ja koordinaatit otetaan Karttasepän datasta; jos teksti ja data ovat ristiriidassa, palauta kysymys
+  Karttasepälle (SK ei korjaa dataa) ja kirjaa havainto `huomiot`-kenttään.
+- Epävarma paikka ilmoitetaan tarkkuutena (km) kortissa ja siirretään Karttasepälle (taistelupisteet, `alue`); kiistanalainen
+  paikka on kentässä `paikka_varmuus`.
+- Kun teksti muuttuu tarkistuksen jälkeen, päivitä VAIN yksi totuus (`.json`) ja johda `.md` ja Tekstit-osasto siitä, ettei
+  versioita ole kolmea.
+
+**Tekstin valmiin määritelmä (täydentää lukua 3):** jokaisella avainvuodella tarinarivi; tarkistus tehty ja tallennettu;
+Tekstit-osastossa kaikki tekstit tilalla "odottaa hyväksyntää" tai "hyväksytty"; ääni vasta luvalla; `.md`, `.json` ja Tekstit-osasto
+ovat samat sanatarkasti.
+
+**Aikataulu:** tekstit ehtivät rinnan koodin kanssa (vaiheet 3–5); aloita tarinariveistä heti, kun Karttasepän `MUOTO-*.md` on
+valmis. Faktatarkistus ja riippumaton tarkistus ajetaan agenteilla (vain Opus/Sonnet); levyhädän aikana ei agentteja.
 
 ### Äänittäjä
 *(kertoja ja äänimaisema linssille, ääniportti; ks. `kertojan-teksti-ja-aani.md`. Täydentää Äänittäjä.)*
@@ -144,6 +183,9 @@ Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
   oikeassa muodossa, ja epävarmat taistelupaikat lisättiin myöhemmin kenttänä (`alue`) ilman muutosta muuhun. Hidasti: käännös- ja
   simuvuorot yöllä (yksi kerrallaan), joten koodi valmistui tuntia ennen ensimmäistä kuvaa. Muuttuu: QA-komento jokaiselle
   siirtymän tilalle (`siirtyma 0,3`) heti, jolloin yksi simuajo todistaa koko animaation (kultainen polku 9).
+- **17.10.2026, Kiinan dynastiat, tekstit (SK).** Kolmen tarkistajan faktatarkistus (16.10.) ei riittänyt kertojateksteille: riippumaton
+  tarkistus 17.10. löysi 7/19 kertorivistä ja 4/9 kortista korjattavaa (pääkaupungin siirtäjä, "laajimmillaan", ruutireseptikirja,
+  puupainannan alku). Muuttuu: riippumaton tarkistus on oma vaiheensa (SK-osuus kohta 4), ja `.json` on tekstien yksi totuus.
 - **16.10.2026, Kiinan dynastiat pallolle.** Ensimmäinen versio oli litteä kuva; omistaja halusi pelin pallon. Muuttuu:
   ensimmäinen kuva pelistä pallolla (kultainen polku 2), ja värit kysytään pallokuvilla (Qing viileä sininen).
 
