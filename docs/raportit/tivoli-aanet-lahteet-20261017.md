@@ -21,3 +21,5 @@ Puutteet: Himmelskibetille ja Gyldne Tårnille ei löytynyt omaa ääntä (vain 
 - Suositukset käyttöön; Himmelskibet = syntetisoitu tuulen suhina + kaukainen kirkuna (406824), Gyldne Tårn = pudotuksen kirkaisu (438420, 6 s yksittäinen).
 - Ämpäri: `https://media.matkakirja.app/aanet/tivoli-v1/manifest.json` (200; 8 ääntä: tivoli-rutschebanen-kolina, -daemonen, -himmelskibet, -gyldne-torn-pudotus, -vakijoukko, -soittokunta-kaukainen, -karusellin-urut, -jarvi-puisto). Manifestissa paikka, lat/lon, kantama_m, silmukka, taso. Taso −30 LUFS (soittokunta −34, torni −24), huippu −9,3…−19 dBFS. Ääniportti läpi, 10 tiedostoa, virheitä 0.
 - CC BY -nimeämiset: `nimeamiset-ehdotus.json` paketissa (YleArkisto 513923, klankbeeld 192092) → kytkijä lisää `data/aanilahteet.json`:iin kytkettäessä. Paketti `_valmiit/tivoli-v1-vienti-20261017/`, työ `_tyo/tivoli-aanet-20261017/tee.py`.
+
+- **manifest-v2.json** (PT/LR 17.10.): karusellin urut → 55.67318 / 12.56807 (Svingkarrusellen); `https://media.matkakirja.app/aanet/tivoli-v1/manifest-v2.json` korvaa manifest.json:n (ämpäri ei ylikirjoita).
