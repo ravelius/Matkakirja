@@ -15,9 +15,11 @@ Ainoa muutos KK:n luonnokseen: sinetti "katosi kuin savu lähes tuhat vuotta sit
 | Kultaa heitettiin vuoristojärveen | Pitää: Guatavitan järvi (3 000 m), muiscojen kultauhrit; El Dorado -tarun pohja (en.wikipedia Lake Guatavita). |
 | Turkoosikasvoinen naamio | Ei väitä sijaintia eikä esinettä; turkoosimosaiikkinaamiot ovat atsteekkien esineistöä. Montezuma-liitos on luettelon (Aarni) nimi, ei historiallinen väite. |
 | Keisarin sinetti katosi "lähes tuhat vuotta sitten" | EI PIDÄ kaikissa lähteissä: Valtakunnan sinetti katosi joko 900-luvulla (937/946) tai päätyi Yuan-keisareille ja oli kadonnut 1370 mennessä (en.wikipedia Heirloom Seal of the Realm). Siksi "vuosisatoja sitten", joka pitää kummassakin. |
-| Kolme punaista kiveä, timantti keskellä, helmet välissä | Pitää: Herman Ruissel 1389, kolme punaista spinelliä (balas-rubiinia) kolmiossa, keskellä sininen timantti, kolme pyöreää helmeä välissä, lisäksi riippuva helmi (en.wikipedia Three Brothers). |
+| Kolme punaista kiveä, timantti keskellä, helmet välissä | Pitää: Herman Ruissel 1389, kolme punaista spinelliä (balas-rubiinia) kolmiossa, keskellä suuri terävä (pointed) timantti, kolme pyöreää helmeä välissä, lisäksi riippuva helmi (en.wikipedia Three Brothers). |
 | "Viimeksi Hollannissa yli kaksisataa vuotta sitten" | Pitää: viimeinen varma merkintä Alankomaista 1634 (Amsterdam), Henrietta Marian myyntiyritys Haagissa 1642; 1873 − 1642 = 231. Kaanon: kateissa 1640-luvulta. |
 | Näkökulma 1873, ei Aarnia eikä luetteloa | Täyttyy. |
+
+*Korjaus 17.10.2026: tässä taulukossa luki aiemmin "sininen timantti". Sinistä ei mainita Philip Hyvän 1419 inventaariossa ("very big pointed diamond") eikä 1587 listassa ("great poynted Dyamond"); väite "deep blue, ~30 ct" on vain Wikipedian jäljitettävissä yhteen jalokivikauppiaan verkkosivuun (Weldon's of Dublin 2014), eikä kaanon (tarina.md, isoisan-raamattu.md) mainitse väriä. Unen puhuttu teksti ei koskaan sanonut väriä ("timantti keskellä").*
 
 ## Pulun saapumisrepliikit (omistajan päätös 15.10. 17.12)
 

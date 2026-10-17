@@ -17,7 +17,7 @@ Aarnin luettelo: yksi unohdettu aarre per manner (TA, Aarni; IR, Muut maanosat).
 - **El Dorado** (Etelä-Amerikka): kultaa heitettiin vuoristojärven syvyyksiin (Guatavitan järvi, 3 000 m, muiscojen kultauhrit). Kaanonin tunnelma: "kulta joka ei kiillä, joet, sumu, legendat".
 - **Montezuman aarre / turkoosinaamio** (Pohjois-Amerikka): naamio ei väitä sijaintia; turkoosimosaiikkinaamiot ovat atsteekkien esineistöä; luettelon nimi, ei historiaväite (UT). Kaanonin tunnelma: rautatiet ja sähkösanomat.
 - **Keisarin jadesinetti** (Aasia): Valtakunnan sinetti katosi 900-luvulla tai oli kadonnut 1370 mennessä; unessa "vuosisatoja sitten" (UT). Sinetin jälki vahassa/paperissa.
-- **Kolme veljestä** (Eurooppa, kaanonmuutos 11.10.2026): riipus 1389 (TA: Juhana Peloton), kolme punaista spinelliä kolmiossa, keskellä sininen timantti, helmet välissä; kateissa 1640-luvulta, viimeksi Hollannissa (Amsterdam 1634, Haagi 1642) (UT; TA). Aarnin luettelo paljastuu pelaajalle vasta kun se löytyy; alussa isoisä kertoo vain aarteesta.
+- **Kolme veljestä** (Eurooppa, kaanonmuutos 11.10.2026): riipus 1389 (TA: Juhana Peloton), kolme punaista spinelliä kolmiossa, keskellä suuri terävä timantti (väriä ei kaanonissa eikä aikalaislähteissä; "sininen" on vain yhden jalokivikauppiaan verkkosivun väite, ei käytetä), helmet välissä; kateissa 1640-luvulta, viimeksi Hollannissa (Amsterdam 1634, Haagi 1642) (UT; TA). Aarnin luettelo paljastuu pelaajalle vasta kun se löytyy; alussa isoisä kertoo vain aarteesta.
 - Muut: Suuren Zimbabwen kivilintu (Afrikka), Sheban aarre (Lähi-itä, suitsuke ja tähdet), Eteläristin helmi (Oseania, tähtitaivas), Magellanin kompassi (maailmankartta), Sulttaanin timantti (Istanbul) (IR).
 
 ## 4. Isoisän suuri kysymys, pelko, syy lähteä
