@@ -123,8 +123,42 @@ Kultaisesta polusta poiketaan vain PT:n hyväksynnällä; poikkeama joko kirjata
 ## 7. TÄYDENTÄÄ
 
 ### Karttaseppä
-*(rajadata ja kerrokset: CC0-lähteet, `MUOTO-*.md`, kolmiointi ja renkaat, epävarmat paikat alueena, lähteet-kenttä. Täydentää
-Karttaseppä.)*
+*(TÄYDENTÄÄ: Karttaseppä, 17.10.2026, Kiinan dynastiat -linssin aineistotyön pohjalta (19 avainvuotta, 241 kerrosta, epävarmat
+taistelupaikat alueina); ei uusia sääntöjä. Malli: `data/linssit/kiinan-dynastiat/` ja `tools/kiinan-dynastiat/`.)*
+
+**Tuotokset linssiä kohti (tässä järjestyksessä):**
+1. **Lähdeselvitys ennen piirtoa.** Jokaiselle aineistolle lisenssi ja käyttötapa `docs/raportit/<linssi>-lahteet-<pvm>.md`:hen.
+   Kiina: rajat omina käsin piirrettyinä kärkilistoina (CC0), rannikko Natural Earthin maasta (PD), Cliopatria (CC BY 4.0) vain
+   vertailukuvan katkoviivana, ei geometrian lähteenä (krediitti annetaan silti `attribuutio`-kenttään). Ei OSM:ää (ODbL on
+   jakoehtoinen, ei pysyvässä latausluvassa), ei NC-lisenssejä; skriptattu haku vain robots.txt:n salliessa.
+2. **Muoto kirjataan, ennen kuin aineisto tehdään.** Linssisepän muotoehdotus → `MUOTO.md` (LS lukitsee proto-sha:lla). Lukittuun
+   muotoon ei kosketa: lisäykset uutena päätason avaimena (`kerrokset`, `kerrokset_lahteet`) ja oma `MUOTO-<osa>.md`, uudet
+   tiedot lisäkenttinä, joita vanha lukija ei tarvitse (taistelun `alue` tuli myöhemmin ilman muutosta muuhun).
+3. **Geometrian säännöt** (pelin pallo, Isoisä 1873 -muoto): WGS84 `[lon, lat]`, 3 desimaalia; linssin alue rajataan niin, ettei
+   antimeridiaania ylitetä (Kiina 60–145° I); viivat tihennetty ≤ 0,25° ja täyttöjen reunat ≤ 0,5°, ettei pitkä jakso painu
+   pallon pinnan alle; monikulmio = ulkokehä + reiät; alueet eivät mene päällekkäin (aiempi voittaa, naapurit vähennetään
+   järjestyksessä); rannikko tulee pohjasta, viivoissa vain maarajat (luokka 1 valtio, 2 protektoraatti/vasalli); sievennys ~3 km.
+4. **Työkalut toistettaviksi** `tools/<linssi>/`: piirto (`piirra.py`, GeoJSON per vuosi + vertailukuva), vienti (`vie.py`, koko
+   pelin JSON) ja kerrokset (`kerrokset.py` + `kerrokset_data.py`, ajetaan viennin jälkeen ja kirjoittaa vain oman avaimensa).
+   Käsin piirretty data osamoduuleihin (`vuodet_a/b/c.py`), ankkurit kommentteina (vuori, joki, kaupunki). JSON kirjoitetaan
+   väliaikaisen kautta (`.tmp` + `os.replace`); assertit alueen rajoille, ja tuloste kertoo kerrosmäärät ja koon tavuina.
+5. **Epävarmuus muotoon, ei tekstiin.** `epavarma` (paikka kiistanalainen), `tausta` (ennen linssin alkua, näytetään alusta),
+   `alue` + `alue_km` (mahdollisten paikkojen vyöhyke suljettuna renkaana: kupera verho säteen ympyröistä paikkaviivan ympärillä;
+   Punainen kallio Jangtse Baqiu–Wuhan 12 km, Fei-joki Shouchun 15 km). Piste jää yleisimmin mainittuun paikkaan. Arviot
+   merkitään (`arvio`: true, väestön alueosuudet "Karttasepän arvio") ja kaikki lähteet `kerrokset_lahteet`-kenttään.
+6. **Luonnoskuva ennen PR:ää.** Litteä 2 × 2 -välikuva (`valikuva.py`) neljästä avainvuodesta PT:lle rajojen ja värien
+   tarkistukseen; varsinainen hyväksyntä tehdään pelin pallokuvasta (kultainen polku 2).
+7. **PR mainiin, sha Linssisepälle.** Vain `data/linssit/<linssi>/` ja `tools/<linssi>/` (datamuutos ei nosta versiota, vihreä PR
+   mergetään ilman korttia). LS kopioi tiedoston proton `Linssit/Resources/<Aihe>/` ja tarkistaa `cmp`:llä. Korjaukset tehdään aina
+   mainiin uudella ajolla, ei käsin JSONiin eikä protoon (tyypilliset virheet 1).
+
+**Yhteistyö:** Sisältökirjuri ottaa pääkaupungit ja paikat datasta; SK:n tarkistamat koordinaatit ja km-tarkkuudet palautuvat
+Karttasepälle, joka päivittää datan (kiistanalainen paikka `alue`-kenttään). Värit ovat suunnitelman ja omistajan (yksittäinen
+väri kuvaparilla), Karttaseppä vain kirjaa ne `vari`-kenttiin ja `MUOTO.md`:hen.
+
+**Aineiston valmiin määritelmä (täydentää lukua 3):** jokaisella avainvuodella alueet, maarajat, nimet ja pääkaupungit; alueet
+eivät ole päällekkäin; jokaisella kerroksella `alku`–`loppu`, `vari` ja lähde; epävarmat paikat merkitty (`epavarma`, `alue`);
+lisenssit `LAHTEET.md`:ssä ja `attribuutio`-kentässä; työkalut tuottavat mainin JSONin tavulleen samana.
 
 ### Natiivi-UI
 *(kehys (lasipohja, KEHYS-KÄÄRÖ alle 250 ms), aikaselain, nimikkeet ja sinettileima, iPhone pysty ja iPad. Täydentää Natiivi-UI.)*
