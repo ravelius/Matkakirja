@@ -1,0 +1,19 @@
+{
+  "preparedAtUTC": "2026-10-17T18:29:48.029080+00:00",
+  "preparedForParentRootDelivery": true,
+  "mailDeliveredByThisAgent": false,
+  "nativeImageCount": 3,
+  "callsSpent": 3,
+  "allThreeRequestedImagesProduced": true,
+  "allMandatoryVisualRequirementsPassed": false,
+  "notableDefects": [
+    "J5 stud grid 6x13 not 9x9",
+    "J7 modern-looking distant skyline",
+    "Native ratio near but not exactly 16:9",
+    "Some building outlines cropped; complete-building target not certified"
+  ],
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

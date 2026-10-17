@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "DELIVERY-STATUS.json",
+      "bytes": 601,
+      "sha256": "e2e1e4c526832a05bd296950eac6c4cac3e801709da790211cd2a72be7e377c3"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 5342,
+      "sha256": "6df48fe50e13fe832f1a5218e8ddf0c5378358ee373207805cfce083a9e6e512"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 15447,
+      "sha256": "9e4959765145acb99348850739bf76baf73a6eb9d73eb8be9fa68b328600d4d0"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2241,
+      "sha256": "2f16ba0d147fd3ef54fbf3e4dd3a4ede88e62ead9f31eb8767e3275a494dbcda"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 4349,
+      "sha256": "0ca26356f3fe47d9910a790a2314944a84ef7be15e078bdb221d8fc574dd9326"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 3126,
+      "sha256": "893bac31ddd06feb3d63cb8b3967a40e56e34acbb192b418dc7dd7353eaee84e"
+    },
+    {
+      "path": "havainne-j5.png",
+      "bytes": 3211202,
+      "sha256": "772585b463fc414024bdbbd616795ca55236edb69bea3701cea28be4db2fee65"
+    },
+    {
+      "path": "havainne-j6.png",
+      "bytes": 3144312,
+      "sha256": "b3471e9930a9d35414e62d3ad2837a624d060782bb5efa85a6536cb503d502de"
+    },
+    {
+      "path": "havainne-j7.png",
+      "bytes": 3082586,
+      "sha256": "0399aea2c4e73daa1b32ab79f678eacebbadf5a265e2cc364470defc4a2c0c01"
+    },
+    {
+      "path": "qa-diagnostics/factual-preflight-previous-order.json",
+      "bytes": 11280,
+      "sha256": "038b5c5cfc2a6f0731fc9a7829acf384bfb47d80c9ca1c37670d42c9c00fb8c3"
+    },
+    {
+      "path": "qa-diagnostics/j5-door-detail-diagnostic-4x.png",
+      "bytes": 89805,
+      "sha256": "83a3a60066316868328dff6f55ba32f2bcd33ad1571ecab18642e932062b17be"
+    },
+    {
+      "path": "qa-diagnostics/j6-ridge-detail-diagnostic-4x.png",
+      "bytes": 46789,
+      "sha256": "078d38baea4c86512f3ff512c3c4f0ffd9e582fdfc2b3b47f3a89a2fe977303e"
+    },
+    {
+      "path": "qa-diagnostics/j7-horizon-detail-diagnostic-4x.png",
+      "bytes": 37327,
+      "sha256": "4d4e8f4b0975b5d3261645a4e33a664218fe9041e9bd79a6145e1fb46f675c8c"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-juoksupeli-j5-j7-nukkekoti-20261017.md",
+      "bytes": 3464,
+      "sha256": "c29eeb3060bdb5f6d8745cdd09c3d74d5b145082c2a9fd0d3d7f2e2a066cc0fa"
+    },
+    {
+      "path": "sources/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+      "bytes": 4971,
+      "sha256": "00da87fa22aedec81636c5a7fc57988a43a4c24bb1d27d3178bbae7886a74d34"
+    }
+  ],
+  "manifestExcludesItself": true,
+  "nativePNGsUnmodified": true
+}

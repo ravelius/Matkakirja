@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "order": "j5–j7",
+  "method": "built-in image_gen",
+  "wholeNewGeneration": true,
+  "maximumCalls": 3,
+  "callsSpent": 3,
+  "calls": {
+    "j5": {
+      "issuedAtUTC": "2026-10-17T18:24:13.795078+00:00",
+      "status": "completed",
+      "authorizedAttempt": 1,
+      "maximumAttempts": 1,
+      "method": "built-in image_gen",
+      "intent": "new whole image using style references; no partial edit",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/prompts/j5.txt",
+      "promptSHA256": "bee350e6d3b76472457b5bbba59ecc1c2434e162fcb6d1f6a188bba6c6ce1521",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j1.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j4.png"
+      ],
+      "completedAtUTC": "2026-10-17T18:25:59.190802+00:00"
+    },
+    "j6": {
+      "issuedAtUTC": "2026-10-17T18:26:06.202507+00:00",
+      "status": "completed",
+      "authorizedAttempt": 1,
+      "maximumAttempts": 1,
+      "method": "built-in image_gen",
+      "intent": "new whole image using style references; no partial edit",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/prompts/j6.txt",
+      "promptSHA256": "34214e0b2ed785e257e0237cbcbda91fbf2de013d2c6cf6d73fc9632ae901e4d",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j2.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j4.png"
+      ],
+      "completedAtUTC": "2026-10-17T18:27:01.543417+00:00"
+    },
+    "j7": {
+      "issuedAtUTC": "2026-10-17T18:27:17.659877+00:00",
+      "status": "completed",
+      "authorizedAttempt": 1,
+      "maximumAttempts": 1,
+      "method": "built-in image_gen",
+      "intent": "new whole image using style references; no partial edit",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/prompts/j7.txt",
+      "promptSHA256": "71b97b8d104a16dafa23ce2021334fbd1e49029b2b9bfe3d7db3e2cfdc5dc166",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j3.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j4.png"
+      ],
+      "completedAtUTC": "2026-10-17T18:28:20.642936+00:00"
+    }
+  },
+  "nativeImages": {
+    "j5": {
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-ecf2-7b43-87c5-c2736b378375/exec-504a5dd1-7764-4385-919b-0234aadfbace.png",
+      "savedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/images/havainne-j5.png",
+      "t7NativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-nukkekoti-20261017/images/havainne-j5.png",
+      "nativeSHA256": "772585b463fc414024bdbbd616795ca55236edb69bea3701cea28be4db2fee65",
+      "bytes": 3211202,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "format": "PNG",
+      "exact16by9": false,
+      "ratio": 1.7768331562167907,
+      "pixelsModified": false,
+      "recordedAtUTC": "2026-10-17T18:25:59.190638+00:00"
+    },
+    "j6": {
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-ecf2-7b43-87c5-c2736b378375/exec-56a0de2f-d225-49ec-b902-8ed3545a3f23.png",
+      "savedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/images/havainne-j6.png",
+      "t7NativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-nukkekoti-20261017/images/havainne-j6.png",
+      "nativeSHA256": "b3471e9930a9d35414e62d3ad2837a624d060782bb5efa85a6536cb503d502de",
+      "bytes": 3144312,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "format": "PNG",
+      "exact16by9": false,
+      "ratio": 1.7768331562167907,
+      "pixelsModified": false,
+      "recordedAtUTC": "2026-10-17T18:27:01.543247+00:00"
+    },
+    "j7": {
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-ecf2-7b43-87c5-c2736b378375/exec-a631774d-693d-4637-9b09-8564a619b23c.png",
+      "savedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/images/havainne-j7.png",
+      "t7NativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-nukkekoti-20261017/images/havainne-j7.png",
+      "nativeSHA256": "0399aea2c4e73daa1b32ab79f678eacebbadf5a265e2cc364470defc4a2c0c01",
+      "bytes": 3082586,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "format": "PNG",
+      "exact16by9": false,
+      "ratio": 1.7768331562167907,
+      "pixelsModified": false,
+      "recordedAtUTC": "2026-10-17T18:28:20.642740+00:00"
+    }
+  },
+  "noPartialEdits": true,
+  "noRetries": true,
+  "qaApproved": false,
+  "generationCompleted": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

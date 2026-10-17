@@ -1,0 +1,73 @@
+{
+  "reviewedAtUTC": "2026-10-17T18:29:48.029080+00:00",
+  "reviewer": "running_dollhouse_three",
+  "selfReview": true,
+  "independentReview": false,
+  "method": "Generated originals viewed inline and native files opened with view_image original/high; separate diagnostic crops for small details. No delivered pixels changed.",
+  "allImagesLocallyApproved": false,
+  "allImagesHaveMandatoryBriefDeviations": true,
+  "common": {
+    "nativeWidth": 1672,
+    "nativeHeight": 941,
+    "ratio": 1.7768331562167907,
+    "requestedRatio": "16:9",
+    "exact16by9": false,
+    "ratioDifferencePercent": -0.05313496280551222,
+    "landscape": true,
+    "wholeNewScene": true,
+    "photorealisticMaterials": true,
+    "cutawayConvention": "One nearest room roof and ceiling cleanly removed, furnished floor visible; not an actual surveyed palace room",
+    "periodSpecificInteriorHistoricallyVerified": false,
+    "buildingsExactPlanVerified": false,
+    "nativeBytesPreserved": true,
+    "callsSpent": 3,
+    "retries": 0
+  },
+  "j5": {
+    "nativeSHA256": "772585b463fc414024bdbbd616795ca55236edb69bea3701cea28be4db2fee65",
+    "positive": [
+      "Bright green summer scene, rear elevated camera",
+      "Furnished clean cutaway guard/entrance room",
+      "Puyi with yellow robe, cap and queue; three male attendants and one nurse follow",
+      "Gatehouse and sunny stone courtyard; open water vat with two ring handles and low stone base"
+    ],
+    "deviations": [
+      "Right door leaf visibly has 6 columns by 13 rows, not the requested 9 by 9; one portion is occluded by the door knocker",
+      "Five distinct palace masses can be read, but foreground room and edge halls are partly cropped/occluded, so 3–5 whole/nearly-whole buildings is not strictly verified",
+      "Raised gate threshold is visible, but wood grain, required height and a definite attendant toe-stumble are not securely readable at this scale"
+    ],
+    "localQA": "review candidate with mandatory stud-grid deviation"
+  },
+  "j6": {
+    "nativeSHA256": "b3471e9930a9d35414e62d3ad2837a624d060782bb5efa85a6536cb503d502de",
+    "positive": [
+      "Broad flat stone walkway with parapets, no child on pitched roof",
+      "Puyi runs away with yellow robe, cap and braid; three male attendants plus one nurse behind",
+      "Nearest roofless room contains shelves, volumes, lacquered table, chairs, rug and curtains",
+      "Several intact yellow-roofed halls, green summer trees and distant double-eaved hall"
+    ],
+    "deviations": [
+      "Near cutaway building and right-side hall extend outside the frame; 3–5 fully/nearly-fully visible buildings not strictly established",
+      "Small ceramic figures occur on diagonal hip ridge, but leading rider, exact count/species/order and physical size cannot be securely confirmed",
+      "Adult legs partly crop at lower frame; amused/breathless facial expressions unverified because all viewed from behind"
+    ],
+    "localQA": "review candidate; no claim of exact building-count or roof-species compliance"
+  },
+  "j7": {
+    "nativeSHA256": "0399aea2c4e73daa1b32ab79f678eacebbadf5a265e2cc364470defc4a2c0c01",
+    "positive": [
+      "Late afternoon, green trees, moat, yellow multi-eaved tower",
+      "Broad protected flat stone wallwalk; Puyi and three male attendants plus nurse move along it",
+      "Clean furnished roofless room at foreground side; lacquered furniture, rug, curtains and period-looking vessels",
+      "White dagoba and Jingshan-like pavilions form a distant cinematic composition"
+    ],
+    "deviations": [
+      "Rightmost distant horizon has upright rectangular blocks resembling modern buildings, violating the no-modern-skyline requirement",
+      "Tower is a generic simplified two-tiered silhouette; exact northwest corner-tower roof geometry and dimensions not established",
+      "Jingshan and Beihai are composed cinematic geography, not a verified single camera or mapped view",
+      "Two intact structures are clearly legible; left hall and nearest cutaway are cropped/occluded, so 3–5 complete/nearly-complete buildings is not strictly verified",
+      "Nearest male attendant lower body cropped; stairs and amused breathless expressions not securely readable"
+    ],
+    "localQA": "NOT fully QA-approved; modern-looking horizon is a mandatory historical-setting defect"
+  }
+}

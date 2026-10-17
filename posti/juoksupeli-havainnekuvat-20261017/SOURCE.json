@@ -1,0 +1,61 @@
+{
+  "order": "j5–j7 three dollhouse cutaway illustrations",
+  "sources": [
+    {
+      "commit": "23488c7f37e155e4216a67de12e78d36967da1cd",
+      "path": "posti/paatoimittaja-codex-juoksupeli-j5-j7-nukkekoti-20261017.md",
+      "gitBlob": "992dbc20650510ff95116f94ea0f6c77b6aca94c",
+      "bytes": 3464,
+      "sha256": "c29eeb3060bdb5f6d8745cdd09c3d74d5b145082c2a9fd0d3d7f2e2a066cc0fa",
+      "readCompletely": true
+    },
+    {
+      "commit": "23488c7f37e155e4216a67de12e78d36967da1cd",
+      "path": "posti/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+      "gitBlob": "a3110d6fcbb8333d88febdc1d336250c8ec4473b",
+      "bytes": 4971,
+      "sha256": "00da87fa22aedec81636c5a7fc57988a43a4c24bb1d27d3178bbae7886a74d34",
+      "readCompletely": true
+    }
+  ],
+  "referenceImages": {
+    "j1": {
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/images/havainne-j1.png",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j1.png",
+      "sha256": "cb50a05b036d46f6863690fa0451fa22cd576aea19e1ada6114bf856540abce7",
+      "bytes": 2678260,
+      "role": "Style, wardrobe, setting and camera references only; not edit targets",
+      "personallyViewedOriginal": true
+    },
+    "j2": {
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/j2-safe-retry/images/havainne-j2.png",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j2.png",
+      "sha256": "177009388a7cefd5dbd2cf45f05b7a199145af4af1c6dabfdac541811e79bc58",
+      "bytes": 2669831,
+      "role": "Style, wardrobe, setting and camera references only; not edit targets",
+      "personallyViewedOriginal": true
+    },
+    "j3": {
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/images/havainne-j3.png",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j3.png",
+      "sha256": "e9d27f707ff1a74b2fd0bb66c696d99485528cf844c5459edd7ce23519e9bf06",
+      "bytes": 2791985,
+      "role": "Style, wardrobe, setting and camera references only; not edit targets",
+      "personallyViewedOriginal": true
+    },
+    "j4": {
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/j4-game-camera/images/havainne-j4.png",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/references/j4.png",
+      "sha256": "3e435086ac58652d59ec4e4e64362c476d89fe12cc4a7cd6ec3d33e379f995d2",
+      "bytes": 2926993,
+      "role": "Style, wardrobe, setting and camera references only; not edit targets",
+      "personallyViewedOriginal": true
+    }
+  },
+  "newGenerationsAuthorized": 3,
+  "oneCallPerImage": true,
+  "noRetry": true,
+  "originalJ1J4NotModified": true,
+  "gameIntegration": false,
+  "ownerAccepted": false
+}
