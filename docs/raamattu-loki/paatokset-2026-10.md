@@ -472,3 +472,6 @@ Omistaja 18.10.2026 klo 00.15 ja 00.17 (KK:n välittämänä, sanatarkasti): "si
 ## JUNA 201 = KAIKKI; ISS-KOHDEVALIKKO KOKO RUUTU ILMAN IKKUNAA (18.10.2026 klo 00.19)
 
 Omistaja 18.10.2026 klo 00.18 (KK:n välittämänä, sanatarkasti): "julkaise kun nämä valmiit." / "eli kaikki junaan 201". Junaan 201 tulevat myös kehysnappien häivytys, ⚙-ratas ja ISS-kohdevalikko ilman ikkunaa; ei laitetestejä, KK hyväksyy kuvat omistajan puolesta. Kohdevalikko ilman ikkunaa (omistaja 22.59: "näkymä saa olla silloin pehmennetty ja tummennettu") on poikkeus 45 %:n peittosäännöstä; sumea ja tummennettu pysäytyskuva on uusi tyylikirjapohja omistajan pyynnöstä.
+## CLAUDE-API: UUSI ORGANISAATIO KAYTOSSA, VANHA AVAIN POIS (17.10.2026 klo 23.49)
+
+Omistaja 17.10.2026 klo 23.46 ja 23.48 (sanatarkasti): "onko näitä avaimia nyt käytössä? haluaisin siirtää API käytön toiselle tilille" ja "tämä olisi se mitä jatkossa käytettäisiin" (Console, org Visuaaliviestinnän Inst., avain Matkakirja, luotu 11.10.). KK:n selvitys: GitHub-salaisuus ANTHROPIC_API_KEY päivitettiin uuteen avaimeen jo 11.10., ja pollo-julkaisu.yml vie sen workeriin joka ajossa (viimeksi 17.10., vihreä). Omistaja poistaa vanhan KLIK-organisaation matkakirja-avaimen, minkä jälkeen Julkaisija ajaa savuke-pollo.yml. Macin avaintiedoston ANTHROPIC_API_KEY on vanha eikä mikään työkalu käytä sitä. ANTHROPIC_ADMIN_KEY ennallaan.
