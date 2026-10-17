@@ -10,6 +10,8 @@ VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
   ottoon aanet/taidemuseo-kertoja-v2/ranska/ranska-louvre-puhe-2.mp3 + ajat/ranska/…json + manifest-rivit-louvre-fi.json; suomi pakotettu.
   Samaan orsay-valinnaiset-200-haaraan (tai junan 201 haaraan PT:n ohjeella), sha PT:lle yhdellä rivillä.
   Käännös ja simu voi yhdistää kohdan 1 seuraavaan ajoon, jos 201c-simu on jo ajettu.
+- TÄYDENNYS (PT, omistaja 23.03): ÄÄ uusii myös Louvren salien avaukset (ranska-sali1-avaus ym.) suomi pakotettuna → vaihda nekin
+  viittaukset junaan 201, kun ÄÄ (local_16ee69c8-b917-4dcd-9060-3542c5e03e67) ilmoittaa polut; puheen ja salien vaihto samaan committiin, jos ehtii.
 
 ## 1. ENSIMMÄISEKSI: LOUVREN PYRAMIDIN TERÄVÄ VARJO -SIMU (OMISTAJAN PÄÄTÖS 22.27 PT:n kautta)
 Omistaja 22.27 pyramidi v2.1:stä: "Pitää olla terävä mutta pieni varjo ei pehmeä. Muuten ok" → hyväksytty junaan 201, kun varjo on
