@@ -463,3 +463,25 @@ kun 9fa3b99f1 on juna-196:ssa).
   apureiksi (oletukseni PT:n kysymykseen) → **SIIRTOLISTA TYHJÄ**. Yhteenveto: docs/raportit/siirtoseppa-aanipohja-siirtolista-20261017.md.
   SEURAAVA: laitemittaus (verhokäyrä ennen fdfb5f6dd / jälkeen 0bfc62868; seikkailu, pallon kaupunki, radio, raketti+kupoli, museo) PT:n
   vuorolla → sitten SHA NS:lle junaan 198. Haaraa ei yhdistetä ennen PT:n kuittausta.
+
+## PÄIVITYS 17.10. 03.2x — NOLLAUS (Postivahti, kova raja 35 %): SEURAAJAN ENSIMMÄINEN ERÄ = LUENTAMANIFESTI v6
+
+**Valmis:** äänipohjan siirtolista tyhjä, **0bfc62868** (siirtoseppa/siirto-198-1, wt/proto-siirtoseppa-aanipohja). PT kuittasi apurit
+(Aanisoitin, Puhe, UI/Aanet, PeliKomennot = pohjan runkoa). Yhteenveto docs/raportit/siirtoseppa-aanipohja-siirtolista-20261017.md.
+
+**SEURAAJAN ERÄ 1 (PT, juna 198, ENNEN muuta): luentamanifesti → v6.** Äänittäjä 03.xx: `osoitteet.luennat-manifesti` =
+https://media.matkakirja.app/aanet/luennat/v6/manifest.json (kumulatiivinen 8 410 palaa, ämpärissä 200, korvaa v2–v5; raportti
+Äänittäjän haarassa aanittaja-tyo-20261011 c32a62fad docs/raportit/luennat-era4-oppaat-kaupunkilehdet-20261017.md). EI vielä tehty.
+- Natiivi (proto): Assets/Matkakirja/Peli/Valmisluennat.cs:22 ManifestiOletus (v1 → v6), UI/NostoluentaVienti.cs:87 oletus-URL,
+  Scripts/Peli/Puhe.cs:395 käyttää ManifestiOletusta. Testit Peli-testit/Testit/ValmisluennatManifestiTestit.cs (Kansio v1) ja
+  ValmisluennatTestit.cs (v1-syötteet, jätä tai päivitä), kultainen Peli-testit/Kultaiset/tee-valmisluennat-kultainen.mjs (v1 gz).
+  PT: "varmista testillä, että museon luenta löytyy v6:sta" → hae v6-manifesti (curl, oma ämpäri), tee kultainen gz kuten v1 ja testi.
+- Web: origin/mainissa ei osumaa "luennat-manifesti"/"luennat/v1" (tarkista vielä js/ ja asetukset), joten luultavasti vain natiivi.
+- Haara: erillinen pieni erä junaan 198 (NS:n natiiviseppa/juna-198 tai fdfb5f6dd:n päälle) → SHA NS:lle + PT:lle. Älä sotke siirto-198-1:een.
+- PT:lle on kerrottava: v6 EI ole mukana 0bfc62868:ssa.
+
+**SEURAAJAN ERÄ 2: laitemittaus 0bfc62868.** Julkaisija 03.xx: siirto-198-1 0bfc62868 L2-jonossa NUI:n 198-erien jälkeen (~03.30), ilman
+asennusta → _tyo/siirtoseppa/siirto-198-1-app; Julkaisija kysyy ENNEN SIMU NYT:iä simun (95EEDB48?) ja keston → vastaa hänelle
+(session local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914). Mittaus: 100 ms verhokäyrä ennen fdfb5f6dd / jälkeen 0bfc62868 (seikkailu, pallon
+kaupunki, radio, raketti + kupoli, museo verrokkina); skenaario tyokalut/siirtoseppa-ajot/sk-aanipohja-197.txt laajennettava, ajo
+ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 198.
