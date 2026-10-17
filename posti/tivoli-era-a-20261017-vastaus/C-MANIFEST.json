@@ -1,0 +1,76 @@
+{
+  "createdAt": "2026-10-17T18:34:17.917463+00:00",
+  "generator": "built-in image_gen",
+  "calls": 6,
+  "allowedCalls": 6,
+  "retryCalls": 0,
+  "nativePixelsUnchanged": true,
+  "images": [
+    {
+      "id": "c1",
+      "file": "tivoli-Q110289-c1-jarvi.png",
+      "nativeSHA256": "20bb210bf19fc349a8c06a6123dee83a8298ef27bdca57832e2858579e1179ac",
+      "deliverySHA256": "4b10c57cca7294f6a1dff52f35633caf2c3061fec3c1697b96beb8a32bb66f33",
+      "pixelSHA256": "73122bf96a6adb6235419bd7530ef2b24dc42ad1b2a5c3d5f8b859663de3348f",
+      "width": 1448,
+      "height": 1086,
+      "pixelEqualityVerified": true
+    },
+    {
+      "id": "c2",
+      "file": "tivoli-Q110289-c2-paaportti.png",
+      "nativeSHA256": "32dd80612247a587866853582e617d6939dee8a1eee5b1458dbb0e1cf44d8542",
+      "deliverySHA256": "5de7fe777cd5ff20552149949561e9f92582cf24344bb6ed98cdc6c2349d95e0",
+      "pixelSHA256": "5df0a9820b0e07c6c560020d07232f101512390b5923fb00552fc12426df13f6",
+      "width": 1586,
+      "height": 992,
+      "pixelEqualityVerified": true
+    },
+    {
+      "id": "c3",
+      "file": "tivoli-Q110289-c3-nimb.png",
+      "nativeSHA256": "b456fa720ef88cc77b30a84f5d03676bf7228aa194b7b68c2d44962d14e6bb8c",
+      "deliverySHA256": "a61e661fa28c5e6819e164f6cc314093e7897ea6450eddab39e06e134265d744",
+      "pixelSHA256": "8ce2c23287deb5d3839a023a6d8713390c92bc4a2f1b1e6aa9bbd9fde85f4e33",
+      "width": 1546,
+      "height": 1017,
+      "pixelEqualityVerified": true
+    },
+    {
+      "id": "c4",
+      "file": "tivoli-Q110289-c4-lyhtykaytava.png",
+      "nativeSHA256": "9df45a99b5f7cd6f40c7028243fdee119c2cfad2f7aceefa44b5aaf2422ddea0",
+      "deliverySHA256": "c60930eb0cbd4688096d457e55f45626c136c70e04d717f47182546912638e00",
+      "pixelSHA256": "3a31711c6b09f049398b026e18298c04e345fe52dc6563b3780ce9468e3d1709",
+      "width": 1448,
+      "height": 1086,
+      "pixelEqualityVerified": true
+    },
+    {
+      "id": "c5",
+      "file": "tivoli-Q110289-c5-rutschebanen.png",
+      "nativeSHA256": "65cacc9484930f373fa98f2d8edcd53851367b7e38e8d6baefead0d8c4ef0ba6",
+      "deliverySHA256": "f0cd0e436d8d43f5f3a013e296fdcf63dd56c281738cade2cc95e871efb8696c",
+      "pixelSHA256": "44e42db28ce0c525221a520971a943a4d3c2069a063d001797ceea3f575ad4c7",
+      "width": 1695,
+      "height": 928,
+      "pixelEqualityVerified": true
+    },
+    {
+      "id": "c6",
+      "file": "tivoli-Q110289-c6-glyptotek.png",
+      "nativeSHA256": "b35371c0d8ae7aeeac79e9ec64e6ea0a241127a88a9f6c2b21b7f9a8f69b2c4d",
+      "deliverySHA256": "26b95046eda9f26abcb390ca0286e4663f209a56bd89c1fb94d0bad49f6770d0",
+      "pixelSHA256": "60d5de8ceb8e534d0f153f49af685f841b1260025bfdb3c06841c2d80e8d62b5",
+      "width": 1254,
+      "height": 1254,
+      "pixelEqualityVerified": true
+    }
+  ],
+  "sourceCommit": "23488c7f37e155e4216a67de12e78d36967da1cd",
+  "sourceBlob": "926070157662b3b9161d7698261607146e312a76",
+  "ownerApproved": false,
+  "recipientAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
