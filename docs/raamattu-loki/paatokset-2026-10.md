@@ -381,3 +381,7 @@ Kortin kysymys "Vapaan lennon kierroslista: pysyykö se ilman taustaa?" → omis
 ## OMISTAJA PYYSI JULKAISUA: ISOISÄN UNI POIS, PIKAKORJAUS JUNA 199 (17.10.2026 klo 07.11–07.13) (17.10.2026 klo 07.15)
 
 Omistaja 07.11: "Ota uni heti pois, se ei toimi". Kortti 07.13 "Viedäänkö testaajille heti uusi versio, jossa peli alkaa ilman unta?" → "Kyllä, heti (Suositus)". Juna 199 = BUILD 198 d457a1034 + NUI 127fc3319 (IsoisanUni.Kaytossa = false); aamun muut työt junaan 200. Unta ei kytketä takaisin ilman omistajan uutta lupaa.
+
+## OMISTAJAN PÄÄTÖS: CODEXIN VAHTI KAIKKIIN VIESTEIHIN (17.10.2026 klo 07.25) (17.10.2026 klo 07.27)
+
+Omistaja kysyi 07.2x: "Miten jatkossa codex ei jää huomiotta?" Kortti "Codexin vahti oli rikki … Korjataanko se näin?" → "Kyllä (Suositus)". Selite: "Vahti seuraa kaikkia Codexin viestejä. Jos viestiin ei ole vastattu 30 minuutissa, Päätoimittaja vastaa itse tai antaa sen toiselle. Tunnin jälkeen asia näkyy Asemataululla, kunnes siihen on vastattu." Vika: codex-odottaa.py katsoi vain posti/codex-fable-*, joten 16.10. 23.29 ja 17.10. 00.38 Linssisepälle osoitetut Peking #361 -viestit jäivät huomiotta. Korjaus PT 07.3x: kaikki posti/codex-* ja vastaukset posti/*-codex-* (72 h, sama rooli tai sama aihe), 30 min → PT, 60 min → KK + VAATII TOIMIA (KIERROS.md). Testi näytti 106b8db8f:n ja 54516752f:n sekä 5 vanhaa vastaamatonta (KS, PK ×2, VS, LS), jaettu rooleille. Avoimet Codex-viestit kirjataan luovutuksiin (siirtoraportti 3.5).
