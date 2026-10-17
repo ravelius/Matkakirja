@@ -653,6 +653,16 @@
       "kayttajat": ["Julisteet", "ISS-kameran kuvat", "Astronauttien kuvat"],
       "_selite": "kuvakokoelmien pohja (omistaja 2.10.2026 klo 15.5x, loki 022276d61); malli vanha julistegalleria (.julistegalleria*, mitat sieltä)."
     },
+    "PYSÄYTYSKUVA": {
+      "teemat": ["harmaa"],
+      "koostuu": ["kuva (pysäytetty ja pehmennetty ruutu)", "huntu (himmennys.kevyt)", "sisältö ilman ikkunaa"],
+      "kuva": "ruudunkaappaus avaushetkellä, pehmeä sumennus (natiivi GPU-puolitusketju 1/32 → 1/8); maailma jää pysähtyneenä taustaksi, ei elävää kuvaa",
+      "tummennus": "huntu himmennys.kevyt (tausta erottuu, ei lähes mustaa); jos kuvaa ei saada, himmennys.tumma ilman kuvaa",
+      "sisalto": "suoraan hunnun päällä ilman PANEELIa ja reunaa, harmaa teema; pöytä tai muu pysyvä ohjain jää alle terävänä",
+      "sulku": "napautus tyhjään kohtaan tai avaajaan (esim. KOHTEET) sulkee; kuva vapautetaan suljettaessa",
+      "kayttajat": ["ISS-kohdevalikko (koko näkymä)"],
+      "_selite": "koko näkymän valikko ilman ikkunaa (omistaja 17.10.2026 klo 22.59 uusi pohja, 18.10. 00.18 junaan 201; vain natiivi: UI/Pysaytyskuva.cs ja Pohjat/pysaytyskuva.uss). Malli Natiivi-UI:n luonnos iss-hammasratas-luonnos-0024, 4. ruutu."
+    },
     "OHJAUSNAPPI": {
       "teemat": ["harmaa", "harmaa-kuulto", "paperi", "lasi", "lasi-avaruus"],
       "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma; iso = nappi.ohjaus-iso (56) kuvasisällölle, esim. linnan pienoiskartta (omistaja 2.10.2026 klo 17.4x)",
