@@ -475,3 +475,7 @@ Omistaja 18.10.2026 klo 00.18 (KK:n välittämänä, sanatarkasti): "julkaise ku
 ## CLAUDE-API: UUSI ORGANISAATIO KAYTOSSA, VANHA AVAIN POIS (17.10.2026 klo 23.49)
 
 Omistaja 17.10.2026 klo 23.46 ja 23.48 (sanatarkasti): "onko näitä avaimia nyt käytössä? haluaisin siirtää API käytön toiselle tilille" ja "tämä olisi se mitä jatkossa käytettäisiin" (Console, org Visuaaliviestinnän Inst., avain Matkakirja, luotu 11.10.). KK:n selvitys: GitHub-salaisuus ANTHROPIC_API_KEY päivitettiin uuteen avaimeen jo 11.10., ja pollo-julkaisu.yml vie sen workeriin joka ajossa (viimeksi 17.10., vihreä). Omistaja poistaa vanhan KLIK-organisaation matkakirja-avaimen, minkä jälkeen Julkaisija ajaa savuke-pollo.yml. Macin avaintiedoston ANTHROPIC_API_KEY on vanha eikä mikään työkalu käytä sitä. ANTHROPIC_ADMIN_KEY ennallaan.
+
+## EI PUSH-ILMOITUKSIA: VAIN SESSIOIDEN OMAT POIS (18.10.2026 klo 01.56)
+
+Omistajan kortti Keskustelukanavassa 18.10.2026 klo 01.55: "Otanko pois push-ilmoitukset, jotka Claude-sessiot lähettävät itse?" → "Kyllä, vain sessioiden omat (Suositus)". KK muutti ~/.claude/settings.json: agentPushNotifEnabled false, inputNeededNotifEnabled true (ilmoitus odottavasta kortista tai luvasta jää). Tilinvaihdossa päälle tullut asetus palautettiin 14.10. linjauksen mukaiseksi.

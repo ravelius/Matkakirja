@@ -355,7 +355,7 @@ export const RAAMATTU = {
           + 'muut lähettävät PT:lle rivin "VAATII TOIMIA: <rooli>: <asia>", ja PT kirjoittaa dokumentin. Kun asia on hoidettu, dokumentin kirjoittaja poistaa sen '
           + '(ArtifactData delete if_version). ODOTTAA OMISTAJAA (omistaja 4.10.2026): rooli ilmoittaa PT:lle ennen '
           + 'kuin jää odottamaan omistajaa; omistaja näkee odotuksen session omasta ponnahdusikkunasta (Remote Control) ja Asemataululta, ja Postivahti kertoo sen PT:lle rivillä. EI PUSH-ILMOITUKSIA '
-          + '(omistaja 14.10.2026): mikään sessio ei lähetä PushNotificationia. OMISTAJALLE VAIN HÄNTÄ KOSKEVAT ASIAT (omistaja 9.10.2026): PT raportoi vain sen, mikä vaatii omistajan päätöstä, '
+          + '(omistaja 14.10.2026, tarkennus 18.10.2026 klo 01.55): mikään sessio ei lähetä PushNotificationia; asetuksissa agentPushNotifEnabled false, ilmoitus odottavasta kortista tai luvasta (inputNeededNotifEnabled) jää päälle. OMISTAJALLE VAIN HÄNTÄ KOSKEVAT ASIAT (omistaja 9.10.2026): PT raportoi vain sen, mikä vaatii omistajan päätöstä, '
           + 'toimea tai hyväksyntää, tai näkyy hänelle valmiina (TestFlight valmis, hyväksyttävät pelikuvat, vastaukset hänen kysymyksiinsä); omistajalle näytetään vain se, mitä pelaaja näkisi. '
           + 'Valmiit asiat menevät Keskustelukanavalle yhdellä rivillä, ja se välittää oleelliset. Roolien nollaukset, kuittaukset, sisäiset päätökset, levysiirrot ja kierrokset eivät mene chattiin, '
           + 'vaan lokiin ja tyojonot.md:hen. Vastaus omistajan kysymykseen kirjoitetaan vuoron VIIMEISEKSI tekstiksi, koska työkalukutsujen väliin jäävä teksti ei näy puhelimessa. RUTIINIVUORO ILMAN '
