@@ -427,3 +427,11 @@ Omistaja 17.10.2026 klo 22.13 Keskustelukanavan kautta (sanatarkasti): "Sitten v
 ## TIVOLIN CODEX-KUVAT EI KAYTETA (17.10.2026 klo 22.13)
 
 Omistaja 17.10.2026 klo 22.13 kortilla (Tivoli A2 + A1 + C3, sanatarkasti): "Ei näytä aidoille, ei käytetä". Codexin Tivoli-havainnekuvia A1–A2 ja C1–C6 ei käytetä missään; esityksessä pysyvät oikeat CC-valokuvat. Jos ilta- tai järvinäkymä puuttuu, LR hakee Commonsista tuoreen CC-valokuvan ja näyttää sen KK:lle ennen käyttöä. Opetus kuvien tarkistajille: todellisen nykypaikan kuvan pitää näyttää aidolta valokuvalta; ylikylläiset värit, liika valomäärä ja liian täydelliset istutukset paljastavat tekoälykuvan.
+
+## JUOKSUPELIN TUOTANTOPUTKI: HARMAA VERSIO ENSIN (17.10.2026 klo 22.18)
+
+Omistaja 17.10.2026 klo 22.17 kysyi (sanatarkasti) "Miten juoksu peli kannattaa tehdä ja kehittää? Millainen tuotantoputki?" ja valitsi kortilla "Kyllä, harmaa versio ensin (Suositus)": aloitetaan NYT, Codexin Pekingiä ei odoteta. KK:n tuotantoputki: 1) PT + PK pelikirja; 2) PK harmaa pelattava versio Kehittäjä › Kokeet › Juoksupeli + alle minuutin video KK:lle; 3) omistaja pelaa, hionta palautteella; 4) LR + VS palatsin palasarja yhteisellä pohjalla j8–j10-suuntaan; 5) hahmot ja liikkeet; 6) NUI pelinäyttö UI-pohjilla; 7) SS + Äänittäjä äänet, kertoja, faktakortit, generointiluvat kortilla; 8) Kielletyn kaupungin Pelaa-valinta Olavinlinnan mallin mukaan omistajan hyväksynnällä.
+
+## TIVOLIN ILTAKUVA (17.10.2026 klo 22.18)
+
+Omistaja 17.10.2026 klo 22.17 kortilla "Kyllä, pagodi ja järvi (Suositus)": Leif Jørgensenin "Tivoli at night - Det japanske tårn 02" (CC BY-SA 4.0, 2015) Tivolin esitykseen junaan 201 (200 lukittu); varakuva ei.
