@@ -521,3 +521,7 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
   ulkoaani/sisaanmeno → aanet/taidemuseo-louvre-v1/ (ÄÄ b46b06fc7, HEAD 200). Linssit 1980/1980, unity 0. PT + NS (juna 199; omistaja 07.20 yhdisti junat).
   ÄÄ:lle: v6 jo vaihdettu (c25ed3049 junissa 198/199); v7-osoite tulossa 831-ajon jälkeen → vaihda ManifestiOletus + kultainen samalla mallilla.
   Yhä odottaa: SK:n teokset.patsaat.v2.1.json (Alankomaiden patsaiden lahteet[]).
+- 07.36: **Alankomaiden patsaslähteet 70d25ff4f** + testikorjaus **5ade63846** (siirtoseppa/nl-patsaslahteet-199, juna-199 2068b1750 päällä; worktree
+  wt/proto-siirtoseppa-patsaslahteet): 34 lähdettä (SK main 425059757: 8 CC BY 4.0 + 26 CC0) alankomaat/veistokset.json "lahteet", testi
+  VeistostenLahteetKaikilleSijoitetuille; RanskanSaliRipustus 8 → 10 (LR:n Nike+Venus). Linssit 1980/1980, unity 0. PT + NS + SK. JONO TYHJÄ.
+  Auki: luentamanifesti v7 ÄÄ:ltä 831-ajon jälkeen. Worktreet poistettavissa kun rungossa: luennat6, aanipohja, todistusajo, aanivahti199, louvre-aanet, patsaslahteet.
