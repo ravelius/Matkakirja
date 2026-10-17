@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (198)",
+   "paiva": "2026-10-17",
+   "teksti": "Peli alkaa isoisän unella kadonneista aarteista. ISS:ltä näkyy Linnunrata, pienoispallossa kulkee aseman reitti ja kohdeluettelo on ruudukkona, ja raketissa Pulu liukuu narun varaan. Kertoja lukee painetun nimen, museon ympyrät ovat kevyemmät ja aloitusvihjeillä on pehmeä varjo."
+  },
+  {
    "versio": "1.1 (197)",
    "paiva": "2026-10-17",
    "teksti": "Taidemuseon korteista on poistettu kehys ja niihin on lisätty kaiutin, ja kamera katsoo tauluja niiden keskikorkeudelta suoraan edestä. Linssi tai peli avautuu hiljaa, eikä lukijalla ole enää ääni- tai nopeusvalintaa. Intron kuvat liukuvat tasaisesti, ja Louvre sai uuden valon."
