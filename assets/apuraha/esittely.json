@@ -61,8 +61,8 @@
   },
   "kuvat": [
     {
-      "tiedosto": "assets/apuraha/maapallo-eurooppa.jpg",
-      "teksti": "Maapallo: Eurooppa ja Lähi-itä",
+      "tiedosto": "assets/apuraha/maapallo-peruskartta.jpg",
+      "teksti": "Maapallo: pelin oma kartta, Eurooppa ja Afrikka",
       "rajaus": "50% 40%",
       "kappale": 2
     },
