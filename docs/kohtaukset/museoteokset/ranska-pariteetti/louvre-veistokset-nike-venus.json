@@ -1,0 +1,102 @@
+{
+ "huomio": "Louvren veistosten Samothraken Nike ja Milon Venus: nimikyltti, esittelykortin mitat, materiaali, kokoelma, kuvateksti ja skannauksen nimeäminen (Rodin-muoto, rodin-veistokset.json). Tutkijat 2 Sonnet 17.10.2026, riippumaton tarkistus: ks. tarkistus-kentät. Varmistamattomat väitteet jätetty pois (epavarmat). Skannaukset ovat KIPSIVALOKSIA, joten mitat_skannattu_versio on erikseen eikä alkuperäisen lukuja esitetä valoksen mittoina.",
+ "veistokset": {
+  "louvre-ma-2369": {
+   "nimi_fi": "Samothraken Nike",
+   "nimi_fr": "Victoire de Samothrace",
+   "tekija": "Tuntematon kuvanveistäjä (hellenistinen aika; valmistuspaikka mahdollisesti Rodos)",
+   "vuosi": "n. 200–175 eaa. (ajoitus hypoteesi, omistuskirjoitusta ei ole löydetty)",
+   "materiaali": "Paroksen valkoinen marmori (patsas); Lartoksen harmaa marmori Rodokselta (laiva ja jalusta)",
+   "mitat_cm": {
+    "kokonaiskorkeus": 564,
+    "patsas_korkeus": 328,
+    "laiva_korkeus": 200,
+    "jalusta_korkeus": 36,
+    "laiva_leveys": 258,
+    "laiva_syvyys": 429,
+    "jalusta_leveys": 178,
+    "jalusta_syvyys": 467,
+    "lahde": "Louvren kokoelmatietue (museon ilmoittama)",
+    "huom": "Kortilla vain kokonaiskorkeus (Louvren tietue 564 cm; Wikipedia 557, Emory ~550). Patsaan oma korkeus on lähteissä ristiriidassa (Louvre 328 cm, Wikipedia 275 cm; syytä ei selvinnyt), joten sitä ei ilmoiteta.",
+    "esittelykortti_fi": "Koko teos noin 5,6 m korkea"
+   },
+   "kokoelma": "Musée du Louvre, Pariisi; Denon-siipi, taso 1, sali 703; inv. Ma 2369",
+   "mitat_skannattu_versio": "Ei ilmoitettu (Sketchfab-sivu ei anna mittoja); älä esitä alkuperäisen lukuja kipsivaloksen mittoina",
+   "skannattu_versio_kohde": "Skulpturhalle Baselin kipsivalos (ei Louvren alkuperäinen), kuvattu syyskuussa 2013; valos on 1890-luvulta, joten yksityiskohdat voivat poiketa Louvren nykyisestä asusta (päätelmä, ei lähteessä)",
+   "lyhyt_fi": "Patsas löytyi vuonna 1863 yli sadan palan sirpaleina, ja oikean käden kämmen löytyi vasta 1950. Pää ja käsivarret puuttuvat edelleen.",
+   "kuvateksti_fi": "Päätön siivekäs naishahmo seisoo laivan keulan muotoisella jalustalla, vaate tiukasti vartaloa vasten.",
+   "skannaus": {
+    "tekija": "Cosmo Wenman",
+    "lisenssi": "CC BY 4.0",
+    "nimeamisteksti_fi": "3D-skannaus: Cosmo Wenman, kuvattu Skulpturhalle Baselin kipsivalosta syyskuussa 2013 (CC BY 4.0). Tarvittaessa lisäys \"muokattu\".",
+    "nimeamisteksti_en": "\"Winged Victory of Samothrace\" by Cosmo Wenman, CC BY 4.0, Sketchfab",
+    "lahde": "https://sketchfab.com/3d-models/winged-victory-of-samothrace-4edd6459f2834e7ab0b395e71cee2513",
+    "huom": "Sivun teksti sanoo \"Creative Commons Attribution\"; versio 4.0 varmistui lisenssilinkistä. Sketchfab-versio on matalaresoluutioinen esikatselu."
+   },
+   "lahteet": [
+    "https://collections.louvre.fr/en/ark:/53355/cl010252531",
+    "https://www.louvre.fr/oeuvre-notices/victoire-de-samothrace",
+    "https://en.wikipedia.org/wiki/Winged_Victory_of_Samothrace",
+    "https://sketchfab.com/3d-models/winged-victory-of-samothrace-4edd6459f2834e7ab0b395e71cee2513"
+   ],
+   "epavarmat": [
+    "Patsaan ja kokonaisuuden korkeus: Louvre 328/564 cm vs Wikipedia 275/557 vs fr-Wikipedia 512",
+    "Portaikkoon 1883 (Louvre) vs 1884 (Wikipedia)",
+    "Ajoitus 306 eaa. – 154 eaa. kiistelty (Thiersch, Badoud, Stewart); Pythokritos-attribuutio kiistelty",
+    "Kämmen 1950: kolme lähdettä; peukalo 1875 vain yksi lähde, jätetty pois",
+    "Basel-valoksen mitat ja inventaarinumero vain hakutiivisteessä",
+    "Hiuskiehkura ja joukkorahoitus 2014 vain Apollo-lehdessä, jätetty pois",
+    "Patsaan korkeuden ristiriidan syy (Louvre 328 vs Wikipedia 275) ei selvinnyt; ei kortilla"
+   ],
+   "tarkistus": {
+    "tuomio": "OK korjausten jälkeen",
+    "perustelu": "Riippumaton Sonnet-tarkistus 17.10.: Louvren tietue vahvisti ajoituksen 200–175 eaa., materiaalit, salin 703, Ma 2369; löytö 1863, 110 palaa ja kämmen 1950 louvre.fr; Sketchfab: Cosmo Wenman, CC BY 4.0, Skulpturhalle Basel -valos 9/2013. Korjattu: korkeus 'noin 5,6 m', 'käsivarret puuttuvat'."
+   }
+  },
+  "louvre-ma-399": {
+   "nimi_fi": "Milon Venus",
+   "nimi_fr": "Aphrodite, dite « Vénus de Milo »",
+   "tekija": "Tuntematon kreikkalainen kuvanveistäjä (jalustan signeerauksen katkelma \"[…]andros, Antiokiasta Meanderin varrelta\"; jalusta kadonnut, kuuluminen patsaaseen epävarma)",
+   "vuosi": "n. 150–125 eaa. (Louvren tietue; myöhäishellenistinen aika)",
+   "materiaali": "Paroksen marmori",
+   "mitat_cm": {
+    "esittelykortti_fi": "Korkeus noin 2 m",
+    "korkeus_cm": "202–204",
+    "lahde": "Louvren kokoelmatietue 204 cm; Louvren opetusmateriaali ja fr-Wikipedia 202 cm",
+    "huom": "Leveys 36 ja syvyys 64 cm vain fr-Wikipediassa, ei kortissa. Painoa ei löytynyt."
+   },
+   "kokoelma": "Musée du Louvre, Pariisi; Sully-siipi, taso 0, sali 346 (Louvren tietue 345); inv. Ma 399; markiisi de Rivièren lahja Ludvig XVIII:lle 1821",
+   "mitat_skannattu_versio": "Kipsivalos, brutto 213,5 × 66,5 × 63 cm (SMK:n avoin rajapinta; sisältääkö jalustan, ei varmistettu)",
+   "skannattu_versio_kohde": "Kipsivalos KAS434/1, Kuninkaallinen valoskokoelma, SMK – Statens Museum for Kunst, Kööpenhamina (hankittu 1898)",
+   "lyhyt_fi": "Patsas löytyi Milos-saarelta keväällä 1820 ja tuli Louvreen 1821. Käsivarret puuttuvat, eikä kukaan tiedä varmasti, miten ne menetettiin.",
+   "kuvateksti_fi": "Seisova valkoinen naishahmo ilman käsivarsia, puettu vyötäröltä alas laskostuvaan vaatteeseen.",
+   "skannaus": {
+    "tekija": "SMK – National Gallery of Denmark",
+    "lisenssi": "CC0 Public Domain",
+    "nimeamisteksti_fi": "3D-skannaus: SMK – Statens Museum for Kunst, Kööpenhamina, CC0 (kipsivalos KAS434/1).",
+    "nimeamisteksti_en": "\"Venus de Milo (Aphrodite of Milos)\", SMK – National Gallery of Denmark, CC0, Sketchfab",
+    "lahde": "https://sketchfab.com/3d-models/venus-de-milo-aphrodite-of-milos-53082b5d6cef4c34a9701a2a24f58075",
+    "huom": "CC0 ei vaadi nimeämistä; nimetään silti. Sketchfab-sivun ajoitus \"circa 450 BCE\" on virheellinen marmorille, älä käytä."
+   },
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Venus_de_Milo",
+    "https://fr.wikipedia.org/wiki/V%C3%A9nus_de_Milo",
+    "https://mini-site.louvre.fr/trimestriel/2021/Dossier_images_Louvre/281/",
+    "https://sketchfab.com/3d-models/venus-de-milo-aphrodite-of-milos-53082b5d6cef4c34a9701a2a24f58075"
+   ],
+   "epavarmat": [
+    "Louvren oma kokoelmatietue Ma 399 ei auennut (429); korkeus 202 cm Louvren mini-sitestä",
+    "Löytäjän nimi (Kentrotas/Ketrotas/Kendrotas) ja löytöpäivä (8.4. vs 5.4.) vaihtelevat, jätetty pois",
+    "Käsien katkeaminen: kiskontatarina legenda vs. muut kertomukset; ei väitetä",
+    "Alexandros vai Hagesandros; jalusta patsaaseen kuuluva?",
+    "Sali 346 (kolme Louvre-sivua) vs 345 (Petit Louvre)",
+    "Omenaa pitävä käsi Ma 400 patsaaseen kuuluva?",
+    "Löytö 4.3.–14.4.1820 todistuksista (fr-Wikipedia): kortilla vain 'keväällä 1820'"
+   ],
+   "tarkistus": {
+    "tuomio": "OK korjausten jälkeen",
+    "perustelu": "Riippumaton Sonnet-tarkistus 17.10.: Louvren tietue vahvisti Ma 399, Paroksen marmorin, ajoituksen 150–125 eaa. ja korkeuden 204 cm (opetusmateriaali 202); SMK-rajapinta KAS434/1 ja 213,5×66,5×63 cm; Sketchfab CC0. Korjattu: korkeus, ajoitus, lyhyt_fi. Sali 345 vs 346 auki."
+   }
+  }
+ }
+}
