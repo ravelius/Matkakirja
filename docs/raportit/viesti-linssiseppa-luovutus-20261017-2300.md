@@ -31,6 +31,10 @@ VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
       kiihdytyksin, ei veny matkan mukaan. (3) VÄHÄN KÄÄNTÖÄ: eteneminen sivuttain/vinosti, käännös menosuuntaan vain ~15°, lopuksi
       käännös kohti teosta; isossa suunnanmuutoksessa (vastakkainen seinä, toinen sali) musta välähdys (NÄYTTELYN VALINTA OVENSUULTA,
       < 250 ms) pyörityksen sijaan. (4) Automaattinen testi siirron kokonaiskäännölle ja kestolle. < 1 min video täysikokoisena PT:lle.
+- TÄYDENNYS (omistaja 23.16 PT:n kautta; korvaa kohdan (3) "ensimmäinen napautus vain tuo ‹ ⏸ ›"): museon ‹ ⏸ › eivät enää piiloudu kokonaan
+  vaan himmenevät. Himmeässä tilassa napautus mihin tahansa muualle kuin nappiin (lattia, teos, alareuna, tuplanapautus) vain tuo napit
+  esiin; näkyvässä tilassa napautukset toimivat suunnitellusti ja nollaavat 5 s ajastimen; vedot/nipistykset aina suoraan. Toteutus
+  yhdessä NUI:n kehysnappien häivytyksen kanssa (yksi yhteinen paikka; sovi NUI:n kanssa). Testi: himmeä + lattia → ei kävelyä.
 - NS (local_674b9ec4-…) tekee junaan 201 "koko ruudun UI peittää 3D:n" -lepotilan ja rekisteröinnin MuseoSovitin.cs:ään: sovi NS:n kanssa
   ennen MuseoSovitin.cs/MuseoNayttamo.cs-muutoksia (vastasin 23.2x: minulla ei kesken muutoksia niihin).
 
