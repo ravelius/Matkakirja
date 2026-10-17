@@ -407,3 +407,7 @@ tulee joku koko ajan perässä, mutta myös sivuilta tulee vartioita, jotka koet
 voi yrittää sitä liukumista. Eli oikealla peukalalla voi pyyhkäistä oikealle tai vasemmalle valitakseen reitin ja vasemmalla peukalalla voi liukua. Kehitellään myös muitakin juttuja, mutta tämä olisi
 se peruslogiikka. Ehkä niitä kattoja voisi olla useampiakin auki lähietäisyydellä. Saitko ideasta kiinni? Sama liukunappi voisi toimia myös hyppynappina, millä taas keisari voisi kerätä talosta
 aarteita ja saada lisää pisteitä." Ohjaustapa (yksi napautus vai pyyhkäisy alas/ylös) omistajan kortilla. Codex j8–j10 täydennys 3 (46f732212), edelleen 3 kuvaa.
+
+## JUOKSUPELIN OHJAUS: ALAS LIUKU, YLÖS HYPPY (17.10.2026 klo 22.01)
+
+Omistaja 17.10.2026 klo 21.59 Keskustelukanavan kortilla "Miten vasen peukalo ohjaa liukua ja hyppyä?" valinta "Alas liuku, ylös hyppy (Suositus)": vasemmalla peukalolla pyyhkäisy alas liu'uttaa vartijan alta ja pyyhkäisy ylös hyppää aarteen luo; oikea peukalo vaihtaa reittiä pyyhkäisyllä vasemmalle tai oikealle.
