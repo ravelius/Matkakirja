@@ -485,3 +485,9 @@ asennusta → _tyo/siirtoseppa/siirto-198-1-app; Julkaisija kysyy ENNEN SIMU NYT
 (session local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914). Mittaus: 100 ms verhokäyrä ennen fdfb5f6dd / jälkeen 0bfc62868 (seikkailu, pallon
 kaupunki, radio, raketti + kupoli, museo verrokkina); skenaario tyokalut/siirtoseppa-ajot/sk-aanipohja-197.txt laajennettava, ajo
 ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 198.
+- 03.2x: **ERÄ 1 VALMIS: luentamanifesti v6 c25ed3049** (siirtoseppa/luennat-v6-198, natiiviseppa/juna-198 0253f6b30 päällä; worktree
+  wt/proto-siirtoseppa-luennat6). Valmisluennat.ManifestiOletus → v6, NostoluentaVienti samaan oletukseen; kultainen valmisluennat-v6
+  (v6-manifesti + NUI-vienti 17.10. 02.00, v1-kultainen pois). v6 = v1 + 1 507, kaikki osoitteet täysiä v1/k/-kansioon. Osumat: kaikki
+  7 433 muuta kuin maalehden pyyntöä, museoiden 73 nostoa/nähtävyyttä (Akropolis-museo), maalehdet 310/1 141 (muut palavirtaan),
+  667 manifestin palaa ilman nykyistä pyyntöä (vanhat tekstit). Taidemuseon kertoja on erillinen (taidemuseo-kertoja-v2, ei luennat).
+  Web: ei asetusarvoa (vain tools/vienti/asetusavaimet.json-skeema). Peli-testit 592/592, unity 0. SHA NS:lle + PT:lle. SEURAAVA: erä 2 laitemittaus.
