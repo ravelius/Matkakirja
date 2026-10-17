@@ -1,0 +1,35 @@
+{
+  "status": "CONTROLLED_PREVIEW_ONLY_NOT_A_GEOMETRY_FIX",
+  "actualFrames": 12,
+  "allFrameHashesVerified": true,
+  "sourceGLBsNeverMutated": true,
+  "sourceScriptSHA256": "61b3e5864eb52ce5f0e1e52e68faafbe5ac754a32f4483a4e6781c7c0c7423ca",
+  "modeDefinitions": {
+    "c8-ao-normal-on": {
+      "AOGain": ".6*AO+.4",
+      "normalEnabled": true
+    },
+    "c8-ao-off": {
+      "AOGain": "constant .4, spatial AO pattern removed; not unit gain",
+      "normalEnabled": true
+    },
+    "c8-ao-normal-off": {
+      "AOGain": "constant .4, spatial AO pattern removed; not unit gain",
+      "normalEnabled": false
+    },
+    "c8-flat-paving": {
+      "AOGain": "spatial AO bypassed by constant diffuse colour",
+      "normalEnabled": false,
+      "diffuseLinearRGB": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "roughness": 1
+    }
+  },
+  "parentViewedAllFourBoundarySideModes": true,
+  "parentFinding": "Polygon edge lines and thin light boundary persist when the pilot paving base colour is constant and normal-map strength is zero. This excludes fine grain alone as their sole cause in this controlled preview; geometric normals, adjacent materials and actual seam geometry still require registration. Constant .4 gain means nominal AO-off images are darker overall; do not interpret that as a source change.",
+  "noGameShadingConclusion": true,
+  "noSourceHeightsOrAOModified": true
+}

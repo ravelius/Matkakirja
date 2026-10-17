@@ -1,0 +1,20 @@
+{
+  "status": "BOUNDED_PRIVATE_PREVIEW_PASS_NOT_V8C_OR_GAME_DELIVERY",
+  "createdUTC": "2026-10-17T09:31:11.410933+00:00",
+  "raw72Bytes": 163233828,
+  "rawCeiling": 164326250,
+  "headroom": 1092422,
+  "matchedActualFrames": 30,
+  "technicalAudit": "sol-source-network1-material-audit.json",
+  "visualAudit": "astra-source-network1-visual-review.json",
+  "sourceDataAndProtectedGeometryPreserved": true,
+  "parentVisualFinding": "Broad blurred transition and patchwork removed; source character, joint repetition and thin polygon lines remain.",
+  "G34WasOnlyInteriorHighpassSourceNotStoneNetwork": true,
+  "G34DirectAppearanceNotApproved": true,
+  "prototypeBuiltBeforeReceivingC53": true,
+  "notReceiverV8cDelivery": true,
+  "notCanonicalAdopted": true,
+  "notOwnerQualityAcceptance": true,
+  "newReceiverFeedback": "c53ad7b3a86154e2b36000253a84f3385b70a102",
+  "nextWork": "V8a holes6/7 own replacement ground/channel underV7 material; V8b ellipsoid-water data; G33V8c later. No new image generation planned."
+}

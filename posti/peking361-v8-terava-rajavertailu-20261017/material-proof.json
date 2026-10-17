@@ -1,0 +1,253 @@
+{
+  "status": "WHOLE_FRESH_SOURCE_NETWORK_MATERIAL_PROTOTYPE_PENDING_ACTUAL_GLB_VIEWS",
+  "createdUTC": "2026-10-17T09:24:29.845003+00:00",
+  "wholeNewGeneration": true,
+  "originalSourceRGBNeverEdited": true,
+  "previousOutputRGBNotEdited": true,
+  "generatedDonorNativeRGBNeverEdited": true,
+  "sourceMaskSHA256": "6ead8959b40796b19904c73bde4c1f8eb8e10fc6489873e75ccd1cbfdfb12b5e",
+  "sourceCoreProofSHA256": "2db6f0e29a3de1232d30abdfc5c9a84454337321dd21100e49d1fb692807cab0",
+  "donorLibrarySHA256": "277cfcb56f6687429f79e991726e21524d69330963b56334d2d06aa6bd13b986",
+  "donorLibraryProofSHA256": "8669e23968e8a858525f9817c642c9eb78ed0f4b5871801424f2737eea6ae7a4",
+  "sourceRGBSHA256": "3d8e06486bb5a1064c5f92387310df4bd4b7f255fad6ffe5607cbd39d66e7fc3",
+  "generatedSourceSHA256": "d797c83f8676ca6fe840da2eaa7a184d67f8a15e4bd609287aafc75073dc8fe4",
+  "coreCount": 60,
+  "semanticStoneMasksAccepted": false,
+  "sourceJointGraphAndNativeStonePaletteRetained": true,
+  "faceAppearancePeriodM": 28.8,
+  "jointNetworkPeriodM": 4.8,
+  "newHeightFromColour": false,
+  "originalNormalAndRoughnessNetworkRetiledInSameSourceUVPhase": true,
+  "normalScaleBaked": 1.0,
+  "roughnessFactorBaked": 1.0,
+  "baseColorFactorBaked": [
+    1.0,
+    0.9800000190734863,
+    0.9300000071525574
+  ],
+  "AOReadOrBakedIntoSurface": false,
+  "sourceFootprintsOrWaterChanged": false,
+  "interiorAlbedo1536AndData768": true,
+  "collarDataCoarserThanInterior": true,
+  "notRuntimeOrQualityAcceptance": true,
+  "files": [
+    {
+      "kind": "interior",
+      "lod": 0,
+      "role": "albedo-sRGB",
+      "file": "interior-albedo-lod0.jpg",
+      "bytes": 658963,
+      "size": [
+        1536,
+        1536
+      ],
+      "sha256": "ea7c71a8f128eb4a004334537cc1ac2099baec30c5dbe4ce183d32c3de9aca67"
+    },
+    {
+      "kind": "interior",
+      "lod": 0,
+      "role": "normal-linear",
+      "file": "interior-normal-lod0.png",
+      "bytes": 138813,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "61173b6fdff72434ae2b15d355c2f33bbf3df84ef4466d2a2c21f77abfc6a3a1"
+    },
+    {
+      "kind": "interior",
+      "lod": 0,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "interior-MR-lod0.png",
+      "bytes": 77320,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "2a2a8fd818d085dfecfcc813e4c64b8ed50423a10605482005b6d8bd2510dafb"
+    },
+    {
+      "kind": "interior",
+      "lod": 1,
+      "role": "albedo-sRGB",
+      "file": "interior-albedo-lod1.jpg",
+      "bytes": 143419,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "29f2a6c47e5be491aba834cfaf4b51788d8d94a709ec538a60bc2f1de3480922"
+    },
+    {
+      "kind": "interior",
+      "lod": 1,
+      "role": "normal-linear",
+      "file": "interior-normal-lod1.png",
+      "bytes": 5368,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "c8e47d023df836e62eb400a265da7ff3e82a3646fb595b0c69253be813ed5883"
+    },
+    {
+      "kind": "interior",
+      "lod": 1,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "interior-MR-lod1.png",
+      "bytes": 5111,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "e54684b2ed68105e428921221b5ec543cc8ca28bb9945a050832b4feb22df46f"
+    },
+    {
+      "kind": "interior",
+      "lod": 2,
+      "role": "albedo-sRGB",
+      "file": "interior-albedo-lod2.jpg",
+      "bytes": 31764,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "fec7b68c10866d99134ab530a73a7d8a8537109b1cd4aa9c75868ba7b2d8abd1"
+    },
+    {
+      "kind": "interior",
+      "lod": 2,
+      "role": "normal-linear",
+      "file": "interior-normal-lod2.png",
+      "bytes": 1827,
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "02ec1e0aa9037ec9a3b0df02ac452524c8da5b6d5a992be83dce17827d11db93"
+    },
+    {
+      "kind": "interior",
+      "lod": 2,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "interior-MR-lod2.png",
+      "bytes": 1893,
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "67482ee0274af599ec5e2b072ae0b8c72957e146eea56165f66bca59300ed8a8"
+    },
+    {
+      "kind": "collar",
+      "lod": 0,
+      "role": "albedo-sRGB",
+      "file": "collar-albedo-lod0.jpg",
+      "bytes": 2661752,
+      "size": [
+        4096,
+        2720
+      ],
+      "sha256": "73eb9dd169cb929cb3d5ce66555562b3008d8623e346042edb062752d9042677"
+    },
+    {
+      "kind": "collar",
+      "lod": 0,
+      "role": "normal-linear",
+      "file": "collar-normal-lod0.png",
+      "bytes": 68640,
+      "size": [
+        1024,
+        680
+      ],
+      "sha256": "9b61d74b0b70a2c13fad9f0aa0c253077242e0f9ebdb33eaaf97feffe6c3f9ff"
+    },
+    {
+      "kind": "collar",
+      "lod": 0,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "collar-MR-lod0.png",
+      "bytes": 135758,
+      "size": [
+        1024,
+        680
+      ],
+      "sha256": "1b0209251c728ed8a6855d4b00f849d8eddd1ea27ecde57ef7c2f377eec799fe"
+    },
+    {
+      "kind": "collar",
+      "lod": 1,
+      "role": "albedo-sRGB",
+      "file": "collar-albedo-lod1.jpg",
+      "bytes": 567031,
+      "size": [
+        2048,
+        1360
+      ],
+      "sha256": "2c772f8f94996a1c3380d63bf9fb8f859638904a0ef10af235a802ecf15c80f0"
+    },
+    {
+      "kind": "collar",
+      "lod": 1,
+      "role": "normal-linear",
+      "file": "collar-normal-lod1.png",
+      "bytes": 10412,
+      "size": [
+        512,
+        340
+      ],
+      "sha256": "753249afd58b112ca67e5f6621d84216a0630aea0ada3e08279d7be1b9883f53"
+    },
+    {
+      "kind": "collar",
+      "lod": 1,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "collar-MR-lod1.png",
+      "bytes": 35130,
+      "size": [
+        512,
+        340
+      ],
+      "sha256": "4a66b25327ba5c26e6b68348475614c1d9e766fd8901c23fe9de9a925dbaf4b8"
+    },
+    {
+      "kind": "collar",
+      "lod": 2,
+      "role": "albedo-sRGB",
+      "file": "collar-albedo-lod2.jpg",
+      "bytes": 124079,
+      "size": [
+        1024,
+        680
+      ],
+      "sha256": "b645f24333c537471de07f035893506bc0cb4ce5b48dbfb60295a9cecd3ce3a6"
+    },
+    {
+      "kind": "collar",
+      "lod": 2,
+      "role": "normal-linear",
+      "file": "collar-normal-lod2.png",
+      "bytes": 1904,
+      "size": [
+        256,
+        170
+      ],
+      "sha256": "99ce3d4c2997290a7e6c451683e8cc3c9e9c82314367d844b49cfd54c4c1dc24"
+    },
+    {
+      "kind": "collar",
+      "lod": 2,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "collar-MR-lod2.png",
+      "bytes": 5435,
+      "size": [
+        256,
+        170
+      ],
+      "sha256": "41fdb74d4eae46c75c8a696896048992bec7fdf4e3fca73d89c6a92adc38598b"
+    }
+  ],
+  "totalImageBytes": 4674619,
+  "allNewPBRDecodedPixelCountVsV7": 0.8515625
+}

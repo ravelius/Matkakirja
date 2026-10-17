@@ -1,0 +1,32 @@
+{
+  "status": "ACTUAL_30_FRAMES_AND_MATCHED_FIXED_CAMERAS_HASH_VERIFIED_REVIEWS_PENDING",
+  "createdUTC": "2026-10-17T09:27:01.970497+00:00",
+  "renderProofSHA256": "68cbeb646673bbb4f56720a0f462a3e9d1dadcd16de9b286ef4036145935b235",
+  "candidateProofSHA256": "43578f5a126a02ff7a2aa540f68ddff1aa223b75f79320cfcdc276def7b92657",
+  "nativeMatchedFrames": 30,
+  "actual24TilesImportedEachStage": true,
+  "fixedSixCamerasUnchanged": true,
+  "sourceGLBsAndImagesRemainUnchanged": true,
+  "allMatchedCameraDefinitionsIdentical": true,
+  "allFrameAndImportedGLBHashesVerified": true,
+  "allTaskOutputPathsPhysicallyExternal": true,
+  "parentViewsInspected": [
+    "taihedian",
+    "boundary-close",
+    "boundary-side",
+    "south-boundary",
+    "paving-top-repeat",
+    "interior-regression"
+  ],
+  "parentFinding": "The broad blurred paving and mismatched-edge patchwork visibly improve; original dark polygon outlines and joint repeat remain. Normal mapping target importer convention not verified.",
+  "raw72Bytes": 163233828,
+  "rawCeiling": 164326250,
+  "rawHeadroom": 1092422,
+  "sourceNetworkPeriodM": 4.8,
+  "appearancePeriodM": 28.8,
+  "rendererCompletedAndExited": true,
+  "actualRuntimeAcceptance": false,
+  "gameOrPublicDelivery": false,
+  "canonicalNative51Changed": false,
+  "ownerQualityGoalReached": false
+}
