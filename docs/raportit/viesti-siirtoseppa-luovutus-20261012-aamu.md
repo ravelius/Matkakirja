@@ -517,3 +517,7 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
 - 07.23: ODOTTAA: (1) ÄÄ:n Pariisin lähestymisäänet → avaimet ulkoaani/sisaanmeno Museo/ranska/lahestyminen.json:iin (PT 07.4x). (2) Valinta: Alankomaiden
   34 CC BY -patsasskannausta puuttuu Tekijätiedoista (alankomaat/veistokset.json ilman lahteet[]; Tietoja.VeistostenLahteet lukee vain sen) →
   tarvitaan SK:n teokset.patsaat.v2.1.json (ei repossa/levyllä/postilaatikossa); sitten lahteet[] ranska-mallin mukaan + testi. PT:lle kerrottu.
+- 07.29: **Louvren lähestymisäänet 180761d6e** (siirtoseppa/louvre-aanet-199 = LS c8c6bff49 + 1; worktree wt/proto-siirtoseppa-louvre-aanet): ranska/lahestyminen.json
+  ulkoaani/sisaanmeno → aanet/taidemuseo-louvre-v1/ (ÄÄ b46b06fc7, HEAD 200). Linssit 1980/1980, unity 0. PT + NS (juna 199; omistaja 07.20 yhdisti junat).
+  ÄÄ:lle: v6 jo vaihdettu (c25ed3049 junissa 198/199); v7-osoite tulossa 831-ajon jälkeen → vaihda ManifestiOletus + kultainen samalla mallilla.
+  Yhä odottaa: SK:n teokset.patsaat.v2.1.json (Alankomaiden patsaiden lahteet[]).
