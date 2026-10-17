@@ -64,7 +64,10 @@ KÄÄNNÖSPYYNTÖ JU:lle 38be1ca55 → `kiina-taistelu-250-v1-app`. SIMU NYT →
 (skenaario `sk-taistelu-250.txt`: avaus suoraan 250:een, ~70 s) → SIMU VAPAA → yhdista-video.zsh → kuvat → PT 3 riviä. (v5 koko linssistä korvautuu tällä.)
 **TILA 20.4x:** käännös 71eac8a7f (pohja 44529c734) → `kiina-taistelu-250-v1-app`. Ajo v1 20.41–20.45 EPÄONNISTUI: 250 avausvuotena ohittui ~2 s:ssa
 (taistelu ei näkynyt; todistus-kiina-taistelu-250-v1-20261017-2041). Skenaario korjattu alkamaan 140:stä → ajo **v2** samalla appilla:
-`odota-taistelu-250-v2.zsh` (→ ajo-taistelu-250-v2.out). SIMU-pyyntö JU:lle lähetetty (jonossa). Opin: avausvuosi ei ole pysäkki ajossa. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+`odota-taistelu-250-v2.zsh` (→ ajo-taistelu-250-v2.out). SIMU-pyyntö JU:lle lähetetty (jonossa). Opin: avausvuosi ei ole pysäkki ajossa.
+**TILA 21.0x:** v2 ajettu 20.53–20.57 (todistus-kiina-taistelu-250-v2-20261017-2053): kartta tasainen, aalto renkaina, risti+nimi, lasku ✓; armeija vain pieni
+piste → `c0dac25d7` (TaisteluSileysKm 80, TaistelunKorkeusM 160 km/yks. 3, kumpu umpinaisena dynastian värissä, testi TaisteluKumpuNakyyLaajassaKuvassa).
+KÄÄNNÖSPYYNTÖ JU:lle c0dac25d7 → `kiina-taistelu-250-v3-app`; SIMU NYT → `odota-taistelu-250-v3.zsh`. Video PT:lle vasta v3:sta (PT tietää). LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
