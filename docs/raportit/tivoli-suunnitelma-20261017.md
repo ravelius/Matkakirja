@@ -63,7 +63,7 @@ olevaan laatikkoon, jonka reunoilla on 40 m pehmeä palautus.
 | 5 | PK | liike: junat splinejä pitkin (radan keskiviiva OSM:stä + mallin solmuista), Himmelskibetin nosto ja kierto, tornin nosto ja pudotus, karusellin siirto. Tivolin vapaa lento (luku 6) | laitteet liikkuvat, lento rajattu |
 | 6 | VS | ilta: lamppujen instanssipisteet (ääriviivat, lyhtyrivit, torni 2 800), heijastukset järvessä, oman mallin sävy ja vesi | pelikuvapari päivä/ilta |
 | 7 | ÄÄ | äänimaisema: radan kolina, kirkaisut, väkijoukko, kaukainen soittokunta, karusellin urut. Paikkasidonnaiset lähteet laitteisiin. Vain CC0/CC BY, Freesound API:lla | `lahteet.js` päivitetty |
-| 8 | SK | Williamin 6 lähitarinaa (järvi, torni, teatteri, Nimb, Rutschebanen, Himmelskibet) ≤ 40 sanaa + faktaliite. Pulun kutsu `pulu-vapaalento-kutsu-koopenhamina` | tarkistajat + PT |
+| 8 | SK | 6 lähitarinaa: isoisä järvi ja lyhdyt (1873), William torni, teatteri, Nimb, Rutschebanen, Himmelskibet (luku 8 kohta 3) ≤ 40 sanaa + faktaliite. Pulun kutsu `pulu-vapaalento-kutsu-koopenhamina` | tarkistajat + PT |
 | 9 | JU + NS | käännös, simukuvat, juna | PT → omistaja |
 
 William-äänet tehdään kertojaäänten pysyvällä luvalla, ja tekstit näytetään omistajalle Tekstit-osastossa.
@@ -110,8 +110,11 @@ Generoituja kuvia tehdään yhteensä enintään 18, eikä yhtään ennen omista
 1. "Tivoli-osio näin: kamera laskeutuu pysäkillä 8, ja voit lentää vapaasti puiston yllä 6–120 metrissä. Kahdeksan
    tarkkaa mallia, liikkuvat laitteet, illan lamput, äänet ja Williamin 6 lähitarinaa. Kuvia generoidaan enintään 18
    (2 tunnelmakuvaa + 16 mallien tavoitekuvaa)." → Kyllä / Ei nyt
-2. Tornin nimi – PÄÄTETTY (KK 17.10. 10.00): **"Japanilainen torni – sata vuotta sitä kutsuttiin Kiinalaiseksi torniksi"**
-   (alkuperäinen nimi 1900 Japanese Pagoda). SK käyttää tätä Williamin tekstissä.
+2. Tornin nimi – PÄÄTETTY (KK 17.10. 10.00, SK vahvisti): **"Japanilainen torni – yli sata vuotta sitä kutsuttiin
+   Kiinalaiseksi torniksi"** (alkuperäinen nimi 1900 Japanese Pagoda). Nimenvaihdon syytä ei kerrota.
+3. Kertojat – PT:n päätös 17.10.: Tivoli on isoisän tarina-aihe, mutta **isoisän ääni kertoo vain puistosta, järvestä ja
+   lyhdyistä (1873)**. Torni, teatteri, Nimb ja laitteet ovat **Williamin**. Lähitarinat (luku 6): isoisä = järvi/lyhdyt,
+   William = torni, teatteri, Nimb, Rutschebanen, Himmelskibet.
 
 ## 9. Riskit ja avoimet
 
