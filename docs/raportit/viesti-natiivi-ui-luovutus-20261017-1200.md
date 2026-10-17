@@ -33,3 +33,12 @@ Simua käytetään VAIN Julkaisijan SIMU NYT -viestistä, ja SIMU VAPAA lähetet
 - Skenaariossa `ui valikko kehittaja` jättää paneelin auki pillerin päälle. Sulje se ennen pillerikomentoja komennolla `ui valikko`. Paneelin loppuun pääsee vierittämällä paneelin sisältä: `veto 250 700 250 200`.
 - PT:n viestit voivat olla ristiriitaisia (Postivahdin tiivistelmä): kysy omistajan sanatarkka viesti ennen kuin käännät suuntaa.
 - Omistajan päätös voi kumoutua 10 minuutissa: tee iso uusi pinta omaan committiinsa, jotta revert on helppo.
+
+## Lisäys 12.0x (PT)
+- Ranskan oranssi aamukaista on korjattu (VS 0cd7ae1a7, junassa 200). Kamerapöydän (dfa8e69a2), SEURAA-tilan (PK a03177279), cupola-ohita2:n
+  ja kehys-käärön uusintakuvat otetaan nyt samalla Pariisi-skenaariolla tämän korjauksen päällä, ja niistä tehdään yksi kuvapaketti PT:lle.
+- Teko: yksi yhteiskäännös junan 200 kärjestä (sis. 0cd7ae1a7 ja 2d4ed9e36). Siihen yhdistetään natiivi-ui/kamerapoyta-198 (a07ce043a ⊃ dfa8e69a2 + PK a03177279),
+  cupola-ohita2 dc48eb887 ja natiivi-ui/kaaro-rajat-200 471163876. Tarkista, onko a03177279 jo junassa (`git branch --contains`).
+- Skenaario: sk-kamerapoyta-198.txt (Pariisi, `oleta 240 iss-kamera: oma kuva:`, kohde `linssi astro kyyti kohde pariisi valoisa`) ja
+  perään sk-kaaro-rajat-200.txt:n Kiina-osa. Ilmoita odottaja Julkaisijalle etukäteen ja pyydä vuoro (iPhone ja iPad ~15 min).
+- Jos kaaro-rajat-200-app (471163876) on jo ajettu ENSIN-kohdan 1 mukaan, käärön kuvat tulevat siitä, ja yhteiskäännökseen riittää kamerapöytä, SEURAA ja cupola.
