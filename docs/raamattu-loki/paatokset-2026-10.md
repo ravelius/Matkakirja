@@ -369,3 +369,7 @@ leviää kuin muste, pääkaupunkien jäljet, viisi ratkaisevaa taistelua, muuri
 hallitsijat viileät, kiinalaiset lämpimät). UI-POHJAT, KK:n päätös yövaltuutuksella klo 01.3x: dynastian sinettileima tehdään olemassa olevalla iss-sinetti-leimapohjalla; uusi tyylikirjan pohja
 KEHYS-KÄÄRÖ (NUI tekee kertaalleen, myös muiden historialinssien käyttöön): vain ohuet puurullat ylä- ja alareunassa ja paperin reuna, ei koristeita, kartta näkyy kokonaan, avautuminen alle 250 ms.
 Jos käärö ei valmistu tai ei läpäise tarkistusta, linssi valmistuu lasipohjalla. Omistaja näkee kuvaparin (lasipohja | käärö) aamulla.
+
+## OMISTAJAN PÄÄTÖS: LASI VAIN LINSSEISSÄ JA PELEISSÄ, PERUSKARTALLA SEEPIAPOHJA (17.10.2026 klo 06.5x) (17.10.2026 klo 06.57)
+
+Omistaja KK:n kautta sanatarkasti: "Lasielementit kuuluvat vain linsseihin ja peleihin ei perus kartalle. Siellä vanha seepian sävyinen pohja on oikea, älä muuta sitä." Rajaa LASIPOHJAn (14.10.2026 klo 23.33). Juna 198 on jo käännetty, joten peruskartan lasimuutokset (mm. videopelikortin sininen lasi, Äänet, Pulun chat kartalla) palautetaan junaan 199 (Natiivi-UI). Samassa viestissä: Kipin kaasuvipu palautetaan vanhaan pystyliukuun (kahva hieman leveämpi, rata lyhyempi, ei tekstejä), kompassi näkyviin kun poltin ei ole käytössä (Linssiseppä); ISS-pikkupallon lentorata himmeämmäksi ja ruskea huppu läpinäkyväksi (Karttaseppä).
