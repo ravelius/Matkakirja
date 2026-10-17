@@ -10,6 +10,11 @@ Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Kuvat PT:lle en
 Ketju ketjut-20261016/simu-198-0310.zsh, tuloste _tyo/natiivi-ui/simu-198-0310.out (rivit "AJO <erä> <koodi>", lopuksi VALMIS).
 Järjestys: museo-kevyt iPhone (VALMIS 03.15, todistus-museo-kevyt-iphone-198-20261017-0311) → iss-luettelo iPad → iss-luettelo iPhone
 → kamerapöytä iPad → kamerapöytä iPhone. Jos ketju katkesi nollauksessa (tuloste kesken), aja puuttuvat erikseen Julkaisijan luvalla.
+TILA 03.33: museo-kevyt iPhone OK (todistus-museo-kevyt-iphone-198-20261017-0311, arkkia EI vielä lähetetty PT:lle – katso ja lähetä).
+iss-luettelo iPad JUMIUTUI 03.19:46 komentoon `ui linssi kohdevalikko kategoria kaupungit` (ei vastausta 12 min, sovellus piirsi
+ruutuja; todistus-iss-luettelo-ipad-198-20261017-0315/ajo.log) → ketju pysäytetty, simu vapautettu. SELVITÄ ENSIN: IssKohdevalikko
+kategoria-testikomento (natiivi-ui/iss-luettelo-198) – palauttaako se arvon / jääkö pääsäie odottamaan; korjaa, käännä, aja uudelleen.
+Kamerapöytä iPad + iPhone ajamatta (käännös 93a97749f valmis). Pyydä Julkaisijalta uusi SIMU NYT.
 Lähetä PT:lle kunkin kuva-arkin polku (lokit/todistus-<erä>-<laite>-198-*/kuva-arkki.png) + 1 rivin havainto. Sitten:
 1. LASIPOHJA5-STILL (PT/KK:n ehto, PT 03.1x): `zsh ajo-lasipohja5-197.zsh _tyo/natiivi-ui/lasipohja4-197-app <iPhone> iphone`
    (V3 pienennetty | V4 laajennettu: CC BY -tekijärivi kokonaisena laajennettuna) → PT. VASTA PT:n kuittauksesta SHA e9a2852b4
