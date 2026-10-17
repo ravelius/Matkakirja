@@ -459,3 +459,7 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 03.0x: **9deaaa359** AaniPohja.VanhaLahde + AsetaTaso/LueTaso (mekaaninen siirto vanhalle AudioSource-koodille) + uusi klippi peruu kesken
   olevan pysäytyshäivytyksen. **069d29408** OpasSovitin (kertoja, silta, ukkonen, jyrinä, kellot). Lista 5: RakettiAanet + Aanisoitin, Puhe,
   UI/Aanet, PeliKomennot (PT). Kärki 069d29408, Linssit 1935/1935, tarkista.sh 0.
+- 03.1x: **e07d9df06** RakettiAanet + RakettiPuhe (VanhaLahde), **0bfc62868** ydinäänet (Aanisoitin, Puhe, UI/Aanet) ja testisini vahdin
+  apureiksi (oletukseni PT:n kysymykseen) → **SIIRTOLISTA TYHJÄ**. Yhteenveto: docs/raportit/siirtoseppa-aanipohja-siirtolista-20261017.md.
+  SEURAAVA: laitemittaus (verhokäyrä ennen fdfb5f6dd / jälkeen 0bfc62868; seikkailu, pallon kaupunki, radio, raketti+kupoli, museo) PT:n
+  vuorolla → sitten SHA NS:lle junaan 198. Haaraa ei yhdistetä ennen PT:n kuittausta.
