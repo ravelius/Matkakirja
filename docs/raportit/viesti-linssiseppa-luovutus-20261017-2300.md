@@ -11,6 +11,17 @@ VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
 - Epäillyt: reitinhaku pitää kaiteen sisäpuolta esteenä / katselupiste kaiteen sisällä / kaiteen törmäysalue nappaa napautuksen.
   QA "museo kavele teos louvre-inv-779", "museo napauta", loki "museo: kävely kohteeseen". Tarkista KAIKKI kaiteelliset teokset.
 - Kuvapari (nyt | korjattu) täysikokoisena PT:lle, ei videota. Sha NS:lle junaan 201 PT:n kuittauksen jälkeen.
+- SAMAAN KORJAUKSEEN (OMISTAJAN HAVAINNOT 23.10 PT:n kautta): "monalisan kehys on huonon näköinen ja autozoom zoomaa kuvaa lähemmäs niin että
+  kehys pysyy näkyvissä mutta kuva zoomautuu sen sisällä lähemmäs. myös kun painoin pausenappulaa näkyviin, niin peli otti ensimmäisen ruudun
+  painon jo heti käskynä vastaan vaikka olisi pitänyt tuoda vain pause nappula näkyviin"
+  (1) KEHYS: oikean näköinen (Commonsin kuva mallina), terävä myös lähikuvassa (nyt laatikkomainen, suttuinen); tarkista muut Louvren
+      kehykset; kehysmalli tarvittaessa LR:lle.
+  (2) AUTO ZOOM: kamera liukuu lähemmäs, kehys + maalaus suurenevat yhdessä ja kehys poistuu kuvasta luonnollisesti (kangas täyttää
+      ruudun); selvitä, onko syy kaide (kamera ei pääse) vai kohtazoom tekstuurin sisällä.
+  (3) Kun ‹ ⏸ › ovat piilossa, ensimmäinen napautus vain tuo ne esiin eikä tee muuta (epäilty: piilonapin kohta laukaisee ALAREUNA
+      TAAKSE -alueen, alin 18 %, liuku 3 m); himmeän napin painallus toimii suoraan. Kuvapari tai < 1 min video täysikokoisena PT:lle.
+- NS (local_674b9ec4-…) tekee junaan 201 "koko ruudun UI peittää 3D:n" -lepotilan ja rekisteröinnin MuseoSovitin.cs:ään: sovi NS:n kanssa
+  ennen MuseoSovitin.cs/MuseoNayttamo.cs-muutoksia (vastasin 23.2x: minulla ei kesken muutoksia niihin).
 
 ## 0. TEHTY 23.1x: Louvren puhe ja salien 1–2 avaukset ÄÄ:n uusiin ottoihin = 133e7c00e (huoneet.json, lahestyminen.json,
 MuseoMaaTestit; Linssit 1993/1993) → NS:lle cherry-pickinä runkoon 201 (vain tämä commit), PT:lle kerrottu. Tarkista NS:n kuittaus.
