@@ -10,8 +10,7 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt
   Loki `julkaisija-tyokalut/pelikoodari-juoksupeli.log`. Jos taustatehtävä kuoli nollauksessa: tarkista loki; aja skripti uudelleen
   (kääntää uudelleen, jos app puuttuu). Kun **KS SIMU VAPAA** (taistelu v4, alkoi 22.35): `touch julkaisija-tyokalut/simu-vapaa-juoksupeli`.
   Tulos (kansio + arkki) → PK (local_7fcab04b-…).
-- **Juoksupeli b (kattoreitti, omistaja 22.18):** `pelikoodari-juoksupeli-b.zsh` (bb34dd973 → L1 heti a:n jälkeen, simu era juoksupeli-katto,
-  `simu-vapaa-juoksupeli-b` jo olemassa) → loki `pelikoodari-juoksupeli-b.log`. Tulos PK:lle.
+- Juoksupeli b bb34dd973 PERUTTU (omistaja 22.32: rata ruudukoksi) — älä aja. Ruudukkoversio tulee PK:lta uutena SHA:na.
 - **Galleria arkki 4b:** `pelikoodari-galleria200f-kaanna.zsh` (fa219040b → L2, `_tyo/pelikoodari/galleria-200-f-app`), sitten simu
   `zsh pelikoodari-galleria200f-simu.zsh` juoksupelien jälkeen (8 kuvaa, vaaka, teksti-ylla-arkki) → PK + LR.
 - **Sitten L1 → PK:n esikatselu.sh** (lähetä PK:lle "NYT"; PK ilmoittaa kun L1 vapaa).
