@@ -9,7 +9,8 @@ Osoitekirja: /Users/Shared/Claude/osoitekirja.md. Viestiraja: SendMessage paussi
 2) LS Louvren avaus a9d86b242 simu (kartta + ☰) — uusi, LS lähettää pyynnön/appin.
 3) NUI ohjauspöytä 049b0ef6e+43439f3b5 (= 8fe92ebab) simu.
 4) VS Louvre k82 ja valas k13.
-5) KS Kiinan 19 pysäkin video (oli jo simulla ~18.46 → tarkista KS:ltä, valmistuiko; jos kesken, kesken jäänyt ajo saa päättyä).
+5) KS Kiinan 19 pysäkin video — VALMIS 18.54 (KS SIMU VAPAA).
+TILA 18.56: **NUI ohjauspöytä 8fe92ebab simulla (SIMU NYT 18.56)**, LS a9d86b242 ei vielä pyydetty → seuraavaksi LS (kun käännetty), sitten VS k82, valas k13.
 Juna 200: lukitusehto v6k24 (R2 17.03); EI lukitusta ennen omistajan pyyntöä ("OMISTAJA PYYSI JULKAISUA").
 
 ## 0. ENSIN (heti nollauksen jälkeen)
