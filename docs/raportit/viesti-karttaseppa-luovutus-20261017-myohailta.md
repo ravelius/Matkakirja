@@ -51,9 +51,11 @@ SEURAAVAKSI: odota PT:n/omistajan palautetta videosta.
 **TILA 20.0x (PT 19.5x: korjaa viat, v5 vasta omistajan vastauksen jälkeen, ei junaan):** viat korjattu `45da5a534` (kiina-paketti-200, peili ok):
 lasku + häivytys ennen siirtoa (PysakkiKesken odottaa `Laskee`, pinta pois kartalta), omistajaton maa näkymätön, armeija tummana (`ArmeijaTumma` 0,5)
 ja taistelun risti nimineen kokeessa (jono JonoValo), musteen rintama sileä selkeässä (KiinaAlue `_Kohina` 0,05 / `_Hieno` 0). "e2" = Pulun "zZ",
-ei kartan vika (PT:lle kerrottu). KUN omistaja vastaa: KÄÄNNÖSPYYNTÖ JU:lle `45da5a534` → `kiina-selkea-19-v5-app`, ajo kuten v4 (kopioi ajo/odota-v4 → v5).
+ei kartan vika (PT:lle kerrottu). KUN omistaja vastaa: KÄÄNNÖSPYYNTÖ JU:lle kiina-paketti-200:n kärki (nyt `05ce463ac`) → `kiina-selkea-19-v5-app`, ajo kuten v4 (kopioi ajo/odota-v4 → v5).
 **PT 20.0x:** Pulun "zZ" piiloon kaikissa historialinsseissä → pyydetty Natiivi-UI:lta (Pulu.cs on NUI:n, vastuukartta) kytkin kiina-paketti-200:n
-päälle; kun NUI antaa SHA:n, `git merge <sha>` kiina-paketti-200:aan ja se mukaan samaan v5-käännökseen. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
+päälle; kun NUI antaa SHA:n, `git merge <sha>` kiina-paketti-200:aan ja se mukaan samaan v5-käännökseen.
+**20.1x:** NUI:n `05ce463ac` (Pulu.EiUnta: Kiina, Keksinnöt, Ihmisen matka) fast-forwardattu → kiina-paketti-200 = **05ce463ac** (peili ok) = v5:n käännös-SHA.
+Isoisä-1873 pyydetty NUI:lta samaan kytkimeen; jos SHA tulee ennen v5-pyyntöä, yhdistä sekin. LEVY 19.4x: wt/karttaseppa-kiinan-kerrokset ja wt/karttaseppa-esittely-kuvat poistettu.
 
 **PK (Pelikoodari) kallistus (valmis, ks. lisäys):** pyydetty 19.1x: selkeässä taistelun lähikuva (1500 km/45°) liikaa → kevyt 15–20° hetki. Jos PK antaa SHA:n,
 yhdistä (`git merge <sha>`) kiina-paketti-200:aan ennen käännöstä tai seuraavaan.
