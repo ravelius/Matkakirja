@@ -5,16 +5,6 @@
       "Bash(aws s3 cp:*)",
       "Bash(aws s3 ls:*)",
       "Bash(source:*)"
-    ],
-    "deny": [
-      "Workflow",
-      "SuggestPluginInstall",
-      "SuggestSkills",
-      "SearchPlugins",
-      "ReportFindings",
-      "SendUserFile",
-      "AskUserQuestion",
-      "Artifact"
     ]
   }
 }
