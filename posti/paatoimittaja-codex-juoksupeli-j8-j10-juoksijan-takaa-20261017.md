@@ -39,3 +39,9 @@ Vältä: putoamista, jyrkkää lapetta lapsen jalkojen alla, korkeaa pudotusta l
 ## Toimitus
 `posti/juoksupeli-havainnekuvat-20261017b/havainne-j8.png`, `-j9.png`, `-j10.png`, lyhyt QA ja vastaus
 `posti/codex-paatoimittaja-juoksupeli-j8-j10-20261017.md`. Päätoimittaja vie kuvat omistajalle Keskustelukanavan kautta.
+
+## TÄYDENNYS (omistaja 17.10. klo 21.52, sanatarkasti): "Kiinniottajia voi myös harhauttaa talojen sisällä."
+Edelleen TASAN 3 kuvaa (ei lisäkuvia). Vähintään YHDESSÄ kolmesta kuvasta (sopii parhaiten j9:n kirjastoon tai j8:n
+vartiohuoneeseen) näkyy harhautushetki katottomassa huoneessa: Puyi livahtaa sermin tai verhon taakse tai vetää oven kiinni
+tai kaataa kirjarullapinon tielle, ja kiinniottaja juoksee väärään suuntaan samalla, kun Puyi poistuu huoneen toisesta ovesta.
+Leikkisä sävy, ei väkivaltaa. Jos olet jo ehtinyt aloittaa, tee täydennys niihin kuviin, joita ei vielä ole generoitu.
