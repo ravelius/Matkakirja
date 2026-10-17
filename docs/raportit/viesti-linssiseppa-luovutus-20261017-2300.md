@@ -5,6 +5,12 @@ Edellinen: viesti-linssiseppa-luovutus-20261017-1922.md (osoitteet, yleisohjeet)
 (≤ 3 riviä), JU local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914, NS local_674b9ec4-e2f3-48e9-a810-a129f20a4f03, LR local_996d60ab-b4af-4172-ad31-f8e948f141a3,
 VS local_c238f4af-ae73-44e7-81f1-92848acd9217.
 
+## 0. ENSIN (PT 23.0x, omistajan havainto 22.54, juna 201): LOUVREN LÄHESTYMISPUHE ÄÄ:N UUTEEN OTTOON
+- Vaihda Louvren lähestymispuheen viittaus (nyt ranska-louvre-puhe.mp3, ks. MuseoLahestyminen / lähestymisen puhepolku) ÄÄ:n uuteen
+  ottoon aanet/taidemuseo-kertoja-v2/ranska/ranska-louvre-puhe-2.mp3 + ajat/ranska/…json + manifest-rivit-louvre-fi.json; suomi pakotettu.
+  Samaan orsay-valinnaiset-200-haaraan (tai junan 201 haaraan PT:n ohjeella), sha PT:lle yhdellä rivillä.
+  Käännös ja simu voi yhdistää kohdan 1 seuraavaan ajoon, jos 201c-simu on jo ajettu.
+
 ## 1. ENSIMMÄISEKSI: LOUVREN PYRAMIDIN TERÄVÄ VARJO -SIMU (OMISTAJAN PÄÄTÖS 22.27 PT:n kautta)
 Omistaja 22.27 pyramidi v2.1:stä: "Pitää olla terävä mutta pieni varjo ei pehmeä. Muuten ok" → hyväksytty junaan 201, kun varjo on
 TERÄVÄREUNAINEN, PIENI, tiiviisti pohjan alla, tummuus = pelinappulan varjo.
@@ -39,5 +45,5 @@ TERÄVÄREUNAINEN, PIENI, tiiviisti pohjan alla, tummuus = pelinappulan varjo.
 
 ## ALOITUSVIESTI SEURAAJALLE
 Olet Linssiseppä (Opus, high). Lue CLAUDE.md ja tämä luovutus (git show <sha>:docs/raportit/viesti-linssiseppa-luovutus-20261017-2300.md).
-Ensin kohta 1 (pyramidin terävän varjon simu 22ce38984 JU:n vuorolla → mittaus nappulaa vasten → lähikuva + 4× PT:lle → KK:n kuittauksen
+Ensin kohta 0 (Louvren puhe ÄÄ:n uuteen ottoon), sitten kohta 1 (pyramidin terävän varjon simu 22ce38984 JU:n vuorolla → mittaus nappulaa vasten → lähikuva + 4× PT:lle → KK:n kuittauksen
 jälkeen sha NS:lle junaan 201), sitten Codexin sn1-toimitus kun se tulee.
