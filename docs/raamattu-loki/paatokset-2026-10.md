@@ -415,3 +415,7 @@ Omistaja 17.10.2026 klo 21.59 Keskustelukanavan kortilla "Miten vasen peukalo oh
 ## JUOKSUPELIN PITUUS: EPAREALISTISEN PITKA JUOKSU (17.10.2026 klo 22.03)
 
 Omistaja 17.10.2026 klo 22.02 Keskustelukanavan kautta (sanatarkasti; "kk" = Kielletty kaupunki): "Kielletty kaupunki eli kk voi olla epärealistisen pitkä juoksu pelissä". KK:n tavoite: juoksu kestää niin kauan kuin pelaaja pysyy karkuteillä; rata kootaan palatsin toistuvista paloista (portti, piha, katoton talo, muurikäytävä) aina uudessa järjestyksessä; välillä vastaan tulee oikea tunnettu paikka nimineen (esim. Korkeimman sopusoinnun halli, kulmatorni).
+
+## JUOKSUPELIN OMENAT (17.10.2026 klo 22.08)
+
+Omistaja 17.10.2026 klo 22.08 Keskustelukanavan kautta (sanatarkasti): "Pelaaja voi kerätä myös esim. Omenoita ja heittää niillä vartijoita ja sotkea niiden juoksua. Mitä mieltä? Mikä peli sopisi tähän esikuvaksi?" Kortti "Kyllä, napautus vartijaan (Suositus)": omenoita kerätään hyppäämällä talojen hyllyiltä ja pihojen puista, ja taskuun mahtuu vain muutama; napautus vartijaan heittää omenan, ja osuma saa vartijan liukastumaan hetkeksi; reitinvalinta ja liuku pysyvät pääasiana. KK:n esikuvat: Subway Surfers (ohjaus ja takaa-ajo) ja Disneyn Aladdin 1993 (omenoiden heitto palatsin vartijoita pakoillessa). Codex j8–j10 täydennys 4.
