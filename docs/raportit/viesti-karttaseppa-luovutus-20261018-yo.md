@@ -44,6 +44,11 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
   heittovarjo oikea ala), pätkä PT:lle 01.45. Kysytty: laki persikkainen → kirkastus 1,4 → 1,2? (varjostimen clamp-yläraja). Odottaa PT:tä.
 - **JUNA 202 Reykjavík TEHTY 01.4x:** 571fe9877 (karttaseppa/reykjavik-202, wt proto-karttaseppa-reykjavik-202, pohja juna-201 73bca3b3a,
   peili pushattu): paakaupunki.islanti nimi → Reykjavík; generaattori kokoa-minipallo.mjs korjattu. PT:lle ilmoitettu.
+- **LISÄYS 01.5x: Kiina v8 = 1931f3e55** (PT 01.44: kirkastus 1,4 → 1,2, sävy säilyy) JU:n käännösjonossa → `kiina-taistelu-250-v8-app`,
+  skripti `ajo-taistelu-250-v8.zsh` (aja SUORAAN, ei odota-skriptiä: odota vaatii koko sarjan tyhjäksi; BD64C8E4 on LR:n). Ruudut r03 + r06
+  täysikokoisina → jos laki valtion sävyssä: pätkä SUORAAN KK:lle (local_febfd152-…) omistajalle + rivi PT:lle (PT 01.44).
+- **JUNA 202 Nuuk TEHTY 01.5x:** 37f37a530 (samassa karttaseppa/reykjavik-202) S2Maailma.Versio v2h; paketti `_valmiit/s2-indeksi-v2h-vienti-20261018`
+  VIENTIPYYNTÖ JU:lla (oltava ämpärissä ennen TF 202). Generaattori `_tyo/karttaseppa/s2-nuuk-202/` + T7 `iss-s2-indeksi/v2h-gronlanti/`.
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
