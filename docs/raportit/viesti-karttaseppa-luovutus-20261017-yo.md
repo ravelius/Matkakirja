@@ -44,6 +44,21 @@ Juurisyyagentin (Opus, vain luku) raportti lisätään alle, kun se valmistuu (k
 `oleta` lokiriveille "kaupunkipallot: … himmeinä N" (N > 0 hunnulla) ja näkyvien määrä ilman huntua. Jos syy on release-only, testi tarvitsee
 release-kaltaisen ehdon (esim. Asetukset.PakotaPelaaja-tyyppinen kytkin tai Linssit/Kartta-testi Rakenna-polun puhtaalle osalle).
 
+**LISÄYS 23.1x — juurisyyagentin (Opus, vain luku) raportti:** ei varmaa commit-tason syytä; 184.1-korjaukset ennallaan 01540e13a:ssa
+(KaupunkiPallot.cs:381, PeliOhjain.Paikka.cs:39); ainoa APPSTORE-ero polulla GizaKokeilu (OpasSovitin.cs:2117–2121, vain Giza/Peking pois); Louvre-
+ja Karttapaletti-commitit eivät kaada silmukkaa; palvelimen /opas/aineistot ja alueellisetpiilotukset kunnossa. Ehdokkaat:
+1. **(todennäköisin, keski–matala varmuus) pallokuva jää renderöimättä levossa:** UI/KaupunkiPalloKuva.cs:174–176 ja 193–196 sammuttaa kuvakameran
+   3. Update-kutsulla riippumatta siitä, renderöitiinkö ruutua; kartan levossa renderöidään vain joka 20. ruutu (Ruudunpaivitys.cs:295,313,
+   KuvataajuusPaatos.cs:26–28) → kuva tyhjä mutta Valmis = true → pallot paikallaan ja napautettavissa mutta näkymättömiä (huntu ja ilman).
+   `kuva ??=` / `kipsiKuva ??=` (KaupunkiPallot.cs:175–176) ei koskaan renderöi uudelleen. Simussa ajo pitää kartan liikkeessä → toimii.
+   Ajoitusriippuvainen, ollut 7.10. (0da27abd3) asti → "taas". Pienin korjaus: `kamera.Render()` kerran Rakenna-lopussa tai Askel laskee vain
+   renderöidyt ruudut (`if (!OnDemandRendering.willCurrentFrameRender) return;`).
+2. Sallittu() epätosi TF:ssä (KaupunkiPallot.cs:141–148) → myös raketti/torni/museo katoaisivat.
+3. Sallitut-lista tyhjä TF:ssä → myös Pariisi/Tukholma katoaisivat, raketti/torni näkyisivät.
+Erottelu: kysy PT:n kautta omistajalta näkyvätkö raketti, torni ja Pariisin pallo (raketti+torni mutta ei Pariisia → 3; ei mitään → 1/2).
+SEURAAVAKSI: korjaa ehdokas 1 (todennäköisin, halpa ja vaaraton: kuvan renderöinti varmaksi) + testi (Kartta-/Linssit-testi Askel-logiikalle
+tai simuajo levossa: odota ~10 s ilman liikettä ennen kuvaparia), kuvapari huntu | ilman 1:1 → PT. Kysy samalla PT:ltä erottelukysymys.
+
 ## 2. KIINA: 250-taistelukoe (omistaja 19.59 "Kyllä, vain taisteluihin (Suositus)"; linja 2 kärki, juna 201)
 
 Tila: v5-käännös `0bf177c8b` kirjattu Julkaisijalle → `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kiina-taistelu-250-v5-app` (seuraaja kääntää).
