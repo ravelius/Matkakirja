@@ -514,3 +514,6 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
 - 07.19: PT:n erä 200 (Pariisin lähestymisääni) = jo tehty LS:n **c8c6bff49** (linssiseppa/louvre-pariteetti, EI vielä rungossa): ulko/sisäänmeno maan
   lahestyminen.json:sta (avaimet ulkoaani, sisaanmeno), puuttuva = Museumplein; sisäänmeno PohjaLahde, ulkosilmukka ympäristön Silmukka (Aanisoitin,
   ryhmätaso). Ranskan json:issa ei kumpaakaan eikä Pariisille ole omaa ääntä → ÄÄ (PT:lle kerrottu). Ei omaa committia (ei päällekkäistä työtä).
+- 07.23: ODOTTAA: (1) ÄÄ:n Pariisin lähestymisäänet → avaimet ulkoaani/sisaanmeno Museo/ranska/lahestyminen.json:iin (PT 07.4x). (2) Valinta: Alankomaiden
+  34 CC BY -patsasskannausta puuttuu Tekijätiedoista (alankomaat/veistokset.json ilman lahteet[]; Tietoja.VeistostenLahteet lukee vain sen) →
+  tarvitaan SK:n teokset.patsaat.v2.1.json (ei repossa/levyllä/postilaatikossa); sitten lahteet[] ranska-mallin mukaan + testi. PT:lle kerrottu.
