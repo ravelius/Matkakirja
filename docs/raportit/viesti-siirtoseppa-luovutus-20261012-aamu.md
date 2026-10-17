@@ -525,3 +525,6 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
   wt/proto-siirtoseppa-patsaslahteet): 34 lähdettä (SK main 425059757: 8 CC BY 4.0 + 26 CC0) alankomaat/veistokset.json "lahteet", testi
   VeistostenLahteetKaikilleSijoitetuille; RanskanSaliRipustus 8 → 10 (LR:n Nike+Venus). Linssit 1980/1980, unity 0. PT + NS + SK. JONO TYHJÄ.
   Auki: luentamanifesti v7 ÄÄ:ltä 831-ajon jälkeen. Worktreet poistettavissa kun rungossa: luennat6, aanipohja, todistusajo, aanivahti199, louvre-aanet, patsaslahteet.
+- 07.47: **luentamanifesti v7 f7977522a** (siirtoseppa/luennat-v7-199, juna-199 0e530f7e9 päällä; worktree wt/proto-siirtoseppa-luennat7): ManifestiOletus → v7
+  (ÄÄ 4727a55c7, 9 241 palaa), kultainen v7 (v6 pois); kaikki 8 574 pyyntöä osuvat (maalehdet 1 141/1 141). Peli 592/592, unity 0. PT + NS + ÄÄ. JONO TYHJÄ.
+  Uusi versio: aja Peli-testit/Kultaiset/tee-valmisluennat-kultainen.mjs (vaihda versio skriptissä), päivitä ManifestiOletus + testin vakiot.
