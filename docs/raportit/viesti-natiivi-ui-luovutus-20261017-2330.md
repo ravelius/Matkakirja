@@ -30,18 +30,21 @@ Ajoskriptit: /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ (sk-*, ajo-
    Simu 65cb17d60 (41594c430, todistus-maakunta-*-201c-2322/2327, 0 poikkeusta): Lue lisää → suoraan artikkeli ilman LISÄÄ-nappia OK,
    mutta pikkukuvasta avattuna 45 % "(laajenna)" → fef47c0aa laajentaa. KETJU KÄYNNISSÄ 23.33 (ketjut-20261016/maakunta-astro-kehys-2333.zsh):
    fef47c0aa → maakunta-201-app, sitten 00228d16d → lasipohja-201-app, sitten ec5819d17 → kehyshaivytys-201b-app.
-   ENSIN: kun maakunta-201-app/kaannos.out = KÄÄNNETTY … fef47c0aa → Julkaisijalta SIMU NYT → `zsh ketjut-20261016/maakunta-201c-simu.zsh`
-   → katso M2 ja M3 täysikokoisina (laajennettu, ei LISÄÄ) → pari (L1 | M1 NYK | M2 UUSI | M3 UUSI, iPhone + iPad) _tyo/natiivi-ui/maakunta-201-simu-HHMM/
-   → PT 3 riviä + sha fef47c0aa → NS junaan 201 (PT:n takaraja 00.15, lukitus 00.30; myöhemmin → juna 202).
-2. **Lasipohja-erä (juna 201, PT hyväksyi selitekortin ja Maapallon vuoden 21.2x):** natiivi-ui/lasipohja-201. Astrokuvan selite vaati
-   täysin peittävän sävyn: **00228d16d** (Tyylikirja.Lcd.Pinta), käännös samassa ketjussa maakunnan jälkeen. 87945e5ca:n (LasiAvaruus 90 %) pari _tyo/natiivi-ui/lasipohja-201-astro-2322/
-   hylätty itse: täysikokoisena päiväkirjakortin teksti kuulsi kortin alaosassa. Simu: ketjut-20261016/lasipohja-201b-simu.zsh (vain astro)
-   → täysikokoinen pari PT:lle → koko erä (natiivi-ui/lasipohja-201 kärki) NS:lle. Jos ei ehdi 00.30 → juna 202.
+   **TEHTY 23.54:** simu f784c0532 (todistus-maakunta-{iphone-…-2345, ipad-…-2349}, 0 poikkeusta): iPhone Lue lisää + pikkukuva suoraan
+   laajennettuun artikkeliin; iPadilla pikkukuva OK, Lue lisää -QA-napautus osui tekstin ohi. Pari _tyo/natiivi-ui/maakunta-201-simu-2353/ → PT 23.54.
+   ENSIN: PT:n hyväksyntä → fef47c0aa (haara natiivi-ui/maakunta-suoraan-201) NS:lle junaan 201 (lukitus 00.30; muuten juna 202).
+2. **Lasipohja-erä (juna 201, PT hyväksyi selitekortin ja Maapallon vuoden 21.2x):** natiivi-ui/lasipohja-201 kärki **00228d16d**
+   (astrokuvan selite täysin peittävällä Tyylikirja.Lcd.Pinta). 87945e5ca:n (LasiAvaruus 90 %) pari _tyo/natiivi-ui/lasipohja-201-astro-2322/
+   hylätty itse: täysikokoisena päiväkirjakortin teksti kuulsi kortin alaosassa. Käännös 00228d16d → lasipohja-201-app alkoi 23.43.
+   ENSIN (luovutuksen jälkeen): kaannos.out = KÄÄNNETTY … 00228d16d → Julkaisijalta SIMU NYT → `zsh ketjut-20261016/lasipohja-201b-simu.zsh`
+   (vain astro, ~8 min) → katso K2/K3 TÄYSIKOKOISINA (ei läpikuultoa) → pari kuten lasipohja-201-astro-2322 uuteen kansioon → PT →
+   hyväksynnän jälkeen koko natiivi-ui/lasipohja-201 NS:lle (juna 201, jos ehtii 00.30; muuten 202).
 3. **Kehysnappien häivytys (juna 202, video ensin):** natiivi-ui/kehyshaivytys-201 **ec5819d17**: ydin Linssit/Ydin/KehysHaivytys.cs (testit
    Linssit-testit KehysHaivytysTestit 8/8: himmeä + lattia → ei kävelyä, näkyvä → kävely, tupla, veto, nipistys, napit), UI/Linssit/KehysNapit.cs
    (linssikerrosten mk-ohjausryhma, mk-linssiSulje, Merkki mk-kehysnappi = oppaan esitysrivi; luokka mk-kehys--himmea ohjausnappi.uss
    0,2 / tyylikirjan kestot), nieleminen SyoteLukko.NapautuksenNielija (opas MikaTama, TehtavaKohdeNapautus, DioraamaSyote) +
-   PalloKierto.KehysNielija + UI-pintojen ClickEvent TrickleDown. `ui kehysnapit 0|1|tila|himmea|esiin`. LS lisää museon lattia/teos
+   PalloKierto.KehysNielija + UI-pintojen ClickEvent TrickleDown. Käännös ec5819d17 → kehyshaivytys-201b-app ketjun lopussa (odottaa,
+   kunnes muita käännöksiä ei ole). `ui kehysnapit 0|1|tila|himmea|esiin`. LS lisää museon lattia/teos
    (SyoteLukko.NapautusNielty, LS:n luovutus caebd2f31). SEURAAVAKSI: < 1 min video Kip + ISS (avaus → 5 s → himmeä → napautus tyhjään
    esiin ilman toimintoa → uusi napautus toimii) → PT täysikokoisena → KK. Poikkeama: häivytys 250 ms (tyylikirjan kesto-maksimi), ei 0,6 s.
    Tarkista simussa: viimeisin osuma (`ui kehysnapit tila`) Cupolassa ja Kipissä = maailma (ei koko ruudun UI-elementtiä).
