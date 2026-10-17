@@ -8,15 +8,16 @@ Omistajan pysyvä päätös 16.10. 22.24: kaikki vain YHTEEN avoimeen junaan.
 
 - OMISTAJA PYYSI JULKAISUA 23.21 ("nämä korjaukset voi julkaista heti ilman testejä"); PT: LUKITSE 201 klo 00.30 sillä mitä rungossa on, valmistumaton → 202.
   Ei laite- eikä muistiajoja; automaattiset testit normaalisti.
-- Runko natiiviseppa/juna-201 (wt/proto-natiiviseppa-ehdokas) **fe08a1686** (BUILD 200 = master 94a8a360c päällä):
+- **PYRAMIDI POIS (omistaja 23.46 "varjo leijuu" → juna 202, PT + LS vahvistivat): runko palautettu c83357f52 (reset --hard, peili -f).**
+- Runko natiiviseppa/juna-201 (wt/proto-natiiviseppa-ehdokas) **c83357f52** (BUILD 200 = master 94a8a360c päällä; fe08a1686 = vanha pyramidiversio, EI käytössä):
   NS metat-201 e97616cf3 (3518 .metaa, JU:n TF 200 -löydös) · LR tivoli-ilta-201 adee63344 · LS louvre-alut 133e7c00e (cherry-pick 9b7af01f3) ·
   NS kokoruutu-lepo 86064a98f · LS monalisa-201 f7952e7b3 · KS kohdekaupunkipallot-201 440325942 · LS pyramidiketju 22ce38984 (PT: KETJU, a9d86b242..).
   Pyramidiyhdistyksessä ristiriita KaupunkiPalloKuva.Askel: yhdistetty KS:n KuvaKameraPois + LS:n esi→Kuva-blit, Piirra-silmukkaan museoKuva/louvreKuva (fe08a1686).
-- Testit: 90f392e56 ja c83357f52 vihreät; **fe08a1686 testit201.sh ajossa 23.44** (/tmp/natiiviseppa-testit201-*.log). Punainen pyramidin takia, eikä korjaannu
-  nopeasti → pyramidi pois (runko c83357f52 + muut) junaan 202 (PT 23.4x).
+- Testit **c83357f52 vihreät** (Linssit 2015, Peli 592, Kartta 508, tarkista 0, peili 0) = lukitusrunko, ellei PT kuittaa lisää (NUI fef47c0aa) → silloin testit201.sh uudelleen.
+  Mona Lisa f7952e7b3 pysyy; LS:n kuvat m0–m2 ennen TF-latausta: vika → TF seis ja commit pois.
 - Odottaa PT:n kuittausta simun jälkeen: NUI maakunnan Lue lisää fef47c0aa. Mona Lisan kuvat ~00.25 (LS-seuraaja): vika → commit pois ja Mona Lisa -virke pois muutoslokista.
   EI MUKAAN: NUI kehysnappien häivytys, ISS-hammasratas.
-- Muutosloki: juna201/muutosloki-201.txt (277 mrk, työkalun raja 280); PR https://github.com/ravelius/Matkakirja/pull/4831 odottaa PT:n kuittausta lyhennykselle → JU mergeää = M.
+- Muutosloki: juna201/muutosloki-201.txt = PT:n teksti ilman pyramidia (235 mrk, raja 280); PR https://github.com/ravelius/Matkakirja/pull/4831 (dc6870263) odottaa PT:n kuittausta → JU mergeää = M.
   Worktree wt/natiiviseppa-muutosloki-201 (mergen jälkeen tools/uusi-worktree.sh --poista natiiviseppa-muutosloki-201).
 - Lukitusehto R2: opas/pallokierros-v13/koopenhamina.json (LR:n paketti h, JU vie). Tarkista ennen lukitusta.
 - LUKITUS: build201-viesti.txt täytetty (omistajan 23.21 sanatarkasti). ~00.25 JU:lle "KÄÄNNÖS NYT" (JU pysäyttää muut odottajat) →
@@ -24,7 +25,7 @@ Omistajan pysyvä päätös 16.10. 22.24: kaikki vain YHTEEN avoimeen junaan.
   KÄÄNNETTY → `cd /Users/Shared/Claude/proto-3d/Matkakirja-proto && zsh …/juna201/lukitse201-b.sh <runko> "<KÄÄNNETTY-rivi>" "ohitettu (omistaja 23.21 ilman testejä)" "<testirivi>"`
   (master tarkistetaan = 94a8a360c, juna/b29; peilipush voi kilpailla → ls-remote, juna/b29-peilit erikseen) → BUILD 201 -sha JU:lle (TF iOS) + PT:lle.
   Mac: JU:n TF NYT → `nohup zsh …/juna201/mac201.sh <runko>` (PROTO_LINJA=1 jos L1 vapaa, JU:n luvalla) → TF-ajo → JU + PT. TF:stä rivi PT:lle (tf201-ketju.log on JU:n).
-- PT:n pyyntö: lukituskäännöksestä kuvapari Pariisista (pyramidi + kipsipallot kehittäjätilassa hunnulla | ilman) → `nohup zsh …/juna201/kartta201-simu.sh <runko>`;
+- PT:n pyyntö (pyramidi nyt pois → kuvissa vain kipsipallot): lukituskäännöksestä kuvapari Pariisista (pyramidi + kipsipallot kehittäjätilassa hunnulla | ilman) → `nohup zsh …/juna201/kartta201-simu.sh <runko>`;
   JU kirjoittaa iPad-simun UDID:n juna201/simu-kartta201.nyt (SIMU NYT). Kuvat todistus-pariisi-201-ipad-*/kuvat → PT; ei pidätä TF:ää, ellei selvä rikkoutuminen.
 
 ## AKKU: KOKO RUUDUN SIVU LEPUUTTAA 3D:N (PT 23.06, omistajan havainto Louvren aloituksessa)

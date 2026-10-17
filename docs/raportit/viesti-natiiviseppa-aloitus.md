@@ -2,7 +2,7 @@
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus, session id osoitekirjassa /Users/Shared/Claude/osoitekirja.md.
 Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja (haara selvittaja-3d-luovutus), proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto
-(master 94a8a360c = BUILD 200, Unity 6000.7.0b5), juna 201 -runko wt/proto-natiiviseppa-ehdokas (natiiviseppa/juna-201, LUKITUS 00.30).
+(master 94a8a360c = BUILD 200, Unity 6000.7.0b5), juna 201 -runko wt/proto-natiiviseppa-ehdokas (natiiviseppa/juna-201 c83357f52 ilman pyramidia, LUKITUS 00.30).
 Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se) ja luovutus KOKONAAN: `git fetch origin && git checkout selvittaja-3d-luovutus && git pull`
 → docs/raportit/viesti-natiiviseppa-luovutus-20261017-yo.md + /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt
 + juna201/jono-201.txt (lopusta alkuun: uusin tila).
