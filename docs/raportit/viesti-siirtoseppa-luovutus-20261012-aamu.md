@@ -491,3 +491,7 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
   7 433 muuta kuin maalehden pyyntöä, museoiden 73 nostoa/nähtävyyttä (Akropolis-museo), maalehdet 310/1 141 (muut palavirtaan),
   667 manifestin palaa ilman nykyistä pyyntöä (vanhat tekstit). Taidemuseon kertoja on erillinen (taidemuseo-kertoja-v2, ei luennat).
   Web: ei asetusarvoa (vain tools/vienti/asetusavaimet.json-skeema). Peli-testit 592/592, unity 0. SHA NS:lle + PT:lle. SEURAAVA: erä 2 laitemittaus.
+- 03.24: **ERÄ 2 VALMISTELTU: laitemittaus.** Skenaario tyokalut/siirtoseppa-ajot/skenaariot/sk-aanipohja-mittaus.txt (museo, Pariisin kaupunki + opas,
+  raketti + radio + Cupola, seikkailu botilla; aani-alku/-loppu osioittain m-*). Ajo ajo-aanipohja-mittaus.zsh (odottaja käynnissä, loki
+  lokit/siirtoseppa-aanipohja-mittaus.log) odottaa lippua simu-mittaus.nyt (= Julkaisijan SIMU NYT) → ennen (aanipohja-197-app 9db0288e9) +
+  jälkeen (siirto-198-1-app 0bfc62868), ~40 min. Julkaisijalle simu + kesto kerrottu. Valmis → SIMU VAPAA, verho.py (100 ms RMS) osioittain → PT.
