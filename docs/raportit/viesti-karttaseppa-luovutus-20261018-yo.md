@@ -53,6 +53,8 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
   mutta laki yhä vaalea. JUURISYY: lineaarinen väriavaruus, verteksiväri luettiin lineaarisena. **v9 = cd7b1daa4** (kumpu lineaarisena,
   VainTaisteluTumma 1), KÄÄNNÖSPYYNTÖ JU:lla → `kiina-taistelu-250-v9-app`, skripti `ajo-taistelu-250-v9.zsh` (aja suoraan, simu YKSIN).
   Tarkista r03/r06 täysikokoisina (laki Wun/Wein omassa sävyssä, ei kerma) → pätkä KK:lle omistajalle + rivi PT:lle.
+- **LISÄYS 02.45: v9 VALMIS JA OMISTAJALLA.** Simu 02.40 yksin (todistus-kiina-taistelu-250-v9-20261018-0240, SIMU VAPAA 02.44), r03/r06 ok,
+  pätkä KK:lle 02.45 + rivi PT:lle. ODOTTAA omistajan vastausta; hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai (kohta 3 main-data).
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
