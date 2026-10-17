@@ -508,3 +508,6 @@ ajo-aanipohja-197.zsh (H, ERA, SK). Sitten PT:n kuittaus → SHA NS:lle junaan 1
 - 04.50: SEIKKAILU EI KÄYNNISTYNYT = AJURIN VIKA, ei pelin: peli avasi alun valinnan (olavinlinna-alku: valinta), mutta todistusajo.sh:208/219 tap-teksti ei poista vanhaa ui-puu.json:ia ja odottaa kiinteät 1,5 s → kuormassa luki edellisen puun (71 el. museosta 04.29; oikea 04.38 puu 31 el.); sama selittää museon puuttuvan "Siirry näyttelyyn". Korjaus NS:n työkaluun: rm -f + odota tiedostoa kuten rivit 283–284.
 - 05.18: todistusajo-korjaus **d6578a2cc** (siirtoseppa/todistusajo-puu-198, natiiviseppa/juna-198 60f4445d4 päällä; worktree wt/proto-siirtoseppa-todistusajo):
   tuore_puu (rm + odotus ≤ 10 s) tap-tekstille, liuku-kohdalle, tap-/veto-kohdalle ja kuvalle. zsh -n ok (skripti on zsh, ei bash). Ei simuajoa. → PT → NS lukituksen jälkeen.
+- 06.30: **ERÄ juna 199: äänivahdin aukko 0a3c4b09c** (siirtoseppa/aanivahti-199, natiiviseppa/juna-198 d7d9af99c päällä; worktree wt/proto-siirtoseppa-aanivahti199):
+  3 PlayClipAtPointia (tyrmän askeleet 2, esineen kolahdus) → SeikkailuAanet.SoitaKlippi (pohja, kuulokehys: myös paikka korjautuu); vahti
+  näkee PlayClipAtPoint + typeof(AudioSource). Linssit 1979/1979, unity 0, tarkista.sh 0. Ei simua. → PT → NS junaan 199.
