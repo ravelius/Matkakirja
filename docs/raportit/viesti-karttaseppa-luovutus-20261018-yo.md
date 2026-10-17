@@ -27,6 +27,8 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
 - Seuraaja: tarkista `ajo-taistelu-250-v5.out` (rivi "AJO kiina-taistelu-250-v5"), sitten heti **SIMU VAPAA Julkaisijalle** (jos ei jo kuitattu:
   `xcrun simctl --set "/Volumes/T7 4TB/Simulaattorit/Sarja" list devices booted` tyhjä) → `yhdista-video.zsh <todistuskansio>` → 1:1-ruudut
   13–36 s (`crop=800:600:500:250`) → jos ok `patka.zsh <kansio> 12 26` → PT 3 riviä.
+- **LISÄYS 00.39: ajo VALMIS ja SIMU VAPAA kuitattu JU:lle.** Todistus `proto-3d/lokit/todistus-kiina-taistelu-250-v5-20261018-0034/`
+  (PUUTE kaannos.txt = käännöspalvelun merge-sha 270832938 ⊇ 0bf177c8b, ok). Seuraaja: `yhdista-video.zsh` tähän kansioon → ruudut → pätkä → PT.
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
