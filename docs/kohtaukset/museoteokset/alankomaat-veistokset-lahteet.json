@@ -1,5 +1,5 @@
 {
- "huomio": "Alankomaiden 34 patsasskannauksen lähdetiedot pelin Tekijätietoihin (Tietoja.cs lukee veistokset.json lahteet[]; sama muoto kuin ranska/veistokset.json lahteet). Johdettu proton alankomaat/sali.json veistospaikat[].teos-kentistä (krediitti, lisenssi, lahde_url) ja veistokset.json sijoitus-avaimista (SK 17.10.2026). CC BY 4.0 (7 skannausta, Rijksmuseum) vaatii nimeämisen; CC0 (27, Rijksmuseum van Oudheden) nimetään silti. Siirtoseppä lisää tämän listan alankomaat/veistokset.json:iin avaimella \"lahteet\".",
+ "huomio": "Alankomaiden 34 patsasskannauksen lähdetiedot pelin Tekijätietoihin (Tietoja.cs lukee veistokset.json lahteet[]; sama muoto kuin ranska/veistokset.json lahteet). Johdettu proton alankomaat/sali.json veistospaikat[].teos-kentistä (krediitti, lisenssi, lahde_url) ja veistokset.json sijoitus-avaimista (SK 17.10.2026). CC BY 4.0 (8 skannausta, Rijksmuseum) vaatii nimeämisen; CC0 (26, Rijksmuseum van Oudheden) nimetään silti. Siirtoseppä lisää tämän listan alankomaat/veistokset.json:iin avaimella \"lahteet\".",
  "lahteet": [
   {
    "patsas": "rijks-ccby-keyser-mies",
