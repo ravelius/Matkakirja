@@ -385,3 +385,7 @@ Omistaja 07.11: "Ota uni heti pois, se ei toimi". Kortti 07.13 "Viedäänkö tes
 ## OMISTAJAN PÄÄTÖS: CODEXIN VAHTI KAIKKIIN VIESTEIHIN (17.10.2026 klo 07.25) (17.10.2026 klo 07.27)
 
 Omistaja kysyi 07.2x: "Miten jatkossa codex ei jää huomiotta?" Kortti "Codexin vahti oli rikki … Korjataanko se näin?" → "Kyllä (Suositus)". Selite: "Vahti seuraa kaikkia Codexin viestejä. Jos viestiin ei ole vastattu 30 minuutissa, Päätoimittaja vastaa itse tai antaa sen toiselle. Tunnin jälkeen asia näkyy Asemataululla, kunnes siihen on vastattu." Vika: codex-odottaa.py katsoi vain posti/codex-fable-*, joten 16.10. 23.29 ja 17.10. 00.38 Linssisepälle osoitetut Peking #361 -viestit jäivät huomiotta. Korjaus PT 07.3x: kaikki posti/codex-* ja vastaukset posti/*-codex-* (72 h, sama rooli tai sama aihe), 30 min → PT, 60 min → KK + VAATII TOIMIA (KIERROS.md). Testi näytti 106b8db8f:n ja 54516752f:n sekä 5 vanhaa vastaamatonta (KS, PK ×2, VS, LS), jaettu rooleille. Avoimet Codex-viestit kirjataan luovutuksiin (siirtoraportti 3.5).
+
+## PAATOKSET 17.10.2026 klo 19.59: Kiinan historiakartan korkeus vain taisteluihin (17.10.2026 klo 19.59)
+
+Omistaja (kortti KK:lla): korkeusanimaatio vain taistelulauseen ajaksi (armeija liikkuvana huippuna dynastian värissä, isku pehmeänä aaltona, sitten kartta tasainen); väestöpinta pois. Ensin koe Punaisen kallion taistelusta, muut taistelut hyväksynnän jälkeen.
