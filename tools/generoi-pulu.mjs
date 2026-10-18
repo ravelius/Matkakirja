@@ -117,7 +117,7 @@ import {
 import {
   LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
   LIVIAN_KAUPUNKILAHTEET, LIVIAN_LINSSILAHTEET, LIVIAN_VARATTU, livianAanitykset,
-  livianKaupunkiKentat, livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
+  livianKaupunkiKentat, livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste, livianTiivisteTasmaa,
 } from '../js/liviapuhe.js';
 import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
 import { FOKUSVIRTA_ALPIT } from '../js/packs/fokusvirta-alpit.js';
@@ -900,7 +900,8 @@ export function aanitteenTila(rivi) {
   // js/livia.js:n omat lähteet (ks. js/liviapuhe.js LIVIAN_AANITETYT).
   const vanha = LIVIAN_AANITETYT[rivi.avain];
   if (!vanha) return 'uusi';
-  return vanha === livianTiiviste(rivi.teksti) ? 'ajan tasalla' : 'muuttunut';
+  // Lainausmerkit (18.10.2026): vanha raaka tiiviste kelpaa, joten ”-tekstejä ei generoida uudelleen.
+  return livianTiivisteTasmaa(vanha, rivi.teksti) ? 'ajan tasalla' : 'muuttunut';
 }
 
 /**

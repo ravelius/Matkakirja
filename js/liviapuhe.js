@@ -1,4 +1,5 @@
 import { seuraaLivianKasvoAanitetta, lopetaLivianKasvoAanite } from './livia-puhetila.js';
+import { normalisoiLainausmerkit } from './lainausmerkit.js';
 import { kytkeLivianPuheEleet } from './livia-puheleet.js';
 import { kytkeLivianPilottiEleet } from './livia-puheeleet-lataus.js';
 /*
@@ -734,14 +735,29 @@ export const LIVIAN_AANITETTY_PALJASTUS = { paikkaan: 'Ateenaan', paikkaa: 'Atee
  * Tiiviste ei ole turvatoimi vaan tunniste: se erottaa kaksi eri
  * tekstiä toisistaan lyhyellä merkkijonolla, joka mahtuu tauluun ja
  * manifestiin.
+ *
+ * LAINAUSMERKIT (18.10.2026, js/lainausmerkit.js): kaarevat merkit
+ * suoriksi ennen tiivistettä. Taulun vanhat rivit on laskettu raa'asta
+ * tekstistä, joten vertailu kulkee livianTiivisteTasmaa-funktion kautta.
  */
 export function livianTiiviste(teksti) {
+  return livianTiivisteRaaka(normalisoiLainausmerkit(teksti));
+}
+
+/** Vanha tiiviste ilman lainausmerkkien normalisointia (ennen 18.10.2026 generoidut rivit). */
+export function livianTiivisteRaaka(teksti) {
   let h = 0x811c9dc5;
   for (const merkki of String(teksti ?? '').trim()) {
     h ^= merkki.codePointAt(0);
     h = Math.imul(h, 0x01000193) >>> 0;
   }
   return h.toString(16).padStart(8, '0');
+}
+
+/** Vastaako tallennettu tiiviste tekstiä: ensin normalisoitu, sitten vanha raaka (ei uudelleengenerointia). */
+export function livianTiivisteTasmaa(tallennettu, teksti) {
+  return tallennettu != null
+    && (tallennettu === livianTiiviste(teksti) || tallennettu === livianTiivisteRaaka(teksti));
 }
 
 /**
@@ -1070,7 +1086,7 @@ export function livianKorostetutKaupungit() {
 export function livianAaniAjanTasalla(lahde, indeksi, teksti = null) {
   if (teksti == null) return !LIVIAN_KAUPUNKILAHTEET[lahde] && !LIVIAN_LINSSILAHTEET[lahde];
   const avain = `${lahde}-${indeksi + 1}`;
-  return LIVIAN_AANITETYT[avain] === livianTiiviste(teksti);
+  return livianTiivisteTasmaa(LIVIAN_AANITETYT[avain], teksti);
 }
 
 /** Häivytys, kun seuraava kupla katkaisee edellisen repliikin. */
