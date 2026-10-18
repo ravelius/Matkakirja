@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "method": "built-in image_gen, whole new native scenes",
+  "taskNumbers": [
+    408,
+    409,
+    410
+  ],
+  "sourceSnapshot": "47beb2a5e9255316127a55b1ce380d5b79bfb32a",
+  "sourceCommit": "9a6f3660b1af006d445dc9e4444c9a0f8d255c7f",
+  "sourceBlob": "269825ec70b91176c26394cb696290ef5d2e58ff",
+  "authorizedCalls": 3,
+  "callsSpent": 3,
+  "calls": {
+    "j8": {
+      "issuedAtUTC": "2026-10-18T06:27:34.427251+00:00",
+      "status": "completed",
+      "authorizedAttempt": 1,
+      "maximumAttempts": 1,
+      "method": "built-in image_gen",
+      "intent": "new whole image using style references; no partial edit",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/prompts/j8.txt",
+      "promptSHA256": "f393e9807e0724cd6074fe1b6d2b810bf6393844ffda59db08a23983438092ff",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/references/j5.png"
+      ],
+      "completedAtUTC": "2026-10-18T06:28:41.698940+00:00"
+    },
+    "j9": {
+      "issuedAtUTC": "2026-10-18T06:29:05.854845+00:00",
+      "status": "completed",
+      "authorizedAttempt": 1,
+      "maximumAttempts": 1,
+      "method": "built-in image_gen",
+      "intent": "new whole image using style references; no partial edit",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/prompts/j9.txt",
+      "promptSHA256": "47990eef46d51dbb248070d4de28bc190e0cac0224863b76207f5915f402cbba",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/references/j6.png"
+      ],
+      "completedAtUTC": "2026-10-18T06:30:09.535171+00:00"
+    },
+    "j10": {
+      "issuedAtUTC": "2026-10-18T06:33:07.716454+00:00",
+      "status": "completed",
+      "authorizedAttempt": 1,
+      "maximumAttempts": 1,
+      "method": "built-in image_gen",
+      "intent": "new whole image using style references; no partial edit",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/prompts/j10.txt",
+      "promptSHA256": "232387c3198489396d3e1f19db295ce45b009fb0c566c2f96cc1ccdf75c15ead",
+      "references": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/references/j7.png"
+      ],
+      "completedAtUTC": "2026-10-18T06:34:48.093499+00:00"
+    }
+  },
+  "nativeImages": {
+    "j8": {
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-ecf2-7b43-87c5-c2736b378375/exec-0dcd005e-fd0b-4d9d-a487-6e0fc4ed7404.png",
+      "savedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/images/havainne-j8.png",
+      "t7NativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-juoksijan-takaa-20261018/images/havainne-j8.png",
+      "nativeSHA256": "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828",
+      "bytes": 2857780,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "format": "PNG",
+      "exact16by9": false,
+      "ratio": 1.7768331562167907,
+      "pixelsModified": false,
+      "recordedAtUTC": "2026-10-18T06:28:41.698752+00:00"
+    },
+    "j9": {
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-ecf2-7b43-87c5-c2736b378375/exec-5d011e06-772d-4032-98dc-b4acd974b529.png",
+      "savedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/images/havainne-j9.png",
+      "t7NativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-juoksijan-takaa-20261018/images/havainne-j9.png",
+      "nativeSHA256": "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+      "bytes": 3028071,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "format": "PNG",
+      "exact16by9": false,
+      "ratio": 1.7768331562167907,
+      "pixelsModified": false,
+      "recordedAtUTC": "2026-10-18T06:30:09.534972+00:00"
+    },
+    "j10": {
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-ecf2-7b43-87c5-c2736b378375/exec-58c02d64-1e01-4aca-afda-7c79600ae894.png",
+      "savedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/images/havainne-j10.png",
+      "t7NativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-juoksijan-takaa-20261018/images/havainne-j10.png",
+      "nativeSHA256": "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021",
+      "bytes": 3011601,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "format": "PNG",
+      "exact16by9": false,
+      "ratio": 1.7768331562167907,
+      "pixelsModified": false,
+      "recordedAtUTC": "2026-10-18T06:34:48.093328+00:00"
+    }
+  },
+  "remainingCalls": 0,
+  "retries": 0,
+  "noPartialPixelEdits": true,
+  "oldJ5J7Unmodified": true,
+  "allImagesFullyQAApproved": false,
+  "nativeImageCount": 3
+}

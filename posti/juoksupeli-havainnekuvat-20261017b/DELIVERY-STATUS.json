@@ -1,0 +1,14 @@
+{
+  "preparedAtUTC": "2026-10-18T06:37:08.943035+00:00",
+  "nativeImageCount": 3,
+  "allThreeRequestedImagesProduced": true,
+  "qaComplete": true,
+  "allMandatoryVisualRequirementsPassed": false,
+  "mailDeliveredByThisAgent": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "requiredDestinationFolder": "posti/juoksupeli-havainnekuvat-20261017b/",
+  "requiredReply": "posti/codex-paatoimittaja-juoksupeli-j8-j10-20261017.md"
+}

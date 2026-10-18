@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUTC": "2026-10-18T06:37:08.943035+00:00",
+  "reviewer": "running_dollhouse_three",
+  "method": "Producer original-size native self-review; root also reported viewing all three originals. No pixel edits or retries.",
+  "independentQA": false,
+  "allImagesFullyQAApproved": false,
+  "camera": "High camera directly behind the lower-centre child with route continuing toward upper centre; exact height/near-bird angle not measured",
+  "common": {
+    "dimensions": [
+      1672,
+      941
+    ],
+    "requestedAspect": "16:9",
+    "exact16by9": false,
+    "ratioDifferencePercent": -0.05313496280551222,
+    "nativePixelsUnchanged": true,
+    "knownModernApartmentSkylineObserved": false,
+    "historicArchitectureMeasured": false,
+    "naturalMaterialSurface": "Plausible stone, wood, cloth and foliage; fairly detailed rather than maximally simplified gameplay graphics",
+    "routeNavigationVerifiedInRuntime": false,
+    "ownerAccepted": false
+  },
+  "images": {
+    "j8": {
+      "nativeSHA256": "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828",
+      "observed": [
+        "Yellow-robed child low to ground, braid/cap/back visible lower centre",
+        "Airborne sideways-moving guard left ahead, two oncoming guards at gateway and another on right route; persistent chaser at bottom edge",
+        "Two clear nearby open-roof rooms, central gate and right parapeted route; glowing collectibles",
+        "Open bronze water vat with ring handles beyond gate"
+      ],
+      "deviations": [
+        "Gate stud grid still has six visible columns and more than nine rows per leaf; required 9×9 not met",
+        "Guard is airborne left/ahead of child, not clearly vertically overlapping him; exact slide-under timing/anatomy not established",
+        "Child pose reads a low belly-first slide/dive rather than unambiguous feet-first slide; no fall or injury shown",
+        "Rooms and alternative route openings are visible, but every entrance-to-exit connection and ramp access cannot be certified from this one frame",
+        "Interior furniture/greenery remains somewhat decorative rather than fully stripped-down"
+      ],
+      "fullBriefPass": false
+    },
+    "j9": {
+      "nativeSHA256": "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+      "observed": [
+        "Puyi viewed from back mid forward jump above a low chest inside roofless room",
+        "Glowing jade-like collectible and red apples on side table/shelf",
+        "Wrong-lane guard heads away in left room; two oncoming guards ahead, rear male chaser and nurse at lower edge",
+        "Three nearby open-roof rooms and a straight central entrance-to-far-exit passage"
+      ],
+      "deviations": [
+        "Jump is clear, but actual reaching/collecting contact with off-to-right jade/apples is not shown",
+        "Parallel room routes and stairs are visible, but connections between all branches and side interception timing are not proved",
+        "Wall scrolls carry generated calligraphy; text/content is invented and unverified period decoration",
+        "Bookshelves/library character is weak: sparse rooms, low chests/tables and scrolls read more strongly than a specific library",
+        "Carpets, ornament and decor remain more detailed than a minimal reaction-game layout"
+      ],
+      "fullBriefPass": false
+    },
+    "j10": {
+      "nativeSHA256": "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021",
+      "observed": [
+        "Back-facing lower-centre child running/throwing with a clearly visible red apple in air ahead of hand",
+        "Adult guard leans off balance with arms raised, no visible injury; other guards enter side rooms/routes",
+        "Male chaser and nurse at lower edge; apple tree and apples on furniture; at least two clear nearby roofless building sections",
+        "Broad parapeted wall route, down stairs, doorways, moat, tower and warm late afternoon"
+      ],
+      "deviations": [
+        "Static frame shows apple in air and off-balance guard, but actual apple impact and subsequent harmless recovery cannot be confirmed",
+        "Guard leans beside parapet; precise balance/contact anatomy is not mechanically validated",
+        "All room-to-room route continuities and wrong-route logic cannot be fully established",
+        "Distant studded tower doors do not allow 9×9 per leaf to be certified; apparent visible columns differ from a complete 9-column leaf",
+        "Northwest tower silhouette/height and Jingshan–Beihai view are cinematic invented geography, not a survey; tower roof is cropped",
+        "Natural/palace background remains detailed; exact historical furniture and spatial layout unverified"
+      ],
+      "fullBriefPass": false
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "frozenAtUTC": "2026-10-18T06:37:08.943035+00:00",
+  "nativePNGsUnmodified": true,
+  "files": [
+    {
+      "path": "DELIVERY-STATUS.json",
+      "bytes": 493,
+      "sha256": "e562f613c8b90cb7f81d9e07ad578bfd08e3cea2498bc4eab5753e44e7cc995c"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 5217,
+      "sha256": "f4946a1ad0dacfbd01096d72885102c7942696473ac0794fc4ae75e3f6e9f373"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 17762,
+      "sha256": "092efa54f400a956d643e3082177ef49b60185f1b9d16482b29a98b1ce1e297c"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2418,
+      "sha256": "cfcb40822e4c55f8e6cc56ec63f57230a52ba8ebae87273a16c16114956c4440"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 4789,
+      "sha256": "aff93300df92dadeec7439513f139cf21024c9f5353216e1f3b078852fe2d26e"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 6387,
+      "sha256": "e01b1e73dd589f8e69b59b5ac787899e57a71bdf430ee2f502b483d2f1662109"
+    },
+    {
+      "path": "havainne-j10.png",
+      "bytes": 3011601,
+      "sha256": "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021"
+    },
+    {
+      "path": "havainne-j8.png",
+      "bytes": 2857780,
+      "sha256": "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828"
+    },
+    {
+      "path": "havainne-j9.png",
+      "bytes": 3028071,
+      "sha256": "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd"
+    },
+    {
+      "path": "prompts/j10.txt",
+      "bytes": 5753,
+      "sha256": "232387c3198489396d3e1f19db295ce45b009fb0c566c2f96cc1ccdf75c15ead"
+    },
+    {
+      "path": "prompts/j8.txt",
+      "bytes": 5333,
+      "sha256": "f393e9807e0724cd6074fe1b6d2b810bf6393844ffda59db08a23983438092ff"
+    },
+    {
+      "path": "prompts/j9.txt",
+      "bytes": 5383,
+      "sha256": "47990eef46d51dbb248070d4de28bc190e0cac0224863b76207f5915f402cbba"
+    },
+    {
+      "path": "qa-diagnostics/j10-door-studs-diagnostic-4x.png",
+      "bytes": 20339,
+      "sha256": "7163a131f22eb88afd81119a05671fb786e22fc3b468b1e9c13bf61e4d552aa5"
+    },
+    {
+      "path": "qa-diagnostics/j8-door-studs-diagnostic-4x.png",
+      "bytes": 71573,
+      "sha256": "aa6500d8984e238f1573b58efdd6c01bc300df024daa568c40fb7c09a6d69077"
+    },
+    {
+      "path": "sources/history/01-e97acee099f7.md",
+      "bytes": 3507,
+      "sha256": "02cc1eb3e83fa305d5662baaa9790f4e8df982b8c428ea4e374748b8b96eddbd"
+    },
+    {
+      "path": "sources/history/02-ad6eaea5ed15.md",
+      "bytes": 4124,
+      "sha256": "35f55871c69b57ddf2a12b035fa5f91819d95554f96790ed886efd42f7b75358"
+    },
+    {
+      "path": "sources/history/03-b32c4903bcf3.md",
+      "bytes": 4623,
+      "sha256": "a356b1f2c8096fbc86887db005f9f9b51fe99f532515dfda33435847a96f7635"
+    },
+    {
+      "path": "sources/history/04-46f732212161.md",
+      "bytes": 6005,
+      "sha256": "514a68f8b8e9b0f0f536267476225a3ba99657d0abf59e5c2d5e325f3006771d"
+    },
+    {
+      "path": "sources/history/05-9a6f3660b1af.md",
+      "bytes": 6687,
+      "sha256": "2e18c4ec0ccd625894d34d9d3ef87a7ad51826b0209c489fd30e7f3d246a7104"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "bytes": 6687,
+      "sha256": "2e18c4ec0ccd625894d34d9d3ef87a7ad51826b0209c489fd30e7f3d246a7104"
+    },
+    {
+      "path": "sources/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+      "bytes": 4971,
+      "sha256": "00da87fa22aedec81636c5a7fc57988a43a4c24bb1d27d3178bbae7886a74d34"
+    }
+  ],
+  "manifestExcludesItself": true
+}

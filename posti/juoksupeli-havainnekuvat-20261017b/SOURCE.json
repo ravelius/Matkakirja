@@ -1,0 +1,118 @@
+{
+  "assignment": {
+    "key": "runningJ8to10",
+    "taskNumbers": [
+      408,
+      409,
+      410
+    ],
+    "assetCodes": [
+      "j8",
+      "j9",
+      "j10"
+    ],
+    "maximumCalls": 3,
+    "sourcePath": "posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+    "sourceBlob": "269825ec70b91176c26394cb696290ef5d2e58ff",
+    "sourceCommit": "9a6f3660b1af006d445dc9e4444c9a0f8d255c7f",
+    "sourceSnapshot": "47beb2a5e9255316127a55b1ce380d5b79bfb32a",
+    "producerAgent": "/root/running_dollhouse_three",
+    "productionRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018",
+    "mirror": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-juoksijan-takaa-20261018",
+    "deliveryVerified": false,
+    "productionActive": false,
+    "generationMayStart": true,
+    "waitForRunningFirst": false
+  },
+  "historyManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/posti-intake-20261018/interval-manifest.json",
+  "versionsReadChronologicallyInFull": [
+    {
+      "commit": "e97acee099f70da1f0536e114f933ceab0f23a3a",
+      "path": "posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "blob": "cefa50de1d1c5c60a959bca1de4b9bd6c9c7dfbe",
+      "sha256": "02cc1eb3e83fa305d5662baaa9790f4e8df982b8c428ea4e374748b8b96eddbd",
+      "bytes": 3507,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/posti-intake-20261018/versions/e97acee099f7/posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "incomingFirstLevel": true,
+      "readInFull": true
+    },
+    {
+      "commit": "ad6eaea5ed1522e550383dd87738404b7ecc75ed",
+      "path": "posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "blob": "54a3ddac6df20df74af68be16b67a3748a74ac5c",
+      "sha256": "35f55871c69b57ddf2a12b035fa5f91819d95554f96790ed886efd42f7b75358",
+      "bytes": 4124,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/posti-intake-20261018/versions/ad6eaea5ed15/posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "incomingFirstLevel": true,
+      "readInFull": true
+    },
+    {
+      "commit": "b32c4903bcf33f3ace0966fa7a280f6a32959e5c",
+      "path": "posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "blob": "ec92fbb09c3a7c40bbdee92a1d61427bc7044c20",
+      "sha256": "a356b1f2c8096fbc86887db005f9f9b51fe99f532515dfda33435847a96f7635",
+      "bytes": 4623,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/posti-intake-20261018/versions/b32c4903bcf3/posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "incomingFirstLevel": true,
+      "readInFull": true
+    },
+    {
+      "commit": "46f7322121613b69980b2ae6f1369332e3e3a667",
+      "path": "posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "blob": "f4f575aa9cd9ec45f81cb9b46758357e11c24748",
+      "sha256": "514a68f8b8e9b0f0f536267476225a3ba99657d0abf59e5c2d5e325f3006771d",
+      "bytes": 6005,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/posti-intake-20261018/versions/46f732212161/posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "incomingFirstLevel": true,
+      "readInFull": true
+    },
+    {
+      "commit": "9a6f3660b1af006d445dc9e4444c9a0f8d255c7f",
+      "path": "posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "blob": "269825ec70b91176c26394cb696290ef5d2e58ff",
+      "sha256": "2e18c4ec0ccd625894d34d9d3ef87a7ad51826b0209c489fd30e7f3d246a7104",
+      "bytes": 6687,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/posti-intake-20261018/versions/9a6f3660b1af/posti/paatoimittaja-codex-juoksupeli-j8-j10-juoksijan-takaa-20261017.md",
+      "incomingFirstLevel": true,
+      "readInFull": true
+    }
+  ],
+  "finalSourceGoverns": true,
+  "supersededHidingInstructionNotUsed": true,
+  "finalActionSplit": {
+    "j8": "slide beneath sideways-leaping guard",
+    "j9": "forward collecting jump inside open-roof house",
+    "j10": "apple in air and guard off-balance upright"
+  },
+  "referenceImages": {
+    "j5": {
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/images/havainne-j5.png",
+      "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/references/j5.png",
+      "sha256": "772585b463fc414024bdbbd616795ca55236edb69bea3701cea28be4db2fee65",
+      "bytes": 3211202,
+      "personallyViewedOriginal": true,
+      "role": "Reference only for setting, costume, materials, cutaway; not edit target and NOT camera or defect reference"
+    },
+    "j6": {
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/images/havainne-j6.png",
+      "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/references/j6.png",
+      "sha256": "b3471e9930a9d35414e62d3ad2837a624d060782bb5efa85a6536cb503d502de",
+      "bytes": 3144312,
+      "personallyViewedOriginal": true,
+      "role": "Reference only for setting, costume, materials, cutaway; not edit target and NOT camera or defect reference"
+    },
+    "j7": {
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/images/havainne-j7.png",
+      "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/references/j7.png",
+      "sha256": "0399aea2c4e73daa1b32ab79f678eacebbadf5a265e2cc364470defc4a2c0c01",
+      "bytes": 3082586,
+      "personallyViewedOriginal": true,
+      "role": "Reference only for setting, costume, materials, cutaway; not edit target and NOT camera or defect reference"
+    }
+  },
+  "priorImagesUnchanged": true,
+  "summertimeStyleReadInFull": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-nukkekoti-20261017/sources/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+  "method": "built-in image_gen, three whole new scenes, no partial edits",
+  "newCallsAuthorized": 3,
+  "noRetries": true
+}
