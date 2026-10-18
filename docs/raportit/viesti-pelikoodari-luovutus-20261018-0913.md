@@ -20,6 +20,8 @@ Julkaisijan vie-paketti.sh:lla (ei aws s3 cp). Ei rm:ää (PT 08.4x).
   Kerro SK:lle odotuksesta, jos PT ei vahvista.
 
 ## 2) ÄÄNIKARTAT LONTOO, PRAHA, ATEENA (PT 08.4x, juna 202; Siirtoseppä kytkee)
+- LISÄYS 09.2x: KAIKKI KOLME VALMIINA, paketti valmis (SHA256SUMS + LAHTEET.md) → seuraava askel vain: JU ajaa vie-paketti.sh
+  _valmiit/aanikartta-lontoo-praha-ateena-vienti-20261018 → ?t=-tarkistus → Siirtosepälle → PT:lle. (Alla oleva "ateena kesken" on vanhentunut.)
 - Ämpärissä 404 (tarkistettu 08.4x; HUOM CDN voi välimuistittaa 404:n → tarkista myöhemmin ?t=-parametrilla).
 - Ajo tools/aanimaisema/tee-aanikartta.mjs → paketti /Users/Shared/Claude/proto-3d/_valmiit/aanikartta-lontoo-praha-ateena-vienti-20261018/
   aanet/aanikartta-v1/: lontoo.json ja praha.json VALMIIT, ateena kesken (katkeaa session mukana). Overpass-välimuisti
