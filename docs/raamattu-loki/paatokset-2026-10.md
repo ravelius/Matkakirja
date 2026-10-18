@@ -550,3 +550,7 @@ Omistaja (KK:n kortit 11.34): (1) Puyi ja vartija Tripolla liikkeineen "Kyllä, 
 ## TRIPO-MALLIEN LATAUS: PYSYVA LUPA (18.10.2026 klo 11.47)
 
 Omistajan kortti (KK 18.10.2026 klo 11.46): "Kyllä, myös jatkossa (Suositus)". Valoseppä saa ladata Louvren k2- ja vartija-GLB:t, ja jatkossa roolit saavat ladata kaikki omistajan Tripo-tilin peliin hyväksytyt mallit ilman uutta kysymystä. Lupa ei koske tilin muita tiedostoja. Uusi generointi tarvitsee yhä omistajan luvan.
+
+## KUVATEKSTIT KUVAN ULKOPUOLELLE (18.10.2026 klo 12.15)
+
+Omistaja 18.10.2026 klo 12.14 (KK:n välittämänä sanatarkasti): "Nuo tekstit saisi tehdä aina kuvan ulkopuolelle.  Ovat monesti tiellä". Kaikissa kuvapareissa, arkeissa ja vertailukuvissa kuvateksti on omalla raidallaan kuvan ylä- tai alapuolella, ei koskaan kuvan päällä. Koskee kaikkia rooleja ja koostetyökaluja heti. Taustalla Louvren parit 3: k2:n jalat jäivät kuvatekstin alle.
