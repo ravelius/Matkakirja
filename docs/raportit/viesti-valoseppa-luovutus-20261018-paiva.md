@@ -95,3 +95,10 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - 12.5x SIIVOUS (PT): T7 "/Volumes/T7 4TB/arkisto/valoseppa/20261018/" ← appit/{kyyti-diag-app, kyyti-diag3-app, concorde-putki, kl-tekoaly},
   louvre1, valas-havainne, tripo-raskas (Tripon 2 M -glb:t). _tyo/linssiseppa2 7,4 → 2,6 G. kyyti-diag4-app T7:lle, kun diag 5 on ajettu.
   Ennen-kuvien appi (kyyti-diag-app) on T7:llä → Louvren seuraavat parit `$D/simu-louvre4.zsh <app>` (vain jälkeen; ennen 73f7c278 valmiina).
+
+## 11. LISÄYS 12.2x (PT; KK): 19.10. PUYI-TESTIN OHJE (täydentää kohtaa 5)
+- Tarkista koko ketju: Tripon automaattiluuranko → FBX → Unity Humanoid; liikkeet Tripon kirjastosta.
+- Lisäliikkeet ilmaisista CC0-kirjastoista: Quaternius UAL ja UAL 2 Standard (parkour, juoksu, sprintti). Korjaukset Blenderillä.
+- Louvren poseeratut mallit (käsi leualla, kädet selän takana, istuva): vain pienet liikkeet (hengitys, pään käännös), ei kävelyä.
+- Kävelevät hahmot aina kädet irti vartalosta.
+- Puuttuva maksullinen → kysymys PT:n kautta KK:lle, EI ostoja.
