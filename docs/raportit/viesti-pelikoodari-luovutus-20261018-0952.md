@@ -9,6 +9,13 @@ CLAUDE.md, Raamatun Ydinajatus kohta 2, tämä raportti. PT:lle ≤ 3 riviä. Ku
 OMISTAJAN PÄÄTÖS 09.37 (PT): työn alla vain ISS, Louvre ja aamun pyynnöt; juoksupeli TAUOLLA.
 
 ## ENSIN: ISS-PÖYTÄ LUONNOS 6 (omistaja 09.2x "Katso itse myös iss paneeli läpi …", KK:n havainnot, PT 09.37; junaan 202)
+- PT:n viesti 09.37 sanatarkasti: "Uusi ENSIN (omistaja 09.2x "Katso itse myös iss paneeli läpi. Siellä vielä outo asettelu ja fontit
+  eivät mahdu luontevasti omiin paikkoihinsa"): KK:n havainnot (todistus-iss-poyta5-201-k6b, iPhone + iPad P1/P5): NOPEUS täyttää pillerin
+  reunoja myöten, KAMERA koskee napin reunoihin, 1×/1000× ahtaat, ATLANTIN VALTAMERI reunasta reunaan, kolme otsikkotyyliä (vihreä pilleri /
+  harmaa TILA / näytön sisäinen), ryhmien ylä- ja alareunat eri tasoissa, alhaalla tyhjä kaista (iPadilla alapuolisko tyhjä). Tavoite: yksi
+  huolellinen laitepaneeli, yhtenäiset otsikot samalla rivillä, tekstit väljästi, ryhmät tasattuina, ei tyhjää kaistaa, pitkät nimet
+  siististi; vain olemassa olevilla UI-pohjilla (puuttuva pohja → kysy PT:ltä). Pari ennen|jälkeen iPhone + iPad PT:lle → KK. Junaan 202."
+- TILA 09.5x: kaikki kahdeksan havaintoa korjattu koodissa ja kuvissa (alla); laitekuvat puuttuvat (käännös L2-jonossa, ei vielä simua).
 - Haara pelikoodari/iss-paneeli-202 **d653af8ff**, worktree /Users/Shared/Claude/wt/proto-pelikoodari-iss-paneeli-202, tarkista.sh 0.
 - Sisältö: poyta.py luonnos 6 (Blender renderöity, osat Resources/IssOhjauspoyta/, raakarenderit _tyo/pelikoodari/ohjauspoyta-l6):
   neljä ryhmää samankorkuisissa kehyksissä, otsikot (NOPEUS/ZOOM, TILA, PAIKKA … KOHTEET ›) koodissa yhdellä rivillä kehysten yllä
@@ -29,7 +36,9 @@ OMISTAJAN PÄÄTÖS 09.37 (PT): työn alla vain ISS, Louvre ja aamun pyynnöt; j
   Valmisluennat.Url (normalisoitu + raaka), Lukijaaani.Valimuistiavain (normalisoitu), Sahketehtava.TiivisteTasmaa. Peli-testit 609/609,
   tarkista.sh 0. PT:lle kerrottu 09.3x. Junan kokoaja ottaa haaran.
 
-## 3) JUOKSUPELI 202 — TAUOLLA (omistaja 09.37)
+## 3) KULTAISET: PT 09.5x "kultaiset #4862:n mergen jälkeen" (ei tarkempaa tehtävää tällä vuorolla; kysy PT:ltä mitä kultaisia, kun #4862 on mergetty).
+
+## 4) JUOKSUPELI 202 — TAUOLLA (omistaja 09.37)
 - pelikoodari/juoksupeli-202 **13a1927cf**: vartijat näkyvät seuraavan risteyksen käytävillä (reitinvalinta, omistaja 21.51), matalat
   korttelit, HUD ←n ↑n →n, talossa huoneet oviaukoin; testit 17/17. Puutelista + tila: proto-3d/_tyo/pelikoodari/juoksupeli/PUUTELISTA-202.md.
 - Käännetty L1 afb2b8c32 09.48 (.app _tyo/pelikoodari/app-juoksupeli-202), LUKKO VAPAA JU:lle ilmoitettu. Video (sk-juoksupeli-202.txt)
