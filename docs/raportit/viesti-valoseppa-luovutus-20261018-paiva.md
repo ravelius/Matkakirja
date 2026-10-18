@@ -51,3 +51,11 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
   nivelet tarkistetaan liikkeessä; samat valot/varjostimet kuin muilla malleilla.
 - Olavinlinnan väki myöhemmin (pidossa) – ei tehdä.
 - Jonoon kohdan 4 Tripo-latauksen jälkeen.
+
+## 6. LISÄYS 11.4x (PT; KK + omistaja 11.41): LOUVREN TRIPO-MALLIEN TUOMIO
+- HYVÄKSYTTY: mies k2 (7c048280) ja vartija (e8f91566) → vienti peliin TÄNÄÄN: Export GLB kevennettynä ~30 k kolmiota, 2K-tekstuuri →
+  $L/tripo/<nimi>.glb → MuseoHenkilot (k2 gg, vartija se) → pelikuvat KK:lle (PT:n kautta).
+- k1 (nainen, 8d4bae4d): sivukuvassa hiusmassa peittää silmät ja nenän → korjaus TRIPOSSA (hiusosan tai mallin uusinta) HUOMENNA 19.10. klo 10 jälkeen.
+- Pulu (a1a9e725): niskasauma, oranssit silmät (tekstuurin värjäys skriptillä ok), pyrstö viuhkaksi → Tripossa huomenna 19.10. klo 10 jälkeen.
+- Tripo-selaintyö Sonnet-apulaisella (pieni muisti). EI Blender-veistoa.
+- Kohta 5 (Puyi + vartija luurankoineen) alkaa vasta, kun KK on hyväksynyt Louvren mallit pelissä.
