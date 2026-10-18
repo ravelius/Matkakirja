@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 18.10.2026 00.40, tilinvaihto)
+# Linnanrakentajan aloitusviesti (päivitetty 18.10.2026 08.2x, kova raja)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (18.10. 00.40, omistajan tilinvaihto):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261018-yo.md` KOKONAAN.
+1. **NYT (18.10. 08.2x, kova raja):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261018-aamu.md` KOKONAAN.
+   ENSIN omistajan "Kaksi kehystä" (juna 202): korjaus 05833ad6e (602 kaarena) NS:llä → kuvapari ennen|jälkeen + tekijärivi PT:lle
+   (`ajo-yksi-kehys-202.zsh`). Sitten kartan arkki 5 (PK:n kuvat) ja Tivolin Codex v2. Louvren kehykset v4 661c71873 junassa 201 (hyväksytty).
+1. **(vanha) 18.10. 00.40, omistajan tilinvaihto:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261018-yo.md` KOKONAAN.
    ENSIN Louvren kehykset (proto `linnanrakentaja/louvre-kehykset-201` 3aeac4c8d, juna 201): JU:n seuraaja ajaa simun
    (`proto-3d/tyokalut/linnanrakentaja-ajot/sk-louvre-kehykset-201.txt`) → tarkista kuvat täysikokoisina → arkki PT:lle.
    Sitten kartan 3D-yhtenäistyksen arkki 5 (LS:n pyramidi ffa433c76 → PK → JU) ja Tivolin Codex v2 (aitous edellä).
