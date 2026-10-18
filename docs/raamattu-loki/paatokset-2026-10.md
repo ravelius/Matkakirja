@@ -546,3 +546,7 @@ Omistaja (KK:n kortti 11.20, kuva näytetty): "Kyllä, logo heti (Suositus)": sa
 ## PAATOKSET 18.10.2026 klo 11.34: juoksupelin hahmot Tripolla, Olavinlinnan väki myöhemmin (18.10.2026 klo 11.35)
 
 Omistaja (KK:n kortit 11.34): (1) Puyi ja vartija Tripolla liikkeineen "Kyllä, kun Louvren mallit ovat hyviä (Suositus)": lupa Codex 6 kuvaa (Puyi + vartija edestä/sivulta/takaa, kädet irti vartalosta, tasainen valo, harmaa tausta; tilaus postilaatikossa 1de736c41) + Tripo 2 mallia luurankoineen, liikkeet kirjastosta (juoksu, spurtti, hyppy, liuku, kompastus, heitto, kiinniotto); alkaa 19.10. koodauksen kanssa, kun KK on hyväksynyt Louvren mallit pelissä. Puyin kaapu juoksuun (helma polviin + housut). (2) Olavinlinnan ihmiset Tripolla "Kun linnan tauko päättyy (Suositus)": koko linnan väki kerralla, Tripo-tilaus voimassa 18.11. asti → työlistaan. KK katsoo jokaisen hahmon edestä/sivulta/takaa + liikevideon ennen peliä.
+
+## TRIPO-MALLIEN LATAUS: PYSYVA LUPA (18.10.2026 klo 11.47)
+
+Omistajan kortti (KK 18.10.2026 klo 11.46): "Kyllä, myös jatkossa (Suositus)". Valoseppä saa ladata Louvren k2- ja vartija-GLB:t, ja jatkossa roolit saavat ladata kaikki omistajan Tripo-tilin peliin hyväksytyt mallit ilman uutta kysymystä. Lupa ei koske tilin muita tiedostoja. Uusi generointi tarvitsee yhä omistajan luvan.
