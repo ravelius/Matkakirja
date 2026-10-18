@@ -44,6 +44,24 @@ def viivat(g):
         yield pyorista(l.coords, TIHEYS_VIIVA)
 
 
+# Käsin siirretyt nimiöt (vuosi, alue) → (lat, lon[, teksti]): selkeän historiakartan 2× nimet törmäsivät (simut 17.–18.10.2026):
+# Itäturkit 589 Mongolian rajan yli, Eteläinen Tang 950 naapureihin (kahdelle riville), Nurgan 1421 ruudun reunaan, Wu 250 Punaisen
+# kallion taistelunimen alle (proto kiina-paketti-200 f173a6f37, PT hyväksyi 18.10. 08.4x).
+NIMET_KASIN = {
+    (250, 'Wu'): (26.2, 115.2),
+    (589, 'Itäturkit'): (44.3, 112.48),
+    (950, 'Eteläinen Tang'): (25.9, 116.0, 'ETELÄINEN\nTANG'),
+    (1421, 'Nurgan'): (45.5, 129.5),
+}
+
+
+def nimio(vu, n, t, g, v):
+    k = NIMET_KASIN.get((vu, n))
+    lat, lon = (k[0], k[1]) if k else nimen_paikka(g, v)
+    return {'teksti': k[2] if k and len(k) > 2 else n.upper(), 'lat': lat, 'lon': lon,
+            'luokka': 2 if t == 'protektoraatti' else 1, 'koko': KOKO[t]}
+
+
 def nimen_paikka(g, v):
     """Sama paikka kuin piirra.py:n kuvassa (lat, lon)."""
     lon, lat = piirra.nimen_paikka(g, v)
@@ -76,8 +94,7 @@ def vuosi(vu):
         'alueet': [{'nimi': n, 'avain': a, 'tyyppi': t, 'vari': rajat.VARIT[a], 'monikulmiot': monikulmiot(g)} for n, a, t, g in alueet],
         'kotiseudut': kotiseudut,
         'viivat': [{'l': 1, 'p': p} for p in viivat(taydet)] + ([{'l': 2, 'p': p} for p in viivat(prot)] if not prot.is_empty else []),
-        'nimet': [dict(zip(('teksti', 'lat', 'lon'), (n.upper(),) + nimen_paikka(g, v)), luokka=2 if t == 'protektoraatti' else 1, koko=KOKO[t])
-                  for n, a, t, g in alueet],
+        'nimet': [nimio(vu, n, t, g, v) for n, a, t, g in alueet],
         'paakaupungit': [{'nimi': kn.split('|')[0], 'lat': rajat.KAUPUNGIT[kn][1], 'lon': rajat.KAUPUNGIT[kn][0]} for kn in v['paakaupungit']],
     }
 
