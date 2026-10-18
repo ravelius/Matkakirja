@@ -8,7 +8,7 @@ Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Us
 1. **Uusinta NYKYINEN-kortti + galleria koko ruudulla** (kuvakäännös 4 b656d1792): lokit /Users/Shared/Claude/proto-3d/lokit/
    todistus-kuva-kokoruutu-iphone-202b-20261018-0629 ja -ipad-202b-20261018-0629 (kuvat/raaka/K1-kortti.png, K4-galleria-kokoruutu.png).
    TEHTY 06.4x: parit _tyo/natiivi-ui/kuva4-parit/5–6 (NYKYINEN kortti | UUSI koko ruutu | galleriasta) → PT; SIMU VAPAA kuitattu.
-   NYKYINEN (K1) | UUSI (K4 + kuva4-parit/3 K2) → polku PT:lle yhdellä rivillä. Jos K1/K4 epäonnistui: uusinta kuvakäännöksestä 5.
+   NYKYINEN (K1) | UUSI (K4 + kuva4-parit/3 K2) → polku PT:lle yhdellä rivillä. Jos K1/K4 epäonnistui: uusinta kuvakäännöksestä 6.
 2. **Mustan taustan todiste kuvakäännöksestä 6 (kärki 0ba132aca; PT: kuvakäännös 5 9288ca434 EI sisällä sitä, 6 = NS:n lukitusehdokas)** (pyydä SIMU NYT Julkaisijalta; varmista `git -C <proto> merge-base --is-ancestor
    619275871 <rungon sha>`): `zsh ajo-kuva-kokoruutu-202.zsh <kuva5-app> <udid> <iphone|ipad>` (K2 otto + K3 zoom: kuvateksti piilossa,
    tausta musta) → polku PT:lle.
@@ -26,7 +26,7 @@ Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Us
 1. **Uusinta kuvakäännös 4:stä käynnistettiin 06.30** (ajo-kuva-kokoruutu-202b.zsh, iPhone + iPad): NYKYINEN-kortti kuvan otossa (K1) + gallerian
    "Oma kuva" koko ruudulle (K4). Lokit lokit/todistus-kuva-kokoruutu-{iphone,ipad}-202b-20261018-063x. Jos valmis: tarkista K1/K4
    täysikokoisina → SIMU VAPAA Julkaisijalle (jos ei jo kuitattu) → parit `python3 <scratch>/pari2.py` -tyyliin (NYKYINEN | UUSI) → PT.
-   Huom: K4 on vanhasta (ei-mustasta) taustasta; mustan taustan todiste kuvakäännöksestä 5 (619275871 mukana?) → `zsh ajo-kuva-kokoruutu-202b.zsh
+   Huom: K4 on vanhasta (ei-mustasta) taustasta; mustan taustan todiste kuvakäännöksestä 6 (0ba132aca mukana?) → `zsh ajo-kuva-kokoruutu-202b.zsh
    <app> <udid> <laite>` + K2 (kuvan otto) → PT. Pari-skripti: /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/pari.py (ilman otsikoita).
 2. PT:n kohta c (paikan nimi Arras/Reims ≠ 49°52'N 3°35'E) EI NUI:n: IssSijainti.Hae → LahinVakiluvulla (Valoseppä/LS2) → PT tietää.
 
