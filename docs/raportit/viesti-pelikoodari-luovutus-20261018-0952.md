@@ -51,3 +51,14 @@ OMISTAJAN PÄÄTÖS 09.37 (PT): työn alla vain ISS, Louvre ja aamun pyynnöt; j
 ## Worktreet
 wt/proto-pelikoodari-iss-paneeli-202 (ENSIN), -lainausmerkit-202, -juoksupeli-202 (tauko), wt/pelikoodari-lainausmerkit (PR #4860),
 wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikoodari-vapaa-lento-osio, wt/pelikoodari-posti.
+
+## LISÄYS 11.3x (nollauksen jälkeinen vuoro)
+- ISS-PÖYTÄ LUONNOS 6 VALMIS: käännös L2 f88411b77 (d653af8ff), todistusajot OK (lokit/todistus-iss-paneeli6-202-{iphone-20261018-1100,
+  ipad-20261018-1104}), parit + LUE.md lokit/todistus-iss-paneeli6-202-parit/. KK hyväksyi junaan 202; d653af8ff junassa 378e328b0 (NS).
+  SIMU VAPAA JU:lle (app poistettu, simut sammutettu).
+- iPadin levyn kavennus 6af527f3b PERUTTU (PT: sivujen tyhjä levy = omistajan 02.00-päätös, pyyntötiedosto 6b) → palautus ef819661c
+  (puu = d653af8ff). ÄLÄ kavenna iPadin levyä.
+- JUOKSUPELI RATA 1 -SUUNNITELMA (omistaja 10.46; PT hyväksyi 11.3x koodauksen pohjaksi 19.10.):
+  /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksupeli/RATA1-SUUNNITELMA.md. Koodaus vasta 19.10. haaran juoksupeli-202 13a1927cf päälle.
+  Omenakysymys (heitto takaa tulevaan hoviin) PT vie KK:lle.
+- Kultaiset: tauko kunnes #4862 mergetään (vasta OMISTAJA PYYSI JULKAISUA). JONO TYHJÄ huomiseen.
