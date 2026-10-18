@@ -89,3 +89,6 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
   183/183, tarkista 0. LR yhdistää kehykset v9:n kanssa → yksi JU-käännös → uudet parit (simu-louvre3.zsh; vaihda jälkeen-app LR:n polkuun).
 - sk-louvre-jalkeen: j11/j12 alaviistoon −15°, jotta kengät + varjo näkyvät kuvatekstin yläpuolella (KK).
 - gg:n marmori/pylväät = LR. Kiintiö 92 % (PT) → pienet erät.
+- 12.4x: todistusajon kuvateksti omalle raidalleen kuvan alle (omistaja 12.14) proto master cef176edc. LR: cc3aa269e → yhdistetty-202 f5477b167,
+  JU-käännös v2n:n kanssa ~12.55 → louvre4 (jälkeen-app LR:n polusta). se-atlas on leivottu vanhoilla se-arvoilla; LR ei leivo uusilla ennen
+  louvre4-kuvia – jos leipoo, palauta ajonaikainen heijastus/ambient samalla, ettei se kirkastu kahdesti.
