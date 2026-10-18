@@ -1,0 +1,137 @@
+{
+  "folder": "posti/louvre-ihmiset-20261018",
+  "createdAt": "2026-10-18T06:38:44.532066+00:00",
+  "nativeCount": 9,
+  "personCount": 3,
+  "calls": 9,
+  "allNativesUnmodified": true,
+  "receiverAccepted": false,
+  "ownerApproved": false,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 10951,
+      "sha256": "dc18a1f6f26fcd9f0c1a3b1ad144ef7e1b49de126ad3df7843316926894a580d"
+    },
+    {
+      "path": "NATIVE-FREEZE.json",
+      "bytes": 1854,
+      "sha256": "7f2e4e87c02f0f162bca4557d731016013ff2e1e6492cde8662ad19718f5e05b"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 30838,
+      "sha256": "7d2b84d99abfdba9f19328828aaa0c0b8d101ae8f1953155b6c7fc817dc2e37e"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2275,
+      "sha256": "bd1a3fb4c82b9aea3d68e98d262bee83c1a4f272aa9df28d4092ca4efe0b33e1"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 14014,
+      "sha256": "7e32be7ebe08c6ce1c339b39d2374adddc84cb1ae05cc95857fb54ba68a9ff48"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 1418,
+      "sha256": "c2190dd7e26a8fd4e2b616ee82a32d0afc21aec0901f5e95a45d544faeaba915"
+    },
+    {
+      "path": "k1-edesta.png",
+      "bytes": 1719209,
+      "sha256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6"
+    },
+    {
+      "path": "k1-sivulta.png",
+      "bytes": 1716032,
+      "sha256": "15fe738ea9c221e00d7be2f43c4720e0471c9982906f03f91378ad70e0308372"
+    },
+    {
+      "path": "k1-takaa.png",
+      "bytes": 1714077,
+      "sha256": "b4c09e57362ca691353fd36dc059844967065c074995b33b80cd2e1ec5ab5c6c"
+    },
+    {
+      "path": "k2-edesta.png",
+      "bytes": 1821237,
+      "sha256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21"
+    },
+    {
+      "path": "k2-sivulta.png",
+      "bytes": 1756906,
+      "sha256": "5c3e817d05e575baf6f7461ffd5c38cd49de50607e9e402fabd1bfb734a0bc7f"
+    },
+    {
+      "path": "k2-takaa.png",
+      "bytes": 1768311,
+      "sha256": "e0eab452e4632b52fb635ee4458f4dd14740f6d153c415deed7ec802441a5963"
+    },
+    {
+      "path": "prompts/k1-edesta.txt",
+      "bytes": 2627,
+      "sha256": "bdb65c3f0adf842adac1f640dde2047074b8a2076c5820d3541a769f26f1304e"
+    },
+    {
+      "path": "prompts/k1-sivulta.txt",
+      "bytes": 3452,
+      "sha256": "a9da31d4beaca2c32cf62cb13bcfa942cdec843d0f74068d6b4598c097b446df"
+    },
+    {
+      "path": "prompts/k1-takaa.txt",
+      "bytes": 3394,
+      "sha256": "ababfcdf93640b7c9f87160b20a86846e3df6c7f9e112d4d138f5dd57902f784"
+    },
+    {
+      "path": "prompts/k2-edesta.txt",
+      "bytes": 2383,
+      "sha256": "e7b98670da21621b5e0fe8be5da21ddea34842a62ea07abdccc3b7dcf8047d7c"
+    },
+    {
+      "path": "prompts/k2-sivulta.txt",
+      "bytes": 3208,
+      "sha256": "06437a3b8259383e58b265d8f8d9c5d64136adf15ef808a570e4a6b31a5d819b"
+    },
+    {
+      "path": "prompts/k2-takaa.txt",
+      "bytes": 3150,
+      "sha256": "9d0c3d50a000a68f932f3db08847ebffb3c62ea50db60a3d4f1ad7bf633cf64e"
+    },
+    {
+      "path": "prompts/v-edesta.txt",
+      "bytes": 2770,
+      "sha256": "7a437078590e7affff2c80e1809bcf2973e7905809e8af8926d3ae2ac1af484e"
+    },
+    {
+      "path": "prompts/v-sivulta.txt",
+      "bytes": 3595,
+      "sha256": "c43ecb5a0f01da3a218278f34ec54384d199b7f19faf75b31e5cd698fbcbf007"
+    },
+    {
+      "path": "prompts/v-takaa.txt",
+      "bytes": 3537,
+      "sha256": "36db13a1476836f56a72273e5f31b041c1b1721fc87b0b1367760c7174036c0f"
+    },
+    {
+      "path": "sources/valoseppa-codex-louvre-ihmiset-20261018.md",
+      "bytes": 3203,
+      "sha256": "ad78de7cead03d488e4ab76659061b44c8dc1d2f180835f778f188278aa3a36c"
+    },
+    {
+      "path": "v-edesta.png",
+      "bytes": 1803359,
+      "sha256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48"
+    },
+    {
+      "path": "v-sivulta.png",
+      "bytes": 1790185,
+      "sha256": "415e015b9ec59bab22027876ec52ca5fd1aa00c0971ad18cbb91e9f14bf23244"
+    },
+    {
+      "path": "v-takaa.png",
+      "bytes": 1805987,
+      "sha256": "37ef8eab34868378dbd0ab82074dff82cd73a6ee8cc07358179b3c4b10003d76"
+    }
+  ]
+}

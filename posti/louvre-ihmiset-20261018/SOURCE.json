@@ -1,0 +1,45 @@
+{
+  "sourcePath": "posti/valoseppa-codex-louvre-ihmiset-20261018.md",
+  "commit": "47beb2a5e9255316127a55b1ce380d5b79bfb32a",
+  "snapshot": "47beb2a5e9255316127a55b1ce380d5b79bfb32a",
+  "blob": "23b9c9ee120224d23231eb58999f70dc8bb81296",
+  "sha256": "ad78de7cead03d488e4ab76659061b44c8dc1d2f180835f778f188278aa3a36c",
+  "bytes": 3203,
+  "sourceReadInFull": true,
+  "taskNumbers": [
+    414,
+    415,
+    416,
+    417,
+    418,
+    419,
+    420,
+    421,
+    422
+  ],
+  "maximumCalls": 9,
+  "specificPoseOverridesGenericArmGap": true,
+  "wholeChairInsideFrameNotImpossibleAllOccludedSurfacesVisible": true,
+  "externalPhotoOrFaceReferences": [],
+  "sourceImages": {
+    "k1-edesta": {
+      "origin": "front native generated in this authorized batch",
+      "sha256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+      "person": "k1",
+      "usedForSamePersonSideBack": true
+    },
+    "k2-edesta": {
+      "origin": "front native generated in this authorized batch",
+      "sha256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+      "person": "k2",
+      "usedForSamePersonSideBack": true
+    },
+    "v-edesta": {
+      "origin": "front native generated in this authorized batch",
+      "sha256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+      "person": "v",
+      "usedForSamePersonSideBack": true
+    }
+  },
+  "unseenDetailsInvented": true
+}

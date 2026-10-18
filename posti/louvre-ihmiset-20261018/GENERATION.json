@@ -1,0 +1,253 @@
+{
+  "method": "built-in image_gen",
+  "wholeNewNativePerView": true,
+  "callsAllowed": 9,
+  "callsIssued": 9,
+  "callsCompleted": 9,
+  "retries": 0,
+  "extraCalls": 0,
+  "calls": {
+    "k1-edesta": {
+      "task": 414,
+      "issuedAt": "2026-10-18T06:25:40.470066+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "bdb65c3f0adf842adac1f640dde2047074b8a2076c5820d3541a769f26f1304e",
+      "references": [],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:26:28.780726+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-98fd1319-d3a3-43d5-a467-29a320c8759b.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k1-edesta.png",
+      "nativeSHA256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+      "bytes": 1719209,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "k1-sivulta": {
+      "task": 415,
+      "issuedAt": "2026-10-18T06:26:44.602168+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "a9da31d4beaca2c32cf62cb13bcfa942cdec843d0f74068d6b4598c097b446df",
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k1-edesta.png",
+          "sha256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+          "role": "front identity/clothes/frozen pose, viewed before use"
+        }
+      ],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:27:24.302959+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-8c0dc0f6-b9ea-4bb0-b813-bdf5a7400e4b.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k1-sivulta.png",
+      "nativeSHA256": "15fe738ea9c221e00d7be2f43c4720e0471c9982906f03f91378ad70e0308372",
+      "bytes": 1716032,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "k1-takaa": {
+      "task": 416,
+      "issuedAt": "2026-10-18T06:27:44.133502+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "ababfcdf93640b7c9f87160b20a86846e3df6c7f9e112d4d138f5dd57902f784",
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k1-edesta.png",
+          "sha256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+          "role": "front identity/clothes/frozen pose, viewed before use"
+        }
+      ],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:28:22.080802+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-366752b6-ea80-464a-8577-d102ff5af019.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k1-takaa.png",
+      "nativeSHA256": "b4c09e57362ca691353fd36dc059844967065c074995b33b80cd2e1ec5ab5c6c",
+      "bytes": 1714077,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "k2-edesta": {
+      "task": 417,
+      "issuedAt": "2026-10-18T06:28:54.980776+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "e7b98670da21621b5e0fe8be5da21ddea34842a62ea07abdccc3b7dcf8047d7c",
+      "references": [],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:29:47.957900+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-fef3deed-a641-4e71-9364-3a215a0c9f39.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k2-edesta.png",
+      "nativeSHA256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+      "bytes": 1821237,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "k2-sivulta": {
+      "task": 418,
+      "issuedAt": "2026-10-18T06:30:07.937791+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "06437a3b8259383e58b265d8f8d9c5d64136adf15ef808a570e4a6b31a5d819b",
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k2-edesta.png",
+          "sha256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+          "role": "front identity/clothes/frozen pose, viewed before use"
+        }
+      ],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:31:42.204464+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-533eee27-5152-4b83-b791-6dbbd110d147.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k2-sivulta.png",
+      "nativeSHA256": "5c3e817d05e575baf6f7461ffd5c38cd49de50607e9e402fabd1bfb734a0bc7f",
+      "bytes": 1756906,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "k2-takaa": {
+      "task": 419,
+      "issuedAt": "2026-10-18T06:32:20.195840+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "9d0c3d50a000a68f932f3db08847ebffb3c62ea50db60a3d4f1ad7bf633cf64e",
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k2-edesta.png",
+          "sha256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+          "role": "front identity/clothes/frozen pose, viewed before use"
+        }
+      ],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:33:01.285373+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-df30f361-39fa-47a8-b750-20bf22628748.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/k2-takaa.png",
+      "nativeSHA256": "e0eab452e4632b52fb635ee4458f4dd14740f6d153c415deed7ec802441a5963",
+      "bytes": 1768311,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "v-edesta": {
+      "task": 420,
+      "issuedAt": "2026-10-18T06:33:25.295433+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "7a437078590e7affff2c80e1809bcf2973e7905809e8af8926d3ae2ac1af484e",
+      "references": [],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:34:13.044227+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-b0330bfd-17c0-4f50-8f38-b24294df1500.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/v-edesta.png",
+      "nativeSHA256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+      "bytes": 1803359,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "v-sivulta": {
+      "task": 421,
+      "issuedAt": "2026-10-18T06:34:35.313490+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "c43ecb5a0f01da3a218278f34ec54384d199b7f19faf75b31e5cd698fbcbf007",
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/v-edesta.png",
+          "sha256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+          "role": "front identity/clothes/frozen pose, viewed before use"
+        }
+      ],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:35:24.326154+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-9c13c59f-c574-4759-a332-c66957b09ed0.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/v-sivulta.png",
+      "nativeSHA256": "415e015b9ec59bab22027876ec52ca5fd1aa00c0971ad18cbb91e9f14bf23244",
+      "bytes": 1790185,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    },
+    "v-takaa": {
+      "task": 422,
+      "issuedAt": "2026-10-18T06:35:44.302516+00:00",
+      "status": "completed",
+      "attempt": 1,
+      "promptSHA256": "36db13a1476836f56a72273e5f31b041c1b1721fc87b0b1367760c7174036c0f",
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/v-edesta.png",
+          "sha256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+          "role": "front identity/clothes/frozen pose, viewed before use"
+        }
+      ],
+      "method": "built-in image_gen, entirely new native generation",
+      "retryAuthorized": false,
+      "completedAt": "2026-10-18T06:36:40.684355+00:00",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-5bebadfe-4466-4b81-b12e-f29366fd822d.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-ihmiset-20261018/images/v-takaa.png",
+      "nativeSHA256": "37ef8eab34868378dbd0ab82074dff82cd73a6ee8cc07358179b3c4b10003d76",
+      "bytes": 1805987,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "ratio3to4Exact": true
+    }
+  },
+  "nativeUnmodified": true,
+  "allDimensions": [
+    1086,
+    1448
+  ],
+  "frontReferencesPersonallyViewedBeforeUse": true,
+  "noAPIOrRunwayOrTripo": true,
+  "no3DProduction": true
+}

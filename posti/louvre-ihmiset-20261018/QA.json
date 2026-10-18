@@ -1,0 +1,291 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-18T06:38:43.841825+00:00",
+  "reviewer": "producer louvre_pyramid_nine",
+  "allNineNativesPersonallyViewed": true,
+  "sourceReadCompletely": true,
+  "nativeFreezeSHA256": "7f2e4e87c02f0f162bca4557d731016013ff2e1e6492cde8662ad19718f5e05b",
+  "scope": "visible native 2D content and within-person view consistency only; not identity biometric proof, camera calibration, topology or Tripo success",
+  "fictionalPeople": true,
+  "realPersonPhotoOrExternalFaceReferenceUsed": false,
+  "specificPosesPreservedInsteadOfGenericArmsAway": true,
+  "armpitGapLimitation": "Behind-back, chin/elbow support and lap poses + coat/suit cover armpits/hand contacts; generic separated-arm requirement not fully achieved, pose not changed without authority.",
+  "noFloorShadowRequirementFullyMet": false,
+  "backgroundPerfectUniformityMet": false,
+  "samePoseAndCameraExactVerified": false,
+  "handsAllFingersIndividuallyVerified": false,
+  "allNativesUnmodified": true,
+  "all3to4Portrait": true,
+  "views": {
+    "k1-edesta": {
+      "task": 414,
+      "nativeSHA256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+      "bytes": 1719209,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": null,
+      "approxManualSilhouetteYBounds": [
+        65,
+        1329
+      ],
+      "approxFrameHeightFraction": 0.8729,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": null,
+      "findings": [
+        "Full body, both white shoes and head inside frame. Beige open trench, charcoal blouse and trousers, brown shoulder-length hair.",
+        "Behind-back hands are naturally hidden; fingers cannot be evaluated from front.",
+        "Relaxed asymmetric stance visible; supporting leg side is not certified against rear view.",
+        "Soft contact/floor shading remains despite no-floor-shadow prompt."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "k1-sivulta": {
+      "task": 415,
+      "nativeSHA256": "15fe738ea9c221e00d7be2f43c4720e0471c9982906f03f91378ad70e0308372",
+      "bytes": 1716032,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": null,
+      "approxManualSilhouetteYBounds": [
+        62,
+        1340
+      ],
+      "approxFrameHeightFraction": 0.8826,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+      "findings": [
+        "Left-side profile with nose toward image left, body/shoes wholly in frame; front identity closely retained.",
+        "Hands partly visible behind back. Front unseen cuff button/pocket details are newly inferred.",
+        "Coat opening, leg bend and foot spacing are not a rigid calibrated rotation of front; exact pose consistency is unverified.",
+        "Soft foot contact shadow and gray background gradient remain."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "k1-takaa": {
+      "task": 416,
+      "nativeSHA256": "b4c09e57362ca691353fd36dc059844967065c074995b33b80cd2e1ec5ab5c6c",
+      "bytes": 1714077,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": null,
+      "approxManualSilhouetteYBounds": [
+        67,
+        1316
+      ],
+      "approxFrameHeightFraction": 0.8626,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+      "findings": [
+        "Back of head, brown shoulder-length hair and beige coat, both hands behind lower back and both shoes visible.",
+        "Rear storm flap, central seam and cuff buttons inferred from front; hem length/folds differ slightly from other views.",
+        "Hands overlap in a natural wrist/palm hold; all fingers cannot be counted separately or proven reconstruction-safe.",
+        "Weight-bearing/bent-leg side may differ from front; no exact anatomical same-pose claim.",
+        "Soft foot shading remains."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "k2-edesta": {
+      "task": 417,
+      "nativeSHA256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+      "bytes": 1821237,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": null,
+      "approxManualSilhouetteYBounds": [
+        41,
+        1343
+      ],
+      "approxFrameHeightFraction": 0.8992,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": null,
+      "findings": [
+        "Full body with gray sweater, pale-blue collar, navy chinos, brown leather lace shoes and glasses; right hand to chin, left hand supports right elbow.",
+        "Arms contact torso and each other as required by thoughtful pose; little/no separate armpit clearance.",
+        "Sweater has dense curling/marled microtexture that may read synthetically; no claim of faultless real-photo surface.",
+        "Fingers partly occluded by chin and elbow support. Soft contact shading remains."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "k2-sivulta": {
+      "task": 418,
+      "nativeSHA256": "5c3e817d05e575baf6f7461ffd5c38cd49de50607e9e402fabd1bfb734a0bc7f",
+      "bytes": 1756906,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": null,
+      "approxManualSilhouetteYBounds": [
+        45,
+        1337
+      ],
+      "approxFrameHeightFraction": 0.8923,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+      "findings": [
+        "Left-side profile, nose left; gray hair, glasses and clothing broadly match front. Both shoes fully in frame.",
+        "Chin/elbow support pose retained broadly; exact finger contact and wrist geometry are not identical/validated.",
+        "Collar contour, sweater folds and shoe seam/lacing detail vary from front.",
+        "Same distance/waist-height camera is prompted but not calibrated or metrically proven."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "k2-takaa": {
+      "task": 419,
+      "nativeSHA256": "e0eab452e4632b52fb635ee4458f4dd14740f6d153c415deed7ec802441a5963",
+      "bytes": 1768311,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": null,
+      "approxManualSilhouetteYBounds": [
+        42,
+        1323
+      ],
+      "approxFrameHeightFraction": 0.8847,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+      "findings": [
+        "Back torso view; short gray hair with inferred thinning crown, pale-blue collar, navy rear pockets, brown shoe heels.",
+        "Head appears slightly turned rather than a certified exact 180degree frozen-pose rotation.",
+        "Right chin hand and left elbow-support hand only partly visible; no independent ten-finger count.",
+        "Collar height, heel seams/soles, trouser folds and sweater texture vary. Soft floor shading remains."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "v-edesta": {
+      "task": 420,
+      "nativeSHA256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+      "bytes": 1803359,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": true,
+      "approxManualSilhouetteYBounds": [
+        76,
+        1319
+      ],
+      "approxFrameHeightFraction": 0.8584,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": null,
+      "findings": [
+        "Fictional guard fully in frame with navy suit, white shirt, dark tie, black lace shoes; blank silver badge on his left chest, no text.",
+        "Upright seated pose, hands separately on lap/upper thighs, feet flat visually.",
+        "One dark four-leg armless wooden chair entirely contained within frame; body naturally occludes seat/back surfaces.",
+        "Visible fingers broadly plausible; hidden thumb/contact geometry not exhaustively verified. Soft contact/floor shading remains."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "v-sivulta": {
+      "task": 421,
+      "nativeSHA256": "415e015b9ec59bab22027876ec52ca5fd1aa00c0971ad18cbb91e9f14bf23244",
+      "bytes": 1790185,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": true,
+      "approxManualSilhouetteYBounds": [
+        77,
+        1277
+      ],
+      "approxFrameHeightFraction": 0.8287,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+      "findings": [
+        "Left side profile; face, hair and suit broadly match front. Hands on upper thighs, feet and chair fully contained in frame.",
+        "Chair has straight dark wooden back, seat and four legs, no armrests; some legs overlap in projection naturally.",
+        "Exact chair rail/leg angles, cuff/hand contact, jacket hem and shoe detail vary between independently generated views.",
+        "Subject-plus-chair vertical framing slightly smaller than front; not an exact identical-distance calibrated camera."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    },
+    "v-takaa": {
+      "task": 422,
+      "nativeSHA256": "37ef8eab34868378dbd0ab82074dff82cd73a6ee8cc07358179b3c4b10003d76",
+      "bytes": 1805987,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "wholeBodyAndShoesContained": true,
+      "chairContainedInFrame": true,
+      "approxManualSilhouetteYBounds": [
+        75,
+        1296
+      ],
+      "approxFrameHeightFraction": 0.8432,
+      "framingMeasurementLimit": "manual approximate visible top/bottom, about5px; includes chair for guard, not geometric calibration",
+      "referenceFrontSHA256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+      "findings": [
+        "Back seated view with same broad hair/suit appearance; complete chair silhouette and shoe heels inside frame.",
+        "Chair back board and leg rails visible, no armrests. Hands naturally occluded in lap; cannot judge fingers from rear.",
+        "Rear chair geometry, wood grain and seat/back heights are plausible but not proven identical to front/side.",
+        "Foot/chair ground alignment and framing differ mildly; exact fixed pose/camera not verified. Soft floor shading remains."
+      ],
+      "status": "candidate-for-receiver-review-with-limits"
+    }
+  },
+  "personGroups": {
+    "k1": {
+      "views": [
+        "k1-edesta",
+        "k1-sivulta",
+        "k1-takaa"
+      ],
+      "identity": "face/profile/hair/build visually close; back face inherently unobservable, no exact identity proof",
+      "pose": "hands behind back and lifted head broadly consistent; weight-bearing and relaxed-leg side may differ, exact same pose unverified",
+      "garments": "beige open trench/dark blouse/trousers/white shoes retained; rear flap/cuffs/seams inferred, folds/hem/construction details not perfectly identical",
+      "scale": "about86–88% visible height, horizontal long-lens appearance, not calibrated same distance"
+    },
+    "k2": {
+      "views": [
+        "k2-edesta",
+        "k2-sivulta",
+        "k2-takaa"
+      ],
+      "identity": "gray short hair/glasses/face/build broadly consistent, inferred rear crown thinning",
+      "pose": "right chin hand + left elbow support broadly retained; rear head slightly turns, exact limbs/contacts not rigidly matched",
+      "garments": "gray sweater/pale-blue collar/navy chinos/brown lace shoes retained; collar, shoe details and knit microtexture differ",
+      "scale": "about88–90% visible height, larger than85% target, no crop; exact camera distance unproven"
+    },
+    "v": {
+      "views": [
+        "v-edesta",
+        "v-sivulta",
+        "v-takaa"
+      ],
+      "identity": "same broad face/profile/hair/suit retained, rear unseen face not provable",
+      "pose": "upright seated, hands in lap/upper thighs, feet on floor retained broadly; contact and framing differ",
+      "garmentsAndChair": "navy suit/white shirt/dark tie/black shoes/blank silver badge + one dark four-leg armless wood chair retained; exact wood/joint/rail geometry differs or is inferred",
+      "scale": "about83–86% person-plus-chair height, slight framing/ground-plane differences; chair inside frame but naturally occluded"
+    }
+  },
+  "TripoOr3DWorkStarted": false,
+  "receiverAccepted": false,
+  "ownerApproved": false,
+  "gameIntegrated": false,
+  "published": false,
+  "localDisposition": "nine review candidates with documented multi-view/shadow/surface limits; not guaranteed-ready 3D reconstruction",
+  "generationCalls": 9,
+  "retries": 0,
+  "extraVariantsOrReferenceSheets": 0
+}

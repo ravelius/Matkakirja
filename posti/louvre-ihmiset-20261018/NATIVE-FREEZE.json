@@ -1,0 +1,80 @@
+{
+  "frozenAt": "2026-10-18T06:38:43.834416+00:00",
+  "calls": 9,
+  "extraCalls": 0,
+  "nativePixelsUnmodified": true,
+  "images": {
+    "k1-edesta": {
+      "sha256": "3deb879c16474b1afeb956be8a2e1e43d859cc8ae83038d3fb87a9d494c2f5c6",
+      "bytes": 1719209,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "k1-sivulta": {
+      "sha256": "15fe738ea9c221e00d7be2f43c4720e0471c9982906f03f91378ad70e0308372",
+      "bytes": 1716032,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "k1-takaa": {
+      "sha256": "b4c09e57362ca691353fd36dc059844967065c074995b33b80cd2e1ec5ab5c6c",
+      "bytes": 1714077,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "k2-edesta": {
+      "sha256": "8c241f4589fcc2583570c61645c62a99e9d6a1a2f4ed8c01184a4ded9a1c6d21",
+      "bytes": 1821237,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "k2-sivulta": {
+      "sha256": "5c3e817d05e575baf6f7461ffd5c38cd49de50607e9e402fabd1bfb734a0bc7f",
+      "bytes": 1756906,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "k2-takaa": {
+      "sha256": "e0eab452e4632b52fb635ee4458f4dd14740f6d153c415deed7ec802441a5963",
+      "bytes": 1768311,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "v-edesta": {
+      "sha256": "1669b7ac2beb9ea6deadabc0df7af458c3b5c747e740c55269eeb896da939c48",
+      "bytes": 1803359,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "v-sivulta": {
+      "sha256": "415e015b9ec59bab22027876ec52ca5fd1aa00c0971ad18cbb91e9f14bf23244",
+      "bytes": 1790185,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    "v-takaa": {
+      "sha256": "37ef8eab34868378dbd0ab82074dff82cd73a6ee8cc07358179b3c4b10003d76",
+      "bytes": 1805987,
+      "dimensions": [
+        1086,
+        1448
+      ]
+    }
+  }
+}

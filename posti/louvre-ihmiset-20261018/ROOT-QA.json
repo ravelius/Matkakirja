@@ -1,0 +1,17 @@
+{
+  "reviewedAt": "2026-10-18T06:43:09.685487+00:00",
+  "reviewer": "root",
+  "imageCount": 9,
+  "method": "built-in image_gen; one complete new generation per requested view, no retries",
+  "visibleReview": [
+    "Root personally viewed all nine complete native images.",
+    "All figures and guard chair outer extents fit frame; natural body/chair occlusion remains.",
+    "Faint floor/contact shadows violate the strict no-shadow criterion; exact camera/pose identity is not established.",
+    "k1 weight-leg uncertainty, k2 wool microtexture and slight head turn, clothing/shoe/chair differences match producer QA.",
+    "No Tripo reconstruction, recipient acceptance or game integration is asserted."
+  ],
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
