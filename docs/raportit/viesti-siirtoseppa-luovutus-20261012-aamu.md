@@ -569,3 +569,7 @@ KupolinSelostus.LoppuManifestit v2 ensin, kameran polut iss-kamera-v2.json:sta (
 VanhaOtto pitää kaksi heikkoa ottoa vanhoina) + **66c1f6fdf** (VanhaOtto tyhjä → heikot otot uusina; revert palauttaa). Linssit 2025/2025, unity-tarkistus 0. Web: ei viittauksia.
 Vientipaketti Julkaisijalle: proto-3d/_valmiit/raketti-aanet-v14-vienti-20261018 (kuiva ok). SHA:t PT:lle; NS:lle vasta PT:n kuittauksella.
 Kun rungossa: poista worktree issfi. Simuvuoro vasta junan 201 kuvien jälkeen (PT).
+- 18.10. 07.4x: PT 07.3x (LS nollauksessa): Louvren "Kaanaan häät" -otot **db78471bb** (siirtoseppa/kaanaan-201, juna-201 6d37d5057 päällä,
+  wt/proto-siirtoseppa-kaanaan, peili) → NS juna 201. Löydös: 9b7af01f3:n -2-avaukset puuttuivat manifest-200:sta (salien 1–2 avaukset eivät soineet);
+  MuseoKertoja.Manifest = manifest-201 (vara 200). Vienti Julkaisijalle: _valmiit/taidemuseo-kertoja-manifest-201-vienti-20261018 (kuiva ok).
+  Kun rungossa: poista worktree kaanaan.
