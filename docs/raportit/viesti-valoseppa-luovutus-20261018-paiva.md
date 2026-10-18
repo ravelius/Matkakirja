@@ -108,3 +108,9 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
   Pilvikuori, Ilmakeha, Ilmakaari). Epäily: Avaruus.PaivitaKaari asettaa Ilmakaari2:n arvot (Kuvaputki/Nousu) – tai lisäpiirtäjät.
 - Diag 6 3b1547278 (kaikki piirtäjät + Ilmakeha/Ilmakaari/Pilvikuori-aineiden arvot) → JU L1 → kyyti-diag6-app → `$D/simu-diag6.zsh`.
   Vertaa iPhone vs iPad: grep -a "kyyti-diagnoosi +5 s kamera\|aine " <tuloskansio>/konsoli-stdout.log. kyyti-diag4-app T7:llä.
+
+## 13. LISÄYS 12.46 (PT; omistajan kortti): TRIPO RAJAPINNALLA 19.10. ALKAEN, EI CHROMEA
+- Rajapinta v3 openapi.tripo3d.com: rig-check → rig → retarget; saldo GET /v3/account/balance.
+- Avain TRIPO_API_KEY tiedostossa ~/.matkakirja-avaimet-koodaus.zsh (omistaja tallentaa; KK vahvistaa PT:lle). Avainta ei lokiin, repoon eikä viesteihin.
+- Tehtävät: k1:n hiukset, Pulun korjaukset (niskasauma, silmät, pyrstö), Puyi + vartija luurankoineen (kohdat 5, 6, 11).
+- Generointimäärät omistajan lupien mukaan; krediittiostot vain omistajan luvalla. Kirjaa saldo ennen ja jälkeen.
