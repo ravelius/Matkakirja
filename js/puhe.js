@@ -38,6 +38,7 @@ import { luoLivianKuunteluvuoro } from './livia-tilanteet.js';
 import { PUHEVOIMA_OLETUS, puheVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+import { normalisoiLainausmerkit } from './lainausmerkit.js';
 import { akustiikka, tehosteketju } from './tehosteketju.js';
 import { luoMp3Virta } from './puhevirta.js';
 
@@ -905,7 +906,8 @@ async function haePala(teksti, persoona, sailio = null, kuulija = null) {
   // saa soida vanhan äänen välimuistista eikä päinvastoin.
   const saadot = puheenSaadot(persoona);
   const saatoTunniste = `${saadot ? `${saadot.aani ?? ''}|${saadot.ohje ?? ''}` : ''}${nopeusTunniste()}`;
-  const avain = `${persoona}|${saatoTunniste}|${teksti}`;
+  // Lainausmerkit suoriksi avaimessa (js/lainausmerkit.js): ” ja " ovat sama pala.
+  const avain = `${persoona}|${saatoTunniste}|${normalisoiLainausmerkit(teksti)}`;
   if (puheMuisti.has(avain)) return puheMuisti.get(avain);
   /*
    * KÄYNNISSÄ OLEVA HAKU JAETAAN (progressiivinen puhe 27.9.2026): jos
@@ -939,11 +941,17 @@ async function haePalaVerkosta(teksti, persoona, sailio, saadot, saatoTunniste, 
   let kansio = null;
   let osoiteAvain = null;
   if (sailio && typeof caches !== 'undefined') {
-    osoiteAvain = await sailioAvain(`${persoona}|${saatoTunniste}`, teksti);
+    // Ensin normalisoitu avain, sitten vanha raaka (jo säilötyt ”-tekstit; js/lainausmerkit.js).
+    const normalisoitu = normalisoiLainausmerkit(teksti);
+    osoiteAvain = await sailioAvain(`${persoona}|${saatoTunniste}`, normalisoitu);
     if (osoiteAvain) {
       try {
         kansio = await caches.open(sailionNimi(sailio));
-        const osuma = await kansio.match(osoiteAvain);
+        let osuma = await kansio.match(osoiteAvain);
+        if (!osuma && normalisoitu !== teksti) {
+          const raaka = await sailioAvain(`${persoona}|${saatoTunniste}`, teksti);
+          if (raaka) osuma = await kansio.match(raaka);
+        }
         if (osuma) {
           const osoite = URL.createObjectURL(await osuma.blob());
           muistiin(avain, osoite);

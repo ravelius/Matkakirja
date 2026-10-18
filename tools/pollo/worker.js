@@ -1263,7 +1263,20 @@ function puheOtsakkeet(kors, moottori, lahde) {
  * ohjeen ja tekstin: minkä tahansa muuttuessa syntyy uusi avain ja
  * vanha tallenne vanhenee itsestään pois tieltä.
  */
+/**
+ * LAINAUSMERKIT (18.10.2026): sama kuin js/lainausmerkit.js normalisoiLainausmerkit (worker ei tuo js/:stä;
+ * tests/lainausmerkit.test.mjs vertaa). Kaarevat ” “ „ → " ja ’ ‘ → ' ennen tiivistettä.
+ */
+export function normalisoiLainausmerkit(teksti) {
+  return String(teksti ?? '').replace(/[\u201D\u201C\u201E]/g, '"').replace(/[\u2019\u2018]/g, "'");
+}
+
+/** Säilöavain lainausmerkit normalisoituna (uudet palat); puheenAvainRaaka = vanha avain jo säilötyille. */
 async function puheenAvain(malli, aani, ohje, teksti, nopeus = 1) {
+  return puheenAvainRaaka(malli, aani, ohje, normalisoiLainausmerkit(teksti), nopeus);
+}
+
+async function puheenAvainRaaka(malli, aani, ohje, teksti, nopeus = 1) {
   // Nopeus liitetään avaimeen vain kun se poikkeaa normaalista, jotta
   // kaikki ennen nopeusparametria säilötyt palat pysyvät osumina.
   const hanta = nopeus !== 1 ? `|${nopeus}` : '';
@@ -1490,7 +1503,10 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
     try {
       avain = await puheenAvain(malli, aani, ohje, teksti, nopeus);
       r2Avain = `puhe/${lohko}/${avain.url.split('/').pop()}.mp3`;
-      const osuma = await caches.default.match(avain);
+      // Vanha raaka avain jo säilötyille ”-teksteille (lainausmerkit 18.10.2026): haetaan normalisoidun jälkeen.
+      const raaka = normalisoiLainausmerkit(teksti) !== teksti ? await puheenAvainRaaka(malli, aani, ohje, teksti, nopeus) : null;
+      const r2Raaka = raaka ? `puhe/${lohko}/${raaka.url.split('/').pop()}.mp3` : null;
+      const osuma = (await caches.default.match(avain)) ?? (raaka ? await caches.default.match(raaka) : undefined);
       if (osuma) {
         return new Response(osuma.body, { status: 200, headers: puheOtsakkeet(kors, moottoriNimi, 'reuna') });
       }
@@ -1501,7 +1517,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
        * koko maailmalle. Osuma nostetaan samalla takaisin reunalle.
        */
       if (env.PUHE_R2) {
-        const talle = await env.PUHE_R2.get(r2Avain);
+        const talle = (await env.PUHE_R2.get(r2Avain)) ?? (r2Raaka ? await env.PUHE_R2.get(r2Raaka) : null);
         if (talle) {
           const data = await talle.arrayBuffer();
           ctx?.waitUntil?.(caches.default.put(avain, new Response(data, {

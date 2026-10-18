@@ -32,7 +32,7 @@ import {
   livianAanenKesto, livianKaupunkiIndeksi, livianKaupunkiKentat, livianKaupunkiKuplia,
   livianKentanKuplat, livianKenttaPinoutuu, livianKorostetutKaupungit, livianKuplanAika,
   livianKuplanAjastin, livianKuplat, livianSaapumisrepliikki, LIVIAN_VARATTU,
-  livianSoitettava, livianTiiviste, LIVIAN_KOROSTUS_KAYTOSSA, LIVIAN_PUHEEN_HANTA_MS,
+  livianSoitettava, livianTiiviste, livianTiivisteTasmaa, LIVIAN_KOROSTUS_KAYTOSSA, LIVIAN_PUHEEN_HANTA_MS,
   LIVIAN_KESTOT, LIVIAN_LINSSILAHTEET, LIVIAN_VERSIOIDUT_AANET,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
@@ -382,7 +382,7 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
     const lahde = avain.slice(0, avain.lastIndexOf('-'));
     const indeksi = Number(avain.slice(avain.lastIndexOf('-') + 1)) - 1;
     assert.equal(livianAaniOsoite(lahde, indeksi), `${AANI_JUURI}${LIVIAN_VERSIOIDUT_AANET[avain]}`, avain);
-    assert.equal(LIVIAN_AANITETYT[avain], livianTiiviste(teksti), `${avain}: tekstin tiiviste`);
+    assert.ok(livianTiivisteTasmaa(LIVIAN_AANITETYT[avain], teksti), `${avain}: tekstin tiiviste`);
     assert.ok(LIVIAN_KESTOT[avain] > 0, `${avain}: kuitin kesto`);
   }
   for (const [avain, polku] of Object.entries(LIVIAN_VERSIOIDUT_AANET)) {
@@ -397,7 +397,8 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
     // Kaupunkikuplat -3 ja -4 = pakin kommentti[0] ja [1]; muiden tiivisteet
     // valvoo kuivan ajon testi (kaikki ajan tasalla).
     if (FOKUSVIRRAT[lahde] && lahde !== 'sofia' && (indeksi === 2 || indeksi === 3)) {
-      assert.equal(LIVIAN_AANITETYT[avain], livianTiiviste(FOKUSVIRRAT[lahde].pollo.kommentti[indeksi - 2]),
+      // Lainausmerkit (18.10.2026): vanha raaka tiiviste kelpaa (livianTiivisteTasmaa).
+      assert.ok(livianTiivisteTasmaa(LIVIAN_AANITETYT[avain], FOKUSVIRRAT[lahde].pollo.kommentti[indeksi - 2]),
         `${avain}: näkyvän tekstin tiiviste`);
     }
     assert.ok(Number.isFinite(LIVIAN_KESTOT[avain]) && LIVIAN_KESTOT[avain] > 0,
