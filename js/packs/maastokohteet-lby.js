@@ -194,7 +194,7 @@ export const MAASTOKOHTEET_LBY = [
     laudat: {
       maailmankartta: { x: 6249.5, y: 2078.1 },
     },
-    teksti: 'Sabratha oli läntisin Rooman Tripoliksen "kolmesta kaupungista" Oean ja Leptis '
+    teksti: 'Sabratha oli läntisin Rooman Tripoliksen ”kolmesta kaupungista” Oean ja Leptis '
       + 'Magnan rinnalla, ja se sijaitsee Välimeren rannalla nykyisestä Tripolista länteen. '
       + 'Satama perustettiin ehkä noin 500 eaa. foinikialaiseksi kauppapaikaksi nimeltä '
       + 'Tsabratan, ja sitä kautta kulki Afrikan sisämaan tavara. Karthagon tappion jälkeen '
@@ -233,7 +233,7 @@ export const MAASTOKOHTEET_LBY = [
       + 'Rooman valtaan Kyrene siirtyi 96 eaa., ja vuosien 262 ja 365 maanjäristykset '
       + 'runtelivat sen. Vuoden 642 muslimivalloituksen jälkeen paikka autioitui, kunnes '
       + 'italialaiset perustivat sinne sotilastukikohdan 1913 — ja tukikohtaa rakentaessaan '
-      + 'sotilaat löysivät päättömän marmoripatsaan, "Kyrenen Venuksen", joka vietiin Roomaan ja '
+      + 'sotilaat löysivät päättömän marmoripatsaan, ”Kyrenen Venuksen”, joka vietiin Roomaan ja '
       + 'palautettiin Libyaan vasta 2008. Unescon maailmanperintökohde 1982.',
     lahde: 'en-Wikipedia "Cyrene, Libya", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
@@ -283,7 +283,7 @@ export const MAASTOKOHTEET_LBY = [
       maailmankartta: { x: 6150, y: 2176 },
     },
     teksti: 'Ghadames on keidaskaupunki Luoteis-Libyassa lähellä Algerian ja Tunisian rajoja, ja '
-      + 'sitä kutsutaan "aavikon helmeksi". Se on vanhimpia Saharan pohjoispuolisia '
+      + 'sitä kutsutaan ”aavikon helmeksi”. Se on vanhimpia Saharan pohjoispuolisia '
       + 'asuinpaikkoja: arkeologisen aineiston perusteella seutu on ollut asuttu neljännestä '
       + 'vuosituhannesta eaa. Kaupungin talot on jaettu pystysuunnassa käyttötavan mukaan: '
       + 'katutasolla säilytettiin tavaraa, ensimmäisessä kerroksessa asui perhe, ja katolla '
@@ -314,7 +314,7 @@ export const MAASTOKOHTEET_LBY = [
     },
     teksti: 'Tadrart Acacus on vuorijono Länsi-Libyan aavikossa Ghatin kaupungista itään, ja se '
       + 'tunnetaan poikkeuksellisen runsaasta kalliotaiteestaan. Berberikielessä tadrart on '
-      + 'sanan "vuori" feminiinimuoto. Metsästäjä-keräilijät asuivat alueella yhtäjaksoisesti '
+      + 'sanan ”vuori” feminiinimuoto. Metsästäjä-keräilijät asuivat alueella yhtäjaksoisesti '
       + 'koko holoseenin ajan, vaikka ilmasto vaihteli Afrikan kostean kauden aikana, ja '
       + 'eläinten kesyttäminen tuli seudulle noin 7 000 vuotta sitten. Maalaukset ja '
       + 'kaiverrukset ovat vuosilta 12 000 eaa. – 100 jaa., ja ne kertovat, miten seutu on '

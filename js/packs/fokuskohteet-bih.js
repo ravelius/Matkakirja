@@ -146,7 +146,7 @@ export const FOKUSKOHTEET_BIH = [
       + 'yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein '
       + 'ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen '
       + 'riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan '
-      + '"kuolemanpelossa".',
+      + '”kuolemanpelossa”.',
     lahde: 'en-Wikipedia "Stari Most", johdanto ja osio "History" '
       + '(tarkistettu 25.8.2026).',
     // Commons 25.8.2026: 2390×1600, CC BY-SA 4.0, Ramirez, 10.7.2007,
@@ -233,7 +233,7 @@ export const FOKUSKOHTEET_BIH = [
       europe: { x: 521.0, y: 723.4 },
     },
     teksti: 'Paikallisen tarinan mukaan joen nimesivät roomalaiset: '
-      + 'nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" '
+      + 'nähtyään sen ensi kerran he sanoivat una — ”ainoa”, ”yksi ainoa” '
       + '— kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on '
       + 'täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu '
       + 'kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. '
@@ -372,7 +372,7 @@ export const FOKUSKOHTEET_BIH = [
     },
     teksti: 'Neretva on Dinaaristen Alppien suurin karstijoki: 225 '
       + 'kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen '
-      + 'arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — '
+      + 'arvellaan tulevan indoeurooppalaisesta juuresta ner, ”sukeltaa” — '
       + 'sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että '
       + 'Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen '
       + 'vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.',
@@ -542,7 +542,7 @@ export const FOKUSKOHTEET_BIH = [
     },
     teksti: 'Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi '
       + 'mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti '
-      + '"banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin '
+      + '”banin niittyä” — ei kylpylää, vaikka moni niin luulee. Kaupungin '
       + 'keskellä seisoo Kastel, jonka juuret ovat roomalaisessa '
       + 'linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja '
       + 'trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle '

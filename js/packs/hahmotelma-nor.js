@@ -937,7 +937,7 @@ export const HAHMOTELMA_NOR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-notodden-1b4117f6.jpg',
         lyhyt: 'Svelgfossin voimalaitoksen portti ja vuodet 1905–1907 kertova kivi.',
-        selite: 'Metalliportin vierellä on kivi, jossa lukee "Svælgfos Kraftan 1905–1907". Taustalla '
+        selite: 'Metalliportin vierellä on kivi, jossa lukee ”Svælgfos Kraftan 1905–1907”. Taustalla '
           + 'erottuu voimajohtopylväitä.',
         lahde: 'Valokuva: PeltonMan, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'PeltonMan',

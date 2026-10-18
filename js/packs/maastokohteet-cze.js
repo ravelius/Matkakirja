@@ -287,7 +287,7 @@ export const MAASTOKOHTEET_CZE = [
     lahde: 'en-Wikipedia "Kutná Hora", johdanto-osa sekä osiot "Etymology" ja '
       + '"Geography" (tarkistettu 2.9.2026).',
     visa: {
-      kysymys: "Mitä sana 'hora' tarkoittaa Kutná Horan nimessä?",
+      kysymys: "Mitä sana ’hora’ tarkoittaa Kutná Horan nimessä?",
       vaihtoehdot: [
         'Kaivosta',
         'Kylää',
@@ -400,11 +400,11 @@ export const MAASTOKOHTEET_CZE = [
       + 'Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä '
       + 'nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä '
       + 'vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 '
-      + '"Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.\n\n'
+      + '”Pilsner Bier” rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.\n\n'
       + 'Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna '
       + '1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen '
       + 'Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell '
-      + 'kääntyy suunnilleen "Plzeňin alkuperäinen lähde".',
+      + 'kääntyy suunnilleen ”Plzeňin alkuperäinen lähde”.',
     lahde: 'en-Wikipedia "Pilsner Urquell Brewery", johdanto-osa ja osio "History" '
       + '(tarkistettu 2.9.2026).',
   },
@@ -458,7 +458,7 @@ export const MAASTOKOHTEET_CZE = [
       + 'seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea '
       + 'keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat '
       + 'vallitseva ja väistyvä.\n\n'
-      + 'Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään '
+      + 'Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät ”tekijät” — nykyään '
       + 'geenit — määräävät ominaisuudet ennustettavasti. Työn merkitystä ei '
       + 'ymmärretty ennen vuosisadan vaihdetta: vasta 1900 Erich von Tschermak, '
       + 'Hugo de Vries ja Carl Correns vahvistivat toisistaan riippumatta useita '
@@ -610,7 +610,7 @@ export const MAASTOKOHTEET_CZE = [
       + 'Nimi Jablonec on tšekkiä ja tarkoittaa pientä omenapuuta: kylä perustettiin '
       + 'paikkaan, jossa kasvoi omenapuu. Saksankieliset uudisasukkaat muokkasivat '
       + 'nimen 1500-luvulla muotoon Gablonz. Vuonna 1904 nimeen liitettiin '
-      + 'kummallakin kielellä lisäys "Nisan varrella".',
+      + 'kummallakin kielellä lisäys ”Nisan varrella”.',
     lahde: 'en-Wikipedia "Jablonec nad Nisou", johdanto-osa sekä osiot "Etymology" '
       + 'ja "Geography" (tarkistettu 2.9.2026).',
   },

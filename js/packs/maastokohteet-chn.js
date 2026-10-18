@@ -92,7 +92,7 @@ export const MAASTOKOHTEET_CHN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Jangtse eli Chang Jiang, "pitkä joki", on Kiinan pisin ja koko maailman kolmanneksi '
+    teksti: 'Jangtse eli Chang Jiang, ”pitkä joki”, on Kiinan pisin ja koko maailman kolmanneksi '
       + 'pisin joki: 6 236 kilometriä Tiibetin ylängön Tanggula-vuorilta itään Itä-Kiinan '
       + 'mereen. Sen valuma-alue kattaa viidenneksen Kiinan pinta-alasta, ja alueella asuu '
       + 'lähes kolmannes maan väestöstä.',

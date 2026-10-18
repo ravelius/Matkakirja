@@ -463,7 +463,7 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'itse viimeisen osan, jonka nimi oli Suomi herää. Se kiihotti '
         + 'kuulijoita niin, että kappaletta soitettiin sen jälkeen '
         + 'vaihtuvilla nimillä — yksi niistä oli pelkkä Impromptu, joka '
-        + 'tarkoittaa suunnilleen "jotain, mitä nyt sattui syntymään". '
+        + 'tarkoittaa suunnilleen ”jotain, mitä nyt sattui syntymään”. '
         + 'Nimen Finlandia teos sai vasta vuonna 1900. Se kestää noin '
         + 'kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, mitä '
         + 'yksikään puhe ei olisi saanut tehdä ääneen.',

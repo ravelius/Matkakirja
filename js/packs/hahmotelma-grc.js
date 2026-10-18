@@ -101,7 +101,7 @@ export const HAHMOTELMA_GRC = [
       + 'Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys '
       + '120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa '
       + 'kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman '
-      + '"syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on '
+      + '”syvimmäksi suhteessa leveyteensä” olevaksi rotkoksi. Rotkon pääosa on '
       + 'Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on '
       + 'useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan '
       + 'sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.',
@@ -2159,8 +2159,8 @@ export const HAHMOTELMA_GRC = [
       + 'abderalaisista tuli vitsien aihe: Cicero käytti kaupungin nimeä tyhmyyden '
       + 'vertauskuvana, ja antiikin vitsikirjassa Philogeloksessa on kokonainen luku '
       + 'abderalaisvitsejä. Silti kaupungista tulivat filosofit Demokritos, joka '
-      + 'muistetaan atomiteoriastaan, ja Protagoras, jonka lause "ihminen on kaiken '
-      + 'mitta" tunnetaan yhä.',
+      + 'muistetaan atomiteoriastaan, ja Protagoras, jonka lause ”ihminen on kaiken '
+      + 'mitta” tunnetaan yhä.',
     lahde: 'en-Wikipedia "Abdera, Thrace", "Democritus" ja "Protagoras", haettu '
       + '26.9.2026.',
   },

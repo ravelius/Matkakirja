@@ -762,7 +762,7 @@ export const HAHMOTELMA_DEU = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-maulbronn-889b430a.jpg',
       lyhyt: 'Maulbronnin luostarin kirkko esipylväikköineen ja viereiset rakennukset kirkkaan sinistä taivasta vasten.',
-      selite: 'Maulbronnin entinen sistersiläisluostari Baden-Württembergissä. Kuvassa näkyy luostarikirkko ja sen eteinen eli "paratiisi" sekä punaharmaasta hiekkakivestä rakennetut luostarirakennukset.',
+      selite: 'Maulbronnin entinen sistersiläisluostari Baden-Württembergissä. Kuvassa näkyy luostarikirkko ja sen eteinen eli ”paratiisi” sekä punaharmaasta hiekkakivestä rakennetut luostarirakennukset.',
       lahde: 'Valokuva: Elke Wetzig (Elya), Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Elke Wetzig (Elya)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kloster_Maulbronn_2009.jpg',
@@ -1857,7 +1857,7 @@ export const HAHMOTELMA_DEU = [
       maailmankartta: { x: 6123.9, y: 1415.7 },
       europe: { x: 378.5, y: 594.1 },
     },
-    teksti: 'Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa '
+    teksti: 'Heidelbergin linnan Krautturm eli ”gesprengter Turm” (räjäytetty torni) oli osa '
       + '1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin '
       + 'perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen '
       + 'alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — '

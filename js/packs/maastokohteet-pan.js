@@ -361,7 +361,7 @@ export const MAASTOKOHTEET_PAN = [
       + 'niistä on pieniä ja asumattomia. Tunnetuin on Contadoran saari, jonka nimi kertoo '
       + 'sen tehtävästä: espanjan contador tarkoittaa laskijaa tai kirjanpitäjää, ja '
       + 'valloittajien kerrotaan pysähtyneen saarelle laskemaan saaliinsa ennen paluuta '
-      + 'Espanjaan. Suurin saari on 234 neliökilometrin Isla del Rey, "kuninkaan saari", '
+      + 'Espanjaan. Suurin saari on 234 neliökilometrin Isla del Rey, ”kuninkaan saari”, '
       + 'jonka nimi viitannee Kristukseen kuninkaana eikä maalliseen hallitsijaan; se on '
       + 'yksin suurempi kuin kaikki muut Helmisaaret yhteensä ja Panaman toiseksi suurin '
       + 'saari Coiban jälkeen. Saaret kohosivat merestä, kun mannerlaatat alkoivat liittyä '

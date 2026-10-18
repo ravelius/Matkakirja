@@ -853,7 +853,7 @@ export const HAHMOTELMA_ESP = [
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-las-navas-3f5dbea6.jpg',
-        lyhyt: 'Kaiverros "Las Navasin taistelun aatto" vuodelta 1852.',
+        lyhyt: 'Kaiverros ”Las Navasin taistelun aatto” vuodelta 1852.',
         selite: 'Kirjaillustraatio teoksesta Las glorias nacionales (1852) esittää sotapäällikön ja sotilaat leirissä ennen taistelua: lippuja kohotetaan, ja oikealla näkyy alttari ristin kanssa.',
         lahde: 'Kaiverrus: Fondo Antiguo de la Biblioteca de la Universidad de Sevilla, Wikimedia Commons (CC BY 2.0).',
         tekija: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla',
@@ -1783,7 +1783,7 @@ export const HAHMOTELMA_ESP = [
       + 'II:n kuoleman jälkeen, ja sisällissodassa 1010–1013 se ryöstettiin ja jätettiin '
       + 'raunioiksi. Kaivaukset alkoivat 1911, mutta alkuperäisestä 112 hehtaarista on '
       + 'kaivettu esiin ja osin kunnostettu vain noin 10 hehtaaria. UNESCO listasi kohteen '
-      + 'maailmanperintöluetteloon vuonna 2018 nimellä "Caliphate City of Medina Azahara".',
+      + 'maailmanperintöluetteloon vuonna 2018 nimellä ”Caliphate City of Medina Azahara”.',
     lahde: 'en-Wikipedia "Madinat al-Zahra" (uudelleenohjaus "Medina Azahara"), johdanto-osa '
       + '(tarkistettu 21.9.2026).',
     ihme: {

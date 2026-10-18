@@ -9,8 +9,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'tuulessa — tai kuin appelsiinin lohkot, väittää paikallinen '
       + 'vieressäni. Satama on niin suuri, että lautat risteilevät '
       + 'sillä kuin bussit kaduilla.',
-    nosto: 'Isoisä kirjoitti: "Sydneyn satamaan mahtuisivat kaikki '
-      + 'maailman laivastot kerralla, ja silti jäisi tilaa purjehtia." '
+    nosto: 'Isoisä kirjoitti: ”Sydneyn satamaan mahtuisivat kaikki '
+      + 'maailman laivastot kerralla, ja silti jäisi tilaa purjehtia.” '
       + 'Purjeet ovat yhä täällä — nyt yksi seisoo rannalla kivestä '
       + 'tehtynä.',
   },
@@ -19,8 +19,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'kaupunki on yli kahden tuhannen kilometrin päässä. '
       + 'Joutsenjoella lipui mustia joutsenia — täällä ne eivät ole '
       + 'satua vaan arkea, ja koko joki on nimetty niiden mukaan.',
-    nosto: 'Isoisä kirjoitti: "Vanhassa maailmassa musta joutsen tarkoitti '
-      + 'mahdotonta. Täällä niitä ui satamassa laumoittain." Mahdoton '
+    nosto: 'Isoisä kirjoitti: ”Vanhassa maailmassa musta joutsen tarkoitti '
+      + 'mahdotonta. Täällä niitä ui satamassa laumoittain.” Mahdoton '
       + 'on vain asia, jota ei ole vielä nähty.',
   },
   melbourne: {
@@ -28,9 +28,9 @@ export const OCEANIA_SAAPUMISET = {
       + 'keskustassa vaunuihin saa hypätä ilmaiseksi. Kujat ovat '
       + 'kahviloiden ja seinämaalausten labyrintti — täällä väitetään '
       + 'vakavissaan, että kaupungissa tehdään maailman paras kahvi.',
-    nosto: 'Isoisä kirjoitti: "Kultaryntäys on tehnyt Melbournesta '
+    nosto: 'Isoisä kirjoitti: ”Kultaryntäys on tehnyt Melbournesta '
       + 'maailman rikkaimpia kaupunkeja — teatterit ovat Lontoon '
-      + 'veroisia." Kulta loppui, mutta itsevarmuus jäi. Nyt se '
+      + 'veroisia.” Kulta loppui, mutta itsevarmuus jäi. Nyt se '
       + 'kohdistuu kahviin.',
   },
   brisbane: {
@@ -38,9 +38,9 @@ export const OCEANIA_SAAPUMISET = {
       + 'että sillalta näkee aina toisen sillan. Keskellä kaupunkia on '
       + 'oikea uimaranta — hiekka tuotu, laguuni rakennettu, mutta '
       + 'aurinko ja uimarit ovat aitoja ympäri vuoden.',
-    nosto: 'Isoisä kirjoitti: "Joki tekee täällä niin monta mutkaa, että '
+    nosto: 'Isoisä kirjoitti: ”Joki tekee täällä niin monta mutkaa, että '
       + 'laiva kulkee tunnin päästäkseen paikkaan, jonne kävelisi '
-      + 'vartissa." Mutkat ovat samat — nyt niitä ajetaan pikaveneellä.',
+      + 'vartissa.” Mutkat ovat samat — nyt niitä ajetaan pikaveneellä.',
   },
   cairns: {
     kuvaus: 'Cairnsista vene vei Isolle valliriutalle. Painoin kasvot '
@@ -48,8 +48,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'kilpikonna joka souti ohi kuin vanha herra. Riutta näkyy '
       + 'avaruuteen asti — se on maailman suurin elävän rakentama '
       + 'rakennelma.',
-    nosto: 'Isoisä kirjoitti: "Korallimeri on laivurin painajainen — '
-      + 'riutat repivät pohjan huomaamatta." Sama riutta, kaksi '
+    nosto: 'Isoisä kirjoitti: ”Korallimeri on laivurin painajainen — '
+      + 'riutat repivät pohjan huomaamatta.” Sama riutta, kaksi '
       + 'maailmaa: hänelle vaara, minulle ihme. Kumpikaan ei ole '
       + 'väärässä.',
   },
@@ -59,8 +59,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'kuusimetriseksi, ja niitä elää joissa ja meressä. Kaupungissa '
       + 'on trooppinen rytmi: sadekausi ja kuiva kausi, eikä mitään '
       + 'siltä väliltä.',
-    nosto: 'Isoisä kirjoitti: "Pohjoisrannikolla joet kuhisevat liskoja, '
-      + 'jotka vetävät härän veteen." Ne kuhisevat yhä — ja siksi '
+    nosto: 'Isoisä kirjoitti: ”Pohjoisrannikolla joet kuhisevat liskoja, '
+      + 'jotka vetävät härän veteen.” Ne kuhisevat yhä — ja siksi '
       + 'täällä uidaan vain siellä, missä kyltti antaa luvan.',
   },
   adelaide: {
@@ -69,8 +69,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'päässä ovat viinilaaksot, joiden tarhoista osa on maailman '
       + 'vanhimpia — ne eivät koskaan kärsineet tuholaisesta, joka '
       + 'tuhosi Euroopan köynnökset.',
-    nosto: 'Isoisä kirjoitti: "Siirtokunta ilman vankeja — kaupunki täynnä '
-      + 'kirkkoja ja hyvää omaatuntoa." Kirkot seisovat yhä, ja hyvä '
+    nosto: 'Isoisä kirjoitti: ”Siirtokunta ilman vankeja — kaupunki täynnä '
+      + 'kirkkoja ja hyvää omaatuntoa.” Kirkot seisovat yhä, ja hyvä '
       + 'omatunto on vaihtunut hyväksi viiniksi.',
   },
   alicesprings: {
@@ -79,9 +79,9 @@ export const OCEANIA_SAAPUMISET = {
       + 'Nykyään täällä toimii lentävien lääkärien tukikohta ja '
       + 'radiokoulu, jonka oppilaat asuvat satojen kilometrien päässä '
       + 'toisistaan.',
-    nosto: 'Isoisä kirjoitti: "Lennätinlinja halkaisi juuri koko mantereen '
+    nosto: 'Isoisä kirjoitti: ”Lennätinlinja halkaisi juuri koko mantereen '
       + 'etelästä pohjoiseen — viesti kulkee Adelaidesta Lontooseen '
-      + 'tunneissa." Se linja kulki tästä pihasta. Asema on yhä '
+      + 'tunneissa.” Se linja kulki tästä pihasta. Asema on yhä '
       + 'paikallaan.',
   },
   uluru: {
@@ -89,8 +89,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'muuttuu koko päivän: aamulla violetti, keskipäivällä oranssi, '
       + 'auringonlaskussa hehkuvan punainen. Kalliota kierretään jalan '
       + '— sen päälle ei enää nousta, koska se on anangu-kansalle pyhä.',
-    nosto: 'Isoisä kirjoitti: "Tutkimusmatkailija kertoi tänä vuonna '
-      + 'jättimäisestä punaisesta kalliosta keskellä mannerta." Uutinen '
+    nosto: 'Isoisä kirjoitti: ”Tutkimusmatkailija kertoi tänä vuonna '
+      + 'jättimäisestä punaisesta kalliosta keskellä mannerta.” Uutinen '
       + 'oli uusi vain hänelle — anangut olivat tunteneet kallionsa '
       + 'kymmeniätuhansia vuosia.',
   },
@@ -100,8 +100,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'yhä maailman helmikaupan pikkuinen pääkatu. Illalla '
       + 'kamelikaravaani käveli pitkin Cable Beachin rantaa '
       + 'auringonlaskua vasten.',
-    nosto: 'Isoisä kirjoitti: "Luoteisrannikon simpukoissa kasvaa helmiä, '
-      + 'joista Lontoossa maksetaan talon hinta." Helmiä viljellään nyt '
+    nosto: 'Isoisä kirjoitti: ”Luoteisrannikon simpukoissa kasvaa helmiä, '
+      + 'joista Lontoossa maksetaan talon hinta.” Helmiä viljellään nyt '
       + 'tarhoissa — mutta kaupungin nimi tarkoittaa yhä helmeä '
       + 'kaikilla kielillä.',
   },
@@ -121,8 +121,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'kuusi yhden kävelyn aikana. Saaren nimen antoi kapteeni Cook, '
       + 'jonka kompassi sekosi tässä kohtaa. Vika ei ollut saaressa '
       + 'vaan laivassa.',
-    nosto: 'Isoisä kirjoitti: "Rannikolla on saari, joka muka vetää '
-      + 'kompassin sekaisin — merimiehet vannovat sen nimeen." Tarina '
+    nosto: 'Isoisä kirjoitti: ”Rannikolla on saari, joka muka vetää '
+      + 'kompassin sekaisin — merimiehet vannovat sen nimeen.” Tarina '
       + 'elää yhä, vaikka syyllistä ei koskaan löytynyt. Hyvä nimi '
       + 'voittaa selityksen.',
   },
@@ -131,8 +131,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'olla lunta samana päivänä, kun satamassa syödään jäätelöä. '
       + 'Vanhat kivimakasiinit ovat nyt gallerioita ja panimoita, ja '
       + 'lauantaisin koko kaupunki tungeksii Salamancan torilla.',
-    nosto: 'Isoisä kirjoitti: "Etelämpänä ei ole enää kaupunkia — seuraava '
-      + 'satama on jäätikkö." Se pitää melkein paikkansa yhä: täältä '
+    nosto: 'Isoisä kirjoitti: ”Etelämpänä ei ole enää kaupunkia — seuraava '
+      + 'satama on jäätikkö.” Se pitää melkein paikkansa yhä: täältä '
       + 'lähtevät etelämantereen tutkimuslaivat.',
   },
   nullarbor: {
@@ -141,8 +141,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'rataosuuden: lähes viisisataa kilometriä ilman ainuttakaan '
       + 'kaarretta. Katsoin ikkunasta tunnin — horisontti ei muuttunut '
       + 'miksikään.',
-    nosto: 'Isoisä kirjoitti: "Tasanko, jolla ei ole puuta eikä vettä — '
-      + 'sen poikki ei kulje kukaan huvikseen." Nyt sen poikki kulkee '
+    nosto: 'Isoisä kirjoitti: ”Tasanko, jolla ei ole puuta eikä vettä — '
+      + 'sen poikki ei kulje kukaan huvikseen.” Nyt sen poikki kulkee '
       + 'juna, ja ravintolavaunussa tarjoillaan teetä. Ukko olisi '
       + 'nauranut.',
   },
@@ -152,17 +152,17 @@ export const OCEANIA_SAAPUMISET = {
       + 'parkkipaikalle. Kerran vuodessa kylään saapuu seitsemäntuhatta '
       + 'ihmistä hevoskilpailuihin — teltat leviävät aavikolle kuin oma '
       + 'kaupunkinsa.',
-    nosto: 'Isoisä kirjoitti karjapoluista: "Paimenet ajavat laumat '
+    nosto: 'Isoisä kirjoitti karjapoluista: ”Paimenet ajavat laumat '
       + 'tuhannen virstan halki aavikon — reitin varrella on kaivo ja '
-      + 'kapakka." Se kapakka on tämä. Ja kaivo toimii yhä.',
+      + 'kapakka.” Se kapakka on tämä. Ja kaivo toimii yhä.',
   },
   exmouth: {
     kuvaus: 'Exmouthissa uin valashain rinnalla: se on maailman suurin '
       + 'kala, pidempi kuin bussi, ja se söi vain planktonia '
       + 'välittämättä minusta lainkaan. Ningaloon riutta alkaa suoraan '
       + 'rannasta — ei venematkaa, vain maski päähän ja mereen.',
-    nosto: 'Isoisä kirjoitti: "Luoteisrannikon vesillä valaat kulkevat ohi '
-      + 'laumoina — laiva väisti niitä koko päivän." Ryhävalaat '
+    nosto: 'Isoisä kirjoitti: ”Luoteisrannikon vesillä valaat kulkevat ohi '
+      + 'laumoina — laiva väisti niitä koko päivän.” Ryhävalaat '
       + 'vaeltavat samaa reittiä yhä, samoina kuukausina, samassa '
       + 'järjestyksessä.',
   },
@@ -172,9 +172,9 @@ export const OCEANIA_SAAPUMISET = {
       + 'alla on enemmän tunnelikilometrejä kuin kaduilla '
       + 'katukilometrejä. Elokuussa täällä pidetään Australian suurin '
       + 'rodeo.',
-    nosto: 'Isoisä kirjoitti sisämaasta: "Karjatilat ovat täällä '
+    nosto: 'Isoisä kirjoitti sisämaasta: ”Karjatilat ovat täällä '
       + 'kreivikuntien kokoisia, ja naapuriin ratsastetaan kaksi '
-      + 'päivää." Tilat ovat yhä sen kokoisia — nyt naapuriin lennetään '
+      + 'päivää.” Tilat ovat yhä sen kokoisia — nyt naapuriin lennetään '
       + 'omalla pikkukoneella.',
   },
   cooberpedy: {
@@ -183,8 +183,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'on aina viileää. Kaupunki elää opaaleista — hohtavista '
       + 'jalokivistä, joita löytyy vain täältä ja joita kaivetaan yhä '
       + 'käsin.',
-    nosto: 'Isoisän kartassa tässä kohtaa lukee vain: "Kivistä '
-      + 'autiomaata." Hän oli oikeassa — kukaan ei vain vielä tiennyt, '
+    nosto: 'Isoisän kartassa tässä kohtaa lukee vain: ”Kivistä '
+      + 'autiomaata.” Hän oli oikeassa — kukaan ei vain vielä tiennyt, '
       + 'että ne kivet hohtavat sateenkaaren värejä, kun ne nostaa '
       + 'valoon.',
   },
@@ -193,8 +193,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'sataman langustiveneet lähtevät ulos ennen aamunkoittoa. '
       + 'Kaupungin langustit lennätetään eläviksi Aasian ravintoloihin: '
       + 'hummeripyynti on täällä yhtä arkista kuin muualla maidonhaku.',
-    nosto: 'Isoisä kirjoitti: "Länsirannikon tuuli ei lakkaa koskaan — '
-      + 'purjeet paikataan täällä useammin kuin missään." Tuuli on '
+    nosto: 'Isoisä kirjoitti: ”Länsirannikon tuuli ei lakkaa koskaan — '
+      + 'purjeet paikataan täällä useammin kuin missään.” Tuuli on '
       + 'sama. Nyt sillä pyöritetään sähköä koko rannikolle.',
   },
   portmoresby: {
@@ -203,8 +203,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'kieltä — enemmän kuin missään muualla maailmassa. '
       + 'Naapurikylillä voi olla eri kieli, ja yhteinen tok pisin '
       + 'syntyi, jotta kauppa kävisi.',
-    nosto: 'Isoisä kirjoitti: "Saarella sanotaan puhuttavan enemmän kieliä '
-      + 'kuin koko Euroopassa yhteensä." Se ei ollut liioittelua — se '
+    nosto: 'Isoisä kirjoitti: ”Saarella sanotaan puhuttavan enemmän kieliä '
+      + 'kuin koko Euroopassa yhteensä.” Se ei ollut liioittelua — se '
       + 'oli aliarvio.',
   },
   sepik: {
@@ -212,8 +212,8 @@ export const OCEANIA_SAAPUMISET = {
       + '— vain kyliä, kanootteja ja krokotiileja. Joen kylissä '
       + 'veistetään puuta kuuluisalla kädellä: henkitalojen pylväät, '
       + 'naamiot ja kanootin keulat kertovat sukujen tarinat.',
-    nosto: 'Isoisä kirjoitti: "Joki on täällä ainoa tie, ja kanootti on '
-      + 'hevonen, kärry ja talo samassa." Sepikillä se on sitä yhä — '
+    nosto: 'Isoisä kirjoitti: ”Joki on täällä ainoa tie, ja kanootti on '
+      + 'hevonen, kärry ja talo samassa.” Sepikillä se on sitä yhä — '
       + 'moottori vain korvasi melan, kun on kiire.',
   },
   honiara: {
@@ -222,8 +222,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'Rautapohjaksi. Nyt hylyt ovat korallin peitossa ja kalojen '
       + 'kerrostaloja — sukeltajat tulevat katsomaan, kuinka meri '
       + 'korjaa sodan jäljet.',
-    nosto: 'Isoisä kirjoitti Salomonsaarista: "Saaret ovat vihreitä kuin '
-      + 'smaragdit, ja niiden nimet lupaavat kultaa." Kultaa ei '
+    nosto: 'Isoisä kirjoitti Salomonsaarista: ”Saaret ovat vihreitä kuin '
+      + 'smaragdit, ja niiden nimet lupaavat kultaa.” Kultaa ei '
       + 'löytynyt — mutta smaragdit olivat totta.',
   },
   portvila: {
@@ -232,8 +232,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'ollut. Vanuatu keikkuu tulivuorten ja mannerlaattojen päällä — '
       + 'maanjäristys on täällä arkea, ja silti kyselyissä tämä on '
       + 'maailman onnellisimpia maita.',
-    nosto: 'Isoisä kirjoitti: "Saarilla maa vavahtelee viikoittain, eikä '
-      + 'kukaan hätkähdä." Sama tyyneys kantaa yhä — talot rakennetaan '
+    nosto: 'Isoisä kirjoitti: ”Saarilla maa vavahtelee viikoittain, eikä '
+      + 'kukaan hätkähdä.” Sama tyyneys kantaa yhä — talot rakennetaan '
       + 'kevyiksi ja mieli vielä kevyemmäksi.',
   },
   noumea: {
@@ -242,8 +242,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'rantakadulla pelataan petankkia. Kaupunkia ympäröi maailman '
       + 'suurin laguuni, jonka vesi on niin kirkasta, että vene näyttää '
       + 'ankkuroituneen ilmaan.',
-    nosto: 'Isoisä kirjoitti: "Ranska on tuonut tänne leipänsä, pelinsä ja '
-      + 'vankilansa." Vankila on kauan poissa — leipä ja petankki '
+    nosto: 'Isoisä kirjoitti: ”Ranska on tuonut tänne leipänsä, pelinsä ja '
+      + 'vankilansa.” Vankila on kauan poissa — leipä ja petankki '
       + 'jäivät, ja laguuni päätyi maailmanperintölistalle.',
   },
   norfolk: {
@@ -251,8 +251,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'muualla: norfukia, joka syntyi Bounty-laivan kapinallisten '
       + 'jälkeläisten mukana. Saaren omat männyt nousevat suorina kuin '
       + 'mastot — niitä vietiin aikanaan juuri laivojen mastoiksi.',
-    nosto: 'Isoisä kirjoitti: "Saari oli ankarin rangaistussiirtola, mitä '
-      + 'imperiumi keksi — sen nimi sai vangit vapisemaan." Rauniot '
+    nosto: 'Isoisä kirjoitti: ”Saari oli ankarin rangaistussiirtola, mitä '
+      + 'imperiumi keksi — sen nimi sai vangit vapisemaan.” Rauniot '
       + 'ovat jäljellä, mutta niiden ympärillä pelataan nyt golfia. '
       + 'Aika on armollinen.',
   },
@@ -262,8 +262,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'kaupunki pysähtyy. Illalla kava-malja kiersi piirissä kädestä '
       + 'käteen — juoma puuduttaa kielen ja hidastaa puheen '
       + 'ystävälliseksi.',
-    nosto: 'Isoisä kirjoitti: "Fidžin päälliköt neuvottelevat parhaillaan '
-      + 'koko saariston liittämisestä Britanniaan." Vuotta myöhemmin se '
+    nosto: 'Isoisä kirjoitti: ”Fidžin päälliköt neuvottelevat parhaillaan '
+      + 'koko saariston liittämisestä Britanniaan.” Vuotta myöhemmin se '
       + 'tapahtui. Rugby jäi briteiltä — kava oli täällä jo ennen '
       + 'heitä.',
   },
@@ -272,8 +272,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'viisikymmentä sammunutta purkausaukkoa, ja moni niistä on nyt '
       + 'vihreä puistokukkula lampaineen. Satamassa purjeita on niin '
       + 'tiheässä, että kaupunkia kutsutaan purjeiden kaupungiksi.',
-    nosto: 'Isoisä kirjoitti: "Kaupunki makaa tulivuorten päällä kuin '
-      + 'peitolla — maori tuntee jokaisen kukkulan nimen ja tarinan." '
+    nosto: 'Isoisä kirjoitti: ”Kaupunki makaa tulivuorten päällä kuin '
+      + 'peitolla — maori tuntee jokaisen kukkulan nimen ja tarinan.” '
       + 'Nimet ja tarinat elävät yhä. Tulivuoret nukkuvat, '
       + 'toistaiseksi.',
   },
@@ -283,8 +283,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'keskustasta kukkulalle, ja kahviloita on asukasta kohti '
       + 'enemmän kuin New Yorkissa — säässä, joka vaihtuu neljästi '
       + 'päivässä, kahvila on turvasatama.',
-    nosto: 'Isoisä kirjoitti: "Pääkaupunki muutti juuri tänne, keskemmälle '
-      + '— salmen rannalle, jossa tuuli ei anna lipun levätä." Lippu ei '
+    nosto: 'Isoisä kirjoitti: ”Pääkaupunki muutti juuri tänne, keskemmälle '
+      + '— salmen rannalle, jossa tuuli ei anna lipun levätä.” Lippu ei '
       + 'lepää vieläkään. Pääkaupunki ei muuttanut enää mihinkään.',
   },
   christchurch: {
@@ -293,8 +293,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'rakensi väliaikaisen pahviputkista ja rakastui siihen. Uutta '
       + 'kaupunkia rakennetaan yhä, ja seinämaalaukset valtasivat '
       + 'tyhjät seinät.',
-    nosto: 'Isoisä kirjoitti: "Englantilaisempi kuin Englanti — '
-      + 'soutuveneitä, pajuja ja teetä joen rannalla." Punting-veneet '
+    nosto: 'Isoisä kirjoitti: ”Englantilaisempi kuin Englanti — '
+      + 'soutuveneitä, pajuja ja teetä joen rannalla.” Punting-veneet '
       + 'soutavat samalla joella yhä. Kaupunki oppi olemaan myös jotain '
       + 'omaansa.',
   },
@@ -304,9 +304,9 @@ export const OCEANIA_SAAPUMISET = {
       + 'paikallinen. Rautatieasema on mustaa basalttia ja vaaleaa '
       + 'kiveä kuin piparkakkutalo, ja koko kaupunki on rakennettu '
       + 'sammuneen tulivuoren päälle.',
-    nosto: 'Isoisä kirjoitti: "Skotlantilaiset ovat pystyttäneet tänne '
+    nosto: 'Isoisä kirjoitti: ”Skotlantilaiset ovat pystyttäneet tänne '
       + 'toisen Edinburghin kivi kiveltä ja kutsuvat sitä yhä '
-      + 'siirtokunnaksi." Kivitalot seisovat. Niiden ansiosta kaupunki '
+      + 'siirtokunnaksi.” Kivitalot seisovat. Niiden ansiosta kaupunki '
       + 'kutsuu itseään nykyään perintökaupungiksi.',
   },
   milfordsound: {
@@ -314,9 +314,9 @@ export const OCEANIA_SAAPUMISET = {
       + 'nousevat suoraan merestä yli kilometrin, ja sade — jota täällä '
       + 'riittää — herättää satoja vesiputouksia kerralla. Delfiinit '
       + 'saattoivat laivaa ulos kuin kunniavartio.',
-    nosto: 'Isoisä kirjoitti: "Vuono, jonka seinät katoavat pilviin. '
+    nosto: 'Isoisä kirjoitti: ”Vuono, jonka seinät katoavat pilviin. '
       + 'Sanoin kapteenille, että tämä on katedraali — hän vastasi, '
-      + 'että se on vasta eteinen." Kapteeni oli oikeassa: perällä '
+      + 'että se on vasta eteinen.” Kapteeni oli oikeassa: perällä '
       + 'odotti Mitre Peak.',
   },
   dili: {
@@ -325,8 +325,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'parikymppisiä. Aamulla kalastajat työnsivät veneensä vesille '
       + 'pyhän patsaan alla, joka katsoo kaupunkia vuorelta kuin Rio de '
       + 'Janeirossa.',
-    nosto: 'Isoisä kirjoitti: "Saarelta laivataan santelipuuta, jonka '
-      + 'tuoksu täyttää koko ruuman viikoiksi." Santelipuu vietiin '
+    nosto: 'Isoisä kirjoitti: ”Saarelta laivataan santelipuuta, jonka '
+      + 'tuoksu täyttää koko ruuman viikoiksi.” Santelipuu vietiin '
       + 'melkein loppuun — mutta saari itse ei loppunut, ja nyt se '
       + 'kuuluu itselleen.',
   },
@@ -336,8 +336,8 @@ export const OCEANIA_SAAPUMISET = {
       + 'temppeliyhteisöt tuhat vuotta. Joka aamu kynnyksille ilmestyy '
       + 'pieniä palmunlehtikoreja — kukkia ja riisiä, kiitokseksi ja '
       + 'pyynnöksi hyville hengille.',
-    nosto: 'Isoisä kirjoitti: "Saarella on enemmän temppeleitä kuin '
-      + 'taloja, ja jokainen päivä on jonkin juhla." Laskin yhden '
+    nosto: 'Isoisä kirjoitti: ”Saarella on enemmän temppeleitä kuin '
+      + 'taloja, ja jokainen päivä on jonkin juhla.” Laskin yhden '
       + 'aamupäivän aikana kolme kulkuetta. Ukko ei liioitellut.',
   },
 };

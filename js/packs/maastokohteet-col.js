@@ -253,7 +253,7 @@ export const MAASTOKOHTEET_COL = [
       + 'vauras tavaraliikenteen välietappi sisämaahan, sinne perustettiin '
       + 'kuninkaallinen rahapaja ja se tunnettiin kultasepistään. Kolumbian kaupungeista '
       + 'se julisti ensimmäisenä itsenäisyytensä Espanjasta 6. elokuuta 1810 tunnuslauseella '
-      + '"olkaamme vapaita tai kuolkaamme".',
+      + '”olkaamme vapaita tai kuolkaamme”.',
     lahde: 'en-Wikipedia "Santa Cruz de Mompox", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
   },

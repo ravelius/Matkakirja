@@ -627,7 +627,7 @@ export const HAHMOTELMA_HUN = [
       },
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/hun-nosto-sopron-73e2551c.jpg',
-        lyhyt: 'Tulitornin "Uskollisuuden portti" veistoksineen.',
+        lyhyt: 'Tulitornin ”Uskollisuuden portti” veistoksineen.',
         selite: 'Tulitornin eteläpuolella oleva Uskollisuuden portti tehtiin vuoden 1921 kansanäänestyksen muistoksi, jossa Sopron ja kahdeksan naapurikylää halusivat jäädä Unkarille. Portin päällä on kuvanveistäjän tekemä veistosryhmä.',
         lahde: 'Valokuva: Pennyjey, Wikimedia Commons (CC BY 2.0).',
         tekija: 'Pennyjey',

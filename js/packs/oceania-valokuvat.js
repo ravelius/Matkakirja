@@ -622,7 +622,7 @@ export const OCEANIA_VALOKUVAT = {
     selite: 'Purjelaiva Alcestis hinataan irti kareilta Otagon lahdella '
       + 'joskus 1880-luvulla; höyryhinaaja vetää vasemmalla ja takana '
       + 'kohoaa Goat Island eli Rakiriri. Lasinegatiiviin on kirjoitettu '
-      + 'käsin "Alcestis ashore". Lahti on kapea ja matala, ja juuri '
+      + 'käsin ”Alcestis ashore”. Lahti on kapea ja matala, ja juuri '
       + 'siksi Dunedinin oikea satama on sen suulla Port Chalmersissa.',
     lisat: [
       {
@@ -1149,7 +1149,7 @@ export const OCEANIA_VALOKUVAT = {
     tiedosto: 'Camel train crossing Nullarbor Plain(GN00374).jpg',
     vuosi: '1910-luku',
     lahde: 'State Government Photographer / History Trust of South Australia, Commons (CC0)',
-    lyhyt: 'Kamelikaravaani Nullarborin tasangolla noin 1915, "ei puuta" -nimen alkuperä.',
+    lyhyt: 'Kamelikaravaani Nullarborin tasangolla noin 1915, ”ei puuta” -nimen alkuperä.',
     selite: 'Kamelikaravaani ylittämässä Nullarborin tasankoa noin vuonna 1915. '
       + 'Nimi tulee latinan sanoista nullus arbor, ei puuta: maassa kasvaa '
       + 'suolayrttiä ja matalaa pensasta mutta ei metsää, ja tavarat kulkivat '

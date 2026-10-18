@@ -79,7 +79,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Vuonna 1540 Cosimo I de\' Medici muutti taloon, ja hän '
           + 'muutti sen palatsiksi. Kun hovi siirtyi 1565 joen toiselle '
           + 'puolelle Pitti-palatsiin, vanha talo sai nimen Palazzo '
-          + 'Vecchio, "vanha palatsi". Sisällä on Viidensadan sali, '
+          + 'Vecchio, ”vanha palatsi”. Sisällä on Viidensadan sali, '
           + 'joka rakennettiin 1494 suurta kansanneuvostoa varten ja '
           + 'jonka seiniä Leonardo da Vinci ja Michelangelo saivat '
           + 'saman aikaan maalattavakseen — kumpikaan ei saanut työtään '
@@ -104,7 +104,7 @@ export const NAHTAVYYSJUTUT = {
     Uffizi: {
       aika: '1560–1581',
       teksti: 'Uffizi ei ole rakennettu museoksi vaan virastotaloksi. '
-          + 'Nimi tarkoittaa italiaksi yksinkertaisesti "virastoja": '
+          + 'Nimi tarkoittaa italiaksi yksinkertaisesti ”virastoja”: '
           + 'Cosimo I halusi kaupungin hallinnon toimistot yhteen '
           + 'taloon, ja Giorgio Vasari alkoi rakentaa niitä vuonna '
           + '1560. Tuloksena on pitkä kapea U, jonka avoin sisäpiha '
@@ -298,7 +298,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Dominikaanimunkit saivat vuonna 1221 haltuunsa pienen kirkon '
           + 'kaupungin laidalla peltojen keskellä. Se kävi nopeasti ahtaaksi, '
           + 'ja uuden kirkon rakentaminen alkoi 1279. Paavi Eugenius IV vihki '
-          + 'sen 1420. Nimi Novella eli "uusi" jäi kirkkoon kiinni, ja se on '
+          + 'sen 1420. Nimi Novella eli ”uusi” jäi kirkkoon kiinni, ja se on '
           + 'kantanut sitä nyt seitsemänsataa vuotta.'
         + '\n\n'
         + 'Julkisivu tehtiin kahdessa erässä sadan vuoden välein. Alaosa on '
@@ -722,7 +722,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-berliini-karhu',
       teksti: 'Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta '
         + '1280 lähtien: ensimmäinen todistettu sinetti on turkkurien '
-        + 'kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". '
+        + 'kiltakirjeessä, ja siinä lukee ”olen Berliinin porvarien sinetti”. '
         + 'Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen '
         + 'kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan '
         + 'paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on '
@@ -851,7 +851,7 @@ export const NAHTAVYYSJUTUT = {
         + 'jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska '
         + 'valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. '
         + 'Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen '
-        + 'tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" '
+        + 'tikku-ukkoon — kunnes kansalaiskampanja ”Pelastakaa Ampelmännchen” '
         + 'nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa '
         + 'kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on '
         + 'tullut koko kaupungin maskotti, jota myydään matkamuistona.',
@@ -1059,7 +1059,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Tahririn aukio': {
       aika: '2011',
-      teksti: 'Tahririn aukio tarkoittaa arabiaksi "vapautuksen aukiota". '
+      teksti: 'Tahririn aukio tarkoittaa arabiaksi ”vapautuksen aukiota”. '
           + 'Aukio syntyi vuonna 1867 nimellä Ismailia-aukio, mutta se '
           + 'sai nykyisen nimensä vasta myöhemmin, kansannousun jälkeen.'
         + '\n\n'
@@ -1421,7 +1421,7 @@ export const NAHTAVYYSJUTUT = {
     'Pyhän Markuksen tori': {
       aika: '1902',
       teksti: 'Pyhän Markuksen tori on Venetsian sydän, jota '
-          + 'Napoleonin kerrotaan kutsuneen "Euroopan olohuoneeksi". '
+          + 'Napoleonin kerrotaan kutsuneen ”Euroopan olohuoneeksi”. '
           + 'Torin laidalla kohoaa Pyhän Markuksen basilika: pyhän '
           + 'Markuksen jäännökset tuotiin sinne salaa Alexandriasta, ja '
           + 'ensimmäinen kirkko niille valmistui jo vuonna 836.'
@@ -2390,7 +2390,7 @@ export const NAHTAVYYSJUTUT = {
         + 'lyötyine paalurivineen. Ja tässä on se kohta, joka isoisääsi '
         + 'kiinnostaisi. Taulu, joka Storkyrkanissa riippuu, on öljymaalaus '
         + 'puupaneelille, 163 senttiä leveä ja 110 korkea, ja siihen on '
-        + 'kirjoitettu kaksi vuosilukua: 1535 ja "renovoitu 1636". Vuonna '
+        + 'kirjoitettu kaksi vuosilukua: 1535 ja ”renovoitu 1636”. Vuonna '
         + '1999 taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun '
         + 'työksi: renovointi olikin kopiointi, jonka teki Jacob Heinrich '
         + 'Elbfas. Alkuperäinen on kadonnut, eikä kukaan tiedä minne. '
@@ -2713,7 +2713,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'skandaali-etelameren-kupla',
       teksti: 'Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, '
         + 'joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 '
-        + 'sanan \'kupla\' kalleimmalla mahdollisella tavalla. Konttorirakennuksen '
+        + 'sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen '
         + 'nimi seisoo yhä Threadneedle Streetin kulmassa.',
       lahde: 'Wikipedia',
     },
@@ -4326,7 +4326,7 @@ export const NAHTAVYYSJUTUT = {
           + 'yksi maailman suurimmista mosaiikeista, joka on koottu 25 '
           + '000 pienestä keraamisesta palasesta.'
         + '\n\n'
-        + 'Tornissa riippuu "Savoyarde", Ranskan suurin kello, joka '
+        + 'Tornissa riippuu ”Savoyarde”, Ranskan suurin kello, joka '
           + 'painaa lähes 19 tonnia. Kirkon huipulta, 200 metrin '
           + 'korkeudesta Seine-joen yläpuolelta, avautuu näkymä koko '
           + 'Pariisiin.',
@@ -4594,7 +4594,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
         + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas '
         + 'kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi '
-        + 'täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset '
+        + 'täpliä ja väri nimeltä ”kirahvin vatsa” myi kaiken. Aikalaiset '
         + 'kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des '
         + 'Plantes\'ssa 18 vuotta.',
       kuvat: [
@@ -4661,7 +4661,7 @@ export const NAHTAVYYSJUTUT = {
         + 'näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja '
         + 'mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi '
         + 'Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
-        + '"Impressionistien näyttely". Pilkkanimi jäi — ja taiteilijat ottivat '
+        + '”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat '
         + 'sen itse käyttöön.',
       kuvat: [
         {
@@ -5114,8 +5114,8 @@ export const NAHTAVYYSJUTUT = {
     Päärautatieasema: {
       aika: '1919',
       teksti: 'Nykyinen asemarakennus syntyi arkkitehti Eliel Saarisen '
-          + 'kilpailuehdotuksesta, jonka nimi oli "Siivekäs pyörä '
-          + 'maapallon päällä". Rakennustyöt alkoivat vuonna 1912, '
+          + 'kilpailuehdotuksesta, jonka nimi oli ”Siivekäs pyörä '
+          + 'maapallon päällä”. Rakennustyöt alkoivat vuonna 1912, '
           + 'mutta ensimmäinen maailmansota hidasti niitä — kesken '
           + 'rakennustöiden asema toimi jopa venäläisten '
           + 'sotilassairaalana vuosina 1915–1916. Uusi asema avattiin '
@@ -5150,7 +5150,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1812',
       teksti: 'Kaisaniemi on Helsingin vanhin julkinen puisto — se sai '
           + 'alkunsa jo vuonna 1812. Puisto on saanut nimensä '
-          + 'paikallisesta naisesta, Catharina eli "Kajsa" '
+          + 'paikallisesta naisesta, Catharina eli ”Kajsa” '
           + 'Wahllundista. Vuonna 1829 osa alueesta annettiin Helsingin '
           + 'yliopistolle puutarhaksi, ja vuonna 1889 sinne avattiin '
           + 'ensimmäinen kasvihuone — Kaisaniemen kasvitieteellinen '
@@ -5202,7 +5202,7 @@ export const NAHTAVYYSJUTUT = {
           + 'soitetaan joka päivä kello 12 ja 18 sävelmä, jonka Jean '
           + 'Sibelius sävelsi varta vasten kirkon vihkiäisiin. '
           + 'Alttaritauluna on Hannes Autereen vuonna 1956 veistämä '
-          + 'puureliefi, jonka aiheena on kutsu "Tulkaa minun tyköni" — '
+          + 'puureliefi, jonka aiheena on kutsu ”Tulkaa minun tyköni” — '
           + 'hahmojen malleina olivat kalliolaiset itse.',
       kuvat: [
         {
@@ -5288,7 +5288,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Kirkon kaksoistornit kohoavat 74 metrin korkeuteen ja '
           + 'näkyvät kauas ympäri kaupunkia. Sisällä alttaritaulun '
-          + '"Jumalallinen ilmestys" maalasi taidemaalari Eero '
+          + '”Jumalallinen ilmestys” maalasi taidemaalari Eero '
           + 'Järnefelt vuonna 1932.'
         + '\n\n'
         + 'Kirkon urkuja on kasvatettu vuosikymmenien varrella: '
@@ -5316,8 +5316,8 @@ export const NAHTAVYYSJUTUT = {
           + 'rakensi yhtä aikaa noin 7000 työntekijää. Alun perin '
           + 'linnoitus tunnettiin nimellä Sveaborg.'
         + '\n\n'
-        + 'Maineestaan huolimatta — sitä kutsuttiin "Pohjolan '
-          + 'Gibraltariksi" — linnoitus antautui venäläisille jo vuonna '
+        + 'Maineestaan huolimatta — sitä kutsuttiin ”Pohjolan '
+          + 'Gibraltariksi” — linnoitus antautui venäläisille jo vuonna '
           + '1808, vain parin kuukauden piirityksen jälkeen. Vuonna '
           + '1855 Krimin sodan aikana Englannin ja Ranskan laivastot '
           + 'pommittivat saaria voimakkaasti.'
@@ -5413,8 +5413,8 @@ export const NAHTAVYYSJUTUT = {
         + 'kuvaelmia Suomen historiasta, ja Jean Sibelius johti itse viimeisen '
         + 'osan, jonka nimi oli Suomi herää. Se kiihotti kuulijoita niin, että '
         + 'kappaletta soitettiin sen jälkeen vaihtuvilla nimillä — yksi niistä '
-        + 'oli pelkkä Impromptu, joka tarkoittaa suunnilleen "jotain, mitä nyt '
-        + 'sattui syntymään". Nimen Finlandia teos sai vasta vuonna 1900. Se '
+        + 'oli pelkkä Impromptu, joka tarkoittaa suunnilleen ”jotain, mitä nyt '
+        + 'sattui syntymään”. Nimen Finlandia teos sai vasta vuonna 1900. Se '
         + 'kestää noin kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, '
         + 'mitä yksikään puhe ei olisi saanut tehdä ääneen.',
       kuvat: [
@@ -5580,7 +5580,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Sýntagman aukio': {
       aika: '1843',
-      teksti: 'Sýntagman aukio tarkoittaa "perustuslain aukiota". Vuonna '
+      teksti: 'Sýntagman aukio tarkoittaa ”perustuslain aukiota”. Vuonna '
           + '1843 sotilaat ja kaupunkilaiset kokoontuivat vanhan '
           + 'kuninkaanlinnan eteen vaatimaan kuningas Otolta Kreikalle '
           + 'perustuslakia. Vaatimus onnistui, ja aukio nimettiin '
@@ -5632,7 +5632,7 @@ export const NAHTAVYYSJUTUT = {
           + 'jopa Bob Dylanin kaltaisia maailmantähtiä.'
         + '\n\n'
         + 'Huipulle pääsee kävellen tai köysirautatiellä. Nimen '
-          + 'Lykavittós arvellaan juontuvan kreikan sanasta "lykos", '
+          + 'Lykavittós arvellaan juontuvan kreikan sanasta ”lykos”, '
           + 'susi — ehkä kukkula oli aikoinaan yksinäisten susien '
           + 'piilopaikka kaupungin laidalla.',
       kuvat: [
@@ -5656,7 +5656,7 @@ export const NAHTAVYYSJUTUT = {
     },
     Kallimarmaro: {
       aika: '144 jaa. – 1896',
-      teksti: 'Kallimarmaro tarkoittaa "kauniisti marmoroitua" — se on '
+      teksti: 'Kallimarmaro tarkoittaa ”kauniisti marmoroitua” — se on '
           + 'maailman ainoa stadion, joka on kokonaan valkoista '
           + 'marmoria. Rikas roomalainen Herodes Atticus rakennutti sen '
           + 'vanhan juoksuradan paikalle, ja se valmistui noin vuonna '
@@ -5791,7 +5791,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Kun eräs nuorukainen kerran rikkoi hänen astiansa, ateenalaiset eivät '
         + 'suuttuneet vaan hankkivat uuden tilalle — omituista kunnioitusta '
         + 'miehelle, joka kulki päivällä lyhty kädessä ja väitti etsivänsä '
-        + '"ihmistä", ikään kuin kirkkainkaan valo ei siihen '
+        + '”ihmistä”, ikään kuin kirkkainkaan valo ei siihen '
         + 'riittäisi. Isoisäsi mainitsee torin tingittyine oliiveineen — hänkin '
         + 'olisi kävellyt Diogeneen astian ohi tietämättään.',
       kuvat: [
@@ -6296,11 +6296,11 @@ export const NAHTAVYYSJUTUT = {
           + 'retket. Swift toimi katedraalin kirkkoherrana vuosina '
           + '1713–1745.'
         + '\n\n'
-        + 'Kirkossa on myös kummallinen "sovinnon ovi": vuonna 1492 '
+        + 'Kirkossa on myös kummallinen ”sovinnon ovi”: vuonna 1492 '
           + 'kaksi riitaista aatelissukua teki rauhan leikkaamalla '
           + 'oveen reiän, jotta toinen voisi kätellä pelkäämättä '
-          + 'väijytystä. Tästä syntyi englanninkielinen sanonta "to '
-          + 'chance your arm".',
+          + 'väijytystä. Tästä syntyi englanninkielinen sanonta ”to '
+          + 'chance your arm”.',
       lainaus: {
         teksti: 'Swift on purjehtinut lepoon, minne raju suuttumus ei enää '
           + 'voi raadella hänen rintaansa. Matkalainen, seuraa hänen '
@@ -6358,7 +6358,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Silta sai lempinimensä tulliltaan. Ennen siltaa joen yli '
           + 'kuljettiin lautoilla, ja lauttoja pyörittänyt William '
           + 'Walsh sai luvan periä sillan käyttäjiltä puolen pennyn eli '
-          + '"ha\'pennyn" maksun peräti 100 vuoden ajan, kunnes se '
+          + '”ha\'pennyn” maksun peräti 100 vuoden ajan, kunnes se '
           + 'lopulta poistettiin vuonna 1919.'
         + '\n\n'
         + 'Sillan virallinen nimi oli aluksi Wellingtonin silta, '
@@ -6378,7 +6378,7 @@ export const NAHTAVYYSJUTUT = {
     },
     Spire: {
       aika: '2002–2003',
-      teksti: 'Dublinin Spire eli "Valon monumentti" kohoaa O\'Connell '
+      teksti: 'Dublinin Spire eli ”Valon monumentti” kohoaa O\'Connell '
           + 'Streetillä, kaupungin pääkadulla. Samalla paikalla seisoi '
           + 'ennen Nelsonin pylväs, jonka aktivistit räjäyttivät vuonna '
           + '1966. Uusi teräksinen huippu pystytettiin vuosina '
@@ -6391,8 +6391,8 @@ export const NAHTAVYYSJUTUT = {
           + 'valoreikää, jotka loistavat pimeän tultua.'
         + '\n\n'
         + 'Dublinilaiset ovat antaneet patsaalle monta hupaisaa '
-          + 'lempinimeä, kuten "piikkikorko slummissa" ja "nuppineula '
-          + 'roskiksessa". Teräspylväs maksoi 4,6 miljoonaa euroa ja '
+          + 'lempinimeä, kuten ”piikkikorko slummissa” ja ”nuppineula '
+          + 'roskiksessa”. Teräspylväs maksoi 4,6 miljoonaa euroa ja '
           + 'pystytettiin osana vuosituhannen vaihteen juhlallisuuksia.',
       kuvat: [
         {
@@ -6495,8 +6495,8 @@ export const NAHTAVYYSJUTUT = {
         + 'kolumbalaisessa luostarissa — Ionan saarella, Kellsissä tai osittain '
         + 'molemmissa, siitä kiistellään yhä. Siinä on 340 lehteä vasikannahkaa '
         + 'ja kymmenen kokosivun kuvaa. Vuonna 1007 Ulsterin annaaleihin '
-        + 'kirjattiin, että "Columkillen suuri evankeliumikirja, läntisen '
-        + 'maailman päämuistoesine" varastettiin yöllä kivikirkon läntisestä '
+        + 'kirjattiin, että ”Columkillen suuri evankeliumikirja, läntisen '
+        + 'maailman päämuistoesine” varastettiin yöllä kivikirkon läntisestä '
         + 'sakaristosta — ja syy sanotaan merkinnässä suoraan: sen taotun '
         + 'kotelon tähden. Kirja löytyi muutamaa kuukautta myöhemmin turpeen '
         + 'alta. Kotelo oli poissa, kulta ja jalokivet sen mukana, ja noin '
@@ -6591,7 +6591,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Moskeijassa on kuusi minarettia, mikä oli rakennusaikaan '
           + 'poikkeuksellista — vain Mekan pyhäkössä oli yhtä monta. '
           + 'Perimätiedon mukaan arkkitehti kuuli sulttaanin pyynnön '
-          + '"kultaiset minareetit" väärin "kuutena minareettina", ja '
+          + '”kultaiset minareetit” väärin ”kuutena minareettina”, ja '
           + 'kohusta selvittiin lopulta rakentamalla Mekkaan seitsemäs '
           + 'minareetti.'
         + '\n\n'
@@ -6729,7 +6729,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Üsküdar sijaitsee Istanbulin Aasian-puoleisella rannalla, '
           + 'vastapäätä vanhaa kaupunkia. Kreikkalaiset siirtolaiset '
           + 'Megarasta perustivat sen jo 600-luvulla eaa. ja antoivat '
-          + 'sille nimen Khrysopolis, "Kultainen kaupunki". Osmanit '
+          + 'sille nimen Khrysopolis, ”Kultainen kaupunki”. Osmanit '
           + 'valtasivat sen jo vuonna 1338 — yli sata vuotta ennen kuin '
           + 'Konstantinopoli itse kaatui vuonna 1453.'
         + '\n\n'
@@ -6828,7 +6828,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata '
           + 'kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan '
           + 'muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin '
-          + '"väliaikainen" asema.'
+          + '”väliaikainen” asema.'
         + '\n\n'
         + 'Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, '
           + 'ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli '
@@ -7195,8 +7195,8 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Tornin huipulla, 41 metrin korkeudessa, seisoo 11,2 metriä '
           + 'korkea kultainen patsas Neitsyt Mariasta lapsi sylissään. '
-          + 'Marseillelaiset kutsuvat kirkkoa lempinimellä "Bonne '
-          + 'Mère", Hyvä Äiti.',
+          + 'Marseillelaiset kutsuvat kirkkoa lempinimellä ”Bonne '
+          + 'Mère”, Hyvä Äiti.',
       kuvat: [
         {
           tiedosto: '1027 Basilique Notre-Dame-de-la-Garde in Marseille at sunset Photo by Giles Laurent.jpg',
@@ -7244,7 +7244,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Charlotte Square on yksi Edinburghin uuden kaupunginosan, '
           + 'New Townin, komeimmista aukioista. Arkkitehti Robert Adam '
           + 'suunnitteli sen vuonna 1791. Aukiosta tuli koko New Townin '
-          + 'rakennushankkeen viimeinen ja hitain osa — se "valmistui" '
+          + 'rakennushankkeen viimeinen ja hitain osa — se ”valmistui” '
           + 'vasta vuonna 1820, ja sen luoteiskulma jopa vasta vuonna '
           + '1990.'
         + '\n\n'
@@ -7382,8 +7382,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Kuuluisin on Kansallismonumentti, joka aloitettiin vuonna '
           + '1826 antiikin Parthenonin mallin mukaan mutta jäi '
           + 'rahapulan takia kesken vain 12 pylvään kohdalla — '
-          + 'edinburghilaiset ristivät sen pilkkanimellä "Edinburghin '
-          + 'häpeä". Vieressä kohoaa amiraali Nelsonin muistoksi '
+          + 'edinburghilaiset ristivät sen pilkkanimellä ”Edinburghin '
+          + 'häpeä”. Vieressä kohoaa amiraali Nelsonin muistoksi '
           + 'rakennettu torni.'
         + '\n\n'
         + 'Huhtikuun viimeisenä iltana kukkulalla juhlitaan '
@@ -7397,7 +7397,7 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Kansallismonumentti aloitettiin vuonna 1826 antiikin '
             + 'Parthenonin mallin mukaan mutta jäi rahapulan takia kesken '
             + '12 pylvään kohdalle — kaupunkilaiset ristivät sen '
-            + '"Edinburghin häpeäksi".',
+            + '”Edinburghin häpeäksi”.',
           lahde: 'Saffron Blaze, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -7451,7 +7451,7 @@ export const NAHTAVYYSJUTUT = {
         + 'ja isoisäsi olisi voinut nousta sen portaat, sillä torni oli seissyt '
         + 'jo lähes kolmekymmentä vuotta hänen tullessaan. Muistomerkkikilpailu '
         + 'järjestettiin Walter Scottin kuoltua 1832, ja sen voitti ehdotus, '
-        + 'jonka lähettäjä oli allekirjoittanut nimellä "John Morvo" — Melrosen '
+        + 'jonka lähettäjä oli allekirjoittanut nimellä ”John Morvo” — Melrosen '
         + 'luostarin keskiaikaisen rakentajan mukaan. Nimimerkin takana oli '
         + '45-vuotias George Meikle Kemp, puuseppä ja piirtäjä ilman arkkitehdin '
         + 'koulutusta, joka pelkäsi että hänen nimensä hylättäisiin heti kuoreen '
@@ -7490,7 +7490,7 @@ export const NAHTAVYYSJUTUT = {
         + 'päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta '
         + 'omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu '
         + 'vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa '
-        + 'kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", '
+        + 'kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, '
         + 'josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään '
         + 'louhitaan kilometrikaupalla käytäviä, ja linnan ympärille kasvava kaupunki '
         + 'kantaa yhä saman nimen johdannaista. Jyrkänne suojaa paikkaa kolmelta '
@@ -7522,8 +7522,8 @@ export const NAHTAVYYSJUTUT = {
     Rossio: {
       aika: '1755–1874',
       teksti: 'Rossio on yksi Lissabonin vanhimmista aukioista - täällä '
-          + 'on kokoonnuttu jo keskiajalta asti. Nimi "rossio" '
-          + 'tarkoittaa suunnilleen "yhteismaata", ja aikoinaan '
+          + 'on kokoonnuttu jo keskiajalta asti. Nimi ”rossio” '
+          + 'tarkoittaa suunnilleen ”yhteismaata”, ja aikoinaan '
           + 'aukiolla pidettiin jopa hevosmarkkinoita. Noin vuonna 1450 '
           + 'aukion laidalle nousi komea palatsi, josta tuli myöhemmin '
           + 'pelätyn inkvisition päämaja - ja aukiolla poltettiin '
@@ -7583,7 +7583,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Vuoden 1755 maanjäristys vaurioitti linnaa pahoin, ja se '
           + 'kunnostettiin nykyiseen kuntoonsa vasta 1930-luvulla. '
-          + 'Yhdestä torneista, "Odysseuksen tornista", löytyy '
+          + 'Yhdestä torneista, ”Odysseuksen tornista”, löytyy '
           + 'erikoinen kamera obscura -laite, jonka avulla voi katsella '
           + 'koko kaupunkia kuin taikapeilistä.',
       kuvat: [
@@ -7647,7 +7647,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Kauppatori eli Praça do Comércio on yksi Euroopan '
           + 'suurimmista aukioista - se on lähes neliön muotoinen ja '
           + 'mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä '
-          + 'myös nimellä Terreiro do Paço, "palatsin piha", sillä '
+          + 'myös nimellä Terreiro do Paço, ”palatsin piha”, sillä '
           + 'täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, '
           + 'jonka kirjastossa oli yli 200 000 kirjaa.'
         + '\n\n'
@@ -7695,8 +7695,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Rakennus oli alun perin Pyhän Engrácian kirkko, ja sen '
           + 'rakentaminen aloitettiin vuonna 1681. Työ kesti niin '
           + 'uskomattoman kauan - peräti 285 vuotta! - että '
-          + 'portugalilaiset alkoivat käyttää sanontaa "Pyhän Engrácian '
-          + 'työmaa" tarkoittamaan mitä tahansa hanketta, joka ei tunnu '
+          + 'portugalilaiset alkoivat käyttää sanontaa ”Pyhän Engrácian '
+          + 'työmaa” tarkoittamaan mitä tahansa hanketta, joka ei tunnu '
           + 'koskaan valmistuvan.'
         + '\n\n'
         + 'Rakennus valmistui lopulta vasta vuonna 1966, ja pian sen '
@@ -7881,7 +7881,7 @@ export const NAHTAVYYSJUTUT = {
           + 'jotka näyttävät valtavan eläimen kylkiluilta, ja keskellä '
           + 'rakennusta on siniseksi laatoitettu valokuilu, joka tuo '
           + 'päivänvaloa aina alimpiin kerroksiin asti. Talon '
-          + 'lempinimikin, \'Luiden talo\', kertoo sen erikoisesta, '
+          + 'lempinimikin, ’Luiden talo’, kertoo sen erikoisesta, '
           + 'melkein elävältä tuntuvasta muodosta. Nykyään talossa voi '
           + 'vierailla museona, ja se on ollut Unescon '
           + 'maailmanperintökohde vuodesta 2005.',
@@ -8000,7 +8000,7 @@ export const NAHTAVYYSJUTUT = {
           + 'myyjiä ja ostajia edelleen tänäkin päivänä.'
         + '\n\n'
         + 'Torin nimi Boqueria juontuu luultavasti katalaanin sanasta '
-          + '\'boc\', joka tarkoittaa vuohta – ennen vanhaan siellä '
+          + '’boc’, joka tarkoittaa vuohta – ennen vanhaan siellä '
           + 'nimittäin myytiin paljon vuohenlihaa. Nykyään hallin sadat '
           + 'myyntikojut pursuavat tuoreita hedelmiä, kaloja, lihaa ja '
           + 'herkullisia makeisia, ja se on yksi Barcelonan '
@@ -8395,7 +8395,7 @@ export const NAHTAVYYSJUTUT = {
         + 'isä oli aloittanut palatsin korjaustyöt 1828 ja jonka poika jatkoi '
         + 'niitä hänen jälkeensä — kolme sukupolvea samaa taloa, aina vuoteen '
         + '1907 asti. He tekivät työnsä sen ajan opin mukaan: rakennukseen sai '
-        + 'lisätä osia, jotta siitä tulisi "kokonainen", vaikkei lisäys vastaisi '
+        + 'lisätä osia, jotta siitä tulisi ”kokonainen”, vaikkei lisäys vastaisi '
         + 'mitään, mitä siinä oli joskus ollut. Kupolin esikuva oli osittain '
         + 'Persiassa, tuhannen kilometrin ja monen vuosisadan päässä tästä '
         + 'pihasta. Se ei ollut huijaus vaan makuasia: niin arabialaisen tyylin '
@@ -8619,7 +8619,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ne.'
         + '\n\n'
         + 'Portaiden alla on 1620-luvulta peräisin oleva suihkulähde, '
-          + 'jonka lempinimi on \'ruma vene\' — se on muotoiltu puoliksi '
+          + 'jonka lempinimi on ’ruma vene’ — se on muotoiltu puoliksi '
           + 'upoksissa olevaksi laivaksi. Ylhäällä portaat päättyvät '
           + 'Trinità dei Monti -kirkon eteen, jonka kaksoistornit '
           + 'näkyvät kauas yli kaupungin katujen.'
@@ -8648,7 +8648,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Piazza di Spagna, Roma - scalinata fc03.jpg',
           lyhyt: 'Espanjalaisten portaiden alla on 1620-luvun suihkulähde lempinimeltään ruma vene.',
           selite: 'Portaiden alla on 1620-luvun suihkulähde, jonka lempinimi '
-            + 'on "ruma vene", ja ylhäällä ne päättyvät Trinità dei Monti '
+            + 'on ”ruma vene”, ja ylhäällä ne päättyvät Trinità dei Monti '
             + '-kirkon eteen.',
           lahde: 'Fczarnowski, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -8711,7 +8711,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Temppelin kupoli on edelleen maailman suurin '
           + 'raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. '
-          + 'Katon keskellä on pyöreä aukko, oculus eli \'silmä\', jonka '
+          + 'Katon keskellä on pyöreä aukko, oculus eli ’silmä’, jonka '
           + 'läpi paistaa aurinko ja sataa sade suoraan lattialle. '
           + 'Roomalaiset käyttivät kupolin yläosassa yhä kevyempää '
           + 'kiveä kuin alaosassa, jotta se ei romahtaisi omaan '
@@ -8741,7 +8741,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Interior oculus of the Rome Pantheon.jpg',
           lyhyt: 'Pantheonin kupolin oculus päästää auringon ja sateen sisään, maailman suurin raudoittamaton kupoli.',
-          selite: 'Kupolin keskellä oleva pyöreä aukko, oculus eli "silmä", '
+          selite: 'Kupolin keskellä oleva pyöreä aukko, oculus eli ”silmä”, '
             + 'päästää sisään auringon ja sateen; kupoli on yhä maailman '
             + 'suurin raudoittamaton betonikupoli, halkaisijaltaan 43 '
             + 'metriä.',
@@ -8766,7 +8766,7 @@ export const NAHTAVYYSJUTUT = {
           + 'käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia '
           + 'juhlittiin peräti 100 päivän ajan erilaisin näytöksin. '
           + 'Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — '
-          + 'lempinimi \'Colosseum\' tulee sen vierestä kohonneesta '
+          + 'lempinimi ’Colosseum’ tulee sen vierestä kohonneesta '
           + 'jättiläismäisestä Colossus-patsaasta, ei areenasta '
           + 'itsestään.'
         + '\n\n'
@@ -9444,7 +9444,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Caravaggio pakeni Roomasta 1607 tapettuaan miehen '
           + 'kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa '
           + '1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi '
-          + 'oratorioon "Johannes Kastajan mestauksen" — ainoan '
+          + 'oratorioon ”Johannes Kastajan mestauksen” — ainoan '
           + 'teoksensa, jonka hän koskaan signeerasi: nimikirjoitus on '
           + 'piirretty Johanneksen kaulasta valuvaan vereen.'
           + '\n\n'
@@ -9452,13 +9452,13 @@ export const NAHTAVYYSJUTUT = {
           + 'haavoitti tappelussa vanhempaa ritaria ja joutui '
           + 'vankityrmään Pyhän Angelon linnoitukseen, mutta pakeni '
           + 'sieltä Sisiliaan. Joulukuussa 1608 ritarikunta erotti hänet '
-          + 'muodollisesti kokouksessaan sanoin "kuin mätänevä ja '
-          + 'löyhkäävä jäsen".',
+          + 'muodollisesti kokouksessaan sanoin ”kuin mätänevä ja '
+          + 'löyhkäävä jäsen”.',
       kuvat: [
         {
           tiedosto: 'Beheading of Saint John the Baptist by Caravaggio.jpg',
-          lyhyt: 'Caravaggion "Johannes Kastajan mestaus" oratoriossa — hänen ainoa signeeraamansa teoksensa.',
-          selite: 'Caravaggion 1608 maalaama "Johannes Kastajan mestaus" '
+          lyhyt: 'Caravaggion ”Johannes Kastajan mestaus” oratoriossa — hänen ainoa signeeraamansa teoksensa.',
+          selite: 'Caravaggion 1608 maalaama ”Johannes Kastajan mestaus” '
             + 'katedraalin oratoriossa. Taiteilija signeerasi teoksen '
             + 'ainoan kerran urallaan — nimikirjoitus on piirretty '
             + 'Johanneksen kaulasta valuvaan vereen.',
@@ -9962,8 +9962,8 @@ export const NAHTAVYYSJUTUT = {
           + 'elämää.'
         + '\n\n'
         + 'Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 '
-          + 'porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha '
-          + 'Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on '
+          + 'porrasaskelmaa. Huipulla pyörii Vana Toomas, eli ”Vanha '
+          + 'Toomas” - kaupunginvartijaa esittävä tuuliviiri, joka on '
           + 'ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. '
           + 'Alkuperäinen tuuliviiri on nykyään esillä raatihuoneen '
           + 'kellarissa, sillä sotavaurioiden vuoksi huipulle '
@@ -10069,7 +10069,7 @@ export const NAHTAVYYSJUTUT = {
           + 'arvokkaina. Torneja on sittemmin kunnostettu useaan '
           + 'otteeseen, muun muassa Moskovan olympialaisia varten '
           + 'vuonna 1980, ja nykyään ne on rekisteröity Tallinnan '
-          + 'kaupungin omaksi tavaramerkiksi nimellä "Virun portti".',
+          + 'kaupungin omaksi tavaramerkiksi nimellä ”Virun portti”.',
       kuvat: [
         {
           tiedosto: 'Viru värav ja tornid.jpg',
@@ -10613,7 +10613,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna '
           + '1865, kun joukko sivistyneitä romanialaisia perusti '
           + 'kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta '
-          + 'ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja '
+          + 'ihmisiltä tunnuslauseella ”Anna yksi leu Ateneumille!”, ja '
           + 'rakennus vihittiin käyttöön vuonna 1888, vaikka '
           + 'viimeistelytyöt jatkuivat vielä vuoteen 1897 asti.'
         + '\n\n'
@@ -10748,8 +10748,8 @@ export const NAHTAVYYSJUTUT = {
           + 'luostarikirkko Bukarestin vanhassa keskustassa. '
           + 'Kreikkalainen munkki Ioannikios Stratonikeas rakennutti '
           + 'sen vuonna 1724 ruhtinas Nicholas Mavrocordatoksen aikana. '
-          + 'Nimi tulee kreikan sanoista "Stavropolis", joka tarkoittaa '
-          + '"Ristin kaupunkia".'
+          + 'Nimi tulee kreikan sanoista ”Stavropolis”, joka tarkoittaa '
+          + '”Ristin kaupunkia”.'
         + '\n\n'
         + 'Kirkon arkkitehtuuri edustaa niin sanottua '
           + 'brâncoveanu-tyyliä, jossa on koristeellisia kiviveistoksia '
@@ -11184,7 +11184,7 @@ export const NAHTAVYYSJUTUT = {
           + 'nykyinen silta on pääosin vuosilta 1798–1799. Silta lepää '
           + 'neljän kivikaaren ja kolmen pilarin varassa, ja pilarien '
           + 'yläpuolella on pyöreitä keventäviä aukkoja — nämä '
-          + 'tunnusomaiset "silmät" näkyvät jopa Sarajevon vanhassa '
+          + 'tunnusomaiset ”silmät” näkyvät jopa Sarajevon vanhassa '
           + 'kaupunginvaakunassa.'
         + '\n\n'
         + 'Silta on kantanut montaa nimeä. Jugoslavian aikana sitä '
@@ -11976,7 +11976,7 @@ export const NAHTAVYYSJUTUT = {
     'Bolšoi-teatteri': {
       aika: '1825',
       teksti: 'Moskovan Bolšoi-teatteri, jonka nimi tarkoittaa venäjäksi '
-          + '"suurta teatteria", avasi ovensa vuonna 1825. Sen '
+          + '”suurta teatteria”, avasi ovensa vuonna 1825. Sen '
           + 'suunnitteli arkkitehti Joseph Bové, ja rakennuksen '
           + 'pylväikön yläpuolella nelivaljakkoa ajaa jumala Apollo '
           + 'pronssisessa vaunussa - patsaan teki kuvanveistäjä Pjotr '
@@ -12025,8 +12025,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kutsuttiin yksinkertaisesti Toriksi, sillä siellä käytiin '
           + 'kauppaa vuosisatojen ajan.'
         + '\n\n'
-        + 'Nimi "punainen" ei alun perin viitannut väriin: vanhalla '
-          + 'venäjän kielellä sana tarkoitti "kaunista". Vasta '
+        + 'Nimi ”punainen” ei alun perin viitannut väriin: vanhalla '
+          + 'venäjän kielellä sana tarkoitti ”kaunista”. Vasta '
           + 'myöhemmin samasta sanasta tuli myös punaisen värin '
           + 'nimitys. Tori on lähes 330 metriä pitkä ja 70 metriä leveä '
           + '- yhteensä melkein 73 000 neliömetriä.'
@@ -12792,7 +12792,7 @@ export const NAHTAVYYSJUTUT = {
           + 'betonista, mikä oli 1960-luvulla hyvin moderni ratkaus.'
         + '\n\n'
         + 'Itäpäädyssä on vuonna 1972 valmistunut suurikokoinen '
-          + 'lasimosaiikki \'Kristuksen paluu\', taiteilija Victor '
+          + 'lasimosaiikki ’Kristuksen paluu’, taiteilija Victor '
           + 'Sparren käsialaa. Kirkossa on tilaa noin 600 hengelle, ja '
           + 'siellä soi nykyään komea urku, jossa on 42 äänikertaa ja '
           + 'lähes 3000 pilliä.',
@@ -12841,7 +12841,7 @@ export const NAHTAVYYSJUTUT = {
           + 'merellä oikeasti tapahtuu myrskyjen aikana.'
         + '\n\n'
         + 'Akvaarion tähtiä ovat koulutetut partahylkeet, joita voi '
-          + 'katsella altaan reunalta tai kävellä niiden \'alla\' '
+          + 'katsella altaan reunalta tai kävellä niiden ’alla’ '
           + 'läpinäkyvässä tunnelissa altaan pohjan alla. Muissa '
           + 'näyttelyissä pääsee tutustumaan Norjan rannikon kaloihin '
           + 'ja eläimiin, ja viisiruutuisessa '
@@ -12978,7 +12978,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Sponzan palatsi rakennettiin vuosina 1516–1522 arkkitehti '
           + 'Paskoje Miličevićin suunnitelmien mukaan, ja se yhdistelee '
           + 'kahta tyyliä: osa rakennuksesta on goottilaista, osa '
-          + 'renessanssia. Nimi \'Sponza\' tulee latinan sanasta, joka '
+          + 'renessanssia. Nimi ’Sponza’ tulee latinan sanasta, joka '
           + 'tarkoittaa paikkaa, johon sadevesi kerääntyy - katoilta '
           + 'valuva vesi kerääntyi juuri tämän talon pihalle.'
         + '\n\n'
@@ -13086,7 +13086,7 @@ export const NAHTAVYYSJUTUT = {
           + 'dubrovnikilaiset luottivat siihen, ettei heidän oma '
           + 'kaupunkinsa koskaan hyökkäisi omaa linnakettaan vastaan. '
           + 'Linnaketta puolusti kymmenen suurta tykkiä, joista '
-          + 'suurinta kutsuttiin nimellä \'Gušter\', eli Lisko.'
+          + 'suurinta kutsuttiin nimellä ’Gušter’, eli Lisko.'
         + '\n\n'
         + 'Portin yläpuolella on yhä luettavissa latinankielinen '
           + 'lause, joka kertoi koko Dubrovnikin tasavallan '
@@ -13122,7 +13122,7 @@ export const NAHTAVYYSJUTUT = {
           lyhyt: 'Linnaketta puolusti aikanaan kymmenen tykkiä, suurin nimeltään Gušter eli Lisko.',
           selite: 'Fort Lovrijenac kalliolla kaupungin länsipuolella; '
             + 'linnaketta puolusti aikanaan kymmenen suurta tykkiä, joista '
-            + 'suurinta kutsuttiin nimellä \'Gušter\' eli Lisko.',
+            + 'suurinta kutsuttiin nimellä ’Gušter’ eli Lisko.',
           lahde: 'Zysko serhii, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13617,8 +13617,8 @@ export const NAHTAVYYSJUTUT = {
           + 'tähtitieteilijät tarkkailivat taivasta aikansa parhailla '
           + 'kaukoputkilla.'
         + '\n\n'
-        + 'Yliopiston tunnuslause \'Hinc itur ad astra\' tarkoittaa '
-          + '\'täältä tie vie tähtiin\', ja se sopii hyvin paikkaan, '
+        + 'Yliopiston tunnuslause ’Hinc itur ad astra’ tarkoittaa '
+          + '’täältä tie vie tähtiin’, ja se sopii hyvin paikkaan, '
           + 'josta on valmistunut esimerkiksi kirjailija Czesław '
           + 'Miłosz, joka voitti myöhemmin Nobelin '
           + 'kirjallisuuspalkinnon. Tsaarin hallitus sulki yliopiston '
@@ -13652,7 +13652,7 @@ export const NAHTAVYYSJUTUT = {
     Užupis: {
       aika: '1997',
       teksti: 'Užupis on pieni Vilnan kaupunginosa joen toisella puolella '
-          + '– nimikin tarkoittaa suunnilleen \'joen takana\'. '
+          + '– nimikin tarkoittaa suunnilleen ’joen takana’. '
           + 'Aprillipäivänä eli huhtikuun 1. päivänä 1997 alueen '
           + 'taiteilijat julistivat sen leikkimielisesti omaksi '
           + 'tasavallakseen, jolla on oma lippu, oma pieni armeija ja '
@@ -13660,7 +13660,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Tasavallalla on oma perustuslaki, jossa on 41 pykälää ja '
           + 'jotka on käännetty jo yli 40 kielelle. Yksi '
-          + 'suosikkipykälistä kuuluu: \'Koiralla on oikeus olla koira.\' '
+          + 'suosikkipykälistä kuuluu: ’Koiralla on oikeus olla koira.’ '
           + 'Toinen muistuttaa, että jokaisella on oikeus olla sekä '
           + 'onnellinen että onneton, aivan miten itse haluaa.'
         + '\n\n'
@@ -13688,7 +13688,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Vilnia, Zarečča. Вільня, Зарэчча (S. Fleury, 1896).jpg',
           lyhyt: 'Vuonna 1896 Užupis oli matalien puutalojen kaupunginosa; nyt siellä asuu paljon taiteilijoita.',
           selite: 'Vuonna 1896 Zarečča eli Užupis — nimi tarkoittaa suunnilleen '
-            + '\'joen takana\' — oli vielä matalien puutalojen '
+            + '’joen takana’ — oli vielä matalien puutalojen '
             + 'kaupunginosa; nykyään sen noin 7000 asukkaasta lähes tuhat '
             + 'on taiteilijoita.',
           lahde: 'Stanisław Filibert Fleury, Wikimedia Commons (Public domain)',
@@ -13983,7 +13983,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Joka vuosi 10. joulukuuta salissa jaetaan Nobelin '
           + 'rauhanpalkinto, ja marmoripintainen juhlasali on 31 metriä '
           + 'pitkä. Kansanäänestyksessä norjalaiset valitsivat '
-          + 'kaupungintalon kerran jopa "vuosisadan rakennukseksi".',
+          + 'kaupungintalon kerran jopa ”vuosisadan rakennukseksi”.',
       kuvat: [
         {
           tiedosto: 'Oslo Rådhus - Oslo City Hall - Oslo, Norway 2020-09-16.jpg',
@@ -14262,7 +14262,7 @@ export const NAHTAVYYSJUTUT = {
     },
     Nyhavn: {
       aika: '1670–1675',
-      teksti: 'Nyhavn eli "uusi satama" on 450 metriä pitkä kanava '
+      teksti: 'Nyhavn eli ”uusi satama” on 450 metriä pitkä kanava '
           + 'Kööpenhaminan keskustassa. Kuningas Christian V rakennutti '
           + 'sen vuosina 1670–1675, ja työn tekivät tanskalaiset '
           + 'sotilaat sekä Tanskan ja Ruotsin sodassa vangiksi jääneet '
@@ -17862,8 +17862,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Rukoustilaa on kesäpuolella noin 330:lle ja talvipuolella '
         + '500:lle. Brittiläinen matkakirjailija James Silk Buckingham '
         + 'kävi moskeijassa ja kuvasi vuonna 1827 ilmestyneessä '
-        + 'kirjassaan Travels in Mesopotamia sen "hienon kupolin ja '
-        + 'korkean minareetin".',
+        + 'kirjassaan Travels in Mesopotamia sen ”hienon kupolin ja '
+        + 'korkean minareetin”.',
       kuvat: [
         {
           tiedosto: 'Al-Wazeer Mosque.png',
@@ -21692,8 +21692,8 @@ export const NAHTAVYYSJUTUT = {
       aika: '1627',
       teksti: 'Pyhäkkö perustettiin vuonna 1627 Tokugawa Ieyasun muistoksi. '
         + 'Ieyasu oli shogunaatin perustaja, ja kuolemansa jälkeen hänet '
-        + 'nostettiin jumaluudeksi nimellä Tōshō Daigongen, "suuri '
-        + 'idästä loistava ilmestys". Pyhäkön rakennutti sotapäällikkö '
+        + 'nostettiin jumaluudeksi nimellä Tōshō Daigongen, ”suuri '
+        + 'idästä loistava ilmestys”. Pyhäkön rakennutti sotapäällikkö '
         + 'Tōdō Takatora, ja päärakennus uusittiin 1651 Ieyasun '
         + 'pojanpojan, kolmannen shogunin Tokugawa Iemitsun toimesta. '
         + 'Vuoteen 1868 asti pyhäkkö oli osa viereistä Kan\'ei-jin '
@@ -22206,8 +22206,8 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Gwanghwamun on Gyeongbokgungin eteläportti ja koko '
         + 'Joseon-kauden Soulin pääportti. Se valmistui vuoden 1395 '
         + 'yhdeksännessä kuussa ja sai nimensä 1426 kuningas Sejong '
-        + 'Suurelta; nimi luetaan yleensä "valo levittää maan hyveen '
-        + 'joka suuntaan". Kolmen kiviholvin yläpuolella lepää '
+        + 'Suurelta; nimi luetaan yleensä ”valo levittää maan hyveen '
+        + 'joka suuntaan”. Kolmen kiviholvin yläpuolella lepää '
         + 'puinen porttitorni, ja portin edessä istuu kivinen '
         + 'haetae, tarueläin, jonka uskottiin torjuvan tulipalot ja '
         + 'pahat henget. Portin katon alapinta on maalattu täyteen '
@@ -23631,7 +23631,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ympärillä olevista kukkuloista louhittiin onyksia, '
           + 'kalsedonia ja karneolia, ja niitä työstettiin täällä. '
           + 'Metallityöstä kaupunki oli kuuluisa: britit kuvasivat sen '
-          + '1900-luvun alussa sanalla "famous", vaikka huomauttivat '
+          + '1900-luvun alussa sanalla ”famous”, vaikka huomauttivat '
           + 'samalla, että ala oli hiipumassa. Torilla vaihtui myös '
           + 'kaikki muu, mitä ympäröivä maatalous tuotti, ja koska Sana '
           + 'on Adenista muualle arabimaailmaan johtavan reitin varrella, '
@@ -23652,7 +23652,7 @@ export const NAHTAVYYSJUTUT = {
           + 'persialainen maantieteilijä Ibn Rustah kirjoitti, ettei '
           + 'suurempaa, väkirikkaampaa tai vauraampaa kaupunkia löydy, '
           + 'ja lakioppinut al-Shafii tiivisti asian lauseeseen '
-          + '"La budda min Sanaa" — Sana on nähtävä.',
+          + '”La budda min Sanaa” — Sana on nähtävä.',
       kuvat: [
         {
           tiedosto: 'Sanaa, Yemen view.jpg',
@@ -24009,8 +24009,8 @@ export const NAHTAVYYSJUTUT = {
           + 'esi-islamilaisiin uhritoimituksiin — se sopisi yhteen '
           + 'yleisimmän ikäoletuksen kanssa. '
           + 'Kirjallisia mainintoja on vasta islamin ajalta: '
-          + '900-luvulla al-Hamdani kirjoitti, että "Adenissa on '
-          + 'altaita, jotka varastoivat veden kun sataa", ja 1300-luvulla '
+          + '900-luvulla al-Hamdani kirjoitti, että ”Adenissa on '
+          + 'altaita, jotka varastoivat veden kun sataa”, ja 1300-luvulla '
           + 'paikalla käynyt Ibn Battuta täsmensi, että vesi kerätään '
           + 'yksinomaan kaupunkilaisten juomavedeksi.'
           + '\n\n'
@@ -28108,7 +28108,7 @@ export const NAHTAVYYSJUTUT = {
           + 'metrin pudotuksesta. Hyppyjä kirjattiin 234, ja '
           + 'hyppääjistä 85,4 prosenttia selvisi. Tapa kiellettiin '
           + 'vuonna 1872 — vuotta ennen isoisän matkaa. Sanonta '
-          + '"hypätä Kiyomizun lavalta" tarkoittaa japanissa yhä '
+          + '”hypätä Kiyomizun lavalta” tarkoittaa japanissa yhä '
           + 'suuren päätöksen tekemistä.',
       kuvat: [
         {
@@ -28832,7 +28832,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Rakennus on suorakaiteen muotoinen, noin viisitoista metriä '
           + 'pitkä sali, jonka katolla on viisi kupolia. Se on '
           + '1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan '
-          + 'teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn '
+          + 'teoksen ”Samaria” mukaan Khoja Doniyor oli Qutham ibn '
           + 'Abbasin seuralaisia, ja perimätiedon mukaan Timur '
           + 'rakennutti haudan päälle moskeijan.'
           + '\n\n'
@@ -28885,7 +28885,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Tutkijoiden mukaan se on väännös persian sanasta Parsiab, '
           + 'sogdiksi Parshvab, joka tarkoittaa mustan joen takaista — '
           + 'joki on Siyob, joka rajaa aluetta pohjoisessa. Nimi '
-          + '"Afrasiabin linna" esiintyy kirjallisissa lähteissä vasta '
+          + '”Afrasiabin linna” esiintyy kirjallisissa lähteissä vasta '
           + '1600-luvun lopulla.'
           + '\n\n'
           + 'Ensimmäiset kaivaukset teki Nikolai Veselovski 1800-luvun '
@@ -31259,8 +31259,8 @@ export const NAHTAVYYSJUTUT = {
           + 'ministeriöitä, virastoja ja asuintorneja. Kävelyosuudella '
           + 'on suihkulähteiden kuja.'
           + '\n\n'
-          + 'Suunta ei ole sattumaa. Kurokawan periaate oli "historian '
-          + 'ja tulevaisuuden symbioosi": vanha kaupunki joen '
+          + 'Suunta ei ole sattumaa. Kurokawan periaate oli ”historian '
+          + 'ja tulevaisuuden symbioosi”: vanha kaupunki joen '
           + 'pohjoispuolella säilytettäisiin ennallaan, ja uusi '
           + 'rakennettaisiin eteläpuolelle omalle akselilleen. Siksi '
           + 'bulevardilta katsoo kahteen suuntaan kahta eri '
@@ -32115,7 +32115,7 @@ export const NAHTAVYYSJUTUT = {
           + 'kuningas Okkalapa hoviväkineen kerääntyivät hänen '
           + 'ympärilleen kysymään paikkaa, ja lopulta hän muisti sen. '
           + 'Nimelle on kolme selitystä: su-way tarkoittaa '
-          + '"kerääntyä ympärille", su-le orjantappurapensaikkoa, ja '
+          + '”kerääntyä ympärille”, su-le orjantappurapensaikkoa, ja '
           + 'kolmas johtaa sen paalin sanoista cula, pieni, ja ceti, '
           + 'pagodi.'
           + '\n\n'
@@ -32890,7 +32890,7 @@ export const NAHTAVYYSJUTUT = {
           + 'suurimman korjauksen.'
           + '\n\n'
           + 'Ympärillä on Ximending, joka sai nimensä Japanin ajan '
-          + 'kaupunginosasta Seimon-chō — "länsiportin kaupunginosa" — '
+          + 'kaupunginosasta Seimon-chō — ”länsiportin kaupunginosa” — '
           + 'sillä alue oli muurin länsiportin ulkopuolella. Portti ja '
           + 'muurit purettiin, mutta nimi jäi. Ximendingistä tuli '
           + '1930-luvulla teatterikatu, jonka yhdellä korttelilla oli '
@@ -34759,7 +34759,7 @@ export const NAHTAVYYSJUTUT = {
           + 'vanhin säilynyt tiibetinkielinen kirjoitus: kertomus '
           + 'kenraali Nganlam Takdra Lukhongin palveluksista '
           + 'kuninkaalle. Pilarin ikä ilmoitetaan Wikipediassa kahdella '
-          + 'tavalla, Lhasa-artikkelissa "noin 764" ja pilarin omassa '
+          + 'tavalla, Lhasa-artikkelissa ”noin 764” ja pilarin omassa '
           + 'artikkelissa vuoden 783 rajasopimuksen muistoksi '
           + 'pystytettynä.',
       kuvat: [
@@ -36564,8 +36564,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kaiteeseen asti 68 jalan korkeudella, ja siitä ylöspäin muoto '
           + 'vaihtuu kahdeksankulmaiseksi. 1800-luvulla kello soitti '
           + 'kuudestatoista sävelmästä neljää kerrallaan ja vaihtoi '
-          + 'ohjelmaansa neljästi päivässä; joukossa olivat "Home! Sweet '
-          + 'Home!" ja Händel-sinfonia. Nykyään se soittaa yhtä sävelmää '
+          + 'ohjelmaansa neljästi päivässä; joukossa olivat ”Home! Sweet '
+          + 'Home!” ja Händel-sinfonia. Nykyään se soittaa yhtä sävelmää '
           + 'vartin välein. Aikanaan torni oli kaupungin korkein '
           + 'rakennus, ja se kuuluu Unescon maailmanperintöluetteloon '
           + 'osana Mumbain viktoriaanista ja art deco -kokonaisuutta.',
@@ -36938,7 +36938,7 @@ export const NAHTAVYYSJUTUT = {
           + 'selityksen mukaan nimi tulee portugalilaiselta insinööriltä '
           + 'nimeltä Beira, toisen mukaan hollantilaiselta insinööriltä '
           + 'nimeltä De Beer — tätä tukee sulkuportista löytynyt '
-          + 'graniittilaatta, johon on hakattu "De Beer 1700". Kolmas '
+          + 'graniittilaatta, johon on hakattu ”De Beer 1700”. Kolmas '
           + 'selitys on portugalin sana beira, järven ranta tai reuna, '
           + 'neljäs samanniminen Portugalin maakunta.'
         + '\n\n'
@@ -38172,8 +38172,8 @@ export const NAHTAVYYSJUTUT = {
     'Karangahape Road': {
       aika: '1868',
       teksti: 'Karangahape on maorinkielinen nimi, jonka alkuperästä on useita '
-          + 'tulkintoja: se on käännetty niin "mutkittelevaksi ihmisten '
-          + 'harjanteeksi" kuin "Hapen kutsumiseksi". Hape oli Tainui-'
+          + 'tulkintoja: se on käännetty niin ”mutkittelevaksi ihmisten '
+          + 'harjanteeksi” kuin ”Hapen kutsumiseksi”. Hape oli Tainui-'
           + 'kanootin tohunga eli tietäjä, joka asui Manukau-sataman '
           + 'seudulla, ja harjannetta pitkin kulkenutta polkua sanottiin '
           + 'nimellä Te Ara o Karangahape, Karangahapen tie. Katu on siis '
@@ -38520,8 +38520,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupungissa ei ollut vakinaista palokuntaa ennen joulukuuta '
           + '1866, vaan paloista vastasivat vapaaehtoiset komppaniat. '
           + 'Testamentissaan Coit määräsi kolmanneksen omaisuudestaan, '
-          + '118 000 dollaria, käytettäväksi "sopivalla tavalla sen '
-          + 'kaupungin kaunistamiseen, jota olen aina rakastanut". '
+          + '118 000 dollaria, käytettäväksi ”sopivalla tavalla sen '
+          + 'kaupungin kaunistamiseen, jota olen aina rakastanut”. '
           + 'Kaupunginvaltuutetut ehdottivat rahoilla tietä Lake '
           + 'Merced\'ille, mutta pesänhoitajat vaativat itsenäistä '
           + 'muistomerkkiä, ja taidelautakunnan puheenjohtaja Herbert '
@@ -38649,8 +38649,8 @@ export const NAHTAVYYSJUTUT = {
           + 'pyramidia vastustettiin äänekkäästi ja sitä pidettiin '
           + 'silmäsärkynä, mutta arvostelijat vaihtoivat mieltään: '
           + 'San Francisco Chroniclen John King kuvasi taloa 2009 '
-          + '"parhaan lajin arkkitehtoniseksi ikoniksi — sellaiseksi, '
-          + 'joka sopii paikkaansa ja paranee iän myötä". '
+          + '”parhaan lajin arkkitehtoniseksi ikoniksi — sellaiseksi, '
+          + 'joka sopii paikkaansa ja paranee iän myötä”. '
           + 'Kahdennenkymmenennenseitsemännen kerroksen näköalatasanne '
           + 'suljettiin 2001, ja tilalle asennettiin huipun neljä '
           + 'kameraa, joiden kuvaa aulan näytöiltä voi kääntää itse.',
@@ -38737,7 +38737,7 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupungin ja koko osavaltion korkein rakennus.'
           + '\n\n'
           + 'Kellotornin kellotaulun alle hakattiin lause '
-          + '"Son, observe the time and fly from evil" eli poika, pane '
+          + '”Son, observe the time and fly from evil” eli poika, pane '
           + 'merkille aika ja pakene pahaa. Se on Sirakin kirjasta ja '
           + 'oli tarkoitettu ohjeeksi kadun ohikulkijoille. Katedraali '
           + 'kirkko oli vuoteen 1891, jolloin kasvava seurakunta sai '
@@ -38833,7 +38833,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Grand Court, jonne vaunut ajoivat sisään ja jota '
           + 'ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. '
           + 'Hisseinä oli punapuupaneloituja hydraulisia '
-          + '"nousuhuoneita", ja joka huoneessa oli oma kylpyhuone ja '
+          + '”nousuhuoneita”, ja joka huoneessa oli oma kylpyhuone ja '
           + 'sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun '
           + 'isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä '
           + 'ollut — se avattiin kaksi vuotta myöhemmin.'
@@ -38855,7 +38855,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Enrico Caruso, joka oli edellisiltana laulanut Don Josén '
           + 'osan Carmenissa ja joka vannoi järistyksen jälkeen, ettei '
           + 'palaa kaupunkiin koskaan. Väliaikaiseksi majataloksi '
-          + 'pystytettiin 23 huoneen "Baby" Palace, joka avattiin jo '
+          + 'pystytettiin 23 huoneen ”Baby” Palace, joka avattiin jo '
           + 'marraskuussa 1906. Nykyinen hotelli avattiin samalle '
           + 'tontille 19. joulukuuta 1909, ja vanhan Grand Courtin '
           + 'paikalla on siitä lähtien ollut ruokasali Garden Court. '
@@ -40194,7 +40194,7 @@ export const NAHTAVYYSJUTUT = {
           + 'alussa osa niistä kuului varakkaalle portugalilaiselle '
           + 'kauppiaalle Elias António Lopesille. Hän rakensi noin 1803 '
           + 'kukkulan päälle kartanon, jonka ikkunoista näkyi Guanabaran '
-          + 'lahti — siitä nimi Boa Vista, "hyvä näköala". Kun '
+          + 'lahti — siitä nimi Boa Vista, ”hyvä näköala”. Kun '
           + 'prinssiregentti João VI saapui hoveineen 1808, Lopes '
           + 'lahjoitti tilan hänelle.'
           + '\n\n'
@@ -40734,7 +40734,7 @@ export const NAHTAVYYSJUTUT = {
           + 'sunnuntaina 21. lokakuuta 1906. Sen suunnitteli George '
           + 'Troup flaamilaisen renessanssin tyyliin, ja rakennus on '
           + 'hänen tunnetuin työnsä — se toi hänelle lempinimen '
-          + '"Gingerbread George".'
+          + '”Gingerbread George”.'
           + '\n\n'
           + 'Paikalliset arvelevat asemaa maan valokuvatuimmaksi '
           + 'rakennukseksi ja eteläisen pallonpuoliskon toiseksi '
@@ -42011,7 +42011,7 @@ export const NAHTAVYYSJUTUT = {
           + 'se oli purku-uhan alla: tilalle oli suunniteltu puisto. '
           + 'Vuoden 1989 vallanvaihdon jälkeen joukko '
           + 'arkkitehtiopiskelijoita aloitti kampanjan nimellä '
-          + '"Salvemos la Manzana frente al palacio" — pelastetaan '
+          + '”Salvemos la Manzana frente al palacio” — pelastetaan '
           + 'palatsin edessä oleva kortteli.'
         + '\n\n'
         + 'Amerikan löytämisen 500-vuotispäivää varten perustettiin '
@@ -42053,7 +42053,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ihmistä — kuitenkin aivan keskustassa, hallituspalatsin, '
           + 'parlamentin, katedraalin ja Costaneran naapurissa, '
           + 'Paraguayjoen rannassa. Muusikko Maneco Galeano teki '
-          + 'kaupunginosasta guarania-laulun "Soy de la Chacarita".'
+          + 'kaupunginosasta guarania-laulun ”Soy de la Chacarita”.'
         + '\n\n'
         + 'Korttelien keskellä on jalkapallokenttä. Stadion on '
           + 'Resistencia-seuran koti, siihen mahtuu 3 500 katsojaa, '
@@ -42092,7 +42092,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Vuonna 1886 katalonialainen liikemies Baudillo Alió sai '
           + 'tontin ja luvan purkaa vanhan talon. Uusi '
-          + '"kansallisteatteri" valmistui 1889 ja vihittiin '
+          + '”kansallisteatteri” valmistui 1889 ja vihittiin '
           + '21. heinäkuuta orkesterilla ja espanjalaisella '
           + 'Estudiantina Fígaro -yhtyeellä, joka soitti Verdiä, '
           + 'Schubertia ja Flotowia. Vuoden 1894 korjauksessa saliin '
@@ -42619,8 +42619,8 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Montrealin taidemuseo on Kanadan vanhin taidemuseo ja '
           + 'näyttelypinta-alaltaan maan suurin. Se perustettiin '
           + 'huhtikuussa 1860, kun anglikaanipiispa Francis Fulford '
-          + 'käynnisti Montrealin taideyhdistyksen "edistämään '
-          + 'kaupunkilaisten taiteentuntemusta". Yhdistyksellä ei '
+          + 'käynnisti Montrealin taideyhdistyksen ”edistämään '
+          + 'kaupunkilaisten taiteentuntemusta”. Yhdistyksellä ei '
           + 'ollut taloa eikä siis paikkaa säilyttää hankintoja, '
           + 'joten se ei voinut ostaa teoksia eikä ottaa vastaan '
           + 'kokoelmia. Parikymmentä vuotta se piti näyttelynsä '
@@ -42736,7 +42736,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Point Cruz on niemi keskellä Honiaraa, Tandai Highwayn '
           + 'varrella noin neljäsosamailin päässä parlamenttitalosta '
           + 'pohjoiseen. Ghari-kielellä paikan nimi on naho-ni-ara, '
-          + '"kohti itä- ja kaakkoispasaatituulia" — ja siitä on '
+          + '”kohti itä- ja kaakkoispasaatituulia” — ja siitä on '
           + 'saanut nimensä myös koko kaupunki.'
         + '\n\n'
         + 'Niemen satama on Salomonsaarten pääsaapumissatama. '
@@ -42780,8 +42780,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Suunnittelijaksi valittiin honolululainen arkkitehtitoimisto '
           + 'Wimberly Allison Tong & Goo. Projektiarkkitehti Michael '
           + 'J. Batchelorin mukaan hallitus pyysi rakennusta, joka '
-          + 'olisi "olennaisesti salomonsaarelainen tyyliltään, ei '
-          + 'päälle asetettua arkkitehtuuria". Kaksikerroksinen, noin '
+          + 'olisi ”olennaisesti salomonsaarelainen tyyliltään, ei '
+          + 'päälle asetettua arkkitehtuuria”. Kaksikerroksinen, noin '
           + 'kahdentuhannen neliömetrin talo on teräsrunkoinen ja '
           + 'raudoitettua betonia, ja siinä on paljon lasia.'
         + '\n\n'
@@ -42824,7 +42824,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Pysyvän katedraalin peruskivi laskettiin 1976 samalle '
           + 'kukkulalle, ja rakennus vihittiin ja avattiin 1978. '
           + 'Samana vuonna paavi Johannes Paavali II korotti Honiaran '
-          + 'arkkihiippakunnaksi bullalla "Laetentur insulae multae". '
+          + 'arkkihiippakunnaksi bullalla ”Laetentur insulae multae”. '
           + 'Katedraali on arkkihiippakunnan istuin.',
       kuvat: [
         {
@@ -42858,10 +42858,10 @@ export const NAHTAVYYSJUTUT = {
           + 'viidestä taistelusta ja luettelevat menetettyjen alusten '
           + 'nimet.'
         + '\n\n'
-        + 'Muistomerkin teksti kuuluu: "Yhdysvallat on pystyttänyt '
+        + 'Muistomerkin teksti kuuluu: ”Yhdysvallat on pystyttänyt '
           + 'tämän muistomerkin nöyränä kunnianosoituksena pojilleen '
           + 'ja liittolaisilleen, jotka maksoivat viimeisen hinnan '
-          + 'Salomonsaarten vapauttamisesta 1942–1943." Muistotilaisuus '
+          + 'Salomonsaarten vapauttamisesta 1942–1943.” Muistotilaisuus '
           + 'pidetään joka vuosi 7. elokuuta. Mount Austenilla on '
           + 'japanilaisten pystyttämä muistomerkki heidän omille '
           + 'kaatuneilleen.',
@@ -44756,7 +44756,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Museon tunnetuin näyttely kertoo Titanicista. Halifax oli '
           + 'huhtikuussa 1912 lähin suuri satama onnettomuuspaikalle, '
           + 'ja pelastustyöt johdettiin täältä. Julkisivun lippurivissä '
-          + 'lukee "Welcome aboard L44 38N G63 34W" — se on museon oma '
+          + 'lukee ”Welcome aboard L44 38N G63 34W” — se on museon oma '
           + 'sijainti asteina ja minuutteina.',
       kuvat: [
         {
@@ -45037,7 +45037,7 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + 'Yhdessä kolmesta teatteritilasta māorien tarinat '
           + 'esitetään Pepperin haamu -illuusiolla, ylimmässä '
-          + 'kerroksessa on "Wellington Time Machine", ja vuoden 2015 '
+          + 'kerroksessa on ”Wellington Time Machine”, ja vuoden 2015 '
           + 'lopussa avattiin ullakkonäyttely. The Times valitsi '
           + 'museon 2013 maailman viidenkymmenen parhaan joukkoon. '
           + 'Talon vanha kokoushuone on säilynyt sellaisenaan: siinä '
@@ -45096,8 +45096,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kuuntelemaan musiikkia ja ostamaan kukkakimppu; se pysyi '
           + 'muodissa vuosikymmeniä. Ensimmäinen kylpylaitos avattiin '
           + '1864 avoimena merivesialtaana. Vuoden 1897 esittelyn '
-          + 'mukaan altaat oli "turvallisesti suojattu merihirviöiden '
-          + 'vierailuilta", ja niiden ympärillä oli 34 pukukoppia. '
+          + 'mukaan altaat oli ”turvallisesti suojattu merihirviöiden '
+          + 'vierailuilta”, ja niiden ympärillä oli 34 pukukoppia. '
           + 'Kaupunki rakensi 1901 uudet Te Aron kylpylät, ja niiden '
           + 'tilalle tuli 1963 Freybergin uimahalli. Raitiovaunut '
           + 'alkoivat kulkea Oriental Paradea pitkin syyskuussa 1904 '
@@ -45201,7 +45201,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ruokki Waitangi-puro. William Mein Smith mittasi paikan '
           + '1840 ja suunnitteli, että allas syvennettäisiin ja '
           + 'siitä kaivettaisiin kanava merelle; vuoden 1841 kartassa '
-          + 'alue on nimeltään "Proposed Basin and Canal". Kanavaa ei '
+          + 'alue on nimeltään ”Proposed Basin and Canal”. Kanavaa ei '
           + 'tullut. Vuoden 1855 Wairarapan maanjäristys nosti aluetta '
           + 'lähes 1,8 metriä ja kuivatti suon osittain.'
           + '\n\n'
@@ -45411,7 +45411,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'New Regent Street': {
       aika: '1932',
-      teksti: 'Kadun paikalla oli ennen "sirkuslaidun", jolla '
+      teksti: 'Kadun paikalla oli ennen ”sirkuslaidun”, jolla '
           + 'kiertävät sirkukset pystyttivät telttansa. Vuodesta 1888 '
           + 'siinä seisoi Colosseum-niminen halli, joka oli vuoron '
           + 'perään luistinrata, saapastehdas, taksiasema ja 1908 '
@@ -45521,7 +45521,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Jellicoe. Hän myös paljasti valmiin holvin aselepopäivänä '
           + '11. marraskuuta 1924. Suunnittelukilpailun voitti '
           + 'toimisto Prouse and Gummer, ja piirustukset teki William '
-          + 'Gummer. Holvin keskellä lukee "Quid non pro patria".'
+          + 'Gummer. Holvin keskellä lukee ”Quid non pro patria”.'
           + '\n\n'
           + 'Paikka ei ole sattuma. Kuningas Edvardin kasarmilta '
           + 'Cashel Streetin länsipäästä sotilaat marssivat juuri '
@@ -46411,14 +46411,14 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + 'Uuden kirkon rakensi isä James McGuckin, ja hanketta '
           + 'pidettiin niin uhkarohkeana, että sitä kutsuttiin '
-          + 'nimellä "McGuckinin hulluus". Seurakunta oli jo velkaa, '
+          + 'nimellä ”McGuckinin hulluus”. Seurakunta oli jo velkaa, '
           + 'ja rahat saatiin lopulta siten, että McGuckinin oma '
           + 'sääntökunta kiinnitti päämajansa Ranskassa. Peruskivi '
           + 'laskettiin 16. heinäkuuta 1899, arkkitehteina Thomas '
           + 'Ennor Julian ja H. J. Williams, ja kirkko valmistui '
           + '491 päivässä. Se avattiin 8. joulukuuta 1900, ja sitä '
-          + 'kehuttiin "hienoimmaksi arkkitehtuuriksi Torontosta '
-          + 'länteen ja San Franciscosta pohjoiseen". Katedraaliksi '
+          + 'kehuttiin ”hienoimmaksi arkkitehtuuriksi Torontosta '
+          + 'länteen ja San Franciscosta pohjoiseen”. Katedraaliksi '
           + 'kirkko korotettiin 1916. Vihkiä sitä ei kuitenkaan '
           + 'voitu, koska katolinen kirkko vihitään vasta velattomana '
           + '— vihkiminen tapahtui 3. lokakuuta 1953, '
@@ -46472,7 +46472,7 @@ export const NAHTAVYYSJUTUT = {
           + 'pienen kohun.'
           + '\n\n'
           + 'Vuonna 1918 vancouverilaiset kerääntyivät katsomaan, kun '
-          + 'Harry Gardiner, "ihmiskärpänen", kiipesi talon ulkoseinää '
+          + 'Harry Gardiner, ”ihmiskärpänen”, kiipesi talon ulkoseinää '
           + 'ylös. Nimensä talo sai 1937, kun The Vancouver Sun osti '
           + 'sen; lehti muutti pois jo kauan sitten, mutta nimi jäi. '
           + 'Ikkunoiden alla on paikallista andesiittiä Haddington '
@@ -46504,7 +46504,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Playersin omistuksessa; Ivan Ackery johti taloa vuodesta '
           + '1935 eläkkeelle jäämiseensä 1969. Vuonna 1973 Famous '
           + 'Players päätti purkaa sisätilat ja tehdä talosta '
-          + 'monisalin. Siitä syntyi kansanliike "Save the Orpheum", '
+          + 'monisalin. Siitä syntyi kansanliike ”Save the Orpheum”, '
           + 'ja jopa koomikko Jack Benny lensi paikalle auttamaan '
           + 'varainkeruussa. Kaupunki osti teatterin 19. maaliskuuta '
           + '1974, ja hinta oli 7,1 miljoonaa dollaria; kaupungin '
@@ -46693,7 +46693,7 @@ export const NAHTAVYYSJUTUT = {
           + 'teräsrungon päällä, eivätkä sen kallistuvat seinät '
           + 'kosketa vanhoja suojeltuja seiniä lainkaan. Mielipiteet '
           + 'jakautuivat heti: Globe and Mailin arkkitehtuurikriitikko '
-          + 'kirjoitti, että uusi museo "raivoaa maailmalle", kun '
+          + 'kirjoitti, että uusi museo ”raivoaa maailmalle”, kun '
           + 'taas toiset pitivät sitä monumenttina — ja jotkin '
           + 'listat ovat panneet sen maailman kymmenen rumimman '
           + 'rakennuksen joukkoon.',
@@ -46729,9 +46729,9 @@ export const NAHTAVYYSJUTUT = {
           + 'puiselle portaikolle; tuli tuhosi koko itäsiiven ja '
           + 'kirjaston. Ottawassa yliopiston kansleri Edward Blake, '
           + 'joka oli myös kansanedustaja, keskeytti puheensa ja '
-          + 'kertoi alahuoneelle, että "suuri laitos, maamme '
+          + 'kertoi alahuoneelle, että ”suuri laitos, maamme '
           + 'oppilaitosten kruunu ja kunnia, on tällä hetkellä '
-          + 'liekeissä". Kirjoja ehdittiin pelastaa noin sata. Palon '
+          + 'liekeissä”. Kirjoja ehdittiin pelastaa noin sata. Palon '
           + 'muistoksi collegen opiskelijat järjestävät yhä vuosittain '
           + 'Fireball-juhlan.'
           + '\n\n'
@@ -46769,7 +46769,7 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + '1900-luvun alussa alueelle muutti itäeurooppalaisia '
           + 'juutalaisia ja italialaisia siirtolaisia. He tulivat '
-          + '"Wardista", ahtaasta tulijoiden korttelistosta Yonge '
+          + '”Wardista”, ahtaasta tulijoiden korttelistosta Yonge '
           + 'Streetin ja University Avenuen välissä, ja hakivat '
           + 'väljyyttä, parempia asuntoja ja mahdollisuutta pitää '
           + 'kauppaa oman talon edessä. 1920-luvulla aluetta '
@@ -46843,7 +46843,7 @@ export const NAHTAVYYSJUTUT = {
           + 'julkisivussa on lasia ja mittatilaustyönä tehtyjä '
           + 'titaanilevyjä. Se oli Gehryn ensimmäinen suunnitelma '
           + 'ilman voimakkaasti vääntyvää teräsrunkoa, ja Globe and '
-          + 'Mail kutsui tulosta "pidättyväiseksi mestariteokseksi".',
+          + 'Mail kutsui tulosta ”pidättyväiseksi mestariteokseksi”.',
       kuvat: [
         {
           tiedosto: 'AGO Toronto 1.jpg',
@@ -46861,9 +46861,9 @@ export const NAHTAVYYSJUTUT = {
           + 'suurta torontolaista arkkitehtitoimistoa esitteli '
           + 'varovaisen ehdotuksen, ja se sai murskaavan '
           + 'vastaanoton: Frank Lloyd Wright kutsui sitä '
-          + '"kliseeksi, joka on jo vanhentunut", ja Walter Gropius '
-          + '"hyvin huonoksi pseudomoderniksi suunnitelmaksi, joka on '
-          + 'Toronton arvolle sopimaton". Äänestäjät hylkäsivät '
+          + '”kliseeksi, joka on jo vanhentunut”, ja Walter Gropius '
+          + '”hyvin huonoksi pseudomoderniksi suunnitelmaksi, joka on '
+          + 'Toronton arvolle sopimaton”. Äänestäjät hylkäsivät '
           + 'kahdeksantoista miljoonan dollarin hankkeen. Pormestari '
           + 'Nathan Phillips ajoi tilalle kansainvälisen '
           + 'suunnittelukilpailun — Ontarion ensimmäisen, johon '
@@ -46881,9 +46881,9 @@ export const NAHTAVYYSJUTUT = {
           + 'tanskalaisen ja viiden yhdysvaltalaisen suunnitelman '
           + 'rinnalla. Kuudentenakolmatta syyskuuta 1958 tuomaristo '
           + 'valitsi hänet äänin kolme kaksi vastaan. Alvar Aalto '
-          + 'sähkötti oppilaalleen: "Harvoin kollega iloitsee näin '
-          + 'paljon toisen voitosta." Frank Lloyd Wright kutsui '
-          + 'suunnitelmaa "haudan päätykiveksi".'
+          + 'sähkötti oppilaalleen: ”Harvoin kollega iloitsee näin '
+          + 'paljon toisen voitosta.” Frank Lloyd Wright kutsui '
+          + 'suunnitelmaa ”haudan päätykiveksi”.'
           + '\n\n'
           + 'Revell muutti perheineen Torontoon ja työskenteli '
           + 'paikallisen toimiston John B. Parkin Associatesin '
@@ -47017,11 +47017,11 @@ export const NAHTAVYYSJUTUT = {
           + 'pääministeri William Lyon Mackenzie King ja Britannian '
           + 'pääministeri Stanley Baldwin. Prinssi oli ensimmäinen '
           + 'ihminen, joka astui junasta tälle asemalle, ja '
-          + 'päähallissa hän kuittasi näkemänsä lauseella: "te '
+          + 'päähallissa hän kuittasi näkemänsä lauseella: ”te '
           + 'rakennatte rautatieasemanne niin kuin me rakennamme '
-          + 'katedraalimme". Hänelle annettiin aseman ensimmäinen '
-          + 'lippu, joka kelpasi "ikuisesti" ja "kaikkien asemien '
-          + 'välillä". Neljä päivää myöhemmin raiteet siirrettiin '
+          + 'katedraalimme”. Hänelle annettiin aseman ensimmäinen '
+          + 'lippu, joka kelpasi ”ikuisesti” ja ”kaikkien asemien '
+          + 'välillä”. Neljä päivää myöhemmin raiteet siirrettiin '
           + 'vanhalta asemalta tänne, ja koko hanke valmistui vasta '
           + '1930, kun laiturikatos oli tehty.'
           + '\n\n'
@@ -48436,7 +48436,7 @@ export const NAHTAVYYSJUTUT = {
           + 'maailmanperintöalueeseen; 19. maaliskuuta 2016 siitä tuli '
           + 'Chilen ensimmäinen anglikaaninen katedraali. Vuodesta '
           + '1995 siellä on soitettu joka sunnuntai-iltapäivä '
-          + 'urkukonsertti — "Música en las alturas" on maan ainoa '
+          + 'urkukonsertti — ”Música en las alturas” on maan ainoa '
           + 'säännöllinen urkukonserttisarja, ja se aloitettiin '
           + 'kertomaan kirkon korjaustarpeesta.',
       kuvat: [
@@ -48481,7 +48481,7 @@ export const NAHTAVYYSJUTUT = {
           + 'pohjoispäässä katolisen yliopiston päärakennus. Yliopisto '
           + 'on yksi kuudestatoista Chilen valtionyliopistojen '
           + 'konsortion jäsenestä ja yksi 25 rehtorineuvoston '
-          + '"perinteisestä" yliopistosta.',
+          + '”perinteisestä” yliopistosta.',
       lahde: 'Wikipedia',
     },
     'Katolinen yliopisto': {
@@ -48508,7 +48508,7 @@ export const NAHTAVYYSJUTUT = {
           + 'rehtori.'
           + '\n\n'
           + 'Yliopiston tunnetuin sivutuote on arkkitehtuurin '
-          + 'korkeakoulu, "Valparaíson koulu". Se rakensi muutama '
+          + 'korkeakoulu, ”Valparaíson koulu”. Se rakensi muutama '
           + 'kilometri kaupungista pohjoiseen kokeellisen Avoimen '
           + 'kaupungin, jossa opettajat opettavat ja asuvat taloissa, '
           + 'jotka he ja opiskelijat ovat itse suunnitelleet ja '
@@ -49125,7 +49125,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Nimi on vanhempi kuin talo ja vanhempi kuin kaupunki. '
           + 'Tequendama tulee muiscojen chibcha-kielestä ja tarkoittaa '
-          + 'suunnilleen "se, joka syöksee alaspäin" — sama sana on '
+          + 'suunnilleen ”se, joka syöksee alaspäin” — sama sana on '
           + 'annettu Bogotá-joen suurelle putoukselle ylätasangon '
           + 'reunalla. Hotellin aulassa on muiscojen jumalia esittävä '
           + 'seinämaalaus.',
@@ -49258,9 +49258,9 @@ export const NAHTAVYYSJUTUT = {
           + 'ovat toimineet korkein oikeus, perustuslakituomioistuin, '
           + 'valtionneuvosto ja ylin tuomarineuvosto. Sisäänkäynnillä '
           + 'on ainoa vanhasta talosta säilynyt osa: laatta, johon on '
-          + 'kaiverrettu kenraali Santanderin lause "kolumbialaiset, '
+          + 'kaiverrettu kenraali Santanderin lause ”kolumbialaiset, '
           + 'aseet ovat antaneet teille itsenäisyyden, lait antavat '
-          + 'teille vapauden". Talo on nimetty Alfonso Reyes '
+          + 'teille vapauden”. Talo on nimetty Alfonso Reyes '
           + 'Echandían mukaan — hän oli korkeimman oikeuden '
           + 'presidentti ja kuoli piirityksessä.',
       kuvat: [
@@ -49439,8 +49439,8 @@ export const NAHTAVYYSJUTUT = {
           + 'vuodeksi, ja tilalle rakennettiin uusi museo OMA:n ja '
           + 'Hassellin piirustusten mukaan. Se avattiin lauantaina '
           + '21. marraskuuta 2020 nimellä WA Museum Boola Bardip. '
-          + 'Boola Bardip on noongaria ja tarkoittaa "monia '
-          + 'tarinoita". Museolla on kuusi toimipistettä: Perthin '
+          + 'Boola Bardip on noongaria ja tarkoittaa ”monia '
+          + 'tarinoita”. Museolla on kuusi toimipistettä: Perthin '
           + 'lisäksi merenkulku- ja hylkymuseot Fremantlessa sekä omat '
           + 'museot Albanyssa, Geraldtonissa ja '
           + 'Kalgoorlie-Boulderissa.',
@@ -49911,7 +49911,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Tarjoukset tulivat silti seitsemäntuhannen punnan '
           + 'tienoille, ja piirustuksia karsittiin vielä ennen kuin '
           + 'urakka annettiin. Gawler kutsuttiin 1841 takaisin '
-          + 'Englantiin osittain juuri "tuhlailevien" '
+          + 'Englantiin osittain juuri ”tuhlailevien” '
           + 'rakennushankkeidensa vuoksi, ja hänen seuraajansa '
           + 'käyttivät taloon niin vähän rahaa kuin suinkin.'
           + '\n\n'
@@ -50038,7 +50038,7 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + 'Ensimmäinen näyttely esitteli Utopian yhteisön naisten '
           + 'silkille tekemiä töitä Pohjoisterritoriosta nimellä '
-          + '"Utopia — A Picture Story". Sen jälkeen talossa on nähty '
+          + '”Utopia — A Picture Story”. Sen jälkeen talossa on nähty '
           + 'näyttelyitä ja tapahtumia laidasta laitaan, muun muassa '
           + 'Adelaiden fringe-festivaalin esityksiä ja helmikuussa '
           + '2023 alkuperäiskansojen parlamenttiäänen kyllä-kampanjan '
@@ -51028,7 +51028,7 @@ export const NAHTAVYYSJUTUT = {
           + 'lipas, jossa on 522 ensimmäisessä maailmansodassa '
           + 'kaatuneen tasmanialaisen nimet. Muistomerkki paljastettiin '
           + '13. joulukuuta 1925. Itse kivessä ei ole nimiä, vain '
-          + '"Lest We Forget" ja vuosiluvut 1914–1919 — jälkimmäinen '
+          + '”Lest We Forget” ja vuosiluvut 1914–1919 — jälkimmäinen '
           + 'viittaa Versaillesin rauhaan eikä aselepoon.'
           + '\n\n'
           + 'Muistomerkkiä vanhempi on sen alapuolella kulkeva '
@@ -51418,8 +51418,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Victoria Hotel.'
           + '\n\n'
           + 'Talo menetti kattonsa kolmesti alle sadassa vuodessa. '
-          + 'Ensimmäinen kerta oli 6. tammikuuta 1897, kun "suureksi '
-          + 'hirmumyrskyksi" kutsuttu myrsky tappoi 28 ihmistä ja '
+          + 'Ensimmäinen kerta oli 6. tammikuuta 1897, kun ”suureksi '
+          + 'hirmumyrskyksi” kutsuttu myrsky tappoi 28 ihmistä ja '
           + 'upotti satamaan 19 alusta, koko helmenkalastuslaivueen '
           + 'mukaan lukien; hotelli oli niitä harvoja taloja, joiden '
           + 'rakenteet kestivät. Toinen kerta oli maaliskuussa 1937 ja '
@@ -51494,8 +51494,8 @@ export const NAHTAVYYSJUTUT = {
           + 'maksoi 2 000 puntaa, mitä pidettiin aikanaan valtavana '
           + 'summana. Kylpylä oli Darwinin ainoa uima-allas 1900-luvun '
           + 'alkupuoliskolla — ensimmäinen yksityinen allas rakennettiin '
-          + 'kaupunkiin vasta 1955. Rantaa kutsuttiin "pieneksi '
-          + 'Manlyksi", ja haita ja krokotiileja nähtiin usein, mutta '
+          + 'kaupunkiin vasta 1955. Rantaa kutsuttiin ”pieneksi '
+          + 'Manlyksi”, ja haita ja krokotiileja nähtiin usein, mutta '
           + 'se ei vähentänyt suosiota.'
           + '\n\n'
           + 'Vuosina 1969–1974 rannalla asui jopa 400 telttailijaa, ja '
@@ -51516,8 +51516,8 @@ export const NAHTAVYYSJUTUT = {
     },
     'Hotel Darwin': {
       aika: '1940',
-      teksti: 'Esplanadin hotelli tunnettiin lempinimellä "Grand Old '
-          + 'Duchess". Sen piirsi D. K. Turner toimistosta Stephenson '
+      teksti: 'Esplanadin hotelli tunnettiin lempinimellä ”Grand Old '
+          + 'Duchess”. Sen piirsi D. K. Turner toimistosta Stephenson '
           + 'and Turner, ja se rakennettiin vanhan Club Hotelin '
           + 'paikalle 50 000 – 85 000 punnan hinnalla. Avajaisiin '
           + 'heinäkuussa 1940 tuli kaksisataa vierasta, ja tilaisuutta '
@@ -51536,7 +51536,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Seuraavana vuonna Laurance sai syytteen hinnaston '
           + 'puuttumisesta, ja ravintoloitsija lopetti oluen '
           + 'myymisen oikeudenkäynnin ajaksi — jaksoa on kutsuttu '
-          + 'hotellin "oluettomiksi, ilottomiksi päiviksi".'
+          + 'hotellin ”oluettomiksi, ilottomiksi päiviksi”.'
           + '\n\n'
           + 'Hotelli kesti sekä pommitukset että hirmumyrsky Tracyn, '
           + 'mutta ei 1990-lukua. Omistajat ilmoittivat 9. syyskuuta '
@@ -51870,8 +51870,8 @@ export const NAHTAVYYSJUTUT = {
           + 'setri- ja mahonkipuusta veistettyä parveketta, ja niiden '
           + 'jaotus on eri: oikeanpuoleisessa on kolme osaa ja '
           + 'vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun '
-          + 'vaakuna ja teksti "Tagle se llamó el que la sierpe mató y '
-          + 'con la infanta casó" — Tagleksi kutsuttiin sitä, joka '
+          + 'vaakuna ja teksti ”Tagle se llamó el que la sierpe mató y '
+          + 'con la infanta casó” — Tagleksi kutsuttiin sitä, joka '
           + 'tappoi käärmeen ja nai prinsessan. Eteisholvin seinät '
           + 'ovat sevillalaista kaakelia ja katto veistettyä puuta; '
           + 'sivuilla on matalat astinkivet, joilta talon naiset '
@@ -51891,8 +51891,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Jr Ucayali, centro de Lima 02.jpg',
           lyhyt: 'Portaalin vaakunassa lukee tarina käärmeen tappaneesta ja prinsessan naineesta Taglesta.',
-          selite: 'Portaalin päällä oleva vaakuna kantaa tekstiä "Tagle se llamó '
-            + 'el que la sierpe mató y con la infanta casó".',
+          selite: 'Portaalin päällä oleva vaakuna kantaa tekstiä ”Tagle se llamó '
+            + 'el que la sierpe mató y con la infanta casó”.',
           lahde: 'Ibrehaut, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -52106,7 +52106,7 @@ export const NAHTAVYYSJUTUT = {
           + 'joka suunniteltiin vasta 1700-luvulla. Siellä '
           + 'allekirjoitettiin vuoden 1809 hallintoneuvoston asiakirja. '
           + 'Pääalttarilla riippuu Miguel de Santiagon 1600-luvulla '
-          + 'maalaama valtava teos "Pyhän Augustinuksen riemuvoitto"; '
+          + 'maalaama valtava teos ”Pyhän Augustinuksen riemuvoitto”; '
           + 'saman maalarin töitä on muuallakin talossa.',
       kuvat: [
         {
@@ -52208,8 +52208,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupungin tapojen, ihmisten ja perinteiden läpi '
           + '1500-luvulta 1800-luvulle, toinen kertoo sairaalasta ja '
           + 'esittelee erään sen lääkärin kokoelman, ja kolmannen nimi '
-          + 'on "uusi yhteiskuntajärjestys murtautuu esiin: Quito '
-          + '1800-luvulla".'
+          + 'on ”uusi yhteiskuntajärjestys murtautuu esiin: Quito '
+          + '1800-luvulla”.'
           + '\n\n'
           + 'Heinäkuussa 2020 museo sai 69 esinettä takaisin '
           + 'Ecuadoriin. Ne oli vienyt maasta 1960-luvulla '
@@ -52233,7 +52233,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Kukkula on tulivuoriperäinen ja kohoaa kaupungin '
           + 'kattojen yli kaksisataa metriä; sen laki on 3 016 metriä '
           + 'merenpinnasta. Espanjalaiset antoivat sille nimen '
-          + 'Panecillo, "pieni leipä", muodon mukaan. Vanha nimi oli '
+          + 'Panecillo, ”pieni leipä”, muodon mukaan. Vanha nimi oli '
           + 'Yavirac, ja jesuiittahistorioitsija Juan de Velascon '
           + 'mukaan sen laella oli temppeli, jossa palvottiin '
           + 'aurinkoa, kunnes valloittajat hävittivät sen. Kukkulalle '
@@ -52250,7 +52250,7 @@ export const NAHTAVYYSJUTUT = {
           + 'on tavanomaista kuvastoa — mutta hänellä on siivet, ja '
           + 'quitolaisten mukaan hän on maailman ainoa siivekäs '
           + 'Madonna. Esikuva on Bernardo de Legardan vuonna 1734 '
-          + 'veistämä "Quiton Neitsyt", jota sanotaan tanssijattareksi, '
+          + 'veistämä ”Quiton Neitsyt”, jota sanotaan tanssijattareksi, '
           + 'koska se esittää liikkeessä olevaa hahmoa aikansa '
           + 'liikkumattomien madonnien sijaan. Patsaan pronssikilven '
           + 'mukaan kuvattu nainen on Ilmestyskirjan luvun 12 vaimo.',
@@ -52268,7 +52268,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Quito järjesti 1909 oman maailmannäyttelynsä. Syy oli '
           + 'sata vuotta täyttänyt itsenäisyystaistelu, ja '
           + 'näyttelypalatsi avattiin juhlallisesti 10. elokuuta 1909 '
-          + '— päivälleen sata vuotta "ensimmäisen vapaudenhuudon" '
+          + '— päivälleen sata vuotta ”ensimmäisen vapaudenhuudon” '
           + 'jälkeen. Itse näyttely aukesi 8. syyskuuta. Suojelijana '
           + 'toimi presidentti Eloy Alfaro, ja palkinnot jaettiin 28. '
           + 'syyskuuta.'
@@ -52347,10 +52347,10 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Papua-Uuden-Guinean kansalliskirjasto perustettiin '
           + '1978, kolme vuotta itsenäistymisen jälkeen. Se ei ollut '
           + 'maan oma hanke vaan Australian lahja: kirjasto '
-          + 'perustettiin sanoin "lahjana Papua-Uuden-Guinean '
-          + 'hallitukselle ja kansalle", ja tehtäväksi annettiin '
-          + '"auttaa kokoamaan kansallisesti merkittävien aineistojen '
-          + 'kokoelma".'
+          + 'perustettiin sanoin ”lahjana Papua-Uuden-Guinean '
+          + 'hallitukselle ja kansalle”, ja tehtäväksi annettiin '
+          + '”auttaa kokoamaan kansallisesti merkittävien aineistojen '
+          + 'kokoelma”.'
           + '\n\n'
           + 'Kokoelmassa on noin 56 000 nimikettä. Se ei ole pelkkä '
           + 'kirjavarasto: mukana on kirjojen lisäksi elokuvia ja '
@@ -52997,10 +52997,10 @@ export const NAHTAVYYSJUTUT = {
           + 'kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon '
           + 'espanjalaisperäisistä asukkaista halusi estää uuden '
           + 'kuninkaan tunnustamisen ja tarjosi Amador Buenolle '
-          + '"São Paulon kuninkaan" arvoa. Bueno kieltäytyi ja pakeni '
+          + '”São Paulon kuninkaan” arvoa. Bueno kieltäytyi ja pakeni '
           + 'luostariin kansanjoukkoa; munkkien avulla tilanne '
           + 'rauhoittui ja Juhana IV tunnustettiin. Vuonna 1650 '
-          + 'bandeirante Fernão Dias Pais, "smaragdinmetsästäjä", '
+          + 'bandeirante Fernão Dias Pais, ”smaragdinmetsästäjä”, '
           + 'kustansi korjauksen ja sai vastineeksi hautapaikan '
           + 'kirkosta; hänen jäännöksensä lepäävät yhä pääkirkkosalissa.'
           + '\n\n'
@@ -53173,8 +53173,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Castro Alves, Álvares de Azevedo ja Fagundes Varela, '
           + 'juristi ja poliitikko Ruy Barbosa sekä kirjailija '
           + 'Monteiro Lobato. Talon edessä seisoo Álvares de Azevedon '
-          + 'patsas, jonka jalustassa lukee "Foi poeta, sonhou e amou '
-          + 'na vida" — hän oli runoilija, uneksi ja rakasti '
+          + 'patsas, jonka jalustassa lukee ”Foi poeta, sonhou e amou '
+          + 'na vida” — hän oli runoilija, uneksi ja rakasti '
           + 'elämässään.'
           + '\n\n'
           + 'Pihalla on hautakivi. Saksalainen professori Julius '
@@ -53822,7 +53822,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Basilika on Nasarealaisen kuvan tärkein kunnioituspaikka, ja '
           + 'pääsiäisenä väkeä tulee paljon. Juuri siitä syntyi '
           + 'kaupungin pahin kirkko-onnettomuus: 9. huhtikuuta 1952 '
-          + 'joku huusi täydessä kirkossa "tulipalo", ja viisikymmentä '
+          + 'joku huusi täydessä kirkossa ”tulipalo”, ja viisikymmentä '
           + 'ihmistä kuoli tungoksessa jalkoihin. Neljäkymmentä '
           + 'ihmistä pidätettiin tapauksen johdosta. Rakennus '
           + 'julistettiin kansalliseksi historialliseksi kohteeksi '
@@ -54106,7 +54106,7 @@ export const NAHTAVYYSJUTUT = {
           + 'vuoteen 2002, jolloin useat Bergenin keskustan '
           + 'seurakunnat yhdistettiin. Sen jälkeen se ei ole ollut '
           + 'tavallinen seurakuntakirkko: se luovutettiin Kirkens '
-          + 'Bymisjonille, ja nykyään se on "avoin kirkko", jossa on '
+          + 'Bymisjonille, ja nykyään se on ”avoin kirkko”, jossa on '
           + 'joka päivä väkeä vastassa. Sisään voi tulla hiljaisuuden '
           + 'takia, sytyttämään kynttilän, juttelemaan, '
           + 'jumalanpalvelukseen tai kuuntelemaan musiikkia, ja työstä '
@@ -54372,7 +54372,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Vierailijoiden lista on pitkä ja kirjava. Kahvilassa ovat '
         + 'istuneet muun muassa Beatles ja Rolling Stones sekä '
         + 'espanjalainen kirjailija Juan Goytisolo. Laulaja-lauluntekijä '
-        + 'Luis Eduardo Aute omisti paikalle kappaleen "Hafa Café" '
+        + 'Luis Eduardo Aute omisti paikalle kappaleen ”Hafa Café” '
         + 'levyllään Slowly.',
       kuvat: [
         {
@@ -54677,9 +54677,9 @@ export const NAHTAVYYSJUTUT = {
         + 'on koristeltu maalatuin ja taltatuin kasviaihein.'
         + '\n\n'
         + 'Sisällä vaakapalkin yläpuolella on leveä stukkofriisi, jonka '
-        + 'kahdeksansakaraista tähtikuviota kutsutaan nimellä "Mtemmen '
-        + 'maa\'kous". Sen molemmin puolin kapeammissa friiseissä toistuu '
-        + 'ylistys "kunnia Jumalalle". Palkkiin oli maalattu runosäe, joka '
+        + 'kahdeksansakaraista tähtikuviota kutsutaan nimellä ”Mtemmen '
+        + 'maa\'kous”. Sen molemmin puolin kapeammissa friiseissä toistuu '
+        + 'ylistys ”kunnia Jumalalle”. Palkkiin oli maalattu runosäe, joka '
         + 'on sittemmin kadonnut; se tunnetaan vain vanhasta valokuvasta '
         + 'ja piirroksesta. Medinassa on kaikkiaan 45 juomavesilähdettä, '
         + 'ja niiden koko kertoo korttelin koosta.',
@@ -54820,7 +54820,7 @@ export const NAHTAVYYSJUTUT = {
         + 'katto lepää kahdentoista carraranmarmorisen pylvään varassa.'
         + '\n\n'
         + 'Aikanaan nekropoli eristettiin ympäröivistä kaduista ja '
-        + 'unohtui. Marokon muinaismuistoviranomainen "löysi" sen '
+        + 'unohtui. Marokon muinaismuistoviranomainen ”löysi” sen '
         + 'uudelleen 1917 ja aloitti tarkan ennallistuksen, jossa '
         + 'puuttuvat koristeet tehtiin säilyneiden osien mallin mukaan; '
         + 'samalla paikka avattiin ensi kertaa yleisölle. Monet '
@@ -54858,7 +54858,7 @@ export const NAHTAVYYSJUTUT = {
         + 'kaarta kiertävät vuorottelevat puolikaaret, kulmissa on '
         + 'kasviaiheita ja kummankin keskellä kaiverrettu simpukka, ja '
         + 'kaiken kehyksenä kulkee Koraanin al-Hijr-suuran katkelmia '
-        + 'lehväkufilaisin kirjaimin. Nimen alkuperä on epäselvä: "agnaou" '
+        + 'lehväkufilaisin kirjaimin. Nimen alkuperä on epäselvä: ”agnaou” '
         + 'on todennäköisesti berberiä, ja sille on kirjattu useita '
         + 'merkityksiä. Kivi on kärsinyt laastin liukoisista suoloista ja '
         + 'ilmansaasteista.',
@@ -56023,7 +56023,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Nimi on paljon vanhempi kuin portti. Erään selityksen '
           + 'mukaan se on kansanomainen väännös ilmauksesta Abu '
-          + 'al-Junud, "sotilaiden isä", ja viittaa portin '
+          + 'al-Junud, ”sotilaiden isä”, ja viittaa portin '
           + 'länsipuolella olleeseen paraatikenttään. Vanha Bab Bou '
           + 'Jeloud oli vaatimaton portti, joka saattoi olla peräisin '
           + '1100-luvulta; sen käytävä kulki muurin suuntaisesti, '
@@ -56783,7 +56783,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Argentiinan lipun ensimmäistä kertaa cabildon '
           + 'parvekkeelle. Talo palveli poliisia ja hallintoa '
           + '1880-luvulle asti; lähteet antavat loppuvuodeksi sekä '
-          + '1888 että "1880 ja yhdeksän vuotta myöhemmin", eikä '
+          + '1888 että ”1880 ja yhdeksän vuotta myöhemmin”, eikä '
           + 'kumpikaan ole varmempi. Sitten se myytiin julkisella '
           + 'huutokaupalla yksityisille, ja siinä asuttiin, myytiin '
           + 'tavaraa ja pidettiin hotellia. Osa purettiin: '
@@ -56869,8 +56869,8 @@ export const NAHTAVYYSJUTUT = {
           + 'veistetty käsin algarrobo-puusta vuonna 1762. Sen '
           + 'pielissä on pylväät, jotka kannattavat kaksoiskaaren '
           + 'muotoista kamanaa, ja keskellä on lehtiaihe ja Kristuksen '
-          + 'nimikirjaimet. Kylkeen on kaiverrettu "Don Pedro '
-          + 'Balentín de la Cámara, año 1762". Ovi tuli talosta, ja '
+          + 'nimikirjaimet. Kylkeen on kaiverrettu ”Don Pedro '
+          + 'Balentín de la Cámara, año 1762”. Ovi tuli talosta, ja '
           + 'se asennettiin luostarin uuteen sisäänkäyntiin 1847, kun '
           + 'vanha sairaalanovi kapelin vieressä muurattiin umpeen. '
           + 'Monumentti vuodesta 1941.',
@@ -56898,8 +56898,8 @@ export const NAHTAVYYSJUTUT = {
           + 'puolustuksen gaucho-ratsumiehistä, jotka opetettiin '
           + 'sissitaktiikkaan. Kuninkaanmielinen kenraali Joaquín de '
           + 'la Pezuela kirjoitti Perun varakuninkaalle, että '
-          + 'Güemesin väki kävi "melkein rankaisematta hidasta mutta '
-          + 'väsyttävää ja vahingollista sotaa". Vuonna 1817 '
+          + 'Güemesin väki kävi ”melkein rankaisematta hidasta mutta '
+          + 'väsyttävää ja vahingollista sotaa”. Vuonna 1817 '
           + 'espanjalainen sotamarsalkka de la Serna marssi Saltaan '
           + 'suuren joukon kanssa ja saapui kaupunkiin '
           + 'huhtikuussa — mutta väestö ei antautunut, ja joukot '
@@ -58369,8 +58369,8 @@ export const NAHTAVYYSJUTUT = {
           + 'neliömetrillä ja kokoelmassa 1 325 esinettä, joista vain '
           + 'osa on kerrallaan esillä. Esineistä tunnetuimpia ovat '
           + 'Porfirio Díazin vaunut, 1800-luvun kastemalja ja Servando '
-          + 'Teresa de Mierin kirjapaino. Salissa nimeltä "Nuestros '
-          + 'caudillos" riippuu Santiago Vidaurrin muotokuva. Kukkulan '
+          + 'Teresa de Mierin kirjapaino. Salissa nimeltä ”Nuestros '
+          + 'caudillos” riippuu Santiago Vidaurrin muotokuva. Kukkulan '
           + 'laella on lisäksi näköalapaikka ja monumenttilippu.',
       kuvat: [
         {
@@ -59688,7 +59688,7 @@ export const NAHTAVYYSJUTUT = {
           + 'miekkamuseoksi.'
         + '\n\n'
         + 'Tarinaa kannattaa lukea niin kuin lähde sen kertoo. '
-          + 'Wikipedia käyttää sanaa "uskotaan" ja merkitsee saman '
+          + 'Wikipedia käyttää sanaa ”uskotaan” ja merkitsee saman '
           + 'artikkelin toisen väitteen — että eurooppalaiset '
           + 'olisivat yrittäneet irrottaa Anokyen tikaria '
           + 'viidensadan vuoden ajan — lähteettömäksi. Miekka on '
@@ -59755,7 +59755,7 @@ export const NAHTAVYYSJUTUT = {
           + 'syntyi kaksi lähetysasemaa ja kaksi koulua. Hanke ei '
           + 'ollut suosittu: sotilaallisen valloituksen jälkeen '
           + 'lähetystyötä pidettiin siirtomaavallan jatkeena ja '
-          + 'kristinuskoa "voittajan uskontona".'
+          + 'kristinuskoa ”voittajan uskontona”.'
         + '\n\n'
         + 'Vuoteen 1900 mennessä Baselin lähetyksellä oli Kumasissa '
           + 'kuusitoista koulua ja niissä 311 oppilasta. Kappeli '
@@ -60747,10 +60747,10 @@ export const NAHTAVYYSJUTUT = {
           + 'Djennéssä hän oli maaliskuussa 1828.'
         + '\n\n'
         + 'Kaupunki ei vastannut sitä, mitä Euroopassa oli luvattu. '
-          + 'Caillié kirjoitti: "Olin muodostanut aivan toisenlaisen '
+          + 'Caillié kirjoitti: ”Olin muodostanut aivan toisenlaisen '
           + 'käsityksen Timbuktun mahtavuudesta ja rikkaudesta. '
           + 'Kaupunki ei ensi näkemältä ollut muuta kuin joukko '
-          + 'rumannäköisiä, savesta rakennettuja taloja." Hän vietti '
+          + 'rumannäköisiä, savesta rakennettuja taloja.” Hän vietti '
           + 'täällä kaksi viikkoa ja lähti 4. toukokuuta 1828 '
           + 'karavaanin mukana, jossa oli noin kuusisataa kamelia — '
           + 'hän antoi kirjassaan kaksi eri lukua, leipätekstissä '
@@ -60868,9 +60868,9 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Barth arvosteli edeltäjänsä Caillién kuvausta kaupungista. '
           + 'Caillién piirroksissa talot seisoivat erillään, mutta '
-          + 'Barthin mukaan "todellisuudessa kadut ovat kokonaan '
+          + 'Barthin mukaan ”todellisuudessa kadut ovat kokonaan '
           + 'suljettuja, sillä asunnot muodostavat yhtenäisiä, '
-          + 'katkeamattomia rivejä". Talosta, jossa Barth asui, on '
+          + 'katkeamattomia rivejä”. Talosta, jossa Barth asui, on '
           + 'valokuva vuodelta 1908 — otettu ennen kuin rakennus '
           + 'sortui.',
       lahde: 'Wikipedia',
@@ -60882,10 +60882,10 @@ export const NAHTAVYYSJUTUT = {
           + 'tuaregnaisen rahoituksella. Se sijaitsi Sankorén '
           + 'kaupunginosassa, jossa asui suurin osa kaupungin '
           + 'berbereistä ja arabeista. Nimi tarkoittaa songhaiksi '
-          + 'valkoisia mestareita tai valkoisia ylimyksiä; "valkoinen" '
+          + 'valkoisia mestareita tai valkoisia ylimyksiä; ”valkoinen” '
           + 'viittaa vaaleaihoisiin sanhaja-berbereihin. Kronikan '
           + 'ranskantajat Octave Houdas ja Maurice Delafosse '
-          + 'käänsivät nimen muotoon "ylimysten kaupunginosa".'
+          + 'käänsivät nimen muotoon ”ylimysten kaupunginosa”.'
         + '\n\n'
         + 'Rakennus on savea ja puupalkkeja, ja se on pienempi ja '
           + 'koristelultaan vaatimattomampi kuin Djennén suuri '
@@ -61587,8 +61587,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Kumibuumin aikaan täällä yöpyivät kumiherrat ja '
           + 'eurooppalaiset kauppiaat. Vuodesta 1961 talossa on '
           + 'toiminut Itäisen sotilasalueen esikunta. Rakennus on '
-          + 'kuvattu Perun yhden solin kolikossa nimellä "Antiguo '
-          + 'Hotel Palace, 1912".',
+          + 'kuvattu Perun yhden solin kolikossa nimellä ”Antiguo '
+          + 'Hotel Palace, 1912”.',
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Malecón Tarapacá': {
@@ -61961,7 +61961,7 @@ export const NAHTAVYYSJUTUT = {
     'Weaver & Devoren kauppa': {
       aika: '1936',
       teksti: 'Turkiskauppiaat ja vesikulkijat Harry Weaver ja Ellis '
-          + '"Bud" Devore tulivat Peace Riveristä Albertasta ja tekivät '
+          + '”Bud” Devore tulivat Peace Riveristä Albertasta ja tekivät '
           + 'ensimmäisen kauppamatkansa Yellowknife Baylle kesällä '
           + '1936, kun kaivostoiminta oli juuri vilkastunut. Seuraavana '
           + 'vuonna he pystyttivät pysyvän hirsisen kauppa-aseman.'
@@ -61985,7 +61985,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Old Townissa on noin sadanviidenkymmenen metrin mittainen '
           + 'päällystämätön asuinkatu, jota on kutsuttu yhdeksi Kanadan '
           + 'kuuluisimmista. Nimi tarkoittaa suunnilleen '
-          + '"riekaleiskatu" ja on peräisin sanonnasta, jolla '
+          + '”riekaleiskatu” ja on peräisin sanonnasta, jolla '
           + 'kuvataan täysin rahatonta ihmistä. Sitä ennen katu '
           + 'tunnettiin nimellä Privy Road eli huussitie, koska sen '
           + 'varrella oli paljon ulkohuusseja.'
@@ -62607,7 +62607,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Fen oman rakennustyylin keskeisistä nimistä.'
           + '\n\n'
           + 'Kokoelma jakautuu neljään siipeen. Girardin siiven näyttely '
-          + '"Multiple Visions: A Common Bond" avattiin 1982 ja esittää '
+          + '”Multiple Visions: A Common Bond” avattiin 1982 ja esittää '
           + 'leluja, nukkeja, pukuja, naamioita, tekstiilejä ja '
           + 'uskonnollista kansantaidetta yli sadasta maasta; sen '
           + 'suunnitteli lahjoittaja itse, arkkitehti ja muotoilija '
@@ -62681,7 +62681,7 @@ export const NAHTAVYYSJUTUT = {
           + 'yhteentoista palaan. Varas tuomittiin elinkautiseen '
           + 'pakkotyöhön, ja ensin hänet sidottiin tunniksi häpeäpaaluun '
           + 'Grand-Placella. Palat koottiin ja niistä valettiin uusi '
-          + 'pronssi, jonka jalustaan merkittiin "1620 – REST 1817". '
+          + 'pronssi, jonka jalustaan merkittiin ”1620 – REST 1817”. '
           + 'Isoisän aikaan patsasta ympäröi vuonna 1851 tehty takorautainen '
           + 'aita, joka esti pääsyn veteen: juomavesilähteestä oli tullut '
           + 'pelkkä koriste ja kaupungin vertauskuva.'
@@ -62721,7 +62721,7 @@ export const NAHTAVYYSJUTUT = {
           + 'työtä valmiina; kuningas Leopold II vihki rakennuksen 15. '
           + 'lokakuuta 1883. Työmaan tieltä purettiin osa Marollesin '
           + 'kaupunginosaa, ja satakunta vaatimatonta asukasta joutui '
-          + 'muuttamaan. Moni syytti Poelaertia, ja "schieven architect", '
+          + 'muuttamaan. Moni syytti Poelaertia, ja ”schieven architect”, '
           + 'häpeällinen arkkitehti, tuli Marollesin murteen pahimpiin '
           + 'haukkumasanoihin.'
           + '\n\n'
@@ -62810,7 +62810,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ensimmäisenä todella julkisena kauppakäytävänä. Se edelsi '
           + 'myös Milanon kuuluisaa Galleria Vittorio Emanuele II:ta.'
           + '\n\n'
-          + 'Päätykolmion tunnuslause Omnibus omnia, "kaikkea kaikille", '
+          + 'Päätykolmion tunnuslause Omnibus omnia, ”kaikkea kaikille”, '
           + 'piti paikkansa. Isoisän aikaan gallerioissa kävellään ja '
           + 'istutaan kahviloissa Brysselin sateelta suojassa, ja '
           + 'Kuninkaan galleriassa toimii Cluysenaarin suunnittelema '
@@ -62835,7 +62835,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Mont des Arts': {
       aika: '1910',
-      teksti: 'Mont des Arts eli Kunstberg, "taiteiden mäki", on '
+      teksti: 'Mont des Arts eli Kunstberg, ”taiteiden mäki”, on '
           + 'kulttuurikortteli Brysselin keskustan rinteessä: siellä ovat '
           + 'Belgian kuninkaallinen kirjasto, valtionarkisto, '
           + 'kongressikeskus ja maisema-arkkitehti René Pechèren '
@@ -63338,8 +63338,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Picco. Se avattiin 25. syyskuuta 1842 ja nimettiin Franzin '
           + 'sillaksi arkkiherttua Franz Karlin kunniaksi. Siinä oli kaksi '
           + 'kaarta ja metallikaide, ja keskipilarin yllä on yhä '
-          + 'latinankielinen omistus: "Arkkiherttua Franz Karlille 1842, '
-          + 'kaupunki." Tämän kaksikaarisen kivisillan yli isoisä kulkee '
+          + 'latinankielinen omistus: ”Arkkiherttua Franz Karlille 1842, '
+          + 'kaupunki.” Tämän kaksikaarisen kivisillan yli isoisä kulkee '
           + 'vuonna 1873.'
           + '\n\n'
           + 'Kolmisillaksi se muuttui vasta, kun Jože Plečnik suunnitteli '
@@ -63354,7 +63354,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Tromostovje napis.jpg',
           lyhyt: 'Vuoden 1842 omistuskirjoitus sillan keskipilarin yllä.',
           selite: 'Keskimmäisen sillan pilarin yllä lukee yhä '
-            + '"ARCHIDVCI. FRANCISCO. CAROLO. MDCCCXLII. CIVITAS.", '
+            + '”ARCHIDVCI. FRANCISCO. CAROLO. MDCCCXLII. CIVITAS.”, '
             + 'kaupungin omistus arkkiherttua Franz Karlille vuodelta 1842.',
           lahde: 'Eleassar, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -63386,7 +63386,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Hermagoraan ja Pyhän Fortunatuksen hiekkakivipatsaat '
           + 'valmistuivat 1872, vain vuotta ennen hänen tuloaan. Samalla '
           + 'seinällä on aurinkokello vuodelta 1826 latinankielisine '
-          + 'mietelauseineen "Ette tiedä päivää ettekä hetkeä", ja '
+          + 'mietelauseineen ”Ette tiedä päivää ettekä hetkeä”, ja '
           + 'torneissa soi Slovenian toiseksi vanhin kello vuodelta 1326.',
       kuvat: [
         {
@@ -65166,12 +65166,12 @@ export const NAHTAVYYSJUTUT = {
     },
     'Sininen moskeija': {
       aika: '1765–1766',
-      teksti: 'Sininen moskeija rakennettiin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa joukko poikia opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, \'taivaansininen moskeija\'. Laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin jälkeen 1990-luvulla se on ollut jälleen uskonnollisessa käytössä, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2010-luvulla.',
+      teksti: 'Sininen moskeija rakennettiin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa joukko poikia opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, ’taivaansininen moskeija’. Laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin jälkeen 1990-luvulla se on ollut jälleen uskonnollisessa käytössä, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2010-luvulla.',
       kuvat: [
         {
           tiedosto: 'Dome of Blue Mosque, Yerevan, Armenia.jpg',
           lyhyt: 'Sinisen moskeijan laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.',
-          selite: 'Moskeijan nimi Gök Jami tarkoittaa \'taivaansinistä moskeijaa\'.',
+          selite: 'Moskeijan nimi Gök Jami tarkoittaa ’taivaansinistä moskeijaa’.',
           lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -65192,7 +65192,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Zoravorin kirkko': {
       aika: '1693–94',
-      teksti: 'Zoravor Surp Astvatsatsin on kupoliton kolminaavinen basilika Shaharin vanhassa kaupunginosassa, jossa oli aiemmin apostoli Ananiaan hauta ja kappeli. Nimi Zoravor tarkoittaa \'voimakas\', ja se lisättiin, koska kirkossa säilytettiin 1200-luvun Zoravor-Raamattua.\n\n1600-luvun alkupuoliskolla munkki Movses Syunetsi rakensi paikalle luostarikompleksin jerevanilaisten rahoituksella katolikos Pilipoksen aikana, ja vuoden 1679 maanjäristys tuhosi sen. Nykyinen kirkko rakennettiin 1693–94 samalle paikalle jerevanilaisen kauppiaan Khoja Panosin lahjoituksella. Sisä- ja ulkoasu ovat yksinkertaiset, ja ulkoseinillä on 1600-luvun khachkar-ristikiviä.\n\nIsoisän matkavuonna 1873 kirkko oli olemassa, mutta Pyhän Ananiaan kappeli sen koillispuolella rakennettiin vasta 1800-luvun lopulla. Neuvostoaikana kirkkoa käytettiin muihin tarkoituksiin; se palautettiin kirkolle 1970-luvulla ja kunnostettiin täysin.',
+      teksti: 'Zoravor Surp Astvatsatsin on kupoliton kolminaavinen basilika Shaharin vanhassa kaupunginosassa, jossa oli aiemmin apostoli Ananiaan hauta ja kappeli. Nimi Zoravor tarkoittaa ’voimakas’, ja se lisättiin, koska kirkossa säilytettiin 1200-luvun Zoravor-Raamattua.\n\n1600-luvun alkupuoliskolla munkki Movses Syunetsi rakensi paikalle luostarikompleksin jerevanilaisten rahoituksella katolikos Pilipoksen aikana, ja vuoden 1679 maanjäristys tuhosi sen. Nykyinen kirkko rakennettiin 1693–94 samalle paikalle jerevanilaisen kauppiaan Khoja Panosin lahjoituksella. Sisä- ja ulkoasu ovat yksinkertaiset, ja ulkoseinillä on 1600-luvun khachkar-ristikiviä.\n\nIsoisän matkavuonna 1873 kirkko oli olemassa, mutta Pyhän Ananiaan kappeli sen koillispuolella rakennettiin vasta 1800-luvun lopulla. Neuvostoaikana kirkkoa käytettiin muihin tarkoituksiin; se palautettiin kirkolle 1970-luvulla ja kunnostettiin täysin.',
       kuvat: [
         {
           tiedosto: 'Surp Zoravor Astvatsatsin Church.JPG',

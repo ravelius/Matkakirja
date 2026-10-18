@@ -1009,7 +1009,7 @@ export const NORTHAMERICA_VALOKUVAT = {
         lahde: 'Bohemian Baltimore, Commons (CC BY-SA 4.0)',
         lyhyt: 'St-Viateur Bagel Mile Endin kaupunginosassa Montrealissa vuonna 2013.',
         selite: 'St-Viateur Bagel Mile Endin kaupunginosassa. Ikkunassa lukee '
-          + 'vuosiluku 1957 ja ovessa "ouvert 24 h": leipomo paistaa '
+          + 'vuosiluku 1957 ja ovessa ”ouvert 24 h”: leipomo paistaa '
           + 'puu-uunissa vuorokauden ympäri, ja Montrealin bageli on ohuempi '
           + 'ja makeampi kuin newyorkilainen.',
       },
@@ -1029,8 +1029,8 @@ export const NORTHAMERICA_VALOKUVAT = {
     lahde: 'Rise Studio, Rapid City / Library of Congress (PD)',
     lyhyt: 'Työmiehet kiipeävät Mount Rushmoren keskeneräisillä kasvoilla noin 1932.',
     selite: 'Työmiehet kiipeävät tikkaita George Washingtonin kasvoilla, kun '
-      + 'veistos on vielä kesken. Kuvaan on kirjoitettu käsin "Workmen on '
-      + 'face of Geo. Washington"; kalliota muotoiltiin dynamiitilla ja '
+      + 'veistos on vielä kesken. Kuvaan on kirjoitettu käsin ”Workmen on '
+      + 'face of Geo. Washington”; kalliota muotoiltiin dynamiitilla ja '
       + 'poravasaroilla, ja miehet laskeutuivat työhön vaijerien varassa.',
     lisat: [
       {

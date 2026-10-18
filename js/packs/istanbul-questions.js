@@ -308,7 +308,7 @@ export const ISTANBUL_QUESTIONS = {
       q: 'Mikä on lokum?',
       options: ['hyytelömäinen sokerimakeinen', 'suolainen keksi', 'jäätelölaji', 'kova karamelli'],
       correct: 0,
-      fact: 'Lokumia eli "turkkilaista iloa" on tehty Istanbulissa 1700-luvulta asti, usein ruusuvedellä ja pistaasilla maustettuna.',
+      fact: 'Lokumia eli ”turkkilaista iloa” on tehty Istanbulissa 1700-luvulta asti, usein ruusuvedellä ja pistaasilla maustettuna.',
       hint: 'Pehmeät palat pyöritellään tomusokerissa.',
     },
     {
@@ -620,7 +620,7 @@ export const ISTANBUL_QUESTIONS = {
       options: ['Khalkedon', 'Troija', 'Sparta', 'Karthago'],
       correct: 0,
       level: 3,
-      fact: 'Khalkedonia kutsuttiin "sokeain maaksi": sen asukkaat eivät muka huomanneet vastarannan parempaa paikkaa.',
+      fact: 'Khalkedonia kutsuttiin ”sokeain maaksi”: sen asukkaat eivät muka huomanneet vastarannan parempaa paikkaa.',
       hint: 'Asukkaita sanottiin sokeiksi, koska he eivät valinneet vastarannan parempaa paikkaa.',
     },
     {
@@ -953,7 +953,7 @@ export const ISTANBUL_FACTS = {
     },
   ],
   kadikoy: [
-    'Kadıköyn paikalla oli antiikin Khalkedon, jota kutsuttiin "sokeain maaksi".',
+    'Kadıköyn paikalla oli antiikin Khalkedon, jota kutsuttiin ”sokeain maaksi”.',
     'Kadıköyn kalatorilla ja kahviloissa sykkii Aasian puolen arki — ja seinät ovat täynnä katutaidetta.',
     {
       text: 'Aasian puolen tori on täynnä kalaa ja vihanneksia, ja hinnat ovat kolmanneksen halvemmat kuin vastarannalla. Antiikin kirjoittaja kutsui tämän paikan perustajia sokeiksi; hän ei ilmeisesti käynyt torilla.',

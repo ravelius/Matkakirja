@@ -9,8 +9,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'sen värin, mitä laivamaalia jäi yli. Kulmassa pariskunta '
       + 'tanssi tangoa keskellä iltapäivää, ja ohikulkijat pysähtyivät '
       + 'kuin käskystä.',
-    nosto: 'Isoisä kirjoitti: "Satama on täynnä siirtolaislaivoja — puoli '
-      + 'Eurooppaa tuntuu muuttavan tänne." Heidän mukanaan tulivat '
+    nosto: 'Isoisä kirjoitti: ”Satama on täynnä siirtolaislaivoja — puoli '
+      + 'Eurooppaa tuntuu muuttavan tänne.” Heidän mukanaan tulivat '
       + 'sävelet, joista pian syntyi tango. Ukko ehti paikalle juuri '
       + 'ennen sitä.',
   },
@@ -20,8 +20,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'näkee molemmat — miljoonakaupungin laaksossa ja Karibian meren '
       + 'toisella puolen. Ylhäällä ilma oli viileää kuin toisessa '
       + 'maassa.',
-    nosto: 'Isoisä kirjoitti: "Kaupunki makaa laaksossa kuin kämmenellä, '
-      + 'ja vuori pitää siitä kiinni." Vuori pitää yhä — caracasilaiset '
+    nosto: 'Isoisä kirjoitti: ”Kaupunki makaa laaksossa kuin kämmenellä, '
+      + 'ja vuori pitää siitä kiinni.” Vuori pitää yhä — caracasilaiset '
       + 'sanovat sitä kaupungin keuhkoiksi.',
   },
   bogota: {
@@ -31,9 +31,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'lautta — juuri se, josta El Doradon legenda alkoi. '
       + 'Sunnuntaisin pääkadut suljetaan autoilta ja koko kaupunki '
       + 'pyöräilee.',
-    nosto: 'Isoisä kirjoitti: "Täällä tarinat kullatusta miehestä eivät '
+    nosto: 'Isoisä kirjoitti: ”Täällä tarinat kullatusta miehestä eivät '
       + 'ole satua vaan muistoja — järvenpohjasta nostetaan kultaa '
-      + 'yhä." Se järvi on Guatavita, ja lautta on nyt museossa. Kävin '
+      + 'yhä.” Se järvi on Guatavita, ja lautta on nyt museossa. Kävin '
       + 'katsomassa.',
   },
   quito: {
@@ -42,8 +42,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'pallonpuoliskolle. Kaupunki itse on rakennettu tulivuoren '
       + 'kylkeen lähes kolmen kilometrin korkeuteen, ja vanhakaupunki '
       + 'on Amerikan parhaiten säilyneitä.',
-    nosto: 'Isoisä kirjoitti: "Ranskalaiset mittasivat täällä maapallon '
-      + 'muodon — siksi viiva kulkee juuri tästä." Seisoin viivalla '
+    nosto: 'Isoisä kirjoitti: ”Ranskalaiset mittasivat täällä maapallon '
+      + 'muodon — siksi viiva kulkee juuri tästä.” Seisoin viivalla '
       + 'hajareisin kuin hän Uralilla: käsi kummallakin puoliskolla.',
   },
   galapagos: {
@@ -51,9 +51,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'puistonpenkillä, jättiläiskilpikonna ylitti tien omaan '
       + 'tahtiinsa ja sinijalkasuula tanssi esittelytanssiaan metrin '
       + 'päässä. Täällä ihminen on se, joka väistää — ja niin on hyvä.',
-    nosto: 'Isoisä kirjoitti: "Herra Darwinin kirja teki näistä saarista '
+    nosto: 'Isoisä kirjoitti: ”Herra Darwinin kirja teki näistä saarista '
       + 'kuuluisia — hän väittää, että saarten linnut kertovat elämän '
-      + 'historian." Ne kertovat sen yhä, jokaiselle joka pysähtyy '
+      + 'historian.” Ne kertovat sen yhä, jokaiselle joka pysähtyy '
       + 'katsomaan.',
   },
   boavista: {
@@ -62,8 +62,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'laiduntaa puolivillejä karjalaumoja. Kadut säteilevät '
       + 'keskusaukiolta kuin viuhka, ja joen rannalla syödään '
       + 'paistettua piraijaa.',
-    nosto: 'Isoisä kirjoitti: "Sademetsän takana aukeaa yllättäen '
-      + 'ruohomeri — kuin Afrikka olisi eksynyt Amerikkaan." '
+    nosto: 'Isoisä kirjoitti: ”Sademetsän takana aukeaa yllättäen '
+      + 'ruohomeri — kuin Afrikka olisi eksynyt Amerikkaan.” '
       + 'Lavrado-tasanko yllättää tulijan yhä samalla tavalla.',
   },
   cayenne: {
@@ -72,9 +72,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'satelliitit lähtevät matkaan päiväntasaajan vauhdilla. Torilla '
       + 'myytiin sitä kuuluisaa pippuria, joka kantaa kaupungin nimeä '
       + 'maailmalla.',
-    nosto: 'Isoisä kirjoitti: "Siirtokunta tunnetaan kahdesta asiasta: '
+    nosto: 'Isoisä kirjoitti: ”Siirtokunta tunnetaan kahdesta asiasta: '
       + 'pippurista ja vankilasta, jonne Ranska lähettää '
-      + 'unohdettavansa." Vankila suljettiin aikaa sitten. Pippuri jäi '
+      + 'unohdettavansa.” Vankila suljettiin aikaa sitten. Pippuri jäi '
       + '— ja raketit tulivat tilalle.',
   },
   macapa: {
@@ -83,9 +83,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'pelaavat eri pallonpuoliskoilla, ja maalit vaihtuvat puolelta '
       + 'toiselle kuin vuodenajat. Kaupungin nollapistettä käydään '
       + 'katsomassa kuin nähtävyyttä.',
-    nosto: 'Isoisä kirjoitti: "Amazonin suulla joki on niin leveä, ettei '
+    nosto: 'Isoisä kirjoitti: ”Amazonin suulla joki on niin leveä, ettei '
       + 'vastarantaa näy — makea vesi värjää meren ruskeaksi kauas '
-      + 'ulapalle." Väri näkyy yhä avaruudesta asti.',
+      + 'ulapalle.” Väri näkyy yhä avaruudesta asti.',
   },
   manaus: {
     kuvaus: 'Manausissa kaksi jokea kohtaa suostumatta sekoittumaan: Rio '
@@ -93,18 +93,18 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'kilometrikaupalla rinnakkain kuin kaksiraitainen tie. Keskellä '
       + 'sademetsän suurkaupunkia nousee oopperatalo, jonka kupoli '
       + 'hohtaa Brasilian väreissä.',
-    nosto: 'Isoisä kirjoitti: "Kumipuun maito tekee täällä miehistä '
+    nosto: 'Isoisä kirjoitti: ”Kumipuun maito tekee täällä miehistä '
       + 'ruhtinaita — kaupunki aikoo rakentaa oopperan keskelle '
-      + 'viidakkoa." Se rakensi. Kumi loppui, mutta ooppera soi yhä.',
+      + 'viidakkoa.” Se rakensi. Kumi loppui, mutta ooppera soi yhä.',
   },
   santarem: {
     kuvaus: 'Santarémissa Tapajósjoen vesi on kirkasta ja lämmintä, ja sen '
       + 'valkohiekkaiset rannat kilpailevat meren kanssa — keskellä '
       + 'Amazoniaa on rantakylä, jota kutsutaan sisämaan Karibiaksi. '
       + 'Laiturilla vaaleanpunainen jokidelfiini nousi henkäisemään.',
-    nosto: 'Isoisä kirjoitti: "Joella näkee delfiinin, joka on '
+    nosto: 'Isoisä kirjoitti: ”Joella näkee delfiinin, joka on '
       + 'vaaleanpunainen kuin ilta-aurinko. Intiaanit kertovat sen '
-      + 'muuttuvan öisin ihmiseksi." Boto ui näissä vesissä yhä — '
+      + 'muuttuvan öisin ihmiseksi.” Boto ui näissä vesissä yhä — '
       + 'tarina myös.',
   },
   saoluis: {
@@ -113,8 +113,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'joka pitää talot viileinä. Ja kaikkialla soi reggae — tämä '
       + 'Brasilian kolkka rakastui Jamaikan musiikkiin ja teki siitä '
       + 'omansa.',
-    nosto: 'Isoisä kirjoitti: "Kaupungin talot on vuorattu posliinilla '
-      + 'kuin astiakaappi nurinpäin." Kaakelit hohtavat yhä — ja '
+    nosto: 'Isoisä kirjoitti: ”Kaupungin talot on vuorattu posliinilla '
+      + 'kuin astiakaappi nurinpäin.” Kaakelit hohtavat yhä — ja '
       + 'iltaisin niiden edessä tanssitaan.',
   },
   joaopessoa: {
@@ -123,8 +123,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'kaksoismantereelle ensimmäisenä. Rantabulevardilla ei saa '
       + 'rakentaa taloja palmuja korkeammalle, joten meri näkyy '
       + 'kaikkialle.',
-    nosto: 'Isoisä kirjoitti: "Purjehdimme niemen ohi, joka kurottaa kohti '
-      + 'Afrikkaa kuin ojennettu käsi." Tässä kohtaa mantereet ovat '
+    nosto: 'Isoisä kirjoitti: ”Purjehdimme niemen ohi, joka kurottaa kohti '
+      + 'Afrikkaa kuin ojennettu käsi.” Tässä kohtaa mantereet ovat '
       + 'lähimpänä toisiaan — ja silti valtameren päässä.',
   },
   salvador: {
@@ -132,8 +132,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'välillä kulkee hissi. Yläkaupungin Pelourinhon aukioilla '
       + 'capoeira-piirit pyörivät berimbaun soidessa — laji, joka on '
       + 'tanssia ja kamppailua samassa liikkeessä, syntyi juuri täällä.',
-    nosto: 'Isoisä kirjoitti: "Kaupunkiin valmistui juuri hissi, joka '
-      + 'nostaa ihmiset rantakadulta yläkaupunkiin — uskomaton laite." '
+    nosto: 'Isoisä kirjoitti: ”Kaupunkiin valmistui juuri hissi, joka '
+      + 'nostaa ihmiset rantakadulta yläkaupunkiin — uskomaton laite.” '
       + 'Lacerdan hissi kulkee yhä, päivin ja öin. Ajoin sillä ylös ja '
       + 'alas, kahdesti.',
   },
@@ -142,8 +142,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'suurin kaupunki, johon ajaa vain vene tai lentokone. Belénin '
       + 'kaupunginosassa talot kelluvat tulvan mukana, ja torilla '
       + 'myydään asioita, joiden nimiä ei opi kirjoista.',
-    nosto: 'Isoisä kirjoitti: "Kumiherrat rakentavat viidakkoon palatseja '
-      + 'ja verhoavat ne portugalilaisiin kaakeleihin." Palatsit '
+    nosto: 'Isoisä kirjoitti: ”Kumiherrat rakentavat viidakkoon palatseja '
+      + 'ja verhoavat ne portugalilaisiin kaakeleihin.” Palatsit '
       + 'seisovat yhä rantakadulla — kaakelit hohtavat, vaikka kumi on '
       + 'kauan lopetettu.',
   },
@@ -152,8 +152,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'raskas: Madeira–Mamoré-rata rakennettiin sademetsän läpi kumin '
       + 'kuljettamiseksi, ja työ maksoi tuhansien rakentajien hengen. '
       + 'Kaupunki elää nyt joesta — se on portti Amazonin latvavesille.',
-    nosto: 'Isoisä kirjoitti: "Madeiran kosket katkaisevat joen — lastit '
-      + 'kannetaan maitse koskien ohi, ja moni jää sille matkalle." '
+    nosto: 'Isoisä kirjoitti: ”Madeiran kosket katkaisevat joen — lastit '
+      + 'kannetaan maitse koskien ohi, ja moni jää sille matkalle.” '
       + 'Rata rakennettiin myöhemmin juuri siksi. Kosket kohisevat yhä.',
   },
   bananal: {
@@ -162,8 +162,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'asuu karajá-kansa, jonka savesta muotoillut nuket tunnetaan '
       + 'kautta Brasilian, ja kosteikoilla kahlaa tuhansittain '
       + 'haikaroita.',
-    nosto: 'Isoisä kirjoitti: "Joki jakautuu kahtia ja sulkee sisäänsä '
-      + 'saaren, jonka ympäri purjehtiminen veisi viikkoja." Araguaia '
+    nosto: 'Isoisä kirjoitti: ”Joki jakautuu kahtia ja sulkee sisäänsä '
+      + 'saaren, jonka ympäri purjehtiminen veisi viikkoja.” Araguaia '
       + 'tekee sen yhä — hitaasti, niin kuin kaikki täällä.',
   },
   machupicchu: {
@@ -173,8 +173,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'rakensivat sen ilman laastia — kivet on hiottu niin tarkasti, '
       + 'ettei veitsenterä mahdu väliin.',
     nosto: 'Isoisä ratsasti laakson halki tietämättä, mitä pilvien '
-      + 'yläpuolella oli. Hänen kirjassaan lukee vain: "Vuoret kätkevät '
-      + 'täällä enemmän kuin näyttävät." Hän ei arvannut, kuinka '
+      + 'yläpuolella oli. Hänen kirjassaan lukee vain: ”Vuoret kätkevät '
+      + 'täällä enemmän kuin näyttävät.” Hän ei arvannut, kuinka '
       + 'oikeassa oli.',
   },
   titicaca: {
@@ -183,9 +183,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'kerros lisätään aina vanhan päälle. Järvi on niin korkealla, '
       + 'että pilvet kulkevat matalalla — laivat purjehtivat lähempänä '
       + 'taivasta kuin missään muualla.',
-    nosto: 'Isoisä kirjoitti: "Järvelle laskettiin höyrylaiva, joka '
+    nosto: 'Isoisä kirjoitti: ”Järvelle laskettiin höyrylaiva, joka '
       + 'kannettiin vuorten yli muulien selässä — osina, kahdeksan '
-      + 'vuoden urakalla." Se laiva, Yavari, kelluu Punossa yhä. Kävin '
+      + 'vuoden urakalla.” Se laiva, Yavari, kelluu Punossa yhä. Kävin '
       + 'sen kannella.',
   },
   lima: {
@@ -194,8 +194,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'koskaan kastele katua. Vanhoissa kortteleissa törröttää puisia '
       + 'umpiparvekkeita, joista aikanaan katseltiin katua näkymättä '
       + 'itse.',
-    nosto: 'Isoisä kirjoitti: "Kaupungissa ei ole sateenvarjoja eikä '
-      + 'salamanjohdattimia — täällä ei sada eikä jyrise koskaan." Ukko '
+    nosto: 'Isoisä kirjoitti: ”Kaupungissa ei ole sateenvarjoja eikä '
+      + 'salamanjohdattimia — täällä ei sada eikä jyrise koskaan.” Ukko '
       + 'piti sitä mahdottomana. Se on totta tänäkin päivänä.',
   },
   santacruz: {
@@ -203,8 +203,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'puistokujan puissa ja vaihtavat oksaa kerran päivässä, jos '
       + 'sittenkään. Kaupunki itse on kaikkea muuta — Bolivian '
       + 'nopeimmin kasvava, kuuma ja kova käymään kauppaa.',
-    nosto: 'Isoisä kirjoitti: "Tasangon kaupunki elää härkävankkureista ja '
-      + 'kärsivällisyydestä." Vankkurit vaihtuivat rekkoihin, '
+    nosto: 'Isoisä kirjoitti: ”Tasangon kaupunki elää härkävankkureista ja '
+      + 'kärsivällisyydestä.” Vankkurit vaihtuivat rekkoihin, '
       + 'kärsivällisyys jäi puihin — laiskiaiset eivät ole muuttaneet '
       + 'minnekään.',
   },
@@ -214,8 +214,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'koboltinsinisiä ja äänekkäitä. Kaupunki on portti Pantanaliin, '
       + 'maailman suurimmalle kosteikolle, jossa kaimaanit makaavat '
       + 'rannoilla riveissä.',
-    nosto: 'Isoisä kirjoitti: "Tasangolla karja kahlaa polviaan myöten '
-      + 'vedessä puoli vuotta — ja lihoo silti." Pantanal tulvii yhä '
+    nosto: 'Isoisä kirjoitti: ”Tasangolla karja kahlaa polviaan myöten '
+      + 'vedessä puoli vuotta — ja lihoo silti.” Pantanal tulvii yhä '
       + 'kellonsa mukaan, ja kaikki elävä on oppinut sen rytmin.',
   },
   rio: {
@@ -224,9 +224,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'näyttää kasvaneen maisemaan eikä päinvastoin. Copacabanan '
       + 'jalkakäytävä aaltoilee mustavalkoisena mosaiikkina koko rannan '
       + 'pituuden.',
-    nosto: 'Isoisä kirjoitti: "Amerikassa on yksi keisarikunta, ja sen '
+    nosto: 'Isoisä kirjoitti: ”Amerikassa on yksi keisarikunta, ja sen '
       + 'pääkaupunki on tämä. Keisari Pedro kuulemma pitää enemmän '
-      + 'kirjoista kuin kruunusta." Keisarit menivät — mutta vuorelle '
+      + 'kirjoista kuin kruunusta.” Keisarit menivät — mutta vuorelle '
       + 'nousi patsas, joka levittää käsiään koko kaupungille.',
   },
   saopaulo: {
@@ -236,8 +236,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'muuttuu kävelykaduksi täynnä soittajia. Täällä syödään joka '
       + 'maan keittiöstä — japanilaisia on enemmän kuin missään Japanin '
       + 'ulkopuolella.',
-    nosto: 'Isoisä kirjoitti: "Kahvi rakentaa tätä kaupunkia — jokainen '
-      + 'laiva vie säkkejä ja tuo siirtolaisia." Kahvi rakensi pohjan, '
+    nosto: 'Isoisä kirjoitti: ”Kahvi rakentaa tätä kaupunkia — jokainen '
+      + 'laiva vie säkkejä ja tuo siirtolaisia.” Kahvi rakensi pohjan, '
       + 'siirtolaiset kaiken muun. Siksi täällä maistuu koko maailma.',
   },
   iguazu: {
@@ -246,8 +246,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'kilometrikaupalla — ja Pirunkurkun reunalla jyly tuntuu '
       + 'rintakehässä asti. Perhoset istuivat käsivarsilleni '
       + 'levähtämään vesipölyssä.',
-    nosto: 'Isoisä kirjoitti: "Putousten ääni kuuluu tunnin '
-      + 'ratsastusmatkan päähän, ja sumu näkyy vielä kauemmas." Kuulin '
+    nosto: 'Isoisä kirjoitti: ”Putousten ääni kuuluu tunnin '
+      + 'ratsastusmatkan päähän, ja sumu näkyy vielä kauemmas.” Kuulin '
       + 'sen itse ennen kuin näin mitään — ukko ei liioitellut '
       + 'tälläkään kertaa.',
   },
@@ -257,8 +257,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'jokaisella on oma tarkka mielipide oikeasta lämpötilasta. '
       + 'Sunnuntain grillijuhla, churrasco, on täällä uskonnon ja '
       + 'urheilun väliltä.',
-    nosto: 'Isoisä kirjoitti: "Etelän paimenet ratsastavat kuin olisivat '
-      + 'syntyneet satulaan, ja lihaa paistetaan miekan mitalla." '
+    nosto: 'Isoisä kirjoitti: ”Etelän paimenet ratsastavat kuin olisivat '
+      + 'syntyneet satulaan, ja lihaa paistetaan miekan mitalla.” '
       + 'Miekka on nyt metallivarras — muu ei ole muuttunut.',
   },
   antofagasta: {
@@ -267,9 +267,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'kertaakaan mittaushistorian aikana. Kaupungin takana aavikko '
       + 'nousee ylängöksi, jossa tähdet näkyvät niin kirkkaina, että '
       + 'tänne on rakennettu maailman suurimmat kaukoputket.',
-    nosto: 'Isoisä kirjoitti: "Salpietari tekee tästä rannikosta '
+    nosto: 'Isoisä kirjoitti: ”Salpietari tekee tästä rannikosta '
       + 'kultarannikon — lannoite lähtee täältä koko maailman '
-      + 'pelloille." Salpietarin aika meni. Nyt aavikosta kaivetaan '
+      + 'pelloille.” Salpietarin aika meni. Nyt aavikosta kaivetaan '
       + 'kuparia ja katsotaan tähtiin.',
   },
   salta: {
@@ -278,8 +278,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'jättiläisen maalikaupassa. Kaupungin empanadat ovat '
       + 'Argentiinan kuuluisimmat, ja illalla peñassa laulettiin '
       + 'kansanlauluja kitaran ympärillä.',
-    nosto: 'Isoisä kirjoitti: "Laaksot ovat täällä värikkäämmät kuin '
-      + 'mikään maalaus — luonto ei tiennyt lopettaa ajoissa." '
+    nosto: 'Isoisä kirjoitti: ”Laaksot ovat täällä värikkäämmät kuin '
+      + 'mikään maalaus — luonto ei tiennyt lopettaa ajoissa.” '
       + 'Seitsemän värin kukkula todistaa, ettei tiennyt vieläkään.',
   },
   asuncion: {
@@ -288,8 +288,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'tereré-kupin kuin vanhalle tutulle: jääkylmää matea '
       + 'kierrätetään täällä tuntemattomallekin. Appelsiinipuita kasvaa '
       + 'pihoilla ja katujen varsilla.',
-    nosto: 'Isoisä kirjoitti: "Kaupunki toipuu raskaasta sodasta, mutta '
-      + 'pihoilla kypsyvät appelsiinit ja torilla myydään pitsiä." '
+    nosto: 'Isoisä kirjoitti: ”Kaupunki toipuu raskaasta sodasta, mutta '
+      + 'pihoilla kypsyvät appelsiinit ja torilla myydään pitsiä.” '
       + 'Ñandutí-pitsiä kudotaan yhä — sen nimi tarkoittaa '
       + 'hämähäkinseittiä.',
   },
@@ -299,9 +299,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'puulaatikoita, jotka narisevat mutta kulkevat. Portaikot ja '
       + 'seinät ovat yhtä jättimäistä ulkoilmagalleriaa — muraaleja on '
       + 'kaikkialla.',
-    nosto: 'Isoisä kirjoitti: "Jokainen Kap Hornin kiertänyt laiva '
+    nosto: 'Isoisä kirjoitti: ”Jokainen Kap Hornin kiertänyt laiva '
       + 'pysähtyy tässä satamassa — kadut ovat täynnä maailman '
-      + 'merimiehiä." Panaman kanava hiljensi sataman, mutta kukkulat '
+      + 'merimiehiä.” Panaman kanava hiljensi sataman, mutta kukkulat '
       + 'eivät hiljentyneet koskaan.',
   },
   sanambrosio: {
@@ -309,18 +309,18 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'nousevat suoraan merestä, ja ainoat asukkaat ovat merilinnut, '
       + 'jotka pesivät seinämillä tuhansittain. Kalastajat käyvät '
       + 'vesillä hummerinpyynnissä, mutta yöksi kukaan ei jää.',
-    nosto: 'Isoisä kirjoitti: "Kartalla on saaria, joilla ei käy kukaan — '
+    nosto: 'Isoisä kirjoitti: ”Kartalla on saaria, joilla ei käy kukaan — '
       + 'ne ovat merilintujen valtakuntia, ja niin niiden kuuluu '
-      + 'ollakin." Tämä on yksi niistä. Linnut hallitsevat hyvin.',
+      + 'ollakin.” Tämä on yksi niistä. Linnut hallitsevat hyvin.',
   },
   robinsoncrusoe: {
     kuvaus: 'Robinson Crusoen saari sai nimensä kirjasta, mutta tarina on '
       + 'tosi: merimies Alexander Selkirk eli täällä yksin neljä vuotta '
       + 'ja neljä kuukautta, ja hänen näköalapaikkansa vuorella on yhä '
       + 'merkitty. Kylän laiturilla nostettiin hummeriruukkuja.',
-    nosto: 'Isoisä kirjoitti: "Saari, jolla yksinäinen merimies odotti '
+    nosto: 'Isoisä kirjoitti: ”Saari, jolla yksinäinen merimies odotti '
       + 'laivaa neljä vuotta — hänen tarinastaan tehtiin kuuluisin '
-      + 'seikkailukirja." Saari vaihtoi lopulta nimensä kirjan mukaan. '
+      + 'seikkailukirja.” Saari vaihtoi lopulta nimensä kirjan mukaan. '
       + 'Tarina voitti kartan.',
   },
   puertomontt: {
@@ -329,8 +329,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'lahdesta Chilen kalatalouden sydämen. Torikahvilassa '
       + 'tarjottiin saksalaista kakkua — siirtolaisten perintö näkyy '
       + 'taloissa ja resepteissä.',
-    nosto: 'Isoisä kirjoitti: "Saksalaiset raivasivat tänne pellot ja '
-      + 'rakensivat talot kuin kotonaan — vain vuoret ovat korkeammat." '
+    nosto: 'Isoisä kirjoitti: ”Saksalaiset raivasivat tänne pellot ja '
+      + 'rakensivat talot kuin kotonaan — vain vuoret ovat korkeammat.” '
       + 'Kirkontornit ja kakut ovat yhä kuin Baijerissa. Vuoret '
       + 'voittavat yhä.',
   },
@@ -340,9 +340,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'yli kaksikymmentä kilometriä. Illalla vanhankaupungin '
       + 'kortteleista kuului candombe-rumpujen jylinä — kolme rumpua, '
       + 'kolme ääntä, yksi kieli.',
-    nosto: 'Isoisä kirjoitti: "Satamassa liput vaihtuvat mutta rummut '
+    nosto: 'Isoisä kirjoitti: ”Satamassa liput vaihtuvat mutta rummut '
       + 'eivät vaikene — afrikkalaisten vapautettujen tanssi kaikuu '
-      + 'kaduilla." Candombe kaikuu yhä, joka sunnuntai, samoilla '
+      + 'kaduilla.” Candombe kaikuu yhä, joka sunnuntai, samoilla '
       + 'kaduilla.',
   },
   falkland: {
@@ -351,8 +351,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'riveissä kuin juhlapukuinen kuoro. Stanleyn kylässä on '
       + 'punaisia puhelinkoppeja ja englantilainen pubi — keskellä '
       + 'Etelä-Atlanttia.',
-    nosto: 'Isoisä kirjoitti: "Saarilla on enemmän lampaita kuin ihmisiä '
-      + 'ja enemmän lintuja kuin lampaita." Suhdeluvut pitävät yhä — ja '
+    nosto: 'Isoisä kirjoitti: ”Saarilla on enemmän lampaita kuin ihmisiä '
+      + 'ja enemmän lintuja kuin lampaita.” Suhdeluvut pitävät yhä — ja '
       + 'linnut ovat edelleen parhaiten pukeutuneita.',
   },
   puntaarenas: {
@@ -361,9 +361,9 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'Kaupunki vaurastui aikanaan Magalhãesinsalmen laivoista ja '
       + 'lampaista — aukiolla intiaanipatsaan varvasta kosketetaan, '
       + 'jotta tänne vielä palataan.',
-    nosto: 'Isoisä kirjoitti: "Salmi on myrskyjen koti, mutta ainoa tie '
+    nosto: 'Isoisä kirjoitti: ”Salmi on myrskyjen koti, mutta ainoa tie '
       + 'valtamerestä toiseen — jokainen laiva maksaa sille tullinsa '
-      + 'pelossa." Kanava vei laivat, tuuli jäi. Kosketin varvasta '
+      + 'pelossa.” Kanava vei laivat, tuuli jäi. Kosketin varvasta '
       + 'varmuuden vuoksi.',
   },
   caphorn: {
@@ -371,8 +371,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'seuraavaksi Etelämanner. Niemen kalliolla seisoo albatrossin '
       + 'muotoinen muistomerkki merimiehille, jotka jäivät näihin '
       + 'vesiin — aallot voivat nousta täällä talon korkuisiksi.',
-    nosto: 'Isoisä kirjoitti: "Joka kiertää Hornin purjeilla, saa kantaa '
-      + 'kultarengasta korvassaan ja pitää jalkansa pöydällä." Vanha '
+    nosto: 'Isoisä kirjoitti: ”Joka kiertää Hornin purjeilla, saa kantaa '
+      + 'kultarengasta korvassaan ja pitää jalkansa pöydällä.” Vanha '
       + 'merimiesten laki — kovalla työllä ansaittu oikeus pieneen '
       + 'ylpeyteen.',
   },

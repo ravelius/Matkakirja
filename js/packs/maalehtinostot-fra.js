@@ -308,7 +308,7 @@ const JAKO = [
     symboli: 'sana',
     lahi: true,
     teksti: "Ranskan armeijalle kehitettiin 1800-luvun alussa "
-      + "'yökirjoitus', kohopistejärjestelmä, jonka avulla sotilaat "
+      + "’yökirjoitus’, kohopistejärjestelmä, jonka avulla sotilaat "
       + 'pystyivät lukemaan viestejä pimeässä sormin. Sen keksijä '
       + 'Charles Barbier toi menetelmän Pariisin sokeainkouluun, '
       + 'jossa kolmevuotiaana isänsä satulasepänverstaassa naskalin '
@@ -513,8 +513,8 @@ const JAKO = [
     symboli: 'luonto',
     lahi: true,
     teksti: 'Keskiajalla Mont-Saint-Michelin lahdelle kulkeneille '
-      + "pyhiinvaeltajille varoitettiin, että vuorovesi nousee 'yhtä "
-      + "nopeasti kuin laukkaava hevonen' — liikkuva hiekka ja äkkiä "
+      + "pyhiinvaeltajille varoitettiin, että vuorovesi nousee ’yhtä "
+      + "nopeasti kuin laukkaava hevonen’ — liikkuva hiekka ja äkkiä "
       + 'nouseva vesi ovat vieneet henkiä vuosisatojen ajan. Lahdessa '
       + 'vuoroveden korkeusero on noin neljätoista metriä, yksi '
       + 'Euroopan suurimmista, ja kalliosaari oli ennen kiinni '
@@ -701,8 +701,8 @@ const JAKO = [
     teksti: 'Vuonna 1688 kuninkaan asetus määräsi, että Marseillen '
       + 'saippua saa keittää vain puhtaasta oliiviöljystä ja '
       + 'soodasta — rasvan tai voin käyttö tarkoitti tavaroiden '
-      + "takavarikointia. Yli kolmesataa vuotta myöhemmin nimeä 'savon "
-      + "de Marseille' ei kuitenkaan suojaa mikään laki: kuka tahansa "
+      + "takavarikointia. Yli kolmesataa vuotta myöhemmin nimeä ’savon "
+      + "de Marseille’ ei kuitenkaan suojaa mikään laki: kuka tahansa "
       + 'saa myydä sillä nimellä mitä tahansa saippuaa, ja vasta 2003 '
       + 'perustettu vapaaehtoinen laatuvaliokunta yrittää pitää '
       + 'perinteen elossa. Perinteisen 600 gramman kuution kylkeen '
@@ -821,7 +821,7 @@ const KUVAT = {
   'maalehti-michelin-opas': [{
     osoite: `${OSOITE}fra-maalehti-michelin-opas-707cb9ef.jpg`,
     lyhyt: 'Ensimmäisen Michelin-oppaan punainen kansi vuodelta 1900.',
-    selite: 'Vuoden 1900 Michelin-oppaan kansi: rengas ja lupaus "Offert gracieusement aux Chauffeurs" — opas jaettiin autoilijoille ilmaiseksi.',
+    selite: 'Vuoden 1900 Michelin-oppaan kansi: rengas ja lupaus ”Offert gracieusement aux Chauffeurs” — opas jaettiin autoilijoille ilmaiseksi.',
     lahde: 'Kuva: tekijä tuntematon, Wikimedia Commons (public domain).',
     tekija: 'Tekijä tuntematon',
     lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Guidem_michelin_1900.jpg',
@@ -911,7 +911,7 @@ const KUVAT = {
   'maalehti-couesnonin-vuorovesi': [{
     osoite: `${OSOITE}fra-maalehti-couesnonin-vuorovesi-62337764.jpg`,
     lyhyt: 'Vuosisadan vuorovesi ympäröi Mont-Saint-Michelin maaliskuussa 2015.',
-    selite: 'Maaliskuun 2015 päiväntasauksen "vuosisadan vuorovesi": vesi on noussut saaren muurien juureen ja lahti on yhtä ulappaa.',
+    selite: 'Maaliskuun 2015 päiväntasauksen ”vuosisadan vuorovesi”: vesi on noussut saaren muurien juureen ja lahti on yhtä ulappaa.',
     lahde: 'Valokuva: Édouard Hue, Wikimedia Commons (CC BY-SA 4.0).',
     tekija: 'Édouard Hue',
     lahdeUrl: 'https://commons.wikimedia.org/wiki/File:March_2015_equinox_spring_tide_at_Mont_Saint-Michel-2.jpg',
@@ -931,7 +931,7 @@ const KUVAT = {
   'maalehti-petanque': [{
     osoite: `${OSOITE}fra-maalehti-petanque-933799cc.jpg`,
     lyhyt: 'Jeu provençalia pelataan Avignonin puistokujalla.',
-    selite: 'Jeu provençal eli "la longue" on pétanquen edeltäjä: heittäjä ottaa vauhtia juosten, ja juuri siksi paikallaan pysyvä pétanque keksittiin.',
+    selite: 'Jeu provençal eli ”la longue” on pétanquen edeltäjä: heittäjä ottaa vauhtia juosten, ja juuri siksi paikallaan pysyvä pétanque keksittiin.',
     lahde: 'Valokuva: Fif’, Wikimedia Commons (CC BY-SA 2.0).',
     tekija: 'Fif’',
     lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jeu_proven%C3%A7al_all%C3%A9es_de_l'Oulle_Avignon.jpg",

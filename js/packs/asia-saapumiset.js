@@ -22,8 +22,8 @@ export const ASIA_SAAPUMISET = {
       + 'ja ilmassa tuoksui paahdettu maissi. Vanhalla torilla '
       + 'marmoripylväät seisovat siellä, missä kauppiaat kävelivät jo '
       + 'kaksituhatta vuotta sitten — ja kauppa käy yhä.',
-    nosto: 'Isoisä kirjoitti: "Smyrnan satamasta laivataan viikunoita ja '
-      + 'rusinoita koko maailmalle." Kaupungin nimi on nyt Izmir — ja '
+    nosto: 'Isoisä kirjoitti: ”Smyrnan satamasta laivataan viikunoita ja '
+      + 'rusinoita koko maailmalle.” Kaupungin nimi on nyt Izmir — ja '
       + 'viikunat ovat yhä maailman parhaita.',
   },
   ankara: {
@@ -31,8 +31,8 @@ export const ASIA_SAAPUMISET = {
       + 'rakensi uuden pääkaupunkinsa sata vuotta sitten. Vanhan '
       + 'linnoituksen muurilta katsoin, kuinka vanha kaupunki valuu '
       + 'rinnettä alas kuin olisi aina ollut siinä.',
-    nosto: 'Isoisä kirjoitti: "Angora on pieni kauppala, jonka vuohien '
-      + 'villa on pehmeintä maailmassa." Kauppalasta tuli pääkaupunki — '
+    nosto: 'Isoisä kirjoitti: ”Angora on pieni kauppala, jonka vuohien '
+      + 'villa on pehmeintä maailmassa.” Kauppalasta tuli pääkaupunki — '
       + 'ja angoravilla on yhä nimensä veroista.',
   },
   kapadokia: {
@@ -40,8 +40,8 @@ export const ASIA_SAAPUMISET = {
       + 'kivestä torneja, joihin ihmiset ovat kovertaneet koteja, '
       + 'kirkkoja ja kokonaisia maanalaisia kaupunkeja. Aamulla taivas '
       + 'täyttyi kuumailmapalloista kuin värikkäistä saippuakuplista.',
-    nosto: 'Isoisä kirjoitti: "Täällä ihmiset asuvat kalliossa kuin '
-      + 'linnut, ja ovet ovat kivitornien kyljissä." Kallioasuntoja '
+    nosto: 'Isoisä kirjoitti: ”Täällä ihmiset asuvat kalliossa kuin '
+      + 'linnut, ja ovet ovat kivitornien kyljissä.” Kallioasuntoja '
       + 'vuokrataan nyt matkailijoille — nukuin itsekin yön kivessä.',
   },
   nikosia: {
@@ -49,9 +49,9 @@ export const ASIA_SAAPUMISET = {
       + 'keskellä vanhaakaupunkia vastaan tulee piikkilankaa ja taloja, '
       + 'joissa aika pysähtyi vuosikymmeniä sitten. Näytin passini ja '
       + 'kävelin rajan yli kadulta toiselle.',
-    nosto: 'Isoisä kirjoitti Kyproksesta: "Saarella on kreikkalaisia ja '
+    nosto: 'Isoisä kirjoitti Kyproksesta: ”Saarella on kreikkalaisia ja '
       + 'turkkilaisia kyliä vieretysten, ja kumpikin leipoo parempaa '
-      + 'leipää kuin Lontoo." Leipä on yhä hyvää — viivan molemmin '
+      + 'leipää kuin Lontoo.” Leipä on yhä hyvää — viivan molemmin '
       + 'puolin.',
   },
   halab: {
@@ -60,8 +60,8 @@ export const ASIA_SAAPUMISET = {
       + 'takaisin kaari kerrallaan, ja ensimmäiset kauppiaat myyvät '
       + 'taas saippuaa, jota täällä on keitetty laakerinlehdistä tuhat '
       + 'vuotta.',
-    nosto: 'Isoisä kirjoitti: "Halabin basaarissa voi kävellä tunnin '
-      + 'näkemättä taivasta, ja joka holvin alla tuoksuu eri mauste." '
+    nosto: 'Isoisä kirjoitti: ”Halabin basaarissa voi kävellä tunnin '
+      + 'näkemättä taivasta, ja joka holvin alla tuoksuu eri mauste.” '
       + 'Holvit nousevat uudelleen — ja saippua tuoksuu jo.',
   },
   damaskos: {
@@ -69,8 +69,8 @@ export const ASIA_SAAPUMISET = {
       + 'kuin missään muussa pääkaupungissa — kaupunki on ollut asuttu '
       + 'tuhansia vuosia. Suoraksi kutsuttu katu kulkee vanhankaupungin '
       + 'läpi täsmälleen samassa kohdassa kuin roomalaisten aikaan.',
-    nosto: 'Isoisä kirjoitti: "Damaskoksen sepät takovat terästä, jonka '
-      + 'maine kulkee kauppiaiden mukana kaikkialle." Damaskoksenteräs '
+    nosto: 'Isoisä kirjoitti: ”Damaskoksen sepät takovat terästä, jonka '
+      + 'maine kulkee kauppiaiden mukana kaikkialle.” Damaskoksenteräs '
       + 'on yhä sana, jonka sepät lausuvat kunnioituksella.',
   },
   jerusalem: {
@@ -79,8 +79,8 @@ export const ASIA_SAAPUMISET = {
       + 'Muutaman korttelin sisällä ovat Itkumuuri, Pyhän haudan kirkko '
       + 'ja Kalliomoskeija — kolmen uskonnon pyhimmät paikat, melkein '
       + 'seinä seinässä.',
-    nosto: 'Isoisä kirjoitti: "Täällä jokainen kivi on jollekulle pyhä, ja '
-      + 'siksi jokaisesta kivestä myös kiistellään." Molemmat lauseet '
+    nosto: 'Isoisä kirjoitti: ”Täällä jokainen kivi on jollekulle pyhä, ja '
+      + 'siksi jokaisesta kivestä myös kiistellään.” Molemmat lauseet '
       + 'pitävät paikkansa yhä.',
   },
   petra: {
@@ -89,8 +89,8 @@ export const ASIA_SAAPUMISET = {
       + 'palatsin julkisivu, veistetty suoraan ruusunpunaiseen kallioon '
       + 'kaksituhatta vuotta sitten. Seisoin siinä enkä saanut sanaa '
       + 'suustani.',
-    nosto: 'Isoisä kirjoitti: "Kaupunki, jonka paimentolaiset tunsivat ja '
-      + 'kartat eivät." Nyt sen tuntee koko maailma — mutta rotkon '
+    nosto: 'Isoisä kirjoitti: ”Kaupunki, jonka paimentolaiset tunsivat ja '
+      + 'kartat eivät.” Nyt sen tuntee koko maailma — mutta rotkon '
       + 'päässä henkeä salpaa yhä.',
   },
   siinai: {
@@ -99,8 +99,8 @@ export const ASIA_SAAPUMISET = {
       + 'autiomaa vaihtoi värinsä hetkessä harmaasta kullanpunaiseksi. '
       + 'Vuoren juurella seisoo luostari, joka on toiminut puolitoista '
       + 'tuhatta vuotta.',
-    nosto: 'Isoisä kirjoitti: "Beduiiniopas tuntee polun pimeässäkin, '
-      + 'sillä hänen sukunsa on kulkenut sitä sata sukupolvea." Samat '
+    nosto: 'Isoisä kirjoitti: ”Beduiiniopas tuntee polun pimeässäkin, '
+      + 'sillä hänen sukunsa on kulkenut sitä sata sukupolvea.” Samat '
       + 'suvut opastavat kulkijoita yhä.',
   },
 
@@ -110,8 +110,8 @@ export const ASIA_SAAPUMISET = {
       + 'paksuja, ettei viisi ihmistä yllä käsistä kiinni niiden '
       + 'ympäri. Joen toisella rannalla on laakso, johon faaraot '
       + 'kätkivät hautansa — ja uusia kätköjä löytyy yhä.',
-    nosto: 'Isoisä kirjoitti: "Niilin itäranta kuuluu eläville ja '
-      + 'länsiranta kuolleille — niin täällä on aina ollut." Aurinko '
+    nosto: 'Isoisä kirjoitti: ”Niilin itäranta kuuluu eläville ja '
+      + 'länsiranta kuolleille — niin täällä on aina ollut.” Aurinko '
       + 'nousee yhä temppelien puolelta ja laskee hautojen.',
   },
   medina: {
@@ -120,8 +120,8 @@ export const ASIA_SAAPUMISET = {
       + 'Kaupungin sydämeen pääsevät vain muslimit, joten katsoin '
       + 'kaukaa, kuinka profeetan moskeijan vihreä kupoli hohti '
       + 'valkoisen kaupungin keskellä.',
-    nosto: 'Isoisä kirjoitti: "Pyhiinvaeltaja myi minulle taateleita ja '
-      + 'kertoi kävelleensä kotoaan asti — neljä kuukautta." Nykyään '
+    nosto: 'Isoisä kirjoitti: ”Pyhiinvaeltaja myi minulle taateleita ja '
+      + 'kertoi kävelleensä kotoaan asti — neljä kuukautta.” Nykyään '
       + 'matka lennetään tunneissa, mutta perillä ollaan yhtä '
       + 'onnellisia.',
   },
@@ -131,9 +131,9 @@ export const ASIA_SAAPUMISET = {
       + 'pyhiinvaeltajien bussit jatkoivat kohti kaupunkia, jonka '
       + 'keskellä miljoonat kiertävät mustaa Kaabaa — samaan suuntaan, '
       + 'yhtenä virtana.',
-    nosto: 'Isoisä kirjoitti: "Tänne minun jalkani eivät saa astua, ja '
+    nosto: 'Isoisä kirjoitti: ”Tänne minun jalkani eivät saa astua, ja '
       + 'hyvä niin — maailmassa saa olla paikkoja, jotka eivät ole '
-      + 'minua varten." Käänsin katseeni pois kunnioituksesta, kuten '
+      + 'minua varten.” Käänsin katseeni pois kunnioituksesta, kuten '
       + 'hänkin.',
   },
   riad: {
@@ -143,8 +143,8 @@ export const ASIA_SAAPUMISET = {
       + 'torilla myytiin taateleita kymmeninä lajikkeina, ja jokaista '
       + 'sai maistaa.',
     nosto: 'Isoisä ei käynyt Riadissa — sinne ei ollut tietä, vain '
-      + 'kamelipolku aavikon poikki. Hän kirjoitti: "Sisämaassa '
-      + 'sanotaan olevan kaupunki, jonne matka kestää kuukauden." '
+      + 'kamelipolku aavikon poikki. Hän kirjoitti: ”Sisämaassa '
+      + 'sanotaan olevan kaupunki, jonne matka kestää kuukauden.” '
       + 'Minulta se kesti kolme tuntia.',
   },
   rubalkhali: {
@@ -153,8 +153,8 @@ export const ASIA_SAAPUMISET = {
       + 'pitkälle kuin näkee, ja dyynit ovat korkeita kuin kerrostalot. '
       + 'Yöllä tähtiä oli enemmän kuin olen ikinä nähnyt — eikä yhtään '
       + 'muuta valoa.',
-    nosto: 'Isoisä kirjoitti: "Maailman suurin hiekka-aavikko, jonka '
-      + 'poikki eivät kulje kuin beduiinit — ja hekin sen reunoja." '
+    nosto: 'Isoisä kirjoitti: ”Maailman suurin hiekka-aavikko, jonka '
+      + 'poikki eivät kulje kuin beduiinit — ja hekin sen reunoja.” '
       + 'Ensimmäinen eurooppalainen ylitti sen vasta viisikymmentä '
       + 'vuotta myöhemmin.',
   },
@@ -164,8 +164,8 @@ export const ASIA_SAAPUMISET = {
       + 'valkoisella kalkilla. Niissä on asuttu sukupolvesta toiseen '
       + 'yli tuhat vuotta. Sota on koetellut kaupunkia vuosia, mutta '
       + 'tornit seisovat, ja niitä paikataan.',
-    nosto: 'Isoisä kirjoitti: "Sanaassa talot rakennetaan taivasta kohti, '
-      + 'sillä tontti on kallis mutta taivas ilmainen." Samat talot '
+    nosto: 'Isoisä kirjoitti: ”Sanaassa talot rakennetaan taivasta kohti, '
+      + 'sillä tontti on kallis mutta taivas ilmainen.” Samat talot '
       + 'kurottavat ylöspäin yhä.',
   },
   aden: {
@@ -173,9 +173,9 @@ export const ASIA_SAAPUMISET = {
       + 'kraatterin kylkeen, ja kaupunki kiipesi mustia rinteitä ylös. '
       + 'Täällä ovat pysähtyneet idän ja lännen väliä kulkevat laivat '
       + 'siitä asti, kun Suezin kanava avattiin.',
-    nosto: 'Isoisä kirjoitti: "Aden on maailman kuumin satama ja tärkein '
+    nosto: 'Isoisä kirjoitti: ”Aden on maailman kuumin satama ja tärkein '
       + 'hiilivarasto — jokainen Intiaan matkaava laiva täyttää täällä '
-      + 'ruumansa." Hiili vaihtui öljyyn, mutta laivat kulkevat yhä '
+      + 'ruumansa.” Hiili vaihtui öljyyn, mutta laivat kulkevat yhä '
       + 'samasta salmesta.',
   },
   salalah: {
@@ -183,8 +183,8 @@ export const ASIA_SAAPUMISET = {
       + 'vuoriin, ja muutamaksi kuukaudeksi koko seutu muuttuu '
       + 'vihreäksi kuin puutarha. Torilla ostin palan suitsukepihkaa ja '
       + 'poltin sen illalla — huone tuoksui kuin vanha kirkko.',
-    nosto: 'Isoisä kirjoitti: "Suitsuke kasvaa vain täällä, ja sillä on '
-      + 'maksettu keisarien lunnaita." Pihkaa kerätään yhä samoista '
+    nosto: 'Isoisä kirjoitti: ”Suitsuke kasvaa vain täällä, ja sillä on '
+      + 'maksettu keisarien lunnaita.” Pihkaa kerätään yhä samoista '
       + 'puista, veitsellä ja kärsivällisyydellä.',
   },
   masqat: {
@@ -192,8 +192,8 @@ export const ASIA_SAAPUMISET = {
       + 'vanha kaupunki mahtuu kahden linnoituksen väliin. Satamassa '
       + 'keinuivat puiset dhow-veneet, samanmuotoiset kuin vuosisatoja '
       + 'sitten, ja rantakadulla tuoksui suolavesi ja suitsuke.',
-    nosto: 'Isoisä kirjoitti: "Maskatin satamaa vartioi kaksi vanhaa '
-      + 'linnaketta, ja sisään pääsee vain niiden ohi." Purjehdimme '
+    nosto: 'Isoisä kirjoitti: ”Maskatin satamaa vartioi kaksi vanhaa '
+      + 'linnaketta, ja sisään pääsee vain niiden ohi.” Purjehdimme '
       + 'samasta aukosta — linnakkeet katsoivat yhä.',
   },
   dubai: {
@@ -201,9 +201,9 @@ export const ASIA_SAAPUMISET = {
       + 'huipulle minuutissa, ja korvissa poksahti kuin lentokoneessa. '
       + 'Ylhäältä näkyi kaupunki, jota ei sata vuotta sitten ollut '
       + 'olemassa — vain lahti, jossa sukellettiin helmiä.',
-    nosto: 'Isoisä kirjoitti lahden kylistä: "Täällä miehet sukeltavat '
+    nosto: 'Isoisä kirjoitti lahden kylistä: ”Täällä miehet sukeltavat '
       + 'pohjaan yhdellä hengenvedolla ja nostavat simpukoita, joiden '
-      + 'sisällä voi olla aarre." Helmet loppuivat — mutta aarre '
+      + 'sisällä voi olla aarre.” Helmet loppuivat — mutta aarre '
       + 'päätettiin rakentaa itse.',
   },
   doha: {
@@ -212,8 +212,8 @@ export const ASIA_SAAPUMISET = {
       + 'käsivarrellaan kuin kalliita kelloja. Metsästyshaukka on '
       + 'täällä perheenjäsen — sillä on oma passi ja lentokoneessa oma '
       + 'paikka.',
-    nosto: 'Isoisä kirjoitti: "Beduiinin paras omaisuus on haukka, joka '
-      + 'palaa aina hänen luokseen." Haukat palaavat yhä — nyt '
+    nosto: 'Isoisä kirjoitti: ”Beduiinin paras omaisuus on haukka, joka '
+      + 'palaa aina hänen luokseen.” Haukat palaavat yhä — nyt '
       + 'ilmastoituihin halleihin.',
   },
 
@@ -224,8 +224,8 @@ export const ASIA_SAAPUMISET = {
       + 'tunnus. Ennen öljyä täällä rakennettiin puulaivoja ja '
       + 'purjehdittiin Intiaan asti, ja vanhalla veistämöllä '
       + 'dhow-veneitä syntyy yhä.',
-    nosto: 'Isoisä kirjoitti: "Kuwaitin veistämöillä syntyvät lahden '
-      + 'parhaat laivat, ja niiden rungot kestävät valtameren." '
+    nosto: 'Isoisä kirjoitti: ”Kuwaitin veistämöillä syntyvät lahden '
+      + 'parhaat laivat, ja niiden rungot kestävät valtameren.” '
       + 'Veistäjien taito elää — käsissä ja muistissa.',
   },
   bagdad: {
@@ -234,8 +234,8 @@ export const ASIA_SAAPUMISET = {
       + 'kieliltä. Tigrisin rannalla paistettiin kalaa avotulella, ja '
       + 'sillalla joku lausui runoja ääneen — täällä runoilijoita on '
       + 'aina arvostettu.',
-    nosto: 'Isoisä kirjoitti: "Tuhannen ja yhden yön kaupunki on nähnyt '
-      + 'parempia öitä, mutta sen tarinat eivät kulu." Eivät kuluneet — '
+    nosto: 'Isoisä kirjoitti: ”Tuhannen ja yhden yön kaupunki on nähnyt '
+      + 'parempia öitä, mutta sen tarinat eivät kulu.” Eivät kuluneet — '
       + 'luin niitä hänen kirjastaan koko matkan.',
   },
   mosul: {
@@ -244,8 +244,8 @@ export const ASIA_SAAPUMISET = {
       + 'minareetti, jota kaupunkilaiset kutsuvat kyttyräseläksi, '
       + 'sortui sodassa — ja rakennettiin pystyyn uudelleen, vanhoista '
       + 'tiilistä.',
-    nosto: 'Isoisä kirjoitti: "Mosulin kankaita kysytään Lontoossa asti — '
-      + 'ohuinta puuvillaa, jota sormet tuskin tuntevat." Kankaan nimi '
+    nosto: 'Isoisä kirjoitti: ”Mosulin kankaita kysytään Lontoossa asti — '
+      + 'ohuinta puuvillaa, jota sormet tuskin tuntevat.” Kankaan nimi '
       + 'elää kielessä yhä: musliini tarkoittaa Mosulin kangasta.',
   },
   tabriz: {
@@ -253,9 +253,9 @@ export const ASIA_SAAPUMISET = {
       + 'holvikäytäviä on kilometrikaupalla, ja mattokauppiaan '
       + 'huoneessa juotiin teetä ennen kuin yhtään mattoa levitettiin. '
       + 'Kauppa on täällä keskustelua — hinta on vasta loppuhuipennus.',
-    nosto: 'Isoisä kirjoitti: "Tabrizin matossa on solmuja tiheämmässä '
+    nosto: 'Isoisä kirjoitti: ”Tabrizin matossa on solmuja tiheämmässä '
       + 'kuin tähtiä taivaalla, ja kauppias muistaa jokaisen kutojan '
-      + 'nimen." Parhaat matot kudotaan yhä käsin — ja nimet '
+      + 'nimen.” Parhaat matot kudotaan yhä käsin — ja nimet '
       + 'muistetaan.',
   },
   teheran: {
@@ -264,8 +264,8 @@ export const ASIA_SAAPUMISET = {
       + 'takaa. Aamulla vuoret olivat terävät, illalla ne hehkuivat '
       + 'punaisina liikenteen yllä. Basaarissa hinnat laskettiin '
       + 'helmitaululla.',
-    nosto: 'Isoisä kirjoitti: "Shaahin aarrekammiossa on jalokivistä tehty '
-      + 'karttapallo, jossa meret ovat smaragdia." Se karttapallo on '
+    nosto: 'Isoisä kirjoitti: ”Shaahin aarrekammiossa on jalokivistä tehty '
+      + 'karttapallo, jossa meret ovat smaragdia.” Se karttapallo on '
       + 'yhä olemassa — ja meret ovat vihreät kuin silloin.',
   },
   isfahan: {
@@ -274,9 +274,9 @@ export const ASIA_SAAPUMISET = {
       + 'kirkkaimmillaan, ja illalla kaupunkilaiset istuivat vanhojen '
       + 'siltojen holveissa laulamassa — sillat on rakennettu myös '
       + 'oleskelua varten.',
-    nosto: 'Isoisä kirjoitti: "Aukiolla pelattiin ratsain palloa jo '
+    nosto: 'Isoisä kirjoitti: ”Aukiolla pelattiin ratsain palloa jo '
       + 'shaahien aikaan, ja kivistä maalitolpat seisovat yhä '
-      + 'paikoillaan." Ne seisovat vieläkin — neljäsataa vuotta '
+      + 'paikoillaan.” Ne seisovat vieläkin — neljäsataa vuotta '
       + 'vanhoina.',
   },
   persepolis: {
@@ -285,8 +285,8 @@ export const ASIA_SAAPUMISET = {
       + 'kankaita, kultaa. Kävelin samat portaat ylös kuin he kaksi ja '
       + 'puoli tuhatta vuotta sitten. Pylväät seisovat, vaikka palatsit '
       + 'paloivat jo antiikin aikana.',
-    nosto: 'Isoisä kirjoitti: "Aleksanteri poltti tämän kaupungin, ja '
-      + 'silti se on säilynyt paremmin kuin moni elävä." Kivi muistaa '
+    nosto: 'Isoisä kirjoitti: ”Aleksanteri poltti tämän kaupungin, ja '
+      + 'silti se on säilynyt paremmin kuin moni elävä.” Kivi muistaa '
       + 'pidempään kuin tuli.',
   },
 
@@ -297,8 +297,8 @@ export const ASIA_SAAPUMISET = {
       + 'rajan päällä, yksi jalka kummassakin maanosassa — ja takanani '
       + 'toinen matkalainen odotti vuoroaan tehdäkseen täsmälleen '
       + 'saman.',
-    nosto: 'Isoisä kirjoitti: "Uralin raja on tässä vain viiva, mutta '
-      + 'juhlallinen sellainen — joka seurue pysähtyy sen kohdalla." '
+    nosto: 'Isoisä kirjoitti: ”Uralin raja on tässä vain viiva, mutta '
+      + 'juhlallinen sellainen — joka seurue pysähtyy sen kohdalla.” '
       + 'Minäkin pysähdyin. Ja hyppäsin sitten maanosasta toiseen '
       + 'tasajalkaa.',
   },
@@ -308,8 +308,8 @@ export const ASIA_SAAPUMISET = {
       + 'parakkileiristä kasvoi suurkaupunki nopeammin kuin mikään muu '
       + 'Venäjällä. Talvella joki jäätyy niin paksuksi, että sen yli '
       + 'ajetaan autolla.',
-    nosto: 'Isoisä kirjoitti näiltä main vain: "Arojen yli ajaa kärryillä '
-      + 'viikon näkemättä kaupunkia." Kaupunkia ei ollutkaan — se '
+    nosto: 'Isoisä kirjoitti näiltä main vain: ”Arojen yli ajaa kärryillä '
+      + 'viikon näkemättä kaupunkia.” Kaupunkia ei ollutkaan — se '
       + 'syntyi vasta hänen jälkeensä. Nyt siinä asuu puolitoista '
       + 'miljoonaa ihmistä.',
   },
@@ -319,9 +319,9 @@ export const ASIA_SAAPUMISET = {
       + 'on enemmän vettä kuin kaikissa Pohjois-Amerikan suurjärvissä '
       + 'yhteensä. Vesi oli niin kirkasta, että vene näytti leijuvan '
       + 'ilmassa.',
-    nosto: 'Isoisä kirjoitti: "Baikalin vesi on kirkkainta, mitä olen '
+    nosto: 'Isoisä kirjoitti: ”Baikalin vesi on kirkkainta, mitä olen '
       + 'kohdannut, ja siinä elää hylje tuhannen virstan päässä '
-      + 'merestä." Se hylje, nerpa, elää siellä yhä — eikä kukaan tiedä '
+      + 'merestä.” Se hylje, nerpa, elää siellä yhä — eikä kukaan tiedä '
       + 'varmasti, miten se sinne päätyi.',
   },
   jakutsk: {
@@ -329,8 +329,8 @@ export const ASIA_SAAPUMISET = {
       + 'alle viidenkymmenen, ja silloin hengitys jää ilmaan sumuna '
       + 'kadulle. Talot seisovat betonijaloilla irti maasta, koska '
       + 'ikirouta ei saa sulaa niiden alla — muuten talo vajoaa.',
-    nosto: 'Isoisä kirjoitti: "Täällä turkiskauppias ei kysy, onko sinulla '
-      + 'turkki, vaan montako." Ymmärsin kysymyksen jo lokakuussa.',
+    nosto: 'Isoisä kirjoitti: ”Täällä turkiskauppias ei kysy, onko sinulla '
+      + 'turkki, vaan montako.” Ymmärsin kysymyksen jo lokakuussa.',
   },
   magadan: {
     kuvaus: 'Magadan on kaupunki maailman laidalla: takana Ohotanmeri, '
@@ -338,7 +338,7 @@ export const ASIA_SAAPUMISET = {
       + 'ankarina aikoina, ja rinteellä seisoo suuri kivikasvoinen '
       + 'muistomerkki niille, jotka tänne aikoinaan pakolla tuotiin.',
     nosto: 'Isoisän kartassa tätä kaupunkia ei ole — koko rannikolla lukee '
-      + 'vain: "Tundraa, jonka poikki ei kulje tietä." Nyt tie on, ja '
+      + 'vain: ”Tundraa, jonka poikki ei kulje tietä.” Nyt tie on, ja '
       + 'sen päässä asutaan — kaukanakin koti on koti.',
   },
   kamtsatka: {
@@ -346,8 +346,8 @@ export const ASIA_SAAPUMISET = {
       + 'lentokoneen ikkunasta ne näkyivät rivissä kuin lumihuippuiset '
       + 'keilat. Joella näimme karhun seisovan koskessa: se odotti '
       + 'kärsivällisesti, ja lohi hyppäsi suoraan sen suuhun.',
-    nosto: 'Isoisä kirjoitti: "Niemimaa, jossa maa savuaa ja joet kiehuvat '
-      + 'kaloja." Kumpikin on totta tänäkin päivänä — ja karhuja on '
+    nosto: 'Isoisä kirjoitti: ”Niemimaa, jossa maa savuaa ja joet kiehuvat '
+      + 'kaloja.” Kumpikin on totta tänäkin päivänä — ja karhuja on '
       + 'monin paikoin enemmän kuin ihmisiä.',
   },
   sahalin: {
@@ -356,8 +356,8 @@ export const ASIA_SAAPUMISET = {
       + 'kokonainen maa, ja sen eteläkärjestä näkee kirkkaalla säällä '
       + 'Japaniin — naapuri on ollut välillä ystävä, välillä jotain '
       + 'muuta.',
-    nosto: 'Isoisä kirjoitti: "Saari, jonne keisari lähettää ne, joita ei '
-      + 'halua nähdä." Vankileirit ovat kauan poissa — nyt saaren '
+    nosto: 'Isoisä kirjoitti: ”Saari, jonne keisari lähettää ne, joita ei '
+      + 'halua nähdä.” Vankileirit ovat kauan poissa — nyt saaren '
       + 'pitävät hengissä ravut, kalat ja öljy.',
   },
   vladivostok: {
@@ -365,8 +365,8 @@ export const ASIA_SAAPUMISET = {
       + '— niin monta kilometriä rautatietä on Moskovaan. Junat '
       + 'lähtevät täältä viikon matkalle kuin bussit ikään. Satamassa '
       + 'sumutorvi huusi, ja toinen vastasi jostain lahden takaa.',
-    nosto: 'Isoisä kirjoitti: "Kaupungin nimi tarkoittaa idän hallitsijaa, '
-      + 'ja sen satamasta Venäjä katsoo Tyynellemerelle." Katsoo yhä — '
+    nosto: 'Isoisä kirjoitti: ”Kaupungin nimi tarkoittaa idän hallitsijaa, '
+      + 'ja sen satamasta Venäjä katsoo Tyynellemerelle.” Katsoo yhä — '
       + 'ja rata kulkee perille asti, mikä hänen aikanaan oli pelkkä '
       + 'haave.',
   },
@@ -376,8 +376,8 @@ export const ASIA_SAAPUMISET = {
       + 'ja torni, jonka kultaisesta pallosta katsotaan aroa '
       + 'horisonttiin asti. Melkein kaikki on rakennettu minun '
       + 'elinaikanani.',
-    nosto: 'Isoisä kirjoitti aroista: "Ruohomeri, jossa ratsastaja näkyy '
-      + 'tuntia ennen kuin saapuu." Meri on sama — mutta keskellä sitä '
+    nosto: 'Isoisä kirjoitti aroista: ”Ruohomeri, jossa ratsastaja näkyy '
+      + 'tuntia ennen kuin saapuu.” Meri on sama — mutta keskellä sitä '
       + 'on nyt pääkaupunki, joka talvella on maailman kylmimpiä.',
   },
   samarkand: {
@@ -386,8 +386,8 @@ export const ASIA_SAAPUMISET = {
       + 'kuin taivasta olisi laskettu palasiksi. Silkkitien karavaanit '
       + 'kohtasivat täällä tuhat vuotta — Kiina ja Eurooppa vaihtoivat '
       + 'tavaraa ja tarinoita.',
-    nosto: 'Isoisä kirjoitti: "Samarkandiin verrattuna moni Euroopan tori '
-      + 'on eteinen." Aukio on entisellään — ja iltavalossa kaakelit '
+    nosto: 'Isoisä kirjoitti: ”Samarkandiin verrattuna moni Euroopan tori '
+      + 'on eteinen.” Aukio on entisellään — ja iltavalossa kaakelit '
       + 'hehkuvat kuin hänen aikanaan.',
   },
   kashgar: {
@@ -396,9 +396,9 @@ export const ASIA_SAAPUMISET = {
       + 'mattoja, meloneja ja veitsiä, ja tinkiminen kuuluu kauas. Tämä '
       + 'keidaskaupunki on ollut Silkkitien portti vuorten yli '
       + 'kaksituhatta vuotta.',
-    nosto: 'Isoisä kirjoitti: "Kashgarissa kohtaavat ne, jotka ovat '
+    nosto: 'Isoisä kirjoitti: ”Kashgarissa kohtaavat ne, jotka ovat '
       + 'ylittäneet maailman korkeimmat vuoret, ja ne, jotka vasta '
-      + 'aikovat." Tori on yhä täynnä molempia.',
+      + 'aikovat.” Tori on yhä täynnä molempia.',
   },
   ulanbator: {
     kuvaus: 'Ulan Batorissa kerrostalojen takana alkavat jurtat: pyöreitä '
@@ -406,8 +406,8 @@ export const ASIA_SAAPUMISET = {
       + 'Naadam-juhlassa katsoin, kuinka lapset ratsastivat kilpaa '
       + 'kymmeniä kilometrejä arolla — voittaja oli minun ikäiseni ja '
       + 'otti voittonsa tyynesti.',
-    nosto: 'Isoisä kirjoitti: "Mongoli oppii ratsastamaan ennen kuin '
-      + 'kävelemään, eikä se ole sanonta vaan havainto." Havainto pätee '
+    nosto: 'Isoisä kirjoitti: ”Mongoli oppii ratsastamaan ennen kuin '
+      + 'kävelemään, eikä se ole sanonta vaan havainto.” Havainto pätee '
       + 'yhä.',
   },
   lhasa: {
@@ -416,8 +416,8 @@ export const ASIA_SAAPUMISET = {
       + 'ikkunan voimalla, ja sen juurella pyhiinvaeltajat kiertävät '
       + 'temppeliä rukousmyllyjä pyörittäen — jokainen pyöräytys on '
       + 'yksi rukous.',
-    nosto: 'Isoisä kirjoitti: "Kaupunki, jonne matkalaisella ei ole asiaa '
-      + '— harva on nähnyt sen ja palannut kertomaan." Hän ei päässyt '
+    nosto: 'Isoisä kirjoitti: ”Kaupunki, jonne matkalaisella ei ole asiaa '
+      + '— harva on nähnyt sen ja palannut kertomaan.” Hän ei päässyt '
       + 'tänne. Pyöräytin myllyä myös hänen puolestaan.',
   },
   peking: {
@@ -426,8 +426,8 @@ export const ASIA_SAAPUMISET = {
       + 'uusi palatsi. Keisarin kaupungissa sanotaan olevan lähes '
       + 'kymmenentuhatta huonetta — ja viisisataa vuotta kansa ei '
       + 'nähnyt niistä yhtäkään.',
-    nosto: 'Isoisä kirjoitti: "Pekingin muurin portit ovat kuin vuoria, '
-      + 'joihin on puhkaistu ovi." Suuret muurit purettiin sittemmin — '
+    nosto: 'Isoisä kirjoitti: ”Pekingin muurin portit ovat kuin vuoria, '
+      + 'joihin on puhkaistu ovi.” Suuret muurit purettiin sittemmin — '
       + 'mutta Kielletty kaupunki avattiin kaikille. Kävin keisarin '
       + 'pihassa lippua vilauttamalla.',
   },
@@ -438,7 +438,7 @@ export const ASIA_SAAPUMISET = {
       + 'vuotta sitten, ja maanviljelijä löysi ne kaivoa kaivaessaan — '
       + 'vasta viisikymmentä vuotta sitten.',
     nosto: 'Isoisä kulki Xianin ohi tietämättä, että pellon alla nukkui '
-      + 'armeija. Hän kirjoitti vain: "Täältä Silkkitie alkaa." '
+      + 'armeija. Hän kirjoitti vain: ”Täältä Silkkitie alkaa.” '
       + 'Molemmat olivat totta koko ajan.',
   },
   shanghai: {
@@ -447,9 +447,9 @@ export const ASIA_SAAPUMISET = {
       + 'pankkipalatsit, toisella lasitornit, jotka katoavat pilviin. '
       + 'Lautta kulkee välissä edestakaisin kuin sukkula kahden '
       + 'vuosisadan väliä.',
-    nosto: 'Isoisä kirjoitti: "Shanghaissa maailman kaupat kohtaavat: '
+    nosto: 'Isoisä kirjoitti: ”Shanghaissa maailman kaupat kohtaavat: '
       + 'laiturilla puhutaan kymmentä kieltä ja lasketaan kolmella '
-      + 'rahalla." Kieliä on yhä kymmenen — ja satama on maailman '
+      + 'rahalla.” Kieliä on yhä kymmenen — ja satama on maailman '
       + 'suurimpia.',
   },
   hongkong: {
@@ -458,8 +458,8 @@ export const ASIA_SAAPUMISET = {
       + 'kaatuvan. Ylhäältä kaupunki oli tornien metsä sataman '
       + 'ympärillä, ja illalla tuhannet valot syttyivät kuin '
       + 'tähtitaivas olisi kaadettu mereen.',
-    nosto: 'Isoisä kirjoitti: "Kalastajakylästä on tullut satama, jossa '
-      + 'käy enemmän laivoja kuin Lontoossa." Hän näki alun — mutta '
+    nosto: 'Isoisä kirjoitti: ”Kalastajakylästä on tullut satama, jossa '
+      + 'käy enemmän laivoja kuin Lontoossa.” Hän näki alun — mutta '
       + 'tätä huippua hän ei olisi arvannut.',
   },
   taipei: {
@@ -468,9 +468,9 @@ export const ASIA_SAAPUMISET = {
       + 'kun maa järisee tai taifuuni puhaltaa, pallo heilahtaa vastaan '
       + 'ja pitää tornin vakaana. Illalla söin yötorilla nyyttejä '
       + 'höyryävästä korista.',
-    nosto: 'Isoisä kirjoitti saaresta: "Formosa tarkoittaa kaunista — '
+    nosto: 'Isoisä kirjoitti saaresta: ”Formosa tarkoittaa kaunista — '
       + 'portugalilaiset nimesivät sen laivan kannelta, eivätkä '
-      + 'valehdelleet." Nimi vaihtui, kauneus ei.',
+      + 'valehdelleet.” Nimi vaihtui, kauneus ei.',
   },
   soul: {
     kuvaus: 'Soulissa keskellä kaupunkia virtaa puro, jonka rannalle '
@@ -478,8 +478,8 @@ export const ASIA_SAAPUMISET = {
       + 'pauhaa miljoonakaupunki, alhaalla ihmiset istuvat kivillä ja '
       + 'kastavat jalkojaan. Puro oli vuosikymmenet piilossa betonin '
       + 'alla — kunnes kaupunki kaivoi sen esiin.',
-    nosto: 'Isoisä kirjoitti: "Soul on muurien ja porttien kaupunki, ja '
-      + 'portit suljetaan yöksi kellon lyönnillä." Suuret portit '
+    nosto: 'Isoisä kirjoitti: ”Soul on muurien ja porttien kaupunki, ja '
+      + 'portit suljetaan yöksi kellon lyönnillä.” Suuret portit '
       + 'seisovat yhä keskellä liikennettä — ja kelloa lyödään '
       + 'edelleen, juhlan vuoksi.',
   },
@@ -488,8 +488,8 @@ export const ASIA_SAAPUMISET = {
       + 'tuhansia ihmisiä joka suuntaan — eikä kukaan törmää kehenkään. '
       + 'Kadunkulman takana odotti pyhäkkö, jonka pihalla ei kuulunut '
       + 'mitään. Tämä kaupunki osaa olla kahta asiaa yhtä aikaa.',
-    nosto: 'Isoisä kirjoitti: "Yedossa on juuri vaihdettu nimi ja koko '
-      + 'valtakunnan suunta." Nimi vaihtui Tokioksi viisi vuotta ennen '
+    nosto: 'Isoisä kirjoitti: ”Yedossa on juuri vaihdettu nimi ja koko '
+      + 'valtakunnan suunta.” Nimi vaihtui Tokioksi viisi vuotta ennen '
       + 'hänen matkaansa — ukko ehti nähdä muutoksen alun.',
   },
 
@@ -500,8 +500,8 @@ export const ASIA_SAAPUMISET = {
       + 'maalattu täyteen kukkia, tähtiä ja perheenjäsenten nimiä. '
       + 'Nousin kyytiin takaovesta, ja kolikkoni kulki kädestä käteen '
       + 'kuljettajalle asti.',
-    nosto: 'Isoisä kirjoitti: "Manilan lahdella auringonlasku on niin '
-      + 'punainen, että laivakello luullaan tulipaloksi." Katsoin sen '
+    nosto: 'Isoisä kirjoitti: ”Manilan lahdella auringonlasku on niin '
+      + 'punainen, että laivakello luullaan tulipaloksi.” Katsoin sen '
       + 'itse — hän ei liioitellut.',
   },
   hanoi: {
@@ -510,8 +510,8 @@ export const ASIA_SAAPUMISET = {
       + 'sitä. Yhdellä kujalla juna kulkee niin läheltä taloja, että '
       + 'asukkaat siirtävät tuolinsa sisään sen ajaksi ja takaisin heti '
       + 'perään.',
-    nosto: 'Isoisä kirjoitti: "Kolmekymmentäkuusi katua, ja jokaisella oma '
-      + 'ammattikuntansa — näin järjestetty kaupunki ei eksytä ketään." '
+    nosto: 'Isoisä kirjoitti: ”Kolmekymmentäkuusi katua, ja jokaisella oma '
+      + 'ammattikuntansa — näin järjestetty kaupunki ei eksytä ketään.” '
       + 'Minä eksyin silti. Onneksi.',
   },
   bangkok: {
@@ -520,8 +520,8 @@ export const ASIA_SAAPUMISET = {
       + 'ja kauppias souti veneensä suoraan viereen myymään mangoa. '
       + 'Kultaiset temppelitornit välkkyivät puiden takana joka '
       + 'käännöksessä.',
-    nosto: 'Isoisä kirjoitti: "Bangkok on idän Venetsia — kadut ovat vettä '
-      + 'ja markkinat kelluvat." Autot tulivat sittemmin, mutta veneet '
+    nosto: 'Isoisä kirjoitti: ”Bangkok on idän Venetsia — kadut ovat vettä '
+      + 'ja markkinat kelluvat.” Autot tulivat sittemmin, mutta veneet '
       + 'eivät hävinneet minnekään.',
   },
   yangon: {
@@ -530,8 +530,8 @@ export const ASIA_SAAPUMISET = {
       + 'päällystetty aidolla kullalla, ja huipulla kimaltaa tuhansia '
       + 'jalokiviä. Kävelin sen ympäri paljain jaloin kuten kaikki — '
       + 'marmori oli lämmin jalkojen alla.',
-    nosto: 'Isoisä kirjoitti: "Torni on kullattu kansan lahjoittamalla '
-      + 'kullalla, lehti kerrallaan, sukupolvi toisensa perään." '
+    nosto: 'Isoisä kirjoitti: ”Torni on kullattu kansan lahjoittamalla '
+      + 'kullalla, lehti kerrallaan, sukupolvi toisensa perään.” '
       + 'Kultaamista jatketaan yhä — näin, kun uusia lehtiä kannettiin '
       + 'ylös.',
   },
@@ -541,8 +541,8 @@ export const ASIA_SAAPUMISET = {
       + 'runkoja pitkin kasvaa tuhansia oikeita kasveja, ja illalla ne '
       + 'syttyvät valoshow\'ksi. Katu oli niin siisti, etten löytänyt '
       + 'roskaa edes etsimällä.',
-    nosto: 'Isoisä kirjoitti: "Singapore on portti, jonka kautta idän ja '
-      + 'lännen laivat kulkevat — joka toinen lippu on eri maasta." '
+    nosto: 'Isoisä kirjoitti: ”Singapore on portti, jonka kautta idän ja '
+      + 'lännen laivat kulkevat — joka toinen lippu on eri maasta.” '
       + 'Portti ei sulkeutunut koskaan: satama on nyt maailman '
       + 'vilkkaimpia.',
   },
@@ -552,8 +552,8 @@ export const ASIA_SAAPUMISET = {
       + 'käsivarsineen — orangutan, metsän ihminen, kuten nimi '
       + 'paikallisella kielellä kuuluu. Se katsoi meitä kaikessa '
       + 'rauhassa ja jatkoi matkaansa oksalta oksalle.',
-    nosto: 'Isoisä kirjoitti: "Saaren metsissä asuu punainen apina, joka '
-      + 'rakentaa joka ilta itselleen uuden vuoteen puiden latvoihin." '
+    nosto: 'Isoisä kirjoitti: ”Saaren metsissä asuu punainen apina, joka '
+      + 'rakentaa joka ilta itselleen uuden vuoteen puiden latvoihin.” '
       + 'Niin se tekee yhä — mutta metsää on jäljellä paljon vähemmän '
       + 'kuin ukon aikaan.',
   },
@@ -562,8 +562,8 @@ export const ASIA_SAAPUMISET = {
       + 'rannoilla nenäapinat loikkivat puissa kuin kömpelöt '
       + 'akrobaatit. Saaren sademetsä on maailman vanhimpia — se oli '
       + 'täällä jo silloin, kun dinosaurukset vielä katosivat.',
-    nosto: 'Isoisä kirjoitti: "Sisämaahan ei ole tietä, mutta joet vievät '
-      + 'minne vain, jos soutaja tuntee ne." Moottori korvasi airot — '
+    nosto: 'Isoisä kirjoitti: ”Sisämaahan ei ole tietä, mutta joet vievät '
+      + 'minne vain, jos soutaja tuntee ne.” Moottori korvasi airot — '
       + 'joet ovat yhä teitä.',
   },
   jakarta: {
@@ -572,8 +572,8 @@ export const ASIA_SAAPUMISET = {
       + 'Indonesia rakentaa siksi kokonaan uutta pääkaupunkia toiselle '
       + 'saarelle. Vanhassa satamassa lastattiin yhä puisia '
       + 'purjelaivoja käsivoimin.',
-    nosto: 'Isoisä kirjoitti: "Bataviassa kanavat ovat kuin Amsterdamissa, '
-      + 'mutta ilma on kuin pesutuvassa." Nimi vaihtui Jakartaksi — '
+    nosto: 'Isoisä kirjoitti: ”Bataviassa kanavat ovat kuin Amsterdamissa, '
+      + 'mutta ilma on kuin pesutuvassa.” Nimi vaihtui Jakartaksi — '
       + 'kosteus ei vaihtunut mihinkään.',
   },
 
@@ -584,8 +584,8 @@ export const ASIA_SAAPUMISET = {
       + 'maailman korkeimmat vuoret. Torilla kantaja nosti selkäänsä '
       + 'kokonaisen kaapin ja lähti vuoripolulle kuin se olisi '
       + 'koulureppu.',
-    nosto: 'Isoisä kirjoitti: "Täältä alkaa maailman katto, eikä kukaan '
-      + 'ole käynyt sen harjalla." Nyt on käyty monta kertaa — ja silti '
+    nosto: 'Isoisä kirjoitti: ”Täältä alkaa maailman katto, eikä kukaan '
+      + 'ole käynyt sen harjalla.” Nyt on käyty monta kertaa — ja silti '
       + 'vuoret näyttävät yhtä mahdottomilta.',
   },
   delhi: {
@@ -594,9 +594,9 @@ export const ASIA_SAAPUMISET = {
       + 'kertaakaan. Kujien takana aukeni yhtäkkiä Punaisen '
       + 'linnoituksen muuri — kokonainen keisarin kaupunki kaupungin '
       + 'sisällä.',
-    nosto: 'Isoisä kirjoitti: "Delhi on nähnyt seitsemän kaupunkia '
+    nosto: 'Isoisä kirjoitti: ”Delhi on nähnyt seitsemän kaupunkia '
       + 'päällekkäin — jokainen valloittaja rakensi omansa edellisen '
-      + 'viereen." Kahdeksas rakennettiin hänen jälkeensä. Sekin '
+      + 'viereen.” Kahdeksas rakennettiin hänen jälkeensä. Sekin '
       + 'edellisten viereen.',
   },
   kolkata: {
@@ -605,8 +605,8 @@ export const ASIA_SAAPUMISET = {
       + 'katkennut hetkeksikään. Kirjakatu jatkui kortteleittain: '
       + 'kojuja, joissa kirjapinot nousevat kattoon, ja myyjä löytää '
       + 'pyydetyn hetkessä.',
-    nosto: 'Isoisä kirjoitti: "Kalkutassa runoilijat ja kirjanpitäjät '
-      + 'istuvat samassa kahvilassa, ja väittely kuuluu kadulle." '
+    nosto: 'Isoisä kirjoitti: ”Kalkutassa runoilijat ja kirjanpitäjät '
+      + 'istuvat samassa kahvilassa, ja väittely kuuluu kadulle.” '
       + 'Kuuluu yhä — se on täällä kansanhuvi.',
   },
   mumbai: {
@@ -615,8 +615,8 @@ export const ASIA_SAAPUMISET = {
       + 'tehdyn lounaan ja toimittavat sen junilla ja pyörillä juuri '
       + 'oikealle työpaikalle — satojatuhansia annoksia päivässä, '
       + 'käytännössä virheettä.',
-    nosto: 'Isoisä kirjoitti: "Bombayn satamassa puretaan ja lastataan '
-      + 'yötä päivää — tämä kaupunki ei nuku koskaan." Nimi vaihtui '
+    nosto: 'Isoisä kirjoitti: ”Bombayn satamassa puretaan ja lastataan '
+      + 'yötä päivää — tämä kaupunki ei nuku koskaan.” Nimi vaihtui '
       + 'Mumbaiksi. Valvominen ei.',
   },
   chennai: {
@@ -625,8 +625,8 @@ export const ASIA_SAAPUMISET = {
       + 'sankareita ja eläimiä, maalattuina kaikin värein. Illalla koko '
       + 'kaupunki tuntui kävelevän Marina-rannalle — hiekkaa riittää '
       + 'kilometreittäin.',
-    nosto: 'Isoisä kirjoitti: "Madrasin rannassa aallot ovat niin suuret, '
-      + 'että laivat puretaan soutuveneillä." Satama rakennettiin '
+    nosto: 'Isoisä kirjoitti: ”Madrasin rannassa aallot ovat niin suuret, '
+      + 'että laivat puretaan soutuveneillä.” Satama rakennettiin '
       + 'myöhemmin — ranta jäi kaupunkilaisten iltakävelylle.',
   },
   colombo: {
@@ -634,8 +634,8 @@ export const ASIA_SAAPUMISET = {
       + 'on viety täältä maailmalle vuosisatoja. Tuk-tuk kiemurteli '
       + 'liikenteessä kuin kala virrassa, ja kuljettaja kertoi ylpeänä, '
       + 'että hänen saarensa teetä juodaan joka mantereella.',
-    nosto: 'Isoisä kirjoitti: "Ceylonin kaneli on niin arvokasta, että sen '
-      + 'metsiä on vartioitu kuin aarrekammioita." Kaneli kasvaa '
+    nosto: 'Isoisä kirjoitti: ”Ceylonin kaneli on niin arvokasta, että sen '
+      + 'metsiä on vartioitu kuin aarrekammioita.” Kaneli kasvaa '
       + 'saarella yhä — ja tee vei lopulta vielä suuremman maineen.',
   },
   karachi: {
@@ -644,8 +644,8 @@ export const ASIA_SAAPUMISET = {
       + 'ketjuja, jotka helisevät ajaessa. Kuljettajat koristavat '
       + 'autonsa kuin palatsit, ja satamassa niitä jonotti tuhansia '
       + 'lastia hakemaan.',
-    nosto: 'Isoisä kirjoitti: "Karachin satama kasvaa niin, että kartta '
-      + 'vanhenee ennen kuin ehtii painosta." Kalastajakylästä kasvoi '
+    nosto: 'Isoisä kirjoitti: ”Karachin satama kasvaa niin, että kartta '
+      + 'vanhenee ennen kuin ehtii painosta.” Kalastajakylästä kasvoi '
       + 'yksi maailman suurimmista kaupungeista — kartat vanhenevat '
       + 'yhä.',
   },
@@ -655,9 +655,9 @@ export const ASIA_SAAPUMISET = {
       + 'ohjasivat niitä katoilta pelkällä langalla. Pudonnut leija '
       + 'kuuluu sille, joka saa sen kiinni — ja juoksu alkaa heti, kun '
       + 'lanka katkeaa.',
-    nosto: 'Isoisä kirjoitti: "Kabul on kuin linnoitus laakson pohjalla, '
+    nosto: 'Isoisä kirjoitti: ”Kabul on kuin linnoitus laakson pohjalla, '
       + 'ja sen basaarissa myydään hevosia, mattoja ja vuorten '
-      + 'viileyttä." Vuoret vartioivat kaupunkia yhä — ja leijat '
+      + 'viileyttä.” Vuoret vartioivat kaupunkia yhä — ja leijat '
       + 'nousevat aina uudelleen.',
   },
 };

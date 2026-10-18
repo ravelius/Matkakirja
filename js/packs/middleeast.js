@@ -291,9 +291,9 @@ export const MIDDLE_EAST = {
     diaries: [
       'Basaari tuoksuu täsmälleen kirjojeni kuvauksilta. Kauppias ottaa puntani vastaan ystävällisesti — museokappaleita, hän sanoo, ja antaa vaihtorahat sovelluksella.',
       'Isoisän kartassa tämä alue on jaettu kahden keisarikunnan kesken ja loput on merkitty tyhjäksi. Nyt tässä on parikymmentä valtiota, joiden rajat piirsivät pääosin eurooppalaiset virkamiehet viivoittimella. Se näkyy kartassa yhä.',
-      '"Aavikko on este, joka on kierrettävä", kirjoitti isoisä. Karavaanit olivat kulkeneet sen halki tuhat vuotta ennen häntä, ja nyt sen yli lennetään kuudessa tunnissa. Este oli hänen mielikuvituksessaan.',
+      '”Aavikko on este, joka on kierrettävä”, kirjoitti isoisä. Karavaanit olivat kulkeneet sen halki tuhat vuotta ennen häntä, ja nyt sen yli lennetään kuudessa tunnissa. Este oli hänen mielikuvituksessaan.',
       'Isoisä ihaili suitsuketta, silkkiä ja terästä ja piti niitä idän tuotteina. Ne olivat idän keksintöjä, mikä on eri asia, ja sen hän kirjoitti muistiin vasta kolmannella sivulla.',
-      '"Öljyllä ei ole täällä käyttöä", merkitsi isoisä Persianlahden rannalla. Yhden lauseen kohdalla hän oli väärässä perusteellisemmin kuin koko muussa päiväkirjassaan yhteensä.',
+      '”Öljyllä ei ole täällä käyttöä”, merkitsi isoisä Persianlahden rannalla. Yhden lauseen kohdalla hän oli väärässä perusteellisemmin kuin koko muussa päiväkirjassaan yhteensä.',
       'Isoisä kirjasi tarkasti kaupunkien iän ja sai luvut oikein: Damaskos, Aleppo, Jeriko. Sivun alalaidassa hän lisää, että meidän Lontoomme on tähän verrattuna uudisrakennus. Se on hänen rehellisin lauseensa.',
     ],
   },

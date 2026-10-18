@@ -163,8 +163,8 @@ export const FOKUSKOHTEET_EGY = [
       maailmankartta: { x: 6830.6, y: 2136.9 },
     },
     teksti: 'Aleksandrian kirjasto oli antiikin suurimpia, ja se kuului '
-      + 'laajempaan tutkimuslaitokseen nimeltä Mouseion — "muusien '
-      + 'talo". Ajatus kaikki maailman kirjat kokoavasta kirjastosta '
+      + 'laajempaan tutkimuslaitokseen nimeltä Mouseion — ”muusien '
+      + 'talo”. Ajatus kaikki maailman kirjat kokoavasta kirjastosta '
       + 'esitettiin Ptolemaios ensimmäiselle, mutta rakennettu se '
       + 'todennäköisesti vasta hänen poikansa aikana. Papyruskääröjä '
       + 'kertyi nopeasti, sillä kuninkaat ostivat ja takavarikoivat '

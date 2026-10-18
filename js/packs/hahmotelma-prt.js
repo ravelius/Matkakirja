@@ -359,7 +359,7 @@ export const HAHMOTELMA_PRT = [
     },
     teksti: 'Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin '
       + 'päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria '
-      + 'perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, '
+      + 'perinteisesti nimellä ”the Burlings”. Ainoa asuttu saari on suurin, Berlenga Grande, '
       + 'vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden '
       + 'pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar '
       + 'Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön '
@@ -375,7 +375,7 @@ export const HAHMOTELMA_PRT = [
         'Erakkoelämää varten',
       ],
       oikea: 0,
-      fakta: 'Britannian merimiehet kutsuivat saaria vanhastaan nimellä "the Burlings".',
+      fakta: 'Britannian merimiehet kutsuivat saaria vanhastaan nimellä ”the Burlings”.',
     },
   },
   {
@@ -516,8 +516,8 @@ export const HAHMOTELMA_PRT = [
       europe: { x: 74.6, y: 840.6 },
     },
     teksti: 'Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 '
-      + 'kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin '
-      + 'portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu '
+      + 'kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu ”Portugalin '
+      + 'portugalilaisimpana kylänä”, kun hallituksen vuonna 1938 järjestämä kilpailu '
       + 'palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. '
       + 'Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi '
       + '758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta '
@@ -1439,7 +1439,7 @@ export const HAHMOTELMA_PRT = [
       + '1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran '
       + 'identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, '
       + 'tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu '
-      + 'kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan '
+      + 'kanervapensaikko, ja hiilenpolttaja ”Pescão de Casegas” löysi kiiltävän mustan '
       + 'kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin '
       + 'louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.',
     lahde: 'en-Wikipedia "Panasqueira", johdanto-osa ja osio "Discovery" (tarkistettu '
@@ -1582,7 +1582,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-vimeiro-f0dff4e9.jpg',
       lyhyt: 'Vimeiron taistelun satavuotismuistomerkki, obeliski leijonan kuvalla.',
-      selite: 'Kuningas Manuel II vihki muistomerkin 21.8.1908 taistelun satavuotispäivänä; pylvään tekstit ovat "Batalha do Vimeiro" ja "21 Agosto 1808".',
+      selite: 'Kuningas Manuel II vihki muistomerkin 21.8.1908 taistelun satavuotispäivänä; pylvään tekstit ovat ”Batalha do Vimeiro” ja ”21 Agosto 1808”.',
       lahde: 'Valokuva: Alta Falisa, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Alta Falisa',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vimeiro_%E2%80%93_Padr%C3%A3o_Comemorativo_da_Batalha_do_Vimeiro_%E2%80%93_1808_-_1908.jpg',

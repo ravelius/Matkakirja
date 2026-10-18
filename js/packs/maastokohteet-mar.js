@@ -87,7 +87,7 @@ export const MAASTOKOHTEET_MAR = [
       + 'suoraan sen ulapalle. Ensimmäisinä valtameren tiedetään ylittäneen viikinkien, mutta '
       + 'seurauksiltaan suurin oli Kristoffer Kolumbuksen retki vuonna 1492: se avasi '
       + 'eurooppalaisten löytöretkien ja siirtomaavalloitusten aikakauden. Löytöretkien aikaan '
-      + 'Atlantin ajateltiin erottavan Amerikan \'uuden maailman\' vanhasta.',
+      + 'Atlantin ajateltiin erottavan Amerikan ’uuden maailman’ vanhasta.',
     lahde: 'en-Wikipedia "Atlantic Ocean", johdanto-osa (tarkistettu 30.8.2026).',
   },
   {
@@ -203,7 +203,7 @@ export const MAASTOKOHTEET_MAR = [
       + 'käytettiin Larachen epäonnistuneessa ranskalaisretkessä 1765 vangittuja miehiä. '
       + 'Tarkoitus oli tehdä kaupunki ulkomaisten kauppiaiden tarpeisiin, ja siitä tuli maan '
       + 'tärkein kauppasatama ja 1700-luvun lopun ja 1800-luvun alkupuolen diplomaattinen '
-      + 'keskus. Nimi on arabian sanan "muuri" deminutiivi. Lahti on ollut suojaisa satama '
+      + 'keskus. Nimi on arabian sanan ”muuri” deminutiivi. Lahti on ollut suojaisa satama '
       + 'esihistoriasta asti: karthagolainen Hanno kävi täällä 400-luvulla eaa., ja Mauretanian '
       + 'kuningas Juba II perusti saarelle purppuratehtaan, jossa simpukoista keitettiin '
       + 'väri Rooman senaattorien togien raitoihin. Medina on ollut maailmanperintökohde 2001 '
@@ -227,7 +227,7 @@ export const MAASTOKOHTEET_MAR = [
       maailmankartta: { x: 5657.7, y: 1988.9 },
     },
     teksti: 'Chefchaouen tunnetaan sinisiksi maalatuista taloistaan, ja nimi tulee arabian ja '
-      + 'berberin yhdistelmästä: "katso sarvia" viittaa kahteen vuorenhuippuun kaupungin '
+      + 'berberin yhdistelmästä: ”katso sarvia” viittaa kahteen vuorenhuippuun kaupungin '
       + 'yläpuolella. Ali ibn Rashid al-Alami perusti paikalle 1471 pienen kasbahin '
       + 'puolustukseksi portugalilaisia vastaan, jotka hyökkäilivät tuolloin Pohjois-Marokon '
       + 'kaupunkeihin. Granadan kukistuminen 1492 ja moriskojen karkotus Espanjasta 1609 toivat '
@@ -316,7 +316,7 @@ export const MAASTOKOHTEET_MAR = [
       + 'Arruda, ja kun portugalilaiset menettivät Agadirin 1541, kuningas João III siirsi '
       + 'voimansa juuri tänne ja laajensi linnoituksen nykyiseen muotoonsa. Portugalilaiset '
       + 'luopuivat siitä vasta 1769. Kaupunki sai nykyisen nimensä 1820: al-Jadida tarkoittaa '
-      + '"uutta". Unesco otti Mazagãon maailmanperintöluetteloon 2004 esimerkkinä eurooppalaisten '
+      + '”uutta”. Unesco otti Mazagãon maailmanperintöluetteloon 2004 esimerkkinä eurooppalaisten '
       + 'ja marokkolaisten vaikutteiden vaihdosta ja renessanssin ihanteiden varhaisesta '
       + 'toteutuksesta; tärkeimmät portugalilaisajan rakennukset ovat manuelilaistyylinen '
       + 'vesisäiliö ja Taivaaseenastumisen kirkko.',

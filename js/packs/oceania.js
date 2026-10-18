@@ -390,10 +390,10 @@ export const OCEANIA = {
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [
       'Karttani kutsuu tätä maailman laidaksi. Täältä katsoen laidalla onkin Lontoo — ja myönnettäköön, moni asia näytti sieltä käsin nurinkuriselta.',
-      'Isoisän kartalla tämä alue on enimmäkseen tyhjää sinistä, ja reunaan on kirjoitettu "tuntematon". Tässä on tuhansia saaria, joilla on asuttu kolmetuhatta vuotta ja purjehdittu avomerellä tähtien avulla ilman kompassia. Tuntematon oli hänen sanansa, ei heidän.',
-      '"Siirtokunnat tarvitsevat meitä vielä sata vuotta", arvioi isoisä. Täällä on nyt oma perustuslaki, oma raha ja oma tapa lausua jokainen sana; Lontoo mainitaan lähinnä krikettiotteluiden yhteydessä.',
+      'Isoisän kartalla tämä alue on enimmäkseen tyhjää sinistä, ja reunaan on kirjoitettu ”tuntematon”. Tässä on tuhansia saaria, joilla on asuttu kolmetuhatta vuotta ja purjehdittu avomerellä tähtien avulla ilman kompassia. Tuntematon oli hänen sanansa, ei heidän.',
+      '”Siirtokunnat tarvitsevat meitä vielä sata vuotta”, arvioi isoisä. Täällä on nyt oma perustuslaki, oma raha ja oma tapa lausua jokainen sana; Lontoo mainitaan lähinnä krikettiotteluiden yhteydessä.',
       'Isoisä kirjoitti riutasta kaksi sivua ja päätyi sanaan sanoinkuvaamaton. Riutta on yhä siellä ja yhä sanoinkuvaamaton, mutta nyt sitä mitataan myös asteina: lämpenevä meri vaalentaa korallin.',
-      '"Näillä saarilla aika kuluu hitaasti", merkitsi isoisä hyväntahtoisesti. Kysyin asiaa satamassa, ja minulle näytettiin merenpinnan mittaustaulukkoa ja kysyttiin kummalla meistä on kiire. Hitaus taisi olla hänen omansa.',
+      '”Näillä saarilla aika kuluu hitaasti”, merkitsi isoisä hyväntahtoisesti. Kysyin asiaa satamassa, ja minulle näytettiin merenpinnan mittaustaulukkoa ja kysyttiin kummalla meistä on kiire. Hitaus taisi olla hänen omansa.',
       'Isoisä päätteli, ettei saarten välillä voi olla kauppaa, koska etäisyydet ovat liian suuria. Kauppaa käytiin tuhat vuotta ennen häntä: obsidiaania, simpukkaa ja sukulaisuussuhteita kulki saarelta saarelle kanooteilla.',
     ],
   },

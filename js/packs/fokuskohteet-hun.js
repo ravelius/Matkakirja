@@ -104,7 +104,7 @@ export const FOKUSKOHTEET_HUN = [
     },
     teksti: 'Unkarin toiseksi suurin kaupunki keskellä Suurta alankoa. '
       + 'Reformaation jälkeen Debrecen oli niin yksimielisen '
-      + 'protestanttinen, että sitä kutsuttiin "kalvinismin Roomaksi", ja '
+      + 'protestanttinen, että sitä kutsuttiin ”kalvinismin Roomaksi”, ja '
       + 'sen 1820-luvulla valmistunut Suuri kirkko on yhä maan suurin '
       + 'protestanttinen kirkko. Samassa kirkossa julistettiin huhtikuussa '
       + '1849 Habsburgien suvun menettäneen Unkarin valtaistuimen — '
@@ -122,7 +122,7 @@ export const FOKUSKOHTEET_HUN = [
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
-      kysymys: 'Miksi Debreceniä alettiin kutsua "kalvinismin Roomaksi"?',
+      kysymys: 'Miksi Debreceniä alettiin kutsua ”kalvinismin Roomaksi”?',
       vaihtoehdot: [
         'Koko kaupunki oli protestanttinen',
         'Siellä asui paavi maanpaossa',
@@ -224,7 +224,7 @@ export const FOKUSKOHTEET_HUN = [
       + 'vuosisataa myöhemmin kaupunki kuitenkin siirtyi ottomaaneille, ja '
       + 'siltä ajalta on jäljellä 40 metriä korkea minareetti, Euroopan '
       + 'pohjoisin säilynyt. Ympäröivät rinteet tuottavat Egri bikavér '
-      + '-punaviiniä, jonka nimi tarkoittaa "härän verta".',
+      + '-punaviiniä, jonka nimi tarkoittaa ”härän verta”.',
     lahde: 'en-Wikipedia "Eger" ja "Siege of Eger", johdanto ja '
       + 'historiaosa (tarkistettu 27.8.2026).',
     kuva: {
@@ -363,7 +363,7 @@ export const FOKUSKOHTEET_HUN = [
     teksti: 'Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin '
       + 'läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja '
       + 'saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat '
-      + '"kirjoitettua kiveä". Laella oleva näkötorni on rakennettu '
+      + '”kirjoitettua kiveä”. Laella oleva näkötorni on rakennettu '
       + 'suoraan rajalinjan päälle, joten portaissa voi astua maasta '
       + 'toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä '
       + 'alkaa Pannonian alanko, joka jatkuu tasaisena satoja '
@@ -618,7 +618,7 @@ export const FOKUSKOHTEET_HUN = [
       + 'aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo '
       + 'vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä '
       + 'suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin '
-      + '"viinien kuningas ja kuninkaiden viini".',
+      + '”viinien kuningas ja kuninkaiden viini”.',
     lahde: 'en-Wikipedia "Tokaj wine region" ja "Tokaji", johdanto ja '
       + 'historiaosa (tarkistettu 27.8.2026).',
     kuva: {

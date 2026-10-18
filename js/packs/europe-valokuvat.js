@@ -245,9 +245,9 @@ export const EUROPE_VALOKUVAT = {
         lahde: 'CC BY-SA 4.0 (Buiobuione, Commons)',
 
         lyhyt: 'Ferhadijan kadun kulttuurienrajamerkki Sarajevossa vuonna 2018.',
-        selite: 'Ferhadijan kävelykadulle upotettu merkki "Sarajevo Meeting of '
+        selite: 'Ferhadijan kävelykadulle upotettu merkki ”Sarajevo Meeting of '
 
-          + 'Cultures". Siitä eteenpäin katukuva vaihtuu ottomaanien '
+          + 'Cultures”. Siitä eteenpäin katukuva vaihtuu ottomaanien '
 
           + 'basaarista keskieurooppalaiseksi — tämän rajan päiväkirja '
 
@@ -690,7 +690,7 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Ragusa eli Dubrovnik Itävalta-Unkarin aikaan 1890-luvulla.',
     selite: 'Ragusa — Dubrovnikin vanha nimi — Itävalta-Unkarin aikaan. '
       + 'Kaupunki oli menettänyt itsenäisyytensä 1808, ja vedoksen '
-      + 'kyljessä lukee siksi "Austro-Hungary".',
+      + 'kyljessä lukee siksi ”Austro-Hungary”.',
     uusi: {
       tiedosto: 'Steep coast near the city wall in the Old Town of Dubrovnik, Croatia (48613191222).jpg',
       lahde: 'dronepicr, Commons (CC BY 2.0)',
@@ -764,7 +764,7 @@ export const EUROPE_VALOKUVAT = {
     lahde: 'Wikimedia Commons (PD)',
     lyhyt: 'Banya Bashin moskeija Sofiassa noin vuonna 1900.',
     selite: 'Banya Bashin moskeija noin vuonna 1900. Se rakennettiin '
-      + '1566 kuumien lähteiden päälle — nimi tarkoittaa "monta kylpyä". '
+      + '1566 kuumien lähteiden päälle — nimi tarkoittaa ”monta kylpyä”. '
       + 'Bulgaria oli vasta itsenäistynyt, ja Sofiasta tehtiin '
       + 'pääkaupunki 1879.',
     uusi: {
@@ -1302,9 +1302,9 @@ export const EUROPE_VALOKUVAT = {
 
           + 'kyltti on katalaaniksi (Carrer del Hostal d\'En Sol), vanha '
 
-          + 'kivikyltti samassa kulmassa taas espanjaksi: \'Calle del Correo '
+          + 'kivikyltti samassa kulmassa taas espanjaksi: ’Calle del Correo '
 
-          + 'Viejo\'.',
+          + 'Viejo’.',
 
       },
 
@@ -1375,8 +1375,8 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Ben van Meerendonk / AHF, kokoelma IISG, Commons (CC BY-SA 2.0)',
 
-        lyhyt: 'Katu-urku \'de Arabier\' Museumpleinilla Amsterdamissa vuonna 1951.',
-        selite: 'Perleen katu-urku \'de Arabier\' Museumpleinilla Amsterdamissa '
+        lyhyt: 'Katu-urku ’de Arabier’ Museumpleinilla Amsterdamissa vuonna 1951.',
+        selite: 'Perleen katu-urku ’de Arabier’ Museumpleinilla Amsterdamissa '
 
           + '15. lokakuuta 1951; lihakaupan poika on pysähtynyt katsomaan. '
 
@@ -1967,7 +1967,7 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Vanhankaupungin tori torimyyntipäivänä 1890-luvulla, '
               + 'käsinvärittynä photochrom-vedoksena. Kojujen katokset '
               + 'täyttävät koko aukion. Alkuperäisessä kuvatekstissä lukee '
-              + '"Varsova, Venäjä" — kaupunki kuului tuolloin Venäjän '
+              + '”Varsova, Venäjä” — kaupunki kuului tuolloin Venäjän '
               + 'keisarikuntaan.',
     uusi: {
       tiedosto: '2018-07-08 Old Town Market Square in Warsaw.jpg',
@@ -2039,7 +2039,7 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Romanian Ateneum ja sen puutarha käsinvärittynä postikorttina '
               + '1900-luvun taitteessa. Konserttitalo vihittiin vuonna 1888, ja '
               + 'osa rakennusrahoista kerättiin kansalaiskeräyksellä, jonka '
-              + 'tunnuslause oli "Dați un leu pentru Ateneu" — antakaa yksi leu '
+              + 'tunnuslause oli ”Dați un leu pentru Ateneu” — antakaa yksi leu '
               + 'Ateneumille.',
     uusi: {
       tiedosto: 'Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 73.jpg',
@@ -2576,7 +2576,7 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Senaatintori ja Nikolainkirkko Helsingissä 1890-luvulla.',
     selite: 'Senaatintori ja Nikolainkirkko käsinvärittynä '
               + 'photochrom-vedoksena. Kirkko valmistui 1852 Carl Ludvig '
-              + 'Engelin piirustusten mukaan. Vedoksen kyljessä lukee "Russia": '
+              + 'Engelin piirustusten mukaan. Vedoksen kyljessä lukee ”Russia”: '
               + 'Suomi oli tuolloin Venäjän suuriruhtinaskunta.',
     uusi: {
       tiedosto: 'Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg',
@@ -2850,7 +2850,7 @@ export const EUROPE_VALOKUVAT = {
         lahde: 'Panek, Wikimedia Commons (CC BY-SA 4.0)',
         lyhyt: 'Arno-tulvan 1966 muistolaatta Firenzen talon seinässä vuonna 2013.',
         selite: 'Marmorilaatta talon seinässä kolmen metrin korkeudella: '
-          + '"IL 4 NOVEMBRE 1966 L\'ACQUA DELL\'ARNO ARRIVÒ QUI" — tähän asti '
+          + '”IL 4 NOVEMBRE 1966 L\'ACQUA DELL\'ARNO ARRIVÒ QUI” — tähän asti '
           + 'Arnon vesi nousi. Vastaavia laattoja on ympäri keskustaa.',
       },
       {

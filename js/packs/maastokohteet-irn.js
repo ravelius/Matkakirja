@@ -170,7 +170,7 @@ export const MAASTOKOHTEET_IRN = [
       + 'valmistajana. Joulukuun 26. päivänä 2003 maanjäristys tuhosi sitadellin lähes '
       + 'kokonaan yhdessä suuren osan Bamin kaupunkia kanssa, ja muutamaa päivää myöhemmin '
       + 'presidentti ilmoitti, että se rakennetaan uudelleen. Unescon luettelossa paikka on '
-      + 'nimellä "Bam ja sen kulttuurimaisema".',
+      + 'nimellä ”Bam ja sen kulttuurimaisema”.',
     lahde: 'en-Wikipedia "Arg-e Bam", johdanto-osa ja osio "History" (tarkistettu 6.9.2026).',
   },
   {

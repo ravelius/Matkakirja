@@ -456,8 +456,8 @@ export const FOKUSVIRTA_PARIISI = {
         + 'näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin '
         + 'ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. '
         + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, '
-        + 'soleil levant ja otsikoi juttunsa "Impressionistien '
-        + 'näyttely". Pilkkanimi jäi — ja taiteilijat ottivat sen itse '
+        + 'soleil levant ja otsikoi juttunsa ”Impressionistien '
+        + 'näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse '
         + 'käyttöön.',
       lahde: 'en-Wikipedia "Impressionism". Tarkistettu 1.9.2026.',
       /*
@@ -724,7 +724,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
           + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka '
           + 'kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, '
-          + 'kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi '
+          + 'kankaisiin ilmestyi täpliä ja väri nimeltä ”kirahvin vatsa” myi '
           + 'kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle '
           + 'Africaine, ja se eli Jardin des Plantes\'ssa 18 vuotta.',
       ],

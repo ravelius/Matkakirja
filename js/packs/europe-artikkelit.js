@@ -630,7 +630,7 @@ export const EUROPE_ARTIKKELIT = {
       + 'uusi ja mullistava — kaupunkia johdettiin keskustelemalla, ja '
       + 'päätökset tehtiin kansankokouksessa kukkulan rinteellä.\n\n'
       + 'Samaan aikaan kaupungissa kirjoitettiin ensimmäiset näytelmät, '
-      + 'perustettiin filosofian koulut ja opeteltiin kysymään "miksi". '
+      + 'perustettiin filosofian koulut ja opeteltiin kysymään ”miksi”. '
       + 'Sokrates käveli torilla ja kyseli ohikulkijoilta niin '
       + 'hankalia kysymyksiä, että hänet lopulta tuomittiin kuolemaan.\n\n'
       + 'Sitten kaupunki hiipui. Roomalaiset, bysanttilaiset ja '
@@ -949,7 +949,7 @@ export const EUROPE_ARTIKKELIT = {
       + 'vuosilta 1907–1908.',
     teksti: 'Roomalaiset perustivat tänne kaupungin nimeltä Serdica '
       + 'kuumien lähteiden takia. Keisari Konstantinus Suuri viihtyi '
-      + 'siellä niin hyvin, että sanoi: "Serdica on minun Roomani." '
+      + 'siellä niin hyvin, että sanoi: ”Serdica on minun Roomani.” '
       + 'Metroa rakennettaessa 2010-luvulla kaivettiin esiin kokonainen '
       + 'roomalainen katu, joka jätettiin näkyviin lasin alle keskelle '
       + 'kaupunkia.\n\n'
@@ -1164,9 +1164,9 @@ export const EUROPE_ARTIKKELIT = {
               + 'puistoksi.\n\n1700-luvun lopulla samoilla kaduilla kävelivät '
               + 'filosofi David Hume, taloustieteilijä Adam Smith ja geologi '
               + 'James Hutton. Aikaa kutsutaan Skotlannin valistukseksi. Eräs '
-              + 'vieras kertoi voivansa seisoa kadunkulmassa ja "muutamassa '
+              + 'vieras kertoi voivansa seisoa kadunkulmassa ja ”muutamassa '
               + 'minuutissa puristaa kättä viidellekymmenelle '
-              + 'nerolle".\n\nSkotlannin oma parlamentti lakkautettiin 1707, '
+              + 'nerolle”.\n\nSkotlannin oma parlamentti lakkautettiin 1707, '
               + 'kun Skotlanti ja Englanti yhdistyivät yhdeksi valtakunnaksi. '
               + 'Se palasi vasta 1999, ja uusi parlamenttitalo avattiin '
               + 'Holyroodissa 2004. Skotlanti päättää nykyään itse muun muassa '
@@ -1208,7 +1208,7 @@ export const EUROPE_ARTIKKELIT = {
              + 'vuosisatoja Britannian hallinnassa, ja itsenäinen valtio '
              + 'syntyi vuonna 1922.',
     teksti: 'Irlanniksi kaupunki ei ole Dublin vaan Baile Átha Cliath, '
-              + '"risuista punotun kahlaamon kaupunki". Kaksi nimeä kertoo '
+              + '”risuista punotun kahlaamon kaupunki”. Kaksi nimeä kertoo '
               + 'kahdesta asutuksesta: gaelilaisesta kahlaamosta joen '
               + 'yläjuoksulla ja viikinkien satamasta mustan lammen rannalla. '
               + 'Molemmat nimet ovat käytössä yhä — bussien kylkeen on maalattu '
@@ -1875,7 +1875,7 @@ export const EUROPE_ARTIKKELIT = {
               + 'metrolinjat ja sukulaissuhteet 28 vuodeksi. Raja aukesi 9. '
               + 'marraskuuta 1989 osin väärinkäsityksen takia: '
               + 'tiedotustilaisuudessa sanottiin uusien matkustussääntöjen '
-              + 'astuvan voimaan "heti, viipymättä", ja ihmiset kävelivät '
+              + 'astuvan voimaan ”heti, viipymättä”, ja ihmiset kävelivät '
               + 'portille.\n\nBerliinistä tuli yhdistyneen Saksan pääkaupunki '
               + '1990, ja hallitus muutti tänne 1999. Vuokrat pysyivät pitkään '
               + 'halpoina, mikä veti kaupunkiin taiteilijoita ja muusikoita '
@@ -2220,8 +2220,8 @@ export const EUROPE_ARTIKKELIT = {
               + 'koko Romanian pääkaupungiksi vuonna 1862.\n\n1800-luvun '
               + 'lopulla kaupunkia rakennettiin tietoisesti Pariisin malliin: '
               + 'leveitä bulevardeja, ranskalaisia arkkitehtejä ja puistoja. '
-              + 'Siltä ajalta ovat Ateneum-konserttitalo ja lempinimi "pikku '
-              + 'Pariisi". Vuonna 1857 Bukarest oli tiettävästi maailman '
+              + 'Siltä ajalta ovat Ateneum-konserttitalo ja lempinimi ”pikku '
+              + 'Pariisi”. Vuonna 1857 Bukarest oli tiettävästi maailman '
               + 'ensimmäinen kaupunki, jonka kadut valaistiin petrolilampuin: '
               + 'lamppuja oli tuhat, ja niitä sytyttämään palkattiin oma '
               + 'ammattikuntansa.\n\nVuonna 1977 kaupunkia ravisteli voimakas '
@@ -2478,7 +2478,7 @@ export const EUROPE_ARTIKKELIT = {
              + 'lainkaan.',
     teksti: 'Kaupunki rakennettiin soiselle suistoalueelle, jossa ei ollut '
               + 'kaupunkia ennestään. Pietari Suuri halusi Venäjälle sataman ja '
-              + '"ikkunan Eurooppaan". Hän määräsi suon kuivaamiseen ja '
+              + '”ikkunan Eurooppaan”. Hän määräsi suon kuivaamiseen ja '
               + 'paalutukseen joka vuosi kymmeniätuhansia maaorjia eri puolilta '
               + 'valtakuntaa, ja moni heistä kuoli työmaalla. Arkkitehdit hän '
               + 'palkkasi Italiasta ja Ranskasta. Tulos näkyy yhä: suorat '
@@ -4280,7 +4280,7 @@ export const EUROPE_ARTIKKELIT = {
   },
   Zagreb: {
     intro: 'Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin **Kaptol** perustettiin 1094, ja **Gradec** sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.\n\nIsoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta **vuoden 1880 maanjäristyksen** jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.\n\nNykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden 2025 puolivälissä). Kaupunki sijaitsee Savan varrella Medvednica-vuoren etelärinteillä lähellä Slovenian rajaa. Sen keskusta jatkuu kukkuloilta etelään aukioiden ja puistojen sarjana.',
-    teksti: 'Zagrebin nimen alkuperä on epäselvä. Lähteen mukaan todennäköisin selitys on sana, joka tarkoittaa penkereen tai vallinharjan kaltaista maastonmuotoa ja viittaa Gričin vanhoihin linnoitteisiin. Kansa on kertonut myös legendan, jossa kuvernööri käski tytön ammentamaan vettä Manduševacin kaivosta sanoin "Zagrabi, Mando".\n\nGradec ja Kaptol olivat vuosisatoja eri kaupunkeja, ja niiden alapuolelle tasangolle perustettiin 1641 torialue Manduševac-lähteen lähelle. Siitä kasvoi nykyinen Ban Jelačić -aukio. Kaupunki kuuluu Kroatian erityisasemassa oleviin hallintoalueisiin: se on sekä kaupunki että piirikunta, ja sillä on 17 kaupunginosaa.\n\nNykyisen ilmeensä kaupunki sai pitkälti 1800-luvun lopulla ja 1900-luvun alussa, kun maanjäristyksen jälkeen syntyi uusi asemakaava ja Alakaupunki sai säännöllisen korttelirakenteen. Toinen voimakas järistys 22.3.2020 vaurioitti historiallista keskustaa ja tuomiokirkon tornia, ja kunnostus jatkui lähteen mukaan vielä 2020-luvun puolivälissä.',
+    teksti: 'Zagrebin nimen alkuperä on epäselvä. Lähteen mukaan todennäköisin selitys on sana, joka tarkoittaa penkereen tai vallinharjan kaltaista maastonmuotoa ja viittaa Gričin vanhoihin linnoitteisiin. Kansa on kertonut myös legendan, jossa kuvernööri käski tytön ammentamaan vettä Manduševacin kaivosta sanoin ”Zagrabi, Mando”.\n\nGradec ja Kaptol olivat vuosisatoja eri kaupunkeja, ja niiden alapuolelle tasangolle perustettiin 1641 torialue Manduševac-lähteen lähelle. Siitä kasvoi nykyinen Ban Jelačić -aukio. Kaupunki kuuluu Kroatian erityisasemassa oleviin hallintoalueisiin: se on sekä kaupunki että piirikunta, ja sillä on 17 kaupunginosaa.\n\nNykyisen ilmeensä kaupunki sai pitkälti 1800-luvun lopulla ja 1900-luvun alussa, kun maanjäristyksen jälkeen syntyi uusi asemakaava ja Alakaupunki sai säännöllisen korttelirakenteen. Toinen voimakas järistys 22.3.2020 vaurioitti historiallista keskustaa ja tuomiokirkon tornia, ja kunnostus jatkui lähteen mukaan vielä 2020-luvun puolivälissä.',
   },
   'Andorra la Vella': {
     intro: 'Andorra la Vella on Andorran pääkaupunki ja suurin asutuskeskus, ja Andorra la Vellan seurakunnassa asui 31.12.2025 Andorran tilastotoimiston mukaan 24 836 ihmistä. Kaupunki sijaitsee Pyreneiden kapeassa laaksossa noin 1 023 metrin korkeudessa, ja lähteen mukaan se on Euroopan korkeimmalla sijaitseva pääkaupunki. Nimi tarkoittaa Andorran kaupunkia erotukseksi koko ruhtinaskunnasta. Kaupunki kasvoi kahden vuoristopuron, Valira del Norden ja Valira de l\'Orientin, yhtymäkohtaan, ja ne muodostavat yhdessä **Gran Valiran**.\n\nVanhassa keskustassa seisoo **Casa de la Vall**, 1500-luvun lopulla rakennettu talo, jossa maan parlamentti kokoontui vuodesta 1702 vuoteen 2011. Lähellä on romaaninen Sant Esteven kirkko, ja kaupungin laidalla Santa Coloman kirkko, jota lähde pitää Andorran vanhimpana. Maan hallinnon juuret ulottuvat vuoden 1278 sopimukseen, jossa Foix\'n kreivi ja Urgellin piispa jakoivat vallan. Isoisän matkavuonna 1873 kaupunki oli jo olemassa, mutta lähteet eivät kerro, miltä se silloin näytti. Elinkeinoja ovat kauppa, matkailu ja pankit, ja virallinen kieli on katalaani.',

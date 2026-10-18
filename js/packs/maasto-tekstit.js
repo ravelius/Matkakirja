@@ -4445,7 +4445,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lob Issyk-Kul-04.JPG',
-          lyhyt: 'Ysyk-Köl Tienšanissa: "kuuma järvi" ei jäädy, koska vesi on suolaista ja syvää.',
+          lyhyt: 'Ysyk-Köl Tienšanissa: ”kuuma järvi” ei jäädy, koska vesi on suolaista ja syvää.',
           selite: 'Ysyk-Köl ja Tienšanin harjanne. Nimi tarkoittaa kuumaa järveä, '
             + 'vaikka vesi on kylmää. Se ei silti jäädy: vesi on lievästi '
             + 'suolaista ja lähes seitsemänsataa metriä syvää.',
@@ -4781,7 +4781,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'E. C. Frome - First view of the salt desert - called Lake Torrens - Google Art Project.jpg',
-          lyhyt: 'Fromen akvarelli 1843: "Ensinäkymä suola-aavikkoon" Torrensjärvestä.',
+          lyhyt: 'Fromen akvarelli 1843: ”Ensinäkymä suola-aavikkoon” Torrensjärvestä.',
           selite: 'Edward Fromen akvarelli vuodelta 1843. Frome lähetettiin '
             + 'tarkastamaan Eyren havainnot ja antoi kuvalleen nimen '
             + 'Ensinäkymä suola-aavikkoon. Vettä siinä on hädin tuskin: '
@@ -5709,7 +5709,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Serra da Mantiqueira vista da Rodovia Floriano Rodrigues Pinheiro.jpg',
-          lyhyt: 'Serra da Mantiqueira Brasilian ylängöllä: "itkevä vuori", vettä ympäri vuoden.',
+          lyhyt: 'Serra da Mantiqueira Brasilian ylängöllä: ”itkevä vuori”, vettä ympäri vuoden.',
           selite: 'Serra da Mantiqueira. Nimi tarkoittaa tupinkielellä '
             + 'suunnilleen itkevää vuorta, koska rinteiltä valuu vettä ympäri '
             + 'vuoden. Reunan takana maa nousee tasaisesti eikä laske enää.',

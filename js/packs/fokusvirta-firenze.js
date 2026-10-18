@@ -711,7 +711,7 @@ export const FOKUSVIRTA_FIRENZE = {
       + 'kieltäytyi niin päättäväisesti, että luut piilotettiin '
       + 'kerran luostarin valeseinään. Karkotusvuosinaan hän '
       + 'kirjoitti runoelman, jonka nimeksi hän pani vain Commedia. '
-      + 'Sana "jumalainen" ei ole hänen: sen liitti nimeen ensimmäisen '
+      + 'Sana ”jumalainen” ei ole hänen: sen liitti nimeen ensimmäisen '
       + 'kerran Giovanni Boccaccio noin kolmekymmentä vuotta hänen '
       + 'kuolemansa jälkeen, ja vasta vuoden 1555 laitoksessa se '
       + 'painettiin kanteen asti. Tärkeämpää oli se, millä kielellä '

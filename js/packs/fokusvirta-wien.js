@@ -650,7 +650,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'meklari Adolf Petschek, jota kutsuttiin meklarikaupan '
           + 'kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja '
           + 'kello 13 poliisi sulki pörssin — päivä on Itävallan historian '
-          + '"musta perjantai". Romahdus levisi Berliiniin ja syyskuussa '
+          + '”musta perjantai”. Romahdus levisi Berliiniin ja syyskuussa '
           + 'New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa '
           + 'historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 '
           + 'miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi '

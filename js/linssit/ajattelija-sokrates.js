@@ -163,7 +163,7 @@ export const SOKRATES = Object.freeze({
       { otsikko: 'Delfoin oraakkeli', teksti: 'Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ryhtyi sen jälkeen kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.' },
       { otsikko: 'Oikeudenkäynti', teksti: 'Vuonna 399 eaa. kolme ateenalaista syytti häntä jumalattomuudesta ja nuorison turmelemisesta, ja tuomaristo julisti hänet syylliseksi ja tuomitsi hänet kuolemaan.' },
       { otsikko: 'Ei pakoa', teksti: 'Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi: Platonin Kritonissa hän sanoo, ettei vääryyttä saa tehdä koskaan, ei edes vääryyden vastaukseksi.' },
-      { otsikko: 'Viimeiset sanat', teksti: 'Hän joi maljallisen myrkkykatkoa, käveli, kunnes jalat tuntuivat raskailta, ja asettui sitten makuulle. Platonin mukaan hänen viimeiset sanansa olivat: "Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako."' },
+      { otsikko: 'Viimeiset sanat', teksti: 'Hän joi maljallisen myrkkykatkoa, käveli, kunnes jalat tuntuivat raskailta, ja asettui sitten makuulle. Platonin mukaan hänen viimeiset sanansa olivat: ”Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako.”' },
       { teksti: 'Sokrates ei kirjoittanut itse mitään. Lähes kaikki, mitä hänestä tiedetään, tulee Platonilta, Ksenofonilta ja Aristofanekselta; myös Aristoteles kertoo hänestä, mutta toisen käden tietoon perustuen.' },
     ],
   },

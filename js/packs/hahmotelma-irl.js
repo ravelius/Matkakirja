@@ -633,7 +633,7 @@ export const HAHMOTELMA_IRL = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-cobh-0e911282.jpg',
         lyhyt: 'Värikkäät rinnetalot West Viewn kadulla Cobhissa.',
-        selite: 'Cobhin West View -kadun värikkäät talorivit tunnetaan paikallisesti nimellä "Deck of Cards".',
+        selite: 'Cobhin West View -kadun värikkäät talorivit tunnetaan paikallisesti nimellä ”Deck of Cards”.',
         lahde: 'Valokuva: Colin Park, Wikimedia Commons (CC BY-SA 2.0).',
         tekija: 'Colin Park',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cobh_-_\'Deck_of_Cards\'_houses,_West_View_-_geograph.org.uk_-_7930681.jpg',

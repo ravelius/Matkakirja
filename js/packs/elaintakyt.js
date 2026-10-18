@@ -241,7 +241,7 @@ export const ELAINTAKYT = {
   IRL: {
     elain: 'rusakko',
     otsikko: 'Niittyjen nyrkkeilijä',
-    teksti: 'Keväisin Irlannin niityillä näkee jänisten "nyrkkeilyottelun": takajaloilleen nousseet jänikset huitovat toisiaan etukäpälillä. Kyse ei ole urosten kaksintaistelusta, kuten pitkään luultiin — useimmiten naaras torjuu liian innokasta kosijaa.',
+    teksti: 'Keväisin Irlannin niityillä näkee jänisten ”nyrkkeilyottelun”: takajaloilleen nousseet jänikset huitovat toisiaan etukäpälillä. Kyse ei ole urosten kaksintaistelusta, kuten pitkään luultiin — useimmiten naaras torjuu liian innokasta kosijaa.',
     lahde: 'en-Wikipedia "European hare". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-irl.jpg',
     lon: -7.6,
@@ -496,7 +496,7 @@ export const ELAINTAKYT = {
   TUR: {
     elain: 'angoravuohi',
     otsikko: 'Silkkiä ylängöltä',
-    teksti: 'Angoravuohi on saanut nimensä Ankarasta, joka tunnettiin ennen Angorana, ja sen kiiltävää kiharaa kuitua kutsutaan mohairiksi. Ranskalainen Pierre Belon näki vuonna 1555 Anatoliassa vuohia, joiden villa oli hänestä "niin hienoa, että sen sanoisi silkkiä hienommaksi". Mohairia tuotettiin pelkästään Turkissa 1800-luvun puoliväliin asti; rotu vietiin Etelä-Afrikkaan 1838 ja Yhdysvaltoihin 1849, ja nyt kumpikin tuottaa mohairia enemmän kuin kotimaa — amerikkalainen kuitu tulee lähes kokonaan Texasista. Turkissa vuohet keritään kerran vuodessa eikä kahdesti niin kuin muualla, ja siksi maailman pisin mohair kasvaa yhä täällä. Kilin ensimmäinen villa on hienointa, sillä kuitu paksunee vuosi vuodelta.',
+    teksti: 'Angoravuohi on saanut nimensä Ankarasta, joka tunnettiin ennen Angorana, ja sen kiiltävää kiharaa kuitua kutsutaan mohairiksi. Ranskalainen Pierre Belon näki vuonna 1555 Anatoliassa vuohia, joiden villa oli hänestä ”niin hienoa, että sen sanoisi silkkiä hienommaksi”. Mohairia tuotettiin pelkästään Turkissa 1800-luvun puoliväliin asti; rotu vietiin Etelä-Afrikkaan 1838 ja Yhdysvaltoihin 1849, ja nyt kumpikin tuottaa mohairia enemmän kuin kotimaa — amerikkalainen kuitu tulee lähes kokonaan Texasista. Turkissa vuohet keritään kerran vuodessa eikä kahdesti niin kuin muualla, ja siksi maailman pisin mohair kasvaa yhä täällä. Kilin ensimmäinen villa on hienointa, sillä kuitu paksunee vuosi vuodelta.',
     lahde: 'en-Wikipedia "Angora goat", osio "History", en-Wikipedia "Mohair", '
       + 'osiot "Production" ja "History", ja en-Wikipedia "Ankara". '
       + 'Tarkistettu 2.9.2026.',
@@ -743,7 +743,7 @@ export const ELAINTAKYT = {
   SAU: {
     elain: 'arabianoryksi',
     otsikko: 'Yksisarvinen ilman toista sarvea',
-    teksti: 'Arabianoryksin suorat sarvet ovat onttoa luuta eivätkä kasva takaisin, joten toisen menettänyt eläin kulkee loppuikänsä yhdellä. Aristoteles ja Plinius vanhempi pitivät oryksia yksisarvisen esikuvana, ja tietystä kulmasta kaksi sarvea asettuukin yhdeksi. Kuivalla kaudella eläin makaa päivät varjossa liikkumatta ja laiduntaa vasta öisin; virtsan ja aineenvaihdunnan on mitattu putoavan puoleen. Villinä laji kuoli sukupuuttoon 1970-luvun alussa, palautettiin aavikolle 1980 ja nousi 2011 ensimmäisenä eläimenä luokasta "luonnosta hävinnyt" takaisin vaarantuneeksi.',
+    teksti: 'Arabianoryksin suorat sarvet ovat onttoa luuta eivätkä kasva takaisin, joten toisen menettänyt eläin kulkee loppuikänsä yhdellä. Aristoteles ja Plinius vanhempi pitivät oryksia yksisarvisen esikuvana, ja tietystä kulmasta kaksi sarvea asettuukin yhdeksi. Kuivalla kaudella eläin makaa päivät varjossa liikkumatta ja laiduntaa vasta öisin; virtsan ja aineenvaihdunnan on mitattu putoavan puoleen. Villinä laji kuoli sukupuuttoon 1970-luvun alussa, palautettiin aavikolle 1980 ja nousi 2011 ensimmäisenä eläimenä luokasta ”luonnosta hävinnyt” takaisin vaarantuneeksi.',
     lahde: 'en-Wikipedia "Arabian oryx", osiot "Unicorn myth" ja "Adaptations for desert '
       + 'environments" sekä johdanto. Tarkistettu 5.9.2026.',
     kuvat: [
@@ -1755,7 +1755,7 @@ export const ELAINTAKYT = {
   JOR: {
     elain: 'nubiantorvikauris',
     otsikko: 'Aavikon vuohi, joka opittiin tuntemaan Ylä-Egyptistä',
-    teksti: 'Nubiantorvikauris on aavikoilla elävä vuohilaji, jota tavataan Pohjois- ja Koillis-Afrikan sekä Lähi-idän vuoristoseuduilla. Sitä pidettiin pitkään alppikauriin alalajina, mutta nykyään se luetaan omaksi lajikseen; Frédéric Cuvier kuvasi sen tieteelle 1825 nimellä "Ylä-Egyptin villivuohi". Se on torvikauriista pienin, säkäkorkeus 65–75 senttimetriä, ja koiraat ovat selvästi naaraita suurempia: koiras painaa 52–75 ja naaras 25–33 kiloa. Villikanta on arviolta 4 500 aikuista yksilöä, ja laji on luokiteltu vaarantuneeksi. Jordaniassa se oli lähellä hävitä kokonaan, mutta maa on palauttanut kannan tarhakasvatuksella ja istutuksilla: yksilöitä on 480–600, ja vahvimmat kannat elävät Danan, Wadi Mujibin ja Wadi Rumin suojelualueilla. Suurin uhka on metsästys. Kauris on ollut Lähi-idän taiteen aihe tuhansia vuosia — kalliopiirroksissa sitä ajavat koirat ja jousimiehet.',
+    teksti: 'Nubiantorvikauris on aavikoilla elävä vuohilaji, jota tavataan Pohjois- ja Koillis-Afrikan sekä Lähi-idän vuoristoseuduilla. Sitä pidettiin pitkään alppikauriin alalajina, mutta nykyään se luetaan omaksi lajikseen; Frédéric Cuvier kuvasi sen tieteelle 1825 nimellä ”Ylä-Egyptin villivuohi”. Se on torvikauriista pienin, säkäkorkeus 65–75 senttimetriä, ja koiraat ovat selvästi naaraita suurempia: koiras painaa 52–75 ja naaras 25–33 kiloa. Villikanta on arviolta 4 500 aikuista yksilöä, ja laji on luokiteltu vaarantuneeksi. Jordaniassa se oli lähellä hävitä kokonaan, mutta maa on palauttanut kannan tarhakasvatuksella ja istutuksilla: yksilöitä on 480–600, ja vahvimmat kannat elävät Danan, Wadi Mujibin ja Wadi Rumin suojelualueilla. Suurin uhka on metsästys. Kauris on ollut Lähi-idän taiteen aihe tuhansia vuosia — kalliopiirroksissa sitä ajavat koirat ja jousimiehet.',
     lahde: 'en-Wikipedia "Nubian ibex", johdanto sekä osiot "Classification", "Description", '
       + '"Distribution", "Conservation and population status by country" ja "Cultural significance". Tarkistettu 6.9.2026.',
     kuvat: [
@@ -2126,7 +2126,7 @@ export const ELAINTAKYT = {
   TCD: {
     elain: 'sapelisarvioryksi',
     otsikko: 'Antilooppi, joka palasi luonnosta hävinneiden listalta',
-    teksti: 'Sapelisarvioryksi eli Oryx dammah oli aikoinaan levinnyt laajalti Pohjois-Afrikkaan sekä osiin Länsi- ja Keski-Afrikkaa. Se kestää aavikon oloja poikkeuksellisen hyvin: se tulee toimeen kuukausia juomatta ja saa suurimman osan päivittäisestä nesteestään kasveista. Kanta alkoi hiipua jo neoliittisen kauden ilmastonmuutoksessa, kun "vihreä Sahara" kuivui, ja myöhemmin lajia metsästettiin ankarasti sarvien takia; 1900-luvulla hevoset ja tuliaseet tekivät metsästyksestä tuhoisaa. Vuonna 2000 IUCN julisti sapelisarvioryksin luonnosta hävinneeksi. Tšad johtaa lajin palautushanketta Ouadi Rimé-Ouadi Achimin riistasuojelualueella, joka on 78 000 neliökilometrillään yksi maailman suurimmista suojelualueista: ensimmäinen 21 eläimen ryhmä päästettiin totutusaitaukseen alkuvuodesta 2016 ja vapaaksi sadekaudella, ja jo alkuvuonna 2017 syntyi vasa — ensimmäinen luonnossa yli kahteenkymmeneen vuoteen. Vuonna 2021 syntyi 60 vasaa, ja luonnossa eläviä oli noin 400. Vuonna 2023 laji siirrettiin punaisella listalla luokkaan erittäin uhanalainen.',
+    teksti: 'Sapelisarvioryksi eli Oryx dammah oli aikoinaan levinnyt laajalti Pohjois-Afrikkaan sekä osiin Länsi- ja Keski-Afrikkaa. Se kestää aavikon oloja poikkeuksellisen hyvin: se tulee toimeen kuukausia juomatta ja saa suurimman osan päivittäisestä nesteestään kasveista. Kanta alkoi hiipua jo neoliittisen kauden ilmastonmuutoksessa, kun ”vihreä Sahara” kuivui, ja myöhemmin lajia metsästettiin ankarasti sarvien takia; 1900-luvulla hevoset ja tuliaseet tekivät metsästyksestä tuhoisaa. Vuonna 2000 IUCN julisti sapelisarvioryksin luonnosta hävinneeksi. Tšad johtaa lajin palautushanketta Ouadi Rimé-Ouadi Achimin riistasuojelualueella, joka on 78 000 neliökilometrillään yksi maailman suurimmista suojelualueista: ensimmäinen 21 eläimen ryhmä päästettiin totutusaitaukseen alkuvuodesta 2016 ja vapaaksi sadekaudella, ja jo alkuvuonna 2017 syntyi vasa — ensimmäinen luonnossa yli kahteenkymmeneen vuoteen. Vuonna 2021 syntyi 60 vasaa, ja luonnossa eläviä oli noin 400. Vuonna 2023 laji siirrettiin punaisella listalla luokkaan erittäin uhanalainen.',
     lahde: 'en-Wikipedia "Scimitar oryx", johdanto sekä osio "Status and '
       + 'conservation". Tarkistettu 6.9.2026.',
     kuva: 'elain-tcd',

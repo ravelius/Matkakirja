@@ -862,7 +862,7 @@ export const MAASTOKOHTEET_IRL = [
       + '182 metriä merenpinnan yläpuolella. Perinteessä sitä kutsutaan saaren symboliseksi '
       + 'ja pyhäksi keskukseksi. Noin kahden neliökilometrin alueella on arviolta 40 '
       + 'muinaismuistoa, joista noin puolet näkyy maan päällä, ja ihmistoimintaa on ollut '
-      + 'noin 5 000 vuotta. Tunnetuin kohde on kivimöhkäle Ail na Míreann, "jakojen kivi", '
+      + 'noin 5 000 vuotta. Tunnetuin kohde on kivimöhkäle Ail na Míreann, ”jakojen kivi”, '
       + 'jota pidetään maakuntien kohtaamispaikkana. Alue on kansallismonumentti.',
     lahde: 'en-Wikipedia "Hill of Uisneach", osiot "Description" ja "Archaeology" (tarkistettu '
       + '30.9.2026).',
@@ -1036,7 +1036,7 @@ export const MAASTOKOHTEET_IRL = [
     },
     teksti: 'Devil\'s Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren '
       + 'luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut '
-      + 'nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan '
+      + 'nimensä; iiriksi nimi on Bearnán Éile, ”Éilen pieni loveva kukkula”. Kansantarinan '
       + 'mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion '
       + 'nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen '
       + 'risti.',

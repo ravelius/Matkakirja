@@ -1805,7 +1805,7 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-varkaus-51463788.jpg',
         lyhyt: 'Varkauden tehdasalue vesiväylän rannalla: punatiilirakennuksia ja piippuja.',
         selite: 'Panoraamakuva Varkauden paperitehtaiden alueelta. Alue on valtakunnallisesti '
-          + 'merkittävä rakennettu kulttuuriympäristö, \'Varkauden paperitehtaat\'.',
+          + 'merkittävä rakennettu kulttuuriympäristö, ’Varkauden paperitehtaat’.',
         lahde: 'Valokuva: Tiia Monto, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Tiia Monto',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Varkaus_factory_-_canal.jpg',

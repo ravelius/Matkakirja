@@ -126,7 +126,7 @@ export const SUOMI_QUESTIONS = {
       hint: 'Koski yhdistää järvet keskellä kaupunkia.',
     },
     {
-      q: 'Mikä teollisuus toi Tampereelle lempinimen "Suomen Manchester"?',
+      q: 'Mikä teollisuus toi Tampereelle lempinimen ”Suomen Manchester”?',
       options: ['puuvillatehtaat', 'autotehtaat', 'telakat', 'kaivokset'],
       correct: 0,
       fact: 'Finlaysonin puuvillatehdas oli aikanaan Pohjoismaiden suurin, ja sen alue on nyt kulttuurikeskus.',
@@ -377,7 +377,7 @@ export const SUOMI_QUESTIONS = {
       options: ['saimaannorppa', 'merikotka', 'majava', 'ahma'],
       correct: 0,
       level: 1,
-      fact: 'Norppia on vain noin 500. Kanta jäi järveen "vangiksi", kun maa kohosi jääkauden jälkeen.',
+      fact: 'Norppia on vain noin 500. Kanta jäi järveen ”vangiksi”, kun maa kohosi jääkauden jälkeen.',
       hint: 'Se on makeassa vedessä elävä hylje.',
     },
     {

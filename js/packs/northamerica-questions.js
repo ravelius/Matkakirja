@@ -44,7 +44,7 @@ export const NORTHAMERICA_QUESTIONS = {
       correct: 0,
       level: 2,
       hint: 'Nimi on alueen alkuperäiskansan kieltä.',
-      fact: 'Sana merkitsee suunnilleen "kansa Sheen ulkopuolella".',
+      fact: 'Sana merkitsee suunnilleen ”kansa Sheen ulkopuolella”.',
       source: 'https://fi.wikipedia.org/wiki/Sitka',
     },
     {
@@ -1318,7 +1318,7 @@ export const NORTHAMERICA_QUESTIONS = {
       correct: 0,
       level: 1,
       hint: 'Kuulennoilla astronautit sanoivat radioon ensimmäisenä tämän kaupungin nimen.',
-      fact: 'NASAn miehitettyjen lentojen ohjauskeskus on Houstonissa. Ensimmäinen sana Kuun pinnalta oli "Houston".',
+      fact: 'NASAn miehitettyjen lentojen ohjauskeskus on Houstonissa. Ensimmäinen sana Kuun pinnalta oli ”Houston”.',
     },
     {
       q: 'Missä osavaltiossa Houston sijaitsee?',
@@ -1339,10 +1339,10 @@ export const NORTHAMERICA_QUESTIONS = {
     {
       q: 'Mikä lause radioitiin Kuun pinnalta ensimmäisenä?',
       options: [
-        '"Houston, Kotka on laskeutunut"',
-        '"New York, kaikki hyvin"',
-        '"Washington, olemme perillä"',
-        '"Pariisi, kuuletteko"',
+        '”Houston, Kotka on laskeutunut”',
+        '”New York, kaikki hyvin”',
+        '”Washington, olemme perillä”',
+        '”Pariisi, kuuletteko”',
       ],
       correct: 0,
       level: 2,

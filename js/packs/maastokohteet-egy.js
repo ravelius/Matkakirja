@@ -58,7 +58,7 @@ export const MAASTOKOHTEET_EGY = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Siinainvuori eli arabiaksi Jabal Musa, \'Mooseksen vuori\', kohoaa 2 285 metriin Siinain '
+    teksti: 'Siinainvuori eli arabiaksi Jabal Musa, ’Mooseksen vuori’, kohoaa 2 285 metriin Siinain '
       + 'niemimaalla. Se on tunnetuin niistä paikoista, joita on esitetty Raamatun '
       + 'Siinainvuoreksi — vuoreksi, jolla Mooses sai Jumalalta kymmenen käskyä juutalaisuuden, '
       + 'kristinuskon ja islamin pyhien kirjoitusten mukaan. Vuorta ympäröivät joka puolelta '

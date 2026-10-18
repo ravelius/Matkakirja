@@ -257,8 +257,8 @@ export const SOUTHAMERICA_MAATIEDOT = {
       sija: '62./172',
       linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~PER',
       selitys: 'Peru on yksikkövaltio, jossa presidentti ja kongressi kilpailevat '
-        + 'vallasta. Kongressi voi erottaa presidentin "pysyvän moraalisen '
-        + 'kyvyttömyyden" perusteella, eikä päätöstä juuri voi riitauttaa '
+        + 'vallasta. Kongressi voi erottaa presidentin ”pysyvän moraalisen '
+        + 'kyvyttömyyden” perusteella, eikä päätöstä juuri voi riitauttaa '
         + 'tuomioistuimessa, joten institutionaalinen valta on suurelta osin '
         + 'kongressilla. Demokratia palautettiin 1980, mutta Alberto '
         + 'Fujimorin kausi 1990–2000 katkaisi sen, ja uusi siirtymä tehtiin '

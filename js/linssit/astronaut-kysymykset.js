@@ -2065,7 +2065,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Pariisia kutsutaan Valon kaupungiksi?",
-        "vastaus": "Pariisia kutsutaan ranskaksi \"la Ville Lumière\". Nimitys juontuu 1800-luvulta, kun kaupunki oli edelläkävijä katuvalaistuksessa ja valistusajan ajatusten keskuksena, ja se vakiintui erityisesti 1889 ja 1900 maailmannäyttelyiden sähkövalaistuksen myötä.",
+        "vastaus": "Pariisia kutsutaan ranskaksi ”la Ville Lumière”. Nimitys juontuu 1800-luvulta, kun kaupunki oli edelläkävijä katuvalaistuksessa ja valistusajan ajatusten keskuksena, ja se vakiintui erityisesti 1889 ja 1900 maailmannäyttelyiden sähkövalaistuksen myötä.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Paris",
@@ -2125,7 +2125,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Roomaa kutsutaan ikuiseksi kaupungiksi?",
-        "vastaus": "Nimitys \"ikuinen kaupunki\" (Roma aeterna) juontuu antiikin ajoilta, kun roomalaiset uskoivat kaupunkinsa säilyvän ikuisesti. Rooma on ollut asutettu yhtäjaksoisesti antiikista nykypäivään, perinteisen tarinan mukaan vuodesta 753 eaa.",
+        "vastaus": "Nimitys ”ikuinen kaupunki” (Roma aeterna) juontuu antiikin ajoilta, kun roomalaiset uskoivat kaupunkinsa säilyvän ikuisesti. Rooma on ollut asutettu yhtäjaksoisesti antiikista nykypäivään, perinteisen tarinan mukaan vuodesta 753 eaa.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Rome",
@@ -2166,7 +2166,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
       },
       {
         "kysymys": "Mikä on MOSE-hanke Venetsiassa?",
-        "vastaus": "MOSE on Venetsian laguunin suulle rakennettu tulvasulkujärjestelmä, joka suojaa kaupunkia \"acqua alta\" -tulvilta nostettavilla patoporteilla. Järjestelmä otettiin käyttöön vuosikymmenten rakentamisen jälkeen 2020-luvulla.",
+        "vastaus": "MOSE on Venetsian laguunin suulle rakennettu tulvasulkujärjestelmä, joka suojaa kaupunkia ”acqua alta” -tulvilta nostettavilla patoporteilla. Järjestelmä otettiin käyttöön vuosikymmenten rakentamisen jälkeen 2020-luvulla.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/MOSE_Project",
@@ -2240,7 +2240,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
   "hongkong": {
     "kysymykset": [
       "Miksi Britannia palautti Hongkongin Kiinalle 1997?",
-      "Mitä tarkoittaa \"yksi maa, kaksi järjestelmää\"?"
+      "Mitä tarkoittaa ”yksi maa, kaksi järjestelmää”?"
     ],
     "vastaukset": [
       {
@@ -2255,7 +2255,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss072e399613"
       },
       {
-        "kysymys": "Mitä tarkoittaa \"yksi maa, kaksi järjestelmää\"?",
+        "kysymys": "Mitä tarkoittaa ”yksi maa, kaksi järjestelmää”?",
         "vastaus": "Periaate tarkoittaa, että Hongkong säilyttää omat oikeus-, talous- ja hallintojärjestelmänsä osana Kiinaa vuoteen 2047 asti, vaikka kuuluu Kiinan kansantasavaltaan erityishallintoalueena. Periaate on kirjattu Hongkongin perustuslakiin (Basic Law).",
         "lahteet": [
           {
@@ -2616,7 +2616,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
       },
       {
         "kysymys": "Mikä on Bangkokin virallinen täysi nimi?",
-        "vastaus": "Bangkokin täysi seremoniallinen nimi on yksi maailman pisimmistä virallisista paikannimistä. Se sisältää yli 160 kirjainta ja kuvailee kaupungin mytologisena \"enkelien kaupunkina\".",
+        "vastaus": "Bangkokin täysi seremoniallinen nimi on yksi maailman pisimmistä virallisista paikannimistä. Se sisältää yli 160 kirjainta ja kuvailee kaupungin mytologisena ”enkelien kaupunkina”.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Bangkok",
@@ -2785,7 +2785,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Victorianputousta sanotaan maailman suurimmaksi?",
-        "vastaus": "Victorianputous on 1708 metriä leveä ja noin 108 metriä korkea, mikä tekee siitä leveyden ja korkeuden yhdistelmänä maailman suurimman yhtenäisen putoavan vesiverhon. Paikallinen nimi Mosi-oa-Tunya tarkoittaa \"jyrisevää savua\", sumupilven mukaan joka näkyy kilometrien päähän.",
+        "vastaus": "Victorianputous on 1708 metriä leveä ja noin 108 metriä korkea, mikä tekee siitä leveyden ja korkeuden yhdistelmänä maailman suurimman yhtenäisen putoavan vesiverhon. Paikallinen nimi Mosi-oa-Tunya tarkoittaa ”jyrisevää savua”, sumupilven mukaan joka näkyy kilometrien päähän.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Victoria_Falls",
@@ -4555,7 +4555,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Mitä Casablanca tarkoittaa espanjaksi?",
-        "vastaus": "Casablanca tarkoittaa espanjaksi 'valkoista taloa', ja nimi juontuu kaupungin valkoisiksi kalkituista rakennuksista. Eurooppalaiset merenkulkijat antoivat nimen jo vuosisatoja sitten.",
+        "vastaus": "Casablanca tarkoittaa espanjaksi ’valkoista taloa’, ja nimi juontuu kaupungin valkoisiksi kalkituista rakennuksista. Eurooppalaiset merenkulkijat antoivat nimen jo vuosisatoja sitten.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Casablanca",
@@ -4615,7 +4615,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Mitä Taklamakanin nimen on tulkittu tarkoittavan?",
-        "vastaus": "Taklamakanin nimen on kansanperinteessä tulkittu tarkoittavan jotain 'sinne menet mutta et tule takaisin' -tyyppistä, vaikka kielitieteilijät kiistelevät tulkinnasta. Autiomaan äärimmäiset olosuhteet ovat joka tapauksessa tehneet siitä pelätyn.",
+        "vastaus": "Taklamakanin nimen on kansanperinteessä tulkittu tarkoittavan jotain ’sinne menet mutta et tule takaisin’ -tyyppistä, vaikka kielitieteilijät kiistelevät tulkinnasta. Autiomaan äärimmäiset olosuhteet ovat joka tapauksessa tehneet siitä pelätyn.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Taklamakan_Desert",
@@ -4825,7 +4825,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Montako haaraa Mekong muodostaa suistoonsa?",
-        "vastaus": "Mekong jakautuu suistossaan yhdeksään pääuomaan, joita kutsutaan vietnamiksi nimellä 'Cửu Long' eli yhdeksän lohikäärmettä. Bassac on näistä haaroista toiseksi suurin.",
+        "vastaus": "Mekong jakautuu suistossaan yhdeksään pääuomaan, joita kutsutaan vietnamiksi nimellä ’Cửu Long’ eli yhdeksän lohikäärmettä. Bassac on näistä haaroista toiseksi suurin.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Mekong_Delta",
@@ -4896,7 +4896,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
       },
       {
         "kysymys": "Mikä saaristo kärsii usein Saharan pölystä?",
-        "vastaus": "Kanariansaaret kärsivät toistuvasti Saharan pölypilvistä, joita paikalliset kutsuvat nimellä 'calima'. Ilmiö voi heikentää näkyvyyttä ja ilmanlaatua saarilla useiksi päiviksi kerrallaan.",
+        "vastaus": "Kanariansaaret kärsivät toistuvasti Saharan pölypilvistä, joita paikalliset kutsuvat nimellä ’calima’. Ilmiö voi heikentää näkyvyyttä ja ilmanlaatua saarilla useiksi päiviksi kerrallaan.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Canary_Islands",

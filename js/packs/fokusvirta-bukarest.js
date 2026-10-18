@@ -778,8 +778,8 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli '
         + 'sijoitettu Styriaan ja kreivin nimi oli Count Wampyr; nimen '
         + 'Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja '
-        + 'Moldavian historiasta ja kopioi kirjasta alaviitteen "Dracula '
-        + 'means devil". Vlad Seivästäjää ei mainita muistiinpanoissa '
+        + 'Moldavian historiasta ja kopioi kirjasta alaviitteen ”Dracula '
+        + 'means devil”. Vlad Seivästäjää ei mainita muistiinpanoissa '
         + 'lainkaan.',
       lahde: 'en-Wikipedia "Bram Stoker", en-Wikipedia "Dracula" ja '
         + 'en-Wikipedia "Vlad the Impaler". Tarkistettu 1.9.2026.',

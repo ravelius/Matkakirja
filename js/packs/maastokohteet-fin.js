@@ -787,7 +787,7 @@ export const MAASTOKOHTEET_FIN = [
       + 'korkein yksittäinen nosto on Mälkiän 12,4 metriä. Kanava oli avain koko sisämaahan: '
       + 'sen kautta pääsee Suomen järvialueen 120 toisiinsa liittyvään järveen, ja Saimaan '
       + 'syväväyliä on 814 kilometriä aina Kuopioon asti. Talvisin kanava on kiinni. Se '
-      + 'peruskorjattiin ja levennettiin vuosina 1963–1968, ja nykyinen "saimax"-mitta sallii '
+      + 'peruskorjattiin ja levennettiin vuosina 1963–1968, ja nykyinen ”saimax”-mitta sallii '
       + 'enintään 82,5 metriä pitkän ja 12,6 metriä leveän aluksen.',
     lahde: 'en-Wikipedia "Saimaa Canal", johdanto-osa sekä osiot "Topography", "Dimensions", '
       + '"Locks" ja "History" (tarkistettu 11.9.2026).',
@@ -928,7 +928,7 @@ export const MAASTOKOHTEET_FIN = [
       + 'puolella. Suomi näki nälkää, ja vuorihallitus lähetti 1868 insinööri Conrad Lihrin '
       + 'johtaman retkikunnan pohjoiseen; syyskuussa se löysi kultaa Ivalojoesta Inarista. '
       + 'Aleksanteri II vahvisti huhtikuussa 1870 lain, joka luopui hallitsijan yksinoikeudesta '
-      + 'jalometalleihin ja avasi huuhdonnan jokaiselle "kunnolliselle" suuriruhtinaskunnan ja '
+      + 'jalometalleihin ja avasi huuhdonnan jokaiselle ”kunnolliselle” suuriruhtinaskunnan ja '
       + 'Venäjän keisarikunnan miehelle. Saman kevään ja kesän aikana noin viisisataa '
       + 'kullankaivajaa hiihti, käveli ja souti satoja kilometrejä Ivalojoen ja Sotajoen '
       + 'yhtymäkohtaan. Sinne perustettiin Kultalan kruununasema, jossa viranomaiset '

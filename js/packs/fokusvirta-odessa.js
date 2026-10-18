@@ -700,8 +700,8 @@ export const FOKUSVIRTA_ODESSA = {
           + '(CC BY-SA 3.0)',
       },
       visa: {
-        kysymys: 'Isoisäsi kirjoitti elokuussa 1873, että oopperatalo "paloi '
-          + 'talvella". Milloin palo oli?',
+        kysymys: 'Isoisäsi kirjoitti elokuussa 1873, että oopperatalo ”paloi '
+          + 'talvella”. Milloin palo oli?',
         vaihtoehdot: [
           'Helmikuun lopulla, laskiaisviikolla',
           'Edellisenä jouluna, joulukuussa 1872',

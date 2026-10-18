@@ -145,7 +145,7 @@ export const HAHMOTELMA_SVK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/svk-nosto-dobsinska-jaaluola-a17004b1.jpg',
       lyhyt: 'Jääpylväät ja jäälattia Dobšinán jääluolassa.',
-      selite: 'Dobšinská ľadová jaskyňa -luolan jäämuodostelmat "Alttari" ja "Kaivo" jäälattian yllä luolan kalliokaton alla.',
+      selite: 'Dobšinská ľadová jaskyňa -luolan jäämuodostelmat ”Alttari” ja ”Kaivo” jäälattian yllä luolan kalliokaton alla.',
       lahde: 'Valokuva: Margoz, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Margoz',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dob%C5%A1insk%C3%A1_%C4%BEadov%C3%A1_jasky%C5%88a_altar_and_well.jpg',
@@ -155,8 +155,8 @@ export const HAHMOTELMA_SVK = [
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/svk-nosto-dobsinska-jaaluola-d9cd99fe.jpg',
-        lyhyt: 'Jäämuodostelma "Kaivo" Dobšinán jääluolassa.',
-        selite: 'Dobšinská ľadová jaskyňa -luolan jäämuodostelma "Kaivo" kohoaa jäälattiasta kalliokattoa vasten.',
+        lyhyt: 'Jäämuodostelma ”Kaivo” Dobšinán jääluolassa.',
+        selite: 'Dobšinská ľadová jaskyňa -luolan jäämuodostelma ”Kaivo” kohoaa jäälattiasta kalliokattoa vasten.',
         lahde: 'Valokuva: Margoz, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Margoz',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dob%C5%A1insk%C3%A1_%C4%BEadov%C3%A1_jasky%C5%88a_Ice_form_well.jpg',
@@ -1716,7 +1716,7 @@ export const HAHMOTELMA_SVK = [
       + 'joka myöhemmin otti nimen Bebek, hallitsi linnaa 1200-luvun puolivälistä vuoteen 1566 '
       + '(Mariássy-suvun lyhyttä väliaikaista haltuunottoa lukuun ottamatta), ja vuonna 1578 '
       + 'linna siirtyi Andrássyn suvulle, joka omisti sen aina vuoteen 1918 asti. Linnasta on '
-      + 'tehty unkarilainen kansanballadi "Krasznahorka büszke vára", jota soitetaan '
+      + 'tehty unkarilainen kansanballadi ”Krasznahorka büszke vára”, jota soitetaan '
       + 'perinteisesti tárogató-puhaltimella.',
     lahde: 'en-Wikipedia "Krásna Hôrka Castle", johdanto-osa ja osiot "History" ja "2012 fire" '
       + '(tarkistettu 21.9.2026).',
@@ -1884,8 +1884,8 @@ export const HAHMOTELMA_SVK = [
       + 'furmint-rypäleen; italialaiset asettuivat muun muassa Baran kylään. Kuninkaallinen '
       + 'asetus rajasi alueen suljetuksi viinialueeksi vuonna 1737, mitä pidetään maailman '
       + 'varhaisimpana alkuperänimitysten suojajärjestelmänä, ja Ranskan Ludvig XIV kutsui '
-      + 'Tokajia saatuaan siitä pulloja Ferenc II Rákóczilta vuonna 1703 "kuninkaiden '
-      + 'viiniksi, viinien kuninkaaksi". Trianonin rauhansopimus jakoi alueen Unkarin ja '
+      + 'Tokajia saatuaan siitä pulloja Ferenc II Rákóczilta vuonna 1703 ”kuninkaiden '
+      + 'viiniksi, viinien kuninkaaksi”. Trianonin rauhansopimus jakoi alueen Unkarin ja '
       + 'silloisen Tšekkoslovakian kesken 1920, jolloin nykyiselle Slovakian puolelle jäi '
       + 'seitsemän kylää, muun muassa Slovenské Nové Mesto ja Malá Tŕňa; rypäletuhooja '
       + 'fylloksera ei ole vielä 1870-luvun alussa saapunut alueelle, vaan se tuhoaa suuren '
@@ -1901,7 +1901,7 @@ export const HAHMOTELMA_SVK = [
         'Roseeviinistä',
       ],
       oikea: 0,
-      fakta: 'Ranskan Ludvig XIV kutsui sitä "kuninkaiden viiniksi, viinien kuninkaaksi".',
+      fakta: 'Ranskan Ludvig XIV kutsui sitä ”kuninkaiden viiniksi, viinien kuninkaaksi”.',
     },
   },
 ];

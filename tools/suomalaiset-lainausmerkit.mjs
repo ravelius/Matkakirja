@@ -21,8 +21,8 @@ const YKSI = arg('--tiedosto');
 const ESIM = Number(arg('--esimerkit') ?? 1);
 
 /* Mukana: pakettien ja linssien sisältö, data-JSONit, katalogit. Pois: koodi, museot (LS), lähdesivut. */
-const MUKANA = [/^js\/packs\/.+\.js$/, /^js\/linssit\/.+\.js$/, /^data\/.+\.json$/];
-const POIS = [/museo|ranska|alankomaat|louvre|orsay|rodin/i, /^js\/lahteet\.js$/, /^js\/packs\/commons-tekijat\.js$/, /^data\/aanilahteet\.json$/, /^data\/oppaan-kuvat\/oppaan-kuvat\.json$/];
+const MUKANA = [/^tools\/astronaut\/qa-.+\.json$/, /^js\/packs\/.+\.js$/, /^js\/linssit\/.+\.js$/, /^data\/.+\.json$/];
+const POIS = [/^js\/linssit\/astronaut-kysymykset\.js$/, /museo|ranska|alankomaat|louvre|orsay|rodin/i, /^js\/lahteet\.js$/, /^js\/packs\/commons-tekijat\.js$/, /^data\/aanilahteet\.json$/, /^data\/oppaan-kuvat\/oppaan-kuvat\.json$/];
 /* Vain näyttötekstien avaimet (valkolista); lähde-, tiedosto-, tekijä-, luokka- ja koodikentät eivät ole mukana. */
 const NAYTTO_AVAIMET = /^(teksti|selite|pitka|a|lyhyt|q|kysymys|kysymykset|fact|diaries|fakta|saanto|vaihtoehdot|options|vastaus|otsikko|nosto|kortti|text|kappaleet|kappale|selitys|juttu|intro|johdanto|esittely|loyto|hint|henkilojuttu|artikkeli|lunastus|kuvaus|valtiomuoto|paikka|vaarin|lehtiJohdanto|nappi|ateena|kamerun|lagos|nairobi|kioto|kanton|vilna|kadikoy|suomi|lontoo|newyork|mumbai|peking|singapore|niah|beringia)$/;
 

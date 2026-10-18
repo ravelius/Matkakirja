@@ -735,8 +735,8 @@ export const EUROPE_KULTTUURI = {
         'Paikan tasavallan hallituksessa',
       ],
       correct: 2,
-      fact: 'Perustuslain pykälä 12 kuuluu: "Koiralla on oikeus olla '
-              + 'koira." Pykäliä on kaikkiaan 41, ja ne on käännetty useille '
+      fact: 'Perustuslain pykälä 12 kuuluu: ”Koiralla on oikeus olla '
+              + 'koira.” Pykäliä on kaikkiaan 41, ja ne on käännetty useille '
               + 'kymmenille kielille.',
     },
   },

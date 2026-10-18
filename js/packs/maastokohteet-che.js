@@ -394,7 +394,7 @@ export const MAASTOKOHTEET_CHE = [
       + 'luostarikirjastoista. Sen perusti Pyhä Othmar, luostarin perustaja. Kun '
       + 'luostari paloi vuonna 937, kirjasto säilyi ehjänä. Nykyinen kirjastosali '
       + 'rakennettiin vuosina 1758–1767 arkkitehti Peter Thumbin rokokoopiirustusten '
-      + 'mukaan. Oven yllä lukee kreikaksi ΨΥΧΗΣ ΙΑΤΡΕΙΟΝ, "sielun parantola" — '
+      + 'mukaan. Oven yllä lukee kreikaksi ΨΥΧΗΣ ΙΑΤΡΕΙΟΝ, ”sielun parantola” — '
       + 'kirjoitus on lainattu Ramses II:n kirjaston kaiverruksesta.\n\n'
       + 'Kokoelma on Sveitsin vanhin: lähes 160 000 nidettä, joista 1 650 on '
       + 'inkunaabelia eli ennen vuotta 1500 painettua kirjaa, ja 2 100 käsikirjoitusta '
@@ -451,7 +451,7 @@ export const MAASTOKOHTEET_CHE = [
       + 'Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. '
       + 'Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee '
       + 'valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta '
-      + '1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".\n\n'
+      + '1195 tunnettu Castrum Quilonis olisi siis ”kalliolavalle rakennettu linna”.\n\n'
       + 'Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin '
       + 'pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie '
       + 'Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti '
@@ -530,8 +530,8 @@ export const MAASTOKOHTEET_CHE = [
       + 'kuoli. Favre itse sai sydänkohtauksen tunnelissa 19. heinäkuuta 1879, '
       + 'puoli vuotta ennen läpimurtoa.\n\n'
       + 'Läpimurto tapahtui 29. helmikuuta 1880, ja mittaustarkkuus osoittautui '
-      + 'erinomaiseksi. Insinööri Adolphe Gautier kutsui työtä aikanaan "suurimmaksi '
-      + 'teoksi, mihin ihminen on tähän mennessä ryhtynyt".',
+      + 'erinomaiseksi. Insinööri Adolphe Gautier kutsui työtä aikanaan ”suurimmaksi '
+      + 'teoksi, mihin ihminen on tähän mennessä ryhtynyt”.',
     lahde: 'en-Wikipedia "Gotthard Tunnel", johdanto-osa ja osio '
       + '"History/Construction" (tarkistettu 2.9.2026).',
   },
@@ -1027,7 +1027,7 @@ export const MAASTOKOHTEET_CHE = [
     teksti: 'Habsburgin linna kohoaa Aargaun kantonissa Aare-joen lähellä, ja siitä sai alkunsa '
       + 'Habsburgien hallitsijasuvun nimi. Linnan rakennutti noin vuonna 1020 kreivi Radbot '
       + 'yhdessä Strasbourgin piispa Wernerin kanssa. Radbotin pojanpoika Otto II alkoi '
-      + 'käyttää arvonimessään lisäystä "von Habsburg", ja Rudolf I siirsi suvun '
+      + 'käyttää arvonimessään lisäystä ”von Habsburg”, ja Rudolf I siirsi suvun '
       + 'valtakeskuksen Itävaltaan vuonna 1276. Linna pysyi suvun omistuksessa vuoteen 1415, '
       + 'jolloin Aargau joutui sveitsiläiselle valaliitolle; nykyään sen omistaa Aargaun '
       + 'kantoni. Länsiosa on kunnostettu ja siellä toimii ravintola sekä pieni näyttely, kun '

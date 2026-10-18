@@ -1073,7 +1073,7 @@ export const FOKUSVIRTA_PIETARI = {
           + 'työn yhdellä kirveellä ja heitti sen valmistuttua järveen: '
           + 'toista samanlaista ei ole eikä tule.',
         'Kirkosta kerrotaan aina sama lause: se on rakennettu ilman '
-          + 'ainuttakaan naulaa. Se on melkein totta, ja "melkein" on '
+          + 'ainuttakaan naulaa. Se on melkein totta, ja ”melkein” on '
           + 'tässä kiinnostavampi kuin väite. Hirsirunko todella on '
           + 'nauloitta: hirret on veistetty kirveellä ja liitetty '
           + 'nurkissa salvoksin, ja koko rakennus lepää kivijalustalla '

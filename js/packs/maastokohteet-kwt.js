@@ -183,8 +183,8 @@ export const MAASTOKOHTEET_KWT = [
       + 'saari on ollut strateginen palkinto sumerilaisen Urin ajoista asti. Dilmunin aikaan sen '
       + 'nimi oli Agarum, jumala Enzakin maa. Tanskalainen retkikunta Geoffrey Bibbyn johdolla '
       + 'kaivoi saarta 1958–1963 ja löysi noin viisikymmentä lieriösinettiä ja neljäsataa '
-      + 'leimasinta; yhdessä nuolenpääkirjoituksessa luki "Marduk, erinomainen ruhtinas, '
-      + 'armollinen jumala, ylistetty taivaassa ja maan päällä, armahda". Myöhemmin löytyi '
+      + 'leimasinta; yhdessä nuolenpääkirjoituksessa luki ”Marduk, erinomainen ruhtinas, '
+      + 'armollinen jumala, ylistetty taivaassa ja maan päällä, armahda”. Myöhemmin löytyi '
       + 'peruskivi, jonka teksti kertoo palatsin kuuluvan Babylonian kuninkaalle '
       + 'Nebukadnessarille.',
     lahde: 'en-Wikipedia "Failaka Island", johdanto-osa sekä osiot "Antiquity" ja "Hellenistic '

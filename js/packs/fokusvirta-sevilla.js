@@ -155,7 +155,7 @@ const APPELSIINI_VISA = {
   oikea: 1,
   fakta: 'Katkerassa appelsiinissa on enemmän pektiiniä kuin makeassa, '
     + 'joten hillo hyytyy paremmin. Varhaisin tunnettu resepti '
-    + '"marmelet of oranges" on vuodelta 1677 — ja saman hedelmän kuorta '
+    + '”marmelet of oranges” on vuodelta 1677 — ja saman hedelmän kuorta '
     + 'jauhetaan suomalaiseen mämmiin.',
 };
 

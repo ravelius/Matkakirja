@@ -431,7 +431,7 @@ export const PAIKALLISAARTEET = {
     isoAarre: {
       name: 'Minette-rautamalmin lohkare',
       fakta: 'Maan eteläosasta, Eschin seudulta, löytyi 1850-luvulla '
-        + 'punertavaa "minette"-rautamalmia. Löytö muutti pienen '
+        + 'punertavaa ”minette”-rautamalmia. Löytö muutti pienen '
         + 'maatalouskylän muutamassa vuosikymmenessä yhdeksi Euroopan '
         + 'tärkeimmistä teräksentuottajista.',
     },
@@ -485,8 +485,8 @@ export const PAIKALLISAARTEET = {
       fakta: 'Marmeladi tarvitsee katkeraa sevillanappelsiinia, joka kypsyy vain '
         + 'talvella, ja valtaosa Sevillan sadosta viedään Britanniaan '
         + 'keitettäväksi. Sana tulee portugalin kvittenihilloa tarkoittavasta '
-        + 'sanasta marmelada; tarina Maria Stuartista ja sanoista "Marie est '
-        + 'malade" on pelkkä kansanselitys. Dundeessa marmeladia on tehty '
+        + 'sanasta marmelada; tarina Maria Stuartista ja sanoista ”Marie est '
+        + 'malade” on pelkkä kansanselitys. Dundeessa marmeladia on tehty '
         + 'kaupaksi 1700-luvun lopulta asti.',
     },
     isoAarre: {
@@ -855,7 +855,7 @@ export const PAIKALLISAARTEET = {
       kuva: 'assets/aarteet/paikallis/and-pieni.jpg',
       fakta: 'Trinxat on Pyreneiden vuoristoruoka, jota syödään Andorrassa sekä '
         + 'Cerdanyan ja Alt Urgellin seuduilla. Nimi tulee katalaanin '
-        + 'verbistä trinxar, "pilkkoa", ja ruoka tehdään kaalista ja '
+        + 'verbistä trinxar, ”pilkkoa”, ja ruoka tehdään kaalista ja '
         + 'perunoista, jotka keitetään ja soseutetaan. Sen kanssa tarjoillaan '
         + 'paistettua pekonia. Andorrassa sitä saa erityisesti bordoista, '
         + 'perinteisistä maatilarakennuksista, joissa tarjoillaan paikallisia '
@@ -918,7 +918,7 @@ export const PAIKALLISAARTEET = {
       kuva: 'assets/aarteet/paikallis/mco-pieni.jpg',
       fakta: 'Barbagiuan on Monacon kansallisruoaksi sanottu paistettu piiras, '
         + 'jonka täytteenä on perinteisesti mangoldia ja ricottaa. Nimi '
-        + 'tarkoittaa monégasquen kielellä "setä Jeania": tarun mukaan kokki '
+        + 'tarkoittaa monégasquen kielellä ”setä Jeania”: tarun mukaan kokki '
         + 'Jean ei saanut kastiketta raviolieihinsa, joten hän täytti '
         + 'taikinan mangoldilla ja paistoi sen. Barbagiuaneja syödään '
         + 'erityisesti kansallispäivänä 19. marraskuuta.',
@@ -961,8 +961,8 @@ export const PAIKALLISAARTEET = {
       kuva: 'assets/aarteet/paikallis/mkd-pieni.jpg',
       fakta: 'Tavče gravče on Pohjois-Makedonian kansallisruoka: isoja valkoisia '
         + 'papuja, sipulia, paprikaa ja kuivattua minttua, paistettuina ja '
-        + 'tarjoiltuina samassa savivuoassa. Nimi on suunnilleen "pavut '
-        + 'pannulla", ja pannun sana tava on lainattu turkin kautta. '
+        + 'tarjoiltuina samassa savivuoassa. Nimi on suunnilleen ”pavut '
+        + 'pannulla”, ja pannun sana tava on lainattu turkin kautta. '
         + 'Perinteisesti sitä syödään perjantaisin ilman lihaa. Tetovon '
         + 'seudun pavut ovat tunnetuimpia.',
     },

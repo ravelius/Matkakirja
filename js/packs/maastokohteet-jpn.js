@@ -341,7 +341,7 @@ export const MAASTOKOHTEET_JPN = [
     laudat: {
       maailmankartta: { x: 10162.4, y: 2079.9 },
     },
-    teksti: 'Dejima eli "ulostulosaari" oli keinosaari Nagasakin edustalla. Se toimi '
+    teksti: 'Dejima eli ”ulostulosaari” oli keinosaari Nagasakin edustalla. Se toimi '
       + 'kauppapaikkana ensin portugalilaisille 1570–1639 ja sitten hollantilaisille '
       + '1641–1858, ja 220 vuoden ajan se oli ainoa japanilainen alue, jonne '
       + 'länsimaalaiset pääsivät — koko ulkomaankaupan ja kulttuurivaihdon kanava '

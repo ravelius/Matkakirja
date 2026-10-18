@@ -196,7 +196,7 @@ export const FOKUSVIRTA_ATEENA = {
     kuva: {
       tiedosto: 'Sophia Schliemann wearing gold jewelry.jpg',
       lyhyt: 'Sophia Schliemann koruissaan Priamoksen aarteen löydön jälkeen; kulta oli Euroopan puheenaihe.',
-      selite: 'Sophia Schliemann kantaa "Priamoksen aarteen" koruja. '
+      selite: 'Sophia Schliemann kantaa ”Priamoksen aarteen” koruja. '
         + 'Kuva otettiin joulun 1873 tienoilla, ja se levisi '
         + 'myöhemmin lehdissä ympäri maailmaa.',
       lahde: 'Tuntematon kuvaaja n. 1873, Wikimedia Commons (public domain)',
@@ -335,7 +335,7 @@ export const FOKUSVIRTA_ATEENA = {
         + 'mukavuuksista eikä katoista. Kun eräs nuorukainen kerran rikkoi '
         + 'hänen astiansa, ateenalaiset eivät suuttuneet vaan hankkivat '
         + 'uuden tilalle — omituista kunnioitusta miehelle, joka kulki '
-        + 'päivällä lyhty kädessä ja väitti etsivänsä "ihmistä", '
+        + 'päivällä lyhty kädessä ja väitti etsivänsä ”ihmistä”, '
         + 'ikään kuin kirkkainkaan valo ei siihen riittäisi. '
         + 'Isoisäsi mainitsee torin tingittyine oliiveineen — hänkin olisi '
         + 'kävellyt Diogeneen astian ohi tietämättään.',
@@ -366,7 +366,7 @@ export const FOKUSVIRTA_ATEENA = {
           'Puista paimensauvaa',
         ],
         oikea: 1,
-        fakta: 'Diogenes väitti etsivänsä lyhdyllään "ihmistä" '
+        fakta: 'Diogenes väitti etsivänsä lyhdyllään ”ihmistä” '
           + '— vihjaten, ettei sellaista löytynyt edes kirkkaassa '
           + 'päivänvalossa.',
       },

@@ -304,8 +304,8 @@ export const NORTHAMERICA = {
     types: themedTokenTypes({
       star: {
         name: 'Montezuman aarre',
-        fakta: 'Kun espanjalaiset pakenivat Tenochtitlanista \'surullisena '
-          + 'yönä\' 1520, suuri osa Montezuman kullasta upposi järveen — '
+        fakta: 'Kun espanjalaiset pakenivat Tenochtitlanista ’surullisena '
+          + 'yönä’ 1520, suuri osa Montezuman kullasta upposi järveen — '
           + 'sitä etsitään yhä.',
         kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
       },
@@ -386,9 +386,9 @@ export const NORTHAMERICA = {
     diaries: [
       'Siirtokunnat ovat pärjänneet ilman meitä hämmentävän hyvin. Päätin olla ottamatta teekutsuja puheeksi.',
       'Isoisä odotti täältä siirtokuntia ja sai vastaansa kaksi liittovaltiota, jotka pärjäävät hämmentävän hyvin ilman meitä. Päätin olla ottamatta teekutsuja puheeksi.',
-      '"Manner on tyhjä lännestä itään", kirjoitti isoisä ja tarkoitti sitä kohteliaisuutena. Täällä oli satoja kansoja, kieliä ja kaupunkeja ennen ensimmäistäkään purjetta. Tyhjyys oli hänen kartassaan, ei maassa.',
+      '”Manner on tyhjä lännestä itään”, kirjoitti isoisä ja tarkoitti sitä kohteliaisuutena. Täällä oli satoja kansoja, kieliä ja kaupunkeja ennen ensimmäistäkään purjetta. Tyhjyys oli hänen kartassaan, ei maassa.',
       'Isoisä laski, että mantereen ylitys vaunuilla kestää viisi kuukautta. Juna vie sen nyt kolmessa vuorokaudessa ja lentokone kuudessa tunnissa. Hän ehti nähdä ensimmäisen näistä ja piti sitä lopullisena.',
-      '"Kulta loppuu ja kaupungit katoavat", ennusti isoisä kaivoskaupungeista. Osa katosi ja osa on nyt miljoonakaupunkeja. Hän oli oikeassa puolet ajasta, mikä on ennustajalle kunniallinen tulos.',
+      '”Kulta loppuu ja kaupungit katoavat”, ennusti isoisä kaivoskaupungeista. Osa katosi ja osa on nyt miljoonakaupunkeja. Hän oli oikeassa puolet ajasta, mikä on ennustajalle kunniallinen tulos.',
       'Isoisän kartassa raja kulkee suorana viivana länteen. Suora viiva on yhä siellä, ja se leikkaa yhä läpi jokia, vuoria ja kansoja, jotka olivat paikalla ennen viivan piirtäjää.',
     ],
   },
