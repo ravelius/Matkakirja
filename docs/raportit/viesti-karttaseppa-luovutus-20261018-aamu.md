@@ -18,6 +18,14 @@ Työpuu: proto-wt `/Users/Shared/Claude/wt/proto-karttaseppa-iss-reitti-198` haa
 - **8effba503** (⊇ v10): KiinaKerros.TaisteluKummut oletuksena päällä → kummut kaikilla 5 taistelupysäkillä (−221 Changping, 250, 440 Fei-joki,
   1280 Yamen, 1644 Shanhai). QA `linssi kiina korkeus <vuosi>|kaikki|pois`.
 
+## LISÄYS 06.0x (ennen nollausta)
+
+- v10 ajettu 05.49 (todistus-kiina-taistelu-250-v10-20261018-0548, SIMU VAPAA kuitattu 05.54). Video alkoi 36 s myöhässä (jäätyminen):
+  taistelu ~55–58 s, Chengdu-hehku ~61–69 s, siirtymä 250→440 ~71–72 s. Kuvaparit `…/kuvaparit/pari-v9-*-v10-*.png` → PT 06.0x.
+- TULOS: siirtymä korjautui. Taistelunimi "208" ja Taolaisuus-nimi yhä osin kummun/hehkun alla → SEURAAJA: nimi ylemmäs kummun yli
+  (Lat −1,4 → pohjoispuolelle tai korkeus kummun huipun yli) ja valopisteen nimi kauemmas / HehkuSade 0,95 → 0,6; uusi pari PT:lle.
+  Kohta 1 alla on siis TEHTY (paitsi tämä jatko); kohta 2 (kaikki taistelut 8effba503) ennallaan, JU:n L1-jonossa PK:n jälkeen.
+
 ## ENSIN (seuraaja)
 
 1. **v10 kuvaparit:** JU kääntää 5c59703d0 → `_tyo/karttaseppa/kiina-taistelu-250-v10-app` (L1 05.37–). SIMU NYT → aja SUORAAN
