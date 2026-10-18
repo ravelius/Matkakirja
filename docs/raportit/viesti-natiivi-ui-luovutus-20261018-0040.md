@@ -83,3 +83,11 @@ Käännös valmis: **KÄÄNNETTY eefb79a01 a45af2f97** (_tyo/natiivi-ui/ratas-20
   wt/proto-natiivi-ui-kuva-kokoruutu-202, pohja juna-201 73bca3b3a): oma kuva suoraan KUVASUURENNOS-kokoruutuun (kortti pois, kytkin
   IssOmatKuvat.Kokoruudussa), jaa + ✕ OHJAUSNAPIT, galleria kokoruutu, nipistys + kaksoisnapautus, tarkka kuva. Simu: sk-kuva-kokoruutu-202.txt
   (ajoskripti tekemättä; malli ajo-kehys-ratas-201.zsh) käännöksestä, jossa haara on → pari PT:lle.
+
+## PÄIVITYS 06.3x
+- Kohdevalikko-korjaus natiivi-ui/kohdevalikko-korjaus-201 6911a9f21 (KK 05.58 kohdat 2+4) rungossa d60107576, todiste kuvakäännös 4
+  b656d1792 OK (lokit/todistus-kohdevalikko-korjaus-*-201-20261018-0615) → _tyo/natiivi-ui/kuva4-parit/1–2 PT:lle.
+- Kuva-kokoruutu: kärki 4421afa56 (+ kuvateksti piiloon zoomattuna) NS:lle; parit 3–4 (otto → koko ruutu, nipistys) OK.
+  KESKEN: NYKYINEN-kortti + gallerian koko ruutu → uusinta ajo-kuva-kokoruutu-202b.zsh <app> <udid> <laite> seuraavasta kuvakäännöksestä
+  (SIMU NYT Julkaisijalta, ~6 min, iPhone + iPad) → parit PT:lle. Gallerian ruutuun tap-teksti "Oma kuva" (luokkaa mk-galleria__vedos ei ole).
+- Sininen maa = opas Pariisi → ISS (KaupunkiIlmakeha), vanha; Valosepän 92dc1db2e:n aihe (KK). KÖÖPENHAMINA radan ulkopuolella (55,7°).
