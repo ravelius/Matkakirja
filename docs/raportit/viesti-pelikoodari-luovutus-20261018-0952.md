@@ -60,5 +60,5 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
   (puu = d653af8ff). ÄLÄ kavenna iPadin levyä.
 - JUOKSUPELI RATA 1 -SUUNNITELMA (omistaja 10.46; PT hyväksyi 11.3x koodauksen pohjaksi 19.10.):
   /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksupeli/RATA1-SUUNNITELMA.md. Koodaus vasta 19.10. haaran juoksupeli-202 13a1927cf päälle.
-  Omenakysymys (heitto takaa tulevaan hoviin) PT vie KK:lle.
+  OMISTAJAN PÄÄTÖS 11.43 omena: "Ei, takaa-ajajaa paetaan" → heitto vain edessä oleviin vartijoihin (kirjattu suunnitelmaan; Heita jo näin).
 - Kultaiset: tauko kunnes #4862 mergetään (vasta OMISTAJA PYYSI JULKAISUA). JONO TYHJÄ huomiseen.
