@@ -1,0 +1,53 @@
+{
+  "status": "PASS_PREPARED_V8A_PACKAGE_INDEPENDENT_READBACK_PENDING_FINAL_METADATA_FREEZE",
+  "createdUTC": "2026-10-18T06:46:19.119528+00:00",
+  "packet": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261018-native51-v8a-source-ground3",
+  "auditedPreparedManifestSHA256": "bf463ec81f372f1bb33e3cd843458077ce50b62fd5d8312ed35dfa7e53650b8e",
+  "manifestFilesChecked": 49,
+  "manifestFileInventoryComplete": true,
+  "changed3GLBsBitExactReviewedC3": [
+    {
+      "path": "glb-v4/peking_2_3_lod0.glb",
+      "sha256": "96bb64d7196356c425e7de936acecfa38a3690769ab742663d62c9eef9a99ddf",
+      "bytes": 13162880
+    },
+    {
+      "path": "glb-v4/peking_2_3_lod1.glb",
+      "sha256": "08165ef9e15e86070739ec0b4403c0ee7d9344960b9ed0b55c33d4367df371f0",
+      "bytes": 5302528
+    },
+    {
+      "path": "glb-v4/peking_2_3_lod2.glb",
+      "sha256": "3ad1b00386fedb9fad64809540968f4f8c2ad6f80e13d6917dd309e178ecdc78",
+      "bytes": 4333116
+    }
+  ],
+  "unchanged69V6HashesVerified": true,
+  "overlay72ManifestAndBytesVerified": true,
+  "rawAll72": 163727012,
+  "rawHeadroom": 599238,
+  "trianglesFromPinnedLeaves": 1391292,
+  "triangleHeadroom": 6091,
+  "tableChangesOnly": [
+    "description",
+    "peking_2_3.koot_tavua"
+  ],
+  "all24OriginsHeightsBoundsPathsExact": true,
+  "cutSHA256": "ecf4359279c75fa9d1dc8e7ad75058144304816ab65f6b114fa7711c6f4774cd",
+  "cutByteExactToAuditedC3": true,
+  "all15ValidOrdinaryNoHolePolygons": true,
+  "all15MustLoad": true,
+  "officialSN1CutUnmodified": true,
+  "actualNativePNGsByteExactToSource": 18,
+  "all18FrameHashesAnd48ImportedLOD0BindingsVerified": true,
+  "matched9CameraAndFixedSixDefinitionsExact": true,
+  "waterInventoryHash": "84f514a5ea0156557f5bf788a7278314890ed22991d261ff06499dbf797b7fad",
+  "waterInventory4InheritedBankFailures8UnknownLevels2SeparateLocalDesignEstimatesVerified": true,
+  "readinessCorrectlyFalsePendingAuditReports": true,
+  "preparedExportAuditFlagsFalseAccurate": true,
+  "privateScopeReadmeAccurate": true,
+  "technicalAuditInheritedSHA256": "a7bf6f9bb1a6147abf778b8ea1df241322420ef82d483461205a86022e11af23",
+  "findings": [],
+  "requiredFinalization": "Parent copies completed technical/visual/package reports, sets audit flags accurately and freezes a new manifest. Recheck all final package hashes; reviewedGLBs,cut,PNGs,watertable,origins must remain unchanged.",
+  "notRuntimeVisualOwnerOrPublicationAcceptance": true
+}

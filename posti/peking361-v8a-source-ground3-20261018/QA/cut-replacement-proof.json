@@ -1,0 +1,56 @@
+{
+  "status": "LOCAL_DRAFT_CUT_FROM_ACTUAL_GEOMETRY_COVERAGE_PENDING_AUDIT_AND_GAME",
+  "oldCutSHA256": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7",
+  "newCutSHA256": "ecf4359279c75fa9d1dc8e7ad75058144304816ab65f6b114fa7711c6f4774cd",
+  "noHoleFeatures": 15,
+  "everyFeatureMustBeLoaded": true,
+  "addedCutAreaM2": 7242.271654447758,
+  "unintendedAddedM2": 9.076420636717634e-12,
+  "lostOldCutM2": 6.4420068310229445e-12,
+  "protectedHoleAddedAreaM2": {
+    "1": 1.0005541922851577e-13,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "8": 0.0
+  },
+  "roundtripDifferenceM2": 8.573558954922351e-08,
+  "actualReplacementCoverageToleranceM": 0.0001,
+  "outsidePilotPartsOfHoles6And7Unchanged": true,
+  "officialDeliveredSN1CutUnmodified": true,
+  "notRuntimeOrOwnerAcceptance": true,
+  "allExportedWGS84FeaturesValidAfterJSONRoundtrip": true,
+  "validityNormalization": [
+    {
+      "oldFeature": 6,
+      "oldReason": "Self-intersection[116.394675999328 39.9136444174773]",
+      "method": "make_valid structure; remove collapsed non-area spikes",
+      "newPolygonCount": 1
+    },
+    {
+      "oldFeature": 7,
+      "numericalInteriorLoopsRemoved": 1,
+      "maximumRemovedLoopAreaDegrees2": 6.751861749964088e-22
+    },
+    {
+      "oldFeature": 7,
+      "oldReason": "Ring Self-intersection[116.394579600509 39.9147990983144]",
+      "method": "make_valid structure; remove collapsed non-area spikes",
+      "newPolygonCount": 1
+    },
+    {
+      "oldFeature": 10,
+      "numericalInteriorLoopsRemoved": 1,
+      "maximumRemovedLoopAreaDegrees2": 2.417103175471495e-20
+    },
+    {
+      "oldFeature": 10,
+      "oldReason": "Ring Self-intersection[116.392598776864 39.9137024812239]",
+      "method": "make_valid structure; remove collapsed non-area spikes",
+      "newPolygonCount": 1
+    }
+  ],
+  "validityNormalizationAreaDifferenceM2": 9.292843855535082e-10,
+  "invalidDraftPreservedNotForUse": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-v8-work/v8a-source-ground3/pre-validity-fix-cut-not-for-use.json"
+}

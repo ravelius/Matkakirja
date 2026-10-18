@@ -1,0 +1,12 @@
+{
+  "readyForReceiverHandoff": true,
+  "readyForIndependentPackageReadback": true,
+  "sharedModelWritesRequired": false,
+  "parallelModelWriter": false,
+  "all3GLBHashesMatchRenderedSource": true,
+  "all69BaseHashesMatch": true,
+  "independentTechnicalAndVisualReportsPending": false,
+  "independentPackageAuditPassed": true,
+  "noReviewedAssetsChangedDuringFreeze": true,
+  "notGameAcceptance": true
+}

@@ -1,0 +1,14 @@
+{
+  "status": "BOUNDED_LOCAL_V8A_GEOMETRY_AND_APPEARANCE_APPROVED_FOR_PRIVATE_GAME_TEST",
+  "technicalReportSHA256": "a7bf6f9bb1a6147abf778b8ea1df241322420ef82d483461205a86022e11af23",
+  "visualReportSHA256": "ec1b7715cf7cfd3b4b75cc85f45569e7c926950e65302cb2b3fbc188c1249f5b",
+  "packageReportSHA256": "d42e2d749170c7788c4b9a7017751fd1f0f0bf89b7be42a7db61abde583a0845",
+  "allOriginalSN1AssetsPreserved": true,
+  "actualNewGeometryBuiltAndRendered": true,
+  "protectedWhiteRegionsAndOutsidePilotRetained": true,
+  "floorAppearanceIsNotRuntimeWater": true,
+  "darkPolygonLineFixIncluded": false,
+  "gameAccepted": false,
+  "physicalDeviceAccepted": false,
+  "wholeCityQualityGoalReached": false
+}

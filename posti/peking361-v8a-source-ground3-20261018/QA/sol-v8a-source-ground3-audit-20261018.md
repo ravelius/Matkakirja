@@ -1,0 +1,29 @@
+# V8a source-ground3 independent technical audit
+
+**Bounded PASS for the actual three-LOD geometry and corrected local draft cut. Private actual-GLB rendering may proceed.** This does not establish image, game, receiver conversion, packaging or owner acceptance.
+
+Audited actual candidate `v8a-source-ground3`, source SN1 pilot and immutable V2+original25m field. Exact GLB hashes, source-plane witness audit references, new-bank checks, layer areas, AO bindings and cut proof are in JSON. Constructor calculations use authored commonENU=(GLB.x+275,−GLB.z,GLB.y), with no captured-world warp added to source geometry.
+
+The72-file projected raw sum is independently **163,727,012B**, leaving **599,238B**. Triangle total is1,391,292, leaving6091 below1,397,383. Three actual LODs retain every old SN1 ordered triangle-corner attribute, old material value, embedded image, node and scene exactly. Roof/tree/source geometry is preserved by those comparisons. C3's nonbank ordered data is exact to C2, which was exact to the independently checked C1 nonbank data; inherited numerical results below are explicitly bound through those comparisons.
+
+Added dry land follows V2 source height planes plus the unchanged existing field. Actual added-ground vertex/centroid checks find no unmatched source reference and maximum plane discrepancy**0.253µm**. Current-rim source-reference checks previously matched910probes within0.223µm; this candidate does not move those rim vertices. Source material layers are retained rather than silently flattened: paving triangle-area sum5491.42536m², grass382.48087m², road208.67267m². Relative to independent V2 restore-region area sums, differences are+0.000260,+0.0000358,−0.0000281m² respectively. Those sums exceed dry union5731.31094m² because original surface layers overlap.
+
+All added dry/floor upward faces have positive winding and no zero-area triangles. Maximum stored normal-versus-geometric-face angle is0.01541°. Actual combined dry+floor footprint leaves0.00056035m² gap; none survives0.1mm inward erosion. Outside authorized scope is0.00068985m². Dry F32 triangles intrude0.00064457m² into intended wet geometry, while0.00053294m² of intended wet lacks exact floor coverage. These are separately disclosed float boundary differences, **not exact zero-gap/zero-intrusion statements**. Bank edges have no missing/outside length beyond0.1mm. They do not justify expanding dry design into source water.
+
+Original mapped source-water polygons inside the authorized scope lie fully in the wet intent. The nominal4m channel is explicitly a game design estimate; source wet lobes are included. No water-surface material or above-floor water mesh is added. The new horizontal wet geometry is submerged maa support; old SN1 data is retained.
+
+## Banks, floors and AO
+
+Candidate1 had artificial tile-end walls, and candidate2 still had dry-facing bank normals. C3 fixes both: **zero N=−250 cross-section endcap triangles**, and all**666 bank faces perLOD face wet** using actual F32 geometric normals with adaptive10mm/1mm/0.1mm classification. This avoids depending on double-sided backface behavior. Real bank outline is718.253982m; actual top-edge union is718.253968m. Entire intended real bank is covered within0.1mm; no artificial9.27749m tile closure remains. Channel ends stay open toward the unmodified adjacent tile.
+
+Bank profiles are noded at source/field boundaries and overlapping-plane switches. Stored top samples match a source reference within0.247µm. Minimum actual authored-local bank clearance is**0.400000009m**; minimum stored floor depth below explicit design water is**1.100000050m**. The two local authored design-water heights are−0.783195708m and−2.199406679m. They are estimates below source bank profiles, not measurements or exact geodetic ellipsoid heights. Adjacent-tile water/network continuity and physically accurate channel levels are not established here.
+
+For newly added paving, both existing SN1 material roles use actual constant UV1 in a large verified white AO patch at eachLOD, checked in both vertical orientations. Original AO images/bindings/UV1 bytes are unchanged. New land is explicitly unbaked neutral AO; it is not extrapolated from nonglobal AO charts. JSON records actual constants, patch radii and image sizes. Base white and constant derivatives do not prove arbitrary receiver mip/shader behavior. Existing interior/collar texture mapping remains SN1; no new texture generation or material edit is introduced.
+
+## Corrected draft cut
+
+Read every one of**15 valid ordinary no-hole WGS84 polygons** after JSON roundtrip. New cut SHA256:`ecf4359279c75fa9d1dc8e7ad75058144304816ab65f6b114fa7711c6f4774cd`. All15 feature properties require loading every feature. The initial invalid draft is archived as not-for-use; its tiny collapsed self-touch loops were corrected without modifying any GLB.
+
+The corrected union matches old SN1 union plus authorized pilot hole6/7 footprint within8.67e-08m². Added area is7242.271654m². Added outside authorized/pilot footprint and lost old-cut area remain below1e−6m². Holes1–5 and8 change below1e−6m²; outside-pilot portions of6/7 remain intact to that precision. All15 parts must be consumed; checking only the first feature would be incorrect. Official delivered SN1 cut remains unchanged: this is still a local draft until receiver packaging/game steps.
+
+The V8b compact inventory binds the completed independent source/actual-floor audit and separates inherited bank-clearance failures/inner unknowns from the two new local design estimates. It is documentation, not a new all-bank or geodetic-water PASS. Actual frame review, final packet metadata/hash readback, receiver15-part cut loading, KTX2/runtime normals, game k3 visibility and owner acceptance remain separate gates. No Blender, source/assets or official delivered files were changed by this audit.
