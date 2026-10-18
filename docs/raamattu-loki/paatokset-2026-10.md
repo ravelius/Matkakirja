@@ -487,3 +487,7 @@ Omistaja Keskustelukanavassa 18.10.2026 klo 02.03 (sanatarkasti): "Ei videoita k
 ## VIESTIRAJA: VARAKANAVA HETI, EI ODOTETA OMISTAJAA (OPETUS 18.10.) (18.10.2026 klo 05.36)
 
 Omistaja Keskustelukanavan kautta 18.10.2026 klo 05.36 (sanatarkasti): "Tähän on parempi kiertotie". Vahvistaa linjauksen VIESTIRAJA JA VARAKANAVAT (24.9. ja 30.9.): kun SendMessage-raja täyttyy, viesti lähetetään HETI varakanavalla mcp__ccd_session_mgmt__send_message session-id:llä, eikä omistajan viestiä tai nollausta odoteta. OPETUS: 18.10. PT:n viestit odottivat 01.55–05.33, koska edellisen PT:n luovutus kielsi kiertämisen. Roolit seisoivat 2 h, ja juna 201 viivästyi. Se kielto on kumottu.
+
+## VIESTIRAJA: SOVELLUKSEN PYSÄYTYS → VARAKANAVA HETI (KORTTI 05.40) (18.10.2026 klo 05.41)
+
+Omistajan kortti Keskustelukanavassa 18.10.2026 klo 05.40 (sanatarkasti): "Kyllä, lisää rivi (Suositus)". CLAUDE.md:hen rivi "Kun sovellus pysäyttää viestit toisille sessioille, lähetä ne heti varakanavalla." (KK #4844). Raamatun VIESTIRAJA-kohta nimeää nyt viestin "Not delivered … Paused until your user's next message".
