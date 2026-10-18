@@ -14,6 +14,7 @@ Viestit: SendMessage-raja täyttyi 07.5x → varakanava mcp__ccd_session_mgmt__s
 - Muistuta jokaisessa SIMU NYT:ssä: app pois simusta + sammutus (levy).
 
 ## 1. Käännökset käynnissä
+- L1 jonossa: LR yhdistetty-202 3262c4679 (⊇ v7 + v2k + pienoismallit, LR tarkisti) → louvre-v2k-202-app (`julkaisija-tyokalut/lr-yhdistetty202-kaanna.zsh`, loki .log). Simu: `zsh proto-3d/tyokalut/linnanrakentaja-ajot/ajo-yhdistetty-202.zsh <app>/Matkakirja3D.app` (iPhone 3 + iPad 1).
 - L1: fa51ec0ed (LR louvre-v2k) Unity-vaiheessa, irrotettu (PPID 1) → valmistuu, EI KÄYTETÄ (yhdistetty haara korvaa). 41516822d ja v7 c70933e2b PERUTTU (PT: yhdistyvät).
 - L2: LR kehykset v6 8a33ed5e4 (Unity-vaihe, EI KÄYTETÄ – LR antaa uuden sha KK-korjauksin) → PK ISS d653af8ff (PK:n oma).
 
