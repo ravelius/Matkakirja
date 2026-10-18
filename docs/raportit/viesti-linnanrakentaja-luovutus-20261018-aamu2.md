@@ -74,3 +74,13 @@ Proton työkopio: `/Users/Shared/Claude/wt/proto-linnanrakentaja-kehykset`. Siin
 - **Omistajan linja voittaa PT:n sanamuodon:** PT pyysi "pehmeää" varjoa, mutta omistajan 22.27 sääntö "terävä, ei pehmeä" voittaa. Kerro siitä PT:lle parin yhteydessä.
 - **Kuvaa ei voi päätellä tiedostonimestä:** PK:n galleriaskenaario tallentaa iPadin kuvat 90° kiertyneinä (raaka/*.png pystyssä). Kierrä takaisin ennen rajausta.
 - **Blender-skriptin globaalit:** puutarha.py käyttää sali_blenderin globaaleja nimiä. Uudet apufunktiot tarvitsevat yksilölliset nimet.
+
+## LISÄYS 09.4x (PT): KK:n arvio v5:stä ja omistajan priorisointi
+
+- **Omistaja 09.37:** työn alla vain ISS, Louvre ja aamun pyynnöt (pienoismallit, Grimeton, Big Ben). Muut tauolle.
+- **KK v5 → v6 (EI VIELÄ omistajalle):**
+  1. **Lähellä rypistetty folio (möykkyiset kiemurat).** Sumenna korkeuskartta 2–3 px ennen normalisointia (`tee_kultaveisto.py`), ja harkitse kohoumaa 5 → 4 mm. Tämä EI ole vielä mukana 8a33ed5e4:ssä.
+  2. **Listojen reunoilla sinisiä juovia.** Tutki ympäristöheijastus (`_Ymparisto`, Fresnel heijastaa sinistä seinää/taivasta) ja v6:n pehmennetyt taitteet (PehmeaKulmaAste 40). Mitä tahansa korjaatkin, tarkista simukuvasta lähellä.
+  3. **Profiilista puuttuvat Louvre 904:n porrastetut listat:** helminauha, sileä kouru, sisänauha ja kirkas sisäreuna kaikilla sivuilla. Osa on mukana 8a33ed5e4:n fr_A–D-profiileissa. Vertaa simukuvaa 904-sivupalkkiin ja lisää helminauha (tiheä pallorivi korkeuskarttaan tai omaksi profiilinauhaksi) ja kirkas sisäreuna.
+  4. **Kulta on oikeaa tummempi.** v6:ssa 236/214/150 ja valo 1,55. Valitse simun QA-kuvista, ja jos tarvitaan, käytä kirkasta 245/228/175.
+- **Kolmikko KK:lle** (`local_febfd152-…`) ja PT:lle vasta, kun kohdat 1–4 näkyvät simukuvassa.
