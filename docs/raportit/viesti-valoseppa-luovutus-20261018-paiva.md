@@ -114,3 +114,12 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - Avain TRIPO_API_KEY tiedostossa ~/.matkakirja-avaimet-koodaus.zsh (omistaja tallentaa; KK vahvistaa PT:lle). Avainta ei lokiin, repoon eikä viesteihin.
 - Tehtävät: k1:n hiukset, Pulun korjaukset (niskasauma, silmät, pyrstö), Puyi + vartija luurankoineen (kohdat 5, 6, 11).
 - Generointimäärät omistajan lupien mukaan; krediittiostot vain omistajan luvalla. Kirjaa saldo ennen ja jälkeen.
+
+## 14. TILA 13.2x – SININEN MAA: JUURISYY JA KORJAUS
+- Diag 6: piirtäjät ja ilmakehän aineet samat → ero ei peittävä kappale. Oppaan polulla pallon laattoja ei piirry, näkyy vain Pohjapallo.
+- Lokijärjestys: "ruutu: koko ruudun sivu peittää → Cesium seis" → kaupunki avautuu (palloOli = suspendUpdate = true) → "koko ruudun sivu pois"
+  → kaupunki sulkeutuu ja palauttaa pallon suspendUpdate = true → ISS:llä laatat eivät lataudu.
+- Korjaus: Ruudunpaivitys.PysaytettyLevossa(t) + CesiumKaupunki ei laske levon pysäytystä pallon omaksi tilaksi.
+  Junakelpoinen haara proto linssiseppa2/sininen-maa-202 3fad81c08 (= iss-nakyvyys-202 + korjaus; wt /Users/Shared/Claude/wt/proto-linssiseppa2-sininen),
+  tarkista 0. Diag-haarassa sama fac459de8. JU L1 → _tyo/linssiseppa2/sininen-korjaus-app → `$D/simu-sininen-korjaus.zsh` (JU:n SIMU NYT).
+  Hyväksyntä: iPhonen c1/c2 (opas → ISS) näyttää maan kuten iPadin d1 → kuvapari PT:lle → NS:lle junaan. a7c0afa1a ja diag-commitit EIVÄT junaan.
