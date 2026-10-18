@@ -23,6 +23,8 @@ const MODULES = [
   // Lauseraja (PAATOKSET 34 kohta 16): puhdas tekstiapuri ilman tuonteja,
   // jonka nähtävyysnäkymä (js/kaupunkinosto.js) tuo — siksi ennen sitä.
   'js/lauseraja.js',
+  // Lainausmerkkien normalisointi (PT 18.10., juna 202): puhdas apuri ilman tuonteja; puhe.js ja liviapuhe.js tuovat sen.
+  'js/lainausmerkit.js',
   'js/galleria.js',
   // Ilmepaketti tuo vain median (peilin juuri); ui, fokusvirta,
   // karttaselite ja main tuovat sen.
