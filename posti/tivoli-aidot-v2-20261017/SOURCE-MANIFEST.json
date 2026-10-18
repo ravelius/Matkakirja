@@ -1,0 +1,53 @@
+[
+  {
+    "id": "night",
+    "commonsTitle": "File:Tivoli at night - Det japanske tårn 02.JPG",
+    "commonsPage": "https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_tårn_02.JPG",
+    "author": "Leif Jørgensen",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/references/night/reference.jpg",
+    "referenceSHA256": "1c98bc3754c2c191d6565c62e18d7a47303e28717eada18f61ac4748130a5737",
+    "rawApiSHA256": "7ba1c2a154c0b34e2aa569fff526d5f1ad8e1a3ede42cee41b5822f8e23aea4f",
+    "rawPageSHA256": "beaeee7b17fe1e8fc598451d278c362414d6ca5262ebe03f18b01a7769aa9abb",
+    "sourceViewed": true,
+    "authorLicenseVerified": true,
+    "verifiedAt": "2026-10-18T06:25:32.522463+00:00",
+    "reusedFromPreviousVerifiedBatch": false
+  },
+  {
+    "id": "day-light",
+    "commonsTitle": "File:Tivoli Gardens Copenhagen.jpg",
+    "commonsPage": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_Copenhagen.jpg",
+    "author": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_Gardens_Copenhagen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/references/day-light/reference.jpg",
+    "referenceSHA256": "2d0a2555c54d636606a5c66b2785ca4b90143f8724461f31f95c63b3ba576822",
+    "rawApiSHA256": "074f65b98ca0254fb05e335ae1936fcabebf3873321c48b047425507029cb2fb",
+    "rawPageSHA256": "61f1cc56102561b894ca802fcf747e2696e5447a81ccf464afe5c023fc8a904a",
+    "sourceViewed": true,
+    "authorLicenseVerified": true,
+    "verifiedAt": "2026-10-18T06:25:32.527199+00:00",
+    "reusedFromPreviousVerifiedBatch": true
+  },
+  {
+    "id": "nimb",
+    "commonsTitle": "File:Jardines de Tivoli 07.jpg",
+    "commonsPage": "https://commons.wikimedia.org/wiki/File:Jardines_de_Tivoli_07.jpg",
+    "author": "Alberto-g-rovi",
+    "license": "CC BY 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Jardines_de_Tivoli_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/references/nimb/reference.jpg",
+    "referenceSHA256": "3eec04cf4cd704ad030bf2c14ad6f9912379352d5119e6584581dd0d8db10493",
+    "rawApiSHA256": "807a6f27e67578962f8924ae44aa60daf499bcc29500d441adf995c91e0c6904",
+    "rawPageSHA256": "46cdb5a6d16cff2f976b040653246fefc719effdd98aeb6a5fe7e5b1adb43d2c",
+    "sourceViewed": true,
+    "authorLicenseVerified": true,
+    "verifiedAt": "2026-10-18T06:25:32.530908+00:00",
+    "reusedFromPreviousVerifiedBatch": true
+  }
+]

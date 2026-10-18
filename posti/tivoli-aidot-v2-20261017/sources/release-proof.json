@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-18T06:34:46.751928+00:00",
+  "messageFromRoot": "ROOT RELEASE 2026-10-18: J8–J10-tuottaja vahvisti kaikkien kolmen valtuutetun kutsun valmistuneen ja kolme kuvaa syntyneen. Tivoli v2 saa nyt aloittaa tasan kolme sisäistä image_gen-kutsua, yksi per kohde, ei uusintoja. Root toimittaa J8-paketin ennen Tivolin toimitusta.",
+  "runningGameFirstSatisfiedByRoot": true,
+  "dependencyStatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-juoksijan-takaa-20261018/production-state.json",
+  "dependencyStateSHA256": "5ab15f489a7f5bab1a1b6b40416ff8cf9405e4d97a833783fccbb214645f9058",
+  "capturedAt": "2026-10-18T06:34:57.432582+00:00"
+}

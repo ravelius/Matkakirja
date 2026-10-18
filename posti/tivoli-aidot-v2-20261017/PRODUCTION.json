@@ -1,0 +1,280 @@
+{
+  "createdAt": "2026-10-18T06:26:05.590250+00:00",
+  "sourceCommit": "9f0efea5fc2861f1a4eadcc58fbcef5383829777",
+  "sourceSnapshot": "47beb2a5e9255316127a55b1ce380d5b79bfb32a",
+  "sourceBlob": "a70d6661723feacba038f6f91a372dfc0082ee83",
+  "maximumCalls": 3,
+  "issuedCalls": 3,
+  "generationReleased": true,
+  "productionActive": false,
+  "rows": [
+    {
+      "task": 411,
+      "id": "t1-ilta",
+      "filename": "tivoli-t1-ilta.png",
+      "referenceIDs": [
+        "night"
+      ],
+      "author": "Leif Jørgensen",
+      "license": "CC BY-SA 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+      "callsIssued": 1,
+      "status": "qa-reviewed",
+      "sources": [
+        {
+          "id": "night",
+          "commonsTitle": "File:Tivoli at night - Det japanske tårn 02.JPG",
+          "commonsPage": "https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_tårn_02.JPG",
+          "author": "Leif Jørgensen",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/references/night/reference.jpg",
+          "referenceSHA256": "1c98bc3754c2c191d6565c62e18d7a47303e28717eada18f61ac4748130a5737",
+          "rawApiSHA256": "7ba1c2a154c0b34e2aa569fff526d5f1ad8e1a3ede42cee41b5822f8e23aea4f",
+          "rawPageSHA256": "beaeee7b17fe1e8fc598451d278c362414d6ca5262ebe03f18b01a7769aa9abb",
+          "sourceViewed": true,
+          "authorLicenseVerified": true,
+          "verifiedAt": "2026-10-18T06:25:32.522463+00:00",
+          "reusedFromPreviousVerifiedBatch": false
+        }
+      ],
+      "callIssuedAt": "2026-10-18T06:35:10.028024+00:00",
+      "promptSHA256": "7e042ac27b7217a9f560619e1a21486be9c88228d00cd64460b361c4a2f4f600",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/native/t1-ilta-native.png",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-4cc2-70c3-831d-2bfae0736b9d/exec-9777ab2d-6a5d-466f-9afe-2c617bce8420.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/delivery-packet/tivoli-t1-ilta.png",
+      "nativeSHA256": "26b3171640bddf5f9b2221c498dcf8be70cb27a7eb57c3f93af7729fa0954cd9",
+      "deliverySHA256": "ded1949b6376e712d31394fdb6d7d94e129d1359625fc79204d3d01408688dbd",
+      "pixelSHA256": "1af87d3dd2cd21e7824965ca4844753c2a5fec53d6b6293161b78f28e540ddaa",
+      "pixelHashDefinition": "SHA-256 of decoded RGBA pixel bytes, row-major order",
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "nativeBytes": 2281492,
+      "deliveryBytes": 2282235,
+      "pixelIdentityVerified": true,
+      "pngMetadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Pohjana Leif Jørgensen, CC BY-SA 4.0.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Pohjana Leif Jørgensen, CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_tårn_02.JPG",
+        "License": "CC BY-SA 4.0 ; https://creativecommons.org/licenses/by-sa/4.0",
+        "Attribution": "Havainnekuva, pohjana Leif Jørgensen, CC BY-SA 4.0",
+        "Modification": "Entirely new AI-generated image based on specified Commons references. Ordinary photographic exposure/light reinterpretation. Metadata added without altering native decoded pixels; no image resizing, cropping, retouching or postprocessing."
+      },
+      "recordedAt": "2026-10-18T06:37:02.293998+00:00",
+      "comparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/qa/compare-t1-ilta.jpg",
+      "qa": {
+        "summary": "Yökuvan rantakamera ja pääkohteiden järjestys säilyvät lähellä Leif Jørgensenin pohjaa: pagodi keskellä, Dæmonenin kaaret vasemmalla, järvi ja alareunan puukaide sekä masto oikealla. Taivas on lähteen mustaa yötä vaaleampi sininen hetki, kuten sallittiin; oksat ja rannat näkyvät selvemmin. Valojen paikat vastaavat visuaalisesti lähdettä, uusia puiden/kaiteiden valoketjuja ei havaittu, mutta yksittäisten lamppujen lukumäärää ei voida varmentaa sumeasta lähteestä. Pagodin valot ja veden heijastukset ovat pohjaa terävämpiä ja järjestyneempiä; vedessä on yhä melko säännöllistä pieniä heijastuskatkoja. Karkea toistuva kaiverrettu pintakuvio ei erotu. Pieniä kamera-/rakennusmuotojen eroja on, ei täsmällistä mitta- tai pikseliyhtäläisyyttä. Ei väitetä aitona valokuvana tai täydellisenä aitoustavoitteen täyttymisenä.",
+        "differencesFromSource": [
+          "Sky lighter dark blue rather than black",
+          "More readable branches/shores and sharper light/reflection details",
+          "Pagoda/coaster fine geometry and shoreline not exact",
+          "Reflections retain some regular fine ripple rhythm"
+        ],
+        "lightingPlacementVisuallyClose": true,
+        "exactLightCountVerified": false,
+        "cameraExactnessVerified": false,
+        "artificialEngravedPatternObserved": false,
+        "photographicLookAssessment": "ordinary-camera-like with residual organized reflections; receiver/owner review required",
+        "reviewedAt": "2026-10-18T06:39:30.014299+00:00",
+        "nativeViewed": true,
+        "comparisonViewed": true,
+        "diagnosticOnly": true,
+        "status": "review-candidate-with-explicit-source-differences",
+        "ownerApproved": false,
+        "recipientAccepted": false
+      }
+    },
+    {
+      "task": 412,
+      "id": "t2-paiva",
+      "filename": "tivoli-t2-paiva.png",
+      "referenceIDs": [
+        "night",
+        "day-light"
+      ],
+      "author": "Leif Jørgensen + kallerna (päivän valon viite)",
+      "license": "CC BY-SA 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+      "callsIssued": 1,
+      "status": "qa-reviewed",
+      "sources": [
+        {
+          "id": "night",
+          "commonsTitle": "File:Tivoli at night - Det japanske tårn 02.JPG",
+          "commonsPage": "https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_tårn_02.JPG",
+          "author": "Leif Jørgensen",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/references/night/reference.jpg",
+          "referenceSHA256": "1c98bc3754c2c191d6565c62e18d7a47303e28717eada18f61ac4748130a5737",
+          "rawApiSHA256": "7ba1c2a154c0b34e2aa569fff526d5f1ad8e1a3ede42cee41b5822f8e23aea4f",
+          "rawPageSHA256": "beaeee7b17fe1e8fc598451d278c362414d6ca5262ebe03f18b01a7769aa9abb",
+          "sourceViewed": true,
+          "authorLicenseVerified": true,
+          "verifiedAt": "2026-10-18T06:25:32.522463+00:00",
+          "reusedFromPreviousVerifiedBatch": false
+        },
+        {
+          "id": "day-light",
+          "commonsTitle": "File:Tivoli Gardens Copenhagen.jpg",
+          "commonsPage": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_Copenhagen.jpg",
+          "author": "kallerna",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "originalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_Gardens_Copenhagen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/references/day-light/reference.jpg",
+          "referenceSHA256": "2d0a2555c54d636606a5c66b2785ca4b90143f8724461f31f95c63b3ba576822",
+          "rawApiSHA256": "074f65b98ca0254fb05e335ae1936fcabebf3873321c48b047425507029cb2fb",
+          "rawPageSHA256": "61f1cc56102561b894ca802fcf747e2696e5447a81ccf464afe5c023fc8a904a",
+          "sourceViewed": true,
+          "authorLicenseVerified": true,
+          "verifiedAt": "2026-10-18T06:25:32.527199+00:00",
+          "reusedFromPreviousVerifiedBatch": true
+        }
+      ],
+      "callIssuedAt": "2026-10-18T06:35:10.291508+00:00",
+      "promptSHA256": "54ca7e810e8043edb39a41064ce20ad3fac22fe5b7ebd156c332ddce8dad0ec6",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/native/t2-paiva-native.png",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-4cc2-70c3-831d-2bfae0736b9d/exec-86f9c426-9f74-4557-b006-4717b9aa2e48.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/delivery-packet/tivoli-t2-paiva.png",
+      "nativeSHA256": "b3641f4d0c1ccc0d57322200600c6528cc0e1b55b95d20cd9a2a15c94d7366c6",
+      "deliverySHA256": "170f4b8d4efa2349a9f567ac676f5d0dcd710774783a20b29914860e0ea65ac3",
+      "pixelSHA256": "dc0cd66a5ebc007b4a6528ee231c54603317f05789e0ebe0cddaa42f45782477",
+      "pixelHashDefinition": "SHA-256 of decoded RGBA pixel bytes, row-major order",
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "nativeBytes": 3256999,
+      "deliveryBytes": 3257916,
+      "pixelIdentityVerified": true,
+      "pngMetadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Pohjana Leif Jørgensen + kallerna (päivän valon viite), CC BY-SA 4.0.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Pohjana Leif Jørgensen + kallerna (päivän valon viite), CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_tårn_02.JPG ; https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_Copenhagen.jpg",
+        "License": "CC BY-SA 4.0 ; https://creativecommons.org/licenses/by-sa/4.0",
+        "Attribution": "Havainnekuva, pohjana Leif Jørgensen + kallerna (päivän valon viite), CC BY-SA 4.0",
+        "Modification": "Entirely new AI-generated image based on specified Commons references. Ordinary photographic exposure/light reinterpretation. Metadata added without altering native decoded pixels; no image resizing, cropping, retouching or postprocessing."
+      },
+      "recordedAt": "2026-10-18T06:37:02.627779+00:00",
+      "comparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/qa/compare-t2-paiva.jpg",
+      "qa": {
+        "summary": "T2 käyttää Leifin yöpohjan järvikameraa, ei kallerna-päiväkuvan eri kameraa: pagodi keskellä, kaksi vuoristoradan kaarta vasemmalla, Himmelskibet oikealla ja puinen etukaide. Päivän värit ja valotus ovat tavallisen aurinkoisen kamerakuvan kaltaisia, valot eivät hehku, ihmiset ovat pieniä satunnaisia vierailijoita rannalla. Puusto on yökuvan paljaita oksia lehtisempi; veden aallot, veneet ja rantarakenteiden pienosat ovat tulkittuja. T1/T2-rinnakkaisvertailussa silmukoiden huipuissa, pagodin alareunassa ja rantaviivan korkeudessa näkyy pieniä siirtymiä. Täysin saman kamerageometrian vaatimus EI ole todennettu; pari vastaa samaa näkymää likimääräisesti, ei tarkasti lukittuna. Aallokossa on jonkin verran tasaista vaakarytmiä, mutta ei aiempaa kaiverrettua/pyörteistä pintakuviota.",
+        "differencesFromSource": [
+          "Daylight conversion from night; leafier vegetation",
+          "Day camera framing approximately follows night source, not the kallerna composition",
+          "Boat/shore details reinterpreted",
+          "Small visible shifts relative to t1: loop peaks, pagoda base and shoreline",
+          "Some repeated horizontal ripple rhythm"
+        ],
+        "daylightReferenceRole": "kallerna only natural daylight/color; not camera",
+        "sameCameraAsT1Verified": false,
+        "sameViewpointApproximate": true,
+        "cameraExactnessVerified": false,
+        "artificialEngravedPatternObserved": false,
+        "photographicLookAssessment": "ordinary-camera-like daylight; exact paired camera requirement not verified",
+        "reviewedAt": "2026-10-18T06:39:30.014541+00:00",
+        "nativeViewed": true,
+        "comparisonViewed": true,
+        "diagnosticOnly": true,
+        "status": "review-candidate-with-explicit-source-differences",
+        "ownerApproved": false,
+        "recipientAccepted": false
+      }
+    },
+    {
+      "task": 413,
+      "id": "t3-nimb",
+      "filename": "tivoli-t3-nimb.png",
+      "referenceIDs": [
+        "nimb"
+      ],
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0",
+      "callsIssued": 1,
+      "status": "qa-reviewed",
+      "sources": [
+        {
+          "id": "nimb",
+          "commonsTitle": "File:Jardines de Tivoli 07.jpg",
+          "commonsPage": "https://commons.wikimedia.org/wiki/File:Jardines_de_Tivoli_07.jpg",
+          "author": "Alberto-g-rovi",
+          "license": "CC BY 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by/4.0",
+          "originalURL": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Jardines_de_Tivoli_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/references/nimb/reference.jpg",
+          "referenceSHA256": "3eec04cf4cd704ad030bf2c14ad6f9912379352d5119e6584581dd0d8db10493",
+          "rawApiSHA256": "807a6f27e67578962f8924ae44aa60daf499bcc29500d441adf995c91e0c6904",
+          "rawPageSHA256": "46cdb5a6d16cff2f976b040653246fefc719effdd98aeb6a5fe7e5b1adb43d2c",
+          "sourceViewed": true,
+          "authorLicenseVerified": true,
+          "verifiedAt": "2026-10-18T06:25:32.530908+00:00",
+          "reusedFromPreviousVerifiedBatch": true
+        }
+      ],
+      "callIssuedAt": "2026-10-18T06:35:10.538426+00:00",
+      "promptSHA256": "5dd8947eb6becee34a730150206928697563157fca48fbee8529272f8e1c4ddd",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/native/t3-nimb-native.png",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-4cc2-70c3-831d-2bfae0736b9d/exec-8360a5a9-96f8-419a-9060-32bdb5aa9159.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/delivery-packet/tivoli-t3-nimb.png",
+      "nativeSHA256": "2d4d611b6e78b067611d38210606e8a98d3a4b7c8f053fa16b52996100f5648b",
+      "deliverySHA256": "e2ad0b7616c3d69ec051e46acb67257e985ea743686a1fa6d1a8fb0f4bfff618",
+      "pixelSHA256": "f20e4cace0b5615c245b232530f0e31e6f2f770e737f6680395c14b74167e223",
+      "pixelHashDefinition": "SHA-256 of decoded RGBA pixel bytes, row-major order",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeBytes": 3188963,
+      "deliveryBytes": 3189670,
+      "pixelIdentityVerified": true,
+      "pngMetadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Pohjana Alberto-g-rovi, CC BY 4.0.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Pohjana Alberto-g-rovi, CC BY 4.0. https://commons.wikimedia.org/wiki/File:Jardines_de_Tivoli_07.jpg",
+        "License": "CC BY 4.0 ; https://creativecommons.org/licenses/by/4.0",
+        "Attribution": "Havainnekuva, pohjana Alberto-g-rovi, CC BY 4.0",
+        "Modification": "Entirely new AI-generated image based on specified Commons references. Ordinary photographic exposure/light reinterpretation. Metadata added without altering native decoded pixels; no image resizing, cropping, retouching or postprocessing."
+      },
+      "recordedAt": "2026-10-18T06:37:03.052156+00:00",
+      "comparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/tivoli-aidot-v2-20261018/qa/compare-t3-nimb.jpg",
+      "qa": {
+        "summary": "Nimbin peruskuvakulma, julkisivun pituus, kupolit, takana oleva tekovuori/masto ja puutarhan järjestys seuraavat Alberto-g-rovin lähdettä. Pilvinen neutraali päivä, himmeät valkoiset seinät, tavallisemmat kukat/nurmikko ja märkä kulunut etupolku poistavat aiemman kultaisen mainosilmeen. Ulkoseinien lamput eivät muodosta uutta hehkuvaa valoketjustoa. Kaari-ikkunoiden ja koristelun pienosissa on eroja, etualan mainospylväät ja ravintolakirjoitus on poistettu; ravintolan sisävalot ja terassin ihmiset ovat lähdettä näkyvämpiä ja uudelleentulkittuja. Kasvisto on lähdettä epätäydellisempi, mutta muodolliset leikatut pensaat säilyvät oikean puutarhan mukaisesti. Puutarhan vesisuihkut ovat jo annetussa lähteessä; niitä ei otettu erillisestä pois jätetystä suihkulähdekuvasta. Natiivi on 1536×1024 (3:2), lähteen 1280×842 on hieman eri suhde, joten rajauksen samuus on likimääräinen. Ei havaittu karkeaa toistuvaa tekoälypintakuviota; koristeiden täsmällisyyttä ei ole mitattu.",
+        "differencesFromSource": [
+          "Gray-cloud daylight and more visible small garden/path imperfections",
+          "Restaurant sign and foreground poster cylinders omitted",
+          "Stronger/added-looking interior lights and more visible terrace visitors",
+          "Facade fine ornament/windows reinterpreted",
+          "Native3:2 vs reference1280x842 slight framing ratio difference",
+          "Assigned source garden water jets remain"
+        ],
+        "exteriorLightGlowObserved": false,
+        "interiorLightDifferenceObserved": true,
+        "cameraExactnessVerified": false,
+        "artificialEngravedPatternObserved": false,
+        "photographicLookAssessment": "more ordinary neutral-overcast camera appearance; fine details remain interpreted",
+        "reviewedAt": "2026-10-18T06:39:30.014544+00:00",
+        "nativeViewed": true,
+        "comparisonViewed": true,
+        "diagnosticOnly": true,
+        "status": "review-candidate-with-explicit-source-differences",
+        "ownerApproved": false,
+        "recipientAccepted": false
+      }
+    }
+  ],
+  "ownerApproved": false,
+  "recipientAccepted": false,
+  "deliveryVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "releasedAt": "2026-10-18T06:34:46.751744+00:00",
+  "releaseMessage": "ROOT RELEASE 2026-10-18: J8–J10-tuottaja vahvisti kaikkien kolmen valtuutetun kutsun valmistuneen ja kolme kuvaa syntyneen. Tivoli v2 saa nyt aloittaa tasan kolme sisäistä image_gen-kutsua, yksi per kohde, ei uusintoja. Root toimittaa J8-paketin ennen Tivolin toimitusta.",
+  "completedAt": "2026-10-18T06:39:32.386400+00:00",
+  "remainingCalls": 0,
+  "imageCount": 3,
+  "readyForRootDelivery": true,
+  "allThreeProduced": true
+}

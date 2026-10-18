@@ -1,0 +1,58 @@
+{
+  "createdAt": "2026-10-18T06:39:32.408998+00:00",
+  "method": "built-in image_gen",
+  "wholeNewImages": true,
+  "authorizedCalls": 3,
+  "issuedCalls": 3,
+  "extraCalls": 0,
+  "retouchesOrFilterPasses": 0,
+  "nativePixelPreservation": "Delivery PNG adds iTXt metadata only; decoded RGBA identity verified for each image. Diagnostics are separate display canvases only.",
+  "sourceCommit": "9f0efea5fc2861f1a4eadcc58fbcef5383829777",
+  "sourceSnapshot": "47beb2a5e9255316127a55b1ce380d5b79bfb32a",
+  "sourceBlob": "a70d6661723feacba038f6f91a372dfc0082ee83",
+  "images": [
+    {
+      "task": 411,
+      "id": "t1-ilta",
+      "filename": "tivoli-t1-ilta.png",
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "nativeSHA256": "26b3171640bddf5f9b2221c498dcf8be70cb27a7eb57c3f93af7729fa0954cd9",
+      "deliverySHA256": "ded1949b6376e712d31394fdb6d7d94e129d1359625fc79204d3d01408688dbd",
+      "pixelSHA256": "1af87d3dd2cd21e7824965ca4844753c2a5fec53d6b6293161b78f28e540ddaa",
+      "pixelIdentityVerified": true
+    },
+    {
+      "task": 412,
+      "id": "t2-paiva",
+      "filename": "tivoli-t2-paiva.png",
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "nativeSHA256": "b3641f4d0c1ccc0d57322200600c6528cc0e1b55b95d20cd9a2a15c94d7366c6",
+      "deliverySHA256": "170f4b8d4efa2349a9f567ac676f5d0dcd710774783a20b29914860e0ea65ac3",
+      "pixelSHA256": "dc0cd66a5ebc007b4a6528ee231c54603317f05789e0ebe0cddaa42f45782477",
+      "pixelIdentityVerified": true
+    },
+    {
+      "task": 413,
+      "id": "t3-nimb",
+      "filename": "tivoli-t3-nimb.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeSHA256": "2d4d611b6e78b067611d38210606e8a98d3a4b7c8f053fa16b52996100f5648b",
+      "deliverySHA256": "e2ad0b7616c3d69ec051e46acb67257e985ea743686a1fa6d1a8fb0f4bfff618",
+      "pixelSHA256": "f20e4cace0b5615c245b232530f0e31e6f2f770e737f6680395c14b74167e223",
+      "pixelIdentityVerified": true
+    }
+  ],
+  "ownerApproved": false,
+  "recipientAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

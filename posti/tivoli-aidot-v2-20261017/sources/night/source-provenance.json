@@ -1,0 +1,213 @@
+{
+  "retrievedAt": "2026-10-18T06:24:22.792520+00:00",
+  "api": {
+    "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo%7Crevisions&iiprop=url%7Cextmetadata%7Csha1%7Csize&rvprop=ids%7Ctimestamp&titles=File%3ATivoli+at+night+-+Det+japanske+t%C3%A5rn+02.JPG",
+    "finalURL": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo%7Crevisions&iiprop=url%7Cextmetadata%7Csha1%7Csize&rvprop=ids%7Ctimestamp&titles=File%3ATivoli+at+night+-+Det+japanske+t%C3%A5rn+02.JPG",
+    "headers": {
+      "date": "Sun, 18 Oct 2026 06:24:21 GMT",
+      "server": "mw-api-ext.eqiad.main-5564d958dd-bzg26",
+      "x-content-type-options": "nosniff",
+      "content-security-policy": "default-src 'self'; script-src 'none'; object-src 'none'",
+      "x-frame-options": "DENY",
+      "content-disposition": "inline; filename=api-result.json",
+      "expires": "Sun, 18 Oct 2026 07:24:21 GMT",
+      "cache-control": "max-age=3600, s-maxage=3600, public",
+      "content-type": "application/json; charset=utf-8",
+      "age": "0",
+      "accept-ranges": "bytes",
+      "x-cache": "cp3066 miss, cp3066 miss",
+      "x-cache-status": "miss",
+      "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+      "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+      "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+      "set-cookie": "WMF-Last-Access=18-Oct-2026;Path=/;HttpOnly;secure;Expires=Thu, 19 Nov 2026 00:00:00 GMT",
+      "x-client-ip": "176.72.168.224",
+      "vary": "Accept-Encoding,X-Subdomain,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization,User-Agent",
+      "content-length": "2689",
+      "x-request-id": "3bbf7b24-2c5b-4268-9e81-74848948c96a",
+      "x-analytics": "",
+      "server-timing": "cache;desc=\"miss\", host;desc=\"cp3066\",co_id;desc=\"3162860561\"",
+      "connection": "close"
+    },
+    "status": 200,
+    "bytes": 2689,
+    "sha256": "7ba1c2a154c0b34e2aa569fff526d5f1ad8e1a3ede42cee41b5822f8e23aea4f"
+  },
+  "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "finalURL": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "headers": {
+      "content-type": "image/jpeg",
+      "x-object-meta-sha1base36": "6ly9msytymg3ru9ga08zmz5nvclguyg",
+      "etag": "a06c3cfa66e92ebdc87a8e864463c0e1",
+      "last-modified": "Sat, 25 Apr 2015 19:37:38 GMT",
+      "accept-ranges": "bytes",
+      "content-length": "1989120",
+      "date": "Sun, 18 Oct 2026 06:24:21 GMT",
+      "x-ratelimit-limit": "600000, 600000;w=60",
+      "x-ratelimit-remaining": "599999",
+      "x-ratelimit-reset": "39",
+      "server": "envoy",
+      "age": "0",
+      "x-cache": "cp3080 miss, cp3080 miss",
+      "x-cache-status": "miss",
+      "server-timing": "cache;desc=\"miss\", host;desc=\"cp3080\"",
+      "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+      "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+      "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+      "x-client-ip": "176.72.168.224",
+      "x-content-type-options": "nosniff",
+      "reporting-endpoints": "csp_endpoint=\"https://commons.wikimedia.org/w/api.php?reportonly=1&source=image&action=cspreport&format=json\"",
+      "content-security-policy-report-only": "default-src 'none'; script-src 'none'; style-src 'unsafe-inline' data:; font-src data:; img-src data: https://upload.wikimedia.org/favicon.ico https://thumb.wikimedia.org/favicon.ico; connect-src https://upload.wikimedia.org/favicon.ico https://thumb.wikimedia.org/favicon.ico; media-src data: 'self'; object-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; report-uri https://commons.wikimedia.org/w/api.php?reportonly=1&source=image&action=cspreport&format=json; report-to csp_endpoint",
+      "access-control-allow-origin": "*",
+      "access-control-expose-headers": "Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache",
+      "timing-allow-origin": "*",
+      "set-cookie": "WMF-Uniq=yooL1U_WwtrEcE1JfxMowwP9AAAAAFvdrfdy4bwavmvfKImkVpOc5ziuP8YK_Pwa;Domain=upload.wikimedia.org;Path=/;HttpOnly;secure;SameSite=None;Expires=Mon, 18 Oct 2027 00:00:00 GMT",
+      "x-request-id": "a130de9c-7082-4e10-865e-a54c0dbb4b2e",
+      "x-analytics": "",
+      "connection": "close"
+    },
+    "status": 200,
+    "bytes": 1989120,
+    "sha256": "1c98bc3754c2c191d6565c62e18d7a47303e28717eada18f61ac4748130a5737"
+  },
+  "page": {
+    "url": "https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG",
+    "finalURL": "https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG",
+    "headers": {
+      "date": "Sun, 18 Oct 2026 06:24:22 GMT",
+      "server": "mw-web.eqiad.main-7df87d9897-xrdj7",
+      "x-content-type-options": "nosniff",
+      "content-language": "en",
+      "accept-ch": "",
+      "reporting-endpoints": "csp-report-to-endpoint='/w/api.php?action=cspreport&format=json';",
+      "content-security-policy": "script-src 'unsafe-eval' blob: 'self' meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org 'unsafe-inline' auth.wikimedia.org; default-src 'self' data: blob: https://upload.wikimedia.org https://thumb.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org https://maps.wikimedia.org en.wikipedia.org en.wikibooks.org en.wikinews.org en.wikiquote.org en.wikisource.org en.wikiversity.org en.wikivoyage.org en.wiktionary.org www.mediawiki.org foundation.wikimedia.org incubator.wikimedia.org species.wikimedia.org wikimania.wikimedia.org www.wikidata.org www.wikifunctions.org auth.wikimedia.org; style-src 'self' data: blob: https://upload.wikimedia.org https://thumb.wikimedia.org meta.wikimedia.org *.wikimedia.org *.wikipedia.org *.wikinews.org *.wiktionary.org *.wikibooks.org *.wikiversity.org *.wikisource.org wikisource.org *.wikiquote.org *.wikidata.org *.wikifunctions.org *.wikivoyage.org *.mediawiki.org mediawiki.org wikimedia.org *.wmflabs.org *.wmcloud.org *.toolforge.org wss://*.toolforge.org *.jsdelivr.net unpkg.com cdnjs.cloudflare.com raw.githubusercontent.com *.github.com code.jquery.com cdn.mathjax.org use.typekit.net fonts.cdnfonts.com use.fontawesome.com i.ytimg.com rsms.me doi.org localhost https://localhost:* http://localhost:* wss://localhost:* ws://localhost:* *.google.com *.gstatic.com *.googleapis.com *.translate.yandex.net yastatic.net ya.ru radically.github.io cdn.sammdot.ca cdn.fontshare.com viaf.org publicai-proxy.alaexis.workers.dev iiif.archive.org api.flickr.com live.staticflickr.com api.anthropic.com api.openai.com api.publicai.co catalogo.pusc.it parsifal.urbe.it opac.sbn.it overpass-api.de api.openrouteservice.org archive.org *.openstreetmap.org *.waymarkedtrails.org *.thunderforest.com registry.ipe.wiki analytics.ipe.wiki qlever.dev app.goacoustic.com wikipedia-archive.ourworldindata.org api.inaturalist.org inaturalist-open-data.s3.amazonaws.com validator.w3.org db.onlinewebfonts.com fontlibrary.org https://maps.wikimedia.org 'unsafe-inline'; object-src 'none'; report-uri /w/api.php?action=cspreport&format=json; report-to csp-report-to-endpoint",
+      "last-modified": "Sun, 04 Oct 2026 06:24:22 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "age": "0",
+      "accept-ranges": "bytes",
+      "x-cache": "cp3066 miss, cp3066 miss",
+      "x-cache-status": "miss",
+      "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+      "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+      "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+      "set-cookie": "WMF-Last-Access=18-Oct-2026;Path=/;HttpOnly;secure;Expires=Thu, 19 Nov 2026 00:00:00 GMT",
+      "x-client-ip": "176.72.168.224",
+      "cache-control": "private, s-maxage=0, max-age=0, must-revalidate, no-transform",
+      "vary": "Accept-Encoding,X-Subdomain,Cookie,Authorization,User-Agent",
+      "transfer-encoding": "chunked",
+      "x-request-id": "ebdb8875-4db8-49e4-a8c6-e56f9564eae6",
+      "x-analytics": "",
+      "server-timing": "cache;desc=\"miss\", host;desc=\"cp3066\",co_id;desc=\"2548494775\"",
+      "connection": "close"
+    },
+    "status": 200,
+    "bytes": 112840,
+    "sha256": "beaeee7b17fe1e8fc598451d278c362414d6ca5262ebe03f18b01a7769aa9abb"
+  },
+  "commonsTitle": "File:Tivoli at night - Det japanske tårn 02.JPG",
+  "revision": [
+    {
+      "revid": 1080458354,
+      "parentid": 924148664,
+      "timestamp": "2025-09-03T21:58:35Z"
+    }
+  ],
+  "imageInfo": {
+    "size": 1989120,
+    "width": 2560,
+    "height": 1920,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tivoli_at_night_-_Det_japanske_t%C3%A5rn_02.JPG",
+    "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=39778212",
+    "sha1": "3895cb134c9e7b859b183277e63eb8e69bd195b8",
+    "extmetadata": {
+      "DateTime": {
+        "value": "2015-04-25 19:37:37",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+      },
+      "ObjectName": {
+        "value": "Tivoli at night - Det japanske tårn 02",
+        "source": "mediawiki-metadata"
+      },
+      "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+      },
+      "Categories": {
+        "value": "Tivoli Søen|Dæmonen|Det Japanske Taarn|Self-published work|Amusement parks in 2015|Denmark photographs taken on 2015-04-08|Files with coordinates missing SDC location of creation|Night in Tivoli Gardens (Copenhagen)",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "GPSLatitude": {
+        "value": "55.673478",
+        "source": "commons-desc-page"
+      },
+      "GPSLongitude": {
+        "value": "12.570239",
+        "source": "commons-desc-page"
+      },
+      "GPSMapDatum": {
+        "value": "WGS-84",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "ImageDescription": {
+        "value": "Det japanske tårn (the japanese tower) at the lake Tivoli Søen in the amusement park Tivoli in Copenhagen.",
+        "source": "commons-desc-page"
+      },
+      "DateTimeOriginal": {
+        "value": "2015-04-08 22:21:13",
+        "source": "commons-desc-page"
+      },
+      "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+      },
+      "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dannebrog_Spy\" title=\"User:Dannebrog Spy\">Leif Jørgensen</a>",
+        "source": "commons-desc-page"
+      },
+      "LicenseShortName": {
+        "value": "CC BY-SA 4.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 4.0",
+        "source": "commons-desc-page"
+      },
+      "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "commons-desc-page"
+      },
+      "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "License": {
+        "value": "cc-by-sa-4.0",
+        "source": "commons-templates",
+        "hidden": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-18T06:25:32.576979+00:00",
+  "allInputsViewed": true,
+  "allAuthorsLicensesVerified": true,
+  "tivoliDkUsed": false,
+  "callsIssued": 0,
+  "generationReleased": false,
+  "rejectionReasonAddressed": [
+    "Neutral normal-camera exposure and color",
+    "No invented lights; daytime bulbs off",
+    "No HDR/saturation/sharpening",
+    "Incidental anonymous people allowed",
+    "Imperfect actual garden details",
+    "Same night-source viewpoint for t1/t2"
+  ],
+  "comparisonPlan": {
+    "t1": "night reference vs t1 native, diagnostic only",
+    "t2": "same night reference vs t2 native plus t1/t2 paired-camera diagnostic and day-light ancillary exposure reference",
+    "t3": "Nimb reference vs t3 native, diagnostic only"
+  }
+}

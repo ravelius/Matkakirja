@@ -1,0 +1,69 @@
+{
+  "t1-ilta": {
+    "summary": "Yökuvan rantakamera ja pääkohteiden järjestys säilyvät lähellä Leif Jørgensenin pohjaa: pagodi keskellä, Dæmonenin kaaret vasemmalla, järvi ja alareunan puukaide sekä masto oikealla. Taivas on lähteen mustaa yötä vaaleampi sininen hetki, kuten sallittiin; oksat ja rannat näkyvät selvemmin. Valojen paikat vastaavat visuaalisesti lähdettä, uusia puiden/kaiteiden valoketjuja ei havaittu, mutta yksittäisten lamppujen lukumäärää ei voida varmentaa sumeasta lähteestä. Pagodin valot ja veden heijastukset ovat pohjaa terävämpiä ja järjestyneempiä; vedessä on yhä melko säännöllistä pieniä heijastuskatkoja. Karkea toistuva kaiverrettu pintakuvio ei erotu. Pieniä kamera-/rakennusmuotojen eroja on, ei täsmällistä mitta- tai pikseliyhtäläisyyttä. Ei väitetä aitona valokuvana tai täydellisenä aitoustavoitteen täyttymisenä.",
+    "differencesFromSource": [
+      "Sky lighter dark blue rather than black",
+      "More readable branches/shores and sharper light/reflection details",
+      "Pagoda/coaster fine geometry and shoreline not exact",
+      "Reflections retain some regular fine ripple rhythm"
+    ],
+    "lightingPlacementVisuallyClose": true,
+    "exactLightCountVerified": false,
+    "cameraExactnessVerified": false,
+    "artificialEngravedPatternObserved": false,
+    "photographicLookAssessment": "ordinary-camera-like with residual organized reflections; receiver/owner review required",
+    "reviewedAt": "2026-10-18T06:39:30.014299+00:00",
+    "nativeViewed": true,
+    "comparisonViewed": true,
+    "diagnosticOnly": true,
+    "status": "review-candidate-with-explicit-source-differences",
+    "ownerApproved": false,
+    "recipientAccepted": false
+  },
+  "t2-paiva": {
+    "summary": "T2 käyttää Leifin yöpohjan järvikameraa, ei kallerna-päiväkuvan eri kameraa: pagodi keskellä, kaksi vuoristoradan kaarta vasemmalla, Himmelskibet oikealla ja puinen etukaide. Päivän värit ja valotus ovat tavallisen aurinkoisen kamerakuvan kaltaisia, valot eivät hehku, ihmiset ovat pieniä satunnaisia vierailijoita rannalla. Puusto on yökuvan paljaita oksia lehtisempi; veden aallot, veneet ja rantarakenteiden pienosat ovat tulkittuja. T1/T2-rinnakkaisvertailussa silmukoiden huipuissa, pagodin alareunassa ja rantaviivan korkeudessa näkyy pieniä siirtymiä. Täysin saman kamerageometrian vaatimus EI ole todennettu; pari vastaa samaa näkymää likimääräisesti, ei tarkasti lukittuna. Aallokossa on jonkin verran tasaista vaakarytmiä, mutta ei aiempaa kaiverrettua/pyörteistä pintakuviota.",
+    "differencesFromSource": [
+      "Daylight conversion from night; leafier vegetation",
+      "Day camera framing approximately follows night source, not the kallerna composition",
+      "Boat/shore details reinterpreted",
+      "Small visible shifts relative to t1: loop peaks, pagoda base and shoreline",
+      "Some repeated horizontal ripple rhythm"
+    ],
+    "daylightReferenceRole": "kallerna only natural daylight/color; not camera",
+    "sameCameraAsT1Verified": false,
+    "sameViewpointApproximate": true,
+    "cameraExactnessVerified": false,
+    "artificialEngravedPatternObserved": false,
+    "photographicLookAssessment": "ordinary-camera-like daylight; exact paired camera requirement not verified",
+    "reviewedAt": "2026-10-18T06:39:30.014541+00:00",
+    "nativeViewed": true,
+    "comparisonViewed": true,
+    "diagnosticOnly": true,
+    "status": "review-candidate-with-explicit-source-differences",
+    "ownerApproved": false,
+    "recipientAccepted": false
+  },
+  "t3-nimb": {
+    "summary": "Nimbin peruskuvakulma, julkisivun pituus, kupolit, takana oleva tekovuori/masto ja puutarhan järjestys seuraavat Alberto-g-rovin lähdettä. Pilvinen neutraali päivä, himmeät valkoiset seinät, tavallisemmat kukat/nurmikko ja märkä kulunut etupolku poistavat aiemman kultaisen mainosilmeen. Ulkoseinien lamput eivät muodosta uutta hehkuvaa valoketjustoa. Kaari-ikkunoiden ja koristelun pienosissa on eroja, etualan mainospylväät ja ravintolakirjoitus on poistettu; ravintolan sisävalot ja terassin ihmiset ovat lähdettä näkyvämpiä ja uudelleentulkittuja. Kasvisto on lähdettä epätäydellisempi, mutta muodolliset leikatut pensaat säilyvät oikean puutarhan mukaisesti. Puutarhan vesisuihkut ovat jo annetussa lähteessä; niitä ei otettu erillisestä pois jätetystä suihkulähdekuvasta. Natiivi on 1536×1024 (3:2), lähteen 1280×842 on hieman eri suhde, joten rajauksen samuus on likimääräinen. Ei havaittu karkeaa toistuvaa tekoälypintakuviota; koristeiden täsmällisyyttä ei ole mitattu.",
+    "differencesFromSource": [
+      "Gray-cloud daylight and more visible small garden/path imperfections",
+      "Restaurant sign and foreground poster cylinders omitted",
+      "Stronger/added-looking interior lights and more visible terrace visitors",
+      "Facade fine ornament/windows reinterpreted",
+      "Native3:2 vs reference1280x842 slight framing ratio difference",
+      "Assigned source garden water jets remain"
+    ],
+    "exteriorLightGlowObserved": false,
+    "interiorLightDifferenceObserved": true,
+    "cameraExactnessVerified": false,
+    "artificialEngravedPatternObserved": false,
+    "photographicLookAssessment": "more ordinary neutral-overcast camera appearance; fine details remain interpreted",
+    "reviewedAt": "2026-10-18T06:39:30.014544+00:00",
+    "nativeViewed": true,
+    "comparisonViewed": true,
+    "diagnosticOnly": true,
+    "status": "review-candidate-with-explicit-source-differences",
+    "ownerApproved": false,
+    "recipientAccepted": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "reviewedAt": "2026-10-18T06:43:09.685487+00:00",
+  "reviewer": "root",
+  "imageCount": 3,
+  "method": "built-in image_gen; one complete new generation per requested view, no retries",
+  "visibleReview": [
+    "Root viewed all three complete images and all five source/daylight/camera comparisons.",
+    "T1/T2 preserve approximate lake viewpoint but not exact geometry; shoreline and loop/pagoda positions shift.",
+    "Nimb ornaments and interior lights are interpreted. No global photographic authenticity pass.",
+    "Delivery PNGs add attribution metadata only; all decoded native pixels independently confirmed identical."
+  ],
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
