@@ -558,3 +558,7 @@ Omistaja 18.10.2026 klo 12.14 (KK:n välittämänä sanatarkasti): "Nuo tekstit 
 ## TRIPO-RAJAPINTA KAYTTOON 19.10. (18.10.2026 klo 12.46)
 
 Omistajan kortti 18.10.2026 klo 12.46 (KK): "Tripolla on myös rajapinta, jonka kautta mallit, luurangot ja liikkeet tehdään skriptillä ilman selainta. Otetaanko se käyttöön huomisesta alkaen?" → "Kyllä (Suositus)". API-krediitit ovat erilliset (alkuun 2 000 ilmaiseksi lähteiden mukaan). Omistaja luo avaimen platform.tripo3d.ai:ssa ja tallentaa sen itse muuttujaan TRIPO_API_KEY tiedostoon ~/.matkakirja-avaimet-koodaus.zsh; KK tarkistaa. 19.10. alkaen Valoseppä tekee API:lla (v3 openapi.tripo3d.com: rig-check → rig → retarget; saldo GET /v3/account/balance) k1:n hiukset, Pulun korjaukset, Puyin ja vartijan ilman Chromea. Generointimäärät omistajan lupien mukaan; krediittiostot vain omistajan luvalla.
+
+## TRIPO: SELAIMELLA, EI RAJAPINTAA (KUMOAA 12.46) (18.10.2026 klo 13.24)
+
+Omistajan kortti 18.10.2026 klo 13.24 (KK): avain TRIPO_API_KEY on tallennettu (~/.matkakirja-avaimet-koodaus.zsh) ja toimii v2:lla (api.tripo3d.ai/v2/openapi; v3 openapi.tripo3d.com antaa 401), mutta API-saldo on 0 (ei ilmaisia krediittejä) → "Selaimella, kevyellä apulaisella (Suositus)". 19.10. Valoseppä tekee Tripo-työt Chromessa Max-tilauksella (24 895 krediittiä) Sonnet-apulaisella pienellä muistilla, ei omalla isolla kontekstilla. API-krediittejä ei osteta. Avain jää talteen.
