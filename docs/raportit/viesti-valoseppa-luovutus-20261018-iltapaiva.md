@@ -25,14 +25,15 @@ linssiseppa2/kyyti-sininen-diag (diag-commitit + a7c0afa1a) EI junaan; diag-appi
 - se-atlas leivottu vanhoilla arvoilla; LR ei leivo uusilla ennen louvre4-kuvia – jos leipoo, palauta ajonaikainen heijastus/ambient samalla.
 - MuseoHenkilot.Paalla yhä false (kehityslippu) → true + testi, kun KK hyväksyy pelikuvat.
 
-## 3. TRIPO (19.10. alkaen RAJAPINNALLA, ei Chromea – omistajan kortti 12.46)
+## 3. TRIPO (19.10. CHROMESSA Max-tilauksella Sonnet-apulaisella pienellä muistilla, EI rajapintaa – OMISTAJAN PÄÄTÖS 13.24 kumoaa 12.46:n; API-saldo 0, ei osteta)
 - k2 + vartija valmiina: media.matkakirja.app/taidemuseo/louvre-ihmiset-v1/{k2,vartija}.glb (30 k, 2K; kevennys $L/tripo/kevenna.py).
 - 19.10. klo 10 jälkeen: k1:n hiukset, Pulun korjaukset (niskasauma, oranssit silmät, pyrstö viuhkaksi), Puyi + vartija luurankoineen
-  (rig-check → rig → retarget; Humanoid; Quaternius UAL CC0 lisäliikkeet). Avain TRIPO_API_KEY ~/.matkakirja-avaimet-koodaus.zsh (ei lokiin).
+  (rig-check → rig → retarget; Humanoid; Quaternius UAL CC0 lisäliikkeet). Kaikki Tripo-sivuston kautta Chromessa (Max-tilaus), apulaisena
+  Sonnet pienellä muistilla; EI rajapintaa eikä TRIPO_API_KEY:tä (saldo 0).
   Generoinnit vain omistajan lupien mukaan, ei ostoja. Latauslupa: kaikki peliin hyväksytyt Tripo-mallit (omistaja 11.46). Yksityiskohdat: edellinen kohdat 5, 6, 11, 13.
 
 ## 4. SIIVOUS
 T7 "/Volumes/T7 4TB/arkisto/valoseppa/20261018/" (appit, louvre1, valas-havainne, tripo-raskas). _tyo/linssiseppa2 2,0 G.
 
 ## 5. JONO
-1. Kohta 0 (korjausvarmistus) → 2. Louvren KK-palaute / louvre4 (LR) → 3. 19.10. Tripo-rajapinta → 4. ISS-kuvan alueen nimi (TAUOLLA-listan ulkopuolella, pieni).
+1. Kohta 0 (korjausvarmistus) → 2. Louvren KK-palaute / louvre4 (LR) → 3. 19.10. Tripo Chromessa (Sonnet-apulainen) → 4. ISS-kuvan alueen nimi (TAUOLLA-listan ulkopuolella, pieni).
