@@ -16,6 +16,8 @@ Julkaisijan vie-paketti.sh:lla (ei aws s3 cp). Ei rm:ää (PT 08.4x).
   livia-aani-testin kaksi tiivistevertailua Tasmaa-funktiolla. generoi-pulu --kuiva: 0 muuttunutta, ei generointia.
 - Pyydetty JU:ta (09.0x) mergemään vihreänä. SEURAAVAKSI: merge-sha → yksi rivi SK:lle (local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3) ja PT:lle.
   Jos CI punainen: korjaa samaan haaraan.
+- LISÄYS 09.1x (JU): #4860 on junan 202 web-joukkoa → merge pidossa julkaisuun asti, ellei PT vahvista "merge nyt"; JU ilmoittaa sha:n.
+  Kerro SK:lle odotuksesta, jos PT ei vahvista.
 
 ## 2) ÄÄNIKARTAT LONTOO, PRAHA, ATEENA (PT 08.4x, juna 202; Siirtoseppä kytkee)
 - Ämpärissä 404 (tarkistettu 08.4x; HUOM CDN voi välimuistittaa 404:n → tarkista myöhemmin ?t=-parametrilla).
