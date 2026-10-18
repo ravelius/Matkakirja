@@ -66,3 +66,14 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - Louvren pariajo 11.37 EPÄONNISTUI: vaakana "Siirry näyttelyyn" ei ui-puussa → kaikki kuvat näyttelysivua. sk-louvre-ennen/jalkeen: kierto vaaka
   vasta näyttelyssä. Uusinta `$D/simu-louvre3.zsh` (jälkeen = LR:n louvre-v2k-202-app 3b92c73bd) JU:n SIMU NYT:llä (JU: LR:n vuoron jälkeen ~12.00).
 - Diag 4 (0ca420e58, kyyti-diag4-app) ajettu JU:n SIMU NYT 11.43:lla `$D/simu-diag4.zsh` (diag 3 -kuvat $K/diag/*-diag3). Tulos JONO.md:ssä.
+
+## 8. TILA 12.0x
+- TRIPO k2 + vartija LADATTU (Sonnet-apulainen; Tripon vienti ei kevennä ilmaiseksi, Retopology 40 krediittiä/malli → ei käytetty).
+  Raskaat $L/tripo/raskas/*-tripo.glb (~59 Mt, 2 M kolmiota). Kevennys Blenderillä `$L/tripo/kevenna.py` (yhdistä kärjet + Decimate
+  collapse, ei veistoa) → $L/tripo/k2.glb, vartija.glb 30 k kolmiota, 2K, ~3 Mt; vertailu $L/tripo/kevennetty/*-2M-vs-30k.png (sama ulkonäkö).
+  Ämpärissä media.matkakirja.app/taidemuseo/louvre-ihmiset-v1/{k2,vartija}.glb (HEAD 200). MuseoHenkilot.Paalla on yhä false (kehityslippu);
+  sk-louvre-jalkeen.txt kytkee "museo henkilot 1" ja ottaa j11 (k2 sivulta), j12 (vartija edestä). Kääntö/paikka korjataan kuvien mukaan.
+  Kun KK hyväksyy pelikuvat: Paalla = true pilottihaaraan + testi, ja sitten kohta 5 (Puyi + vartija luurankoineen 19.10.).
+- DIAG 4 TULOS: pallon globaalit samat; oppaan polulla pallon laattoja ei pääkameran näkymässä; vain oppaan polulla "raketti: FFT-meri luotu"
+  ja origo CartographicOrigin (kaupungin _IlmMaailma/_IlmHamara jäävät, mutta pallon varjostin ei käytä niitä). DIAG 5 4585e4c62 (kaikki
+  kamerat + niiden piirtäjät kerroksittain) → JU L1 → `$D/simu-diag5.zsh`. Pääepäilty nyt raketin päällyskamera/maasto (RakettiMaasto.Kerros) jää päälle.
