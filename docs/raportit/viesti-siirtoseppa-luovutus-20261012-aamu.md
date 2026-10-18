@@ -573,3 +573,7 @@ Kun rungossa: poista worktree issfi. Simuvuoro vasta junan 201 kuvien jälkeen (
   wt/proto-siirtoseppa-kaanaan, peili) → NS juna 201. Löydös: 9b7af01f3:n -2-avaukset puuttuivat manifest-200:sta (salien 1–2 avaukset eivät soineet);
   MuseoKertoja.Manifest = manifest-201 (vara 200). Vienti Julkaisijalle: _valmiit/taidemuseo-kertoja-manifest-201-vienti-20261018 (kuiva ok).
   Kun rungossa: poista worktree kaanaan.
+- 18.10. 08.1x: Kaanaan-simu OK kuvakäännös 8:lla 007c891a (lokit/todistus-kaanaan201-iphone-20261018-0811): manifest-201 109, louvre-puhe-3 ja
+  sali1-avaus-3 soivat, poikkeuksia 0; simu vapautettu JU:lle. manifest-201 ja raketti-aanet-v14 ämpärissä.
+- 18.10. 08.3x: PT perui ISS-erän uusinnan (jo junassa 202, 697e787e8); simuvuoropyyntö peruttu JU:lta. Valmis skenaario talteen:
+  siirtoseppa-ajot/skenaariot/sk-issfi202-iphone.txt + ajo-issfi202.zsh. Worktreet issfi ja kaanaan poistettu (rungossa). **JONO TYHJÄ.**
