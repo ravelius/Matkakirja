@@ -3,8 +3,8 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261018-yo.md`** (PT/Postivahti 18.10. 00.3x; edellinen -20261017-yo.md).
-   Kohta 1 kohdekaupunkipallot TEHTY (440325942 junassa 201, varmistus TF 201); kohta 2 Kiinan 250-koe v5 simuajo käynnissä/valmis → SIMU VAPAA + pätkä PT:lle.
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261018-aamu.md`** (Postivahti 18.10. 06.0x; edellinen -20261018-yo.md).
+   ENSIN v10-kuvaparit (5c59703d0) JU:n SIMU NYT:n jälkeen, sitten kaikkien 5 taistelun ajo (8effba503).
    Viestit AINA send_message id:llä `/Users/Shared/Claude/osoitekirja.md`:stä; PT:lle ≤ 3 riviä. Nollaukset Postivahdin kautta ("LUOVUTUS VALMIS <sha>").
    Käännökset ja simut vain Julkaisijan jonon kautta.
 3. Auto-memory `karttaseppa-tila-20261010-ilta` (päivän rivit 10.–13.10.), `karttaseppa-tila-20261002-ilta` (2.–5.10.), `s2-earth-search-baseline-04-offset`, `heredoc-js-lainaus`, `sonnet-rajattuihin-tehtaviin`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
