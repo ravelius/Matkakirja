@@ -1,0 +1,44 @@
+# Pelikoodarin luovutus 18.10.2026 klo 09.52 (KOVA RAJA, Postivahti)
+
+Rooli Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoodari (haara pelikoodari-luovutus-20261014-paiva), proto-git
+/Users/Shared/Claude/proto-3d/Matkakirja-proto. Id:t /Users/Shared/Claude/osoitekirja.md. Edellinen luovutus -20261018-0913 (375242330).
+Proto-haarat varmuuskopioitu natiivi-backup peili/proto/pelikoodari/<haara>.
+
+## Lue ensin
+CLAUDE.md, Raamatun Ydinajatus kohta 2, tämä raportti. PT:lle ≤ 3 riviä. Kuvat täysikokoisina ennen lähettämistä. Ei rm:ää.
+OMISTAJAN PÄÄTÖS 09.37 (PT): työn alla vain ISS, Louvre ja aamun pyynnöt; juoksupeli TAUOLLA.
+
+## ENSIN: ISS-PÖYTÄ LUONNOS 6 (omistaja 09.2x "Katso itse myös iss paneeli läpi …", KK:n havainnot, PT 09.37; junaan 202)
+- Haara pelikoodari/iss-paneeli-202 **d653af8ff**, worktree /Users/Shared/Claude/wt/proto-pelikoodari-iss-paneeli-202, tarkista.sh 0.
+- Sisältö: poyta.py luonnos 6 (Blender renderöity, osat Resources/IssOhjauspoyta/, raakarenderit _tyo/pelikoodari/ohjauspoyta-l6):
+  neljä ryhmää samankorkuisissa kehyksissä, otsikot (NOPEUS/ZOOM, TILA, PAIKKA … KOHTEET ›) koodissa yhdellä rivillä kehysten yllä
+  (poyta.json "otsikot", USS --otsikko/--rivi, --tk-paperi-muste 14 pt), kytkimen puoliskot 59 pt, 1×/1000× 14 pt, pitkä nimi kahdelle
+  riville (IssOhjaamo.SovitaKohde, 17 pt), levy 78 pt + 55 % turva-alueesta (9-slice). ui.iss.tila-iso uusi. Tekstimalli tarkistettu
+  (scratch l6-malli.png): kaikki mahtuu väljästi.
+- KÄÄNNÖS L2 (JU: KÄÄNNÖS NYT L2 09.4x) jonotettiin 09.4x minulla taustalla: `PROTO_LINJA=2 PROTO_APP_KOPIO=/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/app-iss-paneeli-202 zsh /Users/Shared/Claude/proto-3d/tyokalut/proto-kaanna.sh d653af8ff`
+  (JU arvio valmis ~10.35). Katkeaa todennäköisesti nollauksessa: tarkista proto-3d/lokit/kaannospalvelu/*d653af8ff*-l2.log; jos ei
+  KÄÄNNETTY, aja sama komento uudelleen (sama NYT-vuoro, kerro JU:lle) ja ilmoita LUKKO VAPAA.
+- SEURAAVAKSI: SIMU NYT JU:lta (iPhone BD64C8E4-A5E4-459B-A863-B5460E2A26DB + iPad 00CF62C2-2FE6-4993-8475-5786CC40A7A3, IPAD=1,
+  ENSIN-etusija) → tyokalut/todistusajo/todistusajo.sh skenaarioilla proto-3d/tyokalut/pelikoodari-ajot/sk-iss-paneeli6-202-{iphone,ipad}.txt
+  (--app _tyo/pelikoodari/app-iss-paneeli-202/Matkakirja3D.app, --sha käännöksen SHA, --haara d653af8ff). HUOM näytön napautus
+  laskettu uusista mitoista (tap 288 823 / 601 1333), ei kokeiltu: jos P4 PUUTE, korjaa koordinaatti. → ennen|jälkeen-parit
+  (ennen: lokit/todistus-iss-poyta5-201-k6b-{iphone,ipad}-20261018-0733 P1/P5) täysikokoisina tarkistettuina PT:lle → KK.
+
+## 2) LAINAUSMERKIT NATIIVISSA (PT kiireellinen 09.3x) — VALMIS, odottaa junaa 202
+- pelikoodari/lainausmerkit-202 **df8a9d9b5** (worktree wt/proto-pelikoodari-lainausmerkit-202): Peli/Lainausmerkit.Normalisoi,
+  Valmisluennat.Url (normalisoitu + raaka), Lukijaaani.Valimuistiavain (normalisoitu), Sahketehtava.TiivisteTasmaa. Peli-testit 609/609,
+  tarkista.sh 0. PT:lle kerrottu 09.3x. Junan kokoaja ottaa haaran.
+
+## 3) JUOKSUPELI 202 — TAUOLLA (omistaja 09.37)
+- pelikoodari/juoksupeli-202 **13a1927cf**: vartijat näkyvät seuraavan risteyksen käytävillä (reitinvalinta, omistaja 21.51), matalat
+  korttelit, HUD ←n ↑n →n, talossa huoneet oviaukoin; testit 17/17. Puutelista + tila: proto-3d/_tyo/pelikoodari/juoksupeli/PUUTELISTA-202.md.
+- Käännetty L1 afb2b8c32 09.48 (.app _tyo/pelikoodari/app-juoksupeli-202), LUKKO VAPAA JU:lle ilmoitettu. Video (sk-juoksupeli-202.txt)
+  vasta kun PT avaa.
+
+## VALMIIT TÄLLÄ VUOROLLA
+- Äänikartat lontoo/praha/ateena ämpärissä (sha = paketti), Siirtoseppä kytki (natiivi 75b9d6874, PR #4861). Ateena täydellinen (PT perui).
+- #4860 lainausmerkit (web): merge pidossa junan 202 julkaisuun (JU), SK:lle kerrottu.
+
+## Worktreet
+wt/proto-pelikoodari-iss-paneeli-202 (ENSIN), -lainausmerkit-202, -juoksupeli-202 (tauko), wt/pelikoodari-lainausmerkit (PR #4860),
+wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikoodari-vapaa-lento-osio, wt/pelikoodari-posti.

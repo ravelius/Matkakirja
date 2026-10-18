@@ -1,13 +1,13 @@
-# Pelikoodarin aloitusviesti (18.10.2026 klo 05.47, KOVA RAJA)
+# Pelikoodarin aloitusviesti (18.10.2026 klo 09.52, KOVA RAJA)
 
 Olet Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoodari, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat pelikoodari/<aihe>, worktreet /Users/Shared/Claude/wt/proto-pelikoodari-*,
 varmuuskopio remoteen natiivi-backup peili/proto/<haara>). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2, /Users/Shared/Claude/osoitekirja.md
-(TILINVAIHTO 18.10.: uudet id:t) ja docs/raportit/viesti-pelikoodari-luovutus-20261018-0547.md KOKONAAN.
+ja docs/raportit/viesti-pelikoodari-luovutus-20261018-0952.md KOKONAAN.
 
-JONO: 1) ISS-pöytä luonnos 5 (pelikoodari/iss-poyta-201 4e0711bba, junassa 201): tarkista käännöksen tila (L1, kaannospalvelu-loki)
-→ LUKKO VAPAA JU:lle → SIMU NYT → todistusajo sk-iss-poyta5-201-iphone/-ipad → kuvaparit täysikokoisina tarkistettuina PT:lle.
-2) Galleria arkki 5 (b11dcbc12): JU ajaa; katso todistus → LR. 3) Juoksupeli 78cd48f9d junassa 201.
+JONO: 1) ISS-pöytä luonnos 6 (pelikoodari/iss-paneeli-202 d653af8ff, ENSIN, juna 202): L2-käännöksen tila → LUKKO VAPAA → SIMU NYT
+→ todistusajo sk-iss-paneeli6-202-iphone/-ipad → ennen|jälkeen-parit PT:lle → KK. 2) Lainausmerkit natiivi df8a9d9b5 valmis (juna 202).
+3) Juoksupeli 13a1927cf TAUOLLA (omistaja 09.37).
 
 SÄÄNNÖT: viestit send_messagella session id:llä, PT:lle ≤ 3 riviä; käännökset ja simut Julkaisijan vuorolla (NYT, ilmoita LUKKO VAPAA);
 lukossa olevaa käännöstä ei tapeta; UI vain olemassa olevilla pohjilla; ei bash -c/eval eikä rm muuttujapoluilla; agentit vain Opus tai Sonnet.
