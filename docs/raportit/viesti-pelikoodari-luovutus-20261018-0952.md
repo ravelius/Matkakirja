@@ -64,3 +64,7 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
 - Kultaiset: tauko kunnes #4862 mergetään (vasta OMISTAJA PYYSI JULKAISUA). JONO TYHJÄ huomiseen.
 - KUVATEKSTIT KUVAN ULKOPUOLELLE (omistaja 12.14, PT #4872): todistusajon merkitse() → raita kuvan alle: proto pelikoodari/kuvateksti-202
   08272d736 (worktree wt/proto-pelikoodari-kuvateksti-202), NS:lle junaan 202. Omat parikoosteet: otsikkokaista kuvan yläpuolelle (ei päälle).
+- JUNA 203 (OMISTAJA PYYSI JULKAISUA 16.02, PT 16.05): ISS A1, A3–A7 proto pelikoodari/iss-ohjaus-203 0d36a7aba (wt/proto-pelikoodari-iss-ohjaus-203),
+  NS:lle runkoon 203. TODISTEET rungon 203 Release-käännöksestä (JU tekee; EI omaa käännöstä): skenaariot
+  proto-3d/tyokalut/pelikoodari-ajot/sk-iss-ohjaus-203-{iphone,ipad}.txt (A1-kuva + video kupola pieni/iso veto + zoom 10 + video A7-valinta)
+  → A1-kuvaan kosketuskohta merkitään jälkikäteen (raita kuvan ulkopuolelle) → KK + PT. A2/A8 NUI.
