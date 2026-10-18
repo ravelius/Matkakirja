@@ -12,6 +12,8 @@ Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Us
    Kuvakäännös PT:n pyynnöstä. Todiste PT:lle RUUTUINA (ei videota, PT 09.2x): NYK = 202-1-appi, UUSI = uusi kuvakäännös:
    `zsh ajo-kylmakaynnistys-202.zsh <app> <udid> iphone` → lokit/kylmakaynnistys-*/ruudut (0,5 s välein) → valitse 1 s, 3 s, logo pois, peli → NYK|UUSI.
    Tarkista logon koko (Unityn splash mitoittaa itse; sprite Kartta/Aloitusruutu-logo-splash.png 1200×600 reunuksella) ja että logo pysyy latauksen ajan.
+3. **Louvren Pulu → Pulu-chat** (VS:n pyyntö, omistaja 09.04): 27f4c89df natiivi-ui/museo-pulu-chat-202 (wt/proto-natiivi-ui-museo-pulu-202, VS:n
+   linssiseppa2/louvre-pilotti-202 4e3148f73 päällä) VS:lle 09.2x; VS yhdistää ja todistaa (QA `linssi museo pulu napauta`). VS:n MuseoPulu.cs kaataa liikevahdin.
 
 ## 08.5x: KEHYSHÄIVYTYS TODISTETTU 202-1 (599260114 ⊇ 0583403e9), PT:lle; odottaa PT:n hyväksyntää. Kuvat _tyo/natiivi-ui/kehyshaivytys-202/202-1-*.png.
 Siivous 08.4x tehty (4 .app + 9 mergettyä proto-worktreetä); PT: ei enää rm:ää. Jäännös wt/proto-natiivi-ui-kohdevalikko-201 (.DS_Store, Finder).
