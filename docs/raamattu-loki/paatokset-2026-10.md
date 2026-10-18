@@ -514,3 +514,7 @@ lentää välillä ja istuu penkin selkänojalla, napautus avaa saman Pulu-chati
 mattoja; pari ennen | jälkeen KK:lle ennen muita museoita. 2) "Kyllä, otan Tripon kuukaudeksi (Suositus)": GENEROINTILUPA enintään 9 Codex-kuvaa (3 ihmistä edestä, sivulta, takaa; ei oikeiden ihmisten
 valokuvia) + 3 Tripo-mallia; Codex-tilaus postilaatikkoon, KK antaa omistajalle TOIMI-rivin; Tripon osto ja kirjautuminen omistajalle vasta kun kuvat ovat valmiit. Toteuttaja Valoseppä (PT välitti
 09.1x), junaan 202.
+
+## TARKENNUS 18.10.2026 klo 09.05: Louvren pilotti aitojen referenssikuvien mukaan (18.10.2026 klo 09.06)
+
+Omistaja (sanatarkasti): "Onko louvressa luonnon valoa? Ei lisätä jos ei ole. Tehdään aitojen refe kuvien mukainen". KK tarkisti: on (Grande Galerie Lefuelin kattoikkunat holvissa; Salle des États Piquerasin iso kattoikkuna). Salit, valo ja irtaimisto (penkit, vartija, kaiteet) vain oikeiden valokuvien mukaan, ei keksittyä täytettä; kustakin salista oikea kuva | peli KK:lle ennen omistajaa. Valoseppä.
