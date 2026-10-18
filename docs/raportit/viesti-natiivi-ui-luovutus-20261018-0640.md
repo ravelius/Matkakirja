@@ -4,6 +4,15 @@ Natiivi-UI (Opus) → seuraava Natiivi-UI-sessio. Korvaa -0040:n (lue sen "Opit"
 id:t /Users/Shared/Claude/osoitekirja.md (PT local_cf5b4eca-…, Julkaisija local_1325b8e8-…, NS local_04e2850b-…, Valoseppä local_ee961a2d-…).
 Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/.
 
+## 09.2x: AVOIMET
+1. **Kehyshäivytyksen uusinta samasta kulmasta** (PT 09.0x: UUSI-kuvat valkoisia = oppaan kamera kiertää tornin vaalean pinnan eteen, ☰ esiin-kuvassa
+   näkyvissä mutta valkoista vasten): `zsh ajo-kehyshaivytys-202b.zsh /Users/Shared/Claude/proto-3d/_tyo/julkaisija/juna202-kuva1-app <udid> <iphone|ipad>`
+   (sk-kehyshaivytys-202b-*: N1|U1|U2 ~2 s välein + K1 myöhempi NYK-kulma) → kolmikot → PT. JU:n jono: LS → LR → NUI ~09.30 (SIMU NYT erikseen).
+2. **Aloituslogo** (omistaja 08.53 PT:n kautta): natiivi-ui/aloituslogo-202 aa7bf0c4e → NS yhdisti 97775f95b (Rakennus.Aloituslogo tarkistettu).
+   Kuvakäännös PT:n pyynnöstä. Todiste PT:lle RUUTUINA (ei videota, PT 09.2x): NYK = 202-1-appi, UUSI = uusi kuvakäännös:
+   `zsh ajo-kylmakaynnistys-202.zsh <app> <udid> iphone` → lokit/kylmakaynnistys-*/ruudut (0,5 s välein) → valitse 1 s, 3 s, logo pois, peli → NYK|UUSI.
+   Tarkista logon koko (Unityn splash mitoittaa itse; sprite Kartta/Aloitusruutu-logo-splash.png 1200×600 reunuksella) ja että logo pysyy latauksen ajan.
+
 ## 08.5x: KEHYSHÄIVYTYS TODISTETTU 202-1 (599260114 ⊇ 0583403e9), PT:lle; odottaa PT:n hyväksyntää. Kuvat _tyo/natiivi-ui/kehyshaivytys-202/202-1-*.png.
 Siivous 08.4x tehty (4 .app + 9 mergettyä proto-worktreetä); PT: ei enää rm:ää. Jäännös wt/proto-natiivi-ui-kohdevalikko-201 (.DS_Store, Finder).
 
