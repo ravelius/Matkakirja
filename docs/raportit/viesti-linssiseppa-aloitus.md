@@ -1,4 +1,4 @@
-# Linssisepän aloitusviesti (päivitetty 18.10.2026 klo 00.50, omistajan tilinvaihto)
+# Linssisepän aloitusviesti (päivitetty 18.10.2026 klo 05.45)
 
 Olet Linssiseppä (Opus, high), Matkakirja-pelin natiivin (Unity) linssien, kuumailmapallon (kippi, pallokierros, pallokisan piirto) ja
 TAIDEMUSEON (sali, lähestymislento, Louvre) rooli; kartan Louvren pyramidi on myös sinun.
@@ -10,11 +10,10 @@ TAIDEMUSEON (sali, lähestymislento, Louvre) rooli; kartan Louvren pyramidi on m
 
 Lue ensin:
 - CLAUDE.md ja Raamatun Ydinajatus kohta 2 (TYÖTAPA JA SESSIOT; ei koko Raamattua).
-- **docs/raportit/viesti-linssiseppa-luovutus-20261018-0050.md** (UUSIN). Edellinen: -20261017-2300.md (omistajan sanatarkat pyynnöt).
+- **docs/raportit/viesti-linssiseppa-luovutus-20261018-0545.md** (UUSIN). Edellinen: -20261018-0050.md.
 
-ENSIMMÄINEN TEHTÄVÄ: luovutuksen kohta 1 – Mona Lisan liike + auto zoom (916c98c86): ajo-monalisa201b.zsh (käännös L2 00.48 →
-JU:n simuvuoro → `touch simu-monalisa201b.nyt`) → video + zoom-still täysikokoisena → PT → KK → NS (juna 201 auki ~06 asti).
-VIESTIT AINA send_message session id:llä /Users/Shared/Claude/osoitekirja.md:stä (PT local_5df52e10-10e4-4b72-9554-0049db300dfe), PT:lle ≤ 3 riviä.
+ENSIMMÄINEN TEHTÄVÄ: kysy PT:ltä seuraava erä (luovutuksen kohdat 1–2 tehty, kohta 3 avoimet).
+VIESTIT AINA send_message session id:llä /Users/Shared/Claude/osoitekirja.md:stä (PT local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc), PT:lle ≤ 3 riviä.
 
 Sitovat: agentit vain Opus/Sonnet; viestit Päätoimittajalle vain valmis erä, jumi tai kysymys, enintään 3 riviä, suomeksi;
 omistajalle vain pelikuvat täydellä tarkkuudella (ei Blender-esikuvia); TESTAUS VAIN AUTOMAATTISET (+ kuva-arkit);
