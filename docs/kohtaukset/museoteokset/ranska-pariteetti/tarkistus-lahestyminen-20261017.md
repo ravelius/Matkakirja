@@ -18,7 +18,7 @@ Merkinnät: OK / KORJAA / EPÄVARMA. "Sivu" = sivu haettu WebFetchillä ja luett
 | 1.3 | Myöhemmät kuninkaat tekivät siitä palatsin | OK | Linnoitus menetti puolustustehtävän 1300-luvulla ja purettiin vaiheittain 1528-1660 palatsin tieltä (tiiviste, History.com/Wikipedia). https://en.wikipedia.org/wiki/Medieval_Louvre_Castle (sivu) |
 | 1.4 | Vuonna 1793 ovet avattiin kansalle, palatsista tuli museo | OK (pieni tarkennus) | Avattiin 10.8.1793 nimellä Muséum central des Arts de la République. Alussa pääsy ilmainen mutta taiteilijoilla etusija, suuri yleisö vain osan viikosta (tiiviste); museo oli suljettuna 1796-1801. "Avattiin kansalle" on silti kohtuullinen kertojan tiivistys. https://en.wikipedia.org/wiki/Louvre (sivu) |
 | 1.5 | Sisällä Mona Lisa | OK | https://en.wikipedia.org/wiki/Louvre (sivu) |
-| 1.6 | Sisällä Kanaan häät | OK | Veronesen teos on Louvressa (otettu 1797, jäi Pariisiin 1815). https://en.wikipedia.org/wiki/The_Wedding_at_Cana_(Veronese) (sivu) |
+| 1.6 | Sisällä Kaanaan häät | OK | Veronesen teos on Louvressa (otettu 1797, jäi Pariisiin 1815). https://en.wikipedia.org/wiki/The_Wedding_at_Cana_(Veronese) (sivu) |
 | 1.7 | "satoja muita mestariteoksia" | OK | Epämääräinen mutta turvallinen (kokoelmassa kymmeniätuhansia esillä olevia teoksia; ei tarkistettu luvulle). |
 
 Ehdotus: ei muutoksia. Valinnainen tarkennus: "Vuonna 1793 palatsi avattiin yleisölle museona."
@@ -31,7 +31,7 @@ Ehdotus: ei muutoksia. Valinnainen tarkennus: "Vuonna 1793 palatsi avattiin ylei
 | 2.2 | Alkoi noin 1190 Filip II:n linnoituksena | OK | Ks. 1.2. |
 | 2.3 | Kuninkaat rakensivat siitä palatsin | OK | Ks. 1.3. |
 | 2.4 | "Museona Louvre on avoinna vuodesta 1793" | KORJAA (lievä) | Museo oli suljettuna 1796-1801 (tiiviste: https://en.wikipedia.org/wiki/Louvre). Ehdotus: "Museona Louvre on toiminut vuodesta 1793." |
-| 2.5 | Mona Lisa ja Kanaan häät tunnetuimpia teoksia | OK | Ks. 1.5, 1.6. |
+| 2.5 | Mona Lisa ja Kaanaan häät tunnetuimpia teoksia | OK | Ks. 1.5, 1.6. |
 
 ## 3. ORSAY-PUHE
 
@@ -78,7 +78,7 @@ Ehdotus: ei pakollisia muutoksia. Pieni epäilys vain 5.5:ssä, jos halutaan var
 | 6.3 | Filip II rakennutti linnoituksen noin 1190 | OK | Ks. 1.2. |
 | 6.4 | "palatsi avattiin kansalle museona vuonna 1793" | OK | Ks. 1.4. |
 | 6.5 | Mona Lisa | OK | Ks. 1.5. |
-| 6.6 | Veronesen Kanaan häät | OK | Ks. 1.6. |
+| 6.6 | Veronesen Kaanaan häät | OK | Ks. 1.6. |
 | 6.7 | Davidin Horatiusten vala Louvressa | OK | Maalaus 1784-85, "now on display in the Louvre in Paris". https://en.wikipedia.org/wiki/Oath_of_the_Horatii (sivu). Suomeksi yleinen nimi "Horatiusten vala" (nimen vakiintuneisuutta ei tarkistettu). |
 | 6.8 | Orsayn museon impressionistit Monet, Renoir, Degas ja Cézanne | OK | Ks. 3.6 ja 4.5. Cézannen osalta lähde tiiviste. Cézanne on tarkemmin jälki-impressionisti. |
 | 6.9 | Rodinin veistokset | OK (sisältö) | Rodinin veistokset ovat Musée Rodinissa, ei Louvressa; lause "Pelin saleissa..." kuvaa peliä, ei todellista Louvrea, ja on rakenteeltaan selvä. Varmista, ettei lukija ymmärrä Orsayn ja Rodinin olevan Louvressa. Ehdotus: "Pelin saleissa ovat Louvren mestariteosten lisäksi myös muita Pariisin museoita: Orsayn impressionisteja ja Rodinin veistoksia." |
@@ -91,4 +91,4 @@ Ehdotus: ei pakollisia muutoksia. Pieni epäilys vain 5.5:ssä, jos halutaan var
 - Cézanne Orsayssa: vain matkailusivujen tiivisteet, ei Orsayn omaa sivua.
 - Suuren kellon sijainti suhteessa impressionistisaleihin: vain Wikipedian yleiskuvaus.
 - "Satoja muita mestariteoksia" -määrä: ei tarkistettu.
-- Mona Lisan ja Kanaan häiden sijainti samassa salissa (yleistieto, ei tässä tarkistettu).
+- Mona Lisan ja Kaanaan häiden sijainti samassa salissa (yleistieto, ei tässä tarkistettu).
