@@ -577,3 +577,8 @@ Kun rungossa: poista worktree issfi. Simuvuoro vasta junan 201 kuvien jälkeen (
   sali1-avaus-3 soivat, poikkeuksia 0; simu vapautettu JU:lle. manifest-201 ja raketti-aanet-v14 ämpärissä.
 - 18.10. 08.3x: PT perui ISS-erän uusinnan (jo junassa 202, 697e787e8); simuvuoropyyntö peruttu JU:lta. Valmis skenaario talteen:
   siirtoseppa-ajot/skenaariot/sk-issfi202-iphone.txt + ajo-issfi202.zsh. Worktreet issfi ja kaanaan poistettu (rungossa). **JONO TYHJÄ.**
+- 18.10. 09.2x: PT: Lontoon ja Prahan äänikartat junaan 202. Natiivi **75b9d6874** (siirtoseppa/aanikartta-202, juna-202 97775f95b päällä,
+  wt/proto-siirtoseppa-aanikartta, peili): PalloAanimaisema.KorvaaKartalla (katu, vanhakaupunki → liikenne_hiljainen vain kun
+  KaupunkiAanimaisemaSoitin.KarttaLadattu). Vienti JU:lle _valmiit/aanikartta-lontoo-praha-vienti-20261018 (kuiva ok). Viennin jälkeen
+  web-PR haarasta siirtoseppa-aanikartta (ff7ad23a3, tools/pollo/aineistot.js aanikartta += lontoo, praha; wt/siirtoseppa-aanikartta) → merge
+  vihreänä (pollo-julkaisu vie workerin). Ateena: PK:n kansio -ateena-, viedään erikseen kun valmis → sama kaava (+ aineistot.js).
