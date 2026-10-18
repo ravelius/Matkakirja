@@ -93,3 +93,8 @@ Proton työkopio: `/Users/Shared/Claude/wt/proto-linnanrakentaja-kehykset`. Siin
   2. Vaihda Big Benin `LinssiMallit`-rivi niin, ettei se ole enää "radio". Tee siitä aina näkyvä nappi ilman linssiä: esim. `Linssi = null` ja uusi `Aina`-polku, jolloin `LinssiSaatavilla`-ehto ohitetaan.
   3. Kysy napautus PT:ltä (ei mitään / kaupunki).
   4. Pyydä uusi käännös ennen pienoismallien kuvaparia. 15bff8bba (006f7f4df) on yhä Big Ben → radio -versio.
+
+## LISÄYS 09.41: v2k-leivonta VALMIS
+
+`lokit/aja_v2k.log`: "V2K VALMIS 09.41", lod0 + lod1 glb ja atlas leivottu. Esikatselut `esikatselu/v2k_r01–r15.png` ovat reitin kameroista, eikä niitä ole vielä katsottu.
+Seuraava askel: katso GG-, SE- ja SC-kuvat refejä vasten → paketti_v2.py → vienti → sali.json (kohta 1).
