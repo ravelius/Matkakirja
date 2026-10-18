@@ -5,7 +5,7 @@ id:t /Users/Shared/Claude/osoitekirja.md (PT local_cf5b4eca-…, Julkaisija loca
 Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/.
 
 ## 09.2x: AVOIMET
-1. TEHTY 09.07 (kuvat _tyo/natiivi-ui/kehyshaivytys-202/202b-*.png PT:lle, odottaa hyväksyntää). **Kehyshäivytyksen uusinta samasta kulmasta** (PT 09.0x: UUSI-kuvat valkoisia = oppaan kamera kiertää tornin vaalean pinnan eteen, ☰ esiin-kuvassa
+1. PT HYVÄKSYI 09.1x (kehysnapit-opas-202 0583403e9 juna 202:ssa; valkoinen kiertokulma LS:n jonossa; worktree poistettavissa). **Kehyshäivytyksen uusinta samasta kulmasta** (PT 09.0x: UUSI-kuvat valkoisia = oppaan kamera kiertää tornin vaalean pinnan eteen, ☰ esiin-kuvassa
    näkyvissä mutta valkoista vasten): `zsh ajo-kehyshaivytys-202b.zsh /Users/Shared/Claude/proto-3d/_tyo/julkaisija/juna202-kuva1-app <udid> <iphone|ipad>`
    (sk-kehyshaivytys-202b-*: N1|U1|U2 ~2 s välein + K1 myöhempi NYK-kulma) → kolmikot → PT. JU:n jono: LS → LR → NUI ~09.30 (SIMU NYT erikseen).
 2. **Aloituslogo** (omistaja 08.53 PT:n kautta): natiivi-ui/aloituslogo-202 aa7bf0c4e → NS yhdisti 97775f95b (Rakennus.Aloituslogo tarkistettu).
