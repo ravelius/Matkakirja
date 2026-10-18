@@ -39,3 +39,5 @@ ylitetä). Viivat tihennetty ≤ 0,25° välein, täyttöjen reunat ≤ 0,5° (p
   16.10.2026 klo 20.35): ulkoiset viileät, kiinalaiset lämpimät, Jin ja Qing sukulaisvärein.
 - Avainvuodet (18 + loppu): -221, -200, -100, 140, 250, 440, 500, 589, 669, 790, 950, 1100, 1142, 1280, 1421, 1644,
   1760, 1873, 1912. Välivuodet interpoloi moottori.
+- Nimiön paikka on alueen sisin kohta (polylabel), paitsi `vie.py`:n `NIMET_KASIN`-taulussa käsin siirretyt (Wu 250, Itäturkit 589,
+  Eteläinen Tang 950 kahdella rivillä, Nurgan 1421; selkeän historiakartan 2× nimet törmäsivät, Karttaseppä 18.10.2026).
