@@ -62,3 +62,5 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
   /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksupeli/RATA1-SUUNNITELMA.md. Koodaus vasta 19.10. haaran juoksupeli-202 13a1927cf päälle.
   OMISTAJAN PÄÄTÖS 11.43 omena: "Ei, takaa-ajajaa paetaan" → heitto vain edessä oleviin vartijoihin (kirjattu suunnitelmaan; Heita jo näin).
 - Kultaiset: tauko kunnes #4862 mergetään (vasta OMISTAJA PYYSI JULKAISUA). JONO TYHJÄ huomiseen.
+- KUVATEKSTIT KUVAN ULKOPUOLELLE (omistaja 12.14, PT #4872): todistusajon merkitse() → raita kuvan alle: proto pelikoodari/kuvateksti-202
+  08272d736 (worktree wt/proto-pelikoodari-kuvateksti-202), NS:lle junaan 202. Omat parikoosteet: otsikkokaista kuvan yläpuolelle (ei päälle).
