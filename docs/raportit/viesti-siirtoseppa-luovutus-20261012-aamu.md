@@ -587,3 +587,5 @@ Kun rungossa: poista worktree issfi. Simuvuoro vasta junan 201 kuvien jälkeen (
   PT: JU mergeää junan 202 julkaisussa. PT hyväksyi 75b9d6874 → NS. Kun rungossa/mergetty: poista wt/proto-siirtoseppa-aanikartta ja wt/siirtoseppa-aanikartta.
 - 18.10. 09.4x: PT välitti päätöksen (09.37): työn alla vain ISS, Louvre ja aamun pyynnöt; vanhat (luentamanifesti, kierrokset ym.) tauolla.
   PR #4861 jää junaan 202. Siirtosepällä ei keskeneräistä tauolle siirrettävää. JONO TYHJÄ.
+- 18.10. 14.5x: levysiivous (Postivahti): PR #4861 mergetty, 75b9d6874 juna-202:ssa → worktreet siirtoseppa-aanikartta ja proto-siirtoseppa-aanikartta
+  poistettu (~1,9 G). Ei omia .app-kansioita (_tyo/siirtoseppa tyhjä). Ei omia worktreetä.
