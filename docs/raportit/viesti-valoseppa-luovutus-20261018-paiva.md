@@ -92,3 +92,6 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - 12.4x: todistusajon kuvateksti omalle raidalleen kuvan alle (omistaja 12.14) proto master cef176edc. LR: cc3aa269e → yhdistetty-202 f5477b167,
   JU-käännös v2n:n kanssa ~12.55 → louvre4 (jälkeen-app LR:n polusta). se-atlas on leivottu vanhoilla se-arvoilla; LR ei leivo uusilla ennen
   louvre4-kuvia – jos leipoo, palauta ajonaikainen heijastus/ambient samalla, ettei se kirkastu kahdesti.
+- 12.5x SIIVOUS (PT): T7 "/Volumes/T7 4TB/arkisto/valoseppa/20261018/" ← appit/{kyyti-diag-app, kyyti-diag3-app, concorde-putki, kl-tekoaly},
+  louvre1, valas-havainne, tripo-raskas (Tripon 2 M -glb:t). _tyo/linssiseppa2 7,4 → 2,6 G. kyyti-diag4-app T7:lle, kun diag 5 on ajettu.
+  Ennen-kuvien appi (kyyti-diag-app) on T7:llä → Louvren seuraavat parit `$D/simu-louvre4.zsh <app>` (vain jälkeen; ennen 73f7c278 valmiina).
