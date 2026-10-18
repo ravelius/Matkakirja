@@ -42,7 +42,7 @@
    "eurooppaan": {
     "vuosi": 1190,
     "pysakki": 1280,
-    "paikka": "Pariisi, Ranska (Alexander Neckam; kirjoituspaikka epävarma, mahdollisesti Englanti)",
+    "paikka": "Eurooppa (Alexander Neckam, De naturis rerum; kirjoituspaikka tuntematon, Pariisi tai Englanti: piste on arvaus, SK 17.10.)",
     "lon": 2.3522,
     "lat": 48.8566,
     "vuosi_arvio": true,
@@ -73,7 +73,7 @@
    "eurooppaan": {
     "vuosi": 1267,
     "pysakki": 1280,
-    "paikka": "Oxford, Englanti (Roger Bacon, Opus Majus)",
+    "paikka": "Eurooppa (Roger Bacon, Opus Majus; kirjoituspaikka epävarma, Oxford tai Pariisi: piste on arvaus, SK 17.10.)",
     "lon": -1.2577,
     "lat": 51.752,
     "vuosi_arvio": true,
@@ -98,7 +98,7 @@
    "epavarma": true,
    "eurooppaan": {
     "vuosi": 1450,
-    "pysakki": 1644,
+    "pysakki": 1421,
     "paikka": "Mainz, Saksa (Gutenberg)",
     "lon": 8.2473,
     "lat": 49.9929,
@@ -141,8 +141,8 @@
    "paikka": "Heming-vuori, Dayin piirikunta, Chengdu, Sichuan (hist. Heming-vuori (Kurkien huuto), Shu / Yizhou)",
    "paikka_nyky": "Heming-vuori, Dayin piirikunta, Chengdu, Sichuan",
    "paikka_hist": "Heming-vuori (Kurkien huuto), Shu / Yizhou",
-   "lon": 103.43,
-   "lat": 30.7,
+   "lon": 103.403,
+   "lat": 30.638,
    "epavarma": true,
    "vaihtoehtoinen_paikka": {
     "paikka": "Luyi, Henan (Laozin perinteinen syntymäpaikka, Daodejing-perinne)",

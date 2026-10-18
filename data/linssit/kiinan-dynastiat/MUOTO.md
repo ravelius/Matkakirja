@@ -39,3 +39,6 @@ ylitetä). Viivat tihennetty ≤ 0,25° välein, täyttöjen reunat ≤ 0,5° (p
   16.10.2026 klo 20.35): ulkoiset viileät, kiinalaiset lämpimät, Jin ja Qing sukulaisvärein.
 - Avainvuodet (18 + loppu): -221, -200, -100, 140, 250, 440, 500, 589, 669, 790, 950, 1100, 1142, 1280, 1421, 1644,
   1760, 1873, 1912. Välivuodet interpoloi moottori.
+- Natiivin lisätiedostot (sama sisältö kuin `Assets/Matkakirja/Linssit/Resources/Kiina/`, juna 202): `kiina-puherivit.json`
+  (Williamin pysäkkilauseet, Sisältökirjurin käsikirjoitus v2), `nykyinen-kiina.json` (nykyraja Natural Earth 10 m, nimiö "Nykyinen Kiina"),
+  `valopisteet.json` ja `vaestopinta/` (MUOTO-VAESTOPINTA.md).
