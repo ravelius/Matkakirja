@@ -566,3 +566,7 @@ Omistajan kortti 18.10.2026 klo 13.24 (KK): avain TRIPO_API_KEY on tallennettu (
 ## PULU: KOODIKYYHKY POIS JUNASTA 202, TRIPO-PULUN SILMAT ORANSSEIKSI (18.10.2026 klo 14.11)
 
 KK 18.10.2026 klo 14.1x omistajan linjausten perusteella: Louvren penkin koodikyyhky (MuseoPulu.cs) pois junasta 202, koska omistajan kortti 10.52 hylkäsi nykyisen kyyhkyn ("Kyllä, Pulun näköinen"); Tripo-Pulu ja museon Pulu-chat tulevat junaan 203. KORJAUS PT:n luovutukseen (viesti-fable-luovutus-20261018-paiva.md, 11.41-kohta): Tripo-Pulun silmät eivät olleet oranssit vaan RUSKEAT; pelin Pulu-piirroksen mukaan silmät ovat ORANSSIT (#E07A1F), joten 19.10. Tripo-korjauksessa silmät tehdään oransseiksi. Niskasauma ja pyrstö viuhkaksi korjataan ennallaan.
+
+## VIIKKOKIINTIO: PAATILI 100 %, EI SIIRTOPROMPTIA (18.10.2026 klo 16.11)
+
+Omistaja 18.10.2026 klo 16.10 (Keskustelukanavan välittämä, sanatarkasti): "luovutuspromptia ei tarvitse tehdä, voit käyttää koko 100%". Päätilillä (nollautuu 19.10. klo 10.00) raja on 100 %: ei siirto- eikä luovutuspromptia, ei 99 %:n riviä omistajalle; työ jatkuu täydellä teholla. Korvaa päätilin 50 %:n vaihtosäännön ja 97 %:n siirtopromptin.
