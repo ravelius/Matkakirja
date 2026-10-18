@@ -1,6 +1,6 @@
 # Natiivi-UI:n aloitusviesti (14.10.2026, päivitetty 15.10. 15.4x)
 
-**UUSIN 18.10.2026 06.3x: lue ENSIN docs/raportit/viesti-natiivi-ui-luovutus-20261018-0640.md** (juna 201: ratas, kohdevalikko-korjaus ja kuva-kokoruutu 619275871 NS:llä; KESKEN kuva-kokoruutu-uusinnan parit PT:lle). Edellinen: -0040.
+**UUSIN 18.10.2026 06.3x: lue ENSIN docs/raportit/viesti-natiivi-ui-luovutus-20261018-0640.md** (juna 201: ratas, kohdevalikko-korjaus ja kuva-kokoruutu 0ba132aca NS:llä; KESKEN kuva-kokoruutu-uusinnan parit PT:lle). Edellinen: -0040.
 
 **(vanha) 18.10.2026 00.40: docs/raportit/viesti-natiivi-ui-luovutus-20261018-0040.md** (juna 201: natiivi-ui/ratas-201b a45af2f97 =
 kehyshäivytys + ⚙ ja säädöt vain rattaasta + Valosepän ikkunaton kohdevalikko; KESKEN: rattaan osuma 44 pt, käännös, simu, pari KK:lle).

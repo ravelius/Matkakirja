@@ -9,9 +9,11 @@ Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Us
    todistus-kuva-kokoruutu-iphone-202b-20261018-0629 ja -ipad-202b-20261018-0629 (kuvat/raaka/K1-kortti.png, K4-galleria-kokoruutu.png).
    TEHTY 06.4x: parit _tyo/natiivi-ui/kuva4-parit/5–6 (NYKYINEN kortti | UUSI koko ruutu | galleriasta) → PT; SIMU VAPAA kuitattu.
    NYKYINEN (K1) | UUSI (K4 + kuva4-parit/3 K2) → polku PT:lle yhdellä rivillä. Jos K1/K4 epäonnistui: uusinta kuvakäännöksestä 5.
-2. **Mustan taustan 619275871 todiste kuvakäännöksestä 5** (pyydä SIMU NYT Julkaisijalta; varmista `git -C <proto> merge-base --is-ancestor
+2. **Mustan taustan todiste kuvakäännöksestä 5 (kärki nyt 0ba132aca)** (pyydä SIMU NYT Julkaisijalta; varmista `git -C <proto> merge-base --is-ancestor
    619275871 <rungon sha>`): `zsh ajo-kuva-kokoruutu-202.zsh <kuva5-app> <udid> <iphone|ipad>` (K2 otto + K3 zoom: kuvateksti piilossa,
    tausta musta) → polku PT:lle.
+3. **Gallerian alateksti "Oma kuva · paikka · aika"** (PT 06.4x) TEHTY 0ba132aca (NS:lle). Todista samassa ajossa: K4 (galleriasta) alateksti
+   = Oma kuva …, ei "Contains modified Copernicus…"; tausta musta → PT hyväksyy koko ruudun (parit 5–6 muuten OK).
 
 ## TILA 06.3x — JUNA 201 (kaikki NS:llä)
 - ratas-201b db3915373 (⚙ + säädöt, kehyshäivytys, osuma 44 pt, Valosepän kohdevalikko): KK HYVÄKSYI 05.58.
