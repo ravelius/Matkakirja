@@ -518,3 +518,7 @@ valokuvia) + 3 Tripo-mallia; Codex-tilaus postilaatikkoon, KK antaa omistajalle 
 ## TARKENNUS 18.10.2026 klo 09.05: Louvren pilotti aitojen referenssikuvien mukaan (18.10.2026 klo 09.06)
 
 Omistaja (sanatarkasti): "Onko louvressa luonnon valoa? Ei lisätä jos ei ole. Tehdään aitojen refe kuvien mukainen". KK tarkisti: on (Grande Galerie Lefuelin kattoikkunat holvissa; Salle des États Piquerasin iso kattoikkuna). Salit, valo ja irtaimisto (penkit, vartija, kaiteet) vain oikeiden valokuvien mukaan, ei keksittyä täytettä; kustakin salista oikea kuva | peli KK:lle ennen omistajaa. Valoseppä.
+
+## PAATOKSET 18.10.2026 klo 09.10: Maailmanradio Grimetoniin, Lontoon pienoismalli Big Ben (18.10.2026 klo 09.10)
+
+Omistaja 09.08 (sanatarkasti): "Siirrä maailmanradio toiseen paikkaan. Voi olla jossain maassa vain jossain paikassa joka ei ole edes kohdekaupunki. Lontooseen tulee oma kuvaaavampi pienoismalli." Kortti 09.10: "Grimeton, Ruotsi (Suositus)" + "Big Ben (Suositus)". Maailmanradio vapaaksi pisteeksi Grimetonin radioasemalle (Varberg, Unesco, 1924), pienoismallina kuuden terästornin rivi, ei laudan kaupunki (kuten Andøya); Lontoo ei enää linssikaupunki, pienoismalliksi Big Ben. Linssiseppä (siirto, Houkuttimet lontoo pois) + Linnanrakentaja (pienoismallit), junaan 202. Samalla omistaja 09.03: värihehkut pois, tilalle pienoismallit (Lontoo, Edinburgh, Alpit, Istanbul); kehittäjätilan kohdekaupungit selvinä pisteinä; Louvren kierroksen alku yhtenä kävelynä Mona Lisan eteen.
