@@ -1,0 +1,297 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": -221,
+ "hila": {
+  "lon0": 99,
+  "lon1": 126,
+  "lat0": 20,
+  "lat1": 51,
+  "askel": 0.1,
+  "leveys": 270,
+  "korkeus": 310,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta--221.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 98.2,
+  "p99": 47.3,
+  "summa_milj": 28.17,
+  "arvio": true,
+  "korotus": 1.431
+ },
+ "omistus": {
+  "tiedosto": "omistus--221.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": -221
+ },
+ "dynastiat": [
+  {
+   "avain": "qin",
+   "nimi": "Qin",
+   "vari": "#4a3a32",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "xiongnu",
+   "nimi": "Xiongnut",
+   "vari": "#5f7b69",
+   "tyyppi": "ulkoinen"
+  },
+  {
+   "avain": "zhao",
+   "nimi": "zhao",
+   "vari": "#7a6a5e",
+   "tyyppi": "kiina",
+   "alueeton": true
+  }
+ ],
+ "vakiluku_milj": 25.0,
+ "aluejako": "han_l",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat--221.geojson (Matkakirja, CC0)",
+  "armeijat": "Shiji 73, 81, 5 (Wikisource); Wikipedia: Battle of Changping, Bai Qi, Battle of Handan; zh-wiki 长平之战. Kaikki luvut arvioita."
+ },
+ "hetki": {
+  "nimi": "Changping",
+  "vuosi": -260,
+  "rajat_vuosi": -221,
+  "huom": "Omistusvärit linssin pysäkiltä -221 (Qin on yhdistänyt Kiinan). Taistelupaikka Changping (Gaoping, Shanxi) ~20 km epävarma. Shiji ei anna kummankaan armeijan vahvuutta: luvut ovat Wikipedian arvioita tai Shijin tappiolukujen johdannaisia (kiistelty).",
+  "armeijat": [
+   {
+    "avain": "qin-armeija",
+    "nimi": "Qin (Wang He, sitten Bai Qi)",
+    "dynastia": "qin",
+    "miehia": 550000,
+    "miehia_vali": [
+     250000,
+     600000
+    ],
+    "arvio": true,
+    "huom": "Shiji ei anna vahvuutta. 550 000 = Wikipedia (en), ~600 000 zh-wiki; Li Zefen (1979) pitää lukuja liioiteltuina. Alaraja 250 000 on mallinnusrajaus. Shiji: Qinin sotilaista kuoli \"yli puolet\". Henein kutsunta (yli 15-v) tuli myöhään.",
+    "keraus": [
+     {
+      "lon": 108.9,
+      "lat": 34.4,
+      "sade_km": 160,
+      "osuus": 0.4
+     },
+     {
+      "lon": 111.2,
+      "lat": 35.1,
+      "sade_km": 90,
+      "osuus": 0.15
+     },
+     {
+      "lon": 113.0,
+      "lat": 35.1,
+      "sade_km": 70,
+      "osuus": 0.2
+     },
+     {
+      "lon": 105.5,
+      "lat": 34.6,
+      "sade_km": 150,
+      "osuus": 0.15
+     },
+     {
+      "lon": 104.1,
+      "lat": 30.7,
+      "sade_km": 120,
+      "osuus": 0.1
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 108.72,
+      "lat": 34.33,
+      "paikka": "Xianyang"
+     },
+     {
+      "t": 0.22,
+      "lon": 110.87,
+      "lat": 34.52,
+      "paikka": "Hangu-sola"
+     },
+     {
+      "t": 0.3,
+      "lon": 111.2,
+      "lat": 35.15,
+      "paikka": "Anyi (Hedong)"
+     },
+     {
+      "t": 0.38,
+      "lon": 112.93,
+      "lat": 35.09,
+      "paikka": "Yewang (Henei)"
+     },
+     {
+      "t": 0.44,
+      "lon": 112.85,
+      "lat": 35.49,
+      "paikka": "Taihang-tie"
+     },
+     {
+      "t": 0.48,
+      "lon": 112.92,
+      "lat": 35.75,
+      "paikka": "Gaoping / Dan-joen itäranta (leiri)"
+     }
+    ]
+   },
+   {
+    "avain": "zhao-armeija",
+    "nimi": "Zhao (Lian Po, sitten Zhao Kuo)",
+    "dynastia": "zhao",
+    "miehia": 450000,
+    "miehia_vali": [
+     150000,
+     450000
+    ],
+    "arvio": true,
+    "huom": "450 000 on nimellisluku: Shijin tappiosumma (450 000) ja 400 000 antautunutta; Shiji ei anna vahvuutta (kiistelty: Bodde, Lewis). Alaraja 150 000 on mallinnusrajaus. Keräysosuudet ovat arvioita; Shangdangin Han-varuskunta ~50 000 (zh-wiki).",
+    "keraus": [
+     {
+      "lon": 114.5,
+      "lat": 36.6,
+      "sade_km": 110,
+      "osuus": 0.4
+     },
+     {
+      "lon": 115.0,
+      "lat": 38.0,
+      "sade_km": 140,
+      "osuus": 0.2
+     },
+     {
+      "lon": 112.5,
+      "lat": 37.9,
+      "sade_km": 100,
+      "osuus": 0.2
+     },
+     {
+      "lon": 113.1,
+      "lat": 36.2,
+      "sade_km": 60,
+      "osuus": 0.12
+     },
+     {
+      "lon": 113.3,
+      "lat": 39.8,
+      "sade_km": 120,
+      "osuus": 0.08
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 114.48,
+      "lat": 36.6,
+      "paikka": "Handan"
+     },
+     {
+      "t": 0.24,
+      "lon": 113.68,
+      "lat": 36.57,
+      "paikka": "Shexian / Gu-sola"
+     },
+     {
+      "t": 0.34,
+      "lon": 113.12,
+      "lat": 36.2,
+      "paikka": "Shangdang (Changzhi)"
+     },
+     {
+      "t": 0.42,
+      "lon": 112.95,
+      "lat": 35.95,
+      "paikka": "Dan-joen länsipuoli (Lian Pon linja)"
+     },
+     {
+      "t": 0.48,
+      "lon": 112.92,
+      "lat": 35.8,
+      "paikka": "Changping (leiri)"
+     }
+    ]
+   }
+  ],
+  "lyonnit": [
+   {
+    "t": 0.55,
+    "lon": 112.92,
+    "lat": 35.8,
+    "voittaja": "qin-armeija",
+    "havio": "zhao-armeija",
+    "voima": 1.0,
+    "huom": "Syys 260 eaa: Zhao Kuo ylittää Dan-joen, Bai Qi katkaisee takaosan (25 000) ja ratsut (5 000); saarto 46 päivää, Zhao Kuo kaatuu. Ensi yhteenotto (Gaopingin sola, 262 eaa) jätetty pois. Tappioluvut kiisteltyjä."
+   }
+  ],
+  "jalkeen": [
+   {
+    "armeija": "zhao-armeija",
+    "t0": 0.55,
+    "t1": 0.8,
+    "miehia": 240,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 112.92,
+      "lat": 35.8,
+      "paikka": "Changping"
+     },
+     {
+      "t": 0.8,
+      "lon": 112.89,
+      "lat": 35.87,
+      "paikka": "Yonglun kuoppa"
+     }
+    ],
+    "huom": "Shijin mukaan 400 000 antautui ja kaikki paitsi 240 nuorinta surmattiin (kiistelty; Yonglun kuoppa 1 todistaa surmat, ei lukua). Ne 240 vapautettiin Zhaoon. Pinta ei palaa täyteen: miehia on vain kuvan mittasuhde."
+   },
+   {
+    "armeija": "qin-armeija",
+    "t0": 0.58,
+    "t1": 0.85,
+    "miehia": 250000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.58,
+      "lon": 112.92,
+      "lat": 35.8,
+      "paikka": "Changping"
+     },
+     {
+      "t": 0.72,
+      "lon": 113.12,
+      "lat": 36.2,
+      "paikka": "Shangdang"
+     },
+     {
+      "t": 0.85,
+      "lon": 114.48,
+      "lat": 36.6,
+      "paikka": "Handan (piiritys 259 eaa)"
+     }
+    ],
+    "huom": "Tauko talvella, Handanin hyökkäys alkaa heinäkuussa 259 eaa ja epäonnistuu (257 eaa). 250 000 on Wikipedian johdettu arvio (\"yli puolet kuoli\", Shiji); ei tappioluku vaan kuvan mittasuhde."
+   }
+  ],
+  "toipuminen": {
+   "t0": 0.8,
+   "t1": 1.0,
+   "huom": "Qin toipuu vuosikymmenessä ja yhdistää Kiinan 221 eaa. Zhaon miesvara ei toipunut täysin: Zhaon keräysalueet jäävät alemmas. Visuaalinen arvio."
+  },
+  "lahteet": "Shiji 73, 81, 5 (Wikisource); Wikipedia: Battle of Changping, Bai Qi, Battle of Handan; zh-wiki 长平之战. Kaikki luvut arvioita."
+ }
+}
