@@ -495,3 +495,7 @@ Omistajan kortti Keskustelukanavassa 18.10.2026 klo 05.40 (sanatarkasti): "Kyll�
 ## KESKUSTELUKANAVAN NOLLAUS YÖLLÄ AUTOMAATTISESTI (18.10.2026 klo 05.49)
 
 Omistajan kortti Keskustelukanavassa 18.10.2026 klo 05.42 (sanatarkasti): "Yöllä pitää olla automaattinen nollaus ilman minun hyväksyntää. Saat nollata"; vahvistus 05.48 "Tee sen mukaan". KK nollautuu yöllä (omistaja nukkuu) kontekstirajalla ilman korttia; päivällä kortti kuten ennen. KK teki: ~/.claude/CLAUDE.md, KK:n muisti ja aloitus.md.
+
+## PAATOS: ISS-LINSSIN NAKYVYYSTIETO EI NYT (omistaja 18.10.2026 klo 08.1x, kortti Keskustelukanavassa) (18.10.2026 klo 08.14)
+
+Kysymys: Lisataanko ISS-linssiin tieto, milloin avaruusasema nakyy omalta paikaltasi taivaalla paljain silmin? Omistajan vastaus: Ei nyt. Ei toita. God's Eye View -vertailu talteen Keskustelukanavan scratchpadiin (gods-eye-view-vertailu.md).
