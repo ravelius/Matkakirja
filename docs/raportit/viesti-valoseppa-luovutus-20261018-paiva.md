@@ -59,3 +59,10 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - Pulu (a1a9e725): niskasauma, oranssit silmät (tekstuurin värjäys skriptillä ok), pyrstö viuhkaksi → Tripossa huomenna 19.10. klo 10 jälkeen.
 - Tripo-selaintyö Sonnet-apulaisella (pieni muisti). EI Blender-veistoa.
 - Kohta 5 (Puyi + vartija luurankoineen) alkaa vasta, kun KK on hyväksynyt Louvren mallit pelissä.
+
+## 7. LISÄYS 11.5x
+- LATAUSLUPA (KK: OMISTAJAN PÄÄTÖS 11.46, "Kyllä, myös jatkossa"): Valoseppä saa ladata Tripo-tililtä kaikki peliin hyväksytyt mallit GLB:nä;
+  ei muita tiedostoja. k2 + vartija -lataus Sonnet-apulaisella käynnistetty 11.5x → $L/tripo/k2.glb, vartija.glb (tarkista onko perillä).
+- Louvren pariajo 11.37 EPÄONNISTUI: vaakana "Siirry näyttelyyn" ei ui-puussa → kaikki kuvat näyttelysivua. sk-louvre-ennen/jalkeen: kierto vaaka
+  vasta näyttelyssä. Uusinta `$D/simu-louvre3.zsh` (jälkeen = LR:n louvre-v2k-202-app 3b92c73bd) JU:n SIMU NYT:llä (JU: LR:n vuoron jälkeen ~12.00).
+- Diag 4 (0ca420e58, kyyti-diag4-app) ajettu JU:n SIMU NYT 11.43:lla `$D/simu-diag4.zsh` (diag 3 -kuvat $K/diag/*-diag3). Tulos JONO.md:ssä.
