@@ -4,6 +4,15 @@ Natiivi-UI (Opus) → seuraava Natiivi-UI-sessio. Korvaa -0040:n (lue sen "Opit"
 id:t /Users/Shared/Claude/osoitekirja.md (PT local_cf5b4eca-…, Julkaisija local_1325b8e8-…, NS local_04e2850b-…, Valoseppä local_ee961a2d-…).
 Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/.
 
+## NYT 08.3x: KEHYSHÄIVYTYS (PT 07.5x erä 2; maakunta-erä jo valmis fef47c0aa)
+- Kuva 6 -ajo (lokit todistus-kehyshaivytys-{iphone-202-20261018-0814,ipad-202-20261018-0815}, kuvat proto-3d/_tyo/natiivi-ui/kehyshaivytys-202/):
+  Kipissä himmeni vain ☰, ↕/⟳-tapit ja >-väkänen kirkkaat; ISS:llä ei reunanappeja (pöytä EiHaivy) → ero ei näy.
+- Korjaus **0583403e9** natiivi-ui/kehysnapit-opas-202 (wt/proto-natiivi-ui-kehysnapit-opas-202, juna-201 2f9b5dc64 päällä): väkänen + rivi Merkki,
+  tapit + vipu KehysNapit.Ohjain (himmenee, käyttö ei tuo muita esiin). NS:lle seuraavaan junaan 08.3x.
+- SEURAAVA: kun NS:n käännös sisältää 0583403e9 → SIMU NYT JU:lta → `zsh ajo-kehyshaivytys-202.zsh <app> <udid> <iphone|ipad>` → kolmikot
+  (`python3 proto-3d/_tyo/natiivi-ui/kuva6-todiste/kolmikko.py ulos.png a b c`) → PT; ajon jälkeen app pois simusta (bundle app.matkakirja.proto3d,
+  --set "/Volumes/T7 4TB/Simulaattorit/Sarja") + SIMU VAPAA. Huom: oppaan kamera lentää valkoiseen taivaaseen U1/U2:ssa → harkitse aiempaa kuvaa.
+
 ## JUNA 201: AVOIMET ENSIMMÄISEKSI (PT 06.3x)
 **TEHTY 07.28 (kohdat 2+3):** kuvakäännös 6 642f8ed23 (sis. 619275871 + 0ba132aca), iPhone + iPad OK: musta tausta, kuvateksti piilossa zoomattuna,
 gallerian alateksti "Oma kuva · paikka · aika". Kuvat proto-3d/_tyo/natiivi-ui/kuva6-todiste/{iphone,ipad}-K2-K3-K4.png, lokit todistus-kuva-kokoruutu-*-202c-20261018-0722
