@@ -538,3 +538,7 @@ Omistaja (KK:n kortti 10.46, J11–J16 näytetty): huomisen koodauksen ensimmäi
 ## PAATOKSET 18.10.2026 klo 10.46–10.52: Tripo ostettu, Pulu 4. malliksi (18.10.2026 klo 10.53)
 
 Omistaja 10.46 (sanatarkasti KK:ssa): "tripo ostettu max tilaus kuukaudeksi" (voimassa ~18.11. asti, Macin Chromessa). Valoseppä tekee 3 mallia Louvren ihmisistä. 10.52 Pulu-kortti "Kyllä, Pulun näköinen (Suositus)": generointilupa 1 Tripo-malli lisää (yhteensä 4). Harmaansininen Pulu oransseine silmineen pelin oman Pulu-piirroksen mukaan, ilman avaruuspukua, ei Codex-kuvia; lentää ja istuu museossa, napautus avaa chatin. Mallit KK:lle kuvina ennen peliin vientiä.
+
+## PAATOKSET 18.10.2026 klo 11.20: aloituslogo heti käynnistysruutuun (18.10.2026 klo 11.20)
+
+Omistaja (KK:n kortti 11.20, kuva näytetty): "Kyllä, logo heti (Suositus)": sama logo terävänä iOS:n käynnistysruutuun; kumoaa 6.10. päätöksen mustasta alusta (silloin kuva rakeinen eikä mahtunut). Tavoite: napautuksesta logo heti, sama logo pysyy paikallaan pelin logoon asti ilman mustaa välähdystä tai hyppäystä (iPhone + iPad, tumma ja vaalea tila). KK tarkistaa videon napautuksesta peliin ennen junaa.
