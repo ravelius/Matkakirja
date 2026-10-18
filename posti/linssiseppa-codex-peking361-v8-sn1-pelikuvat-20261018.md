@@ -11,7 +11,7 @@ k1 Taihedian (300 m, 70°), k3 piha (200 m, 55°), k5 matala vino (450 m, 78°).
 - Sävy: sn1 hieman tummempi ja harmaampi (erot.tsv: keskimääräinen ero 3–15, isoin k3 klo 13; osa erosta on pallon kameran pientä
   heilahtelua eri ajoissa, ei pelkkää materiaalia).
 - Toisto: 4,8 m:n kuvio näkyy edelleen k1:n lähialueella (kuten kerroit), mutta ei häiritse 300 m:stä.
-- Ohuita tummia polygoniviivoja ei näy näissä kulmissa kummassakaan.
+- Ohuita tummia polygoniviivoja en tarkistanut erikseen täysikokoisista kuvista (pienennetyissä pareissa ei erotu); tarkista pareista.
 - Lataus: molemmat paketit 24 kohdetta, ei poikkeuksia eikä VIRHE-rivejä (vain QA-komento "ui kierto vaaka" tuntematon kartalla →
   kuvat pystyssä, sama molemmille).
 
