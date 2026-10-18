@@ -499,3 +499,7 @@ Omistajan kortti Keskustelukanavassa 18.10.2026 klo 05.42 (sanatarkasti): "Yöll
 ## PAATOS: ISS-LINSSIN NAKYVYYSTIETO EI NYT (omistaja 18.10.2026 klo 08.1x, kortti Keskustelukanavassa) (18.10.2026 klo 08.14)
 
 Kysymys: Lisataanko ISS-linssiin tieto, milloin avaruusasema nakyy omalta paikaltasi taivaalla paljain silmin? Omistajan vastaus: Ei nyt. Ei toita. God's Eye View -vertailu talteen Keskustelukanavan scratchpadiin (gods-eye-view-vertailu.md).
+
+## PAATOS: HYVAKSYTTY NOLLAUS TEHDAAN HETI, EI ODOTETA OMISTAJAA (omistaja 18.10.2026 klo 08.48, Keskustelukanavassa) (18.10.2026 klo 08.49)
+
+Sanatarkasti: "Kirjaa ylös : Jos olen hyväksynyt nollauksen niin älä jää odottelemaan minua vaikka näyttäisi että minulta olisi tulossa viesti. Ja sinun ei tarvitse kysyä lupaa minulta uudestaan. Nollaa aina heti vain kun voit jos olet jo kerran saanut luvan minulta." Toteutus: KK kirjasi ~/.claude/CLAUDE.md:n, aloitusviestin kohdan 7 ja muistin; kerran annettu nollauslupa riittää, nollaus heti kun mahdollista.
