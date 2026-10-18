@@ -46,7 +46,7 @@ export const MAASTOKOHTEET_KAZ = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Khan Tengri, "taivaiden valtias", kohoaa Tian Shanin vuoristossa täsmälleen '
+    teksti: 'Khan Tengri, ”taivaiden valtias”, kohoaa Tian Shanin vuoristossa täsmälleen '
       + 'Kazakstanin, Kirgisian ja Kiinan rajojen yhtymäkohdassa, ja se on Kazakstanin korkein '
       + 'kohta. Kalliohuippu on 6 995 metrissä, mutta laen jääkupu nostaa vuoren 7 010 metriin '
       + '— siksi vuorikiipeilijät laskevat sen seitsemäntuhantisten joukkoon. Koko Tian '
@@ -59,7 +59,7 @@ export const MAASTOKOHTEET_KAZ = [
     tyyppi: 'meri',
     kysymykset: [
       'Minne Araljärven vesi meni?',
-      'Mitä \'saarten meri\' tarkoittaa?',
+      'Mitä ’saarten meri’ tarkoittaa?',
     ],
     korostukset: ['puuvilla|puuvillapelloille'],
     nappi: 'Meri, joka katosi ihmisen käsissä',
@@ -82,7 +82,7 @@ export const MAASTOKOHTEET_KAZ = [
     nimi: 'Irtyš',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi Irtyš on \'vain\' sivujoki?',
+      'Miksi Irtyš on ’vain’ sivujoki?',
       'Minkä kolmen maan läpi joki virtaa?',
     ],
     korostukset: ['Ob|Obiin'],
@@ -316,7 +316,7 @@ export const MAASTOKOHTEET_KAZ = [
       + 'joissa on 60 erilaista kasvi- ja geometrista kuviota sekä tyyliteltyä '
       + 'kalligrafiaa — muodot ja koristelu tuovat mieleen hienon pitsin. Tyylillisesti se '
       + 'polveutuu suoraan Buharan samanidimausoleumista. Kymmenen metrin päässä on toinen '
-      + 'hautarakennus, Babaji Khatun eli "viisas kuningatar".',
+      + 'hautarakennus, Babaji Khatun eli ”viisas kuningatar”.',
     lahde: 'en-Wikipedia "Aisha Bibi", johdanto-osa sekä osiot "Design", "Site" ja '
       + '"Typology" (tarkistettu 6.9.2026).',
   },

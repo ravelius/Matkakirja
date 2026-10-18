@@ -601,7 +601,7 @@ export const EUROPE_MAATIEDOT = {
                  + 'puoluetta, hallitukset kaatuvat ja syntyvät parlamentin '
                  + 'äänestyksissä, ja lehdistö on vapaa. Lukua painaa '
                  + 'kansalaisuuskysymys — 8,9 prosenttia asukkaista on yhä '
-                 + '"ei-kansalaisia", joilla ei ole äänioikeutta valtiollisissa '
+                 + '”ei-kansalaisia”, joilla ei ole äänioikeutta valtiollisissa '
                  + 'vaaleissa. Osuus pienenee vuosi vuodelta.',
     },
     keskitulo: { arvo: '24 980 $/v', sija: '48./190' },

@@ -1696,7 +1696,7 @@ export const HAHMOTELMA_POL = [
       europe: { x: 586.6, y: 566.7 },
     },
     teksti: 'Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, '
-      + 'kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka '
+      + 'kalkkikivikallioiden ympäröimänä, ja se on osa ”Kotkanpesät”-linnojen reittiä, joka '
       + 'yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla '
       + 'tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin '
       + 'rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi '

@@ -851,7 +851,7 @@ export const HAHMOTELMA_UKR = [
     tyyppi: 'historia',
     lahi: true,
     kysymykset: [
-      'Mistä nimestä Itävalta-Unkarin "Lodomerian kuningaskunta" on peräisin?',
+      'Mistä nimestä Itävalta-Unkarin ”Lodomerian kuningaskunta” on peräisin?',
       'Kuuluiko Volodymyrin kaupunki itse tähän kuningaskuntaan?',
     ],
     korostukset: ['Lodomeria|Lodomeria', 'Galitsia-Volhynian|Galitsia-Volhynian'],

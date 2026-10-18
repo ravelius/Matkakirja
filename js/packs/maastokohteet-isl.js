@@ -147,7 +147,7 @@ export const MAASTOKOHTEET_ISL = [
       + 'ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.',
     lahde: 'en-Wikipedia "Greenland Sea", johdanto-osa (tarkistettu 29.8.2026).',
     visa: {
-      kysymys: 'Minkä toisen meren kanssa Grönlanninmeri luetaan merentutkimuksessa "Pohjoisiin meriin"?',
+      kysymys: 'Minkä toisen meren kanssa Grönlanninmeri luetaan merentutkimuksessa ”Pohjoisiin meriin”?',
       vaihtoehdot: [
         'Barentsinmeren',
         'Norjanmeren',
@@ -967,7 +967,7 @@ export const MAASTOKOHTEET_ISL = [
       + 'perustettiin maan ensimmäinen virallinen koulu, Skálholtsskóli, kouluttamaan pappeja. '
       + 'Keskiajalla paikka oli kokonainen kylä: piispantalo, katedraali, koulu, laaja '
       + 'maanviljelys, paja ja katolisen ajan luostari sekä asuntolat opettajille ja väelle. '
-      + 'Adam Bremeniläinen kuvasi sitä noin vuonna 1075 Islannin "suurimmaksi kaupungiksi". '
+      + 'Adam Bremeniläinen kuvasi sitä noin vuonna 1075 Islannin ”suurimmaksi kaupungiksi”. '
       + 'Katolisen ajan loppu piirtyi tänne: vuonna 1550 viimeinen katolinen piispa Jón Arason '
       + 'teloitettiin Skálholtissa kahden poikansa kanssa, ja samana vuonna hävitettiin myös '
       + 'pyhän Þorlákurin reliikkiarkku.',

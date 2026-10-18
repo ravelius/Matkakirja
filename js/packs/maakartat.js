@@ -2728,8 +2728,8 @@ export const MAAKARTAT = {
       teksti: 'São Francisco saa alkunsa Canastra-vuorilta Minas Geraisin '
         + 'ylängöltä ja kiertää lähes kolmetuhatta kilometriä koilliseen '
         + 'ennen kuin laskee Atlanttiin. Brasilialaiset kutsuvat sitä '
-        + 'nimellä Velho Chico, Vanha Chico, ja "kansallisen '
-        + 'yhdistymisen joeksi": se on ainoa suuri vesireitti, joka '
+        + 'nimellä Velho Chico, Vanha Chico, ja ”kansallisen '
+        + 'yhdistymisen joeksi”: se on ainoa suuri vesireitti, joka '
         + 'yhdistää etelän ja koillisen ja tuo vettä puolikuivalle '
         + 'sertãolle. Amerigo Vespucci näki joen 4. lokakuuta 1501, '
         + 'Franciscus Assisilaisen muistopäivänä, ja siitä tuli nimi. '
@@ -3147,7 +3147,7 @@ export const KAUPUNKIKARTAT = {
         teksti: 'Vuonna 1987 avattu 30-metrinen betoniobeliski merkitsee '
           + 'tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa '
           + 'pohjoisella ja eteläisellä pallonpuoliskolla. Tästä '
-          + 'Macapá tunnetaan lempinimellä "Keskimaailman pääkaupunki".',
+          + 'Macapá tunnetaan lempinimellä ”Keskimaailman pääkaupunki”.',
       },
     ],
   },
@@ -8181,7 +8181,7 @@ export const KAUPUNKIKARTAT = {
           + 'kävelytieksi samaa vauhtia kuin muutakin kaupunkia.'
           + '\n\n'
           + 'Myöhemmin, 1900-luvulla, kirjailija Batty Weber antaa '
-          + 'kulkutielle lempinimen "Euroopan kaunein parveke" — isoisän '
+          + 'kulkutielle lempinimen ”Euroopan kaunein parveke” — isoisän '
           + 'matkan aikaan se on vielä tuore, äskettäin avattu näköalapaikka.',
         kuvat: [
           {
@@ -16732,7 +16732,7 @@ export const KAUPUNKIKARTAT = {
     rajat: { pohjoinen: 63.7610, etela: 63.7250, lansi: -68.5720, ita: -68.4390 },
     esittely: 'Kartalla on koko Iqaluit Frobisher-lahden pohjukassa. Asutus kasvoi, kun Yhdysvallat '
       + 'rakensi alueelle lentotukikohdan 1942. Paikan nimi oli pitkään Frobisher Bay; vuonna '
-      + '1987 palautettiin inuktitutin nimi Iqaluit, "paljon kaloja".\n\n'
+      + '1987 palautettiin inuktitutin nimi Iqaluit, ”paljon kaloja”.\n\n'
       + 'Nunavut perustettiin 1. huhtikuuta 1999, ja Iqaluit oli valittu sen pääkaupungiksi '
       + 'kansanäänestyksessä 1995. Nunavutin parlamenttitalo avattiin lokakuussa 1999. Pyhän '
       + 'Juudaksen katedraali, iglun muotoinen kirkko, tuhoutui tulipalossa; uusi rakennus '
@@ -19341,7 +19341,7 @@ export const KAUPUNKIKARTAT = {
     ],
     esittely: 'Kartan alue on Porto-Novon keskusta. Kaupunki on Beninin virallinen pääkaupunki, '
       + 'vaikka Cotonou on maan taloudellinen keskus. Portugalilainen Eucaristo de Campos '
-      + 'antoi kaupungille vuonna 1730 nimen Porto-Novo, "uusi satama"; paikalliset kutsuivat '
+      + 'antoi kaupungille vuonna 1730 nimen Porto-Novo, ”uusi satama”; paikalliset kutsuivat '
       + 'sitä Hogbonuksi.\n\n'
       + 'Jardin des plantes et de la nature on entisen pyhän metsän jäänne. Metsä kuului '
       + 'Hogbonoun kuningaskunnan oikeusasioista vastanneelle virkamiehelle, ja siellä kasvaa '
@@ -19603,7 +19603,7 @@ export const KAUPUNKIKARTAT = {
     numeroympyrat: true,
     esittely: 'Kartan alue on Libreville, Gabonin pääkaupunki Komo-joen suistossa Guineanlahden '
       + 'rannalla. Kaupungin perustivat vuonna 1848 ranskalaisten orjalaivalta vapauttamat '
-      + 'ihmiset, ja nimi, "vapaa kaupunki", otettiin Sierra Leonen Freetownista.\n\n'
+      + 'ihmiset, ja nimi, ”vapaa kaupunki”, otettiin Sierra Leonen Freetownista.\n\n'
       + 'Mont-Bouët\'n tori on laaja markkina-alue Librevillessä: sadat kojut jakautuvat '
       + 'usealle korttelille, ja myytävänä on muun muassa kankaita ja vaatteita. Sibangin '
       + 'arboretum on 1930-luvulla perustettu koemetsä, jonka koealoille on istutettu '
@@ -20305,7 +20305,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kartan alue on Taškentin vanhakaupunki Chorsun basaarin ympärillä. Chorsu tarkoittaa '
-      + 'persiaksi "tienristeystä". Venäjän joukot valtasivat kaupungin toukokuussa 1865, ja '
+      + 'persiaksi ”tienristeystä”. Venäjän joukot valtasivat kaupungin toukokuussa 1865, ja '
       + 'uusi kaupunki rakennettiin vanhan viereen; vuoden 1966 maanjäristys tuhosi suuren '
       + 'osan vanhakaupungin savitaloista.\n\n'
       + 'Kukeldashin medresa seisoo basaarin reunalla. Keltaisesta tiilestä rakennettu '

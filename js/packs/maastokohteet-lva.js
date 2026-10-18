@@ -340,7 +340,7 @@ export const MAASTOKOHTEET_LVA = [
       + 'kristinuskoon ja liittoutuivat ristiretkeläisten kanssa, ja vuonna 1208 '
       + 'ritarit asettuivat asumaan heidän linnavuorelleen ja korvasivat puiset '
       + 'varustukset kivimuurilla. Vaikka Henrik Liiviläisen kronikka kutsuu linnaa '
-      + '"Liivinmaan pienimmäksi", se kesti toistuvat piiritykset.\n\n'
+      + '”Liivinmaan pienimmäksi”, se kesti toistuvat piiritykset.\n\n'
       + 'Uuden kivilinnan rakentaminen alkoi vanhan linnavuoren viereen 1213 tai '
       + '1214. Vuonna 1237 linna siirtyi Saksalaisen ritarikunnan Liivinmaan '
       + 'haaralle, ja seurasi suuri uudisrakennus: vanhat varustukset korvattiin '

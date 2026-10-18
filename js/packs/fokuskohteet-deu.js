@@ -171,7 +171,7 @@ export const FOKUSKOHTEET_DEU = [
       + 'Itävallan kanssa. Massiivin länsipuolella kulkee pohjois-'
       + 'eteläsuuntainen harjanne, jolla on kolme päähuippua: Hocheck '
       + '(2 651 m), Mittelspitze (2 713 m) ja Südspitze (2 712 m). Niiden '
-      + 'vieressä ovat matalampi Watzmannfrau eli "Watzmannin vaimo" '
+      + 'vieressä ovat matalampi Watzmannfrau eli ”Watzmannin vaimo” '
       + '(2 307 m) ja viisi vielä matalampaa huippua, joita kutsutaan '
       + 'Watzmannin lapsiksi. Koko massiivi kuuluu nykyään Berchtesgadenin '
       + 'kansallispuistoon.',
@@ -208,7 +208,7 @@ export const FOKUSKOHTEET_DEU = [
       + 'sai nimensä vuorelta, ei päinvastoin. Isoisän matkan aikaan '
       + 'Schwarzwald tunnettiin Euroopassa kellosepistään ja '
       + 'metsätaloudestaan; Reinin laaksosta katsottuna sen tumma kuusikko '
-      + 'näyttää yhä siltä, mistä nimi "musta metsä" tulee.',
+      + 'näyttää yhä siltä, mistä nimi ”musta metsä” tulee.',
     lahde: 'en-Wikipedia "Feldberg (Black Forest)", johdanto-osa '
       + '(tarkistettu 27.8.2026).',
     kuva: {
@@ -236,11 +236,11 @@ export const FOKUSKOHTEET_DEU = [
       maailmankartta: { x: 6271.2, y: 1428.6 },
       europe: { x: 463.4, y: 601.9 },
     },
-    teksti: 'Großer Arber — tšekiksi Velký Javor eli "suuri vaahtera" — on '
+    teksti: 'Großer Arber — tšekiksi Velký Javor eli ”suuri vaahtera” — on '
       + 'Baijerin metsän ja Böömin metsän vuorijonon korkein huippu, '
       + '1 455,5 metriä. Se on samalla Ala-Baijerin korkein kohta, ja siksi '
-      + 'sitä kutsutaan Regenin ja Chamin seuduilla "Baijerin metsän '
-      + 'kuninkaaksi". Huippualue on paragneissiä eli muinaisista '
+      + 'sitä kutsutaan Regenin ja Chamin seuduilla ”Baijerin metsän '
+      + 'kuninkaaksi”. Huippualue on paragneissiä eli muinaisista '
       + 'sedimenteistä puristunutta liuskekiveä. Vuori seisoo Saksan ja '
       + 'Böömin vanhalla rajalla: isoisän matkan aikaan sen toisella '
       + 'puolella alkoi Itävalta-Unkari.',
@@ -703,7 +703,7 @@ export const FOKUSKOHTEET_DEU = [
     ],
     korostukset: ['rokokoo|rokokootyylisenä'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
-    nappi: 'Linna nimeltä "ilman huolia"',
+    nappi: 'Linna nimeltä ”ilman huolia”',
     // 13,0387 E / 52,4004 N — en-Wikipedia "Sanssouci".
     laudat: {
       maailmankartta: { x: 6268.0, y: 1284.2 },
@@ -716,7 +716,7 @@ export const FOKUSKOHTEET_DEU = [
       + 'päähuonetta, terassirinteen harjalla keskellä puistoa. Georg '
       + 'Wenzeslaus von Knobelsdorff suunnitteli ja rakensi sen '
       + '1745–1747, ja kuningas halusi siitä yksityisasunnon, johon paeta '
-      + 'hovin juhlamenoja. Nimi on ranskaa: sans souci, "ilman huolia". '
+      + 'hovin juhlamenoja. Nimi on ranskaa: sans souci, ”ilman huolia”. '
       + 'Kuninkaan oma maku näkyy talossa niin vahvasti, että tyyliä '
       + 'sanotaan fredrikiläiseksi rokokooksi.',
     lahde: 'en-Wikipedia "Sanssouci", johdanto-osa (tarkistettu 27.8.2026).',

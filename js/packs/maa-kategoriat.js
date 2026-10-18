@@ -2755,8 +2755,8 @@ export const MAA_KATEGORIAT = {
             + 'ensimmäisiä tekijänoikeuslakeja, joka suojasi kuvia eikä '
             + 'pelkkää kirjoitettua sanaa. Samana päivänä hän julkaisi '
             + 'kahdeksan lehden sarjansa perintönsä tuhlaavasta nuoresta '
-            + 'miehestä, ja jokaisen lehden alle painettiin rivi "Publish\'d '
-            + 'according to Act of Parliament".',
+            + 'miehestä, ja jokaisen lehden alle painettiin rivi ”Publish\'d '
+            + 'according to Act of Parliament”.',
           lyhyt: 'Hogarthin kahdeksan maalauksen sarja kaiverrettiin 1734 ja julkaistiin 1735.',
           selite: 'Hogarthin kahdeksan maalauksen sarja kaiverrettiin 1734 '
             + 'ja julkaistiin painoksena 1735, samana vuonna kun hänen '
@@ -2951,7 +2951,7 @@ export const MAA_KATEGORIAT = {
             + 'Dodgson julkaisi sen nimellä Lewis Carroll. Kuvittajaksi tuli '
             + 'Punch-lehden pilapiirtäjä John Tenniel, jonka kuvista tuli '
             + 'niin tunnettuja, että moni näkee Liisan yhä juuri sellaisena. '
-            + 'Hullun hatuntekijän hattuun kirjoitettu "10/6" on hinta: '
+            + 'Hullun hatuntekijän hattuun kirjoitettu ”10/6” on hinta: '
             + 'kymmenen shillinkiä ja kuusi penceä.',
           lyhyt: 'John Tenniel piirsi 42 puukaiverrusta Lewis Carrollin 1865 kirjaan; tämä on värillinen 1890 laitos.',
           selite: 'John Tenniel piirsi 42 puukaiverrusta Lewis Carrollin '
@@ -3009,8 +3009,8 @@ export const MAA_KATEGORIAT = {
             + 'vaimolleen. Tarina syntyi kymmenessä päivässä ja kirja '
             + 'ilmestyi 13. lokakuuta 1958; karhu sai nimen läheisen '
             + 'rautatieaseman mukaan, sillä Bond asui tuolloin Paddingtonin '
-            + 'kupeessa. Paddingtonin kaulassa roikkuu lappu "Please look '
-            + 'after this bear. Thank you", ja esikuvana olivat sota-ajan '
+            + 'kupeessa. Paddingtonin kaulassa roikkuu lappu ”Please look '
+            + 'after this bear. Thank you”, ja esikuvana olivat sota-ajan '
             + 'uutisfilmit, joissa lontoolaislapsia lähetettiin maaseudulle '
             + 'turvaan nimilappu kaulassa ja pieni matkalaukku kädessä.',
           lyhyt: "Paddingtonin aseman Brunelin rautahalli",
@@ -3739,7 +3739,7 @@ export const MAA_KATEGORIAT = {
             + 'harjoitteli lounastauoillaan ja yritti 6. toukokuuta 1954 '
             + 'Oxfordin Iffley Roadin radalla. Tuuli oli kova, ja hän päätti '
             + 'vasta viime hetkellä juosta. Aika oli 3.59,4. Kuuluttaja ehti '
-            + 'sanoa vain "three" ennen kuin yleisön huuto peitti loput. Alle '
+            + 'sanoa vain ”three” ennen kuin yleisön huuto peitti loput. Alle '
             + 'kaksi kuukautta myöhemmin toinen juoksija alitti saman rajan — '
             + 'muuri oli ollut päässä.',
           lyhyt: 'Roger Bannister juoksi 1954 ensimmäisenä mailin alle neljän minuutin Oxfordin radalla.',
@@ -3760,7 +3760,7 @@ export const MAA_KATEGORIAT = {
           '4.10,0',
         ],
         oikea: 0,
-        fakta: 'Kuuluttaja ehti sanoa vain "three" ennen kuin yleisön huuto '
+        fakta: 'Kuuluttaja ehti sanoa vain ”three” ennen kuin yleisön huuto '
           + 'peitti loput.',
       },
     },
@@ -4485,8 +4485,8 @@ export const MAA_KATEGORIAT = {
             + 'vähäpätöinen faarao, jonka nimen historia melkein unohti. '
             + 'Juuri siksi hänen hautansa säilyi: kun Howard Carter '
             + 'vuonna 1922 avasi reiän hautakammion oveen ja häneltä '
-            + 'kysyttiin, näkyykö mitään, hän vastasi: "Näkyy — '
-            + 'ihmeellisiä asioita." Hauta oli ainoa lähes koskemattomana '
+            + 'kysyttiin, näkyykö mitään, hän vastasi: ”Näkyy — '
+            + 'ihmeellisiä asioita.” Hauta oli ainoa lähes koskemattomana '
             + 'löydetty faaraonhauta: yli 5 000 esinettä, ja niiden '
             + 'joukossa 11-kiloinen kultainen kasvonaamio.',
           lyhyt: 'Tutankhamonin kultainen hautanaamio löytyi 1922 Kuninkaiden laaksosta ja esittää Osiriksen hahmoa.',
@@ -5600,7 +5600,7 @@ export const MAA_KATEGORIAT = {
             + 'suoria, että moni Euroopan moottoritie kulkee nykyään '
             + 'samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä '
             + 'pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: '
-            + 'sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan '
+            + 'sanonta ”kaikki tiet vievät Roomaan” oli aikanaan aivan '
             + 'kirjaimellinen väite. Pinjojen reunustamalla Via Appialla '
             + 'voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi '
             + 'vuosituhatta sitten.',
@@ -5638,7 +5638,7 @@ export const MAA_KATEGORIAT = {
           teksti: '1400-luvun Firenzessä suvut ja killat kilpailivat '
             + 'siitä, kuka teettää kauneimman kirkon, patsaan tai '
             + 'kupolin. Kilpailusta syntyi renessanssi — '
-            + '"uudelleensyntyminen" — joka muutti koko Euroopan taiteen, '
+            + '”uudelleensyntyminen” — joka muutti koko Euroopan taiteen, '
             + 'tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli '
             + 'oli valmistuessaan 1436 maailman suurin muuraamalla tehty '
             + 'kupoli, eikä kukaan tiennyt varmasti, pysyisikö se '
@@ -5731,7 +5731,7 @@ export const MAA_KATEGORIAT = {
             + 'muotojen perhe, ja jokaisella muodolla on nimi ja '
             + 'tehtävä: putkimainen rigatoni pitää paksun kastikkeen '
             + 'sisällään, litteä bavette imee öljyn, ja spaghetti alla '
-            + 'chitarra leikataan "kitaran" kielillä. Muoto ei ole '
+            + 'chitarra leikataan ”kitaran” kielillä. Muoto ei ole '
             + 'koristelua vaan insinöörityötä, joka ratkaisee, miten '
             + 'kastike tarttuu. Italialainen syö pastaa keskimäärin 23 '
             + 'kiloa vuodessa, enemmän kuin kukaan muu maailmassa, ja '
@@ -5811,11 +5811,11 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Giuseppe Verdi by Giovanni Boldini.jpg',
           teksti: 'Giuseppe Verdi sävelsi oopperoita, joiden melodioita '
             + 'hyräiltiin kaduilla kuin iskelmiä. Nabucco-oopperan '
-            + 'orjien kuorosta "Va, pensiero" tuli 1800-luvulla '
+            + 'orjien kuorosta ”Va, pensiero” tuli 1800-luvulla '
             + 'epävirallinen kansallislaulu, kun italialaiset kuulivat '
             + 'siinä oman kaipuunsa yhtenäiseen maahan. Nimikin taipui '
             + 'iskulauseeksi: seinään kirjoitettu VERDI luettiin '
-            + '"Vittorio Emanuele Re D\'Italia". Kun säveltäjä kuoli '
+            + '”Vittorio Emanuele Re D\'Italia”. Kun säveltäjä kuoli '
             + '1901, Milanon kaduilla sadattuhannet lauloivat juuri sen '
             + 'kuoron — hiljaa, ilman johtajaa.',
           lyhyt: 'Giovanni Boldinin muotokuva Giuseppe Verdistä, joka hallitsi italialaista oopperaa vuosikymmeniä.',
@@ -5856,8 +5856,8 @@ export const MAA_KATEGORIAT = {
             + 'lähtivät mukana. Napolin laulut — O sole mio, Funiculì '
             + 'funiculà, Santa Lucia — levisivät satamakaupungista koko '
             + 'maailman lauluiksi, joita esittävät niin oopperatähdet '
-            + 'kuin jäätelöautot. O sole mio tarkoittaa "minun '
-            + 'aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan '
+            + 'kuin jäätelöautot. O sole mio tarkoittaa ”minun '
+            + 'aurinkoni”, ja se sävellettiin 1898 — ei Napolissa vaan '
             + 'Odessassa, jossa napolilainen säveltäjä oli kiertueella '
             + 'ja ikävöi kotiin.',
           lyhyt: 'Napolilainen O sole mio kirjoitettiin 1898 Giovanni Capurron sanoin ja Eduardo di Capuan sävelin.',
@@ -6346,7 +6346,7 @@ export const MAA_KATEGORIAT = {
             + 'Altamiran luolassa Kantabriassa, hänen '
             + 'kahdeksanvuotias tyttärensä María kyllästyi ja lähti '
             + 'kierrelemään lyhty kädessä. Hän katsoi ylös ja huusi: '
-            + '"Katso, isä, härkiä!" Katossa oli parikymmentä '
+            + '”Katso, isä, härkiä!” Katossa oli parikymmentä '
             + 'biisonia punaisella ja mustalla, ja isä ymmärsi ne '
             + 'jääkautisiksi. Tiedemiehet pitivät häntä väärentäjänä '
             + 'kaksikymmentä vuotta — maalaukset olivat heidän '
@@ -6851,7 +6851,7 @@ export const MAA_KATEGORIAT = {
             + 'tarhoissa ja päästettiin luontoon, ja teille '
             + 'rakennettiin alikulkuja. Nyt niitä on yli '
             + 'kaksituhatta, ja laji siirrettiin luokasta '
-            + '"äärimmäisen uhanalainen" luokkaan "vaarantunut".',
+            + '”äärimmäisen uhanalainen” luokkaan ”vaarantunut”.',
           lyhyt: 'Iberianilves elää vain Iberian niemimaalla; sen kanta romahti 1900-luvulla metsästyksen takia.',
           selite: 'Iberianilves elää vain Iberian niemimaalla, ja sen kanta '
             + 'romahti 1900-luvulla metsästyksen ja elinympäristöjen '
@@ -6995,8 +6995,8 @@ export const MAA_KATEGORIAT = {
             + 'kapteeni Hardylta vielä kerran, ja kumpikin tietää, mitä vastaus '
             + 'tarkoittaa: Victory ajetaan suoraan lähitulitukseen. Kello on '
             + 'hieman yli kaksitoista. Neljännestä vaille kaksitoista Nelson '
-            + 'lähetti lippuviestin "England expects that every man will do his '
-            + 'duty", ja puolelta päivin ranskalainen Fougueux ampui ensimmäisen '
+            + 'lähetti lippuviestin ”England expects that every man will do his '
+            + 'duty”, ja puolelta päivin ranskalainen Fougueux ampui ensimmäisen '
             + 'laukauksensa. Kansi on hiekoitettu, jottei veri tekisi lankuista '
             + 'liukkaita, ja tykkimiehet työskentelevät paitasillaan; ensimmäistä '
             + 'taisteluaan odottava ruutipoika yrittää lukea vanhempien '
@@ -7651,7 +7651,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Satakieli, jonka lippuja huudettiin huutokaupassa',
           tiedosto: 'Magnus, Eduard - Lind, Jenny - Alte Nationalgalerie - Google Arts Project.jpg',
           teksti: 'Tukholmalainen Jenny Lind oli 1800-luvun suurin '
-            + 'laulutähti — "Ruotsin satakieli", jonka ääntä tultiin '
+            + 'laulutähti — ”Ruotsin satakieli”, jonka ääntä tultiin '
             + 'kuulemaan kuninkaanlinnoihin ympäri Euroopan. Kun hän '
             + 'lähti 1850 Amerikan-kiertueelle, liput myytiin '
             + 'huutokaupalla ja satamiin kerääntyi kymmeniätuhansia '
@@ -7842,7 +7842,7 @@ export const MAA_KATEGORIAT = {
             + 'räjähteillä, joita käytettiin sekä tunneleiden '
             + 'louhimiseen että sodassa. Vuonna 1888 eräs lehti luuli '
             + 'hänen kuolleen ja julkaisi muistokirjoituksen otsikolla '
-            + '"kuoleman kauppias on kuollut". Nobel luki oman '
+            + '”kuoleman kauppias on kuollut”. Nobel luki oman '
             + 'muistokirjoituksensa ja kirjoitti myöhemmin '
             + 'testamentin, jossa hän määräsi lähes koko omaisuutensa '
             + 'palkinnoiksi. Ensimmäiset Nobelin palkinnot jaettiin '
@@ -7861,7 +7861,7 @@ export const MAA_KATEGORIAT = {
             + 'nimen: ensin suku, sitten laji — Homo sapiens, Alces '
             + 'alces. Järjestelmä oli niin selkeä, että se on käytössä '
             + 'yhä, ja se teki mahdolliseksi verrata löytöjä maasta '
-            + 'toiseen. Linné lähetti oppilaitaan, "apostoleitaan", '
+            + 'toiseen. Linné lähetti oppilaitaan, ”apostoleitaan”, '
             + 'keräämään lajeja ympäri maailmaa; osa heistä ei palannut '
             + 'koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä '
             + 'puutarhassa on yhä nähtävissä.',
@@ -8177,7 +8177,7 @@ export const MAA_KATEGORIAT = {
             + 'tiedottaja Günter Schabowski sai käteensä keskeneräisen '
             + 'paperin. Kun toimittaja kysyi suorassa lähetyksessä, '
             + 'milloin uudet säännöt tulevat voimaan, Schabowski selasi '
-            + 'lappujaan ja vastasi: "Tietääkseni heti." Kymmenettuhannet '
+            + 'lappujaan ja vastasi: ”Tietääkseni heti.” Kymmenettuhannet '
             + 'itäberliiniläiset lähtivät samana iltana muurille, '
             + 'rajavartijat avasivat puomit — ja 28 vuotta kaupungin '
             + 'halkaissut muuri alkoi murtua vielä samana yönä.',
@@ -8343,8 +8343,8 @@ export const MAA_KATEGORIAT = {
             + 'poikakuoroa ja latinaa. Sävellyksiä kertyi yli tuhat. '
             + 'Bach oli aikansa kuuluisin urkujen testaaja: kun uudet '
             + 'urut valmistuivat, hän veti kaikki äänikerrat auki ja '
-            + 'sanoi haluavansa kuulla, onko soittimella "hyvät '
-            + 'keuhkot". Kotona oli kaksikymmentä lasta, joista neljä '
+            + 'sanoi haluavansa kuulla, onko soittimella ”hyvät '
+            + 'keuhkot”. Kotona oli kaksikymmentä lasta, joista neljä '
             + 'pojista nousi itsekin kuuluisiksi säveltäjiksi.',
           lyhyt: 'Elias Gottlob Haussmannin muotokuva vuodelta 1746 esittää Johann Sebastian Bachia.',
           selite: 'Elias Gottlob Haussmannin muotokuva vuodelta 1746 esittää '
@@ -8683,7 +8683,7 @@ export const MAA_KATEGORIAT = {
             + 'sivut. Hän nimesi tuntemattoman säteen X:ksi. '
             + 'Joulukuussa hän kuvasi vaimonsa Anna Berthan käden — '
             + 'kuvassa näkyvät luut ja sormus, ja vaimon kerrotaan '
-            + 'huudahtaneen: "Olen nähnyt oman kuolemani!" Röntgen sai '
+            + 'huudahtaneen: ”Olen nähnyt oman kuolemani!” Röntgen sai '
             + 'historian ensimmäisen fysiikan Nobelin 1901 eikä '
             + 'patentoinut keksintöään: se kuului hänen mielestään '
             + 'kaikille.',
@@ -10790,8 +10790,8 @@ export const MAA_KATEGORIAT = {
             + 'viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa '
             + 'toisistaan — muutama metri kiveä ja savea, ei enää mitään. '
             + 'Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön '
-            + 'kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen "de '
-            + 'Vlieterin" kohdalla, ja koko Afsluitdijk, jota on rakennettu '
+            + 'kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen ”de '
+            + 'Vlieterin” kohdalla, ja koko Afsluitdijk, jota on rakennettu '
             + 'vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien '
             + 'lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja '
             + 'rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa '
@@ -19521,7 +19521,7 @@ export const MAA_KATEGORIAT = {
             + 'suoperäisellä rannalla, ja moni heistä kuoli raskaissa '
             + 'oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli '
             + 'vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui '
-            + 'itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä '
+            + 'itse ”ikkunaksi Eurooppaan”. Pietari valvoi rakennustöitä '
             + 'usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, '
             + 'mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen '
             + 'asuun ja etäisyyteen.',
@@ -19657,9 +19657,9 @@ export const MAA_KATEGORIAT = {
             + 'perunatärkkelystä, ja makea marjaversio yleistyi vasta '
             + '1800-luvulla, kun halpaa perunatärkkelystä alkoi olla '
             + 'kaikkien saatavilla. Venäläisissä saduissa ihannemaata '
-            + 'kuvataan sanonnalla "maidonjoet, kisselirannat", ja '
-            + 'kaukaista sukulaista sanotaan leikillään "seitsemänneksi '
-            + 'vedeksi kisselin jälkeen" — niin ohuena serkkuus siinä '
+            + 'kuvataan sanonnalla ”maidonjoet, kisselirannat”, ja '
+            + 'kaukaista sukulaista sanotaan leikillään ”seitsemänneksi '
+            + 'vedeksi kisselin jälkeen” — niin ohuena serkkuus siinä '
             + 'näyttäytyy. Karpalosta keitetty kisseli on yksi '
             + 'suosituimmista versioista, ja sen paksu, kiiltävä pinta '
             + 'muistuttaa enemmän hyytelöä kuin juomaa.',
@@ -20055,8 +20055,8 @@ export const MAA_KATEGORIAT = {
             + 'maatalouden pakkokollektivisointi ajoi ukrainalaiset '
             + 'talonpojat luopumaan maastaan ja omaisuudestaan, ja '
             + 'vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot '
-            + 'äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme '
-            + 'nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt '
+            + 'äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että ”jos emme '
+            + 'nyt toimi, voimme menettää Ukrainan” – ja syksyllä tehdyt '
             + 'päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot '
             + 'uhrien määrästä vaihtelevat muutamasta miljoonasta yli '
             + 'kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, '
@@ -20141,10 +20141,10 @@ export const MAA_KATEGORIAT = {
             + 'lukea. Neuvostovalta lopetti kiertelevän kobzariperinteen '
             + '1930-luvulla vangitsemalla ja karkottamalla soittajia '
             + 'Siperiaan. Bandurassa on nykyisin 56–68 kieltä, ja soitin näkyy '
-            + 'usein "kasakka Mamai" -kansantaiteessa, jossa kasakka istuu '
+            + 'usein ”kasakka Mamai” -kansantaiteessa, jossa kasakka istuu '
             + 'hevosensa vierellä bandura sylissään.',
           lyhyt: 'Sokeat kobzarit kiersivät maata soittaen banduraa ja laulaen kasakoiden tarinoita.',
-          selite: '"Kasakka Mamai" -maalaus vuodelta 1832: kasakka istuu '
+          selite: '”Kasakka Mamai” -maalaus vuodelta 1832: kasakka istuu '
             + 'banduransa kanssa hevosensa vieressä.',
           lahde: 'Silar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bandura',
@@ -20154,7 +20154,7 @@ export const MAA_KATEGORIAT = {
           aika: '1500-luku',
           tiedosto: 'Split jump in Hopak dance performed by the Kalyna Performing Art Ensemble.jpg',
           teksti: 'Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta '
-            + '"hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden '
+            + '”hop!”. Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden '
             + 'juhlana: kun sotaretkeltä palattiin voittajina, miehet '
             + 'tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat '
             + 'taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet '
@@ -20175,7 +20175,7 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Майстриня ляльок.jpg',
           teksti: 'Motanka-nukke tehdään kietomalla kangassuikaleita ja '
             + 'lankaa ilman neulaa tai muuta terävää – uskomuksen mukaan '
-            + 'pistäminen olisi "pistänyt kohtaloa". Nuken kasvot jätettiin '
+            + 'pistäminen olisi ”pistänyt kohtaloa”. Nuken kasvot jätettiin '
             + 'tyhjiksi tai niiden paikalle solmittiin risti, sillä kasvot '
             + 'olisivat voineet houkutella nukkeen pahan hengen. Jokainen '
             + 'nukke tehtiin tiettyä toivomusta varten – perheen suojaksi, '
@@ -26590,7 +26590,7 @@ export const MAA_KATEGORIAT = {
               + 'Kahdensadan kilometrin päässä koilliseen alkaa Ramlat '
               + 'as-Sabatayn, hiekka-aavikko jossa sataa muutama kymmenen '
               + 'millimetriä vuodessa.',
-          lyhyt: 'Ibbin ylängöllä sataa eniten koko Arabian niemimaalla, siksi \'vihreä maakunta\'.',
+          lyhyt: 'Ibbin ylängöllä sataa eniten koko Arabian niemimaalla, siksi ’vihreä maakunta’.',
           selite: 'Ibbin, Taizzin ja Yarimin lounaisylängöllä sataa vuodessa '
             + '600–1 500 millimetriä eli enemmän kuin missään muualla Arabian '
             + 'niemimaalla, ja siksi Ibbiä kutsutaan vihreäksi maakunnaksi.',
@@ -31373,7 +31373,7 @@ export const MAA_KATEGORIAT = {
           teksti: 'Jesuiitta Pedro Murillo Velarde laati vuonna 1734 kartan, '
               + 'jota kutsutaan kaikkien Filippiinien karttojen äidiksi. '
               + 'Kaiverruksen teki tagalogilainen Nicolás de la Cruz Bagay, '
-              + 'joka merkitsi nimensä viereen sanat "Indio Tagalo". Reunoilla '
+              + 'joka merkitsi nimensä viereen sanat ”Indio Tagalo”. Reunoilla '
               + 'on kaksitoista kuvaa: kaupunkien ja saarten karttoja sekä '
               + 'saarilla asuvia väkiä sangleyeistä aetoihin. Kuparilaatat '
               + 'vietiin Manilasta Britanniaan 1762, ja niistä lyötiin lisää '
@@ -31466,7 +31466,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Aamun huuto kuuluu kadulle',
           tiedosto: '1955Walking taho street vendors in the Philippines 04.jpg',
-          teksti: 'Aamuisin kaduilla kajahtaa venytetty huuto "Tahôô!". '
+          teksti: 'Aamuisin kaduilla kajahtaa venytetty huuto ”Tahôô!”. '
               + 'Magtataho kantaa olallaan kantotangon päissä kahta '
               + 'alumiinisankoa: isommassa on lämmintä silkkistä tofua, '
               + 'pienemmässä sagohelmiä, kassalipas ja arnibal eli ruskeasta '
@@ -33440,7 +33440,7 @@ export const MAA_KATEGORIAT = {
               + 'kahdesti uudelleen, ja heidän nimensä ovat yhä kellon '
               + 'kyljessä. Helmikuun 23. päivänä 1846 philadelphialainen '
               + 'lehti kertoi kellon soineen viimeisen kerran ja tulleen '
-              + '"korjaamattomasti haljenneeksi ja ikuisesti mykäksi". '
+              + '”korjaamattomasti haljenneeksi ja ikuisesti mykäksi”. '
               + 'Nimen Vapauskello sille antoivat orjuuden vastustajat '
               + '1830-luvulla: kellon kylkeen valettu lupaus vapaudesta '
               + 'kaikille maan asukkaille oli heidän mielestään pilkkaa '
@@ -33489,8 +33489,8 @@ export const MAA_KATEGORIAT = {
           aika: '1872',
           tiedosto: 'Thomas Moran - Grand Canyon of the Yellowstone - Smithsonian.jpg',
           teksti: 'Maaliskuun 1. päivänä 1872 presidentti Ulysses S. Grant '
-              + 'allekirjoitti lain, joka varasi Yellowstonen "kansan '
-              + 'hyödyksi ja iloksi puistoksi" — yleisesti maailman '
+              + 'allekirjoitti lain, joka varasi Yellowstonen ”kansan '
+              + 'hyödyksi ja iloksi puistoksi” — yleisesti maailman '
               + 'ensimmäisenä kansallispuistona pidetty päätös. Kongressi '
               + 'uskoi kertomukset kiehuvista lähteistä vasta nähtyään '
               + 'Ferdinand Haydenin vuoden 1871 retkikunnan todisteet: '
@@ -33603,8 +33603,8 @@ export const MAA_KATEGORIAT = {
               + 'kuoron ja lähti sen kanssa kiertueelle 6. lokakuuta 1871. '
               + 'Ryhmä lauloi presidentti Grantille Valkoisessa talossa '
               + 'maaliskuussa 1872, ja huhtikuussa 1873 se esitti Lontoossa '
-              + 'kuningatar Viktorialle laulut "Steal Away to Jesus" ja "Go '
-              + 'Down, Moses". Kiertueiden tuotoilla yliopisto rakensi '
+              + 'kuningatar Viktorialle laulut ”Steal Away to Jesus” ja ”Go '
+              + 'Down, Moses”. Kiertueiden tuotoilla yliopisto rakensi '
               + 'ensimmäisen kivitalonsa, Jubilee Hallin, joka seisoo yhä.',
           lyhyt: 'Fisk Jubilee Singers lauloi 1873 kuningatar Viktorialle; tuotoilla rakennettiin Jubilee Hall.',
           selite: 'Fisk Jubilee Singers lauloi huhtikuussa 1873 kuningatar '
@@ -33629,7 +33629,7 @@ export const MAA_KATEGORIAT = {
               + 'Garrison ja Charles Pickard Ware kuuntelemalla '
               + 'gullah-kansan laulua Etelä-Carolinan Saint Helenan '
               + 'saarella. Laulujen kaksoismerkitys oli avoin salaisuus: '
-              + '"Go Down, Moses" kertoi Egyptistä mutta tarkoitti '
+              + '”Go Down, Moses” kertoi Egyptistä mutta tarkoitti '
               + 'vapautta, ja monet orjanomistajat kielsivät sen.',
           lyhyt: 'Slave Songs of the United States (1867) sisälsi 136 laulua ja oli ensimmäinen laatuaan.',
           selite: 'Slave Songs of the United States ilmestyi 1867, sisälsi '
@@ -33649,7 +33649,7 @@ export const MAA_KATEGORIAT = {
               + 'kasvikuidusta. Malli tuli Länsi- ja Keski-Afrikan '
               + 'soittimista. Varhaisin tunnettu kuvaus on englantilaisen '
               + 'Richard Jobsonin muistiinpano Gambiasta vuodelta 1621: '
-              + '"iso kurpitsa ja siihen kiinnitetty kaula", ilman nauhoja '
+              + '”iso kurpitsa ja siihen kiinnitetty kaula”, ilman nauhoja '
               + 'ja enintään kuusi kieltä. Nimen alkuperästä kiistellään '
               + 'yhä; ehdolla ovat muun muassa kimbundun mbanza ja mandingon '
               + 'sanat.',
@@ -33665,7 +33665,7 @@ export const MAA_KATEGORIAT = {
           aika: '1755–1777',
           tiedosto: "Sprit of '76.2.jpeg",
           teksti: 'Brittiarmeijan kirurgi Richard Shuckburgh sepitti '
-              + '"Yankee Doodlen" noin vuonna 1755 pilkatakseen '
+              + '”Yankee Doodlen” noin vuonna 1755 pilkatakseen '
               + 'siirtomaajoukkoja, joiden hän katsoi luulevan höyhenen '
               + 'hatussa tekevän heistä yhtä hienoja kuin Lontoon '
               + 'macaroni-keikarit. Amerikkalaiset omivat pilkan itselleen, '
@@ -33675,7 +33675,7 @@ export const MAA_KATEGORIAT = {
               + 'kansallisylpeyden laulu, ja se toimi yhtenä epävirallisena '
               + 'kansallislauluna aina vuoteen 1931 asti.',
           lyhyt: 'Britit sepittivät Yankee Doodlen 1755 pilkaksi, mutta amerikkalaiset tekivät siitä ylpeydenlaulunsa.',
-          selite: 'Britit sepittivät "Yankee Doodlen" noin 1755 '
+          selite: 'Britit sepittivät ”Yankee Doodlen” noin 1755 '
             + 'pilkkalauluksi siirtomaajoukoista, mutta amerikkalaiset '
             + 'omivat sen itselleen ja tekivät siitä kansallisylpeyden '
             + 'laulun; kuvan alalaitaan on painettu kustantajan nimi.',
@@ -33702,13 +33702,13 @@ export const MAA_KATEGORIAT = {
               + 'jätti keskeneräisen maalauksensa sikseen. Kongressi '
               + 'myönsi 1843 kolmekymmentätuhatta dollaria koelinjalle '
               + 'Washingtonista Baltimoreen, ja 24. toukokuuta 1844 Morse '
-              + 'lähetti sitä pitkin sanat "Mitä Jumala on tehnyt". Laite '
+              + 'lähetti sitä pitkin sanat ”Mitä Jumala on tehnyt”. Laite '
               + 'välitti kolmekymmentä merkkiä minuutissa. Vuoteen 1850 '
               + 'mennessä lennätinlankaa oli maassa jo 19 000 kilometriä.',
-          lyhyt: 'Samuel Morse lähetti lennättimellä 1844 sanat \'Mitä Jumala on tehnyt\' Washingtonista Baltimoreen.',
+          lyhyt: 'Samuel Morse lähetti lennättimellä 1844 sanat ’Mitä Jumala on tehnyt’ Washingtonista Baltimoreen.',
           selite: 'Samuel Morse oli taidemaalari, joka keksi yhden langan '
-            + 'lennättimen ja lähetti sillä 24. toukokuuta 1844 sanat "Mitä '
-            + 'Jumala on tehnyt" Washingtonista Baltimoreen; kuvan '
+            + 'lennättimen ja lähetti sillä 24. toukokuuta 1844 sanat ”Mitä '
+            + 'Jumala on tehnyt” Washingtonista Baltimoreen; kuvan '
             + 'kirjaimet ovat kaiverruksen omat osaviitteet.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
           wiki: 'Samuel Morse',
@@ -33823,7 +33823,7 @@ export const MAA_KATEGORIAT = {
               + 'alkuperäiskansojen, länsiafrikkalaisten ja '
               + 'eurooppalaisten tavoista: puu poltetaan ensin hiillokseksi, '
               + 'ja liha kypsyy tuntikausia savussa. Kansanselitys '
-              + 'ranskan sanoista "parrasta häntään" ei saa tukea '
+              + 'ranskan sanoista ”parrasta häntään” ei saa tukea '
               + 'kielitieteestä.',
           lyhyt: 'Sana barbecue juontuu arawakin sanasta barabicu; Oviedo painatti sen ensi kerran 1526.',
           selite: 'Sana barbecue juontuu Karibian arawak-kielten sanasta '
@@ -34208,8 +34208,8 @@ export const MAA_KATEGORIAT = {
               + 'laativat sen 4.–5. helmikuuta, ja lähetyssaarnaajat '
               + 'käänsivät sen yön yli māoriksi. Hobson otti päälliköt '
               + 'vastaan aamutakissaan — silminnäkijä William Colenso muisti '
-              + 'hänet "siviilivaatteissa, hattua lukuun ottamatta". Jokaisen '
-              + 'allekirjoituksen jälkeen hän sanoi: "He iwi tahi tātou", '
+              + 'hänet ”siviilivaatteissa, hattua lukuun ottamatta”. Jokaisen '
+              + 'allekirjoituksen jälkeen hän sanoi: ”He iwi tahi tātou”, '
               + 'olemme nyt yksi kansa.',
           lyhyt: 'Ōriwa Haddonin maalaus esittää Waitangin sopimuksen allekirjoitusta 6. helmikuuta 1840.',
           selite: 'Ōriwa Haddonin maalaus esittää Waitangin sopimuksen '
@@ -34370,7 +34370,7 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'MaoriWardanceKahuroa.jpg',
           teksti: 'Haka on asentotanssi, jossa sanat, jalkojen isku, kädet, '
               + 'silmät ja ulos työnnetty kieli sanovat saman asian yhtä '
-              + 'aikaa. Käännös "sotatanssi" on liian kapea: hakoja on '
+              + 'aikaa. Käännös ”sotatanssi” on liian kapea: hakoja on '
               + 'juhliin, hautajaisiin, vieraiden vastaanottoon ja '
               + 'tervehdyksiin, eikä esittäjän tarvitse olla soturi. '
               + 'Tunnetuin niistä, Ka Mate, on Ngāti Toan päällikön Te '
@@ -34514,9 +34514,9 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Old gold workings, St. Bathans, Otago, New Zealand.jpg',
           teksti: 'Toukokuussa 1861 australialainen etsijä Gabriel Read kaivoi '
               + 'Tuapeka-joen rantatörmää lähellä nykyistä Lawrencea. '
-              + '"Lapioin pois puolisen metriä soraa, tulin kauniiseen '
+              + '”Lapioin pois puolisen metriä soraa, tulin kauniiseen '
               + 'pehmeään liuskeeseen ja näin kullan kimaltavan kuin tähdet '
-              + 'Orionissa pakkasyönä", hän kirjoitti. Löytökirje syntyi '
+              + 'Orionissa pakkasyönä”, hän kirjoitti. Löytökirje syntyi '
               + 'Janet Robertsonin mökissä, ja uutinen ilmestyi Otago '
               + 'Witnessissä 8. kesäkuuta. Ryntäys alkoi toden teolla vasta, '
               + 'kun virkamies John Hardy kävi katsomassa kentän. Jouluun '
@@ -35663,7 +35663,7 @@ export const MAA_KATEGORIAT = {
               + 'muistiin paikallisen guugu yimithirr -kansan sanan '
               + 'gangurru. Sanan on myöhemmin todettu tarkoittavan '
               + 'itäharmaakengurua — tarina siitä, että se olisi merkinnyt '
-              + '"en ymmärrä", on pelkkä legenda. Kaikki eivät olleet '
+              + '”en ymmärrä”, on pelkkä legenda. Kaikki eivät olleet '
               + 'yhtä mieltä: Phillip Parker King väitti vuosina 1819–1820 '
               + 'paikallisen sanan olevan menuah. Upseeri John Gore ampui '
               + 'yhden eläimen, ja sen nahka vietiin Englantiin. George '
@@ -35719,7 +35719,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Nimi, joka tarkoittaa ei vettä',
           tiedosto: 'Koala branch.jpg',
           teksti: 'Sana koala tulee Sydneyn seudun dharug-kielen sanasta '
-              + 'gula, joka merkitsee "ei vettä": eläin saa lähes kaiken '
+              + 'gula, joka merkitsee ”ei vettä”: eläin saa lähes kaiken '
               + 'nesteensä eukalyptuksen lehdistä. Ravinto on niin '
               + 'köyhää ja osin myrkyllistä, että koala nukkuu jopa '
               + 'kaksikymmentä tuntia vuorokaudessa ja syö ja nukkuu '
@@ -36664,8 +36664,8 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'The Start From Fort Dufferin, 1874.jpg',
           teksti: 'Kanadan parlamentti hyväksyi 23. toukokuuta 1873 lain, '
               + 'joka perusti North-West Mounted Policen. Pääministeri John '
-              + 'A. Macdonald määritteli tehtäväksi "rauhan säilyttämisen ja '
-              + 'rikosten ehkäisyn" valtavassa lännessä, jossa ei ollut '
+              + 'A. Macdonald määritteli tehtäväksi ”rauhan säilyttämisen ja '
+              + 'rikosten ehkäisyn” valtavassa lännessä, jossa ei ollut '
               + 'siviilihallintoa ja jonne rajan takaa tuotiin viinaa. '
               + 'Univormun punainen takki valittiin tarkoituksella '
               + 'muistuttamaan brittiläistä sotilaspukua. Seuraavana vuonna '
@@ -36945,8 +36945,8 @@ export const MAA_KATEGORIAT = {
           teksti: 'Poutine syntyi Keski-Québecissä 1950-luvun lopulla, mutta '
               + 'kaksi paikkakuntaa vaatii kunniaa. Warwickissa Fernand '
               + 'Lachance huudahti 1957 asiakkaalle, joka pyysi '
-              + 'juustonarskuja ranskalaisten sekaan: "tästä tulee '
-              + 'kirottu sotku!" — ja lisäsi kastikkeen vasta 1962. '
+              + 'juustonarskuja ranskalaisten sekaan: ”tästä tulee '
+              + 'kirottu sotku!” — ja lisäsi kastikkeen vasta 1962. '
               + 'Drummondvillessä Jean-Paul Roy myi samaa yhdistelmää 1958 '
               + 'ja otti sen ruokalistalle 1964. Ratkaiseva ainesosa on '
               + 'tuoreus: narskut menettävät narinansa vuorokaudessa, joten '
@@ -37106,8 +37106,8 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Generalísimo Miguel Hidalgo y Costilla.png',
           teksti: 'Doloresin kirkkoherra Miguel Hidalgo y Costilla kutsui '
               + 'seurakuntansa koolle 16. syyskuuta 1810 ja huusi kapinaan. '
-              + 'Sanoista on eri versioita; syytekirjaan päätyi "Eläköön '
-              + 'uskonto! Eläköön Amerikka ja alas huono hallinto!" Hidalgo '
+              + 'Sanoista on eri versioita; syytekirjaan päätyi ”Eläköön '
+              + 'uskonto! Eläköön Amerikka ja alas huono hallinto!” Hidalgo '
               + 'teloitettiin jo 1811, hänen seuraajansa José María Morelos '
               + '1815, ja sota jatkui sissisotana yksitoista vuotta. '
               + 'Ratkaisu tuli 1821, kun rojalistikomentaja Agustín de '
@@ -37406,11 +37406,11 @@ export const MAA_KATEGORIAT = {
               + 'soitettava requinto, arpa-harppu ja leona-basso — sekä '
               + 'tarima, puinen lava, jota tanssija lyö kantapäillään. '
               + 'Laulajat vaihtavat improvisoituja säkeitä. Tunnetuin son '
-              + 'jarocho on "La Bamba".',
+              + 'jarocho on ”La Bamba”.',
           lyhyt: 'Son jarochon soittimiin kuuluu tarima, jota tanssija lyö kantapäillään tanssiessaan.',
           selite: 'Son jarochon soittimiin kuuluu tarima eli puinen lava, '
             + 'jota tanssija lyö kantapäillään, ja lajin tunnetuin kappale '
-            + 'on "La Bamba".',
+            + 'on ”La Bamba”.',
           lahde: 'Koffermejia, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -37981,8 +37981,8 @@ export const MAA_KATEGORIAT = {
               + 'soittajaa vuorottelee putkiaan. Sikun ja quena-huilun '
               + 'ympärille rakentuu huayno, Andien suosituin laulu- ja '
               + 'tanssimusiikki. Samasta perinteestä ammensi Daniel Alomía '
-              + 'Robles, kun hän sävelsi 1913 zarzuelaansa "El Cóndor '
-              + 'Pasan": siitä on tehty yli neljätuhatta versiota, ja Peru '
+              + 'Robles, kun hän sävelsi 1913 zarzuelaansa ”El Cóndor '
+              + 'Pasan”: siitä on tehty yli neljätuhatta versiota, ja Peru '
               + 'julisti sen kansalliseksi kulttuuriperinnöksi 2004.',
           lyhyt: 'Siku-panhuilut soitetaan pareittain, koska sävelasteikko on jaettu kahteen soittimeen.',
           selite: 'Siku-panhuilut soitetaan pareittain, ira ja arka, koska '
@@ -38071,7 +38071,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Ruca on mapuchejen perinteinen olkikattoinen talo, ja kansan johtaja on lonko.',
           selite: 'Ruca on mapuchejen perinteinen olkikattoinen talo, ja '
             + 'kansan johtaja on lonko, sodan ajaksi valittu johtaja toki eli '
-            + '"kirves".',
+            + '”kirves”.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
           wiki: 'Mapuchet',
         },
@@ -38444,7 +38444,7 @@ export const MAA_KATEGORIAT = {
               + 'hänen arpilleroistaan, öljymaalauksistaan ja '
               + 'rautalankaveistoksistaan — ensimmäinen '
               + 'latinalaisamerikkalaisen taiteilijan yksityisnäyttely siellä. '
-              + 'Laulu "Gracias a la vida" syntyi La Pazissa 1966. Parran '
+              + 'Laulu ”Gracias a la vida” syntyi La Pazissa 1966. Parran '
               + 'syntymäpäivä 4. lokakuuta on Chilen muusikoiden päivä.',
           wiki: 'Violeta Parra',
         },
@@ -38786,7 +38786,7 @@ export const MAA_KATEGORIAT = {
               + 'ja Sumapazin páramo parinkymmenen kilometrin päässä '
               + 'Bogotásta etelään on maailman suurin; siitä tuli '
               + 'kansallispuisto 1977 ja se on ylängön tärkein vesilähde. '
-              + 'Tunnuskasvi on frailejón, "iso munkki".',
+              + 'Tunnuskasvi on frailejón, ”iso munkki”.',
           lyhyt: 'Frailejón kerää mehevät karvaiset lehtensä tiiviiseen kierteeseen suojaksi yön pakkaselta.',
           selite: 'Frailejón eli Espeletia kerää mehevät karvaiset lehtensä '
             + 'tiiviiseen kierteeseen, ja kuivuneet lehdet jäävät runkoon '
@@ -38897,7 +38897,7 @@ export const MAA_KATEGORIAT = {
               + 'hautajaisperinteistä. Perinteisessä kokoonpanossa on kolme '
               + 'rumpua — tambora, tambor alegre ja llamador — ja kolme huilua: '
               + 'gaita hembra, gaita macho ja flauta de millo. Tunnusomaisen '
-              + '"chu-chucu-chu"-rytmin tekee guacharaca-raaputin. '
+              + '”chu-chucu-chu”-rytmin tekee guacharaca-raaputin. '
               + 'Kolumbialainen cumbia on kaikkien muunnelmien alkulähde, ja '
               + 'siihen kuuluu tapa tanssia kynttilät käsissä.',
           selite: 'Cumbian kolme rumpua ja gaita-huilut Karibian rannikon '
@@ -38917,7 +38917,7 @@ export const MAA_KATEGORIAT = {
               + 'uutiset — he lauloivat viestinsä. Kokoonpanon kolme soitinta '
               + 'tulevat kolmelta mantereelta: nappihaitari Saksasta, '
               + 'caja-rumpu Afrikasta ja guacharaca-raaputin '
-              + 'alkuperäiskansoilta. Rytmejä eli "ilmoja" on neljä: son, '
+              + 'alkuperäiskansoilta. Rytmejä eli ”ilmoja” on neljä: son, '
               + 'paseo, merengue ja puya. Unesco pitää lajia kiireellistä '
               + 'suojelua vaativana perintönä.',
           lyhyt: 'Vallenaton kolmirivinen nappihaitari on saksalaista tekoa, saapui 1800-luvulla Aruban kautta.',
@@ -38939,7 +38939,7 @@ export const MAA_KATEGORIAT = {
               + 'sunnuntain ja maanantain suurkulkueella ja päättyy tiistaina '
               + 'Joselito Carnavalin hautajaisiin. Unesco otti karnevaalin '
               + 'luetteloonsa Pariisissa 7. marraskuuta 2003. Tunnuslause on '
-              + '"sen nauttii, joka sen elää".',
+              + '”sen nauttii, joka sen elää”.',
           lyhyt: 'Marimonda on karnevaalin suosituin hahmo: huppupää pitkine nenineen ja lerpattavine korvineen.',
           selite: 'Marimonda on karnevaalin suosituin hahmo: huppupää, jolla '
             + 'on pitkä nenä, lerpattavat korvat ja kirkkaat vaatteet.',
@@ -39089,7 +39089,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Cienfuegosin marmorimuistomerkki esittää José Martía, jonka runoista sovitettiin Guantanamera.',
           selite: 'Cienfuegosin aukiolla seisova marmorimuistomerkki esittää '
             + 'José Martía, jonka runoista sovitettiin myöhemmin laulun '
-            + '"Guantanamera" sanat.',
+            + '”Guantanamera” sanat.',
           lahde: 'Dudva, Wikimedia Commons (CC0)',
           wiki: 'José Martí',
         },
@@ -40764,7 +40764,7 @@ export const MAA_KATEGORIAT = {
           + 'panhuiluja, joiden moniäänisyys on kiinnostanut '
           + 'musiikintutkijoita ympäri maailman.',
       tehtava: {
-        kysymys: 'Mistä on peräisin Deep Forest -yhtyeen hitissä "Sweet Lullaby" kuultava laulu?',
+        kysymys: 'Mistä on peräisin Deep Forest -yhtyeen hitissä ”Sweet Lullaby” kuultava laulu?',
         vaihtoehdot: [
           'Pygmien laulu Keski-Afrikasta',
           'Rorogwela, vanha laulu Malaitalta',
@@ -40827,7 +40827,7 @@ export const MAA_KATEGORIAT = {
               + 'julkaisi äänitteen 1973 levyllä Solomon Islands: Fateleka '
               + 'and Baegu Music from Malaita. Vuonna 1992 ranskalainen '
               + 'yhtye Deep Forest käytti Afunakwan ääntä kappaleessa '
-              + '"Sweet Lullaby", josta tuli hitti muun muassa '
+              + '”Sweet Lullaby”, josta tuli hitti muun muassa '
               + 'Britanniassa, Australiassa ja Norjassa. Lupaa ei ollut '
               + 'pyydetty keneltäkään, ja levyn kansitiedoissa laulu '
               + 'sanottiin virheellisesti afrikkalaisten pygmien lauluksi.',
@@ -40847,13 +40847,13 @@ export const MAA_KATEGORIAT = {
               + 'Bambusoittimet saivat oman yleisönsä 1920-luvulla, ja '
               + 'niistä kehittyi maan tunnetuin nykysoitinperinne. '
               + '1950-luvulla Edwin Nanau Sitori sävelsi laulun '
-              + '"Walkabout long Chinatown", jota hallitus on kutsunut '
+              + '”Walkabout long Chinatown”, jota hallitus on kutsunut '
               + 'maan epäviralliseksi kansallislauluksi — nimi viittaa '
               + 'Honiaran kiinalaiskortteliin. Nykyään kuunnellaan '
               + 'rockia, reggaeta ja sitä, mitä saarilla kutsutaan '
               + 'nimellä island music.',
           lyhyt: 'Edwin Nanau Sitorin Walkabout long Chinatown on Salomonsaarten epävirallinen kansallislaulu.',
-          selite: 'Edwin Nanau Sitorin "Walkabout long Chinatown" on '
+          selite: 'Edwin Nanau Sitorin ”Walkabout long Chinatown” on '
             + 'Salomonsaarten epävirallinen kansallislaulu, ja se '
             + 'sävellettiin 1950-luvulla.',
         },
@@ -43652,7 +43652,7 @@ export const MAA_KATEGORIAT = {
               + 'kuoli, Fatima ja hänen sisarensa Mariam perivät suuren '
               + 'omaisuuden, ja Fatima lupasi käyttää perintönsä '
               + 'kokonaan moskeijaan. Siitä kasvoi al-Qarawiyyin, '
-              + '"kairouanilaisten moskeija", ja sen ympärille '
+              + '”kairouanilaisten moskeija”, ja sen ympärille '
               + 'opetuslaitos, jota Unesco ja Guinness World Records '
               + 'pitävät maailman vanhimpana yhä toimivana '
               + 'korkeakouluna. Osa historioitsijoista epäilee tarinaa: '
@@ -44447,7 +44447,7 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Orchester El Gusto 24.jpg',
           teksti: 'Dahmane El Harrachi — oikealta nimeltään Amrani '
               + 'Abderrahmane — kirjoitti ja levytti vuonna 1973 '
-              + 'chaabi-laulun "Ya Rayah". Sen sanat puhuttelevat '
+              + 'chaabi-laulun ”Ya Rayah”. Sen sanat puhuttelevat '
               + 'lähtijää: sinä joka lähdet, minne matka, tiedätkö mitä '
               + 'olet jättämässä. Laulu on maastamuuttajan balladi, ja '
               + 'juuri siksi se on kulkenut maasta toiseen. Vuonna 1997 '
@@ -44468,8 +44468,8 @@ export const MAA_KATEGORIAT = {
               + 'piti mennä Radio Algerin laulajalle Nouaralle. Kun tämä '
               + 'kieltäytyi, Idir esitti sen itse yhdessä laulaja Milan '
               + 'kanssa, ja siitä tuli välitön menestys. Alkuperäinen '
-              + 'nimi oli "A Baba-inu Ba", ja tunnetuksi se tuli muodossa '
-              + '"A Vava Inouva" — laulu isälle, jonka ovea lapsi pyytää '
+              + 'nimi oli ”A Baba-inu Ba”, ja tunnetuksi se tuli muodossa '
+              + '”A Vava Inouva” — laulu isälle, jonka ovea lapsi pyytää '
               + 'avaamaan. Vuonna 1976 julkaistusta kappaleesta tuli '
               + 'kansainvälisesti tunnetuin kabyylinkielinen laulu, ja se '
               + 'on käännetty muun muassa arabiaksi, espanjaksi, '
@@ -44764,7 +44764,7 @@ export const MAA_KATEGORIAT = {
               + 'koodi on TU. Yhdysvaltain tullimääräysten mukaan '
               + 'todellinen alkuperä on ilmoitettava samalla puolella '
               + 'etikettiä yhtä suurin kirjaimin, mutta moni merkki '
-              + 'painaa eteen isolla "imported from Italy" ja muut maat '
+              + 'painaa eteen isolla ”imported from Italy” ja muut maat '
               + 'pienellä taakse. Niinpä italialaiseksi luultu öljy on '
               + 'usein peräisin Turkista, Tunisiasta, Marokosta, '
               + 'Espanjasta tai Kreikasta.',
@@ -44831,14 +44831,14 @@ export const MAA_KATEGORIAT = {
               + 'ottanut minut haltuunsa, enää minun ei tarvitse juosta '
               + 'sen perässä — väri ja minä olemme yhtä, olen maalari. '
               + 'Kotiin palattuaan hän maalasi ensimmäisen täysin '
-              + 'abstraktin teoksensa "Kairouanin tapaan", joka koostuu '
+              + 'abstraktin teoksensa ”Kairouanin tapaan”, joka koostuu '
               + 'värillisistä suorakaiteista ja muutamasta ympyrästä. '
               + 'Värillisestä suorakaiteesta tuli hänen '
               + 'perusrakennuspalikkansa, jota tutkijat ovat verranneet '
               + 'nuottiin. Egyptissä hän kävi 1928, mutta se ei tehnyt '
               + 'samaa.',
           lyhyt: 'August Macken akvarelli Kairouan III hajottaa kaupungin läpikuultaviksi väripinnoiksi.',
-          selite: 'August Macken akvarelli "Kairouan III" on samalta '
+          selite: 'August Macken akvarelli ”Kairouan III” on samalta '
             + 'matkalta: kaupunki on hajotettu läpikuultaviksi '
             + 'väripinnoiksi, joista erottuvat muuri, palmu ja kulkija.',
           lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
@@ -45104,7 +45104,7 @@ export const MAA_KATEGORIAT = {
               + 'kaupunkivaltioon, nykyiseen Zariaan. Kuusitoistavuotiaana '
               + 'hänet nimettiin kruununperijäksi, ja veljensä ratsuväessä '
               + 'hänestä tuli hausalaisten ylistyslaulujen mukaan '
-              + '"Nikatun tytär, nainen joka pystyi samaan kuin mies". '
+              + '”Nikatun tytär, nainen joka pystyi samaan kuin mies”. '
               + 'Perimätiedon mukaan hän nousi valtaan 1576 ja aloitti '
               + 'kolmenkymmenenneljän vuoden sotaretket kahdenkymmenentuhannen '
               + 'jalkamiehen ja tuhannen ratsumiehen armeijalla. Valloitetut '
@@ -45168,8 +45168,8 @@ export const MAA_KATEGORIAT = {
               + 'warrant chief -päälliköitä vastaan. Kipinä syttyi, kun '
               + 'laskija käski Nwanyeruwa-nimistä naista laskemaan '
               + 'vuohensa, lampaansa ja väkensä. Nainen ymmärsi sen '
-              + 'veroluetteloksi ja vastasi: "Laskettiinko sinun '
-              + 'leskiäitisi?" Igboperinteessä naiset eivät maksaneet '
+              + 'veroluetteloksi ja vastasi: ”Laskettiinko sinun '
+              + 'leskiäitisi?” Igboperinteessä naiset eivät maksaneet '
               + 'veroa. Protestin muoto oli vanha tapa nimeltä miehen '
               + 'päällä istuminen: joukko naisia asettui päällikön talon '
               + 'eteen laulamaan, kunnes tämä erosi. Kuuden kansan naiset '
@@ -45234,7 +45234,7 @@ export const MAA_KATEGORIAT = {
               + 'pullokurpitsan — valkoisia siemeniä, jotka kuivataan ja '
               + 'jauhetaan. Jorubankielinen nimi kertoo valmistustavan: e '
               + 'tarkoittaa suunnan, gun jauhamista ja si avaamista, eli '
-              + '"jauhaa auki". Jauhettu siemen paksuntaa keiton ja tuo '
+              + '”jauhaa auki”. Jauhettu siemen paksuntaa keiton ja tuo '
               + 'siihen runsaasti valkuaista; sekaan tulee palmuöljyä, '
               + 'lihaa tai kalaa ja iso kasa vihreitä lehtiä, useimmiten '
               + 'karvaslehteä. Egusi-keittoa syödään ympäri Länsi- ja '
@@ -45462,8 +45462,8 @@ export const MAA_KATEGORIAT = {
               + 'hän kirjoitti tarinan miehestä, joka lähtee kuolleiden '
               + 'kaupunkiin etsimään palmuviinin tiristäjäänsä. Faber and '
               + 'Faber julkaisi The Palm-Wine Drinkardin Lontoossa 1952, ja '
-              + 'runoilija Dylan Thomas ylisti sitä sanoilla "lyhyt, '
-              + 'tungokseen asti täysi, kaamea ja lumoava". Nigeriassa kirja '
+              + 'runoilija Dylan Thomas ylisti sitä sanoilla ”lyhyt, '
+              + 'tungokseen asti täysi, kaamea ja lumoava”. Nigeriassa kirja '
               + 'sai kovaa kritiikkiä: Tutuolan englanti ei noudattanut '
               + 'koulukielioppia. Arvostelu on sittemmin vaimennut, ja kirja '
               + 'on käännetty kymmenille kielille.',
@@ -45488,8 +45488,8 @@ export const MAA_KATEGORIAT = {
               + 'miljoonaa kappaletta ja käännetty 57 kielelle.',
           lyhyt: 'Achebe puhumassa Buffalossa 2008; ilman Beattien käyntiä kirjaa ei ehkä olisi syntynyt.',
           selite: 'Achebe puhumassa Buffalossa 2008. Ilman Beattien käyntiä '
-            + 'kirjaa ei ehkä olisi: "olisin lannistunut niin, että olisin '
-            + 'luultavasti luopunut kokonaan", hän sanoi myöhemmin.',
+            + 'kirjaa ei ehkä olisi: ”olisin lannistunut niin, että olisin '
+            + 'luultavasti luopunut kokonaan”, hän sanoi myöhemmin.',
           lahde: 'Stuart C. Shapiro, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Chinua Achebe',
         },
@@ -45500,9 +45500,9 @@ export const MAA_KATEGORIAT = {
           teksti: 'Wole Soyinka on kirjoittanut kolme romaania, '
               + 'kaksikymmentäviisi näytelmää, seitsemän runokokoelmaa ja '
               + 'viisi muistelmateosta. Vuonna 1986 hänelle myönnettiin '
-              + 'Nobelin kirjallisuuspalkinto perusteluilla "laajasta '
+              + 'Nobelin kirjallisuuspalkinto perusteluilla ”laajasta '
               + 'kulttuurinäkymästä ja runollisista sävyistä, joilla hän '
-              + 'muovaa olemassaolon draamaa" — ensimmäisenä afrikkalaisena '
+              + 'muovaa olemassaolon draamaa” — ensimmäisenä afrikkalaisena '
               + 'kirjailijana. Kiitospuheensa This Past Must Address Its '
               + 'Present hän omisti tuolloin vielä vankilassa istuneelle '
               + 'Nelson Mandelalle ja käytti sen Etelä-Afrikan '
@@ -45576,8 +45576,8 @@ export const MAA_KATEGORIAT = {
               + 'ikkunankehykset. Winwood Reade näki saman palatsin 1874 ja '
               + 'luetteli sen huoneista kirjoja monilla kielillä, '
               + 'böömiläistä lasia, kelloja, hopeaa, persialaisia mattoja, '
-              + 'miekan tekstillä "Kuningatar Viktorialta asantien '
-              + 'kuninkaalle" ja Timesin numeron 17. lokakuuta 1843. '
+              + 'miekan tekstillä ”Kuningatar Viktorialta asantien '
+              + 'kuninkaalle” ja Timesin numeron 17. lokakuuta 1843. '
               + 'Britit polttivat palatsin samana vuonna. Nykyinen Manhyian '
               + 'palatsi rakennettiin 1925 kuningas Prempeh I:n paluuta '
               + 'varten.',
@@ -45613,7 +45613,7 @@ export const MAA_KATEGORIAT = {
               + 'itsenäistynyt siirtomaa Saharan eteläpuolisessa Afrikassa. '
               + 'Accraan saapui yli sata toimittajaa ja valokuvaajaa, ja kun '
               + 'viides päivä vaihtui kuudenneksi, Kwame Nkrumah julisti '
-              + 'kymmenilletuhansille: "Ghana on vapaa ikuisesti." Uuden '
+              + 'kymmenilletuhansille: ”Ghana on vapaa ikuisesti.” Uuden '
               + 'maan lipun suunnitteli opettaja Theodosia Okoh: punainen, '
               + 'keltainen ja vihreä sekä keskellä musta tähti, joka '
               + 'tarkoittaa afrikkalaista vapautta. Nkrumah avasi Accraan '
@@ -45729,8 +45729,8 @@ export const MAA_KATEGORIAT = {
               + 'purettiin tuotua silkkiä ja kudottiin langat uudelleen '
               + 'omiksi kuvioiksi. Kuvioita on satoja, ja jokaisella on '
               + 'nimi, joka voi tulla sananlaskusta, tapahtumasta tai '
-              + 'kuningattarenäidistä. Vaikein niistä on adweneasa, "olen '
-              + 'käyttänyt taitoni loppuun".',
+              + 'kuningattarenäidistä. Vaikein niistä on adweneasa, ”olen '
+              + 'käyttänyt taitoni loppuun”.',
           selite: 'Kaistaleita säilytetään ja myydään kimppuina; ostaja '
             + 'valitsee usein kuvion nimen eikä värin mukaan.',
           lahde: 'Warmglow, Wikimedia Commons (CC0)',
@@ -46107,7 +46107,7 @@ export const MAA_KATEGORIAT = {
           teksti: 'Mafé on maapähkinätahnasta keitetty muhennos, jossa on '
               + 'lihaa tai kalaa, tomaattia ja juureksia. Se on Senegalin '
               + 'ja Gambian arkiruokaa, ja mandingoksi sen nimi on '
-              + 'tigadɛgɛna, "maapähkinätahnakastike". Ruokahistorioitsijat '
+              + 'tigadɛgɛna, ”maapähkinätahnakastike”. Ruokahistorioitsijat '
               + 'ovat eri mieltä sen iästä: mafén nykymuoto syntyi vasta '
               + 'siirtomaakaudella, kun ranskalainen öljyteollisuus '
               + 'laajensi maapähkinäviljelmiä Keski-Senegalissa ja hirssin '
@@ -46332,7 +46332,7 @@ export const MAA_KATEGORIAT = {
               + 'saadaan hapanta jauhetta.',
           lyhyt: 'Baobabi Thièsin laitamilla; kuivana kautena lehdetön puu paljastaa juurensa taivaalla.',
           selite: 'Baobabi Thièsin laitamilla. Kuivana kautena puu on '
-            + 'lehdetön, ja silloin sen "juuret taivaalla" näkyvät '
+            + 'lehdetön, ja silloin sen ”juuret taivaalla” näkyvät '
             + 'parhaiten.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
           wiki: 'Apinanleipäpuu',
@@ -46547,7 +46547,7 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Volcan de Fuego in Guatemala - Eruption at night.jpg',
           teksti: 'Guatemalassa on 37 tulivuorta, ja niistä neljä on '
               + 'toiminnassa: Pacaya, Santiaguito, Tacaná ja Fuego. Fuego on '
-              + 'kaqchikeliksi Chi Qʼaqʼ, "siellä missä tuli on". Se seisoo '
+              + 'kaqchikeliksi Chi Qʼaqʼ, ”siellä missä tuli on”. Se seisoo '
               + 'noin 16 kilometriä Antigua Guatemalasta länteen kolmen '
               + 'departementin rajalla ja purkautuu tiuhaan; viimeisin '
               + 'purkausjakso alkoi 4. elokuuta 2026. Tulivuoret ovat '
@@ -46571,7 +46571,7 @@ export const MAA_KATEGORIAT = {
               + 'tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on '
               + 'karstia ja sedimenttikiveä mesotsooiselta '
               + 'liitukaudelta. Nimi tulee mamin sanoista cuchuj ja '
-              + 'matán, "se joka koottiin ylivoimalla".',
+              + 'matán, ”se joka koottiin ylivoimalla”.',
           lyhyt: 'Cuchumatanesin ylänkö laskeutuu Huehuetenangoon, Väli-Amerikan korkein tulivuoreton vuoristo.',
           selite: 'Cuchumatanesin ylänkö laskeutuu Huehuetenangon laaksoon, '
               + 'ja se on Väli-Amerikan korkein vuoristo, jossa ei ole '
@@ -46855,7 +46855,7 @@ export const MAA_KATEGORIAT = {
           aika: '25. tammikuuta',
           osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-3-r20260907-v8-root.jpg',
           teksti: 'Rabinal Achí on kʼicheʼnkielinen tanssinäytelmä, jonka '
-              + 'oma nimi on Xajoj Tun, "rummun tanssi". Se esitetään joka '
+              + 'oma nimi on Xajoj Tun, ”rummun tanssi”. Se esitetään joka '
               + 'vuosi 25. tammikuuta Rabinalissa Baja Verapazissa Pyhän '
               + 'Paavalin päivänä, ja koko kylä osallistuu. Soittimina ovat '
               + 'rakorumpu ja kaksi torvea, ja hahmot erottaa toisistaan '
@@ -47226,8 +47226,8 @@ export const MAA_KATEGORIAT = {
               + 'maan spitaalisiirtolaan, koska hän omisti kolme teostaan '
               + 'presidentti José Santos Zelayalle. Viidessä vuodessa hän '
               + 'sokeutui täysin, esiintyi enää harvoin ja kuoli 22. '
-              + 'syyskuuta 1907. Hänet tunnetaan nimellä "jumalallinen '
-              + 'spitaalinen", ja Leónin teatteri on nimetty hänen '
+              + 'syyskuuta 1907. Hänet tunnetaan nimellä ”jumalallinen '
+              + 'spitaalinen”, ja Leónin teatteri on nimetty hänen '
               + 'mukaansa.',
           lyhyt: 'José de la Cruz Menan valssit ovat Nicaraguan tunnetuinta taidemusiikkia; suuri osa on kadonnut.',
           selite: 'José de la Cruz Menan valssit ovat Nicaraguan '
@@ -47675,7 +47675,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kolme rumpua ja laulaja ympyrän keskellä',
           aika: '1600-luku',
           osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-musiikki-0.jpg',
-          teksti: 'Tamborito, "pieni rumpu", on Panaman kansallistanssi, ja '
+          teksti: 'Tamborito, ”pieni rumpu”, on Panaman kansallistanssi, ja '
               + 'sen sävelmien juuret ulottuvat 1600-luvulle. Se on '
               + 'espanjalaisen, alkuperäiskansojen ja afrikkalaisen '
               + 'perinteen sekoitus: rytmi on afrikkalainen ja sanat '
@@ -51454,7 +51454,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Huuto, josta tuli tanssilaji',
           aika: '1950-luku',
           teksti: 'Makossa syntyi Doualassa dualojen kossa-tanssista. Nelle Eyoum '
-              + 'huusi yhtyeensä keikoilla "kossa kossa" lapsille, jotka alkoivat '
+              + 'huusi yhtyeensä keikoilla ”kossa kossa” lapsille, jotka alkoivat '
               + 'siitä tanssia, ja huudosta jäi kappaleisiin kertosäe ja lajille nimi. '
               + 'Sana m\'a kossa tarkoittaa dualaksi kiemuroita, ja kossa on jotain '
               + 'kehotushuudon ja kirosanan väliltä — kiihoke, johon on pakko reagoida. '
@@ -51891,8 +51891,8 @@ export const MAA_KATEGORIAT = {
           teksti: 'Tungi on saarelaisten nimi viikunakaktukselle, jonka norsunluukauppiaat '
               + 'toivat Itä-Afrikasta 1850-luvulla. Kasvi villiintyi kuiville '
               + 'rannikkorinteille ja on sittemmin päätynyt osaksi saaren omaa ruokapöytää. '
-              + 'Lajikkeita on kolme: keltainen "English", iso punainen "Madeira" ja pieni '
-              + 'kova "spiny red". Vain kaksi ensimmäistä kelpaavat tislaukseen, sillä '
+              + 'Lajikkeita on kolme: keltainen ”English”, iso punainen ”Madeira” ja pieni '
+              + 'kova ”spiny red”. Vain kaksi ensimmäistä kelpaavat tislaukseen, sillä '
               + 'pienen hedelmän mehupitoisuus on liian matala, vaikka sen satokausi kestää '
               + 'lähes kahdeksan kuukautta. Tungi-viina tislataan Alarm Forestissa '
               + 'tislaamossa, jota kutsutaan maailman syrjäisimmäksi; samasta tislaamosta '
@@ -51903,8 +51903,8 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Sugar Loaf viewed from Jamestown harbour.jpg',
           teksti: 'Saaren kalastus on pientä ja saalis enimmäkseen tonnikalaa, mutta '
               + 'pyyntitapa on tarkkaan valittu: kalat nostetaan yksi kerrallaan vavalla ja '
-              + 'siimalla. Tunnuslause kuuluu englanniksi "one pole, one line, one fish at a '
-              + 'time", ja se on samalla myyntivaltti — osa saaren tonnikalasta on päätynyt '
+              + 'siimalla. Tunnuslause kuuluu englanniksi ”one pole, one line, one fish at a '
+              + 'time”, ja se on samalla myyntivaltti — osa saaren tonnikalasta on päätynyt '
               + 'Kapkaupungin ravintoloiden listoille. Toinen vientituote tulee '
               + 'mehiläisiltä: koska saarella ei ole niiden loisia eikä tauteja, tarhaajat '
               + 'keräävät maailman puhtaimpiin kuuluvaa hunajaa. Molempia yritetään '
@@ -52791,7 +52791,7 @@ export const MAA_KATEGORIAT = {
               + 'sukuun. Hän jätti suvun liiketoimet ja ryhtyi kirjoittamaan nepal '
               + 'bhasaksi, kieltä jota Rana-hallinto ei sallinut painaa. Kokoelma '
               + 'julkaistiin 1933 rajan takana Kalimpongissa, mutta tulli takavarikoi '
-              + 'koko painoksen. Yhden runon allekirjoitus "äiditön lapsi" tulkittiin '
+              + 'koko painoksen. Yhden runon allekirjoitus ”äiditön lapsi” tulkittiin '
               + 'hallinnon arvosteluksi, ja 1940 hänet tuomittiin kuudeksi vuodeksi '
               + 'vankeuteen. Vankilassa hän kirjoitti pääteoksensa Sugata Saurabhan, '
               + 'Buddhan elämän yhdeksäntoista laulussa; sisar Moti Laxmi Upasika '
@@ -53113,7 +53113,7 @@ export const MAA_KATEGORIAT = {
               + 'sairaalle, ja sen kanssa syödään kitozaa, savustettuja sebun '
               + 'lihasuikaleita. Vary amin\'anana on puuroa lihan ja silputun '
               + 'lehtivihanneksen kanssa; famadihanassa eli luiden kääntämisen juhlassa tarjotaan vary be menaka, '
-              + '"riisi, jossa on paljon rasvaa". Paahdettuna ja jauhettuna riisi on '
+              + '”riisi, jossa on paljon rasvaa”. Paahdettuna ja jauhettuna riisi on '
               + 'lango, joka kestää matkan. Yleisin juoma syntyy kattilan pohjasta: '
               + 'ranon\'ampango on kuumaa vettä paahtuneen riisikuoren päällä. Kuivassa '
               + 'etelässä riisin korvaa maniokki, maissi tai hapatettu sebunmaito.',
@@ -53220,7 +53220,7 @@ export const MAA_KATEGORIAT = {
               + '1950-luvulla, kun rituaaleissa soitettu antsa sai sähkökitarat. Tempo on '
               + 'noin 290 iskua minuutissa, ja soitinnuksessa ovat helisevä kitara, oikea '
               + 'tai syntetisoitu haitari, sähköbasso, rumpusetti, djembe ja helistimet. '
-              + 'Keskellä kappaletta on aina folaka, "katkennut", lähes soitinvoittoinen '
+              + 'Keskellä kappaletta on aina folaka, ”katkennut”, lähes soitinvoittoinen '
               + 'jakso, jonka aikana laulajat ja yleisö taputtavat päällekkäisiä rytmejä. '
               + 'Eusèbe Jaojoby syntyi 1955 sakalavaperheeseen Sambavan lähellä ja lauloi '
               + 'Diego-Suarezissa 1970-luvun alusta yhtyeissä, jotka sekoittivat souliä ja '
@@ -53293,8 +53293,8 @@ export const MAA_KATEGORIAT = {
           teksti: 'Ohabolana ovat sananlaskuja, ja suurimmassa julkaistussa kokoelmassa '
               + 'niitä on yli 6 500. Sanamuoto säilyy muuttumattomana, vaikka puhekielen '
               + 'kielioppi ympärillä muuttuisi, koska sananlaskun korjaaminen olisi '
-              + 'piittaamattomuutta esivanhempia kohtaan. "Moite on kuin tuuli: se tuntuu '
-              + 'mutta ei näy." "Älä ole niin rakastunut, ettet huomaa sateen tulevan." '
+              + 'piittaamattomuutta esivanhempia kohtaan. ”Moite on kuin tuuli: se tuntuu '
+              + 'mutta ei näy.” ”Älä ole niin rakastunut, ettet huomaa sateen tulevan.” '
               + 'Kabary on seremoniallinen puhemuoto, jossa sananlasku on vahvin kortti, '
               + 'ja vanha kokoelma sanoo hallitsemisoikeuden joskus ratkenneen '
               + 'kaunopuheisuudella. Vastapuolen virhe osoitetaan hienovaraisesti: suora '
@@ -55952,15 +55952,15 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Ali Farka Toure.jpg',
           teksti: 'Ali Farka Tourélle annettiin lisänimi Farka, aasi: hän oli '
               + 'äitinsä kymmenes poika ja ainoa, joka eli vauvaikää pidemmälle, ja '
-              + 'nimen piti tuoda sitkeyttä. "Minä olen se aasi, jonka selkään '
-              + 'kukaan ei nouse", hän '
+              + 'nimen piti tuoda sitkeyttä. ”Minä olen se aasi, jonka selkään '
+              + 'kukaan ei nouse”, hän '
               + 'sanoi. Muusikoksi ei ollut lupaa — soittaminen kuului jeleille — '
               + 'joten poika rakensi peltipurkista yksikielisen soittimen ja soitti '
               + 'salaa. Ensimmäisen kitaransa hän osti Bulgarian-matkalla, ja '
               + 'siellä hän kuuli ensi kerran John Lee Hookerin: mistä he ovat '
               + 'tämän kulttuurin saaneet, tämähän kuuluu meille. Länsimaissa häntä '
-              + 'kutsuttiin Afrikan bluesmieheksi, mitä hän ei hyväksynyt: "Blues '
-              + 'on pesujauhemerkki, minun musiikkini on bluesia vanhempaa."',
+              + 'kutsuttiin Afrikan bluesmieheksi, mitä hän ei hyväksynyt: ”Blues '
+              + 'on pesujauhemerkki, minun musiikkini on bluesia vanhempaa.”',
           lyhyt: 'Ali Farka Touré esiintymässä 2005; pormestarina 2004 hän kunnosti kotikylänsä tiet omin varoin.',
           selite: 'Ali Farka Touré esiintymässä 2005. Kotikylässään Niafunkéssa, '
             + 'jonka pormestariksi hänet valittiin 2004, hän kunnosti tiet ja '
@@ -57070,9 +57070,9 @@ export const MAA_KATEGORIAT = {
               + 'villa, hevoset ja strutsinsulat, ja tulot henkeä kohti olivat '
               + 'maailman alhaisimpia. Liittovaltiorakenne purettiin 1963, ja saman '
               + 'vuoden huhtikuussa naiset saivat äänioikeuden.',
-          lyhyt: 'Kuningaskunnan passin kannessa lukee \'yhdistynyt\', nimi kolmesta yhteen liitetystä maakunnasta.',
+          lyhyt: 'Kuningaskunnan passin kannessa lukee ’yhdistynyt’, nimi kolmesta yhteen liitetystä maakunnasta.',
           selite: 'Kuningaskunnan passin kannessa lukee sekä arabiaksi että '
-            + 'englanniksi "yhdistynyt": nimi muistuttaa kolmesta maakunnasta, jotka '
+            + 'englanniksi ”yhdistynyt”: nimi muistuttaa kolmesta maakunnasta, jotka '
             + 'liitto sitoi yhteen.',
           lahde: 'Huddyhuddy, Wikimedia Commons (CC0)',
         },
@@ -57522,11 +57522,11 @@ export const MAA_KATEGORIAT = {
               + 'lasta ja neljäkymmentä siirtolaista. Norjalaisia ei löytynyt — vain '
               + 'kalaallit, joiden kieltä Egede alkoi opetella. Isä meidän -rukouksen '
               + 'jokapäiväinen leipä tuotti vaikeuksia, koska leipää ei syöty: hän kokeili '
-              + 'sanaa mamaq luullen sen tarkoittavan ruokaa, vaikka se tarkoittaa "kuinka '
-              + 'herkullista".',
+              + 'sanaa mamaq luullen sen tarkoittavan ruokaa, vaikka se tarkoittaa ”kuinka '
+              + 'herkullista”.',
           lyhyt: 'Egeden 1745 kirjan kartan itä-länsijako johti hänet etsimään Itäistä asutusta väärältä rannikolta.',
           selite: 'Kartta Egeden kirjasta A Description of Greenland (1745). Otsikossa '
-            + 'lukee "Old Greenland as to its Eastern and Western Parts" — juuri se jako '
+            + 'lukee ”Old Greenland as to its Eastern and Western Parts” — juuri se jako '
             + 'johti hänet harhaan, sillä hän etsi Itäistä asutusta itärannikolta.',
           lahde: 'Hans Egede, Wikimedia Commons (PD)',
         },
@@ -57797,8 +57797,8 @@ export const MAA_KATEGORIAT = {
               + 'puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana '
               + 'vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama '
               + 'kuvio. Seura oli vanhempi, ja se antoi luvan.',
-          lyhyt: 'Erfalasorput eli \'meidän lippumme\': valkoinen jäätikkö, punainen meri, laskeva aurinko kiekkona.',
-          selite: 'Erfalasorput eli "meidän lippumme". Valkoinen raita on jäätikkö, punainen '
+          lyhyt: 'Erfalasorput eli ’meidän lippumme’: valkoinen jäätikkö, punainen meri, laskeva aurinko kiekkona.',
+          selite: 'Erfalasorput eli ”meidän lippumme”. Valkoinen raita on jäätikkö, punainen '
             + 'meri, ja kiekko on aurinko, jonka alaosa on painunut mereen; oikealla näkyy '
             + 'Dannebrog, jota liputetaan usein rinnalla.',
           lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
@@ -57838,7 +57838,7 @@ export const MAA_KATEGORIAT = {
               + 'tuontitavaransa. Soittimista syntyi kalattuut, grönlantilainen polkka, jolla '
               + 'on omat virtuoosinsa, kuten haitarinsoittaja Louis Andreasen; uudempi tyyli '
               + 'vaigat muistuttaa countrya. Kansallislaulu Nunarput utoqqarsuanngoravit, '
-              + '"Maamme, joka olet käynyt niin vanhaksi", on ollut virallinen vuodesta 1916; '
+              + '”Maamme, joka olet käynyt niin vanhaksi”, on ollut virallinen vuodesta 1916; '
               + 'sen sävelsi Jonathan Petersen ja sanoitti Henrik Lund, molemmat '
               + 'grönlantilaisia.',
           selite: 'Havainnekuva kalattuut-tanssista grönlantilaisessa '
@@ -59240,8 +59240,8 @@ export const MAA_KATEGORIAT = {
               + 'enää tiedä ja jonka avaamista pidettiin vuosisatoja onnettomuutena.',
           lyhyt: 'Munea kuvataan myöhemmin liitonarkun kaltaiseksi säiliöksi, jonka sisältö avattaessa katosi.',
           selite: 'Munea on myöhemmissä lähteissä kuvattu liitonarkun kaltaiseksi '
-            + 'peitetyksi säiliöksi. Kun se avattiin, sen sisältö "vapautui ja lensi '
-            + 'pois" — enempää ei tiedetä.',
+            + 'peitetyksi säiliöksi. Kun se avattiin, sen sisältö ”vapautui ja lensi '
+            + 'pois” — enempää ei tiedetä.',
         },
         {
           otsikko: 'Sulttaanit, jotka veivät pääkaupungin mennessään',
@@ -59469,7 +59469,7 @@ export const MAA_KATEGORIAT = {
               + 'musiikkinsa jakautuu kahtia: naiset laulavat, miehet soittavat '
               + 'kielisoittimia. Jako ei ole makuasia vaan käytöstapa. Miehen ei ole '
               + 'sopivaa laulaa aikuisen naisen edessä, joten soitin ottaa laulajan '
-              + 'tehtävän: keleli ja muut kielisoittimet "puhuvat" esittäjän puolesta, ja '
+              + 'tehtävän: keleli ja muut kielisoittimet ”puhuvat” esittäjän puolesta, ja '
               + 'kuulijat tietävät mitä ne sanovat. Tibestin alueella soitetaan myös '
               + 'luuttuja ja jousisoittimia, ja fulanit yksilehdykkäisiä huiluja.',
           lyhyt: 'Tedojen kansanmusiikki jakautuu miesten kielisoittimiin ja naisten lauluun, kummallakin oma tehtävä.',
@@ -59533,7 +59533,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Näytelmä, joka ilmestyi vasta tekijän kuoltua',
           aika: '1952–1983',
-          teksti: 'Mahamat "Baba" Moustapha kirjoitti näytelmänsä ranskaksi ja ehti elää '
+          teksti: 'Mahamat ”Baba” Moustapha kirjoitti näytelmänsä ranskaksi ja ehti elää '
               + 'kolmekymmentä vuotta: 1952–1982. Hänen käsialaansa ovat Le Maître des '
               + 'Djinns, Le Souffle de l\'Harmattan ja Makarie aux Épines. Parhaana '
               + 'pidetään Commandant Chakaa, sotilasdiktatuurien tuomiota, joka ilmestyi '
@@ -60417,7 +60417,7 @@ export const MAA_KATEGORIAT = {
             + 'vuodesta 1836 alkaen tuhannet heistä pakkasivat koko '
             + 'omaisuutensa härkävankkureihin ja lähtivät pohjoiseen '
             + 'sisämaahan. Vaeltajat kutsuivat itseään nimellä '
-            + 'voortrekker, "edelläkulkija". Matkasta syntyi kolme '
+            + 'voortrekker, ”edelläkulkija”. Matkasta syntyi kolme '
             + 'itsenäistä buuritasavaltaa — Transvaal, Oranjen '
             + 'vapaavaltio ja Natalia — ja samalla pitkä kiista maasta '
             + 'niiden kanssa, jotka siellä jo asuivat: pohjoiset '
@@ -60551,7 +60551,7 @@ export const MAA_KATEGORIAT = {
             + 'maasta, syntyi apukieli: fanagalo. Sanasto on '
             + 'enimmäkseen zulua, mukana on englantia ja hiukan '
             + 'afrikaansia, ja nimi tulee nguni-ilmauksesta '
-            + 'fana-ga-lo, "tee näin". Nimi kertoo, mihin kieltä '
+            + 'fana-ga-lo, ”tee näin”. Nimi kertoo, mihin kieltä '
             + 'käytettiin: työnjohtaja neuvoi sillä työmiehiä. '
             + 'Fanagaloa ei opittu äidinkielenä, mutta 1970-luvulla '
             + 'puhujia arvioitiin olevan satojatuhansia. Kun '
@@ -60565,8 +60565,8 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Enoch Sontonga Braamfontein.jpg',
           teksti: 'Metodistilähetyskoulun opettaja Enoch Sontonga '
             + 'sävelsi 1897 Johannesburgin lähellä virren, jonka nimi '
-            + 'on xhosaksi Nkosi Sikelel\' iAfrika eli "Jumala '
-            + 'siunatkoon Afrikkaa". Siitä tuli koko mantereen '
+            + 'on xhosaksi Nkosi Sikelel\' iAfrika eli ”Jumala '
+            + 'siunatkoon Afrikkaa”. Siitä tuli koko mantereen '
             + 'vapauslaulu, ja sen sävelmä on yhä Tansanian ja Sambian '
             + 'kansallislaulu. Nykyinen kansallislaulu otettiin '
             + 'käyttöön 1997, ja se on hybridi: alkupuoli on Sontongan '
@@ -60595,7 +60595,7 @@ export const MAA_KATEGORIAT = {
             + 'Johannesburgiin töihin ja lauloi Evening Birds '
             + '-kuorossa. Vuonna 1939 hän oli levy-yhtiö Gallon '
             + 'tehtaalla pakkaajana, pääsi studioon ja improvisoi '
-            + 'äänityksessä laulun Mbube, "leijona". Levyä myytiin '
+            + 'äänityksessä laulun Mbube, ”leijona”. Levyä myytiin '
             + 'yhdeksässä vuodessa yli satatuhatta kappaletta, mutta '
             + 'Linda oli myynyt oikeutensa Gallolle kymmenellä '
             + 'shillingillä heti istunnon jälkeen. Pete Seeger kuuli '
@@ -60629,7 +60629,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kilpalaulanta, jossa voittaa hiljaisin',
           tiedosto: 'Ladysmith Black Mambazo 2018.jpg',
           teksti: 'Isicathamiya on zulunkielinen mieskuorolaulu, ja '
-            + 'nimi tulee verbistä -cathama, "astua varovasti". Se '
+            + 'nimi tulee verbistä -cathama, ”astua varovasti”. Se '
             + 'syntyi siirtotyöläisten asuntoloissa. Vanhempi tyyli '
             + 'mbube laulettiin täydellä äänellä, mutta '
             + 'isicathamiyassa tavoitteena on äänten sulautuminen ja '
@@ -60650,7 +60650,7 @@ export const MAA_KATEGORIAT = {
           aika: '2020-luku',
           teksti: 'Amapiano nousi Johannesburgin lähiöistä 2020-luvun '
             + 'alussa maailmanlaajuiseksi tanssimusiikiksi. Nimi on '
-            + 'zulua ja tarkoittaa yksinkertaisesti "pianoja". '
+            + 'zulua ja tarkoittaa yksinkertaisesti ”pianoja”. '
             + 'Tyylissä yhdistyvät kwaito, deep house, gqom, jazz ja '
             + 'soul, ja sen tunnistaa leveästä log drum -bassosta, '
             + 'joka on sähköinen versio länsiafrikkalaisesta '
@@ -60680,7 +60680,7 @@ export const MAA_KATEGORIAT = {
             + 'vieraat tuovat oman lihansa, ja lisukkeena on pap eli '
             + 'hienoksi jauhetusta maissista keitetty puuro sekä '
             + 'tulinen chakalaka. Lähiöissä sama asia on shisa nyama, '
-            + 'zulua "polta lihaa": lihakauppias antaa grillin ja tulen '
+            + 'zulua ”polta lihaa”: lihakauppias antaa grillin ja tulen '
             + 'ilmaiseksi niille, jotka ostavat lihan häneltä. Vuonna '
             + '2005 alkanut braai-päivä on 24. syyskuuta, samana '
             + 'päivänä kuin perintöpäivä, ja Desmond Tutu suostui 2007 '
@@ -60716,8 +60716,8 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Sliced Biltong.jpg',
           teksti: 'Biltong on ilmakuivattua ja mausteilla kuorrutettua '
             + 'lihaa: nautaa, mutta myös strutsia tai kuduantilooppia. '
-            + 'Nimi tulee afrikaansin sanoista bil, "takapuoli", ja '
-            + 'tong, "suikale". Se muistuttaa amerikkalaista jerkyä, '
+            + 'Nimi tulee afrikaansin sanoista bil, ”takapuoli”, ja '
+            + 'tong, ”suikale”. Se muistuttaa amerikkalaista jerkyä, '
             + 'mutta jerky kuumennetaan vähintään 71 asteeseen, kun '
             + 'biltong vain kuivuu ilmassa — siitä tulee eri rakenne ja '
             + 'maku. Hollantilaiset toivat mausteikseen pippurin, '
@@ -60735,7 +60735,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Muurahaispesästä löytyi kokonaisen elinkeinon siemen',
           aika: '1930-luku',
           tiedosto: 'Rooibos (Aspalathus linearis)PICT2813.JPG',
-          teksti: 'Rooibos eli afrikaansiksi "punainen pensas" kasvaa '
+          teksti: 'Rooibos eli afrikaansiksi ”punainen pensas” kasvaa '
             + 'vain Cederbergin vuorilla noin 250 kilometriä '
             + 'Kapkaupungista pohjoiseen. Neulasmaiset lehdet '
             + 'hapetetaan auringossa, jolloin vihreä pensas muuttuu '
@@ -60775,8 +60775,8 @@ export const MAA_KATEGORIAT = {
             + 'Maalauksia on vaikea ajoittaa käytettyjen aineiden '
             + 'takia, mutta sanit ovat asuneet vuoristossa vähintään '
             + 'neljäkymmentätuhatta vuotta. Vuoriston zulunkielinen '
-            + 'nimi uKhahlamba on käännetty "ylöspäin osoittavien '
-            + 'keihäiden valliksi". Unesco otti uKhahlamba '
+            + 'nimi uKhahlamba on käännetty ”ylöspäin osoittavien '
+            + 'keihäiden valliksi”. Unesco otti uKhahlamba '
             + 'Drakensbergin puiston luetteloonsa 2000.',
           selite: 'Eland Cave Cathedral Peakin alueella on yksi Lohikäärmevuorten '
             + 'sadoista sanien maalauskohteista.',
@@ -60795,7 +60795,7 @@ export const MAA_KATEGORIAT = {
             + 'kalliomaalauslohkareesta, joka on Iziko-museossa '
             + 'Kapkaupungissa. Tunnuslause ǃke e꞉ ǀxarra ǁke on '
             + 'ǀxam-kieltä, sammunutta khoisankieltä, ja tarkoittaa '
-            + 'kirjaimellisesti "erilaiset ihmiset yhdistyvät". '
+            + 'kirjaimellisesti ”erilaiset ihmiset yhdistyvät”. '
             + 'Edellinen, vuodesta 1910 käytössä ollut vaakuna oli '
             + 'latinankielinen.',
           lyhyt: 'Linton-lohkare on Iziko South African Museumin kokoelmissa; siitä on poimittu vaakunan ihmishahmot.',
@@ -60909,7 +60909,7 @@ export const MAA_KATEGORIAT = {
               + 'laaksossa. Haltijan piti asua tilallaan eikä myydä tai vuokrata sitä '
               + 'eteenpäin — sääntöä rikottiin jatkuvasti. Vuonna 1677 asutusta '
               + 'yritettiin houkutella omalla säännöllä: vapautunut prazo annettiin '
-              + '"ansioituneille orpotytöille tai kruunun virkamiesten tyttärille", ja '
+              + '”ansioituneille orpotytöille tai kruunun virkamiesten tyttärille”, ja '
               + 'se siirtyi vanhimmalle tyttärelle kolmen sukupolven ajan sillä '
               + 'ehdolla, että tämä nai portugalilaisen. Haltija sai käydä kauppaa '
               + 'kaikella, pitää järjestystä ja koota oman armeijan. Teten maakunnassa '
@@ -60928,7 +60928,7 @@ export const MAA_KATEGORIAT = {
               + '1608. Kuninkaan arvonimi oli makombe, ja 1700-luvun lopulta lähtien '
               + 'kruunajaisten viimeinen vaihe oli outo: uusi kuningas paastosi kolme '
               + 'päivää, minkä jälkeen portugalilainen '
-              + 'edustaja toi pullollisen pyhää vettä — mazia manga, "vesi joka sitoo" '
+              + 'edustaja toi pullollisen pyhää vettä — mazia manga, ”vesi joka sitoo” '
               + '— ja kaatoi sen hänen päähänsä. Sitten kuningas valitsi jousen ja '
               + 'nuolen tai kuokan; kuokka merkitsi rauhaa. Kun portugalilaiset '
               + '1800-luvulla yrittivät käyttää veden toimittamista painostuskeinona, '
@@ -61183,7 +61183,7 @@ export const MAA_KATEGORIAT = {
               + 'aloitti soittamalla peltipurkista tehtyä kitaraa kaupungin '
               + 'esikaupungeissa. Paremman elannon perässä hän muutti Etelä-Afrikkaan, '
               + 'ja Johannesburgissa hänet päästettiin His Master\'s Voicen studioon. '
-              + 'Levystä "Loko ni kumbuka Jorgina", "kun muistan Georginan", tuli '
+              + 'Levystä ”Loko ni kumbuka Jorgina”, ”kun muistan Georginan”, tuli '
               + 'kansainvälinen menestys, ja se on yhä mosambikilaisen populaarimusiikin '
               + 'tunnetuimpia kappaleita. Pfumon tavaramerkki oli sekoittaa oman maansa '
               + 'tanssirytmit jazziin ja eteläafrikkalaiseen kwelaan. Maineen jälkeen '
@@ -61200,7 +61200,7 @@ export const MAA_KATEGORIAT = {
               + 'jälkeisen Kuuban ensimmäinen uusi tyylilaji, ja siitä polveutuvat songo '
               + 'ja timba. New Yorkissa Eddie Palmieri teki 1960-luvulla oman '
               + 'versionsa, jonka kellokuviota rumpali Steve Gadd soittaa Paul Simonin '
-              + 'kappaleessa "Late in the Evening".',
+              + 'kappaleessa ”Late in the Evening”.',
         },
       ],
     },
@@ -61258,7 +61258,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Valtaistuin, jonka termiitit allekirjoittivat',
           teksti: 'Cristóvão Estevão Canhavato, taiteilijanimeltään Kester, kokosi '
               + '2002 valtaistuimen käytöstä poistetuista aseista, jotka hän sai '
-              + '"aseista työkaluiksi" -hankkeelta. Osat ovat monesta maasta: '
+              + '”aseista työkaluiksi” -hankkeelta. Osat ovat monesta maasta: '
               + 'selkänojan kiväärit suunniteltiin Saksassa ja tehtiin Portugalissa, '
               + 'istuimen osat Puolassa ja Tšekkoslovakiassa. Kester veisti teokseen '
               + 'hymyileviä kasvoja, vaikka hänen omia sukulaisiaan oli haavoittunut '
@@ -61316,7 +61316,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Linnoitussaari keskellä valtamerta',
           aika: '1930-luku',
           tiedosto: "Naval and military parade in King's Square, St. George's Town, in the British Imperial Fortress colony of Bermuda in the 1930s.jpg",
-          teksti: 'Kun Britannia menetti tukikohtansa Yhdysvaltain itsenäistyttyä, se tarvitsi uuden aseman läntiselle Atlantille. 1790-luvulla Bermudalle alkoi rakentua laivastotukikohta, ja saaresta tuli virallisesti "Imperial Fortress" – linnoitussiirtokunta, jota puolustivat sekä laivasto että maavoimat. Kuninkaallinen laivasto piti Bermudaa Länsi-Atlantin päätukikohtanaan aina 1950-luvulle asti, ja tukikohdasta käsin lähti muun muassa hyökkäys Washingtoniin vuonna 1814. Kuvassa laivaston ja armeijan paraati St. Georgen King\'s Squarella 1930-luvulla, taustalla kaupungintalo, jonka yläkerrassa oli ensimmäisen maailmansodan kaatuneiden muistomerkki.',
+          teksti: 'Kun Britannia menetti tukikohtansa Yhdysvaltain itsenäistyttyä, se tarvitsi uuden aseman läntiselle Atlantille. 1790-luvulla Bermudalle alkoi rakentua laivastotukikohta, ja saaresta tuli virallisesti ”Imperial Fortress” – linnoitussiirtokunta, jota puolustivat sekä laivasto että maavoimat. Kuninkaallinen laivasto piti Bermudaa Länsi-Atlantin päätukikohtanaan aina 1950-luvulle asti, ja tukikohdasta käsin lähti muun muassa hyökkäys Washingtoniin vuonna 1814. Kuvassa laivaston ja armeijan paraati St. Georgen King\'s Squarella 1930-luvulla, taustalla kaupungintalo, jonka yläkerrassa oli ensimmäisen maailmansodan kaatuneiden muistomerkki.',
           lyhyt: "Laivaston ja armeijan paraati St. Georgen King's Squarella 1930-luvulla.",
           selite: "Kuninkaallisen laivaston ja armeijan paraati King's Squarella St. Georgessa 1930-luvulla, taustalla kaupungintalo.",
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
@@ -61339,7 +61339,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kolmio joka ei ole niin salaperäinen',
           aika: '1945–1970-luku',
           tiedosto: 'Bermuda Triangle (clear).svg',
-          teksti: 'Joulukuussa 1945 viisi Yhdysvaltain laivaston pommikonetta katosi harjoituslennolla Bermudan, Floridan ja Puerto Ricon rajaamalta merialueelta, eikä niistä tai etsintään lähteneestä pelastuskoneesta löytynyt koskaan jälkeäkään. Tapaus ruokki 1950–70-lukujen lehtijuttuja ja kirjoja, jotka nivoivat yhteen kymmeniä erillisiä onnettomuuksia "Bermudan kolmioksi". Yhdysvaltain merivoimien mukaan alueella ei kuitenkaan katoa aluksia sen enempää kuin muillakaan vilkkailla ja myrskyisillä merialueilla – tilastot vain koottiin näyttävästi yhteen. Osa kadonneista selittyy hirmumyrskyillä, ihmisen virheillä ja Golfvirran oikuilla, ei yliluonnollisilla voimilla.',
+          teksti: 'Joulukuussa 1945 viisi Yhdysvaltain laivaston pommikonetta katosi harjoituslennolla Bermudan, Floridan ja Puerto Ricon rajaamalta merialueelta, eikä niistä tai etsintään lähteneestä pelastuskoneesta löytynyt koskaan jälkeäkään. Tapaus ruokki 1950–70-lukujen lehtijuttuja ja kirjoja, jotka nivoivat yhteen kymmeniä erillisiä onnettomuuksia ”Bermudan kolmioksi”. Yhdysvaltain merivoimien mukaan alueella ei kuitenkaan katoa aluksia sen enempää kuin muillakaan vilkkailla ja myrskyisillä merialueilla – tilastot vain koottiin näyttävästi yhteen. Osa kadonneista selittyy hirmumyrskyillä, ihmisen virheillä ja Golfvirran oikuilla, ei yliluonnollisilla voimilla.',
           lyhyt: 'Bermudan kolmio sai maineensa 1945 kadonneesta lentueesta, vaikka tilastot eivät tue mysteeriä.',
           selite: 'Kartta Bermudan kolmiosta, merialueesta jonka kärjet ovat Bermuda, Florida ja Puerto Rico.',
           lahde: 'Arz, Wikimedia Commons (PD)',
@@ -61349,7 +61349,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Lintu joka luultiin kuolleen sukupuuttoon',
           aika: '1951',
           tiedosto: 'Cahowchick.jpg',
-          teksti: 'Kun ensimmäiset siirtolaiset saapuivat 1600-luvulla, bermudanviistäjiä eli cahow-lintuja pesi saaristossa arviolta puoli miljoonaa paria. Siirtolaiset ja heidän mukanaan tulleet siat ja rotat söivät munia ja poikasia niin ahnaasti, että laji luultiin kuolleeksi jo 1620-luvulla. Vuonna 1951 tutkijat löysivät saariston ulkoluodoilta yllättäen 18 pesivää paria – yksi tunnetuimmista "Lasarus-lajeista", jotka löytyvät hengissä kuolleeksi julistamisen jälkeen. Sitkeä suojelutyö, muun muassa keinopesät ja rotanpyynti pesimäluodoilla, on kasvattanut kannan yli 150 pariin. Kuvassa suojelija Jeremy Madeiros Nonsuch-saarella cahow-poikasen kanssa 2009.',
+          teksti: 'Kun ensimmäiset siirtolaiset saapuivat 1600-luvulla, bermudanviistäjiä eli cahow-lintuja pesi saaristossa arviolta puoli miljoonaa paria. Siirtolaiset ja heidän mukanaan tulleet siat ja rotat söivät munia ja poikasia niin ahnaasti, että laji luultiin kuolleeksi jo 1620-luvulla. Vuonna 1951 tutkijat löysivät saariston ulkoluodoilta yllättäen 18 pesivää paria – yksi tunnetuimmista ”Lasarus-lajeista”, jotka löytyvät hengissä kuolleeksi julistamisen jälkeen. Sitkeä suojelutyö, muun muassa keinopesät ja rotanpyynti pesimäluodoilla, on kasvattanut kannan yli 150 pariin. Kuvassa suojelija Jeremy Madeiros Nonsuch-saarella cahow-poikasen kanssa 2009.',
           lyhyt: 'Bermudanviistäjä luultiin sukupuuttoon kuolleeksi, kunnes se löytyi uudelleen vuonna 1951.',
           selite: 'Cahow-poikanen ja Bermudan luonnonsuojelija Jeremy Madeiros Nonsuch-saarella huhtikuussa 2009.',
           lahde: 'Depotgrl, Wikimedia Commons (CC BY-SA 3.0)',
@@ -61369,7 +61369,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Puu joka melkein hävisi kokonaan',
           aika: '1946–1953',
           tiedosto: 'Bermuda cedars (Juniperus bermudiana), living and dead, at Ferry Reach, Bermuda, 2011.jpg',
-          teksti: 'Bermudankataja oli saariston maisemaa hallinnut puulaji, jonka punertavasta puusta tehtiin laivoja, huonekaluja ja taloja. Toisen maailmansodan aikana tukikohtien rakentaminen toi saarelle vahingossa kaksi kilpikaskaslajia, jotka levisivät hallitsemattomasti. Vuosina 1946–1953 tuho, jota Bermudalla kutsutaan nimellä "The Blight", tappoi noin 95–99 prosenttia saariston katajista muutamassa vuodessa ja autioitti maiseman. Vain pieni osa puista osoittautui vastustuskykyiseksi, ja niiden jälkikasvu muodostaa nykyisen, noin kymmenesosan entisestä kannasta olevan populaation. Tuho vei mukanaan myös kaksi endeemistä kaskaslajia ja yhden mehiläislajin.',
+          teksti: 'Bermudankataja oli saariston maisemaa hallinnut puulaji, jonka punertavasta puusta tehtiin laivoja, huonekaluja ja taloja. Toisen maailmansodan aikana tukikohtien rakentaminen toi saarelle vahingossa kaksi kilpikaskaslajia, jotka levisivät hallitsemattomasti. Vuosina 1946–1953 tuho, jota Bermudalla kutsutaan nimellä ”The Blight”, tappoi noin 95–99 prosenttia saariston katajista muutamassa vuodessa ja autioitti maiseman. Vain pieni osa puista osoittautui vastustuskykyiseksi, ja niiden jälkikasvu muodostaa nykyisen, noin kymmenesosan entisestä kannasta olevan populaation. Tuho vei mukanaan myös kaksi endeemistä kaskaslajia ja yhden mehiläislajin.',
           lyhyt: 'Toisen maailmansodan jälkeen kilpikaskaset tappoivat lähes kaikki Bermudan endeemiset katajat.',
           selite: 'Kaksi bermudankatajaa Ferry Reachilla Bermudalla vuonna 2011: vasemmanpuoleinen puu elää, oikeanpuoleinen kuoli tuhon uhrina.',
           lahde: 'Seán Pòl Ó Creachmhaoil (Aodhdubh), Wikimedia Commons (CC BY-SA 4.0)',
@@ -61402,7 +61402,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Vanhin toimiva kirkko Brittein saarten ulkopuolella',
           aika: '1612–',
           tiedosto: "St. Peter's Church, Bermuda, Front.jpg",
-          teksti: 'St. Peter\'s Church perustettiin heti St. Georgen siirtokunnan synnyn jälkeen 1612, ja alun perin se oli olkikattoinen puurakennus, jossa myös Bermudan ensimmäinen parlamentti kokoontui 1620. Puinen kirkko tuhoutui pian, ja tilalle rakennettiin useita kertoja uusi, kunnes vuoden 1712 hirmumyrsky raunioitti sen lähes kokonaan. Nykyinen kalkkikivinen runko nousi 1713, osittain vanhoista raunioista, ja sisälle säilytettiin alkuperäinen puinen alttari. Kirkkoa pidetään vanhimpana yhä toiminnassa olevana anglikaanisena kirkkona Brittein saarten ulkopuolella, ja 400-vuotisjuhlan kunniaksi se sai 2012 arvonimen "Their Majesties Chappell".',
+          teksti: 'St. Peter\'s Church perustettiin heti St. Georgen siirtokunnan synnyn jälkeen 1612, ja alun perin se oli olkikattoinen puurakennus, jossa myös Bermudan ensimmäinen parlamentti kokoontui 1620. Puinen kirkko tuhoutui pian, ja tilalle rakennettiin useita kertoja uusi, kunnes vuoden 1712 hirmumyrsky raunioitti sen lähes kokonaan. Nykyinen kalkkikivinen runko nousi 1713, osittain vanhoista raunioista, ja sisälle säilytettiin alkuperäinen puinen alttari. Kirkkoa pidetään vanhimpana yhä toiminnassa olevana anglikaanisena kirkkona Brittein saarten ulkopuolella, ja 400-vuotisjuhlan kunniaksi se sai 2012 arvonimen ”Their Majesties Chappell”.',
           lyhyt: "St. Peter's Church on vanhin yhä toimiva anglikaaninen kirkko Brittein saarten ulkopuolella.",
           selite: "St. Peter's Churchin julkisivu ja kellotorni St. Georgessa Bermudalla.",
           lahde: 'JoeyBagODonuts, Wikimedia Commons (CC BY-SA 3.0)',
@@ -61465,7 +61465,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Rummun tahdissa naamion takaa',
           aika: 'nykyään',
           tiedosto: 'Gombey dancers Bermuda.JPG',
-          teksti: 'Gombey on bermudalainen naamiotanssiperinne, joka syntyi orjuutettujen afrikkalaisten, alkuperäiskansojen ja brittiläisten vaikutteiden sekoituksesta 1700-luvulla. Värikkäästi puetut, sulkapäähineitä ja helmipanssareita kantavat tanssijat esiintyvät ryhmissä eli "troopeissa" rummun ja pillin tahdissa, ja johtajaa kutsutaan usein jousimieheksi. Perinteisesti gombeyt kiertävät kaduilla joulun tienoilla, mutta nykyään heitä nähdään myös festivaaleilla ja risteilylaivojen saapuessa. Tanssin liikkeet ja rummutus periytyvät suullisesti, eikä niitä ole kirjoitettu muistiin. Kuvassa gombey-tanssijoita King\'s Squarella St. Georgessa 2004.',
+          teksti: 'Gombey on bermudalainen naamiotanssiperinne, joka syntyi orjuutettujen afrikkalaisten, alkuperäiskansojen ja brittiläisten vaikutteiden sekoituksesta 1700-luvulla. Värikkäästi puetut, sulkapäähineitä ja helmipanssareita kantavat tanssijat esiintyvät ryhmissä eli ”troopeissa” rummun ja pillin tahdissa, ja johtajaa kutsutaan usein jousimieheksi. Perinteisesti gombeyt kiertävät kaduilla joulun tienoilla, mutta nykyään heitä nähdään myös festivaaleilla ja risteilylaivojen saapuessa. Tanssin liikkeet ja rummutus periytyvät suullisesti, eikä niitä ole kirjoitettu muistiin. Kuvassa gombey-tanssijoita King\'s Squarella St. Georgessa 2004.',
           lyhyt: 'Gombey on afrikkalais-, alkuperäiskansa- ja brittivaikutteinen naamiotanssiperinne Bermudalla.',
           selite: "Gombey-tanssijoita esiintymässä King's Squarella St. Georgessa Bermudalla vuonna 2004.",
           lahde: 'Captain-tucker, Wikimedia Commons (CC BY-SA 3.0)',
@@ -61513,8 +61513,8 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Sipuli joka nimesi koko kansan',
           aika: '1616–',
           tiedosto: "Bolgiano's 1902 catalogue (16349122012) (cropped to Bermuda onion).jpg",
-          teksti: 'Sipulinsiemeniä lähetettiin Bermudalle Englannista jo 1616, ja saaren lämmin ilmasto ja kalkkipitoinen maaperä tuottivat poikkeuksellisen makeaa ja mietoa satoa. 1800-luvulla Madeiralta ja Azoreilta muuttaneet viljelijät toivat mukanaan vielä parempia siemeniä, ja 1870-luvulla Bermudasta lähti New Yorkiin tuhansia tonneja sipulia joka vuosi. Vienti oli niin merkittävää, että koko saarta alettiin kutsua "sipulilaikuksi" ja bermudalaisia itseään "sipuleiksi" – lempinimi elää yhä. Ensimmäinen maailmansota katkaisi laivaliikenteen, ja Yhdysvallat alkoi tullien suojassa kasvattaa omia "Bermuda-sipuleitaan", mikä romahdutti alkuperäisen viennin 1920-luvulla.',
-          lyhyt: 'Sipulinvienti antoi bermudalaisille lempinimen "sipulit", joka on käytössä yhä.',
+          teksti: 'Sipulinsiemeniä lähetettiin Bermudalle Englannista jo 1616, ja saaren lämmin ilmasto ja kalkkipitoinen maaperä tuottivat poikkeuksellisen makeaa ja mietoa satoa. 1800-luvulla Madeiralta ja Azoreilta muuttaneet viljelijät toivat mukanaan vielä parempia siemeniä, ja 1870-luvulla Bermudasta lähti New Yorkiin tuhansia tonneja sipulia joka vuosi. Vienti oli niin merkittävää, että koko saarta alettiin kutsua ”sipulilaikuksi” ja bermudalaisia itseään ”sipuleiksi” – lempinimi elää yhä. Ensimmäinen maailmansota katkaisi laivaliikenteen, ja Yhdysvallat alkoi tullien suojassa kasvattaa omia ”Bermuda-sipuleitaan”, mikä romahdutti alkuperäisen viennin 1920-luvulla.',
+          lyhyt: 'Sipulinvienti antoi bermudalaisille lempinimen ”sipulit”, joka on käytössä yhä.',
           selite: 'Yhdysvaltalaisen siemenkaupan vuoden 1902 luettelokuva valkoisesta ja punaisesta Bermuda-sipulista.',
           lahde: 'Bolgiano & Co. / Biodiversity Heritage Library, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Bermuda onion',
@@ -61523,9 +61523,9 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Myrsky lasissa',
           aika: '1806–',
           tiedosto: "Dark 'N' Stormy.jpg",
-          teksti: 'Gosling-suku toi ensimmäiset rommitynnyrinsä Bermudalle 1806, ja perheyhtiö alkoi myöhemmin sekoittaa eri tynnyrien rommeja omaksi, melassin tummaksi värjäämäksi Black Seal -merkiksi; nimi ja mustavahalla suljettu pullo vakiintuivat 1900-luvun puolivälissä. Sodan jälkeen Bermudalla asemapaikkaa pitäneet brittisotilaat sekoittivat Black Sealia laivaston upseerikerhon inkiväärioluen kanssa, ja syntyi drinkki, jonka väriä verrattiin myrskypilveen: Dark \'n\' Stormy. Gosling Brothers rekisteröi nimen tavaramerkiksi Bermudalla 1980 ja Yhdysvalloissa 1991 ja on sittemmin puolustanut sitä oikeudessa – nimeä saa virallisesti käyttää vain Goslingin rommilla.',
-          lyhyt: "Dark 'n' Stormy syntyi sotilasklubilla Bermudan tummasta rommista ja inkiväärioluesta.",
-          selite: "Dark 'n' Stormy -cocktail limeviipaleen kera tarjoiltuna baarissa San Franciscossa vuonna 2015.",
+          teksti: 'Gosling-suku toi ensimmäiset rommitynnyrinsä Bermudalle 1806, ja perheyhtiö alkoi myöhemmin sekoittaa eri tynnyrien rommeja omaksi, melassin tummaksi värjäämäksi Black Seal -merkiksi; nimi ja mustavahalla suljettu pullo vakiintuivat 1900-luvun puolivälissä. Sodan jälkeen Bermudalla asemapaikkaa pitäneet brittisotilaat sekoittivat Black Sealia laivaston upseerikerhon inkiväärioluen kanssa, ja syntyi drinkki, jonka väriä verrattiin myrskypilveen: Dark ’n’ Stormy. Gosling Brothers rekisteröi nimen tavaramerkiksi Bermudalla 1980 ja Yhdysvalloissa 1991 ja on sittemmin puolustanut sitä oikeudessa – nimeä saa virallisesti käyttää vain Goslingin rommilla.',
+          lyhyt: "Dark ’n’ Stormy syntyi sotilasklubilla Bermudan tummasta rommista ja inkiväärioluesta.",
+          selite: "Dark ’n’ Stormy -cocktail limeviipaleen kera tarjoiltuna baarissa San Franciscossa vuonna 2015.",
           lahde: 'Will Shenton, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: "Dark 'n' stormy",
         },
@@ -61684,7 +61684,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Pieni sammakko, suuri ääni',
           aika: 'nykyään',
           tiedosto: 'Common Coquí.jpg',
-          teksti: 'Coquí-sammakko on niin tärkeä osa Puerto Ricon identiteettiä, että saarelaiset sanovat itsestään: "olen kotoisin täältä kuin coquí". Kämmenelle mahtuva sammakko on saanut nimensä koiraan kaksitavuisesta iltakutsusta, "ko-kee", jota se toistaa väsymättä hämärän laskeuduttua. Ensimmäinen tavu merkitsee koiraalle reviiriä, jälkimmäinen houkuttelee naaraita. Taínojen tarun mukaan jumalatar loi sammakon huutamaan ikuisesti kadonneen rakastettunsa nimeä. Toisin kuin useimmat sammakot, coquí kehittyy munasta suoraan pieneksi sammakoksi ilman nuijapäävaihetta, ja se elää luonnostaan vain Puerto Ricossa.',
+          teksti: 'Coquí-sammakko on niin tärkeä osa Puerto Ricon identiteettiä, että saarelaiset sanovat itsestään: ”olen kotoisin täältä kuin coquí”. Kämmenelle mahtuva sammakko on saanut nimensä koiraan kaksitavuisesta iltakutsusta, ”ko-kee”, jota se toistaa väsymättä hämärän laskeuduttua. Ensimmäinen tavu merkitsee koiraalle reviiriä, jälkimmäinen houkuttelee naaraita. Taínojen tarun mukaan jumalatar loi sammakon huutamaan ikuisesti kadonneen rakastettunsa nimeä. Toisin kuin useimmat sammakot, coquí kehittyy munasta suoraan pieneksi sammakoksi ilman nuijapäävaihetta, ja se elää luonnostaan vain Puerto Ricossa.',
           lyhyt: 'Coquí-sammakko, Puerto Ricon kansallissymboliksi noussut pieni sammakkolaji.',
           selite: 'Lähikuva ruskeasta coquí-sammakosta vihreällä pinnalla. Laji on kooltaan vain muutaman senttimetrin mittainen.',
           lahde: 'Yhdysvaltain maatalousministeriö USDA, Wikimedia Commons (PD)',
@@ -61710,7 +61710,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Kuka keksi piña coladan vuonna 1954?',
         vaihtoehdot: ['Ramón Marrero, Caribe Hiltonin baarimikko', 'Rafael Cortijo, muusikko', 'Julio Vizcarrondo, toimittaja', 'Ismael Rivera, laulaja'],
         oikea: 0,
-        fakta: 'Piña coladan keksi Caribe Hiltonin baarimikko Ramón "Monchito" Marrero vuonna 1954 kolmen kuukauden kokeilujen jälkeen.',
+        fakta: 'Piña coladan keksi Caribe Hiltonin baarimikko Ramón ”Monchito” Marrero vuonna 1954 kolmen kuukauden kokeilujen jälkeen.',
       },
       nostot: [
         {
@@ -61737,7 +61737,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kolme kuukautta kokeiluja baaritiskillä',
           aika: '1954',
           tiedosto: 'Piña Colada.jpg',
-          teksti: 'Vuonna 1954 Caribe Hiltonin baarimikko Ramón "Monchito" Marrero alkoi kokeilla juomaa, joka yhdistäisi rommin, kookoskerman ja ananasmehun jäämurskan kanssa. Kolmen kuukauden hionnan jälkeen hän oli tyytyväinen: juoma tuntui vangitsevan koko Puerto Ricon maun yhteen lasiin, ja hän nimesi sen piña coladaksi, siivilöidyksi ananakseksi. Marrero tarjoili omaa versiotaan hotellin baarissa peräti 35 vuoden ajan. Puerto Rico julisti piña coladan saaren viralliseksi juomaksi vuonna 1978. Juoman alkuperää on toisinaan kiistelty, mutta vuonna 2004 saaren kuvernööri vahvisti virallisesti sekä Marreron keksijäksi että Caribe Hiltonin juoman syntypaikaksi.',
+          teksti: 'Vuonna 1954 Caribe Hiltonin baarimikko Ramón ”Monchito” Marrero alkoi kokeilla juomaa, joka yhdistäisi rommin, kookoskerman ja ananasmehun jäämurskan kanssa. Kolmen kuukauden hionnan jälkeen hän oli tyytyväinen: juoma tuntui vangitsevan koko Puerto Ricon maun yhteen lasiin, ja hän nimesi sen piña coladaksi, siivilöidyksi ananakseksi. Marrero tarjoili omaa versiotaan hotellin baarissa peräti 35 vuoden ajan. Puerto Rico julisti piña coladan saaren viralliseksi juomaksi vuonna 1978. Juoman alkuperää on toisinaan kiistelty, mutta vuonna 2004 saaren kuvernööri vahvisti virallisesti sekä Marreron keksijäksi että Caribe Hiltonin juoman syntypaikaksi.',
           lyhyt: 'Lasillinen piña coladaa, Puerto Ricon vuonna 1978 viralliseksi julistamaa juomaa.',
           selite: 'Kuvassa on korkea lasi täynnä vaaleaa, jäistä piña coladaa pillillä ja koristeella.',
           lahde: 'Mario Trefz, Wikimedia Commons (PD)',
@@ -61800,7 +61800,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Salsan yliopisto perustettiin toukokuussa',
           aika: '1962',
           tiedosto: 'El Gran Combo de Puerto Rico.jpg',
-          teksti: 'Pianisti Rafael Ithier perusti yhtyeen El Gran Combo de Puerto Rico toukokuussa 1962 aiemman orkesterinsa hajottua. Yhtye yhdisti saaren omaa plena- ja bomba-perinnettä kuubalaisperäiseen sonrytmiin ja loi tanssikelpoisen, puhaltimien vetämän soundin, josta tuli tunnettu nimellä salsa. Vuosikymmenten kuluessa riveissä lauloi niin monta myöhemmin maailmankuuluksi tullutta laulajaa, että yhtye sai Kolumbiassa lisänimen "Salsan yliopisto". Ithier johti yhtyettä yli kuusi vuosikymmentä, ja se soittaa edelleen sekä levyillä että lavoilla. El Gran Combo on yhä yksi Latinalaisen Amerikan menestyneimmistä ja pisimpään toimineista yhtyeistä.',
+          teksti: 'Pianisti Rafael Ithier perusti yhtyeen El Gran Combo de Puerto Rico toukokuussa 1962 aiemman orkesterinsa hajottua. Yhtye yhdisti saaren omaa plena- ja bomba-perinnettä kuubalaisperäiseen sonrytmiin ja loi tanssikelpoisen, puhaltimien vetämän soundin, josta tuli tunnettu nimellä salsa. Vuosikymmenten kuluessa riveissä lauloi niin monta myöhemmin maailmankuuluksi tullutta laulajaa, että yhtye sai Kolumbiassa lisänimen ”Salsan yliopisto”. Ithier johti yhtyettä yli kuusi vuosikymmentä, ja se soittaa edelleen sekä levyillä että lavoilla. El Gran Combo on yhä yksi Latinalaisen Amerikan menestyneimmistä ja pisimpään toimineista yhtyeistä.',
           lyhyt: 'El Gran Combo de Puerto Rico esiintymässä lavalla vuonna 2011.',
           selite: 'Kuvassa yhtyeen laulajat esiintyvät lavalla Festival Medina -tapahtumassa vuonna 2011.',
           lahde: 'Magiciandude, Wikimedia Commons (CC BY-SA 3.0)',
@@ -61959,8 +61959,8 @@ export const MAA_KATEGORIAT = {
           teksti: 'Kapybara on maailman suurin jyrsijä, ja se viihtyy hyvin Kouroun '
             + 'seudun kosteilla savanneilla — myös Guayanan avaruuskeskuksen 690 '
             + 'neliökilometrin suoja-alueella, jonne raketit eivät saa lähtökuopalta '
-            + 'muuta liikennettä häiritä. Alueella pääsee ilmaiselle "Visite des '
-            + 'Savanes" -kierrokselle bongaamaan kapybaroiden lisäksi laiskiaisia, '
+            + 'muuta liikennettä häiritä. Alueella pääsee ilmaiselle ”Visite des '
+            + 'Savanes” -kierrokselle bongaamaan kapybaroiden lisäksi laiskiaisia, '
             + 'kilpikonnia ja aroja aivan laukaisualustojen kupeessa. Kapybara elää '
             + 'laumoissa, ui sujuvasti ja voi painaa yli 60 kiloa, mikä tekee siitä '
             + 'ylivoimaisesti suurimman nykyisin elävän jyrsijälajin.',
@@ -62050,8 +62050,8 @@ export const MAA_KATEGORIAT = {
             + 'leireille tai ankarampaan vankeuteen Paholaisensaarille. Vuosina '
             + '1852–1946 leirin kautta kulki arviolta 70 000 vankia eri puolilta '
             + 'Ranskaa. Nykyään kaupungin kivisistä leirirakennuksista on tehty '
-            + 'museo, ja Saint-Laurent-du-Maroni sai vuonna 2007 arvonimen "taiteen '
-            + 'ja historian kaupunki" ainutlaatuisen vankila-arkkitehtuurinsa '
+            + 'museo, ja Saint-Laurent-du-Maroni sai vuonna 2007 arvonimen ”taiteen '
+            + 'ja historian kaupunki” ainutlaatuisen vankila-arkkitehtuurinsa '
             + 'ansiosta.',
           lyhyt: 'Saint-Laurent-du-Maronin vankileiri otti vastaan noin 70 000 vankia vuosina 1852–1946.',
           selite: 'Camp de la Transportationin kivirakennuksia Saint-Laurent-du-Maronissa.',
@@ -62173,7 +62173,7 @@ export const MAA_KATEGORIAT = {
         + 'orjien jälkeläisten kreolikeittiön ja intialaisten siirtotyöläisten curryn. '
         + 'Kaupungin nimi on myös levinnyt maailmalle yhden mausteen mukana.',
       tehtava: {
-        kysymys: 'Mistä sana "colombo" alun perin juontuu ruoan nimenä?',
+        kysymys: 'Mistä sana ”colombo” alun perin juontuu ruoan nimenä?',
         vaihtoehdot: [
           'Sri Lankan pääkaupungista',
           'tamilinkielisestä kastiketta tarkoittavasta sanasta',
@@ -62226,7 +62226,7 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Piment de cayenne marché.jpg',
           teksti: 'Chilipippureita on viljelty Väli- ja Etelä-Amerikassa jo tuhansia '
             + 'vuosia, ja Kolumbus toi ne Eurooppaan vuonna 1493. Englantilainen '
-            + 'kasvitieteilijä Nicholas Culpeper käytti ilmausta "cayenne pepper" '
+            + 'kasvitieteilijä Nicholas Culpeper käytti ilmausta ”cayenne pepper” '
             + 'ensimmäisiä kertoja jo vuonna 1652 — nimi ei viitannut siihen, mistä '
             + 'pippuri oli kotoisin, vaan siihen, että Cayennen kaupunki toimi sen '
             + 'vientisatamana. Nykyään Cayennenpippuri-nimi kattaa ranskan kielessä '
@@ -62281,7 +62281,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Tuhat paria valkoisella rannalla',
           aika: 'nykyään',
           tiedosto: 'King Penguins (50779765941).jpg',
-          teksti: 'Falklandin koillisosassa, yksityisen Johnson’s Harbour -tilan mailla, on Volunteer Point: saarten suurin kuningaspingviiniyhdyskunta, jossa pesii noin tuhat paria. Kuningaspingviini on toiseksi suurin pingviinilaji keisaripingviinin jälkeen, ja sen poikanen kasvaa ruskeaksi, vanhempiaan pörhöisemmäksi untuvapalloksi, jota kutsutaan leikkisästi nimellä "okum boy" laivanrakennuksen tiivistysaineen mukaan. Koska pesimäkierto kestää 14–16 kuukautta, rannalla näkyy poikasia eri kasvuvaiheissa ympäri vuoden. Point on luonnonsuojelualue, jonne pääsee vain maanomistajan luvalla, yleensä maastoajoneuvolla kuivan kelin aikaan.',
+          teksti: 'Falklandin koillisosassa, yksityisen Johnson’s Harbour -tilan mailla, on Volunteer Point: saarten suurin kuningaspingviiniyhdyskunta, jossa pesii noin tuhat paria. Kuningaspingviini on toiseksi suurin pingviinilaji keisaripingviinin jälkeen, ja sen poikanen kasvaa ruskeaksi, vanhempiaan pörhöisemmäksi untuvapalloksi, jota kutsutaan leikkisästi nimellä ”okum boy” laivanrakennuksen tiivistysaineen mukaan. Koska pesimäkierto kestää 14–16 kuukautta, rannalla näkyy poikasia eri kasvuvaiheissa ympäri vuoden. Point on luonnonsuojelualue, jonne pääsee vain maanomistajan luvalla, yleensä maastoajoneuvolla kuivan kelin aikaan.',
           lyhyt: 'Volunteer Pointissa pesii noin tuhat paria kuningaspingviinejä, saarten suurin yhdyskunta.',
           selite: 'Kuningaspingviinejä Volunteer Pointin valkoisella hiekkarannalla Itä-Falklandilla.',
           lahde: 'kuhnmi, Wikimedia Commons (CC BY 2.0)',
@@ -62364,7 +62364,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Laivojen hautausmaa satamassa',
           aika: '1800-luku',
           tiedosto: "The 'Lady Elizabeth' in Stanley Harbour Falklands 1984.jpg",
-          teksti: 'Kap Hornin kiertäminen oli 1800-luvun purjelaivoille niin raskasta, että moni saapui Port Stanleyn satamaan pahoin vaurioituneena eikä koskaan enää lähtenyt merille. Paikallinen vakuutusasiamies oli usein myös kaupungin johtava liikemies, joka julisti laivan "merikelvottomaksi" ja osti sen sitten itse halvalla varastoksi tai asuintaloksi, sillä puu oli puuttomilla saarilla kallista tuontitavaraa. Rannassa lepää yhä parikymmentä hylkyä, muun muassa rautarunkoinen Lady Elizabeth, joka ajautui rantaan myrskyssä 1936 kuljetettuaan aiemmin lastia vuosikymmenten ajan. Satamaa on kutsuttu maailman suurimmaksi 1800-luvun purjelaivojen hautausmaaksi.',
+          teksti: 'Kap Hornin kiertäminen oli 1800-luvun purjelaivoille niin raskasta, että moni saapui Port Stanleyn satamaan pahoin vaurioituneena eikä koskaan enää lähtenyt merille. Paikallinen vakuutusasiamies oli usein myös kaupungin johtava liikemies, joka julisti laivan ”merikelvottomaksi” ja osti sen sitten itse halvalla varastoksi tai asuintaloksi, sillä puu oli puuttomilla saarilla kallista tuontitavaraa. Rannassa lepää yhä parikymmentä hylkyä, muun muassa rautarunkoinen Lady Elizabeth, joka ajautui rantaan myrskyssä 1936 kuljetettuaan aiemmin lastia vuosikymmenten ajan. Satamaa on kutsuttu maailman suurimmaksi 1800-luvun purjelaivojen hautausmaaksi.',
           lyhyt: 'Port Stanleyn satamassa lepää yhä parikymmentä 1800-luvun purjelaivan hylkyä.',
           selite: 'Rautarunkoisen Lady Elizabeth -laivan hylky matalikolla Port Stanleyn satamassa.',
           lahde: 'Petebutt, Wikimedia Commons (Public domain)',
@@ -62430,7 +62430,7 @@ export const MAA_KATEGORIAT = {
       nimi: 'Arki',
       johdanto: 'Falklandeilla on enemmän lampaita kuin ihmisiä ja enemmän maastoautoja asukasta kohti kuin missään muualla maailmassa. Kaupungin ulkopuolinen maaseutu tunnetaan yksinkertaisesti nimellä camp.',
       tehtava: {
-        kysymys: 'Mistä sanasta Falklandin maaseutua tarkoittava termi "camp" on peräisin?',
+        kysymys: 'Mistä sanasta Falklandin maaseutua tarkoittava termi ”camp” on peräisin?',
         vaihtoehdot: [
           'Englannin sanasta camp, leiri',
           'Espanjan ja gauchojen sanasta campo, maaseutu',
@@ -62508,7 +62508,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kivijoki joka hämmensi Darwinia',
           aika: '1833–34',
           tiedosto: 'East Falkland - Stone Run.jpg',
-          teksti: 'Falklandinsaarten rinteillä virtaa outoja "kivijokia": valkoisen kvartsiitin lohkareiden muodostamia, jopa viiden kilometrin pituisia vyöhykkeitä, jotka näyttävät pysähtyneiltä joilta. Charles Darwin näki niitä Beagle-retkikunnalla 1833 ja 1834 ja pohti pitkään, mikä voisi liikutella niin suuria kiviä ilman virtaavaa vettä. Nykyisin kivijokien tiedetään syntyneen viimeisen jääkauden aikana, kun toistuva jäätyminen ja sulaminen halkaisi kalliota ja siirteli kiviä hitaasti alaspäin routivassa maaperässä. Prosessi pysähtyi ilmaston lämmetessä, joten kivijoet ovat nykyään jäätyneen menneisyyden liikkumattomia jäänteitä.',
+          teksti: 'Falklandinsaarten rinteillä virtaa outoja ”kivijokia”: valkoisen kvartsiitin lohkareiden muodostamia, jopa viiden kilometrin pituisia vyöhykkeitä, jotka näyttävät pysähtyneiltä joilta. Charles Darwin näki niitä Beagle-retkikunnalla 1833 ja 1834 ja pohti pitkään, mikä voisi liikutella niin suuria kiviä ilman virtaavaa vettä. Nykyisin kivijokien tiedetään syntyneen viimeisen jääkauden aikana, kun toistuva jäätyminen ja sulaminen halkaisi kalliota ja siirteli kiviä hitaasti alaspäin routivassa maaperässä. Prosessi pysähtyi ilmaston lämmetessä, joten kivijoet ovat nykyään jäätyneen menneisyyden liikkumattomia jäänteitä.',
           lyhyt: 'Kivijoet ovat jääkauden aikana syntyneitä kvartsiittilohkareiden vöitä, jotka hämmensivät Darwinia.',
           selite: 'Valkoisen kvartsiitin lohkareista koostuva kivijoki virtaa kuin pysähtynyt joki rinnettä alas.',
           lahde: 'P. Hughes, Wikimedia Commons (CC BY-SA 4.0)',
@@ -62862,7 +62862,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Helvetti paratiisissa',
           aika: '1825–1855',
           tiedosto: 'Penal settlement at Norfolk Island c 1839 watercolour.jpg',
-          teksti: 'Britannia avasi Norfolkinsaarelle uuden, aiempaa ankaramman rangaistussiirtolan vuonna 1825 pahimmille rikollisille. Komentaja Morisset käytti 1830-luvulla ruoskaa niin ahkerasti, että saaresta tuli tunnettu nimellä "helvetti paratiisissa". Vuonna 1846 komentaja Childs kielsi vangeilta omat ruoanlaittoastiat ja käski luovuttaa kattilat pois – seurauksena William Westwoodin johtama Kattilakapina surmasi neljä vartijaa. Kapinaan osallistuneista kaksitoista hirtettiin lokakuussa 1846. Piispa Robert Wilsonin raportti julmuuksista sai lopulta Britannian sulkemaan siirtolan asteittain, ja viimeiset vangit siirrettiin pois vuoteen 1855 mennessä.',
+          teksti: 'Britannia avasi Norfolkinsaarelle uuden, aiempaa ankaramman rangaistussiirtolan vuonna 1825 pahimmille rikollisille. Komentaja Morisset käytti 1830-luvulla ruoskaa niin ahkerasti, että saaresta tuli tunnettu nimellä ”helvetti paratiisissa”. Vuonna 1846 komentaja Childs kielsi vangeilta omat ruoanlaittoastiat ja käski luovuttaa kattilat pois – seurauksena William Westwoodin johtama Kattilakapina surmasi neljä vartijaa. Kapinaan osallistuneista kaksitoista hirtettiin lokakuussa 1846. Piispa Robert Wilsonin raportti julmuuksista sai lopulta Britannian sulkemaan siirtolan asteittain, ja viimeiset vangit siirrettiin pois vuoteen 1855 mennessä.',
           lyhyt: 'Toinen, erityisen ankara rangaistussiirtola toimi saarella vuosina 1825–1855.',
           selite: 'Akvarellimaalaus Kingstonin rangaistussiirtolasta noin vuodelta 1839: rakennukset, viljelysmaat ja laiva ankkurissa rannan edustalla.',
           lahde: 'Thomas Seller, Wikimedia Commons (public domain)',
@@ -62900,7 +62900,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Papukaija joka ei antanut periksi',
           aika: '1988 lähtien',
           tiedosto: 'Cyanoramphus cookii -Palm Glen, Norfolk Island, Australia-8.jpg',
-          teksti: 'Norfolkinsaarenviherkaija (Cyanoramphus cookii), paikallisesti "vihreä papukaija", on yksi maailman uhanalaisimmista linnuista. Rotat, kissat sekä kilpailevat tuontipapukaijat ja kottaraiset veivät sen pesäpaikat ja munat niin tehokkaasti, että vuonna 1988 luonnossa laskettiin enää 32 yksilöä. Tiukka suojeluohjelma – pesäpönttöjä, petoeläinten pyyntiä ja tarkkaa seurantaa – nosti kannan vuoteen 2013 mennessä 50–100 lintuun, joista vain kymmenkunta oli munivia naaraita. 2020-luvulla laji on levinnyt kansallispuiston rajojen ulkopuolellekin, mutta sen tulevaisuus riippuu yhä pesäpönttöjen huollosta ja vieraspetojen torjunnasta.',
+          teksti: 'Norfolkinsaarenviherkaija (Cyanoramphus cookii), paikallisesti ”vihreä papukaija”, on yksi maailman uhanalaisimmista linnuista. Rotat, kissat sekä kilpailevat tuontipapukaijat ja kottaraiset veivät sen pesäpaikat ja munat niin tehokkaasti, että vuonna 1988 luonnossa laskettiin enää 32 yksilöä. Tiukka suojeluohjelma – pesäpönttöjä, petoeläinten pyyntiä ja tarkkaa seurantaa – nosti kannan vuoteen 2013 mennessä 50–100 lintuun, joista vain kymmenkunta oli munivia naaraita. 2020-luvulla laji on levinnyt kansallispuiston rajojen ulkopuolellekin, mutta sen tulevaisuus riippuu yhä pesäpönttöjen huollosta ja vieraspetojen torjunnasta.',
           lyhyt: 'Norfolkinsaarenviherkaijan kanta romahti 32 yksilöön 1988, mutta suojelutyö on kasvattanut sitä.',
           selite: 'Norfolkinsaarenviherkaija piiloutuu puiden lehvästöön Palm Glenin metsässä, tunnistettavissa punaisesta otsatäplästään.',
           lahde: 'Paul Gear, Wikimedia Commons (CC BY-SA 3.0)',
@@ -63026,7 +63026,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kylä jossa kaikilla on sama sukunimi',
           aika: 'nykyään',
           tiedosto: 'Bounty Folk Museum.jpg',
-          teksti: 'Lähes puolet Norfolkinsaaren asukkaista polveutuu samoista yhdeksästä Bounty-kapinallisesta, joten saarella on käytössä vain kourallinen sukunimiä: Christian, Quintal, Adams, Young, McCoy, Evans, Buffett ja Nobbs. Puhelinluettelossa on noin 40 Quintalia, 37 Evansia ja 18 Adamsia, joten pelkkä sukunimi ei riitä erottamaan ketään. Siksi useimmat saarelaiset tunnetaan lempinimillä, jotka on painettu puhelinluetteloon oikeiden nimien rinnalle: "Dar Bizziebee" on Darlene Buffett, "Chinny" on Rob Adams ja "Moonie" jompikumpi kahdesta John Christianista. Saaren oma Bounty Folk -museo kokoaa yhteen tämän sukuhistorian esineitä ja tarinoita.',
+          teksti: 'Lähes puolet Norfolkinsaaren asukkaista polveutuu samoista yhdeksästä Bounty-kapinallisesta, joten saarella on käytössä vain kourallinen sukunimiä: Christian, Quintal, Adams, Young, McCoy, Evans, Buffett ja Nobbs. Puhelinluettelossa on noin 40 Quintalia, 37 Evansia ja 18 Adamsia, joten pelkkä sukunimi ei riitä erottamaan ketään. Siksi useimmat saarelaiset tunnetaan lempinimillä, jotka on painettu puhelinluetteloon oikeiden nimien rinnalle: ”Dar Bizziebee” on Darlene Buffett, ”Chinny” on Rob Adams ja ”Moonie” jompikumpi kahdesta John Christianista. Saaren oma Bounty Folk -museo kokoaa yhteen tämän sukuhistorian esineitä ja tarinoita.',
           lyhyt: 'Harvat sukunimet pakottivat norfolkinsaarelaiset keksimään lempinimet puhelinluetteloa varten.',
           selite: 'Vanha avovene Bounty Folk -museon seinustalla; museo kertoo Bounty-kapinallisten jälkeläisten sukuhistoriasta.',
           lahde: 'Dr Bob Hall, Wikimedia Commons (CC BY-SA 2.0)',
@@ -63841,7 +63841,7 @@ export const MAA_KATEGORIAT = {
             + 'ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 '
             + 'metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos '
             + 'paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin '
-            + 'virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti '
+            + 'virallisesti vain ”Ratsastavaksi soturiksi” – naapurimaa Kreikka piti '
             + 'Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta '
             + 'kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi '
             + 'vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka '
@@ -64276,7 +64276,7 @@ export const MAA_KATEGORIAT = {
           aika: '27.3.1918',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-bessarabian-liittyminen-1918-lahi-photo-v4.jpg',
-          teksti: '"Kahdeksankymmentäkuusi puolesta." Ääni, joka lukee '
+          teksti: '”Kahdeksankymmentäkuusi puolesta.” Ääni, joka lukee '
             + 'ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, '
             + 'mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa '
             + 'kalenteria (9. huhtikuuta uutta), ja Bessarabian '
@@ -64606,7 +64606,7 @@ export const MAA_KATEGORIAT = {
             + 'jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin '
             + '60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat '
             + 'poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. '
-            + 'Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa '
+            + 'Tapahtumasta tuli ranskan kieleen sana ”Bérézina”, joka tarkoittaa '
             + 'täydellistä katastrofia.',
           lyhyt: 'Napoleonin armeija ylitti jäisen Berezina-joen paetessaan Venäjältä '
             + 'marraskuussa 1812.',
@@ -64623,7 +64623,7 @@ export const MAA_KATEGORIAT = {
           teksti: 'Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun '
             + 'lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun '
             + 'jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj '
-            + 'Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla '
+            + 'Kristof ”Orpo” Radziwiłł laajensi sitä kolmikerroksisilla '
             + 'asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen '
             + 'ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi '
             + 'toisessa maailmansodassa, jolloin sen muurien sisään perustettiin '
@@ -64665,7 +64665,7 @@ export const MAA_KATEGORIAT = {
             + 'valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir '
             + 'Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti '
             + 'väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin '
-            + 'heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin '
+            + 'heidän jälkeläisensä, ”velhoruhtinas” Vseslav, rakennutti kaupunkiin '
             + 'Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin '
             + 'Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän '
             + 'kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen '

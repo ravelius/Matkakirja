@@ -395,9 +395,9 @@ export const SOUTHAMERICA = {
     diaries: [
       'Esi-isäni tulivat hakemaan El Doradon kultaa ja veivät minkä irti saivat. Minä ostan jääkaappimagneetin ja maksan ylihintaa. Jonkinlaista oikeudenmukaisuutta sekin.',
       'Isoisän kartassa tämä manner on merkitty kahden kuningaskunnan väreillä. Nyt täällä on kaksitoista itsenäistä valtiota, ja niiden vapaussodat käytiin ennen kuin hän ehti pakata laukkunsa.',
-      '"Sademetsä on tyhjä ja kulkukelvoton", kirjoitti isoisä varmana. Metsässä asui miljoonia ihmisiä, jotka olivat parantaneet maaperää niin hyvin, että se on viljavaa vieläkin. Kulkukelvoton oli hänen jalkansa, ei metsä.',
+      '”Sademetsä on tyhjä ja kulkukelvoton”, kirjoitti isoisä varmana. Metsässä asui miljoonia ihmisiä, jotka olivat parantaneet maaperää niin hyvin, että se on viljavaa vieläkin. Kulkukelvoton oli hänen jalkansa, ei metsä.',
       'Isoisä ihasteli Andien korkeutta ja arveli, ettei niiden yli voi kulkea kuin muulilla. Bussi vie nyt solan yli kolmessa tunnissa, ja muuli seisoo tien vieressä katsomassa. Molemmat ovat yhä käytössä.',
-      '"Kahvi, kumi ja hopea — siinä koko manner", tiivisti isoisä talouden. Lisäisin listalle litiumin, soijan, lentokoneet ja sen, että tuotteiden hinnasta päätetään nykyään useammin täällä kuin Lontoossa.',
+      '”Kahvi, kumi ja hopea — siinä koko manner”, tiivisti isoisä talouden. Lisäisin listalle litiumin, soijan, lentokoneet ja sen, että tuotteiden hinnasta päätetään nykyään useammin täällä kuin Lontoossa.',
       'Isoisä merkitsi muistiin, että putoukset ovat vaikuttavat mutta Niagara vaikuttavampi. Seisoin molempien äärellä ja olen eri mieltä. Tämä on ainoa kohta, jossa uskallan sanoa hänen erehtyneen mittasuhteissa.',
     ],
   },

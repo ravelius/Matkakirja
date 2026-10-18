@@ -670,8 +670,8 @@ export const FOKUSVIRTA_MADRID = {
           + 'naurettiin ääneen. Sautuolaa syytettiin väärennöksestä, koska '
           + 'hän ei osannut selittää, miksi katossa ei ollut nokea. Vasta '
           + '1902, kun vastaavia luolamaalauksia oli löytynyt lisää, '
-          + 'Cartailhac perui julkisesti artikkelissa "Mea culpa d\'un '
-          + 'sceptique". Sautuola oli silloin ollut kuolleena neljätoista '
+          + 'Cartailhac perui julkisesti artikkelissa ”Mea culpa d\'un '
+          + 'sceptique”. Sautuola oli silloin ollut kuolleena neljätoista '
           + 'vuotta.',
       ],
       lahde: 'en-Wikipedia "Cave of Altamira", johdanto ja osio "Discovery, '
@@ -840,7 +840,7 @@ export const FOKUSVIRTA_MADRID = {
           + '12. heinäkuuta 1873 ja julistautui itsenäiseksi kantoniksi. '
           + 'Kapinalliset saivat puolelleen sataman sota-alukset, jotka '
           + 'olivat Espanjan parhaita. Kantonin laivasto lähti keräämään '
-          + 'rahaa "ulkovallalta", Almerían kaupungilta, ja kun kaupunki ei '
+          + 'rahaa ”ulkovallalta”, Almerían kaupungilta, ja kun kaupunki ei '
           + 'maksanut, se pommitettiin. Madridin hallitus julisti kantonin '
           + 'johtajan merirosvoksi ja pani hänen päästään palkkion.',
         'Fregatit Almansa ja Vitoria otettiin lopulta kiinni merirosvoina, '

@@ -134,7 +134,7 @@ export const HAHMOTELMA_CYP = [
       + 'arabian muotoaan, kyproksenmaroniittiarabiaa, ja kuuluvat katoliseen '
       + 'maroniittikirkkoon; Kormakitisin niemi on nimetty kylän mukaan. Kansanetymologian '
       + 'mukaan nimi tulee Libanonin Kourista tulleilta maroniiteilta, jotka haikailivat '
-      + 'kotiinsa toistelemalla lausetta "Nahni jina wa Kour ma jit". Kyproksen '
+      + 'kotiinsa toistelemalla lausetta ”Nahni jina wa Kour ma jit”. Kyproksen '
       + 'maroniittiyhteisö muotoutui neljässä muuttoaallossa, jotka alkoivat 700-luvulla, ja '
       + 'Denoresin suvun läänitys Kormakitis oli vuosina 1191–1489 yksi saaren rikkaimmista. '
       + 'Vuonna 1570 kylässä oli 850 asukasta, mutta osmanien aikana asukasluku väheni, ja '
@@ -914,7 +914,7 @@ export const HAHMOTELMA_CYP = [
     },
     teksti: 'Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli '
       + 'lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista '
-      + '"lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. '
+      + '”lefka” (valkoinen) ja ”ori” (vuoret), viitaten alueen vaaleaan kalkkikiveen. '
       + 'Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä '
       + 'alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin '
       + 'osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, '

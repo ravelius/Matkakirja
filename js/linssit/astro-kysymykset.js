@@ -54,7 +54,7 @@ export const ASTRO_KYSYMYKSET = {
   "pallo": [
     {
       "kysymys": "Miksi astronautit näkevät 16 auringonnousua vuorokaudessa?",
-      "vastaus": "ISS kiertää Maan noin 90 minuutissa, joten aurinko nousee ja laskee asemalla noin 16 kertaa vuorokaudessa. Yksi täysi kierros Maan ympäri vastaa siis astronauteille yhtä \"päivää\".",
+      "vastaus": "ISS kiertää Maan noin 90 minuutissa, joten aurinko nousee ja laskee asemalla noin 16 kertaa vuorokaudessa. Yksi täysi kierros Maan ympäri vastaa siis astronauteille yhtä ”päivää”.",
       "lahteet": [
         {
           "url": "https://www.thalesgroup.com/en/worldwide/space/magazine/where-can-you-marvel-16-sunrises-each-day-ask-astronauts-cupola-400",
@@ -126,7 +126,7 @@ export const ASTRO_KYSYMYKSET = {
     },
     {
       "kysymys": "Kuinka monta kuvaa Maasta on otettu avaruudesta?",
-      "vastaus": "Astronautit ovat kuvanneet Maata käsikameroilla jo yli 60 vuotta, aina 1960-luvun Mercury-lennoista lähtien, ja kuvia on kertynyt miljoonia. Ne löytyvät julkisesta \"Gateway to Astronaut Photography of Earth\" -tietokannasta.",
+      "vastaus": "Astronautit ovat kuvanneet Maata käsikameroilla jo yli 60 vuotta, aina 1960-luvun Mercury-lennoista lähtien, ja kuvia on kertynyt miljoonia. Ne löytyvät julkisesta ”Gateway to Astronaut Photography of Earth” -tietokannasta.",
       "lahteet": [
         {
           "url": "https://ntrs.nasa.gov/api/citations/20230005919/downloads/CEO_ISSRD23_final.pdf",

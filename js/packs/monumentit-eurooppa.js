@@ -728,7 +728,7 @@ export const EUROOPAN_KADONNEET = {
     id: 'orheiul-vechi', nimi: 'Orheiul Vechi', nimio: 'Orheiul Vechi',
     nappi: 'Kalkkikivijyrkänteen luolaluostari ja keskiaikainen linnakaupunki',
     laudat: { maailmankartta: { x: 6799.8, y: 1503.3 }, europe: { x: 767.9, y: 648.0 } },
-    teksti: 'Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan '
+    teksti: 'Orheiul Vechi (”Vanha Orhei”) on kalkkikivijyrkänteelle Răutin joen mutkaan '
       + 'kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen '
       + 'Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut '
       + 'luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien '

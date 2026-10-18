@@ -418,7 +418,7 @@ export const NAKSUTUSVARIANTIT = [
       'c — kielen kärki hammasvallilta',
     ],
     jarjestys: [2, 0, 1],
-    hint: 'Sana cela alkaa c:llä — ja paheksuva "ts, ts" syntyy kielen kärjellä ylähampaiden takana.',
+    hint: 'Sana cela alkaa c:llä — ja paheksuva ”ts, ts” syntyy kielen kärjellä ylähampaiden takana.',
   },
   {
     q: 'Kolmas naksaus on syvin: kieli irtoaa kitalaen etuosasta ja poksahtaa kuin korkki pullosta. Sana qala — aloittaa — alkaa sillä. Mikä kirjain?',
@@ -559,7 +559,7 @@ export const AFRICA_PUZZLES = [
       'x — kielen sivu poskihampailta',
     ],
     correct: 3,
-    fact: 'Xhosan kolme naksausta eroavat toisistaan vain irrotuskohdan mukaan: c on dentaalinen (kielen etuosa etuhampaiden takaa, kuin paheksuva "ts"), x on lateraalinen (kieli poskihampaita vasten ja ilma purkautuu kielen sivulta, kuin hevosta hoputettaessa) ja q on postalveolaarinen (kielen kärki hammasvallilla, vedetään alas, poksahtaa kuin korkki). Nimessä isiXhosa naksaus on Xh-kirjainparissa, ei sanan alussa: se ääntyy suunnilleen isi-ǁhoosa. Yhden laskutavan mukaan joka kymmenennessä xhosan perussanassa on naksaus — enemmän kuin lähes missään muussa bantukielessä; vain yeyi yltää suunnilleen samaan. Isoisä kirjoitti muistiin kolme kuvaa ja luuli sitä kieliopiksi.',
+    fact: 'Xhosan kolme naksausta eroavat toisistaan vain irrotuskohdan mukaan: c on dentaalinen (kielen etuosa etuhampaiden takaa, kuin paheksuva ”ts”), x on lateraalinen (kieli poskihampaita vasten ja ilma purkautuu kielen sivulta, kuin hevosta hoputettaessa) ja q on postalveolaarinen (kielen kärki hammasvallilla, vedetään alas, poksahtaa kuin korkki). Nimessä isiXhosa naksaus on Xh-kirjainparissa, ei sanan alussa: se ääntyy suunnilleen isi-ǁhoosa. Yhden laskutavan mukaan joka kymmenennessä xhosan perussanassa on naksaus — enemmän kuin lähes missään muussa bantukielessä; vain yeyi yltää suunnilleen samaan. Isoisä kirjoitti muistiin kolme kuvaa ja luuli sitä kieliopiksi.',
     source: [
       'https://en.wikipedia.org/wiki/Xhosa_language',
       'https://en.wikipedia.org/wiki/Lateral_click',

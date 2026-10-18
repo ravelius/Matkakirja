@@ -751,7 +751,7 @@ export const HISTORIAN_HETKET = [
       + 'Hardylta vielä kerran, ja kumpikin tietää, mitä vastaus tarkoittaa: '
       + 'Victory ajetaan suoraan lähitulitukseen. Kello on hieman yli '
       + 'kaksitoista. Neljännestä vaille kaksitoista Nelson lähetti '
-      + 'lippuviestin "England expects that every man will do his duty", ja '
+      + 'lippuviestin ”England expects that every man will do his duty”, ja '
       + 'puolelta päivin ranskalainen Fougueux ampui ensimmäisen laukauksensa. '
       + 'Kansi on hiekoitettu, jottei veri tekisi lankuista liukkaita, ja '
       + 'tykkimiehet työskentelevät paitasillaan; ensimmäistä taisteluaan '
@@ -1587,7 +1587,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'tutankhamon-carter-1922',
-    otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+    otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
     nimio: 'Luxor 1922',
     paivays: '26.11.1922',
     paikka: 'Kuninkaiden laakso, Egypti',
@@ -1601,8 +1601,8 @@ export const HISTORIAN_HETKET = [
       + 'lordi Carnarvon, hänen tyttärensä Evelyn Herbert ja apulainen Arthur '
       + 'Callender. Ensin ei näy mitään; sitten silmät tottuvat, ja pimeydestä '
       + 'nousee kullan hohdetta — eläinhahmoisia vuoteita, vaunuja, '
-      + 'patsaita. "Näkyykö mitään?" Carnarvon kysyy. "Näkyy, ihmeellisiä '
-      + 'asioita", Carter vastaa. Viikkoa aiemmin, 4. marraskuuta, työmiehet '
+      + 'patsaita. ”Näkyykö mitään?” Carnarvon kysyy. ”Näkyy, ihmeellisiä '
+      + 'asioita”, Carter vastaa. Viikkoa aiemmin, 4. marraskuuta, työmiehet '
       + 'olivat löytäneet kallioon hakatun portaikon ensimmäisen askelman '
       + 'työmiesmajojen alta; Carnarvon oli rahoittanut Carterin kaivauksia '
       + 'vuodesta 1907 ja suostunut vielä yhteen, viimeiseen kauteen. '
@@ -1658,9 +1658,9 @@ export const HISTORIAN_HETKET = [
     visa: {
       kysymys: 'Mitä Howard Carter vastasi, kun häneltä kysyttiin, näkyykö reiästä mitään?',
       vaihtoehdot: [
-        '"Ei mitään — hauta on ryöstetty"',
-        '"Näkyy, ihmeellisiä asioita"',
-        '"Kultaa, pelkkää kultaa"',
+        '”Ei mitään — hauta on ryöstetty”',
+        '”Näkyy, ihmeellisiä asioita”',
+        '”Kultaa, pelkkää kultaa”',
       ],
       oikea: 1,
     },
@@ -1904,7 +1904,7 @@ export const HISTORIAN_HETKET = [
       + 'linssinsä itse edellisestä syksystä alkaen. Maaliskuussa 1610 hän '
       + 'julkaisee Venetsiassa ohuen kirjan Sidereus nuncius, Tähtien '
       + 'sanansaattaja, jossa ovat Kuun vuoret, Linnunradan lukemattomat '
-      + 'tähdet ja neljä "Medicin tähteä", jotka hän nimeää Toscanan '
+      + 'tähdet ja neljä ”Medicin tähteä”, jotka hän nimeää Toscanan '
       + 'suurherttuan suvulle päästäkseen tämän hoviin. Kuut tunnetaan nyt '
       + 'Galilein kuina: Io, Europa, Ganymedes ja Kallisto. Kirja tekee '
       + 'hänestä Euroopan kuuluisimman luonnontutkijan — ja aloittaa tien, '
@@ -1957,7 +1957,7 @@ export const HISTORIAN_HETKET = [
       + 'jotka ilta illalta vaihtoivat paikkaa — ensimmäiset kappaleet, joiden '
       + 'nähtiin kiertävän muuta kuin Maata.',
     lehtiTehtava: {
-      kysymys: 'Miksi Galilei nimesi kuut "Medicin tähdiksi"?',
+      kysymys: 'Miksi Galilei nimesi kuut ”Medicin tähdiksi”?',
       vaihtoehdot: [
         'Ne löytyivät Medicien palatsin katolta',
         'Hän halusi Toscanan suurherttuan hoviin',
@@ -4732,7 +4732,7 @@ export const HISTORIAN_HETKET = [
       + 'päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta '
       + 'omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu '
       + 'vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa '
-      + 'kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", '
+      + 'kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, '
       + 'josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään '
       + 'louhitaan kilometrikaupalla käytäviä, ja linnan ympärille kasvava kaupunki '
       + 'kantaa yhä saman nimen johdannaista. Jyrkänne suojaa paikkaa kolmelta '
@@ -4982,7 +4982,7 @@ export const HISTORIAN_HETKET = [
     iso: "AUT",
     lat: 48.2166, lon: 16.3648,
     kuvaversio: 4,
-    teksti: "Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutuu hajottamaan pörssisalin edustalle kerääntyneen väkijoukon. Krahi, jota jälkipolvet kutsuvat nimellä \"Der Krach\", painaa Itävallan talouden vuosien lamaan juuri samaan aikaan kun näyttelyvieraiden mukana kaupunkiin leviää koleraepidemia. Seuraavien viikkojen aikana yli kuusikymmentä pankkia ja rakennusyhtiötä ajautuu vararikkoon, ja moni pieni säästäjä menettää elämänsä säästöt yhden ainoan aamupäivän aikana.",
+    teksti: "Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutuu hajottamaan pörssisalin edustalle kerääntyneen väkijoukon. Krahi, jota jälkipolvet kutsuvat nimellä ”Der Krach”, painaa Itävallan talouden vuosien lamaan juuri samaan aikaan kun näyttelyvieraiden mukana kaupunkiin leviää koleraepidemia. Seuraavien viikkojen aikana yli kuusikymmentä pankkia ja rakennusyhtiötä ajautuu vararikkoon, ja moni pieni säästäjä menettää elämänsä säästöt yhden ainoan aamupäivän aikana.",
     kuvat: [
       {
         rooli: "lahi",
@@ -5005,7 +5005,7 @@ export const HISTORIAN_HETKET = [
     kartanUlkopuolella: true,
     kartanUlkopuolellaSyy: "piste on Wienin kohdekartan rajauksessa: hetki kuuluu kaupungin omaan karttaan",
     lehti: { laji: "kaupunki", avain: "wien" },
-    lehtiJohdanto: "Wienin pörssi romahti 9. toukokuuta 1873 vain viikko maailmannäyttelyn avajaisten jälkeen — \"Der Krach\" painoi Itävallan talouden vuosien lamaan.",
+    lehtiJohdanto: "Wienin pörssi romahti 9. toukokuuta 1873 vain viikko maailmannäyttelyn avajaisten jälkeen — ”Der Krach” painoi Itävallan talouden vuosien lamaan.",
     lehtiTehtava: {
       kysymys: "Mikä avattiin Wienissä vain viikkoa ennen pörssiromahdusta 1873?",
       vaihtoehdot: ["Maailmannäyttely", "Uusi rautatieasema", "Keisarillinen ooppera", "Pörssin uusi rakennus"],
@@ -5019,11 +5019,11 @@ export const HISTORIAN_HETKET = [
     otsikko: "De Vlieter 1932 — meri lakkaa kahtia jakamasta",
     nimio: "Vlieter 1932",
     paivays: "28.5.1932",
-    paikka: "\"De Vlieter\", Afsluitdijk",
+    paikka: "”De Vlieter”, Afsluitdijk",
     iso: "NLD",
     lat: 53.005, lon: 5.1875,
     kuvaversio: 4,
-    teksti: "Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen \"de Vlieterin\" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä patoa, ja insinöörit halusivat viimeistellä sulun ennen seuraavaa myrskykautta. Hetki päättää insinööri Cornelis Lelyn vuosikymmeniä vanhan suunnitelman: Pohjanmeren suolainen Zuiderzee lakkaa olemasta ja muuttuu vähitellen makeavetiseksi IJsselmeeriksi, ja Alankomaat saa 32 kilometrin patotien, joka suojaa satojatuhansia ihmisiä tulvilta ja avaa uutta maata pengerryksille.",
+    teksti: "Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen ”de Vlieterin” kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä patoa, ja insinöörit halusivat viimeistellä sulun ennen seuraavaa myrskykautta. Hetki päättää insinööri Cornelis Lelyn vuosikymmeniä vanhan suunnitelman: Pohjanmeren suolainen Zuiderzee lakkaa olemasta ja muuttuu vähitellen makeavetiseksi IJsselmeeriksi, ja Alankomaat saa 32 kilometrin patotien, joka suojaa satojatuhansia ihmisiä tulvilta ja avaa uutta maata pengerryksille.",
     kuvat: [
       {
         rooli: "lahi",
@@ -5455,7 +5455,7 @@ export const HISTORIAN_HETKET = [
     // Chișinău liittyi laudan kaupungiksi 14.10.2026 (juna 193): paikka on kaupungin laatan kohdalla.
     kattoVapaa: true,
     kuvaversio: 4,
-    teksti: "\"Kahdeksankymmentäkuusi puolesta.\" Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin Bessarabia oli julistautunut itsenäiseksi Moldovan kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii maareformia, paikallista itsehallintoa ja perusoikeuksien kunnioittamista, ehtoja joita ei koskaan täysin lunastettu. Kolme edustajaa äänestää vastaan avoimesti kädet pystyssä, peläten liiton hukuttavan Bessarabian oman kielen ja hallinnon suurempaan naapuriin. Sali, jossa ääni juuri kaikui, on rakennettu vain kolmetoista vuotta aiemmin lukioksi; siitä tulee hetkeksi paikka, jossa uusi raja Euroopan kartalle piirretään ilman yhtään laukausta.",
+    teksti: "”Kahdeksankymmentäkuusi puolesta.” Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin Bessarabia oli julistautunut itsenäiseksi Moldovan kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii maareformia, paikallista itsehallintoa ja perusoikeuksien kunnioittamista, ehtoja joita ei koskaan täysin lunastettu. Kolme edustajaa äänestää vastaan avoimesti kädet pystyssä, peläten liiton hukuttavan Bessarabian oman kielen ja hallinnon suurempaan naapuriin. Sali, jossa ääni juuri kaikui, on rakennettu vain kolmetoista vuotta aiemmin lukioksi; siitä tulee hetkeksi paikka, jossa uusi raja Euroopan kartalle piirretään ilman yhtään laukausta.",
     kuvat: [
       {
         rooli: "lahi",

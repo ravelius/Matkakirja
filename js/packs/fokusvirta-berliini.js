@@ -89,7 +89,7 @@ const AMPELMANN_VISA = {
   fakta: 'Liikennepsykologi Karl Peglau piirsi hahmon 1961, ja '
     + 'ensimmäiset valot syttyivät Itä-Berliinissä 1969. Kun ukkelia '
     + 'alettiin yhdistymisen jälkeen vaihtaa lännen tikku-ukkoon, '
-    + 'kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja '
+    + 'kansalaiskampanja ”Pelastakaa Ampelmännchen” nousi vastaan ja '
     + 'voitti.',
 };
 
@@ -402,8 +402,8 @@ export const FOKUSVIRTA_BERLIINI = {
       otsikko: 'Berliinin karhu',
       teksti: 'Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. '
         + 'maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on '
-        + 'turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin '
-        + 'porvarien sinetti". Vitsi on siinä, ettei karhulla '
+        + 'turkkurien kiltakirjeessä, ja siinä lukee ”olen Berliinin '
+        + 'porvarien sinetti”. Vitsi on siinä, ettei karhulla '
         + 'todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: '
         + 'tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on '
         + 'slaavilaista perua sanasta berl, suo, ja karhu on '
@@ -861,8 +861,8 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska '
           + 'valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. '
           + 'Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen '
-          + 'tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa '
-          + 'Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen '
+          + 'tikku-ukkoon — kunnes kansalaiskampanja ”Pelastakaa '
+          + 'Ampelmännchen” nousi vastaan ja voitti. Nykyään hattupäinen '
           + 'ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin '
           + 'risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota '
           + 'myydään matkamuistona.',

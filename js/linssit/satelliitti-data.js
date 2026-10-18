@@ -4155,7 +4155,7 @@ export const SATELLIITTI_KOHTEET = [
     "tunnus": "everglades",
     "nimi": "Everglades",
     "seutu": "Florida, Yhdysvallat",
-    "selite": "Valtavan matalana virtaava \"ruohon joki\", yksi maailman suurimmista kosteikoista.",
+    "selite": "Valtavan matalana virtaava ”ruohon joki”, yksi maailman suurimmista kosteikoista.",
     "lat": 25.4,
     "lon": -80.9,
     "oletus": "iss015e08920",
@@ -4163,7 +4163,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss015e08920",
         "aika": "2007-05-19",
-        "teksti": "Turkoosin ja tummanvihreän kirjava kuvio on satojen tuhansien hehtaarien laajuinen saraikko, jonka läpi vesi virtaa niin hitaasti — vain muutaman sadan metrin päivässä — että aluetta kutsutaan \"ruohon joeksi\". Kansallispuisto on maailman ainoa paikka, jossa amerikanalligaattori ja amerikankrokotiili elävät luonnossa samalla alueella.",
+        "teksti": "Turkoosin ja tummanvihreän kirjava kuvio on satojen tuhansien hehtaarien laajuinen saraikko, jonka läpi vesi virtaa niin hitaasti — vain muutaman sadan metrin päivässä — että aluetta kutsutaan ”ruohon joeksi”. Kansallispuisto on maailman ainoa paikka, jossa amerikanalligaattori ja amerikankrokotiili elävät luonnossa samalla alueella.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 15",
         "kuvaaja": null,
@@ -4412,7 +4412,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss072e645691",
         "aika": "2025-02-17",
-        "teksti": "Casablancan valot piirtävät rannikon ääriviivan tarkasti Atlantin mustaa merta vasten. Kaupunki on Marokon suurin ja tärkein talouskeskus, ja siellä asuu yli 3,7 miljoonaa ihmistä. Nimi tarkoittaa espanjaksi 'valkoista taloa' – portugalilaiset ja espanjalaiset merenkulkijat antoivat sen valkoisiksi kalkittujen rakennusten mukaan.",
+        "teksti": "Casablancan valot piirtävät rannikon ääriviivan tarkasti Atlantin mustaa merta vasten. Kaupunki on Marokon suurin ja tärkein talouskeskus, ja siellä asuu yli 3,7 miljoonaa ihmistä. Nimi tarkoittaa espanjaksi ’valkoista taloa’ – portugalilaiset ja espanjalaiset merenkulkijat antoivat sen valkoisiksi kalkittujen rakennusten mukaan.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 72",
         "kuvaaja": null,
@@ -4464,7 +4464,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss074e0316083",
         "aika": "2026-02-18",
-        "teksti": "Taklamakanin autiomaan läntinen reuna kohtaa Pamirin vuoriston lumihuiput jyrkässä siirtymässä. Autiomaa on toiseksi suurin liikkuvan hiekan alue maailmassa, ja sen nimen on tulkittu tarkoittavan suunnilleen 'sinne menee mutta ei tule takaisin'. Muinaiset silkkitiekulkijat kiersivät koko autiomaan sen reunoja pitkin sen sijaan, että olisivat yrittäneet ylittää sen.",
+        "teksti": "Taklamakanin autiomaan läntinen reuna kohtaa Pamirin vuoriston lumihuiput jyrkässä siirtymässä. Autiomaa on toiseksi suurin liikkuvan hiekan alue maailmassa, ja sen nimen on tulkittu tarkoittavan suunnilleen ’sinne menee mutta ei tule takaisin’. Muinaiset silkkitiekulkijat kiersivät koko autiomaan sen reunoja pitkin sen sijaan, että olisivat yrittäneet ylittää sen.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 74",
         "kuvaaja": null,
@@ -4646,7 +4646,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss073e0818427",
         "aika": "2025-10-02",
-        "teksti": "Bassac-joki – Mekongin yksi yhdeksästä 'lohikäärmehaarasta' – kiertää Cù Lao Dungin jokisaarta ruskeana ja sedimenttipitoisena juuri ennen laskuaan mereen. Vasemmalla näkyy tummempaa maata ja oikealla vihreämpää viljelysmaata ja hedelmätarhoja. Sameus syntyy Mekongin koko valuma-alueelta kertyneestä liejusta, jota vuorovesi sekoittaa edelleen suulla.",
+        "teksti": "Bassac-joki – Mekongin yksi yhdeksästä ’lohikäärmehaarasta’ – kiertää Cù Lao Dungin jokisaarta ruskeana ja sedimenttipitoisena juuri ennen laskuaan mereen. Vasemmalla näkyy tummempaa maata ja oikealla vihreämpää viljelysmaata ja hedelmätarhoja. Sameus syntyy Mekongin koko valuma-alueelta kertyneestä liejusta, jota vuorovesi sekoittaa edelleen suulla.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 73",
         "kuvaaja": null,
@@ -5998,7 +5998,7 @@ export const SATELLIITTI_KOHTEET = [
     "tunnus": "brindisi",
     "nimi": "Brindisi",
     "seutu": "Italia",
-    "selite": "Adrianmeren satamakaupunki Italian \"koron\" kärjessä, josta 1800-luvun matkustajalaivat lähtivät kohti Suezia.",
+    "selite": "Adrianmeren satamakaupunki Italian ”koron” kärjessä, josta 1800-luvun matkustajalaivat lähtivät kohti Suezia.",
     "lat": 40.632,
     "lon": 17.9369,
     "oletus": "iss028e008604",
@@ -6006,7 +6006,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss028e008604",
         "aika": "2011-06-11",
-        "teksti": "Kesäkuussa 2011 otetussa yökuvassa Italian \"saappaan\" kantapää ja kärki piirtyvät esiin suurten kaupunkien, kuten Napolin, Barin ja Brindisin, valoista. Brindisi oli 1800-luvulla tärkeä satama, josta höyrylaivat lähtivät kohti Suezin kanavaa ja Intiaa — samaa reittiä, jota pitkin moni aikansa matkailija kiersi maailman ympäri.",
+        "teksti": "Kesäkuussa 2011 otetussa yökuvassa Italian ”saappaan” kantapää ja kärki piirtyvät esiin suurten kaupunkien, kuten Napolin, Barin ja Brindisin, valoista. Brindisi oli 1800-luvulla tärkeä satama, josta höyrylaivat lähtivät kohti Suezin kanavaa ja Intiaa — samaa reittiä, jota pitkin moni aikansa matkailija kiersi maailman ympäri.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 28",
         "kuvaaja": null,

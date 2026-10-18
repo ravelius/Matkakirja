@@ -1216,7 +1216,7 @@ export const ASIA_VALOKUVAT = {
         lyhyt: 'Ledran kadun jakolinja Nikosiassa vuonna 2007.',
         selite: 'Ledran kadun pää: peltiaita katkaisee kadun, vieressä on '
           + 'vartiokoppi ja seinässä kyltti, jossa lukee neljällä kielellä '
-          + '"viimeinen jaettu pääkaupunki". Aidan takana katu jatkuu aivan '
+          + '”viimeinen jaettu pääkaupunki”. Aidan takana katu jatkuu aivan '
           + 'samanlaisena, mutta kyltit vaihtuvat kreikasta turkkiin.',
       },
       {

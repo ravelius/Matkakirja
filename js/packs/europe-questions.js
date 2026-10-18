@@ -244,7 +244,7 @@ export const EUROPE_QUESTIONS = {
       options: ['Notre-Dame', 'Sacré-Cœur', 'Pyhän Paavalin katedraali', 'Sagrada Família'],
       correct: 0,
       fact: 'Katedraali vaurioitui pahoin tulipalossa 2019. Se avattiin uudelleen vuoden 2024 lopulla, ja korjaukseen osallistui satoja kivenveistäjiä ja puuseppiä.',
-      hint: 'Nimi tarkoittaa ranskaksi "Meidän rouvamme".',
+      hint: 'Nimi tarkoittaa ranskaksi ”Meidän rouvamme”.',
     },
   ],
 
@@ -1166,7 +1166,7 @@ export const EUROPE_QUESTIONS = {
       q: 'Minkä lempinimen Luxemburgin kaupunki sai vahvan linnoituksensa vuoksi?',
       options: ['Pohjoisen Gibraltar', 'Alppien Venetsia', 'Manner-Euroopan Malta', 'Reinin portti'],
       correct: 0,
-      fact: 'Ranskalainen sotilasinsinööri Lazare Carnot kutsui Luxemburgin linnoitusta maailman parhaaksi Gibraltaria lukuun ottamatta, mistä syntyi lempinimi "Pohjoisen Gibraltar".',
+      fact: 'Ranskalainen sotilasinsinööri Lazare Carnot kutsui Luxemburgin linnoitusta maailman parhaaksi Gibraltaria lukuun ottamatta, mistä syntyi lempinimi ”Pohjoisen Gibraltar”.',
       hint: 'Nimi vertaa kaupunkia Espanjan eteläkärjen linnoitukseen.',
       source: 'https://en.wikipedia.org/wiki/Luxembourg_City',
     },
@@ -2232,7 +2232,7 @@ export const EUROPE_QUESTIONS = {
       ],
       correct: 0,
       level: 3,
-      fact: 'Yli 200 metriä korkea rakennus valmistui 1953 ja kuuluu kaupungin "seitsemään sisareen". Sen käytävien yhteispituus lasketaan kymmenissä kilometreissä.',
+      fact: 'Yli 200 metriä korkea rakennus valmistui 1953 ja kuuluu kaupungin ”seitsemään sisareen”. Sen käytävien yhteispituus lasketaan kymmenissä kilometreissä.',
       hint: 'Rakennus valmistui pian toisen maailmansodan jälkeen ja kohoaa yli 200 metriin.',
     },
     {
@@ -2459,7 +2459,7 @@ export const EUROPE_QUESTIONS = {
       q: 'Mikä Vilnan kaupunginosa julistautui leikkimielisesti omaksi tasavallakseen?',
       options: ['Užupis', 'Montmartre', 'Kreuzberg', 'Trastevere'],
       correct: 0,
-      fact: 'Taiteilijoiden asuttama kaupunginosa julisti 1997 oman "tasavaltansa", jonka perustuslaki on kirjoitettu seinään usealla kielellä. Kyse on leikistä, ei valtiosta.',
+      fact: 'Taiteilijoiden asuttama kaupunginosa julisti 1997 oman ”tasavaltansa”, jonka perustuslaki on kirjoitettu seinään usealla kielellä. Kyse on leikistä, ei valtiosta.',
       hint: 'Alueen perustuslaki on kirjoitettu seinään monella kielellä.',
     },
     {
@@ -3472,7 +3472,7 @@ export const EUROPE_FACTS = {
     },
   ],
   vilna: [
-    'Vilnassa on taiteilijoiden julistama leikkimielinen Užupisin "tasavalta", jolla on oma perustuslaki käännettynä kymmenille kielille.',
+    'Vilnassa on taiteilijoiden julistama leikkimielinen Užupisin ”tasavalta”, jolla on oma perustuslaki käännettynä kymmenille kielille.',
     'Liettua oli viimeinen Euroopan maa, joka kristillistyi — vasta 1387.',
     {
       text: 'Kaupungissa on kirjapainoja ja oppineita niin paljon, että sitä kutsutaan Pohjolan Jerusalemiksi. Barokkikirkkoja on niin monta, että laskin ne kahdesti väärin.',
@@ -4912,7 +4912,7 @@ export const PAAKAUPUNKIEN_KYSYMYKSET = {
       correct: 1,
       level: 3,
       hint: 'Nimi viittaa moskeijan laatoituksen väriin.',
-      fact: 'Matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, \'taivaansininen moskeija\'.',
+      fact: 'Matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, ’taivaansininen moskeija’.',
       source: 'https://en.wikipedia.org/wiki/Blue_Mosque,_Yerevan',
     },
     {

@@ -119,7 +119,7 @@ export const FOKUSKOHTEET_BGR = [
       + 'Silti Filibe oli tuolloin bulgarialaisen kansallisen '
       + 'herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. '
       + 'Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä '
-      + 'kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella '
+      + 'kutsutaan ”seitsemän kukkulan kaupungiksi”, ja asutusta alueella '
       + 'on ollut yhtäjaksoisesti jo 6000-luvulta eaa.',
     lahde: 'en-Wikipedia "Plovdiv", johdanto-osa ja osio "History/Ottoman '
       + 'rule" alaotsikkoineen (tarkistettu 24.8.2026).',
@@ -301,7 +301,7 @@ export const FOKUSKOHTEET_BGR = [
     },
     teksti: 'Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — '
       + 'nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa '
-      + 'suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian '
+      + 'suunnilleen ”rukouspaikkaa”. Huipulta näkee kaikki Bulgarian '
       + 'suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 '
       + 'kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan '
       + 'keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin '
@@ -402,7 +402,7 @@ export const FOKUSKOHTEET_BGR = [
       + 'pääsee bussilla ja hissillä keskustasta. Vuori syntyi '
       + 'tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien '
       + 'poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu '
-      + 'Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan '
+      + 'Cherni Vrah (”musta huippu”) kohoaa 2290 metriin. Vitošan '
       + 'luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.',
     lahde: 'en-Wikipedia "Vitosha", johdanto-osa ja osio "Conservation" '
       + '(tarkistettu 24.8.2026). Suomenkielinen kirjoitusasu "Vitoša" on '
@@ -440,7 +440,7 @@ export const FOKUSKOHTEET_BGR = [
     },
     teksti: 'Balkanin niemimaa on saanut nimensä juuri tästä vuoristosta, '
       + 'jota bulgariaksi ja serbiaksi kutsutaan Stara planinaksi, '
-      + '"Vanhaksi vuoreksi". Se kulkee noin 560 kilometriä Serbian '
+      + '”Vanhaksi vuoreksi”. Se kulkee noin 560 kilometriä Serbian '
       + 'rajalta Mustallemerelle asti ja jakaa Bulgarian pohjois- ja '
       + 'eteläosiin. Korkein huippu on Botev-huippu (2376 m). Vuoriston '
       + 'karstimaastossa on lukuisia luolia, joista Maguran luola '
@@ -489,7 +489,7 @@ export const FOKUSKOHTEET_BGR = [
     },
     teksti: 'Tonava on Euroopan toiseksi pisin joki Volgan jälkeen ja oli '
       + 'aikoinaan Rooman valtakunnan raja — latinalainen nimi Danubius '
-      + 'juontuu kelttiläisestä jumalattaresta Danusta. Suomen "Tonava" on '
+      + 'juontuu kelttiläisestä jumalattaresta Danusta. Suomen ”Tonava” on '
       + 'peräisin saksan Donau-nimestä. Bulgarian pohjoisrajalla joki '
       + 'erottaa maan Romaniasta lähes koko matkan, ja sen varrella '
       + 'sijaitsevat muun muassa Vidinin, Kozloduyn ja Rusen kaupungit.',
@@ -537,11 +537,11 @@ export const FOKUSKOHTEET_BGR = [
       europe: { x: 883.2, y: 736.4 },
     },
     teksti: 'Antiikin kreikkalaiset kutsuivat merta ensin nimellä Pontos '
-      + 'Axeinos, "epävieraanvarainen meri", koska purjehdus oli '
+      + 'Axeinos, ”epävieraanvarainen meri”, koska purjehdus oli '
       + 'vaarallista ja rannikon heimot vihamielisiä. Kreikkalaisten '
       + 'perustettua siirtokuntia rannoille nimi käännettiin: Euxeinos '
-      + 'Pontos, "vieraanvarainen meri". Osmanit puolestaan kutsuivat '
-      + 'merta Karadenizeksi, "mustaksi mereksi"; Bulgarian rannikolla '
+      + 'Pontos, ”vieraanvarainen meri”. Osmanit puolestaan kutsuivat '
+      + 'merta Karadenizeksi, ”mustaksi mereksi”; Bulgarian rannikolla '
       + 'avautuu muun muassa laaja Burgasin lahti.',
     lahde: 'en-Wikipedia "Black Sea", osiot "Historical names and '
       + 'etymology" ja "Geography" (tarkistettu 24.8.2026).',

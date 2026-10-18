@@ -1721,7 +1721,7 @@ export const HAHMOTELMA_SWE = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-eskilstuna-a7a07950.jpg',
       lyhyt: 'Punaisia puurakennuksia Rademachersmedjornan kadun varrella Eskilstunassa.',
-      selite: 'Rademachersmedjorna eli \'Rademacherin takomot\' on Eskilstunan vanha takomoalue. '
+      selite: 'Rademachersmedjorna eli ’Rademacherin takomot’ on Eskilstunan vanha takomoalue. '
         + 'Karl Gustavs Stad rakennettiin seppä Reinhold Rademacherin takomoiden '
         + 'ympärille.',
       lahde: 'Valokuva: Calle Eklund/V-wolf, Wikimedia Commons (CC BY-SA 3.0).',

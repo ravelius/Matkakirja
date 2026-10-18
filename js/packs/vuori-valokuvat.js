@@ -422,7 +422,7 @@ export const VUORIKUVAT = {
       lyhyt: 'Roraiman laki Venezuelan puolella.',
       selite: 'Roraiman laki Venezuelan puolella. Ylätasanko on mustaa '
         + 'kivilabyrinttiä ja lammikoita — Arthur Conan Doyle sijoitti '
-        + '"Kadonneen maailmansa" juuri tällaiselle vuorelle.',
+        + '”Kadonneen maailmansa” juuri tällaiselle vuorelle.',
       lahde: 'Tinhojv, Wikimedia Commons (CC BY-SA 4.0)',
     },
     {
@@ -602,7 +602,7 @@ export const VUORIKUVAT = {
       lyhyt: 'Kamerunvuori Doualan rautatieasemalta illansuussa.',
       selite: 'Kamerunvuori Doualan rautatieasemalta illansuussa. '
         + 'Karthagolainen Hanno kuvasi purjehduksellaan noin 500 eaa. '
-        + '"jumalten vaunuja" — tulta vuoren laella, mahdollisesti juuri '
+        + '”jumalten vaunuja” — tulta vuoren laella, mahdollisesti juuri '
         + 'tämän purkauksen.',
       lahde: 'Edouard Tamba, Wikimedia Commons (CC0)',
     },
@@ -1072,7 +1072,7 @@ export const VUORIKUVAT = {
       lyhyt: 'Denali sumumeren yllä.',
       selite: 'Denali sumumeren yllä. Vuori kantoi vuodesta 1917 nimeä Mount '
         + 'McKinley, mutta palasi 2015 vanhaan athabaskien nimeensä, joka '
-        + 'tarkoittaa "korkeaa".',
+        + 'tarkoittaa ”korkeaa”.',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
     },
     {
@@ -1495,7 +1495,7 @@ export const VUORIKUVAT = {
       lyhyt: 'Iltavalo pilvien läpi Drakensbergin pohjoisosassa.',
       selite: 'Iltavalo pilvien läpi Drakensbergin pohjoisosassa. Nimi '
         + 'tarkoittaa hollanniksi lohikäärmevuoria; zulun kielellä se on '
-        + 'uKhahlamba, "keihäsvalli".',
+        + 'uKhahlamba, ”keihäsvalli”.',
       lahde: 'Thomas Fuhrmann, Wikimedia Commons (CC BY-SA 4.0)',
     },
     {
@@ -1593,7 +1593,7 @@ export const VUORIKUVAT = {
       tiedosto: 'Ama Dablam, Nepal.jpg',
       lyhyt: 'Ama Dablam luoteesta Pherichen kylän luota.',
       selite: 'Ama Dablam luoteesta Pherichen kylän luota. Nimi tarkoittaa '
-        + '"äidin kaulakorua": harjanteet ovat kädet ja rinteen riippuva '
+        + '”äidin kaulakorua”: harjanteet ovat kädet ja rinteen riippuva '
         + 'jäätikkö se koru.',
       lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
     },
@@ -1992,7 +1992,7 @@ export const VUORIKUVAT = {
       tiedosto: 'Campo Imperatore with il Corno Grande in the background - Gran Sasso.jpg',
       lyhyt: 'Campo Imperatoren ylätasanko keväällä.',
       selite: 'Campo Imperatoren ylätasanko keväällä. Tasankoa on kutsuttu '
-        + '"Italian pikku-Tiibetiksi": se on parikymmentä kilometriä pitkä, '
+        + '”Italian pikku-Tiibetiksi”: se on parikymmentä kilometriä pitkä, '
         + 'lähes puuton ja tyhjä.',
       lahde: 'Bouke ten Cate, Wikimedia Commons (CC BY 4.0)',
     },

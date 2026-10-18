@@ -111,7 +111,7 @@ export const MAASTOKOHTEET_NIC = [
     laudat: {
       maailmankartta: { x: 3043.3, y: 2846.2 },
     },
-    teksti: 'San Juanjoki eli El Desaguadero, "laskuoja", virtaa 192 kilometriä '
+    teksti: 'San Juanjoki eli El Desaguadero, ”laskuoja”, virtaa 192 kilometriä '
       + 'Nicaraguajärvestä itään Karibianmereen. Suuri osa Nicaraguan ja Costa Rican rajasta '
       + 'kulkee joen etelärantaa pitkin, ja Cañas–Jerez-sopimuksen mukaan vedet ovat '
       + 'Nicaraguan ja Costa Rica saa käyttää tiettyjä osia vain kauppapurjehdukseen '
@@ -286,7 +286,7 @@ export const MAASTOKOHTEET_NIC = [
       + 'itse kanjonia. Kanjonin suulla yhtyvät Tapacalí- ja Comalí-joet, ja niistä syntyy '
       + 'Coco-joki, joka virtaa kanjonin läpi ja siitä eteenpäin 750 kilometriä '
       + 'Karibianmereen. Kanjonia ei ollut tutkittu järjestelmällisesti, ennen kuin '
-      + 'tšekkiläisten ja nicaragualaisten tutkijoiden ryhmä "löysi" sen 2004; sen '
+      + 'tšekkiläisten ja nicaragualaisten tutkijoiden ryhmä ”löysi” sen 2004; sen '
       + 'arvellaan syntyneen 5–13 miljoonaa vuotta sitten mioseenikaudella. '
       + 'Luonnonmuistomerkiksi se julistettiin 29. marraskuuta 2006. Kanjonista tuli nopeasti '
       + 'matkailukohde, mutta sen mukana tuli myös töhryjä, joita viranomaiset käyvät '

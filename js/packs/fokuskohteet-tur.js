@@ -286,7 +286,7 @@ export const FOKUSKOHTEET_TUR = [
     teksti: 'Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin '
       + 'ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, '
       + 'jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien '
-      + 'ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja '
+      + 'ajan ”keijunsavupiipuiksi”. Pehmeään kiveen on kaiverrettu satoja '
       + 'kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, '
       + 'joissa on monikerroksisia puolustusjärjestelmiä: käytäviä '
       + 'sulkevia pyöreitä kivipaasia ja aukkoja katossa.',
@@ -666,7 +666,7 @@ export const FOKUSKOHTEET_TUR = [
     },
     teksti: 'Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen '
       + 'vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien '
-      + 'Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", '
+      + 'Euroopassa vuori on samastettu Raamatun ”Araratin vuoriin”, '
       + 'joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista '
       + 'on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen '
       + 'tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian '
@@ -821,7 +821,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     teksti: 'Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja '
       + 'antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen '
-      + 'rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": '
+      + 'rannalla käytiin 28. toukokuuta 585 eaa. ”pimennyksen taistelu”: '
       + 'kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet '
       + 'solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin '
       + 'ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän '
@@ -992,8 +992,8 @@ export const FOKUSKOHTEET_TUR = [
       maailmankartta: { x: 6722.3, y: 1786.6 },
       europe: { x: 723.3, y: 830.7 },
     },
-    teksti: 'Gelibolun satamakaupungissa lapset "tuuditettiin uneen '
-      + 'meren ja laivojen kehtolaululla", kirjoitti 1500-luvun '
+    teksti: 'Gelibolun satamakaupungissa lapset ”tuuditettiin uneen '
+      + 'meren ja laivojen kehtolaululla”, kirjoitti 1500-luvun '
       + 'historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien '
       + 'laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi '
       + 'muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja '
@@ -1041,8 +1041,8 @@ export const FOKUSKOHTEET_TUR = [
     teksti: 'Vanjärven seudulla elää oma kissakantansa, jota ei ole '
       + 'jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, '
       + 'jonka silmät ovat siniset, meripihkanväriset tai '
-      + 'kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana '
-      + 'kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita '
+      + 'kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan ”uivana '
+      + 'kissana”, sillä sen on nähty uivan Vanjärvessä. Puhtaita '
       + 'yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on '
       + 'vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl '
       + '-yliopiston kampuksella Vanissa.',
@@ -1103,7 +1103,7 @@ export const FOKUSKOHTEET_TUR = [
         '1992',
       ],
       oikea: 3,
-      fakta: 'Vanin kissa tunnetaan "uivana kissana", sillä sen on nähty uivan '
+      fakta: 'Vanin kissa tunnetaan ”uivana kissana”, sillä sen on nähty uivan '
         + 'Vanjärvessä.',
     },
   },
@@ -1130,7 +1130,7 @@ export const FOKUSKOHTEET_TUR = [
       europe: { x: 721.1, y: 797.5 },
     },
     teksti: 'Edirnen liepeillä on painittu öljypainia joka vuosi '
-      + 'vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, '
+      + 'vuodesta 1360: Kırkpınar, ”neljänkymmenen lähteen” turnaus, '
       + 'pitää Guinnessin ennätystä maailman pisimpään jatkuneena '
       + 'urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain '
       + 'nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä '
@@ -1614,9 +1614,9 @@ export const FOKUSKOHTEET_TUR = [
       + 'uhripihan seinillä oli toinen, pienempi friisi Telefoksen '
       + 'elämästä; hän oli Herakleen poika ja kaupungin tarunomainen '
       + 'perustaja. Roomalainen Lucius Ampelius luetteli alttarin '
-      + 'maailman ihmeiden joukkoon: "Pergamonissa on suuri '
+      + 'maailman ihmeiden joukkoon: ”Pergamonissa on suuri '
       + 'marmorialttari, neljäkymmentä jalkaa korkea, ja siinä on '
-      + 'kolossaalisia veistoksia." Rakennelma purettiin osittain '
+      + 'kolossaalisia veistoksia.” Rakennelma purettiin osittain '
       + '600-luvulla, kun akropolis linnoitettiin, ja 1800-luvulla '
       + 'paikallinen väki käytti rinnettä kivilouhoksena. Saksalaiset '
       + 'kaivaukset nostivat friisin palat esiin 1878–1886, ja alttarin '

@@ -83,8 +83,8 @@ export const MAASTOKOHTEET_GTM = [
     },
     teksti: 'Atitlánjärvi on suuri luonnonjärvi Guatemalan ylängöillä Sierra Madren '
       + 'vuoristossa, Sololán maakunnassa maan lounaisosassa. Se on 340 metrin '
-      + 'enimmäissyvyydellään Keski-Amerikan syvin järvi. Nimi tarkoittaa "vesien välissä": '
-      + 'nahuatlin kielessä atl on vesi ja titlan tarkoittaa "välissä, vieressä, lähellä" — '
+      + 'enimmäissyvyydellään Keski-Amerikan syvin järvi. Nimi tarkoittaa ”vesien välissä”: '
+      + 'nahuatlin kielessä atl on vesi ja titlan tarkoittaa ”välissä, vieressä, lähellä” — '
       + 'sanan atl loppu jää pois, kun siihen liitetään pääte.',
     lahde: 'en-Wikipedia "Lake Atitlán", johdanto-osa ja osio "Name" (tarkistettu 6.9.2026).',
   },
@@ -192,7 +192,7 @@ export const MAASTOKOHTEET_GTM = [
       + 'varrella, tärkeiden kauppareittien risteyksessä. Paikka oli asuttu jo vuonna 200, '
       + 'akropoliin rakentaminen alkoi noin 550, ja suurin rakennuskausi käynnistyi '
       + '700-luvulla. Kasvun syy oli sota: kuningas Kʼakʼ Tiliw Chan Yopaat voitti Copánin '
-      + 'vuonna 738, ja Copánin suurin kuningas Uaxaclajuun Ubʼaah Kʼawiil eli "18 Kania" '
+      + 'vuonna 738, ja Copánin suurin kuningas Uaxaclajuun Ubʼaah Kʼawiil eli ”18 Kania” '
       + 'vangittiin ja uhrattiin Quiriguán suurella aukiolla. Siihen asti Quiriguá oli ollut '
       + 'Copánin vasalli, mutta sen jälkeen se säilytti itsenäisyytensä. Seremonia-arkkitehtuuri '
       + 'on vaatimatonta, mutta veistokset ovat huikeita: paikalla on mayamaailman korkein '
@@ -223,8 +223,8 @@ export const MAASTOKOHTEET_GTM = [
       + 'päiväykset ovat poikkeuksellisen myöhäisiä: monumentteja pystytettiin vielä sen '
       + 'jälkeen, kun klassisen mayakulttuurin romahdus oli jo niellyt suurimman osan '
       + 'Peténiä, ja myöhäisissä monumenteissa näkyy vaikutteita Keski-Meksikosta ja '
-      + 'Meksikonlahden rannikolta. Nimi on väännös espanjan sanasta ceibal, "paikka jossa '
-      + 'kasvaa ceiba-puita".',
+      + 'Meksikonlahden rannikolta. Nimi on väännös espanjan sanasta ceibal, ”paikka jossa '
+      + 'kasvaa ceiba-puita”.',
     lahde: 'en-Wikipedia "Seibal", johdanto-osa ja osio "Etymology" (tarkistettu 6.9.2026).',
   },
   {
@@ -250,7 +250,7 @@ export const MAASTOKOHTEET_GTM = [
       + 'otettiin 1524 hyvin vastaan, ja Iximchestä tehtiin Guatemalan kuningaskunnan '
       + 'ensimmäinen pääkaupunki. Juuri siitä maan nimi tulee: espanjalaiset kutsuivat '
       + 'kaupunkia nahuatlinkielisten liittolaistensa mukaan nimellä Quauhtemallan, '
-      + '"metsäinen maa". Liitto katkesi pian liiallisiin veronkantovaatimuksiin, kaqchikelit '
+      + '”metsäinen maa”. Liitto katkesi pian liiallisiin veronkantovaatimuksiin, kaqchikelit '
       + 'jättivät kaupunkinsa, ja espanjalaiset karkurit polttivat sen kahta vuotta myöhemmin.',
     lahde: 'en-Wikipedia "Iximche", johdanto-osa ja osio "Etymology" (tarkistettu 6.9.2026).',
   },
@@ -274,7 +274,7 @@ export const MAASTOKOHTEET_GTM = [
       + 'merkitys on kirjallinen: juuri täällä säilytettiin ja kirjoitettiin muistiin '
       + '1700-luvun alussa Popol Vuhin alkuperäiskäsikirjoitus, kʼicheʼ-kansan pyhä kertomus. '
       + 'Espanjalaiset valloittajat antoivat kaupungille nahuatlinkielisen nimen '
-      + 'Tzitzicaztenanco, "nokkosten paikka", tlaxcalalaisten liittolaistensa kielellä; '
+      + 'Tzitzicaztenanco, ”nokkosten paikka”, tlaxcalalaisten liittolaistensa kielellä; '
       + 'alkuperäinen kʼicheʼ-nimi oli Chaviar. Vuoden 2012 laskennan mukaan 98,5 prosenttia '
       + 'kunnan asukkaista on kʼicheʼ-mayoja: 21 prosenttia puhuu vain kʼicheʼä, 71 '
       + 'prosenttia sekä kʼicheʼä että espanjaa ja loput 8 prosenttia vain espanjaa.',

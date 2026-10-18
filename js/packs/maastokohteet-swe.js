@@ -377,7 +377,7 @@ export const MAASTOKOHTEET_SWE = [
       + 'Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun '
       + 'kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, '
       + 'Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta '
-      + '"Uppsalan kuninkaana".\n\n'
+      + '”Uppsalan kuninkaana”.\n\n'
       + 'Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui '
       + 'esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät '
       + 'pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen '

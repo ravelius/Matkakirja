@@ -1219,7 +1219,7 @@ export const ASIA_MAATIEDOT = {
       arvo: '0,04',
       sija: '163./174',
       linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~TJK',
-      selitys: 'Presidentti Emomali Rahmon on johtanut maata vuodesta 1994, ja hänen perheenjäseniään istuu keskeisissä valtion viroissa. Hänen asemansa "kansakunnan johtajana" vapauttaa hänet perustuslaillisista kausirajoituksista, ja vaalilainsäädäntö on rajoittanut oppositiopuolueiden rekisteröitymistä.',
+      selitys: 'Presidentti Emomali Rahmon on johtanut maata vuodesta 1994, ja hänen perheenjäseniään istuu keskeisissä valtion viroissa. Hänen asemansa ”kansakunnan johtajana” vapauttaa hänet perustuslaillisista kausirajoituksista, ja vaalilainsäädäntö on rajoittanut oppositiopuolueiden rekisteröitymistä.',
     },
     keskitulo: { arvo: '1 650 $/v', sija: '167./198' },
     tervehdykset: [

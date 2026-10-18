@@ -435,7 +435,7 @@ export const FOKUSKOHTEET_ROU = [
     teksti: 'Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, '
       + 'ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat '
       + 'paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä '
-      + 'kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi '
+      + 'kalauz, ”opas”. Vielä 1900-luvulla laivat vedettiin kanavan läpi '
       + 'veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta '
       + 'nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen '
       + 'turkkilainen erillisalue, moskeija ja tuhat kujaa.',
@@ -476,8 +476,8 @@ export const FOKUSKOHTEET_ROU = [
       + 'kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. '
       + 'keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti '
       + 'elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan '
-      + 'Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan '
-      + 'runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". '
+      + 'Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli ”sodan '
+      + 'runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla”. '
       + 'Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; '
       + 'Romanialle se siirtyi vasta 1878.',
     lahde: 'en-Wikipedia "Constanța", johdanto-osa sekä osiot "Ancient '
@@ -633,7 +633,7 @@ export const FOKUSKOHTEET_ROU = [
       + 'tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. '
       + 'Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa '
       + 'pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi '
-      + '"Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon '
+      + '”Romanian seitsemästä ihmeestä”. Nykyinen asu ei silti ole keskiaikainen: tulipalon '
       + 'ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi '
       + 'siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että '
       + 'Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram '

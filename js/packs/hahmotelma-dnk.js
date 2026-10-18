@@ -619,7 +619,7 @@ export const HAHMOTELMA_DNK = [
       + 'aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä '
       + 'on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren '
       + 'muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa '
-      + 'paikalliselle viikunalajikkeelle \'Bornholmin timantille\'. Saarella on useita '
+      + 'paikalliselle viikunalajikkeelle ’Bornholmin timantille’. Saarella on useita '
       + 'Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, '
       + 'Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi '
       + 'saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja '

@@ -612,9 +612,9 @@ export const EUROPE = {
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Kotimantere. Puolet karttani rajoista on väärin, ja loput ylitetään näyttämättä passia. Kukaan ei tarkasta papereitani — en tiedä, olenko helpottunut vai loukkaantunut.',
-      '"Mannermaalla tarvitaan passi, kultaa ja kärsivällisyyttä", kirjoitti isoisä. Minulla on kortti, jolla maksan junalipun Lissabonista Tallinnaan, eikä kukaan kysy mitään. Kärsivällisyyttä tarvitaan enää vaihdoilla.',
+      '”Mannermaalla tarvitaan passi, kultaa ja kärsivällisyyttä”, kirjoitti isoisä. Minulla on kortti, jolla maksan junalipun Lissabonista Tallinnaan, eikä kukaan kysy mitään. Kärsivällisyyttä tarvitaan enää vaihdoilla.',
       'Isoisän kartassa tämä maanosa on jaettu viiden keisarin kesken. Nyt tässä on yli neljäkymmentä valtiota, joista moni käyttää samaa rahaa ja jokainen omaa lippuaan. Hänen viisi keisariaan mahtuisivat nykyään yhteen kokoushuoneeseen — ja jonottaisivat vuoroaan.',
-      '"Junat myöhästyvät kaikkialla paitsi Sveitsissä", merkitsi isoisä huolellisesti. Istun asemalla ja katson taulua, joka sanoo saman asian sataviisikymmentä vuotta myöhemmin. Jotkut havainnot eivät vanhene lainkaan.',
+      '”Junat myöhästyvät kaikkialla paitsi Sveitsissä”, merkitsi isoisä huolellisesti. Istun asemalla ja katson taulua, joka sanoo saman asian sataviisikymmentä vuotta myöhemmin. Jotkut havainnot eivät vanhene lainkaan.',
       'Isoisä luetteli maanosan suuret joet ja sai ne oikein: Volga, Tonava, Rein, Veiksel. Rajat hän sai väärin lähes kaikki. Vedet pysyivät, rajat eivät — tämä on matkani lyhyin oppitunti.',
     ],
   },

@@ -72,7 +72,7 @@ export const MAASTOKOHTEET_MEX = [
     },
     teksti: 'Popocatépetl on toiminnassa oleva kerrostulivuori Meksikon keskiosassa ja '
       + '5 393 metrillään maan toiseksi korkein huippu Pico de Orizaban jälkeen. Nimi tulee '
-      + 'nahuatlin sanoista popōca, "se savuaa", ja tepētl, "vuori"; meksikolaiset kutsuvat '
+      + 'nahuatlin sanoista popōca, ”se savuaa”, ja tepētl, ”vuori”; meksikolaiset kutsuvat '
       + 'sitä tuttavallisesti El Popoksi. Korkea satula, Paso de Cortés, yhdistää sen '
       + 'pohjoispuoliseen kaksoisvuoreen Iztaccíhuatliin. Vuori näkyy Mexico Cityyn '
       + '70 kilometrin päähän, kun ilma on kirkas. Jäätiköt olivat vielä 1990-luvulla '
@@ -100,7 +100,7 @@ export const MAASTOKOHTEET_MEX = [
     },
     teksti: 'Cozumel on saari Karibianmerellä Jukatanin niemimaan itäpuolella, Playa del '
       + 'Carmenin kohdalla, ja se on oma kuntansa Quintana Roon osavaltiossa. Nimi tulee '
-      + 'mayan sanasta Cuzamil, "pääskysten saari". Saarelta tunnetaan yli kolmekymmentä '
+      + 'mayan sanasta Cuzamil, ”pääskysten saari”. Saarelta tunnetaan yli kolmekymmentä '
       + 'arkeologista paikkaa, ja asutusta on ollut noin vuodesta 300 eaa. espanjalaisten '
       + 'tuloon asti. Noin vuodesta 1250 saari kukoisti satamana ja pyhiinvaelluskohteena: '
       + 'kauppiaat ja pyhiinvaeltajat tulivat palvomaan Ixcheliä, kuun, synnytyksen ja '
@@ -162,7 +162,7 @@ export const MAASTOKOHTEET_MEX = [
       + 'arviolta satatuhatta ihmistä, ja kaupunki oli Amerikkojen suurin ja mahdollisesti '
       + 'aikansa kuudenneksi suurin koko maailmassa. Kaupungin oma nimi ei ole tiedossa; '
       + 'nahuatlinkielisen nimen antoivat atsteekit vasta satoja vuosia sen tuhon jälkeen, ja '
-      + 'se on käännetty muotoon "jumalten syntymäpaikka". Kaupungin läpi kulkee neljä '
+      + 'se on käännetty muotoon ”jumalten syntymäpaikka”. Kaupungin läpi kulkee neljä '
       + 'kilometriä pitkä ja 40 metriä leveä Kuolleiden katu, jonka päissä ovat Auringon ja '
       + 'Kuun pyramidit. Sieltä vietiin hienoja obsidiaanityökaluja kaikkialle Mesoamerikkaan. '
       + 'Kaupungin päärakennukset ryöstettiin ja poltettiin järjestelmällisesti noin 550.',
@@ -214,8 +214,8 @@ export const MAASTOKOHTEET_MEX = [
       maailmankartta: { x: 2881, y: 2512.3 },
     },
     teksti: 'Chichén Itzá oli suuri maya-kaupunki Jukatanilla, ja se hallitsi seutua '
-      + 'myöhäisklassiselta kaudelta varhaiselle jälkiklassiselle. Nimi tarkoittaa "itzájen '
-      + 'kaivon suulla": Pohjois-Jukatan on karstia, jossa joet virtaavat maan alla, ja vesi '
+      + 'myöhäisklassiselta kaudelta varhaiselle jälkiklassiselle. Nimi tarkoittaa ”itzájen '
+      + 'kaivon suulla”: Pohjois-Jukatan on karstia, jossa joet virtaavat maan alla, ja vesi '
       + 'saatiin neljästä luonnon kuilusta eli cenotesta. Niistä kuuluisin on Pyhä cenote, '
       + 'johon uhrattiin esineitä ja ihmisiä sadejumala Chaacille. Kaupungin yli kohoaa '
       + 'Kukulcánin temppeli eli El Castillo, noin 30 metriä korkea porraspyramidi, jossa on '

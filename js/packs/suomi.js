@@ -231,9 +231,9 @@ export const SUOMI = {
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisän kartta sanoo: Suuriruhtinaskunta. Nykyään tämä on maa, jossa hallitus toimii verkossa ja järvetkin on laskettu — 187 888, he tarkistivat. Isoisä olisi vaatinut nähdä laskutoimituksen.',
-      '"Kesällä aurinko ei laske ollenkaan pohjoisessa, ja se tekee ihmisistä puheliaita", isoisä kirjoitti. Ensimmäinen väite pitää paikkansa. Toisesta olen kuullut eriäviä näkemyksiä paikallisilta itseltään.',
+      '”Kesällä aurinko ei laske ollenkaan pohjoisessa, ja se tekee ihmisistä puheliaita”, isoisä kirjoitti. Ensimmäinen väite pitää paikkansa. Toisesta olen kuullut eriäviä näkemyksiä paikallisilta itseltään.',
       'Isoisä matkusti täällä reellä ja piti tervaa maan tärkeimpänä vientituotteena. Terva vaihtui paperiin, paperi puhelimiin ja puhelimet ohjelmistoihin. Metsä on yhä samassa paikassa ja tekee yhä työtä.',
-      '"Talvi kestää täällä puoli vuotta ja on itse asiassa vuoden paras aika", isoisä merkitsi muistiin. Pidin sitä pakkasen aiheuttamana harhana, kunnes näin ensimmäisen kunnolla auratun jäätien.',
+      '”Talvi kestää täällä puoli vuotta ja on itse asiassa vuoden paras aika”, isoisä merkitsi muistiin. Pidin sitä pakkasen aiheuttamana harhana, kunnes näin ensimmäisen kunnolla auratun jäätien.',
       'Isoisä ihmetteli, että talonpojankin lapset osasivat lukea. Nykyään täällä ihmetellään, jos joku ei osaa. Muutos on hänen listassaan pieni rivi; minusta se on koko kirjan tärkein.',
     ],
   },

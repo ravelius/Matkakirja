@@ -211,7 +211,7 @@ export const FOKUSKOHTEET_GRC = [
     teksti: 'Kaupungin perusti makedonialainen kuningas Kassandros vuonna '
       + '315 eaa. ja nimesi sen vaimonsa Thessaloniken mukaan — tämä oli '
       + 'Aleksanteri Suuren sisarpuoli. Bysantin aikana kaupunkia '
-      + 'kutsuttiin "kanssapääkaupungiksi" (Symprotevousa) Konstantinopolin '
+      + 'kutsuttiin ”kanssapääkaupungiksi” (Symprotevousa) Konstantinopolin '
       + 'rinnalla. Ottomaanivallan 1430–1912 aikana täällä asui rinnakkain '
       + 'kristittyjä, muslimeja ja juutalaisia, ja 1500–1900-luvuilla se oli '
       + 'Euroopan ainoa juutalaisenemmistöinen kaupunki.',
@@ -483,7 +483,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja '
       + 'kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin '
       + 'mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös '
-      + 'nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias '
+      + 'nimellä Pentadaktylos, ”viisisormi”. Korkein huippu, Profitis Ilias '
       + '(2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee '
       + 'yhä Spartan ja Kalamatan kaupunkien taivasrajaa.',
     lahde: 'en-Wikipedia "Taygetus", johdanto-osa sekä osiot '
@@ -539,8 +539,8 @@ export const FOKUSKOHTEET_GRC = [
       europe: { x: 621.1, y: 854.8 },
     },
     teksti: 'Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään '
-      + 'pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan '
-      + 'selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke '
+      + 'pitkin Kreikan mannerta ja tunnetaan puhekielessä ”Kreikan '
+      + 'selkärankana”. Vuoristo on geologisesti Dinaaristen Alppien jatke '
       + 'ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. '
       + 'Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa '
       + 'perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.',
@@ -611,7 +611,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'jonka maankuoren liike on nostanut yli kahden kilometrin '
       + 'korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä '
       + 'vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni '
-      + 'vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen '
+      + 'vuoristojärvi Drakolímni eli ”lohikäärmejärvi”: paikallisen '
       + 'tarun mukaan järvien lohikäärmeet tappelivat heittelemällä '
       + 'toisiaan männyillä ja kivillä ja muotoilivat siinä koko '
       + 'maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa '
@@ -970,7 +970,7 @@ export const FOKUSKOHTEET_GRC = [
     teksti: 'Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee '
       + '415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi '
       + 'on traakialaista perua ja juontuu kantaindoeurooppalaisesta '
-      + 'sanasta srew-, "virrata" — samasta juuresta tulee englannin sana '
+      + 'sanasta srew-, ”virrata” — samasta juuresta tulee englannin sana '
       + 'stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan '
       + 'Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden '
       + 'ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; '
@@ -1022,7 +1022,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa '
       + 'alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on '
       + 'Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla '
-      + 'eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli '
+      + 'eaa.; se tarkoitti ”leveää”, ja traakian kielessä siitä tuli '
       + 'Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja '
       + 'Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta '
       + 'pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. '
@@ -1168,7 +1168,7 @@ export const FOKUSKOHTEET_GRC = [
       europe: { x: 643.2, y: 881.5 },
     },
     teksti: 'Muinaiset kreikkalaiset pitivät Delfoita koko maailman '
-      + 'keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". '
+      + 'keskipisteenä — paikkaa merkitsi Omfalos-kivi, ”maailman napa”. '
       + 'Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä '
       + 'päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi '
       + 'juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. '
@@ -1616,7 +1616,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan '
       + 'voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla '
       + 'nimensä. Itse paikannimi on arkisempi: se tulee fenkolia '
-      + 'tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". '
+      + 'tarkoittavasta kreikan sanasta ja merkitsee ”fenkolien paikkaa”. '
       + 'Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille '
       + '192 ateenalaiselle.',
     lahde: 'en-Wikipedia "Marathon, Greece", johdanto, osio "History" ja '

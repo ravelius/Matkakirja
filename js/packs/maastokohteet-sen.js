@@ -349,7 +349,7 @@ export const MAASTOKOHTEET_SEN = [
       + 'millimetriä sadetta. Kaupunki on ollut kauppapaikka vuosisatoja, sillä se on '
       + 'Casamancen kapeimmalla kohdalla ja toisessa päässä kannasta, jonka yli kuljettiin '
       + 'Cacheujoelle. Nimestä kiistellään: tunnetuimman selityksen mukaan se tulee '
-      + 'portugalin sanoista "Cheguei e choram", tulin ja he itkevät, koska seudun asukkaat '
+      + 'portugalin sanoista ”Cheguei e choram”, tulin ja he itkevät, koska seudun asukkaat '
       + 'itkivät nähdessään eurooppalaisten saapuvan; toisten mukaan nimi on bainuk-kielinen '
       + 'ja vanhempi kuin portugalilaiset. Virallinen eurooppalainen asutus alkoi 1645, kun '
       + 'portugalilaiset perustivat sinne Cacheun alaisen kauppapaikan.',

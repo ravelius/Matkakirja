@@ -138,7 +138,7 @@ export const HAHMOTELMA_RUS = [
     taso: 1,
     lahi: true,
     kysymykset: [
-      'Miksi Peterhofia kutsutaan "Venäjän Versailles\'ksi"?',
+      'Miksi Peterhofia kutsutaan ”Venäjän Versailles\'ksi”?',
       'Miten Peterhofin Suuren kaskadin suihkulähteet saavat vetensä liikkeelle?',
     ],
     korostukset: ['Rastrelli|Rastrellin', 'Suuri kaskadi|Suuri kaskadi'],
@@ -880,7 +880,7 @@ export const HAHMOTELMA_RUS = [
     lahi: true,
     kysymykset: [
       'Kuka kehitti Vologdan voin valmistustavan ja mistä hän sai idean?',
-      'Miksi voita myytiin aluksi nimellä "Pariisin voi"?',
+      'Miksi voita myytiin aluksi nimellä ”Pariisin voi”?',
     ],
     korostukset: ['Nikolai Vereštšagin|Nikolai Vereštšagin', 'pähkinäinen maku|pähkinäisen maun'],
     nappi: 'Vereštšagin kehittää parhaillaan menetelmäänsä Jedimonovon meijerikoulussa — '

@@ -73,7 +73,7 @@ export const FOKUSKOHTEET_CHN = [
     laudat: {
       maailmankartta: { x: 9709.8, y: 1802.6 },
     },
-    teksti: 'Yuanmingyuan eli "täydellisen kirkkauden puutarha" oli '
+    teksti: 'Yuanmingyuan eli ”täydellisen kirkkauden puutarha” oli '
       + 'palatsien ja puutarhojen alue Pekingin luoteispuolella. Se '
       + 'rakennettiin 1700-luvulla ja 1800-luvun alussa, ja se oli '
       + 'Qianlong-keisarin ja hänen seuraajiensa varsinainen '

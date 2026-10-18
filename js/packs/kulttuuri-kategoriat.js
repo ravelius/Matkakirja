@@ -2308,7 +2308,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kevyt vastapaino Kafkan omalle vakavalle maineelle: veistos '
             + 'ei viittaa suoraan mihinkään Kafkan teokseen, vaan '
             + 'kaupungin tapaan käsitellä raskaita aiheita huumorilla.',
-          lyhyt: 'Museon pihan pronssiveistos vuodelta 2004 esittää kahta miestä, jotka "kirjoittavat" Tšekin muotoiseen altaaseen.',
+          lyhyt: 'Museon pihan pronssiveistos vuodelta 2004 esittää kahta miestä, jotka ”kirjoittavat” Tšekin muotoiseen altaaseen.',
           selite: 'Franz Kafka -museon pihan pronssiveistos vuodelta 2004 '
             + 'esittää kahta kääntyvää miestä, jotka kirjoittavat '
             + 'Tšekin muotoiseen altaaseen.',
@@ -3350,7 +3350,7 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Wienin krahi 1873',
       johdanto: 'Wienin pörssi romahti 9. toukokuuta 1873 vain viikko '
-        + 'maailmannäyttelyn avajaisten jälkeen — "Der Krach" painoi Itävallan '
+        + 'maailmannäyttelyn avajaisten jälkeen — ”Der Krach” painoi Itävallan '
         + 'talouden vuosien lamaan.',
       tehtava: {
         kysymys: 'Mikä avattiin Wienissä vain viikkoa ennen pörssiromahdusta 1873?',
@@ -3382,7 +3382,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki '
             + 'toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutuu '
             + 'hajottamaan pörssisalin edustalle kerääntyneen väkijoukon. Krahi, '
-            + 'jota jälkipolvet kutsuvat nimellä "Der Krach", painaa Itävallan '
+            + 'jota jälkipolvet kutsuvat nimellä ”Der Krach”, painaa Itävallan '
             + 'talouden vuosien lamaan juuri samaan aikaan kun näyttelyvieraiden '
             + 'mukana kaupunkiin leviää koleraepidemia. Seuraavien viikkojen '
             + 'aikana yli kuusikymmentä pankkia ja rakennusyhtiötä ajautuu '
@@ -4624,7 +4624,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koska valopintaa on paljon. Ensimmäiset syttyivät '
             + 'Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin '
             + 'vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja '
-            + '"Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään '
+            + '”Pelastakaa Ampelmännchen” nousi vastaan ja voitti. Nykyään '
             + 'hattupäinen ukkeli ohjaa kulkijoita myös monessa '
             + 'Länsi-Berliinin risteyksessä, ja siitä on tullut koko '
             + 'kaupungin maskotti, jota myydään matkamuistona.',
@@ -5507,7 +5507,7 @@ export const KULTTUURI_KATEGORIAT = {
         + 'ilta illalta vaihtoivat paikkaa — ensimmäiset kappaleet, joiden '
         + 'nähtiin kiertävän muuta kuin Maata.',
       tehtava: {
-        kysymys: 'Miksi Galilei nimesi kuut "Medicin tähdiksi"?',
+        kysymys: 'Miksi Galilei nimesi kuut ”Medicin tähdiksi”?',
         vaihtoehdot: [
           'Ne löytyivät Medicien palatsin katolta',
           'Hän halusi Toscanan suurherttuan hoviin',
@@ -5539,7 +5539,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'linssinsä itse edellisestä syksystä alkaen. Maaliskuussa 1610 hän '
             + 'julkaisee Venetsiassa ohuen kirjan Sidereus nuncius, Tähtien '
             + 'sanansaattaja, jossa ovat Kuun vuoret, Linnunradan lukemattomat '
-            + 'tähdet ja neljä "Medicin tähteä", jotka hän nimeää Toscanan '
+            + 'tähdet ja neljä ”Medicin tähteä”, jotka hän nimeää Toscanan '
             + 'suurherttuan suvulle päästäkseen tämän hoviin. Kuut tunnetaan nyt '
             + 'Galilein kuina: Io, Europa, Ganymedes ja Kallisto. Kirja tekee '
             + 'hänestä Euroopan kuuluisimman luonnontutkijan — ja aloittaa tien, '
@@ -5592,7 +5592,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Pio Ospedale della Pietà (Venice) 10.jpg',
           teksti: 'Antonio Vivaldi vihittiin papiksi 1703, mutta astmansa '
             + 'vuoksi hän ei juuri lukenut messua — punaisen tukkansa '
-            + 'vuoksi häntä kutsuttiin "il Prete Rosso", punaiseksi '
+            + 'vuoksi häntä kutsuttiin ”il Prete Rosso”, punaiseksi '
             + 'papiksi. Samana vuonna hän aloitti viulunsoiton opettajana '
             + 'Ospedale della Pietàssa, orpokodissa, joka kasvatti '
             + 'löytölapsitytöistä muusikoita. Tytöt soittivat ristikon '
@@ -8059,7 +8059,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerran rikkoi hänen astiansa, ateenalaiset eivät suuttuneet '
             + 'vaan hankkivat uuden tilalle. Se oli omituista kunnioitusta '
             + 'miehelle, joka kulki torilla päivällä lyhty kädessä ja väitti '
-            + 'etsivänsä "ihmistä" — ikään kuin kirkkainkaan valo '
+            + 'etsivänsä ”ihmistä” — ikään kuin kirkkainkaan valo '
             + 'ei siihen riittäisi.',
           selite: 'Diogenes asui talvisin viljan säilytykseen tarkoitetussa '
             + 'saviastiassa eli pithoksessa.',
@@ -8674,7 +8674,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           ampari: 'herokoe/hero-amsterdam-ilta.png',
           lyhyt: 'Magere Brug, Amstelin kääntösilta vuodelta 1934, valaistaan iltaisin yli tuhannella lampulla.',
-          selite: '"Laiha silta" eli Magere Brug on Amstelin yli johtava '
+          selite: '”Laiha silta” eli Magere Brug on Amstelin yli johtava '
             + 'valkoinen puinen kääntösilta, jonka nykyhahmo on '
             + 'vuodelta 1934 — iltaisin sen kaaria valaisee yli tuhat '
             + 'lamppua.',
@@ -9296,7 +9296,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Kalaa leivän välissä',
               teksti: 'Istanbulin tunnetuin katuruoka on balık ekmek eli '
-                + '"kala leipä": paistettu tai grillattu makrillifilee '
+                + '”kala leipä”: paistettu tai grillattu makrillifilee '
                 + 'leivän välissä, mukana salaattia ja sipulia. Sitä '
                 + 'myydään Eminönün rantatorilla suoraan veneestä: kala '
                 + 'kypsennetään samassa aluksessa, joka keinuu laiturin '
@@ -9311,7 +9311,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Balik ekmek Galata Bridge.JPG',
                 lyhyt: 'Balık ekmek eli kalaleipä on paistettua makrillifileetä leivän välissä salaatin ja sipulin kera.',
-                selite: 'Balık ekmek eli "kala leipä" on paistettua tai '
+                selite: 'Balık ekmek eli ”kala leipä” on paistettua tai '
                   + 'grillattua makrillifileetä leivän välissä salaatin '
                   + 'ja sipulin kanssa.',
                 lahde: 'Benreis, Wikimedia Commons (CC BY 3.0)',
@@ -9611,17 +9611,17 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Mehter-musiikin vaikutus levisi Osmanien '
             + 'valtakunnan rajojen ulkopuolelle 1700-luvulla: '
             + 'eurooppalaiset hovit alkoivat perustaa omia '
-            + '"janitsaarimusiikki"-innoittamia soittokuntiaan, ja '
+            + '”janitsaarimusiikki”-innoittamia soittokuntiaan, ja '
             + 'säveltäjät kuten Mozart ja Beethoven lainasivat mehterin '
             + 'rytmejä ja lyömäsoittimia sävellyksiinsä — tästä syntyi '
-            + 'termi "turkkilainen tyyli". Näin yhden sulttaanin '
+            + 'termi ”turkkilainen tyyli”. Näin yhden sulttaanin '
             + 'armeijan taistelumusiikki muokkasi vuosisatoja '
             + 'myöhemmin eurooppalaisen orkesterin lyömäsoitinkalustoa.',
           lyhyt: 'Osmanien sotilassoittokunta noin 1900-luvun alussa; '
             + 'sen tyyli vaikutti eurooppalaisiin säveltäjiin.',
           selite: 'Osmanien sotilassoittokunta noin 1900-luvun alussa; '
             + 'mehterin rytmit ja lyömäsoittimet vaikuttivat 1700-luvun '
-            + 'eurooppalaiseen "turkkilaiseen tyyliin".',
+            + 'eurooppalaiseen ”turkkilaiseen tyyliin”.',
           lahde: 'Paul Thompson, Wikimedia Commons (public domain)',
           wiki: 'Mehter',
         },
@@ -9631,14 +9631,14 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vaikuttivat 1700-luvulla?',
         vaihtoehdot: [
           'Intialaiseen klassiseen musiikkiin',
-          'Eurooppalaiseen "turkkilaiseen tyyliin" (mm. Mozart, Beethoven)',
+          'Eurooppalaiseen ”turkkilaiseen tyyliin” (mm. Mozart, Beethoven)',
           'Amerikkalaiseen jazz-musiikkiin',
           'Kiinalaiseen oopperaan',
         ],
         oikea: 1,
         fakta: 'Mehterin rytmit ja lyömäsoittimet vaikuttivat 1700-luvun '
             + 'eurooppalaisten säveltäjien, kuten Mozartin ja Beethovenin, '
-            + '"turkkilaiseen tyyliin".',
+            + '”turkkilaiseen tyyliin”.',
       },
     },
   ],
@@ -10635,7 +10635,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Calton Hillin kansallismonumentti jäi kesken 1829 ja rakastettiin rauniona nimestään huolimatta.',
           selite: 'Calton Hillin kansallismonumentti jäi kesken 1829, kun '
             + 'rahat loppuivat kahdentoista pylvään jälkeen — '
-            + '"Edinburghin häpeäksi" ristitystä raunioista tuli '
+            + '”Edinburghin häpeäksi” ristitystä raunioista tuli '
             + 'rakastettu maamerkki.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -10860,9 +10860,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'katukiviin on kaiverrettu lainauksia skotlantilaisilta '
             + 'kirjailijoilta — makar on vanha skottilainen sana runoilijalle. '
             + 'Walter Scottin kivessä lukee rivi hänen runostaan Lay of the '
-            + 'Last Minstrel vuodelta 1805: "Breathes there the man, with '
+            + 'Last Minstrel vuodelta 1805: ”Breathes there the man, with '
             + 'soul so dead, who never to himself hath said, this is my own, '
-            + 'my native land." Uusia kiviä on lisätty pihaan vuosien '
+            + 'my native land.” Uusia kiviä on lisätty pihaan vuosien '
             + 'varrella, ja piha kasvaa yhä kaupungin kirjallisuushistorian '
             + 'mukana.',
           lyhyt: 'Makars\' Courtin katukiviin on kaiverrettu lainauksia skotlantilaisilta kirjailijoilta.',
@@ -11438,7 +11438,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'onnistuneista matkoista — kirkon seinillä riippuu yhä '
             + 'satoja pienoislaivoja ja muistolaattoja pelastuneista '
             + 'haaksirikoista. Marseillelaiset kutsuvat patsasta '
-            + 'hellästi "La Bonne Mère", hyväksi äidiksi.',
+            + 'hellästi ”La Bonne Mère”, hyväksi äidiksi.',
           lyhyt: 'Notre-Dame de la Garde -basilika 1864 on merenkulkijoiden perinteinen suojeluspaikka Marseillen korkeimmalla kukkulalla.',
           selite: 'Notre-Dame de la Garde -basilika Marseillen '
             + 'korkeimmalla kukkulalla — merenkulkijoiden perinteinen '
@@ -12173,8 +12173,8 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Kuningas José I:n pääministeri, markiisi de Pombal, '
             + 'otti jälleenrakennuksen johtoonsa ja teetti Baixan '
             + 'keskustaan täysin uuden, suoraviivaisen ruutukaavan — yhden '
-            + 'Euroopan ensimmäisistä. Talot rakennettiin "gaiola '
-            + 'pombalinaksi" kutsutulla puisella häkkirungolla, joka '
+            + 'Euroopan ensimmäisistä. Talot rakennettiin ”gaiola '
+            + 'pombalinaksi” kutsutulla puisella häkkirungolla, joka '
             + 'joustaa järistyksessä murtumatta; kestävyys testattiin '
             + 'muun muassa marssittamalla sotilasjoukkoja rakennusten '
             + 'ympärillä täristystä jäljittelemään. Isoisän matkan '
@@ -12185,7 +12185,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'järistyksenkestävänä.',
           selite: 'Baixan kaupunginosa ylhäältä; se rakennettiin uudelleen '
             + '1755 järistyksen jälkeen suoraviivaisena ruutukaavana ja '
-            + 'järistyksenkestävällä "gaiola pombalina" -rakennustavalla.',
+            + 'järistyksenkestävällä ”gaiola pombalina” -rakennustavalla.',
           lahde: 'David Broad, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Baixa Pombalina',
         },
@@ -12200,7 +12200,7 @@ export const KULTTUURI_KATEGORIAT = {
           'Testejä ei tehty, vain rukoiltiin'
         ],
         oikea: 1,
-        fakta: 'Baixan "gaiola pombalina" -runkojen kestävyyttä testattiin '
+        fakta: 'Baixan ”gaiola pombalina” -runkojen kestävyyttä testattiin '
             + 'muun muassa marssittamalla sotilasjoukkoja rakennusten '
             + 'ympärillä järistystä jäljittelemään.',
       },
@@ -12999,7 +12999,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muuttivat siihen — siksi sen kipsikoristelu ja arabiankieliset '
             + 'kirjoitukset ovat yhä paikoillaan. Sama lause toistuu seinillä '
             + 'uudestaan ja uudestaan: se oli hallitsijasuvun tunnuslause, ja '
-            + 'se kuuluu "ei ole voittajaa paitsi Jumala".',
+            + 'se kuuluu ”ei ole voittajaa paitsi Jumala”.',
           lyhyt: 'Kun Alhambra luovutettiin 1492, voittajat asuivat siinä, joten sen kipsikoristelu säilyi.',
           selite: 'Kun Alhambra luovutettiin vuonna 1492, voittajat eivät '
             + 'purkaneet palatsia vaan muuttivat siihen, ja siksi sen '
@@ -13209,9 +13209,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Säveltäjä, joka muutti Alhambran kylkeen',
           tiedosto: 'Manuel de Falla.jpg',
-          teksti: 'Manuel de Falla kirjoitti teoksensa "Öitä Espanjan '
-            + 'puutarhoissa" vuosina 1909–1915, kun asui vielä Pariisissa ja '
-            + 'Madridissa. Sen ensimmäinen osa on nimeltään "Generalifessa", '
+          teksti: 'Manuel de Falla kirjoitti teoksensa ”Öitä Espanjan '
+            + 'puutarhoissa” vuosina 1909–1915, kun asui vielä Pariisissa ja '
+            + 'Madridissa. Sen ensimmäinen osa on nimeltään ”Generalifessa”, '
             + 'ja se on puutarha Alhambran kukkulalla. Vasta myöhemmin Falla '
             + 'muutti Granadaan ja asettui pieneen puutarhataloon aivan saman '
             + 'kukkulan rinteeseen; talo on nyt museo ja piano yhä '
@@ -13219,8 +13219,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kilpailun, joka pelasti vanhan cante jondo -laulun '
             + 'unohdukselta.',
           lyhyt: 'Manuel de Falla sävelsi Öitä Espanjan puutarhoissa 1909–1915 ja muutti sitten Granadaan.',
-          selite: 'Manuel de Falla (1876–1946) sävelsi "Öitä Espanjan '
-            + 'puutarhoissa" vuosina 1909–1915 ja muutti vasta sen jälkeen '
+          selite: 'Manuel de Falla (1876–1946) sävelsi ”Öitä Espanjan '
+            + 'puutarhoissa” vuosina 1909–1915 ja muutti vasta sen jälkeen '
             + 'Granadaan Alhambran kukkulan rinteeseen.',
           lahde: 'A. Ciarán, Wikimedia Commons (PD)',
           wiki: 'Manuel de Falla',
@@ -15398,9 +15398,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kotimaahansa, Johannes Paavali II kiipesi yöllä '
             + 'entisen kotinsa, arkkipiispan palatsin, ikkunalaudalle '
             + 'puhumaan alla laulaville nuorille — kardinaali piti häntä '
-            + 'kiinni, ettei hän putoaisi. "Kun asuin täällä Krakovassa, '
+            + 'kiinni, ettei hän putoaisi. ”Kun asuin täällä Krakovassa, '
             + 'olin melko kunnollinen ihminen. En koskaan kiivennyt '
-            + 'ikkunoihin", paavi vitsaili yleisölle. Tapahtumasta tuli '
+            + 'ikkunoihin”, paavi vitsaili yleisölle. Tapahtumasta tuli '
             + 'perinne, jota toistettiin jokaisella hänen '
             + 'vierailullaan kuolemaansa 2005 asti, ja ikkuna vetää '
             + 'yhä pyhiinvaeltajia.',
@@ -19420,7 +19420,7 @@ export const KULTTUURI_KATEGORIAT = {
           ampari: 'saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png',
           lyhyt: 'Zamoskvoretšje on Moskva-joen eteläpuolinen kaupunginosa, jonka nimi '
             + 'tarkoittaa joen takaista.',
-          selite: 'Nimi tulee sanoista "joen takana" Kremliltä katsoen. 1700-luvulta alueelle '
+          selite: 'Nimi tulee sanoista ”joen takana” Kremliltä katsoen. 1700-luvulta alueelle '
             + 'asettui paljon kauppiaita, joiden matalissa taloissa oli hedelmätarhoja.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -20276,7 +20276,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Bulgarian yogurt 2015.jpg',
           teksti: 'Perinteinen bulgarialainen jogurtti, kiselo mlyako, '
             + 'käy paksuksi bakteerilla, joka sai tieteellisen nimensä '
-            + '"Lactobacillus bulgaricus" juuri Bulgarian mukaan — '
+            + '”Lactobacillus bulgaricus” juuri Bulgarian mukaan — '
             + 'bulgarialainen lääketieteen opiskelija Stamen Grigorov '
             + 'tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti '
             + 'oli tunnettu Balkanilla vuosisatoja ennen sitä, ja '
@@ -20286,7 +20286,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Perinteinen bulgarialainen jogurtti; sen käymisbakteeri '
             + 'sai tieteellisen nimensä Bulgarian mukaan 1905.',
           selite: 'Perinteinen bulgarialainen jogurtti, kiselo mlyako; sen '
-            + 'käymisbakteeri "Lactobacillus bulgaricus" sai nimensä '
+            + 'käymisbakteeri ”Lactobacillus bulgaricus” sai nimensä '
             + 'Bulgarian mukaan, kun Stamen Grigorov tunnisti sen 1905.',
           lahde: 'Biser Todorov, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lactobacillus delbrueckii subsp. bulgaricus',
@@ -20560,7 +20560,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Makkara, jolta loppui kuori',
           tiedosto: 'Mititei la gratar.jpg',
-          teksti: 'Mici eli mititei, "pienet", ovat kuorettomia '
+          teksti: 'Mici eli mititei, ”pienet”, ovat kuorettomia '
             + 'jauhelihamakkaroita, joissa on valkosipulia, timjamia ja '
             + 'ruokasoodaa — sooda tekee niistä kuohkeita. Tarinan mukaan ne '
             + 'syntyivät 1800-luvun Bukarestissa, kun eräältä kapakoitsijalta '
@@ -20854,14 +20854,14 @@ export const KULTTUURI_KATEGORIAT = {
             + 'itsenäisyysvoiton kunniaksi. Kadun varrelle nousi '
             + 'vuosikymmenten kuluessa ranskalaistyylisiä palatseja, '
             + 'kauppoja ja kahviloita, ja kaupunki alkoi saada '
-            + 'lempinimen "Micul Paris", Pieni Pariisi — osittain siksi, '
+            + 'lempinimen ”Micul Paris”, Pieni Pariisi — osittain siksi, '
             + 'että moni romanialainen arkkitehti oli opiskellut juuri '
             + 'Pariisissa.',
           lyhyt: 'Calea Victoriei noin vuonna 1900; kadun ranskalaisvaikutteinen '
             + 'arkkitehtuuri antoi Bukarestille lempinimen Pieni Pariisi.',
           selite: 'Calea Victoriei noin vuonna 1900; kadun '
             + 'ranskalaisvaikutteinen arkkitehtuuri antoi Bukarestille '
-            + 'lempinimen "Micul Paris", Pieni Pariisi.',
+            + 'lempinimen ”Micul Paris”, Pieni Pariisi.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
           wiki: 'Calea Victoriei',
         },
@@ -23894,9 +23894,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kantoi kelloa, kompassia, kynää ja numeroituja '
             + 'paperiliuskoja muistiinpanoille. Kirjassaan Personal '
             + 'Narrative of a Pilgrimage to Al-Medinah and Meccah hän '
-            + 'kirjoitti: "Mekassa ei ole mitään teatraalista, mikään ei '
+            + 'kirjoitti: ”Mekassa ei ole mitään teatraalista, mikään ei '
             + 'muistuta oopperaa, vaan kaikki on yksinkertaista ja '
-            + 'vaikuttavaa."',
+            + 'vaikuttavaa.”',
           lyhyt: 'Richard Francis Burton matkusti Mekkaan 1853 valepuvussa, muistiinpanot koraanikotelossa.',
           selite: 'Richard Francis Burton matkusti Mekkaan vuonna 1853 '
             + 'valepuvussa ja kantoi muistiinpanovälineitä '
@@ -26437,7 +26437,7 @@ export const KULTTUURI_KATEGORIAT = {
         + 'mainetta että olutta, ja sinne ajautui lopulta myös '
         + 'Euroopan pelätyin sotalaiva.',
       tehtava: {
-        kysymys: 'Miksi Tromssaa on kutsuttu "Jäämeren Pariisiksi" ja arktisten retkikuntien porttikaupungiksi?',
+        kysymys: 'Miksi Tromssaa on kutsuttu ”Jäämeren Pariisiksi” ja arktisten retkikuntien porttikaupungiksi?',
         vaihtoehdot: [
           'Retkikunnat varustautuivat ja rekrytoivat miehistöä siellä ennen pohjoista matkaa',
           'Kaupunki sijaitsee tarkalleen Pohjoisnavalla',
@@ -26505,12 +26505,12 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rekrytoivat miehistöä Tromssassa ennen matkojaan '
             + 'Koillisväylälle ja Pohjoisnavan suunnalle.'
             + '\n\n'
-            + 'Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", '
+            + 'Kaupungin lempinimeksi vakiintui ”Jäämeren Pariisi”, '
             + 'osin ironisesti ja osin ylpeydestä sen kansainvälisestä '
             + 'merkityksestä napatutkimukselle. Nykyinen Polarmuseet '
             + 'toimii vanhassa tullirakennuksessa satamassa ja '
             + 'kertoo näiden retkikuntien historiasta.',
-          lyhyt: 'Amundsen ja Nansen varustautuivat retkikuntiinsa Tromssassa, joka sai lempinimen "Jäämeren Pariisi".',
+          lyhyt: 'Amundsen ja Nansen varustautuivat retkikuntiinsa Tromssassa, joka sai lempinimen ”Jäämeren Pariisi”.',
           selite: 'Polarmuseet Tromssan satamassa vanhassa '
             + 'tullirakennuksessa — kertoo kaupungista napaseutujen '
             + 'retkikuntien lähtöpaikkana.',
@@ -26787,8 +26787,8 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'GKS 1005 fol., 0005v - 15 (cropped).jpg',
           teksti: 'Islannin kieli on muuttunut niin vähän, että koululainen voi '
             + 'lukea 1200-luvun saagoja alkukielellä. Uusille asioille ei '
-            + 'lainata sanoja vaan tehdään omat: tietokone on tölva, "lukujen '
-            + 'ennustaja", ja kaikille islantilaisille tuttu sana yhtä '
+            + 'lainata sanoja vaan tehdään omat: tietokone on tölva, ”lukujen '
+            + 'ennustaja”, ja kaikille islantilaisille tuttu sana yhtä '
             + 'lailla.',
           lyhyt: 'Flateyjarbók on Islannin suurin keskiaikainen käsikirjoitus, 225 lehteä Norjan kuninkaiden saagoja.',
           selite: 'Flateyjarbók on Islannin suurin keskiaikainen käsikirjoitus, '
@@ -27030,8 +27030,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lähestyessään Islannin rannikkoa noin vuonna 874 ja '
             + 'lupasi asettua sinne, minne pylväät ajautuisivat. Ne '
             + 'löytyivät lahdesta, jossa hän näki maasta nousevaa '
-            + 'höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi '
-            + 'lahdeksi", kuumien lähteiden mukaan.'
+            + 'höyryä — hän nimesi paikan Reykjavíkiksi, ”savuiseksi '
+            + 'lahdeksi”, kuumien lähteiden mukaan.'
             + '\n\n'
             + 'Ingólfuria pidetään Islannin ensimmäisenä pysyvänä '
             + 'asukkaana, ja häntä seurasivat vuosikymmenten aikana '
@@ -27053,7 +27053,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mannerlaatat erkanevat toisistaan, ja perustivat Alþingin '
             + '— yleiskokouksen, joka sääti lakeja ja ratkaisi '
             + 'riitoja koko saarelle. Kokous pidettiin joka kesä '
-            + 'kahden viikon ajan Lögbergillä, "lakikalliolla", josta '
+            + 'kahden viikon ajan Lögbergillä, ”lakikalliolla”, josta '
             + 'lakimies julisti maan lait ääneen muistista, sillä '
             + 'niitä ei aluksi kirjoitettu ylös.'
             + '\n\n'
@@ -27062,7 +27062,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Tanskan vallan aikana, mutta perustettiin uudelleen ja '
             + 'toimii Reykjavíkissä nykyäänkin.',
           lyhyt: 'Alþingi perustettiin 930 Þingvellirin tasangolle, jossa mannerlaatat erkanevat toisistaan.',
-          selite: 'Lögberg, "lakikallio", Þingvellirin kansallispuistossa '
+          selite: 'Lögberg, ”lakikallio”, Þingvellirin kansallispuistossa '
             + '— paikka, jossa Alþingi kokoontui vuodesta 930 alkaen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -27081,7 +27081,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'salli vanhojen jumalien palvonnan yksityisesti kotona: '
             + 'kompromissi, joka vältti sisällissodan uhan. Þorgeir '
             + 'itse heitti perimätiedon mukaan omat epäjumalankuvansa '
-            + 'lähistön Goðafossiin, "jumalten koskeen".',
+            + 'lähistön Goðafossiin, ”jumalten koskeen”.',
           lyhyt: 'Lakimies Þorgeir julisti Islannin kristityksi vuonna 1000 kompromissilla, joka vältti sisällissodan.',
           selite: 'Almannagjá-rotko Þingvellirin kansallispuistossa — '
             + 'samalla tasangolla, jossa Islanti päätti siirtyä '
@@ -27603,8 +27603,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '1971 lähtien. Suuri osa esityksistä pohjautuu joikuun, '
             + 'saamelaiseen perinnelauluun, jolla ei ole alkua eikä '
             + 'loppua tavallisessa mielessä — saamelaisen käsityksen '
-            + 'mukaan ei "lauleta jostakin" vaan "joiataan joku tai '
-            + 'jokin", ikään kuin laulu kantaisi kohteensa esiin.'
+            + 'mukaan ei ”lauleta jostakin” vaan ”joiataan joku tai '
+            + 'jokin”, ikään kuin laulu kantaisi kohteensa esiin.'
             + '\n\n'
             + 'Kilpailu on kasvanut pieneksi pääsiäisfestivaaliksi, '
             + 'joka kokoaa saamelaisia eri puolilta Norjaa, Ruotsia, '
@@ -31052,7 +31052,7 @@ export const KULTTUURI_KATEGORIAT = {
           ampari: 'saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png',
           lyhyt: 'Užupis on Vilnian joen takana sijaitseva Vilnan kaupunginosa.',
           selite: 'Užupisin asukkaat julistivat alueen leikkimielisesti itsenäiseksi '
-            + 'tasavallaksi 1. huhtikuuta 1997. Nimi tarkoittaa \'joen takana\' ja viittaa '
+            + 'tasavallaksi 1. huhtikuuta 1997. Nimi tarkoittaa ’joen takana’ ja viittaa '
             + 'Vilnia-jokeen.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -31065,7 +31065,7 @@ export const KULTTUURI_KATEGORIAT = {
           ampari: 'saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png',
           lyhyt: 'Vilnia-joki virtaa Vilnan läpi ja laskee Nerikseen.',
           selite: 'Vilnia on Nerin sivujoki, ja kaupungin nimen arvellaan tulevan joen '
-            + 'nimestä. Joen nimi liittyy liettuan sanaan vilnis, \'aalto\'.',
+            + 'nimestä. Joen nimi liittyy liettuan sanaan vilnis, ’aalto’.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -31090,7 +31090,7 @@ export const KULTTUURI_KATEGORIAT = {
           ampari: 'saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png',
           lyhyt: 'Žvėrynasin kaupunginosassa Vilnassa on paljon 1890–1910-luvuilla '
             + 'rakennettuja puutaloja.',
-          selite: 'Alueen nimi tarkoittaa \'eläintarhaa\', ja se liittyy Radziwiłłien '
+          selite: 'Alueen nimi tarkoittaa ’eläintarhaa’, ja se liittyy Radziwiłłien '
             + 'metsästysalueeseen. Puutalot rakennettiin enimmäkseen 1890-luvulta '
             + '1910-luvulle.',
           lahde: 'Matkakirjan havainnekuva',
@@ -31800,7 +31800,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seitsemänkymmentäkuusivuotias Edvard Munch pelkäsi natsien '
             + 'vievän tai tuhoavan hänen elämäntyönsä — hänen '
             + 'taidettaan oli aiemmin leimattu Saksassa '
-            + '"rappiotaiteeksi". Hän kirjoitti testamenttinsa saman '
+            + '”rappiotaiteeksi”. Hän kirjoitti testamenttinsa saman '
             + 'kuun lopulla ja testamenttasi lähes koko jäljellä olevan '
             + 'tuotantonsa Oslon kaupungille. Munch kuoli tammikuussa '
             + '1944, vain reilu vuosi ennen sodan päättymistä.',
@@ -32619,7 +32619,7 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 1,
         fakta: 'Tuhat lasta kiersi kaupungin keräämässä pelikortteja, '
-          + 'koruja, peilejä, naamioita ja "säädyttömiä" tauluja, jotka '
+          + 'koruja, peilejä, naamioita ja ”säädyttömiä” tauluja, jotka '
           + 'poltettiin yhdessä valtavassa kasassa Piazza della '
           + 'Signorialla.',
       },
@@ -34190,7 +34190,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen '
             + 'kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. '
             + 'Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: '
-            + 'hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", '
+            + 'hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, '
             + 'josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion '
             + 'sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympärille '
             + 'kasvava kaupunki kantaa yhä saman nimen johdannaista. Jyrkänne '
@@ -38350,7 +38350,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+          otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
           aika: '26.11.1922',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
@@ -38361,8 +38361,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rahoittaja lordi Carnarvon, hänen tyttärensä Evelyn Herbert ja '
             + 'apulainen Arthur Callender. Ensin ei näy mitään; sitten silmät '
             + 'tottuvat, ja pimeydestä nousee kullan hohdetta — eläinhahmoisia '
-            + 'vuoteita, vaunuja, patsaita. "Näkyykö mitään?" Carnarvon kysyy. '
-            + '"Näkyy, ihmeellisiä asioita", Carter vastaa. Viikkoa aiemmin, 4. '
+            + 'vuoteita, vaunuja, patsaita. ”Näkyykö mitään?” Carnarvon kysyy. '
+            + '”Näkyy, ihmeellisiä asioita”, Carter vastaa. Viikkoa aiemmin, 4. '
             + 'marraskuuta, työmiehet olivat löytäneet kallioon hakatun portaikon '
             + 'ensimmäisen askelman työmiesmajojen alta; Carnarvon oli '
             + 'rahoittanut Carterin kaivauksia vuodesta 1907 ja suostunut vielä '
@@ -38383,7 +38383,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+              otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
               lyhyt: 'Lady Evelyn Herbert seuraa jännittyneenä, kun yli '
                 + 'kolmentuhannen vuoden hiljaisuus rikkoutuu.',
@@ -38395,7 +38395,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
             },
             {
-              otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+              otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
               lyhyt: 'Brittilehti kuvittaa Carterin löydön piirroksin, ennen kuin '
                 + 'varsinaiset valokuvat leviävät.',
@@ -40955,7 +40955,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Lahjin maakunta, luoteessa Abyan. Antiikin aikaan Aden '
                 + 'oli enemmän saari kuin niemi, sillä sen mantereeseen '
                 + 'yhdistävä kannas oli paljon kapeampi kuin nyt; '
-                + 'Periplus kuvasi paikan sanoilla "kylä rannalla". '
+                + 'Periplus kuvasi paikan sanoilla ”kylä rannalla”. '
                 + 'Vuonna 1920 satama-alue mitattiin kolmentoista ja '
                 + 'kuuden kilometrin kokoiseksi.',
               kuva: {
@@ -40996,7 +40996,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Settlement. Ajatus oli vanha: Bombayn kuvernööri Sir '
                 + 'Robert Grant, joka oli virassa 1834–1838, uskoi että '
                 + 'Intiaa voi puolustaa vain ottamalla haltuun '
-                + '"vahvoja paikkoja" etukäteen. Alue myös kasvoi '
+                + '”vahvoja paikkoja” etukäteen. Alue myös kasvoi '
                 + 'palasina: Perimin saari, kolmetoista neliökilometriä, '
                 + 'liitettiin vuonna 1857, Khuriya Muriya -saaret eli 73 '
                 + 'neliökilometriä vuonna 1868 ja Kamaran, 108 '
@@ -41024,8 +41024,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Craterin oma sääkooste antaa 61, kun taas '
                 + 'ERA5-ruutu antaa 125. Ero syntyy mittaustavasta ja '
                 + 'jaksosta, eikä yksikään luku kumoa toista; suuruusluokka '
-                + 'on joka tapauksessa "vähän ja lähes kokonaan '
-                + 'elokuussa". Joulu–helmikuu on selvästi mukavin aika: '
+                + 'on joka tapauksessa ”vähän ja lähes kokonaan '
+                + 'elokuussa”. Joulu–helmikuu on selvästi mukavin aika: '
                 + 'keskilämpö 24–25 astetta ja sade muutama millimetri.',
               kuva: {
                 tiedosto: 'Yémen-209.JPG',
@@ -41854,9 +41854,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Vuonna 1847 nuori brittidiplomaatti Austen Henry '
                 + 'Layard tutki Kuyunjikin ja tunnisti sen Niniveksi. '
                 + 'Hänen menetelmänsä oli hänen omien sanojensa mukaan '
-                + 'saada "mahdollisimman suuri määrä hyvin säilyneitä '
+                + 'saada ”mahdollisimman suuri määrä hyvin säilyneitä '
                 + 'taide-esineitä mahdollisimman pienellä ajan ja rahan '
-                + 'kululla"; vuonna 1851 hän löysi Assurbanipalin '
+                + 'kululla”; vuonna 1851 hän löysi Assurbanipalin '
                 + 'kirjaston, jossa oli kaksikymmentäkaksituhatta '
                 + 'nuolenpääsavitaulua. Suurin osa löydöistä lähti '
                 + 'Britannian museoon, ja työtä jatkoivat Hormuzd Rassam '
@@ -49713,7 +49713,7 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Yksi joki, neljä kansanryhmää ja saari, joka on '
             + 'kasvanut merta täyttämällä.',
           nosto: 'Chinatownin kiinankielinen nimi tarkoittaa '
-            + '"härkävankkurivettä" — 1800-luvulla korttelien juomavesi '
+            + '”härkävankkurivettä” — 1800-luvulla korttelien juomavesi '
             + 'tuotiin sinne eläinten vetämillä kärryillä.',
           jaksot: [
             {
@@ -49855,8 +49855,8 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Part of Singapore Island (British Library India Office Records, 1825, detail).jpg',
           teksti: 'Vuonna 1822 Raffles antoi kaupungin '
             + 'suunnittelukomitealle tehtäväksi järjestää alueet '
-            + '"eri asukasluokkien mukavuuden ja turvallisuuden '
-            + 'vuoksi". Näin syntyi Jackson-suunnitelma: '
+            + '”eri asukasluokkien mukavuuden ja turvallisuuden '
+            + 'vuoksi”. Näin syntyi Jackson-suunnitelma: '
             + 'eurooppalaisten kaupunginosa, kiinalaisille varattu '
             + 'alue joen lounaispuolella, Koromandelin rannikolta '
             + 'tulleiden chulia-kauppiaiden kortteli sekä arabien ja '
@@ -56765,8 +56765,8 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Istiqlal on Kaakkois-Aasian suurin moskeija katedraalia vastapäätä, 2021 pihat tunneloitiin.',
           selite: 'Istiqlal on Kaakkois-Aasian suurin moskeija, ja se '
             + 'seisoo tarkoituksella katedraalia vastapäätä — vuonna '
-            + '2021 niiden esipihat yhdistettiin "ystävyyden '
-            + 'tunnelilla".',
+            + '2021 niiden esipihat yhdistettiin ”ystävyyden '
+            + 'tunnelilla”.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -56837,7 +56837,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Sundan kuninkaan kanssa vapaasta pippurikaupasta, mutta '
             + '22. kesäkuuta 1527 Demakin sulttaanikunnan joukot '
             + 'Fatahillahin johdolla valtasivat sataman ja nimesivät '
-            + 'sen Jayakartaksi, sanskritin "voitollinen teko". '
+            + 'sen Jayakartaksi, sanskritin ”voitollinen teko”. '
             + 'Reilut yhdeksänkymmentä vuotta myöhemmin, toukokuussa '
             + '1619, hollantilaisen Itä-Intian kauppakomppanian VOC:n '
             + 'joukot Jan Pieterszoon Coenin johdolla valtasivat '
@@ -57115,7 +57115,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Punainen talo Kali Besarin varrella',
           tiedosto: 'Jakarta - Toko Merah (2025) - img 01.jpg',
-          teksti: 'Toko Merah eli "punainen kauppa" rakennettiin noin '
+          teksti: 'Toko Merah eli ”punainen kauppa” rakennettiin noin '
             + 'vuonna 1730 nousevalle VOC-virkamiehelle Gustaaf Willem '
             + 'van Imhoffille, josta tuli myöhemmin Alankomaiden '
             + 'Itä-Intian kenraalikuvernööri. Talo ehti olla '
@@ -57519,7 +57519,7 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Kaupungin tunnetuin kulkuneuvo on jeepney, kirkkaaksi '
                 + 'maalattu pikkubussi, joka kulkee kiinteää reittiä '
                 + 'kiinteällä hinnalla. Sen esi-isä oli auto calesa eli '
-                + '"autokalesa", 1910-luvulla halvoista tuontiautoista '
+                + '”autokalesa”, 1910-luvulla halvoista tuontiautoista '
                 + 'tehty yhteistaksi, joka sai nimensä hevosvetoisesta '
                 + 'kalesasta; nykyinen muoto syntyi sodan jälkeen, kun '
                 + 'amerikkalaisten jättämiä maastoautoja alettiin muuttaa '
@@ -63304,8 +63304,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sanfrancisco-ilta.png',
-          lyhyt: 'Alamo Squaren "Painted Ladies" on 1890-luvun taloriviä, kaupungin tunnetuimpia näkymiä.',
-          selite: 'Alamo Squaren "Painted Ladies" on 1890-luvulla '
+          lyhyt: 'Alamo Squaren ”Painted Ladies” on 1890-luvun taloriviä, kaupungin tunnetuimpia näkymiä.',
+          selite: 'Alamo Squaren ”Painted Ladies” on 1890-luvulla '
             + 'rakennettu viktoriaanisten Queen Anne -talojen rivi, josta '
             + 'tuli kaupungin tunnetuimpia näkymiä.',
           lahde: 'Matkakirjan havainnekuva',
@@ -64643,8 +64643,8 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Auckland',
       johdanto: 'Kapea kannas kahden sataman välissä, viidenkymmenenkolmen '
-        + 'tulivuoren päällä — maorien Tāmaki Makaurau, "Tāmaki jota moni '
-        + 'halusi". Auckland oli Uuden-Seelannin pääkaupunki 1841–1865, ja '
+        + 'tulivuoren päällä — maorien Tāmaki Makaurau, ”Tāmaki jota moni '
+        + 'halusi”. Auckland oli Uuden-Seelannin pääkaupunki 1841–1865, ja '
         + 'isoisän saapuessa 1873 se oli yhä maan vilkkain satama.',
       /*
        * KANSIKUVAT jäävät tällä kaupungilla pikkuriviltä piiloon,
@@ -66119,8 +66119,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'saman metrolinjan varrella.',
           nosto: 'Kaupungin maisema itsessään on Unescon '
             + 'maailmanperintökohde: vuonna 2012 listalle otettiin '
-            + '"Rio de Janeiro: Carioca Landscapes between the Mountain and '
-            + 'the Sea" eli vuorten ja meren väliin jäävä kaupunkimaisema, '
+            + '”Rio de Janeiro: Carioca Landscapes between the Mountain and '
+            + 'the Sea” eli vuorten ja meren väliin jäävä kaupunkimaisema, '
             + 'ei yksittäinen rakennus.',
           jaksot: [
             {
@@ -66334,7 +66334,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Tammikuun joki joka ei ollut joki',
           teksti: 'Portugalilaiset purjehtivat Guanabaran lahdelle '
             + '1. tammikuuta 1502 ja luulivat sitä joen suuksi — siitä nimi '
-            + 'Rio de Janeiro, "tammikuun joki". Ranskalaiset siirtolaiset '
+            + 'Rio de Janeiro, ”tammikuun joki”. Ranskalaiset siirtolaiset '
             + 'ehtivät perustaa lahden saarelle oman siirtokuntansa 1555, ja '
             + 'portugalilaiset karkottivat heidät vasta vuosien sotimisen '
             + 'jälkeen 1567. Estácio de Sá perusti varsinaisen kaupungin '
@@ -67940,11 +67940,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Trapa Nodo.jpg',
-          lyhyt: 'Kaupungin tunnus NO8DO on sanaleikki, joka luetaan "no me ha dejado" eli "ei ole hylännyt minua".',
+          lyhyt: 'Kaupungin tunnus NO8DO on sanaleikki, joka luetaan ”no me ha dejado” eli ”ei ole hylännyt minua”.',
           selite: 'Kaupungin tunnus NO8DO on sanaleikki, jossa keskellä '
             + 'oleva kahdeksikko luetaan sanaksi madeja, lankakerä, '
-            + 'jolloin koko rivi kuuluu "no me ha dejado" eli "ei ole '
-            + 'hylännyt minua".',
+            + 'jolloin koko rivi kuuluu ”no me ha dejado” eli ”ei ole '
+            + 'hylännyt minua”.',
           lahde: 'Eduardo Milla, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -68145,7 +68145,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuodessa sato kerätään ja laivataan Britanniaan: pektiiniä '
             + 'on enemmän kuin makeassa appelsiinissa, joten marmeladi '
             + 'hyytyy paremmin ja sitä saadaan enemmän. Varhaisin tunnettu '
-            + 'resepti "marmelet of oranges" on Eliza Cholmondeleyn '
+            + 'resepti ”marmelet of oranges” on Eliza Cholmondeleyn '
             + 'kirjaama vuodelta 1677. Sama hedelmä on suomalaisessa '
             + 'keittiössä tuttu toisesta yhteydestä: mämmiin jauhetaan '
             + 'sen kuorta.',
@@ -68270,13 +68270,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'puistonpenkeissä ja parvekkeilta riippuvissa '
                 + 'viireissä. Se on kuvasanaleikki, jossa keskimmäinen '
                 + 'kahdeksikko luetaan sanana madeja, lankakerä, jolloin '
-                + 'rivi kuuluu "no me ha dejado" eli "ei ole hylännyt '
-                + 'minua". Legendan mukaan tunnuksen antoi kuningas '
+                + 'rivi kuuluu ”no me ha dejado” eli ”ei ole hylännyt '
+                + 'minua”. Legendan mukaan tunnuksen antoi kuningas '
                 + 'Alfonso X, joka asui kaupungin Alcázarissa ja sai '
                 + 'sevillalaisilta tuen silloin, kun hänen poikansa — '
                 + 'myöhempi Sancho IV — yritti anastaa valtaistuimen. '
-                + 'Sama kuningas antoi kaupungille arvonimen "hyvin '
-                + 'uskollinen".',
+                + 'Sama kuningas antoi kaupungille arvonimen ”hyvin '
+                + 'uskollinen”.',
               kuva: {
                 tiedosto: 'NO8DO.JPG',
                 selite: 'Sevillan lippu ripustetaan parvekkeille '
@@ -68397,7 +68397,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Suurlähettiläiden salin arabiankielinen kirjoitus vuoden '
             + '1366 — todennäköiset aloitus- ja valmistumisvuodet. '
             + 'Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä '
-            + 'kuningasta nimellä "Sultan Don Bidru". Työhön lähetti '
+            + 'kuningasta nimellä ”Sultan Don Bidru”. Työhön lähetti '
             + 'todennäköisesti käsityöläisiä Pedron liittolainen '
             + 'Muhammad V, Granadan nasridihallitsija, ja lopputulos '
             + 'muistuttaa läheisesti samaan aikaan rakennettua '
@@ -74071,7 +74071,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Draft of Major Matthews map of Vancouver\'s indigenous place names.tif',
           teksti: 'Squamishin kielessä paikkaa, johon Stampin saha '
             + 'rakennettiin, kutsuttiin nimellä K\'emk\'emeláy̓, '
-            + '"paikka jossa kasvaa paljon vaahteroita"; nimi on '
+            + '”paikka jossa kasvaa paljon vaahteroita”; nimi on '
             + 'käytössä Sea to Sky Highwayn squamishinkielisissä '
             + 'tienviitoissa. Musqueamin puhumassa hən̓q̓əmin̓əm̓-'
             + 'kielessä ei ole sanaa koko Vancouverille lainkaan, vaan '
@@ -75454,7 +75454,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'luoteislaidalla noin 27 kilometriä keskustasta ja jolla on '
                 + 'kahdeksan kiitotietä — enemmän kuin millään muulla '
                 + 'lentoasemalla maailmassa. Kentältä keskustaan pääsee '
-                + 'kohoradan sinisellä linjalla. Chicagon "L" aloitti '
+                + 'kohoradan sinisellä linjalla. Chicagon ”L” aloitti '
                 + 'liikenteen 6. kesäkuuta 1892, ja siinä on nykyään '
                 + 'kahdeksan linjaa, 146 asemaa ja runsaat 165 kilometriä '
                 + 'rataa; osa kulkee kohoradalla, osa maan tasalla, osa '
@@ -75540,8 +75540,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'nousee vähintään 32 asteeseen seitsemäntenätoista päivänä; '
                 + 'joulu–maaliskuun normaali päivälämpötila on noin kaksi '
                 + 'astetta. Ukkosia on keskimäärin 38 päivänä vuodessa. '
-                + 'Lempinimestä kannattaa tietää yksi asia: "Tuulisen '
-                + 'kaupungin" alkuperästä on neljä kilpailevaa selitystä, '
+                + 'Lempinimestä kannattaa tietää yksi asia: ”Tuulisen '
+                + 'kaupungin” alkuperästä on neljä kilpailevaa selitystä, '
                 + 'eikä Chicago ole mittausten mukaan muita Yhdysvaltain '
                 + 'kaupunkeja tuulisempi — keskituulennopeus on 10,3 mailia '
                 + 'tunnissa, Bostonissa 12,4.',
@@ -76060,11 +76060,11 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Perth Water 1838.jpg',
           teksti: 'Stirlingin julistus siirtokunnan perustamisesta luettiin '
             + 'Fremantlessa 18. kesäkuuta 1829, ja se päättyi sanoihin '
-            + '"annettu Perthissä". Nimi oli lainattu Skotlannin Perthistä. '
+            + '”annettu Perthissä”. Nimi oli lainattu Skotlannin Perthistä. '
             + 'Ainoa aikalaislähde sille, kenen kunniaksi, on kapteeni '
             + 'Charles Fremantlen päiväkirjamerkintä 12. elokuuta 1829: '
-            + 'paikka "nimettiin Perthiksi Sir George Murrayn toiveiden '
-            + 'mukaisesti". Murray oli siirtomaaministeri. Whadjukeilla '
+            + 'paikka ”nimettiin Perthiksi Sir George Murrayn toiveiden '
+            + 'mukaisesti”. Murray oli siirtomaaministeri. Whadjukeilla '
             + 'alueella oli jo oma nimensä, Boorloo, ja se on viime vuosina '
             + 'palannut kaupungin rinnakkaisnimeksi.',
           lyhyt: 'Maanmittaushallinnon 1838 asemakaava näyttää Perthin ruutukaavan ja ympärille jääneet järvet.',
@@ -78233,9 +78233,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ruutukaavan itse kolmen avustajansa kanssa ja laski omin '
             + 'käsin tuomiokirkon peruskiven. Virallinen nimi jäi '
             + 'asiakirjoihin, mutta arkikielessä kaupunkia sanottiin pian '
-            + 'Limaksi – nimi juontuu joko ketšuan sanasta limaq, "puhuja", '
+            + 'Limaksi – nimi juontuu joko ketšuan sanasta limaq, ”puhuja”, '
             + 'joka oli laakson oraakkelin nimi, tai aimaran sanoista '
-            + 'lima-limaq, "keltainen kukka". Ruutukaava rakennettiin '
+            + 'lima-limaq, ”keltainen kukka”. Ruutukaava rakennettiin '
             + 'paikallisen kuraakan Taulichuscon maille.',
           selite: 'Nykyinen tuomiokirkko seisoo sillä paikalla, jolle Pizarro '
             + 'laski peruskiven vuonna 1535.',
@@ -79165,8 +79165,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'en-Wikipedian Quito-artikkelin Climate-osiosta eivätkä '
                 + 'samasta lähteestä kuin lehtien vuosigraafit. Ilmasto on '
                 + 'subtrooppista ylänköilmastoa (Köppen: Cfb), ja vuodessa on '
-                + 'käytännössä kaksi vuodenaikaa: kuiva "kesä" kesäkuusta '
-                + 'elokuuhun ja sateinen "talvi" syyskuusta toukokuuhun. '
+                + 'käytännössä kaksi vuodenaikaa: kuiva ”kesä” kesäkuusta '
+                + 'elokuuhun ja sateinen ”talvi” syyskuusta toukokuuhun. '
                 + 'Sadetta kertyy sijainnista riippuen yli 1 000 millimetriä '
                 + 'vuodessa. Lentokentän mittausasemalla vuosien 1991–2020 '
                 + 'keskilämpötila on 14,1 astetta, iltapäivän keskimääräinen '
@@ -81140,7 +81140,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'satamansa ansiosta ja nousi saaren pääkaupungiksi 1552. '
             + 'Kuningas Filip II myönsi sille kaupungin arvonimen 20. '
             + 'joulukuuta 1592, ja myöhemmin kruunu nimesi sen virallisesti '
-            + '"Uuden maailman avaimeksi ja Länsi-Intian muuriksi". Nimitys '
+            + '”Uuden maailman avaimeksi ja Länsi-Intian muuriksi”. Nimitys '
             + 'ei ollut liioittelua: kaikkialta Uudesta maailmasta tulleet '
             + 'laivat toivat lastinsa ensin Havannaan, josta laivasto vei '
             + 'sen Espanjaan. Lahdella odottaneet tuhannet alukset '
@@ -81233,7 +81233,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Havannasta Santiago de Cubaan, rautateitse 836 kilometriä. '
                 + 'Katukuvan tunnistaa kuitenkin autoista: 1950-luvun '
                 + 'amerikkalaisia autoja kutsutaan Kuubassa nimillä '
-                + 'almendrón eli "iso manteli" ja máquina, ja niitä arvioidaan '
+                + 'almendrón eli ”iso manteli” ja máquina, ja niitä arvioidaan '
                 + 'olevan teillä yhä noin 60 000. Uusia amerikkalaisautoja ei '
                 + 'ole tuotu maahan 1960-luvun alun jälkeen, joten vanhat on '
                 + 'pidetty ajossa itse tehdyin osin, ja moneen taksiin on '
@@ -82026,7 +82026,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niitä vastaan koottiin vuosisatojen ajan desagüe-nimistä '
             + 'pakkotyötä. 1700-luvun lopulla aateliston palatsit olivat niin '
             + 'komeita, että Alexander von Humboldtin antama lisänimi '
-            + '"palatsien kaupunki" jäi elämään.',
+            + '”palatsien kaupunki” jäi elämään.',
           lyhyt: 'Vuoden 1851 kirjan kuvassa siirtomaa-ajan kaupunki on yhä matala kirkontornien hallitsemana.',
           selite: 'Vuoden 1851 kirjan kuvassa siirtomaa-ajan kaupunki on yhä '
             + 'matala ja kirkontornien hallitsema, ja taustalla kohoavat '
@@ -82603,7 +82603,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maustettua café au laitia vuodesta 1862. Maanantain '
                 + 'ruokana ovat perinteisesti punaiset pavut ja riisi — '
                 + 'Louis Armstrong allekirjoitti kirjeitään usein sanoilla '
-                + '"Red beans and ricely yours".',
+                + '”Red beans and ricely yours”.',
               kuva: {
                 tiedosto: 'Beignet and Cafe au lait (30116730573).jpg',
                 lyhyt: 'Beignet on uppopaistettu hiivataikinamunkki, joka tarjoillaan tomusokerin alla sikurikahvin kanssa.',
@@ -85029,9 +85029,9 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Kun vankikuljetukset loppuivat, Hobart ajautui '
                 + '1860-luvulla epävarmuuden aikaan. Aikalaishistorioitsija '
                 + 'kertoi vanhojen rouvien muistelleen entisten päivien '
-                + 'iloisuutta ja kauppiaiden aikaa, jolloin "Hobart Townin '
+                + 'iloisuutta ja kauppiaiden aikaa, jolloin ”Hobart Townin '
                 + 'luultiin tulevan Australian kauppapaikaksi, ellei jopa '
-                + 'pääkaupungiksi". Silti juuri silloin rakennettiin '
+                + 'pääkaupungiksi”. Silti juuri silloin rakennettiin '
                 + 'kaupungintalo: peruskivi laskettiin 14. huhtikuuta 1864, '
                 + 'päivästä tehtiin vapaapäivä ja kadulla marssittiin, ja '
                 + 'kun talo valmistui syyskuussa 1866, juhlittiin toisella '
@@ -85204,7 +85204,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mukaan. Charles Darwin kiipesi huipulle helmikuussa 1836 ja '
             + 'kutsui eukalyptusmetsää jaloksi; kosteissa rotkoissa hän näki '
             + 'puusaniaisen, joka oli vähintään kuusi metriä korkea ja jonka '
-            + 'lehvät tekivät varjon "kuin yön ensimmäisellä tunnilla". Vuonna '
+            + 'lehvät tekivät varjon ”kuin yön ensimmäisellä tunnilla”. Vuonna '
             + '2013 Tasmania otti käyttöön kaksoisnimet, ja kunanyi / Mount '
             + 'Wellington oli ensimmäisiä.',
           lyhyt: 'Urkupillit on kunanyin rinteessä kohoava doleriittipilarien seinämä, vuoren tunnusomaisin piirre.',
@@ -85746,7 +85746,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Vesteys Beach (renamed Bundilla Beach in 2021) in May 2003.jpg',
           teksti: 'Larrakia-kansa on asunut Darwinin seudulla kauan ennen '
             + 'eurooppalaisia ja kutsuu aluetta nimellä Garramilla, '
-            + '"valkoinen kivi", seudun kallioiden ja merenrantajyrkänteiden '
+            + '”valkoinen kivi”, seudun kallioiden ja merenrantajyrkänteiden '
             + 'värin mukaan. Kansa tunnettiin aiemmin nimellä Gulumirrgin, ja '
             + 'sama sana on yhä sen kielen rinnakkaisnimi; vuoden 2021 '
             + 'väestönlaskennassa 41 ihmistä ilmoitti osaavansa kieltä. '
@@ -85857,7 +85857,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja niistä noin 60 myy ruokaa; kaupungin monikulttuurisuus '
                 + 'on tehnyt kaakkoisaasialaisesta laksa-nuudelikeitosta '
                 + 'darwinilaisten suosikkiruoan. Rannan nimi on peräisin '
-                + 'Goyderin vuoden 1869 kartasta, jossa "Mindil" merkittiin '
+                + 'Goyderin vuoden 1869 kartasta, jossa ”Mindil” merkittiin '
                 + 'tonttien takana olleelle suolle; nimi siirtyi pian suon '
                 + 'edessä olevalle rannalle. Samalla rannalla soudetaan '
                 + 'elokuussa oluttölkeistä rakennetuilla veneillä. Keskustan '
@@ -87329,7 +87329,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Vanhassa puupiirroksessa lahti on täynnä purjelaivojen mastoja, kuvatekstinä Harbor of Valparaiso.',
           selite: 'Vanhassa puupiirroksessa lahti on täynnä purjelaivojen '
             + 'mastoja, ja kuvan alareunaan on painettu julkaisijan oma '
-            + 'kuvateksti "Harbor of Valparaiso, Chili".',
+            + 'kuvateksti ”Harbor of Valparaiso, Chili”.',
           lahde: 'Sarah S. Cornell, Wikimedia Commons (PD)',
           wiki: 'Valparaíso',
         },
@@ -90612,10 +90612,10 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä sana acarajé alun perin tarkoittaa joruban kielellä?',
         vaihtoehdot: [
-          '"valkoinen puku"',
-          '"pyhä öljy"',
-          '"papujen juhla"',
-          '"tule syömään akaraa"',
+          '”valkoinen puku”',
+          '”pyhä öljy”',
+          '”papujen juhla”',
+          '”tule syömään akaraa”',
         ],
         oikea: 3,
         fakta: 'Sanonta oli myyntihuuto, jolla kadulla työskentelevät naiset '
@@ -90629,8 +90629,8 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Acarajéta on myyty Salvadorin kaduilla 1800-luvulta '
             + 'lähtien, ja myyjät – valkopukuiset baianat – tunnistaa jo '
             + 'kaukaa. Nimikin syntyi kaupankäynnistä: brasilianportugalin '
-            + 'acarajé tulee joruban ilmauksesta àkàrà n\'jẹ, "tule syömään '
-            + 'akaraa", jolla myyjät kutsuivat ohikulkijoita. Myyntitulot '
+            + 'acarajé tulee joruban ilmauksesta àkàrà n\'jẹ, ”tule syömään '
+            + 'akaraa”, jolla myyjät kutsuivat ohikulkijoita. Myyntitulot '
             + 'eivät olleet pelkkää arjen leipärahaa vaan monelle naiselle '
             + 'ainoa keino koota summa, jolla osti orjuutetun '
             + 'perheenjäsenensä vapaaksi. Kaupungissa toimii yhä yli 500 '
@@ -92169,7 +92169,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Uuden-Seelannin vanhin historiamuseo. Alkuun se keskittyi '
             + 'vain vuosien 1848–1861 pioneereihin mutta laajeni '
             + 'myöhemmin kattamaan kaikki tulokkaat, ja silloin sana '
-            + '"early" katosi nimestä. Museon kuljetussiipi on entinen '
+            + '”early” katosi nimestä. Museon kuljetussiipi on entinen '
             + 'vuoden 1939 art deco -linja-autoasema, jossa nyt seisovat '
             + 'kaupungin vanhat raitiovaunut ja veturit. Dunedinin '
             + 'kaupunki otti museon omistukseensa 1991.',
@@ -92272,7 +92272,7 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Vuoteen 1900 mennessä Dunedin ei enää ollut maan '
                 + 'suurin kaupunki. Vaikutusvalta ja kasvu olivat '
                 + 'siirtyneet pohjoisemmas — ilmiötä kutsuttiin nimellä '
-                + '"the drift north", ja se jatkui suuren osan '
+                + '”the drift north”, ja se jatkui suuren osan '
                 + '1900-lukua. Kaupunki putosi lopulta neljänneksi '
                 + 'pääkeskukseksi Aucklandin, Wellingtonin ja '
                 + 'Christchurchin jälkeen. Vasta 1990-luvulla väestökato '
@@ -95194,7 +95194,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Nimi tarkoittaa tuulen suuntaa',
           teksti: 'Honiaran nimi tulee sanoista nagho ni ara, jotka '
             + 'kääntyvät yhdessä Guadalcanalin kielistä suunnilleen '
-            + 'muotoon "itätuulen paikka" tai "kaakkoistuulta päin". '
+            + 'muotoon ”itätuulen paikka” tai ”kaakkoistuulta päin”. '
             + 'Sama nimi on niemellä, jonka ympärille kaupunki '
             + 'rakennettiin: Point Cruzin ghari-kielinen nimi on '
             + 'naho-ni-ara. Kaupunki on saaren luoteisrannikolla, ja '
@@ -96295,7 +96295,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Maa, joka oli sopimuksella toisten',
           teksti: 'Seudulla asuivat apassit, utet, tšeijennit, comanchet '
             + 'ja arapahot. Arapahot kutsuvat itseään nimellä '
-            + 'Hinono’eino, "meidän ihmisemme", ja tšeijennit '
+            + 'Hinono’eino, ”meidän ihmisemme”, ja tšeijennit '
             + 'nimellä Tsétsėhéstȧhese. Vuoden 1851 Fort Laramien '
             + 'sopimuksessa Yhdysvallat määritteli heidän alueekseen '
             + 'maat North Platte -joelta Arkansas-joelle — juuri sen, '
@@ -96320,7 +96320,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ryhmä löysi Little Dry Creekin suulta noin kaksikymmentä '
             + 'troy-unssia kultaa, silloiselta arvoltaan noin 380 '
             + 'dollaria. Kansas City Journal of Commerce julisti löydön '
-            + 'elokuussa otsikolla "THE NEW ELDORADO!!", ja ryntäykseen '
+            + 'elokuussa otsikolla ”THE NEW ELDORADO!!”, ja ryntäykseen '
             + 'lähti arviolta satatuhatta ihmistä. Marraskuussa 1858 '
             + 'kenraali William Larimer ja kapteeni Jonathan Cox '
             + 'asettivat poppelipölkkyjä merkitäkseen valtauksen '
@@ -96846,16 +96846,16 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       nostot: [
         {
-          otsikko: 'Ishak — "ne ihmiset" — ja karankawat',
+          otsikko: 'Ishak — ”ne ihmiset” — ja karankawat',
           teksti: 'Nykyisen Houstonin maalla asuivat karankawat ja '
             + 'atakapat vähintään kaksituhatta vuotta ennen ensimmäisiä '
             + 'tunnettuja uudisasukkaita. Atakapat kutsuivat itseään '
-            + 'nimellä Ishak, "ne ihmiset"; nimi Atakapa on choctawin '
+            + 'nimellä Ishak, ”ne ihmiset”; nimi Atakapa on choctawin '
             + 'kieltä ja eurooppalaisten naapurikansalta omaksuma. '
             + 'Läntiset ishakit olivat Hikike Ishak, auringonlaskun '
             + 'kansa. Kieli oli kielisaareke, ja siitä julkaistiin '
             + 'sanakirja 1932. Seudun paikannimissä se elää yhä: '
-            + 'Calcasieu tulee sanoista Katkōsh Yōk, "itkevä kotka". '
+            + 'Calcasieu tulee sanoista Katkōsh Yōk, ”itkevä kotka”. '
             + 'Nykyään jälkeläisikseen itsensä lukevat ovat '
             + 'järjestäytyneet, mutta yhtäkään järjestöä ei ole '
             + 'liittovaltiollisesti tunnustettu.',
@@ -97393,7 +97393,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Ubiqua-paimenmetsästäjiä. Hallitseva ryhmä lahdella '
             + 'olivat !Uriǁʼaekua, ylängön väki. Antropologi '
             + 'Theophilus Hahn kirjasi paikan alkuperäisen nimen '
-            + 'muotoon ǁHui ǃGais, "siellä missä pilvet kokoontuvat", '
+            + 'muotoon ǁHui ǃGais, ”siellä missä pilvet kokoontuvat”, '
             + 'ja vuoren nimi oli Huriǂ’oaxa, merestä nouseva '
             + 'vuori. ǁAmmaqua kävi lahdella kauppaa jo kauan ennen '
             + 'yhtiöitä: vuosina 1601–1608 he myivät neljälle laivalle '
@@ -101872,7 +101872,7 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 1,
         fakta: 'Nimi on jorubaa ja tarkoittaa kirjaimellisesti '
-          + '"poimi akoko". Akoko-lehtiä käytetään hedelmällisyyden '
+          + '”poimi akoko”. Akoko-lehtiä käytetään hedelmällisyyden '
           + 'apuna ja päällikön kruunajaisissa.',
       },
       nostot: [
@@ -103458,7 +103458,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Mitä täällä syödään',
               teksti: 'Ruokailu on Senegalissa perheasia. Kun on '
-                + 'ruoka-aika, joku sanoo "kay lekk", tule syömään, '
+                + 'ruoka-aika, joku sanoo ”kay lekk”, tule syömään, '
                 + 'ja kaikki kokoontuvat saman vadin ympärille ja '
                 + 'syövät käsin. Kuuluisimmat ruoat ovat kala-riisipata '
                 + 'thiéboudienne ja sipulinen yassa. Tapakulttuuri on '
@@ -104231,7 +104231,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjallinen liike, jonka tunnetuimpia nimiä ovat '
             + 'runoilijat Juan Carlos Dávalos, Manuel J. Castilla, '
             + 'Jaime Dávalos ja Walter Adet. Heidän sanoituksiaan '
-            + 'sävelsivät Gustavo "Cuchi" Leguizamón ja kitaristi '
+            + 'sävelsivät Gustavo ”Cuchi” Leguizamón ja kitaristi '
             + 'Eduardo Falú, joka syntyi 1923 maakunnan El Galpónissa '
             + 'syyrialaisten siirtolaisten poikana. Lauluja veivät '
             + 'maailmalle Los Chalchaleros, joka perustettiin Saltassa '
@@ -104469,7 +104469,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'noin 1870 uudelleen oman Antofagasta de la Sierra '
             + '-tilansa mukaan Argentiinan Catamarcassa; englanniksi '
             + 'tämä on ainoa mainittu selitys, ja siinäkin lukee '
-            + '"oletettavasti". Chilessä kaupunkia sanotaan pohjoisen '
+            + '”oletettavasti”. Chilessä kaupunkia sanotaan pohjoisen '
             + 'helmeksi ja lyhyesti Antofaksi.',
         },
         {
@@ -105048,7 +105048,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Akvarelli viiden vuoden päästä isoisän matkasta: kirkko, muutama talo ja lippu kalliolla.',
           selite: 'Akvarelli viiden vuoden päästä isoisän matkasta: '
             + 'kirkko, muutama talo ja lippu kalliolla — kirjoitus '
-            + '"Godthaab 1878" on tekijän omaa käsialaa.',
+            + '”Godthaab 1878” on tekijän omaa käsialaa.',
           lahde: 'Nationalmuseet - The National Museum of Denmark '
             + 'from Denmark, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Old Nuuk',
@@ -105388,8 +105388,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '2010 ja 2025 — silti viimeisten kahdenkymmenen vuoden '
             + 'minimit ovat koko satelliittiajan kaksikymmentä '
             + 'pienintä. Tutkija Linette Boisvert kuvaili tilannetta '
-            + 'NASA:lle: jää on "tasaantunut mutta yhä matalalla '
-            + 'verrattuna sarjan alkupäähän".',
+            + 'NASA:lle: jää on ”tasaantunut mutta yhä matalalla '
+            + 'verrattuna sarjan alkupäähän”.',
           tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677).png',
           lyhyt: 'NASA:n visualisointi näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
           selite: 'NASA:n Scientific Visualization Studion kuva '
@@ -106952,8 +106952,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Cruzissa, Benissä ja Pandossa syntyneitä; nykyään sillä '
             + 'tarkoitetaan alankojen espanjalais-, chané- ja muun '
             + 'amazonilaisen alkuperän sekoittunutta väestöä. Sana on '
-            + 'myös arkinen sana ihmiselle: kysymys "kuka tuo camba '
-            + 'on?" ei kerro mitään kysytyn taustasta. Alkuperästä on '
+            + 'myös arkinen sana ihmiselle: kysymys ”kuka tuo camba '
+            + 'on?” ei kerro mitään kysytyn taustasta. Alkuperästä on '
             + 'kaksi selitystä. Toisen mukaan sana tulee Angolan '
             + 'bantukielistä, joissa jesuiitta Pedro Dias kirjasi sen '
             + 'vuoden 1697 kielioppiinsa muodossa camba, monikko '
@@ -107009,7 +107009,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'cabildossa teurastettavaksi lehmiä juhlan ruoaksi. '
             + '1800-luvun lopulla mukaan tulivat värjätyllä ja '
             + 'hajustetulla vedellä täytetyt munankuoret sekä '
-            + '"karnevaalin posti". Ensimmäinen karnevaalikuningatar '
+            + '”karnevaalin posti”. Ensimmäinen karnevaalikuningatar '
             + 'valittiin 1936. Nykyään valmistelut alkavat '
             + 'joulukuussa, esikarnevaalikulkueet kiertävät kaupunkia '
             + 'ja itse juhla on kolme vapaapäivää, jolloin '
@@ -107784,8 +107784,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sokeriviljelmien laajeneminen oli syönyt mayojen '
             + 'yhteismaita ja ajanut suuren osan velkatyöhön '
             + 'haciendoille. Jacinto Pat kirjoitti 1848 haluavansa '
-            + '"vapautta eikä sortoa, koska ennen meidät alistettiin '
-            + 'monilla maksuilla ja veroilla". Keväällä 1848 mayat '
+            + '”vapautta eikä sortoa, koska ennen meidät alistettiin '
+            + 'monilla maksuilla ja veroilla”. Keväällä 1848 mayat '
             + 'hallitsivat lähes koko Yucatánia paitsi muurattuja '
             + 'Campecheä ja Méridaa. Piiritys purkautui yhtäkkiä, '
             + 'eivätkä historioitsijat ole yksimielisiä syystä: '
@@ -109270,7 +109270,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kaksi siementä, yksi kum-puu',
-          teksti: 'Nimi tulee twin sanasta Kumase, "kum-puun alla": '
+          teksti: 'Nimi tulee twin sanasta Kumase, ”kum-puun alla”: '
             + 'kum on puu ja ase alla. Kaupungin perusti 1680-luvulla '
             + 'asantehene Osei Kofi Tutu I. Siitä, kuka paikan valitsi, '
             + 'kerrotaan monta versiota, ja lähde luettelee ne itse: '
@@ -109291,8 +109291,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'omistajansa sielun istuin. Kun sitä ei käytetä, se '
             + 'nostetaan seinää vasten, jotta ohikulkevat sielut '
             + 'voivat levätä sillä. Kaikkien yläpuolella on kultainen '
-            + 'jakkara Sika Dwa Kofi, "perjantaina syntynyt '
-            + 'kultajakkara" — se on koko kansan istuin, elävien, '
+            + 'jakkara Sika Dwa Kofi, ”perjantaina syntynyt '
+            + 'kultajakkara” — se on koko kansan istuin, elävien, '
             + 'kuolleiden ja vielä syntymättömien, eikä se saa koskaan '
             + 'koskettaa maata, vaan asetetaan huovalle. Istuin on 46 '
             + 'senttiä korkea ja alusta 61 senttiä leveä. Perimätiedon '
@@ -109337,10 +109337,10 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kaupunki, josta ei ollut kahta samaa kuvausta',
           teksti: 'Vuonna 1873 Brackenbury kirjoitti Kumasista, että '
-            + '"kadut ovat yleensä hyvin leveitä ja puhtaita ja '
+            + '”kadut ovat yleensä hyvin leveitä ja puhtaita ja '
             + 'koristeltuja monilla kauniilla banyan-puilla, jotka '
             + 'antavat kiitollista varjoa auringon voimakkailta '
-            + 'säteiltä". Vuotta myöhemmin F. Boyle huomautti, että '
+            + 'säteiltä”. Vuotta myöhemmin F. Boyle huomautti, että '
             + 'kaupungin hajut eivät koskaan ole viemärin hajuja. '
             + 'Samasta kaupungista kirjoitettiin myös päinvastaista: '
             + 'William Butlerin kuvaus on yhtä halventava kuin '
@@ -110004,7 +110004,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tori, emiirin palatsi, suurmoskeija ja Gidan '
                 + 'Makaman museo, ja lähistöllä vanhat '
                 + 'värjäämökuopat, jotka ovat yhä käytössä. Muurien '
-                + 'ulkopuolella on Sabon Gari, "uusi kaupunki", jonne '
+                + 'ulkopuolella on Sabon Gari, ”uusi kaupunki”, jonne '
                 + 'asettuivat rautateiden mukana tulleet kauppiaat ja '
                 + 'työläiset. Kolmas osa on tudun wada, joka '
                 + 'rakennettiin niille pohjoisen väelle, jotka eivät '
@@ -110867,8 +110867,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lastassa 1864 ja julistettiin keisariksi Soqotassa '
             + 'elokuussa 1868 nimellä Tekle Giyorgis II. Hän kunnosti '
             + 'Gondarin kirkot niin, että kronikoitsija kirjoitti: '
-            + '"Fasilin jälkeen kukaan ei tehnyt Gondarille sitä, '
-            + 'mitä Tekle Giyorgis teki." Adwan taistelun 11. '
+            + '”Fasilin jälkeen kukaan ei tehnyt Gondarille sitä, '
+            + 'mitä Tekle Giyorgis teki.” Adwan taistelun 11. '
             + 'heinäkuuta 1871 hän hävisi, ja voittaja kruunattiin '
             + 'puoli vuotta myöhemmin Yohannes IV:ksi. Vuonna 1873 '
             + 'Lastan oma keisari oli vankeudessa.',
@@ -113351,7 +113351,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'löytäneensä siitä kultaa — ja kysyttäessä, miksi muut '
             + 'eivät löytäneet, vastasi että luontoa pitää osata '
             + 'imarrella. Seuraava matka toi kotiin noin 200 tonnia '
-            + '"malmia", ja Dartfordiin rakennettiin sitä varten oma '
+            + '”malmia”, ja Dartfordiin rakennettiin sitä varten oma '
             + 'sulatto. Viiden vuoden jälkeen kivi todettiin '
             + 'hornblendeksi ja käytettiin tienpohjaksi. Yhtiö meni '
             + 'konkurssiin.',
@@ -113419,7 +113419,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'liikennevaloja. Tilapäisiä on asennettu, ja niistä '
             + 'syntyi aikanaan oma kohunsa. Risteykset hoituvat '
             + 'stop-merkeillä, ja ruuhkaa kutsutaan paikallisesti '
-            + 'nimellä "the rush minute".',
+            + 'nimellä ”the rush minute”.',
           jaksot: [
             {
               otsikko: 'Perille ja liikkeelle',
@@ -113643,7 +113643,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Hudsoninsalmen mantereelta jalan, koiravaljakolla tai '
             + 'moottorikelkalla, yli sata kilometriä. Autoja on yhä '
             + 'enemmän, ja niistä syntyy ruuhkia, joita sanotaan '
-            + '"kiireminuutiksi" — silti moottorikelkka on '
+            + '”kiireminuutiksi” — silti moottorikelkka on '
             + 'suositumpi, koska auton rahtaaminen maksaa ja tie '
             + 'kuluttaa sen. Läheiseen Qaummaarviitin puistoon, jossa '
             + 'on yhdentoista turvetalon jäänteet, pääsee talvella '
@@ -113949,15 +113949,15 @@ export const KULTTUURI_KATEGORIAT = {
         oikea: 1,
         fakta: 'Nimi tulee espanjan ahdistusta tarkoittavasta sanasta. '
           + 'Kuka tahansa voi kirjoittaa murheensa lapulle ja jättää '
-          + 'sen "murhelaatikkoon" poltettavaksi nuken mukana.',
+          + 'sen ”murhelaatikkoon” poltettavaksi nuken mukana.',
       },
       nostot: [
         {
           otsikko: 'Sääntö, joka teki kaupungista yhtenäisen',
           teksti: 'Kun Santa Fe kasvoi 1800-luvulla, rakennustyylit '
             + 'sekoittuivat niin, että osavaltioaseman aikaan 1912 '
-            + 'kaupunki näytti kirjoittajien sanoin "Anywhere '
-            + 'USA":lta. Taantuma oli alkanut jo kaksikymmentä vuotta '
+            + 'kaupunki näytti kirjoittajien sanoin ”Anywhere '
+            + 'USA”:lta. Taantuma oli alkanut jo kaksikymmentä vuotta '
             + 'aiemmin radan siirryttyä länteen ja liittovaltion '
             + 'suljettua Fort Marcyn, ja hallinto arveli matkailun '
             + 'voivan kääntää sen. Ratkaisu oli keksiä yhtenäinen '
@@ -113979,7 +113979,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettujen talojen on etenkin historiallisilla '
             + 'alueilla noudatettava pueblo- tai '
             + 'espanjalais-territoriaalista tyyliä tasakattoineen. '
-            + 'Kaupungista tuli "erilainen", kuten matkailumainos '
+            + 'Kaupungista tuli ”erilainen”, kuten matkailumainos '
             + 'lupasi — mutta hinta maksettiin historialla: '
             + 'puebloittamisen kiireessä revittiin pois valurautaiset '
             + 'liikejulkisivut ja viktoriaaniset koristeet, ja suuri osa '
@@ -114015,7 +114015,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nukke ruumiillistaa synkkyyden, ja polttamalla se '
             + 'hävitetään edellisen vuoden murheet. Murheensa voi '
             + 'kirjoittaa lapulle ja jättää kaupungin matkailuneuvonnan '
-            + '"murhelaatikkoon" — nukkeen on päätynyt avioeropapereita, '
+            + '”murhelaatikkoon” — nukkeen on päätynyt avioeropapereita, '
             + 'pysäköintisakkoja, maksettuja asuntolainoja ja hääpuku. '
             + 'Taiteilija Will Shuster poltti ensimmäisen Zozobran '
             + 'takapihallaan 1924; nykyään katsojia on yli 60 000. '
@@ -114380,7 +114380,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Jylisevä savu saa eurooppalaisen nimen',
           teksti:
-            'Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone näki putoukset ensimmäisenä eurooppalaisena 16. marraskuuta 1855 matkatessaan kanootilla Zambezi-jokea kohti Intian valtamerta. Seuraavana päivänä hän kiipesi joen keskellä olevalle saarelle ja katsoi, kuinka vesimassa syöksyi rotkoon valtavana sumupilvenä — hän nimesi näyn kuningatar Viktorian mukaan. Paikalliset lozi- ja tonga-kansat olivat kuitenkin tunteneet putoukset kauan ennen häntä ja kutsuivat niitä nimellä Mosi-oa-Tunya, "jylisevä savu", joka on virallinen nimi yhä Sambian puolella.',
+            'Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone näki putoukset ensimmäisenä eurooppalaisena 16. marraskuuta 1855 matkatessaan kanootilla Zambezi-jokea kohti Intian valtamerta. Seuraavana päivänä hän kiipesi joen keskellä olevalle saarelle ja katsoi, kuinka vesimassa syöksyi rotkoon valtavana sumupilvenä — hän nimesi näyn kuningatar Viktorian mukaan. Paikalliset lozi- ja tonga-kansat olivat kuitenkin tunteneet putoukset kauan ennen häntä ja kutsuivat niitä nimellä Mosi-oa-Tunya, ”jylisevä savu”, joka on virallinen nimi yhä Sambian puolella.',
           tiedosto: 'Victoria Falls, Zimbabwe 05.jpg',
           lyhyt: 'Zambezi-joki syöksyy putouksena rotkoon, jonka rinteillä kasvaa vihreää sademetsää.',
           selite:
@@ -114435,7 +114435,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Uinti putouksen partaalla',
           teksti:
-            'Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil\'s Pool eli "paholaisen allas". Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.',
+            'Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil\'s Pool eli ”paholaisen allas”. Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.',
           tiedosto: "Devil's Pool on Livingstone Island.jpg",
           lyhyt: 'Uimari lepää Devil\'s Poolin reunalla aivan putouksen partaalla, sateenkaari sumussa.',
           selite:
@@ -114691,7 +114691,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Sademetsä jota sade ei koskaan jätä',
           teksti:
-            'Viktorian putouksen reunalla kasvaa kapea mutta tiheä sademetsäkaistale, joka elää täysin putouksen oman sumun varassa: vettä tippuu puiden lehdille joka ikinen päivä ympäri vuoden, vaikka koko ympäröivä seutu kuuluu kuivaan savanniin. Putouksesta nouseva sumupilvi voi runsasvetisenä tulva-aikana maalis–toukokuussa kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän — juuri tästä näystä syntyi paikallinen nimi "jylisevä savu". Sumumetsässä kasvaa muun muassa palmuja, saniaisia ja mahonkipuita, joita ei tapaa missään muualla seudun kuivissa metsissä.',
+            'Viktorian putouksen reunalla kasvaa kapea mutta tiheä sademetsäkaistale, joka elää täysin putouksen oman sumun varassa: vettä tippuu puiden lehdille joka ikinen päivä ympäri vuoden, vaikka koko ympäröivä seutu kuuluu kuivaan savanniin. Putouksesta nouseva sumupilvi voi runsasvetisenä tulva-aikana maalis–toukokuussa kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän — juuri tästä näystä syntyi paikallinen nimi ”jylisevä savu”. Sumumetsässä kasvaa muun muassa palmuja, saniaisia ja mahonkipuita, joita ei tapaa missään muualla seudun kuivissa metsissä.',
           tiedosto: 'Rainforest, Victoria Falls, Zimbabwean side.jpg',
           lyhyt: 'Aurinko siivilöityy Viktorian putousten sumumetsän tiheän lehvästön läpi.',
           selite:
@@ -114722,9 +114722,9 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Zambezi',
         },
         {
-          otsikko: '"Jylisevä savu" ennen Livingstonea',
+          otsikko: '”Jylisevä savu” ennen Livingstonea',
           teksti:
-            'Kauan ennen kuin yksikään eurooppalainen oli kuullutkaan putouksista, Batoka-ylängön tonga- ja lozi-kansat tunsivat ne nimellä Mosi-oa-Tunya, "jylisevä savu", ja pitivät paikkaa pyhänä: lähistöllä oli uhripaikkoja, ja kertomusten mukaan joessa asui voimakas jokihenki, jota piti lepytellä ennen ylitystä. Nimi elää yhä virallisena Sambian puolella, jossa myös kansallispuisto on nimetty Mosi-oa-Tunyaksi, kun taas Zimbabwen puolella käytetään edelleen Livingstonen antamaa nimeä. Kahden nimen rinnakkaiselo muistuttaa, että paikka oli osa paikallista maailmaa kauan ennen kuin siitä tuli osa eurooppalaisten karttoja.',
+            'Kauan ennen kuin yksikään eurooppalainen oli kuullutkaan putouksista, Batoka-ylängön tonga- ja lozi-kansat tunsivat ne nimellä Mosi-oa-Tunya, ”jylisevä savu”, ja pitivät paikkaa pyhänä: lähistöllä oli uhripaikkoja, ja kertomusten mukaan joessa asui voimakas jokihenki, jota piti lepytellä ennen ylitystä. Nimi elää yhä virallisena Sambian puolella, jossa myös kansallispuisto on nimetty Mosi-oa-Tunyaksi, kun taas Zimbabwen puolella käytetään edelleen Livingstonen antamaa nimeä. Kahden nimen rinnakkaiselo muistuttaa, että paikka oli osa paikallista maailmaa kauan ennen kuin siitä tuli osa eurooppalaisten karttoja.',
           tiedosto: 'Victoria falls, zambia.jpg',
           lyhyt: 'Rotkon partaalla kasvaa vehreää sademetsää putouksen sumun ansiosta.',
           selite:
@@ -114771,7 +114771,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Casa del Obispo Ruso..jpg',
           lyhyt: 'Keltainen Piispantalo ja opastaulu muistuttavat Sitkan venäläisestä hallintokeskuksesta.',
           selite:
-            "Kuvassa näkyy puistonvartijan opastaulu 'Russian Bishop's House' aidan takana, ja sen takana kohoaa keltainen, punakattoinen kaksikerroksinen hirsirakennus sekä sen vieressä pienempi valkoinen rakennus, entinen venäläinen orpokoti.",
+            "Kuvassa näkyy puistonvartijan opastaulu ’Russian Bishop's House’ aidan takana, ja sen takana kohoaa keltainen, punakattoinen kaksikerroksinen hirsirakennus sekä sen vieressä pienempi valkoinen rakennus, entinen venäläinen orpokoti.",
           lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: "Russian Bishop's House",
         },
@@ -114970,11 +114970,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'punaiseksi tulivuoren tuhkaksi, jonka poikki kyltit ohjaavat '
                 + 'kraatterin reunalle; karhujakin voi tulla vastaan. Kraatteri '
                 + 'tuli kuuluisaksi aprillipäivänä 1974, kun paikallinen '
-                + 'kepposenlaskija Oliver "Porky" Bickar lennätti sinne '
+                + 'kepposenlaskija Oliver ”Porky” Bickar lennätti sinne '
                 + 'helikopterilla 70 vanhaa rengasta ja sytytti ne. '
                 + 'Kaupunkilaiset luulivat tulivuoren heränneen, kunnes '
                 + 'kraatterin reunalta paljastui 15-metrisin kirjaimin maalattu '
-                + '"April Fool". Poliisille ja ilmailuviranomaiselle Bickar oli '
+                + '”April Fool”. Poliisille ja ilmailuviranomaiselle Bickar oli '
                 + 'kertonut aikeistaan, mutta rannikkovartiosto oli unohtunut. '
                 + 'Noin 32 kilometriä Sitkasta länteen on St. Lazarian saari, '
                 + 'jolla pesii noin 250 000 paria myrskykeijuja ja pari tuhatta '
@@ -115140,7 +115140,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Sipulisaari',
           teksti:
-            '1800-luvun puolivälistä lähtien bermudalaiset viljelivät makeaa, nopeasti kypsyvää sipulilajiketta, jonka he ehtivät New Yorkin markkinoille ennen kilpailijoitaan. Kauppa kasvoi vuosikymmen vuosikymmeneltä niin suureksi, että amerikkalaiset alkoivat kutsua saarta Sipulilaikuksi ja sen asukkaita Sipuleiksi – lempinimi, joka on elänyt tähän päivään asti. Isoisän matkavuoden 1873 tienoilla vientiä lastattiin viikoittain kymmeniätuhansia laatikoita, ja kauppa huipentui 1899, jolloin saarilta lähti lähes 450 000 laatikollista sipulia. Myöhemmin yhdysvaltalaiset tulliesteet ja Texasin oma "Bermuda-sipuli" tekivät lopun vientimenestyksestä.',
+            '1800-luvun puolivälistä lähtien bermudalaiset viljelivät makeaa, nopeasti kypsyvää sipulilajiketta, jonka he ehtivät New Yorkin markkinoille ennen kilpailijoitaan. Kauppa kasvoi vuosikymmen vuosikymmeneltä niin suureksi, että amerikkalaiset alkoivat kutsua saarta Sipulilaikuksi ja sen asukkaita Sipuleiksi – lempinimi, joka on elänyt tähän päivään asti. Isoisän matkavuoden 1873 tienoilla vientiä lastattiin viikoittain kymmeniätuhansia laatikoita, ja kauppa huipentui 1899, jolloin saarilta lähti lähes 450 000 laatikollista sipulia. Myöhemmin yhdysvaltalaiset tulliesteet ja Texasin oma ”Bermuda-sipuli” tekivät lopun vientimenestyksestä.',
           tiedosto: 'N.E. Lusher - Packing Onions, Bermuda 3339541392.jpg',
           lyhyt: 'Työntekijät pakkaavat sipuleita puulaatikoihin setripuiden varjossa Bermudalla.',
           selite:
@@ -115331,8 +115331,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'entinen rautatien sähkömies ja bussinkuljettaja, joka noin '
                 + 'vuodesta 1986 seisoi arkiaamuisin Hamiltonin Crow Lanen '
                 + 'liikenneympyrässä vähän ennen neljää ja vilkutti töihin '
-                + 'ajaville kymmeneen asti. Hän toivotti ohiajaville "I love '
-                + 'you", ja koska lähes kaikki saaren lännestä ja etelästä '
+                + 'ajaville kymmeneen asti. Hän toivotti ohiajaville ”I love '
+                + 'you”, ja koska lähes kaikki saaren lännestä ja etelästä '
                 + 'tulevat kulkivat ympyrän kautta, hänet tunsi lähes jokainen '
                 + 'työmatkalainen. Vuonna 1998 hänestä pystytettiin '
                 + 'elämänkokoinen pronssipatsas lähelle paikkaa, jossa hän '
@@ -115403,7 +115403,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Lintu joka katosi',
           teksti:
-            "1500-luvulla espanjalaiset merimiehet pyydystivät Bermudan pesimäsaarilta jopa 4000 cahow-lintua yhtenä yönä ruoaksi, ja englantilaisten asuttua saaret 1609 mukana tulleet siat ja rotat tuhosivat lintujen maakoloihin tehdyt pesät. Vuoteen 1620 mennessä cahow'ta pidettiin jo sukupuuttoon kuolleena, eikä yhtään elävää yksilöä nähty yli kolmeen vuosisataan. Tammikuun 28. päivänä 1951 tutkijat Robert Cushman Murphy, Louis Mowbray ja viisitoistavuotias David Wingate löysivät Castle Harbourin pikkusaarilta kuitenkin 18 pesivää paria – yksi luonnonhistorian kuuluisimmista \"ylösnousemuksista\". Wingatesta tuli myöhemmin lintulajin pelastustyön elämäntehtävä.",
+            "1500-luvulla espanjalaiset merimiehet pyydystivät Bermudan pesimäsaarilta jopa 4000 cahow-lintua yhtenä yönä ruoaksi, ja englantilaisten asuttua saaret 1609 mukana tulleet siat ja rotat tuhosivat lintujen maakoloihin tehdyt pesät. Vuoteen 1620 mennessä cahow'ta pidettiin jo sukupuuttoon kuolleena, eikä yhtään elävää yksilöä nähty yli kolmeen vuosisataan. Tammikuun 28. päivänä 1951 tutkijat Robert Cushman Murphy, Louis Mowbray ja viisitoistavuotias David Wingate löysivät Castle Harbourin pikkusaarilta kuitenkin 18 pesivää paria – yksi luonnonhistorian kuuluisimmista ”ylösnousemuksista”. Wingatesta tuli myöhemmin lintulajin pelastustyön elämäntehtävä.",
           tiedosto: 'Bermuda Petrel From The Crossley ID Guide Eastern Birds.jpg',
           lyhyt: 'Neljä eri höyrylintulajia, niiden joukossa cahow, liitää meren yllä.',
           selite:
@@ -115425,11 +115425,11 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Madon rakentamat pikkuriutat',
           teksti:
-            'Bermudan matalissa lahdissa esiintyy harvinainen ilmiö: pieni putkimato rakentaa kalkkisia putkiaan tiiviisti toistensa päälle, kunnes muodostuu matala, rengasmainen riutta kuin pienoiskoossa oleva koralliatolli. Luonnontutkija Alpheus Hyatt Verrill kuvasi näitä "serpuliiniatolleja" 1900-luvun alussa, ja osa niistä kohoaa yhä ajoittain näkyviin matalan veden aikaan aaltojen halkoessa niiden ympärillä. Ilmiö on erikoinen, sillä tavallisesti riuttoja rakentavat korallieläimet, eivät madot: Bermudan lämmin vesi, suojaisat lahdet ja runsas kalkkiaines ovat yhdistelmä, joka mahdollistaa pienoisriutan synnyn vain harvoissa paikoissa maailmassa.',
+            'Bermudan matalissa lahdissa esiintyy harvinainen ilmiö: pieni putkimato rakentaa kalkkisia putkiaan tiiviisti toistensa päälle, kunnes muodostuu matala, rengasmainen riutta kuin pienoiskoossa oleva koralliatolli. Luonnontutkija Alpheus Hyatt Verrill kuvasi näitä ”serpuliiniatolleja” 1900-luvun alussa, ja osa niistä kohoaa yhä ajoittain näkyviin matalan veden aikaan aaltojen halkoessa niiden ympärillä. Ilmiö on erikoinen, sillä tavallisesti riuttoja rakentavat korallieläimet, eivät madot: Bermudan lämmin vesi, suojaisat lahdet ja runsas kalkkiaines ovat yhdistelmä, joka mahdollistaa pienoisriutan synnyn vain harvoissa paikoissa maailmassa.',
           tiedosto: 'FMIB 49263 Serpuline atolls at Bermuda.jpeg',
           lyhyt: 'Vanha valokuva näyttää kaksi matalaa, pitkänomaista riuttaa aaltojen keskellä.',
           selite:
-            'Vuosisadan alun valokuvassa näkyy kaksi tummaa, pitkänomaista ja rengasmaista muodostumaa aivan meren pinnan tasalla aaltojen lyödessä niitä vasten – kyseessä ovat putkimatojen kalkista rakentamat pienet riutat eli "serpuliiniatollit".',
+            'Vuosisadan alun valokuvassa näkyy kaksi tummaa, pitkänomaista ja rengasmaista muodostumaa aivan meren pinnan tasalla aaltojen lyödessä niitä vasten – kyseessä ovat putkimatojen kalkista rakentamat pienet riutat eli ”serpuliiniatollit”.',
           lahde: 'Alpheus Hyatt Verrill, Wikimedia Commons (Public domain)',
           wiki: 'Serpulidae',
         },
@@ -115826,7 +115826,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Falkland Island wolf, Dusicyon australis OMNZVT2369 !1pub.jpg',
           lyhyt: 'Varran täytetty museonäyttely, sudenkaltainen kettu Falklandinsaarilta.',
           selite:
-            'Kuvassa on Otago-museon täytetty varra-näyttelykappale, jonka jalustassa lukee "Canis Antarcticus, Falkland Island" - ainoa tapa nähdä laji nykyään, sillä se hävisi sukupuuttoon jo 1800-luvulla.',
+            'Kuvassa on Otago-museon täytetty varra-näyttelykappale, jonka jalustassa lukee ”Canis Antarcticus, Falkland Island” - ainoa tapa nähdä laji nykyään, sillä se hävisi sukupuuttoon jo 1800-luvulla.',
           lahde: 'Kane Fleury / MothmanNZ, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Warrah',
         },
@@ -115838,7 +115838,7 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Kap Horn',
       johdanto:
-        'Kap Horn on Etelä-Amerikan eteläisin niemi, jonka ohi purjehtiminen oli isoisän matkavuonna 1873 lähes ainoa tie Atlantilta Tyynelle valtamerelle. Merimiehet kutsuivat sitä kunnioittaen ja kauhulla "purjelaivojen hautausmaaksi".',
+        'Kap Horn on Etelä-Amerikan eteläisin niemi, jonka ohi purjehtiminen oli isoisän matkavuonna 1873 lähes ainoa tie Atlantilta Tyynelle valtamerelle. Merimiehet kutsuivat sitä kunnioittaen ja kauhulla ”purjelaivojen hautausmaaksi”.',
       nostot: [
         {
           otsikko: 'Nimi joka syntyi Hoornin kaupungista',
@@ -115856,7 +115856,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Purjelaivojen hautausmaa',
           teksti:
-            'Kap Hornin ympärillä puhaltavat lähes taukoamatta "pauhaavat neljäkymmentä", "raivoisat viisikymmentä" ja "kiljuvat kuusikymmentä" -nimillä tunnetut länsituulet, joita Andit ja Etelämantereen niemimaa vielä voimistavat suppilomaisesti. Matalikoilla tuuli ja virtaukset nostavat aaltoja, jotka voivat äityä yli 30 metrin korkuisiksi jättiaalloiksi, ja jäävuoret ajautuvat alueelle etenkin talvikuukausina. Charles Darwin kirjoitti rannikosta nähtyään sen: pelkkä näky riittäisi saamaan maakravun näkemään viikon painajaisia haaksirikoista. Satojen vuosien aikana Kap Hornin edustalle onkin uponnut lukemattomia laivoja.',
+            'Kap Hornin ympärillä puhaltavat lähes taukoamatta ”pauhaavat neljäkymmentä”, ”raivoisat viisikymmentä” ja ”kiljuvat kuusikymmentä” -nimillä tunnetut länsituulet, joita Andit ja Etelämantereen niemimaa vielä voimistavat suppilomaisesti. Matalikoilla tuuli ja virtaukset nostavat aaltoja, jotka voivat äityä yli 30 metrin korkuisiksi jättiaalloiksi, ja jäävuoret ajautuvat alueelle etenkin talvikuukausina. Charles Darwin kirjoitti rannikosta nähtyään sen: pelkkä näky riittäisi saamaan maakravun näkemään viikon painajaisia haaksirikoista. Satojen vuosien aikana Kap Hornin edustalle onkin uponnut lukemattomia laivoja.',
           tiedosto: 'Cape Horn (js) 1.jpg',
           lyhyt:
             'Kap Hornin raivoisat tuulet ja jättiaallot ovat upottaneet lukemattomia laivoja vuosien varrella.',
@@ -116209,7 +116209,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Klipperien kiertoreitti maailman ympäri',
           teksti:
-            '1800-luvun jälkipuoliskolla monet Britanniasta Australiaan ja Uuteen-Seelantiin purjehtineet villa-, vilja- ja kultaklipperit eivät kääntyneet takaisin samaa reittiä, vaan jatkoivat itään ja kiersivät koko maapallon. Menomatka kulki Toivonniemen kautta Etelämantereen tuntumassa puhaltavien länsituulten työntämänä, ja paluumatka jatkui samoja "pauhaavia" tuulia hyödyntäen aina Kap Hornin ohi Atlantille asti. Kap Horn oli tällä maailmanympärysreitillä suunnilleen puolimatkan kohta, ja sen onnistunut kiertäminen kertoi, että pahin osuus koko matkasta oli jo takana.',
+            '1800-luvun jälkipuoliskolla monet Britanniasta Australiaan ja Uuteen-Seelantiin purjehtineet villa-, vilja- ja kultaklipperit eivät kääntyneet takaisin samaa reittiä, vaan jatkoivat itään ja kiersivät koko maapallon. Menomatka kulki Toivonniemen kautta Etelämantereen tuntumassa puhaltavien länsituulten työntämänä, ja paluumatka jatkui samoja ”pauhaavia” tuulia hyödyntäen aina Kap Hornin ohi Atlantille asti. Kap Horn oli tällä maailmanympärysreitillä suunnilleen puolimatkan kohta, ja sen onnistunut kiertäminen kertoi, että pahin osuus koko matkasta oli jo takana.',
           tiedosto:
             'Jack Spurling - The square-rigged wool clipper „Argonaut“ under full sail.jpg',
           lyhyt:
@@ -116234,7 +116234,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kultainen korvarengas ja täysi laiva ihossa',
           teksti:
-            'Merimiehellä, joka oli kiertänyt Kap Hornin täysiluokan purjelaivassa, oli oikeus kutsua itseään "Kap Hornin kiertäjäksi" ja käyttää kultaista korvarengasta siinä korvassa, joka matkalla oli osoittanut kohti mannerta. Korun arvon piti riittää tarvittaessa jopa haltijansa hautajaisiin, jos hän kuolisi merellä kaukana kotoa. Toinen tunnusmerkki oli iholle piirretty täysin takiloitu laiva, jonka saattoi ansaita vain todistetusti Hornin kiertänyt purjehtija. Kunniaan kuului perimätiedon mukaan myös oikeus syödä pöydässä toinen jalka pöydällä.',
+            'Merimiehellä, joka oli kiertänyt Kap Hornin täysiluokan purjelaivassa, oli oikeus kutsua itseään ”Kap Hornin kiertäjäksi” ja käyttää kultaista korvarengasta siinä korvassa, joka matkalla oli osoittanut kohti mannerta. Korun arvon piti riittää tarvittaessa jopa haltijansa hautajaisiin, jos hän kuolisi merellä kaukana kotoa. Toinen tunnusmerkki oli iholle piirretty täysin takiloitu laiva, jonka saattoi ansaita vain todistetusti Hornin kiertänyt purjehtija. Kunniaan kuului perimätiedon mukaan myös oikeus syödä pöydässä toinen jalka pöydällä.',
           tiedosto: "T G Purvis - 'Port Stanley', a four masted barque in a heavy sea.jpg",
           lyhyt:
             'Kap Hornin kiertänyt merimies ansaitsi kultaisen korvarenkaan ja takiloidun laivan tatuoinnin.',
@@ -116277,7 +116277,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Albatrossi jota ei saanut tappaa',
           teksti:
-            'Kap Hornin ja Diego Ramírezin saarten ympärillä pesii useita albatrossilajeja, jotka seuraavat laivoja tunti- ja päiväkausia liitäen tuulen mukana siipeäkään räpäyttämättä. Merimiesten keskuudessa lintua pidettiin pyhänä: sen näkeminen tiesi onnea, mutta sen tappaminen toisi laivalle kirouksen. Uskomus tuli tunnetuksi laajalle yleisölle Samuel Taylor Coleridgen vuonna 1798 julkaisemasta runosta "Vanhan merimiehen tarina", jossa laivan onni kääntyy, kun päähenkilö ampuu albatrossin. Kap Hornin tuulissa liitävä lintu muistutti purjehtijoita siitä, kuinka vähän he pystyivät hallitsemaan omaa kohtaloaan.',
+            'Kap Hornin ja Diego Ramírezin saarten ympärillä pesii useita albatrossilajeja, jotka seuraavat laivoja tunti- ja päiväkausia liitäen tuulen mukana siipeäkään räpäyttämättä. Merimiesten keskuudessa lintua pidettiin pyhänä: sen näkeminen tiesi onnea, mutta sen tappaminen toisi laivalle kirouksen. Uskomus tuli tunnetuksi laajalle yleisölle Samuel Taylor Coleridgen vuonna 1798 julkaisemasta runosta ”Vanhan merimiehen tarina”, jossa laivan onni kääntyy, kun päähenkilö ampuu albatrossin. Kap Hornin tuulissa liitävä lintu muistutti purjehtijoita siitä, kuinka vähän he pystyivät hallitsemaan omaa kohtaloaan.',
           tiedosto: 'Diomedea exulans -Southern Ocean, Drakes Passage -flying-8.jpg',
           lyhyt:
             'Albatrossin tappaminen toi uskomuksen mukaan laivalle kirouksen, sen näkeminen sen sijaan onnea.',
@@ -116290,7 +116290,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kolme suurta niemeä, yksi sitkeä laiva',
           teksti:
-            'Merimiehiä, jotka olivat kiertäneet kaikki kolme suurta eteläistä niemeä – Kap Hornin, Toivonniemen ja Leeuwinin niemen – kunnioitettiin arvonimellä "kolmen niemen mies". Yksi sitkeimmistä Kap Hornin kiertäjistä oli purjelaiva Balclutha, joka kiersi niemen peräti 17 kertaa vain kolmentoista vuoden aikana, miehistönään ainoastaan noin 26 merimiestä. Tällaiset laivat ja niiden miehistöt tekivät Kap Hornista paitsi pelätyn myös kunnioitetun koettelemuksen, jonka läpäisseet saivat kantaa titteliään lopun elämäänsä.',
+            'Merimiehiä, jotka olivat kiertäneet kaikki kolme suurta eteläistä niemeä – Kap Hornin, Toivonniemen ja Leeuwinin niemen – kunnioitettiin arvonimellä ”kolmen niemen mies”. Yksi sitkeimmistä Kap Hornin kiertäjistä oli purjelaiva Balclutha, joka kiersi niemen peräti 17 kertaa vain kolmentoista vuoden aikana, miehistönään ainoastaan noin 26 merimiestä. Tällaiset laivat ja niiden miehistöt tekivät Kap Hornista paitsi pelätyn myös kunnioitetun koettelemuksen, jonka läpäisseet saivat kantaa titteliään lopun elämäänsä.',
           tiedosto: 'Sailing ship Balclutha (San Francisco).jpg',
           lyhyt:
             'Purjelaiva Balclutha kiersi Kap Hornin 17 kertaa kolmessatoista vuodessa vain 26 hengen miehistöllä.',
@@ -116327,7 +116327,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Maailman vanhin aavikko',
           teksti:
-            'Namib on pysynyt kuivana tai puolikuivana arviolta 55–80 miljoonan vuoden ajan, kauan ennen kuin Alpit tai Himalaja olivat kohonneet nykymuotoonsa. Pitkä eristyneisyys on synnyttänyt aavikolle enemmän omia, muualla tuntemattomia lajeja kuin millään muulla aavikolla. Suuri osa hiekasta on peräisin kaukaa etelästä Oranje-joesta, josta tuuli ja merivirrat ovat vuosimiljoonien kuluessa kuljettaneet sen pohjoiseen pitkin rannikkoa – aavikkoa on kutsuttu jopa "tuulen siirtämäksi Oranje-joen suistoksi". Namib-Naukluftin kansallispuiston kivinen Kuunlaakso, jonka Swakop-joki on kaivertanut, näyttää veden hitaan työn ikivanhassa kalliossa.',
+            'Namib on pysynyt kuivana tai puolikuivana arviolta 55–80 miljoonan vuoden ajan, kauan ennen kuin Alpit tai Himalaja olivat kohonneet nykymuotoonsa. Pitkä eristyneisyys on synnyttänyt aavikolle enemmän omia, muualla tuntemattomia lajeja kuin millään muulla aavikolla. Suuri osa hiekasta on peräisin kaukaa etelästä Oranje-joesta, josta tuuli ja merivirrat ovat vuosimiljoonien kuluessa kuljettaneet sen pohjoiseen pitkin rannikkoa – aavikkoa on kutsuttu jopa ”tuulen siirtämäksi Oranje-joen suistoksi”. Namib-Naukluftin kansallispuiston kivinen Kuunlaakso, jonka Swakop-joki on kaivertanut, näyttää veden hitaan työn ikivanhassa kalliossa.',
           tiedosto: 'Vallée de la Lune - Namib-Naukluft National Park 02.jpg',
           lyhyt: 'Swakop-joen veistämä kivinen Kuunlaakso Namib-Naukluftin kansallispuistossa.',
           selite:
@@ -116338,7 +116338,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Maa jonka Jumala teki vihassaan',
           teksti:
-            'Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.',
+            'Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä ”maa, jonka Jumala teki vihassaan”, ja portugalilaiset puhuivat ”helvetin porteista”. Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.',
           tiedosto: 'Laika ac Skeleton Coast (8419496570).jpg',
           lyhyt: 'Sumu leijuu Luurankorannikon yllä Namibin pohjoisosassa.',
           selite:
@@ -116717,7 +116717,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Nimi joka vaihtui vasta 1966',
           teksti:
-            'Espanjalainen merenkulkija Juan Fernández löysi saariryhmän vuonna 1574, ja se tunnettiin pitkään nimellä Más a Tierra, "lähempänä mannerta". Isoisän vieraillessa Tyynellämerellä vuonna 1873 saarella ei virallisesti ollut vielä mitään tekemistä Daniel Defoen romaanihahmon kanssa: Chilen hallitus nimesi sen Robinson Crusoen saareksi vasta vuonna 1966, houkutellakseen matkailijoita kirjan maineella. Nykyinen pääkylä San Juan Bautista sijaitsee Cumberland-lahden rannalla, ja sen kaduilla seisoo puusta veistetty patsas muistuttamassa nimen alkuperästä.',
+            'Espanjalainen merenkulkija Juan Fernández löysi saariryhmän vuonna 1574, ja se tunnettiin pitkään nimellä Más a Tierra, ”lähempänä mannerta”. Isoisän vieraillessa Tyynellämerellä vuonna 1873 saarella ei virallisesti ollut vielä mitään tekemistä Daniel Defoen romaanihahmon kanssa: Chilen hallitus nimesi sen Robinson Crusoen saareksi vasta vuonna 1966, houkutellakseen matkailijoita kirjan maineella. Nykyinen pääkylä San Juan Bautista sijaitsee Cumberland-lahden rannalla, ja sen kaduilla seisoo puusta veistetty patsas muistuttamassa nimen alkuperästä.',
           tiedosto: 'Robinson Crusoe Island statue of Robinson Crusoe in the town of San Juan Bautista.jpg',
           lyhyt: 'Puusta veistetty Robinson Crusoe -patsas San Juan Bautistan kylässä.',
           selite:
@@ -116763,7 +116763,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Isla Juan Fernandez- Langostas (Lobsters).jpg',
           lyhyt: 'Kalastajat esittelevät tuoreita Juan Fernándezin langusteja veneen kannella.',
           selite:
-            'Valokuvassa kolme kalastajaa puuveneessä nimeltä "Crusoe": yksi heistä pitää molemmissa käsissään suuria oranssinpunaisia langusteja, taustalla saaren paljaat vuorenrinteet.',
+            'Valokuvassa kolme kalastajaa puuveneessä nimeltä ”Crusoe”: yksi heistä pitää molemmissa käsissään suuria oranssinpunaisia langusteja, taustalla saaren paljaat vuorenrinteet.',
           lahde: 'Serpentus~commonswiki, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Juan Fernández Islands',
         },
@@ -116781,9 +116781,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kaalipuu jota ei kasva muualla',
           teksti:
-            'Robinson Crusoen saarella kasvaa runsaasti kasvilajeja, jotka ovat kehittyneet eristyksissä miljoonien vuosien aikana eikä niitä tavata missään muualla – yksi näistä on Dendroseris litoralis, paikallisesti "kaalipuuksi" kutsuttu pensasmainen kasvi, jonka suuret lehdet ja riippuvat kukat muistuttavat etäisesti kaalia. Saariston kasvillisuutta uhkaavat kuitenkin vakavasti tuodut vieraslajit: villit vadelmapensaat ja maqui-pensaat ovat vallanneet jo 80–90 prosenttia saaren alkuperäismetsästä, ja monet endeemiset lajit ovat siksi äärimmäisen uhanalaisia.',
+            'Robinson Crusoen saarella kasvaa runsaasti kasvilajeja, jotka ovat kehittyneet eristyksissä miljoonien vuosien aikana eikä niitä tavata missään muualla – yksi näistä on Dendroseris litoralis, paikallisesti ”kaalipuuksi” kutsuttu pensasmainen kasvi, jonka suuret lehdet ja riippuvat kukat muistuttavat etäisesti kaalia. Saariston kasvillisuutta uhkaavat kuitenkin vakavasti tuodut vieraslajit: villit vadelmapensaat ja maqui-pensaat ovat vallanneet jo 80–90 prosenttia saaren alkuperäismetsästä, ja monet endeemiset lajit ovat siksi äärimmäisen uhanalaisia.',
           tiedosto: 'Robinson Crusoe Island Dendroseris litoralis – Juan Fernández Cabbage Tree.jpg',
-          lyhyt: 'Dendroseris litoralis eli "kaalipuu" kukkii pensaana saaren rinteellä.',
+          lyhyt: 'Dendroseris litoralis eli ”kaalipuu” kukkii pensaana saaren rinteellä.',
           selite:
             'Kuva näyttää tuuheaa, suurilehtistä pensasta, jonka oksilta riippuu keltaisenoranssiin kukintoihin päättyviä varsia – kasvi tunnetaan vain Robinson Crusoen saarelta.',
           lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
@@ -117042,13 +117042,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Vuonna 2013 kylän kaava kielsi rakentamasta asuntoja '
                 + 'rantaan. Matkailijan sääntö on yksinkertainen: jos meri '
                 + 'vetäytyy äkkiä tai puhelin hälyttää, lähde heti vihreiden '
-                + '"Vía de evacuación tsunami" -viittojen suuntaan ylös '
+                + '”Vía de evacuación tsunami” -viittojen suuntaan ylös '
                 + 'rinteeseen äläkä jää rantaan katsomaan.',
               kuva: {
                 tiedosto: 'CI-Robinson-dorfstrasse.jpg',
                 lyhyt: 'Vihreä kyltti Alfred von Rodtin kadulla osoittaa tsunamin pakoreitin.',
                 selite: 'Puisen Alfred von Rodt -kadunnimikyltin vieressä '
-                  + 'seisoo vihreävalkoinen "Vía de evacuación tsunami" '
+                  + 'seisoo vihreävalkoinen ”Vía de evacuación tsunami” '
                   + '-kyltti; taustalla kylän puutalot ja metsäinen '
                   + 'vuorenrinne. Kuva marraskuulta 2017.',
                 lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
@@ -117086,11 +117086,11 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kirja joka teki tarinasta kuolemattoman',
           teksti:
-            'Daniel Defoe julkaisi huhtikuussa 1719 romaanin "The Life and Strange Adventures of Robinson Crusoe", jonka päähahmo joutuu haaksirikkoon ja elää vuosikausia yksin autiolla saarella – Defoe ammensi ideansa osin Selkirkin tositarinasta, vaikka sijoittikin oman kertomuksensa Karibialle Tyynenmeren sijaan. Kirja oli välitön menestys, ja siitä uutisoitiin samana syksynä myös lehdistössä, kuten lontoolaisessa Original London Postissa lokakuussa 1719. Selkirkin oikea saari sai kuitenkin virallisesti Robinson Crusoen nimen vasta lähes kaksisataa vuotta myöhemmin, vuonna 1966.',
+            'Daniel Defoe julkaisi huhtikuussa 1719 romaanin ”The Life and Strange Adventures of Robinson Crusoe”, jonka päähahmo joutuu haaksirikkoon ja elää vuosikausia yksin autiolla saarella – Defoe ammensi ideansa osin Selkirkin tositarinasta, vaikka sijoittikin oman kertomuksensa Karibialle Tyynenmeren sijaan. Kirja oli välitön menestys, ja siitä uutisoitiin samana syksynä myös lehdistössä, kuten lontoolaisessa Original London Postissa lokakuussa 1719. Selkirkin oikea saari sai kuitenkin virallisesti Robinson Crusoen nimen vasta lähes kaksisataa vuotta myöhemmin, vuonna 1966.',
           tiedosto: '1719-heathcot-robinson-crusoe.jpg',
           lyhyt: 'Lontoolaisen lehden etusivu lokakuulta 1719 esittelee Robinson Crusoen tarinan.',
           selite:
-            'Kuvassa on vanhan englantilaisen "The Original London Post" -lehden etusivu 7. lokakuuta 1719, jonka pääotsikko kertoo juuri ilmestyneen kirjan Robinson Crusoen elämästä ja seikkailuista.',
+            'Kuvassa on vanhan englantilaisen ”The Original London Post” -lehden etusivu 7. lokakuuta 1719, jonka pääotsikko kertoo juuri ilmestyneen kirjan Robinson Crusoen elämästä ja seikkailuista.',
           lahde: 'Daniel Defoe, Wikimedia Commons (Public domain)',
           wiki: 'Robinson Crusoe',
         },
@@ -117124,7 +117124,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Descripción de la Ysla Grande de Juan Fernández.JPG',
           lyhyt: 'Espanjalainen 1700-luvun kartta kuvailee saaren muotoa ja vuohilaumoja.',
           selite:
-            'Käsin väritetty espanjalainen kartta esittää saaren pitkänomaisen muodon ja sisältää tekstiselityksen, joka mainitsee saarella laiduntavat vuohilaumat ("ganado cabrio").',
+            'Käsin väritetty espanjalainen kartta esittää saaren pitkänomaisen muodon ja sisältää tekstiselityksen, joka mainitsee saarella laiduntavat vuohilaumat (”ganado cabrio”).',
           lahde: 'Antonio Ulloa, Wikimedia Commons (Public domain)',
           wiki: 'Robinson Crusoe Island',
         },
@@ -117167,7 +117167,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Helvetti Tyynellämerellä',
           teksti:
-            'Vuonna 1825 Norfolkille perustettiin uusi, aiempaa ankarampi rangaistussiirtola pahimmille uusintarikollisille. Komentaja Morissetin kaudella 1829–1834 ruoskarangaistuksia käytettiin niin häikäilemättömästi, että saaren maine "helvettinä maan päällä" tunnettiin jo 1830-luvulla kautta Britannian. Vankeja oli enimmillään lähes 700, ja monet heistä oli tuomittu pelkistä omaisuusrikoksista, ei väkivallasta. Kapinoita puhkesi useita vuosina 1826–1846, ja selviytyneiden kertomukset ankarista oloista tekivät Norfolkista pelätyimmän rangaistuspaikan koko brittiläisessä siirtomaajärjestelmässä.',
+            'Vuonna 1825 Norfolkille perustettiin uusi, aiempaa ankarampi rangaistussiirtola pahimmille uusintarikollisille. Komentaja Morissetin kaudella 1829–1834 ruoskarangaistuksia käytettiin niin häikäilemättömästi, että saaren maine ”helvettinä maan päällä” tunnettiin jo 1830-luvulla kautta Britannian. Vankeja oli enimmillään lähes 700, ja monet heistä oli tuomittu pelkistä omaisuusrikoksista, ei väkivallasta. Kapinoita puhkesi useita vuosina 1826–1846, ja selviytyneiden kertomukset ankarista oloista tekivät Norfolkista pelätyimmän rangaistuspaikan koko brittiläisessä siirtomaajärjestelmässä.',
           tiedosto: 'Norfolk Island convict buildings.jpg',
           lyhyt: 'Kingstonin vankisiirtolan kaksikerroksinen kasarmirakennus nykyisin.',
           selite:
@@ -117192,8 +117192,8 @@ export const KULTTUURI_KATEGORIAT = {
               lyhyt: 'Thomas Sellerin vesiväri (n. 1839) näyttää Norfolkin ankaran rangaistussiirtolan.',
               selite: 'Thomas Sellerin vesiväri (n. 1839): Norfolkin '
                 + 'rangaistussiirtolan rakennukset komentaja Morissetin '
-                + 'ankaran kauden aikana, jolloin saaren maine "helvettinä '
-                + 'maan päällä" vakiintui.',
+                + 'ankaran kauden aikana, jolloin saaren maine ”helvettinä '
+                + 'maan päällä” vakiintui.',
               lahde: 'Thomas Seller, Wikimedia Commons (PD)',
             },
             {
@@ -117437,7 +117437,7 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Uimaan mennään Kingstonin edustalle Emily Bayhin ja '
                 + 'viereiseen Slaughter Bayhin, joita pieni koralliriutta '
                 + 'suojaa avomereltä. Muut rannat ovat valvomattomia, ja '
-                + 'saarelaiset varoittavat "seitsemännestä aallosta", '
+                + 'saarelaiset varoittavat ”seitsemännestä aallosta”, '
                 + 'yllättäen korkeammaksi nousevasta aallosta, joka voi '
                 + 'viedä varomattoman uimarin mukanaan. Riutan sisällä '
                 + 'snorklataan korallien ja trooppisten kalojen keskellä, ja '
@@ -117494,7 +117494,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Providence-liitäjä pelasti siirtokunnan',
           teksti:
-            'Maaliskuussa 1790 laiva HMS Sirius haaksirikkoutui Norfolkin riutalle, ja saarelle jäi lähes 500 brittiä ilman kunnollisia varastoja tai toivoa avusta. Pelastus löytyi Mount Pittin rinteiltä, jonne pesi valtava Providence-liitäjien parvi: siirtokuntalaiset metsästivät lintuja jopa 5000 yötä kohti, munineen ja poikasineen, kunnes puutarhat alkoivat tuottaa satoa vuoteen 1793 mennessä. Pelastustyö vaati kuitenkin hirvittävän hinnan — laji, jota kutsuttiin kiitollisuudesta "Providence-linnuksi", oli metsästetty Norfolkilta sukupuuttoon jo vuoteen 1800 mennessä.',
+            'Maaliskuussa 1790 laiva HMS Sirius haaksirikkoutui Norfolkin riutalle, ja saarelle jäi lähes 500 brittiä ilman kunnollisia varastoja tai toivoa avusta. Pelastus löytyi Mount Pittin rinteiltä, jonne pesi valtava Providence-liitäjien parvi: siirtokuntalaiset metsästivät lintuja jopa 5000 yötä kohti, munineen ja poikasineen, kunnes puutarhat alkoivat tuottaa satoa vuoteen 1793 mennessä. Pelastustyö vaati kuitenkin hirvittävän hinnan — laji, jota kutsuttiin kiitollisuudesta ”Providence-linnuksi”, oli metsästetty Norfolkilta sukupuuttoon jo vuoteen 1800 mennessä.',
           tiedosto: 'Providence Petrel.JPG',
           lyhyt: 'Providence-liitäjä istumassa maassa saniaisten katveessa.',
           selite:
@@ -118059,7 +118059,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kristityn Afrikan suurin basilika',
           teksti:
-            'Karthagon suurin tunnettu kristillinen pyhäkkö ei ollut yksittäinen kirkko vaan kokonainen 15 000 neliömetrin rakennusryhmä: pääbasilikan mitat olivat 65 x 45 metriä, ja sen sisällä kulki peräti yhdeksästä yhteentoista pylväsriviä, joiden korinttilaispäät kannattelivat kattoa. Nimi Damous el Karita juontuu latinan sanoista domus caritatis, "laupeuden talo". Kompleksiin kuului myös maanalainen pyöreä huone, jonka sisähalkaisija oli yli yhdeksän metriä ja jonka terrakottakatto on säilynyt osittain tähän päivään asti – vaikka koko aluetta ei ole koskaan kaivettu loppuun asti tutkijoiden toimesta.',
+            'Karthagon suurin tunnettu kristillinen pyhäkkö ei ollut yksittäinen kirkko vaan kokonainen 15 000 neliömetrin rakennusryhmä: pääbasilikan mitat olivat 65 x 45 metriä, ja sen sisällä kulki peräti yhdeksästä yhteentoista pylväsriviä, joiden korinttilaispäät kannattelivat kattoa. Nimi Damous el Karita juontuu latinan sanoista domus caritatis, ”laupeuden talo”. Kompleksiin kuului myös maanalainen pyöreä huone, jonka sisähalkaisija oli yli yhdeksän metriä ja jonka terrakottakatto on säilynyt osittain tähän päivään asti – vaikka koko aluetta ei ole koskaan kaivettu loppuun asti tutkijoiden toimesta.',
           tiedosto: 'Basilica Damous El Karita - view from the side of the semi- circular atrium.jpg',
           lyhyt: 'Damous el Karitan basilikan pylväskenttää ja taustalla moskeija.',
           selite:
@@ -118323,7 +118323,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Härännahan kokoinen valtakunta',
           teksti:
-            'Perimätiedon mukaan Karthagon perusti foinikialainen kuningatar Elissa, jota myöhemmin kutsuttiin myös nimellä Dido. Hän pakeni kotikaupunkiaan Tyrosta sen jälkeen, kun oma veli Pygmalion oli murhannut hänen aviomiehensä, ja osti paikalliselta päälliköltä maata niin paljon kuin yksi härännahka riittäisi peittämään. Dido leikkautti nahan ohuiksi suikaleiksi ja ympäröi niillä kokonaisen kukkulan – näin syntyi tarinan mukaan kaupunki, jonka puunilainen nimi Qart-hadašt tarkoittaa yksinkertaisesti "uutta kaupunkia". Perinteinen perustamisvuosi on 814 eaa., yli 250 vuotta ennen Rooman ensimmäistä sotaa Karthagoa vastaan.',
+            'Perimätiedon mukaan Karthagon perusti foinikialainen kuningatar Elissa, jota myöhemmin kutsuttiin myös nimellä Dido. Hän pakeni kotikaupunkiaan Tyrosta sen jälkeen, kun oma veli Pygmalion oli murhannut hänen aviomiehensä, ja osti paikalliselta päälliköltä maata niin paljon kuin yksi härännahka riittäisi peittämään. Dido leikkautti nahan ohuiksi suikaleiksi ja ympäröi niillä kokonaisen kukkulan – näin syntyi tarinan mukaan kaupunki, jonka puunilainen nimi Qart-hadašt tarkoittaa yksinkertaisesti ”uutta kaupunkia”. Perinteinen perustamisvuosi on 814 eaa., yli 250 vuotta ennen Rooman ensimmäistä sotaa Karthagoa vastaan.',
           tiedosto: 'Turner Dido Building Carthage.jpg',
           lyhyt: 'Turnerin maalaus kuvitteellisesta Karthagon rakentamisesta iltahämärässä.',
           selite:
@@ -118377,8 +118377,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Memorial tablet marking the spot where Livingstone and Stanley met at Ujiji in 1871 ATLIB 305982.png',
           vuosi: '1903',
-          lyhyt: 'Muistolaatta Ujijissa: Stanley löysi Livingstonen 1871, "Tohtori Livingstone, otaksun?".',
-          selite: 'Muistolaatta Ujijissa Tanganjikajärven rannalla — paikassa, jossa Stanley löysi kadonneen Livingstonen vuonna 1871 ja tervehti: "Tohtori Livingstone, otaksun?"',
+          lyhyt: 'Muistolaatta Ujijissa: Stanley löysi Livingstonen 1871, ”Tohtori Livingstone, otaksun?”.',
+          selite: 'Muistolaatta Ujijissa Tanganjikajärven rannalla — paikassa, jossa Stanley löysi kadonneen Livingstonen vuonna 1871 ja tervehti: ”Tohtori Livingstone, otaksun?”',
           lahde: 'A. P. Godber (PD)',
         },
         {
@@ -118423,9 +118423,9 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'David Livingstone',
         },
         {
-          otsikko: '"Tohtori Livingstone, oletan?"',
+          otsikko: '”Tohtori Livingstone, oletan?”',
           teksti:
-            '10. marraskuuta 1871 Stanley saapui karavaaninsa kanssa Ujijiin ja näki väkijoukossa harmaapartaisen valkoisen miehen. Hän astui esiin, nosti hattuaan ja lausui myöhemmin maailmankuuluksi tulleet sanat: "Tohtori Livingstone, oletan?" Stanley jäi Ujijiin neljäksi kuukaudeksi ja pyysi lopuksi Livingstonea palaamaan kanssaan Eurooppaan, mutta tämä kieltäytyi jatkaakseen tutkimustyötään. He eivät tavanneet enää koskaan: Livingstone kuoli puolitoista vuotta myöhemmin nykyisen Sambian alueella.',
+            '10. marraskuuta 1871 Stanley saapui karavaaninsa kanssa Ujijiin ja näki väkijoukossa harmaapartaisen valkoisen miehen. Hän astui esiin, nosti hattuaan ja lausui myöhemmin maailmankuuluksi tulleet sanat: ”Tohtori Livingstone, oletan?” Stanley jäi Ujijiin neljäksi kuukaudeksi ja pyysi lopuksi Livingstonea palaamaan kanssaan Eurooppaan, mutta tämä kieltäytyi jatkaakseen tutkimustyötään. He eivät tavanneet enää koskaan: Livingstone kuoli puolitoista vuotta myöhemmin nykyisen Sambian alueella.',
           tiedosto: 'Henry Morton Stanley meeting David Livingstone at Ujiji, in Wellcome V0006855.jpg',
           lyhyt: 'Stanleyn tilaama kaiverrus kuvaa hetkeä, jolloin hän löysi Livingstonen Ujijistä 1871.',
           selite:
@@ -118450,7 +118450,7 @@ export const KULTTUURI_KATEGORIAT = {
             'Memorial tablet marking the spot where Livingstone and Stanley met at Ujiji in 1871 ATLIB 305982.png',
           lyhyt: 'Vanha valokuva Livingstonen ja Stanleyn tapaamispaikan muistomerkistä mangopuun juurella.',
           selite:
-            'Vanha mustavalkoinen valokuva National Geographic -lehden sivulta näyttää ison puunrungon ympärille rakennetun kivimuistomerkin, jonka kylkeen on kaiverrettu "LIVINGSTONE STANLEY 1871"; vieressä istuu paikallisia lapsia.',
+            'Vanha mustavalkoinen valokuva National Geographic -lehden sivulta näyttää ison puunrungon ympärille rakennetun kivimuistomerkin, jonka kylkeen on kaiverrettu ”LIVINGSTONE STANLEY 1871”; vieressä istuu paikallisia lapsia.',
           lahde: 'Albert Percy Godber, Wikimedia Commons (Public domain)',
           wiki: 'Livingstone–Stanley Monument',
         },
@@ -118576,11 +118576,11 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kivimuuriin kaiverrettu nimi',
           teksti:
-            'Linnoituksen kivimuuriin on kaiverrettu pieni, siisti teksti: "H. ROBINSON 1733". Kuka tahansa rakennustöissä ollut mies saattoi jättää tällaisen jäljen työstään kiveen, ja Robinsonin nimikirjoitus on säilynyt luettavana lähes 300 vuotta, vaikka suuri osa linnoituksen historiasta tunnetaan vain asiakirjoista. Se muistuttaa, että kivimuurit eivät nousseet itsestään: jokainen lohkare piti louhia, kuljettaa ja muurata paikalleen ihmisvoimin subarktisen kesän lyhyinä kuukausina. Tällaisia nimikirjoituksia on löydetty muureista useita, ja ne ovat tavallisten rakentajien ainoa säilynyt jälki suurhankkeesta.',
+            'Linnoituksen kivimuuriin on kaiverrettu pieni, siisti teksti: ”H. ROBINSON 1733”. Kuka tahansa rakennustöissä ollut mies saattoi jättää tällaisen jäljen työstään kiveen, ja Robinsonin nimikirjoitus on säilynyt luettavana lähes 300 vuotta, vaikka suuri osa linnoituksen historiasta tunnetaan vain asiakirjoista. Se muistuttaa, että kivimuurit eivät nousseet itsestään: jokainen lohkare piti louhia, kuljettaa ja muurata paikalleen ihmisvoimin subarktisen kesän lyhyinä kuukausina. Tällaisia nimikirjoituksia on löydetty muureista useita, ja ne ovat tavallisten rakentajien ainoa säilynyt jälki suurhankkeesta.',
           tiedosto: 'H Robinson 1733 Graffiti at Prince of Wales Fort - Churchill, Manitoba (40402090835).jpg',
           lyhyt: 'Kivimuuriin vuonna 1733 kaiverrettu rakentajan nimikirjoitus.',
           selite:
-            'Lähikuva linnoituksen kivimuuriin kaiverretusta tekstistä "H. ROBINSON 1733" — yhden rakennustöissä olleen miehen jättämä nimikirjoitus.',
+            'Lähikuva linnoituksen kivimuuriin kaiverretusta tekstistä ”H. ROBINSON 1733” — yhden rakennustöissä olleen miehen jättämä nimikirjoitus.',
           lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Prince of Wales Fort',
         },
@@ -118858,7 +118858,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Jääkarhujen pääkaupunki',
           teksti:
-            'Lokakuun puolivälistä marraskuun puoliväliin Churchillin rannikolle kerääntyy keskimäärin noin 600 jääkarhua odottamaan Hudsoninlahden jäätymistä. Karhut ovat viettäneet kesän maalla paastoten, sillä kesäisin lahdella ei ole jäätä, jolla metsästää hylkeitä. Juuri Churchillin kohdalla jää muodostuu myöhemmin kuin monin muin paikoin arktisella alueella, joten karhut viipyvät täällä pidempään ja kokoontuvat tiheämmin kuin lähes missään muualla maailmassa. Ilmiö on tehnyt pikkukaupungista "jääkarhujen pääkaupungin", ja matkailijat saapuvat joka syksy erikoisrakenteisilla tundrabusseilla katsomaan karhuja turvallisen välimatkan päästä.',
+            'Lokakuun puolivälistä marraskuun puoliväliin Churchillin rannikolle kerääntyy keskimäärin noin 600 jääkarhua odottamaan Hudsoninlahden jäätymistä. Karhut ovat viettäneet kesän maalla paastoten, sillä kesäisin lahdella ei ole jäätä, jolla metsästää hylkeitä. Juuri Churchillin kohdalla jää muodostuu myöhemmin kuin monin muin paikoin arktisella alueella, joten karhut viipyvät täällä pidempään ja kokoontuvat tiheämmin kuin lähes missään muualla maailmassa. Ilmiö on tehnyt pikkukaupungista ”jääkarhujen pääkaupungin”, ja matkailijat saapuvat joka syksy erikoisrakenteisilla tundrabusseilla katsomaan karhuja turvallisen välimatkan päästä.',
           tiedosto: 'Polar Bear and Tundra Buggy - Churchill, Manitoba (26427267077).jpg',
           lyhyt: 'Tundrabussi ja jääkarhu kohtaavat Churchillin rannikolla syksyllä.',
           selite:
@@ -118902,11 +118902,11 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Karhujen vankila',
           teksti:
-            'Kun nälkäinen jääkarhu eksyy liian lähelle asutusta, Churchillin viranomaiset eivät tapa sitä vaan siirtävät sen usein niin sanottuun "karhujen vankilaan" — virallisesti Polar Bear Holding Facilityyn. Vanhasta lentotukikohdan hallista muutettu rakennus toimii väliaikaisena säilönä, jossa ongelmakarhu odottaa parhaimmillaan viikkoja, kunnes lahti jäätyy tarpeeksi ja se voidaan kuljettaa helikopterilla takaisin luontoon kauas kaupungista. Karhuille ei anneta ruokaa vankilan aikana, jotta ne eivät opi yhdistämään ihmisiä ruokaan. Järjestelmä on osa Polar Bear Alert -ohjelmaa, joka on siirtänyt kaupunkiin eksyneitä karhuja jo vuosikymmenten ajan.',
+            'Kun nälkäinen jääkarhu eksyy liian lähelle asutusta, Churchillin viranomaiset eivät tapa sitä vaan siirtävät sen usein niin sanottuun ”karhujen vankilaan” — virallisesti Polar Bear Holding Facilityyn. Vanhasta lentotukikohdan hallista muutettu rakennus toimii väliaikaisena säilönä, jossa ongelmakarhu odottaa parhaimmillaan viikkoja, kunnes lahti jäätyy tarpeeksi ja se voidaan kuljettaa helikopterilla takaisin luontoon kauas kaupungista. Karhuille ei anneta ruokaa vankilan aikana, jotta ne eivät opi yhdistämään ihmisiä ruokaan. Järjestelmä on osa Polar Bear Alert -ohjelmaa, joka on siirtänyt kaupunkiin eksyneitä karhuja jo vuosikymmenten ajan.',
           tiedosto: 'Polar Bear Jail (6360633055).jpg',
-          lyhyt: 'Churchillin Polar Bear Holding Facility eli kansanomaisesti "karhujen vankila".',
+          lyhyt: 'Churchillin Polar Bear Holding Facility eli kansanomaisesti ”karhujen vankila”.',
           selite:
-            'Kuvassa matala, kaareviin katonmuotoihin rakennettu halli, jonka kylkeen kiinnitetty kyltti kertoo sen olevan Polar Bear Holding Facility — Churchillin "karhujen vankila".',
+            'Kuvassa matala, kaareviin katonmuotoihin rakennettu halli, jonka kylkeen kiinnitetty kyltti kertoo sen olevan Polar Bear Holding Facility — Churchillin ”karhujen vankila”.',
           lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Polar bear',
         },
@@ -118917,7 +118917,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Polar bear alert (6357573595).jpg',
           lyhyt: 'Churchillin varoituskyltti: luonnonvaraisten eläinten ruokkiminen on laitonta.',
           selite:
-            'Kyltti varoittaa: "Polar Bear Alert — luonnonvaraisen eläimen ruokkiminen on laitonta, rikkomuksesta seuraa syyte" — tällaisia varoituksia on ympäri Churchillia.',
+            'Kyltti varoittaa: ”Polar Bear Alert — luonnonvaraisen eläimen ruokkiminen on laitonta, rikkomuksesta seuraa syyte” — tällaisia varoituksia on ympäri Churchillia.',
           lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Churchill, Manitoba',
         },
@@ -118980,7 +118980,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Länsi-Afrikan vanhin korkeakoulu',
           teksti:
-            'Englannin kirkon lähetysseura perusti Freetowniin vuonna 1827 Fourah Bay Collegen, josta tuli koko Saharan eteläpuolisen Afrikan ensimmäinen korkeakoulu. Sen ensimmäinen oppilas oli poika, joka oli itse vapautettu orjalaivalta ja josta kasvoi myöhemmin Afrikan ensimmäinen anglikaaninen piispa. 1800-luvun puoliväliin mennessä oppilaitos veti opiskelijoita ympäri Länsi-Afrikan rannikkoa, ja Freetownia alettiin kutsua "Länsi-Afrikan Ateenaksi". Isoisän vierailun aikaan 1873 koulu oli jo tunnettu oppineisuuden keskus keskellä siirtomaakaupunkia, jonka kaduilla kulki yhtä lailla kauppiaita kuin pappisopiskelijoita.',
+            'Englannin kirkon lähetysseura perusti Freetowniin vuonna 1827 Fourah Bay Collegen, josta tuli koko Saharan eteläpuolisen Afrikan ensimmäinen korkeakoulu. Sen ensimmäinen oppilas oli poika, joka oli itse vapautettu orjalaivalta ja josta kasvoi myöhemmin Afrikan ensimmäinen anglikaaninen piispa. 1800-luvun puoliväliin mennessä oppilaitos veti opiskelijoita ympäri Länsi-Afrikan rannikkoa, ja Freetownia alettiin kutsua ”Länsi-Afrikan Ateenaksi”. Isoisän vierailun aikaan 1873 koulu oli jo tunnettu oppineisuuden keskus keskellä siirtomaakaupunkia, jonka kaduilla kulki yhtä lailla kauppiaita kuin pappisopiskelijoita.',
           tiedosto: 'Old building of Fourah Bay College. Cline Town, Freetown, Sierra Leone.jpg',
           lyhyt: 'Fourah Bay Collegen vanha rakennus Cline Townissa Freetownissa.',
           selite:
@@ -118991,33 +118991,33 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Lääkäri, joka piirsi Afrikan uudelleen',
           teksti:
-            'James Africanus Beale Horton syntyi noin 1835 Freetownissa vanhemmille, jotka brittilaivasto oli vapauttanut orjalaivalta. Stipendin turvin hän opiskeli lääketiedettä Edinburghissa ja väitteli tohtoriksi 1859 — ensimmäisenä afrikkalaisena Britanniassa. Armeijan lääkärinä Länsi-Afrikassa palvellessaan hän kirjoitti 1868 teoksen "West African Countries and Peoples", jossa hän kumosi aikansa rotuoppeja ja vaati afrikkalaisille itsehallintoa. Samana vuonna hän julkaisi teoksen liitteenä kartan koko Länsi-Afrikan rannikosta, viisi vuotta ennen isoisän matkaa.',
+            'James Africanus Beale Horton syntyi noin 1835 Freetownissa vanhemmille, jotka brittilaivasto oli vapauttanut orjalaivalta. Stipendin turvin hän opiskeli lääketiedettä Edinburghissa ja väitteli tohtoriksi 1859 — ensimmäisenä afrikkalaisena Britanniassa. Armeijan lääkärinä Länsi-Afrikassa palvellessaan hän kirjoitti 1868 teoksen ”West African Countries and Peoples”, jossa hän kumosi aikansa rotuoppeja ja vaati afrikkalaisille itsehallintoa. Samana vuonna hän julkaisi teoksen liitteenä kartan koko Länsi-Afrikan rannikosta, viisi vuotta ennen isoisän matkaa.',
           tiedosto: '(1868) MAP OF THE WEST COAST OF AFRICA, by Africanus Horton, Sierra Leone.jpg',
           lyhyt: 'Africanus Hortonin vuonna 1868 julkaisema kartta Länsi-Afrikan rannikosta.',
           selite:
-            'Vanha painettu kartta esittää koko Länsi-Afrikan rannikkoseudun Saharasta Guineanlahdelle asti, allekirjoituksena "Africanus Horton, M.D., Sierra Leone".',
+            'Vanha painettu kartta esittää koko Länsi-Afrikan rannikkoseudun Saharasta Guineanlahdelle asti, allekirjoituksena ”Africanus Horton, M.D., Sierra Leone”.',
           lahde: 'The British Library, Wikimedia Commons (Public domain)',
           wiki: 'James Africanus Beale Horton',
         },
         {
           otsikko: 'Leijonavuorten satama',
           teksti:
-            'Portugalilainen merenkulkija Pedro de Sintra purjehti rannikolle 1462 ja nimesi vuoret "Serra Leoa" eli leijonavuoriksi — perimätiedon mukaan joko niiden hammasmaisen muodon tai ukkosen jylinän vuoksi. Vuorten juurelle avautuu valtava suistolahti, jota pidetään yhtenä maailman suurimmista luonnonsatamista: juuri siksi Britannian laivasto valitsi Freetownin Länsi-Afrikan tukikohdakseen. Sademetsän peittämät rinteet nousevat suoraan meren rannasta, ja isoisän aikaan höyrylaivat ankkuroituivat samaan lahteen, jonka muodon portugalilaiset olivat piirtäneet karttoihinsa jo neljäsataa vuotta aiemmin.',
+            'Portugalilainen merenkulkija Pedro de Sintra purjehti rannikolle 1462 ja nimesi vuoret ”Serra Leoa” eli leijonavuoriksi — perimätiedon mukaan joko niiden hammasmaisen muodon tai ukkosen jylinän vuoksi. Vuorten juurelle avautuu valtava suistolahti, jota pidetään yhtenä maailman suurimmista luonnonsatamista: juuri siksi Britannian laivasto valitsi Freetownin Länsi-Afrikan tukikohdakseen. Sademetsän peittämät rinteet nousevat suoraan meren rannasta, ja isoisän aikaan höyrylaivat ankkuroituivat samaan lahteen, jonka muodon portugalilaiset olivat piirtäneet karttoihinsa jo neljäsataa vuotta aiemmin.',
           tiedosto: 'Freetown-aerialview.jpg',
           lyhyt: 'Ilmakuva Freetownin lahdesta ja sitä ympäröivistä metsäisistä vuorista.',
           selite:
-            'Ilmakuva näyttää laajan sinisen lahden, jonka ympärillä kaupunki levittäytyy rannalle metsäisten vuorten juurelle — samat "leijonavuoret", jotka antoivat koko maalle nimen.',
+            'Ilmakuva näyttää laajan sinisen lahden, jonka ympärillä kaupunki levittäytyy rannalle metsäisten vuorten juurelle — samat ”leijonavuoret”, jotka antoivat koko maalle nimen.',
           lahde: 'David Hond, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Freetown',
         },
         {
           otsikko: 'Kerhotalo kuvalehden sivulla',
           teksti:
-            'Tammikuussa 1883 lontoolainen kuvalehti The Graphic julkaisi kokonaisen sivun piirroksia matkasta Madeiralta Sierra Leoneen: palmurantoja, tulivuorenhuippuja ja lentäviä kaloja. Sivun oikeassa alakulmassa on kuva "The Club Housesta" Freetownissa — siirtomaan brittiläisten kokoontumispaikasta palmujen keskellä. Vain kymmenen vuotta isoisän matkan jälkeen tällaiset piirrokset olivat yhä yleisölle eksotiikkaa: kotisohvalla istuva lukija näki niiden kautta ensimmäistä kertaa, millaiselta Länsi-Afrikan rannikkokaupunki näytti.',
+            'Tammikuussa 1883 lontoolainen kuvalehti The Graphic julkaisi kokonaisen sivun piirroksia matkasta Madeiralta Sierra Leoneen: palmurantoja, tulivuorenhuippuja ja lentäviä kaloja. Sivun oikeassa alakulmassa on kuva ”The Club Housesta” Freetownissa — siirtomaan brittiläisten kokoontumispaikasta palmujen keskellä. Vain kymmenen vuotta isoisän matkan jälkeen tällaiset piirrokset olivat yhä yleisölle eksotiikkaa: kotisohvalla istuva lukija näki niiden kautta ensimmäistä kertaa, millaiselta Länsi-Afrikan rannikkokaupunki näytti.',
           tiedosto: 'The Graphic 1883, p. 52.jpg',
           lyhyt: 'The Graphic -lehden sivu 1883 Länsi-Afrikan matkakuvista, alhaalla Freetownin kerhotalo.',
           selite:
-            'Vanhan kuvalehden sivulla on viisi puupiirrosta: Madeiran ja Teneriffan maisemia, lentokala sekä oikeassa alakulmassa Freetownin "Club House" -rakennus palmujen keskellä.',
+            'Vanhan kuvalehden sivulla on viisi puupiirrosta: Madeiran ja Teneriffan maisemia, lentokala sekä oikeassa alakulmassa Freetownin ”Club House” -rakennus palmujen keskellä.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
           wiki: 'Freetown',
         },
@@ -119261,7 +119261,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ylikuormatut poda-podat ja kiireiset okadat. Pimeällä '
                 + 'kannattaa kantaa taskulamppua, koska katuvaloja on vähän. '
                 + 'Jaetut taksit ajavat kiinteitä reittejä; sanomalla '
-                + '"no cha cha" kertoo haluavansa jakaa kyydin eikä '
+                + '”no cha cha” kertoo haluavansa jakaa kyydin eikä '
                 + 'vuokrata koko autoa. Malaria on suurin terveysriski, joten '
                 + 'estolääkityksestä kannattaa kysyä lääkäriltä hyvissä '
                 + 'ajoin. Aidosti paikallisia käsitöitä ovat solmuvärjätty '
@@ -119310,7 +119310,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Portti vapauteen',
           teksti:
-            'Kun brittilaivasto pysäytti orjalaivan merellä, se toi vapautetut ihmiset Freetowniin rekisteröitäväksi ja uudelleenasutettavaksi. Vuonna 1817 kaupunkiin pystytettiin sairaala ja turvakoti, jonka porttikaareen kiinnitetty kivilaatta kertoo yhä tehtävästä: koti "orjuudesta pelastetuille afrikkalaisille". Saapujat olivat kotoisin kymmenistä eri kansoista — joruboja, igboja, akaneja, wolofeja — eivätkä he jakaneet yhteistä kieltä. Vuosikymmenten kuluessa heidän jälkeläisistään ja aiemmista uudisasukkaista kasvoi oma kansanryhmänsä, krio, jolla on tänäkin päivänä oma kielensä.',
+            'Kun brittilaivasto pysäytti orjalaivan merellä, se toi vapautetut ihmiset Freetowniin rekisteröitäväksi ja uudelleenasutettavaksi. Vuonna 1817 kaupunkiin pystytettiin sairaala ja turvakoti, jonka porttikaareen kiinnitetty kivilaatta kertoo yhä tehtävästä: koti ”orjuudesta pelastetuille afrikkalaisille”. Saapujat olivat kotoisin kymmenistä eri kansoista — joruboja, igboja, akaneja, wolofeja — eivätkä he jakaneet yhteistä kieltä. Vuosikymmenten kuluessa heidän jälkeläisistään ja aiemmista uudisasukkaista kasvoi oma kansanryhmänsä, krio, jolla on tänäkin päivänä oma kielensä.',
           tiedosto: 'Asylum for Liberated Africans in Freetown, Sierra Leone.jpg',
           lyhyt: 'Vuonna 1817 pystytetyn Freetownin turvakodin porttikaari ja kivilaatta.',
           selite:
@@ -119589,7 +119589,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Shenandoah ja Mainen Baxterin osavaltiopuisto. Monessa '
                 + 'pikkukaupungissa polku kulkee suoraan keskustan läpi, '
                 + 'kuten Pohjois-Carolinan Hot Springsissä. Länsi-Virginian '
-                + 'Harpers Ferryssä, reitin "henkisellä puolivälillä", '
+                + 'Harpers Ferryssä, reitin ”henkisellä puolivälillä”, '
                 + 'toimii ATC:n päämaja, jossa pitkän matkan vaeltajat '
                 + 'kuvataan vuoden vaeltaja-albumiin.',
               kuva: {
@@ -119826,7 +119826,7 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Myrskypäivä satamassa 1846',
               tiedosto: 'View of James Town and the harbour, Saint Helena taken from the Harbour Master\'s Office during the Rollers of the 17th February 1846, on which day thirteen vessels were wrecked.jpg',
               lyhyt: 'Vuoden 1846 litografia kuvaa Jamestownin satamaa päivänä, jolloin kolmetoista alusta haaksirikkoutui rantaan lyövissä aalloissa.',
-              selite: 'Kuva näyttää saaren ankaran "rollers"-ilmiön: ajoittain tyynelläkin säällä nousevat jättiaallot ovat tuhonneet lukuisia satamassa olleita aluksia vuosisatojen aikana.',
+              selite: 'Kuva näyttää saaren ankaran ”rollers”-ilmiön: ajoittain tyynelläkin säällä nousevat jättiaallot ovat tuhonneet lukuisia satamassa olleita aluksia vuosisatojen aikana.',
               lahde: 'Tuntematon litografi, Wikimedia Commons (PD)',
             },
           ],
@@ -120087,8 +120087,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'saarelaisista yhden kansan. Virallinen kieli on englanti, '
                 + 'mutta saaren omaa murretta kutsutaan nimellä Saint. Siinä '
                 + 'tutut sanat asettuvat uuteen järjestykseen: nimeä kysytään '
-                + '"What your name is?", ja uutta rengasta tarvitseva sanoo '
-                + '"Us need one new tyre". Moni saint on lähtenyt töihin '
+                + '”What your name is?”, ja uutta rengasta tarvitseva sanoo '
+                + '”Us need one new tyre”. Moni saint on lähtenyt töihin '
                 + 'Falklandinsaarille, Ascensionille tai Britanniaan, ja '
                 + 'vuonna 2018 Swindonissa asui niin paljon saarelaisia, että '
                 + 'kaupunki sai lempinimen Swindolena. Jamestownin yleinen '
@@ -120280,7 +120280,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Tyhjä hauta Geraniumilaaksossa',
-          teksti: "Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.",
+          teksti: "Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain ’Napoleon’ vai täydellisemmin ’Napoleon Bonaparte’. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.",
           tiedosto: "Napoleon's Tomb on Saint Helena 2020.jpg",
           lyhyt: 'Napoleonin tyhjä hauta on yhä paikallaan, vaikka ruumis vietiin Ranskaan 1840.',
           selite: 'Kuvassa nurmikentän keskellä pieni mustan rautaisen aidan ympäröimä tasainen hauta-alue vehreän puutarhan ja kivimuurin keskellä.',
@@ -120648,14 +120648,14 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'South Africa; an open works mine at De Beers diamond mine. P Wellcome V0037952.jpg',
           lyhyt: 'Avolouhoksen portaikkomainen seinämä De Beersin kaivoksella 1890-luvulla.',
           selite:
-            'Käsin väritetty valokuva 1890-luvulta on nimetty "Open Works De Beers Mine": se näyttää avolouhoksen portaikkomaisen, viistoihin kerrostuneen seinämän, jonka yläreunalla erottuu puisia nostotorneja ja matalia rakennuksia.',
+            'Käsin väritetty valokuva 1890-luvulta on nimetty ”Open Works De Beers Mine”: se näyttää avolouhoksen portaikkomaisen, viistoihin kerrostuneen seinämän, jonka yläreunalla erottuu puisia nostotorneja ja matalia rakennuksia.',
           lahde: 'J.E.M., Wikimedia Commons (CC BY 4.0)',
           wiki: 'Big Hole',
         },
         {
           otsikko: 'Kivi joka sai nimensä kaupungista',
           teksti:
-            'Timantit eivät synny sattumalta minkä tahansa kiven sisään, vaan tietynlaisessa syvältä maankuoresta nousseessa kivilajissa. Kun geologit alkoivat tutkia Kimberleyn seudun piippumaisia, alaspäin kapenevia kivimuodostumia, he huomasivat niiden olevan poikkeuksellisen rikkaita timanteista. Koska juuri Kimberleyn ympäristöstä löytyi useita timanttipitoisia piippuja, tutkijat ristivät kivilajin kimberliitiksi. Rapautunut kimberliitti sai lempinimen "yellowground", syvemmällä säilynyt, rapautumaton kivi taas nimen "blueground". Nimi levisi tieteen kieleksi ympäri maailmaa, vaikka moni muukin paikka tuotti myöhemmin timantteja samasta kivilajista.',
+            'Timantit eivät synny sattumalta minkä tahansa kiven sisään, vaan tietynlaisessa syvältä maankuoresta nousseessa kivilajissa. Kun geologit alkoivat tutkia Kimberleyn seudun piippumaisia, alaspäin kapenevia kivimuodostumia, he huomasivat niiden olevan poikkeuksellisen rikkaita timanteista. Koska juuri Kimberleyn ympäristöstä löytyi useita timanttipitoisia piippuja, tutkijat ristivät kivilajin kimberliitiksi. Rapautunut kimberliitti sai lempinimen ”yellowground”, syvemmällä säilynyt, rapautumaton kivi taas nimen ”blueground”. Nimi levisi tieteen kieleksi ympäri maailmaa, vaikka moni muukin paikka tuotti myöhemmin timantteja samasta kivilajista.',
           tiedosto: 'Diamond in kimberlite (Cretaceous; Kimberley, South Africa) 1 (32832594347).jpg',
           lyhyt: 'Kimberliittikivi, jonka sisään on jäänyt kaksi timanttikidettä.',
           selite:
@@ -120726,7 +120726,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Nain Moravian Church, Labrador, July 2023.jpg',
           lyhyt: 'Nainin valkoinen puukirkko, jonka kyltti kertoo perustamisvuoden 1771.',
           selite:
-            'Valokuva Nainin Moravian-kirkosta: valkoiseksi maalattu puukirkko vihreine listoineen ja tornin kellotapuli, edessä kyltti "Nain Moravian Church Established 1771".',
+            'Valokuva Nainin Moravian-kirkosta: valkoiseksi maalattu puukirkko vihreine listoineen ja tornin kellotapuli, edessä kyltti ”Nain Moravian Church Established 1771”.',
           lahde: 'Quincylvania, Wikimedia Commons (CC0)',
           wiki: 'Nain, Newfoundland and Labrador',
         },
@@ -120755,7 +120755,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Jäävuorten kuja',
           teksti:
-            'Labradorinvirta kuljettaa joka kevät Grönlannin ja Baffininsaaren jäätiköiltä irronneita jäävuoria etelään Labradorin rannikkoa pitkin niin säännöllisesti, että reittiä kutsutaan "jäävuorten kujaksi". Kylmä virtaus pitää meriveden lämpötilan usein nollan tuntumassa kesälläkin ja on yksi syy siihen, miksi Labradorin edustan kalavedet olivat pitkään niin runsaat: kylmä, hapekas vesi sopi turskalle ja katkaravulle mainiosti. Ajelehtivat jäävuoret tarjosivat isoisän aikaan myös lepopaikan meripäivälinnuille, jotka istuivat jään harjalla kymmenien parvina.',
+            'Labradorinvirta kuljettaa joka kevät Grönlannin ja Baffininsaaren jäätiköiltä irronneita jäävuoria etelään Labradorin rannikkoa pitkin niin säännöllisesti, että reittiä kutsutaan ”jäävuorten kujaksi”. Kylmä virtaus pitää meriveden lämpötilan usein nollan tuntumassa kesälläkin ja on yksi syy siihen, miksi Labradorin edustan kalavedet olivat pitkään niin runsaat: kylmä, hapekas vesi sopi turskalle ja katkaravulle mainiosti. Ajelehtivat jäävuoret tarjosivat isoisän aikaan myös lepopaikan meripäivälinnuille, jotka istuivat jään harjalla kymmenien parvina.',
           tiedosto: 'Iceberg (Red Bay harbour).jpg',
           lyhyt: 'Jäävuori Red Bayn satamassa, sen laella lepää lintuparvi.',
           selite:
@@ -120776,9 +120776,9 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: "Hudson's Bay Company",
         },
         {
-          otsikko: '"Labradorin pääkaupunki"',
+          otsikko: '”Labradorin pääkaupunki”',
           teksti:
-            'Battle Harbourin saarelle perusti englantilainen Poolen kauppahuone suolakalan käsittelyyn erikoistuneen kauppa-aseman jo 1770-luvulla. Vuoden 1820 jälkeen paikasta tuli niin vakiintunut kesäkalastuksen keskus, että sitä alettiin kutsua "Labradorin pääkaupungiksi". Satoja kalastajia saapui joka kesä Newfoundlandista pyytämään turskaa, joka suolattiin ja kuivattiin telineillä vientiin Eurooppaan. Isoisän aikaan Battle Harbour oli koko rannikon vilkkain paikka juuri kesäkuukausina; talvisin väki väheni murto-osaan. Paikka nimettiin kansalliseksi historialliseksi kohteeksi 1996.',
+            'Battle Harbourin saarelle perusti englantilainen Poolen kauppahuone suolakalan käsittelyyn erikoistuneen kauppa-aseman jo 1770-luvulla. Vuoden 1820 jälkeen paikasta tuli niin vakiintunut kesäkalastuksen keskus, että sitä alettiin kutsua ”Labradorin pääkaupungiksi”. Satoja kalastajia saapui joka kesä Newfoundlandista pyytämään turskaa, joka suolattiin ja kuivattiin telineillä vientiin Eurooppaan. Isoisän aikaan Battle Harbour oli koko rannikon vilkkain paikka juuri kesäkuukausina; talvisin väki väheni murto-osaan. Paikka nimettiin kansalliseksi historialliseksi kohteeksi 1996.',
           tiedosto: 'BattleHarbour Labrador 2008.JPG',
           lyhyt: 'Battle Harbourin kalastusasema sumun peittämänä syksyisenä päivänä.',
           selite:
@@ -120890,7 +120890,7 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Nunatsiavut, inuiittien oma maa',
               teksti: 'Hamilton Inletin suulta pohjoiseen rannikko on '
                 + 'Nunatsiavutia, Labradorin inuiittien itsehallintoaluetta. '
-                + 'Nimi tarkoittaa inuttitutiksi "kaunista maatamme". '
+                + 'Nimi tarkoittaa inuttitutiksi ”kaunista maatamme”. '
                 + 'Tammikuussa 2005 allekirjoitettu maasopimus kattaa yli '
                 + '72 000 neliökilometriä maata ja lisäksi merialueita, ja '
                 + 'saman vuoden joulukuussa inuiittien oma hallitus otti '
@@ -120925,7 +120925,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tarkoittaa ihmistä, ja kansan kieli innu-aimun kuuluu '
                 + 'kriin sukuiseen murrejatkumoon eikä ole sukua inuiittien '
                 + 'kielille. '
-                + 'Kotimaataan innut kutsuvat nimellä Nitassinan, "maamme". '
+                + 'Kotimaataan innut kutsuvat nimellä Nitassinan, ”maamme”. '
                 + 'Labradorin innut elivät karibua ja hirveä metsästäen '
                 + 'liikkuvaa elämää niin pitkään, että asettuivat pysyviin '
                 + 'kyliin vasta 1960-luvulla, viimeisten joukossa Kanadassa. '
@@ -120937,7 +120937,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'käsityötä ovat maalatut karibunnahkavaatteet ja teenuket: '
                 + 'tytöt kantoivat pitkillä vaelluksilla nukkeja, joiden '
                 + 'täytteenä kulki perheen teevarasto. Sisämaassa innujen '
-                + 'Mishta-shipu, "suuri joki", on valjastettu Churchill '
+                + 'Mishta-shipu, ”suuri joki”, on valjastettu Churchill '
                 + 'Fallsin voimalaksi, jonka konesali on louhittu graniittiin '
                 + 'noin 300 metrin syvyyteen. Tekoaltaan alle 1960-luvulla '
                 + 'jääneistä metsästysmaista sovittiin korvauksista vasta '
@@ -120962,7 +120962,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kansallispuisto ja koko itäisen Pohjois-Amerikan suurin '
                 + 'suojelualue. Pitkä nimi Akami-Uapishkᵘ-KakKasuak-Mealy '
                 + 'Mountains yhdistää kolme kieltä: innuksi Akami-Uapishku '
-                + 'tarkoittaa "vastarannan valkoisia vuoria", ja KakKasuak on '
+                + 'tarkoittaa ”vastarannan valkoisia vuoria”, ja KakKasuak on '
                 + 'inuiittien sana vuorelle. Puisto perustettiin varaukseksi, '
                 + 'koska innujen maavaatimusneuvottelut olivat kesken, ja '
                 + 'poikkeuksellisesti paikalliset saavat yhä metsästää, pyytää '
@@ -120996,9 +120996,9 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Paikallisesta kalkkikivestä muurattu, 33 metrin torni on '
                 + 'Atlantin Kanadan korkein ja koko maan toiseksi korkein '
                 + 'majakka, ja vartijan kunnostetussa asunnossa toimii museo. '
-                + 'Viereisen pikkukylän nimi L\'Anse Amour, "rakkauden '
-                + 'poukama", on kaunisteltu muoto vanhasta nimestä Anse aux '
-                + 'Morts, "kuolleiden poukama". Kylän liepeillä on noin 7 500 '
+                + 'Viereisen pikkukylän nimi L\'Anse Amour, ”rakkauden '
+                + 'poukama”, on kaunisteltu muoto vanhasta nimestä Anse aux '
+                + 'Morts, ”kuolleiden poukama”. Kylän liepeillä on noin 7 500 '
                 + 'vuotta vanha hautakumpu, johon arkaaisen merikulttuurin '
                 + 'väki hautasi pojan kasvot alaspäin ja pää länteen. Kumpu '
                 + 'nimettiin Kanadan kansalliseksi historialliseksi kohteeksi '
@@ -121877,7 +121877,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Roraima — vuori joka nousee tasangosta pilviin',
           teksti:
-            'Roraima on tepui: jyrkkäseinäinen pöytävuori, jonka lakea peittävä hiekkakivi on kertynyt jo 1,7–2 miljardia vuotta sitten, kauan ennen kuin elämä siirtyi maalle. Vuori kohoaa yli 2 800 metrin korkeuteen, ja sen huipulla kohtaavat kolme valtiota: Brasilia, Venezuela ja Guyana. Pemón-kansa antoi vuorelle nimen, joka tarkoittaa suunnilleen "suurta sinivihreää" — nimi viittaa etäältä nähtyyn, usein pilvien peittämään sinertävään huippuun. Sadan metrin mittaiset pystysuorat kalliot tekivät vuoresta vuosisatojen ajan lähes mahdottoman kiivetä, mikä ruokki tarinoita sen huipulla piilevästä tuntemattomasta maailmasta.',
+            'Roraima on tepui: jyrkkäseinäinen pöytävuori, jonka lakea peittävä hiekkakivi on kertynyt jo 1,7–2 miljardia vuotta sitten, kauan ennen kuin elämä siirtyi maalle. Vuori kohoaa yli 2 800 metrin korkeuteen, ja sen huipulla kohtaavat kolme valtiota: Brasilia, Venezuela ja Guyana. Pemón-kansa antoi vuorelle nimen, joka tarkoittaa suunnilleen ”suurta sinivihreää” — nimi viittaa etäältä nähtyyn, usein pilvien peittämään sinertävään huippuun. Sadan metrin mittaiset pystysuorat kalliot tekivät vuoresta vuosisatojen ajan lähes mahdottoman kiivetä, mikä ruokki tarinoita sen huipulla piilevästä tuntemattomasta maailmasta.',
           tiedosto: 'Monte Roraima e Kukenan Tepui no retorno a casa.jpg',
           lyhyt: 'Roraima ja Kukenan-tepui kohoavat savannin yllä Gran Sabanassa.',
           selite:
@@ -121899,7 +121899,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kadonnut maailma syntyy tarinana',
           teksti:
-            'Palattuaan Lontooseen Everard im Thurn piti retkestään esitelmän, jota kerrotaan seuranneen myös nuori kirjailija Arthur Conan Doyle. Vuosikymmeniä myöhemmin, vuonna 1912, Conan Doyle julkaisi seikkailuromaanin "Kadonnut maailma", jossa tutkimusretkikunta löytää eristyneeltä pöytävuorelta esihistoriallisten eläinten asuttaman maailman. Roraiman ja sitä ympäröivien tepui-vuorten kerrotaan olleen yksi romaanin innoittajista: todellinen, vaikeapääsyinen ylätasanko oli tiedeyhteisölle vuosikymmenten ajan lähes yhtä salaperäinen kuin kirjan kuvitteellinen ylänkö.',
+            'Palattuaan Lontooseen Everard im Thurn piti retkestään esitelmän, jota kerrotaan seuranneen myös nuori kirjailija Arthur Conan Doyle. Vuosikymmeniä myöhemmin, vuonna 1912, Conan Doyle julkaisi seikkailuromaanin ”Kadonnut maailma”, jossa tutkimusretkikunta löytää eristyneeltä pöytävuorelta esihistoriallisten eläinten asuttaman maailman. Roraiman ja sitä ympäröivien tepui-vuorten kerrotaan olleen yksi romaanin innoittajista: todellinen, vaikeapääsyinen ylätasanko oli tiedeyhteisölle vuosikymmenten ajan lähes yhtä salaperäinen kuin kirjan kuvitteellinen ylänkö.',
           tiedosto: 'Great Savanna 2014.JPG',
           lyhyt: 'Savanni ja etäinen ylätasanko — maisema joka innoitti Kadonnutta maailmaa.',
           selite:
@@ -122390,7 +122390,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Yhä elävä pyhäkkö',
           teksti:
-            'Askian mausoleumi ei ole pelkkä muistomerkki menneisyydestä: se toimii yhä rukouspaikkana, ja gaolaiset kutsuvat sitä myös nimellä Askia djira, "Askian moskeija". Savirakennuksia on rapattu uudelleen säännöllisin väliajoin jo vuosikymmenten ajan, sillä sadekaudet kuluttavat pintaa jatkuvasti. Nykyisin pihapiirissä vietetään päivittäisten rukousten lisäksi häitä sekä Malin itsenäisyyspäivän juhlaa 22. syyskuuta. Karjaa kuljetetaan yhä muurien ohi samalla hiekkaisella aukiolla, jolla vuosisatoja sitten kulkivat kultaa ja suolaa kuljettaneet karavaanit.',
+            'Askian mausoleumi ei ole pelkkä muistomerkki menneisyydestä: se toimii yhä rukouspaikkana, ja gaolaiset kutsuvat sitä myös nimellä Askia djira, ”Askian moskeija”. Savirakennuksia on rapattu uudelleen säännöllisin väliajoin jo vuosikymmenten ajan, sillä sadekaudet kuluttavat pintaa jatkuvasti. Nykyisin pihapiirissä vietetään päivittäisten rukousten lisäksi häitä sekä Malin itsenäisyyspäivän juhlaa 22. syyskuuta. Karjaa kuljetetaan yhä muurien ohi samalla hiekkaisella aukiolla, jolla vuosisatoja sitten kulkivat kultaa ja suolaa kuljettaneet karavaanit.',
           tiedosto: 'Tombeau dAskia in Gao by David Sessoms.jpg',
           lyhyt: 'Karjaa ja lapsia kulkemassa Askian mausoleumin muurien ohitse.',
           selite:
@@ -122501,7 +122501,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Gaohon, ja kaupungissa taisteltiin uudelleen heinäkuussa. '
                 + 'Britannian ulkoministeriö neuvoo välttämään kaikkea '
                 + 'matkustamista Maliin, ja Yhdysvallat pitää maata '
-                + 'korkeimmalla "älä matkusta" -tasollaan. Suomen '
+                + 'korkeimmalla ”älä matkusta” -tasollaan. Suomen '
                 + 'ulkoministeriön matkustustiedote kannattaa lukea ennen kuin '
                 + 'Malia edes harkitsee. Kun matkaan joskus taas voi lähteä, '
                 + 'perille pääsee kolmea reittiä: lentäen Gaon kentälle, '
@@ -122772,7 +122772,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Jumalten vaunu',
           teksti:
-            'Noin vuonna 500 eaa. karthagolainen merenkulkija Hanno purjehti Länsi-Afrikan rannikkoa pitkin ja näki kaukaa merellä vuoren, joka syöksi öisin liekkejä taivaalle. Hänen pelästyneet miehensä antoivat sille nimen "jumalten vaunu", Theon Ochema. Tutkijat eivät ole täysin varmoja, mikä vuori kertomuksessa oli kyseessä, mutta monien mielestä paras ehdokas on juuri Kamerunvuori – jolloin Hannon matkakertomus olisi ihmiskunnan vanhin säilynyt kuvaus tulivuorenpurkauksesta.',
+            'Noin vuonna 500 eaa. karthagolainen merenkulkija Hanno purjehti Länsi-Afrikan rannikkoa pitkin ja näki kaukaa merellä vuoren, joka syöksi öisin liekkejä taivaalle. Hänen pelästyneet miehensä antoivat sille nimen ”jumalten vaunu”, Theon Ochema. Tutkijat eivät ole täysin varmoja, mikä vuori kertomuksessa oli kyseessä, mutta monien mielestä paras ehdokas on juuri Kamerunvuori – jolloin Hannon matkakertomus olisi ihmiskunnan vanhin säilynyt kuvaus tulivuorenpurkauksesta.',
           tiedosto: 'Le Mont Cameroun depuis Limbé.JPG',
           lyhyt: 'Kamerunvuori kohoaa pilvien seasta palmujen takana Limbén rannalta kuvattuna.',
           selite:
@@ -122783,7 +122783,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Katkarapujoki antaa nimen maalle',
           teksti:
-            'Vuonna 1472 portugalilaiset merenkulkijat purjehtivat Wouri-joen suulle ja huomasivat vedessä valtavan määrän pieniä äyriäisiä. He nimesivät joen Rio dos Camarões, "Katkarapujoki". Nimi levisi vähitellen ensin koko rannikkoseutuun ja lopulta koko maahan: siitä syntyivät sekä Kamerun että englanninkielinen Cameroon. Isoisän aikaan 1800-luvulla katkarapujen mukaan nimetty maa oli eurooppalaisille kartoille jo vakiintunut nimi, vaikka harva tiesi enää miksi se niin oli saanut nimensä.',
+            'Vuonna 1472 portugalilaiset merenkulkijat purjehtivat Wouri-joen suulle ja huomasivat vedessä valtavan määrän pieniä äyriäisiä. He nimesivät joen Rio dos Camarões, ”Katkarapujoki”. Nimi levisi vähitellen ensin koko rannikkoseutuun ja lopulta koko maahan: siitä syntyivät sekä Kamerun että englanninkielinen Cameroon. Isoisän aikaan 1800-luvulla katkarapujen mukaan nimetty maa oli eurooppalaisille kartoille jo vakiintunut nimi, vaikka harva tiesi enää miksi se niin oli saanut nimensä.',
           tiedosto: 'River Wouri Douala Cameroon.jpg',
           lyhyt: 'Wouri-joen leveä suisto lähellä Doualaa, josta koko maa sai nimensä.',
           selite:
@@ -122794,7 +122794,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Mongo ma Ndemi ja Victorian synty',
           teksti:
-            'Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, "Suuruuden vuori". Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.',
+            'Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, ”Suuruuden vuori”. Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.',
           tiedosto: 'Down Beach Limbe vue aerienne - Ndongere - Sud-Ouest - Cameroun.jpg',
           lyhyt: 'Ilmakuva Limbén rannikkokaupungista ja kalastajavenelaiturista.',
           selite:
@@ -123102,7 +123102,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Ranskalainen joka eli tuaregien keskuudessa',
           teksti:
-            'Vuonna 1857, 17-vuotiaana, ranskalainen Henri Duveyrier tapasi ensimmäistä kertaa tuareg-paimentolaisia Algerian aavikon reunalla ja kiehtoutui heidän tavoistaan. Toukokuussa 1859 hän lähti tutkimusmatkalle ja vietti seuraavien 27 kuukauden aikana yli seitsemän kuukautta tuaregien keskuudessa alueilla Ahaggarin vuoristosta Fessaniin. Duveyrier palasi 1861 näännyksissä ja kuumeessa, mutta julkaisi 1864 teoksensa "Les Touareg du Nord", aikansa tärkeimmän länsimaisen kuvauksen tuaregien elämästä. Kun isoisä aloitti oman matkansa 1873, kirja oli jo yhdeksän vuotta vanha ja Ahaggarin vuoret olivat vasta äskettäin ilmestyneet eurooppalaisille kartoille.',
+            'Vuonna 1857, 17-vuotiaana, ranskalainen Henri Duveyrier tapasi ensimmäistä kertaa tuareg-paimentolaisia Algerian aavikon reunalla ja kiehtoutui heidän tavoistaan. Toukokuussa 1859 hän lähti tutkimusmatkalle ja vietti seuraavien 27 kuukauden aikana yli seitsemän kuukautta tuaregien keskuudessa alueilla Ahaggarin vuoristosta Fessaniin. Duveyrier palasi 1861 näännyksissä ja kuumeessa, mutta julkaisi 1864 teoksensa ”Les Touareg du Nord”, aikansa tärkeimmän länsimaisen kuvauksen tuaregien elämästä. Kun isoisä aloitti oman matkansa 1873, kirja oli jo yhdeksän vuotta vanha ja Ahaggarin vuoret olivat vasta äskettäin ilmestyneet eurooppalaisille kartoille.',
           tiedosto: 'Duveyrier 1864.jpg',
           lyhyt: 'Henri Duveyrier eli tuaregien keskuudessa ja kartoitti Ahaggaria 1857–1861.',
           selite:
@@ -123184,7 +123184,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Tagelmust — sininen huivi ja miehuuden merkki',
           teksti:
-            'Tuareg-miehet peittävät kasvonsa ja päänsä pitkällä, tummansinisellä kankaalla nimeltä tagelmust jo teini-iästä lähtien: huivin ottaminen käyttöön on merkki siitä, että pojasta on tullut mies. Kangas kiedotaan pään ja kasvojen ympäri monta kertaa, ja sitä voi parhaimmillaan olla yli kymmenen metriä — silti ohut puuvillakangas painaa vain vähän ja suojaa samalla auringolta, kuumuudelta ja hiekkamyrskyiltä. Perinteisesti kangas värjättiin indigolla, jonka väriaine hiertyi ajan myötä ihoon ja antoi tuaregeille lempinimen "siniset ihmiset". Toisin kuin muissa kulttuureissa, tuareg-naiset eivät peitä kasvojaan lainkaan — huivi on nimenomaan miesten tapa.',
+            'Tuareg-miehet peittävät kasvonsa ja päänsä pitkällä, tummansinisellä kankaalla nimeltä tagelmust jo teini-iästä lähtien: huivin ottaminen käyttöön on merkki siitä, että pojasta on tullut mies. Kangas kiedotaan pään ja kasvojen ympäri monta kertaa, ja sitä voi parhaimmillaan olla yli kymmenen metriä — silti ohut puuvillakangas painaa vain vähän ja suojaa samalla auringolta, kuumuudelta ja hiekkamyrskyiltä. Perinteisesti kangas värjättiin indigolla, jonka väriaine hiertyi ajan myötä ihoon ja antoi tuaregeille lempinimen ”siniset ihmiset”. Toisin kuin muissa kulttuureissa, tuareg-naiset eivät peitä kasvojaan lainkaan — huivi on nimenomaan miesten tapa.',
           tiedosto: 'Targui.jpg',
           lyhyt: 'Tuareg-mies tummansinisessä tagelmust-huivissa Ahaggarin kalliomaisemassa.',
           selite:
@@ -123827,7 +123827,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Map Lake Chad 1876 B002.png',
           lyhyt: 'Vuonna 1876 julkaistu kartta Tšad-järvestä Nachtigalin matkatietojen pohjalta.',
           selite:
-            'Vanha painettu kartta otsikolla "Map of Lake Chad and Neighbouring Regions" näyttää järven, sitä ympäröivät alueet Kanemista Bagirmiin sekä ohuen viivan Nachtigalin kulkemasta reitistä pohjoisesta järvelle; kartan on julkaissut Lontoon maantieteellinen seura 1876.',
+            'Vanha painettu kartta otsikolla ”Map of Lake Chad and Neighbouring Regions” näyttää järven, sitä ympäröivät alueet Kanemista Bagirmiin sekä ohuen viivan Nachtigalin kulkemasta reitistä pohjoisesta järvelle; kartan on julkaissut Lontoon maantieteellinen seura 1876.',
           lahde: 'Gustav Nachtigal, Wikimedia Commons (Public domain)',
           wiki: 'Lake Chad',
         },
@@ -123860,7 +123860,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Potash boat on the Lake Chad.jpg',
           lyhyt: 'Vanha valokuva ruo\'osta tehdystä potaskaveneestä Tšad-järvellä.',
           selite:
-            'Mustavalkoinen postikorttivalokuva "Potash boat, Chad" näyttää pitkän, jyrkästi ylöspäin kaartuvakeulaisen ruokoveneen, jonka kannella on pyöreitä potaskakimppuja ja kolme miestä seisomassa; etualalla kaareutuu palmunrunko.',
+            'Mustavalkoinen postikorttivalokuva ”Potash boat, Chad” näyttää pitkän, jyrkästi ylöspäin kaartuvakeulaisen ruokoveneen, jonka kannella on pyöreitä potaskakimppuja ja kolme miestä seisomassa; etualalla kaareutuu palmunrunko.',
           lahde: 'Steve Bittinger, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Buduma people',
         },
@@ -124023,7 +124023,7 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Lasimaljassa on kymmeniä kellertäviä ja vaaleanruskeita pihkakimpaleita eli suitsukkeen kyyneleitä, valokuvattuna suoraan ylhäältä puisella pöydällä.',
           lahde: 'Deror avi, Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Frankincense' },
         { otsikko: 'Oponen kuuluisin vientitavara',
-          teksti: 'Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.',
+          teksti: 'Periplus-oppaan mukaan Oponesta ”tuotettiin suuri määrä kanelia”, ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.',
           tiedosto: 'Cinnamomum verum spices.jpg',
           lyhyt: 'Periplus mainitsee Oponen tärkeimmäksi vientituotteeksi kanelin.',
           selite: 'Kolme rullalle käärittyä kanelitankoa lepää valkoisella pohjalla, edessä kasa kanelijauhetta ja pieni kasa tummia, pyöreitä mausteenpalasia.',
@@ -124055,7 +124055,7 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Ranskan siirtomaasuunnitelma n. 1760',
               tiedosto: 'Vue de la Rivière et de l\'Isle de Cayenne - c\'est en cet endroit que doit se rendre la nouvelle colonie françoise pour y occuper principalement les belles plaines situées entre les rivieres de Marauny, d\'Amaribo et... - btv1b69494998.jpg',
               lyhyt: 'Noin vuonna 1760 tehty kaiverrus esittää Cayennejoen suuta ranskalaisen siirtomaasuunnitelman näkökulmasta.',
-              selite: 'Kaiverrus on osa Ranskan siirtomaahallinnon omaa suunnitteludokumentaatiota eikä paikallinen kuvaus — se merkitsee alueet, joille "uusi ranskalainen siirtokunta" oli tarkoitus perustaa.',
+              selite: 'Kaiverrus on osa Ranskan siirtomaahallinnon omaa suunnitteludokumentaatiota eikä paikallinen kuvaus — se merkitsee alueet, joille ”uusi ranskalainen siirtokunta” oli tarkoitus perustaa.',
               lahde: 'Tekijä tuntematon, Wikimedia Commons (PD)',
             },
           ],
@@ -124429,7 +124429,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Entrée du Temple des Pythons (Ouidah).jpg',
           lyhyt: 'Temple des Pythonsin portti, josta pyhät käärmeet pääsevät liikkumaan vapaasti.',
           selite:
-            'Kuvassa on Temple des Pythonsin sinivalkoinen porttirakennelma, jonka kyltissä lukee "Temple des Pythons"; edustalla myydään puuveistoksia ja naamioita, sisäänkäynnin luona istuu vastaanottopöydän ääressä temppelin työntekijä ja pihalla on pysäköity moottoripyörä.',
+            'Kuvassa on Temple des Pythonsin sinivalkoinen porttirakennelma, jonka kyltissä lukee ”Temple des Pythons”; edustalla myydään puuveistoksia ja naamioita, sisäänkäynnin luona istuu vastaanottopöydän ääressä temppelin työntekijä ja pihalla on pysäköity moottoripyörä.',
           lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ouidah',
         },
@@ -124710,7 +124710,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Chachan tori',
           teksti:
-            "Torilla, jota kutsuttiin Chachan toriksi, käytiin Ouidah'n orjakaupan huutokauppoja. Nimi tulee Francisco Félix de Sousasta, brasilialais-portugalilaisesta kauppiaasta, jonka lempinimi oli \"Chacha\": kuningas Ghezo nimitti hänet 1820-luvulla Dahomeyn viralliseksi orjakaupan välittäjäksi ja myönsi hänelle käytännössä yksinoikeuden koko sataman kauppaan. De Sousasta tuli yksi aikansa rikkaimmista miehistä Länsi-Afrikassa, ja hänen jälkeläisensä hallitsivat Ouidah'n kauppaa vielä vuosikymmeniä hänen kuolemansa jälkeen 1849.",
+            "Torilla, jota kutsuttiin Chachan toriksi, käytiin Ouidah'n orjakaupan huutokauppoja. Nimi tulee Francisco Félix de Sousasta, brasilialais-portugalilaisesta kauppiaasta, jonka lempinimi oli ”Chacha”: kuningas Ghezo nimitti hänet 1820-luvulla Dahomeyn viralliseksi orjakaupan välittäjäksi ja myönsi hänelle käytännössä yksinoikeuden koko sataman kauppaan. De Sousasta tuli yksi aikansa rikkaimmista miehistä Länsi-Afrikassa, ja hänen jälkeläisensä hallitsivat Ouidah'n kauppaa vielä vuosikymmeniä hänen kuolemansa jälkeen 1849.",
           selite:
             'Kuvassa on laatoitettu aukio, jonka poikki kulkee rivi tummia, palloa muistuttavia pronssipylväitä; taustalla näkyy palmuja ja matalia rakennuksia kirkkaassa päivänvalossa.',
           wiki: 'Francisco Félix de Sousa',
@@ -124731,7 +124731,7 @@ export const KULTTUURI_KATEGORIAT = {
           teksti:
             'Kaikki orjiksi otetut eivät selvinneet edes rannalle asti. Zoungbodjin kylän liepeillä sijaitsee joukkohauta, johon haudattiin marssin aikana kuolleet tai liian heikoiksi todetut vangit, jotka kauppiaat hylkäsivät ennen laivaan nousua. Monille vangeille pakotettiin suuhun puinen kapula, joka esti puhumisen ja syömisen sekä teki itsemurhan kielen nielaisemalla mahdottomaksi. Paikka on nykyisin rauhoitettu muistoalue, jolla kylttien mukaan vieraita pyydetään pitämään hiljaisuutta kunnioituksesta uhreja kohtaan.',
           selite:
-            'Kuvassa on tummanvihreä pronssipatsas polvistuneesta miehestä, jonka suuhun on kiinnitetty puinen kapula ja jonka lantiolla on sininen vaate; taustalla on muuri, jossa on kyltti "Ouidah 92" ja teksti muistopaikan hiljaisuudesta.',
+            'Kuvassa on tummanvihreä pronssipatsas polvistuneesta miehestä, jonka suuhun on kiinnitetty puinen kapula ja jonka lantiolla on sininen vaate; taustalla on muuri, jossa on kyltti ”Ouidah 92” ja teksti muistopaikan hiljaisuudesta.',
           wiki: 'Ouidah',
         },
         {
@@ -124741,7 +124741,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Brookes slave ship, British Library.jpg',
           lyhyt: 'Piirros 1700-luvun orjalaivan ahtaasta ruumasta, jollaisia myös Ouidah’sta lähti.',
           selite:
-            'Vanha englanninkielinen piirros "Description of a Slave Ship" näyttää laivan pohjapiirroksena ja poikkileikkauksina: kannen alle on merkitty riveittäin makaavia ihmishahmoja ahtaasti vierekkäin koko ruuman pituudelta.',
+            'Vanha englanninkielinen piirros ”Description of a Slave Ship” näyttää laivan pohjapiirroksena ja poikkileikkauksina: kannen alle on merkitty riveittäin makaavia ihmishahmoja ahtaasti vierekkäin koko ruuman pituudelta.',
           lahde: 'James Phillips, Wikimedia Commons (Public domain)',
           wiki: 'Clotilda (slave ship)',
         },
@@ -124753,7 +124753,7 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Bahr el Ghazal',
       johdanto:
-        'Bahr el Ghazal, arabiaksi "gasellien meri", on Etelä-Sudanin luoteisosan suoinen ja rautakivitasankoinen alue. Isoisän matkavuonna 1873 se oli Samuel Bakerin orjakaupan vastaisen sotaretken näyttämö ja hänen kautensa päätepiste.',
+        'Bahr el Ghazal, arabiaksi ”gasellien meri”, on Etelä-Sudanin luoteisosan suoinen ja rautakivitasankoinen alue. Isoisän matkavuonna 1873 se oli Samuel Bakerin orjakaupan vastaisen sotaretken näyttämö ja hänen kautensa päätepiste.',
       ennenNyt: [
         {
           tiedosto: 'Mission Marchand Haut-Oubangui Bahr-el-Ghazal Nil (...)Marchand Jean-Baptiste btv1b53198373d 4.jpg',
@@ -124773,7 +124773,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Gasellien meri',
           teksti:
-            'Bahr el Ghazal tarkoittaa arabiaksi "gasellien meri", vaikka kyseessä on joki eikä meri: se kokoaa yhteen useita pienempiä jokia, kuten Jur- ja Lol-joen, ja laskee lopulta Bahr al Jabaliin Lake Non luona, mistä yhdistynyt vesi jatkaa Valkoisena Niilinä pohjoiseen. Ympäröivä yli 200 000 neliökilometrin alue on tasaista rautakivitasankoa, joka tulva-aikaan muuttuu laajaksi suoksi — samaa vesistöä, jota paikalliset dinkakalastajat ovat hyödyntäneet vuosisatoja. Vielä 1950-luvulla Lol-joen matalassa vedessä saattoi nähdä kerralla satoja kanootteja, kun kokonaiset kylät kokoontuivat yhteiskalastukseen.',
+            'Bahr el Ghazal tarkoittaa arabiaksi ”gasellien meri”, vaikka kyseessä on joki eikä meri: se kokoaa yhteen useita pienempiä jokia, kuten Jur- ja Lol-joen, ja laskee lopulta Bahr al Jabaliin Lake Non luona, mistä yhdistynyt vesi jatkaa Valkoisena Niilinä pohjoiseen. Ympäröivä yli 200 000 neliökilometrin alue on tasaista rautakivitasankoa, joka tulva-aikaan muuttuu laajaksi suoksi — samaa vesistöä, jota paikalliset dinkakalastajat ovat hyödyntäneet vuosisatoja. Vielä 1950-luvulla Lol-joen matalassa vedessä saattoi nähdä kerralla satoja kanootteja, kun kokonaiset kylät kokoontuivat yhteiskalastukseen.',
           tiedosto:
             'Photo View of the Lol River in Bahr al-Ghazal, with hundreds of boats belonging to Dinka fishermen 1958 - Touring Club Italiano BBT 127.jpg',
           lyhyt: 'Satoja dinkakalastajien kanootteja Lol-joella vuonna 1958.',
@@ -124801,7 +124801,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Sir Samuel White Baker. Photograph by E. Kelley. Wellcome V0025986.jpg',
           lyhyt: 'Samuel Baker, Bahr el Ghazalin alueen egyptiläishallinnon rakentaja.',
           selite:
-            'Muotokuvassa parrakas Samuel Baker istuu valokuvaajan ateljeessa 1800-luvun tapaan pukeutuneena, ja kuvan alle on kirjoitettu hänen oma nimikirjoituksensa "Sam W Baker".',
+            'Muotokuvassa parrakas Samuel Baker istuu valokuvaajan ateljeessa 1800-luvun tapaan pukeutuneena, ja kuvan alle on kirjoitettu hänen oma nimikirjoituksensa ”Sam W Baker”.',
           lahde: 'E. Kelley, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Samuel Baker',
         },
@@ -125298,7 +125298,7 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Broome',
       johdanto:
-        'Broome kasvoi 1880-luvulla satamaksi, kun helmiäissimpukka teki siitä hetkeksi maailman johtavan helmikaupungin. Kauan ennen sitä rannikkoa asutti Yawuru-kansa, jolle helmiäinen oli pyhää jo ennen "Broome"-nimen syntyä.',
+        'Broome kasvoi 1880-luvulla satamaksi, kun helmiäissimpukka teki siitä hetkeksi maailman johtavan helmikaupungin. Kauan ennen sitä rannikkoa asutti Yawuru-kansa, jolle helmiäinen oli pyhää jo ennen ”Broome”-nimen syntyä.',
       ennenNyt: [
         {
           tiedosto: 'LISWA 009553d Koolama.jpg',
@@ -125319,7 +125319,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Helmiäinen ennen Broomea',
           teksti:
-            'Kauan ennen kuin kukaan kutsui tätä rannikkoa Broomeksi, alueen Yawuru-kansa keräsi matalikoilta helmiäissimpukoita ja kaiversi niiden kuorista rijejä, ockrilla värjättyjä koruja, jotka kulkivat kauppareittejä pitkin satojen, jopa yli tuhannen kilometrin päähän sisämaahan ja etelään asti. Kun isoisä matkusti maailmalla vuonna 1873, tätä paikkaa ei ollut vielä olemassa minään "Broomena" – vain rantaviivaa, jota Yawuru oli asuttanut ja hoitanut sukupolvien ajan, ja helmiäissimpukka oli jo silloin rannikon arvokkainta ainesta.',
+            'Kauan ennen kuin kukaan kutsui tätä rannikkoa Broomeksi, alueen Yawuru-kansa keräsi matalikoilta helmiäissimpukoita ja kaiversi niiden kuorista rijejä, ockrilla värjättyjä koruja, jotka kulkivat kauppareittejä pitkin satojen, jopa yli tuhannen kilometrin päähän sisämaahan ja etelään asti. Kun isoisä matkusti maailmalla vuonna 1873, tätä paikkaa ei ollut vielä olemassa minään ”Broomena” – vain rantaviivaa, jota Yawuru oli asuttanut ja hoitanut sukupolvien ajan, ja helmiäissimpukka oli jo silloin rannikon arvokkainta ainesta.',
           tiedosto: 'Riji.JPG',
           lyhyt: 'Yawuru-kansan kaivertama riji eli helmiäiskoru, ockrilla värjätty.',
           selite:
@@ -125341,7 +125341,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kaupunki jonka nimesi kuvernööri',
           teksti:
-            'Karjatilallinen Charles Harper ehdotti jo 1879, että rannikolle perustettaisiin virka-asema tukemaan kasvavaa helmiäissimpukan pyyntiä. Vasta 1883 tutkimusmatkailija John Forrest valitsi tarkan paikan ja nimesi sen Länsi-Australian silloisen kuvernöörin Sir Frederick Broomen mukaan – kymmenen vuotta isoisän matkan jälkeen. Satama sai lempinimen "Port of Pearls", helmisatama, koska sen laitureilta lastattiin vuosikymmenten ajan maailman arvokkainta helmiäistä laivoihin, jotka veivät saaliin aina Lontooseen ja Pariisiin asti.',
+            'Karjatilallinen Charles Harper ehdotti jo 1879, että rannikolle perustettaisiin virka-asema tukemaan kasvavaa helmiäissimpukan pyyntiä. Vasta 1883 tutkimusmatkailija John Forrest valitsi tarkan paikan ja nimesi sen Länsi-Australian silloisen kuvernöörin Sir Frederick Broomen mukaan – kymmenen vuotta isoisän matkan jälkeen. Satama sai lempinimen ”Port of Pearls”, helmisatama, koska sen laitureilta lastattiin vuosikymmenten ajan maailman arvokkainta helmiäistä laivoihin, jotka veivät saaliin aina Lontooseen ja Pariisiin asti.',
           tiedosto: 'Port of Pearls House, Broome, September 2025.jpg',
           lyhyt: 'Port of Pearls -rakennus Broomen satamassa, kaupungin helmiäishistorian muistona.',
           selite:
@@ -125352,7 +125352,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Sukeltajat jotka tekivät kaupungin',
           teksti:
-            'Vuoteen 1887 mennessä koko Broomen helmilaivasto oli siirtynyt kangaspukuihin, kuparikypäriin ja ilmaletkuihin, jotka mahdollistivat sukelluksen yli 20 metrin syvyyteen. Puvut olivat raskaita ja vieraita, joten pearlerit alkoivat värvätä ammattitaitoisia sukeltajia Japanista sekä Kiinasta, Malesiasta ja Timorilta; vuoteen 1920 mennessä joka kolmas Broomen sukeltaja oli japanilainen ja toisen maailmansodan kynnyksellä lähes joka toinen. Liian nopea nousu pinnalle sai typpikaasun kuplimaan sukeltajan veressä ja aiheutti sukellustaudin eli "taivutuksen"; satama-alueelle rakennettu painekammio oli monelle ainoa toivo selvitä hengissä.',
+            'Vuoteen 1887 mennessä koko Broomen helmilaivasto oli siirtynyt kangaspukuihin, kuparikypäriin ja ilmaletkuihin, jotka mahdollistivat sukelluksen yli 20 metrin syvyyteen. Puvut olivat raskaita ja vieraita, joten pearlerit alkoivat värvätä ammattitaitoisia sukeltajia Japanista sekä Kiinasta, Malesiasta ja Timorilta; vuoteen 1920 mennessä joka kolmas Broomen sukeltaja oli japanilainen ja toisen maailmansodan kynnyksellä lähes joka toinen. Liian nopea nousu pinnalle sai typpikaasun kuplimaan sukeltajan veressä ja aiheutti sukellustaudin eli ”taivutuksen”; satama-alueelle rakennettu painekammio oli monelle ainoa toivo selvitä hengissä.',
           tiedosto: 'Early diving recompression chamber at Broome, Western Australia.jpg',
           lyhyt: 'Broomen vanha painekammio, jolla hoidettiin sukeltajien sukellustautia.',
           selite:
@@ -125363,7 +125363,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Nainen joka nousi merestä',
           teksti:
-            'Ennen kuin Broomeen tuotiin ammattisukeltajia Aasiasta, ensimmäiset helmiäissimpukan sukeltajat 1860–1880-luvuilla olivat paikallisia aboriginaaleja – miehiä, naisia ja jopa lapsia, joita niin sanotussa "blackbirding"-käytännössä siepattiin väkisin laivoille sukeltamaan alasti jopa 12 metrin syvyyteen ilman minkäänlaista korvausta. Bedford Parkiin, paikkaan jossa perheet aikoinaan odottivat lugger-veneiden palaavan merten takaa, pystytettiin vuonna 2010 kolmimetrinen pronssipatsas aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka kädessään – muistomerkki naisille, joiden työtä pearling-teollisuuden alkuvuodet harvoin mainitsevat.',
+            'Ennen kuin Broomeen tuotiin ammattisukeltajia Aasiasta, ensimmäiset helmiäissimpukan sukeltajat 1860–1880-luvuilla olivat paikallisia aboriginaaleja – miehiä, naisia ja jopa lapsia, joita niin sanotussa ”blackbirding”-käytännössä siepattiin väkisin laivoille sukeltamaan alasti jopa 12 metrin syvyyteen ilman minkäänlaista korvausta. Bedford Parkiin, paikkaan jossa perheet aikoinaan odottivat lugger-veneiden palaavan merten takaa, pystytettiin vuonna 2010 kolmimetrinen pronssipatsas aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka kädessään – muistomerkki naisille, joiden työtä pearling-teollisuuden alkuvuodet harvoin mainitsevat.',
           tiedosto: 'Women of Pearling monument, Bedford Park, Broome, WA, Australia.jpg',
           lyhyt: 'Bedford Parkin pronssipatsas muistaa naisia, jotka pakotettiin sukeltamaan simpukoita.',
           selite:
@@ -126254,7 +126254,7 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Murzuk',
       johdanto:
-        'Murzuk oli satoja vuosia Fezzanin pääkaupunki ja Saharan halki kulkevien karavaanien tärkein risteysasema – eurooppalaiset matkalaiset kutsuivat hiekkalinnoineen kaupunkia jopa "Saharan Pariisiksi".',
+        'Murzuk oli satoja vuosia Fezzanin pääkaupunki ja Saharan halki kulkevien karavaanien tärkein risteysasema – eurooppalaiset matkalaiset kutsuivat hiekkalinnoineen kaupunkia jopa ”Saharan Pariisiksi”.',
       ennenNyt: [
         {
           tiedosto: 'AFR V2 D101 General view of Murzuk.jpg',
@@ -126274,7 +126274,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Qala at Turk — turkkilaisten linna',
           teksti:
-            'Murzukin maalinnoitus tunnettiin ottomaanien aikana nimellä Qala at Turk, "turkkilaisten linna". Sen juuret ulottuvat 1300-luvun alkuun, jolloin Marokosta saapunut Awlad Muhammad -suku teki oaasista oman sulttaanikuntansa pääkaupungin ja rakensi kukkulalle savitiilistä nousevan linnoituksen hallitsemaan karavaaniteitä. Ottomaanien vallattua Fezzanin 1500-luvun lopulla linna toimi ajoittain paikallishallinnon ja varuskunnan tukikohtana. Muureja on sittemmin korjattu vuosisatojen mittaan, mutta hammastetut tornit ja jyrkkä savivalli seisovat yhä hiekan keskellä muistuttamassa kaupungin poliittisesta merkityksestä.',
+            'Murzukin maalinnoitus tunnettiin ottomaanien aikana nimellä Qala at Turk, ”turkkilaisten linna”. Sen juuret ulottuvat 1300-luvun alkuun, jolloin Marokosta saapunut Awlad Muhammad -suku teki oaasista oman sulttaanikuntansa pääkaupungin ja rakensi kukkulalle savitiilistä nousevan linnoituksen hallitsemaan karavaaniteitä. Ottomaanien vallattua Fezzanin 1500-luvun lopulla linna toimi ajoittain paikallishallinnon ja varuskunnan tukikohtana. Muureja on sittemmin korjattu vuosisatojen mittaan, mutta hammastetut tornit ja jyrkkä savivalli seisovat yhä hiekan keskellä muistuttamassa kaupungin poliittisesta merkityksestä.',
           tiedosto: 'Murzuq - Festung Qala at Turk über dem Ort.jpg',
           lyhyt: 'Murzukin savitiilistä muurattu ottomaaniaikainen linnoitus Qala at Turk kohoaa kukkulalla.',
           selite:
@@ -126285,7 +126285,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Karavaanien risteys jo Garamantien ajoista',
           teksti:
-            'Murzukin oaasi oli karavaanikaupungin risteysasemana jo kauan ennen islamin tuloa: viidennestä vuosisadasta eaa. viidennelle vuosisadalle jaa. seudulla vaikuttanut Garamantien valtakunta hallitsi samoja pohjois-etelä-reittejä, joita myöhemmät karavaanit käyttivät. Ottomaanivallan aikana 1500-luvulta 1900-luvun alkuun Murzuk toimi toistuvasti koko Fezzanin maakunnan pääkaupunkina ja karavaanien tärkeimpänä levähdys- ja kauppapaikkana Tripolin ja Sudanin väliä kulkevalla reitillä. Vaurauden ja vilkkaan kaupan ansiosta eurooppalaiset matkakirjailijat antoivat sille liikanimen "Saharan Pariisi", vaikka kaupunki oli tosiasiassa pieni ja karu aavikko-oaasi.',
+            'Murzukin oaasi oli karavaanikaupungin risteysasemana jo kauan ennen islamin tuloa: viidennestä vuosisadasta eaa. viidennelle vuosisadalle jaa. seudulla vaikuttanut Garamantien valtakunta hallitsi samoja pohjois-etelä-reittejä, joita myöhemmät karavaanit käyttivät. Ottomaanivallan aikana 1500-luvulta 1900-luvun alkuun Murzuk toimi toistuvasti koko Fezzanin maakunnan pääkaupunkina ja karavaanien tärkeimpänä levähdys- ja kauppapaikkana Tripolin ja Sudanin väliä kulkevalla reitillä. Vaurauden ja vilkkaan kaupan ansiosta eurooppalaiset matkakirjailijat antoivat sille liikanimen ”Saharan Pariisi”, vaikka kaupunki oli tosiasiassa pieni ja karu aavikko-oaasi.',
           tiedosto: 'AFR V2 D101 General view of Murzuk.jpg',
           lyhyt: 'Vanha kaivertajan kuva Murzukista palmuineen, kameleineen ja hautausmaineen 1890-luvulta.',
           selite:
@@ -126296,7 +126296,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Brittitutkijoiden vakiotukikohta',
           teksti:
-            'Tammikuussa 1822 brittiläinen Denhamin, Oudneyn ja Clappertonin retkikunta saapui Murzukiin hankkimaan muonaa ja suojelua ennen jatkoaan tuntemattomille alueille kohti Tšad-järveä. Murzukista tuli seuraavina vuosikymmeninä brittitutkijoiden vakiotukikohta: James Richardson pysähtyi siellä sekä 1846 että lähtiessään viimeiselle matkalleen 1850 Heinrich Barthin ja Adolf Overwegin kanssa. Richardson kuvaili Murzukia "kuumetaudin maaksi", sillä hänen mukaansa kolme neljästä sinne saapuneesta eurooppalaisesta sairastui. Hän kuoli tuntemattomaan tautiin 4. maaliskuuta 1851 lähellä Kukawaa Tšad-järven seudulla, vain 22 vuotta ennen isoisän matkaa.',
+            'Tammikuussa 1822 brittiläinen Denhamin, Oudneyn ja Clappertonin retkikunta saapui Murzukiin hankkimaan muonaa ja suojelua ennen jatkoaan tuntemattomille alueille kohti Tšad-järveä. Murzukista tuli seuraavina vuosikymmeninä brittitutkijoiden vakiotukikohta: James Richardson pysähtyi siellä sekä 1846 että lähtiessään viimeiselle matkalleen 1850 Heinrich Barthin ja Adolf Overwegin kanssa. Richardson kuvaili Murzukia ”kuumetaudin maaksi”, sillä hänen mukaansa kolme neljästä sinne saapuneesta eurooppalaisesta sairastui. Hän kuoli tuntemattomaan tautiin 4. maaliskuuta 1851 lähellä Kukawaa Tšad-järven seudulla, vain 22 vuotta ennen isoisän matkaa.',
           tiedosto:
             'The Clapperton expedition at Murzuk (Hugh Clapperton), from 1892 book The Story of Africa and its Explorers.jpg',
           lyhyt: 'Vuoden 1892 kirjankuvitus Clappertonin retkikunnan pysähdyksestä Murzukissa.',
@@ -126414,7 +126414,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Tripolia, Misrataa ja Benghazin seutua, eikä niihinkään '
                 + 'ilman välttämätöntä syytä, joten koko Fezzan jää '
                 + 'varoituksen piiriin. Yhdysvallat pitää Libyaa korkeimmalla '
-                + '"älä matkusta" -tasollaan ja mainitsee syinä rikollisuuden, '
+                + '”älä matkusta” -tasollaan ja mainitsee syinä rikollisuuden, '
                 + 'terrorismin, sieppaukset, räjähtämättömät miinat ja '
                 + 'aseelliset selkkaukset. Varoitukset eivät ole teoriaa: '
                 + 'elokuussa 2011 tubujen taistelijoiden kerrottiin vallanneen '
@@ -126631,7 +126631,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Saharan suuret kauppareitit',
           teksti:
-            'Murzukin kautta kulki 1800-luvulla useita Saharan halki johtavia karavaanireittejä, jotka yhdistivät Kukawan, Kanon ja muiden Sudanin kaupunkien markkinat Tripolin satamaan. Karavaanit kulkivat myös Ghatin, Ghadamesin ja Bilman oaasien kautta, ja samoja reittejä oli käytetty tavaran ja ihmisten kuljetukseen jo Garamantien ajoista lähtien. Ranskalainen maantieteilijä Edouard Blanc kartoitti nämä "Saharan suuret kauppareitit" vuonna 1889. Murzuk pysyi pitkään reitin solmukohtana, koska aavikon yli oli mahdotonta kulkea ilman sen kaivoja ja majataloja.',
+            'Murzukin kautta kulki 1800-luvulla useita Saharan halki johtavia karavaanireittejä, jotka yhdistivät Kukawan, Kanon ja muiden Sudanin kaupunkien markkinat Tripolin satamaan. Karavaanit kulkivat myös Ghatin, Ghadamesin ja Bilman oaasien kautta, ja samoja reittejä oli käytetty tavaran ja ihmisten kuljetukseen jo Garamantien ajoista lähtien. Ranskalainen maantieteilijä Edouard Blanc kartoitti nämä ”Saharan suuret kauppareitit” vuonna 1889. Murzuk pysyi pitkään reitin solmukohtana, koska aavikon yli oli mahdotonta kulkea ilman sen kaivoja ja majataloja.',
           tiedosto: 'Commerce transsaharien.jpg',
           lyhyt: 'Nykyaikainen kartta Saharan kauppareiteistä ja niiden kuljettamista tavaroista.',
           selite:
@@ -126727,9 +126727,9 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Eucla, Western Australia',
         },
         {
-          otsikko: "Nimi joka tarkoittaa 'ei puuta'",
+          otsikko: "Nimi joka tarkoittaa ’ei puuta’",
           teksti:
-            "Nullarbor-nimi juontuu latinan sanoista nullus arbor, 'ei puuta' – ja nimi pitää yhä paikkansa. Tasanko on noin 1 100 kilometriä leveä ja kattaa lähes 200 000 neliökilometriä puutonta kalkkikiveä. Kun Eyre Highway vihdoin valmistui vuonna 1941 ja päällystettiin kokonaan 1976, siitä tuli osa reittiä, jolla on Australian pisin suora tieosuus, 146 kilometriä. Vieressä kulkeva Trans-Australian-rautatie menee vielä pidemmälle: sen suorin osuus on 478 kilometriä, maailman pisin suora rautatie. Kuljettaja voi ajaa tunteja ilman yhtään mutkaa – täsmälleen sellaista autiutta, jonka läpi Eyre ja Wylie kerran raahautuivat jalan.",
+            "Nullarbor-nimi juontuu latinan sanoista nullus arbor, ’ei puuta’ – ja nimi pitää yhä paikkansa. Tasanko on noin 1 100 kilometriä leveä ja kattaa lähes 200 000 neliökilometriä puutonta kalkkikiveä. Kun Eyre Highway vihdoin valmistui vuonna 1941 ja päällystettiin kokonaan 1976, siitä tuli osa reittiä, jolla on Australian pisin suora tieosuus, 146 kilometriä. Vieressä kulkeva Trans-Australian-rautatie menee vielä pidemmälle: sen suorin osuus on 478 kilometriä, maailman pisin suora rautatie. Kuljettaja voi ajaa tunteja ilman yhtään mutkaa – täsmälleen sellaista autiutta, jonka läpi Eyre ja Wylie kerran raahautuivat jalan.",
           tiedosto: 'Eyre Highway, South Australia (on Nullarbor Plain).jpg',
           lyhyt: 'Suora, puuton tie katoaa horisonttiin Nullarbor-tasangolla.',
           selite:
@@ -128684,7 +128684,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Nollapiiri keskellä kaupunkia',
           teksti:
-            'Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä "Keskimaailman pääkaupunki".',
+            'Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä ”Keskimaailman pääkaupunki”.',
           tiedosto: 'Linha do Equador Macapá AP,Brasil - panoramio.jpg',
           lyhyt: 'Marco Zero -muistomerkki merkitsee tarkan kohdan, jossa päiväntasaaja halkoo Macapán.',
           selite:
@@ -128695,7 +128695,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Jalkapalloa kahdella pallonpuoliskolla',
           teksti:
-            'Macapán jalkapallostadion valmistui vuonna 1990 nimellä Estádio Ayrton Senna suoraan päiväntasaajan päälle: kentän keskiviiva osuu tarkalleen nollaleveyspiirille. Se nimettiin uudelleen vuonna 1994 amapálaisen urheilujohtajan Milton de Souza Corrêan mukaan, mutta kaupunkilaiset kutsuvat sitä yhä lempinimellä Zerão, "Iso nolla". Ottelun aikana toinen joukkue puolustaa maalia pohjoisella pallonpuoliskolla ja toinen eteläisellä. Stadion suljettiin vuonna 2007 ja avattiin seitsemän vuoden peruskorjauksen jälkeen uudelleen 2014; katsomoon mahtuu nykyisin 13 680 katsojaa.',
+            'Macapán jalkapallostadion valmistui vuonna 1990 nimellä Estádio Ayrton Senna suoraan päiväntasaajan päälle: kentän keskiviiva osuu tarkalleen nollaleveyspiirille. Se nimettiin uudelleen vuonna 1994 amapálaisen urheilujohtajan Milton de Souza Corrêan mukaan, mutta kaupunkilaiset kutsuvat sitä yhä lempinimellä Zerão, ”Iso nolla”. Ottelun aikana toinen joukkue puolustaa maalia pohjoisella pallonpuoliskolla ja toinen eteläisellä. Stadion suljettiin vuonna 2007 ja avattiin seitsemän vuoden peruskorjauksen jälkeen uudelleen 2014; katsomoon mahtuu nykyisin 13 680 katsojaa.',
           tiedosto: 'Estádio Milton Corrêa 2014.jpg',
           lyhyt: 'Zerão-stadionin keskiviiva osuu tarkalleen päiväntasaajalle.',
           selite:
@@ -129103,7 +129103,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Ataque ao Forte Coimbra.jpg',
           lyhyt: 'Kulunut pronssireliefi kuvaa vuoden 1864 hyökkäystä Coimbran linnakkeeseen.',
           selite:
-            "Kuva näyttää kuluneen pronssireliefin Rio de Janeiron sotasankarimuistomerkistä - reliefi kuvaa vuoden 1864 hyökkäystä Coimbran linnakkeeseen, otsikkona 'Ataque ao Forte Coimbra'.",
+            "Kuva näyttää kuluneen pronssireliefin Rio de Janeiron sotasankarimuistomerkistä - reliefi kuvaa vuoden 1864 hyökkäystä Coimbran linnakkeeseen, otsikkona ’Ataque ao Forte Coimbra’.",
           lahde: 'Picture Master, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'New Coimbra Fort',
         },
@@ -129400,7 +129400,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Jaguaari - suokissan valtakunta',
           teksti:
-            'Pantanalissa elää yksi maailman terveimmistä ja tiheimmistä jaguaarikannoista. Jaguaari on Amerikan mantereen suurin kissaeläin, ja toisin kuin useimmat kissaeläimet se ui mielellään ja saalistaa myös vedessä: sen tehokas purenta murtaa jopa kaimaanin tai valtavan vesikäärmeen panssarin. Pantanalin avoin maasto ja tiheä saalistarjonta - kapybaroista kaimaaneihin - tekevät alueesta poikkeuksellisen paikan tarkkailla muuten arkaa ja vaikeasti nähtävää eläintä päivänvalossa. Paikallinen alalaji tunnetaan nimellä Panthera onca palustris, "suokissa".',
+            'Pantanalissa elää yksi maailman terveimmistä ja tiheimmistä jaguaarikannoista. Jaguaari on Amerikan mantereen suurin kissaeläin, ja toisin kuin useimmat kissaeläimet se ui mielellään ja saalistaa myös vedessä: sen tehokas purenta murtaa jopa kaimaanin tai valtavan vesikäärmeen panssarin. Pantanalin avoin maasto ja tiheä saalistarjonta - kapybaroista kaimaaneihin - tekevät alueesta poikkeuksellisen paikan tarkkailla muuten arkaa ja vaikeasti nähtävää eläintä päivänvalossa. Paikallinen alalaji tunnetaan nimellä Panthera onca palustris, ”suokissa”.',
           tiedosto: 'Jaguar (Panthera onca palustris) female Piquiri River 2.JPG',
           lyhyt: 'Jaguaari kyyristyy valmiina hyökkäykseen Pantanalin kasvillisuudessa.',
           selite:
@@ -129986,11 +129986,11 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Nimi Nome ei viittaa mihinkään paikalliseen sanaan vaan '
             + 'brittiläisen laivaston kartoitusvirheeseen. Vuosina '
             + '1850–1852 HMS Heraldilla purjehtinut kartoittaja merkitsi '
-            + 'nimettömän niemen kohdalle muistiinpanon "? name", '
+            + 'nimettömän niemen kohdalle muistiinpanon ”? name”, '
             + 'kysymysmerkki ja sana nimi. Ison-Britannian amiraliteetin '
             + 'selityksen mukaan toinen piirtäjä luki myöhemmin oman '
             + 'käsialansa väärin: kysymysmerkistä tuli C ja a:sta o, ja '
-            + 'tulokseksi jäi "C. Nome" eli Cape Nome. Virheellinen nimi '
+            + 'tulokseksi jäi ”C. Nome” eli Cape Nome. Virheellinen nimi '
             + 'painettiin karttoihin, ja kun kultakaupunki perustettiin '
             + 'niemen juurelle 1899, se peri saman erehdyksen.',
           wiki: 'Cape Nome',
@@ -130016,11 +130016,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuotta. Ulkoministeri William H. Seward oli neuvotellut '
             + 'koko Alaskan ostosta Venäjältä 1867 hintaan 7,2 miljoonaa '
             + 'dollaria, alle kolme senttiä eekkeriltä, ja poliittiset '
-            + 'vastustajat pilkkasivat kauppaa nimillä "Sewardin hulluus" '
-            + 'ja "Sewardin jääkaappi". Seward-niemimaalla ei ollut '
+            + 'vastustajat pilkkasivat kauppaa nimillä ”Sewardin hulluus” '
+            + 'ja ”Sewardin jääkaappi”. Seward-niemimaalla ei ollut '
             + 'yhtäkään pysyvää siirtokuntaa eikä karttaa, joka olisi '
             + 'merkinnyt tulevan Nomen paikkaa. Vasta kolmekymmentä '
-            + 'vuotta myöhemmin kävi ilmi, että "jääkaappi" kätki '
+            + 'vuotta myöhemmin kävi ilmi, että ”jääkaappi” kätki '
             + 'sittenkin aarteen.',
           wiki: 'Alaska Purchase',
         },
@@ -130430,7 +130430,7 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Nome Gold Rush',
         },
         {
-          otsikko: 'Wyatt Earp "louhi kaivosmiehiä"',
+          otsikko: 'Wyatt Earp ”louhi kaivosmiehiä”',
           teksti: 'Syyskuussa 1899 lännen legenda Wyatt Earp rakensi '
             + 'kumppaninsa Charles Hoxien kanssa Dexter-saluunan, '
             + 'kaupungin ensimmäisen kaksikerroksisen puurakennuksen. '
@@ -130874,7 +130874,7 @@ export const KULTTUURI_KATEGORIAT = {
         + 'liikanimen Perkeleen rata. Sen rippeet ja veturit lepäävät '
         + 'yhä Porto Velhon museossa ja sademetsän vallassa.',
       tehtava: {
-        kysymys: 'Miksi Madeira-Mamoré-rataa alettiin kutsua "Perkeleen radaksi"?',
+        kysymys: 'Miksi Madeira-Mamoré-rataa alettiin kutsua ”Perkeleen radaksi”?',
         vaihtoehdot: [
           'Koska sen rakentamisessa kuoli tuhansia työläisiä tropiikkitauteihin ja väkivaltaan',
           'Koska rata rakennettiin kokonaan yhden ainoan sadekauden aikana',
@@ -130996,7 +130996,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Hylätty veturi numero 20 ruostui vuosikymmeniä sademetsän köynnösten peitossa.',
           selite: 'Vanhassa valokuvassa ruosteinen höyryveturi seisoo '
             + 'puiden ja pensaiden ympäröimänä, kyljessä lukee '
-            + '"Maquinista Rivero".',
+            + '”Maquinista Rivero”.',
           lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Madeira-Mamoré-rautatie',
         },
@@ -131694,11 +131694,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Pandie Pandie -aseman Robert Frew ehdotti sitä '
             + 'seudun runsaan linnuston mukaan. Toisen tarinan '
             + 'mukaan kauppiaat Percy Bird ja George Field '
-            + 'perustivat kaupan nimeltä "Birdfield", jonka '
+            + 'perustivat kaupan nimeltä ”Birdfield”, jonka '
             + 'Adelaiden tukkuliike G. ja R. Wills kirjoitti '
-            + 'vuonna 1882 vahingossa osoitteeseen "Birdsville" — '
+            + 'vuonna 1882 vahingossa osoitteeseen ”Birdsville” — '
             + 'ja nimi jäi elämään. Kolmannen mukaan alun perin '
-            + 'oli "Burtsville", erään Burt-nimisen miehen mukaan, '
+            + 'oli ”Burtsville”, erään Burt-nimisen miehen mukaan, '
             + 'joka vain vääntyi ajan myötä nykyiseksi.',
           wiki: 'Birdsville',
         },
@@ -131750,7 +131750,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neljäkymmentäkaksi osallistujaa perusti Border '
             + 'Jockey Clubin rautakauppa Burt & Co:n tiloissa, ja '
             + 'Birdsville Racesista tuli vuotuinen perinne, jota '
-            + 'sanotaan yhä "aavikon Melbourne Cupiksi". Kilparata '
+            + 'sanotaan yhä ”aavikon Melbourne Cupiksi”. Kilparata '
             + 'siirrettiin 1930-luvulla kaupungin länsilaidalta '
             + 'nykyiselle paikalleen, ja tapahtuma vetää yhä '
             + 'syyskuisin tuhansia vieraita paikkaan, jossa on '
@@ -132066,8 +132066,8 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Kansa, joka asui autiomaassa',
           teksti: 'Wangkangurrukansa on asuttanut Simpsonin aavikkoa '
             + 'kymmenien tuhansien vuosien ajan, ja heidän '
-            + 'perinteinen alueensa — Munga-Thirri, "suurten '
-            + 'hiekkakumpujen maa" — ulottui Dalhousie Springsiltä '
+            + 'perinteinen alueensa — Munga-Thirri, ”suurten '
+            + 'hiekkakumpujen maa” — ulottui Dalhousie Springsiltä '
             + 'aina nykyisen Birdsvillen kohdalle asti. Alue on '
             + 'yksi maailman kuivimmista asutuista seuduista: '
             + 'sadetta tulee harvoin, ja suurin osa vedestä on '
@@ -132230,9 +132230,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'erehtyi pitämään sitä Albert-jokena. Saman virheen oli '
             + 'tehnyt vuosikymmentä aiemmin Ludwig Leichhardt omalla '
             + 'tutkimusmatkallaan, joten Gregory nimesi joen kadonneen '
-            + 'kollegansa mukaan: "Tämän joen erehtyi tohtori Leichhardt '
+            + 'kollegansa mukaan: ”Tämän joen erehtyi tohtori Leichhardt '
             + 'pitämään Albert-jokena, ja siksi nimesin sen hänen '
-            + 'mukaansa." Joen lähde on vain parikymmentä kilometriä '
+            + 'mukaansa.” Joen lähde on vain parikymmentä kilometriä '
             + 'Mount Isasta etelään, ja se virtaa suoraan kaupungin '
             + 'läpi. Vasta lähes seitsemän vuosikymmentä myöhemmin sen '
             + 'varrelle nousi kaivoskaupunki.',
@@ -132356,7 +132356,7 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Mustavalkoisessa kuvassa vuodelta 1932 '
             + 'poikkeuksellisen suuri punajättikenguru seisoo aidatussa '
             + 'karjatilan pihassa Malbonissa Mount Isan seudulla; '
-            + 'kyltissä lukee "J. Lonergans Kangaroo - Malbon, Q".',
+            + 'kyltissä lukee ”J. Lonergans Kangaroo - Malbon, Q”.',
           lahde: 'L. Plass / State Library of Queensland, Wikimedia '
             + 'Commons (PD)',
           wiki: 'Red kangaroo',
@@ -132388,7 +132388,7 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Scientificusrex, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Mount Isa on Luoteis-Queenslandin ainoa suuri kaupunki, '
-          + 'ja paikalliset kutsuvat sitä lyhyesti nimellä "The Isa". '
+          + 'ja paikalliset kutsuvat sitä lyhyesti nimellä ”The Isa”. '
           + 'Rannikolta tänne tullaan yöjunalla, lentäen tai ajaen Barkly '
           + 'Highwayta, joka on Queenslandin ja Pohjoisterritorion ainoa '
           + 'päällystetty maantieyhteys. Kaupungissa syödään seudun '
@@ -132595,7 +132595,7 @@ export const KULTTUURI_KATEGORIAT = {
         + 'yhä maailman suurimpaan rodeoon.',
       tehtava: {
         kysymys: 'Minä vuonna Mount Isassa järjestettiin ensimmäinen '
-          + 'rotaryrodeo, "Centenary Rodeo"?',
+          + 'rotaryrodeo, ”Centenary Rodeo”?',
         vaihtoehdot: ['1923', '1942', '1959', '1984'],
         oikea: 2,
         fakta: 'Ensimmäinen rodeo, Centenary Rodeo, järjestettiin '
@@ -132607,7 +132607,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Rodeo, joka toi kaupungin kartalle',
           teksti: 'Elokuussa 1959 Mount Isassa järjestettiin ensimmäinen '
-            + 'rodeo, "Centenary Rodeo", jossa kilpailtiin muun muassa '
+            + 'rodeo, ”Centenary Rodeo”, jossa kilpailtiin muun muassa '
             + 'sonninratsastuksessa, villihärkäjuoksussa ja avoimessa '
             + 'hurjastelukilpailussa. Kilparatsuja jouduttiin '
             + 'taluttamaan viikkokausia Carandotta-karjatilalta '
@@ -132615,16 +132615,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rodeoaitauksille Kalkadoon Parkiin. Järjestäjien tavoite '
             + 'oli yksinkertainen: kerätä rahaa hyväntekeväisyyteen ja '
             + 'saattaa nuori, syrjäinen kaivoskaupunki kartalle. Vuonna '
-            + '1962 kilpailun "All Around Cowboy" -tittelin vei Buddy '
+            + '1962 kilpailun ”All Around Cowboy” -tittelin vei Buddy '
             + 'Gravener, jonka nimi on säilynyt kaupungin jalkakäytävän '
             + 'muistolaatassa vielä yli 60 vuotta myöhemmin.',
           tiedosto: 'Mount Isa Rodeo Capital of Australia plaque, Queensland, 2023.jpg',
           lyhyt: 'Katukäytävän muistolaatta kunnioittaa rodeon '
             + 'perustamista ja sen varhaisia kilpailijoita.',
           selite: 'Kadulle upotetut muistolaatat kertovat rodeon '
-            + 'historiasta: pronssisessa mitalissa lukee "Mount Isa – '
-            + 'Rodeo Capital of Australia" ja "All Around Cowboy Buddy '
-            + 'Gravener 1962", vierellä kaiverretut kuvat '
+            + 'historiasta: pronssisessa mitalissa lukee ”Mount Isa – '
+            + 'Rodeo Capital of Australia” ja ”All Around Cowboy Buddy '
+            + 'Gravener 1962”, vierellä kaiverretut kuvat '
             + 'sonninratsastuksesta ja häränpainista.',
           lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mount Isa',
@@ -132693,8 +132693,8 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Hard Times Mining Company, Barkly Highway in Mount Isa, Queensland, 2023.jpg',
           lyhyt: 'Hard Times Mine -kierros laskeutuu oikeaan kaivokseen '
             + 'Outback at Isa -keskuksessa.',
-          selite: 'Korkea puinen nostotorni kyltillä "Hard Times Mining '
-            + 'Company" seisoo Barkly Highwayn varrella; sen alla '
+          selite: 'Korkea puinen nostotorni kyltillä ”Hard Times Mining '
+            + 'Company” seisoo Barkly Highwayn varrella; sen alla '
             + 'vierailijat pääsevät hissillä oikeaan malmikaivokseen '
             + 'opastetulle kierrokselle.',
           lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
@@ -133256,7 +133256,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'talonumeroita: matka lasketaan varoina, vanhana '
             + 'espanjalaisena pituusmittana jota ei käytetä juuri '
             + 'missään muualla, ja suunnaksi ilmoitetaan usein '
-            + '"järvelle" pohjoisen sijaan, koska kaupunki nojaa '
+            + '”järvelle” pohjoisen sijaan, koska kaupunki nojaa '
             + 'Xolotlániin. Lähtöpisteenä toimii tunnettu maamerkki, '
             + 'kuten iso pyöreä Rotonda Plaza Inter -risteys. Moni '
             + 'perinteinen maamerkki hävisi kuitenkin vuoden 1972 '
@@ -133301,7 +133301,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vaikka koko ympäröivä kortteli murskaantui. Palatsissa '
             + 'kokoontui kansalliskokous yli viidenkymmenen vuoden '
             + 'ajan, kunnes 22. elokuuta 1978 komentaja Edén Pastora '
-            + '— lisänimeltään "Komentaja Nolla" — johti '
+            + '— lisänimeltään ”Komentaja Nolla” — johti '
             + 'sandinistikapinallisten joukon istuntosaliin ja otti '
             + 'kongressin panttivangiksi. Isku ruokki vallankumousta, '
             + 'joka kaatoi Somozan hallinnon 1979. Nykyään rakennus on '
@@ -133637,14 +133637,14 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Runoilija Rubén Darío omisti vuorelle oman runonsa, ja '
             + 'sen kupeella toimii geoterminen voimala, joka '
             + 'hyödyntää tulivuoren lämpöä sähköksi. Pieni saari '
-            + 'nimeltä Momotombito, "pikku-Momotombo", kohoaa '
+            + 'nimeltä Momotombito, ”pikku-Momotombo”, kohoaa '
             + 'lähellä järven pinnalta samannimisen emovuoren '
             + 'edustalla.',
           tiedosto: 'Isla Momotombito in Lake Managua, and Momotombo Volcano, with San Cristobal Volcano in the distance.jpg',
           lyhyt: 'Momotombo-tulivuori kohoaa 1 297 metriä '
             + 'Xolotlán-järven rannalta.',
           selite: 'Etualalla erottuu pieni Momotombito-saari, '
-            + '"pikku-Momotombo", emovuorensa edustalla.',
+            + '”pikku-Momotombo”, emovuorensa edustalla.',
           lahde: 'Pi3.124, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Momotombo',
         },
@@ -133653,7 +133653,7 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Noin kaksikymmentä kilometriä Managuasta etelään '
             + 'aukeaa Masayan tulivuori, jonka Santiago-kraatteri '
             + 'savuaa jatkuvasti rikkidioksidia. Espanjalaiset '
-            + 'ristivät sen "Helvetin suuksi" ja pystyttivät '
+            + 'ristivät sen ”Helvetin suuksi” ja pystyttivät '
             + '1500-luvulla kraatterin reunalle ristin, Cruz de '
             + 'Bobadillan, manaamaan paholaisen pois. Kraatterin '
             + 'seinämillä pesii silti joukko vihreitä papukaijoja, '
@@ -133667,7 +133667,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Masayan Santiago-kraatteri savuaa jatkuvasti; '
             + 'taustalla Cruz de Bobadillan risti.',
           selite: 'Espanjalaiset pystyttivät ristin 1500-luvulla '
-            + 'manaamaan paholaisen pois "Helvetin suusta".',
+            + 'manaamaan paholaisen pois ”Helvetin suusta”.',
           lahde: 'Chicho96, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Masaya Volcano',
         },
@@ -133695,7 +133695,7 @@ export const KULTTUURI_KATEGORIAT = {
               lyhyt: 'Johannes Vingboonsin näkymä (1665) São Luísista '
                 + 'hollantilaismiehityksen jäljiltä.',
               selite: 'Hollantilaisen Johannes Vingboonsin näkymä (1665): '
-                + '"St. Lodewijkin kaupunki" linnoituksineen ja jokisuun '
+                + '”St. Lodewijkin kaupunki” linnoituksineen ja jokisuun '
                 + 'aluksineen, piirretty vuosikymmen sen jälkeen kun '
                 + 'Alankomaiden Länsi-Intian kauppakomppania hallitsi '
                 + 'kaupunkia 1641–1644.',
@@ -133885,7 +133885,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'hibiskuslajista, jonka lehdet haudutetaan kuivatun '
                 + 'katkaravun, paahdetun seesamin ja maniokkijauhon kanssa; '
                 + 'nimen arvellaan tulevan tupin sanoista, jotka tarkoittavat '
-                + 'suunnilleen "se mikä säilyy happamana". Riisi syödään '
+                + 'suunnilleen ”se mikä säilyy happamana”. Riisi syödään '
                 + 'usein paistetun kalan kanssa. Juçaraksi kutsutaan täällä '
                 + 'samaa palmunmarjasosetta, jota muualla Brasiliassa myydään '
                 + 'makeana açaína, mutta maranhãolainen voi syödä sen myös '
@@ -134057,7 +134057,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kaksi nimeä, yksi kaupunki',
           teksti:
-            'Ponce de León perusti ensimmäisen siirtokunnan lähistölle vuonna 1508 nimellä Caparra; huonon sijainnin vuoksi asukkaat siirtyivät 1521 nykyiselle kalliosaarelle, ja kaupunki sai nimen Ciudad de Puerto Rico de San Juan Bautista. Vuosisatojen mittaan nimet vaihtoivat paikkaa: koko saaresta tuli Puerto Rico, ja kalliolla oleva kaupunki jäi pelkäksi San Juaniksi — vanhoissa espanjalaiskartoissa kaupunki saatettiin vielä merkitä muotoon "Puerto Rico de Puerto Rico". San Juan on vanhin Espanjan perustama siirtokunta nykyisen Yhdysvaltain alueella ja toiseksi vanhin eurooppalaisten perustama pääkaupunki koko Amerikassa, heti Santo Domingon jälkeen.',
+            'Ponce de León perusti ensimmäisen siirtokunnan lähistölle vuonna 1508 nimellä Caparra; huonon sijainnin vuoksi asukkaat siirtyivät 1521 nykyiselle kalliosaarelle, ja kaupunki sai nimen Ciudad de Puerto Rico de San Juan Bautista. Vuosisatojen mittaan nimet vaihtoivat paikkaa: koko saaresta tuli Puerto Rico, ja kalliolla oleva kaupunki jäi pelkäksi San Juaniksi — vanhoissa espanjalaiskartoissa kaupunki saatettiin vielä merkitä muotoon ”Puerto Rico de Puerto Rico”. San Juan on vanhin Espanjan perustama siirtokunta nykyisen Yhdysvaltain alueella ja toiseksi vanhin eurooppalaisten perustama pääkaupunki koko Amerikassa, heti Santo Domingon jälkeen.',
           tiedosto: 'Aerial View Of Old San Juan.jpg',
           lyhyt: 'Vanhan San Juanin kattoja ja kujia ilmasta kuvattuna.',
           selite:
@@ -134828,7 +134828,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Melipullista Puerto Montiksi',
           teksti:
-            'Puerto Montt perustettiin virallisesti 12. helmikuuta 1853, kun siirtolaisasiamies Vicente Pérez Rosales valitsi paikan Reloncavín selän rannalta hallituksen Etelä-Chilen asutusohjelmaa varten. Alue tunnettiin mapudungun-kielisellä nimellä Melipulli, "neljä kukkulaa", ja metsää oli raivattu tontille jo edellisenä syksynä. Uusi kaupunki sai nimensä presidentti Manuel Monttilta, joka käynnisti saksalaisten siirtolaisten muuton Llanquihuen järven seudulle 1850-luvulla. Kun isoisä kulki tällä rannikolla vuonna 1873, kaupunki oli vasta parikymppinen nuori satama - silti jo Patagonian porttina tunnettu.',
+            'Puerto Montt perustettiin virallisesti 12. helmikuuta 1853, kun siirtolaisasiamies Vicente Pérez Rosales valitsi paikan Reloncavín selän rannalta hallituksen Etelä-Chilen asutusohjelmaa varten. Alue tunnettiin mapudungun-kielisellä nimellä Melipulli, ”neljä kukkulaa”, ja metsää oli raivattu tontille jo edellisenä syksynä. Uusi kaupunki sai nimensä presidentti Manuel Monttilta, joka käynnisti saksalaisten siirtolaisten muuton Llanquihuen järven seudulle 1850-luvulla. Kun isoisä kulki tällä rannikolla vuonna 1873, kaupunki oli vasta parikymppinen nuori satama - silti jo Patagonian porttina tunnettu.',
           tiedosto: 'Chile - Puerto Montt - Panorama.jpg',
           lyhyt: 'Puerto Montt kohoaa mäeltä rantaan, Reloncavín selkä taustalla.',
           selite:
@@ -135062,7 +135062,7 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Rantakadun kuuluisimmat asukkaat ovat pariskunta, joka '
                 + 'istuu sylikkäin ja katsoo Reloncavín selälle. Puerto Varasista '
                 + 'kotoisin olevan kuvanveistäjän Robinson Barrían kuusimetrinen '
-                + 'Sentados frente al mar, "Meren edessä istuen", sai aiheensa '
+                + 'Sentados frente al mar, ”Meren edessä istuen”, sai aiheensa '
                 + 'uruguaylaisen Los Iracundos -yhtyeen laulusta Puerto Montt, '
                 + 'ja se paljastettiin ystävänpäivänä 2002. Patsas on tehty '
                 + 'ferrosementistä rautarungon ympärille, ja sen ulkonäköä on '
@@ -135245,7 +135245,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Maailman ensimmäinen kansallispuisto',
           teksti:
-            'Presidentti Ulysses S. Grant allekirjoitti 1. maaliskuuta 1872 lain, joka teki Yellowstonesta maailman ensimmäisen kansallispuiston: alue julistettiin kansan yhteiseksi "huvi- ja virkistysalueeksi", jota kukaan ei saisi ottaa yksityisomistukseensa. Kongressin oli suhteellisen helppo hyväksyä laki, sillä alueella ei asunut siihen aikaan juuri ketään eikä sinne johtanut rautatietä — kukaan ei siis menettänyt maata. Isoisän matkavuonna 1873 puisto oli vasta vuoden ikäinen eikä sillä ollut vielä vartijoita, teitä tai edes selvää rajaa: ensimmäiset vuodet salametsästäjät ja vandaalit saivat toimia siellä lähes vapaasti.',
+            'Presidentti Ulysses S. Grant allekirjoitti 1. maaliskuuta 1872 lain, joka teki Yellowstonesta maailman ensimmäisen kansallispuiston: alue julistettiin kansan yhteiseksi ”huvi- ja virkistysalueeksi”, jota kukaan ei saisi ottaa yksityisomistukseensa. Kongressin oli suhteellisen helppo hyväksyä laki, sillä alueella ei asunut siihen aikaan juuri ketään eikä sinne johtanut rautatietä — kukaan ei siis menettänyt maata. Isoisän matkavuonna 1873 puisto oli vasta vuoden ikäinen eikä sillä ollut vielä vartijoita, teitä tai edes selvää rajaa: ensimmäiset vuodet salametsästäjät ja vandaalit saivat toimia siellä lähes vapaasti.',
           tiedosto: 'Grand Canon of the Yellowstone, by Jackson, William Henry, 1843-1942.jpg',
           lyhyt: 'William Henry Jacksonin valokuva Yellowstonen suuresta kanjonista 1870-luvulta.',
           selite:
@@ -135269,7 +135269,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Colterin helvetti',
           teksti:
-            'Talvella 1807–1808 entinen Lewis ja Clark -retkikunnan jäsen John Colter vaelsi yksin nykyisen Yellowstonen seudulla etsimässä turkiskauppakumppaneita intiaaniheimoilta. Hänen reittinsä kulki myös Shoshone-joen varrella, Codyn kaupungin länsipuolella, jossa maasta kohosi höyryä ja rikin hajuisia kaasuja. Kun Colter palasi ja kertoi näkemästään, harva uskoi häntä — tarinaa pidettiin yksinäisen metsästäjän liioitteluna. Kirjailija Washington Irving risti paikan myöhemmin pilkallisesti "Colterin helvetiksi", ja nimi jäi elämään vuosikymmeniksi, vaikka koko Yellowstonen ihmemaa odotti tuolloin vielä varsinaista löytäjäänsä.',
+            'Talvella 1807–1808 entinen Lewis ja Clark -retkikunnan jäsen John Colter vaelsi yksin nykyisen Yellowstonen seudulla etsimässä turkiskauppakumppaneita intiaaniheimoilta. Hänen reittinsä kulki myös Shoshone-joen varrella, Codyn kaupungin länsipuolella, jossa maasta kohosi höyryä ja rikin hajuisia kaasuja. Kun Colter palasi ja kertoi näkemästään, harva uskoi häntä — tarinaa pidettiin yksinäisen metsästäjän liioitteluna. Kirjailija Washington Irving risti paikan myöhemmin pilkallisesti ”Colterin helvetiksi”, ja nimi jäi elämään vuosikymmeniksi, vaikka koko Yellowstonen ihmemaa odotti tuolloin vielä varsinaista löytäjäänsä.',
           tiedosto: 'Colters Hell.jpg',
           lyhyt: 'Colterin helvetiksi ristitty höyryävä alue Shoshone-joen varrella lähellä Codya.',
           selite:
@@ -135313,7 +135313,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Maalari joka vangitsi kanjonin värit',
           teksti:
-            'Taidemaalari Thomas Moran liittyi Haydenin retkikuntaan kesällä 1871 ja teki paikan päällä lukuisia luonnoksia ja vesivärejä Yellowstonen kanjonista ja putouksista. Palattuaan ateljeehensa hän maalasi niiden pohjalta valtavan, lähes 2,1 metriä leveän öljymaalauksen "Yellowstonen suuri kanjoni", joka valmistui keväällä 1872 — samoihin aikoihin kun puistolaki allekirjoitettiin. Yhdysvaltain kongressi osti maalauksen 10 000 dollarilla ja ripusti sen Capitolin käytävälle, ensimmäisenä länsimaisena maisemamaalauksena, jonka liittovaltio koskaan hankki. Moranin myöhemmät nimikirjaimet T.Y.M., "Thomas Yellowstone Moran", juontuvat juuri tästä teoksesta.',
+            'Taidemaalari Thomas Moran liittyi Haydenin retkikuntaan kesällä 1871 ja teki paikan päällä lukuisia luonnoksia ja vesivärejä Yellowstonen kanjonista ja putouksista. Palattuaan ateljeehensa hän maalasi niiden pohjalta valtavan, lähes 2,1 metriä leveän öljymaalauksen ”Yellowstonen suuri kanjoni”, joka valmistui keväällä 1872 — samoihin aikoihin kun puistolaki allekirjoitettiin. Yhdysvaltain kongressi osti maalauksen 10 000 dollarilla ja ripusti sen Capitolin käytävälle, ensimmäisenä länsimaisena maisemamaalauksena, jonka liittovaltio koskaan hankki. Moranin myöhemmät nimikirjaimet T.Y.M., ”Thomas Yellowstone Moran”, juontuvat juuri tästä teoksesta.',
           tiedosto: 'Thomas Moran - Grand Canyon of the Yellowstone.jpg',
           lyhyt: 'Thomas Moranin vuonna 1872 valmistunut maalaus Yellowstonen suuresta kanjonista.',
           selite:
@@ -135376,8 +135376,8 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Rainbow through Roosevelt Arch (48266871937).jpg',
           lyhyt: 'Pohjoisportin Roosevelt Arch on toivottanut matkailijat tervetulleiksi vuodesta 1903.',
           selite: 'Gardinerin pohjoisportin 16-metrinen holvi on muurattu '
-            + 'pylväsbasaltista, ja sen laatassa lukee "For the Benefit and '
-            + 'Enjoyment of the People", kansan hyödyksi ja iloksi. Portti '
+            + 'pylväsbasaltista, ja sen laatassa lukee ”For the Benefit and '
+            + 'Enjoyment of the People”, kansan hyödyksi ja iloksi. Portti '
             + 'on puiston viidestä ainoa, joka on auki ympäri vuoden.',
           lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
         },
@@ -135610,7 +135610,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Old Faithful — luotettava geysiiri',
           teksti:
-            'Washburnin retkikunta nimesi geysiirin Old Faithful eli "Uskollinen vanha" syyskuussa 1870, koska se purkautui niin säännöllisesti. Nykyisin purkaukset tulevat keskimäärin reilun puolentoista tunnin välein, mutta vaihtelu on suurta: väli voi olla puolesta tunnista kahteen tuntiin. Yksi purkaus syöksee ilmaan noin 14 000–32 000 litraa kiehuvaa vettä 32–56 metrin korkeuteen ja kestää parista minuutista viiteen. Geysiiri ei ole puiston suurin — Steamboat Geyser purkautuu paljon korkeammalle — mutta se on ennustettavuutensa ansiosta puiston tunnetuin nähtävyys jo yli 150 vuoden ajan, ja sen purkauksia on tallennettu yli miljoona kertaa.',
+            'Washburnin retkikunta nimesi geysiirin Old Faithful eli ”Uskollinen vanha” syyskuussa 1870, koska se purkautui niin säännöllisesti. Nykyisin purkaukset tulevat keskimäärin reilun puolentoista tunnin välein, mutta vaihtelu on suurta: väli voi olla puolesta tunnista kahteen tuntiin. Yksi purkaus syöksee ilmaan noin 14 000–32 000 litraa kiehuvaa vettä 32–56 metrin korkeuteen ja kestää parista minuutista viiteen. Geysiiri ei ole puiston suurin — Steamboat Geyser purkautuu paljon korkeammalle — mutta se on ennustettavuutensa ansiosta puiston tunnetuin nähtävyys jo yli 150 vuoden ajan, ja sen purkauksia on tallennettu yli miljoona kertaa.',
           tiedosto: 'Yellowstone National Park (WY, USA), Old Faithful Geyser -- 2022 -- 2599.jpg',
           lyhyt: 'Old Faithful -geysiiri purkautumassa kohti taivasta.',
           selite:
@@ -135632,7 +135632,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Supertulivuori kaiken alla',
           teksti:
-            'Yellowstonen geysirit ja kuumat lähteet kertovat siitä, mitä maan alla piilee: koko puisto lepää valtavan supertulivuoren, Yellowstonen kalderan, päällä. Sen alla oleva magmasäiliö on noin 80 kilometriä pitkä ja 20 kilometriä leveä, ja siitä 6–8 prosenttia on sulaa kiveä. Alueella on ollut kolme jättimäistä purkausta — noin 2,1 miljoonaa, 1,3 miljoonaa ja 631 000 vuotta sitten — joista viimeisin muovasi nykyisen kalderan muodon. Tutkijoiden mukaan seuraava valtapurkaus ei ole "myöhässä": purkausten välit eivät ole säännöllisiä, ja tulivuoriobservatorio seuraa aluetta jatkuvasti mittalaittein ilman merkkejä lähestyvästä katastrofista.',
+            'Yellowstonen geysirit ja kuumat lähteet kertovat siitä, mitä maan alla piilee: koko puisto lepää valtavan supertulivuoren, Yellowstonen kalderan, päällä. Sen alla oleva magmasäiliö on noin 80 kilometriä pitkä ja 20 kilometriä leveä, ja siitä 6–8 prosenttia on sulaa kiveä. Alueella on ollut kolme jättimäistä purkausta — noin 2,1 miljoonaa, 1,3 miljoonaa ja 631 000 vuotta sitten — joista viimeisin muovasi nykyisen kalderan muodon. Tutkijoiden mukaan seuraava valtapurkaus ei ole ”myöhässä”: purkausten välit eivät ole säännöllisiä, ja tulivuoriobservatorio seuraa aluetta jatkuvasti mittalaittein ilman merkkejä lähestyvästä katastrofista.',
           tiedosto: 'Yellowstone Caldera NW Wyoming Topo Rainbow Zebra 2346.jpg',
           lyhyt: 'Topografinen kartta Yellowstonen kalderan muodosta ja rajoista.',
           selite:
@@ -136105,7 +136105,7 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Gosse nimesi löytönsä Ayers Rockiksi kunnianosoituksena Sir Henry Ayersille, joka toimi heinäkuussa 1873 Etelä-Australian pääministerinä ja sisäasiainsihteerinä. Ayers oli noussut asemaansa kuparikaivosyhtiön johtajana ja istui pääministerin tuolilla urallaan peräti viisi kertaa — ennätys, jota kukaan muu siirtokunnan johtaja ei saavuttanut. Tutkimusmatkailijoiden oli tapana nimetä löytönsä vaikutusvaltaisten virkamiesten tai rahoittajien mukaan, ja niin kallio sai eurooppalaisen nimensä mieheltä, joka ei koskaan käynyt paikan päällä. Nimi jäi viralliseen käyttöön yli sadaksi vuodeksi.',
           tiedosto: 'Painting of Ayers Rock (near Lake Amadeus) - Northern Territory(GN02710).jpg',
           lyhyt: 'Vuoden 1905 tienoilla otettu valokuva painokuvasta, jossa Ayers Rock esitellään matkailijoille.',
-          selite: 'Kuva on Etelä-Australian arkiston vanha lasinegatiivi: siinä on painettu maisemakuva Ayers Rockista, jonka alla lukee "Ayers Rock, Near Lake Amadeus, Northern Territory".',
+          selite: 'Kuva on Etelä-Australian arkiston vanha lasinegatiivi: siinä on painettu maisemakuva Ayers Rockista, jonka alla lukee ”Ayers Rock, Near Lake Amadeus, Northern Territory”.',
           lahde: 'State Government Photographer, Wikimedia Commons (CC0)',
           wiki: 'Henry Ayers',
         },
@@ -136462,7 +136462,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Ensimmäinen eurooppalainen näki putoukset 1541',
           teksti:
-            'Espanjalainen valloittaja Álvar Núñez Cabeza de Vaca kulki vuonna 1541 halki nykyisen Brasilian viidakon matkallaan Asunción del Paraguayhin ja törmäsi jylisevään putoussarjaan, josta hän kuuli kaukaa ennen kuin näki sitä. Hän nimesi löytönsä Saltos de Santa Maríaksi, Pyhän Marian putouksiksi, ja kirjoitti niistä matkakertomukseensa, joka julkaistiin myöhemmin Espanjassa. Nimi ei jäänyt elämään: guaranínkielinen Iguazú, "suuri vesi", osoittautui osuvammaksi ja vakiintui käyttöön. Cabeza de Vacan teksti on silti putousten ensimmäinen tunnettu eurooppalainen kuvaus, kolmesataakolmekymmentä vuotta ennen isoisän omaa matkaa.',
+            'Espanjalainen valloittaja Álvar Núñez Cabeza de Vaca kulki vuonna 1541 halki nykyisen Brasilian viidakon matkallaan Asunción del Paraguayhin ja törmäsi jylisevään putoussarjaan, josta hän kuuli kaukaa ennen kuin näki sitä. Hän nimesi löytönsä Saltos de Santa Maríaksi, Pyhän Marian putouksiksi, ja kirjoitti niistä matkakertomukseensa, joka julkaistiin myöhemmin Espanjassa. Nimi ei jäänyt elämään: guaranínkielinen Iguazú, ”suuri vesi”, osoittautui osuvammaksi ja vakiintui käyttöön. Cabeza de Vacan teksti on silti putousten ensimmäinen tunnettu eurooppalainen kuvaus, kolmesataakolmekymmentä vuotta ennen isoisän omaa matkaa.',
           tiedosto: 'Monumento Cabeza de Vaca muralla Jerez.jpg',
           lyhyt: 'Patsas Cabeza de Vacasta, joka löysi Iguazún putoukset eurooppalaisena ensimmäisenä 1541.',
           selite:
@@ -136971,7 +136971,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Puman kivi antoi järvelle nimen',
           teksti:
-            'Nimi Titicaca ei ollut alun perin koko järven nimi lainkaan. Kielitutkija Weston La Barren mukaan sana juontuu ilmauksesta titiqaqa, suunnilleen "harmaa lyijynvärinen puuma" – nimitys viittasi alun perin vain yhteen pyhään kallioon Isla del Solilla. Koska koko järvelle ei 1500-luvulla ollut vakiintunutta yhteistä nimeä, espanjalaiset alkoivat käyttää tämän tärkeimmän pyhäkön nimeä koko vesialueesta, ja ajan mittaan siitä tuli Titicaca. Auringonlaskun aikaan järven pinta hehkuu usein kullanhohtoisena, ja paikalliset soutavat yhä totorasta punotuilla veneillä samoja rantoja pitkin kuin sukupolvet ennen heitä.',
+            'Nimi Titicaca ei ollut alun perin koko järven nimi lainkaan. Kielitutkija Weston La Barren mukaan sana juontuu ilmauksesta titiqaqa, suunnilleen ”harmaa lyijynvärinen puuma” – nimitys viittasi alun perin vain yhteen pyhään kallioon Isla del Solilla. Koska koko järvelle ei 1500-luvulla ollut vakiintunutta yhteistä nimeä, espanjalaiset alkoivat käyttää tämän tärkeimmän pyhäkön nimeä koko vesialueesta, ja ajan mittaan siitä tuli Titicaca. Auringonlaskun aikaan järven pinta hehkuu usein kullanhohtoisena, ja paikalliset soutavat yhä totorasta punotuilla veneillä samoja rantoja pitkin kuin sukupolvet ennen heitä.',
           tiedosto: 'Sunlight reflection on Lake Titicaca.jpg',
           lyhyt: 'Auringonvalo kimmeltää Titicacan pinnalla lähellä Punoa.',
           selite:
@@ -137187,8 +137187,8 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'puoli tuntia, ja raja ylitetään Kasanissa noin seitsemän '
                 + 'ja puolen kilometrin päässä kaupungista. Kellot siirretään '
                 + 'rajalla tunnilla eteenpäin. Noin 6 000 asukkaan kaupungin '
-                + 'nimi tulee aimarankielisestä ilmauksesta "näkymä '
-                + 'järvelle", ja siitä sai nimensä myös Rio de Janeiron '
+                + 'nimi tulee aimarankielisestä ilmauksesta ”näkymä '
+                + 'järvelle”, ja siitä sai nimensä myös Rio de Janeiron '
                 + 'kuuluisa ranta. Kaupungin keskus on vuosina 1669–1679 '
                 + 'rakennettu valkoinen basilika. Sen kappelissa säilytetään '
                 + 'Copacabanan Neitsyen kuvaa, Bolivian suojeluspyhimystä, jonka '
@@ -137239,7 +137239,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kelluvat ruokosaaret',
           teksti:
-            'Uru-kansa on asuttanut Titicaca-järveä vuosisatoja ja rakentanut kotinsa suoraan veden päälle: noin 120 itse tehtyä saarta kelluu järven pohjoisosassa Punon edustalla. Perimätiedon mukaan saaret olivat alun perin puolustuskeino – jos vaara uhkasi rannalta, koko yhteisö saattoi hinata saarensa kauemmas turvaan. Uru-sana Lupihaques tarkoittaa suunnilleen "auringon poikia". Nykyään saarilla asuu enää muutama sata ihmistä; suurin osa lähes 5 300 hengen uru-väestöstä on muuttanut mantereelle, mutta perinne ja kieli elävät saarilla yhä matkailun ja käsitöiden ansiosta.',
+            'Uru-kansa on asuttanut Titicaca-järveä vuosisatoja ja rakentanut kotinsa suoraan veden päälle: noin 120 itse tehtyä saarta kelluu järven pohjoisosassa Punon edustalla. Perimätiedon mukaan saaret olivat alun perin puolustuskeino – jos vaara uhkasi rannalta, koko yhteisö saattoi hinata saarensa kauemmas turvaan. Uru-sana Lupihaques tarkoittaa suunnilleen ”auringon poikia”. Nykyään saarilla asuu enää muutama sata ihmistä; suurin osa lähes 5 300 hengen uru-väestöstä on muuttanut mantereelle, mutta perinne ja kieli elävät saarilla yhä matkailun ja käsitöiden ansiosta.',
           tiedosto: '00 1635 Reed Islands of Lake Titicaca.jpg',
           lyhyt: 'Kelluvia ruokosaaria Titicaca-järvellä ylhäältä kuvattuna.',
           selite:
@@ -137335,7 +137335,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: '450 000 tonnia kalliota pois',
           teksti:
-            'Veistos syntyi enimmäkseen dynamiitilla: työntekijät poraisivat reikiä kallioon ja räjäyttivät sen niin tarkasti, että viimeistelyyn jäi usein vain muutaman sentin verran kiveä pois hakattavaksi käsin. Tätä porausta ja räjäytystä kutsuttiin "hunajakennotukseksi". Noin 400 työntekijää — moni heistä entinen kaivosmies — roikkui turvavaljaissa köysien varassa satojen metrien korkeudessa 14 vuoden ajan. Vaarallisesta työstä huolimatta veistoksen tekeminen saatiin päätökseen ilman yhtään kuolonuhria.',
+            'Veistos syntyi enimmäkseen dynamiitilla: työntekijät poraisivat reikiä kallioon ja räjäyttivät sen niin tarkasti, että viimeistelyyn jäi usein vain muutaman sentin verran kiveä pois hakattavaksi käsin. Tätä porausta ja räjäytystä kutsuttiin ”hunajakennotukseksi”. Noin 400 työntekijää — moni heistä entinen kaivosmies — roikkui turvavaljaissa köysien varassa satojen metrien korkeudessa 14 vuoden ajan. Vaarallisesta työstä huolimatta veistoksen tekeminen saatiin päätökseen ilman yhtään kuolonuhria.',
           tiedosto: 'Mount Rushmore2.jpg',
           lyhyt: 'Työmiehiä köysissä Washingtonin jättimäisillä kasvoilla rakennustyön aikana.',
           selite:
@@ -137663,7 +137663,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kuusi isoisää kalliossa',
           teksti:
-            'Lakotat kutsuivat Mustia vuoria nimellä Pahá Sápa ja pitivät niitä "kaiken sydämenä" — pyhimpänä paikkana koko heidän maailmassaan. Kallio, josta myöhemmin tuli Mount Rushmore, tunnettiin 1870-luvulta lähtien nimellä Kuusi isoisää, viitaten kuuteen kallionkohoumaan ja pyhän miehen Black Elkin näkyyn. Toinen Mustien vuorten pyhä huippu, nykyinen Black Elk Peak, on koko osavaltion korkein kohta ja edelleen tärkeä paikka lakotojen perinteessä ja tarinankerronnassa.',
+            'Lakotat kutsuivat Mustia vuoria nimellä Pahá Sápa ja pitivät niitä ”kaiken sydämenä” — pyhimpänä paikkana koko heidän maailmassaan. Kallio, josta myöhemmin tuli Mount Rushmore, tunnettiin 1870-luvulta lähtien nimellä Kuusi isoisää, viitaten kuuteen kallionkohoumaan ja pyhän miehen Black Elkin näkyyn. Toinen Mustien vuorten pyhä huippu, nykyinen Black Elk Peak, on koko osavaltion korkein kohta ja edelleen tärkeä paikka lakotojen perinteessä ja tarinankerronnassa.',
           tiedosto: 'Black Elk Peak, the highest point in South Dakota.jpg',
           lyhyt: 'Black Elk Peakin kalliohuiput ja palanutta metsää Mustien vuorten sydämessä.',
           selite:
@@ -137674,7 +137674,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Sopimus joka lupasi vuoret ikuisiksi',
           teksti:
-            'Vuonna 1868 Yhdysvaltain hallitus ja lakotat solmivat Fort Laramien sopimuksen, joka takasi Mustat vuoret lakotoille "ikuisiksi ajoiksi" osana suurta Sioux-intiaanialuetta. Sopimus allekirjoitettiin useiden päivien neuvottelujen jälkeen komennuskunnan telttaleirissä, johon osallistui sekä armeijan edustajia että lakotapäälliköitä. Sopimuksesta tuli myöhemmin yksi Yhdysvaltain historian kiistellyimmistä, kun sen ehtoja ei pidetty voimassa kuin muutaman vuoden.',
+            'Vuonna 1868 Yhdysvaltain hallitus ja lakotat solmivat Fort Laramien sopimuksen, joka takasi Mustat vuoret lakotoille ”ikuisiksi ajoiksi” osana suurta Sioux-intiaanialuetta. Sopimus allekirjoitettiin useiden päivien neuvottelujen jälkeen komennuskunnan telttaleirissä, johon osallistui sekä armeijan edustajia että lakotapäälliköitä. Sopimuksesta tuli myöhemmin yksi Yhdysvaltain historian kiistellyimmistä, kun sen ehtoja ei pidetty voimassa kuin muutaman vuoden.',
           tiedosto: 'Photograph of General William T. Sherman and Commissioners in Council with Indian Chiefs at Fort Laramie, Wyoming, ca. 1 - NARA - 531079.jpg',
           lyhyt: 'Neuvottelu telttaleirissä Fort Laramiessa vuonna 1868.',
           selite:
@@ -137700,7 +137700,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: '"Deadwood in 1876." General view of the Dakota Territory gold rush town from a hillside above. By S. J. Morrow - NARA - 533172.jpg',
           lyhyt: 'Lumisen Deadwoodin kaivoskaupungin pääkatu vuonna 1876.',
           selite:
-            'Vanha valokuva näyttää mäenrinteeltä kuvatun kaivoskaupungin: puurakennuksia lumisen kadun varrella, kylttejä kuten "Tin Shop", ja pieni ihmisjoukko kadulla korkeiden mäntyjen keskellä.',
+            'Vanha valokuva näyttää mäenrinteeltä kuvatun kaivoskaupungin: puurakennuksia lumisen kadun varrella, kylttejä kuten ”Tin Shop”, ja pieni ihmisjoukko kadulla korkeiden mäntyjen keskellä.',
           lahde: 'Kansallisarkisto NARA, Wikimedia Commons (Public domain)',
           wiki: 'Black Hills gold rush',
         },
@@ -137747,7 +137747,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Lunalilo – kansan valitsema kuningas',
           teksti:
-            'Kun Kamehameha V kuoli joulukuussa 1872 nimeämättä seuraajaa, Havaijin perustuslaki määräsi, että lainsäätäjien oli valittava uusi hallitsija sopivien kuninkaallisten joukosta. Ensin äänestivät tavalliset havaijilaiset uudenvuodenpäivänä 1873, ja 8. tammikuuta lainsäätäjät vahvistivat tuloksen: prinssi William Charles Lunalilo voitti ylivoimaisesti vastaehdokkaansa David Kalākauan ja nousi valtaistuimelle Havaijin ensimmäisenä koskaan vaaleilla valittuna kuninkaana. Suosionsa ansiosta hänet tunnettiin nimellä "kansan kuningas", mutta hallituskausi jäi lyhyeksi: Lunalilo kuoli tuberkuloosiin jo helmikuussa 1874, jälleen ilman nimettyä perillistä.',
+            'Kun Kamehameha V kuoli joulukuussa 1872 nimeämättä seuraajaa, Havaijin perustuslaki määräsi, että lainsäätäjien oli valittava uusi hallitsija sopivien kuninkaallisten joukosta. Ensin äänestivät tavalliset havaijilaiset uudenvuodenpäivänä 1873, ja 8. tammikuuta lainsäätäjät vahvistivat tuloksen: prinssi William Charles Lunalilo voitti ylivoimaisesti vastaehdokkaansa David Kalākauan ja nousi valtaistuimelle Havaijin ensimmäisenä koskaan vaaleilla valittuna kuninkaana. Suosionsa ansiosta hänet tunnettiin nimellä ”kansan kuningas”, mutta hallituskausi jäi lyhyeksi: Lunalilo kuoli tuberkuloosiin jo helmikuussa 1874, jälleen ilman nimettyä perillistä.',
           tiedosto:
             'King William Charles Lunalilo by Menzies Dickson, c. 1873, albumen silver print, from the National Portrait Gallery - NPG-NPG 80 321Lunalilo-000001.jpg',
           lyhyt: 'Kuningas Lunalilo valokuvassa vuodelta 1873, valintansa vuonna.',
@@ -137770,7 +137770,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kuningaskunnan kaataminen 1893',
           teksti:
-            'Kuningatar Liliʻuokalani nousi valtaistuimelle 1891 ja pyrki vuonna 1893 uuteen perustuslakiin, joka olisi palauttanut äänioikeuden köyhemmille havaijilaisille ja vahvistanut hallitsijan valtaa. Amerikkalaisten ja eurooppalaisten liikemiesten muodostama "turvallisuuskomitea" vastasi kaappauksella: Yhdysvaltain Havaijin-ministeri kutsui rantautumaan sotalaiva Bostonin merijalkaväen, ja tammikuun 17. päivänä 1893 kuningatar joutui aseiden uhalla luopumaan vallasta. Liliʻuokalani antautui protestoiden toivoen presidentti Grover Clevelandin palauttavan hänet valtaistuimelle, mutta kaappaajat julistivat sen sijaan Havaijin tasavallan Sanford Dolen johdolla.',
+            'Kuningatar Liliʻuokalani nousi valtaistuimelle 1891 ja pyrki vuonna 1893 uuteen perustuslakiin, joka olisi palauttanut äänioikeuden köyhemmille havaijilaisille ja vahvistanut hallitsijan valtaa. Amerikkalaisten ja eurooppalaisten liikemiesten muodostama ”turvallisuuskomitea” vastasi kaappauksella: Yhdysvaltain Havaijin-ministeri kutsui rantautumaan sotalaiva Bostonin merijalkaväen, ja tammikuun 17. päivänä 1893 kuningatar joutui aseiden uhalla luopumaan vallasta. Liliʻuokalani antautui protestoiden toivoen presidentti Grover Clevelandin palauttavan hänet valtaistuimelle, mutta kaappaajat julistivat sen sijaan Havaijin tasavallan Sanford Dolen johdolla.',
           tiedosto: 'Liliuokalani, c. 1891.jpg',
           lyhyt: 'Kuningatar Liliʻuokalani muotokuvassa, allekirjoituksin varustettuna.',
           selite:
@@ -137907,8 +137907,8 @@ export const KULTTUURI_KATEGORIAT = {
                   lyhyt: 'Hawaiian Airlinesin saarten välinen Boeing 717 Hilon lentoasemalla Isolla saarella.',
                   selite: 'Hawaiian Airlinesin Boeing 717 odottaa '
                     + 'matkustajasillan vieressä Hilon lentoasemalla elokuussa '
-                    + '2013. Peräsimessä on yhtiön tunnus Pualani, "taivaan '
-                    + 'kukka"; yhtiö on lentänyt tällä konetyypillä saarten '
+                    + '2013. Peräsimessä on yhtiön tunnus Pualani, ”taivaan '
+                    + 'kukka”; yhtiö on lentänyt tällä konetyypillä saarten '
                     + 'välisiä lentoja vuodesta 2001.',
                   lahde: 'Macpro3000, Wikimedia Commons (CC BY-SA 4.0)',
                 },
@@ -138014,7 +138014,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kurkkuäänteen katkoa. Muutama sana ilahduttaa: mahalo on '
                 + 'kiitos, pau tarkoittaa valmista, ja reittiohjeissa mauka '
                 + 'viittaa vuorille päin ja makai merelle päin. Mantereen '
-                + 'Yhdysvalloista puhutaan Mainlandina, sillä "the States" '
+                + 'Yhdysvalloista puhutaan Mainlandina, sillä ”the States” '
                 + 'kuulostaa paikallisten korvissa siltä kuin Havaiji ei '
                 + 'kuuluisi niihin. Havaijilainen tarkoittaa saarilla '
                 + 'alkuperäiskansan jälkeläistä, ei jokaista asukasta, ja '
@@ -138155,7 +138155,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Mark Twain kraatterin reunalla',
           teksti:
-            'Kesäkuussa 1866 nuori sanomalehtimies Samuel Clemens – myöhemmin tunnettu nimellä Mark Twain – matkusti Kilauealle ja majoittui kraatterin reunalla sijainneeseen Volcano House -majataloon, jota hän kehui siistiksi ja mukavaksi. Hän sattui paikalle juuri, kun tulivuori oli poikkeuksellisen aktiivinen, ja kuvaili myöhemmin näkemäänsä sanoin "helvetin ja sen enkelien näky". Twain kirjoitti matkastaan yhteensä 25 kirjettä Sacramento Union -lehteen, ja kokemukset Havaijilla päätyivät vuosia myöhemmin myös osaksi hänen Roughing It -teostaan. Kirjeet olivat monelle amerikkalaiselle ensimmäinen kosketus saarten tulivuoriin.',
+            'Kesäkuussa 1866 nuori sanomalehtimies Samuel Clemens – myöhemmin tunnettu nimellä Mark Twain – matkusti Kilauealle ja majoittui kraatterin reunalla sijainneeseen Volcano House -majataloon, jota hän kehui siistiksi ja mukavaksi. Hän sattui paikalle juuri, kun tulivuori oli poikkeuksellisen aktiivinen, ja kuvaili myöhemmin näkemäänsä sanoin ”helvetin ja sen enkelien näky”. Twain kirjoitti matkastaan yhteensä 25 kirjettä Sacramento Union -lehteen, ja kokemukset Havaijilla päätyivät vuosia myöhemmin myös osaksi hänen Roughing It -teostaan. Kirjeet olivat monelle amerikkalaiselle ensimmäinen kosketus saarten tulivuoriin.',
           tiedosto: 'Rainbow and eruption of Halema`uma`u vent at Kilauea.jpg',
           lyhyt: 'Kilauean kraatterista nousee valtava höyrypilvi ja sen edessä sateenkaari.',
           selite:
@@ -138187,7 +138187,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Nuori Hollanti',
           teksti:
-            'Neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – oli lähtenyt Amsterdamista huhtikuussa 1595 etsimään suoraa merireittiä mausteiden lähteille. Matka oli täynnä onnettomuuksia, mutta helmikuussa 1597 laivueen komentaja Cornelis de Houtman saapui Balille ja tapasi saaren kuninkaan. Houtman ihastui näkemäänsä niin, että hän kutsui saarta leikillään "Nuoreksi Hollanniksi". Elokuussa 1597 laivue jatkoi matkaa mukanaan pippuria, muskottia ja maceta, mutta ensikosketus oli tehty: se avasi tien hollantilaiselle mausteikaupalle ja lopulta koko Itä-Intian siirtomaavallalle.',
+            'Neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – oli lähtenyt Amsterdamista huhtikuussa 1595 etsimään suoraa merireittiä mausteiden lähteille. Matka oli täynnä onnettomuuksia, mutta helmikuussa 1597 laivueen komentaja Cornelis de Houtman saapui Balille ja tapasi saaren kuninkaan. Houtman ihastui näkemäänsä niin, että hän kutsui saarta leikillään ”Nuoreksi Hollanniksi”. Elokuussa 1597 laivue jatkoi matkaa mukanaan pippuria, muskottia ja maceta, mutta ensikosketus oli tehty: se avasi tien hollantilaiselle mausteikaupalle ja lopulta koko Itä-Intian siirtomaavallalle.',
           tiedosto: 'Fleet of Cornelis de Houtman.jpg',
           lyhyt: 'Cornelis de Houtmanin laivue saapumassa Balille vuonna 1597.',
           selite:
@@ -138254,7 +138254,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Puputan – viimeinen taisto',
           teksti:
-            'Syyskuun 20. päivänä 1906 hollantilaiset joukot etenivät Sanurin rannalta Denpasariin syyttäen Badungin ruhtinasta haaksirikkoisen laivan ryöstämisestä. Badungin raja perheineen, pappeineen ja seuralaisineen käveli palatsistaan valkoisiin, ruumiinpolton väriin pukeutuneina, kris-tikarit ja korut mukanaan, suoraan hollantilaisten kivääreitä kohti. Kun tulitus ei pysäyttänyt heitä, moni käänsi terän itseensä tai toisiinsa – puputan, "viimeinen taisto", jossa kuoli yhden aamun aikana yli tuhat balilaista. Denpasarin puistoon pystytetty patsas muistuttaa yhä tapahtumasta, jota balilaiset pitävät esimerkkinä vastarinnasta vierasta valtaa vastaan.',
+            'Syyskuun 20. päivänä 1906 hollantilaiset joukot etenivät Sanurin rannalta Denpasariin syyttäen Badungin ruhtinasta haaksirikkoisen laivan ryöstämisestä. Badungin raja perheineen, pappeineen ja seuralaisineen käveli palatsistaan valkoisiin, ruumiinpolton väriin pukeutuneina, kris-tikarit ja korut mukanaan, suoraan hollantilaisten kivääreitä kohti. Kun tulitus ei pysäyttänyt heitä, moni käänsi terän itseensä tai toisiinsa – puputan, ”viimeinen taisto”, jossa kuoli yhden aamun aikana yli tuhat balilaista. Denpasarin puistoon pystytetty patsas muistuttaa yhä tapahtumasta, jota balilaiset pitävät esimerkkinä vastarinnasta vierasta valtaa vastaan.',
           selite:
             'Pronssipatsas esittää kolmea kris-tikarein ja keihäin aseistautunutta balilaismiestä hyökkäysasennossa – muistomerkki vuoden 1906 puputanille, jossa satoja Badungin asukkaita kuoli taistellessaan hollantilaisia joukkoja vastaan.',
           wiki: 'Puputan',
@@ -138401,7 +138401,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aurinkolaseja, sandaaleja ja puhelimia ja luopuvat saaliistaan '
                 + 'vasta hedelmää vastaan. Joka ilta auringonlaskun aikaan '
                 + 'temppelin kalliolla esitetään kecak-tanssi. Kymmenet miehet '
-                + 'istuvat piirissä ja toistavat rytmikästä "tšak"-huutoa ilman '
+                + 'istuvat piirissä ja toistavat rytmikästä ”tšak”-huutoa ilman '
                 + 'soittimia, kun keskellä tanssijat esittävät Ramayana-eepoksen '
                 + 'kohtauksia. Esitys muokattiin 1930-luvulla vanhasta '
                 + 'transsirituaalista, ja liput voivat loppua kesken. Rannalla '
@@ -138647,7 +138647,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Yksinäisen linnun nimi',
           teksti:
-            'Māorien tarinan mukaan sankari Māui yritti kerran voittaa kuoleman mutta epäonnistui ja kuoli. Kun muut linnut surivat häntä yhdessä, yksi piopio-niminen lintu lensi suruissaan yksin kauas etelään, aina tälle jyrkkien vuorten ympäröimälle vuonolle asti. Siitä vuono sai māorinkielisen nimensä Piopiotahi, joka tarkoittaa suunnilleen "yksi piopio". Piopio-lintu itse hävisi luonnosta vieraspetojen vuoksi jo 1900-luvun alussa, mutta sen nimi elää yhä vuonon toisena, virallisena nimenä Milford Soundin rinnalla.',
+            'Māorien tarinan mukaan sankari Māui yritti kerran voittaa kuoleman mutta epäonnistui ja kuoli. Kun muut linnut surivat häntä yhdessä, yksi piopio-niminen lintu lensi suruissaan yksin kauas etelään, aina tälle jyrkkien vuorten ympäröimälle vuonolle asti. Siitä vuono sai māorinkielisen nimensä Piopiotahi, joka tarkoittaa suunnilleen ”yksi piopio”. Piopio-lintu itse hävisi luonnosta vieraspetojen vuoksi jo 1900-luvun alussa, mutta sen nimi elää yhä vuonon toisena, virallisena nimenä Milford Soundin rinnalla.',
           tiedosto: 'A moody Milford Sound. NZ (26721630361).jpg',
           lyhyt: 'Synkkä pilvitaivas Milford Soundin ylle sopii vuonon surullisen nimitarinan tunnelmaan.',
           selite:
@@ -138669,7 +138669,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Milford Soundin erakko',
           teksti:
-            'Skotlantilainen merimies Donald Sutherland saapui pienellä avoveneellä Milford Soundiin 3. joulukuuta 1877 - vain muutama vuosi isoisän oman matkan jälkeen - ja päätti jäädä. Hän rakensi rantaan ensin yhden, sitten kolme yksinkertaista mökkiä, joita paikalliset alkoivat leikkisästi kutsua "Milfordin kaupungiksi", vaikka asukkaita oli käytännössä vain hän itse ja koiransa. Yksinäisistä vuosistaan Bowen Fallsin kupeessa Sutherland sai lisänimen Milford Soundin erakko. Myöhemmin hän avioitui ja piti vaimonsa kanssa majataloa kasvavalle turistivirralle aina kuolemaansa lokakuussa 1919 asti - hän ehti asua vuonolla lähes 40 vuotta.',
+            'Skotlantilainen merimies Donald Sutherland saapui pienellä avoveneellä Milford Soundiin 3. joulukuuta 1877 - vain muutama vuosi isoisän oman matkan jälkeen - ja päätti jäädä. Hän rakensi rantaan ensin yhden, sitten kolme yksinkertaista mökkiä, joita paikalliset alkoivat leikkisästi kutsua ”Milfordin kaupungiksi”, vaikka asukkaita oli käytännössä vain hän itse ja koiransa. Yksinäisistä vuosistaan Bowen Fallsin kupeessa Sutherland sai lisänimen Milford Soundin erakko. Myöhemmin hän avioitui ja piti vaimonsa kanssa majataloa kasvavalle turistivirralle aina kuolemaansa lokakuussa 1919 asti - hän ehti asua vuonolla lähes 40 vuotta.',
           tiedosto: '2015-01-07-09337-Milford Sound Sutherland.jpg',
           lyhyt: 'Donald Sutherlandin muistolaatta Milford Soundissa, jonne hän jäi asumaan neljäksi vuosikymmeneksi.',
           selite:
@@ -139056,7 +139056,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Maailman hienoin kävelyretki',
           teksti:
-            'Vuonna 1888 löydetty McKinnonin sola avasi kävelyreitin Te Anaun järveltä Milford Soundiin, ja reitistä muodostui vähitellen Milford Track. Vuonna 1908 runoilija Blanche Baughan patikoi reitin ja lähetti siitä 7 500 sanan pituisen kertomuksen Lontooseen julkaistavaksi. Lehden toimittaja otsikoi jutun "The Finest Walk in the World" eli "maailman hienoin kävelyretki", ja nimitys tarttui reittiin pysyvästi. Uuden-Seelannin matkailuvirasto tarttui heti tilaisuuteen ja käytti lausahdusta maan markkinoinnissa vuosikymmenten ajan. Nykyisin nelipäiväinen, 53 kilometrin vaellus vie kulkijat sademetsän ja McKinnonin solan kautta aina Milford Soundiin asti.',
+            'Vuonna 1888 löydetty McKinnonin sola avasi kävelyreitin Te Anaun järveltä Milford Soundiin, ja reitistä muodostui vähitellen Milford Track. Vuonna 1908 runoilija Blanche Baughan patikoi reitin ja lähetti siitä 7 500 sanan pituisen kertomuksen Lontooseen julkaistavaksi. Lehden toimittaja otsikoi jutun ”The Finest Walk in the World” eli ”maailman hienoin kävelyretki”, ja nimitys tarttui reittiin pysyvästi. Uuden-Seelannin matkailuvirasto tarttui heti tilaisuuteen ja käytti lausahdusta maan markkinoinnissa vuosikymmenten ajan. Nykyisin nelipäiväinen, 53 kilometrin vaellus vie kulkijat sademetsän ja McKinnonin solan kautta aina Milford Soundiin asti.',
           tiedosto: 'Milford Track - panoramio.jpg',
           lyhyt: 'Milford Track kulkee sammaleisen aarniometsän läpi kohti Milford Soundia.',
           selite:
@@ -139077,7 +139077,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Vila Rica – kaupunki joka syntyi kullasta',
           teksti:
-            'Vuosina 1695–1696 löytyi Rio das Velhasin ja Tripuín laaksojen puroista kultaa, ja paikalle nousi nopeasti kaivosleirien rykelmä, joka yhdistettiin vuonna 1711 yhdeksi kunnaksi nimeltä Vila Rica – "Rikas kaupunki". Sana levisi Portugaliin ja koko Brasiliaan, ja onnenonkijoita virtasi vuorille niin paljon, että siirtomaahallinto joutui perustamaan tulliportteja estämään kultaa livahtamasta verottamatta rannikolle. 1700-luvun lopulla Vila Ricasta lähetettiin emämaahan virallisesti yli 800 tonnia kultaa – luku, joka ei sisällä salakuljetusta.',
+            'Vuosina 1695–1696 löytyi Rio das Velhasin ja Tripuín laaksojen puroista kultaa, ja paikalle nousi nopeasti kaivosleirien rykelmä, joka yhdistettiin vuonna 1711 yhdeksi kunnaksi nimeltä Vila Rica – ”Rikas kaupunki”. Sana levisi Portugaliin ja koko Brasiliaan, ja onnenonkijoita virtasi vuorille niin paljon, että siirtomaahallinto joutui perustamaan tulliportteja estämään kultaa livahtamasta verottamatta rannikolle. 1700-luvun lopulla Vila Ricasta lähetettiin emämaahan virallisesti yli 800 tonnia kultaa – luku, joka ei sisällä salakuljetusta.',
           tiedosto: 'Old City View with Wall - Ouro Preto - Minas Gerais - Brazil.jpg',
           lyhyt: 'Näkymä Ouro Preton vanhalle kaupunginosalle kivimuurin takaa.',
           selite:
@@ -139112,7 +139112,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Rikkaampi kuin monta muuta kaupunkia yhteensä',
           teksti:
-            'Kulta teki Vila Ricasta 1700-luvun puolivälissä yhden maailman väkirikkaimmista kaupungeista: asukkaita oli parhaimmillaan arviolta jopa 80 000, kun samaan aikaan São Paulossa asui vain reilut 8 000 henkeä. Rikkaus näkyi kaduilla kohoavina barokkikirkkoina ja kullatuilla alttareilla, joita rakennettiin kilpaa eri ammattikuntien ja veljeskuntien varoin. Vuonna 1823, kun Brasilia oli juuri itsenäistynyt, kaupunki sai virallisesti nykyisen nimensä Ouro Preto eli "musta kulta" – nimitys tulee paikallisesta kullasta, jonka pinnan rautaoksidi tummensi lähes mustaksi.',
+            'Kulta teki Vila Ricasta 1700-luvun puolivälissä yhden maailman väkirikkaimmista kaupungeista: asukkaita oli parhaimmillaan arviolta jopa 80 000, kun samaan aikaan São Paulossa asui vain reilut 8 000 henkeä. Rikkaus näkyi kaduilla kohoavina barokkikirkkoina ja kullatuilla alttareilla, joita rakennettiin kilpaa eri ammattikuntien ja veljeskuntien varoin. Vuonna 1823, kun Brasilia oli juuri itsenäistynyt, kaupunki sai virallisesti nykyisen nimensä Ouro Preto eli ”musta kulta” – nimitys tulee paikallisesta kullasta, jonka pinnan rautaoksidi tummensi lähes mustaksi.',
           tiedosto: 'Conjunto arquitetônico e urbanístico de Ouro Preto.JPG',
           lyhyt: 'Ilmakuva Ouro Preton kattojen ja barokkikirkkojen merestä vuorten keskellä.',
           selite:
@@ -139123,7 +139123,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Aleijadinho piirsi kirkon jota kukaan ei ollut nähnyt',
           teksti:
-            'Antônio Francisco Lisboa, tunnetumpi lisänimellä Aleijadinho ("pikku raajarikko"), oli portugalilaisen rakennusmestarin ja orjuutetun äidin poika, joka vapautettiin kasteessa syntyessään Vila Ricassa. Vuodesta 1777 alkaen etenevä sairaus vei häneltä vähitellen sormet ja liikkumiskyvyn, mutta hän jatkoi työtään avustajien kantamana ja työkalut käsiinsä sidottuina. Vuonna 1766 hän suunnitteli Pyhän Franciscuksen kirkon Vila Ricaan: sen pyöreät kellotornit ja katon pyöreä aukko olivat ennennäkemättömiä Brasilian kirkkoarkkitehtuurissa. Sisustuksen kultaukset ja veistokset valmistuivat vasta vuosikymmeniä hänen kuolemansa jälkeen 1800-luvun lopulla.',
+            'Antônio Francisco Lisboa, tunnetumpi lisänimellä Aleijadinho (”pikku raajarikko”), oli portugalilaisen rakennusmestarin ja orjuutetun äidin poika, joka vapautettiin kasteessa syntyessään Vila Ricassa. Vuodesta 1777 alkaen etenevä sairaus vei häneltä vähitellen sormet ja liikkumiskyvyn, mutta hän jatkoi työtään avustajien kantamana ja työkalut käsiinsä sidottuina. Vuonna 1766 hän suunnitteli Pyhän Franciscuksen kirkon Vila Ricaan: sen pyöreät kellotornit ja katon pyöreä aukko olivat ennennäkemättömiä Brasilian kirkkoarkkitehtuurissa. Sisustuksen kultaukset ja veistokset valmistuivat vasta vuosikymmeniä hänen kuolemansa jälkeen 1800-luvun lopulla.',
           tiedosto: 'Igreja de São Francisco de Assis (Ouro Preto, MG) por Rodrigo Tetsuo Argenton.jpg',
           lyhyt: 'Aleijadinhon suunnittelema Pyhän Franciscuksen kirkko Ouro Pretossa.',
           selite:
@@ -139134,7 +139134,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kivikadut jotka rakennuskielto pelasti',
           teksti:
-            'Presidentti Getúlio Vargas julisti Ouro Preton heinäkuussa 1933 kansallismuistomerkiksi – ensimmäisenä kaupunkina koko Brasiliassa. Päätös suojeli kaupungin jyrkkiä mukulakivikatuja ja siirtomaa-ajan taloja purkamiselta ja "modernisoinnilta" juuri kun monet muut Brasilian kaupungit revittiin uusiksi. Vuonna 1980 Unesco lisäsi Ouro Preton maailmanperintöluetteloon ensimmäisenä brasilialaisena kohteena. Nykyään kaduilla kulkiessa näkyy sama kaupunkikuva, jonka isoisäkin näki 1873: talot nojaavat toisiinsa jyrkillä rinteillä, ja jokainen mutka paljastaa uuden kirkontornin.',
+            'Presidentti Getúlio Vargas julisti Ouro Preton heinäkuussa 1933 kansallismuistomerkiksi – ensimmäisenä kaupunkina koko Brasiliassa. Päätös suojeli kaupungin jyrkkiä mukulakivikatuja ja siirtomaa-ajan taloja purkamiselta ja ”modernisoinnilta” juuri kun monet muut Brasilian kaupungit revittiin uusiksi. Vuonna 1980 Unesco lisäsi Ouro Preton maailmanperintöluetteloon ensimmäisenä brasilialaisena kohteena. Nykyään kaduilla kulkiessa näkyy sama kaupunkikuva, jonka isoisäkin näki 1873: talot nojaavat toisiinsa jyrkillä rinteillä, ja jokainen mutka paljastaa uuden kirkontornin.',
           tiedosto: 'Vertiginous Streets in Ouro Preto - Minas Gerais - Brazil.jpg',
           lyhyt: 'Jyrkkä mukulakivikatu laskee Ouro Preton siirtomaa-ajan talojen välistä.',
           selite:
@@ -139145,7 +139145,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Casa dos Contos – kullan kirjanpitäjä',
           teksti:
-            'Rikas veronvuokraaja João Rodrigues de Macedo rakennutti komean kaupunkitalonsa vuosina 1782–1784; vuonna 1803 se arvioitiin captaincyn kalleimmaksi taloksi. Vuodesta 1792 rakennus toimi Minas Geraisin siirtomaahallinnon tili- ja verotoimistona, josta juontuu sen nimi Casa dos Contos, "tilien talo". Talo muistuttaa siitä, että Vila Rica – vuodesta 1823 Ouro Preto – oli Minas Geraisin pääkaupunki jo vuodesta 1720 aina vuoteen 1897 saakka: isoisän matkavuonna 1873 se oli yhä keisari Pedro II:n valtakunnan provinssihallinnon keskus, jonne kullan verot virtasivat vuoristokylistä.',
+            'Rikas veronvuokraaja João Rodrigues de Macedo rakennutti komean kaupunkitalonsa vuosina 1782–1784; vuonna 1803 se arvioitiin captaincyn kalleimmaksi taloksi. Vuodesta 1792 rakennus toimi Minas Geraisin siirtomaahallinnon tili- ja verotoimistona, josta juontuu sen nimi Casa dos Contos, ”tilien talo”. Talo muistuttaa siitä, että Vila Rica – vuodesta 1823 Ouro Preto – oli Minas Geraisin pääkaupunki jo vuodesta 1720 aina vuoteen 1897 saakka: isoisän matkavuonna 1873 se oli yhä keisari Pedro II:n valtakunnan provinssihallinnon keskus, jonne kullan verot virtasivat vuoristokylistä.',
           tiedosto: 'Fachada do Museu Casa dos Contos em Ouro Preto - MG.jpg',
           lyhyt: 'Casa dos Contosin kivibalkoni ja sen yllä liehuva Brasilian lippu.',
           selite:
@@ -139156,7 +139156,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Itacolomi – vuori joka näytti tien',
           teksti:
-            'Ouro Pretoa reunustavista vuorista erottuu Itacolomin 1 772 metrin korkuinen kalliohuippu, jonka tunnisti jo vuonna 1698 kultaa etsinyt bandeirante Antônio Dias de Oliveira: huippu näkyi kauas ja johdatti hänet Tripuín laaksoon, josta Vila Rica sai alkunsa. Matkustajat kutsuivat sitä myöhemmin "bandeirantejen majakaksi", koska sen erottamattoman muodon tunnisti joka suunnasta kuninkaantielle. Taidemaalari Aurélio de Figueiredo maalasi vuonna 1894 näkymän vuorelle – vain parikymmentä vuotta isoisän matkan jälkeen, kun maisema oli yhä lähes koskematon.',
+            'Ouro Pretoa reunustavista vuorista erottuu Itacolomin 1 772 metrin korkuinen kalliohuippu, jonka tunnisti jo vuonna 1698 kultaa etsinyt bandeirante Antônio Dias de Oliveira: huippu näkyi kauas ja johdatti hänet Tripuín laaksoon, josta Vila Rica sai alkunsa. Matkustajat kutsuivat sitä myöhemmin ”bandeirantejen majakaksi”, koska sen erottamattoman muodon tunnisti joka suunnasta kuninkaantielle. Taidemaalari Aurélio de Figueiredo maalasi vuonna 1894 näkymän vuorelle – vain parikymmentä vuotta isoisän matkan jälkeen, kun maisema oli yhä lähes koskematon.',
           tiedosto: 'Aurélio de Figueiredo - Pico do Itacolomi, Ouro Preto.jpg',
           lyhyt: 'Aurélio de Figueiredon vuonna 1894 maalaama näkymä Itacolomin vuorelle.',
           selite:
@@ -139443,7 +139443,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kultaveron uhka joka suututti eliitin',
           teksti:
-            'Portugalin kruunu vaati viidenneksen, "quinton", kaikesta löydetystä kullasta, ja kun kaivokset alkoivat 1780-luvulla ehtyä, siirtomaahallinto uhkasi periä puuttuvan osuuden pakkoverolla nimeltä derrama. Uhka raivostutti Minas Geraisin varakasta eliittiä, joka oli jo kyllästynyt Portugalin kireään talouspolitiikkaan ja verotukseen. Vuosina 1788–1789 joukko lakimiehiä, upseereita ja runoilijoita alkoi salaa suunnitella provinssin itsenäistämistä Portugalista Yhdysvaltain vapaussodan innoittamana; Vila Rica, kaupungeista rikkain ja koulutetuin, oli suunnitelman luonnollinen keskus.',
+            'Portugalin kruunu vaati viidenneksen, ”quinton”, kaikesta löydetystä kullasta, ja kun kaivokset alkoivat 1780-luvulla ehtyä, siirtomaahallinto uhkasi periä puuttuvan osuuden pakkoverolla nimeltä derrama. Uhka raivostutti Minas Geraisin varakasta eliittiä, joka oli jo kyllästynyt Portugalin kireään talouspolitiikkaan ja verotukseen. Vuosina 1788–1789 joukko lakimiehiä, upseereita ja runoilijoita alkoi salaa suunnitella provinssin itsenäistämistä Portugalista Yhdysvaltain vapaussodan innoittamana; Vila Rica, kaupungeista rikkain ja koulutetuin, oli suunnitelman luonnollinen keskus.',
           tiedosto: 'Praça Tiradentes - Ouro Preto - MG.jpg',
           lyhyt: 'Praça Tiradentes hämärässä, taustalla Museu da Inconfidência.',
           selite:
@@ -139454,7 +139454,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Runoilijat, upseeri ja hampaanvetäjä',
           teksti:
-            'Salaliittolaisten joukossa oli everstiluutnantti Francisco de Paula Freire de Andrade, runoilijat Cláudio Manuel da Costa ja Tomás Antônio Gonzaga, lakimies Alvarenga Peixoto sekä kemian opiskelija José Álvares Maciel – lähes kaikki koulutettua yläluokkaa. Ainoa poikkeus oli Joaquim José da Silva Xavier, everstin apulaisupseeri eli alferes, joka veti sivutyönään hampaita ja sai siksi liikanimen Tiradentes, "hampaanvetäjä". Kun salaliitto paljastui, runoilija Cláudio Manuel da Costa löytyi kuolleena selliltään Vila Rican vankilasta jo vuonna 1789, ennen tuomiota – kuolinsyy jäi kiistanalaiseksi vielä vuosisadaksi.',
+            'Salaliittolaisten joukossa oli everstiluutnantti Francisco de Paula Freire de Andrade, runoilijat Cláudio Manuel da Costa ja Tomás Antônio Gonzaga, lakimies Alvarenga Peixoto sekä kemian opiskelija José Álvares Maciel – lähes kaikki koulutettua yläluokkaa. Ainoa poikkeus oli Joaquim José da Silva Xavier, everstin apulaisupseeri eli alferes, joka veti sivutyönään hampaita ja sai siksi liikanimen Tiradentes, ”hampaanvetäjä”. Kun salaliitto paljastui, runoilija Cláudio Manuel da Costa löytyi kuolleena selliltään Vila Rican vankilasta jo vuonna 1789, ennen tuomiota – kuolinsyy jäi kiistanalaiseksi vielä vuosisadaksi.',
           tiedosto: 'Casa de Camara e Cadeia de Ouro Preto black and white.jpg',
           lyhyt: 'Entinen kaupungintalo ja vankila, jossa salaliittolaisia pidettiin vangittuina.',
           selite:
@@ -139815,7 +139815,7 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Luonto',
       johdanto: 'Erakoitunut sijainti kaukana mantereesta on tehnyt Galápagossaarista evoluution näyttämön: täällä elää lajeja, jotka eivät ole sopeutuneet vastaavalla tavalla missään muualla maailmassa.',
       tehtava: {
-        kysymys: 'Mistä saariston nimi "Galápagos" juontuu?',
+        kysymys: 'Mistä saariston nimi ”Galápagos” juontuu?',
         vaihtoehdot: [
           'Ensimmäisen löytäjän sukunimestä',
           'Espanjan sanasta, jolla purjehtijat nimesivät saarten jättiläiskilpikonnat',
@@ -139846,7 +139846,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Darwinin peipposet',
-          teksti: 'Peipposia elää saaristossa kaikkiaan noin 18 lajia, ja jokaisen nokan muoto paljastaa, mitä se syö: paksu nokka murskaa kovia siemeniä, kapea ja terävä nokka nappaa hyönteisiä, ja pitkä, koveroitunut nokka pääsee käsiksi kaktuksen sisään kätkeytyvään mehuun ja siitepölyyn. Nimen "Darwinin peipposet" teki tunnetuksi vasta brittiläinen tutkija David Lack vuonna 1947 ilmestyneessä kirjassaan, joka perustui vuosien 1905–1906 tutkimusmatkalla kerättyihin näytteisiin. Peipposista tuli oppikirjaesimerkki siitä, miten yksi ainoa mantereelta saapunut kantalaji voi haarautua moneksi lajiksi, kun jokainen sopeutuu oman saarensa ruokavalikoimaan.',
+          teksti: 'Peipposia elää saaristossa kaikkiaan noin 18 lajia, ja jokaisen nokan muoto paljastaa, mitä se syö: paksu nokka murskaa kovia siemeniä, kapea ja terävä nokka nappaa hyönteisiä, ja pitkä, koveroitunut nokka pääsee käsiksi kaktuksen sisään kätkeytyvään mehuun ja siitepölyyn. Nimen ”Darwinin peipposet” teki tunnetuksi vasta brittiläinen tutkija David Lack vuonna 1947 ilmestyneessä kirjassaan, joka perustui vuosien 1905–1906 tutkimusmatkalla kerättyihin näytteisiin. Peipposista tuli oppikirjaesimerkki siitä, miten yksi ainoa mantereelta saapunut kantalaji voi haarautua moneksi lajiksi, kun jokainen sopeutuu oman saarensa ruokavalikoimaan.',
           tiedosto: 'Medium ground finch on Floreana Island in the Galápagos Islands.jpg',
           lyhyt: 'Keskikokoinen maapeippo Floreanan saarelta.',
           selite: 'Uroksen tukeva, kartiomainen nokka on tyypillinen siemensyöjälajille — yksi lähes kahdestakymmenestä peipposlajista, jotka eroavat toisistaan juuri nokan muodon perusteella.',
@@ -140121,7 +140121,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Väärän vuoren nimi?',
           teksti:
-            'Nimi Machu Picchu tarkoittaa ketšuaksi suunnilleen "vanha huippu", ja se erottaa kaupungin vieressään kohoavasta terävästä Huayna Picchusta, "nuoresta huipusta". Osa tutkijoista epäilee kuitenkin, että alkuperäinen inkanimi koko kaupungille saattoi todellisuudessa olla Huayna Picchu – nimen "Machu Picchu" popularisoivat vasta Hiram Binghamin 1910-luvun julkaisut. Jos epäily pitää paikkansa, koko kaupunki on tunnettu vuosikymmenet naapurivuoren nimellä ilman että kukaan on virallisesti korjannut asiaa – pieni muistutus siitä, kuinka hataralla pohjalla moni "tunnettu" nimi lepää.',
+            'Nimi Machu Picchu tarkoittaa ketšuaksi suunnilleen ”vanha huippu”, ja se erottaa kaupungin vieressään kohoavasta terävästä Huayna Picchusta, ”nuoresta huipusta”. Osa tutkijoista epäilee kuitenkin, että alkuperäinen inkanimi koko kaupungille saattoi todellisuudessa olla Huayna Picchu – nimen ”Machu Picchu” popularisoivat vasta Hiram Binghamin 1910-luvun julkaisut. Jos epäily pitää paikkansa, koko kaupunki on tunnettu vuosikymmenet naapurivuoren nimellä ilman että kukaan on virallisesti korjannut asiaa – pieni muistutus siitä, kuinka hataralla pohjalla moni ”tunnettu” nimi lepää.',
           tiedosto: '99 - Machu Picchu - Juin 2009.jpg',
           lyhyt: 'Panoraama Huayna Picchun huipulta Urubamban laaksoon.',
           selite:
@@ -140412,7 +140412,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Aurinkoon sidottu kivi',
           teksti:
-            'Pyhän aukion yläpuolisella terassilla seisoo Intihuatana, luonnonkalliosta veistetty pylväskivi, jonka nimi tarkoittaa suunnilleen "paikka, johon aurinko sidotaan". Talvipäivänseisauksena kivi osoittaa suoraan aurinkoon, ja se liittyy laajempaan pyhien vuorten ja taivaankappaleiden linjaukseen – nykytutkijat kuitenkin epäilevät vanhaa käsitystä, jonka mukaan kivi olisi toiminut tarkkana aurinkokellona. Kivi selvisi ehjänä espanjalaisvalloituksesta, jolloin monet vastaavat pyhät kivet tuhottiin muualla Perussa, mutta vuonna 2000 mainoskuvausryhmän nostokurki putosi sen päälle ja lohkaisi siitä kulman irti. Nykyään kiveä ympäröi suoja-aitaus.',
+            'Pyhän aukion yläpuolisella terassilla seisoo Intihuatana, luonnonkalliosta veistetty pylväskivi, jonka nimi tarkoittaa suunnilleen ”paikka, johon aurinko sidotaan”. Talvipäivänseisauksena kivi osoittaa suoraan aurinkoon, ja se liittyy laajempaan pyhien vuorten ja taivaankappaleiden linjaukseen – nykytutkijat kuitenkin epäilevät vanhaa käsitystä, jonka mukaan kivi olisi toiminut tarkkana aurinkokellona. Kivi selvisi ehjänä espanjalaisvalloituksesta, jolloin monet vastaavat pyhät kivet tuhottiin muualla Perussa, mutta vuonna 2000 mainoskuvausryhmän nostokurki putosi sen päälle ja lohkaisi siitä kulman irti. Nykyään kiveä ympäröi suoja-aitaus.',
           tiedosto:
             'Lascar The Intihuatana stone, damaged by JWT when filming and ad campaign here (4548727214).jpg',
           lyhyt: 'Intihuatana-kivi köysiaidan takana, matkailijoita ympärillä.',
@@ -140536,9 +140536,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Antananarivo Four Roads c1905.jpg',
           vuosi: 'noin 1905',
-          lyhyt: 'Postikortti Antananarivon "Neljän tien" risteyksestä '
+          lyhyt: 'Postikortti Antananarivon ”Neljän tien” risteyksestä '
             + 'noin 1905.',
-          selite: 'Vanha postikortti Antananarivon "Neljän tien" '
+          selite: 'Vanha postikortti Antananarivon ”Neljän tien” '
             + 'risteyksestä ja teatterista noin vuodelta 1905 — '
             + 'Tananarive oli kaupungin silloinen ranskalainen nimi.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
@@ -140547,7 +140547,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Highlands, Madagascar (22741639463).jpg',
           vuosi: '2015',
           lyhyt: 'Madagaskarin ylängön punertavat kukkulat, raudan väri '
-            + 'antaa lempinimen "punainen saari".',
+            + 'antaa lempinimen ”punainen saari”.',
           selite: 'Madagaskarin ylängön punertavia kukkuloita ja kyliä. '
             + 'Maan väri tulee raudasta, ja se antaa saarelle '
             + 'lempinimen punainen saari.',
@@ -141006,7 +141006,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Belgrad',
-      johdanto: 'Belgrad on Savan ja Tonavan kulmauksessa kohoavan kalliorinteen "valkoinen kaupunki". Isoisän matkavuonna 1873 se oli Serbian ruhtinaskunnan pääkaupunki, jonka vanha ottomaaniasu oli väistymässä Wienin mallisten katujen tieltä.',
+      johdanto: 'Belgrad on Savan ja Tonavan kulmauksessa kohoavan kalliorinteen ”valkoinen kaupunki”. Isoisän matkavuonna 1873 se oli Serbian ruhtinaskunnan pääkaupunki, jonka vanha ottomaaniasu oli väistymässä Wienin mallisten katujen tieltä.',
       kansikuvat: [
         {
           tiedosto: 'Confluence of the Danube and Sava rivers - Belgrade Fortress (13808328374).jpg',
@@ -145004,7 +145004,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Erebuni, valloituksen linnoitus',
-          teksti: 'Erebunin linnoituksen perusti 782 eaa. Urartun kuningas Argishti I Arin Berd -kukkulalle, joka kohoaa Araratin tasangon reunalla. Perustamiskirjoitus löytyi kukkulalta 1950-luvun alussa Konstantin Hovhannisjanin johtamassa kaivausretkikunnassa, ja siinä Argishti kertoo rakentaneensa linnoituksen jumala Khaldin suuruuden nimissä ja nimenneensä sen Erebuniksi. Kaivauksissa paljastuivat kuninkaan palatsi, pylväillä varustettu kokoushalli, Khaldin temppeli ja lukuisia huoneita. Jerevanin nimen uskotaan juontuvan Erebunista: urartun verbi erebu-ni tarkoittaa lähteen mukaan \'ottaa, vallata\'.',
+          teksti: 'Erebunin linnoituksen perusti 782 eaa. Urartun kuningas Argishti I Arin Berd -kukkulalle, joka kohoaa Araratin tasangon reunalla. Perustamiskirjoitus löytyi kukkulalta 1950-luvun alussa Konstantin Hovhannisjanin johtamassa kaivausretkikunnassa, ja siinä Argishti kertoo rakentaneensa linnoituksen jumala Khaldin suuruuden nimissä ja nimenneensä sen Erebuniksi. Kaivauksissa paljastuivat kuninkaan palatsi, pylväillä varustettu kokoushalli, Khaldin temppeli ja lukuisia huoneita. Jerevanin nimen uskotaan juontuvan Erebunista: urartun verbi erebu-ni tarkoittaa lähteen mukaan ’ottaa, vallata’.',
           tiedosto: 'Erebuni Fortress, Arin Berd 01.jpg',
           lyhyt: 'Erebunin linnoitus Arin Berd -kukkulalla, jonka Urartun kuningas Argishti I perusti 782 eaa.',
           selite: 'Erebunin linnoitusta ei koskaan hylätty kokonaan, vaan asutus jatkui ja kasvoi Jerevaniksi. Erebunin museo perustettiin Jerevanin 2 750-vuotisjuhlan aikoihin 1968.',
@@ -145163,7 +145163,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Käsikirjoitusten arkisto',
-          teksti: 'Sana matenadaran yhdistää sanat \'kirja\' ja \'säilytyspaikka\', ja keskiaikaisessa Armeniassa se tarkoitti kirjastoa, koska kaikki kirjat olivat käsin kirjoitettuja. Nykyinen laitos perustettiin 1959 Etchmiadzinin kokoelman pohjalle, ja se nimettiin Mesrop Mashtotsin mukaan 1960-luvun alussa. Edeltäjänä oli Etchmiadzinin käsikirjoituskokoelma, joka kasvoi 1800-luvulta alkaen tuhansiin käsikirjoituksiin. Lähteen mukaan kokoelmassa on kymmeniä tuhansia käsikirjoituksia ja käärettä katkelmineen. Kokoelma on merkitty UNESCOn Muisti maailmasta -rekisteriin.',
+          teksti: 'Sana matenadaran yhdistää sanat ’kirja’ ja ’säilytyspaikka’, ja keskiaikaisessa Armeniassa se tarkoitti kirjastoa, koska kaikki kirjat olivat käsin kirjoitettuja. Nykyinen laitos perustettiin 1959 Etchmiadzinin kokoelman pohjalle, ja se nimettiin Mesrop Mashtotsin mukaan 1960-luvun alussa. Edeltäjänä oli Etchmiadzinin käsikirjoituskokoelma, joka kasvoi 1800-luvulta alkaen tuhansiin käsikirjoituksiin. Lähteen mukaan kokoelmassa on kymmeniä tuhansia käsikirjoituksia ja käärettä katkelmineen. Kokoelma on merkitty UNESCOn Muisti maailmasta -rekisteriin.',
           tiedosto: 'Yerevan, Matenadaran, Entrance, Armenia.jpg',
           lyhyt: 'Matenadaranin sisäänkäynti ja Mesrop Mashtotsin sekä hänen oppilaansa Koryunin patsas.',
           selite: 'Rakennuksen edessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä keskiaikaisten oppineiden patsaat.',

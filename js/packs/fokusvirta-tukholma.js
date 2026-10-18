@@ -596,7 +596,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + 'lyötyine paalurivineen. Ja tässä on se kohta, joka isoisääsi '
         + 'kiinnostaisi. Taulu, joka Storkyrkanissa riippuu, on öljymaalaus '
         + 'puupaneelille, 163 senttiä leveä ja 110 korkea, ja siihen on '
-        + 'kirjoitettu kaksi vuosilukua: 1535 ja "renovoitu 1636". Vuonna '
+        + 'kirjoitettu kaksi vuosilukua: 1535 ja ”renovoitu 1636”. Vuonna '
         + '1999 taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun '
         + 'työksi: renovointi olikin kopiointi, jonka teki Jacob Heinrich '
         + 'Elbfas. Alkuperäinen on kadonnut, eikä kukaan tiedä minne. '

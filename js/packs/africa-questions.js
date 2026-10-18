@@ -313,7 +313,7 @@ export const AFRICA_QUESTIONS = {
       options: ['valkoinen', 'punainen', 'indigonsininen', 'vihreä'],
       correct: 2,
       level: 3,
-      fact: 'Indigolla värjätty huntu antoi tuaregeille lisänimen "siniset miehet".',
+      fact: 'Indigolla värjätty huntu antoi tuaregeille lisänimen ”siniset miehet”.',
       hint: 'Sama väri kuin farkkukankaassa.',
     },
     {
@@ -882,7 +882,7 @@ export const AFRICA_QUESTIONS = {
       q: 'Mikä litteähuippuinen vuori kohoaa Kapkaupungin yllä?',
       options: ['Pöytävuori', 'Kilimandžaro', 'Draakonivuoret', 'Kenia-vuori'],
       correct: 0,
-      fact: 'Pöytävuoren tasainen huippu peittyy usein "pöytäliinapilveen".',
+      fact: 'Pöytävuoren tasainen huippu peittyy usein ”pöytäliinapilveen”.',
       hint: 'Huippu on tasainen kuin huonekalu.',
     },
     {
@@ -1214,8 +1214,8 @@ export const AFRICA_QUESTIONS = {
       q: 'Kenet Henry Morton Stanley tapasi Tanganjikan rannalla Ujijissa?',
       options: ['David Livingstonen', 'Mungo Parkin', 'Richard Burtonin', 'Cecil Rhodesin'],
       correct: 0,
-      fact: 'Tapaamiseen liitetään lause "Doctor Livingstone, I presume?".',
-      hint: 'Kuuluisa lause alkaa sanalla "Doctor".',
+      fact: 'Tapaamiseen liitetään lause ”Doctor Livingstone, I presume?”.',
+      hint: 'Kuuluisa lause alkaa sanalla ”Doctor”.',
     },
     {
       q: 'Millainen Tanganjikajärvi on muodoltaan?',
@@ -1244,11 +1244,11 @@ export const AFRICA_QUESTIONS = {
       hint: 'Maa itsenäistyi vuonna 2011.',
     },
     {
-      q: 'Mitä arabian sana "bahr" tarkoittaa?',
+      q: 'Mitä arabian sana ”bahr” tarkoittaa?',
       options: ['vuorta', 'jokea tai merta', 'aavikkoa', 'kaupunkia'],
       correct: 1,
       level: 3,
-      fact: 'Nimi tarkoittaa suunnilleen "gasellien jokea".',
+      fact: 'Nimi tarkoittaa suunnilleen ”gasellien jokea”.',
       hint: 'Sana esiintyy monien vesistöjen nimissä.',
     },
     {
@@ -1299,8 +1299,8 @@ export const AFRICA_QUESTIONS = {
       options: ['furien maa', 'kultainen laakso', 'suuri aavikko', 'idän portti'],
       correct: 0,
       level: 3,
-      fact: 'Arabian "dar" tarkoittaa kotia tai maata, fur on alueen kansa.',
-      hint: '"Dar" tarkoittaa kotia tai maata.',
+      fact: 'Arabian ”dar” tarkoittaa kotia tai maata, fur on alueen kansa.',
+      hint: '”Dar” tarkoittaa kotia tai maata.',
     },
     {
       q: 'Mikä on Sudanin pääkaupunki?',
@@ -1586,7 +1586,7 @@ export const AFRICA_QUESTIONS = {
       options: ['Hannibal', 'Julius Caesar', 'Aleksanteri Suuri', 'Leonidas'],
       correct: 0,
       fact: 'Hannibal vei armeijansa ja norsunsa Alppien yli hyökätäkseen Roomaan toisessa puunilaissodassa — temppu, jota pidettiin mahdottomana.',
-      hint: 'Hänen nimensä elää varoituksessa "… ad portas" — hän on porteilla.',
+      hint: 'Hänen nimensä elää varoituksessa ”… ad portas” — hän on porteilla.',
     },
     {
       q: 'Millä nimellä Rooman ja Karthagon sodat tunnetaan?',
@@ -1677,10 +1677,10 @@ export const AFRICA_QUESTIONS = {
       hint: 'Aavikon laidalla arvokkainta ei ole kulta.',
     },
     {
-      q: 'Mitä sana "tšad" tarkoittaa kanurin kielellä?',
+      q: 'Mitä sana ”tšad” tarkoittaa kanurin kielellä?',
       options: ['suurta vesialuetta', 'aurinkoa', 'hiekkaa', 'kamelia'],
       correct: 0,
-      fact: 'Järven nimi tulee kanurin kielen sanasta, joka tarkoittaa suurta vesialuetta — järvi on siis "Järvi-järvi".',
+      fact: 'Järven nimi tulee kanurin kielen sanasta, joka tarkoittaa suurta vesialuetta — järvi on siis ”Järvi-järvi”.',
       hint: 'Nimi kuvaa sitä mitä silmä näkee.',
     },
   ],
@@ -1698,14 +1698,14 @@ export const AFRICA_QUESTIONS = {
       q: 'Mitä paikallinen nimi Mosi-oa-Tunya tarkoittaa?',
       options: ['jylisevää savua', 'suurta vettä', 'sateenkaarta', 'kuninkaan jokea'],
       correct: 0,
-      fact: 'Putousten vesisumu nousee niin korkealle, että se näkyy kilometrien päähän kuin savupatsas — siitä nimi "jylisevä savu".',
+      fact: 'Putousten vesisumu nousee niin korkealle, että se näkyy kilometrien päähän kuin savupatsas — siitä nimi ”jylisevä savu”.',
       hint: 'Nimi kuvaa sitä, mikä näkyy kauas ja kuuluu kauemmas.',
     },
     {
       q: 'Kuka tutkimusmatkailija antoi putouksille eurooppalaisen nimensä?',
       options: ['David Livingstone', 'Henry Stanley', 'John Speke', 'Mungo Park'],
       correct: 0,
-      fact: 'David Livingstone näki putoukset ensimmäisenä eurooppalaisena 16.11.1855 ja nimesi ne kuningattarensa mukaan. Paikallinen nimi Mosi-oa-Tunya, "jylisevä savu", on yhä käytössä sen rinnalla.',
+      fact: 'David Livingstone näki putoukset ensimmäisenä eurooppalaisena 16.11.1855 ja nimesi ne kuningattarensa mukaan. Paikallinen nimi Mosi-oa-Tunya, ”jylisevä savu”, on yhä käytössä sen rinnalla.',
       hint: 'Sama mies, jonka Stanley löysi Tanganjikajärveltä.',
     },
     {
@@ -1757,7 +1757,7 @@ export const AFRICA_QUESTIONS = {
       hint: 'Suunnilleen sama korkeus kuin Ahaggarin vuorten rinteillä.',
     },
     {
-      q: 'Mitä kieltä sana "safari" on alkujaan?',
+      q: 'Mitä kieltä sana ”safari” on alkujaan?',
       options: ['swahilia', 'zulua', 'ranskaa', 'portugalia'],
       correct: 0,
       fact: 'Swahilin safari tarkoittaa matkaa. Sana lainautui maailman kieliin juuri Itä-Afrikan retkikuntien mukana.',
@@ -1843,7 +1843,7 @@ export const AFRICA_QUESTIONS = {
       hint: 'Maan pääkaupunki on Addis Abeba.',
     },
     {
-      q: 'Mistä kielestä sana "safari" on peräisin?',
+      q: 'Mistä kielestä sana ”safari” on peräisin?',
       options: ['swahilista', 'zulusta', 'arabiasta suoraan', 'afrikaansista'],
       correct: 0,
       fact: 'Swahilin safari tarkoittaa matkaa; sana juontuu arabian sanasta safar.',
@@ -1863,7 +1863,7 @@ export const AFRICA_QUESTIONS = {
       hint: 'Rakennelma ei ole kiveä eikä terästä, ja se kasvaa itse.',
     },
     {
-      q: 'Mikä vesiputous Sambesi-joella tunnetaan nimellä "Jyrisevä savu"?',
+      q: 'Mikä vesiputous Sambesi-joella tunnetaan nimellä ”Jyrisevä savu”?',
       options: ['Victorian putoukset', 'Niagara', 'Angelin putous', 'Tugelan putous'],
       correct: 0,
       fact: 'Paikallinen nimi Mosi-oa-Tunya tarkoittaa jyrisevää savua.',
@@ -2106,7 +2106,7 @@ export const AFRICA_FACTS = {
   murzuk: [
     'Ei puuta, ei tolppaa, ei varjoa. Murzukin hiekkameri on yksi Saharan laajimmista dyynialueista, ja kaupunki sen laidalla oli aikoinaan koko Fezzanin pääkaupunki: keskellä tyhjyyttä, koska tyhjyyden halki kulki tie.',
     {
-      text: '"Kirahveja", sanoi kuljettaja ja pyyhkäisi hiekkaa kallion pinnalta. Fezzanin kallioihin on hakattu kirahveja, norsuja ja krokotiileja tuhansia vuosia sitten, silloin kun täällä oli ruohoa ja vettä. Aavikko on nuorempi kuin sen omat kuvat.',
+      text: '”Kirahveja”, sanoi kuljettaja ja pyyhkäisi hiekkaa kallion pinnalta. Fezzanin kallioihin on hakattu kirahveja, norsuja ja krokotiileja tuhansia vuosia sitten, silloin kun täällä oli ruohoa ja vettä. Aavikko on nuorempi kuin sen omat kuvat.',
       wiki: 'Tadrart Acacus',
     },
     {
@@ -2181,7 +2181,7 @@ export const AFRICA_FACTS = {
   sierraleone: [
     'Lentokone laskeutuu Lungiin, mutta kaupunki on lahden toisella puolella, joten viimeinen etappi ostetaan lipputiskiltä ja tehdään vesibussilla. Kannelta näkyy se, mistä maa sai nimensä: vuoret nousevat suoraan merestä, ja portugalilaiset merenkulkijat kirjasivat ne noin 1462 leijonavuoriksi.',
     {
-      text: '"Tuossa se oli", sanoi mies ja osoitti tyhjää kohtaa aukion keskellä. Siinä kasvoi kapokkipuu, jonka alle kokoontuivat vuonna 1792 orjuudesta vapautetut ihmiset, jotka perustivat Freetownin. Puu kaatui myrskyssä toukokuussa 2023, ja aukiolla seistään yhä samassa kohdassa.',
+      text: '”Tuossa se oli”, sanoi mies ja osoitti tyhjää kohtaa aukion keskellä. Siinä kasvoi kapokkipuu, jonka alle kokoontuivat vuonna 1792 orjuudesta vapautetut ihmiset, jotka perustivat Freetownin. Puu kaatui myrskyssä toukokuussa 2023, ja aukiolla seistään yhä samassa kohdassa.',
       wiki: 'Cotton Tree (Sierra Leone)',
     },
     {
@@ -2202,7 +2202,7 @@ export const AFRICA_FACTS = {
   ],
   kumasi: [
     {
-      text: '"Seuraa kenkiä, niin löydät ulos", sanoi myyjä, kun myönsin eksyneeni. Kejetian toria sanotaan Länsi-Afrikan suurimmaksi yhtenäiseksi toriksi: yli kahdeksantuhatta myyntipaikkaa, tavarat riveissä lajeittain. Kengät loppuivat, tomaatit alkoivat, ja ovi oli siinä.',
+      text: '”Seuraa kenkiä, niin löydät ulos”, sanoi myyjä, kun myönsin eksyneeni. Kejetian toria sanotaan Länsi-Afrikan suurimmaksi yhtenäiseksi toriksi: yli kahdeksantuhatta myyntipaikkaa, tavarat riveissä lajeittain. Kengät loppuivat, tomaatit alkoivat, ja ovi oli siinä.',
       wiki: 'Kejetia Market',
     },
     'Manhyian palatsimuseossa on esillä kultaista hovitavaraa, jonka brittijoukot veivät Kumasista vuonna 1874. Kaksi lontoolaista museota palautti niistä 32 esinettä vuonna 2024 — kolmen vuoden lainaksi, jatko-optiolla. Isoisän maa siis lainaa takaisin sen, minkä otti.',
@@ -2235,7 +2235,7 @@ export const AFRICA_FACTS = {
   ],
   kamerun: [
     'Kamerunvuori nousee suoraan merenrannasta yli neljään kilometriin, ja alkuvuodesta sinne juostaan. Race of Hope on 38 kilometrin nousu huipulle ja takaisin alas; nopeimmat miehet tekevät sen alle viidessä tunnissa. Minä hengästyin ensimmäisellä tunnilla enkä ollut vielä metsärajallakaan.',
-    '"Neljäkymmentäkaksi", sanoi vieressäni istunut mies bussissa, kun kysyin mitä Kamerunista pitää tietää. Roger Milla teki maalin MM-kisoissa 42-vuotiaana vuonna 1994, eikä kukaan ole vieläkään tehnyt sitä vanhempana. Muuta mies ei sanonut koko matkalla, eikä tarvinnutkaan.',
+    '”Neljäkymmentäkaksi”, sanoi vieressäni istunut mies bussissa, kun kysyin mitä Kamerunista pitää tietää. Roger Milla teki maalin MM-kisoissa 42-vuotiaana vuonna 1994, eikä kukaan ole vieläkään tehnyt sitä vanhempana. Muuta mies ei sanonut koko matkalla, eikä tarvinnutkaan.',
     {
       text: 'Tulivuori nousee suoraan merestä, ja sen rinteillä sataa enemmän kuin missään muualla, missä olen seisonut. Sateenvarjoni kesti kaksi minuuttia. Vuori on ollut tässä kauemmin.',
       voice: 'isoisa',
@@ -2245,7 +2245,7 @@ export const AFRICA_FACTS = {
     'Kinshasan ja Brazzavillen välissä joki on niin leveä, että kahden pääkaupungin väliä kuljetaan lautalla. Lähempänä toisiaan ei kahta pääkaupunkia maailmasta löydy.',
     'Sademetsä ei ole hiljainen hetkeäkään: se sirisee, kopisee ja huutaa kerroksittain, ja sateen kuulee tulevan minuutteja ennen kuin ensimmäinen pisara osuu.',
     {
-      text: 'Joen suulle pääsee laivalla, ylemmäs ei: koskia on niin paljon, että vesi kuuluu ennen kuin näkyy. Kartassani on tässä kohdassa tyhjä alue ja sana "tuntematon" — tuntematon meille, ei niille jotka siellä asuvat.',
+      text: 'Joen suulle pääsee laivalla, ylemmäs ei: koskia on niin paljon, että vesi kuuluu ennen kuin näkyy. Kartassani on tässä kohdassa tyhjä alue ja sana ”tuntematon” — tuntematon meille, ei niille jotka siellä asuvat.',
       wiki: 'Livingstone Falls',
       voice: 'isoisa',
     },
@@ -2327,11 +2327,11 @@ export const AFRICA_FACTS = {
   kilimandzaro: [
     'Huipulle ei tarvita köysiä eikä hakkuja, vain viikko aikaa ja hidas askel: reitti nousee sademetsästä nummen ja kivierämaan läpi jäätikölle. Opas sanoi tärkeimmän sanan heti portilla: pole pole — hitaasti, hitaasti.',
     {
-      text: 'Isoisän "ikuinen lumi" on kutistunut murto-osaan sadassa vuodessa, ja jäätiköiden arvioidaan katoavan lähivuosikymmeninä. Ikuisuus vaihtoi aikataulua.',
+      text: 'Isoisän ”ikuinen lumi” on kutistunut murto-osaan sadassa vuodessa, ja jäätiköiden arvioidaan katoavan lähivuosikymmeninä. Ikuisuus vaihtoi aikataulua.',
       wiki: 'Furtwängler Glacier',
     },
     {
-      text: 'Kirjoitin Lontooseen, että päiväntasaajan tuntumassa on vuori, jonka huipulla on lunta ympäri vuoden. Vastaus tuli neljän kuukauden päästä: "Ei liene mahdollista." Lumi ei tiettävästi ole lukenut kirjettä.',
+      text: 'Kirjoitin Lontooseen, että päiväntasaajan tuntumassa on vuori, jonka huipulla on lunta ympäri vuoden. Vastaus tuli neljän kuukauden päästä: ”Ei liene mahdollista.” Lumi ei tiettävästi ole lukenut kirjettä.',
       voice: 'isoisa',
     },
   ],
@@ -2367,7 +2367,7 @@ export const AFRICA_FACTS = {
       wiki: 'Kenkänokka',
     },
     {
-      text: 'Joki hajoaa ruohikkoon niin laajalti, ettei uomaa löydä. Veneemme jäi kiinni kolme kertaa päivässä, ja paikalliset kalastajat kulkivat ohitsemme vaivatta. Karttani sanoi tässä olevan "joki".',
+      text: 'Joki hajoaa ruohikkoon niin laajalti, ettei uomaa löydä. Veneemme jäi kiinni kolme kertaa päivässä, ja paikalliset kalastajat kulkivat ohitsemme vaivatta. Karttani sanoi tässä olevan ”joki”.',
       voice: 'isoisa',
     },
   ],

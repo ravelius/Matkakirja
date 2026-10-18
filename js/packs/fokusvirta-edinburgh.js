@@ -562,8 +562,8 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'nousta sen portaat, sillä torni oli seissyt jo lähes '
         + 'kolmekymmentä vuotta hänen tullessaan. Muistomerkkikilpailu '
         + 'järjestettiin Walter Scottin kuoltua 1832, ja sen voitti '
-        + 'ehdotus, jonka lähettäjä oli allekirjoittanut nimellä "John '
-        + 'Morvo" — Melrosen luostarin keskiaikaisen rakentajan mukaan. '
+        + 'ehdotus, jonka lähettäjä oli allekirjoittanut nimellä ”John '
+        + 'Morvo” — Melrosen luostarin keskiaikaisen rakentajan mukaan. '
         + 'Nimimerkin takana oli 45-vuotias George Meikle Kemp, '
         + 'puuseppä ja piirtäjä ilman arkkitehdin koulutusta, joka '
         + 'pelkäsi että hänen nimensä hylättäisiin heti kuoreen '
@@ -609,7 +609,7 @@ export const FOKUSVIRTA_EDINBURGH = {
         ],
         oikea: 1,
         fakta: 'George Meikle Kemp oli 45-vuotias puuseppä ja piirtäjä, '
-          + 'joka lähetti työnsä nimimerkillä "John Morvo". Torni '
+          + 'joka lähetti työnsä nimimerkillä ”John Morvo”. Torni '
           + 'valmistui syksyllä 1844, mutta hän ei nähnyt sitä: hän oli '
           + 'hukkunut Unionin kanavaan saman vuoden maaliskuussa.',
       },

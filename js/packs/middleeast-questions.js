@@ -91,7 +91,7 @@ export const MIDDLEEAST_QUESTIONS = {
 
   kapadokia: [
     {
-      q: 'Mistä Kappadokian kivitornit eli "keijupiiput" ovat syntyneet?',
+      q: 'Mistä Kappadokian kivitornit eli ”keijupiiput” ovat syntyneet?',
       options: ['tulivuoren tuhkasta', 'jäätikön jäästä', 'meren simpukoista', 'muurahaiskeoista'],
       correct: 0,
       fact: 'Pehmeä tuffikivi syntyi tulivuortenpurkausten tuhkasta, ja tuuli ja vesi muovasivat siitä torneja.',

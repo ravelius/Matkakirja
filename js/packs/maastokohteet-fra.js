@@ -1182,7 +1182,7 @@ export const MAASTOKOHTEET_FRA = [
       + 'päin ja työntää edessään olevaa mäntymetsää tieltään. Vielä '
       + '1700-luvun kartoissa Pilat-niminen paikka merkittiin nykyistä '
       + 'etelämmäksi ja osin merelle — nykyinen sijainti tunnettiin '
-      + '1930-luvulle asti nimellä Les Sabloneys, "uudet hiekat".',
+      + '1930-luvulle asti nimellä Les Sabloneys, ”uudet hiekat”.',
     lahde: 'en-Wikipedia "Dune of Pilat", johdanto-osa ja osiot "Formation and '
       + 'movement" ja "Etymology" (tarkistettu 23.9.2026).',
     visa: {

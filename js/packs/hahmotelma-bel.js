@@ -693,7 +693,7 @@ export const HAHMOTELMA_BEL = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-kortrijk-88e1fd6d.jpg',
       lyhyt: 'Kultaisten kannusten taistelun Groeninge-muistomerkki Kortrijkissa: kullattu naishahmo kohottaa keihästä.',
-      selite: 'Muistomerkin jalustassa lukee "Kortrijk, Slag der Gulden Sporen". Kullattu hahmo seisoo leijonan vieressä puiston keskellä.',
+      selite: 'Muistomerkin jalustassa lukee ”Kortrijk, Slag der Gulden Sporen”. Kullattu hahmo seisoo leijonan vieressä puiston keskellä.',
       lahde: 'Valokuva: Flamenc, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Flamenc',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kortrijk-Groeningemonument.jpg',

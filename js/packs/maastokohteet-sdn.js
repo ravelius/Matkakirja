@@ -153,8 +153,8 @@ export const MAASTOKOHTEET_SDN = [
       + 'mukaan paikka valittiin, koska se oli kesäsateiden reunalla ja seudulla oli rautamalmia '
       + 'ja kovaa puuta raudan valmistukseen. Kaupungin ympärillä on yli kaksisataa pyramidia '
       + 'kolmessa ryhmässä, ja sen vauraus perustui rautaan — Archibald Sayce kutsui paikkaa '
-      + '"Afrikan Birminghamiksi", mikä on nykytutkimuksessa kiistanalainen luonnehdinta. '
-      + 'Herodotos kirjoitti 400-luvulla eaa. Meroësta "suurena kaupunkina". Vuonna 1834 '
+      + '”Afrikan Birminghamiksi”, mikä on nykytutkimuksessa kiistanalainen luonnehdinta. '
+      + 'Herodotos kirjoitti 400-luvulla eaa. Meroësta ”suurena kaupunkina”. Vuonna 1834 '
       + 'italialainen Giuseppe Ferlini teki paikalla kaivauksia, joiden korut ovat nyt Berliinin '
       + 'ja Münchenin museoissa. Unescon maailmanperintökohde 2011.',
     lahde: 'en-Wikipedia "Meroë", johdanto-osa sekä osiot "History", "Civilization", '
@@ -268,7 +268,7 @@ export const MAASTOKOHTEET_SDN = [
       + 'Amenhotep III:n temppeli, ja Ekhnatonin noustua valtaan se vihittiin uudelleen Atonille. '
       + 'Pylvässalin pylväissä on luettelo kansoista, joita egyptiläiset sanoivat voittaneensa: '
       + 'jokaisen kohdalla on kädet sidottu vanki ja kilpi, johon on kirjoitettu paikan nimi. '
-      + 'Yhdessä nimessä lukee tꜣ šꜣsw Yhwꜣ eli "Yhwꜣ:n paimentolaisten maa", ja tutkijat '
+      + 'Yhdessä nimessä lukee tꜣ šꜣsw Yhwꜣ eli ”Yhwꜣ:n paimentolaisten maa”, ja tutkijat '
       + 'kiistelevät siitä, liittyykö nimi Israelin jumalan nimeen vai onko todistusaineisto '
       + 'liian ohut. Paikalla on myös laaja hautausmaa, jonka pienet hautakappelit on koristeltu '
       + 'pyramideilla.',

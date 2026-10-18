@@ -191,7 +191,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Occitanie": {
       lyhyt: "Toulousessa kootaan jättiläismäisiä Airbus-matkustajakoneita – tehtaan vierestä näkee yhden nousevan taivaalle.",
-      pitka: "Toulousen vaaleanpunaiset tiilitalot antoivat kaupungille lempinimen ville rose, ja pohjoisessa alkaa Ranskan vanha kanavaverkosto, Canal du Midi, joka yhdisti Atlantin ja Välimeren jo 1600-luvulla. Etelässä keskiaikainen Carcassonnen linnoituskaupunki kantaa nimensä vanhasta legendasta: piiritetty Dame Carcas soitti tarun mukaan voitonkelloja antautumisen sijaan, ja ilmauksen 'Carcas sonne' – Carcas soittaa kelloa – kerrotaan jääneen elämään kaupungin nimessä. Nykyään Carcassonnen kaksinkertaiset muurit ja 52 tornia näkyvät kauas Aude-joen laaksoon, ja illalla valaistu linnoitus näyttää suoraan satukirjasta pudonneelta. Pyreneiden rinteillä ja Välimeren rannalla eletään yhä leppoisaa eteläistä elämänmenoa, jossa oksitaanin kieli kuuluu yhä toreilla ranskan rinnalla.",
+      pitka: "Toulousen vaaleanpunaiset tiilitalot antoivat kaupungille lempinimen ville rose, ja pohjoisessa alkaa Ranskan vanha kanavaverkosto, Canal du Midi, joka yhdisti Atlantin ja Välimeren jo 1600-luvulla. Etelässä keskiaikainen Carcassonnen linnoituskaupunki kantaa nimensä vanhasta legendasta: piiritetty Dame Carcas soitti tarun mukaan voitonkelloja antautumisen sijaan, ja ilmauksen ’Carcas sonne’ – Carcas soittaa kelloa – kerrotaan jääneen elämään kaupungin nimessä. Nykyään Carcassonnen kaksinkertaiset muurit ja 52 tornia näkyvät kauas Aude-joen laaksoon, ja illalla valaistu linnoitus näyttää suoraan satukirjasta pudonneelta. Pyreneiden rinteillä ja Välimeren rannalla eletään yhä leppoisaa eteläistä elämänmenoa, jossa oksitaanin kieli kuuluu yhä toreilla ranskan rinnalla.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/fra-maakunta2-occitanie-v-111175bc.jpg',
@@ -433,7 +433,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   DEU: {
     "Sachsen": {
       lyhyt: "Leipzig sykkii nyt musiikista ja startupeista, ja kevään kirjamessut täyttävät kadut lukijoista!",
-      pitka: "Dresden kylpee Elben rannalla barokkihuviloiden keskellä, ja kaupunkia kutsuttiin sen upean arkkitehtuurin ansiosta jo 1800-luvulla \"Elbin Firenzeksi\". Vuonna 1873 Sachsen oli yhä oma kuningaskuntansa uuden Saksan keisarikunnan sisällä, ja kuningas Johann hallitsi juuri tästä kaupungista. Toisen maailmansodan pommitukset polttivat Frauenkirchen kirkon raunioiksi vuonna 1945, ja mustuneet kivet lojuivat kasassa lähes viisikymmentä vuotta ennen kuin kirkko rakennettiin uudelleen samoista kivistä 2005. Tumman ja vaalean kiven kuvio seinässä näkyy yhä matkailijoille todisteena siitä, mikä selvisi ja mikä rakennettiin uudestaan.",
+      pitka: "Dresden kylpee Elben rannalla barokkihuviloiden keskellä, ja kaupunkia kutsuttiin sen upean arkkitehtuurin ansiosta jo 1800-luvulla ”Elbin Firenzeksi”. Vuonna 1873 Sachsen oli yhä oma kuningaskuntansa uuden Saksan keisarikunnan sisällä, ja kuningas Johann hallitsi juuri tästä kaupungista. Toisen maailmansodan pommitukset polttivat Frauenkirchen kirkon raunioiksi vuonna 1945, ja mustuneet kivet lojuivat kasassa lähes viisikymmentä vuotta ennen kuin kirkko rakennettiin uudelleen samoista kivistä 2005. Tumman ja vaalean kiven kuvio seinässä näkyy yhä matkailijoille todisteena siitä, mikä selvisi ja mikä rakennettiin uudestaan.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-sachsen-924f99ca.jpg',
@@ -1035,7 +1035,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Emilia-Romagna": {
       lyhyt: "Parman kinkku ja Modenan balsamico kypsyvät täällä edelleen, mutta Maranellon tehtaalta lähtee nykyään myös Ferrari.",
-      pitka: "Bolognan yliopisto on maailman vanhin: opetusta on annettu keskeytyksettä vuodesta 1088, ja kaupunkia kutsutaan yhä 'oppineeksi Bolognaksi' punaisen ja lihavan rinnalla. Via Emilian varrella Maranellon lisäksi myös Sant'Agata Bolognesen Lamborghini-tehdas ja Modenan Pagani-verstas tekevät kaistaleesta koko maailman tiiviimmän moottoriurheilun keskittymän – paikalliset kutsuvat sitä yksinkertaisesti Motor Valleyksi. Ruoka ja moottorit eivät ole sattumaa vaan saman tarkkuuden kahta puolta: sama pikkutarkkuus, jolla parmesaania kypsytetään vuosia, näkyy myös koneenosien viimeistelyssä. Emilia-Romagnalaiset ovat ylpeitä sekä pöydästään että konepajoistaan, eivätkä pidä kumpaakaan toistaan tärkeämpänä.",
+      pitka: "Bolognan yliopisto on maailman vanhin: opetusta on annettu keskeytyksettä vuodesta 1088, ja kaupunkia kutsutaan yhä ’oppineeksi Bolognaksi’ punaisen ja lihavan rinnalla. Via Emilian varrella Maranellon lisäksi myös Sant'Agata Bolognesen Lamborghini-tehdas ja Modenan Pagani-verstas tekevät kaistaleesta koko maailman tiiviimmän moottoriurheilun keskittymän – paikalliset kutsuvat sitä yksinkertaisesti Motor Valleyksi. Ruoka ja moottorit eivät ole sattumaa vaan saman tarkkuuden kahta puolta: sama pikkutarkkuus, jolla parmesaania kypsytetään vuosia, näkyy myös koneenosien viimeistelyssä. Emilia-Romagnalaiset ovat ylpeitä sekä pöydästään että konepajoistaan, eivätkä pidä kumpaakaan toistaan tärkeämpänä.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-emilia-romagna-9bb992c7.jpg',
@@ -1275,7 +1275,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Abruzzo": {
       lyhyt: "Abruzzon kansallispuisto suojelee nykyään Euroopan harvinaisinta karhua, Marsican ruskeakarhua, sukupuutolta.",
-      pitka: "Abruzzon maisema vaihtuu nopeasti: Gran Sasson 2912-metriset huiput kohoavat sisämaassa, ja rannikolla on sekä hiekka- että kivikkorantoja Adrianmerta vasten. Alueen tunnuslause 'forte e gentile', vahva ja lempeä, kuvaa hyvin keskiaikaisissa kukkulakylissä eläviä ihmisiä. Noin kolmannes Abruzzon pinta-alasta on suojeltua luontoa, ja Apenniinien rinteillä elää vielä muutama kymmenen marsikankarhua, alalajia jota ei tavata missään muualla maailmassa. Karhujen ja kylien rinnakkaiselo näkyy arjessa yhä: paimenet ja karhut ovat jakaneet samat vuoristopolut sukupolvien ajan.",
+      pitka: "Abruzzon maisema vaihtuu nopeasti: Gran Sasson 2912-metriset huiput kohoavat sisämaassa, ja rannikolla on sekä hiekka- että kivikkorantoja Adrianmerta vasten. Alueen tunnuslause ’forte e gentile’, vahva ja lempeä, kuvaa hyvin keskiaikaisissa kukkulakylissä eläviä ihmisiä. Noin kolmannes Abruzzon pinta-alasta on suojeltua luontoa, ja Apenniinien rinteillä elää vielä muutama kymmenen marsikankarhua, alalajia jota ei tavata missään muualla maailmassa. Karhujen ja kylien rinnakkaiselo näkyy arjessa yhä: paimenet ja karhut ovat jakaneet samat vuoristopolut sukupolvien ajan.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-abruzzo-2fa822e5.jpg',
@@ -1454,7 +1454,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       },
     },
     "Molise": {
-      lyhyt: "Toiseksi pienin maakunta tyhjenee hitaasti nuorista, mutta se on ylpeä 'Molisea ei ole olemassa' -vitsistään.",
+      lyhyt: "Toiseksi pienin maakunta tyhjenee hitaasti nuorista, mutta se on ylpeä ’Molisea ei ole olemassa’ -vitsistään.",
       pitka: "Molise on vuoristoista seutua, jossa 55 prosenttia maasta on vuorten peitossa ja rannikkoa on vain reilut 30 kilometriä. Agnonen kaupungissa jouluaattona kuljetettava tulisoihtukulkue, 'Ndocciata, juontaa esikristillisiin perinteisiin, ja seudulla asuu yhä pieni kroaatteja puhuva vähemmistö, jonka juuret ovat 1400-luvun pakolaisissa Balkanilta. Samassa Agnonessa toimii Marinellin kellovalimo, joka on valanut kirkonkelloja jo yli tuhat vuotta ja jolle paavi on myöntänyt oikeuden käyttää Vatikaanin vaakunaa. Paimentolaisuus – lampaiden vuotuinen siirto vuorilta rannikon laitumille ja takaisin – oli pitkään köyhien vuoristokylien tärkein elinkeino, ja samoja polkuja käytetään monin paikoin yhä nykyään.",
       kuva: [
         {
@@ -1517,7 +1517,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ESP: {
     "Castilla y León": {
       lyhyt: "Salamancan satoja vuosia vanha yliopisto opettaa Kastilja ja Leónissa samoissa keskiaikaisissa kivisaleissa.",
-      pitka: "Kastilja ja León tunnetaan 'linnojen maana' – Ávilan täydellisesti säilyneet keskiaikaiset muurit kiertävät koko vanhankaupungin, ja Segoviassa roomalaisten rakentama vesijohtosilta kantaa yhä vettä ilman tippaakaan laastia liitoksissaan. Alueen laaja ylätasanko on myös viinimaata: Duero-joen varren Ribera del Duero -viinitilat tuottavat joitain Espanjan arvostetuimmista punaviineistä korkealla, viileällä ylängöllä. Kylät ovat harvassa ja etäisyydet pitkiä, mutta juuri se hiljaisuus on tehnyt alueesta suosikin niille, jotka etsivät Espanjasta jotain muuta kuin rantalomaa.",
+      pitka: "Kastilja ja León tunnetaan ’linnojen maana’ – Ávilan täydellisesti säilyneet keskiaikaiset muurit kiertävät koko vanhankaupungin, ja Segoviassa roomalaisten rakentama vesijohtosilta kantaa yhä vettä ilman tippaakaan laastia liitoksissaan. Alueen laaja ylätasanko on myös viinimaata: Duero-joen varren Ribera del Duero -viinitilat tuottavat joitain Espanjan arvostetuimmista punaviineistä korkealla, viileällä ylängöllä. Kylät ovat harvassa ja etäisyydet pitkiä, mutta juuri se hiljaisuus on tehnyt alueesta suosikin niille, jotka etsivät Espanjasta jotain muuta kuin rantalomaa.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-castilla-y-leon-edf4e8e1.jpg',
@@ -1547,7 +1547,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Andalucía": {
       lyhyt: "Andalusia on maailman suurin oliiviöljyn tuotantoalue – oliivipuiden rivit jatkuvat horisonttiin asti.",
-      pitka: "Andalusian sydämessä kohoaa Granadan Alhambra, maurien rakentama linna- ja puutarhakokonaisuus, jonka kaiverretut seinät ja viileät sisäpihat vetävät puoleensa miljoonia kävijöitä vuosittain. Alueen kaupungit – Sevilla, Córdoba, Cádiz – kantavat yhä näkyvissä kerroksia maurien, juutalaisten ja kristittyjen yhteisestä historiasta. Isoisän matkavuonna 1873 Espanja oli lyhyeksi aikaa tasavalta, ja juuri Andalusiassa se horjui pahiten: Cádiz julistautui heinäkuussa omaksi 'kantonikseen' ja vaati täyttä itsehallintoa Madridin keskushallinnolta. Kapina levisi useisiin muihinkin andalusialaisiin kaupunkeihin ennen kuin hallitus sai järjestyksen palautettua.",
+      pitka: "Andalusian sydämessä kohoaa Granadan Alhambra, maurien rakentama linna- ja puutarhakokonaisuus, jonka kaiverretut seinät ja viileät sisäpihat vetävät puoleensa miljoonia kävijöitä vuosittain. Alueen kaupungit – Sevilla, Córdoba, Cádiz – kantavat yhä näkyvissä kerroksia maurien, juutalaisten ja kristittyjen yhteisestä historiasta. Isoisän matkavuonna 1873 Espanja oli lyhyeksi aikaa tasavalta, ja juuri Andalusiassa se horjui pahiten: Cádiz julistautui heinäkuussa omaksi ’kantonikseen’ ja vaati täyttä itsehallintoa Madridin keskushallinnolta. Kapina levisi useisiin muihinkin andalusialaisiin kaupunkeihin ennen kuin hallitus sai järjestyksen palautettua.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-and-c2-5e3504cf.jpg',
@@ -1577,7 +1577,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Castilla-La Mancha": {
       lyhyt: "Consuegran kylässä pyörivät yhä oikeat tuulimyllyt, jotka tekivät La Manchan tasangosta maailmankuulun.",
-      pitka: "Toledo, alueen entinen pääkaupunki, tunnetaan 'kolmen kulttuurin kaupunkina', sillä sen kapeilla kujilla seisovat yhä rinnakkain kristittyjen, juutalaisten ja muslimien rakentamat rakennukset satojen vuosien takaa. La Manchan aavat pellot eivät kasvata vain tuulimyllyjen näkymää, vaan myös maailman arvostetuinta safrania ja lampaanmaidosta tehtyä Manchego-juustoa, jolla on suojattu alkuperänimitys. Kesät ovat täällä polttavan kuumia ja talvet yllättävän kylmiä – juuri se äärimmäinen mannerilmasto tekee sekä viineistä että juustosta niin voimakkaita.",
+      pitka: "Toledo, alueen entinen pääkaupunki, tunnetaan ’kolmen kulttuurin kaupunkina’, sillä sen kapeilla kujilla seisovat yhä rinnakkain kristittyjen, juutalaisten ja muslimien rakentamat rakennukset satojen vuosien takaa. La Manchan aavat pellot eivät kasvata vain tuulimyllyjen näkymää, vaan myös maailman arvostetuinta safrania ja lampaanmaidosta tehtyä Manchego-juustoa, jolla on suojattu alkuperänimitys. Kesät ovat täällä polttavan kuumia ja talvet yllättävän kylmiä – juuri se äärimmäinen mannerilmasto tekee sekä viineistä että juustosta niin voimakkaita.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-castilla-la-mancha-a53e8977.jpg',
@@ -1697,7 +1697,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Galicia": {
       lyhyt: "Santiago de Compostelaan saapuu satoja tuhansia pyhiinvaeltajia vuosittain pitkin Camino de Santiago -reittiä.",
-      pitka: "Galician rannikkoa pilkkovat syvät ría-lahdet, joissa kasvatetaan simpukoita ja saadaan mustekalaa niin runsaasti, että ne ovat alueen ruokakulttuurin ydin. 1800-luvun jälkipuoliskolla köyhyys ajoi valtavia joukkoja galicialaisia siirtolaisiksi meren taakse, erityisesti Kuubaan ja Argentiinaan; niin moni päätyi Buenos Airesiin, että argentiinalaiset kutsuvat yhä tänäkin päivänä kaikkia espanjalaisia yleisnimellä 'gallegos'. Mantereen luoteisin niemi, Fisterra, tunnettiin roomalaisille maailman läntisimpänä reunana – nimikin tarkoittaa 'maan loppua', vaikka rannikko jatkuu sen ohi vielä pitkälti pohjoiseen.",
+      pitka: "Galician rannikkoa pilkkovat syvät ría-lahdet, joissa kasvatetaan simpukoita ja saadaan mustekalaa niin runsaasti, että ne ovat alueen ruokakulttuurin ydin. 1800-luvun jälkipuoliskolla köyhyys ajoi valtavia joukkoja galicialaisia siirtolaisiksi meren taakse, erityisesti Kuubaan ja Argentiinaan; niin moni päätyi Buenos Airesiin, että argentiinalaiset kutsuvat yhä tänäkin päivänä kaikkia espanjalaisia yleisnimellä ’gallegos’. Mantereen luoteisin niemi, Fisterra, tunnettiin roomalaisille maailman läntisimpänä reunana – nimikin tarkoittaa ’maan loppua’, vaikka rannikko jatkuu sen ohi vielä pitkälti pohjoiseen.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-galicia-387335eb.jpg',
@@ -1787,7 +1787,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Murcia": {
       lyhyt: "Murciaa kutsutaan Euroopan vihanneskaapiksi, sillä sen aurinkoiset pellot tuottavat hedelmiä ja vihanneksia ympäri mannerta.",
-      pitka: "Murcian rannikolla makaa Mar Menor, Euroopan suurin rannikkolaguuni, jonka lämmin ja suolainen vesi houkuttelee sekä lomailijoita että flamingoja. Alueen kaivoskaupunki Cartagena kaivoi vuosisatojen ajan hopeaa, lyijyä ja sinkkiä, ja raskas työ synnytti oman musiikkilajinsa, cante de las minas -kaivoslaulun. Vuonna 1873 juuri Cartagena nousi koko Espanjan tasavallan vastarinnan symboliksi: kaupunki julistautui omaksi itsenäiseksi 'kantonikseen' ja kesti hallituksen joukkojen piirityksen puoli vuotta, kunnes antautui vasta tammikuussa 1874 – pisimpään kestänyt kapinapesäke koko maassa.",
+      pitka: "Murcian rannikolla makaa Mar Menor, Euroopan suurin rannikkolaguuni, jonka lämmin ja suolainen vesi houkuttelee sekä lomailijoita että flamingoja. Alueen kaivoskaupunki Cartagena kaivoi vuosisatojen ajan hopeaa, lyijyä ja sinkkiä, ja raskas työ synnytti oman musiikkilajinsa, cante de las minas -kaivoslaulun. Vuonna 1873 juuri Cartagena nousi koko Espanjan tasavallan vastarinnan symboliksi: kaupunki julistautui omaksi itsenäiseksi ’kantonikseen’ ja kesti hallituksen joukkojen piirityksen puoli vuotta, kunnes antautui vasta tammikuussa 1874 – pisimpään kestänyt kapinapesäke koko maassa.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-mur-b2-5e9b4948.jpg',
@@ -1817,7 +1817,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Foral de Navarra": {
       lyhyt: "Pamplonassa juostaan heinäkuussa sonnien edellä San Fermín -juhlan aikana, joka tunnetaan ympäri maailman.",
-      pitka: "Navarra kätkee sisäänsä kaksi täysin erilaista maisemaa: pohjoisessa vihreät Pyreneiden rinteet ja etelässä Bardenas Realesin kuiva, tuulen kuluttama aavikko, jonka savikukkulat muistuttavat kuunpintaa. Nykyisin aluetta kuvataan usein ilmasta käsin – Bardenasin autiomaa toimi kuvauspaikkana muun muassa Game of Thrones -sarjassa. Vuonna 1873 Navarra oli aivan toisenlaisessa myrskyssä: kun Espanja julistautui tasavallaksi, kuningasmieliset karlistit nostivat kapinan ja tekivät Estellasta saman vuoden elokuussa oman \"pääkaupunkinsa\" – sota riehui juuri näillä main vuosia. Nykyään rauha on palannut, ja maaseudun kylät elävät viinistä, lampaanjuustosta ja vaelluksista Pyreneiden poluilla.",
+      pitka: "Navarra kätkee sisäänsä kaksi täysin erilaista maisemaa: pohjoisessa vihreät Pyreneiden rinteet ja etelässä Bardenas Realesin kuiva, tuulen kuluttama aavikko, jonka savikukkulat muistuttavat kuunpintaa. Nykyisin aluetta kuvataan usein ilmasta käsin – Bardenasin autiomaa toimi kuvauspaikkana muun muassa Game of Thrones -sarjassa. Vuonna 1873 Navarra oli aivan toisenlaisessa myrskyssä: kun Espanja julistautui tasavallaksi, kuningasmieliset karlistit nostivat kapinan ja tekivät Estellasta saman vuoden elokuussa oman ”pääkaupunkinsa” – sota riehui juuri näillä main vuosia. Nykyään rauha on palannut, ja maaseudun kylät elävät viinistä, lampaanjuustosta ja vaelluksista Pyreneiden poluilla.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-navarra-6008db2e.jpg',
@@ -1847,7 +1847,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Madrid": {
       lyhyt: "Madrid on kasvanut Etelä-Euroopan vilkkaimmaksi startup-keskukseksi, jonne uusia yrityksiä perustetaan joka viikko.",
-      pitka: "Madrid on Espanjan maantieteellinen ja hallinnollinen sydän: Puerta del Solin aukiolla on pieni laatta, \"Kilometri 0\", josta kaikki maan valtatiet lasketaan alkavaksi. Aukio ja sen tuntumassa oleva parlamentin talo, Cortes, ovat nähneet vuosisatojen käänteet, ja kaupunki elää myöhään – Pradon museon Velázquezit ja Goyat vetävät miljoonia kävijöitä Retiro-puiston kupeeseen. Juuri silloin, 11. helmikuuta 1873, tuossa Cortesin salissa tapahtui mullistus: espanjalaiset kansanedustajat julistivat maan tasavallaksi kuningas Amadeon luovuttua kruunusta, ja lyhytikäinen Ensimmäinen tasavalta kesti vajaat kaksi vuotta ennen kuin monarkia palasi. Nykyään madridilaiset kokoontuvat samalle aukiolle joka uudenvuodenyö syömään kaksitoista onnenrypälettä kellon lyödessä keskiyötä.",
+      pitka: "Madrid on Espanjan maantieteellinen ja hallinnollinen sydän: Puerta del Solin aukiolla on pieni laatta, ”Kilometri 0”, josta kaikki maan valtatiet lasketaan alkavaksi. Aukio ja sen tuntumassa oleva parlamentin talo, Cortes, ovat nähneet vuosisatojen käänteet, ja kaupunki elää myöhään – Pradon museon Velázquezit ja Goyat vetävät miljoonia kävijöitä Retiro-puiston kupeeseen. Juuri silloin, 11. helmikuuta 1873, tuossa Cortesin salissa tapahtui mullistus: espanjalaiset kansanedustajat julistivat maan tasavallaksi kuningas Amadeon luovuttua kruunusta, ja lyhytikäinen Ensimmäinen tasavalta kesti vajaat kaksi vuotta ennen kuin monarkia palasi. Nykyään madridilaiset kokoontuvat samalle aukiolle joka uudenvuodenyö syömään kaksitoista onnenrypälettä kellon lyödessä keskiyötä.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-mad-b1-02028bf9.jpg',
@@ -1937,7 +1937,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Cantabria": {
       lyhyt: "Altamiran luolan kalliomaalaukset Kantabriassa tunnetaan lempinimellä esihistorian Sikstuksen kappeli.",
-      pitka: "Kantabria on Espanjan vihreä, sateinen kaista Biskajanlahden rannalla – paikalliset kutsuvat aluetta usein \"Espanjan luonnolliseksi puutarhaksi\". Picos de Europan jyrkät kalkkikivihuiput kohoavat lähes 2 600 metriin vain parinkymmenen kilometrin päässä rannikosta, ja niiden rinteillä laiduntavat lehmät tuottavat maitoa alueen tunnettuihin juustoihin. Comillasin pikkukaupungissa seisoo El Capricho, ainoa Antoni Gaudín suunnittelema rakennus Kantabriassa – satumainen, keraamisin auringonkukkalaatoin koristeltu huvila 1880-luvulta. Nykyään Santanderin satamakaupunki elää yhä kalastuksesta ja täyttyy kesäisin surffareista, jotka hakevat Atlantin aaltoja pitkin hiekkarantoja.",
+      pitka: "Kantabria on Espanjan vihreä, sateinen kaista Biskajanlahden rannalla – paikalliset kutsuvat aluetta usein ”Espanjan luonnolliseksi puutarhaksi”. Picos de Europan jyrkät kalkkikivihuiput kohoavat lähes 2 600 metriin vain parinkymmenen kilometrin päässä rannikosta, ja niiden rinteillä laiduntavat lehmät tuottavat maitoa alueen tunnettuihin juustoihin. Comillasin pikkukaupungissa seisoo El Capricho, ainoa Antoni Gaudín suunnittelema rakennus Kantabriassa – satumainen, keraamisin auringonkukkalaatoin koristeltu huvila 1880-luvulta. Nykyään Santanderin satamakaupunki elää yhä kalastuksesta ja täyttyy kesäisin surffareista, jotka hakevat Atlantin aaltoja pitkin hiekkarantoja.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-cantabria-ae1f9ebc.jpg',
@@ -2027,7 +2027,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Ceuta": {
       lyhyt: "Ceuta on Espanjan alue Pohjois-Afrikassa – yksi EU:n vain kahdesta maarajasta Afrikkaan, vartioidun raja-aidan takana.",
-      pitka: "Ceuta on pieni, tiiviisti asuttu kaupunki Gibraltarinsalmen etelärannalla, ja sen yllä kohoava Monte Hacho tunnettiin antiikin aikana yhtenä Herakleen pylväistä yhdessä Gibraltarin kalliovuoren kanssa. Kaupungissa elää rinnakkain neljä uskontokuntaa – kristityt, muslimit, juutalaiset ja hindut – ja paikalliset kutsuvat tätä sopuisaa rinnakkaineloa \"neljän kulttuurin\" kaupungiksi. Kirkko, moskeija, synagoga ja hindutemppeli sijaitsevat kaikki muutaman korttelin sisällä toisistaan. Nykyään Ceuta elää satamastaan ja rajakaupasta, ja sen kaduilla kuulee espanjaa ja arabiaa sekaisin samassa keskustelussa.",
+      pitka: "Ceuta on pieni, tiiviisti asuttu kaupunki Gibraltarinsalmen etelärannalla, ja sen yllä kohoava Monte Hacho tunnettiin antiikin aikana yhtenä Herakleen pylväistä yhdessä Gibraltarin kalliovuoren kanssa. Kaupungissa elää rinnakkain neljä uskontokuntaa – kristityt, muslimit, juutalaiset ja hindut – ja paikalliset kutsuvat tätä sopuisaa rinnakkaineloa ”neljän kulttuurin” kaupungiksi. Kirkko, moskeija, synagoga ja hindutemppeli sijaitsevat kaikki muutaman korttelin sisällä toisistaan. Nykyään Ceuta elää satamastaan ja rajakaupasta, ja sen kaduilla kuulee espanjaa ja arabiaa sekaisin samassa keskustelussa.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-ceu-c2-661ce904.jpg',
@@ -2451,7 +2451,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Łódź": {
       lyhyt: "Entiset tehdashallit ovat Łódźissa nyt ostoskeskuksia ja gallerioita, ja kaupunki tunnetaan elokuvakoulustaan.",
-      pitka: "Juuri tuolloin, 1873, Łódź oli Euroopan nopeimmin kasvava kaupunki - vielä vuosisadan alussa parin tuhannen asukkaan kylä oli parissa vuosikymmenessä paisunut kymmeniksituhansiksi, kun puuvillatehtaat imivät työväkeä ympäri Venäjän keisarikuntaa. Puolalaiset, juutalaiset, saksalaiset ja venäläiset elivät ja kilpailivat samassa kaupungissa, ja juuri tästä sekamelskasta syntyi myöhemmin Władysław Reymontin romaani \"Luvattu maa\", joka kuvaa kaupungin raakaa rahanhimoa. Tehtailijoiden Karol Scheiblerin ja Izrael Poznańskin palatsit seisovat yhä keskustassa muistutuksena siitä, kuinka suunnattomia omaisuuksia puuvillasta kerättiin samalla kun tehtaiden työläiset asuivat ahtaissa korttelitaloissa. Nykyään kaupunki hakee uutta identiteettiä muotoilun ja kulttuurin kautta, mutta sen kadunkulmat kertovat yhä tarinaa siitä äkkirikastumisen ja kurjuuden kaupungista, jonka isoisä olisi nähnyt.",
+      pitka: "Juuri tuolloin, 1873, Łódź oli Euroopan nopeimmin kasvava kaupunki - vielä vuosisadan alussa parin tuhannen asukkaan kylä oli parissa vuosikymmenessä paisunut kymmeniksituhansiksi, kun puuvillatehtaat imivät työväkeä ympäri Venäjän keisarikuntaa. Puolalaiset, juutalaiset, saksalaiset ja venäläiset elivät ja kilpailivat samassa kaupungissa, ja juuri tästä sekamelskasta syntyi myöhemmin Władysław Reymontin romaani ”Luvattu maa”, joka kuvaa kaupungin raakaa rahanhimoa. Tehtailijoiden Karol Scheiblerin ja Izrael Poznańskin palatsit seisovat yhä keskustassa muistutuksena siitä, kuinka suunnattomia omaisuuksia puuvillasta kerättiin samalla kun tehtaiden työläiset asuivat ahtaissa korttelitaloissa. Nykyään kaupunki hakee uutta identiteettiä muotoilun ja kulttuurin kautta, mutta sen kadunkulmat kertovat yhä tarinaa siitä äkkirikastumisen ja kurjuuden kaupungista, jonka isoisä olisi nähnyt.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/pol-maakunta2-lodz-v-02ca27a8.jpg',
@@ -2723,7 +2723,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Steiermark": {
       lyhyt: "Steiermarkia kutsutaan Itävallan vihreäksi sydämeksi – täällä kurpitsansiemenöljy on lähes joka ruoan mauste.",
-      pitka: "Steiermarkia kutsutaan Itävallassa lempinimellä 'vihreä maakunta', sillä yli 60 prosenttia sen pinta-alasta on metsää – enemmän kuin missään muussa osavaltiossa. Pohjoisessa maisemaa hallitsee silti toisenlainen jättiläinen: Erzbergin rautavuori Eisenerzin kupeessa on tuottanut malmia yli 1300 vuotta, ja vuodesta 1890 louhinta on muovannut siitä valtavan portaikkomaisen pyramidin, joka näkyy kauas ympäristöön. Graz tunnetaan nykyään muotoilun kaupunkina, mutta rautavuori muistuttaa siitä, mistä koko Steiermarkin vauraus aikanaan kasvoi. Kurpitsansiemenöljyn rinnalla malmi on siis se toinen, raskaampi aine, joka on muovannut aluetta vuosisatojen ajan.",
+      pitka: "Steiermarkia kutsutaan Itävallassa lempinimellä ’vihreä maakunta’, sillä yli 60 prosenttia sen pinta-alasta on metsää – enemmän kuin missään muussa osavaltiossa. Pohjoisessa maisemaa hallitsee silti toisenlainen jättiläinen: Erzbergin rautavuori Eisenerzin kupeessa on tuottanut malmia yli 1300 vuotta, ja vuodesta 1890 louhinta on muovannut siitä valtavan portaikkomaisen pyramidin, joka näkyy kauas ympäristöön. Graz tunnetaan nykyään muotoilun kaupunkina, mutta rautavuori muistuttaa siitä, mistä koko Steiermarkin vauraus aikanaan kasvoi. Kurpitsansiemenöljyn rinnalla malmi on siis se toinen, raskaampi aine, joka on muovannut aluetta vuosisatojen ajan.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-steiermark-a030f180.jpg',
@@ -2813,7 +2813,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Kärnten": {
       lyhyt: "Kärntenin kirkkaat vuoristojärvet, etenkin Wörthersee, täyttyvät kesäisin uimareista ja purjelautailijoista.",
-      pitka: "Klagenfurtin torilla lojuu outo hirviö: pronssinen Lindwurm-lohikäärme, jonka pää valettiin vuonna 1590 keskiajalla löydetyn kallon muotoiseksi. Aikalaiset pitivät kalloa todisteena lohikäärmeestä, mutta 1800-luvun tutkijat tunnistivat sen lopulta jääkauden villakarvaisen sarvikuonon fossiiliksi – yksi varhaisimmista tieteellisistä eläinrekonstruktioista. Legendan mukaan kaupunki sai nimensäkin tästä hirviöstä: ritarit onkivat sen joesta härkää syöttinä käyttäen, ja \"Klagenfurt\" viittaa siihen valituksen täyttämään kahlaamoon. Kesäisin järvien rannoilla uivien kärntenläisten arkeen mahtuu siis yhä tämä keskiaikainen kauhutarina, joka katsoo torilta ohikulkijoita silmästä silmään.",
+      pitka: "Klagenfurtin torilla lojuu outo hirviö: pronssinen Lindwurm-lohikäärme, jonka pää valettiin vuonna 1590 keskiajalla löydetyn kallon muotoiseksi. Aikalaiset pitivät kalloa todisteena lohikäärmeestä, mutta 1800-luvun tutkijat tunnistivat sen lopulta jääkauden villakarvaisen sarvikuonon fossiiliksi – yksi varhaisimmista tieteellisistä eläinrekonstruktioista. Legendan mukaan kaupunki sai nimensäkin tästä hirviöstä: ritarit onkivat sen joesta härkää syöttinä käyttäen, ja ”Klagenfurt” viittaa siihen valituksen täyttämään kahlaamoon. Kesäisin järvien rannoilla uivien kärntenläisten arkeen mahtuu siis yhä tämä keskiaikainen kauhutarina, joka katsoo torilta ohikulkijoita silmästä silmään.",
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-karnten-85a85d1a.jpg',
@@ -3614,7 +3614,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Noord-Brabant': {
       lyhyt: 'Kaatsheuvelin Efteling avattiin 1952 satumetsänä, ja nyt se on Alankomaiden suurin huvipuisto ja yksi maailman vanhimmista.',
-      pitka: `Maakunnan suurin kaupunki Eindhoven oli 1800-luvulla vielä vaatimaton pikkukaupunki, kunnes Philipsin lamppu- ja myöhemmin elektroniikkatehtaat muuttivat sen 1900-luvulla teknologiakeskukseksi – nykyään alueella toimivat muun muassa ASML, maailman johtava piirilevyjen valmistuslaitteiden valmistaja, ja puolijohdeyhtiö NXP. Katolinen perintö näkyy yhä joka helmikuu, kun karnevaali valtaa kadut ja moni kaupunki vaihtaa väliaikaisesti nimeäkin karnevaalihenkiseksi. Brabantilainen keittiö tunnetaan mehevänä ja runsaana, "burgundialaisena", saksalais-ranskalaisten vaikutteiden ja rikkaiden leivonnaisten sekoituksena – tämä poikkeaa selvästi pohjoisemman Alankomaiden pelkistetystä ruokakulttuurista. De Biesbosch on Länsi-Euroopan suurimpia makeanveden tulva-alueita, yli 7 000 hehtaaria kanavia, ruovikkoa ja pientä saaristoa, joka syntyi keskiajan suurtulvien seurauksena. Maakunta on maan tasaisimpia, mutta poikkeuksellisesti lähes koko sen pinta-ala on merenpinnan yläpuolella, mikä erottaa sen monista muista alavista naapureistaan.`,
+      pitka: `Maakunnan suurin kaupunki Eindhoven oli 1800-luvulla vielä vaatimaton pikkukaupunki, kunnes Philipsin lamppu- ja myöhemmin elektroniikkatehtaat muuttivat sen 1900-luvulla teknologiakeskukseksi – nykyään alueella toimivat muun muassa ASML, maailman johtava piirilevyjen valmistuslaitteiden valmistaja, ja puolijohdeyhtiö NXP. Katolinen perintö näkyy yhä joka helmikuu, kun karnevaali valtaa kadut ja moni kaupunki vaihtaa väliaikaisesti nimeäkin karnevaalihenkiseksi. Brabantilainen keittiö tunnetaan mehevänä ja runsaana, ”burgundialaisena”, saksalais-ranskalaisten vaikutteiden ja rikkaiden leivonnaisten sekoituksena – tämä poikkeaa selvästi pohjoisemman Alankomaiden pelkistetystä ruokakulttuurista. De Biesbosch on Länsi-Euroopan suurimpia makeanveden tulva-alueita, yli 7 000 hehtaaria kanavia, ruovikkoa ja pientä saaristoa, joka syntyi keskiajan suurtulvien seurauksena. Maakunta on maan tasaisimpia, mutta poikkeuksellisesti lähes koko sen pinta-ala on merenpinnan yläpuolella, mikä erottaa sen monista muista alavista naapureistaan.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/nld-maakunta-noord-brabant-a02068cb.jpg',
@@ -3660,7 +3660,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Saba: {
       lyhyt: 'Saban lentokentän kiitorata on vain 400 metriä, maailman lyhyin reittiliikenteessä, ja sen molemmissa päissä jyrkänne putoaa mereen.',
-      pitka: `Saaren keskellä kohoaa sammunut tulivuori Mount Scenery, 870 metriä korkea – se on koko Alankomaiden kuningaskunnan korkein kohta, korkeampi kuin mikään paikka Euroopan puoleisessa Alankomaissa. 1800-luvun lopulla, siis pian isoisän matkan jälkeen, saaren naiset alkoivat tehdä "Saban pitsiä", venezuelalaisen nunnan tänne tuomaa neulontatekniikkaa, josta tuli tärkeä tulonlähde ja josta saari sai liikanimen "naisten saari" – suurin osa miehistä oli näet töissä merillä. Pääkylä The Bottom on yhä tavoitettavissa 800 kivestä hakatun portaan kautta, "Tikkaita" pitkin, joita pitkin ennen kannettiin kaikki tavara satamasta ylös. Rantojen edustalla sukeltajat löytävät vedenalaisia tulivuoritorneja, joissa magma on aikoinaan työntynyt merenpohjan läpi, ja alueen suojellut vedet ovat kotia noin 150 kalalajille. Saarella asuu vain runsaat 2 000 ihmistä, mikä tekee siitä väkiluvultaan pienimmän pysyvästi asutun alueen koko Amerikan mantereella.`,
+      pitka: `Saaren keskellä kohoaa sammunut tulivuori Mount Scenery, 870 metriä korkea – se on koko Alankomaiden kuningaskunnan korkein kohta, korkeampi kuin mikään paikka Euroopan puoleisessa Alankomaissa. 1800-luvun lopulla, siis pian isoisän matkan jälkeen, saaren naiset alkoivat tehdä ”Saban pitsiä”, venezuelalaisen nunnan tänne tuomaa neulontatekniikkaa, josta tuli tärkeä tulonlähde ja josta saari sai liikanimen ”naisten saari” – suurin osa miehistä oli näet töissä merillä. Pääkylä The Bottom on yhä tavoitettavissa 800 kivestä hakatun portaan kautta, ”Tikkaita” pitkin, joita pitkin ennen kannettiin kaikki tavara satamasta ylös. Rantojen edustalla sukeltajat löytävät vedenalaisia tulivuoritorneja, joissa magma on aikoinaan työntynyt merenpohjan läpi, ja alueen suojellut vedet ovat kotia noin 150 kalalajille. Saarella asuu vain runsaat 2 000 ihmistä, mikä tekee siitä väkiluvultaan pienimmän pysyvästi asutun alueen koko Amerikan mantereella.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/nld-maakunta-saba-235cbd4e.jpg',
@@ -3683,7 +3683,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'St. Eustatius': {
       lyhyt: 'Fort Oranjen tykit vastasivat 1776 amerikkalaisprikin tervehdykseen – varhainen kansainvälinen tunnustus kapinallisten lipulle.',
-      pitka: `Saaren eteläosaa hallitsee sammunut tulivuori De Quill, 602 metriä korkea, jonka nimi juontuu hollannin sanasta "kuil", kuoppa – kraatterin sisällä kasvaa nykyään sademetsä, joka poikkeaa täysin muusta kuivasta saaresta. 1700-luvun puolivälissä saaresta tuli vapaasatama, jonka kautta kulki niin kauppatavaraa kuin orjakauppaa valtavassa mitassa – brittiläinen valtiomies Edmund Burke kutsui sitä "koko maailman kauppapaikaksi", ja parhaimmillaan saarella toimi yli 70 plantaasia. Isoisän matkan aikoihin 1873 tuo kulta-aika oli jo kaukainen muisto: britit olivat ryöstäneet saaren 1781, ja kauppa siirtyi vähitellen Curaçaolle ja Sint Maartenille, minkä seurauksena väkiluku romahti yli 8 000 asukkaasta muutamaan sataan 1900-luvun puoliväliin mennessä. Fort Oranjen muurien sisällä seisoo yhä tykkejä, jotka muistuttavat siitä hetkestä, jolloin saari tunnusti ensimmäisenä ulkomaisena alueena Yhdysvaltain lipun. Nykyään saarella on hiljaista, ja juuri se hiljaisuus – kadut ilman vilskettä, satama ilman laivoja – kertoo parhaiten siitä, miten paljon saari on menettänyt entisestä vauraudestaan.`,
+      pitka: `Saaren eteläosaa hallitsee sammunut tulivuori De Quill, 602 metriä korkea, jonka nimi juontuu hollannin sanasta ”kuil”, kuoppa – kraatterin sisällä kasvaa nykyään sademetsä, joka poikkeaa täysin muusta kuivasta saaresta. 1700-luvun puolivälissä saaresta tuli vapaasatama, jonka kautta kulki niin kauppatavaraa kuin orjakauppaa valtavassa mitassa – brittiläinen valtiomies Edmund Burke kutsui sitä ”koko maailman kauppapaikaksi”, ja parhaimmillaan saarella toimi yli 70 plantaasia. Isoisän matkan aikoihin 1873 tuo kulta-aika oli jo kaukainen muisto: britit olivat ryöstäneet saaren 1781, ja kauppa siirtyi vähitellen Curaçaolle ja Sint Maartenille, minkä seurauksena väkiluku romahti yli 8 000 asukkaasta muutamaan sataan 1900-luvun puoliväliin mennessä. Fort Oranjen muurien sisällä seisoo yhä tykkejä, jotka muistuttavat siitä hetkestä, jolloin saari tunnusti ensimmäisenä ulkomaisena alueena Yhdysvaltain lipun. Nykyään saarella on hiljaista, ja juuri se hiljaisuus – kadut ilman vilskettä, satama ilman laivoja – kertoo parhaiten siitä, miten paljon saari on menettänyt entisestä vauraudestaan.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/nld-maakunta-st-eustatius-f21920fe.jpg',
@@ -3897,7 +3897,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Hainaut: {
       lyhyt: 'Scheldejoen varren Tournai on Belgian vanhimpia kaupunkeja – se oli aikanaan frankkien valtakunnan ensimmäinen pääkaupunki.',
-      pitka: `Hainaut'n maisemaa hallitsee yhä hiilikaivosten perintö: Borinagen alue on saanut nimensä murresanasta, joka tarkoittaa kaivoskuilua, ja seudun Grand-Hornun kaivosyhtiö oli 1800-luvulla yksi vastikään itsenäistyneen Belgian suurimmista. Vain muutama vuosi isoisän matkan jälkeen, vuosina 1878–1880, nuori hollantilaistaiteilija Vincent van Gogh asui täällä protestanttisena saarnaajana kaivostyöläisten keskuudessa ja jakoi heidän köyhyytensä niin tosissaan, että häntä alettiin kutsua "hiilikaivoksen Kristukseksi". Charleroi kasvoi teollistumisen myötä provinssin suurimmaksi kaupungiksi, vaikka hallinnollinen pääkaupunki on pienempi Mons, joka toimi Euroopan kulttuuripääkaupunkina vuonna 2015. Nykyään moni entinen kaivosalue on suojeltua Unescon maailmanperintöä, ja rivitalokortteleiden välissä elää yhä sitkeä kaivosseudun yhteisöllisyys, vaikka viimeinen kaivos suljettiin jo vuosikymmeniä sitten.`,
+      pitka: `Hainaut'n maisemaa hallitsee yhä hiilikaivosten perintö: Borinagen alue on saanut nimensä murresanasta, joka tarkoittaa kaivoskuilua, ja seudun Grand-Hornun kaivosyhtiö oli 1800-luvulla yksi vastikään itsenäistyneen Belgian suurimmista. Vain muutama vuosi isoisän matkan jälkeen, vuosina 1878–1880, nuori hollantilaistaiteilija Vincent van Gogh asui täällä protestanttisena saarnaajana kaivostyöläisten keskuudessa ja jakoi heidän köyhyytensä niin tosissaan, että häntä alettiin kutsua ”hiilikaivoksen Kristukseksi”. Charleroi kasvoi teollistumisen myötä provinssin suurimmaksi kaupungiksi, vaikka hallinnollinen pääkaupunki on pienempi Mons, joka toimi Euroopan kulttuuripääkaupunkina vuonna 2015. Nykyään moni entinen kaivosalue on suojeltua Unescon maailmanperintöä, ja rivitalokortteleiden välissä elää yhä sitkeä kaivosseudun yhteisöllisyys, vaikka viimeinen kaivos suljettiin jo vuosikymmeniä sitten.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-hainaut-129e8bc8.jpg',
@@ -3920,7 +3920,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'East Flanders': {
       lyhyt: 'Gent sijaitsee Schelde- ja Leiejoen yhtymäkohdassa, ja sen vanhoja katuja täyttävät nykyään Gentin yliopiston opiskelijat.',
-      pitka: `Illaisin Gentin vanhat kivikadut täyttyvät enemmän opiskelijoista kuin turisteista – kaupungissa opiskelee yli 65 000 nuorta, mikä tekee tunnelmasta yllättävän nuorekkaan keskiaikaisten kirkontornien katveessa. Kouterin aukion kukkatori on toiminut vuodesta 1772 lähtien, joten se oli auki jo isoisän matkan aikaan ja on edelleen viikonloppuisin gentiläisten suosituin kohtaamispaikka. Joka neljäs vuosi järjestettävät Gentin Floraliat juontavat juurensa vaatimattomasta vuoden 1809 näyttelystä, ja tapahtuma on nykyään merkitty Flanderin aineettomaksi kulttuuriperinnöksi. Naapurikaupunki Aalstissa taas vietetään Belgian suurinta karnevaalia, jonka huipentumana miehet pukeutuvat naisiksi "Voil Jeanetten" -kulkueessa laskiaistiistaina – perinne, joka hämmästyttää monia ensikertaa paikalla olevia.`,
+      pitka: `Illaisin Gentin vanhat kivikadut täyttyvät enemmän opiskelijoista kuin turisteista – kaupungissa opiskelee yli 65 000 nuorta, mikä tekee tunnelmasta yllättävän nuorekkaan keskiaikaisten kirkontornien katveessa. Kouterin aukion kukkatori on toiminut vuodesta 1772 lähtien, joten se oli auki jo isoisän matkan aikaan ja on edelleen viikonloppuisin gentiläisten suosituin kohtaamispaikka. Joka neljäs vuosi järjestettävät Gentin Floraliat juontavat juurensa vaatimattomasta vuoden 1809 näyttelystä, ja tapahtuma on nykyään merkitty Flanderin aineettomaksi kulttuuriperinnöksi. Naapurikaupunki Aalstissa taas vietetään Belgian suurinta karnevaalia, jonka huipentumana miehet pukeutuvat naisiksi ”Voil Jeanetten” -kulkueessa laskiaistiistaina – perinne, joka hämmästyttää monia ensikertaa paikalla olevia.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bel-maakunta2-east-flanders-v-bf0055be.jpg',
@@ -4012,7 +4012,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'West Flanders': {
       lyhyt: 'Rannikkoraitiovaunu kulkee koko rannikon Ranskan rajalta Alankomaiden rajalle – 67 kilometriä, maailman pisin laatuaan.',
-      pitka: `West-Vlaanderen on Belgian ainoa rantaprovinssi, jonka hiekkarannat vaihettuvat idempänä nopeasti vihertäviksi pelloiksi ja tiilikattoisiksi kyliksi. Rannikon suosituin kaupunki on Ostende, josta kuningas Leopold II teki vuosikymmenten kuluessa isoisän matkan jälkeen Euroopan aateliston suosiman, muodikkaan kylpyläkaupungin – "rantojen kuningattaren". Brugesin keskiaikaiset kanavat ja mutkittelevat kujat ovat tuoneet kaupungille lisänimen "Pohjolan Venetsia", ja pitsinnypläystä harjoitetaan yhä käsityönä monen ikkunan ääressä. Provinssin eteläosassa Ieperin (Ypresin) ympäristö tunnetaan koko maailmassa ensimmäisen maailmansodan Flanders Fields -taistelukentistä, joissa satojatuhansia sotilaita kuoli vain reilut neljä vuosikymmentä isoisän vierailun jälkeen.`,
+      pitka: `West-Vlaanderen on Belgian ainoa rantaprovinssi, jonka hiekkarannat vaihettuvat idempänä nopeasti vihertäviksi pelloiksi ja tiilikattoisiksi kyliksi. Rannikon suosituin kaupunki on Ostende, josta kuningas Leopold II teki vuosikymmenten kuluessa isoisän matkan jälkeen Euroopan aateliston suosiman, muodikkaan kylpyläkaupungin – ”rantojen kuningattaren”. Brugesin keskiaikaiset kanavat ja mutkittelevat kujat ovat tuoneet kaupungille lisänimen ”Pohjolan Venetsia”, ja pitsinnypläystä harjoitetaan yhä käsityönä monen ikkunan ääressä. Provinssin eteläosassa Ieperin (Ypresin) ympäristö tunnetaan koko maailmassa ensimmäisen maailmansodan Flanders Fields -taistelukentistä, joissa satojatuhansia sotilaita kuoli vain reilut neljä vuosikymmentä isoisän vierailun jälkeen.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-west-flanders-4bd62d5f.jpg',
@@ -4035,7 +4035,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Namur: {
       lyhyt: 'Dinantin jyrkän kallion laella seisoo linnoitus, ja kaupunki muistaa poikaansa Adolphe Saxia, joka patentoi saksofonin 1846.',
-      pitka: `Namurin linnoitus kohoaa jyrkällä kalliolla juuri kohdassa, jossa Sambre-joki yhtyy Meuseen, ja koko kaupunki tuntuu rakentuneen tämän veden ja kallion vastakkainasettelun ympärille. Vähän etelämpänä Dinantissa tunnetaan nykyisen linnoituksen lisäksi outo kalliomuodostelma, Rocher Bayard: legendan mukaan Aymonin neljän pojan taruhevonen halkaisi kallion yhdellä kavion iskulla, vaikka todellisuudessa sen lohkaisivat Ludvig XIV:n sotilaat raivatakseen tietä joen varteen. Dinant on myös saksofonin keksijän Adolphe Saxin syntymäkaupunki, ja pojan lapsuus oli niin täynnä läheltä piti -tilanteita – putoamisia, myrkytyksiä, hukkumisvaaroja – että naapurit kutsuivat häntä "Dinantin aavelapseksi" eikä hänen äitinsä uskonut pojan elävän aikuiseksi. Meusen jyrkät kalkkikalliot houkuttelevat nykyään kiipeilijöitä ja melojia, ja joenrantakylät elävät edelleen matkailusta kalkkikivilouhosten katveessa.`,
+      pitka: `Namurin linnoitus kohoaa jyrkällä kalliolla juuri kohdassa, jossa Sambre-joki yhtyy Meuseen, ja koko kaupunki tuntuu rakentuneen tämän veden ja kallion vastakkainasettelun ympärille. Vähän etelämpänä Dinantissa tunnetaan nykyisen linnoituksen lisäksi outo kalliomuodostelma, Rocher Bayard: legendan mukaan Aymonin neljän pojan taruhevonen halkaisi kallion yhdellä kavion iskulla, vaikka todellisuudessa sen lohkaisivat Ludvig XIV:n sotilaat raivatakseen tietä joen varteen. Dinant on myös saksofonin keksijän Adolphe Saxin syntymäkaupunki, ja pojan lapsuus oli niin täynnä läheltä piti -tilanteita – putoamisia, myrkytyksiä, hukkumisvaaroja – että naapurit kutsuivat häntä ”Dinantin aavelapseksi” eikä hänen äitinsä uskonut pojan elävän aikuiseksi. Meusen jyrkät kalkkikalliot houkuttelevat nykyään kiipeilijöitä ja melojia, ja joenrantakylät elävät edelleen matkailusta kalkkikivilouhosten katveessa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/bel-maakunta-namur-958776f4.jpg',
@@ -4700,7 +4700,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Central Finland': {
       lyhyt: 'Keski-Suomen soratiet ajetaan Rally Finlandissa, MM-rallin nopeimmassa osakilpailussa, jossa autot lentävät harjanteilta pitkiä hyppyjä.',
-      pitka: `Keski-Suomen soratiet muuttuvat heinä-elokuun vaihteessa maailman nopeimmaksi ralliradaksi: Rallia on ajettu Jyväskylässä vuodesta 1951, jolloin se tunnettiin nimellä Jyväskylän Suurajot, ja MM-sarjaan se liittyi 1973. Ralli tunnetaan lempinimillä "tuhannen hypyn ralli" ja soran Grand Prix, sillä sileät, leveät tiet ja loivat harjanteet lennättävät autot ilmaan yhä uudelleen. Vuonna 2015 kilpailun keskinopeus oli 125,4 km/h, mikä tekee siitä koko MM-sarjan nopeimman osakilpailun. Kesän kuumimpina viikonloppuina satojatuhansia katsojia asettuu metsäteiden varsille seuraamaan, kun paikalliset kuskit lentävät tutuilla harjanteillaan.`,
+      pitka: `Keski-Suomen soratiet muuttuvat heinä-elokuun vaihteessa maailman nopeimmaksi ralliradaksi: Rallia on ajettu Jyväskylässä vuodesta 1951, jolloin se tunnettiin nimellä Jyväskylän Suurajot, ja MM-sarjaan se liittyi 1973. Ralli tunnetaan lempinimillä ”tuhannen hypyn ralli” ja soran Grand Prix, sillä sileät, leveät tiet ja loivat harjanteet lennättävät autot ilmaan yhä uudelleen. Vuonna 2015 kilpailun keskinopeus oli 125,4 km/h, mikä tekee siitä koko MM-sarjan nopeimman osakilpailun. Kesän kuumimpina viikonloppuina satojatuhansia katsojia asettuu metsäteiden varsille seuraamaan, kun paikalliset kuskit lentävät tutuilla harjanteillaan.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-central-finland-26b0d101.jpg',
@@ -4838,7 +4838,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Northern Ostrobothnia': {
       lyhyt: 'Oulussa ratkotaan joka vuosi ilmakitaran maailmanmestaruus: soittimena on pelkkä kuviteltu kitara, ja kisa on pidetty vuodesta 1996.',
-      pitka: `Oulussa ratkotaan heinäkuussa ilmakitaransoiton MM-mestaruutta, ja kisa on hurjan vakavasti otettu leikki: soittimena on pelkkä kuviteltu kitara, mutta esiintyminen arvioidaan yhtä tarkasti kuin oikeassa rock-keikalla. Kilpailun keksi muusikko Jukka Takalo osana Oulun musiikkivideofestivaalia vuonna 1996, ja siitä kasvoi vuosien saatossa oma tapahtumansa, jota vuodesta 2011 on järjestänyt Airnest Productions. Kisan tunnuslause "Make Air Not War" ei ole pelkkä sanaleikki: järjestäjät uskovat vakavissaan, että maailma paranisi, jos kaikki soittaisivat ilmakitaraa. Nykyään yli kymmenessä maassa järjestetään omat karsintakilpailut ennen kuin parhaat pääsevät Ouluun mittelemään maailman parhaasta ilmasoolosta.`,
+      pitka: `Oulussa ratkotaan heinäkuussa ilmakitaransoiton MM-mestaruutta, ja kisa on hurjan vakavasti otettu leikki: soittimena on pelkkä kuviteltu kitara, mutta esiintyminen arvioidaan yhtä tarkasti kuin oikeassa rock-keikalla. Kilpailun keksi muusikko Jukka Takalo osana Oulun musiikkivideofestivaalia vuonna 1996, ja siitä kasvoi vuosien saatossa oma tapahtumansa, jota vuodesta 2011 on järjestänyt Airnest Productions. Kisan tunnuslause ”Make Air Not War” ei ole pelkkä sanaleikki: järjestäjät uskovat vakavissaan, että maailma paranisi, jos kaikki soittaisivat ilmakitaraa. Nykyään yli kymmenessä maassa järjestetään omat karsintakilpailut ennen kuin parhaat pääsevät Ouluun mittelemään maailman parhaasta ilmasoolosta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-northern-ostrobothnia-4246cad8.jpg',
@@ -4861,7 +4861,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Northern Savonia': {
       lyhyt: 'Sonkajärvellä kisataan joka vuosi eukonkannon maailmanmestaruudesta, ja voittaja on se, joka kantaa toisen ihmisen esteradan läpi nopeimmin.',
-      pitka: `Sonkajärvellä kisataan heinäkuussa eukonkannon MM-mestaruudesta, laji jonka juuret ulottuvat legendaan 1800-luvun lopun rosvopäälliköstä Herkko "Rosvo-Ronkaisesta" – tarinan mukaan hän joko ryösti ruokaa ja naisia lähikylistä tai harjoitutti miehiään kantamalla painavia säkkejä, joista laji myöhemmin syntyi. Nykyään kilpailussa ei katsota sukupuolta eikä siviilisäätyä: pariskunta juoksee esteradan läpi kolmella sallitulla otteella, joista virolaistyyli tarkoittaa kannettavan roikkumista pää alaspäin kantajan selässä. Voittajapari palkitaan kannettavan painon verran olutta, mikä on tehnyt kisasta suositun myös ulkomaisten joukkueiden keskuudessa. Pohjois-Savon vaatimattomasta pikkupitäjästä on näin tullut yllättävä maailmanurheilun keskus, jonne matkataan Japanista ja Yhdysvalloista asti kilpailemaan säkkien sijaan puolisoista.`,
+      pitka: `Sonkajärvellä kisataan heinäkuussa eukonkannon MM-mestaruudesta, laji jonka juuret ulottuvat legendaan 1800-luvun lopun rosvopäälliköstä Herkko ”Rosvo-Ronkaisesta” – tarinan mukaan hän joko ryösti ruokaa ja naisia lähikylistä tai harjoitutti miehiään kantamalla painavia säkkejä, joista laji myöhemmin syntyi. Nykyään kilpailussa ei katsota sukupuolta eikä siviilisäätyä: pariskunta juoksee esteradan läpi kolmella sallitulla otteella, joista virolaistyyli tarkoittaa kannettavan roikkumista pää alaspäin kantajan selässä. Voittajapari palkitaan kannettavan painon verran olutta, mikä on tehnyt kisasta suositun myös ulkomaisten joukkueiden keskuudessa. Pohjois-Savon vaatimattomasta pikkupitäjästä on näin tullut yllättävä maailmanurheilun keskus, jonne matkataan Japanista ja Yhdysvalloista asti kilpailemaan säkkien sijaan puolisoista.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-northern-savonia-ece931f2.jpg',
@@ -5175,7 +5175,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Lääne-Viru': {
       lyhyt: 'Rakveren linnavuoren laidalla seisoo pronssinen alkuhärkä Tarvas, seitsemän metriä pitkä ja Baltian suurimmaksi eläinpatsaaksi sanottu.',
-      pitka: `Rakveren linnavuori on ollut linnoitettuna jo 500–600-luvuilta lähtien, ja vuosisatojen saatossa se on kuulunut vuoroin Tanskan kuninkaille, Liivinmaan ritarikunnalle sekä Ruotsin ja Puolan valtakunnille – puolalaiset joukot vaurioittivat sen pahoin 1605, eikä sitä ole sen jälkeen jälleenrakennettu. Maakunnan pohjoisrannikolla levittäytyy osa Lahemaan kansallispuistoa, jonka Palmsen kartano on entisöity näyttämään 1700-luvun loistoltaan ja avattu yleisölle. Väkeä maakunnassa asuu reilut 58 000, ja lähes yhdeksän kymmenestä on virolaisia – maaseudulla eletään yhä paljolti maataloudesta ja kartanomatkailusta. Rakvere tunnettiin jo vuonna 1226 nimellä Tarvanpea, "härän pää", mistä koko kaupungin nimikin lopulta juontuu. Vaikka vanha linna seisoo raunioina, kaupungin keskiaikainen ydin ja sitä ympäröivä Vallimägi ovat nykyään suosittu kesätapahtumien näyttämö.`,
+      pitka: `Rakveren linnavuori on ollut linnoitettuna jo 500–600-luvuilta lähtien, ja vuosisatojen saatossa se on kuulunut vuoroin Tanskan kuninkaille, Liivinmaan ritarikunnalle sekä Ruotsin ja Puolan valtakunnille – puolalaiset joukot vaurioittivat sen pahoin 1605, eikä sitä ole sen jälkeen jälleenrakennettu. Maakunnan pohjoisrannikolla levittäytyy osa Lahemaan kansallispuistoa, jonka Palmsen kartano on entisöity näyttämään 1700-luvun loistoltaan ja avattu yleisölle. Väkeä maakunnassa asuu reilut 58 000, ja lähes yhdeksän kymmenestä on virolaisia – maaseudulla eletään yhä paljolti maataloudesta ja kartanomatkailusta. Rakvere tunnettiin jo vuonna 1226 nimellä Tarvanpea, ”härän pää”, mistä koko kaupungin nimikin lopulta juontuu. Vaikka vanha linna seisoo raunioina, kaupungin keskiaikainen ydin ja sitä ympäröivä Vallimägi ovat nykyään suosittu kesätapahtumien näyttämö.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/est-maakunta-laane-viru-c7ad3563.jpg',
@@ -5740,7 +5740,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šiauliai': {
       lyhyt: 'Šiauliain pohjoispuolella Ristien mäellä seisoo arviolta 100 000 ristiä, joita pyhiinvaeltajat ovat tuoneet sinne 1800-luvulta asti.',
-      pitka: `Šiauliain nimi juontuu muinaisesta aurinkojumalatar Saulėsta, ja kaupungin syntyhetkeksi lasketaan usein vuoden 1236 Saulen taistelu, jossa liettualaiset ja liiviläiset kukistivat Miekkaveljien ritarikunnan. Keskiajan jälkeen kaupunki koki toistuvia sotia ja ruttoepidemioita, kunnes 1700-luvun lopulla kreivi Antoni Tyzenhaus suunnitteli sen uudelleen säännölliseksi, klassistiseksi kaupungiksi – sama ruutukaava näkyy keskustassa yhä. Vuoden 1872 suurpalon jälkeen Šiauliaihin nousi tehtaita, jotka valmistivat kaikkea silkistä suklaaseen, ja vuoteen 1897 mennessä kaupunki oli jo Liettuan toiseksi suurin Kaunasin jälkeen. 'Auringon kaupunki' on nykyään Liettuan neljänneksi suurin, ja sen ruutukaavainen keskusta sekä tiiliset tehdasrakennukset kertovat yhä siitä, miten paljon kaupunki nousi tuhkasta juuri isoisän oman ajan kynnyksellä 1870-luvulla.`,
+      pitka: `Šiauliain nimi juontuu muinaisesta aurinkojumalatar Saulėsta, ja kaupungin syntyhetkeksi lasketaan usein vuoden 1236 Saulen taistelu, jossa liettualaiset ja liiviläiset kukistivat Miekkaveljien ritarikunnan. Keskiajan jälkeen kaupunki koki toistuvia sotia ja ruttoepidemioita, kunnes 1700-luvun lopulla kreivi Antoni Tyzenhaus suunnitteli sen uudelleen säännölliseksi, klassistiseksi kaupungiksi – sama ruutukaava näkyy keskustassa yhä. Vuoden 1872 suurpalon jälkeen Šiauliaihin nousi tehtaita, jotka valmistivat kaikkea silkistä suklaaseen, ja vuoteen 1897 mennessä kaupunki oli jo Liettuan toiseksi suurin Kaunasin jälkeen. ’Auringon kaupunki’ on nykyään Liettuan neljänneksi suurin, ja sen ruutukaavainen keskusta sekä tiiliset tehdasrakennukset kertovat yhä siitä, miten paljon kaupunki nousi tuhkasta juuri isoisän oman ajan kynnyksellä 1870-luvulla.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ltu-maakunta2-siauliai-v-7267b196.jpg',
@@ -5977,7 +5977,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Jugovzhodna Slovenija': {
       lyhyt: 'Krkan mutkaan rakennettua Novo Mestoa kutsutaan situlojen kaupungiksi, sillä sen maista on kaivettu esiin rautakautisia pronssiastioita.',
-      pitka: `Krkajoki tekee kaupungin kohdalla jyrkkiä mutkia, ja vanha keskusta kohoaa niiden keskellä kuin saarelle – nimikin, Novo Mesto, tarkoittaa yksinkertaisesti "uutta kaupunkia". Alueen rautakautiset asukkaat olivat täällä kauan ennen keskiaikaista kaupunkia: Novo Mestoa kutsutaan "situlojen kaupungiksi", koska sen ympäristön kalmistoista on kaivettu esiin enemmän koristeltuja pronssiämpäreitä kuin mistään muualta Euroopasta samalta ajalta. Ämpäreiden kylkiin on lyöty kulkueita, eläimiä ja juhlamenoja niin tarkasti, että tutkijat pystyvät niistä lukemaan yli 2000 vuoden takaisen yhteiskunnan arkea. Nykyään kaupunkia elättävät pikemminkin tehtaat kuin pronssiseppien pajat – Novo Mesto on Slovenian autoteollisuuden ja lääketeollisuuden yksi keskus, ja sen vaurauden juuret ovat yhtä lailla liukuhihnoissa kuin muinaisissa kauppareiteissä.`,
+      pitka: `Krkajoki tekee kaupungin kohdalla jyrkkiä mutkia, ja vanha keskusta kohoaa niiden keskellä kuin saarelle – nimikin, Novo Mesto, tarkoittaa yksinkertaisesti ”uutta kaupunkia”. Alueen rautakautiset asukkaat olivat täällä kauan ennen keskiaikaista kaupunkia: Novo Mestoa kutsutaan ”situlojen kaupungiksi”, koska sen ympäristön kalmistoista on kaivettu esiin enemmän koristeltuja pronssiämpäreitä kuin mistään muualta Euroopasta samalta ajalta. Ämpäreiden kylkiin on lyöty kulkueita, eläimiä ja juhlamenoja niin tarkasti, että tutkijat pystyvät niistä lukemaan yli 2000 vuoden takaisen yhteiskunnan arkea. Nykyään kaupunkia elättävät pikemminkin tehtaat kuin pronssiseppien pajat – Novo Mesto on Slovenian autoteollisuuden ja lääketeollisuuden yksi keskus, ja sen vaurauden juuret ovat yhtä lailla liukuhihnoissa kuin muinaisissa kauppareiteissä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/svn-maakunta2-jugovzhodna-slovenija-v-55f6175a.jpg',
@@ -6023,7 +6023,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Notranjsko-kraška': {
       lyhyt: 'Cerknicanjärvi on täytenä Slovenian suurin järvi, mutta kuivina kesinä sen vesi voi valua kokonaan maanalaisiin onkaloihin.',
-      pitka: `Notranjsko-kraška-alueen sydämessä makaa Cerknicanjärvi, joka ei ole tavallinen järvi lainkaan: se täyttyy sateiden mukana ja tyhjenee jälleen maan alle vievien kuilujen kautta, ja täytenä se voi kasvaa Slovenian suurimmaksi järveksi. Ilmiön kuvasi tieteellisesti jo 1600-luvulla paikallinen luonnontutkija Janez Vajkard Valvasor, jonka havainnot järven ajoittaisesta katoamisesta veivät hänet Lontoon Royal Societyn jäseneksi asti – ja juuri täältä ovat peräisin kansainvälisetkin termit kuten "karst-polje". Isoisän matka-aikana 1870-luvulla Valvasorin kuvaukset olivat jo vakiintunutta lukemistoa Krainin herttuakunnasta kiinnostuneille, joten hän saattoi tuntea järven maineen jo ennen saapumistaan. Kun vesi laskee kesällä, pohjalle jää vehreä niitty laiduneläimille, ja kun sateet palaavat syksyllä, kalat ja linnut ilmestyvät järvelle uudestaan ikään kuin tyhjästä.`,
+      pitka: `Notranjsko-kraška-alueen sydämessä makaa Cerknicanjärvi, joka ei ole tavallinen järvi lainkaan: se täyttyy sateiden mukana ja tyhjenee jälleen maan alle vievien kuilujen kautta, ja täytenä se voi kasvaa Slovenian suurimmaksi järveksi. Ilmiön kuvasi tieteellisesti jo 1600-luvulla paikallinen luonnontutkija Janez Vajkard Valvasor, jonka havainnot järven ajoittaisesta katoamisesta veivät hänet Lontoon Royal Societyn jäseneksi asti – ja juuri täältä ovat peräisin kansainvälisetkin termit kuten ”karst-polje”. Isoisän matka-aikana 1870-luvulla Valvasorin kuvaukset olivat jo vakiintunutta lukemistoa Krainin herttuakunnasta kiinnostuneille, joten hän saattoi tuntea järven maineen jo ennen saapumistaan. Kun vesi laskee kesällä, pohjalle jää vehreä niitty laiduneläimille, ja kun sateet palaavat syksyllä, kalat ja linnut ilmestyvät järvelle uudestaan ikään kuin tyhjästä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-notranjsko-kraska-df40e431.jpg',
@@ -6267,7 +6267,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ROU: {
     Alba: {
       lyhyt: 'Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan, ja päivä on yhä maan kansallispäivä.',
-      pitka: `Alba Iulia on Romanian kansallisen yhtenäisyyden symboli: kaupungin 1700-luvulla rakennettu tähtilinnoitus houkuttelee vuosittain satojatuhansia kävijöitä, ja sen suojissa julistettiin 1918 Transilvanian liittyminen Romaniaan. Ennen tätä alue kuului vuosisatoja Unkarin kuningaskuntaan, ja lähellä sijaitseva Blaj tunnettiin "Pienenä Roomana", Transilvanian romanialaisten kreikkalaiskatolisten kirkollisena ja sivistyksellisenä keskuksena. Kaupungin kaduilla risteilevät nykyään barokkiaikaiset muurit ja museokokoelmat, joissa kansallinen historia on läsnä joka käänteessä.`,
+      pitka: `Alba Iulia on Romanian kansallisen yhtenäisyyden symboli: kaupungin 1700-luvulla rakennettu tähtilinnoitus houkuttelee vuosittain satojatuhansia kävijöitä, ja sen suojissa julistettiin 1918 Transilvanian liittyminen Romaniaan. Ennen tätä alue kuului vuosisatoja Unkarin kuningaskuntaan, ja lähellä sijaitseva Blaj tunnettiin ”Pienenä Roomana”, Transilvanian romanialaisten kreikkalaiskatolisten kirkollisena ja sivistyksellisenä keskuksena. Kaupungin kaduilla risteilevät nykyään barokkiaikaiset muurit ja museokokoelmat, joissa kansallinen historia on läsnä joka käänteessä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-alba-v-bf9ad83b.jpg',
@@ -6474,7 +6474,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bucharest: {
       lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
-      pitka: `Bukarest on yli kahden miljoonan asukkaan pääkaupunki, jonka Belle Époque -arkkitehtuuri ja hulppea Parlamentin palatsi hallitsevat katukuvaa. Kaupungin päänäyttämö, vuonna 1852 avattu "Teatrul cel Mare", sai 1875 nimensä Kansallisteatteri — nimi, joka on säilynyt siitä lähtien. Cișmigiun puisto on kaupungin vanhin keskustapuisto, ja Romanian Athenaeum-konserttitalo, rakennettu 1880-luvulla, on yksi kaupungin tunnetuimmista maamerkeistä ruhtinas Carol I:n hallituskaudelta periytyvän kaupunkikuvan rinnalla.`,
+      pitka: `Bukarest on yli kahden miljoonan asukkaan pääkaupunki, jonka Belle Époque -arkkitehtuuri ja hulppea Parlamentin palatsi hallitsevat katukuvaa. Kaupungin päänäyttämö, vuonna 1852 avattu ”Teatrul cel Mare”, sai 1875 nimensä Kansallisteatteri — nimi, joka on säilynyt siitä lähtien. Cișmigiun puisto on kaupungin vanhin keskustapuisto, ja Romanian Athenaeum-konserttitalo, rakennettu 1880-luvulla, on yksi kaupungin tunnetuimmista maamerkeistä ruhtinas Carol I:n hallituskaudelta periytyvän kaupunkikuvan rinnalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
@@ -6497,7 +6497,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Buzau: {
       lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
-      pitka: `Buzăun läänin kuuluisin aarre, vuonna 1837 löydetty myöhäisantiikin goottilainen kultaesineistö "Cloșca cu puii de aur", on nykyään esillä Bukarestin kansallismuseossa yhtenä Romanian arvokkaimmista muinaisjäännöksistä. Vuonna 1875 sirkusakrobaatti nimeltä Dumitru Pantazescu-Popescu varasti aarteen ja tuhosi osan koruista — vain kaksitoista alkuperäisistä kahdestakymmenestäkahdesta kultaesineestä on säilynyt tähän päivään. Löytäjät itse olivat sulattaneet ja myyneet osan koruista hopeana jo ennen kuin viranomaiset saivat tietää löydöstä.`,
+      pitka: `Buzăun läänin kuuluisin aarre, vuonna 1837 löydetty myöhäisantiikin goottilainen kultaesineistö ”Cloșca cu puii de aur”, on nykyään esillä Bukarestin kansallismuseossa yhtenä Romanian arvokkaimmista muinaisjäännöksistä. Vuonna 1875 sirkusakrobaatti nimeltä Dumitru Pantazescu-Popescu varasti aarteen ja tuhosi osan koruista — vain kaksitoista alkuperäisistä kahdestakymmenestäkahdesta kultaesineestä on säilynyt tähän päivään. Löytäjät itse olivat sulattaneet ja myyneet osan koruista hopeana jo ennen kuin viranomaiset saivat tietää löydöstä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
@@ -6635,7 +6635,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dâmbovita': {
       lyhyt: 'Târgoviștessa Nicolae ja Elena Ceaușescu tuomittiin ja ammuttiin joulupäivänä 1989, ja varuskunnan rakennus on nyt museo.',
-      pitka: `Pucioasa on yhä toimiva kylpyläkaupunki Dâmbovițan piirikunnassa, jonka rikkipitoiset "pucioasa"-lähteet — nimi tulee sanasta rikki — houkuttelevat kävijöitä edelleen. Ensimmäinen julkinen kylpylaitos valmistui paikalle 1834, ja lähteiden vedet esiteltiin 1873 Wienin maailmannäyttelyssä, mikä toi kylpyläkeskukselle kansainvälistä huomiota. Piirikunnan nimen antava Dâmbovița-joki virtaa Bucegin vuorilta kohti Bukarestia, ja sen varrella kylpylä on kasvanut vuosikymmenten mittaan yhdeksi Valakian tunnetuimmista.`,
+      pitka: `Pucioasa on yhä toimiva kylpyläkaupunki Dâmbovițan piirikunnassa, jonka rikkipitoiset ”pucioasa”-lähteet — nimi tulee sanasta rikki — houkuttelevat kävijöitä edelleen. Ensimmäinen julkinen kylpylaitos valmistui paikalle 1834, ja lähteiden vedet esiteltiin 1873 Wienin maailmannäyttelyssä, mikä toi kylpyläkeskukselle kansainvälistä huomiota. Piirikunnan nimen antava Dâmbovița-joki virtaa Bucegin vuorilta kohti Bukarestia, ja sen varrella kylpylä on kasvanut vuosikymmenten mittaan yhdeksi Valakian tunnetuimmista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dambovita-b78b949a.jpg",
@@ -6819,7 +6819,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Iasi: {
       lyhyt: 'Iașin kulttuuripalatsi on neogoottinen jättirakennus, jossa toimii nykyään neljä museota.',
-      pitka: `Iași oli Moldovan ruhtinaskunnan pääkaupunki kolmisen vuosisataa, vuodesta 1564, ja menetti asemansa Bukarestille vasta 1862, kun Moldova ja Valakia yhdistyivät lopullisesti yhdeksi Romaniaksi. Pääkaupunkiaseman menetys jätti kaupunkiin haikean jälkijättöisyyden tunnun, joka näkyy yhä sen lempinimessä "Romanian kulttuuripääkaupunki". Iașin yliopisto, perustettu ruhtinas Alexandru Ioan Cuzan asetuksella 1860, oli Romanian ensimmäinen nykyaikainen yliopisto ja on yhä yksi kaupungin sivistyksellisen ylpeyden lähteitä.`,
+      pitka: `Iași oli Moldovan ruhtinaskunnan pääkaupunki kolmisen vuosisataa, vuodesta 1564, ja menetti asemansa Bukarestille vasta 1862, kun Moldova ja Valakia yhdistyivät lopullisesti yhdeksi Romaniaksi. Pääkaupunkiaseman menetys jätti kaupunkiin haikean jälkijättöisyyden tunnun, joka näkyy yhä sen lempinimessä ”Romanian kulttuuripääkaupunki”. Iașin yliopisto, perustettu ruhtinas Alexandru Ioan Cuzan asetuksella 1860, oli Romanian ensimmäinen nykyaikainen yliopisto ja on yhä yksi kaupungin sivistyksellisen ylpeyden lähteitä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-iasi-4a2ec737.jpg",
@@ -6842,7 +6842,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ilfov: {
       lyhyt: 'Snagovinjärven saarella seisoo luostari, jonne perimätiedon mukaan Vlad Seivästäjä on haudattu.',
-      pitka: `Mogoșoaian palatsi Ilfovin piirikunnassa on museo ja suosittu retkikohde Bukarestin lähellä, jonka ruhtinas Constantin Brâncoveanu rakennutti 1698–1702 omaa "brâncovenesk"-tyyliään edustavaksi kesäasunnokseen — italialaisten ja ottomaanien vaikutteiden sekoitukseksi, joka oli 1700-luvun alun Valakian arkkitehtuurin huippukohta. Brâncoveanun teloituksen 1714 jälkeen palatsi ryöstettiin ja muuttui majataloksi, ja se koki uuden ryöstön Venäjän–Turkin sodan 1768–1774 aikana. Prinsessa Marta Bibescu kunnosti palatsin loistoonsa vasta 1900-luvun alussa.`,
+      pitka: `Mogoșoaian palatsi Ilfovin piirikunnassa on museo ja suosittu retkikohde Bukarestin lähellä, jonka ruhtinas Constantin Brâncoveanu rakennutti 1698–1702 omaa ”brâncovenesk”-tyyliään edustavaksi kesäasunnokseen — italialaisten ja ottomaanien vaikutteiden sekoitukseksi, joka oli 1700-luvun alun Valakian arkkitehtuurin huippukohta. Brâncoveanun teloituksen 1714 jälkeen palatsi ryöstettiin ja muuttui majataloksi, ja se koki uuden ryöstön Venäjän–Turkin sodan 1768–1774 aikana. Prinsessa Marta Bibescu kunnosti palatsin loistoonsa vasta 1900-luvun alussa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ilfov-94013699.jpg",
@@ -7003,7 +7003,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Salaj: {
       lyhyt: 'Moigradin kukkuloilla ovat Porolissumin rauniot, Rooman Dakian maakunnan luoteisrajan suuren linnoituskaupungin jäänteet.',
-      pitka: `Sălajin Jiboun kylässä syntyi 1796 paroni Wesselényi Miklós, joka nousi kansallissankariksi kun hän 1838 souti läpi jäätyneen, tulvivan Pestin kaduista toiseen pelastaen ihmisiä katoilta — häntä alettiin kutsua "tulvan lauttamieheksi". Hänen sankaritekonsa elävät yhä unkarilaisten koululaisten tarinoissa, ja suvun linna kohoaa edelleen Jiboun keskustassa, nykyään yksityisomistuksessa. Linnan viereen on rakennettu Jiboun kasvitieteellinen puutarha, joka on yksi Romanian suurimmista.`,
+      pitka: `Sălajin Jiboun kylässä syntyi 1796 paroni Wesselényi Miklós, joka nousi kansallissankariksi kun hän 1838 souti läpi jäätyneen, tulvivan Pestin kaduista toiseen pelastaen ihmisiä katoilta — häntä alettiin kutsua ”tulvan lauttamieheksi”. Hänen sankaritekonsa elävät yhä unkarilaisten koululaisten tarinoissa, ja suvun linna kohoaa edelleen Jiboun keskustassa, nykyään yksityisomistuksessa. Linnan viereen on rakennettu Jiboun kasvitieteellinen puutarha, joka on yksi Romanian suurimmista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-salaj-56a973fa.jpg",
@@ -7164,7 +7164,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vaslui: {
       lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
-      pitka: `Vasluin seudun Pleșeștin kylässä syntyi 1858 kirjailija Alexandru Vlahuță, jonka pääteos "România pitorească" ("Kuvauksellinen Romania") kuvasi koko maan maisemia matkakertomuksen muodossa ja tekee hänestä yhden Romanian rakastetuimmista kirjailijoista. Vaslui itse on yhä yksi Romanian rauhallisimmista maakuntakeskuksista, syrjäinen Moldovan pikkukaupunki maatalousseudun keskellä. Vlahuțan syntymäseutu muistetaan nykyään kirjallisuushistoriasta, ja hänen nimeään kantavat koulut ja kadut ympäri Moldovaa.`,
+      pitka: `Vasluin seudun Pleșeștin kylässä syntyi 1858 kirjailija Alexandru Vlahuță, jonka pääteos ”România pitorească” (”Kuvauksellinen Romania”) kuvasi koko maan maisemia matkakertomuksen muodossa ja tekee hänestä yhden Romanian rakastetuimmista kirjailijoista. Vaslui itse on yhä yksi Romanian rauhallisimmista maakuntakeskuksista, syrjäinen Moldovan pikkukaupunki maatalousseudun keskellä. Vlahuțan syntymäseutu muistetaan nykyään kirjallisuushistoriasta, ja hänen nimeään kantavat koulut ja kadut ympäri Moldovaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
@@ -7328,7 +7328,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Královéhradecký': {
       lyhyt: 'Krkonošen Sněžka on 1 603 metrillään Tšekin korkein vuori, ja sen huipun poikki kulkee raja Puolaan.',
-      pitka: `Heinäkuussa 1866 Preussin ja Itävallan armeijat kohtasivat Hradec Královén pelloilla Königgrätzin taistelussa, yhdessä 1800-luvun Euroopan suurimmista yksipäiväisistä taisteluista, joka ratkaisi koko Saksan yhdistymisen suunnan preussilaisittain; alueella on yhä lukuisia muistomerkkejä ja hautausmaita. Linnoitusstatuksen purkamisen jälkeen arkkitehti Josef Gočár laati kaupungille 1920-luvulla kunnianhimoisen kaupunkisuunnitelman, jonka ansiosta siitä tuli tunnettu "tasavallan salonkina". Lähellä sijaitsevassa Kuksin kylässä barokkitaiteilija Matyáš Bernard Braun veisti 1700-luvulla kivestä hyveitä ja paheita esittävät patsaat, jotka seisovat siellä yhä. Krkonošen vuoristo tarjoaa kesäisin vaellusreittejä ja talvisin hiihtoa Sněžkan juurella, Tšekin korkeimman huipun kupeessa.`,
+      pitka: `Heinäkuussa 1866 Preussin ja Itävallan armeijat kohtasivat Hradec Královén pelloilla Königgrätzin taistelussa, yhdessä 1800-luvun Euroopan suurimmista yksipäiväisistä taisteluista, joka ratkaisi koko Saksan yhdistymisen suunnan preussilaisittain; alueella on yhä lukuisia muistomerkkejä ja hautausmaita. Linnoitusstatuksen purkamisen jälkeen arkkitehti Josef Gočár laati kaupungille 1920-luvulla kunnianhimoisen kaupunkisuunnitelman, jonka ansiosta siitä tuli tunnettu ”tasavallan salonkina”. Lähellä sijaitsevassa Kuksin kylässä barokkitaiteilija Matyáš Bernard Braun veisti 1700-luvulla kivestä hyveitä ja paheita esittävät patsaat, jotka seisovat siellä yhä. Krkonošen vuoristo tarjoaa kesäisin vaellusreittejä ja talvisin hiihtoa Sněžkan juurella, Tšekin korkeimman huipun kupeessa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/cze-maakunta2-kralovehradecky-v-9790831e.jpg',
@@ -7443,7 +7443,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Plzeňský': {
       lyhyt: 'Plzeňissä pantiin 1842 ensimmäinen vaalea pohjahiivaolut, ja sen mukaan pils-oluet saivat nimensä ympäri maailman.',
-      pitka: `Plzeňin vanhakaupunki perustettiin 1295 kuningas Václav II:n määräyksestä säännölliseksi ruutukaavaksi, joka on säilynyt sellaisenaan ja on yksi Euroopan parhaiten säilyneistä keskiaikaisista kaupunkisuunnitelmista. Insinööri Emil Škoda otti 1869 haltuunsa pienen konepajan kaupungissa — yrityksen, joka kasvoi yhdeksi Habsburgien valtakunnan ja sittemmin koko Euroopan suurimmista kone- ja asetehtaista, ja Škoda-nimi elää yhä sekä autoissa että raskaassa teollisuudessa. Kaupungin toinen kuuluisuus, vaalea pohjahiivaolut, keksittiin siellä 1842, ja nimitys "pils" on siitä lähtien tarkoittanut lähes mitä tahansa vaaleaa lageria ympäri maailman. Panimoalueella käy nykyään vuosittain satojatuhansia matkailijoita, jotka kiertävät historiallisia hiekkakivikellareita syvällä kaupungin alla.`,
+      pitka: `Plzeňin vanhakaupunki perustettiin 1295 kuningas Václav II:n määräyksestä säännölliseksi ruutukaavaksi, joka on säilynyt sellaisenaan ja on yksi Euroopan parhaiten säilyneistä keskiaikaisista kaupunkisuunnitelmista. Insinööri Emil Škoda otti 1869 haltuunsa pienen konepajan kaupungissa — yrityksen, joka kasvoi yhdeksi Habsburgien valtakunnan ja sittemmin koko Euroopan suurimmista kone- ja asetehtaista, ja Škoda-nimi elää yhä sekä autoissa että raskaassa teollisuudessa. Kaupungin toinen kuuluisuus, vaalea pohjahiivaolut, keksittiin siellä 1842, ja nimitys ”pils” on siitä lähtien tarkoittanut lähes mitä tahansa vaaleaa lageria ympäri maailman. Panimoalueella käy nykyään vuosittain satojatuhansia matkailijoita, jotka kiertävät historiallisia hiekkakivikellareita syvällä kaupungin alla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-plzensky-99a6a1c6.jpg",
@@ -7557,7 +7557,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Zlínský': {
       lyhyt: 'Zlín on Baťan kenkätehtaan kaupunki, ja sen pilvenpiirtäjässä johtajan työhuone oli hissi, joka liikkui kerroksesta toiseen.',
-      pitka: `Zlín oli 1800-luvulla vain vaatimaton maalaispitäjä muutaman tuhannen asukkaan kylineen, kunnes paikallisen suutariperheen poika Tomáš Baťa perusti kenkätehtaansa 1894 — tehdas kasvoi nopeasti maailman suurimpien kenkävalmistajien joukkoon, ja koko kaupunki rakennettiin 1920–30-luvuilla uudelleen funktionalistiseksi "puutarhakaupungiksi" tehtaan ympärille. Nykyään Baťan tehdaskompleksi on osittain museona ja osittain yliopiston ja yritysten käytössä, ja sen punatiiliset tehdashallit ovat harvinainen esimerkki 1900-luvun alun teollisuusarkkitehtuurista. Vuoristoisella Valašskon alueella on sen sijaan pitkät perinteet paimentolaiskarjataloudessa ja hirsirakentamisessa, joita Rožnov pod Radhoštěmin ulkoilmamuseo — Keski-Euroopan vanhin, perustettu 1925 — esittelee alkuperäisissä hirsirakennuksissa.`,
+      pitka: `Zlín oli 1800-luvulla vain vaatimaton maalaispitäjä muutaman tuhannen asukkaan kylineen, kunnes paikallisen suutariperheen poika Tomáš Baťa perusti kenkätehtaansa 1894 — tehdas kasvoi nopeasti maailman suurimpien kenkävalmistajien joukkoon, ja koko kaupunki rakennettiin 1920–30-luvuilla uudelleen funktionalistiseksi ”puutarhakaupungiksi” tehtaan ympärille. Nykyään Baťan tehdaskompleksi on osittain museona ja osittain yliopiston ja yritysten käytössä, ja sen punatiiliset tehdashallit ovat harvinainen esimerkki 1900-luvun alun teollisuusarkkitehtuurista. Vuoristoisella Valašskon alueella on sen sijaan pitkät perinteet paimentolaiskarjataloudessa ja hirsirakentamisessa, joita Rožnov pod Radhoštěmin ulkoilmamuseo — Keski-Euroopan vanhin, perustettu 1925 — esittelee alkuperäisissä hirsirakennuksissa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/cze-maakunta2-zlinsky-v-be48bd0e.jpg',
@@ -8081,7 +8081,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Lovech: {
       lyhyt: 'Devetaškin luolan suu on 35 metriä leveä, ja sen holveissa elää lähes 30 000 lepakkoa – luolassa on kuvattu myös Hollywood-elokuva.',
-      pitka: `Lovechin kaupungin tunnusmerkki on katettu silta, jonka itseoppinut rakennusmestari Kolyu Ficheto pystytti Osamin joen yli 1874–1876, kun edellinen silta oli tuhoutunut tulvassa. Alkuperäisellä sillalla oli 64 puukojua, joissa kauppiaat ja käsityöläiset myivät tavaraansa, ja silta selvisi ehjänä sekä sotavuosista että vuoden 1897 suurtulvasta – vasta tulipalo tuhosi sen lopulta 1925. Nykyinen silta on jälleenrakennettu mahdollisimman uskollisena alkuperäiselle, ja sen kaupat palvelevat yhä lovechilaisia ja matkailijoita samaan tapaan kuin sata viisikymmentä vuotta sitten. Kaupunkia kutsutaankin yhä "katetun sillan kaupungiksi", ja silta on Lovechin tunnetuin maamerkki aivan yhtä lailla kuin lähistön lepakkoluola.`,
+      pitka: `Lovechin kaupungin tunnusmerkki on katettu silta, jonka itseoppinut rakennusmestari Kolyu Ficheto pystytti Osamin joen yli 1874–1876, kun edellinen silta oli tuhoutunut tulvassa. Alkuperäisellä sillalla oli 64 puukojua, joissa kauppiaat ja käsityöläiset myivät tavaraansa, ja silta selvisi ehjänä sekä sotavuosista että vuoden 1897 suurtulvasta – vasta tulipalo tuhosi sen lopulta 1925. Nykyinen silta on jälleenrakennettu mahdollisimman uskollisena alkuperäiselle, ja sen kaupat palvelevat yhä lovechilaisia ja matkailijoita samaan tapaan kuin sata viisikymmentä vuotta sitten. Kaupunkia kutsutaankin yhä ”katetun sillan kaupungiksi”, ja silta on Lovechin tunnetuin maamerkki aivan yhtä lailla kuin lähistön lepakkoluola.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-lovech-55b75026.jpg",
@@ -8817,7 +8817,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šibensko-Kninska': {
       lyhyt: 'Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus.',
-      pitka: `Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus, jotka molemmat kertovat kaupungin venetsialaisajan puolustusarkkitehtuurista. Krkan kansallispuiston vesiputoukset, suojeltuina vuodesta 1985, ovat yksi Kroatian suosituimmista luontokohteista, ja niiden ympärillä kulkevat pitkoskävelyreitit vetävät kävijöitä ympäri vuoden. Kalliolla kohoava Kninin linnoitus oli vuosisatoja Venetsian, Ottomaanien ja Habsburgien kiistakapula, mutta nykyään se muistuttaa lähihistoriasta: linnoituksessa toimii museo Kroatian itsenäisyyssodasta, ja elokuun 1995 sotilasoperaatio "Oluja" ("Myrsky") päättyi juuri Kninissä. Maakunta yhdistää näin keskiaikaisen rannikkoarkkitehtuurin, luonnonihmeet ja Kroatian nuoren valtion historian.`,
+      pitka: `Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus, jotka molemmat kertovat kaupungin venetsialaisajan puolustusarkkitehtuurista. Krkan kansallispuiston vesiputoukset, suojeltuina vuodesta 1985, ovat yksi Kroatian suosituimmista luontokohteista, ja niiden ympärillä kulkevat pitkoskävelyreitit vetävät kävijöitä ympäri vuoden. Kalliolla kohoava Kninin linnoitus oli vuosisatoja Venetsian, Ottomaanien ja Habsburgien kiistakapula, mutta nykyään se muistuttaa lähihistoriasta: linnoituksessa toimii museo Kroatian itsenäisyyssodasta, ja elokuun 1995 sotilasoperaatio ”Oluja” (”Myrsky”) päättyi juuri Kninissä. Maakunta yhdistää näin keskiaikaisen rannikkoarkkitehtuurin, luonnonihmeet ja Kroatian nuoren valtion historian.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sibensko-kninska-f4e33cd1.jpg",
@@ -10231,7 +10231,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bosnian Podrinje': {
       lyhyt: 'Goražden lähellä toimi 1519–1523 nykyisen Bosnia ja Hertsegovinan ensimmäinen kirjapaino, jossa painettiin kirkkoslaavinkielisiä kirjoja.',
-      pitka: `Goraždeen halkoo Drina-joki, jonka ympärille koko Podrinjen seutu on rakentunut – nimikin tarkoittaa suoraan 'Drinan vartta'. Joen kirkas vesi virtaa syvien vuorten välistä, ja rannoilla harrastetaan koskimelontaa, kalastusta, pyöräilyä ja vaellusta ympäri vuoden. Kanjonin jyrkät rinteet tarjoavat näköalapaikkoja, joista joen mutkittelua voi seurata kilometrien päähän. Osa Drinan alkuvedestä syntyy kauempana etelässä kahden vuoristojoen yhtyessä, mikä tekee koko vesistöstä yhden alueen vaikuttavimmista luontokohteista. Goraždessa luonto ja hidas jokielämä kohtaavat sopivassa tahdissa retkeilijälle.`,
+      pitka: `Goraždeen halkoo Drina-joki, jonka ympärille koko Podrinjen seutu on rakentunut – nimikin tarkoittaa suoraan ’Drinan vartta’. Joen kirkas vesi virtaa syvien vuorten välistä, ja rannoilla harrastetaan koskimelontaa, kalastusta, pyöräilyä ja vaellusta ympäri vuoden. Kanjonin jyrkät rinteet tarjoavat näköalapaikkoja, joista joen mutkittelua voi seurata kilometrien päähän. Osa Drinan alkuvedestä syntyy kauempana etelässä kahden vuoristojoen yhtyessä, mikä tekee koko vesistöstä yhden alueen vaikuttavimmista luontokohteista. Goraždessa luonto ja hidas jokielämä kohtaavat sopivassa tahdissa retkeilijälle.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bosnian-podrinje-5b46aaf7.jpg",
@@ -10323,7 +10323,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Foča': {
       lyhyt: 'Sutjeskan kansallispuistossa kasvaa Perućican aarniometsä, ja sen reunalla kohoaa Maglić, Bosnia ja Hertsegovinan korkein huippu.',
-      pitka: `Fočan liepeillä Tara-joki on kaivertanut yhden Euroopan syvimmistä kanjoneista, paikan, jota kutsutaan usein 'Euroopan kyyneleeksi' sen kirkkaan, juomakelpoisen veden vuoksi. Jyrkät kalliot kohoavat yli 1300 metrin korkeuteen joen yllä, ja koskimelojat kokevat matkalla noin 50 koskea vaikeusasteiden 2-4 välillä. Kaupungissa itsessään seisoo Aladža-moskeija vuodelta 1549, ensimmäinen puhtaasti klassista ottomaanityyliä edustava moskeija koko Bosniassa, rakennettu Mimar Sinanin lähipiirin toimesta. Sen värikäs sisäkoristelu on antanut sille lempinimen 'kirjava moskeija', ja se lasketaan yhdeksi maan arvokkaimmista ottomaaniajan rakennusmuistomerkeistä. Fočassa villi luonto ja vuosisatainen käsityötaito kohtaavat samalla kaupunkiseudulla.`,
+      pitka: `Fočan liepeillä Tara-joki on kaivertanut yhden Euroopan syvimmistä kanjoneista, paikan, jota kutsutaan usein ’Euroopan kyyneleeksi’ sen kirkkaan, juomakelpoisen veden vuoksi. Jyrkät kalliot kohoavat yli 1300 metrin korkeuteen joen yllä, ja koskimelojat kokevat matkalla noin 50 koskea vaikeusasteiden 2-4 välillä. Kaupungissa itsessään seisoo Aladža-moskeija vuodelta 1549, ensimmäinen puhtaasti klassista ottomaanityyliä edustava moskeija koko Bosniassa, rakennettu Mimar Sinanin lähipiirin toimesta. Sen värikäs sisäkoristelu on antanut sille lempinimen ’kirjava moskeija’, ja se lasketaan yhdeksi maan arvokkaimmista ottomaaniajan rakennusmuistomerkeistä. Fočassa villi luonto ja vuosisatainen käsityötaito kohtaavat samalla kaupunkiseudulla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-foca-e31fb6a7.jpg",
@@ -10576,7 +10576,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Zenica-Doboj': {
       lyhyt: 'Zenicassa on tehty terästä vuodesta 1892, ja terästehtaan piiput näkyvät yhä Bosna-joen laakson yli.',
-      pitka: `Kaknjin lähellä, kylässä nimeltä Kraljeva Sutjeska eli 'Kuninkaan kanjoni', sijaitsi keskiaikaisen Bosnian kuningaskunnan hovi. Bosnian banuksi kutsuttu Stjepan II Kotromanić perusti hovin tänne 1300-luvulla, ja lähistöllä kohoavalla Grgurevon kummulla ovat yhä näkyvissä kuninkaanlinnan rauniot vuodelta 1330. Paikalle 1300-luvulla perustettu fransiskaaniluostari toimii yhä, ja sen kirjastossa säilytetään noin 11 000 teosta, joukossa 31 inkunaabelia sekä bosniankielistä kyrillistä käsikirjoitusperinnettä. Kansallismonumentiksi julistettu luostari on yksi harvoista paikoista, joissa keskiajan Bosnian kuninkaallinen historia on edelleen käsin kosketeltavissa.`,
+      pitka: `Kaknjin lähellä, kylässä nimeltä Kraljeva Sutjeska eli ’Kuninkaan kanjoni’, sijaitsi keskiaikaisen Bosnian kuningaskunnan hovi. Bosnian banuksi kutsuttu Stjepan II Kotromanić perusti hovin tänne 1300-luvulla, ja lähistöllä kohoavalla Grgurevon kummulla ovat yhä näkyvissä kuninkaanlinnan rauniot vuodelta 1330. Paikalle 1300-luvulla perustettu fransiskaaniluostari toimii yhä, ja sen kirjastossa säilytetään noin 11 000 teosta, joukossa 31 inkunaabelia sekä bosniankielistä kyrillistä käsikirjoitusperinnettä. Kansallismonumentiksi julistettu luostari on yksi harvoista paikoista, joissa keskiajan Bosnian kuninkaallinen historia on edelleen käsin kosketeltavissa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bih-maakunta2-zenica-doboj-v-c337957d.jpg',
@@ -11139,7 +11139,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Larnaca: {
       lyhyt: 'Larnakan suolajärvelle saapuu talvisin tuhansia flamingoja, ja sen rannalla seisoo Hala Sultan Tekke -moskeija.',
-      pitka: "Larnaca tunnetaan lentokentästä, mutta kaupungin alla lepää muinainen Kition, joka perustettiin 1200-luvulla eaa. Pyhän Lasaruksen kirkko rakennettiin 800-luvun lopulla sen jälkeen, kun kaupungista löytyi vuonna 890 hauta, jossa oli kirjoitus \"Lasarus, neljä päivää kuollut\". Kamaresin akvedukti, jossa on 75 kaarta, rakennettiin 1700-luvun puolivälissä tuomaan kaupunkiin vettä. Ulkomerellä makaa 42 metrin syvyydessä Zenobia-lautta, joka kaatui vuonna 1980 ja on nykyään yksi maailman suosituimmista hylkysukelluskohteista. Sisämaassa Choirokoitian neoliittinen kylä, perustettu noin 7000 eaa., kuuluu Unescon maailmanperintöluetteloon vuodesta 1998.",
+      pitka: "Larnaca tunnetaan lentokentästä, mutta kaupungin alla lepää muinainen Kition, joka perustettiin 1200-luvulla eaa. Pyhän Lasaruksen kirkko rakennettiin 800-luvun lopulla sen jälkeen, kun kaupungista löytyi vuonna 890 hauta, jossa oli kirjoitus ”Lasarus, neljä päivää kuollut”. Kamaresin akvedukti, jossa on 75 kaarta, rakennettiin 1700-luvun puolivälissä tuomaan kaupunkiin vettä. Ulkomerellä makaa 42 metrin syvyydessä Zenobia-lautta, joka kaatui vuonna 1980 ja on nykyään yksi maailman suosituimmista hylkysukelluskohteista. Sisämaassa Choirokoitian neoliittinen kylä, perustettu noin 7000 eaa., kuuluu Unescon maailmanperintöluetteloon vuodesta 1998.",
     },
     Limassol: {
       lyhyt: 'Limassolin vuoristokylissä tehdään makeaa Commandaria-viiniä, jota pidetään maailman vanhimpana yhä valmistettavana nimettynä viininä.',
@@ -12163,7 +12163,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   UKR: {
     Cherkasy: {
       lyhyt: 'Kanivin lähellä Tarasinmäellä Dneprin rannalla lepää runoilija Taras Ševtšenko, jonka maalliset jäännökset siirrettiin sinne Pietarista 1861.',
-      pitka: `Cherkasyn maakunta levittäytyy Dneprin molemmin puolin keskisen Ukrainan metsäaromaisemaan, ja joen rannoilla on asuttu tiiviisti jo vuosisatoja. Alueen nimeen kietoutuu kasakkojen varhaishistoria: 1400-luvulla Keski-Dneprin kasakkayhteisöjä kutsuttiin "tšerkasseiksi", ja Kanivin ja Cherkasyn linnoitukset suojasivat seutua tataarien ratsioilta. Nykyään maakunnan tunnetuin matkakohde ei silti liity sotaan vaan hiljaiseen pyhiinvaellukseen: joka syksy ennen juutalaista uutta vuotta Umaniin saapuu kymmeniätuhansia hasidijuutalaisia rukoilemaan rabbi Nachmanin haudalla, ja pikkukaupungin väkiluku moninkertaistuu muutamaksi päiväksi. Umanin toinen aarre, kreivi Potockin 1796 rakennuttama Sofijivkan puisto, houkuttelee ympäri vuoden retkeilijöitä vesiputouksineen ja keinotekoisine luolineen.`,
+      pitka: `Cherkasyn maakunta levittäytyy Dneprin molemmin puolin keskisen Ukrainan metsäaromaisemaan, ja joen rannoilla on asuttu tiiviisti jo vuosisatoja. Alueen nimeen kietoutuu kasakkojen varhaishistoria: 1400-luvulla Keski-Dneprin kasakkayhteisöjä kutsuttiin ”tšerkasseiksi”, ja Kanivin ja Cherkasyn linnoitukset suojasivat seutua tataarien ratsioilta. Nykyään maakunnan tunnetuin matkakohde ei silti liity sotaan vaan hiljaiseen pyhiinvaellukseen: joka syksy ennen juutalaista uutta vuotta Umaniin saapuu kymmeniätuhansia hasidijuutalaisia rukoilemaan rabbi Nachmanin haudalla, ja pikkukaupungin väkiluku moninkertaistuu muutamaksi päiväksi. Umanin toinen aarre, kreivi Potockin 1796 rakennuttama Sofijivkan puisto, houkuttelee ympäri vuoden retkeilijöitä vesiputouksineen ja keinotekoisine luolineen.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-cherkasy-v-22b61bf5.jpg',
@@ -12209,7 +12209,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chernivtsi: {
       lyhyt: 'Tšernivtsin yliopisto toimii entisessä Bukovinan ja Dalmatian metropoliittojen residenssissä, joka on Unescon maailmanperintöä vuodesta 2011.',
-      pitka: `Tšernivtsi on rakennettu kukkuloille Prutin rannalle, ja kaupunkikuvaa hallitsevat yhä keisarilliset kivijulkisivut – vuonna 1873 kaupunki kuului Itävallan keisarikunnan Bukovinan maakuntaan, ja arkkitehtuuri kertoo siitä yhä joka kadulla. Ennen toista maailmansotaa täällä eli rinnakkain ukrainalaisia, romanialaisia, juutalaisia, saksalaisia ja puolalaisia niin tiiviisti, että kaupunkia kutsuttiin "pikku-Wieniksi". Tästä kielten ja kulttuurien sekoituksesta nousi myös runoilija Paul Celan, joka syntyi kaupungissa 1920 ja kirjoitti äidinkielellään saksaksi selviydyttyään natsimiehityksestä juutalaisena – hänestä tuli yksi 1900-luvun tärkeimmistä saksankielisistä runoilijoista. Nykyään yliopistokaupunki on rauhallisempi ja yksikielisempi kuin ennen, mutta sen kadut ja kahvilat muistuttavat yhä siitä, montaa kulttuuria yksi kaupunki voi kantaa.`,
+      pitka: `Tšernivtsi on rakennettu kukkuloille Prutin rannalle, ja kaupunkikuvaa hallitsevat yhä keisarilliset kivijulkisivut – vuonna 1873 kaupunki kuului Itävallan keisarikunnan Bukovinan maakuntaan, ja arkkitehtuuri kertoo siitä yhä joka kadulla. Ennen toista maailmansotaa täällä eli rinnakkain ukrainalaisia, romanialaisia, juutalaisia, saksalaisia ja puolalaisia niin tiiviisti, että kaupunkia kutsuttiin ”pikku-Wieniksi”. Tästä kielten ja kulttuurien sekoituksesta nousi myös runoilija Paul Celan, joka syntyi kaupungissa 1920 ja kirjoitti äidinkielellään saksaksi selviydyttyään natsimiehityksestä juutalaisena – hänestä tuli yksi 1900-luvun tärkeimmistä saksankielisistä runoilijoista. Nykyään yliopistokaupunki on rauhallisempi ja yksikielisempi kuin ennen, mutta sen kadut ja kahvilat muistuttavat yhä siitä, montaa kulttuuria yksi kaupunki voi kantaa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-chernivtsi-vc-205593bc.jpg',
@@ -12439,7 +12439,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "L'viv": {
       lyhyt: 'Lvivin Rynok-toria ympäröi 44 vanhaa kaupunkitaloa, ja torin jokaisessa kulmassa on 1790-luvun kaivolähde antiikin tarujen hahmon patsaineen.',
-      pitka: `Lviv oli 1873 osa Itävalta-Unkaria, Galitsian pääkaupunki, ja kaupungin kadut, kahvilat ja teatterit kantavat yhä keisarikunnan aikaista leimaa vahvemmin kuin missään muualla Ukrainassa. Kaupunki väittää olevansa Itä-Euroopan kahvikulttuurin syntysija: legendan mukaan lvivilaissyntyinen Jerzy Franciszek Kulczycki avasi ensimmäisen kahvilan Wieniin 1683 turkkilaisten jättämillä pavuilla, ja nykyään vanhankaupungin kahviloissa tarjoillaan yhä "kaivoksesta nostettua" kahvia entisissä kellarivarastoissa. Lvivin ooppera- ja balettiteatteri valmistui 1900 arkkitehti Zygmunt Gorgolewskin suunnitelmien mukaan, ja sen rakentamiseksi Poltva-joki ohjattiin kulkemaan maan alle rakennuksen perustusten läpi. Nykyään Lviv on maan tärkeimpiä kulttuurikaupunkeja, jonka teattereissa, oopperassa ja kaduilla kuuluu usein useampi kieli kuin yksi – perintö ajalta, jolloin kaupunki kuului vuorotellen puolalaisille, itävaltalaisille ja neuvostoille ennen itsenäistä Ukrainaa.`,
+      pitka: `Lviv oli 1873 osa Itävalta-Unkaria, Galitsian pääkaupunki, ja kaupungin kadut, kahvilat ja teatterit kantavat yhä keisarikunnan aikaista leimaa vahvemmin kuin missään muualla Ukrainassa. Kaupunki väittää olevansa Itä-Euroopan kahvikulttuurin syntysija: legendan mukaan lvivilaissyntyinen Jerzy Franciszek Kulczycki avasi ensimmäisen kahvilan Wieniin 1683 turkkilaisten jättämillä pavuilla, ja nykyään vanhankaupungin kahviloissa tarjoillaan yhä ”kaivoksesta nostettua” kahvia entisissä kellarivarastoissa. Lvivin ooppera- ja balettiteatteri valmistui 1900 arkkitehti Zygmunt Gorgolewskin suunnitelmien mukaan, ja sen rakentamiseksi Poltva-joki ohjattiin kulkemaan maan alle rakennuksen perustusten läpi. Nykyään Lviv on maan tärkeimpiä kulttuurikaupunkeja, jonka teattereissa, oopperassa ja kaduilla kuuluu usein useampi kieli kuin yksi – perintö ajalta, jolloin kaupunki kuului vuorotellen puolalaisille, itävaltalaisille ja neuvostoille ennen itsenäistä Ukrainaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-lviv-500ca648.jpg",
@@ -12989,7 +12989,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vestfirðir': {
       lyhyt: 'Látrabjarg on Islannin läntisin kohta: 14 kilometriä pitkä ja paikoin 440 metriä korkea lintuvuori, jonka jyrkänteillä pesii lunneja.',
-      pitka: 'Vestfirðirin vuonoihin pääsee vieläkin paikoin vain hitaita, mutkittelevia vuoristoteitä tai tunneleita pitkin, ja seutu on koko Islannin harvimmin asuttu ja syrjäisin osa. Arnarfjörðurin perukassa Dynjandi putoaa noin sata metriä portaittain leveästä, 60-metrisestä alaosastaan kapeampaan 30-metriseen yläosaan – nimi tarkoittaa suunnilleen "jylisevää", ja putouksen kohina kuuluu kauas vuonolle. Ísafjörður, alueen suurin kaupunki, kyyristelee jyrkkien vuorten alla, ja 1990-luvun tuhoisien lumivyöryjen, muun muassa Flateyrin 1995 onnettomuuden, jälkeen sen yläpuolelle rakennettiin massiiviset betoniset ohjausvallit suojaamaan asutusta. Hólmavíkissa Strandagaldur-museo kertoo 1600-luvun "poltettujen vuosisadan" noitavainoista, jolloin alueella tuomittiin roviolle 21 ihmistä – enemmän kuin missään muualla Islannissa.',
+      pitka: 'Vestfirðirin vuonoihin pääsee vieläkin paikoin vain hitaita, mutkittelevia vuoristoteitä tai tunneleita pitkin, ja seutu on koko Islannin harvimmin asuttu ja syrjäisin osa. Arnarfjörðurin perukassa Dynjandi putoaa noin sata metriä portaittain leveästä, 60-metrisestä alaosastaan kapeampaan 30-metriseen yläosaan – nimi tarkoittaa suunnilleen ”jylisevää”, ja putouksen kohina kuuluu kauas vuonolle. Ísafjörður, alueen suurin kaupunki, kyyristelee jyrkkien vuorten alla, ja 1990-luvun tuhoisien lumivyöryjen, muun muassa Flateyrin 1995 onnettomuuden, jälkeen sen yläpuolelle rakennettiin massiiviset betoniset ohjausvallit suojaamaan asutusta. Hólmavíkissa Strandagaldur-museo kertoo 1600-luvun ”poltettujen vuosisadan” noitavainoista, jolloin alueella tuomittiin roviolle 21 ihmistä – enemmän kuin missään muualla Islannissa.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vestfirdir-4f8cbc1f.jpg",
@@ -13012,7 +13012,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Norðurland eystra': {
       lyhyt: 'Húsavíkin lahdelle tulee usein valaita, ja kaupungin ympäristössä harjoittelivat 1960-luvulla Apollo-lentojen astronautit.',
-      pitka: 'Akureyri, usein "Pohjolan pääkaupungiksi" kutsuttu, on Islannin toiseksi suurin taajama ja Eyjafjörðurin vuonon perukassa sijaitseva elävä yliopisto- ja kulttuurikaupunki. Sen kasvitieteellinen puutarha Lystigarðurinn on yksi maailman pohjoisimmista, ja siellä kasvaa nykyään yli 7 000 kasvilajia vain runsaat 50 kilometriä napapiiriltä etelään. Kaupungin liikennevaloissa on palanut sydämen muotoisia valoja vuodesta 2008 lähtien – ne ilmestyivät alun perin vain kuukausia ennen Islannin finanssikriisiä, ja kriisin jälkeen niistä tuli symboli yhteisöllisyydelle ja toivolle vaikeina aikoina. Húsavíkin edustalla, missä valaita nähdään lähes ympäri vuoden, entinen kalastuskaupunki on muuttunut vähitellen valassafarien keskukseksi, ja samalla rannikolla harjoittelivat 1960-luvulla myös Apollo-ohjelman astronautit kuun pintaa muistuttavassa laavamaisemassa.',
+      pitka: 'Akureyri, usein ”Pohjolan pääkaupungiksi” kutsuttu, on Islannin toiseksi suurin taajama ja Eyjafjörðurin vuonon perukassa sijaitseva elävä yliopisto- ja kulttuurikaupunki. Sen kasvitieteellinen puutarha Lystigarðurinn on yksi maailman pohjoisimmista, ja siellä kasvaa nykyään yli 7 000 kasvilajia vain runsaat 50 kilometriä napapiiriltä etelään. Kaupungin liikennevaloissa on palanut sydämen muotoisia valoja vuodesta 2008 lähtien – ne ilmestyivät alun perin vain kuukausia ennen Islannin finanssikriisiä, ja kriisin jälkeen niistä tuli symboli yhteisöllisyydelle ja toivolle vaikeina aikoina. Húsavíkin edustalla, missä valaita nähdään lähes ympäri vuoden, entinen kalastuskaupunki on muuttunut vähitellen valassafarien keskukseksi, ja samalla rannikolla harjoittelivat 1960-luvulla myös Apollo-ohjelman astronautit kuun pintaa muistuttavassa laavamaisemassa.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-eystra-72883732.jpg",
@@ -14322,7 +14322,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Niigatan edustalla oleva Sadon saari tunnetaan kultakaivoksistaan, jotka merkittiin Unescon maailmanperintölistalle 2024.',
     },
     Ōita: {
-      lyhyt: 'Beppun kuumien lähteiden "helvetit" höyryävät toinen kirkkaan sinisenä, toinen verenpunaisena, eikä niissä kylvetä.',
+      lyhyt: 'Beppun kuumien lähteiden ”helvetit” höyryävät toinen kirkkaan sinisenä, toinen verenpunaisena, eikä niissä kylvetä.',
     },
     Okayama: {
       lyhyt: 'Okayaman Kōraku-en lasketaan Japanin kolmen kuuluisimman maisemapuutarhan joukkoon.',
@@ -14410,7 +14410,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Lord Howen saarella saa olla kerrallaan enintään 400 matkailijaa, jotta pieni maailmanperintösaari ei kuluisi.',
     },
     'Western Australia': {
-      lyhyt: 'Perthin edustan Rottnestin saarella elää kvokkoja, pieniä pussieläimiä, joiden "hymyilevät" selfiet ovat kiertäneet maailmaa.',
+      lyhyt: 'Perthin edustan Rottnestin saarella elää kvokkoja, pieniä pussieläimiä, joiden ”hymyilevät” selfiet ovat kiertäneet maailmaa.',
     },
     'Macquarie Island': {
       lyhyt: 'Macquariensaarella maan vaipasta peräisin olevaa kiveä nousee merenpinnan yläpuolelle, ja siksi saari on Unescon maailmanperintökohde.',
@@ -14503,7 +14503,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Marlborough on Uuden-Seelannin suurin viinialue, ja sen sauvignon blanc on tehnyt maan viinit tunnetuiksi maailmalla.',
     },
     'Nelson City': {
-      lyhyt: 'Nelsonin Botanical Hillillä on "Uuden-Seelannin keskipisteen" muistomerkki, vaikka se merkitsee oikeasti maanmittauksen nollapistettä.',
+      lyhyt: 'Nelsonin Botanical Hillillä on ”Uuden-Seelannin keskipisteen” muistomerkki, vaikka se merkitsee oikeasti maanmittauksen nollapistettä.',
     },
     Northland: {
       lyhyt: 'Waipouan metsässä kasvaa Tāne Mahuta, suurin tunnettu elossa oleva kauripuu, jonka runko on yli 15 metriä ympärysmitaltaan.',
@@ -14980,7 +14980,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Appenzell Ausserrhoden': {
       lyhyt: 'Punaisen Ristin perustaja Henry Dunant vietti viimeiset vuotensa Heidenin kylässä, ja siellä asuessaan hän sai ensimmäisen Nobelin rauhanpalkinnon.',
-      pitka: `Appenzell Ausserrhodenin vihreät kumpuilevat niityt ja ruskeat karjalaumat ovat nykyään tuttu näky matkailukuvista, ja Heidenin pieni kylä Bodenjärven yllä elää edelleen siitä, että Punaisen Ristin perustaja Henry Dunant vietti siellä elämänsä viimeiset vuodet ja sai 1901 ensimmäisen Nobelin rauhanpalkinnon. Isoisän vuonna 1873 Dunant ei kuitenkaan asunut vielä Heidenissä eikä missään pysyvässä osoitteessa: hän oli konkurssin runtelemana köyhä ja unohdettu, kierteli Euroopan kaupunkeja ja joutui ajoittain nukkumaan kaduilla Pariisissa. Heidenin idylliin hän löysi tiensä vasta 1887, ja maailma "löysi" hänet uudelleen vasta 1895 — kaksikymmentäkaksi vuotta isoisän matkan jälkeen.`,
+      pitka: `Appenzell Ausserrhodenin vihreät kumpuilevat niityt ja ruskeat karjalaumat ovat nykyään tuttu näky matkailukuvista, ja Heidenin pieni kylä Bodenjärven yllä elää edelleen siitä, että Punaisen Ristin perustaja Henry Dunant vietti siellä elämänsä viimeiset vuodet ja sai 1901 ensimmäisen Nobelin rauhanpalkinnon. Isoisän vuonna 1873 Dunant ei kuitenkaan asunut vielä Heidenissä eikä missään pysyvässä osoitteessa: hän oli konkurssin runtelemana köyhä ja unohdettu, kierteli Euroopan kaupunkeja ja joutui ajoittain nukkumaan kaduilla Pariisissa. Heidenin idylliin hän löysi tiensä vasta 1887, ja maailma ”löysi” hänet uudelleen vasta 1895 — kaksikymmentäkaksi vuotta isoisän matkan jälkeen.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-appenzell-ausserrhoden-4a9fcba1.jpg",
@@ -15187,7 +15187,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Jura: {
       lyhyt: 'Jura on Sveitsin nuorin kantoni: se irtautui Bernistä pitkän ja paikoin kiivaan kamppailun jälkeen ja liittyi valaliittoon 1979.',
-      pitka: `Jura on nykyisin Sveitsin nuorin kantoni ja ranskankielinen saareke, joka tunnetaan hevoskasvatuksesta – Franches-Montagnes on maan ainoa oma hevosrotu – ja keskiaikaisesta Saint-Ursannen kaupungista Doubs-joen mutkassa. Kantonin oma identiteetti syntyi vuosikymmenten kamppailussa Bernin vallan alla, ja se johti vuonna 1979 eroon ja liittymiseen valaliittoon omana kantonina. Isoisän aikaan 1873 alue oli yhä osa Bernia, ja juuri tuolloin kuohui: Sveitsin "kulttuuritaistelu" katolisen kirkon ja liittovaltion välillä repi erityisesti Juraa, kun Baselin hiippakunnan piispa erotettiin virastaan ja katolinen väestö jakautui. Livia muistuttaa, että se kiista kylvi siemenen, joka itäisi vasta sata vuotta myöhemmin.`,
+      pitka: `Jura on nykyisin Sveitsin nuorin kantoni ja ranskankielinen saareke, joka tunnetaan hevoskasvatuksesta – Franches-Montagnes on maan ainoa oma hevosrotu – ja keskiaikaisesta Saint-Ursannen kaupungista Doubs-joen mutkassa. Kantonin oma identiteetti syntyi vuosikymmenten kamppailussa Bernin vallan alla, ja se johti vuonna 1979 eroon ja liittymiseen valaliittoon omana kantonina. Isoisän aikaan 1873 alue oli yhä osa Bernia, ja juuri tuolloin kuohui: Sveitsin ”kulttuuritaistelu” katolisen kirkon ja liittovaltion välillä repi erityisesti Juraa, kun Baselin hiippakunnan piispa erotettiin virastaan ja katolinen väestö jakautui. Livia muistuttaa, että se kiista kylvi siemenen, joka itäisi vasta sata vuotta myöhemmin.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-jura-v-2ac1cc68.jpg',
@@ -15256,7 +15256,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Nidwalden: {
       lyhyt: 'Stanserhornille nousevassa köysiradassa on avoin yläkansi – se oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata.',
-      pitka: `Stanserhornille nousevassa köysiradassa matkustaa nykyään avokattoisessa "CabriO"-vaunussa, joka oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata – matkalla näkymä avautuu Vierwaldstättersee'lle asti. Pieni Nidwalden elää nykyisin pitkälti tästä näköalamatkailusta sekä pienteollisuudesta Alppien rinteiden juurella. Isoisän aikaan 1873 Stanserhornille ei ollut muuta tietä kuin jalkapolku, ja huipulle kiipeäminen oli varattu harvoille alppivaeltajille – ensimmäinen rautatie sen kupeeseen avattiin vasta 1893.`,
+      pitka: `Stanserhornille nousevassa köysiradassa matkustaa nykyään avokattoisessa ”CabriO”-vaunussa, joka oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata – matkalla näkymä avautuu Vierwaldstättersee'lle asti. Pieni Nidwalden elää nykyisin pitkälti tästä näköalamatkailusta sekä pienteollisuudesta Alppien rinteiden juurella. Isoisän aikaan 1873 Stanserhornille ei ollut muuta tietä kuin jalkapolku, ja huipulle kiipeäminen oli varattu harvoille alppivaeltajille – ensimmäinen rautatie sen kupeeseen avattiin vasta 1893.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-nidwalden-c1a06969.jpg",
@@ -15302,7 +15302,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Schaffhausen: {
       lyhyt: 'Schaffhausenilla on pidempi raja Saksan kuin muiden kantonien kanssa, ja sen kupeessa on Büsingen, Saksalle kuuluva saareke.',
-      pitka: `Schaffhausen työntyy nykyään kuin niemi Saksan sisään, ja sen kupeessa on Büsingen am Hochrhein, Saksalle kuuluva saareke, jonka ympäröi kokonaan sveitsiläistä aluetta – kantonilla on pidempi raja Saksan kuin minkään muun kantonin kanssa. Kaupungin tunnetuin nähtävyys on Reinin putous, Euroopan suurin tasangolla sijaitseva vesiputous, joka on vetänyt matkailijoita puoleensa vuosisatoja. Isoisän aikaan 1873 putous oli jo vakiintunut osa "Grand Tourin" reittiä – romantiikan ajan matkailijat olivat vuosikymmeniä aiemmin tehneet siitä yhden Euroopan ihailluimmista luonnonnähtävyyksistä, ja isoisä näki saman veden pauhun kuin nykyinen matkailija.`,
+      pitka: `Schaffhausen työntyy nykyään kuin niemi Saksan sisään, ja sen kupeessa on Büsingen am Hochrhein, Saksalle kuuluva saareke, jonka ympäröi kokonaan sveitsiläistä aluetta – kantonilla on pidempi raja Saksan kuin minkään muun kantonin kanssa. Kaupungin tunnetuin nähtävyys on Reinin putous, Euroopan suurin tasangolla sijaitseva vesiputous, joka on vetänyt matkailijoita puoleensa vuosisatoja. Isoisän aikaan 1873 putous oli jo vakiintunut osa ”Grand Tourin” reittiä – romantiikan ajan matkailijat olivat vuosikymmeniä aiemmin tehneet siitä yhden Euroopan ihailluimmista luonnonnähtävyyksistä, ja isoisä näki saman veden pauhun kuin nykyinen matkailija.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-schaffhausen-f6e3e88f.jpg",
@@ -15325,7 +15325,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Schwyz: {
       lyhyt: 'Koko Sveitsi on saanut nimensä ja lippunsa Schwyzin kantonilta, ja vuoden 1291 liittokirja on yhä nähtävillä Schwyzin museossa.',
-      pitka: `Koko Sveitsi on saanut nimensä ja punavalkoisen lippunsa Schwyzin kantonilta, ja Schwyzin kaupungin liittokirjamuseossa on yhä nähtävillä vuoden 1291 liittokirja, joka pitää maata kokoavaa tarinaa yllä. Nykyisin kantonin maisemaa hallitsee Rigi, "vuorten kuningatar", jonka laelta avautuu näkymä kymmenille järville ja Alpeille. Isoisän aikaan 1873 Rigille pääsi jo junalla: Euroopan ensimmäinen vuoristorautatie, Vitznau–Rigi-rata, avattiin vain kaksi vuotta aiemmin, 1871, ja isoisä olisi hyvinkin voinut nousta huipulle höyryveturin vetämässä vaunussa, kun aiemmat sukupolvet joutuivat kiipeämään.`,
+      pitka: `Koko Sveitsi on saanut nimensä ja punavalkoisen lippunsa Schwyzin kantonilta, ja Schwyzin kaupungin liittokirjamuseossa on yhä nähtävillä vuoden 1291 liittokirja, joka pitää maata kokoavaa tarinaa yllä. Nykyisin kantonin maisemaa hallitsee Rigi, ”vuorten kuningatar”, jonka laelta avautuu näkymä kymmenille järville ja Alpeille. Isoisän aikaan 1873 Rigille pääsi jo junalla: Euroopan ensimmäinen vuoristorautatie, Vitznau–Rigi-rata, avattiin vain kaksi vuotta aiemmin, 1871, ja isoisä olisi hyvinkin voinut nousta huipulle höyryveturin vetämässä vaunussa, kun aiemmat sukupolvet joutuivat kiipeämään.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-schwyz-v-43942782.jpg',
@@ -15348,7 +15348,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Solothurn: {
       lyhyt: 'Solothurn oli 1530–1792 Ranskan Sveitsin-lähettilään kotipaikka, ja sen autoton vanhakaupunki on täynnä barokkirakennuksia.',
-      pitka: `Solothurnin autoton, barokkirakennusten täyttämä vanhakaupunki tunnetaan nykyään "yhdentoista luvusta" – kaupungissa kerrotaan olevan yksitoista kirkkoa, tornia ja suihkulähdettä, koska Solothurn liittyi valaliittoon yhdentenätoista kantonina. Kaupunkikuva on peräisin ajalta, jolloin Solothurn oli 1530–1792 Ranskan kuninkaan Sveitsin-lähettilään virka-asuinpaikka, ja Ambassadorenhofin kaltaiset rakennukset muistuttavat siitä yhä. Isoisän aikaan 1873 lähettilään aika oli jo lähes sata vuotta sitten päättynyt Ranskan vallankumouksen myötä, mutta juuri se loisto, jonka lähettiläät toivat mukanaan, oli jättänyt kaupungille sen ylellisen barokkiasun, jota isoisä käveli ihmetellen samoin kuin nykyinen matkailija.`,
+      pitka: `Solothurnin autoton, barokkirakennusten täyttämä vanhakaupunki tunnetaan nykyään ”yhdentoista luvusta” – kaupungissa kerrotaan olevan yksitoista kirkkoa, tornia ja suihkulähdettä, koska Solothurn liittyi valaliittoon yhdentenätoista kantonina. Kaupunkikuva on peräisin ajalta, jolloin Solothurn oli 1530–1792 Ranskan kuninkaan Sveitsin-lähettilään virka-asuinpaikka, ja Ambassadorenhofin kaltaiset rakennukset muistuttavat siitä yhä. Isoisän aikaan 1873 lähettilään aika oli jo lähes sata vuotta sitten päättynyt Ranskan vallankumouksen myötä, mutta juuri se loisto, jonka lähettiläät toivat mukanaan, oli jättänyt kaupungille sen ylellisen barokkiasun, jota isoisä käveli ihmetellen samoin kuin nykyinen matkailija.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-solothurn-9f4fa816.jpg",
@@ -15394,7 +15394,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Thurgau: {
       lyhyt: 'Thurgaussa kasvaa omenaa ja päärynää niin paljon, että suurin osa hedelmätarhojen sadosta puristetaan siideriksi.',
-      pitka: `Thurgaun hedelmätarhat kukkivat keväällä valtoimenaan, ja syksyllä suuri osa sadosta puristetaan siideriksi – kantoni tunnetaan leikkimielisesti nimellä "Mostindien", siiderin Intia. Järven rannalla kohoava Arenenbergin linna oli 1800-luvulla Ranskan entisen keisarisuvun turvapaikka: sen kasvatti, pieni Louis-Napoleon, vietti täällä osan lapsuudestaan ennen kuin hänestä tuli aikuisena keisari Napoleon III. Isoisän lähtiessä matkaan tammikuussa 1873 Napoleon III kuoli maanpaossa Englannissa – Thurgaun linna oli näin yhä elossa muistona miehestä, jonka aika Euroopassa päättyi juuri sinä vuonna. Nykyään Arenenberg on museo, ja sen puutarhassa kasvavat samat hedelmäpuulajit kuin ympäröivissä kantonin tarhoissa.`,
+      pitka: `Thurgaun hedelmätarhat kukkivat keväällä valtoimenaan, ja syksyllä suuri osa sadosta puristetaan siideriksi – kantoni tunnetaan leikkimielisesti nimellä ”Mostindien”, siiderin Intia. Järven rannalla kohoava Arenenbergin linna oli 1800-luvulla Ranskan entisen keisarisuvun turvapaikka: sen kasvatti, pieni Louis-Napoleon, vietti täällä osan lapsuudestaan ennen kuin hänestä tuli aikuisena keisari Napoleon III. Isoisän lähtiessä matkaan tammikuussa 1873 Napoleon III kuoli maanpaossa Englannissa – Thurgaun linna oli näin yhä elossa muistona miehestä, jonka aika Euroopassa päättyi juuri sinä vuonna. Nykyään Arenenberg on museo, ja sen puutarhassa kasvavat samat hedelmäpuulajit kuin ympäröivissä kantonin tarhoissa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-thurgau-c979d9f3.jpg",
@@ -15813,7 +15813,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Faro: {
       lyhyt: 'Algarven Cabo de São Vicente on Manner-Euroopan lounaisin kärki, ja sen majakan valo näkyy merelle 60 kilometrin päähän.',
-      pitka: `Cabo de São Vicente Algarven lounaiskärjessä on Manner-Euroopan lounaisin piste, ja nykyään sen majakan valo kantaa merelle 60 kilometrin päähän – niemellä istuu iltaisin rivi kalastajia ja auringonlaskun katsojia paikassa jota kutsutaan "maailman loppuna". Majakka nousi vuonna 1846 keskiaikaisen fransiskaanikonventin raunioille sen jälkeen, kun Portugali lakkautti uskonnolliset veljeskunnat ja otti niiden omaisuuden haltuunsa. Isoisän aikaan 1873 majakka oli siis jo parikymmentä vuotta vanha ja isoisä olisi nähnyt saman kivitornin kuin sinäkin – vaikka sen valo paloi hänen aikanaan yhä öljylampulla, ei sähköllä.`,
+      pitka: `Cabo de São Vicente Algarven lounaiskärjessä on Manner-Euroopan lounaisin piste, ja nykyään sen majakan valo kantaa merelle 60 kilometrin päähän – niemellä istuu iltaisin rivi kalastajia ja auringonlaskun katsojia paikassa jota kutsutaan ”maailman loppuna”. Majakka nousi vuonna 1846 keskiaikaisen fransiskaanikonventin raunioille sen jälkeen, kun Portugali lakkautti uskonnolliset veljeskunnat ja otti niiden omaisuuden haltuunsa. Isoisän aikaan 1873 majakka oli siis jo parikymmentä vuotta vanha ja isoisä olisi nähnyt saman kivitornin kuin sinäkin – vaikka sen valo paloi hänen aikanaan yhä öljylampulla, ei sähköllä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-faro-78a2f0a2.jpg",
@@ -16215,7 +16215,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Borsod-Abaúj-Zemplén': {
       lyhyt: 'Tokajin viinialue on Unescon listalla, ja sen aszú-viini kelpasi jo Ludvig XIV:lle – hän kutsui sitä kuninkaiden viiniksi.',
-      pitka: `Tokajin viinialue pääsi Unescon maailmanperintölistalle 2002, ja sen makea aszú-viini tunnetaan yhä lauseesta, jonka Ranskan kuningas Ludvig XIV lausui saatuaan lahjaksi pulloja Tokajista ruhtinas Rákóczilta vuonna 1703: hän kutsui sitä "kuninkaiden viiniksi, viinien kuninkaaksi". Isoisän matkan aikaan 1873 tuo mainelause oli jo 170 vuotta vanha, ja Tokaj oli ehtinyt tulla myös maailman ensimmäiseksi virallisesti luokitelluksi viinialueeksi – Rákóczin oma luokittelu vuodelta 1730 jakoi viinitilat kolmeen laatuluokkaan yli sata vuotta ennen Bordeaux'ta. Rinteiden erikoinen maaperä ja jokien luoma sumu synnyttävät yhä homeen, joka kuivattaa rypäleet aszúksi, ja perinne jatkuu samoilla kukkuloilla tänäkin päivänä.`,
+      pitka: `Tokajin viinialue pääsi Unescon maailmanperintölistalle 2002, ja sen makea aszú-viini tunnetaan yhä lauseesta, jonka Ranskan kuningas Ludvig XIV lausui saatuaan lahjaksi pulloja Tokajista ruhtinas Rákóczilta vuonna 1703: hän kutsui sitä ”kuninkaiden viiniksi, viinien kuninkaaksi”. Isoisän matkan aikaan 1873 tuo mainelause oli jo 170 vuotta vanha, ja Tokaj oli ehtinyt tulla myös maailman ensimmäiseksi virallisesti luokitelluksi viinialueeksi – Rákóczin oma luokittelu vuodelta 1730 jakoi viinitilat kolmeen laatuluokkaan yli sata vuotta ennen Bordeaux'ta. Rinteiden erikoinen maaperä ja jokien luoma sumu synnyttävät yhä homeen, joka kuivattaa rypäleet aszúksi, ja perinne jatkuu samoilla kukkuloilla tänäkin päivänä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/hun-maakunta2-borsod-abauj-zemplen-v-f0b08e72.jpg',
@@ -16353,7 +16353,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Heves: {
       lyhyt: 'Egerin linnassa muistetaan vuotta 1552, kun runsaat 2 000 puolustajaa kesti moninkertaisen osmaniarmeijan piirityksen.',
-      pitka: `Egerin linnassa runsaat 2 100–2 300 puolustajaa – sotilaiden lisäksi myös naisia ja talonpoikia – kesti syksyllä 1552 viikkojen piirityksen 35 000–40 000 osmanisotilaan armeijaa vastaan: ylivoima oli lähes 17-kertainen, mutta linna ei antautunut. Isoisän matkan aikaan 1873 taistelu oli jo yli 300 vuotta vanha kansallissankaritarina, jonka Géza Gárdonyi kirjoitti maailmankuuluksi romaaniksi vasta 1901 – isoisä ei siis olisi voinut lukea sitä, sillä kirjaa ei vielä ollut olemassa. Linnankomentaja István Dobón patsas ja museo pitävät tarinaa elossa, ja Egerin viinitarhoissa kasvatettu Bikavér eli "sonninveri" -punaviini on saanut nimensä piirityksen ajan taruista. Linnan muurit seisovat yhä kaupungin yllä muistuttamassa voitosta, jota kukaan ei odottanut.`,
+      pitka: `Egerin linnassa runsaat 2 100–2 300 puolustajaa – sotilaiden lisäksi myös naisia ja talonpoikia – kesti syksyllä 1552 viikkojen piirityksen 35 000–40 000 osmanisotilaan armeijaa vastaan: ylivoima oli lähes 17-kertainen, mutta linna ei antautunut. Isoisän matkan aikaan 1873 taistelu oli jo yli 300 vuotta vanha kansallissankaritarina, jonka Géza Gárdonyi kirjoitti maailmankuuluksi romaaniksi vasta 1901 – isoisä ei siis olisi voinut lukea sitä, sillä kirjaa ei vielä ollut olemassa. Linnankomentaja István Dobón patsas ja museo pitävät tarinaa elossa, ja Egerin viinitarhoissa kasvatettu Bikavér eli ”sonninveri” -punaviini on saanut nimensä piirityksen ajan taruista. Linnan muurit seisovat yhä kaupungin yllä muistuttamassa voitosta, jota kukaan ei odottanut.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-heves-ebf4c7fd.jpg",
@@ -16376,7 +16376,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Jász-Nagykun-Szolnok': {
       lyhyt: 'Kesäkuun puolivälissä Tisza kukkii: valtavat päivänkorentoparvet kuoriutuvat joesta, ja aikuisina ne elävät vain muutaman tunnin.',
-      pitka: `Kesäkuun puolivälissä Tisza "kukkii": miljoonat Palingenia longicauda -päivänkorennot kuoriutuvat samana iltana joen pohjamudasta kolmen vuoden toukkavaiheen jälkeen, parittelevat ilmassa ja kuolevat saman vuorokauden aikana, sillä aikuisilla ei ole edes suuta ruokailua varten. Isoisän matkan aikaan 1873 tätä ilmiötä oli tarkkailtu jo vuosisatoja, mutta samoihin aikoihin käynnistynyt Tiszan säännöstely ja jokiuomien perkaus hävittivät lajin myöhemmin suurimmasta osasta sen entistä esiintymisaluetta – ilmiö säilyi enää muutamalla joen mutkalla. Nykyään päivänkorentojen parveilu on suojeltu luonnonnähtävyys, joka houkuttelee kesäiltoina rantaan sekä tutkijoita että uteliaita katsojia. Laji on Euroopan suurin päivänkorento, ja sen lyhyt mutta räjähtävä elämä tiivistää koko joen vuodenkierron yhteen ainoaan iltaan.`,
+      pitka: `Kesäkuun puolivälissä Tisza ”kukkii”: miljoonat Palingenia longicauda -päivänkorennot kuoriutuvat samana iltana joen pohjamudasta kolmen vuoden toukkavaiheen jälkeen, parittelevat ilmassa ja kuolevat saman vuorokauden aikana, sillä aikuisilla ei ole edes suuta ruokailua varten. Isoisän matkan aikaan 1873 tätä ilmiötä oli tarkkailtu jo vuosisatoja, mutta samoihin aikoihin käynnistynyt Tiszan säännöstely ja jokiuomien perkaus hävittivät lajin myöhemmin suurimmasta osasta sen entistä esiintymisaluetta – ilmiö säilyi enää muutamalla joen mutkalla. Nykyään päivänkorentojen parveilu on suojeltu luonnonnähtävyys, joka houkuttelee kesäiltoina rantaan sekä tutkijoita että uteliaita katsojia. Laji on Euroopan suurin päivänkorento, ja sen lyhyt mutta räjähtävä elämä tiivistää koko joen vuodenkierron yhteen ainoaan iltaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-jasz-nagykun-szolnok-0a9234ce.jpg",
@@ -16491,7 +16491,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Szabolcs-Szatmár-Bereg': {
       lyhyt: 'Maakunta on kuuluisa luumuistaan: niitä syödään tuoreina, kuivataan, keitetään lekvár-hilloksi ja tislataan tunnetuiksi paloviinoiksi.',
-      pitka: `Maakunta on kuuluisa luumuistaan, joita syödään tuoreena, kuivataan luumuiksi, keitetään Szatmári szilva lekvár -hilloksi ja tislataan pálinkaksi – erityisesti Panyolan kylässä, jossa Tisza, Túr ja Szamos yhtyvät ja luovat luumuille ihanteellisen pienilmaston. Isoisän matkan aikaan 1873 pálinka-perinne oli jo keskiajalta periytyvä osa seudun arkea, mutta luumuhillon ja -paloviinan nykyinen maine syntyi vasta myöhemmin, kun tuotteet alkoivat levitä koko maahan ja lopulta vientiin asti. Nykyään Szatmári szilva lekvár on virallinen "hungaricum", kansallista identiteettiä ilmentävä tuote, ja pálinkan valmistuksessa jokainen vaihe mäskäyksestä tislaukseen on tehtävä samassa läänissä kuin luumut on kasvatettu. Syksyisin ilmaan nousee kylien laitamilla makea, hieman poltettu tuoksu, kun luumuhilloa keitetään suurissa padoissa tuntikausia.`,
+      pitka: `Maakunta on kuuluisa luumuistaan, joita syödään tuoreena, kuivataan luumuiksi, keitetään Szatmári szilva lekvár -hilloksi ja tislataan pálinkaksi – erityisesti Panyolan kylässä, jossa Tisza, Túr ja Szamos yhtyvät ja luovat luumuille ihanteellisen pienilmaston. Isoisän matkan aikaan 1873 pálinka-perinne oli jo keskiajalta periytyvä osa seudun arkea, mutta luumuhillon ja -paloviinan nykyinen maine syntyi vasta myöhemmin, kun tuotteet alkoivat levitä koko maahan ja lopulta vientiin asti. Nykyään Szatmári szilva lekvár on virallinen ”hungaricum”, kansallista identiteettiä ilmentävä tuote, ja pálinkan valmistuksessa jokainen vaihe mäskäyksestä tislaukseen on tehtävä samassa läänissä kuin luumut on kasvatettu. Syksyisin ilmaan nousee kylien laitamilla makea, hieman poltettu tuoksu, kun luumuhilloa keitetään suurissa padoissa tuntikausia.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-szabolcs-szatmar-bereg-f2ce53fb.jpg",
@@ -17054,7 +17054,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Västmanland': {
       lyhyt: 'Kuningas Kaarle IX kutsui Salan hopeakaivosta valtakunnan kalleimmaksi aarteeksi – nyt sen syvyyksissä voi yöpyä maanalaisessa sviitissä.',
-      pitka: `Salan hopeakaivos oli 1500-luvulla Ruotsin valtion tärkein rahasampo, ja kuningas Kaarle IX kutsui sitä aikanaan "valtakunnan etevimmäksi aarteeksi" – Riksens förnämsta Clenodium. Isoisän matkan aikaan 1873 kaivos oli yhä toiminnassa, vaikkakin kaukana 1500-luvun kulta-ajastaan; louhinta jatkui vielä vuoteen 1908 asti, ennen kuin koko alueen kaivostoiminta lakkautettiin lopullisesti 1962. Nykyään syvällä maan alla, yli 150 metrin syvyydessä, voi yöpyä maailman syvimmässä hotellihuoneessa – kivikäytävien kaiku ja täydellinen pimeys tekevät yöstä ainutlaatuisen kokemuksen. Vuonna 1988 kaivos avattiin yleisölle museona, ja nyt siellä käy vuosittain enemmän matkailijoita kuin koskaan louhijoita isoisän aikaan.`,
+      pitka: `Salan hopeakaivos oli 1500-luvulla Ruotsin valtion tärkein rahasampo, ja kuningas Kaarle IX kutsui sitä aikanaan ”valtakunnan etevimmäksi aarteeksi” – Riksens förnämsta Clenodium. Isoisän matkan aikaan 1873 kaivos oli yhä toiminnassa, vaikkakin kaukana 1500-luvun kulta-ajastaan; louhinta jatkui vielä vuoteen 1908 asti, ennen kuin koko alueen kaivostoiminta lakkautettiin lopullisesti 1962. Nykyään syvällä maan alla, yli 150 metrin syvyydessä, voi yöpyä maailman syvimmässä hotellihuoneessa – kivikäytävien kaiku ja täydellinen pimeys tekevät yöstä ainutlaatuisen kokemuksen. Vuonna 1988 kaivos avattiin yleisölle museona, ja nyt siellä käy vuosittain enemmän matkailijoita kuin koskaan louhijoita isoisän aikaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vastmanland-be0231b3.jpg",
@@ -17395,7 +17395,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Møre og Romsdal': {
       lyhyt: 'Atlanterhavsveien kiemurtelee 8,3 kilometriä luodolta toiselle kahdeksaa siltaa pitkin, ja sitä on kutsuttu maailman parhaaksi automatkaksi.',
-      pitka: `Atlanterhavsveien kiemurtelee 8,3 kilometriä luodolta ja saarelta toiselle kahdeksaa siltaa pitkin, ja sen rakentaminen kesti kuusi vuotta ja kesti matkallaan jopa kaksitoista myrskyä ennen valmistumista 1989. Tie on noussut toistuvasti maailman parhaaksi automatkaksi valittujen listojen kärkeen, ja erityisesti mutkitteleva Storseisundetin silta on saanut lempinimen "tie ei-mihinkään". Isoisän aikaan 1873 näillä luodoilla ei ollut mitään tietä eikä siltaa: ainoa tapa liikkua saarelta toiselle oli soutuvene, ja sama Hustadvikan rannikko, jota tie nykyään kiertää, tunnettiin pelättynä haaksirikkojen vaara-alueena. Yli sata vuotta myöhemmin insinöörit onnistuivat siinä, mitä isoisän aikalaiset olisivat pitäneet mahdottomana: sitomaan hajanaiset luodot yhdeksi ajettavaksi tieksi.`,
+      pitka: `Atlanterhavsveien kiemurtelee 8,3 kilometriä luodolta ja saarelta toiselle kahdeksaa siltaa pitkin, ja sen rakentaminen kesti kuusi vuotta ja kesti matkallaan jopa kaksitoista myrskyä ennen valmistumista 1989. Tie on noussut toistuvasti maailman parhaaksi automatkaksi valittujen listojen kärkeen, ja erityisesti mutkitteleva Storseisundetin silta on saanut lempinimen ”tie ei-mihinkään”. Isoisän aikaan 1873 näillä luodoilla ei ollut mitään tietä eikä siltaa: ainoa tapa liikkua saarelta toiselle oli soutuvene, ja sama Hustadvikan rannikko, jota tie nykyään kiertää, tunnettiin pelättynä haaksirikkojen vaara-alueena. Yli sata vuotta myöhemmin insinöörit onnistuivat siinä, mitä isoisän aikalaiset olisivat pitäneet mahdottomana: sitomaan hajanaiset luodot yhdeksi ajettavaksi tieksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-more-og-romsdal-1181f025.jpg",
@@ -17533,7 +17533,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sogn og Fjordane': {
       lyhyt: 'Vuonojen kuninkaaksi kutsuttu Sognefjord työntyy 205 kilometriä sisämaahan, ja syvimmillään se ulottuu 1 308 metriä merenpinnan alle.',
-      pitka: `Sognefjord työntyy 205 kilometriä sisämaahan ja ulottuu syvimmillään 1 308 metriä merenpinnan alle, mikä tekee siitä sekä Norjan pisimmän että syvimmän vuonon – lempinimeltään "vuonojen kuningas". Sen sivuhaarat Nærøyfjord ja kapea Aurlandsfjord kuuluvat nykyään Unescon maailmanperintöön ja houkuttelevat risteilyaluksia ympäri vuoden. Matkailu alkoi vuonolla jo isoisän aikaan: höyrylaivayhteys Balestrandiin avattiin 1858, ja siitä lähtien brittiläiset ja muut eurooppalaiset matkailijat purjehtivat yhä useammin vuonoa ylös ihailemaan sen jyrkkiä vuoria. Isoisän matkatessa 1873 Balestrandista oli siis jo tullut suosittu kesäpaikka Euroopan yläluokalle – vuonon maine kauneimpana matkakohteena syntyi juuri isoisän oman matkan aikoihin.`,
+      pitka: `Sognefjord työntyy 205 kilometriä sisämaahan ja ulottuu syvimmillään 1 308 metriä merenpinnan alle, mikä tekee siitä sekä Norjan pisimmän että syvimmän vuonon – lempinimeltään ”vuonojen kuningas”. Sen sivuhaarat Nærøyfjord ja kapea Aurlandsfjord kuuluvat nykyään Unescon maailmanperintöön ja houkuttelevat risteilyaluksia ympäri vuoden. Matkailu alkoi vuonolla jo isoisän aikaan: höyrylaivayhteys Balestrandiin avattiin 1858, ja siitä lähtien brittiläiset ja muut eurooppalaiset matkailijat purjehtivat yhä useammin vuonoa ylös ihailemaan sen jyrkkiä vuoria. Isoisän matkatessa 1873 Balestrandista oli siis jo tullut suosittu kesäpaikka Euroopan yläluokalle – vuonon maine kauneimpana matkakohteena syntyi juuri isoisän oman matkan aikoihin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-sogn-og-fjordane-b1a39b62.jpg",
@@ -17602,7 +17602,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Troms: {
       lyhyt: 'Tromsøssa keskiyön aurinko pysyy kesällä taivaalla 71 vuorokautta yhtä mittaa, ja talvella kaamos kestää lähes seitsemän viikkoa.',
-      pitka: `Tromsøssa keskiyön aurinko pysyy taivaalla yhtäjaksoisesti noin 71 vuorokautta toukokuun puolivälistä heinäkuun loppuun, ja talvella vastapainoksi seuraa kaamos, jolloin aurinko ei nouse lainkaan lähes seitsemään viikkoon. Nykyään kaupunkia kutsutaan Pohjoisen pääkaupungiksi, ja se elää matkailusta, tutkimuksesta ja kalastuksesta. Isoisän matkatessa 1873 Tromsø tunnettiin toisenlaisesta syystä: kaupunki oli juuri noussut Norjan johtavaksi jäämerenpyynnin – hylkeenpyynnin ja valaanpyynnin – tukikohdaksi, ja sen satamasta lähti joka kevät kymmeniä pyyntialuksia pohjoiseen jäille. Vuosisadan lopulla kaupunkia alettiin kutsua jopa "Pohjolan Pariisiksi", niin vilkasta ja vaurasta oli arktisen pyynnin tuoma kauppa.`,
+      pitka: `Tromsøssa keskiyön aurinko pysyy taivaalla yhtäjaksoisesti noin 71 vuorokautta toukokuun puolivälistä heinäkuun loppuun, ja talvella vastapainoksi seuraa kaamos, jolloin aurinko ei nouse lainkaan lähes seitsemään viikkoon. Nykyään kaupunkia kutsutaan Pohjoisen pääkaupungiksi, ja se elää matkailusta, tutkimuksesta ja kalastuksesta. Isoisän matkatessa 1873 Tromsø tunnettiin toisenlaisesta syystä: kaupunki oli juuri noussut Norjan johtavaksi jäämerenpyynnin – hylkeenpyynnin ja valaanpyynnin – tukikohdaksi, ja sen satamasta lähti joka kevät kymmeniä pyyntialuksia pohjoiseen jäille. Vuosisadan lopulla kaupunkia alettiin kutsua jopa ”Pohjolan Pariisiksi”, niin vilkasta ja vaurasta oli arktisen pyynnin tuoma kauppa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/nor-maakunta2-troms-v-f82d9012.jpg',
@@ -20005,7 +20005,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Tinaquillon naamioidut paholaiset tanssivat Corpus Christinä, ja perinne kuuluu Unescon 2012 tunnustamaan Venezuelan paholaistanssiin.',
     },
     'Delta Amacuro': {
-      lyhyt: 'Orinocon suistossa asuvat warao-intiaanit, "kanoottien kansa", jotka liikkuvat suiston lukemattomissa haaroissa kanooteilla.',
+      lyhyt: 'Orinocon suistossa asuvat warao-intiaanit, ”kanoottien kansa”, jotka liikkuvat suiston lukemattomissa haaroissa kanooteilla.',
     },
     'Dependencias Federales': {
       lyhyt: 'La Tortuga on liittovaltion saarista suurin, noin 157 neliökilometriä, mutta asumaton: sen rannoilla käyvät vain kalastajat ja veneilijät.',
@@ -20275,7 +20275,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Bandungin Gedung Merdekassa pidettiin vuonna 1955 Aasian ja Afrikan maiden konferenssi, ja rakennus on nyt sen muistomuseo.',
     },
     'Jawa Tengah': {
-      lyhyt: 'Semarangin Lawang Sewu, "tuhat ovea", rakennettiin hollantilaisen rautatieyhtiön pääkonttoriksi, ja nyt se on museo.',
+      lyhyt: 'Semarangin Lawang Sewu, ”tuhat ovea”, rakennettiin hollantilaisen rautatieyhtiön pääkonttoriksi, ja nyt se on museo.',
     },
     'Jawa Timur': {
       lyhyt: 'Bromon tulivuorelle noustaan ennen aamunkoittoa katsomaan, kun aurinko nousee Tenggerin kalderan hiekkameren yllä.',
@@ -20476,7 +20476,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Kurunegalan kaupungin yllä kohoaa Ethagala, norsukallioksi kutsuttu kivimuodostelma, jonka laella istuu suuri Buddha-patsas.',
     },
     'Maḍakalapuva': {
-      lyhyt: 'Batticaloan laguunin kerrotaan "laulavan" tyyninä täysikuun öinä, ja kalastajat ovat kuunnelleet ääntä vedestä veneistään.',
+      lyhyt: 'Batticaloan laguunin kerrotaan ”laulavan” tyyninä täysikuun öinä, ja kalastajat ovat kuunnelleet ääntä vedestä veneistään.',
     },
     Mahanuvara: {
       lyhyt: 'Peradeniyan kasvitieteellinen puutarha Kandyn laitamilla on Sri Lankan suurin, ja sen orkideahuone houkuttelee kävijöitä.',
@@ -20570,7 +20570,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Chitwan perustettiin vuonna 1973 Nepalin ensimmäiseksi kansallispuistoksi, ja sen jokivarsilla viihtyvät kapeakuonoiset gaviaalit.',
     },
     Rapti: {
-      lyhyt: 'Pyuthanin Swargadwari, "taivaan portti", on 2 200 metrin kukkulalla oleva temppeli, jolta näkyy Himalajan lumihuippuja.',
+      lyhyt: 'Pyuthanin Swargadwari, ”taivaan portti”, on 2 200 metrin kukkulalla oleva temppeli, jolta näkyy Himalajan lumihuippuja.',
     },
     Sagarmatha: {
       lyhyt: 'Namche Bazaar 3 440 metrissä on Everestin reitin sherpakylä, jossa vaeltajat totuttelevat ohueen ilmaan.',
@@ -21083,7 +21083,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Damghanin Tarikhanehin moskeija on yksi Iranin vanhimmista islamilaisista rakennuksista, arviolta 700-luvulta.',
     },
     "Sistan and Baluchestan": {
-      lyhyt: 'Shahr-e Sukhteh eli "palanut kaupunki" oli pronssikautinen kaupunki Helmand-joen varrella, ja nyt se on Unescon maailmanperintöä.',
+      lyhyt: 'Shahr-e Sukhteh eli ”palanut kaupunki” oli pronssikautinen kaupunki Helmand-joen varrella, ja nyt se on Unescon maailmanperintöä.',
     },
     "South Khorasan": {
       lyhyt: 'Etelä-Khorasan tuottaa valtaosan maailman happomarjoista, joita iranilaiset kutsuvat zereshkiksi ja sirottelevat riisin päälle.',
@@ -21095,7 +21095,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Chaldiranin lähellä vuorilla seisoo armenialainen Pyhän Taddeuksen luostari, jonka kartiokatot näkyvät kauas ja jonne tehdään vuosittain pyhiinvaellus.',
     },
     Yazd: {
-      lyhyt: 'Chak Chak eli "tip-tip" on zarathustralaisten pyhin vuoristopyhäkkö Ardakanin lähellä, ja joka kesäkuu sinne saapuu tuhansia pyhiinvaeltajia.',
+      lyhyt: 'Chak Chak eli ”tip-tip” on zarathustralaisten pyhin vuoristopyhäkkö Ardakanin lähellä, ja joka kesäkuu sinne saapuu tuhansia pyhiinvaeltajia.',
     },
     Zanjan: {
       lyhyt: 'Chehrabadin suolakaivoksesta on löydetty kuuden kaivosmiehen suolan säilyttämät ruumiit; vanhimmat elivät jo akhaimenidien aikaan.',
@@ -21148,7 +21148,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Sulaimaniyan perusti vuonna 1784 babanidiruhtinas Ibrahim Pasha, joka nimesi kaupungin isänsä Sulaiman Pashan mukaan.',
     },
     "At-Ta'mim": {
-      lyhyt: 'Kirkukin lähellä Baba Gurgurin öljykentällä palaa "ikuinen tuli", maan raoista purkautuva kaasuliekki.',
+      lyhyt: 'Kirkukin lähellä Baba Gurgurin öljykentällä palaa ”ikuinen tuli”, maan raoista purkautuva kaasuliekki.',
     },
     Babil: {
       lyhyt: 'Birs Nimrudin kukkulalla seisoo muinaisen Borsippan zikkuratin rauniotorni, jota myöhemmin luultiin Baabelin torniksi.',
@@ -21178,7 +21178,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Maakunta on nimetty Saladinin mukaan: hän syntyi Tikritissä noin vuonna 1137.',
     },
     Wasit: {
-      lyhyt: 'Maakunnan nimi tulee 700-luvulla perustetusta Wasitista; se tarkoittaa "keskimmäistä", sillä kaupunki oli Kufan ja Basran välissä.',
+      lyhyt: 'Maakunnan nimi tulee 700-luvulla perustetusta Wasitista; se tarkoittaa ”keskimmäistä”, sillä kaupunki oli Kufan ja Basran välissä.',
     },
   },
   /*
@@ -21238,7 +21238,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Najranin keitaassa kalliolla seisoo al-Aanin palatsi, jonka viisikerroksinen savitiilitorni hallitsee koko laaksoa.',
     },
     Tabuk: {
-      lyhyt: 'Jabal al-Lawz eli "mantelivuori" kohoaa 2 580 metriin, ja sen huipuille sataa lähes joka talvi lunta.',
+      lyhyt: 'Jabal al-Lawz eli ”mantelivuori” kohoaa 2 580 metriin, ja sen huipuille sataa lähes joka talvi lunta.',
     },
   },
   /*
@@ -23492,7 +23492,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Ohangwenan hiekkamailla viljellään ennen kaikkea mahangua eli helmihirssiä, ja karjanhoito on toinen pääelinkeino.',
     },
     Omaheke: {
-      lyhyt: 'Gobabisin sisääntuloa vartioi härän patsas tekstillä "Cattle Country", sillä seutu on karjatilojen sydänmaata.',
+      lyhyt: 'Gobabisin sisääntuloa vartioi härän patsas tekstillä ”Cattle Country”, sillä seutu on karjatilojen sydänmaata.',
     },
     Omusati: {
       lyhyt: 'Outapin Ombalantun baobabin onttoa runkoa on käytetty kappelina, postina ja piilopaikkana.',
@@ -23818,7 +23818,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Mogadishun Lidon hiekkaranta on kaupunkilaisten suosituin rantapaikka, ja sen varrella on kalaravintoloita.',
     },
     "Bari": {
-      lyhyt: 'Guardafuin niemi on Afrikan sarven kärki, ja sen nimen arvellaan tulevan merimiesten sanoista "katso ja pakene".',
+      lyhyt: 'Guardafuin niemi on Afrikan sarven kärki, ja sen nimen arvellaan tulevan merimiesten sanoista ”katso ja pakene”.',
     },
     "Bay": {
       lyhyt: 'Buur Heyben graniittikallion kalliosuojista on löydetty Afrikan sarven vanhimmat kiistattomat hautaukset.',
@@ -23906,7 +23906,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Floresin vanhakaupunki on Petén Itzá -järven saarella, jonne pääsee lyhyttä pengertietä pitkin.',
     },
     "Quezaltenango": {
-      lyhyt: 'Quetzaltenangon kʼicheʼ-kielinen nimi Xelajú tarkoittaa "kymmenen vuoren alla", ja arjessa kaupunki on Xela.',
+      lyhyt: 'Quetzaltenangon kʼicheʼ-kielinen nimi Xelajú tarkoittaa ”kymmenen vuoren alla”, ja arjessa kaupunki on Xela.',
     },
     "Quiché": {
       lyhyt: 'Nebajin, Chajulin ja Cotzalin vuoristokylissä puhutaan ixiliä, mayakieltä, joka on tämän seudun oma.',

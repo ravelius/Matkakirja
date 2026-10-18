@@ -145,8 +145,8 @@ export const FOKUSKOHTEET_ITA = [
       + 'ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä '
       + 'viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen '
       + 'kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna '
-      + '1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, '
-      + 'Funiculà". Viimeksi vuori purkautui 1944.',
+      + '1880 köysirata, jonka avajaisiksi sepitettiin laulu ”Funiculì, '
+      + 'Funiculà”. Viimeksi vuori purkautui 1944.',
     lahde: 'en-Wikipedia "Mount Vesuvius", johdanto ja osiot '
       + 'purkaushistoriasta sekä "Funicular" (tarkistettu 25.8.2026); '
       + 'virke isoisän matkavuodesta on aineiston koostajan '
@@ -250,8 +250,8 @@ export const FOKUSKOHTEET_ITA = [
       europe: { x: 484.8, y: 819.6 },
     },
     teksti: 'Napolin perustivat kreikkalaiset: ensin Parthenope '
-      + '700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi '
-      + 'kaupunki". Se oli oman valtakuntansa pääkaupunki lähes '
+      + '700-luvulla eaa., sitten uudelleen nimellä Neápolis, ”uusi '
+      + 'kaupunki”. Se oli oman valtakuntansa pääkaupunki lähes '
       + 'yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden '
       + 'Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta '
       + 'vain kaksitoista vuotta taaksepäin. Teatro di San Carlo '
@@ -280,7 +280,7 @@ export const FOKUSKOHTEET_ITA = [
         'Suuri kaupunki',
       ],
       oikea: 2,
-      fakta: 'Napolin kreikkalainen nimi Neápolis tarkoittaa "uutta kaupunkia".',
+      fakta: 'Napolin kreikkalainen nimi Neápolis tarkoittaa ”uutta kaupunkia”.',
     },
   },
   {
@@ -416,7 +416,7 @@ export const FOKUSKOHTEET_ITA = [
       maailmankartta: { x: 6157.2, y: 1637.9 },
       europe: { x: 397.8, y: 733.3 },
     },
-    teksti: '"Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: '
+    teksti: '”Viisi maata” on viisi kylää Ligurian jyrkällä rannikolla: '
       + 'Monterosso al Mare, Vernazza, Corniglia, Manarola ja '
       + 'Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet '
       + 'rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin '
@@ -503,7 +503,7 @@ export const FOKUSKOHTEET_ITA = [
       + 'ja kivilaji puolestaan ranskalaiselta mineralogilta: Déodat '
       + 'Gratet de Dolomieu (1750–1801) kuvasi mineraalin ensimmäisenä. '
       + 'Sitä ennen paikalliset kutsuivat vuoria nimellä Monti Pallidi, '
-      + '"kalpeat vuoret", koska karbonaattikallio heijastaa '
+      + '”kalpeat vuoret”, koska karbonaattikallio heijastaa '
       + 'auringonlaskussa punertavan ja purppuraisen hehkun. Dolomiitit '
       + 'ovat olleet Unescon maailmanperintökohde vuodesta 2009.',
     lahde: 'en-Wikipedia "Dolomites", johdanto ja osio "Etymology" '

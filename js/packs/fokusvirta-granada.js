@@ -189,8 +189,8 @@ const FALLA_VISA = {
     'Valitakseen orkesterilleen uuden ensiviulun',
   ],
   oikea: 1,
-  fakta: 'Falla (1876–1946) sävelsi teoksensa "Öitä Espanjan '
-    + 'puutarhoissa" vuosina 1909–1915, kun asui vielä Pariisissa ja '
+  fakta: 'Falla (1876–1946) sävelsi teoksensa ”Öitä Espanjan '
+    + 'puutarhoissa” vuosina 1909–1915, kun asui vielä Pariisissa ja '
     + 'Madridissa. Vasta myöhemmin hän muutti pieneen puutarhataloon '
     + 'saman kukkulan rinteeseen; talo on nyt museo ja piano yhä '
     + 'paikallaan.',
@@ -684,7 +684,7 @@ export const FOKUSVIRTA_GRANADA = {
         + 'taloa, aina vuoteen 1907 asti. He tekivät työnsä sen ajan '
         + 'opin mukaan: '
         + 'rakennukseen sai lisätä osia, jotta siitä tulisi '
-        + '"kokonainen", vaikkei lisäys vastaisi mitään, mitä siinä oli '
+        + '”kokonainen”, vaikkei lisäys vastaisi mitään, mitä siinä oli '
         + 'joskus ollut. Kupolin esikuva oli osittain Persiassa, tuhannen '
         + 'kilometrin ja monen vuosisadan päässä tästä pihasta. Se ei '
         + 'ollut huijaus vaan makuasia: niin arabialaisen tyylin '

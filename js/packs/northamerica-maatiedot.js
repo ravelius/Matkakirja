@@ -163,7 +163,7 @@ export const NORTHAMERICA_MAATIEDOT = {
       sija: '106./172',
       linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~MEX',
       selitys: 'Meksikon perustuslaki on vuodelta 1917, ja sen kantava periaate on '
-        + '"ei uudelleenvalintaa": presidentti valitaan yhdeksi kuuden vuoden '
+        + '”ei uudelleenvalintaa”: presidentti valitaan yhdeksi kuuden vuoden '
         + 'kaudeksi eikä voi enää koskaan palata virkaan. Yksi puolue, PRI, '
         + 'hallitsi silti käytännössä koko 1900-luvun, ja ensimmäinen '
         + 'oppositiopresidentti astui virkaan vasta vuonna 2000. Vaalit '

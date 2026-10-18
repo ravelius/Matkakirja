@@ -341,7 +341,7 @@ export const HAHMOTELMA_GBR = [
       kysymys: 'Minä vuonna Albert Dock avattiin Liverpoolissa?',
       vaihtoehdot: ['1836', '1846', '1861', '1872'],
       oikea: 1,
-      fakta: 'Telakka sai kuninkaallisen "Royal"-arvonimensä vasta vuonna 2018 – yli 170 '
+      fakta: 'Telakka sai kuninkaallisen ”Royal”-arvonimensä vasta vuonna 2018 – yli 170 '
         + 'vuotta avaamisensa jälkeen.',
     },
   },
@@ -455,7 +455,7 @@ export const HAHMOTELMA_GBR = [
     teksti: 'Fish and chips eli paistettu kala ja ranskalaiset on Britannian tunnetuin '
       + 'pikaruoka, joka syntyi 1800-luvun Englannissa. Paistetun kalan perinteen toivat '
       + 'maahan Alankomaista muuttaneet portugalilais- ja espanjalaistaustaiset juutalaiset '
-      + 'jo 1500-luvulta lähtien, ja Charles Dickens mainitsee "paistetun kalan varastot" '
+      + 'jo 1500-luvulta lähtien, ja Charles Dickens mainitsee ”paistetun kalan varastot” '
       + 'Oliver Twist -romaanissaan 1838. Ensimmäiset varsinaiset fish and chips -kaupat '
       + 'avattiin 1860-luvulla: Lontoossa Joseph Malinin kauppa ja Lancashiren Mossleyssä '
       + 'John Leesin kauppa mainitaan usein varhaisimpina. Annos yleistyi nopeasti '
@@ -791,7 +791,7 @@ export const HAHMOTELMA_GBR = [
       'Mitä krannogit ovat, ja kuinka kauan alueella on asuttu?',
     ],
     korostukset: ['krannogi|krannogeja', 'Ben Lomond|Ben Lomond'],
-    nappi: "Kansanlaulu \"The Bonnie Banks o' Loch Lomond\" on jo tuttu koko Britanniassa "
+    nappi: "Kansanlaulu ”The Bonnie Banks o' Loch Lomond” on jo tuttu koko Britanniassa "
       + 'vuonna 1873',
     // -4.6300 E / 56.1000 N — en-Wikipedia "Loch Lomond"
     laudat: {
@@ -804,8 +804,8 @@ export const HAHMOTELMA_GBR = [
       + 'leveä, ja sen syvin kohta pohjoisosassa yltää lähes 190 metriin. Alueella on '
       + 'asuttu jo noin 5 000 vuotta, ja järvessä on useita keinotekoisia asumussaaria eli '
       + 'krannogeja; roomalaiset rakensivat lähistölle myös puolustuslinnoituksen 1. '
-      + 'vuosisadalla. Järvi tunnetaan laajalti kansanlaulusta "The Bonnie Banks o\' Loch '
-      + 'Lomond", ja sen rannalla kohoava Ben Lomond on Skotlannin eteläisin Munro-huippu.',
+      + 'vuosisadalla. Järvi tunnetaan laajalti kansanlaulusta ”The Bonnie Banks o\' Loch '
+      + 'Lomond”, ja sen rannalla kohoava Ben Lomond on Skotlannin eteläisin Munro-huippu.',
     lahde: 'en-Wikipedia "Loch Lomond", johdanto-osa ja osio "History" (tarkistettu '
       + '21.9.2026).',
   },
