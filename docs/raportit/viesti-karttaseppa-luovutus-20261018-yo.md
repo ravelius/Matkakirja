@@ -55,6 +55,12 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-*`. VIESTIT aina `send_message` 
   Tarkista r03/r06 täysikokoisina (laki Wun/Wein omassa sävyssä, ei kerma) → pätkä KK:lle omistajalle + rivi PT:lle.
 - **LISÄYS 02.45: v9 VALMIS JA OMISTAJALLA.** Simu 02.40 yksin (todistus-kiina-taistelu-250-v9-20261018-0240, SIMU VAPAA 02.44), r03/r06 ok,
   pätkä KK:lle 02.45 + rivi PT:lle. ODOTTAA omistajan vastausta; hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai (kohta 3 main-data).
+- **LISÄYS 05.5x: KK hyväksyi v9:n junaan 201 (PT 04.3x; v9 + Nuuk → NS:n 201-runkoon).** PT:n 3 löydöstä korjattu **v10 = 5c59703d0**
+  (taistelunimi kumpujen päälle, valopisteen nimi hehkun alle, siirtymä selkeässä ilman raitoja/sahalaitoja/saumaa, yläpalkki kohteen mukaan
+  siirtymän alussa; AikajanaNakyma.cs NUI:lle kerrottu). KÄÄNNÖS JU:lla → `kiina-taistelu-250-v10-app`, skripti ajo-taistelu-250-v10.zsh →
+  KUVAPARIT v9|v10 (koko videon 22,5 s nimi, 30 s hehku, 37,5 s siirtymä; v9-ruudut scratchissa → ota uudelleen v9-videosta) → PT.
+  Changping ym.: **8effba503** TaisteluKummut oletuksena kaikilla 5 pysäkillä; KÄÄNNÖSPYYNTÖ 2 → `kiina-taistelut-kaikki-app`,
+  skenaario sk-taistelut-kaikki.txt, skripti ajo-taistelut-kaikki.zsh (~8 min yksin) → ruudut jokaisesta taistelusta → PT.
 - Tarkista v5:ssä: kummut värillisinä kukkuloina (ei mustia reikiä), Wu ja Wei eri väreissä, erillään lyönnissä, aaltorengas näkyvä mutta ei musta.
   Hyväksynnän jälkeen Changping, Fei-joki, Yamen, Shanhai.
 
