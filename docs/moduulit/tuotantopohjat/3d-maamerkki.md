@@ -143,6 +143,32 @@ yksityiskohdat `VERTAILU.md`:hen ja luovutukseen. Agentit vain Opus ja Sonnet.
     delta (esim. kohteen oma atsimuutti) kulkee samassa junassa, muuten malli näyttää väärältä.
 34. **Ei väliaikaisia poikkeamia:** poikkeava osa jätetään pois ja julkaisu odottaa riippuvuutta.
 
+### 2.9 Kartan pienoismallit (karttaesinesarja)
+
+Omistaja 17.10.2026 klo 19.27: kartan 3D-esineet ovat yksi sarja, kuin lautapelin nappulat. Ne tunnistetaan muodosta,
+ei väristä tai koosta. Arkit 1–5b PT:n kautta, kartta hyväksytty junaan 202 (PT 18.10.). Koodissa sääntö on yhdessä paikassa:
+`Karttaesineet.cs` + `KarttaesineSaanto.cs` (proto). Suunnitelma ja arkit: `proto-3d/_valmiit/kartan-pienoismallit-v1/`.
+
+35. **Paletti:** karttapaletti (tyylikirja.json "karttapaletti"). Maamerkit muunnetaan yksisävyiseksi seepiarampiksi luminanssin
+    mukaan: seepia 70/51/31 → okra 196/162/108 → kerma 230/216/186. Lasi ja vesi ovat liusketta 146/154/152, pienet korostukset
+    messinkiä 205/178/128. Ramppi tehdään vain varjostimessa (`KarttaSeepia.hlsl`, Valoseppä), ei toista muunnosta CPU:lla.
+    Oma tunnisteväri on vain pelinappulalla, kuumailmapalloilla ja kipsipäillä.
+36. **Ääriviiva:** seepia 70/51/31, 1,2 pt kaikilla poluilla (`Symbolimallit.ReunaPt`). Ei mustaa viivaa. Iso esitys
+    (galleria) piirretään tarkemmasta kuvasta, jotta viiva pysyy ohuena (`Nappula.NappulanGalleriaKuva`).
+37. **Koko:** esineen suurin mitta ruudulla = `KaupunkiPalloMitat.KarttaesineKoko(pallo)` × mallin osuus (`Karttaesineet.Mitta`).
+    Mallikohtainen kerroin on vain välillä 0,85–1,15. Matalat ja leveät esineet mitataan leveydestä, eli muoto ratkaisee eikä koko.
+38. **Valo:** yksi suunta kaikille, korkeus 58° ja x 0,35 (`KarttaSeepia.Valo`).
+39. **Maavarjo (omistaja 17.10. 22.27: "terävä mutta pieni, ei pehmeä"):** yksi soikio esineen juurella, reuna ≤ 1 px.
+    Leveys on 1,05 × pohjan leveys, korkeus 0,3 × leveys, ei siirtoa ja peitto 0,5 (`Karttaesineet.Varjo*`). Ei jalustoja.
+    Poikkeus on Louvren pyramidin kapea kivireunus, ja sen varjo on pohjan kokoinen.
+40. **Yksi varjo per esine:**
+    - Pelinappulan ainoa varjo on jalan rengas (≤ 1,3 × pohja). Vaalea sarjasoikio ei piirry sen alle.
+    - Kuumailmapallon varjo on korin alla, vaaleampi ja pienempi (peitto 0,2, leveys 0,6 × pallo). Se piiloutuu, jos se osuisi
+      nappulan varjoon.
+41. **Tarkistus:** galleria (QA `ui galleria karttaesineet nyt|yhtenainen`, PK:n skenaario `sk-galleria-arkki4b`) + Pohjois- ja
+    Etelä-Ranska samalla kameralla. Kuvat tarkistetaan täysikokoisina ja esineittäin lähikuvina (mallina `ARKKI-5b-lahikuvat.png`),
+    ja arkki menee PT:lle. Uusi karttaesine tehdään näiden sääntöjen mukaan, eikä sille tehdä omaa poikkeusta.
+
 ## 3. Valmiin määritelmä (tarkistuslista)
 
 Maamerkki ei ole valmis ennen kuin kaikki kohdat täyttyvät:
