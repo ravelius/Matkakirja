@@ -582,3 +582,6 @@ Kun rungossa: poista worktree issfi. Simuvuoro vasta junan 201 kuvien jälkeen (
   KaupunkiAanimaisemaSoitin.KarttaLadattu). Vienti JU:lle _valmiit/aanikartta-lontoo-praha-vienti-20261018 (kuiva ok). Viennin jälkeen
   web-PR haarasta siirtoseppa-aanikartta (ff7ad23a3, tools/pollo/aineistot.js aanikartta += lontoo, praha; wt/siirtoseppa-aanikartta) → merge
   vihreänä (pollo-julkaisu vie workerin). Ateena: PK:n kansio -ateena-, viedään erikseen kun valmis → sama kaava (+ aineistot.js).
+- 18.10. 09.3x: JU vei 09.16 PK:n paketista lontoo, praha JA ateena (SHA = omani; oma paketti aanikartta-lontoo-praha-vienti tarpeeton, ei viedä).
+  Ateena tarkistettu täydeksi. Pöllö-PR **#4861** (siirtoseppa-aanikartta 3ce74bb03: aanikartta += lontoo, praha, ateena) auki;
+  PT: JU mergeää junan 202 julkaisussa. PT hyväksyi 75b9d6874 → NS. Kun rungossa/mergetty: poista wt/proto-siirtoseppa-aanikartta ja wt/siirtoseppa-aanikartta.
