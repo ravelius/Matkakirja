@@ -562,3 +562,7 @@ Omistajan kortti 18.10.2026 klo 12.46 (KK): "Tripolla on myös rajapinta, jonka 
 ## TRIPO: SELAIMELLA, EI RAJAPINTAA (KUMOAA 12.46) (18.10.2026 klo 13.24)
 
 Omistajan kortti 18.10.2026 klo 13.24 (KK): avain TRIPO_API_KEY on tallennettu (~/.matkakirja-avaimet-koodaus.zsh) ja toimii v2:lla (api.tripo3d.ai/v2/openapi; v3 openapi.tripo3d.com antaa 401), mutta API-saldo on 0 (ei ilmaisia krediittejä) → "Selaimella, kevyellä apulaisella (Suositus)". 19.10. Valoseppä tekee Tripo-työt Chromessa Max-tilauksella (24 895 krediittiä) Sonnet-apulaisella pienellä muistilla, ei omalla isolla kontekstilla. API-krediittejä ei osteta. Avain jää talteen.
+
+## PULU: KOODIKYYHKY POIS JUNASTA 202, TRIPO-PULUN SILMAT ORANSSEIKSI (18.10.2026 klo 14.11)
+
+KK 18.10.2026 klo 14.1x omistajan linjausten perusteella: Louvren penkin koodikyyhky (MuseoPulu.cs) pois junasta 202, koska omistajan kortti 10.52 hylkäsi nykyisen kyyhkyn ("Kyllä, Pulun näköinen"); Tripo-Pulu ja museon Pulu-chat tulevat junaan 203. KORJAUS PT:n luovutukseen (viesti-fable-luovutus-20261018-paiva.md, 11.41-kohta): Tripo-Pulun silmät eivät olleet oranssit vaan RUSKEAT; pelin Pulu-piirroksen mukaan silmät ovat ORANSSIT (#E07A1F), joten 19.10. Tripo-korjauksessa silmät tehdään oransseiksi. Niskasauma ja pyrstö viuhkaksi korjataan ennallaan.
