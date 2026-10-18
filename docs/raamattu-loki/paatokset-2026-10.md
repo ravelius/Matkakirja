@@ -491,3 +491,7 @@ Omistaja Keskustelukanavan kautta 18.10.2026 klo 05.36 (sanatarkasti): "Tähän 
 ## VIESTIRAJA: SOVELLUKSEN PYSÄYTYS → VARAKANAVA HETI (KORTTI 05.40) (18.10.2026 klo 05.41)
 
 Omistajan kortti Keskustelukanavassa 18.10.2026 klo 05.40 (sanatarkasti): "Kyllä, lisää rivi (Suositus)". CLAUDE.md:hen rivi "Kun sovellus pysäyttää viestit toisille sessioille, lähetä ne heti varakanavalla." (KK #4844). Raamatun VIESTIRAJA-kohta nimeää nyt viestin "Not delivered … Paused until your user's next message".
+
+## KESKUSTELUKANAVAN NOLLAUS YÖLLÄ AUTOMAATTISESTI (18.10.2026 klo 05.49)
+
+Omistajan kortti Keskustelukanavassa 18.10.2026 klo 05.42 (sanatarkasti): "Yöllä pitää olla automaattinen nollaus ilman minun hyväksyntää. Saat nollata"; vahvistus 05.48 "Tee sen mukaan". KK nollautuu yöllä (omistaja nukkuu) kontekstirajalla ilman korttia; päivällä kortti kuten ennen. KK teki: ~/.claude/CLAUDE.md, KK:n muisti ja aloitus.md.
