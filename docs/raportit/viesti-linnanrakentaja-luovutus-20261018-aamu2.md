@@ -84,3 +84,12 @@ Proton työkopio: `/Users/Shared/Claude/wt/proto-linnanrakentaja-kehykset`. Siin
   3. **Profiilista puuttuvat Louvre 904:n porrastetut listat:** helminauha, sileä kouru, sisänauha ja kirkas sisäreuna kaikilla sivuilla. Osa on mukana 8a33ed5e4:n fr_A–D-profiileissa. Vertaa simukuvaa 904-sivupalkkiin ja lisää helminauha (tiheä pallorivi korkeuskarttaan tai omaksi profiilinauhaksi) ja kirkas sisäreuna.
   4. **Kulta on oikeaa tummempi.** v6:ssa 236/214/150 ja valo 1,55. Valitse simun QA-kuvista, ja jos tarvitaan, käytä kirkasta 245/228/175.
 - **Kolmikko KK:lle** (`local_febfd152-…`) ja PT:lle vasta, kun kohdat 1–4 näkyvät simukuvassa.
+
+## LISÄYS 09.4x (LS): Big Ben ilman radiota
+
+- LS 5d78b3fac (linssiseppa/museo-valahdys-202): Lontoo → radio on poistettu, ja Grimeton on radion ainoa piste.
+- **Tee pienoismallihaaraan:**
+  1. Yhdistä 5d78b3fac.
+  2. Vaihda Big Benin `LinssiMallit`-rivi niin, ettei se ole enää "radio". Tee siitä aina näkyvä nappi ilman linssiä: esim. `Linssi = null` ja uusi `Aina`-polku, jolloin `LinssiSaatavilla`-ehto ohitetaan.
+  3. Kysy napautus PT:ltä (ei mitään / kaupunki).
+  4. Pyydä uusi käännös ennen pienoismallien kuvaparia. 15bff8bba (006f7f4df) on yhä Big Ben → radio -versio.
