@@ -27,9 +27,10 @@ linssiseppa2/kyyti-sininen-diag (diag-commitit + a7c0afa1a) EI junaan; diag-appi
 
 ## 3. TRIPO (19.10. CHROMESSA Max-tilauksella Sonnet-apulaisella pienellä muistilla, EI rajapintaa – OMISTAJAN PÄÄTÖS 13.24 kumoaa 12.46:n; API-saldo 0, ei osteta)
 - k2 + vartija valmiina: media.matkakirja.app/taidemuseo/louvre-ihmiset-v1/{k2,vartija}.glb (30 k, 2K; kevennys $L/tripo/kevenna.py).
-- 19.10. klo 10 jälkeen: k1:n hiukset, Pulun korjaukset (niskasauma, oranssit silmät, pyrstö viuhkaksi), Puyi + vartija luurankoineen
+- 19.10. klo 10 jälkeen: k1:n hiukset, Pulun korjaukset (niskasauma; silmät ORANSSEIKSI #E07A1F – Tripo-Pulun 11.41 silmät olivat RUSKEAT, pelin piirroksessa oranssit (PT 18.10. korjaus); pyrstö viuhkaksi), Puyi + vartija luurankoineen
   (rig-check → rig → retarget; Humanoid; Quaternius UAL CC0 lisäliikkeet). Kaikki Tripo-sivuston kautta Chromessa (Max-tilaus), apulaisena
   Sonnet pienellä muistilla; EI rajapintaa eikä TRIPO_API_KEY:tä (saldo 0).
+  Junat (PT 18.10.): koodikyyhky MuseoPulu.cs otetaan pois junasta 202; Tripo-Pulu korvaa sen junassa 203.
   Generoinnit vain omistajan lupien mukaan, ei ostoja. Latauslupa: kaikki peliin hyväksytyt Tripo-mallit (omistaja 11.46). Yksityiskohdat: edellinen kohdat 5, 6, 11, 13.
 
 ## 4. SIIVOUS
