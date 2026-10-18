@@ -1,0 +1,64 @@
+{
+  "part": "B, j13/j14",
+  "folder": "posti/juoksupeli-havainnekuvat-20261018",
+  "finalSealedAt": "2026-10-18T07:31:56.905416+00:00",
+  "nativeCount": 2,
+  "calls": 2,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 2920,
+      "sha256": "62d45feb01c5da0691afdd85c8fe5f4f1a0a74543c4bf4d2081d0c6cce2b0c36"
+    },
+    {
+      "path": "NATIVE-FREEZE.json",
+      "bytes": 879,
+      "sha256": "f3d2e4baa88e1745fbfdde6dcf4b1a468bfa9bf84f39f7b5e5285200927444bb"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 11094,
+      "sha256": "49e298f66c9fbfd4c9d9693469b1d98671684b4761c48883005493c770105029"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2578,
+      "sha256": "670fe3ab57ccd5c370711b21cabf4ee59a37d6be192d820d82e1c0973f827fab"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 7350,
+      "sha256": "6758369cb7ede9420ea585386f41b419a6d174d7126cfc274c582a669b5c00e6"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 2205,
+      "sha256": "79cf3760cae346746b6b74fad66f1b7826adab56fa69362a616fdb48e83aaaae"
+    },
+    {
+      "path": "havainne-j13.png",
+      "bytes": 3478681,
+      "sha256": "f95a472177d9574abc6905957aa6e41f32aa1a3dc32faa16a353c75047fea50d"
+    },
+    {
+      "path": "havainne-j14.png",
+      "bytes": 3797578,
+      "sha256": "8107be29daaa43b27e7d4c44d0283d6c6a329c48d897468fe178bd41308ee077"
+    },
+    {
+      "path": "prompts/j13.txt",
+      "bytes": 4707,
+      "sha256": "53e941b2be5e3949d5228bc5e07801683cc72b7af212393ebba98a9de89ea687"
+    },
+    {
+      "path": "prompts/j14.txt",
+      "bytes": 4732,
+      "sha256": "dc762897221ab393aa914e8620f22ee0199958b76c75f1899070962dc66075f9"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+      "bytes": 3058,
+      "sha256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477"
+    }
+  ]
+}

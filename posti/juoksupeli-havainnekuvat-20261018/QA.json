@@ -1,0 +1,191 @@
+{
+  "rootReview": {
+    "reviewedAt": "2026-10-18T07:33:32.198808+00:00",
+    "reviewer": "root",
+    "allSixCompleteNativeImagesPersonallyViewed": true,
+    "oneCallPerAsset": true,
+    "extraCalls": 0,
+    "method": "built-in image_gen, entirely new whole image for each code",
+    "sourceCommit": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+    "images": [
+      {
+        "code": "j11",
+        "observations": [
+          "Large palace block with parallel room wings, courts and several route junctions visible.",
+          "Camera is higher than J8-J10 but remains clearly oblique; requested nearly90-degree vertical overhead view not met.",
+          "Exact nine-by-nine gate studs and every shortcut/dead-end connection are unverified."
+        ],
+        "overallQaPassed": false
+      },
+      {
+        "code": "j12",
+        "observations": [
+          "Two levels, colonnaded gallery and multiple broad guarded stair sections are visible.",
+          "All stair/gallery/door connections and navigation graph have not been reconstructed or collision-tested."
+        ],
+        "overallQaPassed": null
+      },
+      {
+        "code": "j13",
+        "observations": [
+          "Library, central kitchen and right-hand bedroom recognizable amid extra rooms.",
+          "Their complete sequential room-to-room route is ambiguous; apparent connections run via courts and some door joins are unclear."
+        ],
+        "overallQaPassed": null
+      },
+      {
+        "code": "j14",
+        "observations": [
+          "Garden path junctions, rock groups, open-roof central pavilion and guarded steps visible.",
+          "Trees/corners/image edges obscure some return routes; complete loop graph not established."
+        ],
+        "overallQaPassed": null
+      },
+      {
+        "code": "j15",
+        "observations": [
+          "Water-crossing bridge and routes on both banks with open-roof rooms visible.",
+          "Main bridge has visible railings on both sides; background edge continuity and actual3D/collision geometry are not verified."
+        ],
+        "overallQaPassed": null
+      },
+      {
+        "code": "j16",
+        "observations": [
+          "Broad stair climb reaches upper wall walk with visible main railings; route branches along the wall.",
+          "Bronze vessel on intermediate landing can obstruct circulation.",
+          "Other gold upright forms appear decorative statues/collectibles, not confirmed duplicate Puyi figures."
+        ],
+        "overallQaPassed": null
+      }
+    ],
+    "commonLimits": [
+      "1672x941 natives approximate16:9 but are not mathematically exact; no crop/resize or surface editing performed.",
+      "No exact nine-by-nine stud compliance established across the gate panels.",
+      "High/wider camera change is visual; camera angles and physical dimensions not calibrated.",
+      "Fictional design layouts; not measured historical reconstructions or a validated playable navigation graph.",
+      "Image-based handrail observations do not establish physical or collision safety.",
+      "Dense foliage, paving and ornament contain generative repetition; no claim of documentary photographic authenticity."
+    ],
+    "recipientAccepted": false,
+    "ownerAccepted": false,
+    "gameImplementationAuthorized": false,
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "assets": [
+    {
+      "taskNumber": 423,
+      "code": "j11",
+      "imageProduced": true,
+      "qaPassed": false,
+      "qaDisposition": "Review candidate with disclosed camera, route, gate-stud and native-aspect limitations; no overall QA pass or owner acceptance",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/delivery-packet/havainne-j11.png",
+      "nativeSHA256": "fb0e3b33618c7bbf16ab049a94f715763664465eb96193befeb3878d2d1d2d02",
+      "deliverySHA256": "fb0e3b33618c7bbf16ab049a94f715763664465eb96193befeb3878d2d1d2d02",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 3366571,
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false,
+      "aspect16to9RelativeError": 0.0005313496280551222
+    },
+    {
+      "taskNumber": 424,
+      "code": "j12",
+      "imageProduced": true,
+      "qaPassed": null,
+      "qaDisposition": "Review candidate with disclosed camera, route, gate-stud and native-aspect limitations; no overall QA pass or owner acceptance",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/delivery-packet/havainne-j12.png",
+      "nativeSHA256": "a18fa24d50d34e665a12497fc412a100eca1e30ff637c524bae0c83a49129abe",
+      "deliverySHA256": "a18fa24d50d34e665a12497fc412a100eca1e30ff637c524bae0c83a49129abe",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 3379716,
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false,
+      "aspect16to9RelativeError": 0.0005313496280551222
+    },
+    {
+      "taskNumber": 425,
+      "code": "j13",
+      "imageProduced": true,
+      "qaPassed": null,
+      "qaDisposition": "Review candidate with disclosed camera, route, gate-stud and native-aspect limitations; no overall QA pass or owner acceptance",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/delivery-packet/havainne-j13.png",
+      "nativeSHA256": "f95a472177d9574abc6905957aa6e41f32aa1a3dc32faa16a353c75047fea50d",
+      "deliverySHA256": "f95a472177d9574abc6905957aa6e41f32aa1a3dc32faa16a353c75047fea50d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 3478681,
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false,
+      "aspect16to9RelativeError": 0.0005313496280551222
+    },
+    {
+      "taskNumber": 426,
+      "code": "j14",
+      "imageProduced": true,
+      "qaPassed": null,
+      "qaDisposition": "Review candidate with disclosed camera, route, gate-stud and native-aspect limitations; no overall QA pass or owner acceptance",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/delivery-packet/havainne-j14.png",
+      "nativeSHA256": "8107be29daaa43b27e7d4c44d0283d6c6a329c48d897468fe178bd41308ee077",
+      "deliverySHA256": "8107be29daaa43b27e7d4c44d0283d6c6a329c48d897468fe178bd41308ee077",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 3797578,
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false,
+      "aspect16to9RelativeError": 0.0005313496280551222
+    },
+    {
+      "taskNumber": 427,
+      "code": "j15",
+      "imageProduced": true,
+      "qaPassed": null,
+      "qaDisposition": "Review candidate with disclosed camera, route, gate-stud and native-aspect limitations; no overall QA pass or owner acceptance",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/delivery-packet/havainne-j15.png",
+      "nativeSHA256": "4d2577f55d8f64b46f2e8ab171fae8d33da2a6c53702552ff554284586394dd7",
+      "deliverySHA256": "4d2577f55d8f64b46f2e8ab171fae8d33da2a6c53702552ff554284586394dd7",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 3413060,
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false,
+      "aspect16to9RelativeError": 0.0005313496280551222
+    },
+    {
+      "taskNumber": 428,
+      "code": "j16",
+      "imageProduced": true,
+      "qaPassed": null,
+      "qaDisposition": "Review candidate with disclosed camera, route, gate-stud and native-aspect limitations; no overall QA pass or owner acceptance",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/delivery-packet/havainne-j16.png",
+      "nativeSHA256": "689800f5530cc866cac064105115eee0bb4a8267568310c3902bb18a6a6daabf",
+      "deliverySHA256": "689800f5530cc866cac064105115eee0bb4a8267568310c3902bb18a6a6daabf",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 3785820,
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false,
+      "aspect16to9RelativeError": 0.0005313496280551222
+    }
+  ],
+  "ownerAccepted": false,
+  "recipientAccepted": false,
+  "gameImplementationAuthorized": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

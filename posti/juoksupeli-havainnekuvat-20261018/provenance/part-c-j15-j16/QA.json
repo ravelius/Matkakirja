@@ -1,0 +1,58 @@
+{
+  "j15": {
+    "summary": "Kamera on aiempaa J8–J10-erää ylempänä ja rajaus selvästi laajempi: useita katottomia huoneita kummallakin rannalla, avoimia oviketjuja ja käytäviä. Kulmaa ei ole kalibroitu asteina. Puyi on selvästi pienempi suhteessa ympäristöön (visuaalinen arvio noin7% kuvan korkeudesta, ei mittakaavavarmennus). Kesäinen valo, keltainen asu, tumma päähine/lettivaikutelma, hyväntuulinen hovi ja hennosti hehkuvat esineet seuraavat viitteitä. Silta ylittää veden yhtenäisellä kannella; pääsillan molemmilla puolilla näkyy pääosin jatkuva kivikaide ja liittyvät rantakaiteet. Puyi juoksee leveällä kannella kaiteiden välissä. Ennen ja jälkeen sillan hahmottuvat vasen/oikea sivureitit huoneisiin; osa ovista ja kauemmista liittymistä peittyy puustoon, joten täydellistä reittigraafia ei ole todennettu. Kaikki taustareunat tai kaiteiden tarkka3D/collision-jatkuvuus eivät ole kuvasta varmennettavissa. Porttipaneelien9×9-nastamäärä ei ole täsmällisesti laskettavissa ja osa näyttää ristikolta tai poikkeavalta ruudukolta: EI QA-passia nastoille. Ei havaittu nykyesineitä, aseita tai putoamista. Kasvillisuus ja kiveys ovat pelikonseptille siistittyjä; veden pienaaltojen ja lehtien tiheässä tekstuurissa on generointiin kuuluvaa toistuvuutta, ei karkeaa kaiverrettua pyörrekuviota.",
+    "cameraHigherVisually": true,
+    "cameraAngleCalibrated": false,
+    "roomsExpanded": true,
+    "beforeBridgeBranchesVisible": true,
+    "afterBridgeBranchesVisible": true,
+    "fullRouteGraphVerified": false,
+    "bridgeBothRailingsVisuallyPresent": true,
+    "exact3DCollisionRailingContinuityVerified": false,
+    "allBackgroundEdgesVerified": false,
+    "childOnGuardedRouteObserved": true,
+    "studGrid9x9Verified": false,
+    "studGridStatus": "Not countable exactly; some panels appear lattice-like or inconsistent",
+    "periodObviousModernObjectsObserved": false,
+    "surfaceLimits": [
+      "Dense repeated foliage/ripple detail",
+      "Clean polished game-concept finish"
+    ],
+    "exact16by9": false,
+    "nativeViewed": true,
+    "reviewedAt": "2026-10-18T07:29:25.912412+00:00",
+    "reviewStatus": "review-candidate-with-declared-limits",
+    "ownerApproved": false,
+    "recipientAccepted": false
+  },
+  "j16": {
+    "summary": "Laaja korkea yläviisto paljastaa monihuoneisen katottoman kokonaisuuden, oviaukkoja ja risteäviä käytäviä. Kameraero aiempaan näkyy, mutta kamera-astetta ei ole kalibroitu. Leveät matalat portaat nousevat kahdessa selvässä jaksossa väli- ja ylätasanteen kautta muurin leveälle ylätasolle; reitti jatkuu ylhäällä vasemmalle ja oikealle. Pääportaikon kummankin reunan ja pääylätason molempien reunojen kaiteet näkyvät pääosin, lapsen aktiivinen reitti on suojattu. Täsmällistä3D/collision-kaidejatkuvuutta, kaikkia kulmaliittymiä tai taustan kaikkia reunoja ei silti voi varmentaa kuvasta. Pronssiastia keskellä välitasannetta vie kulkutilaa ja on mahdollinen suunnittelun törmäyskohta. Pää-Puyi on pieni keltapukuinen mustapäähineinen juoksija portaiden keskialueella; muut kullansävyiset pystyt hahmot vaikuttavat koristepatsailta/keräilyesineiltä, eikä niitä kirjata lisä-Puyiksi. Hovi seuraa leikkisästi, ei aseita, tikapuita tai näkyvää putoamista. Huoneketjut, sivuovet, pikkupihat ja esineet ovat luettavia, mutta täydellinen saavutettavuus/reittigraafi on todentamatta. Porttien nastoitus näyttää joissakin paneeleissa poikkeavalta eikä9×9-per-lehti ole luotettavasti laskettavissa: EI QA-passia. Kasvisto, kivet ja vesi ovat siistittyä pelikonseptipintaa; pientä säännöllistä yksityiskohtarytmiä on, ei selvää karkeaa kaiverrus-/pyörretekstuuria.",
+    "cameraHigherVisually": true,
+    "cameraAngleCalibrated": false,
+    "roomsExpanded": true,
+    "broadStairAndIntermediateLandingVisible": true,
+    "wallTopConnectionVisible": true,
+    "wallTopLeftRightContinuationVisible": true,
+    "stairBothRailingsVisuallyPresent": true,
+    "wallTopBothRailingsVisuallyPresent": true,
+    "exact3DCollisionRailingContinuityVerified": false,
+    "allBackgroundEdgesVerified": false,
+    "childOnGuardedRouteObserved": true,
+    "fullRouteGraphVerified": false,
+    "middleLandingObstacle": "Bronze vessel consumes route space; collision design unverified",
+    "mainPuyiDistinguishedFromGoldDecorations": true,
+    "studGrid9x9Verified": false,
+    "studGridStatus": "Some panels appear inconsistent, exact count not reliable",
+    "periodObviousModernObjectsObserved": false,
+    "surfaceLimits": [
+      "Clean polished concept surfaces",
+      "Fine repeated detail in vegetation/stone/water"
+    ],
+    "exact16by9": false,
+    "nativeViewed": true,
+    "reviewedAt": "2026-10-18T07:29:25.921997+00:00",
+    "reviewStatus": "review-candidate-with-declared-limits",
+    "ownerApproved": false,
+    "recipientAccepted": false
+  }
+}

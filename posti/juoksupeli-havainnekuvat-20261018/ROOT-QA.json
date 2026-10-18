@@ -1,0 +1,74 @@
+{
+  "reviewedAt": "2026-10-18T07:33:32.198808+00:00",
+  "reviewer": "root",
+  "allSixCompleteNativeImagesPersonallyViewed": true,
+  "oneCallPerAsset": true,
+  "extraCalls": 0,
+  "method": "built-in image_gen, entirely new whole image for each code",
+  "sourceCommit": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+  "images": [
+    {
+      "code": "j11",
+      "observations": [
+        "Large palace block with parallel room wings, courts and several route junctions visible.",
+        "Camera is higher than J8-J10 but remains clearly oblique; requested nearly90-degree vertical overhead view not met.",
+        "Exact nine-by-nine gate studs and every shortcut/dead-end connection are unverified."
+      ],
+      "overallQaPassed": false
+    },
+    {
+      "code": "j12",
+      "observations": [
+        "Two levels, colonnaded gallery and multiple broad guarded stair sections are visible.",
+        "All stair/gallery/door connections and navigation graph have not been reconstructed or collision-tested."
+      ],
+      "overallQaPassed": null
+    },
+    {
+      "code": "j13",
+      "observations": [
+        "Library, central kitchen and right-hand bedroom recognizable amid extra rooms.",
+        "Their complete sequential room-to-room route is ambiguous; apparent connections run via courts and some door joins are unclear."
+      ],
+      "overallQaPassed": null
+    },
+    {
+      "code": "j14",
+      "observations": [
+        "Garden path junctions, rock groups, open-roof central pavilion and guarded steps visible.",
+        "Trees/corners/image edges obscure some return routes; complete loop graph not established."
+      ],
+      "overallQaPassed": null
+    },
+    {
+      "code": "j15",
+      "observations": [
+        "Water-crossing bridge and routes on both banks with open-roof rooms visible.",
+        "Main bridge has visible railings on both sides; background edge continuity and actual3D/collision geometry are not verified."
+      ],
+      "overallQaPassed": null
+    },
+    {
+      "code": "j16",
+      "observations": [
+        "Broad stair climb reaches upper wall walk with visible main railings; route branches along the wall.",
+        "Bronze vessel on intermediate landing can obstruct circulation.",
+        "Other gold upright forms appear decorative statues/collectibles, not confirmed duplicate Puyi figures."
+      ],
+      "overallQaPassed": null
+    }
+  ],
+  "commonLimits": [
+    "1672x941 natives approximate16:9 but are not mathematically exact; no crop/resize or surface editing performed.",
+    "No exact nine-by-nine stud compliance established across the gate panels.",
+    "High/wider camera change is visual; camera angles and physical dimensions not calibrated.",
+    "Fictional design layouts; not measured historical reconstructions or a validated playable navigation graph.",
+    "Image-based handrail observations do not establish physical or collision safety.",
+    "Dense foliage, paving and ornament contain generative repetition; no claim of documentary photographic authenticity."
+  ],
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameImplementationAuthorized": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

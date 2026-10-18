@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "frozenAtUTC": "2026-10-18T07:34:17.530354+00:00",
+  "files": [
+    {
+      "path": "DELIVERY-STATUS.json",
+      "bytes": 436,
+      "sha256": "237560c429d4d4736ddffbf002bd749abfeeb49b19a75f971dae6e5a2da24b95"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 13436,
+      "sha256": "b6692c83e8ee0d0aad97d6eeed114b7fb627d4abc5a037a695b44156c7cc885d"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 9898,
+      "sha256": "3cff1bf39c2128d889f65b02f54462a4e5af06ca93e62e8cff5704875e94b835"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2260,
+      "sha256": "399bab890d4920ce98b319af415b66ba344f52ab4b40a0a75c6c7744bfd643d8"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 3442,
+      "sha256": "636daafa2811b45249c7392cf12cd98a8ec4a37ac1ba3fe40f1c51c39d3c510f"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 4382,
+      "sha256": "8574f27b9e2e9fe047c81f1b14a7cd2f77b34bf4aaf574cef91c035c0f5b67b7"
+    },
+    {
+      "path": "havainne-j11.png",
+      "bytes": 3366571,
+      "sha256": "fb0e3b33618c7bbf16ab049a94f715763664465eb96193befeb3878d2d1d2d02"
+    },
+    {
+      "path": "havainne-j12.png",
+      "bytes": 3379716,
+      "sha256": "a18fa24d50d34e665a12497fc412a100eca1e30ff637c524bae0c83a49129abe"
+    },
+    {
+      "path": "prompts/j11.txt",
+      "bytes": 4251,
+      "sha256": "71d76da1a28885483b95a4855c65a66aaeb8e3b67ec40056e31a15ec751ef58c"
+    },
+    {
+      "path": "prompts/j12.txt",
+      "bytes": 4603,
+      "sha256": "9883babfc4152ec1f39f8b371c2236bbc898b0037b234dadcff926454f6e4d32"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+      "bytes": 3058,
+      "sha256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477"
+    }
+  ],
+  "manifestExcludesItself": true,
+  "nativePNGsUnmodified": true,
+  "promptBytesPreserved": true
+}

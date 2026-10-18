@@ -1,0 +1,72 @@
+{
+  "method": "built-in image_gen only",
+  "wholeNewNativeImages": true,
+  "callsAllowed": 2,
+  "maximumCallsPerImage": 1,
+  "callsIssued": 2,
+  "callsCompleted": 2,
+  "retries": 0,
+  "extraVariants": 0,
+  "calls": {
+    "j13": {
+      "task": 425,
+      "status": "completed",
+      "issuedAt": "2026-10-18T07:25:17.361317+00:00",
+      "attempt": 1,
+      "promptSHA256": "53e941b2be5e3949d5228bc5e07801683cc72b7af212393ebba98a9de89ea687",
+      "promptExactBytes": 4707,
+      "promptSingleFinalNewline": true,
+      "referenceSHA256": [
+        "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828",
+        "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+        "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021"
+      ],
+      "method": "built-in image_gen, new entire native image",
+      "noRetry": true,
+      "completedAt": "2026-10-18T07:27:08.665187+00:00",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/part-b-j13-j14/images/havainne-j13.png",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-8cecbb34-8d81-417a-9f57-f805193a4b56.png",
+      "nativeSHA256": "f95a472177d9574abc6905957aa6e41f32aa1a3dc32faa16a353c75047fea50d",
+      "bytes": 3478681,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false
+    },
+    "j14": {
+      "task": 426,
+      "status": "completed",
+      "issuedAt": "2026-10-18T07:27:57.369450+00:00",
+      "attempt": 1,
+      "promptSHA256": "dc762897221ab393aa914e8620f22ee0199958b76c75f1899070962dc66075f9",
+      "promptExactBytes": 4732,
+      "promptSingleFinalNewline": true,
+      "referenceSHA256": [
+        "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828",
+        "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+        "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021"
+      ],
+      "method": "built-in image_gen, new entire native image",
+      "noRetry": true,
+      "completedAt": "2026-10-18T07:29:58.438345+00:00",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/part-b-j13-j14/images/havainne-j14.png",
+      "defaultNativePath": "/Users/samireivinen/.codex/generated_images/01a14b19-a1bc-7193-ae8f-e4d17e5ac90c/exec-84a5ec61-6d67-4b98-b6cd-fd1716243f55.png",
+      "nativeSHA256": "8107be29daaa43b27e7d4c44d0283d6c6a329c48d897468fe178bd41308ee077",
+      "bytes": 3797578,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "nativeUnmodified": true,
+      "aspect16to9Exact": false
+    }
+  },
+  "nativeUnmodified": true,
+  "noAPIOrCLIOrRunway": true,
+  "noGameImplementation": true,
+  "noPekingOrTivoliProduction": true
+}

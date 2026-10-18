@@ -1,0 +1,91 @@
+{
+  "assignment": {
+    "family": "runningJ11to16",
+    "sourcePath": "posti/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+    "sourceCommit": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+    "sourceBlob": "02a1060ebd6514ff59b12b6c16f273a728d61f9d",
+    "sourceSnapshot": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+    "sourceReadInFull": true,
+    "productionRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/part-a-j11-j12",
+    "mirror": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-ylempaa-j11-j16-20261018/part-a-j11-j12",
+    "taskNumbers": [
+      423,
+      424
+    ],
+    "assetCodes": [
+      "j11",
+      "j12"
+    ],
+    "producerAgent": "/root/running_dollhouse_three",
+    "maximumCalls": 2,
+    "maximumCallsPerImage": 1,
+    "noRetry": true,
+    "generationMayStart": true,
+    "references": [
+      {
+        "code": "j8",
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j8.png",
+        "sha256": "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828",
+        "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+        "personallyViewedOriginal": true
+      },
+      {
+        "code": "j9",
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j9.png",
+        "sha256": "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+        "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+        "personallyViewedOriginal": true
+      },
+      {
+        "code": "j10",
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j10.png",
+        "sha256": "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021",
+        "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+        "personallyViewedOriginal": true
+      }
+    ],
+    "gameImplementationAuthorized": false,
+    "earlierOwnerPauseException": "New 18Oct10:14/10:15 explicit scoped permission for six design images only; Peking/Tivoli pauses and all game production remain in force"
+  },
+  "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/part-a-j11-j12/sources/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+  "sourceReadInFull": true,
+  "sourceGitBlobVerified": "02a1060ebd6514ff59b12b6c16f273a728d61f9d",
+  "sourceSHA256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477",
+  "sourceBytes": 3058,
+  "maximumCallsForThisPart": 2,
+  "eachImageOneWholeNewCall": true,
+  "noRetry": true,
+  "references": [
+    {
+      "code": "j8",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j8.png",
+      "sha256": "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828",
+      "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+      "personallyViewedOriginal": true
+    },
+    {
+      "code": "j9",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j9.png",
+      "sha256": "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+      "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+      "personallyViewedOriginal": true
+    },
+    {
+      "code": "j10",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j10.png",
+      "sha256": "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021",
+      "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+      "personallyViewedOriginal": true
+    }
+  ],
+  "usedReferenceCodes": {
+    "j11": [
+      "j9"
+    ],
+    "j12": [
+      "j9"
+    ]
+  },
+  "earlierImagesUnmodified": true,
+  "noGameProduction": true
+}

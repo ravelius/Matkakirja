@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUTC": "2026-10-18T07:34:17.530354+00:00",
+  "reviewer": "running_dollhouse_three",
+  "producerSelfReview": true,
+  "rootAlsoReportedViewingBothOriginals": true,
+  "scope": "Original-size saved native visual QA only; no runtime pathfinding, camera metrology, pixel edits or retries",
+  "allImagesFullyQAApproved": false,
+  "common": {
+    "dimensions": [
+      1672,
+      941
+    ],
+    "nativeLandscape": true,
+    "requestedAspect": "16:9",
+    "exact16by9": false,
+    "aspectDifferencePercent": -0.05313496280551222,
+    "nativeBytesPreserved": true,
+    "cameraClearlyHigherThanJ8J10": true,
+    "cameraAngleMeasured": false,
+    "period": "Plausible summer1914 Qing-inspired design, not surveyed historical-room reconstruction",
+    "modernSkylineObserved": false,
+    "weaponsOrViolenceObserved": false,
+    "childOnPitchedRoofOrUnprotectedDropObserved": false,
+    "runtimeRouteContinuityVerified": false,
+    "goldStud9By9Verified": false,
+    "surface": "Natural-looking stone/wood/fabric, repeated decorative rug motifs and invented wall scroll details; AI planning scene rather than a documentary photo"
+  },
+  "images": {
+    "j11": {
+      "nativeSHA256": "fb0e3b33618c7bbf16ab049a94f715763664465eb96193befeb3878d2d1d2d02",
+      "observed": [
+        "Whole large open-roof palace block with many parallel and consecutive rooms",
+        "Two planted courtyards, corridors and right-angle route choices",
+        "Small yellow-robed running child, adult attendants and nurse in different branches",
+        "Softly glowing collectibles in room-side detours"
+      ],
+      "deviations": [
+        "Essential camera deviation: view remains clearly oblique despite being higher; requested nearly90degree vertical floor-plan view is not achieved",
+        "Every shortcut, dead-end and entrance-to-exit connection not established; trees, wall heights and occlusion hide portions",
+        "Lower main gate stud pattern is visible but not certifiably9rows by9columns per leaf and appears different",
+        "Braid/dragon embroidery/facial expressions too small to verify precisely",
+        "Repeated rugs and decorative wall writing remain detailed and invented"
+      ],
+      "briefPass": false
+    },
+    "j12": {
+      "nativeSHA256": "a18fa24d50d34e665a12497fc412a100eca1e30ff637c524bae0c83a49129abe",
+      "observed": [
+        "Large two-level roofless palace and central open courtyard/atrium",
+        "Upper mezzanine/gallery, long pillared corridor and broad stone stair flights with parapets",
+        "Consecutive and parallel open rooms and sharp right-angle turns",
+        "Small running Puyi on lower level, attendants on lower routes and upper gallery, softly glowing period collectibles"
+      ],
+      "deviations": [
+        "Camera is steeply elevated and higher than prior reference but exact requested angle not measured",
+        "All stair landings, upper-gallery floor connections, route widths and free passage cannot be certified from single2Dimage",
+        "No fully countable monumental9by9studded door; stud compliance unverified rather than assumed",
+        "Some lower rooms sit behind tree canopy/gallery and outer palace edges crop, limiting complete circulation review",
+        "Wall scroll marks, furniture/room layout and repeated rug motifs are generated design details, not verified historical facts"
+      ],
+      "briefPass": false
+    }
+  }
+}

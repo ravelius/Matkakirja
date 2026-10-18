@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-10-18T07:26:21.254649+00:00",
+  "sourcePath": "posti/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+  "sourceCommit": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+  "sourceBlob": "02a1060ebd6514ff59b12b6c16f273a728d61f9d",
+  "sourceSHA256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477",
+  "sourceReadInFull": true,
+  "sourceHasNewAttachments": false,
+  "references": [
+    {
+      "code": "j8",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j8.png",
+      "sha256": "4ad8e4d3e6ce3e7ec36053aa846163c970b524f9b4bbf3d7a4eb6fa76070c828",
+      "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+      "personallyViewedOriginal": true
+    },
+    {
+      "code": "j9",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j9.png",
+      "sha256": "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+      "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+      "personallyViewedOriginal": true
+    },
+    {
+      "code": "j10",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j10.png",
+      "sha256": "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021",
+      "role": "previous delivered native, style/light/Puyi/period reference only; camera must be significantly higher",
+      "personallyViewedOriginal": true
+    }
+  ],
+  "ownerDecisionLocal": "2026-10-18T10:15:00+03:00",
+  "permission": "Exactly six wholly new design images, one call per asset, no rejected-call retries",
+  "scope": "Design exploration only. Fictional room plans and route options inspired by the prior delivered J8-J10 scenes; not measured historical reconstructions.",
+  "earlierPauses": "Game implementation, Peking and Tivoli remain paused; no Tripo, game implementation, R2 or publication authorized",
+  "previousImagesRegenerated": false
+}

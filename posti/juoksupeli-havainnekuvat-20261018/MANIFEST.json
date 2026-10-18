@@ -1,0 +1,220 @@
+{
+  "createdAt": "2026-10-18T07:35:06.621742+00:00",
+  "sourceCommit": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+  "sourceBlob": "02a1060ebd6514ff59b12b6c16f273a728d61f9d",
+  "callsIssued": 6,
+  "imagesProduced": 6,
+  "nativeUnmodified": true,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 40940,
+      "sha256": "1bd6116c2ec616c5710350f6603a7496501a984679fca8a490224801e8ff5b1d"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 30697,
+      "sha256": "7910da1aa241f3a0c8cf7f6f3b64d4a0c9655bdcbd1e0e463ca81c26d7b6df51"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 9825,
+      "sha256": "14b66891cee0adc83ec4640f084e7964b3f5ecb035c80731efa2d5cbb6b5d5f3"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 8386,
+      "sha256": "7fba3c04b0ac5d4b37fcb43f9b3a638ab749694c6319ee24c0b9ce3076d0a487"
+    },
+    {
+      "path": "ROOT-QA.json",
+      "bytes": 3204,
+      "sha256": "3ce53f27edd65a93c7d85071744c5973981a05e43e77450b1e009b1fee2365bd"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 2190,
+      "sha256": "251db5d26ed24693b0f639f4625accc8567159386c7d5b98ddb8635e8dc4432a"
+    },
+    {
+      "path": "havainne-j11.png",
+      "bytes": 3366571,
+      "sha256": "fb0e3b33618c7bbf16ab049a94f715763664465eb96193befeb3878d2d1d2d02"
+    },
+    {
+      "path": "havainne-j12.png",
+      "bytes": 3379716,
+      "sha256": "a18fa24d50d34e665a12497fc412a100eca1e30ff637c524bae0c83a49129abe"
+    },
+    {
+      "path": "havainne-j13.png",
+      "bytes": 3478681,
+      "sha256": "f95a472177d9574abc6905957aa6e41f32aa1a3dc32faa16a353c75047fea50d"
+    },
+    {
+      "path": "havainne-j14.png",
+      "bytes": 3797578,
+      "sha256": "8107be29daaa43b27e7d4c44d0283d6c6a329c48d897468fe178bd41308ee077"
+    },
+    {
+      "path": "havainne-j15.png",
+      "bytes": 3413060,
+      "sha256": "4d2577f55d8f64b46f2e8ab171fae8d33da2a6c53702552ff554284586394dd7"
+    },
+    {
+      "path": "havainne-j16.png",
+      "bytes": 3785820,
+      "sha256": "689800f5530cc866cac064105115eee0bb4a8267568310c3902bb18a6a6daabf"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/DELIVERY-STATUS.json",
+      "bytes": 436,
+      "sha256": "237560c429d4d4736ddffbf002bd749abfeeb49b19a75f971dae6e5a2da24b95"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/GENERATION.json",
+      "bytes": 13436,
+      "sha256": "b6692c83e8ee0d0aad97d6eeed114b7fb627d4abc5a037a695b44156c7cc885d"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/MANIFEST.json",
+      "bytes": 1885,
+      "sha256": "55ce61ca0639277650e8c017956b2db52b74e1065f072625a8337140bb3aaefd"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/PROMPTS.json",
+      "bytes": 9898,
+      "sha256": "3cff1bf39c2128d889f65b02f54462a4e5af06ca93e62e8cff5704875e94b835"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/QA-FI.md",
+      "bytes": 2260,
+      "sha256": "399bab890d4920ce98b319af415b66ba344f52ab4b40a0a75c6c7744bfd643d8"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/QA.json",
+      "bytes": 3442,
+      "sha256": "636daafa2811b45249c7392cf12cd98a8ec4a37ac1ba3fe40f1c51c39d3c510f"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/SOURCE.json",
+      "bytes": 4382,
+      "sha256": "8574f27b9e2e9fe047c81f1b14a7cd2f77b34bf4aaf574cef91c035c0f5b67b7"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/prompts/j11.txt",
+      "bytes": 4251,
+      "sha256": "71d76da1a28885483b95a4855c65a66aaeb8e3b67ec40056e31a15ec751ef58c"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/prompts/j12.txt",
+      "bytes": 4603,
+      "sha256": "9883babfc4152ec1f39f8b371c2236bbc898b0037b234dadcff926454f6e4d32"
+    },
+    {
+      "path": "provenance/part-a-j11-j12/sources/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+      "bytes": 3058,
+      "sha256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/GENERATION.json",
+      "bytes": 2920,
+      "sha256": "62d45feb01c5da0691afdd85c8fe5f4f1a0a74543c4bf4d2081d0c6cce2b0c36"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/MANIFEST.json",
+      "bytes": 1878,
+      "sha256": "888242725b38f2e77770c3e442e8c54e2f7025e050021ec222708818c83928c1"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/NATIVE-FREEZE.json",
+      "bytes": 879,
+      "sha256": "f3d2e4baa88e1745fbfdde6dcf4b1a468bfa9bf84f39f7b5e5285200927444bb"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/PROMPTS.json",
+      "bytes": 11094,
+      "sha256": "49e298f66c9fbfd4c9d9693469b1d98671684b4761c48883005493c770105029"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/QA-FI.md",
+      "bytes": 2578,
+      "sha256": "670fe3ab57ccd5c370711b21cabf4ee59a37d6be192d820d82e1c0973f827fab"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/QA.json",
+      "bytes": 7350,
+      "sha256": "6758369cb7ede9420ea585386f41b419a6d174d7126cfc274c582a669b5c00e6"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/SOURCE.json",
+      "bytes": 2205,
+      "sha256": "79cf3760cae346746b6b74fad66f1b7826adab56fa69362a616fdb48e83aaaae"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/prompts/j13.txt",
+      "bytes": 4707,
+      "sha256": "53e941b2be5e3949d5228bc5e07801683cc72b7af212393ebba98a9de89ea687"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/prompts/j14.txt",
+      "bytes": 4732,
+      "sha256": "dc762897221ab393aa914e8620f22ee0199958b76c75f1899070962dc66075f9"
+    },
+    {
+      "path": "provenance/part-b-j13-j14/sources/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+      "bytes": 3058,
+      "sha256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/GENERATION.json",
+      "bytes": 12375,
+      "sha256": "05d9e7ad25cb2cd0fd1ddbfc768db8bd15e258d1dd95d370aadc7c0d79a1e297"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/MANIFEST.json",
+      "bytes": 1516,
+      "sha256": "44f4b9dc77bc6e7d7c2460e75e4f45741b82d8ff0422fbcee0b84e021a3fb096"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/PROMPTS.json",
+      "bytes": 9296,
+      "sha256": "bd278fc9e27d4ba93f4d583705052e55acf6c1908077d35d6c6cb368ba35f791"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/QA-FI.md",
+      "bytes": 4285,
+      "sha256": "0ea32348f94dc7497257a2f10a90e64bca4ea244c1006b46b2341fc5fadc34a9"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/QA.json",
+      "bytes": 4905,
+      "sha256": "6b45fbd83eedec5275165cc2ff4ea09029f3062359c10a2dd015b6a235f6e734"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/REFERENCES.json",
+      "bytes": 1658,
+      "sha256": "ee514fbfa6f2c6fb68113ea146f7e7f0535fb4a9aa9e7b7a9f4345c5aa6737ca"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/prompts/j15.txt",
+      "bytes": 4601,
+      "sha256": "81da3bd728176d4c71152a70b1b538a3330945153392d879a4982263d45409d0"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/prompts/j16.txt",
+      "bytes": 4649,
+      "sha256": "8dc0599cbf60a78ca6192c20231e81df42495f58635cae4f8d12606aa6a11a8a"
+    },
+    {
+      "path": "provenance/part-c-j15-j16/sources/paatoimittaja-codex-juoksupeli-j11-j16-ylempaa-20261018.md",
+      "bytes": 3058,
+      "sha256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477"
+    },
+    {
+      "path": "source-order.md",
+      "bytes": 3058,
+      "sha256": "82e2f073cfb9707a49ebe941325bf9c53abb82bf6e42d94916ecc7d60c2ef477"
+    }
+  ]
+}

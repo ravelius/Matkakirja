@@ -1,0 +1,152 @@
+{
+  "reviewedAt": "2026-10-18T07:31:56.660757+00:00",
+  "reviewer": "producer louvre_pyramid_nine",
+  "sourceReadInFull": true,
+  "allThreeReferenceNativesPersonallyViewedBeforeUse": true,
+  "bothSavedNativesPersonallyViewed": true,
+  "nativeUnmodified": true,
+  "callsAllowed": 2,
+  "callsUsed": 2,
+  "retries": 0,
+  "allRequirementsPassed": false,
+  "localStatus": "design-candidates-with-documented-limitations",
+  "ownerAccepted": false,
+  "receiverAccepted": false,
+  "gameImplemented": false,
+  "published": false,
+  "views": {
+    "j13": {
+      "task": 425,
+      "nativeSHA256": "f95a472177d9574abc6905957aa6e41f32aa1a3dc32faa16a353c75047fea50d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "requestedAspect": "16:9",
+      "exactAspectMet": false,
+      "aspectLimitation": "native ratio1672/941 is about0.053% narrower than16:9; no crop, resize or postprocessing",
+      "camera": {
+        "higherThanJ8J10Visually": true,
+        "wideRooflessLayoutVisible": true,
+        "angleCalibrated": false,
+        "comment": "Steeper overhead and broader multi-room composition than references; requested numeric camera angle is not measurable from a single generated image."
+      },
+      "rooms": {
+        "library": "upper-left bookshelves and study tables; additional lower-left study/storage room",
+        "kitchen": "upper-middle hearth, copper pots, water vessels and prep tables",
+        "bedchamber": "upper-right canopy bed with textile and cabinets; lower dressing chamber",
+        "parallelChambersVisible": true,
+        "raisedLibraryStairVisible": true,
+        "multipleTrueStoreysVerified": false
+      },
+      "routeContinuity": {
+        "mainCourtyardRouteVisible": true,
+        "libraryKitchenBedroomSequentialTraversalVerified": false,
+        "sideDoorReturnLoopsFullyVerified": false,
+        "comment": "Doors and small lateral passages flank a central court; library→kitchen→bedroom connection appears to circulate through courtyards, but every sequential doorway/return link is not unambiguously visible. No collision/navigation graph is proven."
+      },
+      "characters": {
+        "PuyiYellowRobeCapBraidVisible": true,
+        "PuyiSmallerThanReferences": true,
+        "approxPuyiImageHeightFraction": 0.087,
+        "approximation": "manual about80px of941px, not segmented; prompt3–4% target not achieved exactly",
+        "age8IdentityVerified": false,
+        "navyCourtiersAndPinkFemaleAttendantVisible": true,
+        "expressionsAnatomyAtTinyScaleVerified": false
+      },
+      "safety": {
+        "PuyiOnBroadCourtFloor": true,
+        "obviousImmediateFallOrSteepRoofUnderChild": false,
+        "balustradesAndBroadStairsVisible": true,
+        "allOccludedEdgesAndConnectionsVerified": false,
+        "comment": "Visible child route is broad ground court; raised library has rails. Hidden landings/edges are not an engineering verification."
+      },
+      "studs": {
+        "exact9by9Verified": false,
+        "comment": "Open decorative wood/lattice door leaves appear; no fully countable81-stud gate leaf visible, so gate-stud requirement is not certified."
+      },
+      "period": {
+        "brightSummerGreenTrees": true,
+        "noObviousModernObjectsDetected": true,
+        "architecturalHistoricalAccuracyVerified": false,
+        "comment": "Invented Forbidden City-inspired room plan, not an authenticated1914 palace survey. No obvious bicycles/tourists/cars/modern appliances/weapons detected."
+      },
+      "collectibles": {
+        "smallSubtleJadePorcelainFanGlowVisible": true,
+        "positionsAllProvenReachable": false
+      },
+      "surface": {
+        "photoLikeLightAndMaterials": true,
+        "flawlessPhotographicSurfaceVerified": false,
+        "comment": "Natural-looking warm stone, wood, fabric and wear at broad scale; repeated ornaments, fine leaf/stone detail and selective foreground blur retain a generated/diorama quality. Tiny hands/objects not fully resolvable."
+      },
+      "status": "candidate, not blanketQA-pass"
+    },
+    "j14": {
+      "task": 426,
+      "nativeSHA256": "8107be29daaa43b27e7d4c44d0283d6c6a329c48d897468fe178bd41308ee077",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "requestedAspect": "16:9",
+      "exactAspectMet": false,
+      "aspectLimitation": "native ratio1672/941 is about0.053% narrower than16:9; no crop, resize or postprocessing",
+      "camera": {
+        "higherThanJ8J10Visually": true,
+        "wideRooflessLayoutVisible": true,
+        "angleCalibrated": false,
+        "comment": "High broad oblique view reads garden circulation and pavilion floor; exact65–72degree prompt angle is not calibrated."
+      },
+      "rooms": {
+        "pavilion": "central large roofless room with round low table, front/back/side openings and side chambers",
+        "rockAndPlantingIslandsVisible": true,
+        "pathJunctionsVisible": true,
+        "broadStepsToBalustradedTerraceVisible": true,
+        "multipleTrueStoreysVerified": false
+      },
+      "routeContinuity": {
+        "visiblePathForksAndRockBypasses": true,
+        "pavilionDoorThroughRoutePlausible": true,
+        "allTwoCompleteReturnLoopsVerified": false,
+        "comment": "Front fork, rock-island bypasses and pavilion entrances are legible; foliage, wall corners and image boundary hide some links, so every closed return loop and full door-to-door network cannot be proved."
+      },
+      "characters": {
+        "PuyiYellowRobeCapBraidVisible": true,
+        "PuyiSmallerThanReferences": true,
+        "approxPuyiImageHeightFraction": 0.078,
+        "approximation": "manual about73px of941px, not segmented; prompt3–4% target not achieved exactly",
+        "age8IdentityVerified": false,
+        "navyCourtiersAndPinkFemaleAttendantVisible": true,
+        "expressionsAnatomyAtTinyScaleVerified": false
+      },
+      "safety": {
+        "PuyiOnBroadLevelGardenPath": true,
+        "obviousImmediateFallOrSteepRoofUnderChild": false,
+        "balustradesAndBroadStairsVisible": true,
+        "allOccludedEdgesAndConnectionsVerified": false,
+        "comment": "Child and followers remain on broad ground-level path, terrace/stairs have visible rails; cropped/hidden continuations not physically verified."
+      },
+      "studs": {
+        "exact9by9Verified": false,
+        "comment": "Decorative wood and lattice door leaves; no fully countable9×9 gold-stud gate shown. Do not report the stud rule as passed."
+      },
+      "period": {
+        "brightSummerGreenTrees": true,
+        "noObviousModernObjectsDetected": true,
+        "architecturalHistoricalAccuracyVerified": false,
+        "comment": "Fictional Qing-inspired garden plan; no obvious modern skyline, bicycles, tourists, vehicles, wires, exposed weapons or violence."
+      },
+      "collectibles": {
+        "smallSubtleJadePorcelainFanGlowVisible": true,
+        "positionsAllProvenReachable": false
+      },
+      "surface": {
+        "photoLikeLightAndMaterials": true,
+        "flawlessPhotographicSurfaceVerified": false,
+        "comment": "Warm natural stone/light and leaves read coherently; repeated porous rock cavities, dense foliage and crisp decorative surfaces may look stylized/generated. Not a verified real documentary photograph."
+      },
+      "status": "candidate, not blanketQA-pass"
+    }
+  }
+}

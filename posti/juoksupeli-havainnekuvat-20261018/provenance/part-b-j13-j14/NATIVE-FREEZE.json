@@ -1,0 +1,37 @@
+{
+  "frozenAt": "2026-10-18T07:31:56.654381+00:00",
+  "scope": "only part-b j13/j14",
+  "allNativeBytesUnchanged": true,
+  "callsIssued": 2,
+  "retries": 0,
+  "images": {
+    "j13": {
+      "sha256": "f95a472177d9574abc6905957aa6e41f32aa1a3dc32faa16a353c75047fea50d",
+      "bytes": 3478681,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    "j14": {
+      "sha256": "8107be29daaa43b27e7d4c44d0283d6c6a329c48d897468fe178bd41308ee077",
+      "bytes": 3797578,
+      "dimensions": [
+        1672,
+        941
+      ]
+    }
+  },
+  "prompts": {
+    "j13": {
+      "sha256": "53e941b2be5e3949d5228bc5e07801683cc72b7af212393ebba98a9de89ea687",
+      "bytes": 4707,
+      "singleFinalNewline": true
+    },
+    "j14": {
+      "sha256": "dc762897221ab393aa914e8620f22ee0199958b76c75f1899070962dc66075f9",
+      "bytes": 4732,
+      "singleFinalNewline": true
+    }
+  }
+}

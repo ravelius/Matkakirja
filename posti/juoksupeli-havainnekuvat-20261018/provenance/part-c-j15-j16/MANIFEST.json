@@ -1,0 +1,44 @@
+{
+  "createdAt": "2026-10-18T07:29:26.066089+00:00",
+  "sourceCommit": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+  "sourceBlob": "02a1060ebd6514ff59b12b6c16f273a728d61f9d",
+  "sourceSnapshot": "5aa41f497036f55f6f3e49c5da7414cd9941d4d6",
+  "method": "built-in image_gen",
+  "callsIssued": 2,
+  "retryCalls": 0,
+  "images": [
+    {
+      "task": 427,
+      "nativeSHA256": "4d2577f55d8f64b46f2e8ab171fae8d33da2a6c53702552ff554284586394dd7",
+      "deliverySHA256": "4d2577f55d8f64b46f2e8ab171fae8d33da2a6c53702552ff554284586394dd7",
+      "pixelSHA256": "6058c2cffccf66e9c471c6c47bbab6efaa70e4315a72e3111cc834a5eaf50954",
+      "bytes": 3413060,
+      "width": 1672,
+      "height": 941,
+      "ratio": 1.7768331562167907,
+      "exact16by9": false,
+      "nativePixelsModified": false,
+      "id": "j15",
+      "file": "havainne-j15.png"
+    },
+    {
+      "task": 428,
+      "nativeSHA256": "689800f5530cc866cac064105115eee0bb4a8267568310c3902bb18a6a6daabf",
+      "deliverySHA256": "689800f5530cc866cac064105115eee0bb4a8267568310c3902bb18a6a6daabf",
+      "pixelSHA256": "d0ce2e9730bcba700abbba929414b27a05794ee30e6836a7c4d8e4744d49ed11",
+      "bytes": 3785820,
+      "width": 1672,
+      "height": 941,
+      "ratio": 1.7768331562167907,
+      "exact16by9": false,
+      "nativePixelsModified": false,
+      "id": "j16",
+      "file": "havainne-j16.png"
+    }
+  ],
+  "ownerApproved": false,
+  "recipientAccepted": false,
+  "gameImplementationAuthorized": false,
+  "gameIntegrated": false,
+  "published": false
+}
