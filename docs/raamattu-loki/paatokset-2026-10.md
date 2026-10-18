@@ -483,3 +483,7 @@ Omistajan kortti Keskustelukanavassa 18.10.2026 klo 01.55: "Otanko pois push-ilm
 ## VIDEOT VAIN VÄLTTÄMÄTTÖMINÄ JA KAIKKI YÖN PYYNNÖT JUNAAN 201 (18.10.2026 klo 02.05)
 
 Omistaja Keskustelukanavassa 18.10.2026 klo 02.03 (sanatarkasti): "Ei videoita kuin jos välttämätön. Laita kaikki suoraan samaan junaan". KK:n tulkinta: kaikki yön pyynnöt (omistajan-pyynnot-20261018-0110.md kohdat 1–8 ja 6b: ISS-repliikit, pääkaupungit + extend + harmaa, kuvat koko ruudulle + nipistys, ohjauspöytä luonnos 5 + iPadin tyhjä tila, museoiden katse, Nuuk + Reykjavík) junaan 201 eikä 202:een; todisteiksi kuvaparit, video vain jos liikettä ei muuten näe (myös pöydän veto-ohjaus ilman videota); KK hyväksyy puolesta ilman omistajan kierrosta; TF 201 kun kaikki valmiina. Omistaja 02.02: kirjautuminen ja pilviympäristö eivät ole nyt tarpeen.
+
+## VIESTIRAJA: VARAKANAVA HETI, EI ODOTETA OMISTAJAA (OPETUS 18.10.) (18.10.2026 klo 05.36)
+
+Omistaja Keskustelukanavan kautta 18.10.2026 klo 05.36 (sanatarkasti): "Tähän on parempi kiertotie". Vahvistaa linjauksen VIESTIRAJA JA VARAKANAVAT (24.9. ja 30.9.): kun SendMessage-raja täyttyy, viesti lähetetään HETI varakanavalla mcp__ccd_session_mgmt__send_message session-id:llä, eikä omistajan viestiä tai nollausta odoteta. OPETUS: 18.10. PT:n viestit odottivat 01.55–05.33, koska edellisen PT:n luovutus kielsi kiertämisen. Roolit seisoivat 2 h, ja juna 201 viivästyi. Se kielto on kumottu.
