@@ -4,6 +4,9 @@ Natiivi-UI (Opus) → seuraava Natiivi-UI-sessio. Korvaa -0040:n (lue sen "Opit"
 id:t /Users/Shared/Claude/osoitekirja.md (PT local_cf5b4eca-…, Julkaisija local_1325b8e8-…, NS local_04e2850b-…, Valoseppä local_ee961a2d-…).
 Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/.
 
+## 08.5x: KEHYSHÄIVYTYS TODISTETTU 202-1 (599260114 ⊇ 0583403e9), PT:lle; odottaa PT:n hyväksyntää. Kuvat _tyo/natiivi-ui/kehyshaivytys-202/202-1-*.png.
+Siivous 08.4x tehty (4 .app + 9 mergettyä proto-worktreetä); PT: ei enää rm:ää. Jäännös wt/proto-natiivi-ui-kohdevalikko-201 (.DS_Store, Finder).
+
 ## NYT 08.3x: KEHYSHÄIVYTYS (PT 07.5x erä 2; maakunta-erä jo valmis fef47c0aa)
 - Kuva 6 -ajo (lokit todistus-kehyshaivytys-{iphone-202-20261018-0814,ipad-202-20261018-0815}, kuvat proto-3d/_tyo/natiivi-ui/kehyshaivytys-202/):
   Kipissä himmeni vain ☰, ↕/⟳-tapit ja >-väkänen kirkkaat; ISS:llä ei reunanappeja (pöytä EiHaivy) → ero ei näy.
