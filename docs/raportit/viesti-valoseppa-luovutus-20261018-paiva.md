@@ -102,3 +102,9 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - Louvren poseeratut mallit (käsi leualla, kädet selän takana, istuva): vain pienet liikkeet (hengitys, pään käännös), ei kävelyä.
 - Kävelevät hahmot aina kädet irti vartalosta.
 - Puuttuva maksullinen → kysymys PT:n kautta KK:lle, EI ostoja.
+
+## 12. TILA 12.4x – SININEN MAA
+- Diag 5 (f12ff40d4): yksi kamera molemmissa; oppaan polulla 29 näkyvää piirtäjää, suoraan 19; 8 suurinta samat (KyydinTaivas,
+  Pilvikuori, Ilmakeha, Ilmakaari). Epäily: Avaruus.PaivitaKaari asettaa Ilmakaari2:n arvot (Kuvaputki/Nousu) – tai lisäpiirtäjät.
+- Diag 6 3b1547278 (kaikki piirtäjät + Ilmakeha/Ilmakaari/Pilvikuori-aineiden arvot) → JU L1 → kyyti-diag6-app → `$D/simu-diag6.zsh`.
+  Vertaa iPhone vs iPad: grep -a "kyyti-diagnoosi +5 s kamera\|aine " <tuloskansio>/konsoli-stdout.log. kyyti-diag4-app T7:llä.
