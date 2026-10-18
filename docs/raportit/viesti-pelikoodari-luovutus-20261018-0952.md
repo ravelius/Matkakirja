@@ -68,6 +68,6 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
   NS:lle runkoon 203. TODISTEET rungon 203 Release-käännöksestä (JU tekee; EI omaa käännöstä): skenaariot
   proto-3d/tyokalut/pelikoodari-ajot/sk-iss-ohjaus-203-{iphone,ipad}.txt (A1-kuva + video kupola pieni/iso veto + zoom 10 + video A7-valinta)
   → A1-kuvaan kosketuskohta merkitään jälkikäteen (raita kuvan ulkopuolelle) → KK + PT. A2/A8 NUI.
-- JUNA 204 (PT 16.4x, omistaja "koko 100 %"): B6 + B7 proto pelikoodari/iss-nopeus-204 7c3448de0 (wt/proto-pelikoodari-iss-nopeus-204,
+- SEIS 19.10. ASTI (OMISTAJAN PÄÄTÖS 16.15 KK:n kautta "ÄLÄ TEE HUOMISEN TÖITÄ"; PT vahvisti): EI junaan eikä NS:lle tänään. JUNA 204: B6 + B7 proto pelikoodari/iss-nopeus-204 7c3448de0 (wt/proto-pelikoodari-iss-nopeus-204,
   rungon 203 6d67d042d päällä) → NS. Avoin PT:lle: iPadin fyysisesti pidempi vipu (uusi pohjarender + sivulevy) vai nykyinen pituus koko välillä.
   Video B6/B7 KK:lle + PT:lle 203:n todisteiden jälkeen (204:n käännöksestä).
