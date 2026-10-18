@@ -487,7 +487,7 @@ export const RAAMATTU = {
           + 'muunnelma. TUMMA KORTTI (omistaja 8.10.2026): kortti- ja löytöpohjalla on tumma variantti pelin tummista tokeneista (tk-tumma-*) videopeleihin ja muihin pimeisiin näkymiin; muualla '
           + 'kortit pysyvät paperisina. EI OVAALEJA (omistaja 2.10.2026): ovaalit ja kapselit eivät kuulu muotokieleen; napit, kytkimet, pillerit, valitsimet ja merkit ovat kevyitä suorakulmioita '
           + 'pyöristetyin kulmin (kulma-tokenit, malli nostopaneelin Kysy-nappi). OHJAUSNAPIT: kaikki kuvakenapit (✕, ‹, asetukset, linssi, lista ym.) ovat yhtenäisiä neliöitä pyöristetyin kulmin '
-          + '(yksi OHJAUSNAPPI-pohja), ja näkymän napit ryhmitellään yhteen paikkaan; Pulu-hahmo ei ole nappi. EI TURHIA ✕-NAPPEJA (omistaja 5.10.2026): ✕ jää vain, kun sulkemiseen ei ole muuta '
+          + '(yksi OHJAUSNAPPI-pohja), ja näkymän napit ryhmitellään yhteen paikkaan; Pulu-hahmo ei ole nappi (poikkeus, omistaja 18.10.2026: museossa Pulu on napautettava näkymän esine, joka avaa Pulu-chatin). EI TURHIA ✕-NAPPEJA (omistaja 5.10.2026): ✕ jää vain, kun sulkemiseen ei ole muuta '
           + 'luontevaa tapaa (esim. ohinapautus). MODERNI-KIRJASIN JA TAPPI (omistaja 5.10.2026): Moderni = iOS:n SF Pro (webissä -apple-system, system-ui, sans-serif) vain nykyajan näkymiin '
           + 'harmaassa lasiteemassa (tk-teema-harmaa), muualla pelin omat kirjasimet; TAPPI-pohja: Ø 64/26 pt harmaa lasi, himmeä levossa, alakulmissa, näkyy vain kun ohjattava kohde on ruudulla. '
           + 'LATAUSPALKKI: latauksissa pieni edistymispalkki nimiruudun alla (EDISTYMINEN-pohja, ohut terävä viiva). LATAUSKUVA (omistaja 8.10.2026; tyylikirja LATAUSKUVA): vain 3D-maailmoihin '

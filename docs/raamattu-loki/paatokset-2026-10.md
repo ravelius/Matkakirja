@@ -503,3 +503,14 @@ Kysymys: Lisataanko ISS-linssiin tieto, milloin avaruusasema nakyy omalta paikal
 ## PAATOS: HYVAKSYTTY NOLLAUS TEHDAAN HETI, EI ODOTETA OMISTAJAA (omistaja 18.10.2026 klo 08.48, Keskustelukanavassa) (18.10.2026 klo 08.49)
 
 Sanatarkasti: "Kirjaa ylös : Jos olen hyväksynyt nollauksen niin älä jää odottelemaan minua vaikka näyttäisi että minulta olisi tulossa viesti. Ja sinun ei tarvitse kysyä lupaa minulta uudestaan. Nollaa aina heti vain kun voit jos olet jo kerran saanut luvan minulta." Toteutus: KK kirjasi ~/.claude/CLAUDE.md:n, aloitusviestin kohdan 7 ja muistin; kerran annettu nollauslupa riittää, nollaus heti kun mahdollista.
+
+## PAATOKSET 18.10.2026 klo 09.04: Louvren pilotti (täyte, ihmiset, Pulu) ja generointilupa (18.10.2026 klo 09.05)
+
+Omistaja 08.57 (sanatarkasti): "Onko tilat katsottu refekuvista? Ja saako huoneisiin jotain täytettä että ei ole niin tyhjiä? Hienoin olisi jos olisi kattoikkuna josta tulee valoa tai kasveja, mattoja
+tai mitä muita elementtejä voisi olla? Ihmiset olisivat ehkä kaikkein parhaita  mittasuhteiden kannalta. Voisi teettää valokuvien pohjalta siinä tripossa niin saisi nykymuotia ja oikean paikallisten
+näköisiä ihmisiä. Voisi olla 2-3 ihmistä per taidemuseo. Ja voisiko pulu lennellä välillä tilassa? Ja pulu saisi istua jossain jotta siltä voisi kysyä mitä vain. Mitä mieltä?" Kortti 09.04 (KK): 1)
+"Kyllä, Louvre ensin (Suositus)": Louvren pilotti, kattoikkunoiden päivänvalo näkyviin (gg lasiholvi, se lasikatto), 3 ihmistä (2 nykyajan kävijää tauluja sivuttain/selin + vartija tuolillaan), Pulu
+lentää välillä ja istuu penkin selkänojalla, napautus avaa saman Pulu-chatin (Raamatun 2.10. 'Pulu-hahmo ei ole nappi' saa poikkeuksen: museon Pulu on napautettava näkymän esine); ei kasveja eikä
+mattoja; pari ennen | jälkeen KK:lle ennen muita museoita. 2) "Kyllä, otan Tripon kuukaudeksi (Suositus)": GENEROINTILUPA enintään 9 Codex-kuvaa (3 ihmistä edestä, sivulta, takaa; ei oikeiden ihmisten
+valokuvia) + 3 Tripo-mallia; Codex-tilaus postilaatikkoon, KK antaa omistajalle TOIMI-rivin; Tripon osto ja kirjautuminen omistajalle vasta kun kuvat ovat valmiit. Toteuttaja Valoseppä (PT välitti
+09.1x), junaan 202.
