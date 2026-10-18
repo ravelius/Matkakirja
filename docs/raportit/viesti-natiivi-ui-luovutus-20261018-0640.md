@@ -5,6 +5,9 @@ id:t /Users/Shared/Claude/osoitekirja.md (PT local_cf5b4eca-…, Julkaisija loca
 Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/.
 
 ## JUNA 201: AVOIMET ENSIMMÄISEKSI (PT 06.3x)
+**TEHTY 07.28 (kohdat 2+3):** kuvakäännös 6 642f8ed23 (sis. 619275871 + 0ba132aca), iPhone + iPad OK: musta tausta, kuvateksti piilossa zoomattuna,
+gallerian alateksti "Oma kuva · paikka · aika". Kuvat proto-3d/_tyo/natiivi-ui/kuva6-todiste/{iphone,ipad}-K2-K3-K4.png, lokit todistus-kuva-kokoruutu-*-202c-20261018-0722
+(skenaario sk-kuva-kokoruutu-202c.txt). PT:lle lähetetty, SIMU VAPAA kuitattu. Odottaa PT:n hyväksyntää.
 1. **Uusinta NYKYINEN-kortti + galleria koko ruudulla** (kuvakäännös 4 b656d1792): lokit /Users/Shared/Claude/proto-3d/lokit/
    todistus-kuva-kokoruutu-iphone-202b-20261018-0629 ja -ipad-202b-20261018-0629 (kuvat/raaka/K1-kortti.png, K4-galleria-kokoruutu.png).
    TEHTY 06.4x: parit _tyo/natiivi-ui/kuva4-parit/5–6 (NYKYINEN kortti | UUSI koko ruutu | galleriasta) → PT; SIMU VAPAA kuitattu.
