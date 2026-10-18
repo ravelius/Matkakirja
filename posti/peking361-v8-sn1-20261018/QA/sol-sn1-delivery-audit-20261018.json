@@ -1,0 +1,62 @@
+{
+  "status": "PASS_PREPARED_PACKET_INDEPENDENT_READBACK_FOR_PRIVATE_RECEIVER_TEST",
+  "createdUTC": "2026-10-18T02:39:18.754284+00:00",
+  "packetRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261018-native51-groundpbr-v8-sn1",
+  "auditedManifestSHA256": "d3a5e15e04a3f6fb27132299a39466ed46c8c9397eea973dc3cc8a807ebf3cfb",
+  "packageFilesChecked": 70,
+  "changedReviewedGLBs": [
+    {
+      "file": "glb-v4/peking_2_3_lod0.glb",
+      "bytes": 12998480,
+      "sha256": "03c5ec5e4e90a57a8c9494e11b485e589c3e91dd7050c65958f321934c7a5bc3"
+    },
+    {
+      "file": "glb-v4/peking_2_3_lod1.glb",
+      "bytes": 5138136,
+      "sha256": "006de7f35f8382447a08c33ce2bfefdcd5edc2464d3f91e8dfa9ae618b2701ec"
+    },
+    {
+      "file": "glb-v4/peking_2_3_lod2.glb",
+      "bytes": 4168724,
+      "sha256": "96dbc6c8cd43e36eb6e73e83ba3ede75f8ce82250ab0a6bed7c6f4d9802c82bf"
+    }
+  ],
+  "changed3ByteExactToAuditedC8": true,
+  "source69BaseHashesVerified": true,
+  "overlayGLBCount": 72,
+  "overlayBytes": 163233828,
+  "overlayTrianglesFromPinnedLeaves": 1386765,
+  "rawCeiling": 164326250,
+  "rawHeadroom": 1092422,
+  "cutsV6V7ByteExact": [
+    {
+      "file": "palatsialue-leikkaus-wgs84.geojson",
+      "sha256": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7"
+    },
+    {
+      "file": "palatsialue-leikkaus-wgs84-reikaversio.geojson",
+      "sha256": "145fff606ce775b0262c16324d7109249e500a46edf38e7543ca31a3b22e3e8b"
+    }
+  ],
+  "tableOnlyDifferences": [
+    "topLevelDescription",
+    "peking_2_3.koot_tavua"
+  ],
+  "all24OriginsHeightsBoundsAndCutPathsExact": true,
+  "actualFrameHashesChecked": 30,
+  "matchedCameraDefinitionsExact": true,
+  "all24ImportedGLBsPerStageHashChecked": true,
+  "sourceTechnicalAuditInheritedWithoutBroadRetest": true,
+  "receiverFollowupCommit": "1116b30f0a712700d41c5d74326b48dba4769ff8",
+  "receiverFollowupSHA256": "62f90d684cd56c6a35632fe5539bfb1389379f92992cc0c39f925cd339fdbdb0",
+  "sourceNormalConvention": "glTF tangent+Y, unflipped fileUV; north(oldY,-oldX),south(-oldY,oldX)",
+  "receiverDeclaredConversionCompatible": true,
+  "actualGameNormalContinuityVerified": false,
+  "privateScopeAccurate": true,
+  "findings": [],
+  "stateAtAudit": "PREPARED flags correctly retain independent completion/handoff pending; this PASS completes independent readback but does not mutate packet",
+  "requiredFinalization": "Parent copies this report, sets package audit completion/readiness for restricted receiver handoff, regenerates packageFiles manifest and rechecks new manifest. No GLB/render/table/cut bytes may change.",
+  "notConversionRuntimeOwnerOrPublicationAcceptance": true,
+  "packageFileInventoryComplete": true,
+  "manifestSelfExcludedOnly": true
+}

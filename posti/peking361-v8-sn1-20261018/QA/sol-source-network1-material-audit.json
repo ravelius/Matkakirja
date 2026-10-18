@@ -1,0 +1,68 @@
+{
+  "status": "SOURCE_BINARY_AND_RAW_PASS_COLLAR_RUNTIME_NORMAL_FRAME_OPEN",
+  "rawAll72": 163233828,
+  "headroom": 1092422,
+  "materialBytes": 4674619,
+  "normalRepeatMaxRGB8Error": 0.0,
+  "roughnessRepeatMaxRGB8Error": 0.0,
+  "collarReconstructionMaxRGB8Error": {
+    "west": 0,
+    "north": 0,
+    "south": 0
+  },
+  "corePixels": 25386,
+  "coreIslands": 60,
+  "effectiveAlpha": 0.22665993869304657,
+  "coreHitsHazardsOrMortar": 0,
+  "alphaOutsideCore": 0,
+  "partitionSourceFaces": 2281,
+  "maxReferenceTriangleSymmetricDifference": 6.938893903907228e-17,
+  "maxReferenceTriangleOverlap": 1.1102230246251565e-16,
+  "all3LODs": {
+    "protectedImagesMaterialsNodesScenesOrderedNonpavingExact": true,
+    "sourcePavingFaces": 2281,
+    "survivingPavingTriangles": 2836,
+    "addedTriangles": 555,
+    "zeroArea": 0,
+    "inverted": 0,
+    "maxPositionComponentErrorM": 1.5239628282870399e-05,
+    "maxNormalError": 2.220446049250313e-16,
+    "maxAOuv1Error": 2.952875788331255e-08,
+    "maxSourceUV0div6Error": 4.5714872776159154e-07,
+    "treeMeshesExact": true,
+    "all6NewEmbeddedMapsMatchFreshFiles": true
+  },
+  "decodedPixels": {
+    "albedo": 13500416,
+    "eachData": 1286144,
+    "allRatioV7": 0.8515625,
+    "eachDataRatioV7": 1.2265625
+  },
+  "normalFrame": {
+    "unflippedFileNorth": [
+      "oldY",
+      "-oldX"
+    ],
+    "unflippedFileSouth": [
+      "-oldY",
+      "oldX"
+    ],
+    "declaredCesiumVFlipNorth": [
+      "-oldY",
+      "oldX"
+    ],
+    "declaredCesiumVFlipSouth": [
+      "oldY",
+      "-oldX"
+    ],
+    "generatorMatchesUnflippedFile": true,
+    "runtimeImportUnverified": true
+  },
+  "limits": [
+    "Conservative appearance islands are not accepted semantic stones",
+    "Collar data filters original128 to34px per4.8m period, retaining phase with less detail",
+    "JPEG83 changes decoded RGB even where analytic influence is zero",
+    "No runtime/renderer/conversion/owner acceptance"
+  ],
+  "lineDiagnosis": "No frame-to-world registration or AO ablation performed. Original AO payload/binding and geometry remain protected; cannot distinguish AO/geometry/other causes from binary preservation alone."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "FINAL_PACKET_READY_FOR_RESTRICTED_PRIVATE_RECEIVER_HANDOFF",
+  "createdUTC": "2026-10-18T02:40:38.007928+00:00",
+  "packetRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261018-native51-groundpbr-v8-sn1",
+  "finalManifestSHA256": "37b9d7584219a61d9a08100a6c23f88e5de6e0083c3e3bd9e95b967625877e30",
+  "auditedPreparedManifestSHA256": "d3a5e15e04a3f6fb27132299a39466ed46c8c9397eea973dc3cc8a807ebf3cfb",
+  "packageFileCount": 72,
+  "allFinalPackageFilesHashVerified": true,
+  "completePackageInventoryVerified": true,
+  "source3GLBsAnd69FallbackFilesHashVerified": true,
+  "overlayRawBytes": 163233828,
+  "rawHeadroom": 1092422,
+  "assetsUnchangedDuringFinalization": true,
+  "original30FramesBitExact": true,
+  "gameDeliveryOrOwnerAcceptance": false
+}
