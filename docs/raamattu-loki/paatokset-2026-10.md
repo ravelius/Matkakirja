@@ -542,3 +542,7 @@ Omistaja 10.46 (sanatarkasti KK:ssa): "tripo ostettu max tilaus kuukaudeksi" (vo
 ## PAATOKSET 18.10.2026 klo 11.20: aloituslogo heti käynnistysruutuun (18.10.2026 klo 11.20)
 
 Omistaja (KK:n kortti 11.20, kuva näytetty): "Kyllä, logo heti (Suositus)": sama logo terävänä iOS:n käynnistysruutuun; kumoaa 6.10. päätöksen mustasta alusta (silloin kuva rakeinen eikä mahtunut). Tavoite: napautuksesta logo heti, sama logo pysyy paikallaan pelin logoon asti ilman mustaa välähdystä tai hyppäystä (iPhone + iPad, tumma ja vaalea tila). KK tarkistaa videon napautuksesta peliin ennen junaa.
+
+## PAATOKSET 18.10.2026 klo 11.34: juoksupelin hahmot Tripolla, Olavinlinnan väki myöhemmin (18.10.2026 klo 11.35)
+
+Omistaja (KK:n kortit 11.34): (1) Puyi ja vartija Tripolla liikkeineen "Kyllä, kun Louvren mallit ovat hyviä (Suositus)": lupa Codex 6 kuvaa (Puyi + vartija edestä/sivulta/takaa, kädet irti vartalosta, tasainen valo, harmaa tausta; tilaus postilaatikossa 1de736c41) + Tripo 2 mallia luurankoineen, liikkeet kirjastosta (juoksu, spurtti, hyppy, liuku, kompastus, heitto, kiinniotto); alkaa 19.10. koodauksen kanssa, kun KK on hyväksynyt Louvren mallit pelissä. Puyin kaapu juoksuun (helma polviin + housut). (2) Olavinlinnan ihmiset Tripolla "Kun linnan tauko päättyy (Suositus)": koko linnan väki kerralla, Tripo-tilaus voimassa 18.11. asti → työlistaan. KK katsoo jokaisen hahmon edestä/sivulta/takaa + liikevideon ennen peliä.
