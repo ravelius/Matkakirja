@@ -77,3 +77,8 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - DIAG 4 TULOS: pallon globaalit samat; oppaan polulla pallon laattoja ei pääkameran näkymässä; vain oppaan polulla "raketti: FFT-meri luotu"
   ja origo CartographicOrigin (kaupungin _IlmMaailma/_IlmHamara jäävät, mutta pallon varjostin ei käytä niitä). DIAG 5 4585e4c62 (kaikki
   kamerat + niiden piirtäjät kerroksittain) → JU L1 → `$D/simu-diag5.zsh`. Pääepäilty nyt raketin päällyskamera/maasto (RakettiMaasto.Kerros) jää päälle.
+
+## 9. TILA 12.1x
+- Louvren parit 3 (ef0a85baf) valmiit → PT: $L/parit-3/ (7 kuvaa + ARVIO.md). k2 ja vartija näkyvät pelissä (henkilöt 2/3; k1 puuttuu tarkoituksella).
+  Vartija istui kaiteen takana → x 25,6 pilottihaarassa 867c74f40, LR:lle yhdistettäväksi. Odotetaan KK:n arviota pelikuvista.
+- Diag 5 käännetty JU:lla → kyyti-diag5-app; simujärjestys LR → louvre3 (tehty) → NUI logo → diag 5 (JU:n SIMU NYT → `$D/simu-diag5.zsh`).
