@@ -59,3 +59,7 @@ paperi, kompassi, ruuti, kirjapaino; kungfutselaisuus, taolaisuus, buddhalaisuud
 `silkkitie` {pisteet [[lon, lat, paikka]], lahde}: Chang'anista Antiokiaan. Natiivi: KiinaKerros sytyttää pysäkin pisteet yksi
 kerrallaan (edellinen himmenee 40 %:iin, lopussa tähtikuvio) ja piirtää Silkkitien juovan, kun keksintö saapuu Eurooppaan
 pysäkkien välillä. Perustelut ja epävarmuudet `vaestopinta/lahteet/valopisteet.md`.
+
+- Natiivin lisätiedostot (sama sisältö kuin `Assets/Matkakirja/Linssit/Resources/Kiina/`, juna 202): `kiina-puherivit.json`
+  (Williamin pysäkkilauseet, Sisältökirjurin käsikirjoitus v2), `nykyinen-kiina.json` (nykyraja Natural Earth 10 m, nimiö "Nykyinen Kiina"),
+  `valopisteet.json` ja `vaestopinta/` (MUOTO-VAESTOPINTA.md).
