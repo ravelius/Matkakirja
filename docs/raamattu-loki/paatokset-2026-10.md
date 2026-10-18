@@ -534,3 +534,7 @@ Omistaja (KK:n kortit 10.14): (1) Louvren henkilöt "Kyllä, Tripoon (Suositus)"
 ## PAATOKSET 18.10.2026 klo 10.46: juoksupelin ensimmäinen rata (18.10.2026 klo 10.46)
 
 Omistaja (KK:n kortti 10.46, J11–J16 näytetty): huomisen koodauksen ensimmäiset paikat = "Huoneet ja risteykset (Suositus)": kuvat 11 ja 13, Puyi juoksee huoneesta toiseen oviaukoista, risteyksissä valitaan suunta; loppuun portaat muurille (kuva 16). Ensimmäinen pelattava rata: huoneketju kirjasto–keittiö–makuuhuone + suunnanvalinta risteyksissä + loppunousu muurille. Palatsi (12), puutarha ja silta (14–15) myöhemmin. Koodaus 19.10.; 18.10. ei koodia. Kuvat: claude/postilaatikko posti/juoksupeli-havainnekuvat-20261018/.
+
+## PAATOKSET 18.10.2026 klo 10.46–10.52: Tripo ostettu, Pulu 4. malliksi (18.10.2026 klo 10.53)
+
+Omistaja 10.46 (sanatarkasti KK:ssa): "tripo ostettu max tilaus kuukaudeksi" (voimassa ~18.11. asti, Macin Chromessa). Valoseppä tekee 3 mallia Louvren ihmisistä. 10.52 Pulu-kortti "Kyllä, Pulun näköinen (Suositus)": generointilupa 1 Tripo-malli lisää (yhteensä 4). Harmaansininen Pulu oransseine silmineen pelin oman Pulu-piirroksen mukaan, ilman avaruuspukua, ei Codex-kuvia; lentää ja istuu museossa, napautus avaa chatin. Mallit KK:lle kuvina ennen peliin vientiä.
