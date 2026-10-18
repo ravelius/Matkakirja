@@ -22,7 +22,8 @@ export const OPAS_AINEISTOT = Object.freeze({
   // Poikkeavat polut (ämpäri on muuttumaton): 6 km:n säde isoille kaupungeille (Linssiseppä 6.10.), paketti
   // kartta-tiet-vienti-20261006b. Natiivi käyttää tätä polkua, jos id on tässä, muuten kartta/tiet-v1/<id>.json.
   tiet_polut: { pariisi: 'kartta/tiet-v2/pariisi.json', lontoo: 'kartta/tiet-v2/lontoo.json', rooma: 'kartta/tiet-v2/rooma.json' },
-  aanikartta: ['pariisi', 'venetsia', 'koopenhamina'],   // pariisi 7.10. 00.30 (-20261006); venetsia + koopenhamina 03.30 (-20261007b); silmukat aanimaisema-v1
+  aanikartta: ['pariisi', 'venetsia', 'koopenhamina',   // pariisi 7.10. 00.30 (-20261006); venetsia + koopenhamina 03.30 (-20261007b); silmukat aanimaisema-v1
+    'lontoo', 'praha', 'ateena'],   // 18.10. 09.16 (aanikartta-lontoo-praha-ateena-vienti-20261018, Pelikoodari; natiivissa katu/vanhakaupunki korvaavat liikenteen, juna 202)
   // Esigeneroitu oppaan esittely (opas/esittely-v1/<id>.json, worker lukee itse; opas-esittely.js). 7.10.: pilotti; erä 2 (Rooma, Lontoo, Kööpenhamina) omistajan kuuntelun jälkeen.
   esittely: [
     'pariisi', 'praha', 'wien', 'rooma', 'lontoo', 'koopenhamina',
