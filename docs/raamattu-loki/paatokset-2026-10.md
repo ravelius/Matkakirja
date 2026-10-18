@@ -554,3 +554,7 @@ Omistajan kortti (KK 18.10.2026 klo 11.46): "Kyllä, myös jatkossa (Suositus)".
 ## KUVATEKSTIT KUVAN ULKOPUOLELLE (18.10.2026 klo 12.15)
 
 Omistaja 18.10.2026 klo 12.14 (KK:n välittämänä sanatarkasti): "Nuo tekstit saisi tehdä aina kuvan ulkopuolelle.  Ovat monesti tiellä". Kaikissa kuvapareissa, arkeissa ja vertailukuvissa kuvateksti on omalla raidallaan kuvan ylä- tai alapuolella, ei koskaan kuvan päällä. Koskee kaikkia rooleja ja koostetyökaluja heti. Taustalla Louvren parit 3: k2:n jalat jäivät kuvatekstin alle.
+
+## TRIPO-RAJAPINTA KAYTTOON 19.10. (18.10.2026 klo 12.46)
+
+Omistajan kortti 18.10.2026 klo 12.46 (KK): "Tripolla on myös rajapinta, jonka kautta mallit, luurangot ja liikkeet tehdään skriptillä ilman selainta. Otetaanko se käyttöön huomisesta alkaen?" → "Kyllä (Suositus)". API-krediitit ovat erilliset (alkuun 2 000 ilmaiseksi lähteiden mukaan). Omistaja luo avaimen platform.tripo3d.ai:ssa ja tallentaa sen itse muuttujaan TRIPO_API_KEY tiedostoon ~/.matkakirja-avaimet-koodaus.zsh; KK tarkistaa. 19.10. alkaen Valoseppä tekee API:lla (v3 openapi.tripo3d.com: rig-check → rig → retarget; saldo GET /v3/account/balance) k1:n hiukset, Pulun korjaukset, Puyin ja vartijan ilman Chromea. Generointimäärät omistajan lupien mukaan; krediittiostot vain omistajan luvalla.
