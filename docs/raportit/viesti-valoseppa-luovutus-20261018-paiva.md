@@ -43,3 +43,11 @@ tavoiteluuppi ym. TAUOLLA. JU:n sääntö: L2/simu vain JU:n KÄÄNNÖS NYT / SI
 ## 4. JONO
 1. Kohta 0 (parit) → 2. Tripo-lataus kun katsottu (kohta 1) → 3. Diag 4 (kohta 3) → 4. ISS-kuvan alueen nimi (admin1-fi-eurooppa.json;
 NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:lle (_tyo/_siirretyt/linssiseppa2/).
+
+## 5. LISÄYS 11.35 (PT): TRIPO 2 MALLIA LUURANKOINEN 19.10. – JUOKSUPELIN PUYI + VARTIJA
+- Omistajan lupa 11.34: Tripo 2 mallia luurankoineen (juoksupelin Puyi + vartija) 19.10., VASTA kun KK on hyväksynyt Louvren mallit pelissä.
+  Lähdekuvat Codexilta (1de736c41).
+- KK:n laatuohje: tasainen valo lähdekuviin; 2–3 ehdokasta → paras; verkko pelille (päähahmo 15–20 k kolmiota + kevyt vartija);
+  nivelet tarkistetaan liikkeessä; samat valot/varjostimet kuin muilla malleilla.
+- Olavinlinnan väki myöhemmin (pidossa) – ei tehdä.
+- Jonoon kohdan 4 Tripo-latauksen jälkeen.
