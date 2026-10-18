@@ -82,3 +82,10 @@ NE-lataus vain omistajan vahvistuksella). Vanhat appit t217–t220 siirretty T7:
 - Louvren parit 3 (ef0a85baf) valmiit → PT: $L/parit-3/ (7 kuvaa + ARVIO.md). k2 ja vartija näkyvät pelissä (henkilöt 2/3; k1 puuttuu tarkoituksella).
   Vartija istui kaiteen takana → x 25,6 pilottihaarassa 867c74f40, LR:lle yhdistettäväksi. Odotetaan KK:n arviota pelikuvista.
 - Diag 5 käännetty JU:lla → kyyti-diag5-app; simujärjestys LR → louvre3 (tehty) → NUI logo → diag 5 (JU:n SIMU NYT → `$D/simu-diag5.zsh`).
+
+## 10. TILA 12.3x (KK 12.1x PT:n kautta)
+- Pilottihaara cc3aa269e: se:n päivänvalo (ranska/sali.json se.valo paivanvalo 0,8, valokerroin 0,2, ambient 0,2; tavoite 390 lx),
+  MuseoValaistu heijastunut päivänvalo (MuseoPaivanvalo.Heijastus 0,35, QA "museo paiva heijastus x"), MuseoHenkilot kontaktivarjo.
+  183/183, tarkista 0. LR yhdistää kehykset v9:n kanssa → yksi JU-käännös → uudet parit (simu-louvre3.zsh; vaihda jälkeen-app LR:n polkuun).
+- sk-louvre-jalkeen: j11/j12 alaviistoon −15°, jotta kengät + varjo näkyvät kuvatekstin yläpuolella (KK).
+- gg:n marmori/pylväät = LR. Kiintiö 92 % (PT) → pienet erät.
