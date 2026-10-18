@@ -7,7 +7,7 @@ Simu VAIN Julkaisijan SIMU NYT -viestistä, SIMU VAPAA perään. Ajoskriptit /Us
 ## JUNA 201: AVOIMET ENSIMMÄISEKSI (PT 06.3x)
 1. **Uusinta NYKYINEN-kortti + galleria koko ruudulla** (kuvakäännös 4 b656d1792): lokit /Users/Shared/Claude/proto-3d/lokit/
    todistus-kuva-kokoruutu-iphone-202b-20261018-0629 ja -ipad-202b-20261018-0629 (kuvat/raaka/K1-kortti.png, K4-galleria-kokoruutu.png).
-   Tila luovutushetkellä: ajo käynnissä (Postivahti odottaa NUI:n SIMU VAPAA:ta ennen nollausta). Tarkista K1/K4 täysikokoisina → pari
+   TEHTY 06.4x: parit _tyo/natiivi-ui/kuva4-parit/5–6 (NYKYINEN kortti | UUSI koko ruutu | galleriasta) → PT; SIMU VAPAA kuitattu.
    NYKYINEN (K1) | UUSI (K4 + kuva4-parit/3 K2) → polku PT:lle yhdellä rivillä. Jos K1/K4 epäonnistui: uusinta kuvakäännöksestä 5.
 2. **Mustan taustan 619275871 todiste kuvakäännöksestä 5** (pyydä SIMU NYT Julkaisijalta; varmista `git -C <proto> merge-base --is-ancestor
    619275871 <rungon sha>`): `zsh ajo-kuva-kokoruutu-202.zsh <kuva5-app> <udid> <iphone|ipad>` (K2 otto + K3 zoom: kuvateksti piilossa,
