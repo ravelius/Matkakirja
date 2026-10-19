@@ -1,0 +1,1185 @@
+{
+ "_meta": "Generointilista (EI generoitu; odottaa omistajan hyväksyntää ja äänivalintaa). Jokaisella rivillä tunnetagi.",
+ "rivit": [
+  {
+   "avain": "juoksupeli.rikkoutuva.posliinimaljakko.huuto.1",
+   "teksti": "Maljakko meni ihan sirpaleiksi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.posliinimaljakko.huuto.2",
+   "teksti": "Varmaan miljoonan arvoinen!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.posliinimaljakko.huuto.3",
+   "teksti": "Hovimestari saa taas hepulin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.posliinimaljakko.huuto.4",
+   "teksti": "Kling-klang-kolinaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.huuto.1",
+   "teksti": "Sininen kuvio hajosi palasiksi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.huuto.2",
+   "teksti": "Tuhat vuotta vanha, varmasti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.huuto.3",
+   "teksti": "Opettaja valittaa tästä viikon!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.huuto.4",
+   "teksti": "Pam! Kuului pitkälle!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.famille-rose-maljakko.huuto.1",
+   "teksti": "Vaaleanpunainen maljakko, rikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.famille-rose-maljakko.huuto.2",
+   "teksti": "Kallis kuin koko palatsi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.famille-rose-maljakko.huuto.3",
+   "teksti": "Keisarinnaäiti kuulee tämän kyllä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.famille-rose-maljakko.huuto.4",
+   "teksti": "Oho, sirpaleita lattialla!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.huuto.1",
+   "teksti": "Keltainen kulho meni rikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.huuto.2",
+   "teksti": "Maksoi varmaan sata kultakolikkoa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.huuto.3",
+   "teksti": "Hovin virkamies parkuu tästä vielä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.huuto.4",
+   "teksti": "Rapsahti! Kukaan ei nähnyt, eikö?",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.celadon-kulho.huuto.1",
+   "teksti": "Vihreä kulho on nyt palasina!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.celadon-kulho.huuto.2",
+   "teksti": "Tää on varmaan kallein kulho!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.celadon-kulho.huuto.3",
+   "teksti": "Palvelija hätääntyy, kulho kilahti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.celadon-kulho.huuto.4",
+   "teksti": "Voi ei! Kulho kilahti kolinalla!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.yixing-teekannu.huuto.1",
+   "teksti": "Teekannu! Se oli oikein kallis!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.yixing-teekannu.huuto.2",
+   "teksti": "Varmaan maailman kallein kannu!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.yixing-teekannu.huuto.3",
+   "teksti": "Imettäjä parkuu, kannu hajosi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.yixing-teekannu.huuto.4",
+   "teksti": "Plörinää! Tee valuu lattialle!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.doucai-kuppi.huuto.1",
+   "teksti": "Kuppi lensi ihan palasiksi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.doucai-kuppi.huuto.2",
+   "teksti": "Hintaa varmaan tuhat hopeaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.doucai-kuppi.huuto.3",
+   "teksti": "Opettaja sanoo ettei saa juosta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.doucai-kuppi.huuto.4",
+   "teksti": "Hui! Sirpaleet lentävät!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.nuuskapullo.huuto.1",
+   "teksti": "Pikkupullo pirstoutui!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.nuuskapullo.huuto.2",
+   "teksti": "Pieni mutta maksaa miljoonan!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.nuuskapullo.huuto.3",
+   "teksti": "Palvelija etsii sirpaleita kuukauden!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.nuuskapullo.huuto.4",
+   "teksti": "Atsiuh! Pullo pomppasi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalakulho.huuto.1",
+   "teksti": "Kalakulho meni palasiksi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalakulho.huuto.2",
+   "teksti": "Kolme miljoonaa kultakalaa karkuun!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalakulho.huuto.3",
+   "teksti": "Hovimestari kysyy, minne kalat meni!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalakulho.huuto.4",
+   "teksti": "Läiskis! Vettä joka paikassa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tuoksupoltin.huuto.1",
+   "teksti": "Tuoksupoltin kolahti lattiaan!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tuoksupoltin.huuto.2",
+   "teksti": "Varmaan kaksituhatta vuotta vanha!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tuoksupoltin.huuto.3",
+   "teksti": "Keisarinnaäiti haistaa ongelman jo!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tuoksupoltin.huuto.4",
+   "teksti": "Pöyh! Tuhka lentää kaikkialle!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadeastia.huuto.1",
+   "teksti": "Jadeastia on nyt jadekasa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadeastia.huuto.2",
+   "teksti": "Kalliimpi kuin kulta ja hopea!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadeastia.huuto.3",
+   "teksti": "Palvelija vaikertaa, jade meni!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadeastia.huuto.4",
+   "teksti": "Rapsis! Vihreää murskaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadesinetti.huuto.1",
+   "teksti": "Jättisinetti halkesi kahtia!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadesinetti.huuto.2",
+   "teksti": "Maksoi varmaan koko maan verran!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadesinetti.huuto.3",
+   "teksti": "Hovin virkamies ei voi leimata!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadesinetti.huuto.4",
+   "teksti": "Kops! Nyt kaikki kuulivat!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadevuori.huuto.1",
+   "teksti": "Koko jadevuori kaatui!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadevuori.huuto.2",
+   "teksti": "Kymmenen miljoonaa tuossa vuoressa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadevuori.huuto.3",
+   "teksti": "Qianlong suuttuisi, jos näkisi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadevuori.huuto.4",
+   "teksti": "Bum! Maa tärisi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ruyi-valtikka.huuto.1",
+   "teksti": "Ruyi-valtikka katkesi kahtia!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ruyi-valtikka.huuto.2",
+   "teksti": "Varmaan onnekkain valtikka ikinä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ruyi-valtikka.huuto.3",
+   "teksti": "Hovimestari huokaa: onni hajosi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ruyi-valtikka.huuto.4",
+   "teksti": "Rits! Onni on poikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mughal-jadekuppi.huuto.1",
+   "teksti": "Jadekuppi! Kilahti kuin kello!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mughal-jadekuppi.huuto.2",
+   "teksti": "Tää maksoi varmaan tuhat hevosta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mughal-jadekuppi.huuto.3",
+   "teksti": "Hovin virkamies pyörtyy kohta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mughal-jadekuppi.huuto.4",
+   "teksti": "Kling-klang!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bi-kiekko.huuto.1",
+   "teksti": "Reikäkiekko! Kuin jättikeksi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bi-kiekko.huuto.2",
+   "teksti": "Tää on varmaan viisituhatta vuotta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bi-kiekko.huuto.3",
+   "teksti": "Opettaja suuttuu, tämä oli vanha!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bi-kiekko.huuto.4",
+   "teksti": "Huh, vierähti kuin pyörä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.norsunluupallo.huuto.1",
+   "teksti": "Pallo pallon sisällä! Pyörii vielä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.norsunluupallo.huuto.2",
+   "teksti": "Tää maksoi varmaan sata norsua!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.norsunluupallo.huuto.3",
+   "teksti": "Imettäjä parkuu, pallot sekaisin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.norsunluupallo.huuto.4",
+   "teksti": "Hui! Pyörii pitkin lattiaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.duan-mustekivi.huuto.1",
+   "teksti": "Violetti mustekivi! Pam!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.duan-mustekivi.huuto.2",
+   "teksti": "Tää on varmaan tutkijan kallein aarre!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.duan-mustekivi.huuto.3",
+   "teksti": "Opettaja huokaa: nyt ei voi kirjoittaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.duan-mustekivi.huuto.4",
+   "teksti": "Apua, kivi meni kahtia!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bianqing-kivikellot.huuto.1",
+   "teksti": "Kivilevyt roikkuvat! Tai roikkuivat!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bianqing-kivikellot.huuto.2",
+   "teksti": "Varmaan soitettu jo tuhat vuotta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bianqing-kivikellot.huuto.3",
+   "teksti": "Keisarinnaäiti pitää korvat tukossa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bianqing-kivikellot.huuto.4",
+   "teksti": "Kolisi! Tuli oma konsertti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadekirja.huuto.1",
+   "teksti": "Kirja, jonka sivut on kiveä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadekirja.huuto.2",
+   "teksti": "Painaa varmaan sata kiloa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadekirja.huuto.3",
+   "teksti": "Hovin virkamies kiljuu: sivut sekaisin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadekirja.huuto.4",
+   "teksti": "Plink-plonk! Sivut kilisee!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne.huuto.1",
+   "teksti": "Emalivati! Kauniit värilokerot!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne.huuto.2",
+   "teksti": "Tää on varmaan kultaakin kalliimpi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne.huuto.3",
+   "teksti": "Hovimestari huokaisee syvään, taas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne.huuto.4",
+   "teksti": "Tsing! Pyörii vielä lattialla!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ding-astia.huuto.1",
+   "teksti": "Ding! Iso pronssikattila kaatui!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ding-astia.huuto.2",
+   "teksti": "Tää on varmaan kolme tuhatta vuotta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ding-astia.huuto.3",
+   "teksti": "Esi-isät suuttuvat, uhripata rikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ding-astia.huuto.4",
+   "teksti": "Bong! Ding dong, ding dong!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zun-malja.huuto.1",
+   "teksti": "Pronssimalja! Korkea ja kiiltävä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zun-malja.huuto.2",
+   "teksti": "Maksoi varmaan vuoden verot!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zun-malja.huuto.3",
+   "teksti": "Keisarinnaäiti kuuli tuon kolahduksen!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zun-malja.huuto.4",
+   "teksti": "Bonggg! Koko käytävä kuuli!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikurki.huuto.1",
+   "teksti": "Kurki! Nyt se makaa kyljellään!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikurki.huuto.2",
+   "teksti": "Varmaan kaksisataa vuotta seissyt!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikurki.huuto.3",
+   "teksti": "Palvelija säntää: kurki kaatui!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikurki.huuto.4",
+   "teksti": "Ups, kurki heitti voltin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikilpikonna.huuto.1",
+   "teksti": "Kilpikonna! Hidas mutta raskas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikilpikonna.huuto.2",
+   "teksti": "Painaa varmaan tonnin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikilpikonna.huuto.3",
+   "teksti": "Palvelija huutaa: kilpikonna kellahti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.pronssikilpikonna.huuto.4",
+   "teksti": "Hups! Nyt se on selällään!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kullattu-vesiastia.huuto.1",
+   "teksti": "Iso kultainen vesiastia!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kullattu-vesiastia.huuto.2",
+   "teksti": "Kultaa varmaan koko miljoona!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kullattu-vesiastia.huuto.3",
+   "teksti": "Imettäjä kiljuu: koko lattia kylpee!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kullattu-vesiastia.huuto.4",
+   "teksti": "Roiskis! Sammutin juuri käytävän!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.vuoripoltin.huuto.1",
+   "teksti": "Tuoksupoltin! Kuin pieni vuori!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.vuoripoltin.huuto.2",
+   "teksti": "Kalliimpi kuin koko oikea vuori!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.vuoripoltin.huuto.3",
+   "teksti": "Opettaja suuttuu, tuhkaa kaikkialla!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.vuoripoltin.huuto.4",
+   "teksti": "Pöllähti! Savuako vai pölyä?",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne-poltin.huuto.1",
+   "teksti": "Tuoksupoltin lähti lentoon!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne-poltin.huuto.2",
+   "teksti": "Tää on varmaan miljoonan arvoinen!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne-poltin.huuto.3",
+   "teksti": "Hovimestari parkuu, poltin lensi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.cloisonne-poltin.huuto.4",
+   "teksti": "Kling-klang-pam!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.falangcai.huuto.1",
+   "teksti": "Tää oli se hieno falangcai!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.falangcai.huuto.2",
+   "teksti": "Tämä maksoi varmaan miljoona!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.falangcai.huuto.3",
+   "teksti": "Keisarinnaäiti kuuli! Mä oon mennyttä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.falangcai.huuto.4",
+   "teksti": "Kirrr-kraks, tuhat palasta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.maalattu-emalirasia.huuto.1",
+   "teksti": "Voi ei, emalirasia!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.maalattu-emalirasia.huuto.2",
+   "teksti": "Tää on varmaan satoja vuosia vanha!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.maalattu-emalirasia.huuto.3",
+   "teksti": "Imettäjä nuhtelee, taas rikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.maalattu-emalirasia.huuto.4",
+   "teksti": "Tsiuh, ja rasia lensi kauas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kello.huuto.1",
+   "teksti": "Kello pysähtyi kesken tik-takin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kello.huuto.2",
+   "teksti": "Varmaan kallein kello maailmassa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kello.huuto.3",
+   "teksti": "Palvelijat etsivät jo syyllistä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kello.huuto.4",
+   "teksti": "Dong! Ei se ollut minun vikani!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lakkarasia.huuto.1",
+   "teksti": "Lakkarasia kierähti nurkkaan!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lakkarasia.huuto.2",
+   "teksti": "Tää on varmaan tuhat vuotta vanha!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lakkarasia.huuto.3",
+   "teksti": "Hovimestari ei puhu minulle viikkoon!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lakkarasia.huuto.4",
+   "teksti": "Oho, kiiltävä kansi karkasi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.huuto.1",
+   "teksti": "Se pieni kirjoittaja pysähtyi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.huuto.2",
+   "teksti": "Kullattu! Varmaan sata kiloa kultaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.huuto.3",
+   "teksti": "Virkamies kiljuu, kellopeli rikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.huuto.4",
+   "teksti": "Klik-klak-kraks! Merkit sekaisin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.punalakka-veisto.huuto.1",
+   "teksti": "Punainen astia kaatui kolinalla!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.punalakka-veisto.huuto.2",
+   "teksti": "Qianlong rakasti tätä, hui!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.punalakka-veisto.huuto.3",
+   "teksti": "Esi-isät kääntyvät haudoissaan!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.punalakka-veisto.huuto.4",
+   "teksti": "Ei kai kukaan nähnyt... paitsi kaikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.musteliuska.huuto.1",
+   "teksti": "Mustetanko vierähti pitkin lattiaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.musteliuska.huuto.2",
+   "teksti": "Varmasti kultaa kalliimpaa mustetta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.musteliuska.huuto.3",
+   "teksti": "Opettaja kysyy, millä nyt kirjoitan?",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.musteliuska.huuto.4",
+   "teksti": "Puh, nokea nenässä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasimaljakko.huuto.1",
+   "teksti": "Lasimaljakko meni sirpaleiksi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasimaljakko.huuto.2",
+   "teksti": "Hinta oli varmaan miljoona taelia!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasimaljakko.huuto.3",
+   "teksti": "Palvelija juoksee jo luudan kanssa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasimaljakko.huuto.4",
+   "teksti": "Kling! Kimalsi vielä kuin tähdet!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.viuhka.huuto.1",
+   "teksti": "Taittoviuhka mureni käsiini!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.viuhka.huuto.2",
+   "teksti": "Varmaan tuhannen vuoden takainen!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.viuhka.huuto.3",
+   "teksti": "Hovin virkamies tulee punaisena!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.viuhka.huuto.4",
+   "teksti": "Pyh, ihan vahingossa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalligrafiarulla.huuto.1",
+   "teksti": "Kalligrafiarulla pomppasi pakoon!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalligrafiarulla.huuto.2",
+   "teksti": "Varmaan maailman kallein kirjoitus!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalligrafiarulla.huuto.3",
+   "teksti": "Opettaja huokaa: taas rullasotkua!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalligrafiarulla.huuto.4",
+   "teksti": "Zip-zip-zip, rulla karkaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.qingming-rulla.huuto.1",
+   "teksti": "Qingming-rulla tipahti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.qingming-rulla.huuto.2",
+   "teksti": "Satoja vuosia vanha, varmaan tuhat!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.qingming-rulla.huuto.3",
+   "teksti": "Hovimestari melkein pyörtyy!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.qingming-rulla.huuto.4",
+   "teksti": "Hoi, joki virtaa lattialle asti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sivellin.huuto.1",
+   "teksti": "Sivellin lensi kuin nuoli!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sivellin.huuto.2",
+   "teksti": "Onko tää jadea? Varmaan kallis!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sivellin.huuto.3",
+   "teksti": "Virkamies vaatii uuden siveltimen!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sivellin.huuto.4",
+   "teksti": "Ei-ei-ei, kärki taipui!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.huuto.1",
+   "teksti": "Kuppi, kansi ja lautanen. Kolme palaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.huuto.2",
+   "teksti": "Varmaan satatuhatta teetä sisällä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.huuto.3",
+   "teksti": "Hovimestari vaatii kaikki kolme palaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.huuto.4",
+   "teksti": "Kling-klang, kansi pomppasi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mantsun-veitsisarja.huuto.1",
+   "teksti": "Veitset ja puikot, kaikki lentävät!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mantsun-veitsisarja.huuto.2",
+   "teksti": "Tämä on varmaan sadan sotilaan vyöltä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mantsun-veitsisarja.huuto.3",
+   "teksti": "Opettaja huokaa: ei leikkikalu!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.mantsun-veitsisarja.huuto.4",
+   "teksti": "Plik-plak, puikot pitkin lattiaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.palatsilyhty.huuto.1",
+   "teksti": "Lyhty! Nyt tuli pimeä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.palatsilyhty.huuto.2",
+   "teksti": "Tämä paloi varmaan sata uutta vuotta!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.palatsilyhty.huuto.3",
+   "teksti": "Palvelija valittaa, sytytti sen just!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.palatsilyhty.huuto.4",
+   "teksti": "Pläts! Bambut ritisivät!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.linnunhakki.huuto.1",
+   "teksti": "Häkki! Missä lintu on?",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.linnunhakki.huuto.2",
+   "teksti": "Kultalintu maksoi varmaan miljoonan!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.linnunhakki.huuto.3",
+   "teksti": "Qianlong ihaili näitä. Nyt kasa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.linnunhakki.huuto.4",
+   "teksti": "Piip! Lintu lähti lentoon!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.metallipeili.huuto.1",
+   "teksti": "Peili! Näin itseni nurinpäin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.metallipeili.huuto.2",
+   "teksti": "Peili on varmaan tuhat vuotta vanha!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.metallipeili.huuto.3",
+   "teksti": "Keisarinnaäiti kysyy, kuka rikkoi sen",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.metallipeili.huuto.4",
+   "teksti": "Kilahdus! Nyt näen itseni sirpaleina",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hattulaatikko.huuto.1",
+   "teksti": "Hattulaatikko! Hatut tippuvat!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hattulaatikko.huuto.2",
+   "teksti": "Siinä oli varmaan sata hattua!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hattulaatikko.huuto.3",
+   "teksti": "Hovin virkamies ei löydä hattuaan nyt!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hattulaatikko.huuto.4",
+   "teksti": "Pomp, kesähattu vierii talvihatun alle!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sirkka-astia.huuto.1",
+   "teksti": "Sirkka-astia! Sirkat karkasivat!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sirkka-astia.huuto.2",
+   "teksti": "Se oli lempisirkkani koti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sirkka-astia.huuto.3",
+   "teksti": "Imettäjä kiljuu, sirkka hameessa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sirkka-astia.huuto.4",
+   "teksti": "Tsirp-tsirp, sirkat sinkoilevat!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasiset-go-kivet.huuto.1",
+   "teksti": "Go-kivet! Ne vierivät kaikkialle!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasiset-go-kivet.huuto.2",
+   "teksti": "Nämä maksoivat varmaan miljoonan!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasiset-go-kivet.huuto.3",
+   "teksti": "Hovimestari kerää kiviä koko yön",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasiset-go-kivet.huuto.4",
+   "teksti": "Klik-klik-klik, sateenkaarikiviä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zitan-jakkara.huuto.1",
+   "teksti": "Jakkara! Nyt saa seistä!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zitan-jakkara.huuto.2",
+   "teksti": "Puu on varmaan kovempaa kuin kivi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zitan-jakkara.huuto.3",
+   "teksti": "Esi-isät suuttuvat, heidän jakkaransa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.zitan-jakkara.huuto.4",
+   "teksti": "Rämps! Pyllylleni se vei!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tinakannu.huuto.1",
+   "teksti": "Tinakannu! Kolahti kovaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tinakannu.huuto.2",
+   "teksti": "Tämä on varmaan maailman paras kannu!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tinakannu.huuto.3",
+   "teksti": "Palvelija marisee, kun teet valuivat",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.tinakannu.huuto.4",
+   "teksti": "Dong! Kaikki kuulivat sen!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hiustanko-liangbatou.huuto.1",
+   "teksti": "Hiustanko! Kampaus meni sekaisin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hiustanko-liangbatou.huuto.2",
+   "teksti": "Tämä on varmaan norsunluuta, miljoona!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hiustanko-liangbatou.huuto.3",
+   "teksti": "Keisarinnaäiti suuttuu, tanko oli hänen",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.hiustanko-liangbatou.huuto.4",
+   "teksti": "Tink! Tanko vierii pöydän alle!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.1",
+   "teksti": "Hups!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.2",
+   "teksti": "Voi ei taas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.3",
+   "teksti": "Oho!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.4",
+   "teksti": "Aijai!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.5",
+   "teksti": "Ups!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.6",
+   "teksti": "Auts!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.7",
+   "teksti": "Pam!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.8",
+   "teksti": "Voi voi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.9",
+   "teksti": "Hupsista!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.10",
+   "teksti": "Pahus!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.11",
+   "teksti": "Ai että!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.12",
+   "teksti": "Nyt kilahti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.13",
+   "teksti": "Taas meni!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.14",
+   "teksti": "Kraak!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.15",
+   "teksti": "Rapsahti!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.16",
+   "teksti": "Siinä kävi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.17",
+   "teksti": "Hui hai!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.18",
+   "teksti": "Voi kökkö!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.19",
+   "teksti": "Eipä kestänyt!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.20",
+   "teksti": "Sirpaleita!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.21",
+   "teksti": "Öh, rikki!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.22",
+   "teksti": "Kolisi taas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.23",
+   "teksti": "Voi ei, ei taas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.24",
+   "teksti": "Kilis kolis!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.25",
+   "teksti": "No niin!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.26",
+   "teksti": "Apua!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.27",
+   "teksti": "Kas vain!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.28",
+   "teksti": "Pirstaleiksi!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.29",
+   "teksti": "Hih, taas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.30",
+   "teksti": "Ei kai taas!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.elinvoima.jade-persikka.poiminta.1",
+   "teksti": "Persikka! Pitkää ikää minulle!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  },
+  {
+   "avain": "juoksupeli.elinvoima.jade-persikka.poiminta.2",
+   "teksti": "Jadepersikka! Nyt riittää virtaa!",
+   "tagi": "[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]"
+  }
+ ]
+}
