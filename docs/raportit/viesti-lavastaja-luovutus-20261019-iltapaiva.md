@@ -30,7 +30,8 @@ ajo `ajo-kehyskiilto-204.zsh <app>`: ennen/jälkeen/vahva samalla kulmalla + lä
 (SK-C-6 osui Juutalaismorsiameen, koska kertojan 34 s:n jälkeen kierros eteni). Valitse paras → pari PT:lle (3 riviä).
 **OLAVINLINNA v49b (piste 86):** merkit.json v44 + v44-nyky: reitti:pelaaja-86 → (−37,214; 13,4; −9,21) (seinävara 0,40, tikkaat 0,85, ovi 1,62 m;
 ennen-v49b/ tallessa). Vienti `vie_v49b.zsh` käynnissä 16.23 (worktree `wt/linnanrakentaja-linna-v45k` palautettu), loki `_tyo/linnanrakentaja/vie-v49b.log`
-→ TULOS-tunnukset Projektisepälle (botti) + rivi PT:lle.
+→ **VIETY 16.5x: pala 1499 a36f4199985ef096, nyky 9c0897bec9044c1f** (v45k 1c69c4c43 / c0abe3769); Projektisepälle (kiinnitys + botti) ja PT:lle ilmoitettu.
+   Komeron tiilet huone 9:n Codex-geometrian kanssa (v49c).
 
 ## Avoimet (seuraava sessio)
 1. **Kehysmateriaalien sävy (Kunniagalleria):** kultainen aaltolista näkyy punaruskeana, musta eebenpuu keskiruskeana (HAVAINNOT.md).
