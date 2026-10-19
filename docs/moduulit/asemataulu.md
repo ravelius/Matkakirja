@@ -114,6 +114,41 @@ junan napin alla, ja eteneminen ohittaa junarivin tila-, edistys- ja valmis_arvi
 kun edistys on annettu eikä juna ole valmis (sana valmis, TestFlight tai julkaistu tilassa merkitsee
 valmiiksi). Kun juna on TF:ssä, PT muuttaa junarivin TF-riviksi ja tyhjentää etenemisen.
 
+## Asemataulun merkinnät: yksi kirjoitusohje kaikille tileille (omistaja 18.10.2026, C5)
+
+Sama ohje kaikilla tileillä ja kaikille kirjoittajille (PT, Natiiviseppä, Julkaisija, Asemataulu). Tarkistin
+`tools/asemataulu/tarkista-junat.py` valvoo sitä koneellisesti; AJA SE ENNEN JOKAISTA VIENTIÄ
+(`python3 -I tools/asemataulu/tarkista-junat.py <junat.json> [<eteneminen.json>]`, paluukoodi 0 = ok, 1 = virhe).
+
+Säännöt:
+1. Junan nimi on aina lyhyt: "Juna 204" tai "TF 204" (enintään 12 merkkiä). Selitykset, ajankohdat ja perustelut
+   menevät kenttään `teksti` (leipäteksti), eivät koskaan nimeen eivätkä pitkään `tila`-kenttään (enintään 80 merkkiä).
+2. Junarivin tekstissä on vain kaksi otsikkoa: "Työn alla:" ja "Valmiina:" (TF-rivillä vain "Uutta:"). Ei "Korjatut:",
+   "Odottaa valintaasi:" eikä muita. Kukin asia on tekstissä kerran (ei sekä Työn alla- että Valmiina-luettelossa).
+3. Liikennevalot (viisi neliötä nimen alla) palavat, kun Juna N -rivillä on `edistys` LUKUNA 0–5 (ei merkkijonoa) ja
+   `tila` ei sisällä sanoja valmis, TestFlight tai julkaistu. Päivitä `edistys` ja `tila` jokaisessa vaiheessa samalla
+   viennillä kuin tekstin. Etenemisdokumentti (`eteneminen`) ohittaa rivin kentät vain, jos sen `nimi` on täsmälleen
+   junarivin nimi.
+4. TF N -rivin `tila` sisältää sanan TestFlight (tai valmis/julkaistu), muuten rivi näkyy keskeneräisenä lihavoituna.
+
+| Kenttä | Pakollinen | Muoto | Käyttö |
+|---|---|---|---|
+| nimi | kyllä | "Juna N" / "TF N" | napin teksti; yksi rivi per nimi |
+| teksti | kyllä | leipäteksti, otsikot Työn alla / Valmiina (TF: Uutta) | napautuksella avautuva sisältö |
+| tila | kyllä | lyhyt teksti, TF-rivillä sana TestFlight | väri ja valmis/keskeneräinen |
+| edistys | Juna N: kyllä | luku 0–5 | liikennevalot |
+| valmis_arvio | ei | ISO-aika | jäljellä oleva aika valojen perässä |
+| aika | ei | enintään 20 merkkiä, esim. "klo 18.43" | pieni aika napin alla |
+| lisa | ei | teksti | lisärivi tekstin alla |
+| valmiit, odottaa | ei | kokonaisluvut | nimen perässä (9/2) |
+| ts | ei | luku | kirjoitusaika |
+
+Esimerkki oikeasta junarivistä:
+`{"nimi": "Juna 204", "tila": "Työn alla", "edistys": 1, "teksti": "Julkaisu pyydetty 22.45, lähtee heti.\n\nTyön alla:\n– skannerin tiedot\n\nValmiina:\n– kuvanotto"}`
+
+Esimerkki väärästä (tarkistin hylkää): `{"nimi": "Juna 204: julkaisu pyydetty 22.45, lähtee heti kun alla olevat valmiina", "tila": "valmis", "edistys": "1", "teksti": "Korjatut:\n– kuvanotto\n\nValmiina:\n– kuvanotto"}`
+(pitkä nimi, tila "valmis" sammuttaa valot, edistys merkkijonona, kielletty otsikko Korjatut, sama asia kahdesti).
+
 ## Päivitys
 
 - Rytmi ja BOOST (omistaja 14.10.2026 klo 22.34, 22.40 ja 23.39, Raamattu ASEMATAULU, PÄIVITYSRYTMI JA BOOST):

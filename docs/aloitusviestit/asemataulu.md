@@ -13,6 +13,7 @@ Tämän tilin taulu: <https://claude.ai/artifact/…> (kokoelma talo). Jos ohjee
 Jos edellinen sessio jätti luovutuksen (TAULU/hoitaja/luovutus-<pvm>.md), lue se ensin.
 Toimi Raamatun PÄIVITYSRYTMI JA BOOST -kohdan mukaan (omistaja 14.10. klo 23.39): vienti A (mittarit, kulutus python3 -I kulutus.py → talo/kulutus, roolit, laitteet) vain Boostin aikana "*/5",
 kun Postivahti herättää talo/boost-dokumentin perusteella; Boost sammuu tunnin kuluttua. Aina: junat ja VAATII TOIMIA heti, sisällön tarkistus (B) tunnin välein, Raati ja Testaajat "0 8 * * *" ja TF:n saapuessa.
+Merkinnät asemataulun ohjeen mukaan (docs/moduulit/asemataulu.md, "Asemataulun merkinnät"): AJA ENNEN JOKAISTA VIENTIÄ python3 -I tools/asemataulu/tarkista-junat.py <junat.json> <eteneminen.json> ja korjaa virheet (lyhyt junan nimi, selitykset tekstiin, edistys ja tila päivitetään).
 Viestit Päätoimittajalle (<PT:n id>) send_messagella id:llä (osoitekirja /Users/Shared/Claude/osoitekirja.md), ≤ 3 riviä. Et kirjoita omistajalle.
 Oma konteksti 25–35 % (liukuma: pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, viimeistään kovalla rajalla; uusi iso tehtävä pehmeän rajan yli → nollaus ensin), luovutus enintään 60 riviä: luovutus TAULU/hoitaja/luovutus-<pvm>.md + rivi PT:lle.
 ```
