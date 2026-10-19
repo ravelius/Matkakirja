@@ -131,8 +131,43 @@ Toistuvat samoina eri kaupungeissa; tarkista jokaisesta erästä erikseen:
 
 ## 7. TÄYDENTÄÄ: Karttaseppä
 
-*(kohdelista, 3D-mittaus ja laatukynnys, kartan kohteet ja nimet (nimi_pelissä), pääkaupunkipiste ja laudan rivi, maakortin
-pääkaupunkirivi, havainnekuvat. Täydentää Karttaseppä.)*
+*(Karttaseppä 19.10.2026, PT:n toimeksianto (omistaja 19.10. klo 15.35, Raamattu 8.1): rivit on siirretty luovutuksista ja
+muistista; uusia sääntöjä ei ole. Luovutukset `docs/raportit/viesti-karttaseppa-luovutus-<pvm>.md` ovat haarassa
+`karttaseppa-tyo-20260922`. Kohdelistan ja kierroksen kulmien opit: `kuumailmapallokierros.md` luku 8.)*
+
+**3D-mittaus ja laatukynnys.**
+
+- Mittari (`paakaupungit-3d-20261016/TULOS.md`, Menetelmä): keskustassa 17 pistettä (keskipiste + 8 suuntaa 250 ja 500 m:n
+  päässä), renkaissa 8 pistettä; luokka laatan kolmioiden mediaanireunasta: tarkka ≤ 1,7 m, keskitaso ≤ 5 m, karkea > 5 m,
+  vesi ≥ 12 m (ei lasketa). SALLITTU = keskustan tarkkoja ≥ 50 % ja
+  `r_m` ≥ 1 km; RAJA = tarkkoja ≥ 20 % tai keskitasoa ≥ 40 %; muuten POIS. Keskipisteeksi historiallisen keskustan maamerkki.
+  Työkalu on LS2:n uudelleenkirjoitus (`_tyo/linssiseppa2/google3d-maailma/mittaa.py`, `reunat.mjs`), koska 7.10. alkuperäinen
+  oli scratchpadissa ja hävisi. Lähde: TULOS.md.
+- Samassa ajossa kalibrointikaupungit (Ljubljana, Praha) ja stillit 450 m / 55° (`<id>-450m-55.jpg`, `arkki-kaikki.jpg`);
+  stillit vahvistavat luokan silmämääräisesti. Lähde: TULOS.md.
+- Mittari ei yksin riitä: testi oppaan omista kulmista (luku 8 kierrospohjassa). 16.10.: 7 SALLITTU (Monaco, Bern, Bratislava,
+  Podgorica, Tirana, Belgrad, Zagreb), Vaduz RAJA, Skopje, Chișinău ja Minsk POIS; juna 198: 11 mitattu, 0 lisäystä (Varsova
+  mittarilla SALLITTU mutta vapaassa lennossa sumea). Lähde: luovutukset 16.10. ilta ja ilta2.
+- `r_m` voi tarkoittaa käytännössä naapurimaata: Monacon 20 km osui Rivieralle, ja PT rajasi 3 km:iin. Lähde: TULOS.md;
+  luovutus 16.10. ilta.
+
+**OPAS_SALLITUT ja avaamisen järjestys.** Lisäys `tools/pollo/sallitut.js`:ään (säde `r_m`) on draft-PR, kunnes esittelyt ovat
+mainissa: `tests/opas-esittely.test.mjs` vaatii esittelyn jokaiselle sallitulle, joten CI on punainen tarkoituksella. Avataan,
+kun omistaja on hyväksynyt esittelyt (omistaja 16.10. 18.14); sitten rebase → vihreä → ready → Julkaisija. Lähde: luovutus 16.10.
+ilta (#4713, mergetty f8111eec0 luovutuksen 16.10. ilta2 mukaan).
+
+**Kartan pisteet ja aloitus.**
+
+- Nosto tai skandaali ilman kohdekartan pistettä saa laudan oman pisteen (`maailmankartta-pallopisteet.js`). Lähde: luovutus
+  12.10. ilta.
+- Natiivi lukee aloitusnäkymän kaupungit kentästä `aloitus`/`lahtokohde` (`PeliOhjain.Lahtokaupungit`); `aloitus` ohjaa myös
+  Mannerlentoa ja aarteiden jakoa, joten sen muuttaminen on pelimuutos. Lähde: luovutus 11.10. aamu.
+- Kohdekaupunkipallot kehittäjätilassa (omistaja 17.10. 22.52): ilman huntua kaikki täysinä, hunnulla muut maat himmeinä;
+  hälytinrivi "kohdekaupunkipallot N kaupunkia, ruudulla täysinä A, himmeinä B" ja vakiosarjan skenaario 16 valvovat
+  katoamista. Lähde: luovutus 19.10. päivä (kohdekaupungit-204, juna 204).
+- Pelin maakoodi voi poiketa ISO:sta (Etelä-Sudan SDS, ISO SSD); huomioi Wikidata-hauissa. Lähde: luovutus 15.10. ilta5.
+
+**Havainnekuvat.** Ei omia oppeja 10.–19.10.
 
 ## 8. TÄYDENTÄÄ: Pelikoodari ja Natiivi-UI
 

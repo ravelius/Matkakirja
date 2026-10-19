@@ -130,8 +130,58 @@ köydet, kameran korkeus (`H_m`), Pulun kutsun kytkentä. Täydentää Linssisep
 
 ## 8. TÄYDENTÄÄ: Karttaseppä (kaupunki)
 
-*(kaupungin 3D ja mittaus, kohdelista ja reitti, Q-id:t, sijainnit, `H_m`, avausnäkymän kohde, kartan ja kohdelistan nimet. Täydentää
-Karttaseppä.)*
+*(Karttaseppä 19.10.2026, PT:n toimeksianto (omistaja 19.10. klo 15.35, Raamattu 8.1): rivit on siirretty luovutuksista ja
+muistista; uusia sääntöjä ei ole. Luovutukset `docs/raportit/viesti-karttaseppa-luovutus-<pvm>.md` ovat haarassa
+`karttaseppa-tyo-20260922`.)*
+
+**Kaupungin 3D ja mittaus.**
+
+- Google 3D -mittari luokittelee keskustan pisteet (SALLITTU / RAJA / POIS, säde `r_m`), ja samassa ajossa ajetaan
+  kalibrointikaupungit (Ljubljana, Praha). Pelkkä mittari ei riitä: kaupunki testataan oppaan omista kulmista (avaus 5000 m /
+  25° pystystä, kierto 220–2200 m / 25–78°, vapaa lento ≤ 12 km `r_m`-alueella). Juna 198: Varsova oli mittarilla SALLITTU,
+  mutta vapaassa lennossa sumea → POIS. Lähde: luovutus 16.10. ilta2 (PT 16.10.); `paakaupungit-3d-20261016/TULOS.md`.
+- Kaupunkipaketin maasto: tarkista ennen ajoa, onko Mapterhornissa z13–14 (HEAD `tiles.mapterhorn.com/14/x/y.webp`); ilman
+  niitä DSM-polku tai `kaupunkipaketti-z12.sh` (Bukarest, Reykjavik). Lähde: luovutus 13.10. aamupäivä.
+- Vesimaski: OSM-laguunisuhteesta voi puuttua keskustasaari (Venetsia oli vettä) → `saaret-reiiksi.py`; auditointi
+  "rakennukset vesimaskissa ≤ 0,05 %" kaikista kaupungeista. Lähde: luovutus 13.10. aamupäivä.
+- Karttaa tarkistettaessa katsotaan värikarttaa (`varikartta`), koska peli näyttää sen; `polku`-kuva voi olla vanha.
+  Lähde: luovutus 11.10. ilta2.
+
+**Kohdelista, sijainnit ja Q-id:t.**
+
+- Kohdelista toimitetaan `kohteet.json` + `KOHTEET.md` (8/kaupunki); katse_suunnat ovat arvioita, ja niitä korjataan
+  pyydettäessä. Lähde: luovutus 16.10. ilta (`paakaupungit-3d-20261016/`).
+- Sijainnit tarkistettiin Wikidatan koordinaatteja vastaan: Kööpenhaminassa 8/8 kohdetta, ero 9–94 m eli alle kohteen koon
+  (`koko_m`); Tivolin 94 m on versiorivillä kirjattu tarkoituksellinen siirto järvelle (v7). Lähde:
+  `_tyo/karttaseppa/koopenhamina-kippi-karttatarkistus-20261019.md`.
+- Haut: Wikipedian ja Wikidatan `/w/` (myös `api.php`) ja `query.wikidata.org/sparql` ovat robots.txt:ssä kiellettyjä;
+  `/wiki/`-artikkelisivut ovat sallittuja (koordinaatit sivun `wgCoordinates`-kentästä). Lähde: luovutukset 11.10. ilta ja
+  12.10. ilta; Wikidatan robots.txt 19.10.
+
+**Pysähdysten kulmat (`katse_suunta`, `katse_kaari`, `silma_m`, `H_m`).**
+
+- Silmä 0,5–0,7 × H maasta (`liikesaannot.md`). Prahan linnan ja Malá Stranan muutokset hylättiin, koska liu'ut pitenivät
+  yli 15 s; pysäkkitarkistus: `_tyo/karttaseppa/pysakit-tarkistus-20261014.md` (24 pysäkkiä). Lähde: luovutus 15.10.
+- Katse valitaan niin, että kaupungin tunnistettava linja näkyy (Greenwich 157°, silmä 45–60 m: Queen's House, Thames ja
+  Canary Wharf linjassa; lento 22 → 44 s hyväksyttiin). Lähde: luovutus 15.10.; `greenwich-selvitys-20261014.md`.
+- Katse ei saa näyttää suojattua rakennusta (Opéra Bastille, arkkitehti elossa) → kamera toiselle puolelle. Lähde: luovutus
+  11.10. ilta.
+- Katseen suunta voi laukaista rajauskorjauksen (Josefov 340° → −14° korjaus → 320°). Kameramuutokset ajetaan aina
+  Linssisepän testeillä ennen lähettämistä. Lähde: luovutukset 14.10. ilta ja 15.10.
+
+**Kartan kamera ja lennot (natiivi).** Pääkartan kamera kulkee Kamerajohtajan kautta (`PalloLiikkeet.cs`: PalloTila,
+PalloAjo; `PalloTarkastus.cs`: kartan omat rajat KarttaRajat; lennot `PalloRata.cs`), ja kameraan kirjoittaa vain
+`KameraKirjoittaja.Aseta` (19.10.: myös `PalloKierto.Aseta`, ruutuaikavahti "kartta"). Lähde: luovutus 19.10. päivä;
+`_tyo/karttaseppa/kamerakirjoittaja-kartta-204/TULOS.md`.
+
+**Simu- ja todistusajot.**
+
+- `uusi-peli` ei aja aloituslentoa: lentotodisteisiin `komento nappula lenna …` / `komento nappula aloitus …`
+  (`_tyo/karttaseppa/lentojen-kamera-204/sk-lennot.txt`). Tarkista komennon polku ennen kattavuusväitettä. Lähde: luovutus
+  19.10. päivä (Velat ja opetukset 1).
+- Simu yksin: kuormassa (3 simua) simu jäätyi 31 s ja pysäkki ohittui. Lähde: luovutus 18.10. aamu.
+- `todistusajo.sh`:n OK ei tarkista kuvan sisältöä → kuva-arkki katsotaan aina ennen lähetystä. `palaute`-rivi lukee vain
+  askeleen jälkeiset lokirivit; jo tulleelle riville `oleta`. Lähde: luovutukset 17.10. aamupäivä ja 19.10. päivä.
 
 ## 9. TÄYDENTÄÄ: Äänittäjä (kertoja ja musiikki)
 
