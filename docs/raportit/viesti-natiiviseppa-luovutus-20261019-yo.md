@@ -1,4 +1,4 @@
-# Natiivisepän luovutus 19.10.2026 klo 21.4x (juna 206 AVATTU UUDELLEEN; Postivahti: KOVA RAJA)
+# Natiivisepän luovutus 19.10.2026 klo 21.4x (juna 206 AVATTU, ei takarajaa: omistaja 21.38; Postivahti: KOVA RAJA)
 
 Lue ensin: CLAUDE.md, Raamatun Ydinajatus kohta 2 ja tämä kokonaan. Pysyvät säännöt: proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt.
 Jonot (lopusta alkuun = uusin tila): natiiviseppa-skriptit/juna206/jono-206.txt (+ juna205/, juna204/). Id:t AINA osoitekirjasta (PT local_8d8ebf72-…, JU local_24e63224-…).
@@ -13,10 +13,12 @@ Jonot (lopusta alkuun = uusin tila): natiiviseppa-skriptit/juna206/jono-206.txt 
 ## TILA
 - **BUILD 204** = proto master bad614bec, TF testaajilla. **BUILD 205** = daf1fec08, TF sisäinen valmis 20.06 (iOS 39289399060, Mac 39289606231).
 - **BUILD 206 v1** = 766aa47fa (runko 36615863b, käännös 1fa72d579) JÄI proto-masteriin ja peileihin; TF peruttu: OMISTAJAN PÄÄTÖS 21.32 "Pysäytä juna ja jatka työstämistä".
-- **Juna 206 avattu**: runko natiiviseppa/juna-206 = 49cabfeb2 (wt/proto-natiiviseppa-ehdokas) = 36615863b + master 766aa47fa + PK juoksupeli-207 7ace29fea
-  (yläpalkki pois, Puyin hiha hahmot-v2, puomilta irti, `ui juoksupeli irti`; ämpäri hahmot-v2 ok). EI VIELÄ TESTATTU.
-- **Tulossa ~22.30 (PT:n OK:lla)**: PK kamera + sisäpiha samaan haaraan pelikoodari/juoksupeli-207, VS lattia erikseen. Sitten testit206.sh → sha PT:lle + JU:lle
-  (runkosimu) → LUKITSE ~23.00 VAIN PT:ltä → TF lähellä puoltayötä. Kone vain 206:lle (muut käännökset/simut pidossa).
+- **Juna 206 avattu**: runko natiiviseppa/juna-206 = cd7c1d5cb (wt/proto-natiiviseppa-ehdokas) = 36615863b + master 766aa47fa + PK juoksupeli-207 7ace29fea
+  (yläpalkki pois, Puyin hiha hahmot-v2, puomilta irti, `ui juoksupeli irti`; ämpäri hahmot-v2 ok) + PK da42ac7da (kamera ulkona ylempää/kauempaa). EI VIELÄ TESTATTU → aja testit206.sh ENSIN.
+- **OMISTAJAN PÄÄTÖS 21.38** (PT): "Viivytetään ennemmin junaa. Sanon sitten kun julkaistaan" → 206:lla EI takarajaa; LUKITSE vasta kun KK välittää
+  "OMISTAJA PYYSI JULKAISUA" (ja PT lähettää LUKITSE 206). Runko valmiustilassa: jokainen erä sisään (PT:n OK) + testit + simu, kuvaparit KK:lle. Muut käännökset sallittu.
+- **Tulossa (PT:n OK:lla)**: PK sisäpiha samaan haaraan pelikoodari/juoksupeli-207 (PK haluaa simun 206-rungosta iPhone + iPad ~10 min, JU:n vuorolla),
+  VS lattia linssiseppa2/juoksu-lattia-206 f152ad7d1 (merge-tree puhdas; merge vasta PT:n OK:lla). Jokaisen jälkeen testit206.sh → sha PT:lle + JU:lle.
 - **Lukitus valmiina**: juna206/lukitse206-a.sh <runko> (tarkistaa natiiviseppa/juna-206-refin) → -b.sh <runko> "<käännös>" "<muisti>" "<testit>" (juna/b34 päivittyy,
   master 766aa47fa:n päälle TOINEN BUILD 206 -merge; build206-viesti.txt otsikko jo päivitetty). Ennen -b: build206-viestin OMISTAJA-rivi = PT:n uuden LUKITSE 206:n
   pyyntö sanatarkasti (nyt 20.55-teksti; lisää 21.32). mac206.sh <runko> JU:n TF NYT:llä. Asemataulu talo/eteneminen: nyt "Lastaus" (v68) → lukituksessa matka 1 → 2.
