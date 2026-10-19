@@ -1,0 +1,54 @@
+{
+  "createdAt": "2026-10-19T04:19:02.887590+00:00",
+  "callsIssued": 1,
+  "imagesProduced": 1,
+  "technicalQaPassed": false,
+  "assetReadyForGame": false,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 1004,
+      "sha256": "97927b27bf06f3263e197f1111c74bac614c90853b8dec055ac703b2606093a7"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 1985,
+      "sha256": "edd45fb1450efaac95cc5c03c63a0d8b4a4b7acc0ff54ea3e5a0a6796db8cd79"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 7191,
+      "sha256": "5b30c108a5ccc2b24d122e3d3896dc183a2458cc690b2151e2b6c8254ef384f7"
+    },
+    {
+      "path": "native-inspection.json",
+      "bytes": 4751,
+      "sha256": "7c7b7c34f9ca608f1b745d62e2eab28fe2b52ba01406ec6fbf16fb876a6b5385"
+    },
+    {
+      "path": "preflight.json",
+      "bytes": 1059,
+      "sha256": "e81e0b50bd812e3984ff9be345f28ced4297954e41978ed1d6187679db5b29b9"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 3212,
+      "sha256": "9d852fe667bbac33bc17e10d1373ad5a090284d7687ed2cd4dd05d4d50d0da39"
+    },
+    {
+      "path": "sources/natiivi-ui-codex-iss-ympyraikkuna-20261019.md",
+      "bytes": 2671,
+      "sha256": "3042dab89569d664dfbc5b1ad7d3e4f10803ebbd6438b6919ec9639813cfb72c"
+    },
+    {
+      "path": "tool-arguments.json",
+      "bytes": 3450,
+      "sha256": "ea35a9a545bd1bd73a00c4a5c6ed95f3bc99eb4c0804049a83a4611b0bbca6b9"
+    },
+    {
+      "path": "ympyraikkuna.png",
+      "bytes": 1926574,
+      "sha256": "ab318c8beeb2c4620632c2f9d02dd1aa0430f793409cc5c0cff05aea61a3e6c8"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-19T04:14:04.581948+00:00",
+  "sourceReadInFull": true,
+  "referencePersonallyViewed": true,
+  "referenceContains": "Dark metal rim, round bolts, gray rectangular clamps and orange strap; Earth/star labels/UI/globe/astronaut excluded",
+  "deliveryHistoryChecked": true,
+  "existingDeliveredImageFound": false,
+  "requestedSize": [
+    1536,
+    2304
+  ],
+  "outerDiameterTargetPx": 1658.88,
+  "topMarginTargetPx": [
+    69.12,
+    92.16
+  ],
+  "circleCenterTargetPx": [
+    768,
+    910
+  ],
+  "innerDiameterPromptTargetPx": 1360,
+  "layoutApproximation": "Diameter108% of width plus3-4% top margin gives full-width clear wall below the circle of approximately24-25% of total height; requested lower30% is treated as quiet zone with the lower rim tip entering its upper part. Exact circle/top geometry prioritized; no silent pixel rescaling planned.",
+  "method": "built-in image_gen, exactly one entirely new native generation",
+  "noAutomaticRetry": true,
+  "noPartialRetouchOrAlphaRepair": true,
+  "gameImplementationAuthorized": false
+}

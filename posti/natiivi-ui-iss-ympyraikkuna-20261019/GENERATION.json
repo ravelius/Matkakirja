@@ -1,0 +1,22 @@
+{
+  "sourcePath": "posti/natiivi-ui-codex-iss-ympyraikkuna-20261019.md",
+  "sourceCommit": "68254cb349f55355be2839ae5814c8671dd31cf3",
+  "sourceBlob": "f3460c83ae19d39d40efb3da7e3d4a03572b3c2f",
+  "method": "built-in image_gen",
+  "attempt": 1,
+  "maximumAttempts": 1,
+  "callIssuedAt": "2026-10-19T04:14:40.565155+00:00",
+  "completedAt": "2026-10-19T04:15:55.261474+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-afe25baa-2135-452e-a40c-38dcd62ba2da.png",
+  "nativeSHA256": "ab318c8beeb2c4620632c2f9d02dd1aa0430f793409cc5c0cff05aea61a3e6c8",
+  "nativeUnmodified": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "referenceSHA256": "a22b828897122d9c26504282983f92d247943dd2575ac3609e6d617072dae89a",
+  "promptSHA256": "9d852fe667bbac33bc17e10d1373ad5a090284d7687ed2cd4dd05d4d50d0da39",
+  "technicalQaPassed": false,
+  "assetReadyForGame": false,
+  "noAutomaticRetry": true
+}
