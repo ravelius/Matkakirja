@@ -8709,7 +8709,7 @@
   },
   {
    "tunnus": "k-qui-nhon",
-   "nimi": "Qui Nhon",
+   "nimi": "Quy Nhon",
    "lat": 13.78,
    "lon": 109.18,
    "tyyppi": "kaupunki"
@@ -8807,7 +8807,7 @@
   },
   {
    "tunnus": "k-malacca",
-   "nimi": "Malacca",
+   "nimi": "Malakka",
    "lat": 2.2064,
    "lon": 102.2465,
    "tyyppi": "kaupunki"
@@ -9242,7 +9242,7 @@
   },
   {
    "tunnus": "k-dehra-dun",
-   "nimi": "Dehra Dun",
+   "nimi": "Dehradun",
    "lat": 30.3204,
    "lon": 78.05,
    "tyyppi": "kaupunki"
@@ -9627,7 +9627,7 @@
   },
   {
    "tunnus": "k-raurkela",
-   "nimi": "Raurkela",
+   "nimi": "Rourkela",
    "lat": 22.2304,
    "lon": 84.83,
    "tyyppi": "kaupunki"
@@ -9810,7 +9810,7 @@
   },
   {
    "tunnus": "k-el-mansura",
-   "nimi": "El Mansura",
+   "nimi": "Mansoura",
    "lat": 31.0504,
    "lon": 31.38,
    "tyyppi": "kaupunki"
@@ -10407,7 +10407,7 @@
   },
   {
    "tunnus": "k-tarabulus",
-   "nimi": "Tarabulus",
+   "nimi": "Tripoli (Libanon)",
    "lat": 34.422,
    "lon": 35.868,
    "tyyppi": "kaupunki"
@@ -10598,14 +10598,14 @@
   },
   {
    "tunnus": "k-gaza-city",
-   "nimi": "Gaza City",
+   "nimi": "Gaza",
    "lat": 31.53,
    "lon": 34.445,
    "tyyppi": "kaupunki"
   },
   {
    "tunnus": "k-kota-baharu",
-   "nimi": "Kota Baharu",
+   "nimi": "Kota Bharu",
    "lat": 6.12,
    "lon": 102.23,
    "tyyppi": "kaupunki"
@@ -10633,7 +10633,7 @@
   },
   {
    "tunnus": "k-davangere",
-   "nimi": "Davangere",
+   "nimi": "Davanagere",
    "lat": 14.47,
    "lon": 75.92,
    "tyyppi": "kaupunki"

@@ -168,6 +168,42 @@
   "k-bandjarmasin": {
    "vanha": "Bandjarmasin",
    "uusi": "Banjarmasin"
+  },
+  "k-qui-nhon": {
+   "vanha": "Qui Nhon",
+   "uusi": "Quy Nhon"
+  },
+  "k-malacca": {
+   "vanha": "Malacca",
+   "uusi": "Malakka"
+  },
+  "k-dehra-dun": {
+   "vanha": "Dehra Dun",
+   "uusi": "Dehradun"
+  },
+  "k-raurkela": {
+   "vanha": "Raurkela",
+   "uusi": "Rourkela"
+  },
+  "k-el-mansura": {
+   "vanha": "El Mansura",
+   "uusi": "Mansoura"
+  },
+  "k-tarabulus": {
+   "vanha": "Tarabulus",
+   "uusi": "Tripoli (Libanon)"
+  },
+  "k-gaza-city": {
+   "vanha": "Gaza City",
+   "uusi": "Gaza"
+  },
+  "k-kota-baharu": {
+   "vanha": "Kota Baharu",
+   "uusi": "Kota Bharu"
+  },
+  "k-davangere": {
+   "vanha": "Davangere",
+   "uusi": "Davanagere"
   }
  }
 }
