@@ -31,6 +31,9 @@ ajo `ajo-kehyskiilto-204.zsh <app>`: ennen/jälkeen/vahva samalla kulmalla + lä
   **17.5x kierros 1 (app d025cf2ed, lokit/todistus-kehyskiilto-204-a-20261019-1745):** SK-C-6 osui oikein (tauko toimii). Kiilto EI näkynyt:
   karheus 0,32 = kapea heijastus vain profiilin kaarien viivoihin, litteä sivu vain tummui (141 → 132 → 128). **v2 1e1efa157:** karheus 0,5,
   haja 0,55, täytevalo _Tayte 1 (Louvren malli); nlkiilto-komennon 7. parametri = täyte. JU:lta uusi käännös pyydetty samaan app-polkuun.
+  **18.56 v2 ajettu (app 7679de6d9, iPhone + iPad):** kiilto näkyy (harja + sisähelmi), ei peiliä; kuvat + HAVAINNOT `_valmiit/rijks-kehyskiilto-204/`.
+  Pari PT:lle lähetetty, odottaa kuittausta ("jälkeen" oletuksena vai "vahva" 0.5 1.4 0.55 0.5 1 2) → merge-pyyntö NS:lle 1e1efa157.
+  Siivous 18.5x: grafiikka-kehys-204-app ja kehysvarjo-204-app poistettu (junassa).
 **OLAVINLINNA v49b (piste 86):** merkit.json v44 + v44-nyky: reitti:pelaaja-86 → (−37,214; 13,4; −9,21) (seinävara 0,40, tikkaat 0,85, ovi 1,62 m;
 ennen-v49b/ tallessa). Vienti `vie_v49b.zsh` käynnissä 16.23 (worktree `wt/linnanrakentaja-linna-v45k` palautettu), loki `_tyo/linnanrakentaja/vie-v49b.log`
 → **VIETY 16.5x: pala 1499 a36f4199985ef096, nyky 9c0897bec9044c1f** (v45k 1c69c4c43 / c0abe3769); Projektisepälle (kiinnitys + botti) ja PT:lle ilmoitettu.
