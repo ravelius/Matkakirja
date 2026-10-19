@@ -23,7 +23,14 @@ Kehysmateriaalien sävyerä (vain arvot: kulta-aaltolista, eebenpuu) + Kunniagal
 Yksi käännös, yksi simuvuoro JU:lta; kuvat ennen/jälkeen PT:lle.
 **TILA 16.2x:** TEHTY, odottaa PT:n kuittausta. Proto `linnanrakentaja/kehyssavy-204` **429cb6099** (KultaUusi 150/134/104 → 215/196/150,
 QA "museo nlkulta r g b"; musta ennallaan, PT 15.1x samaa mieltä), app 12a62794b, kulta ruudulla 61/35/11 → 144/97/43.
-Kuvat + HAVAINNOT `_valmiit/rijks-kehyssavy-204/`. PT:ltä kysytty: ok junaan 204 vai kiilto vielä (kulta mattaa okraa). Hyväksynnän jälkeen merge-pyyntö NS:lle.
+Kuvat + HAVAINNOT `_valmiit/rijks-kehyssavy-204/`. **PT kuittasi 16.3x junaan 204, merge-pyyntö NS:lle lähetetty.**
+**KIILTO (PT 16.3x, oma erä):** proto `linnanrakentaja/kehyskiilto-204` **ea0fe613a** (⊃ 429cb6099): Rijksin kulta haja 0,5, kiilto 1,0, karheus 0,32,
+ympäristö 0,45 kullansävyisenä; QA "museo nlkiilto haja kiilto karheus ymp [kultaymp]". JU:lta käännös pyydetty (app `_tyo/linnanrakentaja/kehyskiilto-204-app`),
+ajo `ajo-kehyskiilto-204.zsh <app>`: ennen/jälkeen/vahva samalla kulmalla + lähikuvat; skenaariossa "museo tauko" saapumisen jälkeen
+(SK-C-6 osui Juutalaismorsiameen, koska kertojan 34 s:n jälkeen kierros eteni). Valitse paras → pari PT:lle (3 riviä).
+**OLAVINLINNA v49b (piste 86):** merkit.json v44 + v44-nyky: reitti:pelaaja-86 → (−37,214; 13,4; −9,21) (seinävara 0,40, tikkaat 0,85, ovi 1,62 m;
+ennen-v49b/ tallessa). Vienti `vie_v49b.zsh` käynnissä 16.23 (worktree `wt/linnanrakentaja-linna-v45k` palautettu), loki `_tyo/linnanrakentaja/vie-v49b.log`
+→ TULOS-tunnukset Projektisepälle (botti) + rivi PT:lle.
 
 ## Avoimet (seuraava sessio)
 1. **Kehysmateriaalien sävy (Kunniagalleria):** kultainen aaltolista näkyy punaruskeana, musta eebenpuu keskiruskeana (HAVAINNOT.md).
