@@ -84,7 +84,16 @@ vastaanotossa (älä toimita KTX2:ta).
    peliä (omistaja 18.10. klo 11.34). Lähde: loki "PAATOKSET 18.10.2026 klo 11.34"; muisti pt-kuvan-tarkistus-taysikokoisena.
 4. Viimeistely (LOD, ASTC, törmäysmuodot) ja vientipaketti `_valmiit/<aihe>-vN-vienti-<pvm>/` → Julkaisija `vie-paketti.sh`.
 
-## 7. Ensimmäinen ajo 19.10.2026 (juoksupeli)
+## 7. Valmiin vastaanoton tarkistuslista
+
+- [ ] `node tools/codex-3d-tarkistus.mjs <kansio>` → 0 ENNEN kuin toimitus kytketään peliin (VIRHE-rivit PT:lle → Codex).
+- [ ] Manifesti (SHA256SUMS tai MANIFEST.json) kattaa jokaisen glb:n ja kuvan; LAHTEET.md tai Codexin lähdeinventaario mukana.
+- [ ] Silmämääräisesti täysikokoisena: suunta +Z eteen, animaatioiden silmukat, materiaalit Unityssä, hahmon koko muihin nähden.
+- [ ] Havainnekuva ja pelikuva rinnakkain täysikokoisina (tavoitteen muoto).
+- [ ] Viimeistely (LOD, ASTC, törmäysmuodot) ja vientipaketti `_valmiit/<aihe>-vN-vienti-<pvm>/`; `tyokalut/ennen-junaa.sh` OK ennen junaa.
+- [ ] Opit kirjattu tämän pohjan opit-osioon (luku 8).
+
+## 8. Opit ja retrospektiivi (ensimmäinen ajo 19.10.2026, juoksupeli)
 
 - **hahmot v1** (puyi, puyi-perus, vartija): kaikki läpi; 40 000 kolmiota, 1 piirto, 113–114 luuta, korkeudet 1,35 / 1,35 / 1,75 m.
   HUOM kaikissa kolmessa: juurisolmun skaala soveltamatta (1,37–1,79).
