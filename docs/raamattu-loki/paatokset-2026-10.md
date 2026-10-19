@@ -1826,3 +1826,16 @@ kokeile sissos muodossa "Sis-sos!" hämmästyneen iloisesti"; uudet alut "kaikki
 Horatius-lukituksen): ElevenLabsin kirjaston lapsiääni 08 Kavya – Cute & Engaging (bA58y3FqVI6b6gTNh0oT), tagi [shouting] [panicked], speed 1,2 natiivisti, fi pakotettu, ei jälkikäsittelyä. Huutojen
 alut: Aa!, Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori! (iloinen kiljahdus) ja Sis-sos! (hämmästyneen iloinen). Huudoissa koominen käänne: alku huoleton tai ylpeä, lause kauhistunut.
 Äänittäjä 17 + 2 ottoa (≤ 1 100 mrk, KK:n lupa).
+
+## PAATOKSET 19.10.2026 klo 11.27–11.40: KIPPIEN NAPIT JA KÖÖPENHAMINAN KUVAT (omistaja KK:n kautta, sanatarkasti) (19.10.2026 klo 11.41)
+
+Klo 11.27: "sivutehtävä: lisää kööpenhaminan kippiin kuvia kaikista esittelykierroksen kohteista (cc + havainne). kipistä puuttuu selkeä nappi millä itse voi lentää (pausea painamalla pitää tulla
+"lennä itse" nappi näkyviin) ja lisää osx appiin lento nuolinäppäimillä sekä a,s,d,w näppäimien yhdistelmällä (korvaa vasemman ja oikean joystikin). mitä nappeja tulee nyt näkyviin kun pause
+painetaan? sen ympärille voisi periaatteessa aueta aina kaikki toiminnot." Klo 11.40: "kipin napeissa tarkoitin ympärille jutulla vain sitä että napit tulevat sen oikealla ja vasemmalla puolelle
+yhteen riviin ja otetaan kaikki muut napit pois paitsi yläreunan hampurilainen. kysy voisi olla yksi nappi mitä painamalla tulisi eri syöttövaihtoehdot sekä "<" nappi paluuta varten vasemmalle
+reunalle nappiriviä. kysy nappi toisi oikealle reunalle myös neljä kysymystä kohteesta näkyville jotka menisivät suoraan pululle vastattavaksi. kysymyksiä olisi skrollattavissa kaikkiaan 8kpl, mutta
+kerrallaan näkyisi aina neljä siitä listasta (ei tarvitse mitään laatikkoa ympärille, riittää että yllä ja alla olevat kysymykset näkyvät reunastaa vähän ja feidautuvat läpinäkyviksi. vapaassa
+lennossa pitää näkyä pelkät ohjaimet sekä keskellä vain kaksi nappia: "<" sekä "kysy". "<" nappi kysyisi kortilla haluaako pelaaja palata takaisin esittelykierrokselle vai lopettaa koko linssin. Kysy
+nappi toisi näkyviin tähtäimen ruudun keskelle ja alariviin napin "mikä tämä on" sekä normaalit vapaan kysymyksen syöttönapit sekä vasempaan reunaan "<" paluu napin takaisin vapaaseen lentoon. päivitä
+nappilogiikka kaikkiin kippeihin" → Natiivi-UI (napit, kaikki kipit), Sisältökirjuri (8 kysymystä/kohde), Pelikoodari (Mac WASD = vasen tikku, nuolet = oikea), Linssiseppä + Codex (Kööpenhaminan 8
+kohteen CC-kuvat + 8 havainnekuvaa 7caf8ca1d). Simukuvat KK:lle ennen junaa.
