@@ -1,6 +1,6 @@
 # Asemataulu: ulkoasu, tietomuodot ja päivitys
 
-Siirretty 14.10.2026 Raamatun kohdasta TYÖTAPA JA SESSIOT (läpikäynti PR 1). Raamattuun jäivät
+Siirretty 14.10.2026 Raamatun kohdasta TYÖTAPA JA SESSIOT (nyt luku 7, ASEMATAULU). Raamattuun jäivät
 säännöt (oma kopio jokaisella tilillä, kirjoittajat, päivitysrytmi, VAATII TOIMIA); tämä dokumentti
 on toteutuksen kuvaus. Sanatarkka historia: docs/raamattu-loki/paatokset-2026-09.md, otsikot
 "KARSINTA 0.11 POSTIVAHTI JA ASEMATAULU 14.10.2026" ja "ASEMATAULU: …".

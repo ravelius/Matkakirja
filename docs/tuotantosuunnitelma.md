@@ -15,7 +15,7 @@ docs/tyolista-opukselle.md.)*
 
 Miten jäljellä olevat kohteet (ensin paketti O7: Afrikka, myöhemmin
 muut mantereet) tehdään mahdollisimman nopeasti ja taloudellisesti
-laadusta tinkimättä. Laatu voittaa vauhdin (Raamattu, Ydinajatus) —
+laadusta tinkimättä. Laatu voittaa vauhdin (Raamattu, luku 1) —
 tämä suunnitelma poistaa hukkaa, ei laatuportteja: raha ja aika
 säästetään työn ORGANISOINNISTA (parvi, jonot, erät, yksi
 generointiotto), ei tarkistuksista.

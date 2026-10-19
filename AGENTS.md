@@ -37,7 +37,7 @@ Samalla oppii maailmasta.
 | Tiedosto | Mitä siellä on |
 | --- | --- |
 | `CLAUDE.md` | sisääntulo, osoittaa muualle |
-| `js/tyohuone-raamattu.js` (**Raamattu**) | pelin idea ja kaikki oleelliset linjaukset yhdessä paketissa; viimeinen osio on täydellinen kartta muihin ohjedokumentteihin |
+| `js/tyohuone-raamattu.js` (**Raamattu**) | pelin idea ja kaikki oleelliset linjaukset yhdessä paketissa, 14 lukua; luku 13 on täydellinen kartta muihin ohjedokumentteihin |
 | `docs/roolitus.md` | työnjako kolmen session kesken, viestintä, julkaisusäännöt |
 | `CONTRIBUTING.md` | kysymysten, lautojen ja linssien lisääminen, tekniset periaatteet |
 | `docs/tarina.md`, `docs/isoisan-raamattu.md` | tarinan kaanon, sitova kaikessa sisällössä |
@@ -179,11 +179,11 @@ Lisäksi:
   odottamaan omistajan vastausta (9.10.2026: varustekuvatilaus pysähtyi
   yöksi). Kuvatyyli: käyttöliittymän kuvakkeet (matkalaukun varustekuvat
   `assets/varusteet/`, kartan nähtävyysminiatyyrit) nykyisen akvarellisarjan
-  tyyliin, kaikki muut havainnekuvat fotorealistisina (Raamattu, KUVAT —
+  tyyliin, kaikki muut havainnekuvat fotorealistisina (Raamattu, luku 4, KUVAT —
   TYYLI JA TUOTANTO). Havainnekuviin ei tule tekijänoikeudella suojattuja
   teoksia (veistokset, installaatiot, muistomerkit ja valaistukset, joiden
   tekijän kuolemasta on alle 70 vuotta); jätä sellainen kohde pois ja mainitse
-  se kuittauksessa (Raamattu, SUOJATUT TEOKSET HAVAINNEKUVISSA).
+  se kuittauksessa (Raamattu, luku 11, SUOJATUT TEOKSET).
 
 ## Git-käytännöt
 

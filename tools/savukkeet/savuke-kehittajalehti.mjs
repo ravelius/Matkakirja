@@ -87,20 +87,19 @@ const raamattu = await sivu.evaluate(async () => {
   ui.vaihdaTutkiSivu(1);
   await odota(400);
   const toinen = document.querySelector('#arrival-dialog .aihe-nimi')?.textContent ?? '';
-  // Hyväksytyn osion (Ydinajatus) otsikossa vihreä valmis-chippi.
+  // Hyväksytyn luvun (1. Pelin visio) otsikossa vihreä valmis-chippi.
   const tagi = document.querySelector('#arrival-dialog .aihe-nimi .kehittaja-tagi.valmis')?.textContent ?? '';
   return {
     auki: Boolean(dialogi?.open),
     otsikko,
     sivuja: ui.tutkiSivuja(),
-    // kansi-indeksi 0 + johdanto + osiot + osioiden generoidut
-    // taulusivut (Aarteet, Tutki kätkö -pelit).
+    // kansi-indeksi 0 + johdanto + luvut + luvun 2 (Pelisuunnittelu)
+    // kaksi generoitua taulusivua (aarteet, tutki kätkö -pelit).
     odotus: m.RAAMATTU.osiot.length + 2
-      + m.RAAMATTU.osiot.filter((o) => o.otsikko.startsWith('Aarteet')
-        || o.otsikko.startsWith('Tutki kätkö')).length,
+      + 2 * m.RAAMATTU.osiot.filter((o) => /^\d+\. Pelisuunnittelu/.test(o.otsikko)).length,
     ekaOk: /Raamattu/.test(eka),
     sisaltoOk: runko.includes('Koko pelin idea yhdessä dokumentissa'),
-    toinenOk: /Ydinajatus/.test(toinen),
+    toinenOk: /Pelin visio/.test(toinen),
     tagiOk: tagi === 'valmis',
     lahetaNappi,
   };

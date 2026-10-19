@@ -3,7 +3,10 @@
  * voimassa oleva linjaus, päätöshistoria on sanatarkasti kansiossa
  * docs/raamattu-loki/. Nämä vartiot pitävät jaon koossa:
  *   1. jokainen Raamatun "Loki: docs/raamattu-loki/<tiedosto> #<otsikko>"
- *      -viite osoittaa olemassa olevaan tiedostoon ja otsikkoon;
+ *      -viite osoittaa olemassa olevaan tiedostoon ja otsikkoon, ja
+ *      jokainen docs/raamattu-loki/-polku olemassa olevaan tiedostoon
+ *      (jäsennys 14 lukuun 19.10.2026: "Loki:"-listat poistuivat
+ *      Raamatusta, historia on vain lokissa; määrävaatimusta ei ole);
  *   2. lokitiedostojen otsikot ovat ## -tasolla ja koodin viittaamat
  *      PAATOKSET-sarjat löytyvät lokista (viittaukset eivät katkea);
  *   3. tools/raamattu-kirjaa.mjs kirjoittaa kohdan sovitussa muodossa
@@ -45,7 +48,14 @@ test('jokainen Raamatun lokiviite osoittaa olemassa olevaan tiedostoon ja otsikk
       }
     }
   }
-  assert.ok(viitteita >= 300, `lokiviitteitä vain ${viitteita} — jako näyttää puretulta`);
+  // Jäsennys 19.10.2026: määrää ei vaadita, mutta jokainen polku on elossa.
+  const kaikki = RAAMATTU.osiot.flatMap((o) => o.kohdat).join('\n') + RAAMATTU.johdanto;
+  const polut = [...kaikki.matchAll(/docs\/raamattu-loki\/([\w.-]+\.md)/g)].map((m) => m[1]);
+  assert.ok(kaikki.includes('docs/raamattu-loki/'), 'Raamattu ei viittaa päätöslokiin');
+  for (const p of new Set(polut)) {
+    assert.ok(existsSync(new URL(p, LOKIKANSIO)), `Raamattu viittaa lokiin ${p}, jota ei ole`);
+  }
+  assert.ok(viitteita >= 0);
 });
 
 test('koodin viittaamat KARTTAUUDISTUKSEN PAATOKSET -sarjat löytyvät lokista', () => {

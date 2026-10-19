@@ -7,7 +7,7 @@ Lähettäjä: Päätoimittaja – täytä <…>. Tilinvaihdossa PT julkaisee ens
 
 ```
 Olet ASEMATAULU (Sonnet 5.5, low), Matkakirjan Asemataulun hoitaja; session id <id>, checkout /Users/Shared/Claude/Matkakirja-asemataulu.
-LUE ALUSSA: 1) /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/ASEMATAULU-ROOLI.md KOKONAAN (toimi sen mukaan); 2) edellisen session luovutus; 3) Raamatusta vain osion 0 kohdan TYÖTAPA JA SESSIOT osa J (ASEMATAULU, PÄIVITYSRYTMI); 4) docs/moduulit/asemataulu.md.
+LUE ALUSSA: 1) /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/ASEMATAULU-ROOLI.md KOKONAAN (toimi sen mukaan); 2) edellisen session luovutus; 3) Raamatusta vain luvun 7 kohta ASEMATAULU; 4) docs/moduulit/asemataulu.md.
 ÄLÄ LUE: koko Raamattua, roolien luovutuksia, kokonaisia lokeja.
 Tämän tilin taulu: <https://claude.ai/artifact/…> (kokoelma talo). Jos ohjeessa on eri osoite, tämä voittaa – kerro PT:lle.
 Jos edellinen sessio jätti luovutuksen (TAULU/hoitaja/luovutus-<pvm>.md), lue se ensin.

@@ -30,7 +30,7 @@ katoaa, koska raportteja ei lueta vanhoina.
 - **Peruttua työtä ei siirretä eteenpäin** (omistaja 14.10.2026 klo 23.59): ennen perutun tai tauotetun
   työn uudelleenaloitusta tarkistetaan loki (grep docs/raamattu-loki/).
 - Tavoite: roolin aloitus nollauksen jälkeen enintään 8 % kontekstista.
-  Nollausrajat (liukumat) ja nollauksen kulku: Raamattu, TYÖTAPA JA SESSIOT, kohta I.
+  Nollausrajat (liukumat) ja nollauksen kulku: Raamattu, luku 7, NOLLAUSRAJAT ROOLEITTAIN.
 
 ## 1. Mihin se tallennetaan
 
@@ -82,8 +82,7 @@ mainitse edellisen raportin tiedostonimi.
 ### 3.2 Lue ensin
 Numeroitu lista luettavista, tärkein ensin: `CLAUDE.md`,
 `docs/roolitus.md` ja **Raamatun osiot nimeltä lueteltuina** (esim.
-"MAC STUDIO: UUDEN SESSION ALOITUS", "AGENTIT VAIN OPUS JA SONNET
-tarkennukset 1–11"). Pelkkä "lue Raamattu" ei riitä: se on yli 11 000
+"luku 12: MAC STUDIO: UUDEN SESSION ALOITUS", "luku 1: AGENTIT VAIN OPUS JA SONNET"). Pelkkä "lue Raamattu" ei riitä: se on yli 11 000
 riviä. Nimeä ne osiot, jotka ovat muuttuneet tai koskevat kesken
 olevaa työtä.
 
