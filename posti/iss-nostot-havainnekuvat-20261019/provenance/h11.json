@@ -1,0 +1,45 @@
+{
+  "taskNumber": 451,
+  "code": "h11",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:51:56.795799+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: zoomed oblique ocean with near-level limb y~0.19, small Ireland coast far upper-left, young thin trails crossing broad older veils below; black upper fifth. Channel Islands original gives wispy wind-spread aged trail texture vs razor-thin new trails; ISS009 original shows faint offset dark shadow on lower cloud deck, no hard black line.",
+  "promptSHA256": "1417aa028d8657f52cf916c22caf54411989ccf328b42ee767b8b20f9d4ae8ea",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h11/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:53:19.798506+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0354b74e-e601-4da8-91be-13fbc8321ea2.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h11.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h11.png",
+  "nativeSHA256": "270370d464d3b420cca9d72092de3ed7a1902abb4d19b4706a28b68f3f17a38e",
+  "deliverySHA256": "6725aecb242bc30e694314045875eef4d577b82be3be09aa965fd75e0b8e56fa",
+  "nativeBytes": 2665764,
+  "deliveryBytes": 2665989,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "34d38499e1022c76be997b2f1ec7f85ee045c77b677f0cc6fb0a641463fb19b8",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "contrail-and-shadow-reference-with-pattern-and-camera-caveats",
+    "photoRealism": "Young narrow trail and older spreading feathered cirrus distinct, low cloud deck and soft darker offset traces visible; older filaments somewhat regular/repetitive.",
+    "cameraMatch": "High limb, ocean and far-left land retained broadly; exact camera/FOV not registered and principal route arrangement changed.",
+    "takenFromRealReferences": "Thin fresh trail, broad wind-sheared fibrous veil, faint displaced shadows below high ice clouds.",
+    "invented": "Aircraft route arrangement, trail ages and altitudes, Sun vector, shadow separation and weather layout are interpreted; shadow physics/height not quantitatively validated.",
+    "excludedOverlays": "No visible frame, interface, map labels, timestamps or source captions.",
+    "metadataLabel": "havainnekuva"
+  }
+}
