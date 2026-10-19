@@ -1979,3 +1979,8 @@ IPA, 4 Applelle, 5 TF:ssä). NS kirjoittaa 1 ja 2, Julkaisija 3–5.
 Toteutus: YKSI spesifikaatio docs/moduulit/asemataulu.md (dokumentit ja kirjoittajat, junarivit, valot, roolikortit, päivitysrytmi, käyttöönotto uudella tilillä); kaikki tiedostot vain repossa
 tools/asemataulu/ (HTML, hoitaja, ohje), scratchpadin kopiot syntyvät reposta; yksi komento rakentaa/päivittää taulun millä tahansa tilillä; tarkistin valvoo sääntöjä ennen jokaista vientiä ja
 tilinvaihto-valmis.mjs ajaa sen. Raamattu 7.39 viittaa speksiin. Tekijä Projektiseppä (PT 19.5x).
+
+## ASEMATAULU TARKENNUS: LUKITUN JUNAN RIVI (omistaja 19.10. 19.48) (19.10.2026 klo 19.54)
+
+Korjaa edellisen kirjauksen 19.48-kohdan. Omistaja 19.10.2026 klo 19.48 (sanatarkasti): "junassa 204 on sinne kuulumattomia kohtia".
+Sääntö: junarivillä vain se, mikä on juuri siinä junassa. Lukitulla junalla vain lukitusversion sisältö, ei Työn alla -kohtia. Seuraavan junan asiat menevät seuraavan junan riville. Ei-pelin asiat (Raamattu, taulun ohje, työkalut) eivät kuulu junariveille ollenkaan. Sama sääntö docs/moduulit/asemataulu.md:n speksiin ja tarkistimeen (Projektiseppä).
