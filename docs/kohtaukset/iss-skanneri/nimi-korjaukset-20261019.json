@@ -72,6 +72,34 @@
   "v-uuden-seelannin-alpit": {
    "vanha": "Uuden-seelannin alpit",
    "uusi": "Uuden-Seelannin Alpit"
+  },
+  "k-santa-cruz": {
+   "vanha": "Santa Cruz",
+   "uusi": "Santa Cruz de la Sierra"
+  },
+  "k-sana": {
+   "vanha": "Sana",
+   "uusi": "Sanaa"
+  },
+  "k-shenyeng": {
+   "vanha": "Shenyeng",
+   "uusi": "Shenyang"
+  },
+  "k-riyadh": {
+   "vanha": "Riyadh",
+   "uusi": "Riad"
+  },
+  "k-luan": {
+   "vanha": "Luan",
+   "uusi": "Lu’an"
+  },
+  "k-yingkow": {
+   "vanha": "Yingkow",
+   "uusi": "Yingkou"
+  },
+  "k-jian": {
+   "vanha": "Jian",
+   "uusi": "Ji’an"
   }
  }
 }
