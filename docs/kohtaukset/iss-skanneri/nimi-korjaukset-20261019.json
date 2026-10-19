@@ -136,6 +136,38 @@
   "k-port-elizabeth": {
    "vanha": "Port Elizabeth",
    "uusi": "Gqeberha"
+  },
+  "k-ft-worth": {
+   "vanha": "Ft. Worth",
+   "uusi": "Fort Worth"
+  },
+  "k-huaiyin": {
+   "vanha": "Huaiyin",
+   "uusi": "Huai’an"
+  },
+  "k-mudangiang": {
+   "vanha": "Mudangiang",
+   "uusi": "Mudanjiang"
+  },
+  "k-banghazi": {
+   "vanha": "Banghazi",
+   "uusi": "Bengasi"
+  },
+  "k-sholapur": {
+   "vanha": "Sholapur",
+   "uusi": "Solapur"
+  },
+  "k-hamhung": {
+   "vanha": "Hamhung",
+   "uusi": "Hamhŭng"
+  },
+  "k-bur-said": {
+   "vanha": "Bur Said",
+   "uusi": "Port Said"
+  },
+  "k-bandjarmasin": {
+   "vanha": "Bandjarmasin",
+   "uusi": "Banjarmasin"
   }
  }
 }
