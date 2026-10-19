@@ -9,7 +9,7 @@ Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se) ja luovutus KOKONAAN: `git 
 Viestit AINA session id:llä osoitekirjasta, PT:lle ≤ 3 riviä.
 
 ## KÄRKI
-1. Muistiajon 206 tulos (lokit/natiiviseppa-muisti206-20261019-2134/ajo.log) → PT; puuttuu → aja uudelleen (luovutus, kohta ENSIN).
+1. Muistiajo 206 v1 tehty (2147 Mt vapaana, PT:lle lähetetty); lopulliselle 206:lle uusi ajo ennen TF:ää (luovutus).
 2. Juna 206 avattu, EI takarajaa (omistaja 21.38): testit206.sh rungolle cd7c1d5cb ENSIN; sitten PK sisäpiha + VS lattia f152ad7d1 PT:n OK:lla → testit → sha PT:lle + JU:lle, kuvaparit KK:lle.
 3. Muutosloki 206 uusi teksti PT:ltä → korjaus-PR + merge itse. LUKITSE 206 vasta kun omistaja pyytää julkaisua (KK → PT): juna206/lukitse206-*.sh + mac206.sh.
 

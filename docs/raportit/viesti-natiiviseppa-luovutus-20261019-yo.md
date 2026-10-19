@@ -3,12 +3,11 @@
 Lue ensin: CLAUDE.md, Raamatun Ydinajatus kohta 2 ja tämä kokonaan. Pysyvät säännöt: proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt.
 Jonot (lopusta alkuun = uusin tila): natiiviseppa-skriptit/juna206/jono-206.txt (+ juna205/, juna204/). Id:t AINA osoitekirjasta (PT local_8d8ebf72-…, JU local_24e63224-…).
 
-## ENSIN: MUISTIAJO 206 (voi kuolla nollauksessa)
-- juna206/muisti206.sh 766aa47fa ajettiin iPad Pro 13:lla (00008103-…401E), juoksupeli botti + törmää 300 s; loki lokit/natiiviseppa-muisti206.log,
-  tulokset lokit/natiiviseppa-muisti206-20261019-2134/ (muisti-tarkka.log, ajo.log viimeinen rivi "MUISTI206 fp huippu … vapaa min … varoituksia … kuoli …").
-- Jos ajo.log:ssa EI ole MUISTI206-riviä → aja uudelleen: `OHITA_KAANNOS=1 zsh juna206/muisti206.sh 766aa47fa 300` (Release-app lokit/natiiviseppa-app-206-laite valmis; iPad-vuoro JU:lta).
-- Tulos → PT (≤ 3 riviä); jetsam tai vapaa < 500 Mt → HETI PT:lle. TF EI odota tätä enää (BUILD 766aa47fa:n TF peruttu), mutta PT haluaa tuloksen.
-- Release-app lokit/natiiviseppa-app-206-laite SÄILYTETÄÄN (LT:n yökierros).
+## MUISTIAJO 206 v1 TEHTY (21.34–21.42)
+- 766aa47fa iPad Pro 13: fp huippu 2972 Mt, vapaa min 2147 Mt, muistivaroituksia 0, ei kaatumista (juoksupeli v4 botti + törmää, rata läpi 38 s, loput loppuruudulla).
+  Tulokset lokit/natiiviseppa-muisti206-20261019-2134/; rivi julkaisija-tyokalut/muistiajo-206-v1-766aa47fa.txt (EI muistiajo-206.txt: TF peruttu, lopullinen 206 erikseen).
+- Lopulliselle 206:lle uusi ajo: `zsh juna206/muisti206.sh <BUILD-sha> 300` (laitekäännös + iPad JU:n vuorolla) → muistiajo-206.txt "OK <sha> <min Gt> natiiviseppa", ellei PT linjaa toisin.
+- Release-app lokit/natiiviseppa-app-206-laite (766aa47fa) SÄILYTETÄÄN (LT:n yökierros).
 
 ## TILA
 - **BUILD 204** = proto master bad614bec, TF testaajilla. **BUILD 205** = daf1fec08, TF sisäinen valmis 20.06 (iOS 39289399060, Mac 39289606231).
