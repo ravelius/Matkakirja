@@ -19,3 +19,12 @@ Tiedostot: `/Users/Shared/Claude/proto-3d/_tyo/puyi-koeaanet-20261019/ulos-tagit
 
 **Omistajan kysymykset (tageista):** ElevenLabsilla ei ole kiinteää tagilistaa (v3/v4-mallit tulkitsevat vapaasti englanninkielisiä hakasulkeissa olevia kuvauksia: tunteet, äänenvoimakkuus, hengitys, kuten [whispers], [sighs], [gasps], [panting], [shouting]); tulos vaihtelee, joten kokeilu on oikea tapa. Aiemmissa erissä käytettiin vain `[out of breath] [panicked]`; "running/sprinting/frantic/rushed" ovat nyt ensimmäistä kertaa (ei vielä kuultu). Pitkät kestot (10,6 s sprinting-panting) kertovat, että hengityksiä/hengähdyksiä on tullut mukaan.
 **Pysyvä sääntö siirretty työkaluihin:** puhepohja `_tyo/ranska-lahestyminen-20261017/tee.py` K=1,0 (ei tempoa); 17-nopea/20-nopea olivat viimeiset jälkisäädetyt.
+
+## Lisäerä 23-11…14 (omistajan päätös 10.40: "6 ja 9 olivat parhaat… toisella repliikillä, alkuun huuto 'aa!' tai 'eei!!'")
+**4 ottoa, 218 mrk** (lupa ≤ 300), Horatius `qXpMhyvQqiRxWQs4qSSB`, speed 1,2 natiivisti, ei jälkikäsittelyä, fi pakotettu; portti 0 hylättyä, 0 varoitusta. Tiedostot `ulos-tagit/`:
+| tiedosto | teksti (tagit alussa) | kesto |
+|---|---|---|
+| 23-11-shouting-panicked-aa-siina-meni-miljoonien-ming | [shouting] [panicked] Aa! Siinä meni miljoonien Ming! | 3,0 s |
+| 23-12-rushed-nervous-eei-siina-meni-miljoonien-ming | [rushed] [nervous] Eei!! Siinä meni miljoonien Ming! | 2,8 s |
+| 23-13-shouting-panicked-eei-tama-oli-herttuan-lahja-isalle | [shouting] [panicked] Eei!! Tämä oli herttuan lahja isälle! | 3,5 s |
+| 23-14-rushed-nervous-aa-tama-oli-herttuan-lahja-isalle | [rushed] [nervous] Aa! Tämä oli herttuan lahja isälle! | 2,8 s |
