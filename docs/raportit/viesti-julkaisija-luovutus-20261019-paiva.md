@@ -7,21 +7,16 @@ Osoitekirja /Users/Shared/Claude/osoitekirja.md (gmail-tili 19.10., kaikki id:t 
 "Käske junan odottaa vielä. Annan muutamia korjauksia ennen kuin juna saa lähteä." → EI lukitusta, EI TF-/web-vientiä ennen
 korjauksia + erillistä julkaisupyyntöä. Simujono ja käännökset jatkuvat normaalisti.
 
-## 1. KÄYNNISSÄ NYT (11.46)
-- **L1:** VS nostot c08cfa898 (`vs-nostot4-204-kaanna.zsh`, alkoi 11.40) → `_tyo/linssiseppa2/nostot-app`.
-- **L1-jono (odottavat taustaskriptit, KUOLEVAT NOLLAUKSESSA → käynnistä uudelleen jos lokit tyhjiä ja prosessia ei ole):**
-  1) `lr-kehysvarjo-204-kaanna.zsh` (Lavastaja d0f50ed3f → `_tyo/linnanrakentaja/kehysvarjo-204-app`), odottaa vs-nostot4-lokin "L1 VAPAA".
-  2) `pk-mac-nappainlento-204.zsh` (PK MAC 4814ab2d1, mac-kaanna.sh, sama L1-lukko), odottaa lr-kehysvarjo-lokin "L1 VAPAA".
-  Tarkista `pgrep -fl "kehysvarjo|nappainlento"`; jos puuttuu: `zsh <skripti> > <skripti-nimi>.log 2>&1` taustalle.
+## 1. KÄYNNISSÄ NYT (11.58, kaikki nohup-irrotettuja → jatkuvat nollauksen yli)
+- **L1:** Lavastaja kehysvarjo d0f50ed3f (`lr-kehysvarjo-204-kaanna.log`, alkoi 11.57) → sitten PK MAC 4814ab2d1 (`pk-mac-nappainlento-204.log`, odottaja). Ilmoita KÄÄNNETTY Lavastajalle/PK:lle.
 - **L2:** Projektiseppä linna-botti-10 1286d90ed (PJ ajaa itse, alkoi 11.39) → simu omalla 8362879F heti perään (lupa annettu).
-- **Simu:** PK ajettu 11.54 (51f7d225 OK). Simu TYHJÄ: seuraavaksi NUI 2fd904f95 (omistaja odottaa) tai VS nostot c08cfa898, kumpi valmistuu ensin.
+- **Simu:** VS nostot 21b013b13 SIMU NYT 11.58 (~32 min). NUI 2fd904f95 saa RINNAKKAISEN simun heti käännöksen valmistuttua (omistaja odottaa).
 
 ## 2. SIMUJONO (PT 11.1x: juna 204 ensin; rinnakkaissimut sallittu)
-PK (vuorossa) → VS nostot 4 kierrosta + ennen-video ~32 min (c08cfa898, kun käännetty) → Lavastaja kehysvarjo ~9 min (Punainen
+VS nostot (ajossa) ∥ NUI lenna-itse → Lavastaja kehysvarjo ~9 min (Punainen
 kabinetti + Kunniagalleria, kun käännetty) → KS kamerakirjoittaja (ks. 3).
 - NUI: Lennä itse be20092ee PERUTTU → uusi **2fd904f95 kääntyy L2:lla** (korvasi a076901ae:n) (nohup-irrotettu `nui-lenna-itse-204b.zsh`, loki
   nui-lenna-itse-204b.log, ~12.00) → juna204-lenna-itse-app. OMISTAJA ODOTTAA → SIMU NYT NUI:lle HETI valmistuttua (iPhone + iPad ~12 min).
-- L1-odottajat (kehysvarjo, PK-mac) PYSÄYTETTY 11.47 → käynnistä ne uudelleen VS c08cfa898:n jälkeen (skriptit valmiina).
 - PK MAC näppäinlento: QA-komennon anto Mac-appiin epäselvä → PK kysyy NS:ltä. mac-kaanna.sh:ssa Unity 6000.3.24f1 (iOS-linjat 6000.7.0b5).
 
 ## 3. VASTAAMATTA
