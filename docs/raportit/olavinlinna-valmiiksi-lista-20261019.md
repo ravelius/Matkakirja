@@ -45,3 +45,14 @@ Puuttuvia kohtia yhteensä: 13.
 
 ## Havainto
 Viisi tilaa on pelattavissa, mutta seikkailun loppu (huoneet 6–10: komero, aarre, pako, tyrmä) puuttuu pelattavina tiloina (ydinsimulaatio 1–10 on testeissä, mutta ei tarkistettu, onko logiikka sovelluksessa); suurin työ on tilat + pelikulku, ei hahmot.
+
+## 5. Lavastajan tila tauon alkaessa (omistajan päätös 19.10. 17.05: Olavinlinna tauolle)
+- **Viimeisin pala v49b (19.10. 16.5x):** 1499 `a36f4199985ef096`, esittely nyky `9c0897bec9044c1f` (haara `linnanrakentaja-linna-v45k`
+  1c69c4c43 / c0abe3769) = v49a + reitti:pelaaja-86 irti tikkaista ja Kellotornin ovesta (−37,214; 13,4; −9,21), seinävara 0,40 m.
+  Projektisepän kiinnitys ja botti 85→87 kesken (Projektisepän tila). Lähde `proto-3d/_valmiit/olavinlinna-blender-v44(-nyky)/`, vanha `kavely/ennen-v49b/`.
+- **Huoneet 6–10:** valoasettelu valmis (`proto-3d/_tyo/linnanrakentaja/olavinlinna-asettelu/valot_6_10.py`, kokeiltu muurikäytävällä),
+  asettelumalli `_valmiit/olavinlinna-asettelu-6-10-v1/`. Codexin geometriaa EI toimitettu (tilaus e203239d0) – tilaus jäädytetty, ei uusia.
+- **Jäädytetyt löydökset:** komeron irtotiilet (esine-tiili-komero.glb) leijuvat, koska v49a:n muurissa ei ole tiilitäytettyä aukkoa →
+  korjataan huone 9:n geometrian kokoamisessa (PT 15.2x). Tripo-hahmot (kokki, portinvartija) keittiöön: ei aloitettu.
+- **Työkalut jatkoon:** vientiputki `proto-3d/_valmiit/olavinlinna-kavely-v1/lahde/tyokalut-lr/vie_v49b.zsh` (malli seuraavalle),
+  leivontaliput ja julkaisukaava `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-paiva.md` kohdat 6–7. Worktree v45k poistettu, haara pushattu.
