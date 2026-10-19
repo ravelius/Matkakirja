@@ -9,7 +9,7 @@
  *   gltf) hylätään. Yksittäinen tiedosto: vain mallitarkistus.
  *   Kuvat (Työkaluseppä 19.10.2026: Codex toimittaa kaiken grafiikan): erilliset .png/.jpg-kuvat listassa ja tiiviste
  *   täsmää (paitsi esikatselu/ ja qa/; manifesti myös MANIFEST.json files[].sha256), muoto PNG tai JPEG; tekstuurit/-kansion kuvat kuten glb:n tekstuurit (kahden potenssi,
- *   ≤ 2048 px). LAHTEET.md puuttuu = HUOM.
+ *   ≤ 2048 px). LAHTEET.md puuttuu = HUOM. Listaamaton kuva, jonka tiiviste on GENERATION.json referenceSHA256, on viite (HUOM).
  * Testit: tests/codex-3d-tarkistus.test.mjs (synteettiset glb:t, ei verkkoa).
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -211,6 +211,13 @@ export function tarkistaToimitus(kansio) {
       M.set(p, f.sha256.toLowerCase()); mf = mf || j;
     }
   }
+  // Viitekuvat: Claude lähettää viitteen tilauksen mukana, Codexin MANIFEST listaa vain omat tiedostonsa ja kirjaa viitteen
+  // GENERATION.json referenceSHA256-kenttään (ISS-ympyräikkuna 19.10.). Tiivisteellä täsmäävä kuva ei ole toimitettava.
+  const viitteet = new Set();
+  for (const j of polut.filter((x) => basename(x) === 'GENERATION.json')) {
+    let r; try { r = JSON.parse(readFileSync(join(kansio, j), 'utf8')).referenceSHA256; } catch { continue; }
+    for (const h of [].concat(r || [])) if (/^[0-9a-f]{64}$/i.test(h)) viitteet.add(h.toLowerCase());
+  }
   const glbeja = polut.some((x) => extname(x).toLowerCase() === '.glb');
   if (!mf && glbeja) tulos.virheet.push('SHA256SUMS(.txt) tai MANIFEST.json (files[].sha256) puuttuu');
   else if (!mf) (tulos.huomiot ||= []).push('ei manifestia (SHA256SUMS tai MANIFEST.json): kuvien tiivisteitä ei tarkistettu');
@@ -226,7 +233,8 @@ export function tarkistaToimitus(kansio) {
     const buf = readFileSync(join(kansio, p)); const r = tarkistaKuva(buf, p);
     if (!/(^|\/)(esikatselu|qa)\//.test(p)) {                     // esikatselu- ja QA-kuvat eivät ole toimitettavia
       const h = createHash('sha256').update(buf).digest('hex');
-      if (mf && !M.has(p)) r.virheet.push('ei SHA256SUMS-listassa');
+      if (mf && !M.has(p) && viitteet.has(h)) r.huomiot.push('viitekuva (GENERATION.json referenceSHA256), ei toimitettava');
+      else if (mf && !M.has(p)) r.virheet.push('ei SHA256SUMS-listassa');
       else if (mf && M.get(p) !== h) r.virheet.push(`SHA-256 ei täsmää (lista ${M.get(p).slice(0, 12)}…, tiedosto ${h.slice(0, 12)}…)`);
     }
     tulos.tiedostot.push(r);
