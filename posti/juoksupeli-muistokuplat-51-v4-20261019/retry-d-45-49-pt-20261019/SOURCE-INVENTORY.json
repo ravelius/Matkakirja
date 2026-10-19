@@ -1,0 +1,107 @@
+{
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "canonicalCount": 51,
+  "batchItems": [
+    {
+      "number": 45,
+      "id": "metallipeili",
+      "nimi": "Hovin metallipeili",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Hymyilevä hovimestari esittelee ylpeänä kupariseospeiliä ja sen koristeltua takapuolta, valoisa hovihuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Qianlongin kauden suorakaiteisen kupariseospeilin takapuoli jäljittelee han-ajan pronssipeilejä.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.metallipeili.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.metallipeili.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.metallipeili.kupla",
+          "teksti": "juoksupeli.rikkoutuva.metallipeili.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.metallipeili.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.metallipeili.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.metallipeili.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "valoisa hovihuone"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.metallipeili.kupla"
+        },
+        "mdHeading": "### Hovin metallipeili (`metallipeili`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 49,
+      "id": "zitan-jakkara",
+      "nimi": "Zitan-jakkara",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Hymyilevä imettäjä esittelee ylpeänä zitan-puista jakkaraa, lähikuva, vaalea huone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Zitan-puuta käytettiin lähinnä Qing-palatsien huonekaluissa; Palace Museumissa niitä on yli 2 800.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.zitan-jakkara.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.zitan-jakkara.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.zitan-jakkara.kupla",
+          "teksti": "juoksupeli.rikkoutuva.zitan-jakkara.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.zitan-jakkara.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.zitan-jakkara.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.zitan-jakkara.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaalea huone"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.zitan-jakkara.kupla"
+        },
+        "mdHeading": "### Zitan-jakkara (`zitan-jakkara`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    }
+  ],
+  "orderSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe"
+  },
+  "sourceTaskNumbers": [
+    564
+  ],
+  "jadeAndVersionOnlyExtrasIncluded": false
+}

@@ -1,0 +1,77 @@
+{
+  "items": {
+    "45-metallipeili": {
+      "attempt": 2,
+      "personallyInspectedNative": true,
+      "passed": true,
+      "wholeNewGeneration": true,
+      "contentCorrectionVerified": true,
+      "personDiversityVerified": true,
+      "notesFI": [
+        "Pyöreä pronssipeili: koristeellinen takapuoli kameraan, keskellä nuppi ja sen ympärillä useita samankeskisiä koristevyöhykkeitä. Ei suorakaiteinen laatankansi.",
+        "Uusi noin 50-vuotias hovimestari, pitkänomaiset kulmikkaat kasvot ja vahvat tummat kulmakarvat, ei partaa, viiksiä tai valkoista pukinpartaa. Selvästi eri kasvo kuin 45a1:n vanhus. Musta punanappinen kalotti ja Qing-hoviasu.",
+        "Peili noin 34 % kuvan korkeudesta, luonnollinen pieni käsipeili. Peili on terävä; vaalea hovihuone erittäin voimakkaasti optisesti sumea.",
+        "Kasvojen tärkeät piirteet ovat lähellä keskialuetta. Koko hattu ja esineen ulkoreuna eivät kokonaan 0,45-ytimessä, eivätkä myöhemmän ohjeen mukaan kaikki ulkoreunat ole ehdoton lisäkutsun peruste.",
+        "Kanoninen fakta mainitsee suorakaiteisen peilin mutta PT68a0bf6 vaatii pyöreän; uudempi kasvolähde43e464b syrjäyttää aiemman kasvon säilyttämisen pyynnön.",
+        "Lopullinen kahden valitun kuvan 160 px:n arkki katsottu henkilökohtaisesti: eri-ikäinen parraton hovimestari sekä imettäjän kasvot ja molempien esineiden korjatut muodot ovat luettavissa."
+      ],
+      "personallyInspected160px": true,
+      "ovalQA": {
+        "width": 160,
+        "height": 213,
+        "innerRadius": 0.45,
+        "outerRadius": 1,
+        "curve": "1-smoothstep",
+        "personallyInspected": true,
+        "passedReadable": true
+      }
+    },
+    "49-zitan-jakkara": {
+      "attempt": 1,
+      "personallyInspectedNative": true,
+      "passed": true,
+      "wholeNewGeneration": true,
+      "contentCorrectionVerified": true,
+      "notesFI": [
+        "Zitan-jakkarassa erottuu selvä vaakasuora neliömäinen istuinpinta, neljä erillistä jalkaa ja niitä yhdistävät tukipuut. Jalkojen välissä on avoin tyhjä tila; ei kuusikulmainen kaappi tai jalusta.",
+        "Kiiltävä tumma violetinruskea puu, kypsä hymyilevä imettäjä ja pitkä sininen Manchu-asu; vaalea hovihuone ja erittäin pehmeä optinen bokeh.",
+        "Jakkaran koko korkeus noin 36 % kuvan korkeudesta; näkyy luonnollisessa kolmen neljänneksen suunnassa lattialla.",
+        "Kasvojen alaosan keskeiset piirteet lähellä ydintä; silmät ovat hieman 0,45-ytimen yläpuolella loivan häivytyksen alussa, arviolta r 0,50. Tämä kirjataan, eikä pelkkä marginaalinen r-ero laukaise uutta generointia; 160 px:n luettavuus tarkistetaan.",
+        "Puun lajia ei voi varmentaa valokuvasta kemiallisesti; ulkonäkö vastaa pyydettyä tummaa kiiltävää zitania.",
+        "160 px:n soikioarkki katsottu henkilökohtaisesti: kasvot ja esineen korjattu muoto ovat luettavissa. Peilissä pyöreä ääriviiva, nuppi ja koristekehät; jakkarassa istuin, nelijalkainen avoin runko ja tukipuut näkyvät.",
+        "Lopullinen kahden valitun kuvan 160 px:n arkki katsottu henkilökohtaisesti: eri-ikäinen parraton hovimestari sekä imettäjän kasvot ja molempien esineiden korjatut muodot ovat luettavissa."
+      ],
+      "personallyInspected160px": true,
+      "ovalQA": {
+        "width": 160,
+        "height": 213,
+        "innerRadius": 0.45,
+        "outerRadius": 1,
+        "curve": "1-smoothstep",
+        "personallyInspected": true,
+        "passedReadable": true
+      }
+    }
+  },
+  "rootPreviewReview": {
+    "at": "2026-10-19T12:11:00.696903+00:00",
+    "personallyReviewed160px": true,
+    "personallyInspectedAllSelectedNative": true,
+    "selectedNativePersonallyInspectedByRoot": [
+      45,
+      49
+    ],
+    "selectedSHA256": {
+      "45-metallipeili": "b8fdb3aa9af20f805701f94b1d74a8f8e602334b6501f71380f8f84683d3af21",
+      "49-zitan-jakkara": "f26ce48e75888888320d7e2c9cc21371d347d05f6f3b8801935a039f65bb2943"
+    },
+    "notes": "45a2 shows distinct clean-shaven middle-aged attendant and round bronze back with knob/concentric zones.49a1 has four open legs, seat, stretchers; recurring wet nurse permitted. Both object shapes and facial expressions read at160px.49 eyes enter early feather; disclosed, no claim full-face pixel protection. PT acceptance pending.",
+    "PTAccepted": false,
+    "ownerAccepted": false,
+    "runtimeVerified": false,
+    "published": false
+  },
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

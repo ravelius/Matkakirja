@@ -1,0 +1,12 @@
+{
+  "width": 160,
+  "height": 213,
+  "innerRadius": 0.45,
+  "outerRadius": 1,
+  "curve": "1-smoothstep",
+  "productionFilesUnmodified": true,
+  "assets": [
+    "45-metallipeili",
+    "49-zitan-jakkara"
+  ]
+}

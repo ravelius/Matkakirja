@@ -1,0 +1,470 @@
+{
+  "family": "retry-d-45-49-pt-20261019",
+  "sourceOrder": 536,
+  "sourceListVerified": true,
+  "ready": true,
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "assets": {
+    "45-metallipeili": {
+      "code": "45-metallipeili",
+      "sourceItem": {
+        "number": 45,
+        "id": "metallipeili",
+        "nimi": "Hovin metallipeili",
+        "kuplatyyppi": 1,
+        "kuplatyyppiRaw": "1",
+        "typeLabelFromMarkdown": "esittely",
+        "kupla": "Hymyilevä hovimestari esittelee ylpeänä kupariseospeiliä ja sen koristeltua takapuolta, valoisa hovihuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+        "fakta": "Qianlongin kauden suorakaiteisen kupariseospeilin takapuoli jäljittelee han-ajan pronssipeilejä.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.metallipeili.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.metallipeili.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.metallipeili.kupla",
+            "teksti": "juoksupeli.rikkoutuva.metallipeili.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.metallipeili.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.metallipeili.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.metallipeili.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "valoisa hovihuone"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.metallipeili.kupla"
+          },
+          "mdHeading": "### Hovin metallipeili (`metallipeili`) — kupla 1: esittely",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 2,
+      "callsCompleted": 2,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T11:58:04.602271+00:00",
+          "args": {
+            "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTOGRAPH1086x1448 portraitRGBopaquePNG. Reference image is ONLY the exact elderly Qing COURTMASTER identity/role, blackroundcapREDknob, graybeard/temples, shavedfront+queue, blackroundcollarRIGHT-buttonrobe, face SIZE/POSITION, dark hardwood table and soft luminous palacebackground. Preserve those human/clothing/room/close-framing characteristics in a whole new photograph. COMPLETELY NEW CORRECT OBJECT: a ROUND Chinese BRONZE MIRROR, thin real mirror disk about20cm diameter (15–25cm natural range), circular outline and decorative BACK facing directly TOWARD CAMERA. Central raised round KNOB, surrounded by multiple CONCENTRIC ORNAMENTAL ZONES: lowrelief archaic cloud/animal/geometric motifs in circular bands around knob, fineouterring. Bronze warm brown/gold subtle patina, true thin metal edge, not a rectangular plaque/boxlid or modern reflectiveglass/shield. Mirror fullcircle about33–38% oftotalphotoHEIGHT in sharp CENTRAL foreground, supported naturally atlower/sides bymaster's hands, his happy face visible behind above it. Important eyes/nose/mouth remain at referenceposition nearcentral45%ellipse; wholehat/outerhands neednotfitcore. Cameraartifactlevel0.8m,100mmf/1.4, mirror BACK tacksharp, master mildlysoft behind, background extremely defocused creamy red/gold/white lightblobs. Brightnaturaldaylight/gentlerimbacklight, real skin/wood/metaltexture. No readableletters/text/logo, CGI/plastic/repeatingtexture, mask/fade/vignette/border, cropping/padding/partialediting or pixelcopy. Entire image newlygenerated, NOT a partialobjectreplacement/edit. Latest explicit editor correction now requires ROUND with concentricbands; do not copy the reference's rectangular shape.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/45-metallipeili-attempt2.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T12:02:55.733299+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-61f2a1a0-6a39-4641-897d-112431134530.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/native/45-metallipeili-attempt1.png",
+          "nativeSHA256": "fd8d3c0b22f4b31467c5846e13edbe484eda8baf443c27df917b97cf9cb8bc01",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "86123a565d978bc32fd0db807fba726f59f7207086f92f9dcf1fe9030cffe30a",
+          "technicalPass": true,
+          "qa": {
+            "attempt": 1,
+            "personallyInspectedNative": true,
+            "passed": false,
+            "reasonFI": "Uusin PT:n C-kuittaus 43e464b rajaa samojen kasvojen toiston. Esinekorjaus onnistui mutta valkopartainen vanhus muistuttaa liian monen muun kuplan hahmoa. Säilytetään vanhana ehdokkaana ja tehdään kokonaan uusi 45a2 eri kasvoilla.",
+            "supersedingSource": {
+              "path": "posti/paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+              "commit": "43e464bb68b591d5521d6c0eaa1118c265b86497",
+              "blob": "fb4c5d92e6d6e10336296173c8fc667a1789a99f",
+              "sha256": "42977c5a62fc4ce479512fb1f9334ca9e09319370b4ae71d42e3bc051b0e5de2"
+            }
+          },
+          "qaHistory": [
+            {
+              "replacedAt": "2026-10-19T12:05:04.096743+00:00",
+              "qa": {
+                "attempt": 1,
+                "personallyInspectedNative": true,
+                "passed": true,
+                "wholeNewGeneration": true,
+                "contentCorrectionVerified": true,
+                "notesFI": [
+                  "Pyöreä pronssipeili: koristeellinen takapuoli kameraan, keskellä nuppi ja sen ympärillä useita samankeskisiä koristevyöhykkeitä. Ei suorakaiteinen laatankansi.",
+                  "Hymyilevä vanha hovimestari esittelee peiliä käsissään, musta Qing-asu ja lakki sekä vaalea pehmeästi valaistu hovihuone säilyvät.",
+                  "Peilin halkaisija kuvassa noin 34 % koko kuvan korkeudesta; esine terävä ja tausta hyvin voimakkaasti optisesti sumea.",
+                  "Kasvojen keskeiset piirteet ovat lähellä suojattua keskialuetta; koko hattu ja peilin ulkoreuna eivät ole kokonaan 0,45-ytimessä. Tarkistetaan myös 160 px:n häivytysarkilla.",
+                  "Kanoninen fakta mainitsee suorakaiteisen peilin, mutta uusin PT:n nimenomainen korjaus 68a0bf6 vaatii pyöreän: uusi kuva noudattaa tätä ja lähderistiriita säilytetään."
+                ]
+              }
+            },
+            {
+              "replacedAt": "2026-10-19T12:06:37.136552+00:00",
+              "qa": {
+                "attempt": 1,
+                "personallyInspectedNative": true,
+                "passed": true,
+                "wholeNewGeneration": true,
+                "contentCorrectionVerified": true,
+                "notesFI": [
+                  "Pyöreä pronssipeili: koristeellinen takapuoli kameraan, keskellä nuppi ja sen ympärillä useita samankeskisiä koristevyöhykkeitä. Ei suorakaiteinen laatankansi.",
+                  "Hymyilevä vanha hovimestari esittelee peiliä käsissään, musta Qing-asu ja lakki sekä vaalea pehmeästi valaistu hovihuone säilyvät.",
+                  "Peilin halkaisija kuvassa noin 34 % koko kuvan korkeudesta; esine terävä ja tausta hyvin voimakkaasti optisesti sumea.",
+                  "Kasvojen keskeiset piirteet ovat lähellä suojattua keskialuetta; koko hattu ja peilin ulkoreuna eivät ole kokonaan 0,45-ytimessä. Tarkistetaan myös 160 px:n häivytysarkilla.",
+                  "Kanoninen fakta mainitsee suorakaiteisen peilin, mutta uusin PT:n nimenomainen korjaus 68a0bf6 vaatii pyöreän: uusi kuva noudattaa tätä ja lähderistiriita säilytetään.",
+                  "160 px:n soikioarkki katsottu henkilökohtaisesti: kasvot ja esineen korjattu muoto ovat luettavissa. Peilissä pyöreä ääriviiva, nuppi ja koristekehät; jakkarassa istuin, nelijalkainen avoin runko ja tukipuut näkyvät."
+                ],
+                "personallyInspected160px": true,
+                "ovalQA": {
+                  "width": 160,
+                  "height": 213,
+                  "innerRadius": 0.45,
+                  "outerRadius": 1,
+                  "curve": "1-smoothstep",
+                  "personallyInspected": true,
+                  "passedReadable": true
+                }
+              }
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T12:06:37.213291+00:00",
+          "args": {
+            "prompt": "Create a COMPLETELY NEW photorealistic color CAMERA PHOTOGRAPH, portrait 1086 x 1448 RGB opaque PNG. Reference is ONLY the correct ROUND BRONZE MIRROR object, composition scale, black Qing court robe/cap, bright palace room and creamy bokeh. DO NOT COPY THE ELDERLY MAN OR HIS FACE. New subject is a DIFFERENT Qing COURTMASTER about 50 years old, LONG NARROW ANGULAR face, pronounced angular cheekbones, STRONG DARK STRAIGHT EYEBROWS, dark short hair at temples, clean-shaven chin and upper lip: ABSOLUTELY NO BEARD, NO MOUSTACHE, NO WHITE GOATEE, NO OLD PROFESSOR FACE. Calm proud smile. Make him visibly middle-aged and uniquely angular, not elderly. Black round Qing court cap with red bead knob and black embroidered loose long right-fastened court robe. Correct round Chinese bronze mirror about 20 cm diameter in hands, decorative BACK facing camera, center rounded KNOB and multiple concentric low-relief archaic ornamental bands, thin visible bronze edge. Same mirror size/position as reference, about 34–37% entire photograph HEIGHT, sharp central foreground. Courtmaster's new face behind the mirror, slightly lower than reference if needed so important eyes/nose/mouth near central45% ellipse. View from 0.8m,100mm f/1.4, artifact tacksharp; man mildlysoft but facialfeatures clear; bright airy Qing court room almost completely defocused into cream/red/gold optical bokeh, gentle daylight/backlight. Natural skin and bronze texture, no pattern overlay/CGI/plastic. Mirror ROUND, not rectangular boxlid or reflective modern glass/shield. No readable text, logo, mask/fade/vignette/border/crop/padding. This is a whole NEW generated photograph with a new human identity and new scene pixels, not any partial retouch/edit. Do not reuse the reference's white beard or elderly features.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/native/45-metallipeili-attempt1.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T12:08:04.079054+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-6f5bcf31-871a-481f-9046-838bf3acf15f.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/native/45-metallipeili-attempt2.png",
+          "nativeSHA256": "b8fdb3aa9af20f805701f94b1d74a8f8e602334b6501f71380f8f84683d3af21",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "dbdfd1c5c1d8fffa168e9d934dd1ec6858fd91769ec14f8af74ee365b6d9b31c",
+          "technicalPass": true,
+          "qa": {
+            "attempt": 2,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "wholeNewGeneration": true,
+            "contentCorrectionVerified": true,
+            "personDiversityVerified": true,
+            "notesFI": [
+              "Pyöreä pronssipeili: koristeellinen takapuoli kameraan, keskellä nuppi ja sen ympärillä useita samankeskisiä koristevyöhykkeitä. Ei suorakaiteinen laatankansi.",
+              "Uusi noin 50-vuotias hovimestari, pitkänomaiset kulmikkaat kasvot ja vahvat tummat kulmakarvat, ei partaa, viiksiä tai valkoista pukinpartaa. Selvästi eri kasvo kuin 45a1:n vanhus. Musta punanappinen kalotti ja Qing-hoviasu.",
+              "Peili noin 34 % kuvan korkeudesta, luonnollinen pieni käsipeili. Peili on terävä; vaalea hovihuone erittäin voimakkaasti optisesti sumea.",
+              "Kasvojen tärkeät piirteet ovat lähellä keskialuetta. Koko hattu ja esineen ulkoreuna eivät kokonaan 0,45-ytimessä, eivätkä myöhemmän ohjeen mukaan kaikki ulkoreunat ole ehdoton lisäkutsun peruste.",
+              "Kanoninen fakta mainitsee suorakaiteisen peilin mutta PT68a0bf6 vaatii pyöreän; uudempi kasvolähde43e464b syrjäyttää aiemman kasvon säilyttämisen pyynnön.",
+              "Lopullinen kahden valitun kuvan 160 px:n arkki katsottu henkilökohtaisesti: eri-ikäinen parraton hovimestari sekä imettäjän kasvot ja molempien esineiden korjatut muodot ovat luettavissa."
+            ],
+            "personallyInspected160px": true,
+            "ovalQA": {
+              "width": 160,
+              "height": 213,
+              "innerRadius": 0.45,
+              "outerRadius": 1,
+              "curve": "1-smoothstep",
+              "personallyInspected": true,
+              "passedReadable": true
+            }
+          },
+          "qaHistory": [
+            {
+              "replacedAt": "2026-10-19T12:09:14.311923+00:00",
+              "qa": {
+                "attempt": 2,
+                "personallyInspectedNative": true,
+                "passed": true,
+                "wholeNewGeneration": true,
+                "contentCorrectionVerified": true,
+                "personDiversityVerified": true,
+                "notesFI": [
+                  "Pyöreä pronssipeili: koristeellinen takapuoli kameraan, keskellä nuppi ja sen ympärillä useita samankeskisiä koristevyöhykkeitä. Ei suorakaiteinen laatankansi.",
+                  "Uusi noin 50-vuotias hovimestari, pitkänomaiset kulmikkaat kasvot ja vahvat tummat kulmakarvat, ei partaa, viiksiä tai valkoista pukinpartaa. Selvästi eri kasvo kuin 45a1:n vanhus. Musta punanappinen kalotti ja Qing-hoviasu.",
+                  "Peili noin 34 % kuvan korkeudesta, luonnollinen pieni käsipeili. Peili on terävä; vaalea hovihuone erittäin voimakkaasti optisesti sumea.",
+                  "Kasvojen tärkeät piirteet ovat lähellä keskialuetta. Koko hattu ja esineen ulkoreuna eivät kokonaan 0,45-ytimessä, eivätkä myöhemmän ohjeen mukaan kaikki ulkoreunat ole ehdoton lisäkutsun peruste.",
+                  "Kanoninen fakta mainitsee suorakaiteisen peilin mutta PT68a0bf6 vaatii pyöreän; uudempi kasvolähde43e464b syrjäyttää aiemman kasvon säilyttämisen pyynnön."
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "latestExplicitShapeOverride": "ROUND bronze mirror back with central knob and concentric decorativezones, 15–25cm; canonical rectangular fakta retained for conflict history but overridden by PT68a0bf6.",
+      "activeAttempt": 2,
+      "qa": {
+        "attempt": 2,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "wholeNewGeneration": true,
+        "contentCorrectionVerified": true,
+        "personDiversityVerified": true,
+        "notesFI": [
+          "Pyöreä pronssipeili: koristeellinen takapuoli kameraan, keskellä nuppi ja sen ympärillä useita samankeskisiä koristevyöhykkeitä. Ei suorakaiteinen laatankansi.",
+          "Uusi noin 50-vuotias hovimestari, pitkänomaiset kulmikkaat kasvot ja vahvat tummat kulmakarvat, ei partaa, viiksiä tai valkoista pukinpartaa. Selvästi eri kasvo kuin 45a1:n vanhus. Musta punanappinen kalotti ja Qing-hoviasu.",
+          "Peili noin 34 % kuvan korkeudesta, luonnollinen pieni käsipeili. Peili on terävä; vaalea hovihuone erittäin voimakkaasti optisesti sumea.",
+          "Kasvojen tärkeät piirteet ovat lähellä keskialuetta. Koko hattu ja esineen ulkoreuna eivät kokonaan 0,45-ytimessä, eivätkä myöhemmän ohjeen mukaan kaikki ulkoreunat ole ehdoton lisäkutsun peruste.",
+          "Kanoninen fakta mainitsee suorakaiteisen peilin mutta PT68a0bf6 vaatii pyöreän; uudempi kasvolähde43e464b syrjäyttää aiemman kasvon säilyttämisen pyynnön.",
+          "Lopullinen kahden valitun kuvan 160 px:n arkki katsottu henkilökohtaisesti: eri-ikäinen parraton hovimestari sekä imettäjän kasvot ja molempien esineiden korjatut muodot ovat luettavissa."
+        ],
+        "personallyInspected160px": true,
+        "ovalQA": {
+          "width": 160,
+          "height": 213,
+          "innerRadius": 0.45,
+          "outerRadius": 1,
+          "curve": "1-smoothstep",
+          "personallyInspected": true,
+          "passedReadable": true
+        }
+      },
+      "selectedAttempt": 2,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/delivery-packet/45-metallipeili.png",
+      "deliverySHA256": "b8fdb3aa9af20f805701f94b1d74a8f8e602334b6501f71380f8f84683d3af21",
+      "correctionTaskNumber": 564
+    },
+    "49-zitan-jakkara": {
+      "code": "49-zitan-jakkara",
+      "sourceItem": {
+        "number": 49,
+        "id": "zitan-jakkara",
+        "nimi": "Zitan-jakkara",
+        "kuplatyyppi": 1,
+        "kuplatyyppiRaw": "1",
+        "typeLabelFromMarkdown": "esittely",
+        "kupla": "Hymyilevä imettäjä esittelee ylpeänä zitan-puista jakkaraa, lähikuva, vaalea huone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+        "fakta": "Zitan-puuta käytettiin lähinnä Qing-palatsien huonekaluissa; Palace Museumissa niitä on yli 2 800.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.zitan-jakkara.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.zitan-jakkara.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.zitan-jakkara.kupla",
+            "teksti": "juoksupeli.rikkoutuva.zitan-jakkara.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.zitan-jakkara.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.zitan-jakkara.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.zitan-jakkara.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "vaalea huone"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.zitan-jakkara.kupla"
+          },
+          "mdHeading": "### Zitan-jakkara (`zitan-jakkara`) — kupla 1: esittely",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T11:58:04.762220+00:00",
+          "args": {
+            "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTOGRAPH1086x1448 portraitRGBopaquePNG. Reference image is ONLY the exact mature smiling Manchu NURSEMAID role/appearance, graytemples, horizontalblackliangbatouhairwings, longlooseblue embroideredManchurobe, face SIZE/POSITION, brightairyroom, warmdaylight and soft opticalbokeh. Preserve these human/clothing/room/close-framing characteristics in a whole NEW photograph. Correct object completely: a REAL FOUR-LEGGED ZITAN STOOL, dark VIOLET-BROWN glossy hardwood with natural irregular dense woodgrain. CLEAR FLAT HORIZONTAL SQUARE SEAT, four corners, FOUR distinct slender structural LEGS atcorners, HORIZONTAL STRETCHERS joininglegs nearlowerpart, OPEN EMPTY spaces betweenlegs. Simple elegant traditional Qing mortise-and-tenon stool, visible wooden seat TOP in threequarterview; allFOURlegs individually distinguishable through openframe, not an enclosedcabinet. No sidepanels, cupboard, door, drawer, storage, hexagon, sixlegs, pedestal orcarveddrum. Whole stool about35–40%totalphotoheight, sharpcentralforeground onFLOOR. Nursemaid kneels immediately behind and proudly presents with gentle openpalms beside it; her modesthappyface above stool at referenceposition, important eyes/nose/mouth protected nearcentral45%ellipse, do not zoomin or putfaceattop. Camera0.8m atstoollevel slightlyabove seat toshowhorizontal sittingsurface,100mmf/1.4. Stool tacksharp, nursemaid mildlysoft, roomonly extremelydefocused cream/red/gold lightblobs. Brightnaturaldaylight/gentlebacklight, authentic wood/skin/silktexture, no CGI/plastic/repeatingpattern. No text/logo/graphics, masks/fade/vignette/borders, crop/padding/partialediting/pixelcopy. Entirely NEW photograph, not editing existing object; DO NOT COPY reference hexagonal enclosedsidepanels.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/49-zitan-jakkara-attempt1.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T12:02:55.851891+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-233d1ab8-9b56-4ac9-b88c-5f24e7e5baec.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/native/49-zitan-jakkara-attempt1.png",
+          "nativeSHA256": "f26ce48e75888888320d7e2c9cc21371d347d05f6f3b8801935a039f65bb2943",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "1a71f9473b6245ed313cf9fe48fdf4aed460f5edfcbb4e15d489a682200f49d8",
+          "technicalPass": true,
+          "qa": {
+            "attempt": 1,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "wholeNewGeneration": true,
+            "contentCorrectionVerified": true,
+            "notesFI": [
+              "Zitan-jakkarassa erottuu selvä vaakasuora neliömäinen istuinpinta, neljä erillistä jalkaa ja niitä yhdistävät tukipuut. Jalkojen välissä on avoin tyhjä tila; ei kuusikulmainen kaappi tai jalusta.",
+              "Kiiltävä tumma violetinruskea puu, kypsä hymyilevä imettäjä ja pitkä sininen Manchu-asu; vaalea hovihuone ja erittäin pehmeä optinen bokeh.",
+              "Jakkaran koko korkeus noin 36 % kuvan korkeudesta; näkyy luonnollisessa kolmen neljänneksen suunnassa lattialla.",
+              "Kasvojen alaosan keskeiset piirteet lähellä ydintä; silmät ovat hieman 0,45-ytimen yläpuolella loivan häivytyksen alussa, arviolta r 0,50. Tämä kirjataan, eikä pelkkä marginaalinen r-ero laukaise uutta generointia; 160 px:n luettavuus tarkistetaan.",
+              "Puun lajia ei voi varmentaa valokuvasta kemiallisesti; ulkonäkö vastaa pyydettyä tummaa kiiltävää zitania.",
+              "160 px:n soikioarkki katsottu henkilökohtaisesti: kasvot ja esineen korjattu muoto ovat luettavissa. Peilissä pyöreä ääriviiva, nuppi ja koristekehät; jakkarassa istuin, nelijalkainen avoin runko ja tukipuut näkyvät.",
+              "Lopullinen kahden valitun kuvan 160 px:n arkki katsottu henkilökohtaisesti: eri-ikäinen parraton hovimestari sekä imettäjän kasvot ja molempien esineiden korjatut muodot ovat luettavissa."
+            ],
+            "personallyInspected160px": true,
+            "ovalQA": {
+              "width": 160,
+              "height": 213,
+              "innerRadius": 0.45,
+              "outerRadius": 1,
+              "curve": "1-smoothstep",
+              "personallyInspected": true,
+              "passedReadable": true
+            }
+          },
+          "qaHistory": [
+            {
+              "replacedAt": "2026-10-19T12:05:04.420452+00:00",
+              "qa": {
+                "attempt": 1,
+                "personallyInspectedNative": true,
+                "passed": true,
+                "wholeNewGeneration": true,
+                "contentCorrectionVerified": true,
+                "notesFI": [
+                  "Zitan-jakkarassa erottuu selvä vaakasuora neliömäinen istuinpinta, neljä erillistä jalkaa ja niitä yhdistävät tukipuut. Jalkojen välissä on avoin tyhjä tila; ei kuusikulmainen kaappi tai jalusta.",
+                  "Kiiltävä tumma violetinruskea puu, kypsä hymyilevä imettäjä ja pitkä sininen Manchu-asu; vaalea hovihuone ja erittäin pehmeä optinen bokeh.",
+                  "Jakkaran koko korkeus noin 36 % kuvan korkeudesta; näkyy luonnollisessa kolmen neljänneksen suunnassa lattialla.",
+                  "Kasvojen alaosan keskeiset piirteet lähellä ydintä; silmät ovat hieman 0,45-ytimen yläpuolella loivan häivytyksen alussa, arviolta r 0,50. Tämä kirjataan, eikä pelkkä marginaalinen r-ero laukaise uutta generointia; 160 px:n luettavuus tarkistetaan.",
+                  "Puun lajia ei voi varmentaa valokuvasta kemiallisesti; ulkonäkö vastaa pyydettyä tummaa kiiltävää zitania."
+                ]
+              }
+            },
+            {
+              "replacedAt": "2026-10-19T12:09:14.437849+00:00",
+              "qa": {
+                "attempt": 1,
+                "personallyInspectedNative": true,
+                "passed": true,
+                "wholeNewGeneration": true,
+                "contentCorrectionVerified": true,
+                "notesFI": [
+                  "Zitan-jakkarassa erottuu selvä vaakasuora neliömäinen istuinpinta, neljä erillistä jalkaa ja niitä yhdistävät tukipuut. Jalkojen välissä on avoin tyhjä tila; ei kuusikulmainen kaappi tai jalusta.",
+                  "Kiiltävä tumma violetinruskea puu, kypsä hymyilevä imettäjä ja pitkä sininen Manchu-asu; vaalea hovihuone ja erittäin pehmeä optinen bokeh.",
+                  "Jakkaran koko korkeus noin 36 % kuvan korkeudesta; näkyy luonnollisessa kolmen neljänneksen suunnassa lattialla.",
+                  "Kasvojen alaosan keskeiset piirteet lähellä ydintä; silmät ovat hieman 0,45-ytimen yläpuolella loivan häivytyksen alussa, arviolta r 0,50. Tämä kirjataan, eikä pelkkä marginaalinen r-ero laukaise uutta generointia; 160 px:n luettavuus tarkistetaan.",
+                  "Puun lajia ei voi varmentaa valokuvasta kemiallisesti; ulkonäkö vastaa pyydettyä tummaa kiiltävää zitania.",
+                  "160 px:n soikioarkki katsottu henkilökohtaisesti: kasvot ja esineen korjattu muoto ovat luettavissa. Peilissä pyöreä ääriviiva, nuppi ja koristekehät; jakkarassa istuin, nelijalkainen avoin runko ja tukipuut näkyvät."
+                ],
+                "personallyInspected160px": true,
+                "ovalQA": {
+                  "width": 160,
+                  "height": 213,
+                  "innerRadius": 0.45,
+                  "outerRadius": 1,
+                  "curve": "1-smoothstep",
+                  "personallyInspected": true,
+                  "passedReadable": true
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "latestExplicitShapeOverride": "Clear horizontal seat, FOUR legs and stretchers, glossy dark violetbrown zitan, nursemaid presents.",
+      "activeAttempt": 1,
+      "qa": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "wholeNewGeneration": true,
+        "contentCorrectionVerified": true,
+        "notesFI": [
+          "Zitan-jakkarassa erottuu selvä vaakasuora neliömäinen istuinpinta, neljä erillistä jalkaa ja niitä yhdistävät tukipuut. Jalkojen välissä on avoin tyhjä tila; ei kuusikulmainen kaappi tai jalusta.",
+          "Kiiltävä tumma violetinruskea puu, kypsä hymyilevä imettäjä ja pitkä sininen Manchu-asu; vaalea hovihuone ja erittäin pehmeä optinen bokeh.",
+          "Jakkaran koko korkeus noin 36 % kuvan korkeudesta; näkyy luonnollisessa kolmen neljänneksen suunnassa lattialla.",
+          "Kasvojen alaosan keskeiset piirteet lähellä ydintä; silmät ovat hieman 0,45-ytimen yläpuolella loivan häivytyksen alussa, arviolta r 0,50. Tämä kirjataan, eikä pelkkä marginaalinen r-ero laukaise uutta generointia; 160 px:n luettavuus tarkistetaan.",
+          "Puun lajia ei voi varmentaa valokuvasta kemiallisesti; ulkonäkö vastaa pyydettyä tummaa kiiltävää zitania.",
+          "160 px:n soikioarkki katsottu henkilökohtaisesti: kasvot ja esineen korjattu muoto ovat luettavissa. Peilissä pyöreä ääriviiva, nuppi ja koristekehät; jakkarassa istuin, nelijalkainen avoin runko ja tukipuut näkyvät.",
+          "Lopullinen kahden valitun kuvan 160 px:n arkki katsottu henkilökohtaisesti: eri-ikäinen parraton hovimestari sekä imettäjän kasvot ja molempien esineiden korjatut muodot ovat luettavissa."
+        ],
+        "personallyInspected160px": true,
+        "ovalQA": {
+          "width": 160,
+          "height": 213,
+          "innerRadius": 0.45,
+          "outerRadius": 1,
+          "curve": "1-smoothstep",
+          "personallyInspected": true,
+          "passedReadable": true
+        }
+      },
+      "selectedAttempt": 1,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/delivery-packet/49-zitan-jakkara.png",
+      "deliverySHA256": "f26ce48e75888888320d7e2c9cc21371d347d05f6f3b8801935a039f65bb2943",
+      "correctionTaskNumber": 564
+    }
+  },
+  "startedAt": "2026-10-19T11:58:04.360785+00:00",
+  "updatedAt": "2026-10-19T12:09:14.477086+00:00",
+  "callsIssued": 3,
+  "callsCompleted": 3,
+  "selectedImages": 2,
+  "productionActive": false,
+  "sourceTaskNumbers": [
+    564
+  ],
+  "correctionTaskNumber": 564,
+  "latestCompositionSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe"
+  },
+  "correctionSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-40to51-kuittaus-20261019.md",
+    "commit": "68a0bf6e0a963eb9d2dfc301bd9e59139ebd753c",
+    "blob": "033e9e7d826b0e9d7930a164657c5c4e43fc5200",
+    "sha256": "a865f34e4ee217444cae2ddf4a025897f0b9509126a7dc9442df3aa77ac2b657"
+  },
+  "oldDeliveredCloseDUnmodified": true,
+  "wholeNewGenerationRequired": true,
+  "personDiversitySource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+    "commit": "43e464bb68b591d5521d6c0eaa1118c265b86497",
+    "blob": "fb4c5d92e6d6e10336296173c8fc667a1789a99f",
+    "sha256": "42977c5a62fc4ce479512fb1f9334ca9e09319370b4ae71d42e3bc051b0e5de2"
+  },
+  "personDiversityRule": "Same person at most twice in 51, except named Puyi/teacher/nursemaid; 45 must use new clean-shaven angular middle-aged courtmaster, not repeated white-bearded teacher-like man. 49 nursemaid explicitly allowed recurring."
+}
