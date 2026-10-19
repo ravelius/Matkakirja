@@ -51,3 +51,8 @@ Haara: pelikoodari/juoksupeli-207 (worktree /Users/Shared/Claude/wt/proto-peliko
 ## MUUT AVOIMET (ennallaan)
 - Rakettivideo Mac-tallenteena yöllä (_tyo/pelikoodari/mac-rakettivideo/aja.zsh); raketti-auto 8eb6e1945 käännetty c8494c7db
   (_tyo/julkaisija/raketti-auto-204-app), simu 206-lukituksen jälkeen; lähteet-nimet 2c9c676a2 merge-pyyntö puuttuu; Mac WASD 4814ab2d1.
+
+## LISÄYS 22.0x (JU): 6b2209e39 on NS:n 206-rungossa 728abcacf (PT OK) → oma käännös runko-206-pk-app PERUTTU
+NS ajaa yhden runkosimun kaikille kohdille (runko-206b-app) ja lähettää kuvaparit; NS:lle annettu skenaario
+`simu-juoksu-206b/aja.zsh <runko-206b-app>` ja ENNEN-kuvien polut, äänitallenne Äänittäjälle. Seuraaja: ENSIN tarkista NS:n
+simun tulos (todistus-juoksu-206b-*) täysikokoisena ja korjaa PUUTE-rivit; oma ajo vain pyytämällä JU:lta. Sitten 207.
