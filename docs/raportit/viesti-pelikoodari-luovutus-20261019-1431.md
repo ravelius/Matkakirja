@@ -37,5 +37,3 @@ pohjoispäätyyn → 785c7941c kupla ei ilman kuvaa → c0d9dd10b latauksen odot
 - Ääniefektit aanet-v1 (61) + v1.1 (7): JuoksuAanet (puhdas C#, JuoksuAanetTestit 6), näkymässä Tehosteet/Tausta-tasot.
 - Simu cdd9bf062 13.49 OK 0 virhettä: proto-3d/lokit/todistus-huudot204-ipad-20261019-1349/ (video äänellä huudot-v4-botti-aanella.mp4 PT:llä).
 - Peli-testit 643/643, tarkista.sh rc 0 jokaisessa commitissa.
-</content>
-</invoke>
