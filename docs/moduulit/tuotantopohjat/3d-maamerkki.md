@@ -264,8 +264,9 @@ muistista; uusia sääntöjä ei ole. Luovutukset `docs/raportit/viesti-karttase
   varmuus: ohut masto tai yhden pikselin kärki on "matala/keskitaso", ja lähteen korkeus kirjataan rinnalle (Himmelskibet 74,6 m
   alaraja, valmistaja 80 m). Lähde: Tivolin `LUEMINUT.md` (Mittaukset).
 
-**Mittaukset omista aineistoista.** Googlen laatoista ei mitata mitään; korkeudet ja vertailut tehdään omista DSM:istä
-(ČÚZK, EA, GLO-30, kansalliset LiDARit). Lähde: luovutus 15.10. (Muistiinpanot).
+**Mittaukset omista aineistoista.** Googlen laatoista ei mitata kohteiden korkeuksia eikä mittoja; laattojen laatua mittaa vain
+3D-kattavuusmittari (`kuumailmapallokierros.md` luku 8). Korkeudet ja vertailut tehdään omista DSM:istä (ČÚZK, EA, GLO-30,
+kansalliset LiDARit). Lähde: luovutus 15.10. (Muistiinpanot); PT 19.10. (#4981).
 
 **Vertailuortot (luku 2.6 ja vertailuportti).** `_tyo/karttaseppa/vertailu/<kohde>/`: `orto.jpg` mallin ENU-ruudussa,
 `meta.json` ja `varjot.jpg`; Linnanrakentaja ajaa ne `vertaa_orto.py --meta`:lla, ja uudelle mallille ajo pyydetään, kun malli
