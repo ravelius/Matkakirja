@@ -18,6 +18,9 @@ Edellinen: viesti-pelikoodari-luovutus-20261019-1740.md. Rooli: Pelikoodari (Opu
    runko 4be2a647f oli punainen AanipohjaTestit → korjattu, Linssit 2110/2110, Peli 639/639). Simu ajetaan ad203186e-käännöksellä
    (korjaus ei näy kuvissa).
 
+LISÄYS 19.3x (PT): NS:n juna 205 -runko on 5d41150ce. v1-käännös on JU:n prosessi (ei tämän session lapsi), simua EI ole
+aloitettu → seuraaja käynnistää sen. Simukuvista puuttuu kaikki (M2, J2/J3, K1/K2, U1–U3 iPhone + iPad). Merge-raja 21.15.
+
 ## JUNA 205 / v1 – TILA (PT kuittasi puutelistan; _tyo/pelikoodari/raportit/juoksupeli-v1-puuttuvat-20261019.md)
 - 1 Valikko: 5deb98c46 yksi rivi "Juoksupeli" → v4 (kuitattu). 6 Esteet: Codexin esteet-v1 ämpärissä 19.01, pelikuvat
   kuvapari-esteet-v1-20261019/ (KUITATTU). 4 Drone B "oviaukon läpi" (omistajan päätös 18.02): 6ca040b53 + uloskäynti 21bfda59e,
