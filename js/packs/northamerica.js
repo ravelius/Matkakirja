@@ -308,7 +308,7 @@ export const NORTHAMERICA = {
           + 'Kun espanjalaiset pakenivat atsteekkien Tenochtitlan-kaupungista '
           + '1520 (“surullinen yö”), osa Montezuman aarteesta katosi. '
           + 'Sitä etsitään yhä.',
-        kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
+        kuva: 'assets/aarteet/aarre-northamerica-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Kultaryntäyksen hippu', color: '#e0b02a',

@@ -539,8 +539,9 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
 
 - **Afrikka — Kongon kuninkaan kruunu** *(omistaja 19.10.2026; korvaa
   Suuren Zimbabwen kivilinnun, jonka kaikki kahdeksan lintua on löydetty)*.
-  Paavin lahja kuningas Garcia II:lle 1652; kadonnut Recifessä 1666
-  matkalla Lissaboniin. Kuninkaasta, joka kaatui Mbwilan taistelussa,
+  Paavin lahja kuningas Garcia II:lle 1652. Mbwilan taistelun
+  (29.10.1665) jälkeen kruunu lähetettiin Portugaliin, ja se katosi
+  joko Recifessä tai Lissabonissa. Kuninkaasta, joka kaatui Mbwilan taistelussa,
   kerrotaan arvokkaasti. Uusitaan ensimmäisenä
   (kaupunkien tekstit ovat jo hyvät — tiivistys + dekkarikoukut
   harvakseltaan). Motiivilanka: lähetys, joka ei tullut perille —
@@ -563,13 +564,14 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
 - **Etelä-Amerikka — Mantan smaragdi** *(omistaja 19.10.2026; korvaa
   El Doradon aarteen ja Muiscojen kultalautan, joka löydettiin 1969)*.
   Mantan herran palvoma smaragdi, vähän strutsinmunaa pienempi;
-  manteñot kätkivät sen 1534, eikä sitä ole löydetty. Motiivilanka:
+  manteñot kätkivät sen 1534, eikä sitä ole löydetty. Nimi Umiña on
+  myöhemmän kertomuksen (Velasco 1789). Motiivilanka:
   vihreä valo, jota ei näe — joet, sumu ja kätketty kivi, jota kukaan
   ei kartoita. Sävelpaino: ihmetys ja arvoitus.
 - **Oseania — Raiatean kuninkaiden höyhenvyö** *(omistaja 19.10.2026;
   korvaa Eteläristin helmen, joka löydettiin 1883)*. Punahöyheninen
   maro ʻura, johon jokainen hallitsija lisäsi osan; lähetettiin
-  Lontooseen viimeistään 1822, ja sen jälki katoaa. Pyhä esine, josta
+  Lontooseen viimeistään 1822, eikä sen myöhemmistä vaiheista tiedetä. Pyhä esine, josta
   kerrotaan kunnioittaen. Motiivilanka: punottu muisti ja tähtitaivas,
   jota Horatio ei tunne — kartanpiirtäjä oppii navigoimaan uudestaan.
   Sävelpaino: meri, valo ja hengähdys; laudan rauhallisin.
