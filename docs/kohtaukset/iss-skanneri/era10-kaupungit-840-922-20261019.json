@@ -1,0 +1,1852 @@
+{
+ "_meta": {
+  "kuvaus": "ISS-skanneri B1 erä 10: kaupungit 840–922 (väkiluvun mukaan, karkea arvio) uudessa rakenteessa; k-natal-brasilia (väärät koordinaatit) pois. Lähteet vain krediittitiedostoon. Faktat tarkistettu riippumattomilla Sonnet-tarkistajilla verkosta 19.10.2026.",
+  "rajat": "aloitus ≤ 45, luonne ≤ 110, nimike ≤ 18, rivin arvo ≤ 24 merkkiä"
+ },
+ "kohteet": [
+  {
+   "tunnus": "k-richmond",
+   "nimi": "Richmond",
+   "aloitus": "Yhdysvaltain Virginian pääkaupunki",
+   "luonne": "James-joen putouslinjalla sijaitseva kaupunki, joka oli sisällissodan aikana Konfederaation pääkaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 237 300 (2025)"
+    ],
+    [
+     "Perustettu",
+     "1737"
+    ],
+    [
+     "Pinta-ala",
+     "162 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Richmond,_Virginia"
+   ]
+  },
+  {
+   "tunnus": "k-concepcion",
+   "nimi": "Concepción",
+   "aloitus": "Etelä-Chilen suuri yliopistokaupunki",
+   "luonne": "Täällä julistettiin Chilen itsenäisyys 1818; maanjäristys tuhosi suuren osan kaupungista 1939.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "223 574 (2017)"
+    ],
+    [
+     "Perustettu",
+     "1550"
+    ],
+    [
+     "Pinta-ala",
+     "222 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Concepci%C3%B3n,_Chile"
+   ]
+  },
+  {
+   "tunnus": "k-changhua",
+   "nimi": "Changhua",
+   "aloitus": "Taiwanin länsiosan kaupunki",
+   "luonne": "Tunnettu Baguashanin Suuresta Buddhasta ja Taiwanin vanhimmasta Konfutse-temppelistä; ’Bambukaupunki’.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "226 564 (3/2023)"
+    ],
+    [
+     "Pinta-ala",
+     "65,7 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Changhua_City"
+   ]
+  },
+  {
+   "tunnus": "k-san-bernardino",
+   "nimi": "San Bernardino",
+   "aloitus": "Etelä-Kalifornian sisämaan kaupunki",
+   "luonne": "Mormonit perustivat siirtokunnan 1851; täällä avattiin ensimmäinen McDonald’s-ravintola 1940.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "222 101 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "162 km²"
+    ],
+    [
+     "Korkeus",
+     "321 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/San_Bernardino,_California"
+   ]
+  },
+  {
+   "tunnus": "k-tacoma",
+   "nimi": "Tacoma",
+   "aloitus": "Luoteis-Yhdysvaltain satamakaupunki",
+   "luonne": "’Kohtalon kaupunki’, Northern Pacific -rautatien päätepiste; Narrows-sillan romahdus 1940.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 229 800 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "162 km²"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1875"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tacoma,_Washington"
+   ]
+  },
+  {
+   "tunnus": "k-wellington",
+   "nimi": "Wellington",
+   "aloitus": "Uuden-Seelannin pääkaupunki",
+   "luonne": "Maailman eteläisin itsenäisen valtion pääkaupunki, joka tunnetaan tuulisuudestaan ja satamastaan.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 209 800 (2025)"
+    ],
+    [
+     "Pääkaupunki alkaen",
+     "1865"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Wellington"
+   ]
+  },
+  {
+   "tunnus": "k-salt-lake-city",
+   "nimi": "Salt Lake City",
+   "aloitus": "Yhdysvaltain Utahin pääkaupunki",
+   "luonne": "Mormonipioneerien 1847 perustama kaupunki Suuren Suolajärven lähellä; talviolympialaisten 2002 isäntä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 215 500 (2025)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 300 m"
+    ],
+    [
+     "Pinta-ala",
+     "287 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Salt_Lake_City"
+   ]
+  },
+  {
+   "tunnus": "k-rochester",
+   "nimi": "Rochester",
+   "aloitus": "New Yorkin osavaltion neljäs suurin kaupunki",
+   "luonne": "Kodakin ja Xeroxin kotikaupunki; Frederick Douglass julkaisi täällä The North Star -lehteä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 206 100 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "96 km²"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1834"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rochester,_New_York"
+   ]
+  },
+  {
+   "tunnus": "k-geneve",
+   "nimi": "Geneve",
+   "aloitus": "Sveitsin toiseksi suurin kaupunki",
+   "luonne": "Kansainvälisen diplomatian keskus: YK:n toimistoja, Punainen Risti ja Geneven sopimukset.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "203 856 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "16 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Geneva"
+   ]
+  },
+  {
+   "tunnus": "k-saidu",
+   "nimi": "Saidu Sharif",
+   "aloitus": "Pakistanin pohjoisen Swat-laakson kaupunki",
+   "luonne": "Nimetty pyhimys Saidu Baban mukaan; lähellä on muinainen buddhalainen Butkaran stupa ja Swatin museo.",
+   "rivit": [
+    [
+     "Butkaran stupa",
+     "n. 2. vuosis. eaa."
+    ],
+    [
+     "Korkeus",
+     "n. 970 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Saidu_Sharif",
+    "https://en.wikipedia.org/wiki/Butkara_Stupa"
+   ]
+  },
+  {
+   "tunnus": "k-abbottabad",
+   "nimi": "Abbottabad",
+   "aloitus": "Pohjois-Pakistanin vuoristokaupunki",
+   "luonne": "Brittien perustama varuskuntakaupunki, jossa Osama bin Laden surmattiin vuonna 2011.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "234 395 (2023)"
+    ],
+    [
+     "Perustettu",
+     "1853"
+    ],
+    [
+     "Korkeus",
+     "1 256 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Abbottabad"
+   ]
+  },
+  {
+   "tunnus": "k-birmingham-yhdysvallat",
+   "nimi": "Birmingham",
+   "aloitus": "Alabaman teollisuuskaupunki",
+   "luonne": "Rauta- ja teräsvarojen varaan noussut ’Magic City’ oli kansalaisoikeusliikkeen keskeinen näyttämö.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 196 400 (2024)"
+    ],
+    [
+     "Perustettu",
+     "1871"
+    ],
+    [
+     "Korkeus",
+     "n. 182 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Birmingham,_Alabama"
+   ]
+  },
+  {
+   "tunnus": "k-liege",
+   "nimi": "Liège",
+   "aloitus": "Belgian itäosan Maas-joen kaupunki",
+   "luonne": "Maas ja Ourthe yhtyvät täällä; Vallonian vanhan teollisuuden sydän ja alueen kulttuurikeskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "198 102 (2026)"
+    ],
+    [
+     "Piispavalta",
+     "985–1794"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Li%C3%A8ge"
+   ]
+  },
+  {
+   "tunnus": "k-grand-rapids",
+   "nimi": "Grand Rapids",
+   "aloitus": "Länsi-Michiganin talous- ja kulttuurikeskus",
+   "luonne": "Grand-joen koskien äärellä; täällä järjestetään kansainvälinen ArtPrize-taidekilpailu.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 201 200 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "118 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Grand_Rapids,_Michigan"
+   ]
+  },
+  {
+   "tunnus": "k-pingtung",
+   "nimi": "Pingtung",
+   "aloitus": "Taiwanin eteläosan tasankokaupunki",
+   "luonne": "Alueen maatalouskeskus, jonka ympäristössä viljellään sokeriruokoa, riisiä ja banaaneja.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "193 563 (2/2024)"
+    ],
+    [
+     "Pinta-ala",
+     "66 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Pingtung_City",
+    "https://www.britannica.com/place/Ping-tung-Taiwan"
+   ]
+  },
+  {
+   "tunnus": "k-pasuruan",
+   "nimi": "Pasuruan",
+   "aloitus": "Itä-Jaavan rannikkokaupunki Indonesiassa",
+   "luonne": "Muinainen satamakaupunki Madurasalmen rannalla; hollantilaisaikana tärkeä kauppakeskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 213 800 (2025)"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1918"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Pasuruan",
+    "https://berkalaarkeologi.kemdikbud.go.id/index.php/berkalaarkeologi/article/view/851",
+    "https://id.wikipedia.org/wiki/Kota_Pasuruan"
+   ]
+  },
+  {
+   "tunnus": "k-townsville",
+   "nimi": "Townsville",
+   "aloitus": "Pohjois-Queenslandin suurin kaupunki",
+   "luonne": "Trooppinen satamakaupunki Suuren valliriutan vieressä; nimetty liikemies Robert Townsin mukaan.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 204 500 (2026)"
+    ],
+    [
+     "Perustettu",
+     "1864"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Townsville"
+   ]
+  },
+  {
+   "tunnus": "k-braga",
+   "nimi": "Braga",
+   "aloitus": "Portugalin kirkollinen keskus",
+   "luonne": "Roomalaisten Bracara Augusta; maan vanhin arkkihiippakunta ja Minhon historiallinen pääkaupunki.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "212 635 (2025)"
+    ],
+    [
+     "Perustettu",
+     "n. 16 eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Braga"
+   ]
+  },
+  {
+   "tunnus": "k-providence",
+   "nimi": "Providence",
+   "aloitus": "Rhode Islandin pääkaupunki",
+   "luonne": "Roger Williams perusti sen uskonnonvapauden turvapaikaksi; kotikaupunki Brownin yliopistolle.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "190 934 (2020)"
+    ],
+    [
+     "Perustettu",
+     "1636"
+    ],
+    [
+     "Pinta-ala",
+     "53 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Providence,_Rhode_Island"
+   ]
+  },
+  {
+   "tunnus": "k-naga",
+   "nimi": "Naga",
+   "aloitus": "Filippiinien Bicolin alueen keskus",
+   "luonne": "Espanjalaisten Nueva Cáceres; Peñafrancian Neitsyt Marian pyhiinvaellus tekee siitä pyhiinvaelluskaupungin.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "210 545 (2024)"
+    ],
+    [
+     "Nueva Cáceres",
+     "1575"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Naga,_Camarines_Sur"
+   ]
+  },
+  {
+   "tunnus": "k-akron",
+   "nimi": "Akron",
+   "aloitus": "Ohion koillisosan teollisuuskaupunki",
+   "luonne": "Entinen ’maailman kumipääkaupunki’, rengasyhtiöiden koti; Alcoholics Anonymous syntyi täällä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 189 700 (2025)"
+    ],
+    [
+     "Perustettu",
+     "1825"
+    ],
+    [
+     "Korkeus",
+     "n. 288 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Akron,_Ohio"
+   ]
+  },
+  {
+   "tunnus": "k-knoxville",
+   "nimi": "Knoxville",
+   "aloitus": "Itä-Tennesseen suurin kaupunki",
+   "luonne": "Tennessee-joen varrella; osavaltion ensimmäinen pääkaupunki ja vuoden 1982 maailmannäyttelyn isäntä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "190 740 (2020)"
+    ],
+    [
+     "Asutus",
+     "1786"
+    ],
+    [
+     "Pinta-ala",
+     "270 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Knoxville,_Tennessee"
+   ]
+  },
+  {
+   "tunnus": "k-vancouver-yhdysvallat",
+   "nimi": "Vancouver",
+   "aloitus": "Washingtonin kaakkoisosan joenvarsikaupunki",
+   "luonne": "Columbia-joen rannalla; syntyi Hudson’s Bay Companyn Fort Vancouverin turkiskauppa-aseman ympärille.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "190 915 (2020)"
+    ],
+    [
+     "Perustettu",
+     "1825"
+    ],
+    [
+     "Pinta-ala",
+     "136 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Vancouver,_Washington"
+   ]
+  },
+  {
+   "tunnus": "k-saarbrucken",
+   "nimi": "Saarbrücken",
+   "aloitus": "Saarlandin pääkaupunki Saksan lounaassa",
+   "luonne": "Saarin hiilialueen entinen teollisuuskeskus; kaupungissa on 1700-luvun linna ja Saar-joen kivisilta (1546).",
+   "rivit": [
+    [
+     "Asukasluku",
+     "yli 180 000"
+    ],
+    [
+     "Ensi maininta",
+     "999"
+    ],
+    [
+     "Pinta-ala",
+     "167,5 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Saarbr%C3%BCcken"
+   ]
+  },
+  {
+   "tunnus": "k-southend-on-sea",
+   "nimi": "Southend-on-Sea",
+   "aloitus": "Etelä-Englannin rantalomakaupunki",
+   "luonne": "Lontoolaisten vanha merenrantakohde; sai kaupunkistatuksen 2022 kansanedustaja David Amessin muistoksi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "180 686 (2021)"
+    ],
+    [
+     "Pisin huvilaituri",
+     "2,16 km"
+    ],
+    [
+     "Pinta-ala",
+     "41,8 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Southend-on-Sea",
+    "https://historicengland.org.uk/listing/the-list/list-entry/1112705"
+   ]
+  },
+  {
+   "tunnus": "k-quetzaltenango",
+   "nimi": "Quetzaltenango",
+   "aloitus": "Guatemalan länsiosan ylänkökaupunki",
+   "luonne": "Mayakieliseltä nimeltä Xelajú eli ’Xela’; kahvi toi vaurautta ja belle époque -rakennuksia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "180 706 (2018)"
+    ],
+    [
+     "Korkeus",
+     "2 330 m"
+    ],
+    [
+     "Pinta-ala",
+     "122 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Quetzaltenango"
+   ]
+  },
+  {
+   "tunnus": "k-basel",
+   "nimi": "Basel",
+   "aloitus": "Sveitsin kolmanneksi suurin kaupunki",
+   "luonne": "Reinin varrella; museoiden, Art Baselin sekä Rochen ja Novartiksen kaupunki, jossa LSD löydettiin 1938.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "177 595 (2024)"
+    ],
+    [
+     "Vanhin yliopisto",
+     "1460"
+    ],
+    [
+     "Liittyi Sveitsiin",
+     "1501"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Basel"
+   ]
+  },
+  {
+   "tunnus": "k-oceanside",
+   "nimi": "Oceanside",
+   "aloitus": "Etelä-Kalifornian rantakaupunki",
+   "luonne": "Palmurivien reunustama rantakaupunki, jonka alkuna oli vuonna 1798 perustettu San Luis Reyn lähetysasema.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "174 068 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "109 km²"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1888"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Oceanside,_California"
+   ]
+  },
+  {
+   "tunnus": "k-gliwice",
+   "nimi": "Gliwice",
+   "aloitus": "Puolan Ylä-Sleesian kaupunki",
+   "luonne": "Keskiaikainen vanhakaupunki ja puinen radiotorni; Gleiwitz-välikohtaus syttyi täällä 1939.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "175 102 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "134 km²"
+    ],
+    [
+     "Ensi maininta",
+     "1276"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Gliwice",
+    "https://www.atlasobscura.com/places/gliwice-radio-tower"
+   ]
+  },
+  {
+   "tunnus": "k-newcastle",
+   "nimi": "Newcastle",
+   "aloitus": "Uuden Etelä-Walesin hiilisatamakaupunki",
+   "luonne": "Hunter-joen suulla oleva maailman suurin hiilen vientisatama; asukkaita kutsutaan novocastrialaisiksi.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "168 873 (2021)"
+    ],
+    [
+     "Hiilen vienti",
+     "143 milj. t (2022)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/City_of_Newcastle",
+    "https://en.wikipedia.org/wiki/Newcastle,_New_South_Wales"
+   ]
+  },
+  {
+   "tunnus": "k-cairns",
+   "nimi": "Cairns",
+   "aloitus": "Koillis-Australian trooppinen kaupunki",
+   "luonne": "Suuren valliriutan ja Daintreen sademetsän matkailun portti.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 153 000 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1876"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cairns"
+   ]
+  },
+  {
+   "tunnus": "k-bytom",
+   "nimi": "Bytom",
+   "aloitus": "Ylä-Sleesian kaivoskaupunki Puolassa",
+   "luonne": "Hiilen ja malmin varaan rakentunut teollisuuskaupunki; vaakunassa on kaivosmies.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 146 000 (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "69,4 km²"
+    ],
+    [
+     "Ensimaininta",
+     "1136"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bytom"
+   ]
+  },
+  {
+   "tunnus": "k-darwin",
+   "nimi": "Darwin",
+   "aloitus": "Pohjois-Australian pääkaupunki",
+   "luonne": "Trooppinen satamakaupunki, jota japanilaiset pommittivat 19.2.1942.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "139 902 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1869"
+    ],
+    [
+     "Syklooni 1974",
+     "71 kuoli"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Darwin,_Northern_Territory"
+   ]
+  },
+  {
+   "tunnus": "k-bridgeport",
+   "nimi": "Bridgeport",
+   "aloitus": "Connecticutin väkirikkain kaupunki",
+   "luonne": "Sirkuskuningas P. T. Barnumin kotikaupunki ja entinen tehdaskaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "148 654 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "50,2 km²"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1836"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bridgeport,_Connecticut"
+   ]
+  },
+  {
+   "tunnus": "k-joliet",
+   "nimi": "Joliet",
+   "aloitus": "Illinoisin kaupunki Chicagon lounaispuolella",
+   "luonne": "Vanhan vankilan ja Route 66:n kaupunki; Blues Brothers -elokuva alkaa sen vankilasta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "150 362 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "170 km²"
+    ],
+    [
+     "Asutettu",
+     "1833"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Joliet,_Illinois"
+   ]
+  },
+  {
+   "tunnus": "k-syracuse",
+   "nimi": "Syracuse",
+   "aloitus": "New Yorkin osavaltion suolakaupunki",
+   "luonne": "Suolalähteiden ja Erie-kanavan varaan kasvanut yliopistokaupunki, jossa sataa runsaasti lunta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "148 620 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "66,4 km²"
+    ],
+    [
+     "Yliopisto",
+     "perustettu 1870"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Syracuse,_New_York"
+   ]
+  },
+  {
+   "tunnus": "k-punta-arenas",
+   "nimi": "Punta Arenas",
+   "aloitus": "Magalhãesin salmen kaupunki Etelä-Chilessä",
+   "luonne": "Punakattoinen satama- ja Etelämanner-retkien portti; yli 100 000 asukkaan kaupungeista maailman eteläisin.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "132 363 (2024)"
+    ],
+    [
+     "Perustettu",
+     "1848"
+    ],
+    [
+     "Vapaasatama",
+     "vuodesta 1977"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Punta_Arenas"
+   ]
+  },
+  {
+   "tunnus": "k-dayton",
+   "nimi": "Dayton",
+   "aloitus": "Yhdysvaltain Ohion lentokaupunki",
+   "luonne": "Wrightin veljesten kotikaupunki, jossa moottorilentoa kehitettiin Kitty Hawkin jälkeen.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "137 644 (2020)"
+    ],
+    [
+     "Perustettu",
+     "1796"
+    ],
+    [
+     "Pinta-ala",
+     "147,5 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dayton,_Ohio"
+   ]
+  },
+  {
+   "tunnus": "k-luxemburg",
+   "nimi": "Luxemburg",
+   "aloitus": "Luxemburgin suurherttuakunnan pääkaupunki",
+   "luonne": "Alzette-joen kallioille rakennettu linnoituskaupunki, ”Pohjolan Gibraltar”; EU-laitosten koti.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 137 700 (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "51,5 km²"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1994"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Luxembourg_City",
+    "https://whc.unesco.org/en/decisions/3223",
+    "https://www.luxembourg-city.com/en/about-luxembourg-city/presentation/facts-figures"
+   ]
+  },
+  {
+   "tunnus": "k-new-haven",
+   "nimi": "New Haven",
+   "aloitus": "Connecticutin yliopistokaupunki",
+   "luonne": "Yalen yliopiston kaupunki, jossa on 1600-luvulla suunniteltu yhdeksän ruudun asemakaava.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "134 023 (2020)"
+    ],
+    [
+     "Perustettu",
+     "1638"
+    ],
+    [
+     "Yale kaupungissa",
+     "vuodesta 1716"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/New_Haven,_Connecticut"
+   ]
+  },
+  {
+   "tunnus": "k-stamford",
+   "nimi": "Stamford",
+   "aloitus": "New Yorkin lähellä oleva yrityskaupunki",
+   "luonne": "Rahoitus- ja yrityskeskus; Charter Communicationsin ja Synchronyn pääkonttori ovat täällä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "135 470 (2020)"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1893"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Stamford,_Connecticut"
+   ]
+  },
+  {
+   "tunnus": "k-dunedin",
+   "nimi": "Dunedin",
+   "aloitus": "Uuden-Seelannin skotlantilainen kaupunki",
+   "luonne": "Edinburghin gaelinkielisen nimen mukaan nimetty opiskelijakaupunki; lähellä pesii kuninkaanalbatrosseja.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 104 000 (2025)"
+    ],
+    [
+     "Perustettu",
+     "1848"
+    ],
+    [
+     "Otagon yliopisto",
+     "perustettu 1869"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dunedin"
+   ]
+  },
+  {
+   "tunnus": "k-salerno",
+   "nimi": "Salerno",
+   "aloitus": "Campanian rannikkokaupunki Etelä-Italiassa",
+   "luonne": "Keskiaikaisen lääkärikoulun kaupunki ja Amalfin rannikon portti; liittoutuneet nousivat maihin 1943.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "125 323 (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "59,9 km²"
+    ],
+    [
+     "Rooman kolonia",
+     "190-luvulla eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Salerno"
+   ]
+  },
+  {
+   "tunnus": "k-west-palm-beach",
+   "nimi": "West Palm Beach",
+   "aloitus": "Floridan kaupunki Palm Beachin vastarannalla",
+   "luonne": "Rautatiemiljonääri Henry Flaglerin hotellityöläisille 1890-luvulla perustama kaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "117 415 (2020)"
+    ],
+    [
+     "Kunta perustettu",
+     "1894"
+    ],
+    [
+     "Lempinimi",
+     "Orchid City"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/West_Palm_Beach,_Florida"
+   ]
+  },
+  {
+   "tunnus": "k-hartford",
+   "nimi": "Hartford",
+   "aloitus": "Connecticutin osavaltion pääkaupunki",
+   "luonne": "Vakuutusalan pääkaupunkina tunnettu; Mark Twain kirjoitti täällä tunnetuimmat teoksensa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "121 054 (2020)"
+    ],
+    [
+     "Perustettu",
+     "1635"
+    ],
+    [
+     "Pinta-ala",
+     "46,8 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hartford,_Connecticut"
+   ]
+  },
+  {
+   "tunnus": "k-mendoza",
+   "nimi": "Mendoza",
+   "aloitus": "Argentiinan viinialueen keskus",
+   "luonne": "Maanjäristys tuhosi kaupungin 1861; se rakennettiin leveine katuineen. Lähellä kasvaa malbecia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "115 041 (2010)"
+    ],
+    [
+     "Korkeus",
+     "n. 750 m"
+    ],
+    [
+     "Perustettu",
+     "1561"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mendoza,_Argentina"
+   ]
+  },
+  {
+   "tunnus": "k-bukittinggi",
+   "nimi": "Bukittinggi",
+   "aloitus": "Länsi-Sumatran vuoristokaupunki",
+   "luonne": "Minangkabau-kulttuurin keskus, jonka tunnus on Hollannin ajan Jam Gadang -kellotorni.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 126 000 (2025)"
+    ],
+    [
+     "Korkeus",
+     "930 m"
+    ],
+    [
+     "Jam Gadang",
+     "rakennettu 1926"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bukittinggi"
+   ]
+  },
+  {
+   "tunnus": "k-lowell",
+   "nimi": "Lowell",
+   "aloitus": "Massachusettsin tekstiilikaupunki",
+   "luonne": "Amerikan teollisen vallankumouksen kehto; Merrimack-joen voimalla pyörivät kutomot.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "115 554 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "37,6 km²"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1836"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lowell,_Massachusetts"
+   ]
+  },
+  {
+   "tunnus": "k-rouen",
+   "nimi": "Rouen",
+   "aloitus": "Normandian historiallinen pääkaupunki",
+   "luonne": "Jeanne d’Arc poltettiin täällä 1431; Monet maalasi katedraalin julkisivun monta kertaa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "117 662 (2023)"
+    ],
+    [
+     "Pinta-ala",
+     "21,4 km²"
+    ],
+    [
+     "Gros-Horloge",
+     "1300-luvulta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rouen"
+   ]
+  },
+  {
+   "tunnus": "k-st-john-s",
+   "nimi": "St. John’s",
+   "aloitus": "Newfoundlandin ja Labradorin pääkaupunki",
+   "luonne": "Pohjois-Amerikan itäisin kaupunki; Marconi vastaanotti täällä ensimmäisen radiosignaalin Atlantin yli 1901.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "110 525 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "446 km²"
+    ],
+    [
+     "Suuri palo",
+     "1892"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/St._John%27s,_Newfoundland_and_Labrador"
+   ]
+  },
+  {
+   "tunnus": "k-butterworth",
+   "nimi": "Butterworth",
+   "aloitus": "Penangin mantereen kaupunkikeskus",
+   "luonne": "Lauttayhteyden, rautatieaseman ja sataman solmukohta George Townin vastarannalla.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "80 378 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "14,6 km²"
+    ],
+    [
+     "Lauttaliikenne",
+     "alkoi 1894"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Butterworth,_Penang"
+   ]
+  },
+  {
+   "tunnus": "k-noumea",
+   "nimi": "Nouméa",
+   "aloitus": "Uuden-Kaledonian pääkaupunki",
+   "luonne": "Ranskalais-melanesialainen satamakaupunki ja Uuden-Kaledonian suurin kaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "85 976 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "45,7 km²"
+    ],
+    [
+     "Perustettu",
+     "1854"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Noum%C3%A9a",
+    "https://www.insee.fr/fr/statistiques/8658726?sommaire=2122859"
+   ]
+  },
+  {
+   "tunnus": "k-amaravati",
+   "nimi": "Amaravati",
+   "aloitus": "Andhra Pradeshin uusi pääkaupunki",
+   "luonne": "Krishna-joen rannalle suunniteltu uusi kaupunki, nimetty muinaisen buddhalaiskeskuksen mukaan.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 103 000 (2011)"
+    ],
+    [
+     "Pinta-ala",
+     "217 km²"
+    ],
+    [
+     "Rakennus alkoi",
+     "2015"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Amaravati"
+   ]
+  },
+  {
+   "tunnus": "k-albany",
+   "nimi": "Albany",
+   "aloitus": "New Yorkin osavaltion pääkaupunki",
+   "luonne": "Hollantilaisen Fort Orange -kauppa-aseman paikalle kasvanut Hudson-joen kaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "99 224 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "56,8 km²"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1686"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Albany,_New_York"
+   ]
+  },
+  {
+   "tunnus": "k-tlaxcala",
+   "nimi": "Tlaxcala",
+   "aloitus": "Tlaxcalan osavaltion pääkaupunki Meksikossa",
+   "luonne": "Tlaxcalalaiset liittoutuivat Cortésin kanssa atsteekkeja vastaan; keskusta on siirtomaa-ajan kirkkoineen.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "13 555 (2020)"
+    ],
+    [
+     "Korkeus",
+     "2 239 m"
+    ],
+    [
+     "Perustettu",
+     "1520-luvulla"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tlaxcala_City"
+   ]
+  },
+  {
+   "tunnus": "k-suva",
+   "nimi": "Suva",
+   "aloitus": "Fidžin pääkaupunki",
+   "luonne": "Fidžin suurin kaupunki ja Etelä-Tyynenmeren yliopiston pääkampus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 94 000 (2017)"
+    ],
+    [
+     "Pinta-ala",
+     "26,2 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1882"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Suva"
+   ]
+  },
+  {
+   "tunnus": "k-magadan",
+   "nimi": "Magadan",
+   "aloitus": "Okhotskinmeren satamakaupunki Venäjällä",
+   "luonne": "Stalinin ajan Kolyman vankileirien portti ja kultakaivosten keskus; Surun naamio -muistomerkki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "yli 90 000 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1929"
+    ],
+    [
+     "Pinta-ala",
+     "295 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Magadan",
+    "https://ru.wikipedia.org/wiki/Магадан"
+   ]
+  },
+  {
+   "tunnus": "v-gao",
+   "nimi": "Gao",
+   "aloitus": "Itä-Malin suurin kaupunki Niger-joella",
+   "luonne": "Songhai-valtakunnan entinen pääkaupunki ja Saharan halki kulkeneen kaupan solmukohta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "86 633 (2009)"
+    ],
+    [
+     "Askian hauta",
+     "UNESCO 2004"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Gao"
+   ]
+  },
+  {
+   "tunnus": "k-santa-fe",
+   "nimi": "Santa Fe",
+   "aloitus": "New Mexicon osavaltion pääkaupunki",
+   "luonne": "Taiteen ja adobe-arkkitehtuurin kaupunki; Yhdysvaltain vanhin osavaltion pääkaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "87 505 (2020)"
+    ],
+    [
+     "Korkeus",
+     "yli 2 100 m"
+    ],
+    [
+     "Perustettu",
+     "1610"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Santa_Fe,_New_Mexico"
+   ]
+  },
+  {
+   "tunnus": "k-honiara",
+   "nimi": "Honiara",
+   "aloitus": "Salomonsaarten pääkaupunki",
+   "luonne": "Guadalcanalin saarella oleva kaupunki, jonka lähellä taisteltiin Henderson Fieldistä 1942.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "129 569 (2019)"
+    ],
+    [
+     "Pinta-ala",
+     "22 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1952"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Honiara"
+   ]
+  },
+  {
+   "tunnus": "k-gary",
+   "nimi": "Gary",
+   "aloitus": "Teollisuuskaupunki Yhdysvaltain Indianassa",
+   "luonne": "Terästehtaan ympärille rakennettu yhtiökaupunki Michigan-järven rannalla; Michael Jacksonin syntymäkaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "69 093 (2020)"
+    ],
+    [
+     "Kokonaispinta-ala",
+     "131 km²"
+    ],
+    [
+     "Perustettu",
+     "1906"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Gary,_Indiana",
+    "https://en.wikipedia.org/wiki/Michael_Jackson"
+   ]
+  },
+  {
+   "tunnus": "k-cayenne",
+   "nimi": "Cayenne",
+   "aloitus": "Ranskan Guyanan pääkaupunki",
+   "luonne": "Etelä-Amerikan suurin ranskankielinen kaupunki, joka sijaitsee entisellä saarella Cayenne-joen suulla.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "62 675 (2023)"
+    ],
+    [
+     "Kokonaispinta-ala",
+     "23,6 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cayenne"
+   ]
+  },
+  {
+   "tunnus": "k-sarasota",
+   "nimi": "Sarasota",
+   "aloitus": "Floridan Meksikonlahden rantakaupunki",
+   "luonne": "Ringlingin sirkus talvehti täällä vuodesta 1927; taidemuseo, ooppera ja läheinen Siesta Keyn ranta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "54 842 (2020)"
+    ],
+    [
+     "Kokonaispinta-ala",
+     "62 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sarasota,_Florida"
+   ]
+  },
+  {
+   "tunnus": "v-timbuktu",
+   "nimi": "Timbuktu",
+   "aloitus": "Malin muinainen saharalainen kauppakaupunki",
+   "luonne": "Kulta-, suola- ja norsunluukaupan sekä islamilaisen oppineisuuden keskus; Mansa Musa teki sen tunnetuksi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "84 821 (arvio 2023)"
+    ],
+    [
+     "Korkeus",
+     "261 m"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1988"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Timbuktu",
+    "https://citypopulation.de/en/mali/mun/admin/tombouctou/061204__tombouctou/"
+   ]
+  },
+  {
+   "tunnus": "k-port-vila",
+   "nimi": "Port Vila",
+   "aloitus": "Vanuatun pääkaupunki",
+   "luonne": "Maan talouden ja kaupan keskus Tyynellämerellä; James Cook kartoitti Efaten saaren 1774.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "49 034 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "23,6 km²"
+    ],
+    [
+     "Maan väestöstä",
+     "16,3 % (2020)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Port_Vila"
+   ]
+  },
+  {
+   "tunnus": "k-al-hillah-saudi-arabia",
+   "nimi": "Al Hillah",
+   "aloitus": "Asutus Saudi-Arabian Etelä-Najdissa",
+   "luonne": "Asutus Hotat Bani Tamimin seudulla Etelä-Najdissa, noin 135 km Riadista etelään.",
+   "rivit": [
+    [
+     "Seutu",
+     "Hotat Bani Tamim"
+    ],
+    [
+     "Hotat–Riad",
+     "n. 135 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hotat_Bani_Tamim"
+   ]
+  },
+  {
+   "tunnus": "k-harrisburg",
+   "nimi": "Harrisburg",
+   "aloitus": "Pennsylvanian osavaltion pääkaupunki",
+   "luonne": "Susquehanna-joen varrella; John Harris perusti sen, ja lähellä sattui Three Mile Islandin onnettomuus 1979.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "50 099 (2020)"
+    ],
+    [
+     "Kokonaispinta-ala",
+     "30,7 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1812"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Harrisburg,_Pennsylvania"
+   ]
+  },
+  {
+   "tunnus": "k-geraldton",
+   "nimi": "Geraldton",
+   "aloitus": "Länsi-Australian rannikkokaupunki",
+   "luonne": "Tärkeä satama sekä vehnä-, kala- ja kaivosalueen palvelukeskus; museossa on Batavia-haaksirikon jäänteitä.",
+   "rivit": [
+    [
+     "Taajaman asukkaat",
+     "32 717 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1851 (mitattu 1850)"
+    ],
+    [
+     "Matka Perthiin",
+     "424 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Geraldton",
+    "https://www.abs.gov.au/census/find-census-data/quickstats/2021/UCL512003",
+    "https://www.parliament.wa.gov.au/WebCMS/webcms.nsf/content/parliamentary-library-electorate-profiles-2021-geraldton-2021"
+   ]
+  },
+  {
+   "tunnus": "k-covington",
+   "nimi": "Covington",
+   "aloitus": "Pohjois-Kentuckyn suurin kaupunki",
+   "luonne": "Ohio- ja Licking-joen yhtymäkohdassa Cincinnatin vastarannalla; Roebling-riippusilta yhdistää kaupungit.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "40 961 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "35,6 km²"
+    ],
+    [
+     "Silta avattu",
+     "1867"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Covington,_Kentucky",
+    "https://en.wikipedia.org/wiki/Roebling_Suspension_Bridge"
+   ]
+  },
+  {
+   "tunnus": "v-kalgoorlie",
+   "nimi": "Kalgoorlie",
+   "aloitus": "Länsi-Australian kultakaupunki",
+   "luonne": "Paddy Hannanin kultalöytö synnytti kaupungin; lähellä on Super Pit -kultakaivos.",
+   "rivit": [
+    [
+     "Kalgoorlie–Boulder",
+     "n. 29 100 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1893"
+    ],
+    [
+     "Matka Perthiin",
+     "595 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kalgoorlie"
+   ]
+  },
+  {
+   "tunnus": "k-whitehorse",
+   "nimi": "Whitehorse",
+   "aloitus": "Yukonin pääkaupunki Kanadassa",
+   "luonne": "Yukon-joen molemmin puolin levittäytyvä kaupunki, jonka nimi tulee White Horse -koskista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "28 201 (2021)"
+    ],
+    [
+     "Maapinta-ala",
+     "413,9 km²"
+    ],
+    [
+     "Osuus Yukonista",
+     "n. 70 %"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Whitehorse"
+   ]
+  },
+  {
+   "tunnus": "v-alice-springs",
+   "nimi": "Alice Springs",
+   "aloitus": "Australian keskustan aavikkokaupunki",
+   "luonne": "Sai alkunsa Overland Telegraph -linjan tukiasemasta; arrernte-kansa kutsuu paikkaa nimellä Mparntwe.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 24 900 (2021)"
+    ],
+    [
+     "Korkeus",
+     "545 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Alice_Springs"
+   ]
+  },
+  {
+   "tunnus": "k-yellowknife",
+   "nimi": "Yellowknife",
+   "aloitus": "Luoteisterritorioiden pääkaupunki",
+   "luonne": "Suuren Orjajärven pohjoisrannan kaupunki, jonka nimi tulee dene-heimosta, jota kutsuttiin ’keltaveitsiksi’.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "20 340 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1934"
+    ],
+    [
+     "Kokonaispinta-ala",
+     "134 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yellowknife"
+   ]
+  },
+  {
+   "tunnus": "k-nuuk",
+   "nimi": "Nuuk",
+   "aloitus": "Grönlannin pääkaupunki",
+   "luonne": "Egeden siirtokunta muutti tänne 1728 nimellä Godthåb (’hyvä toivo’); yksi maailman pienimpiä pääkaupunkeja.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "20 113 (2025)"
+    ],
+    [
+     "Perustettu",
+     "1728"
+    ],
+    [
+     "Pinta-ala",
+     "n. 49 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nuuk"
+   ]
+  },
+  {
+   "tunnus": "v-mount-isa",
+   "nimi": "Mount Isa",
+   "aloitus": "Queenslandin sisämaan kaivoskaupunki",
+   "luonne": "Mount Isa Mines on yksi historian tuottoisimmista lyijyn, hopean, kuparin ja sinkin kaivoksista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "18 317 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1923"
+    ],
+    [
+     "Korkeus",
+     "356 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Isa"
+   ]
+  },
+  {
+   "tunnus": "k-broome",
+   "nimi": "Broome",
+   "aloitus": "Länsi-Australian helmikaupunki",
+   "luonne": "Kimberleyn suurin kaupunki ja matkailukohde; yawuru-kansa kutsuu sitä nimellä Rubibi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "14 660 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1883"
+    ],
+    [
+     "Tiematka Perthiin",
+     "n. 2 050–2 220 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Broome,_Western_Australia"
+   ]
+  },
+  {
+   "tunnus": "k-vila-velha",
+   "nimi": "Vila Velha",
+   "aloitus": "Jokikylä Brasilian Amapán osavaltiossa",
+   "luonne": "Cassiporé-joen kylä, jonka karanneiden orjien jälkeläiset tunnustettiin quilombo-yhteisöksi 2016.",
+   "rivit": [
+    [
+     "Asukkaita (piiri)",
+     "2 243 (2022)"
+    ],
+    [
+     "Tieyhteys",
+     "vuodesta 2015"
+    ],
+    [
+     "Päätuotteet",
+     "vesimelonit, kaakao"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Vila_Velha_do_Cassipor%C3%A9",
+    "https://pt.wikipedia.org/wiki/Vila_Velha_(Oiapoque)"
+   ]
+  },
+  {
+   "tunnus": "k-iqaluit",
+   "nimi": "Iqaluit",
+   "aloitus": "Nunavutin pääkaupunki Kanadassa",
+   "luonne": "Baffininsaaren kaupunki, jonka nimi oli 1987 asti Frobisher Bay; tieyhteyttä muualle Kanadaan ei ole.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "7 429 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "51,6 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1999"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Iqaluit"
+   ]
+  },
+  {
+   "tunnus": "v-murzuk",
+   "nimi": "Murzuk",
+   "aloitus": "Libyan Saharan keidaskaupunki",
+   "luonne": "Karavaanireittien solmu Fezzanin keitaalla; ajoittain Fezzanin pääkaupunki, linnoitus on raunioina.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "12 746 (2011)"
+    ],
+    [
+     "Osmanien valta",
+     "1574–1912"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Murzuq"
+   ]
+  },
+  {
+   "tunnus": "k-nome",
+   "nimi": "Nome",
+   "aloitus": "Alaskan kultakuumekaupunki",
+   "luonne": "Iditarod-koiravaljakkokilpailun maalikaupunki; kultalöytö 1898 kasvatti sen aikoinaan Alaskan suurimmaksi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "3 699 (2020)"
+    ],
+    [
+     "Kaupungiksi",
+     "1901"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nome,_Alaska",
+    "https://en.wikipedia.org/wiki/Iditarod_Trail_Sled_Dog_Race"
+   ]
+  },
+  {
+   "tunnus": "v-coober-pedy",
+   "nimi": "Coober Pedy",
+   "aloitus": "Etelä-Australian opaalikaupunki",
+   "luonne": "’Maailman opaalipääkaupunki’, jonka asukkaat suojautuvat helteeltä maanalaisissa luolakodeissa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 566 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1915"
+    ],
+    [
+     "Matka Adelaideen",
+     "846 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Coober_Pedy",
+    "https://abs.gov.au/census/find-census-data/quickstats/2021/SAL40295"
+   ]
+  },
+  {
+   "tunnus": "k-churchill",
+   "nimi": "Churchill",
+   "aloitus": "Manitoban pohjoinen satamakaupunki",
+   "luonne": "’Maailman jääkarhupääkaupunki’: syksyisin karhut vaeltavat rannalle, ja matkailu elää niistä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "870 (2021)"
+    ],
+    [
+     "Maapinta-ala",
+     "50,8 km²"
+    ],
+    [
+     "Jääkarhukausi",
+     "lokakuu–marraskuu"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Churchill,_Manitoba"
+   ]
+  },
+  {
+   "tunnus": "v-birdsville",
+   "nimi": "Birdsville",
+   "aloitus": "Queenslandin aavikkokylä",
+   "luonne": "Syyskuun hevoskilpailut tekevät pienestä kylästä tunnetun; Simpsonin aavikon retkien lähtöpaikka.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "110 (2021)"
+    ],
+    [
+     "Birdsville Track",
+     "514 km (Marree)"
+    ],
+    [
+     "Matka Brisbaneen",
+     "1 590 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Birdsville"
+   ]
+  }
+ ]
+}
