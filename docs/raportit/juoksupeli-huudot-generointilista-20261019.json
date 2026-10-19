@@ -1,5 +1,5 @@
 {
- "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana).",
+ "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi).",
  "rivit": [
   {
    "avain": "juoksupeli.rikkoutuva.posliinimaljakko.versio.1.huuto",
@@ -10,7 +10,7 @@
   {
    "avain": "juoksupeli.rikkoutuva.kello.versio.1.huuto",
    "teksti": "Eikä! Tämä tuli laivalla Englannista!",
-   "aani_teksti": "Eei!! Eikä! Tämä tuli laivalla Englannista!",
+   "aani_teksti": "Aa! Eikä! Tämä tuli laivalla Englannista!",
    "tagi": "[shouting] [panicked] "
   },
   {
@@ -22,7 +22,7 @@
   {
    "avain": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.versio.1.huuto",
    "teksti": "Hups! Keltainen on vain minun värini!",
-   "aani_teksti": "Eei!! Hups! Keltainen on vain minun värini!",
+   "aani_teksti": "Aa! Hups! Keltainen on vain minun värini!",
    "tagi": "[shouting] [panicked] "
   },
   {
@@ -34,7 +34,7 @@
   {
    "avain": "juoksupeli.rikkoutuva.jadesinetti.versio.1.huuto",
    "teksti": "Eikä! Tällä leimattiin käskyt!",
-   "aani_teksti": "Eei!! Eikä! Tällä leimattiin käskyt!",
+   "aani_teksti": "Aa! Eikä! Tällä leimattiin käskyt!",
    "tagi": "[shouting] [panicked] "
   },
   {
@@ -46,7 +46,7 @@
   {
    "avain": "juoksupeli.rikkoutuva.lasimaljakko.versio.1.huuto",
    "teksti": "Oho! Keisarin lasipaja teki tämän!",
-   "aani_teksti": "Eei!! Oho! Keisarin lasipaja teki tämän!",
+   "aani_teksti": "Aa! Oho! Keisarin lasipaja teki tämän!",
    "tagi": "[shouting] [panicked] "
   },
   {
@@ -58,7 +58,7 @@
   {
    "avain": "juoksupeli.rikkoutuva.bianqing-kivikellot.versio.1.huuto",
    "teksti": "Kling! Tämä soi uudenvuoden juhlassa!",
-   "aani_teksti": "Eei!! Kling! Tämä soi uudenvuoden juhlassa!",
+   "aani_teksti": "Aa! Kling! Tämä soi uudenvuoden juhlassa!",
    "tagi": "[shouting] [panicked] "
   }
  ]
