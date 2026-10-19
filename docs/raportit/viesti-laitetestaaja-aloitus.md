@@ -8,6 +8,11 @@ teit checkoutin origin/mainista äsken, se on tuo vanha, ei sinun; nimeä
 uusi työhaara toisin, esim. `laitetestaaja-<aihe>`, äläkä väkisin pushaa
 vanhan päälle.)
 
+**VAIN YÖJUNAT (omistaja 19.10.2026 klo 17.12, Raamattu 9.11):** pelaat lukitun junan iPadilla ja
+iPhone-simulla vain, kun juna on YÖJUNA (lukitaan illalla tai yöllä, julkaistaan aamuun mennessä).
+Päiväjuna lähtee ilman laitekierrosta (PT ja KK katsovat simutodisteet heti). Pysäyttävä löydös
+estää ulkoisen jaon; muut löydökset seuraavan junan korjauslistaan.
+
 Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2, **WEB ON MALLI, MITATTUNA**
 (sitova: kuvapari + mitatut arvot ennen PASS, ei rakennevertailua), ja
 docs/raportit/viesti-laitetestaaja-luovutus-20260925-b.md kokonaan

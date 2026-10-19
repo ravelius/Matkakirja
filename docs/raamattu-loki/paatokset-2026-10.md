@@ -1924,3 +1924,7 @@ Omistaja KK:ssa sanatarkasti: "Olavin linnan voi laittaa toistaiseksi tauolle, j
 ## PAATOKSET 19.10.2026 klo 17.09: Juna 204 ilman Laitetestaajan kierrosta (19.10.2026 klo 17.10)
 
 Omistaja KK:ssa sanatarkasti: "Seuraavan junan voi julkaista ilman testejä. Katso ne kuitenkin itse heti läpi, niin se on nopeampaa." Tulkinta (KK ja PT): koskee junaa 204; Laitetestaajan kierros (9.11) jää tältä junalta pois, automaattiset käännöstarkistukset ajetaan kuten aina. PT katsoo jokaisen jäljellä olevan ehdon simutodisteet (iPhone ja iPad) heti valmistuttua ja lähettää polut KK:lle, joka kertoo vain ongelmista. Viimeisen ehdon jälkeen LUKITSE 204 ja TF suoraan ulkoisille. Poikkeus vain junaan 204.
+
+## PAATOKSET 19.10.2026 klo 17.12: Laitekierros vain yöjunille (19.10.2026 klo 17.13)
+
+Omistaja KK:ssa sanatarkasti: "Jatkossa voisi tehdä niin, että testejä ajetaan vain juniin, jotka julkaistaan yöllä, jolloin on paremmin aikaa testien ajamiseen." Raamattu 9.11 kohta 1 tarkennettu: yöjuna (lukitaan illalla/yöllä, julkaistaan aamuun mennessä) saa Laitetestaajan kierroksen iPadilla ja iPhone-simulla ennen ulkoisia, löydökset seuraavan junan korjauslistaan; päiväjuna ilman laitekierrosta, automaattiset tarkistukset aina ja PT+KK katsovat simutodisteet heti. Laitetestaajan aloitusviesti ja uusi-linssi-pohja päivitetty.

@@ -178,8 +178,8 @@ Raamattu 8.1: paketti ei ole valmis ennen tätä listaa, ja se on valmis vasta, 
 - [ ] Todistusajo iPad + iPhone pysty: `tulokset.tsv` ilman PUUTE/VIRHE-rivejä, poikkeukset 0, `kaannos.txt` = uusi käännös;
       jokainen `kuva`-rivi kertoo tarkistettavan väitteen ja kuva on tarkistettu täysikokoisena.
 - [ ] Ennen/jälkeen-kuvat PT:lle (kuvatekstit omalla raidallaan), PT:n kuittaus ja KK:n tai omistajan hyväksyntä; haara junaan
-      Natiivisepän kautta. Omistaja ei ole ensimmäinen tarkistaja: Laitetestaaja pelaa lukitun käännöksen ennen ulkoisia
-      testaajia (Raamattu 9.11).
+      Natiivisepän kautta. Omistaja ei ole ensimmäinen tarkistaja: yöjunassa Laitetestaaja pelaa lukitun käännöksen ennen ulkoisia
+      testaajia; päiväjunassa PT ja KK katsovat simutodisteet heti (Raamattu 9.11).
 - [ ] Opit kirjattu tämän pohjan lukuun 9.
 
 ## 5. Poikkeaminen
