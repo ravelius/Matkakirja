@@ -90,3 +90,8 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
 - Rata 1 pidennetty e04149615 (9 huonekierrosta, botti 168–173 s). Mallit ämpärissä (JU 07.58). AVOIN PT: käännösvuoro simutodisteeseen;
   Codexin maailma v4 (kävelymittakaava 317 m, 3,2 m käytävät) → ehdotettu oma "Rata v4" -tila reittigraafilla, ~1 päivä, PT päättää.
   Worktreet: ei poistettavaa ennen junan 204 mergeä (Postivahdille kerrottu).
+- 09.4x SEIS-merkki a9513c71d (iss-c2-204; iPad valaistu lovi + SEIS asteikossa; iPhone ennallaan, perustelu PT:lle). Peruuta-koukku NUI bcd63d8e9:stä
+  (d1fcf02d6 jätetty pois).
+- RATA V4 (omistajan päätös 08.15): proto pelikoodari/juoksupeli-202 572d4eb97 (JuoksuV4 + JuoksuV4Maailma + rajapinta JuoksuKierrokset).
+  Maailman vienti _valmiit/juoksupeli-maailma-v4-vienti-20261019 → JU. SEURAAVA: JU:n simuvuoro rata 1 + v4 kerralla → video PT:lle;
+  todennäköiset hionnat: kamera seinien läpi (ei estesäteitä), materiaalien sävyt, vartijoiden paikat.
