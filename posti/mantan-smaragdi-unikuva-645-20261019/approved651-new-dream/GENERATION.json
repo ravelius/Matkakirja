@@ -1,0 +1,40 @@
+{
+  "attempt": 1,
+  "issuedAt": "2026-10-19T14:35:29.548367+00:00",
+  "args": {
+    "prompt": "Generate a COMPLETELY NEW photorealistic COLOR CAMERA dream-treasure photograph, large native SQUARE opaque RGB PNG. FIRST IMAGE is the AUTHORITATIVE PT-ACCEPTED651 EMERALD DESIGN: reproduce THIS SAME smoothly polished EGG-SHAPED OVOID deepgreen translucent largeemerald, same upright naturalcabochon silhouette (height/width about1.4), same broad curved smooth specularreflection, same recognizable naturalinternal GREEN GARDEN of fine mineralinclusions/featherylines, same transparentgreen depth and natural lightthroughstone. Its internalgarden has been explicitly accepted: preserve it, do not replace it with an opaque roughblock, roundboulder, a differentstone or modernfacetedjewel. About12cm unmountedstone, no metalframe/setting/jewellery, no animalegg. SECOND andTHIRD images are DREAMSERIES PRESENTATION/LIGHT/BACKGROUND STYLE ONLY; do NOT copy mask,jade,dragons orotherartifact. One emerald alone, LARGE central sharp hero, entireovoidclearlyvisiblewithbreathingroom, roughly70–75%photoheight. SAME dreamseries near-BLACK verydarkcharcoal surroundings, quietsubtle contactsurface, naturallysoftlightfalloff so background and allfourouteredges/corners gently disappear intodarkness. A little lowkeyfloor texture belowstone, no brightbrownclothbackground fromfirstref, no goldbox orotherobject. Light soft fromupperleft and weaknaturaltransmission preserves emeraldinterior, real mineral photography with cleanpolishedcurvature andfineinclusions; no fantasyneon, glowinghalo, mist, lightbeam, sparks orselfillumination. Borderless fullsquareopaquecontinuousphoto, NO oval/circularframe, graphicmaskedge,hardborder,title,text,logo,watermark,UIor people. Do not dim/blurartexcessively: jewel remains LARGE and CRISP, surroundingdarkness softasstyle refs. EntirelyNEW wholeimagegeneration with anewscene, NOT partialediting/backgroundreplacement ofaccepted651 orpreviouslocaldream; no pixelcompositing, crop,padding,retouch orupscaling. Losttreasureinterpretivevisualization, notclaim ofasurvivingartifactdocumentaryphoto.",
+    "transparent_background": false,
+    "referenced_image_paths": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/PT-accepted651-emerald-native.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/montezuman-naamio-v1-native.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/jadesinetti-v1-native.png"
+    ]
+  },
+  "wholeNewGeneration": true,
+  "completed": true,
+  "completedAt": "2026-10-19T14:37:39.517116+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-0aea4825-170d-4d40-8665-4f97d0213822.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/native/mantan-smaragdi-approved651-dream-attempt1.png",
+  "nativeSHA256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeMode": "RGB",
+  "nativeAlphaExtrema": [
+    255,
+    255
+  ],
+  "nativePixelSHA256": "20b2856df04122fb8dbe99db849065ff141ff76b0bad3522cfbab81fc9f39b88",
+  "actualImageToolCalls": 1,
+  "delivery": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/delivery-packet/mantan-smaragdi-unikuva-native.png",
+    "sha256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+    "method": "byte-exact copy of returned native",
+    "nativeResized": false,
+    "upscaled": false,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false
+  }
+}

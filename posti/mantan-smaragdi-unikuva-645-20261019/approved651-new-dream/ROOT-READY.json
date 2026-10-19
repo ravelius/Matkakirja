@@ -1,0 +1,49 @@
+{
+  "ready": true,
+  "at": "2026-10-19T14:32:49.853103+00:00",
+  "logicalTask": 645,
+  "releaseTask": 662,
+  "releaseSource": {
+    "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+    "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+    "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+    "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+    "readInFull": true,
+    "readAt": "2026-10-19T14:32:49.853103+00:00"
+  },
+  "acceptedDesign": {
+    "at": "2026-10-19T14:32:49.853103+00:00",
+    "source": {
+      "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+      "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    "deliveryCommit": "605119f9cead3f269dc7b1356d823c6a5043382b",
+    "acceptedTasks": [
+      651,
+      652
+    ],
+    "acceptedNative651": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+    "acceptedJPEG651": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+    "acceptedNative652": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+    "acceptedJPEG652": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+    "internalGardenExplicitlyAccepted": true,
+    "noFurther651652Calls": true,
+    "dream645Released": true,
+    "ownerAccepted": false,
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "oldCandidatePreservedAsHistory": true,
+  "oldCandidateDeliveryProhibited": true,
+  "sameObjectDesignTask": 651,
+  "sameObjectDesignSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+  "wholeNewGenerationRequired": true,
+  "native2048MinimumNotInNewSource": true,
+  "seriesComparisonRequired": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-19T14:40:47.680701+00:00",
+  "taskNumbers": [
+    645
+  ],
+  "releaseTask": 662,
+  "source": {
+    "path": "posti/paatoimittaja-codex-unikuva-mantan-smaragdi-20261019.md",
+    "commit": "f652fa9772ac1a5b918c725f6a303a92d5a4c82c",
+    "blob": "bf1de320b234727348d8c2903b78bf1b889ebf1a",
+    "sha256": "e7deb2b2421b8580445e03813a42e16909450eff3fdbadcaf8854eee5498dd9f",
+    "readInFull": true,
+    "readAt": "2026-10-19T13:55:46.434061+00:00"
+  },
+  "releaseSource": {
+    "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+    "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+    "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+    "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+    "readInFull": true,
+    "readAt": "2026-10-19T14:32:49.853103+00:00"
+  },
+  "asset": {
+    "taskNumber": 645,
+    "releaseTask": 662,
+    "filename": "mantan-smaragdi-unikuva-native.png",
+    "imageProduced": true,
+    "actualGenerationCalls": 1,
+    "deliveredTargetImageCount": 1,
+    "nativePath": "mantan-smaragdi-unikuva-native.png",
+    "nativeSHA256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "nativePixelSHA256": "20b2856df04122fb8dbe99db849065ff141ff76b0bad3522cfbab81fc9f39b88",
+    "nativePreservedByteExact": true,
+    "wholeNewGeneration": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "upscale": false,
+    "approvedObjectTask": 651,
+    "approvedObjectNativeSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+    "approvedObjectDeliveryCommit": "605119f9cead3f269dc7b1356d823c6a5043382b",
+    "PTAcceptanceSource": {
+      "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+      "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    "sameSmoothEggShape": true,
+    "internalGardenAllowedByPT": true,
+    "rootNativeAndSeriesAndDesignBoardsPersonallyInspected": true,
+    "rootUnreservedContentQAPass": true,
+    "old643AndOld645NotUsedAsGenerationInputs": true,
+    "old645CandidateNotDelivered": true,
+    "recipientAccepted": false,
+    "ownerAccepted": false,
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

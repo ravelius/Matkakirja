@@ -1,0 +1,238 @@
+{
+  "logicalTask": 645,
+  "releaseTask": 662,
+  "ready": true,
+  "status": "producer-QA-complete-awaiting-parent-delivery",
+  "releaseSource": {
+    "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+    "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+    "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+    "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+    "readInFull": true,
+    "readAt": "2026-10-19T14:32:49.853103+00:00"
+  },
+  "originalDreamSource": {
+    "path": "posti/paatoimittaja-codex-unikuva-mantan-smaragdi-20261019.md",
+    "commit": "f652fa9772ac1a5b918c725f6a303a92d5a4c82c",
+    "blob": "bf1de320b234727348d8c2903b78bf1b889ebf1a",
+    "sha256": "e7deb2b2421b8580445e03813a42e16909450eff3fdbadcaf8854eee5498dd9f"
+  },
+  "raamattu2159": {
+    "sourcePath": "js/tyohuone-raamattu.js",
+    "sourceCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+    "excerptSHA256": "4dea118acf4588e6ffbea4fcf3996a04733aa2759ba4e7f69544e534329064ac",
+    "scopeRead": "entire2.159entry"
+  },
+  "sourceAndComplete2159Read": true,
+  "rootReadyEvidence": {
+    "ready": true,
+    "at": "2026-10-19T14:32:49.853103+00:00",
+    "logicalTask": 645,
+    "releaseTask": 662,
+    "releaseSource": {
+      "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+      "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    "acceptedDesign": {
+      "at": "2026-10-19T14:32:49.853103+00:00",
+      "source": {
+        "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+        "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+        "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+        "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+        "readInFull": true,
+        "readAt": "2026-10-19T14:32:49.853103+00:00"
+      },
+      "deliveryCommit": "605119f9cead3f269dc7b1356d823c6a5043382b",
+      "acceptedTasks": [
+        651,
+        652
+      ],
+      "acceptedNative651": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+      "acceptedJPEG651": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+      "acceptedNative652": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+      "acceptedJPEG652": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+      "internalGardenExplicitlyAccepted": true,
+      "noFurther651652Calls": true,
+      "dream645Released": true,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    "oldCandidatePreservedAsHistory": true,
+    "oldCandidateDeliveryProhibited": true,
+    "sameObjectDesignTask": 651,
+    "sameObjectDesignSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+    "wholeNewGenerationRequired": true,
+    "native2048MinimumNotInNewSource": true,
+    "seriesComparisonRequired": true,
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/PT-accepted651-emerald-native.png",
+      "sha256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "personallyViewed": true,
+      "role": "accepted651objectdesign"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/montezuman-naamio-v1-native.png",
+      "sha256": "fed6e1d09573c9c406e6839a10e4192304daafaa0cb6f892d75fee47aee8db78",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "personallyViewed": true,
+      "role": "previousdreamseriesstylecomparator"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/jadesinetti-v1-native.png",
+      "sha256": "5887075d1a9005b855001b739fc28e9ea820598ba1454e9b95e08eb0eca17391",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "personallyViewed": true,
+      "role": "previousdreamseriesstylecomparator"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/kolme-veljesta-v1-native.png",
+      "sha256": "ef4611bf1815f4c8f5d70e69e09aecd3b103782c111d45f34760ac05d17d82b1",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "personallyViewed": true,
+      "role": "previousdreamseriesstylecomparator"
+    }
+  ],
+  "sameObjectDesignTask": 651,
+  "sameObjectDesignSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+  "accepted651GardenPreserved": true,
+  "wholeNewGenerationRequired": true,
+  "old643AndOld645NotInputs": true,
+  "oldFilesModified": false,
+  "nativeMinimumNotSpecified": true,
+  "old2048GateNotApplied": true,
+  "nativeUpscalingNotClaimed": true,
+  "targetCalls": 1,
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "selectedAttempt": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "issuedAt": "2026-10-19T14:35:29.548367+00:00",
+      "args": {
+        "prompt": "Generate a COMPLETELY NEW photorealistic COLOR CAMERA dream-treasure photograph, large native SQUARE opaque RGB PNG. FIRST IMAGE is the AUTHORITATIVE PT-ACCEPTED651 EMERALD DESIGN: reproduce THIS SAME smoothly polished EGG-SHAPED OVOID deepgreen translucent largeemerald, same upright naturalcabochon silhouette (height/width about1.4), same broad curved smooth specularreflection, same recognizable naturalinternal GREEN GARDEN of fine mineralinclusions/featherylines, same transparentgreen depth and natural lightthroughstone. Its internalgarden has been explicitly accepted: preserve it, do not replace it with an opaque roughblock, roundboulder, a differentstone or modernfacetedjewel. About12cm unmountedstone, no metalframe/setting/jewellery, no animalegg. SECOND andTHIRD images are DREAMSERIES PRESENTATION/LIGHT/BACKGROUND STYLE ONLY; do NOT copy mask,jade,dragons orotherartifact. One emerald alone, LARGE central sharp hero, entireovoidclearlyvisiblewithbreathingroom, roughly70–75%photoheight. SAME dreamseries near-BLACK verydarkcharcoal surroundings, quietsubtle contactsurface, naturallysoftlightfalloff so background and allfourouteredges/corners gently disappear intodarkness. A little lowkeyfloor texture belowstone, no brightbrownclothbackground fromfirstref, no goldbox orotherobject. Light soft fromupperleft and weaknaturaltransmission preserves emeraldinterior, real mineral photography with cleanpolishedcurvature andfineinclusions; no fantasyneon, glowinghalo, mist, lightbeam, sparks orselfillumination. Borderless fullsquareopaquecontinuousphoto, NO oval/circularframe, graphicmaskedge,hardborder,title,text,logo,watermark,UIor people. Do not dim/blurartexcessively: jewel remains LARGE and CRISP, surroundingdarkness softasstyle refs. EntirelyNEW wholeimagegeneration with anewscene, NOT partialediting/backgroundreplacement ofaccepted651 orpreviouslocaldream; no pixelcompositing, crop,padding,retouch orupscaling. Losttreasureinterpretivevisualization, notclaim ofasurvivingartifactdocumentaryphoto.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/PT-accepted651-emerald-native.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/montezuman-naamio-v1-native.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/references/jadesinetti-v1-native.png"
+        ]
+      },
+      "wholeNewGeneration": true,
+      "completed": true,
+      "completedAt": "2026-10-19T14:37:39.517116+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-0aea4825-170d-4d40-8665-4f97d0213822.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/native/mantan-smaragdi-approved651-dream-attempt1.png",
+      "nativeSHA256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGB",
+      "nativeAlphaExtrema": [
+        255,
+        255
+      ],
+      "nativePixelSHA256": "20b2856df04122fb8dbe99db849065ff141ff76b0bad3522cfbab81fc9f39b88",
+      "actualImageToolCalls": 1
+    }
+  ],
+  "createdAt": "2026-10-19T14:35:29.548367+00:00",
+  "output": "mantan-smaragdi-unikuva-native.png",
+  "selectedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/native/mantan-smaragdi-approved651-dream-attempt1.png",
+  "selectedNativeSHA256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/delivery-packet/mantan-smaragdi-unikuva-native.png",
+  "deliverySHA256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+  "producerQA": {
+    "logicalTask": 645,
+    "releaseTask": 662,
+    "attempt": 1,
+    "checkedAt": "2026-10-19T14:39:39.857866+00:00",
+    "personallyInspectedNative": true,
+    "personallyInspectedDreamSeriesComparison": true,
+    "personallyInspected651645DesignComparison": true,
+    "allFourCurrentReferencesPersonallyViewedBeforeCall": true,
+    "releaseOriginalSource2159AndReferenceManifestsReadInFull": true,
+    "producerQAPassed": true,
+    "samePTAccepted651ObjectDesignVerified": true,
+    "sameObjectDesignTask": 651,
+    "sameObjectDesignSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+    "PTAcceptedInternalGardenPreserved": true,
+    "observationsFI": [
+      "Sama PT:n hyväksymä651:n sileä munanmuotoinen läpikuultava syvänvihreä smaragdi, sama luonnollinen sisäinen puutarha ja tunnistettavat sulkeuma-/juovakuviot. Ei hylätyn643:n karkeaa pyöreää muotoa.",
+      "Suuri tarkka yksittäinen esine lähes mustalla taustalla; alusta ja ympäristö pehmenevät luontevasti tummaan ulkokehään. Ei näkyvää ovaalikehystä, geometrisen maskin rajaa, tekstiä tai käyttöliittymää.",
+      "Natiivissa materiaalin kiilto on sileä ja kaareva, sisäinen valo mineraalin luonnollista läpikuultavuutta. Ei korukehystä, fantasia-neonkehää tai ylimääräisiä aarteita.",
+      "Sarjavertailu645+281+282+283 sekä hyväksytyn651:n ja uuden645:n muotoiluvertailu katsottu henkilökohtaisesti. Muotoilut vastaavat toisiaan.",
+      "Aito1254×1254RGBPNG,natiivi säilytetty tavutarkasti ilman suurennusta,rajausta,täytepaloja tai jälkiretusointia. Vertailujen pienennykset ovat erillistäQA:ta."
+    ],
+    "native": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/native/mantan-smaragdi-approved651-dream-attempt1.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "sha256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+      "pixelSHA256": "20b2856df04122fb8dbe99db849065ff141ff76b0bad3522cfbab81fc9f39b88",
+      "byteExactOriginalPreserved": true,
+      "nativeResized": false,
+      "upscaled": false
+    },
+    "actualImageToolCalls": 1,
+    "wholeNewGeneration": true,
+    "partialEdit": false,
+    "failedAttempts": 0,
+    "old643AndOld645NotInputs": true,
+    "oldFilesModified": false,
+    "old2048GateNotApplied": true,
+    "nativeMinimumNotSpecifiedInNewSource": true,
+    "releaseSource": {
+      "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+      "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    "newDreamPTAcceptance": "pending",
+    "postDelivery": "parent handles;not asserted",
+    "ownerAcceptance": "not asserted",
+    "gameIntegration": "not performed",
+    "R2": "not performed",
+    "Tripo": "not performed",
+    "publication": "not performed"
+  },
+  "productionActive": false,
+  "updatedAt": "2026-10-19T14:39:39.857866+00:00"
+}

@@ -1,0 +1,169 @@
+{
+  "at": "2026-10-19T14:40:47.680701+00:00",
+  "family": "mantan-smaragdi-unikuva-645-20261019/approved651-new-dream",
+  "taskNumbers": [
+    645
+  ],
+  "nativeImageCount": 1,
+  "actualCurrentWholeGenerationCalls": 1,
+  "priorHistoricalWholeCalls": 1,
+  "asset": {
+    "taskNumber": 645,
+    "releaseTask": 662,
+    "filename": "mantan-smaragdi-unikuva-native.png",
+    "imageProduced": true,
+    "actualGenerationCalls": 1,
+    "deliveredTargetImageCount": 1,
+    "nativePath": "mantan-smaragdi-unikuva-native.png",
+    "nativeSHA256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "nativePixelSHA256": "20b2856df04122fb8dbe99db849065ff141ff76b0bad3522cfbab81fc9f39b88",
+    "nativePreservedByteExact": true,
+    "wholeNewGeneration": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "upscale": false,
+    "approvedObjectTask": 651,
+    "approvedObjectNativeSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+    "approvedObjectDeliveryCommit": "605119f9cead3f269dc7b1356d823c6a5043382b",
+    "PTAcceptanceSource": {
+      "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+      "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    "sameSmoothEggShape": true,
+    "internalGardenAllowedByPT": true,
+    "rootNativeAndSeriesAndDesignBoardsPersonallyInspected": true,
+    "rootUnreservedContentQAPass": true,
+    "old643AndOld645NotUsedAsGenerationInputs": true,
+    "old645CandidateNotDelivered": true,
+    "recipientAccepted": false,
+    "ownerAccepted": false,
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "files": [
+    {
+      "path": "AGENT-MANIFEST.json",
+      "bytes": 3390,
+      "sha256": "d35b203d6cf46b867357fe18b69c51281ce457761f8ad6214819ee0708420fec"
+    },
+    {
+      "path": "DELIVERY.json",
+      "bytes": 2636,
+      "sha256": "ef6329b1829bf0599fdd02711bef37985171add1b99543bf7053b7560eb1a517"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 4027,
+      "sha256": "9c2c02127b44c89a9f6ecc991d8e4fbecf1b5f2e26458848fc85637e5480954a"
+    },
+    {
+      "path": "PROMPTS.txt",
+      "bytes": 2032,
+      "sha256": "741e852c7fdbf8e59a2aff9e7697f1a1bb601f99ef05b2b408952d6a59f4e5b4"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3450,
+      "sha256": "daba3f2842f492469d99fe501edfb57ba9aef3ca7b329e4964e3b115b01b4dfc"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 3076,
+      "sha256": "1cd5c0a4cdac0a1aafefe2fcbbd45cc74b6ebeab8052ab838014f7e8364bc58a"
+    },
+    {
+      "path": "ROOT-QA.json",
+      "bytes": 781,
+      "sha256": "4e3c38ea9508b16486e38125dd80f6437e05826fab31bb911b4ac49b5d04696d"
+    },
+    {
+      "path": "ROOT-READY.json",
+      "bytes": 2018,
+      "sha256": "b5887192fac93fa555a67268372dccbd40514b9cebba498067095b5653a2048d"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 2018,
+      "sha256": "b5887192fac93fa555a67268372dccbd40514b9cebba498067095b5653a2048d"
+    },
+    {
+      "path": "mantan-smaragdi-unikuva-native.png",
+      "bytes": 2180967,
+      "sha256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059"
+    },
+    {
+      "path": "production-state.json",
+      "bytes": 13159,
+      "sha256": "e41c450781f36ab97c91841b76bcc57a93a549427893ef2fe2d87f97798160d0"
+    },
+    {
+      "path": "qa/accepted651-vs-new645.png",
+      "bytes": 1321761,
+      "sha256": "d939744f22cde1d61627c16d7c656762ba731dfb9411702775f6b67516ef8341"
+    },
+    {
+      "path": "qa/dream-series-comparison.png",
+      "bytes": 1247556,
+      "sha256": "72577649ba29efacc008eac395176bf9b4ae33b69f10e93049624226a7546cb4"
+    },
+    {
+      "path": "root-sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "bytes": 503,
+      "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188"
+    },
+    {
+      "path": "root-sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "bytes": 1073,
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec"
+    },
+    {
+      "path": "root-sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "bytes": 1672,
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72"
+    },
+    {
+      "path": "root-sources/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "bytes": 598,
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4"
+    },
+    {
+      "path": "root-sources/paatoimittaja-codex-unikuva-mantan-smaragdi-20261019.md",
+      "bytes": 585,
+      "sha256": "e7deb2b2421b8580445e03813a42e16909450eff3fdbadcaf8854eee5498dd9f"
+    },
+    {
+      "path": "root-sources/raamattu-2.159-excerpt.txt",
+      "bytes": 809,
+      "sha256": "4dea118acf4588e6ffbea4fcf3996a04733aa2759ba4e7f69544e534329064ac"
+    },
+    {
+      "path": "source/ROOT-READY.json",
+      "bytes": 2018,
+      "sha256": "b5887192fac93fa555a67268372dccbd40514b9cebba498067095b5653a2048d"
+    },
+    {
+      "path": "source/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "bytes": 598,
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4"
+    },
+    {
+      "path": "source/paatoimittaja-codex-unikuva-mantan-smaragdi-20261019.md",
+      "bytes": 585,
+      "sha256": "e7deb2b2421b8580445e03813a42e16909450eff3fdbadcaf8854eee5498dd9f"
+    },
+    {
+      "path": "source/raamattu-2.159-excerpt.txt",
+      "bytes": 809,
+      "sha256": "4dea118acf4588e6ffbea4fcf3996a04733aa2759ba4e7f69544e534329064ac"
+    }
+  ]
+}

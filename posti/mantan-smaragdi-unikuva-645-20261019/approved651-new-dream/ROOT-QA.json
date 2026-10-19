@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-19T14:40:47.680701+00:00",
+  "sourceReadInFullByRoot": true,
+  "readyForPTReview": true,
+  "actualCurrentWholeGenerationCalls": 1,
+  "priorHistoricalWholeCalls": 1,
+  "total645CallsIncludingPreservedRejectedDesignHistory": 2,
+  "pendingCalls": 0,
+  "nativePreservedByteExact": true,
+  "nativeIsNotClaimedAs2048": true,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "accepted651DesignMatched": true,
+  "dreamSeriesComparisonIncluded": true,
+  "accepted651VsNew645Included": true,
+  "rootPersonallyViewedNativeAndBothComparisonBoards": true,
+  "allChildPacketFilesMirrorVerified": true,
+  "oldLocal645CandidatePreservedAndNeverDelivered": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

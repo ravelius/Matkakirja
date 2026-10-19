@@ -1,0 +1,110 @@
+{
+  "logicalTask": 645,
+  "releaseTask": 662,
+  "createdAt": "2026-10-19T14:39:39.857866+00:00",
+  "releaseSourceCommit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+  "originalSourceCommit": "f652fa9772ac1a5b918c725f6a303a92d5a4c82c",
+  "actualImageToolCalls": 1,
+  "selectedAttempt": 1,
+  "producerQAPassed": true,
+  "newDreamPTAcceptance": "pending",
+  "sameObjectDesignTask": 651,
+  "sameObjectDesignSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+  "nativeByteExact": true,
+  "nativeUpscaled": false,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "old2048GateNotApplied": true,
+  "fileCount": 13,
+  "manifestExcludedFromOwnInventory": true,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "sha256": "9c2c02127b44c89a9f6ecc991d8e4fbecf1b5f2e26458848fc85637e5480954a",
+      "bytes": 4027
+    },
+    {
+      "path": "PROMPTS.txt",
+      "sha256": "741e852c7fdbf8e59a2aff9e7697f1a1bb601f99ef05b2b408952d6a59f4e5b4",
+      "bytes": 2032
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "daba3f2842f492469d99fe501edfb57ba9aef3ca7b329e4964e3b115b01b4dfc",
+      "bytes": 3450
+    },
+    {
+      "path": "QA.json",
+      "sha256": "1cd5c0a4cdac0a1aafefe2fcbbd45cc74b6ebeab8052ab838014f7e8364bc58a",
+      "bytes": 3076
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "sha256": "aa4e8e5359b64f6e5d486289e472e7593db04ac3ea99fcd52367b0a1facda1cd",
+      "bytes": 8053
+    },
+    {
+      "path": "mantan-smaragdi-unikuva-native.png",
+      "sha256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+      "bytes": 2180967,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "20b2856df04122fb8dbe99db849065ff141ff76b0bad3522cfbab81fc9f39b88"
+    },
+    {
+      "path": "production-state.json",
+      "sha256": "e41c450781f36ab97c91841b76bcc57a93a549427893ef2fe2d87f97798160d0",
+      "bytes": 13159
+    },
+    {
+      "path": "qa/accepted651-vs-new645.png",
+      "sha256": "d939744f22cde1d61627c16d7c656762ba731dfb9411702775f6b67516ef8341",
+      "bytes": 1321761,
+      "dimensions": [
+        1280,
+        690
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "d029a10cc288d6d321f87a8f68939f883cf4c841fb28058446f487b6f88f4095"
+    },
+    {
+      "path": "qa/dream-series-comparison.png",
+      "sha256": "72577649ba29efacc008eac395176bf9b4ae33b69f10e93049624226a7546cb4",
+      "bytes": 1247556,
+      "dimensions": [
+        1920,
+        530
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "5c6ae3e477b5e82588679396f562f6194b4ab542f457e0ba34e418ed68f243bd"
+    },
+    {
+      "path": "source/ROOT-READY.json",
+      "sha256": "b5887192fac93fa555a67268372dccbd40514b9cebba498067095b5653a2048d",
+      "bytes": 2018
+    },
+    {
+      "path": "source/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+      "bytes": 598
+    },
+    {
+      "path": "source/paatoimittaja-codex-unikuva-mantan-smaragdi-20261019.md",
+      "sha256": "e7deb2b2421b8580445e03813a42e16909450eff3fdbadcaf8854eee5498dd9f",
+      "bytes": 585
+    },
+    {
+      "path": "source/raamattu-2.159-excerpt.txt",
+      "sha256": "4dea118acf4588e6ffbea4fcf3996a04733aa2759ba4e7f69544e534329064ac",
+      "bytes": 809
+    }
+  ]
+}

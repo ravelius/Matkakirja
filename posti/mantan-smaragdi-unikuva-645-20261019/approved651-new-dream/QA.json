@@ -1,0 +1,63 @@
+{
+  "logicalTask": 645,
+  "releaseTask": 662,
+  "attempt": 1,
+  "checkedAt": "2026-10-19T14:39:39.857866+00:00",
+  "personallyInspectedNative": true,
+  "personallyInspectedDreamSeriesComparison": true,
+  "personallyInspected651645DesignComparison": true,
+  "allFourCurrentReferencesPersonallyViewedBeforeCall": true,
+  "releaseOriginalSource2159AndReferenceManifestsReadInFull": true,
+  "producerQAPassed": true,
+  "samePTAccepted651ObjectDesignVerified": true,
+  "sameObjectDesignTask": 651,
+  "sameObjectDesignSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+  "PTAcceptedInternalGardenPreserved": true,
+  "observationsFI": [
+    "Sama PT:n hyväksymä651:n sileä munanmuotoinen läpikuultava syvänvihreä smaragdi, sama luonnollinen sisäinen puutarha ja tunnistettavat sulkeuma-/juovakuviot. Ei hylätyn643:n karkeaa pyöreää muotoa.",
+    "Suuri tarkka yksittäinen esine lähes mustalla taustalla; alusta ja ympäristö pehmenevät luontevasti tummaan ulkokehään. Ei näkyvää ovaalikehystä, geometrisen maskin rajaa, tekstiä tai käyttöliittymää.",
+    "Natiivissa materiaalin kiilto on sileä ja kaareva, sisäinen valo mineraalin luonnollista läpikuultavuutta. Ei korukehystä, fantasia-neonkehää tai ylimääräisiä aarteita.",
+    "Sarjavertailu645+281+282+283 sekä hyväksytyn651:n ja uuden645:n muotoiluvertailu katsottu henkilökohtaisesti. Muotoilut vastaavat toisiaan.",
+    "Aito1254×1254RGBPNG,natiivi säilytetty tavutarkasti ilman suurennusta,rajausta,täytepaloja tai jälkiretusointia. Vertailujen pienennykset ovat erillistäQA:ta."
+  ],
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/native/mantan-smaragdi-approved651-dream-attempt1.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "sha256": "bb55838dcd8a144346703651a1bf5b60c3b9405c93f8028b2185873cb7c49059",
+    "pixelSHA256": "20b2856df04122fb8dbe99db849065ff141ff76b0bad3522cfbab81fc9f39b88",
+    "byteExactOriginalPreserved": true,
+    "nativeResized": false,
+    "upscaled": false
+  },
+  "actualImageToolCalls": 1,
+  "wholeNewGeneration": true,
+  "partialEdit": false,
+  "failedAttempts": 0,
+  "old643AndOld645NotInputs": true,
+  "oldFilesModified": false,
+  "old2048GateNotApplied": true,
+  "nativeMinimumNotSpecifiedInNewSource": true,
+  "releaseSource": {
+    "path": "posti/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+    "commit": "4b8846874a1438e72f7d3e595492060f75c5c425",
+    "blob": "132cd1c87db720d4264935ab708fa2609f52b703",
+    "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+    "readInFull": true,
+    "readAt": "2026-10-19T14:32:49.853103+00:00"
+  },
+  "newDreamPTAcceptance": "pending",
+  "postDelivery": "parent handles;not asserted",
+  "ownerAcceptance": "not asserted",
+  "gameIntegration": "not performed",
+  "R2": "not performed",
+  "Tripo": "not performed",
+  "publication": "not performed"
+}
