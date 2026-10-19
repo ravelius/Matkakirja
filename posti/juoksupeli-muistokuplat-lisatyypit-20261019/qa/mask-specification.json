@@ -1,0 +1,30 @@
+{
+  "diagnosticOnly": true,
+  "notActualGameShader": true,
+  "sourcePhotographsUnmodified": true,
+  "widthPx": 160,
+  "ovalAspectMatchesNative": true,
+  "fullOpacityNormalizedRadius": 0.78,
+  "outerRadius": 1,
+  "feather": "smoothstep",
+  "previews": [
+    {
+      "code": "tyyppi2-sali",
+      "selectedAttempt": 3,
+      "nativeSHA256": "8eb2d7439b6eaedceaa9fc2c33e5b4a9c7d1888a0b483f96564f585d17b3d8ed",
+      "previewSize": [
+        160,
+        120
+      ]
+    },
+    {
+      "code": "tyyppi3-oppitunti",
+      "selectedAttempt": 2,
+      "nativeSHA256": "9d07d6b91d13d8887f1d8649fe5dd2d5653701af99a21dc877a6b4fc1e202710",
+      "previewSize": [
+        160,
+        120
+      ]
+    }
+  ]
+}

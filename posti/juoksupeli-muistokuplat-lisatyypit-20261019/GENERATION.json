@@ -1,0 +1,382 @@
+{
+  "selectedImages": 2,
+  "callsIssued": 5,
+  "callsCompleted": 5,
+  "assets": [
+    {
+      "code": "tyyppi2-sali",
+      "taskNumber": 495,
+      "callsIssued": 3,
+      "callsCompleted": 3,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T07:04:09.594798+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce a wholly NEW realistic COLOR camera photograph of a large quiet Chinese imperial PALACE HALL, with NO PEOPLE anywhere, presenting ONE intact treasured blue-and-white Qing-inspired Jingdezhen porcelain vase LARGE on a dignified central pedestal. This is a memory photograph SOURCE for a game; output FULL OPAQUE rectangular landscape4:3 PNG, natural color and light, alpha255 everywhere. No baked oval/circle/fade, vignette, sepia, illustration, CGI, borders, text, calligraphy, plaque or watermark.\nFRAMING: the entire VASE and PEDESTAL together must lie well INSIDE the central region x35-65percent,y30-72percent. The vase itself is visually substantial, about20percent of full frame width and24percent of height, with a wide rounded blue-white body, flared short neck and cobalt floral design; completely intact, no shards. Pedestal is solid dark carved hardwood with restrained stone/brass inlay, proportionate, holding vase upright; natural contact shadow under vessel. Big room perceived from high ceiling, distant elegant timber colonnade and daylight depth, but ALL important objects lie in center. Top25percent and side25percent calm nearly uniform softly defocused plaster/quiet architecture, bottom25percent empty gently lit stone floor. No decorative clutter or other objects or furniture around edges. Not a graphic matte: entire image is one optically coherent natural photographed hall.\nLarge hall composition with generous space for later software oval feather, central vase/pedestal reads in a160px-wide thumbnail. Quiet restrained dignified daylight, realistic porcelain shine, wood grain and masonry surfaces without repetitive generated embossing or miniatures. Fictional palace interior and historically inspired artifact, not a reconstruction of a documented real room. No figures, servants, child, teacher, shadows of people, statues resembling people or security ropes.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ee48833b-5fc8-479a-b41c-03cf88682312.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/tyyppi2-sali-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/tyyppi2-sali.png",
+          "nativeSHA256": "db2290c5bebd9410158c083cef85b3a225bb13b5aa97c0b8cefe4612d049f0f9",
+          "deliverySHA256": "005b31c9cf53814137089a994c0b615edf3f54580ec04a73175630880b090860",
+          "nativeBytes": 2368386,
+          "deliveryBytes": 2368670,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "df42a4d6970ec5c1780ac357492457aaf3138d0f81973d27489317a629036361",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:06:06.706482+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "candidate-for-small-oval-QA",
+            "photoRealism": "Vase, wood/stone pedestal, grand empty palace hall and daylight read photographically. Room and ornament invented.",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalContentInsideCentral60Percent": true,
+            "estimatedMainSubjectMarginsPercent": {
+              "left": 39,
+              "right": 40,
+              "top": 31,
+              "bottom": 22
+            },
+            "marginCheckMethod": "Manual approximate vase-plus-pedestal bounds",
+            "full20PercentCalmMarginsVisuallySatisfied": false,
+            "visualFindings": "No people. Central vase and pedestal fit safe area, but ornate architecture reaches top/sides; those edges are not uniformly calm. Review mask preview, consider whole new simpler-background candidate.",
+            "thumbnailQAPending": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T07:12:11.957304+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Entirely NEW bright airy natural COLOR camera photograph of a GRAND LIGHT-FILLED CHINESE PALACE HALL with NO PEOPLE. One large intact imperial-style blue-and-white Jingdezhen PORCELAIN VASE stands on a dignified low carved hardwood pedestal with a subtle pale stone inlay. Main vase+pedestal fully central: x38-62%,y30-72%. Vase itself substantial around20% full image width and24% height, rounded body, short flared neck and broad cobalt floral panels on glossy white glaze. Pedestal solid/proportionate, natural soft contact shadow; no floating object.\nCRITICAL LIGHTNESS AND MARGINS: the top25% and left/right25% are very CALM PALE softly defocused hall walls/light timber/ivory paper-screen planes with almost uniform tonal value. Bottom25% empty luminous pale stone floor with only subtle real texture. NO dark red foreground columns, ornate gold carved beams, sharp window grids, high-contrast wall ornament, deep shadows or decorative objects near edges. Sense of a LARGE high-ceilinged hall comes from softly receding broad architectural forms in middle distance, gentle depth/perspective and spacious floor, not visual clutter. Use genuine optical background softness as a real-camera photograph focused on the central vase, not a blurred cutout/filter/border. Background remains a coherent naturally photographed quiet pale ceremonial interior. Delicate indirect daylight, brighter than a heavy dark traditional hall, preserve actual blue-white vase colors and real hardwood tones, never bleach/desaturate to beige/sepia. Full opaque rectangular landscape4:3 PNG, alpha255 everywhere; no oval, circle, alpha fade, vignette, text, plaques, calligraphy, logos, rope barriers, statues, figures or people silhouettes. No artificial film grain, lifted blacks, wavy effect or memory filter. Fictional historically inspired palace, no claim to depict a documented real room.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-088eae14-6cbd-4aa9-adf7-84792ee384e3.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/tyyppi2-sali-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/tyyppi2-sali.png",
+          "nativeSHA256": "5ba20a2c09cc659a7d384fc9b2058f22d2dcdbe18e36922d65dd6b7b06e57eff",
+          "deliverySHA256": "2e1c5096134d70ce75513601981f5bd5811840fd09245752f25e2cc9cf01a449",
+          "nativeBytes": 1909710,
+          "deliveryBytes": 1909994,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "7f2c4629ef4e7157a090b704c2f9223949a5ca4015abbf7b4e7f627adf13e198",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:17:50.569529+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "candidate-lightness-pass-but-bottom-margin-short",
+            "photoRealism": "Bright airy pale hall, rich true blue-white vase, natural soft daylight; no people or filter.",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalArtifactInsideCentral60Percent": true,
+            "full20PercentCalmMarginsVisuallySatisfied": false,
+            "visualFindings": "Vase inside safe area, pedestal feet bottom~83percent leaves17percent quiet floor. Request wider camera for20percent floor; overall lightness matches498.",
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T07:17:53.023211+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. ENTIRELY NEW realistic COLOR photograph from a WIDER camera position in a spacious LIGHT AIRY CHINESE PALACE HALL. Image1 is appearance guidance only for the rich blue-white porcelain, elegant pedestal and pale luminous architecture; do not edit/outpaint/reuse its pixels or add borders. Render a complete new real camera scene with more room all around the central artifact.\nOne INTACT rounded Qing-inspired Jingdezhen blue-white VASE on a dignified dark hardwood pedestal with pale stone top/inlay. NO PEOPLE. Place the WHOLE vase plus every pedestal foot STRICTLY INSIDE x35-65percent,y32-70percent. The bottom of pedestal MUST STOP ABOVE y70percent. Full bottom30percent is EMPTY pale stone floor, NO foot, base, artifact or other furniture in it. Vase+pedestal together only about38percent of total image height, not a giant close-up occupying60percent. Vase itself around16-18percent of full image width and23percent of height, clearly shaped and recognizable even small. Top30percent and left/right30percent are calm pale softly defocused hall wall/light timber/ivory paper-screen planes. Large hall visible through subtle receding architecture and high ceiling depth without ornate sharp edge details or dark columns. Avoid wall paintings and patterned decoration near edges, no text/plaques/characters/figures/ropes. Subdued natural polished floor, no strong mirror reflection/dark floor patch, just soft contact shadow under pedestal. Bright low-contrast natural daylight, preserve rich authentic cobalt blue and white glaze and real wood tones, no bleaching/sepia/grain/lifted black point/waves/vignette. Full opaque rectangular landscape4:3 PNG, alpha255 all pixels, no oval/circle/feather/matte/border.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-088eae14-6cbd-4aa9-adf7-84792ee384e3.png"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fc5164f5-dcc5-42f1-b035-48f7c9aa27c0.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/tyyppi2-sali-attempt3.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/tyyppi2-sali.png",
+          "nativeSHA256": "8eb2d7439b6eaedceaa9fc2c33e5b4a9c7d1888a0b483f96564f585d17b3d8ed",
+          "deliverySHA256": "bf08467aaae6802d2ad51f4e3e5728bbadc5a75eed31a0363b474b2b5964e122",
+          "nativeBytes": 1879721,
+          "deliveryBytes": 1879989,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "eefc71b7996713e78bf6b9269f3a6393efae9d019bd24dfd788d71bf9a1553c2",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:20:38.849254+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "selected-for-final-oval-QA-and-PT",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalContentInsideCentral60Percent": true,
+            "full20PercentCalmMarginsVisuallySatisfied": true,
+            "estimatedMainSubjectMarginsPercent": {
+              "left": 39,
+              "right": 39,
+              "top": 32,
+              "bottom": 32
+            },
+            "marginCheckMethod": "Manual approximate vase-plus-pedestal bounds, not calibrated segmentation",
+            "photoRealism": "Pale airy spacious hall, rich cobalt/white vase, proportionate hardwood pedestal, natural soft daylight and pale floor.",
+            "visualFindings": "No people; whole vase and every pedestal foot well inside center, empty floor below. Pale background architecture remains at edges but is low contrast/soft rather than uniformly blank; diagnostic mask will fade it.",
+            "historicalLimitations": "Palace room and pedestal/vase design fictional Qing-inspired staging, not authenticated real architecture or museum artifact.",
+            "noBakedMemoryEffects": true,
+            "thumbnailQAPending": true,
+            "pixelsNotRetouched": true
+          },
+          "metadataProvenanceVerified": true
+        }
+      ],
+      "callIssuedAt": "2026-10-19T07:17:53.023037+00:00",
+      "activeAttempt": 3,
+      "attempt": 3,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fc5164f5-dcc5-42f1-b035-48f7c9aa27c0.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/tyyppi2-sali-attempt3.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/tyyppi2-sali.png",
+      "nativeSHA256": "8eb2d7439b6eaedceaa9fc2c33e5b4a9c7d1888a0b483f96564f585d17b3d8ed",
+      "deliverySHA256": "bf08467aaae6802d2ad51f4e3e5728bbadc5a75eed31a0363b474b2b5964e122",
+      "nativeBytes": 1879721,
+      "deliveryBytes": 1879989,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "pixelSHA256": "eefc71b7996713e78bf6b9269f3a6393efae9d019bd24dfd788d71bf9a1553c2",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T07:20:38.849254+00:00",
+      "selectedAttempt": 3,
+      "qa": {
+        "personallyInspectedNative": true,
+        "disposition": "selected-for-final-oval-QA-and-PT",
+        "rectangleOpaque": true,
+        "bakedOval": false,
+        "criticalContentInsideCentral60Percent": true,
+        "full20PercentCalmMarginsVisuallySatisfied": true,
+        "estimatedMainSubjectMarginsPercent": {
+          "left": 39,
+          "right": 39,
+          "top": 32,
+          "bottom": 32
+        },
+        "marginCheckMethod": "Manual approximate vase-plus-pedestal bounds, not calibrated segmentation",
+        "photoRealism": "Pale airy spacious hall, rich cobalt/white vase, proportionate hardwood pedestal, natural soft daylight and pale floor.",
+        "visualFindings": "No people; whole vase and every pedestal foot well inside center, empty floor below. Pale background architecture remains at edges but is low contrast/soft rather than uniformly blank; diagnostic mask will fade it.",
+        "historicalLimitations": "Palace room and pedestal/vase design fictional Qing-inspired staging, not authenticated real architecture or museum artifact.",
+        "noBakedMemoryEffects": true,
+        "thumbnailQAPending": true,
+        "pixelsNotRetouched": true,
+        "static160pxOvalPreviewPersonallyInspected": true,
+        "static160pxContentRecognizable": true,
+        "static160pxFindings": "Ehjä maljakko, arvokas jalusta ja ihmisten puuttuminen erottuvat vaaleassa suuressa salissa; taustalla jää vähäkontrastista arkkitehtuuria myös reunoille.",
+        "actualGame2to3SecondRuntimeTested": false,
+        "previewMaskIsDiagnosticOnly": true,
+        "lightnessRequirement498Checked": true,
+        "noBakedGrainLiftedBlackPointOrWaves": true
+      },
+      "metadataProvenanceVerified": true
+    },
+    {
+      "code": "tyyppi3-oppitunti",
+      "taskNumber": 496,
+      "callsIssued": 2,
+      "callsCompleted": 2,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T07:06:08.019925+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Entirely NEW realistic COLOR photograph of a happy historical Chinese palace LESSON, circa1910s inspired fictional characters. One kind delighted Chinese male tutor teaches using a slender WOODEN MAP POINTER; young boy emperor Puyi listens seated at a small traditional wooden school desk. Real-camera skin, cloth and timber, neutral daylight, not sepia/illustration/CGI. Output FULL OPAQUE landscape4:3 PNG, alpha255, no baked oval, circle, feather, vignette, frame, lettering, dates, captions or watermark.\nVERY WIDE COMPACT COMPOSITION with huge quiet background safety: ALL important content including teacher's head, full pointer, map and boy/desk sits only inside x30-70percent,y30-72percent. Top30percent and left/right30percent are calm featureless softly lit pale plaster wall, bottom25percent empty light stone/wood floor. These are real surfaces, no graphic borders. Teacher seated/standing behind a low lectern at center-left (face near x42%,y43%), so only upper body visible and his lower body naturally hidden by furniture inside the central area. Boy at center-right (face near x61%,y54%) in simple yellow silk robe and dark cap, at his compact slightly sloping WOODEN SCHOOL DESK entirely within central area, looking up attentively and smiling. Teacher in dark blue loose period robe/dark cap, laughing warmly, one natural hand holding a plain slender wooden pointer angled across center to a simple unlabeled hand-painted China-like map chart hung behind them centrally around x53%,y38%. Pointer tip and both ends must stay within central safe area; no pointer crossing margins. Map has NO legible labels, letters, glyphs, numbers, dates or modern national flags; a modest old-paper geography diagram, not a claimed accurate map reconstruction. Exactly TWO people. No other treasures or museum objects added, no extra pupils, books with visible text, modern classroom equipment or props near edges. Photo must communicate lesson/pointer/child at desk instantly in a160px-wide oval preview. No photographic inset, use one coherent scene with quiet background, natural scale and plausible hands.\nLATER OWNER LIGHTNESS REQUIREMENT: keep the whole photograph light, airy and gently sunlit, bright pale neutral background and soft low-contrast shadows, never a dark/heavy room. Preserve true artifact and clothing colors, no bleaching/desaturation/sepia. Do NOT bake in grain, lifted black point, wavy distortion, memory filters or any film/aging effect; the game adds those later.\n",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "preDispatchPromptRevisionAt": "2026-10-19T07:07:25.008440+00:00",
+          "preDispatchRevisionSource": {
+            "path": "posti/paatoimittaja-codex-muistokuplat-vaaleat-20261019.md",
+            "commit": "f175d1ec185ab421c4fe9b913d55c6c18bd1d777",
+            "blob": "73230152dc62ad5689e7fbeba67942a3441f2256",
+            "sha256": "b9554cece05a334b1dc9eb8d6fd258abb4f7f40f4904ad2e110fc9ee8b044d49",
+            "readInFull": true
+          },
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d2c67104-fa2d-4cf5-a1b6-1edc26e14abe.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/tyyppi3-oppitunti-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/tyyppi3-oppitunti.png",
+          "nativeSHA256": "a10c5951df928a5e0fe806559d5abfaf1ab1a8de810aff343011dd8a370c6fa2",
+          "deliverySHA256": "d246341093839e7b052011ac8023f710c9b967ab1ebe1598fc356ab612e0e263",
+          "nativeBytes": 2220544,
+          "deliveryBytes": 2220828,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "e3ec95f8b40a67d33a755aea48f85b812598b6a183f1729ffd8b29ed515af64f",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:09:59.365818+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "candidate-for-oval-QA",
+            "photoRealism": "Bright airy lesson photograph, smiling tutor with wooden pointer, young emperor at an actual small school desk. Natural colors and no added memory filter.",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalContentInsideCentral60Percent": true,
+            "full20PercentCalmMarginsVisuallySatisfied": false,
+            "visualFindings": "Faces, hands and pointer safely central, calm side areas. Map top reaches about11percent from top and furniture near81percentheight, so full20percent calm top/bottom margins not met. Map is generated and not verified geographically; tiny marks are not reliable educational labels.",
+            "thumbnailQAPending": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T07:12:12.323923+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. A wholly NEW bright airy realistic COLOR camera photograph of a fictional circa1910s Chinese palace lesson: joyful male teacher with a WOODEN MAP POINTER, young Puyi seated at a small WOODEN SCHOOL DESK smiling attentively. Full opaque rectangular landscape4:3 PNG, alpha255, no oval/circle/alpha fade/vignette/border/text/labels/logos. Pale softly lit plaster-wall background, neutral natural true colors, soft daylight, no heavy shadows, sepia, grain, lifted-black filter or wavy distortion.\nVERY IMPORTANT FRAMING: ALL important elements including the ENTIRE MAP CHART, hanging rod/string, teacher, pointer, child and BOTH desks must be INSIDE x28-72%,y28-73%. Top25%, sides25%, bottom25% completely quiet empty photographed pale wall/floor. Do not place map at top edge! Map is modest, its TOP begins below y28% and its bottom around y48%, full width only around25% of image; centered x53%. Keep this map small enough to leave the whole upper quarter blank wall. All furniture feet stop above y73%, so full bottom quarter is empty pale floor, no foreground table, chair or object in that area. Broad photographed space, not graphic padding.\nTeacher sits/stands behind a compact low traditional lectern at x40%, smiling face around y45%, dark blue loose traditional robe and round dark cap. Young fictional boy emperor in yellow robe/dark cap at x63%,y56%, seated behind his small slightly sloping wooden school desk, looking up toward teacher. Hands rest naturally on desk. Teacher holds a slender plain wooden pointer diagonally to the center map, with both ends and hand fully in central safe area. Map shows ONLY a simple faded blue/ochre unlabeled geographic outline resembling historical China and adjacent coastline, absolutely NO words, glyphs, numbers, flags or written annotations. It is invented educational staging, not verified cartography. No extra treasures, books with text, modern classroom props or extra people. Teacher's smile, child at desk and pointing action should remain legible in a160px-wide oval diagnostic preview. Authentic camera materials and light, furniture proportionate, no plastic/rendered dollhouse texture.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a9751eb4-71ea-4418-84d7-37c7f4cffd90.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/tyyppi3-oppitunti-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/tyyppi3-oppitunti.png",
+          "nativeSHA256": "9d07d6b91d13d8887f1d8649fe5dd2d5653701af99a21dc877a6b4fc1e202710",
+          "deliverySHA256": "0832a55fd2c6cce240400939390ef974a5523b5ae47434708d356d6523570ca5",
+          "nativeBytes": 1831562,
+          "deliveryBytes": 1831830,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "6cbc1476c14a4164dda50b5372e406c5b0b97e89d6b7da2d65d399ea96c2c2cd",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:17:51.581345+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "selected-for-final-oval-QA-and-PT",
+            "photoRealism": "Bright airy photographic classroom, smiling male tutor with wooden pointer and Puyi at school desk. Fictional characters/material staging.",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalContentInsideCentral60Percent": true,
+            "estimatedCalmMarginsPercent": {
+              "left": 27,
+              "right": 28,
+              "top": 20,
+              "bottom": 25
+            },
+            "marginCheckMethod": "Manual approximate outer bounds of map string/furniture; not calibrated segmentation",
+            "full20PercentCalmMarginsVisuallySatisfied": true,
+            "visualFindings": "Map top/string around20percent; all figures/desks/pointer central, broad pale margins. Generated outline map not validated cartography, no readable overlay text. Realism/color accepted for style review;160px test pending.",
+            "thumbnailQAPending": true,
+            "pixelsNotRetouched": true
+          },
+          "metadataProvenanceVerified": true
+        }
+      ],
+      "callIssuedAt": "2026-10-19T07:12:12.323765+00:00",
+      "activeAttempt": 2,
+      "attempt": 2,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a9751eb4-71ea-4418-84d7-37c7f4cffd90.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/tyyppi3-oppitunti-attempt2.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/tyyppi3-oppitunti.png",
+      "nativeSHA256": "9d07d6b91d13d8887f1d8649fe5dd2d5653701af99a21dc877a6b4fc1e202710",
+      "deliverySHA256": "0832a55fd2c6cce240400939390ef974a5523b5ae47434708d356d6523570ca5",
+      "nativeBytes": 1831562,
+      "deliveryBytes": 1831830,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "pixelSHA256": "6cbc1476c14a4164dda50b5372e406c5b0b97e89d6b7da2d65d399ea96c2c2cd",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T07:17:51.581345+00:00",
+      "selectedAttempt": 2,
+      "qa": {
+        "personallyInspectedNative": true,
+        "disposition": "selected-for-final-oval-QA-and-PT",
+        "photoRealism": "Bright airy photographic classroom, smiling male tutor with wooden pointer and Puyi at school desk. Fictional characters/material staging.",
+        "rectangleOpaque": true,
+        "bakedOval": false,
+        "criticalContentInsideCentral60Percent": true,
+        "estimatedCalmMarginsPercent": {
+          "left": 27,
+          "right": 28,
+          "top": 20,
+          "bottom": 25
+        },
+        "marginCheckMethod": "Manual approximate outer bounds of map string/furniture; not calibrated segmentation",
+        "full20PercentCalmMarginsVisuallySatisfied": true,
+        "visualFindings": "Map top/string around20percent; all figures/desks/pointer central, broad pale margins. Generated outline map not validated cartography, no readable overlay text. Realism/color accepted for style review;160px test pending.",
+        "thumbnailQAPending": true,
+        "pixelsNotRetouched": true,
+        "static160pxOvalPreviewPersonallyInspected": true,
+        "static160pxContentRecognizable": true,
+        "static160pxFindings": "Kartta, karttakeppi, opettaja ja pulpetissa istuva lapsi tunnistuvat; ilmeiden hienot yksityiskohdat ovat pieniä ja kartta on kuvitteellinen, ei varmennettua opetustietoa.",
+        "actualGame2to3SecondRuntimeTested": false,
+        "previewMaskIsDiagnosticOnly": true,
+        "lightnessRequirement498Checked": true,
+        "noBakedGrainLiftedBlackPointOrWaves": true
+      },
+      "metadataProvenanceVerified": true
+    }
+  ],
+  "oldDraftNativesPreserved": true,
+  "fullSeriesStarted": false
+}

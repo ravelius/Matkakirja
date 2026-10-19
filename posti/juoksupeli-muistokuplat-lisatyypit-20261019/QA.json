@@ -1,0 +1,63 @@
+{
+  "technicalOpaqueRectangleVerified": true,
+  "layoutMarginsVisuallyChecked": true,
+  "layoutMarginMethod": "manual approximate bounds, not calibrated segmentation",
+  "static160pxOvalPreviewPersonallyInspected": true,
+  "actualGameRuntimeTested": false,
+  "assets": {
+    "tyyppi2-sali": {
+      "personallyInspectedNative": true,
+      "disposition": "selected-for-final-oval-QA-and-PT",
+      "rectangleOpaque": true,
+      "bakedOval": false,
+      "criticalContentInsideCentral60Percent": true,
+      "full20PercentCalmMarginsVisuallySatisfied": true,
+      "estimatedMainSubjectMarginsPercent": {
+        "left": 39,
+        "right": 39,
+        "top": 32,
+        "bottom": 32
+      },
+      "marginCheckMethod": "Manual approximate vase-plus-pedestal bounds, not calibrated segmentation",
+      "photoRealism": "Pale airy spacious hall, rich cobalt/white vase, proportionate hardwood pedestal, natural soft daylight and pale floor.",
+      "visualFindings": "No people; whole vase and every pedestal foot well inside center, empty floor below. Pale background architecture remains at edges but is low contrast/soft rather than uniformly blank; diagnostic mask will fade it.",
+      "historicalLimitations": "Palace room and pedestal/vase design fictional Qing-inspired staging, not authenticated real architecture or museum artifact.",
+      "noBakedMemoryEffects": true,
+      "thumbnailQAPending": true,
+      "pixelsNotRetouched": true,
+      "static160pxOvalPreviewPersonallyInspected": true,
+      "static160pxContentRecognizable": true,
+      "static160pxFindings": "Ehjä maljakko, arvokas jalusta ja ihmisten puuttuminen erottuvat vaaleassa suuressa salissa; taustalla jää vähäkontrastista arkkitehtuuria myös reunoille.",
+      "actualGame2to3SecondRuntimeTested": false,
+      "previewMaskIsDiagnosticOnly": true,
+      "lightnessRequirement498Checked": true,
+      "noBakedGrainLiftedBlackPointOrWaves": true
+    },
+    "tyyppi3-oppitunti": {
+      "personallyInspectedNative": true,
+      "disposition": "selected-for-final-oval-QA-and-PT",
+      "photoRealism": "Bright airy photographic classroom, smiling male tutor with wooden pointer and Puyi at school desk. Fictional characters/material staging.",
+      "rectangleOpaque": true,
+      "bakedOval": false,
+      "criticalContentInsideCentral60Percent": true,
+      "estimatedCalmMarginsPercent": {
+        "left": 27,
+        "right": 28,
+        "top": 20,
+        "bottom": 25
+      },
+      "marginCheckMethod": "Manual approximate outer bounds of map string/furniture; not calibrated segmentation",
+      "full20PercentCalmMarginsVisuallySatisfied": true,
+      "visualFindings": "Map top/string around20percent; all figures/desks/pointer central, broad pale margins. Generated outline map not validated cartography, no readable overlay text. Realism/color accepted for style review;160px test pending.",
+      "thumbnailQAPending": true,
+      "pixelsNotRetouched": true,
+      "static160pxOvalPreviewPersonallyInspected": true,
+      "static160pxContentRecognizable": true,
+      "static160pxFindings": "Kartta, karttakeppi, opettaja ja pulpetissa istuva lapsi tunnistuvat; ilmeiden hienot yksityiskohdat ovat pieniä ja kartta on kuvitteellinen, ei varmennettua opetustietoa.",
+      "actualGame2to3SecondRuntimeTested": false,
+      "previewMaskIsDiagnosticOnly": true,
+      "lightnessRequirement498Checked": true,
+      "noBakedGrainLiftedBlackPointOrWaves": true
+    }
+  }
+}

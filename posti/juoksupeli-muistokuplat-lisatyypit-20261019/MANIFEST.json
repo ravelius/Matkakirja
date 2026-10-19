@@ -1,0 +1,49 @@
+{
+  "selectedCreativeImages": 2,
+  "actualGenerationCalls": 5,
+  "unselectedWholeCandidates": 3,
+  "images": [
+    {
+      "code": "tyyppi2-sali",
+      "taskNumber": 495,
+      "path": "posti/juoksupeli-muistokuplat-lisatyypit-20261019/tyyppi2-sali.png",
+      "bytes": 1879989,
+      "sha256": "bf08467aaae6802d2ad51f4e3e5728bbadc5a75eed31a0363b474b2b5964e122",
+      "nativeSHA256": "8eb2d7439b6eaedceaa9fc2c33e5b4a9c7d1888a0b483f96564f585d17b3d8ed",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "selectedAttempt": 3,
+      "generationCalls": 3
+    },
+    {
+      "code": "tyyppi3-oppitunti",
+      "taskNumber": 496,
+      "path": "posti/juoksupeli-muistokuplat-lisatyypit-20261019/tyyppi3-oppitunti.png",
+      "bytes": 1831830,
+      "sha256": "0832a55fd2c6cce240400939390ef974a5523b5ae47434708d356d6523570ca5",
+      "nativeSHA256": "9d07d6b91d13d8887f1d8649fe5dd2d5653701af99a21dc877a6b4fc1e202710",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "selectedAttempt": 2,
+      "generationCalls": 2
+    }
+  ]
+}
