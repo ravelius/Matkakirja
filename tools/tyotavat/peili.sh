@@ -22,18 +22,12 @@ PARIT=(
   "$S/osoitekirja.md|$KOHDE/osoitekirja.md"
   "$F/keskustelukanava/aloitus.md|$KOHDE/keskustelukanava-aloitus.md"
   "$S/Matkakirja-fable/.claude/settings.local.json|$KOHDE/settings.local.json.malli"
-  "$F/asemataulu/ASEMATAULU-ROOLI.md|$KOHDE/ASEMATAULU-ROOLI.md"
   "$S/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py|$KOHDE/unity-julkaisut.py"
-  "$F/asemataulu/kulutus.py|$ASEMA/kulutus.py"
-  "$F/asemataulu/laitteet.py|$ASEMA/laitteet.py"
-  "$F/asemataulu/paivita.py|$ASEMA/paivita.py"
-  "$F/asemataulu/synkka.py|$ASEMA/synkka.py"
-  "$F/asemataulu/kone.py|$ASEMA/kone.py"
-  "$F/asemataulu/syke.py|$ASEMA/syke.py"
-  "$F/asemataulu/roolit.json|$ASEMA/roolit.json"
   "$F/asemataulu/osoitteet.md|$ASEMA/osoitteet.md"
 )
-# Asemataulun tietokannan pohjatiedot (tilinvaihdon ArtifactData-batch): kaikki data/talo/*.json
+# ASEMATAULUN KOODI JA OHJE EIVÄT OLE PEILISSÄ (omistaja 19.10.2026 klo 19.51, docs/moduulit/asemataulu.md luku 1): totuus on
+# repossa tools/asemataulu/, ja työkansion kopiot syntyvät komennolla python3 -I tools/asemataulu/asemataulu.py.
+# Peilissä vain Asemataulun TILA uuden Macin siemeneksi: osoitteet.md ja tietokannan pohjatiedot data/talo/*.json
 for f in "$F"/asemataulu/data/talo/*.json; do
   [ -f "$f" ] && PARIT+=("$f|$ASEMA/data/talo/$(basename "$f")")
 done

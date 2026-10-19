@@ -26,7 +26,6 @@ export function kohteet() {
     OSOITEKIRJA,
     `${S}/Matkakirja-posti/KIERROS.md`,
     `${S}/Matkakirja-posti/NOLLAUS.md`,
-    `${F}/asemataulu/ASEMATAULU-ROOLI.md`,
     `${F}/keskustelukanava/aloitus.md`,
     `${F}/jonokierros-teksti.md`,
     `${F}/asemataulu/roolit.json`,

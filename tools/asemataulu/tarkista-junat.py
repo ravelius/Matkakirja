@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Asemataulun junat-dokumentin muototarkistin (omistaja 18.10.2026, C5).
+"""Asemataulun tarkistin (omistaja 18.10.2026, C5; laajennettu 19.10.2026 klo 19.18–19.51, speksin kaikki säännöt).
 
-Käyttö: python3 -I tools/asemataulu/tarkista-junat.py [junat.json] [eteneminen.json]
-Aja ennen jokaista vientiä. Paluukoodi 0 = ok, 1 = virheitä, 2 = tiedostoa ei voi lukea.
-Ohje ja sallitut kentät: docs/moduulit/asemataulu.md, kohta "Asemataulun merkinnät".
+Käyttö:
+  python3 -I tools/asemataulu/tarkista-junat.py [junat.json] [eteneminen.json]
+  python3 -I tools/asemataulu/tarkista-junat.py --kansio <data/talo> [--odottaa <hoitaja/odottaa.json>]
+--kansio tarkistaa junat, eteneminen, roolit ja tyolista (puuttuvat ohitetaan); odottaa.json oletuksena
+<kansio>/../../hoitaja/odottaa.json. Aja ennen jokaista vientiä (synkka.py ja asemataulu.py ajavat sen itse).
+Paluukoodi 0 = ok, 1 = virheitä, 2 = tiedostoa ei voi lukea.
+Speksi ja säännöt: docs/moduulit/asemataulu.md (ainoa speksi).
 """
 import json
 import os
@@ -21,7 +25,18 @@ VALMIS_RE = re.compile(r"valmis|testflight|julkaistu", re.I)
 # Sama kuin asemataulu.html:n OSIO_OTSIKKO-laajennus: rivi, joka on otsikko (ei luetelmakohta), päättyy kaksoispisteeseen.
 OTSIKKO_RE = re.compile(r"^\s*([A-ZÅÄÖ][^:\n–\-]{0,40}):\s*$|^\s*(Työn alla|Valmiina|Korjatut|Uutta|Junassa\s+\d+)\b[^:\n]{0,60}:", re.I)
 SALLITUT_JUNA = ("työn alla", "valmiina")
+SALLITUT_LUKITTU = ("valmiina",)
 SALLITUT_TF = ("uutta",)
+# Ei valintamerkkejä junarivillä (omistaja 19.10. 19.20).
+MERKIT_RE = re.compile("[\u2610\u2611\u2612\u2705\u2713\u2714\u274C\u2B1C]")
+# Lukittu Juna N -rivi (omistaja 19.10. 19.48): tila alkaa näillä tai etenemisen jakso on "matka".
+LUKITTU_RE = re.compile(r"^\s*(lukittu|käännös|käännössä|matkalla|ipa|applelle|applella)", re.I)
+# Ei-pelin asiat eivät kuulu junariveille (omistaja 19.10. 19.48): Raamattu, taulun ohje, työkalut.
+EI_PELIN_RE = re.compile(r"\b(raamat\w*|asemataulu\w*|tarkistin\w*|tuotantopohj\w*|työkalu\w*)", re.I)
+# Matkan vaiheiden kirjoittajat (omistaja 19.10. 19.18): Natiiviseppä 1–2, Julkaisija 3–5.
+MATKA_KIRJOITTAJA = {1: "Natiiviseppä", 2: "Natiiviseppä", 3: "Julkaisija", 4: "Julkaisija", 5: "Julkaisija"}
+ROOLI_TILAT = ("työ", "odottaa", "lepo", "kysyy")
+TYOLISTA_KIELLETYT_RE = re.compile(r"\((?:palautteesi|pyyntösi|päätöksesi)", re.I)
 
 
 def otsikon_perus(rivi):
@@ -29,7 +44,7 @@ def otsikon_perus(rivi):
     return m.group(1).strip().lower() if m else ""
 
 
-def tarkista_rivi(r, i, nakyva, virheet, varoitukset):
+def tarkista_rivi(r, i, nakyva, virheet, varoitukset, lukitut=()):
     p = "rivi %d" % (i + 1)
     if not isinstance(r, dict):
         virheet.append("%s: ei objekti" % p)
@@ -78,7 +93,17 @@ def tarkista_rivi(r, i, nakyva, virheet, varoitukset):
         varoitukset.append("%s: TF-rivillä ei pitäisi olla edistystä" % p)
     # Otsikot ja kukin asia kerran
     teksti = r.get("teksti") if isinstance(r.get("teksti"), str) else ""
-    sallitut = SALLITUT_JUNA if on_juna else SALLITUT_TF
+    lukittu = on_juna and (nimi in lukitut or bool(LUKITTU_RE.match(tila)))
+    sallitut = SALLITUT_LUKITTU if lukittu else SALLITUT_JUNA if on_juna else SALLITUT_TF
+    ilmoita = virheet if nakyva else varoitukset
+    if MERKIT_RE.search(teksti) or MERKIT_RE.search(tila):
+        ilmoita.append("%s: valintamerkit (☑/☐/✅/✓) eivät kuulu junariville; vain otsikot ja ranskalaiset viivat" % p)
+    eka = next((x for x in teksti.split("\n") if x.strip()), "")
+    if eka and otsikon_perus(eka) not in sallitut + ("työn alla", "valmiina", "uutta"):
+        ilmoita.append("%s: teksti alkaa johdannolla '%s'; ensimmäinen rivi on otsikko (%s)" % (p, eka.strip()[:40], ", ".join(x.capitalize() + ":" for x in sallitut)))
+    for rivi in teksti.split("\n"):
+        if rivi.strip().startswith(("–", "-", "•")) and EI_PELIN_RE.search(rivi):
+            ilmoita.append("%s: ei-pelin asia junarivillä (Raamattu, taulu, työkalut eivät kuulu junalle): %s" % (p, rivi.strip()[:60]))
     nahty, kohdat, kohta_ryhma = set(), {}, None
     for rivi in teksti.split("\n"):
         if rivi.strip().startswith(("–", "-", "•")):
@@ -97,7 +122,8 @@ def tarkista_rivi(r, i, nakyva, virheet, varoitukset):
         if not o:
             continue
         if o not in sallitut:
-            (virheet if nakyva else varoitukset).append("%s: teksti-osion otsikko '%s' ei sallittu (sallitut: %s)" % (p, rivi.strip()[:40], ", ".join(s.capitalize() for s in sallitut)))
+            syy = "; lukitulla junalla vain Valmiina (lukitusversion sisältö), seuraavan junan asiat seuraavalle riville" if lukittu and o == "työn alla" else ""
+            (virheet if nakyva else varoitukset).append("%s: teksti-osion otsikko '%s' ei sallittu (sallitut: %s)%s" % (p, rivi.strip()[:40], ", ".join(s.capitalize() for s in sallitut), syy))
         if o in nahty:
             (virheet if nakyva else varoitukset).append("%s: osio '%s' esiintyy kahdesti" % (p, o))
         nahty.add(o)
@@ -117,9 +143,12 @@ def tarkista(junat, eteneminen=None):
         m = NIMI_RE.match(r.get("nimi", "")) if isinstance(r, dict) and isinstance(r.get("nimi"), str) else None
         return int(m.group(2)) if m else 0
     nakyvat = {id(r) for r in sorted(rivit, key=nro, reverse=True)[:3]}
+    lukitut = set()
+    if isinstance(eteneminen, dict) and eteneminen.get("jakso") == "matka":
+        lukitut.add(eteneminen.get("nimi"))
     nimet = {}
     for i, r in enumerate(rivit):
-        tarkista_rivi(r, i, id(r) in nakyvat, virheet, varoitukset)
+        tarkista_rivi(r, i, id(r) in nakyvat, virheet, varoitukset, lukitut)
         if isinstance(r, dict) and isinstance(r.get("nimi"), str):
             if r["nimi"] in nimet:
                 virheet.append("nimi '%s' esiintyy kahdesti" % r["nimi"])
@@ -140,7 +169,92 @@ def tarkista(junat, eteneminen=None):
                     datetime.fromisoformat(str(va).replace("Z", "+00:00"))
                 except ValueError:
                     varoitukset.append("eteneminen: valmis_arvio ei ole ISO-aika (%r), jäljellä-aikaa ei näytetä" % (va,))
+            et_tila = eteneminen.get("tila") if isinstance(eteneminen.get("tila"), str) else ""
+            if VALMIS_RE.search(et_tila) and not (isinstance(ed, (int, float)) and ed >= 5):
+                virheet.append("eteneminen: tila %r sisältää sanan valmis/TestFlight/julkaistu ennen vaihetta 5; sana kuuluu tilaan vasta, kun juna on TF:ssä (valot sammuvat)" % et_tila)
+            jakso = eteneminen.get("jakso")
+            if jakso not in (None, "matka"):
+                virheet.append("eteneminen: jakso on joko puuttuva (lastaus, oranssi) tai \"matka\" (lukituksesta TF:ään, vihreä), nyt %r" % (jakso,))
+            if jakso == "matka":
+                if isinstance(ed, bool) or not isinstance(ed, int) or not 1 <= ed <= 5:
+                    virheet.append("eteneminen: matkan edistys on kokonaisluku 1–5 (1 lukittu + käännös alkoi, 2 käännös valmis, 3 testit + IPA, 4 Applelle, 5 TF:ssä), nyt %r" % (ed,))
+                elif eteneminen.get("kirjoittaja") and eteneminen.get("kirjoittaja") != MATKA_KIRJOITTAJA[ed]:
+                    virheet.append("eteneminen: matkan vaiheen %d kirjoittaja on %s (Natiiviseppä 1–2, Julkaisija 3–5), nyt %r" % (ed, MATKA_KIRJOITTAJA[ed], eteneminen.get("kirjoittaja")))
     return virheet, varoitukset
+
+
+def tarkista_roolit(roolit, odottaa=None):
+    """Roolikortit (omistaja 19.10. 19.24 ODOTUS EI OLE LEPO). Palauttaa (virheet, varoitukset)."""
+    virheet = []
+    if not isinstance(roolit, dict) or not isinstance(roolit.get("rivit"), list):
+        return ["roolit: juurella pitää olla objekti, jossa 'rivit' on lista"], []
+    odottaa = odottaa if isinstance(odottaa, dict) else {}
+    for r in roolit["rivit"]:
+        if not isinstance(r, dict):
+            virheet.append("roolit: rivi ei ole objekti")
+            continue
+        n, t, s = r.get("nimi", "?"), r.get("tila"), str(r.get("teksti") or "")
+        if t not in ROOLI_TILAT:
+            virheet.append("roolit (%s): tila pitää olla %s, nyt %r" % (n, " / ".join(ROOLI_TILAT), t))
+        if t == "lepo" and s != "Levossa":
+            virheet.append("roolit (%s): lepäävän roolin teksti on \"Levossa\", nyt %r" % (n, s))
+        if t == "odottaa" and not s.startswith("odottaa "):
+            virheet.append("roolit (%s): odottavan roolin teksti kertoo mitä se odottaa (\"odottaa …\"), nyt %r" % (n, s))
+        if s.lower().startswith("odottaa") and t != "odottaa":
+            virheet.append("roolit (%s): teksti %r mutta tila %r; odottava rooli on tilassa odottaa" % (n, s, t))
+        if t == "lepo" and n in odottaa:
+            virheet.append("roolit (%s): odotus ei ole lepo: odottaa.json sanoo %r, kortissa Levossa" % (n, odottaa[n]))
+    return virheet, []
+
+
+def tarkista_tyolista(tyolista):
+    """Työlistan tyylisäännöt (omistaja: ei (palautteesi)/(pyyntösi)/(päätöksesi) -merkintöjä)."""
+    virheet = []
+    if not isinstance(tyolista, dict) or not isinstance(tyolista.get("rivit"), list):
+        return ["tyolista: juurella pitää olla objekti, jossa 'rivit' on lista"], []
+    for r in tyolista["rivit"]:
+        if not isinstance(r, dict):
+            continue
+        for k, v in r.items():
+            if isinstance(v, str) and TYOLISTA_KIELLETYT_RE.search(v):
+                virheet.append("tyolista (%s): kenttä %s sisältää merkinnän (palautteesi/pyyntösi/päätöksesi …)" % (str(r.get("otsikko", "?"))[:40], k))
+    return virheet, []
+
+
+def tarkista_kansio(kansio, odottaa_polku=None):
+    """Tarkistaa kansion junat, eteneminen, roolit ja tyolista. Palauttaa (virheet, varoitukset, luettu)."""
+    virheet, varoitukset, luettu = [], [], []
+
+    def lue_jos(nimi):
+        p = os.path.join(kansio, nimi + ".json")
+        if not os.path.exists(p):
+            return None
+        luettu.append(nimi)
+        return lue(p)
+    junat, et = lue_jos("junat"), lue_jos("eteneminen")
+    if junat is not None:
+        v, w = tarkista(junat, et)
+        virheet += v
+        varoitukset += w
+    # Roolit: viety versio on TAULU/hoitaja/roolit.json (Asemataulu-session kokoama); data/talo/roolit.json vain, jos sitä ei ole.
+    hoitaja = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(kansio))), "hoitaja")
+    if os.path.exists(os.path.join(hoitaja, "roolit.json")):
+        roolit = lue(os.path.join(hoitaja, "roolit.json"))
+        luettu.append("hoitaja/roolit")
+    else:
+        roolit = lue_jos("roolit")
+    if roolit is not None:
+        op = odottaa_polku or os.path.join(hoitaja, "odottaa.json")
+        od = lue(op) if os.path.exists(op) else None
+        v, w = tarkista_roolit(roolit, od)
+        virheet += v
+        varoitukset += w
+    tl = lue_jos("tyolista")
+    if tl is not None:
+        v, w = tarkista_tyolista(tl)
+        virheet += v
+        varoitukset += w
+    return virheet, varoitukset, luettu
 
 
 def lue(polku):
@@ -149,6 +263,20 @@ def lue(polku):
 
 
 def main(argv):
+    if len(argv) > 2 and argv[1] == "--kansio":
+        kansio = argv[2]
+        od = argv[4] if len(argv) > 4 and argv[3] == "--odottaa" else None
+        try:
+            virheet, varoitukset, luettu = tarkista_kansio(kansio, od)
+        except (OSError, ValueError) as e:
+            print("VIRHE: %s ei luettavissa: %s" % (kansio, e))
+            return 2
+        for v in varoitukset:
+            print("varoitus: " + v)
+        for v in virheet:
+            print("VIRHE: " + v)
+        print("%s (%s): %d virhettä, %d varoitusta" % (kansio, ", ".join(luettu) or "ei tiedostoja", len(virheet), len(varoitukset)))
+        return 1 if virheet else 0
     polku = argv[1] if len(argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "talo", "junat.json")
     try:
         junat = lue(polku)
