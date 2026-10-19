@@ -51,7 +51,7 @@ Jokainen huuto ≤ 60 merkkiä (ääni noin 2–4 s); huudot ovat lyhyitä, jote
 
 - **Fakta:** Keltaista pidettiin keisarin värinä, ja sitä varattiin keramiikassa ja kankaissa pääosin keisarin käyttöön.
 - **Ajoitus (raita):** Qing-dynastia, tyypillisesti 1700–1800-luku
-- **Kupla (Codexille):** Hoviviskaali kultaisessa silkkitakissa pitelee ehjää keltaista kulhoa ja kertoo siitä, keltaverhoisessa salissa lyhdyn valossa.
+- **Kupla (Codexille):** Hovin virkamies kultaisessa silkkitakissa pitelee ehjää keltaista kulhoa ja kertoo siitä, keltaverhoisessa salissa lyhdyn valossa.
 - **Huudot:** „Keltainen kulho! Keisarin oma väri!“ / „Keltainen oli varattu keisarille ja lähipiirille!“ / „Virkamiehet nostavat taas kauhean metelin!“ / „Kulho pomppasi kuin kolikko, hihhei!“
 - **Lähteet:** https://www.metmuseum.org/art/collection/search/42242, https://fondation-baur.ch/de/95, https://www.metmuseum.org/art/collection/search/42242, https://fondation-baur.ch/de/95
 
