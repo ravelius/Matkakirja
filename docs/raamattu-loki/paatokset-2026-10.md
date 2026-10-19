@@ -1984,3 +1984,12 @@ tilinvaihto-valmis.mjs ajaa sen. Raamattu 7.39 viittaa speksiin. Tekijä Projekt
 
 Korjaa edellisen kirjauksen 19.48-kohdan. Omistaja 19.10.2026 klo 19.48 (sanatarkasti): "junassa 204 on sinne kuulumattomia kohtia".
 Sääntö: junarivillä vain se, mikä on juuri siinä junassa. Lukitulla junalla vain lukitusversion sisältö, ei Työn alla -kohtia. Seuraavan junan asiat menevät seuraavan junan riville. Ei-pelin asiat (Raamattu, taulun ohje, työkalut) eivät kuulu junariveille ollenkaan. Sama sääntö docs/moduulit/asemataulu.md:n speksiin ja tarkistimeen (Projektiseppä).
+
+## MUSEON MAALAUKSEN LÄHESTYMINEN (kaikki museot ja teokset) (20.10.2026 klo 01.01)
+
+Omistaja 20.10. 00.40 kohta A ("korjattua kuntoon pysyvästi"), Linssisepän ehdotus, PT hyväksyi 01.0x. Taidemuseon kierros tuo pelaajan teoksen eteen lyhyellä kävelyllä (kierroksen alku enintään noin
+4 m teoksesta, valinnan mustan alla). Ensin teos kehyksineen ja nimi näkyvät seinällä; sen jälkeen kamera lähestyy YHTENÄ JATKUVANA LIIKKEENÄ (siirtymä ja zoom samassa liu'ussa, ei leikkausta eikä
+hyppyä) lähikuvaan, jossa kehys täyttää ruudun, ja maalauksen omat kohdat zoomautuvat kehyksen sisällä. Sama tapa kaikissa museoiden maalauksissa ja laitteissa. Hyppy lähestymisessä on aina virhe:
+vartija MuseoLahestymisVartijaTestit (Linssit, CI) ajaa jokaisen näyttelyn alun ja koko kierroksen iPhonella ja iPadilla ja hylkää kameran hypyn (askel ≥ 10 cm/ruutu, näkymän muutos ≥ 2,4 ln/s tai
+katseen kääntö ≥ 150°/s) sekä lähikuvan, jossa kehys ei täytä ruutua. Ainoa sallittu siirto ilman liikettä on mustan peiton alla. Toteutus linssiseppa/monalisa-zoomi-207 9d88dae16 (syy: Mona Lisan
+kaiteen takana zoomi alkoi 1,5 m lähempää kuin pysähdys ~3 m).
