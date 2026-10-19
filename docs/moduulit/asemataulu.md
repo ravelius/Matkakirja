@@ -121,7 +121,8 @@ Viisi neliötä junan nimen alla. Dokumentti `talo/eteneminen` = `{nimi, tila, e
 - MATKA (lukituksesta TF:ään): `jakso: "matka"`, VIHREÄ, edistys kokonaisluku 1–5: 1 lukittu + käännös alkoi, 2 käännös valmis
   (Natiiviseppä), 3 testit + IPA, 4 Applelle, 5 TF:ssä (Julkaisija; sisäisillä → rivi PT:lle ja KK:lle, Postivahti varmistaa
   tf*-ketju.logista).
-- Valot palavat, kun edistys on luku eikä tila sisällä sanoja valmis, TestFlight tai julkaistu. `valmis_arvio` päivitetään vaiheen
+- Valot palavat, kun edistys on luku eikä tila sisällä sanoja valmis, TestFlight tai julkaistu. Sana TestFlight kuuluu junarivin ja
+  etenemisen tilaan vasta vaiheessa 5 (PT 19.10.2026: "Lukittu, matkalla TestFlightiin" sammutti Juna 205:n valot). `valmis_arvio` päivitetään vaiheen
   vaihtuessa; sivu laskee siitä jäljellä olevan ajan minuutin välein.
 
 ## 6. Roolikortit (omistaja 19.10.2026 klo 19.24: ODOTUS EI OLE LEPO)
@@ -224,8 +225,8 @@ Tekstisäännöt (otsikot, johdanto, merkit, ei-pelin asiat) koskevat kolmea nä
 | otsikot: kertyvä Työn alla + Valmiina, lukittu vain Valmiina, TF vain Uutta; kukin asia kerran | 18.10. (C5), 19.10. 19.48 |
 | teksti alkaa otsikolla (ei johdantoa); ei ☑/☐/✅/✓ | 19.10. 19.20 |
 | ei ei-pelin asioita (Raamattu, Asemataulu, tarkistin, tuotantopohja, työkalu) junarivin kohdissa | 19.10. 19.48 |
-| eteneminen: nimi = junarivi; edistys 0–5; jakso puuttuu tai "matka"; matkalla 1–5 ja kirjoittaja Natiiviseppä 1–2, Julkaisija 3–5 | 19.10. 19.18 |
-| roolit: tila työ/odottaa/lepo/kysyy; lepo = "Levossa"; odottaa = "odottaa …"; odottaa.json:n rooli ei ole lepo | 19.10. 19.24 |
+| eteneminen: nimi = junarivi; edistys 0–5; jakso puuttuu tai "matka"; matkalla 1–5 ja kirjoittaja Natiiviseppä 1–2, Julkaisija 3–5; tilassa TestFlight/valmis/julkaistu vasta vaiheessa 5 | 19.10. 19.18, PT 20.0x |
+| roolit (TAULU/hoitaja/roolit.json, viety versio): tila työ/odottaa/lepo/kysyy; lepo = "Levossa"; odottaa = "odottaa …"; odottaa.json:n rooli ei ole lepo | 19.10. 19.24 |
 | tyolista: ei "(palautteesi", "(pyyntösi", "(päätöksesi" | omistajan tyylilinjaus |
 
 Testit: tests/asemataulu-junat.test.mjs (tarkistin) ja tests/asemataulu-komento.test.mjs (komento).

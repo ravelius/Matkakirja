@@ -178,3 +178,10 @@ test('--kansio: roolikortti Levossa, vaikka odottaa.json sanoo odottaa, hylätä
   assert.equal(r.status, 1);
   assert.match(r.stdout, /palautteesi/);
 });
+
+test('etenemisen tilassa TestFlight ennen vaihetta 5 hylätään', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Valmiina:\n– kuvanotto';
+  assert.match(aja(d, { nimi: 'Juna 204', jakso: 'matka', edistys: 4, tila: 'Matkalla TestFlightiin' }).stdout, /ennen vaihetta 5/);
+  assert.doesNotMatch(aja(d, { nimi: 'Juna 204', jakso: 'matka', edistys: 5, tila: 'TestFlightissa' }).stdout, /ennen vaihetta 5/);
+});

@@ -169,6 +169,9 @@ def tarkista(junat, eteneminen=None):
                     datetime.fromisoformat(str(va).replace("Z", "+00:00"))
                 except ValueError:
                     varoitukset.append("eteneminen: valmis_arvio ei ole ISO-aika (%r), jäljellä-aikaa ei näytetä" % (va,))
+            et_tila = eteneminen.get("tila") if isinstance(eteneminen.get("tila"), str) else ""
+            if VALMIS_RE.search(et_tila) and not (isinstance(ed, (int, float)) and ed >= 5):
+                virheet.append("eteneminen: tila %r sisältää sanan valmis/TestFlight/julkaistu ennen vaihetta 5; sana kuuluu tilaan vasta, kun juna on TF:ssä (valot sammuvat)" % et_tila)
             jakso = eteneminen.get("jakso")
             if jakso not in (None, "matka"):
                 virheet.append("eteneminen: jakso on joko puuttuva (lastaus, oranssi) tai \"matka\" (lukituksesta TF:ään, vihreä), nyt %r" % (jakso,))
@@ -233,9 +236,15 @@ def tarkista_kansio(kansio, odottaa_polku=None):
         v, w = tarkista(junat, et)
         virheet += v
         varoitukset += w
-    roolit = lue_jos("roolit")
+    # Roolit: viety versio on TAULU/hoitaja/roolit.json (Asemataulu-session kokoama); data/talo/roolit.json vain, jos sitä ei ole.
+    hoitaja = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(kansio))), "hoitaja")
+    if os.path.exists(os.path.join(hoitaja, "roolit.json")):
+        roolit = lue(os.path.join(hoitaja, "roolit.json"))
+        luettu.append("hoitaja/roolit")
+    else:
+        roolit = lue_jos("roolit")
     if roolit is not None:
-        op = odottaa_polku or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(kansio))), "hoitaja", "odottaa.json")
+        op = odottaa_polku or os.path.join(hoitaja, "odottaa.json")
         od = lue(op) if os.path.exists(op) else None
         v, w = tarkista_roolit(roolit, od)
         virheet += v
