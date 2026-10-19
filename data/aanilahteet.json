@@ -1,5 +1,5 @@
 {
- "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1). 9.10.: + pallon elävät äänet v2 (aanet/pallo-elava-v2: ihmiset, poltin, katusoittaja, laivan torvi). 19.10.2026: + juoksupelin ääniefektit (juoksupeli/aanet-v1: askeleet, hypyt, rikkoutuvat, kellot, silmukat; 9 CC BY -nimeämistä).",
+ "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1). 9.10.: + pallon elävät äänet v2 (aanet/pallo-elava-v2: ihmiset, poltin, katusoittaja, laivan torvi). 19.10.2026: + juoksupelin ääniefektit (juoksupeli/aanet-v1 ja aanet-v1-1: askeleet, hypyt, rikkoutuvat, kellot, silmukat; 11 CC BY -nimeämistä).",
  "paivitetty": "2026-10-19",
  "nimeamiset": [
   {
@@ -736,6 +736,22 @@
    "tekija": "CraterZounds",
    "lisenssi": "CC BY 4.0",
    "url": "https://freesound.org/s/207970/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Swoosh",
+   "tekija": "EminYILDIRIM",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/555057/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "swipes and whooshes plastic umbrella fast and short swings stereo ORTF 8040.wav",
+   "tekija": "Soundholder",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://freesound.org/s/425853/",
    "ryhma": "Juoksupeli"
   }
  ]
