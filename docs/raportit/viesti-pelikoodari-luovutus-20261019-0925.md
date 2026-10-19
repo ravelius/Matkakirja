@@ -49,3 +49,12 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   maa vs. katot (JuoksuV4Reitti: nyt yksi reitti; tarvitaan valintasolmut). Esteiden mallit + Puyin tarttumisliike odottavat KK:n linjaa.
 - Codexin este-yhteenveto ei saapunut; esteet (hyppy, liuku, väistö = rikkoutuva kulttuuriaarre, yläpuomi + allas) on koodattu.
 - Worktreet: ei poistettavaa ennen junan 204 mergeä (Postivahdille kerrottu).
+
+## LISÄYS 09.3x (PT, omistaja 09.14/09.19; sitovat)
+- Lohikäärmevärit VAHVISTETTU: punainen yleinen = +1/3 viitta-energiaa, keisarillisen keltainen harvinainen = energia täyteen (kohta 2 yllä).
+- HERKKUOMENA = +1/10 elinvoimaa (nyt HerkkuLisa 25 → ElinvoimaMax/10). Uusi harvinainen JADE-esine (ehdotus jadeinen pitkäikäisyyden persikka,
+  omistajan vahvistus tulossa) = täysi elinvoima.
+- RIKKOUTUVAT ESINEET paljon (1. erä 40): rikkominen vie elinvoimaa ja Puyi HUUDAHTAA esineestä; useita repliikkejä per esine, sama repliikki
+  ei toistu peräkkäin samasta esineestä. Tee DATAPOHJAINEN esineluettelo (json: id, nimi, repliikit[], elinvoimahinta) + REPLIIKKIVALITSIN
+  (puhdas, testattava: ei samaa kahdesti peräkkäin per esine). Nyt rikkoutuvat = Väistö-esteet (V4EsteLaji.Vaisto, AarreRikko 15);
+  SK:n juoksupeli.rikkoutuva.<id>.* (5 kpl) pohjaksi.
