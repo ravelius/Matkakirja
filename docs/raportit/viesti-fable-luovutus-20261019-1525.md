@@ -9,6 +9,8 @@ UUTTA: Matkakirja-fable-checkoutissa `gc.auto=0` (39 000 irtonaista objektia lau
 1. PR #4966 (Raamattu 9.11 J1 + 2.181/2.182/11.11/11.13 + 12.24 Tripo Max + kaanon Sheba/Montezuma isoisan-raamattu/tarina) → tarkista `gh pr checks 4966` (testit ajettava uudelleen viimeisestä pushista c5e97a15f; "no checks" ≠ vihreä) → squash-merge kun vihreä.
 2. PR #4967 (SK faktakorjaukset: Kolme veljestä, Sheba/Montezuma JSON + js) → merge kun vihreä.
 3. Monitorit: odottajat-vahti.py + codex-posti-vahti.sh (30 min, uudelleen).
+4. OMISTAJAN PÄÄTÖS 15.23 (J2, KK sanatarkasti) KIRJAAMATTA: "Raamattuun lista maksetuista tilauksista voimassaoloaikoineen (Soundly Pro 2.12. asti, Tripo Max noin 18.11. asti). Tilauksen käyttö ei ole ostamista: Soundlyn äänet ovat ensisijainen lähde kysymättä. 'Ei ostoja' koskee vain uusia ostoja, ja generointi (ElevenLabs, Tripo, Lyria) vaatii yhä lupasi." → Raamattu 11.5 + 5.20 tarkennus, lukuun 12 "Käytössä olevat tilaukset" (Soundly Pro, Tripo Max, ElevenLabs-taso, Codex; yhdistä #4966:n 12.24 tähän), 12.2:sta "API-saldo 0" pois; loki raamattu-kirjaa.mjs. KK päivittää muistin.
+5. Laitetestaajan pohja valmis: docs/raportit/laitekierros-tarkistuslista-pohja.md (#4969). Projektisepän löydökset (piste 86 tikkaat, komeron tiilet huone 9) lähetetty Lavastajalle; köysilasku 2e3990d00 JU:n jonossa ~16.40.
 
 ## 1. JUNA 204 PIDOSSA (omistaja 11.46), ei lukitusta ennen "OMISTAJA PYYSI JULKAISUA"
 - Runko NS: 59c6784c1 (Työkalusepän tarkistukset-204 f3fb0c3b3 merge), täydet testit ajossa; edellinen vihreä 66638f1ff (Linssit 2129, Peli 632, Kartta 512). Mukana Lavastajan kehysvarjo a69ac7e05, LS Kööpenhamina-kuvat-204 ba13ebaf9 (k8 Tivoli v2, PT hyväksyi täysikokoisena).
