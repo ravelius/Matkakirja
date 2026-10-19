@@ -34,3 +34,6 @@
 | ymparisto | sirkat | 2 | 30.0, 30.0 |
 
 Puuttuvat/aukot: kyyhkyn siivet (0), hyppy (1), kaistanvaihto (1), piha-ilmapiiri (1), kaapu/viitta-kangas OK. Seuraavaksi vaiheeseen kuuluvat musiikki (Lyria, KK:n lupa) ja eunukkihuudot (KK:n lupa).
+
+## v1.1: aukkojen täydennys (PT 13.2x)
+`juoksupeli/aanet-v1-1/` ([manifest](https://media.matkakirja.app/juoksupeli/aanet-v1-1/manifest.json)): **7 ääntä** — hyppy-v11-1…3 ja kaistanvaihto-v11-1…3 (AST-ohjattu ikkunavalinta, Whoosh 0,31–0,56 / 0,44–0,49, 0,9 s, CC0/CC BY) sekä kyyhky-siivet-v11-1 (Bird flight, flapping wings 0,27; kyyhkyn siipiä löytyi vain 1 uskottava, 2 muuta hylättiin). Yhteensä v1+v1.1: hyppy 1+3, kaistanvaihto 1+3, kyyhkyn siivet 1. Ääniportti 0/0; kuuntelematta (pelivideo). Uudet CC BY -nimeämiset (2) PR #4951:ssä (yht. 94).
