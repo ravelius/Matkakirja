@@ -4482,7 +4482,7 @@
   },
   {
    "tunnus": "k-santa-cruz",
-   "nimi": "Santa Cruz",
+   "nimi": "Santa Cruz de la Sierra",
    "lat": -17.789,
    "lon": -63.197,
    "tyyppi": "kaupunki"
@@ -4503,7 +4503,7 @@
   },
   {
    "tunnus": "k-sana",
-   "nimi": "Sana",
+   "nimi": "Sanaa",
    "lat": 15.35,
    "lon": 44.2,
    "tyyppi": "kaupunki"
@@ -5549,7 +5549,7 @@
   },
   {
    "tunnus": "k-shenyeng",
-   "nimi": "Shenyeng",
+   "nimi": "Shenyang",
    "lat": 41.8069,
    "lon": 123.448,
    "tyyppi": "kaupunki"
@@ -5591,7 +5591,7 @@
   },
   {
    "tunnus": "k-riyadh",
-   "nimi": "Riyadh",
+   "nimi": "Riad",
    "lat": 24.6428,
    "lon": 46.7708,
    "tyyppi": "kaupunki"
@@ -6514,7 +6514,7 @@
   },
   {
    "tunnus": "k-luan",
-   "nimi": "Luan",
+   "nimi": "Lu’an",
    "lat": 31.7523,
    "lon": 116.4781,
    "tyyppi": "kaupunki"
@@ -8779,7 +8779,7 @@
   },
   {
    "tunnus": "k-yingkow",
-   "nimi": "Yingkow",
+   "nimi": "Yingkou",
    "lat": 40.6723,
    "lon": 122.2781,
    "tyyppi": "kaupunki"
@@ -10457,7 +10457,7 @@
   },
   {
    "tunnus": "k-jian",
-   "nimi": "Jian",
+   "nimi": "Ji’an",
    "lat": 27.1304,
    "lon": 115.0,
    "tyyppi": "kaupunki"
