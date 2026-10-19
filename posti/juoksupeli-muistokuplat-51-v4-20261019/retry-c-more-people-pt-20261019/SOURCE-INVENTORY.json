@@ -1,0 +1,199 @@
+{
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "canonicalCount": 51,
+  "batchItems": [
+    {
+      "number": 28,
+      "id": "cloisonne-poltin",
+      "nimi": "Cloisonné-tuoksupoltin",
+      "kuplatyyppi": 6,
+      "kuplatyyppiRaw": "6",
+      "typeLabelFromMarkdown": "työpaja",
+      "kupla": "Hymyilevä emalimestari täyttää cloisonné-tuoksupolttimen lokeroita värillä pitkällä pensselillä vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Cloisonnén metallilangat rajaavat emalilokerot; varhaiset rungot olivat raskasta pronssia tai messinkiä.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.cloisonne-poltin.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.cloisonne-poltin.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.cloisonne-poltin.kupla",
+          "teksti": "juoksupeli.rikkoutuva.cloisonne-poltin.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.cloisonne-poltin.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.cloisonne-poltin.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.cloisonne-poltin.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaaleassa työpajassa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.cloisonne-poltin.kupla"
+        },
+        "mdHeading": "### Cloisonné-tuoksupoltin (`cloisonne-poltin`) — kupla 6: työpaja",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 30,
+      "id": "maalattu-emalirasia",
+      "nimi": "Maalattu emalirasia",
+      "kuplatyyppi": 6,
+      "kuplatyyppiRaw": "6",
+      "typeLabelFromMarkdown": "työpaja",
+      "kupla": "Riemastunut mestari maalaa kuparille emalikukkia pieneen rasiaan, kirkkaat silmät, vaalea palatsin työpaja; valoisa, ilmava, pehmeä päivänvalo ikkunasta; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Kuparille maalattua emalia tehtiin ensin Kielletyn kaupungin keisarillisissa työpajoissa Kangxin ajan lopulla.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.maalattu-emalirasia.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.maalattu-emalirasia.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.maalattu-emalirasia.kupla",
+          "teksti": "juoksupeli.rikkoutuva.maalattu-emalirasia.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.maalattu-emalirasia.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.maalattu-emalirasia.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.maalattu-emalirasia.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaalea palatsin työpaja"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.maalattu-emalirasia.kupla"
+        },
+        "mdHeading": "### Maalattu emalirasia (`maalattu-emalirasia`) — kupla 6: työpaja",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 34,
+      "id": "punalakka-veisto",
+      "nimi": "Veistetty punalakka",
+      "kuplatyyppi": 6,
+      "kuplatyyppiRaw": "6",
+      "typeLabelFromMarkdown": "työpaja",
+      "kupla": "Iloinen vanha lakkamestari veistää veitsellä kuvioita punaisen lakka-astian kerroksiin vaaleassa palatsin työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Veistetyssä lakassa kuviot leikataan veitsillä monen lakkakerroksen sisään; Qianlong rakasti sitä.",
+      "dynastia": "Qing",
+      "vuosi": "1736–1795",
+      "ajoitus": "Qing-dynastia, 1700-luku (Qianlongin kausi 1736–1795)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.punalakka-veisto.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.punalakka-veisto.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.punalakka-veisto.kupla",
+          "teksti": "juoksupeli.rikkoutuva.punalakka-veisto.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.punalakka-veisto.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.punalakka-veisto.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.punalakka-veisto.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaaleassa palatsin työpajassa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.punalakka-veisto.kupla"
+        },
+        "mdHeading": "### Veistetty punalakka (`punalakka-veisto`) — kupla 6: työpaja",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 37,
+      "id": "viuhka",
+      "nimi": "Keisarin viuhka",
+      "kuplatyyppi": 4,
+      "kuplatyyppiRaw": "4",
+      "typeLabelFromMarkdown": "lahja (lähettiläs)",
+      "kupla": "Hymyilevä lähettiläs ojentaa taittoviuhkan iloiselle virkamiehelle, hovi taputtaa, vaalea sali, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Kangxi-keisarista alkaen keisarin kirjoittama taittoviuhka oli arvostettu lahja hovin virkamiehille.",
+      "dynastia": "Qing",
+      "vuosi": "Kangxista alkaen",
+      "ajoitus": "Qing-dynastia, Kangxin kausi 1662–1722 ja sen jälkeen",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.viuhka.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.viuhka.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.viuhka.kupla",
+          "teksti": "juoksupeli.rikkoutuva.viuhka.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.viuhka.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.viuhka.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.viuhka.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaalea sali"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.viuhka.kupla"
+        },
+        "mdHeading": "### Keisarin viuhka (`viuhka`) — kupla 4: lahja (lähettiläs)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    }
+  ],
+  "orderSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe"
+  },
+  "sourceTaskNumbers": [
+    564
+  ],
+  "jadeAndVersionOnlyExtrasIncluded": false
+}

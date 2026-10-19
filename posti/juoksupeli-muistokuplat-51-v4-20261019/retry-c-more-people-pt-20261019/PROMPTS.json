@@ -1,0 +1,394 @@
+{
+  "attempts": [
+    {
+      "code": "28-cloisonne-poltin",
+      "sourceItemNumber": 28,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:12:10.564147+00:00",
+      "args": {
+        "prompt": "Create a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH, 1086 x 1448 portrait RGB opaque PNG. Reference is ONLY the PT-approved artifact shape, material, action, camera/framing and luminous workshop bokeh; DO NOT copy the old white-bearded male identity. All output pixels must be whole-new generated photograph, not partial editing or identity-swapping of existing pixels. Artifact SHARP central foreground, people medium-close immediately behind with important eyes/nose/mouth near central45% ellipse; keep natural artifact proportions. Lens100mm f/1.4, camera at artifact level0.8m, soft bright window daylight/gentlebacklight, extremely optically defocused warm cream/red/gold workshop lights, no crisply readable architecture. Realcamera skin/enamel/wood textures, no CGI/artificialrepeatingtexture, no text/logos/graphics/border/vignette/mask/fade/crop/padding. ONE NEW FEMALE enamel master aged30–35, narrow ANGULAR cheekbones, long narrow face, almond-shaped darkeyes, straight darkbrows, blackhair neatly pulled back into modest Qing horizontal hairbar style, no grayhair, no beard/moustache, not the older Manchu nursemaid or old man. Long loose muted INDIGO Qing woman's WORK ROBE with rightfastening, practical clean rolledback sleeves. She SMILES and uses a LONG FINE BRUSH to fill one of the GOLD METAL WIRE CLOISONNE CELLS of a squat bronze/brass INCENSE BURNER with color. Exact burner form like reference: rounded bulbous body, short openneck, TWO arched upward handles, THREE metal animal feet, turquoise/red/blue floral enamel within fine goldwire cells; perforated matching lid resting BESIDE it on dark hardwoodtable, tiny pigmentdishes. Full burner about30–35%totalimageheight, clear large readable roundedbody; longbrush actually touches a wirecell at front/neck. Her face immediately behind above the burner, modest compact scale and important features centered. Whole new woman and photograph. Preserve cloisonne wire cell enamel, NOT ordinary painted porcelain.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/native/28-cloisonne-poltin-attempt2.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:14:43.658636+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-2f4724d4-798f-4aef-9c24-293f85d2c444.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/28-cloisonne-poltin-attempt1.png",
+      "nativeSHA256": "d143e700641a00fadda087ea969b92877dcf057950d297c136ed78a444271a0a",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "661ef3b9ab27d9bf640477dc0d154283ccc3e4a8cbe4e760dccbf8c885511143",
+      "technicalPass": true,
+      "qa": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.285,
+        "backgroundStrongBokeh": true,
+        "observationsFI": [
+          "Nuorempi noin 30–35-vuotias kapeampi- ja kulmikkaampikasvoinen nainen indigossa työkaavussa, selvästi eri kuin 30:n nainen, imettäjä tai vanha mies.",
+          "Pitkä pensseli koskettaa cloisonné-polttimen metallilangan rajaamaa emalilokeroa; pyöreä runko, kaksi korvaa, kolme jalkaa ja viereinen rei'itetty kansi. Materiaali ja toiminta lähteen mukaiset.",
+          "Esine noin 28–29 % kuvan korkeudesta, hieman alle yleisen 30–40 % tavoitteen; hyväksytyn esineen luonnollinen muoto ja alkuperäinen lähirajaus säilyvät. Kasvojen silmät/nenä/suu lähellä ydintä. Erittäin pehmeä optinen työpajabokeh."
+        ],
+        "personallyInspected160px": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Lopullinen neljän valinnan160px-arkki henkilökohtaisesti katsottu; esine ja lähteen toiminta luettavat. Kasvojen uudet identiteetit erottuvat keskenään."
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:22:05.196276+00:00",
+          "qa": {
+            "attempt": 1,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "personDiversityVerified": true,
+            "artifactHeightFraction": 0.285,
+            "backgroundStrongBokeh": true,
+            "observationsFI": [
+              "Nuorempi noin 30–35-vuotias kapeampi- ja kulmikkaampikasvoinen nainen indigossa työkaavussa, selvästi eri kuin 30:n nainen, imettäjä tai vanha mies.",
+              "Pitkä pensseli koskettaa cloisonné-polttimen metallilangan rajaamaa emalilokeroa; pyöreä runko, kaksi korvaa, kolme jalkaa ja viereinen rei'itetty kansi. Materiaali ja toiminta lähteen mukaiset.",
+              "Esine noin 28–29 % kuvan korkeudesta, hieman alle yleisen 30–40 % tavoitteen; hyväksytyn esineen luonnollinen muoto ja alkuperäinen lähirajaus säilyvät. Kasvojen silmät/nenä/suu lähellä ydintä. Erittäin pehmeä optinen työpajabokeh."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "30-maalattu-emalirasia",
+      "sourceItemNumber": 30,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:12:10.622225+00:00",
+      "args": {
+        "prompt": "Create a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH, 1086 x 1448 portrait RGB opaque PNG. Reference is ONLY the PT-approved artifact shape, material, action, camera/framing and luminous workshop bokeh; DO NOT copy the old white-bearded male identity. All output pixels must be whole-new generated photograph, not partial editing or identity-swapping of existing pixels. Artifact SHARP central foreground, people medium-close immediately behind with important eyes/nose/mouth near central45% ellipse; keep natural artifact proportions. Lens100mm f/1.4, camera at artifact level0.8m, soft bright window daylight/gentlebacklight, extremely optically defocused warm cream/red/gold workshop lights, no crisply readable architecture. Realcamera skin/enamel/wood textures, no CGI/artificialrepeatingtexture, no text/logos/graphics/border/vignette/mask/fade/crop/padding. ONE NEW FEMALE workshop MASTER about50years, distinctly ROUND FULL FACE and soft broad cheeks, small wide-set bright eyes, short broad nose, short subtle graytemples, blackhair arranged in a simple low modest Manchu horizontalbar style. Not the slender young woman of28, not nursemaid49, no old whitebearded male. Long loose muted SAGE GREEN Qing woman's workrobe with rightfastening and a plain BEIGE LINEN WORKSHOP APRON, practical sleeves. Delighted master with BRIGHT EYES paints pink flowers and greenleaves in ENAMEL DIRECTLY ON COPPER using a LONG fine brush on a SMALL RECTANGULAR BOX. Exact reference box shape/material: shallow rectangular jewelrybox, thin visible COPPER RIM and real hinged lid open/raised towardcamera, smooth ivory enamel surface, floral painteddecoration, copper boxbase visible beneath. No cloisonne metalwirecells, no roundjar/vase. Place broad openbox in sharpcentralforeground, natural sameproportions and closeframing as reference, raisedlid gives clear objectheight around30%image; masterface modestsize behindabovebox near protectedcenter. Brush tip genuinely contacting floral paintedlid. Dark hardwoodtable with smallcolor dishes. Entirelynew picture and woman, keep artifact physical form not old identity.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/native/30-maalattu-emalirasia-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:14:43.807704+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-80376ceb-544f-4be2-952a-5e5bf2fcc270.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/30-maalattu-emalirasia-attempt1.png",
+      "nativeSHA256": "89ac70835472d25b2a923359399f231d3df0f3ab3489b68e506ee0480b43e246",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "075106a1fade5fa671e529a0e7233a5ace7c4f273314b82aaac1e26a25464683",
+      "technicalPass": true,
+      "qa": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.235,
+        "backgroundStrongBokeh": true,
+        "observationsFI": [
+          "Noin 50-vuotias pyöreäkasvoinen nainen, leveämmät posket ja harmaata ohimoilla, vihertävä pitkä työkaapu ja vaalea pellavaesiliina. Ei sama kuin 28:n nuorempi kapeakasvoinen nainen tai imettäjä.",
+          "Pitkä pensseli maalaa emalikukkia avatun suorakaiteisen kuparirasian kanteen. Näkyvä kuparireuna/sarana ja laatikon pohja, ei cloisonné-lankalokeroita.",
+          "Avattu matala rasia noin 23–24 % korkeudesta; yleinen 30–40 % korkeus ei täyty, mutta sama PT:n hyväksymä leveä matala esinemuoto säilyy vääristämättä. Kasvon tärkeät piirteet lähellä ydintä ja ilme luettava natiivissa. Voimakas optinen bokeh."
+        ],
+        "personallyInspected160px": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Lopullinen neljän valinnan160px-arkki henkilökohtaisesti katsottu; esine ja lähteen toiminta luettavat. Kasvojen uudet identiteetit erottuvat keskenään."
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:22:05.250452+00:00",
+          "qa": {
+            "attempt": 1,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "personDiversityVerified": true,
+            "artifactHeightFraction": 0.235,
+            "backgroundStrongBokeh": true,
+            "observationsFI": [
+              "Noin 50-vuotias pyöreäkasvoinen nainen, leveämmät posket ja harmaata ohimoilla, vihertävä pitkä työkaapu ja vaalea pellavaesiliina. Ei sama kuin 28:n nuorempi kapeakasvoinen nainen tai imettäjä.",
+              "Pitkä pensseli maalaa emalikukkia avatun suorakaiteisen kuparirasian kanteen. Näkyvä kuparireuna/sarana ja laatikon pohja, ei cloisonné-lankalokeroita.",
+              "Avattu matala rasia noin 23–24 % korkeudesta; yleinen 30–40 % korkeus ei täyty, mutta sama PT:n hyväksymä leveä matala esinemuoto säilyy vääristämättä. Kasvon tärkeät piirteet lähellä ydintä ja ilme luettava natiivissa. Voimakas optinen bokeh."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "34-punalakka-veisto",
+      "sourceItemNumber": 34,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:14:43.957820+00:00",
+      "args": {
+        "prompt": "Create a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086 x1448 portrait RGBopaquePNG. Reference is ONLY PT-approved artifact shape,material,action,closeframing and luminous palace opticalbokeh. DO NOT COPY old whitebearded man's identity. All pixels whole-new photograph,not partial edit or retouch. Main artifact sharpcentralforeground, people medium-close immediately behind, important facialexpressions nearcentral45% ellipse; no tiny distant principalpeople. Natural artifact proportions,100mmf/1.4,luminoussoft windowdaylight+gentlebacklight,strong creamydefocus red/gold/cream background with no sharp architecture. Authentic skin/wood/paper/lacquertexture,noCGI/repeatingtexture,text/logo/graphics,borders,vignette/mask/fade,croporpadding. ONE happy OLD LACQUER MASTER about65years, ENTIRELY BALD upperhead, very short sparse graystubble atback possible, BROAD ROUND face and roundcheeks, wide flatnose, warm mischievous smiling eyes. NO CAP, NO BEARD, NO MOUSTACHE, NO pointedwhitegoatee. Completely different face from narrowfaced teacher and clean-shaven middle-aged mirrorcourtmaster;this artisan is clearly OLD,ROUND-faced,BALD. Long loose brownblack practical Qing rightfastened workrobe with rolledbacksleeves,not a shortHan jacket. He carves floral motifs with a small fine sharp KNIFE into MANY LAYERS OF VERMILION RED LACQUER on a tall red vessel. Preserve EXACT approvedreference vessel silhouette: roundedpear/bulbousbody, narrowwaistedtallneck and flaredmouth, deep red-on-red floral carvedrelief and fine layered cutedges, same natural shape about35–37%photoheight. NOTmetal,not glazedporcelain. Smallcarvingknife actually touches a motif on vesselshoulder, tinyredcurlchips on darkhardwoodtable;steadyotherhandnatural. His smilingroundface justabovebehindtheartifact nearcenter, modest face size. Vaalea palatsin työpaja, entire background extremely blurred. Whole-newpicture, no child or other person.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/native/34-punalakka-veisto-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:17:13.222799+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-c4b7ea28-8a36-4e06-9cdf-33599da99560.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/34-punalakka-veisto-attempt1.png",
+      "nativeSHA256": "e544aa411793ae99793bbffc1428efb3ea4fe8f6d97321416d66c7143d0eb5f3",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "97629344241f50918559d680b8afff545098f07c22e794386f14415f4ad3656b",
+      "technicalPass": true,
+      "qa": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": false,
+        "personallyInspected160px": true,
+        "artifactHeightFraction": 0.5,
+        "sourceRoleMaterialActionCorrect": true,
+        "reasonFI": "Rootin natiivi- ja160px-tarkistus: astia noin50% ja liian sivussa, mikä muuttaa jo PT-hyväksyttyä noin36.5% lähirajausta merkittävästi. Uusi a2 perusteltu sommittelukorjaus; a1 säilytetään.",
+        "rootAuthorizedSingleCompositionRetry": true
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:19:08.864853+00:00",
+          "qa": {
+            "attempt": 1,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "personDiversityVerified": true,
+            "artifactHeightFraction": 0.5,
+            "backgroundStrongBokeh": true,
+            "qualifiedForPTReview": true,
+            "observationsFI": [
+              "Selvästi uusi noin 65-vuotias pyöreäkasvoinen kalju vanha lakkamestari, ei lakkia/partaa/pukinpartaa. Ei sama kapea valkopartainen opettaja.",
+              "Pieni veitsi leikkaa punaisen lakka-astian kerroksia, näkyvä punainen syvä kukkareliefi ja lastut. Oikea pyöreävartinen, kapenevakaulainen ja suulta levenevä astiamuoto, ei posliini tai metalli.",
+              "Astia noin 50 % kuvan korkeudesta: suurempi kuin yleinen 30–40 % tavoite, lähdetason esinemuoto säilyi mutta koko kasvoi. Tämä kirjataan ehdollisena PT-arvioon. Kasvojen ilme luettava natiivissa, ylävasemmalla varhaisen häivytyksen rajalla; vaalea työpaja optisesti hyvin sumea."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "34-punalakka-veisto",
+      "sourceItemNumber": 34,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T12:19:09.020879+00:00",
+      "args": {
+        "prompt": "COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086x1448portraitRGBopaquePNG. Reference1 is AUTHORITATIVE COMPOSITION and ARTIFACT SCALE: COPY its relative artifact HEIGHT36.5%, objectposition central slightlyrightx55%, camera distance and medium-close human framing, NOT the old bearded person's identity. Reference2 is ONLY the desired NEW MASTER IDENTITY: happy old65year BALD, broadROUNDface, no beard/moustache/goatee, veryshortgraystubbleatback, loosebrownblackQingworkrobe. Ref2's vessel is MUCH TOO LARGE: do not reproduce its50%height; new vessel must be aboutONEQUARTER SMALLERthanreference2, backto reference1size. MAIN RED VESSEL wholeheight35–38% ofcompleteimageheight, fulltopandbottomvisible, moreCENTRALx55%, foregroundtacksharp. Same true vermilion RED CARVED LACQUER vessel shape asreference1: roundpearbody,narrowwaistedneck,flaredmouth, red-on-red deeplycarvedfloralrelief,realmultiplelacquerlayers,notmetal/notporcelainglaze. Master directlybehind veryclose, his happyBALDROUNDface nearcentralprotected45%ellipse, moderatehumanfaceproportions,not a distant tiny person. SmallfinecarvingKNIFE activelycuts layeredfloralpattern atshoulder, otherhandnaturallysteadiesvessel,realredcurls/chips onDARKhardwoodworktable. BrightpaleQingpalaceWORKSHOP,100mmf/1.4,cameraartifactlevel0.9m,brightsoftwindowlightgentlerimbacklight, EXTREMELY opticaldefocusedcreamredgoldbackgroundblobs. Realcameramaterialtextures. Entirelynewpicture, no partialediting/retouch/copypixels,crop,padding; no mask/fade/vignette/border,CGI/plasticpattern,text/logos. Reference1objectscale exact;Reference2baldmaster only, NO WHITEBEARDEDTEACHER.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/native/34-punalakka-veisto-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/34-punalakka-veisto-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:20:26.199524+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-aa93a02d-0a8d-46f2-9385-70ce38b17b2e.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/34-punalakka-veisto-attempt2.png",
+      "nativeSHA256": "1a59336d89239307f3ea249f84c2808972576174c28c7431f79676a8861dd38e",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "35d3cf195e16de7234bc780d51f380792a6eb5239aca50fa118c3410216c0434",
+      "technicalPass": true,
+      "qa": {
+        "attempt": 2,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.36,
+        "backgroundStrongBokeh": true,
+        "observationsFI": [
+          "Noin 65-vuotias kalju pyöreäkasvoinen vanha lakkamestari, ei partaa tai pukinpartaa. Sama eri-kasvoinen uusi lakkamestari kuin a1:ssä, ei vanhan sarjan toistuva opettaja.",
+          "Punainen veistetty lakka-astia pieneni noin 36 %:iin kuvan korkeudesta; koko astia näkyy ja on lähellä keskialuetta (keskilinja hieman oikealla, noin x61%). Muoto ja materiaalivaikutelma oikein: punainen syvä kerroksellinen kukkareliefi, kapeneva kaula ja levenevä suu.",
+          "Veitsi aidosti koskettaa reliefiä, toinen käsi tukee astiaa, punaiset lastut tummalla puupöydällä; vaalea palatsin työpaja erittäin optisesti sumea. Kasvojen tärkeät ilmeet lähellä keskialuetta/varhaisen loivan häivytyksen alussa."
+        ],
+        "personallyInspected160px": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Lopullinen neljän valinnan160px-arkki henkilökohtaisesti katsottu; esine ja lähteen toiminta luettavat. Kasvojen uudet identiteetit erottuvat keskenään."
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:22:05.302670+00:00",
+          "qa": {
+            "attempt": 2,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "personDiversityVerified": true,
+            "artifactHeightFraction": 0.36,
+            "backgroundStrongBokeh": true,
+            "observationsFI": [
+              "Noin 65-vuotias kalju pyöreäkasvoinen vanha lakkamestari, ei partaa tai pukinpartaa. Sama eri-kasvoinen uusi lakkamestari kuin a1:ssä, ei vanhan sarjan toistuva opettaja.",
+              "Punainen veistetty lakka-astia pieneni noin 36 %:iin kuvan korkeudesta; koko astia näkyy ja on lähellä keskialuetta (keskilinja hieman oikealla, noin x61%). Muoto ja materiaalivaikutelma oikein: punainen syvä kerroksellinen kukkareliefi, kapeneva kaula ja levenevä suu.",
+              "Veitsi aidosti koskettaa reliefiä, toinen käsi tukee astiaa, punaiset lastut tummalla puupöydällä; vaalea palatsin työpaja erittäin optisesti sumea. Kasvojen tärkeät ilmeet lähellä keskialuetta/varhaisen loivan häivytyksen alussa."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "37-viuhka",
+      "sourceItemNumber": 37,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:14:44.029855+00:00",
+      "args": {
+        "prompt": "Create a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086 x1448 portrait RGBopaquePNG. Reference is ONLY PT-approved artifact shape,material,action,closeframing and luminous palace opticalbokeh. DO NOT COPY old whitebearded man's identity. All pixels whole-new photograph,not partial edit or retouch. Main artifact sharpcentralforeground, people medium-close immediately behind, important facialexpressions nearcentral45% ellipse; no tiny distant principalpeople. Natural artifact proportions,100mmf/1.4,luminoussoft windowdaylight+gentlebacklight,strong creamydefocus red/gold/cream background with no sharp architecture. Authentic skin/wood/paper/lacquertexture,noCGI/repeatingtexture,text/logo/graphics,borders,vignette/mask/fade,croporpadding. A NEW smiling Chinese Qing ENVOY about40years hands a fully OPEN FOLDING FAN to a joyful Qing OFFICIAL about55years, in a bright palacehall. They are UNMISTAKABLY DIFFERENT MEN. LEFT envoy40: slim narrow long face, straight pronouncednose, smoothdarkhair, clean-shaven, darkslenderbrows, mutedOLIVEcourtROBE blackroundcap REDknob. RIGHT official55: broad squarejaw, widecheeks, grayingtemples, heavier eyebrows, clean-shaven, deepNAVYembroideredrightfastenedcourtROBE,blackroundcap REDknob. NO BEARDS/MOUSTACHES/WHITEGOATEES, no recurring oldteacher. Both smile warmly and lean CLOSE TOGETHER over thefan, principalfaces around middle ofphoto in protected centralregion, not farapartleft/rightedges and not tiny distant people. Keep important expressions closer to central45%oval than oldreference. Main object is an actual FOLDING fan, ivorypaper open semicircularpleatedleaf with visible DARK BAMBOO RIBS converging atpivot, painted delicate inklandscape NOreadablecalligraphy. Naturalfullspread central sharpforeground around25–30%totalphotoheight, no stretching/distortiontofillheight, bamboo ribends andpaperarcallvisible. Envoy's hands pass fan fromleft to official's receivinghandsright, handsnatural. ONE VERY SOFT blurred courtier, youngadultwoman distinct frombothmen, a little behind them CLAPS with hands together. Herpresence/motionreads but is subordinate blurredbokeh,not a third identicaloldman. No duplicatedfaces, no child. Same bright airysoftpalacehall and verystrong opticalbokeh. Entirelynewphotograph.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/native/37-viuhka-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:17:13.372399+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-78056dbb-d5e9-4873-b957-ae95742df5f5.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/37-viuhka-attempt1.png",
+      "nativeSHA256": "ac790b3753b58a7d04b438a649268b1799a3a5705cdada17056f03df5fb14a1a",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "ff2eee968d1fe052f31b70827854eaaa7c67c3f7d97063516676320196e4ea57",
+      "technicalPass": true,
+      "qa": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.24,
+        "backgroundStrongBokeh": true,
+        "qualifiedForPTReview": true,
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "observationsFI": [
+          "Uusi noin 40-vuotias hoikempi lähettiläs ja noin 55-vuotias leveäkasvoinen harmaantunut virkamies; molemmat parrattomia ja keskenään eri näköisiä, eivät aiempia kolmea identtistä vanhusta. Taustalla eri nuori nainen taputtaa pehmeästi sumeana.",
+          "Avoin taittoviuhka: paperinen puoliympyrä, maisema ja bamburivat, oikea lahjaluovutus käsistä käsiin. Ei jäykkä pyöreä viuhka.",
+          "Viuhka noin 24 % kuvan korkeudesta, luonnollinen leveä muoto; yleinen 30–40 % korkeus ei täyty kuten vanhassakaan hyväksytyn esineen muodossa. Päähenkilöiden kasvot ovat suuria ja sivuilla, eivät pieniä kaukana. Oikean kasvon uloimmat piirteet ulottuvat 0,45-ytimestä häivytykseen; tarkistetaan 160 px:n arkilla ennen lopullista valintaa."
+        ],
+        "facesProtected": false,
+        "PTConditionalCompositionReview": true,
+        "personallyInspected160px": true,
+        "rootNativeAnd160pxReviewed": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Ehdollinen PT-arvio: oikean kasvon ulompi silmä on noin r0.71/alpha0.54; suu noin r0.60/alpha0.83. Ilmeet näkyvät160px:ssa, mutta kaikki kasvonpiirteet eivät ole ytimessä. Root katsoi natiivin ja160px ja pyysi toimitusta ilman uutta37-kutsua.",
+        "faceLandmarkMeasurements": {
+          "leftOuterEye": {
+            "manualPixelPoint": [
+              360,
+              397
+            ],
+            "radius": 0.5635376042656846,
+            "smoothstepAlpha": 0.8897513374452869
+          },
+          "leftMouth": {
+            "manualPixelPoint": [
+              387,
+              463
+            ],
+            "radius": 0.4609722566328516,
+            "smoothstepAlpha": 0.9988219247080647
+          },
+          "rightInnerEye": {
+            "manualPixelPoint": [
+              838,
+              523
+            ],
+            "radius": 0.6101035440780856,
+            "smoothstepAlpha": 0.7951208156371781
+          },
+          "rightOuterEye": {
+            "manualPixelPoint": [
+              904,
+              543
+            ],
+            "radius": 0.7102762433326725,
+            "smoothstepAlpha": 0.5401173294697242
+          },
+          "rightMouth": {
+            "manualPixelPoint": [
+              856,
+              613
+            ],
+            "radius": 0.5964678073931446,
+            "smoothstepAlpha": 0.8250166425966763
+          }
+        }
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:19:08.917016+00:00",
+          "qa": {
+            "attempt": 1,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "personDiversityVerified": true,
+            "artifactHeightFraction": 0.24,
+            "backgroundStrongBokeh": true,
+            "qualifiedForPTReview": true,
+            "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+            "observationsFI": [
+              "Uusi noin 40-vuotias hoikempi lähettiläs ja noin 55-vuotias leveäkasvoinen harmaantunut virkamies; molemmat parrattomia ja keskenään eri näköisiä, eivät aiempia kolmea identtistä vanhusta. Taustalla eri nuori nainen taputtaa pehmeästi sumeana.",
+              "Avoin taittoviuhka: paperinen puoliympyrä, maisema ja bamburivat, oikea lahjaluovutus käsistä käsiin. Ei jäykkä pyöreä viuhka.",
+              "Viuhka noin 24 % kuvan korkeudesta, luonnollinen leveä muoto; yleinen 30–40 % korkeus ei täyty kuten vanhassakaan hyväksytyn esineen muodossa. Päähenkilöiden kasvot ovat suuria ja sivuilla, eivät pieniä kaukana. Oikean kasvon uloimmat piirteet ulottuvat 0,45-ytimestä häivytykseen; tarkistetaan 160 px:n arkilla ennen lopullista valintaa."
+            ]
+          }
+        },
+        {
+          "replacedAt": "2026-10-19T12:22:05.357353+00:00",
+          "qa": {
+            "attempt": 1,
+            "personallyInspectedNative": true,
+            "passed": true,
+            "personDiversityVerified": true,
+            "artifactHeightFraction": 0.24,
+            "backgroundStrongBokeh": true,
+            "qualifiedForPTReview": true,
+            "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+            "observationsFI": [
+              "Uusi noin 40-vuotias hoikempi lähettiläs ja noin 55-vuotias leveäkasvoinen harmaantunut virkamies; molemmat parrattomia ja keskenään eri näköisiä, eivät aiempia kolmea identtistä vanhusta. Taustalla eri nuori nainen taputtaa pehmeästi sumeana.",
+              "Avoin taittoviuhka: paperinen puoliympyrä, maisema ja bamburivat, oikea lahjaluovutus käsistä käsiin. Ei jäykkä pyöreä viuhka.",
+              "Viuhka noin 24 % kuvan korkeudesta, luonnollinen leveä muoto; yleinen 30–40 % korkeus ei täyty kuten vanhassakaan hyväksytyn esineen muodossa. Päähenkilöiden kasvot ovat suuria ja sivuilla, eivät pieniä kaukana. Oikean kasvon uloimmat piirteet ulottuvat 0,45-ytimestä häivytykseen; tarkistetaan 160 px:n arkilla ennen lopullista valintaa."
+            ],
+            "facesProtected": false,
+            "PTConditionalCompositionReview": true,
+            "personallyInspected160px": true,
+            "rootNativeAnd160pxReviewed": true
+          }
+        }
+      ]
+    }
+  ]
+}

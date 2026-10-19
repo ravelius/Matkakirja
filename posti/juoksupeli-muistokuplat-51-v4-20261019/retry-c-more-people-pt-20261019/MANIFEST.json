@@ -1,0 +1,124 @@
+{
+  "files": [
+    {
+      "path": "28-cloisonne-poltin.png",
+      "bytes": 2242956,
+      "sha256": "d143e700641a00fadda087ea969b92877dcf057950d297c136ed78a444271a0a"
+    },
+    {
+      "path": "30-maalattu-emalirasia.png",
+      "bytes": 2137668,
+      "sha256": "89ac70835472d25b2a923359399f231d3df0f3ab3489b68e506ee0480b43e246"
+    },
+    {
+      "path": "34-punalakka-veisto.png",
+      "bytes": 2152354,
+      "sha256": "1a59336d89239307f3ea249f84c2808972576174c28c7431f79676a8861dd38e"
+    },
+    {
+      "path": "37-viuhka.png",
+      "bytes": 2305550,
+      "sha256": "ac790b3753b58a7d04b438a649268b1799a3a5705cdada17056f03df5fb14a1a"
+    },
+    {
+      "path": "CORRECTION-SOURCES.json",
+      "bytes": 1980,
+      "sha256": "8d709c8ebe91d29e45ae3a0a5b6b35e3a06e320b150a1c0402100320b7a90e5a"
+    },
+    {
+      "path": "FRAMING-SOURCE.json",
+      "bytes": 192,
+      "sha256": "d3b87b2748645a796363388019e44634ba42ea62eac64c915a09fce9306be9c1"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 54312,
+      "sha256": "cc131fda67b18f0fe2610b7eeed0dda2c882756ee3df222cc3959c44411ebf3b"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 31941,
+      "sha256": "17f99d95ad69503fc5a2bfa63b081043061e43cfce084d34101d8e494701e7ff"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 4560,
+      "sha256": "3f405a253288252d1536cc02f31d73965305e87345071bddd05aa72e2dc3d90f"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 8578,
+      "sha256": "a3473b9e4a65e5b4147e40c7f2adaf52c8f8c31829169e46bd841868d18028ef"
+    },
+    {
+      "path": "SOURCE-INVENTORY.json",
+      "bytes": 9723,
+      "sha256": "f09374a75374952b2c13931e83fa3a3ebac4f1fb5d4a8458b279bdb3d4506e93"
+    },
+    {
+      "path": "qa/160px-wide-feather.json",
+      "bytes": 262,
+      "sha256": "4c216dec55501a99fcabba5059149900bf676a877cc560433ade921b38a0ec3f"
+    },
+    {
+      "path": "qa/160px-wide-feather.png",
+      "bytes": 192707,
+      "sha256": "b362d81c53f6185643718289235dc55978e85ddae9816c0f3d736d89de2e4da8"
+    },
+    {
+      "path": "sources/juoksupeli-huudot-lista-20261019.md",
+      "bytes": 49226,
+      "sha256": "8c183579bdda90bee2b59c623249bb80fbaf6c592c49d1725ab80842e7a787fb"
+    },
+    {
+      "path": "sources/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+      "bytes": 73992,
+      "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-40to51-kuittaus-20261019.md",
+      "bytes": 1074,
+      "sha256": "a865f34e4ee217444cae2ddf4a025897f0b9509126a7dc9442df3aa77ac2b657"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-45-49-uusinta-kuittaus-20261019.md",
+      "bytes": 502,
+      "sha256": "8abd2c26066963a3e41af830b726e512484f2c452116350431034d762b336828"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+      "bytes": 1068,
+      "sha256": "103bb93507ece700362a0aa9ea2bcf25b95f228a87e6798903ee9bcd5b83949f"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-era-a-lahikuvat-kuittaus-20261019.md",
+      "bytes": 790,
+      "sha256": "79778d9e0766da3979c036950d7f2b2ca0625b6b244a8b3bf9c502cec3dd6836"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-era-b-kuittaus-20261019.md",
+      "bytes": 1765,
+      "sha256": "940e2b30d911bac08741959cc8191af6adcbfb570c77e48cec40201fdc86bc53"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+      "bytes": 2053,
+      "sha256": "42977c5a62fc4ce479512fb1f9334ca9e09319370b4ae71d42e3bc051b0e5de2"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-loput-20261019.md",
+      "bytes": 1013,
+      "sha256": "8c13430dff4e22e9ee0bf883a1de001e216d2e77a7086bc923479cd51bed4ec8"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v3-kuittaus-20261019.md",
+      "bytes": 1266,
+      "sha256": "4c697d0da0b2b2bda596e8894972d44976d40e19f728b076111de1d243a42e02"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v4-lisays-20261019.md",
+      "bytes": 1752,
+      "sha256": "fb6e7204f654b4546d65c76830fec508d6e1eeb0dff1f261a3fd4e668dc8977f"
+    }
+  ]
+}
