@@ -46,6 +46,9 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   01.54 → _tyo/natiivi-ui/lasihaku-207-app. SIMU NYT:sta: `zsh /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ajo-ruutuaika-sokkelo-207.zsh
   /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/lasihaku-207-app` (ennen = julkaisija/sokkelo-yhteinen14-207-app) → TULOS.md PK:lle
   (local_11aca9cd-…) + PT:lle → sitten NS:lle junaan 207 PT:n OK:lla.
+  PT 01.5x TARKENNUS: simu ei näytä nykäystä → JU tekee LAITEKÄÄNNÖKSEN, .app LT:lle (local_36a45147) iPad Pro 13 -mittaukseen (p99,
+  >25 ms), kopio PK + PT. Oma simuajo vain kuvapareille. Kehote "Kiinni! Napauta nopeasti" (PT 01.5x): iPadin laatikko ei ole
+  tummempi (molemmissa --lapinakyva, omistajan 14.10. 21.42 lausesääntö) → KYSYTTY PT:ltä, tehdäänkö mk-lasipohja juoksupelin kehotteelle.
 
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
 - palsta-haku 03deb7b16 + SK #5015 tekstit e4c33a4fe → juna 206.
