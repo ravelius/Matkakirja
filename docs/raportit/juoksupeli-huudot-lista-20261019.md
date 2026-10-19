@@ -474,3 +474,7 @@ Muoto `juoksupeli.rikkoutuva.<id>.versio.<n>.kupla/.huuto/.tyyppi/.fakta` (PK:n 
 ## Tunnetagi lukittu (omistaja 10.44)
 
 Tagi `[shouting] [panicked]`; huudon alkuun "Aa!" tai "Eei!!" (Äänittäjän muoto). Generointilistassa vain hyväksytyt KK-erät (nyt erä 1, 10 riviä). Aiemmat maininnat `[out of breath]` korvattu.
+
+## Päivitys 19.10. klo 11.29
+
+Omistaja: "tuo aa on huono" → **Aa!-alku pois** Puyin huudoista (Eei!! ei myöskään käytössä). Huudon alku tulee KK:n tuomasta omistajan hyväksymästä alkulistasta; aiemmat maininnat "Aa!"/"Eei!!" yllä ovat vanhentuneet. Puyin ääni: 08 Kavya (lukittu 11.23). Sallitut alut nyt: Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!, Sis-sos!.
