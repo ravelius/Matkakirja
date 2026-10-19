@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-20261019.md",
+      "commit": "f88774c0d7c8ce08dbcf874d71a53ece77ab5a28",
+      "blob": "32bfb7fb9bac827e77fa2d8f25f65a5f7899982d",
+      "sha256": "3bc0bf081f06a4d844ccc79f3f00b1866fda0a1f6e4b4259ba184de4858ecdd5",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-rikkoutuvat-aarteet-nimet-20261019.md",
+      "commit": "0184e401e91183b4b49d8dfe07c50e341504e62b",
+      "blob": "4fc5457384d3927d562cd132582a450cb53baa74",
+      "sha256": "d95d266f964ab1e37d65bf544f6af1a5b6a2e26c9b7eb0c31d34c4338161775e",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-olavinlinna-tripo-pilotti-20261019.md",
+      "commit": "aaeac7367f3c7b3e49d73384abd60612cde6e1ea",
+      "blob": "f019b0edb8c196b695be8270aa0a3df2599981de",
+      "sha256": "bd69c357bbb44bf254372cd1ce89e4e11cd07b1379db71b443add3715ee10502",
+      "readInFull": true
+    }
+  ],
+  "attachments": [],
+  "priorTargetDeliveryFound": false,
+  "readHead": "f88774c0d7c8ce08dbcf874d71a53ece77ab5a28"
+}

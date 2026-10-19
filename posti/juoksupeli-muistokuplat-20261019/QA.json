@@ -1,0 +1,33 @@
+{
+  "draftOnly": true,
+  "static160pxPreviewPersonallyInspected": true,
+  "actualGameRuntimeTested": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "assets": {
+    "luonnos-01-posliinimaljakko": {
+      "personallyInspectedNative": true,
+      "styleDraftOnly": true,
+      "photoRealism": "Faces, hands and porcelain read as natural photography; textile/porcelain motifs and palace are invented.",
+      "instantReadability": "Personally checked static 160x160 previews against pale and dark backgrounds: delighted teacher, listening child and intact blue-and-white vase remain identifiable; fine floral details merge at this size.",
+      "objectIdentity": "Generic Qing-inspired Jingdezhen-style porcelain vase, not a verified museum reproduction.",
+      "people": "Fictional joyful teacher and child emperor, no real-person portrait claim.",
+      "visualLimitations": "Tiny white/colored edge specks visible at native size, largely inconspicuous at 160px. Costumes and background not historically source-verified.",
+      "technicalLimitations": "RGBA1254x1254, alpha0-255 with feathered vignette; native pixels unchanged. No cleanup. Actual gameplay 2-3s/corner placement not tested.",
+      "recipientAccepted": false,
+      "ownerAccepted": false
+    },
+    "luonnos-02-cloisonne": {
+      "personallyInspectedNative": true,
+      "styleDraftOnly": true,
+      "photoRealism": "Joyful natural face, hands supporting a shallow turquoise/gold dish, realistic cloth/enamel appearance; small background vase incidental.",
+      "instantReadability": "Personally checked static 160x160 previews against pale and dark backgrounds: tutor's smile, child listener and plate silhouette remain readable; detailed enamel motifs become color patches.",
+      "objectIdentity": "Generic Qing-inspired cloisonne shallow dish, not a specific documented artifact.",
+      "people": "Fictional female court tutor and boy emperor; not real-person portraits.",
+      "visualLimitations": "Small white/colored fringe specks around circle at native size; tutor/object large and clear, fine decoration loses detail. Unverified costume accuracy.",
+      "technicalLimitations": "RGBA1254x1254, alpha0-254; slightly translucent interior rather than fully alpha255. No alpha normalization or pixel edits. Real 2-3s runtime and motion/corner placement untested.",
+      "recipientAccepted": false,
+      "ownerAccepted": false
+    }
+  }
+}

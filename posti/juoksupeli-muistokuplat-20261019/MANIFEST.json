@@ -1,0 +1,34 @@
+{
+  "taskNumber": 485,
+  "creativeImageCount": 2,
+  "generationCalls": 2,
+  "fullBatch486Started": false,
+  "images": [
+    {
+      "code": "luonnos-01-posliinimaljakko",
+      "path": "posti/juoksupeli-muistokuplat-20261019/luonnos-01-posliinimaljakko.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 2153629,
+      "sha256": "a9a6c23ff5d9c056994ce6b8cedb0112f598d0bb835563109c7025ea400017bf",
+      "nativeSHA256": "8ab0c6ab357508d5312514d6afefd969fd0db6c589413eed795c42724d94a11a",
+      "nativePixelsUnchanged": true,
+      "classification": "havainnekuva-style-draft"
+    },
+    {
+      "code": "luonnos-02-cloisonne",
+      "path": "posti/juoksupeli-muistokuplat-20261019/luonnos-02-cloisonne.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 2260485,
+      "sha256": "7d956c098b9aba6d08ee3b613c8f6e4021026a0226d8aa68b6ea801cea4f6417",
+      "nativeSHA256": "cbb93986964ad122add34c2010972632ea6e77b06b545026b34b57ee832483bd",
+      "nativePixelsUnchanged": true,
+      "classification": "havainnekuva-style-draft"
+    }
+  ]
+}

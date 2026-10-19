@@ -1,0 +1,118 @@
+{
+  "method": "built-in image_gen",
+  "sourceFiles": [
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-20261019.md",
+      "commit": "f88774c0d7c8ce08dbcf874d71a53ece77ab5a28",
+      "blob": "32bfb7fb9bac827e77fa2d8f25f65a5f7899982d",
+      "sha256": "3bc0bf081f06a4d844ccc79f3f00b1866fda0a1f6e4b4259ba184de4858ecdd5",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-rikkoutuvat-aarteet-nimet-20261019.md",
+      "commit": "0184e401e91183b4b49d8dfe07c50e341504e62b",
+      "blob": "4fc5457384d3927d562cd132582a450cb53baa74",
+      "sha256": "d95d266f964ab1e37d65bf544f6af1a5b6a2e26c9b7eb0c31d34c4338161775e",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-olavinlinna-tripo-pilotti-20261019.md",
+      "commit": "aaeac7367f3c7b3e49d73384abd60612cde6e1ea",
+      "blob": "f019b0edb8c196b695be8270aa0a3df2599981de",
+      "sha256": "bd69c357bbb44bf254372cd1ce89e4e11cd07b1379db71b443add3715ee10502",
+      "readInFull": true
+    }
+  ],
+  "callsIssued": 2,
+  "callsCompleted": 2,
+  "imagesProduced": 2,
+  "assets": [
+    {
+      "code": "luonnos-01-posliinimaljakko",
+      "taskNumber": 485,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "style-draft-QA-reviewed-awaiting-PT",
+      "callIssuedAt": "2026-10-19T06:29:03.365976+00:00",
+      "promptSHA256": "afbb2102f8ce204801b46279e04a0e5a376c43f8a6ab8d58719a9a8afa277988",
+      "generatedAt": "2026-10-19T06:30:35.775086+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-26436f1e-4f60-45ad-98c0-974072f1c8df.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-20261019/native/luonnos-01-posliinimaljakko.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-20261019/delivery-packet/luonnos-01-posliinimaljakko.png",
+      "nativeSHA256": "8ab0c6ab357508d5312514d6afefd969fd0db6c589413eed795c42724d94a11a",
+      "deliverySHA256": "a9a6c23ff5d9c056994ce6b8cedb0112f598d0bb835563109c7025ea400017bf",
+      "nativeBytes": 2153366,
+      "deliveryBytes": 2153629,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativePixelsUnchanged": true,
+      "pixelSHA256": "0768061abca3b047ed6b80bea1221999bfb9cb96c9061b284e1099018e3c39bd",
+      "metadataOnlyAdded": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "styleDraftOnly": true,
+        "photoRealism": "Faces, hands and porcelain read as natural photography; textile/porcelain motifs and palace are invented.",
+        "instantReadability": "Personally checked static 160x160 previews against pale and dark backgrounds: delighted teacher, listening child and intact blue-and-white vase remain identifiable; fine floral details merge at this size.",
+        "objectIdentity": "Generic Qing-inspired Jingdezhen-style porcelain vase, not a verified museum reproduction.",
+        "people": "Fictional joyful teacher and child emperor, no real-person portrait claim.",
+        "visualLimitations": "Tiny white/colored edge specks visible at native size, largely inconspicuous at 160px. Costumes and background not historically source-verified.",
+        "technicalLimitations": "RGBA1254x1254, alpha0-255 with feathered vignette; native pixels unchanged. No cleanup. Actual gameplay 2-3s/corner placement not tested.",
+        "recipientAccepted": false,
+        "ownerAccepted": false
+      }
+    },
+    {
+      "code": "luonnos-02-cloisonne",
+      "taskNumber": 485,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "style-draft-QA-reviewed-awaiting-PT",
+      "callIssuedAt": "2026-10-19T06:30:37.255889+00:00",
+      "promptSHA256": "1d99af50b06a7159ed6598064c666cdd2e51d388eedcaae9d49322510319f4d1",
+      "generatedAt": "2026-10-19T06:32:05.343616+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1327b180-ac28-4e95-b2a4-4d504250e33e.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-20261019/native/luonnos-02-cloisonne.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-20261019/delivery-packet/luonnos-02-cloisonne.png",
+      "nativeSHA256": "cbb93986964ad122add34c2010972632ea6e77b06b545026b34b57ee832483bd",
+      "deliverySHA256": "7d956c098b9aba6d08ee3b613c8f6e4021026a0226d8aa68b6ea801cea4f6417",
+      "nativeBytes": 2260222,
+      "deliveryBytes": 2260485,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "nativePixelsUnchanged": true,
+      "pixelSHA256": "fe7968f00b1328d02954c823a9dfa1c273088940b249d048cc7d9c7c5534fc20",
+      "metadataOnlyAdded": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "styleDraftOnly": true,
+        "photoRealism": "Joyful natural face, hands supporting a shallow turquoise/gold dish, realistic cloth/enamel appearance; small background vase incidental.",
+        "instantReadability": "Personally checked static 160x160 previews against pale and dark backgrounds: tutor's smile, child listener and plate silhouette remain readable; detailed enamel motifs become color patches.",
+        "objectIdentity": "Generic Qing-inspired cloisonne shallow dish, not a specific documented artifact.",
+        "people": "Fictional female court tutor and boy emperor; not real-person portraits.",
+        "visualLimitations": "Small white/colored fringe specks around circle at native size; tutor/object large and clear, fine decoration loses detail. Unverified costume accuracy.",
+        "technicalLimitations": "RGBA1254x1254, alpha0-254; slightly translucent interior rather than fully alpha255. No alpha normalization or pixel edits. Real 2-3s runtime and motion/corner placement untested.",
+        "recipientAccepted": false,
+        "ownerAccepted": false
+      }
+    }
+  ],
+  "pixelRetouching": false,
+  "metadataOnlyAdded": true,
+  "fortyImageSeriesStarted": false
+}
