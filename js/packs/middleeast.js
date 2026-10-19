@@ -215,7 +215,7 @@ export const MIDDLE_EAST = {
           + 'kultaisen suitsukerasian. Hänen valtakuntansa nykyisen '
           + 'Jemenin mailla rikastui suitsukekaupalla, ja suitsukkeen '
           + 'tuoksu tunnettiin temppeleissä Roomaa myöten.',
-        kuva: 'assets/aarteet/aarre-middleeast-star.jpg',
+        kuva: 'assets/aarteet/aarre-middleeast-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Messinkilamppu', color: '#c88f2b',
