@@ -1872,3 +1872,7 @@ Omistaja Keskustelukanavassa 19.10.2026 klo 14.16 sanatarkasti: "Haluan selvityk
 ## OMISTAJA: ÄÄNITEHOSTEIDEN OLETUSTAPA HYVÄKSYTTY (SOUNDLY JA SONNISS ENSIN, VALMIIT YKSITTÄISET TEHOSTEET, TEKOÄLY KUUNTELEE SOKKONA ENNEN PELIÄ); JUOKSUPELIN TEHOSTEET UUDELLEEN (19.10.2026 klo 14.35)
 
 Omistaja Keskustelukanavassa 19.10.2026 klo 14.34: "ok" KK:n suositukseen "Sano ok, niin Raamattu korjataan ja juoksupelin äänet tehdään uudelleen tällä tavalla." Raamattu 5.27 lisätty. Linjaus "kuuntelu = pelivideo omistajalle" kumottu. Äänittäjä aloittaa levyllä olevista (Sonniss 3 204 tiedostoa, NAS:n 2 362 Soundly-tiedostoa); Soundlyn uudet lataukset, kun omistaja on hyväksynyt näytön käyttöluvan Äänittäjän ikkunassa.
+
+## OMISTAJA: TUOTANTOPUTKIEN PERUSAJATUS — ENSIN TAVOITE YHTEISESTI YMMÄRRETTÄVÄKSI, SITTEN KUSTANNUSTEHOKKAIN POLKU LAATU KORKEANA (19.10.2026 klo 14.52)
+
+Omistaja Keskustelukanavassa 19.10.2026 klo 14.50 sanatarkasti: "Minusta on myös ensisijaisen tärkeää ensin aina miettiä, mikä on tavoite ja miten se saadaan parhaiten määriteltyä niin, että kaikki sen ymmärtävät. Esimerkiksi grafiikassa ne havainnekuvat ovat hyviä tässä. Ja sen jälkeen toinen mietintäkierros, että miten siihen tavoitteeseen päästään mahdollisimman kustannustehokkaasti ja silti pidettyä laatu mahdollisimman korkeana. Tätähän ei tietenkään tarvitse ja kannata joka kerta miettiä, mutta perusajatuksena se on hyvä olla olemassa, varsinkin nyt, kun mietimme näitä tuotantoputkia." Raamattu 4.21 täydennetty; KK käyttää tätä putkien läpikäynnin arviointiperusteena.
