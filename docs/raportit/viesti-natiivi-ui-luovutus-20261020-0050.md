@@ -52,6 +52,9 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   JU 02.0x: laitekäännös b8198b4e3 NS:llä L1 → LT mittaa iPadilla (kopio NUI + PT); simukäännös L2 jonossa vain kuvapareille.
   LT 02.1x iPad Pro 13 (laiteäppi NS lokit/natiiviseppa-app-207-lasihaku-laite): 0,5 s NYKÄYS POISTUI (A1 41 → 2 pitkää, p99 33,2 → 16,9;
   A2 ja jäädytetty 0) → PT:lle pyyntö OK → NS junaan 207 (b8198b4e3). Odottaa PT:n kuittausta.
+  JU 02.05: lasihaku SIMU 8a541e270 → _tyo/natiivi-ui/lasihaku-207-app. Simuvuoro PK → LS → KS → NUI. SAMA VUORO: `zsh
+  proto-3d/tyokalut/natiivi-ui-ajot/ajo-museo-iss-207.zsh` ajaa museo + ISS (iPhone + iPad) JA lasihaku-regression (sk-lasihaku-207.txt,
+  iPhone: lasi kiinnittyy, kehysnapit himmenevät, museon lasikortti) → kuvat KK + PT; SIMU VAPAA JU:lle.
   museo-iss-207-app KÄÄNNETTY 01.30 (e9bcee0d, sisältää 7a45cff6f + 81be0b791) → ajo-museo-iss-207.zsh SIMU NYT:sta.
 
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
