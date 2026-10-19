@@ -1,4 +1,4 @@
-# Lavastajan luovutus 19.10.2026 klo 15.00 (Opus, medium) – PT: luovutus kontekstin takia
+# Lavastajan luovutus 19.10.2026 klo 15.00, päivitetty 23.0x (Opus, medium) – Postivahti: kova raja
 
 Edellinen: `viesti-lavastaja-luovutus-20261019-paiva.md` (39b4e3988). Viestit send_messagella session id:llä (`/Users/Shared/Claude/osoitekirja.md`),
 PT:lle enintään 3 riviä, absoluuttiset polut. **Ei käynnissä olevia käännöksiä, simuja eikä Blender-ajoja.**
@@ -38,6 +38,23 @@ ajo `ajo-kehyskiilto-204.zsh <app>`: ennen/jälkeen/vahva samalla kulmalla + lä
 ennen-v49b/ tallessa). Vienti `vie_v49b.zsh` käynnissä 16.23 (worktree `wt/linnanrakentaja-linna-v45k` palautettu), loki `_tyo/linnanrakentaja/vie-v49b.log`
 → **VIETY 16.5x: pala 1499 a36f4199985ef096, nyky 9c0897bec9044c1f** (v45k 1c69c4c43 / c0abe3769); Projektisepälle (kiinnitys + botti) ja PT:lle ilmoitettu.
    Komeron tiilet huone 9:n Codex-geometrian kanssa (v49c).
+
+## ENSIN (uusi Lavastaja, 19.10. ~23.0x): KAUKOMAISEMAN KORJAUKSET ENNEN SIMUA (PT 22.5x arkki8 täysikokoisena)
+v1 on VIETY ämpäriin (juoksupeli/maailma-v4/avoimet-v2/kaukomaisema.glb, JU 22.48) ja 1677ed563 käännetään (JU L2 → _tyo/linnanrakentaja/kaukomaisema-207-app),
+mutta PT haluaa ennen simua: 1) ilmassa leijuvat kultaiset suorakaiteet pois (2./3. sarake keskellä katon yllä), 2) 4. sarakkeen ohuet pystyt punaiset
+seinälevyt pois tai paksuutta/katto, 3) alalaidat eivät saa näkyä (VS:n kaukomaa y −0,08 tulee alle; VS 23.0x: usva 25–270 m / 50 %, korkeususva 16 m).
+Ämpäriä ei ylikirjoiteta → korjattu = **kaukomaisema-v2.glb** uutena pakettina (`_valmiit/juoksupeli-kaukomaisema-v2-vienti-<pvm>`) + Lisaosat-rivi "kaukomaisema-v2"
+uutena committina haaraan linnanrakentaja/juoksu-kaukomaisema-207 (worktree `wt/proto-linnanrakentaja-kaukomaisema`), JU kääntää uudelleen.
+Vihjeet (kaukomaisema.py, aja `Blender -b --factory-startup -P lahde/kaukomaisema.py -- <W> -170 260 25 715 0.06 1 200 70 0.385`):
+ 1) kultaiset laatat = katto_kulta-saaret ilman seinäkolmioita alla (scratchpad-skripti leijuvat.py löysi 40; säde 4.5 Y-akselilla: ray_cast el 5° → (28,−159,15.6) oli hallin
+    yläkatto, seinät 8 m:iin) → poista katto-saaret, joiden XY-jalanjäljen alla ei ole seina_punainen/marmori-tahkoja (kd-puu tahkojen keskipisteistä), TAI poista
+    kattosaaret, joiden alin z > alla olevien seinien ylin z + 2 m.
+ 2) ohuet levyt = seina_punainen-saaret, joiden XY-rajat ovat < 1 m paksuja ja korkeus > 4 m ilman kattoa → poista (tarkista sivulle-kuvassa x ~ +40…+70).
+ 3) alalaidat: poista tahkot, joiden kaikki kärjet z < −0,05 (marmori ulottuu −4 m:iin), tai nosta min 0:aan.
+Esikatselu: lahde/esikatsele.py (+ arkki: esikatselu/arkki8.png ennen|jälkeen), portti `node <scratchpad>/codex-3d-tarkistus.mjs` (main tools/), sitten JU vie-paketti.sh.
+Simu: `zsh /Users/Shared/Claude/proto-3d/tyokalut/linnanrakentaja-ajot/ajo-juoksu-kaukomaisema.zsh <app>` (iPhone 484B130B + iPad 18932B67; skenaario odottaa
+lokiriviä "juoksupeli v4: kaukomaisema paikalleen" → v2:lla vaihda skenaarion oleta-riville kaukomaisema-v2). Kuvaparit KK:lle (local_8e4fcfed…) ja PT:lle, sha NS:lle.
+Aamulla Codexin kevyet horisonttirakennukset (PT 22.5x) → vaihda, jos parempia. VS:n Codex-siluettinauha taivaaseen aamulla (> 300 m voi jäädä nauhalle).
 
 ## JUOKSUPELIN KAUKOMAISEMA (PT 22.3x, omistaja 22.27 "Rakennuksia pitää näkyä enemmän horisontista"; 206 jos hyvä tänään)
 - Malli: Pekingin v11-laatat LOD2 (Kielletty kaupunki + Jingshan) → `proto-3d/_tyo/linnanrakentaja/juoksu-kaukomaisema/` (lahde/kokoa_peking.py
