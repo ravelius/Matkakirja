@@ -543,7 +543,7 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
   höyhen kirjan välissä, veistäjän jälki. Horatio 1873: höyrylaivat
   ja karavaanit, Suezin kanava on kaksivuotias. Sävelpaino:
   ihmetys, kunnioitus ja lämpö; jännitys korkeintaan kahdesti.
-- **Lähi-itä — Sheban aarre.** Motiivilanka: suitsukkeen tuoksu ja
+- **Lähi-itä — Sheban kuningattaren suitsukerasia.** Motiivilanka: suitsukkeen tuoksu ja
   tähdet — karavaanireittien suunnistus. Horatio mittaa öitä, ei
   päiviä. Sävelpaino: arvoitus ja lämpö (teelasit, kauppiaat) —
   JA "Imu aikuiselle" -linjauksen mukainen todellinen jännite:
@@ -553,7 +553,7 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
   jadesinetti.** Motiivilanka: sinetin jälki vahassa ja paperissa —
   asiakirja, johon isoisä ei koskaan saanut leimaa. Sävelpaino:
   ihmetys ja huumori (Horatio ja byrokratia).
-- **Pohjois-Amerikka — Montezuman aarre.** Motiivilanka: rautatiet
+- **Pohjois-Amerikka — Montezuman turkoosinaamio.** Motiivilanka: rautatiet
   ja sähkösanomat — vuoden 1873 uusin maailma, jossa Horatio on
   ensi kertaa se, joka ihmettelee. Sävelpaino: vauhti ja huumori.
 - **Etelä-Amerikka — El Doradon aarre.** Motiivilanka: kulta joka

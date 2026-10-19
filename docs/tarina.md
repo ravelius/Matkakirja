@@ -105,7 +105,7 @@ Sanasto (sitova, myös käännöksiin):
 | Aarnin luettelo | Aarni's Catalogue | tarinan erisnimi aarrekokoelmalle; kirjan koko nimi "Aarnin luettelo unohdetuista aarteista" / "Aarni's Catalogue of Forgotten Treasures" |
 | tutkimusmatkailija Aarni | the explorer Aarni | erisnimi säilyy käännöksessä sellaisenaan |
 
-Laudan omat aarrenimet (kivilintu, jadesinetti, Montezuman aarre…)
+Laudan omat aarrenimet (kivilintu, jadesinetti, Montezuman turkoosinaamio…)
 säilyvät — ne ovat luettelon rivejä. Maailmankartan unohdettua aarretta
 ei nimetä: se on revityn sivun arvoitus. Sanaa "pääaarre" saa käyttää
 koodin sisäisissä kommenteissa, mutta ei pelaajalle näkyvissä teksteissä.
