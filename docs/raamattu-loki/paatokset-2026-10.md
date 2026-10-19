@@ -1872,3 +1872,7 @@ Omistaja Keskustelukanavassa 19.10.2026 klo 14.16 sanatarkasti: "Haluan selvityk
 ## OMISTAJA: ÄÄNITEHOSTEIDEN OLETUSTAPA HYVÄKSYTTY (SOUNDLY JA SONNISS ENSIN, VALMIIT YKSITTÄISET TEHOSTEET, TEKOÄLY KUUNTELEE SOKKONA ENNEN PELIÄ); JUOKSUPELIN TEHOSTEET UUDELLEEN (19.10.2026 klo 14.35)
 
 Omistaja Keskustelukanavassa 19.10.2026 klo 14.34: "ok" KK:n suositukseen "Sano ok, niin Raamattu korjataan ja juoksupelin äänet tehdään uudelleen tällä tavalla." Raamattu 5.27 lisätty. Linjaus "kuuntelu = pelivideo omistajalle" kumottu. Äänittäjä aloittaa levyllä olevista (Sonniss 3 204 tiedostoa, NAS:n 2 362 Soundly-tiedostoa); Soundlyn uudet lataukset, kun omistaja on hyväksynyt näytön käyttöluvan Äänittäjän ikkunassa.
+
+## TARKENNUS 19.10.2026 klo 15.06: vanhentuneet kuvat-, pinta- ja hahmokohdat 7.15:n mukaisiksi, Tripo Max lukuun 12 (19.10.2026 klo 15.06)
+
+KK:n tuotantoputkien läpikäynnin (19.10.) faktakorjaukset, ei uusia sääntöjä: 2.181 pinnat ja 2.182 hahmot sekä 11.11 ja 11.13 kuvat päivitetty vastaamaan omistajan 19.10. linjausta 7.15 (Codex tekee kaikki kuvat, tekstuurit, hahmot ja Tripo-mallit; omistaja ei generoi ChatGPT:ssä; MetaHuman- ja CC0-skannauslinjat korvattu). Lukuun 12 uusi 12.24 Tripo Max -tilaus (omistaja 18.10.: ~18.11. asti, ~24 000 krediittiä, selaimella; API-krediittejä ei osteta).
