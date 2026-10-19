@@ -103,8 +103,9 @@ Jokainen ruutu kirjataan ja tarkistetaan.
   toimituksia → 346 väärää hylkäystä; ennen-junaa.sh ohittaa ne. Porttia ei löysätä vientipakettien vuoksi.
 - **Codexin kuvatoimitukset postilaatikossa:** käyttävät `MANIFEST.json`ia (files[].sha256, sisäkkäisissä myös juuren suhteen)
   ja `qa/`-kansiota; portti lukee ne, Clauden "→ Codex" -viestit ohitetaan. Kuvatoimitus ilman manifestia = HUOM.
-- **Avoin löydös:** `posti/natiivi-ui-iss-ympyraikkuna-20261019/viite-cupola-peli-iphone.jpg` puuttuu toimituksen SHA-listasta
-  (ainoa oikea puute vuorokauden 11 postikansiosta).
+- **Viitekuva ei ole puute (ratkaistu 19.10.):** `posti/natiivi-ui-iss-ympyraikkuna-20261019/viite-cupola-peli-iphone.jpg` on
+  Natiivi-UI:n tilauksen mukana lähettämä viite; Codexin MANIFEST listaa vain omat tiedostonsa ja kirjaa viitteen tiivisteen
+  `GENERATION.json`in `referenceSHA256`-kenttään. Portti hyväksyy tiivisteellä täsmäävän listaamattoman kuvan viitteenä (HUOM).
 - **Pelaava botti** kirjaa `botti: pelaa <kohta>[-n] x/y tekoa` eikä `botti: osa` -riviä; raportti luki tyrmän "ei yhteenvetoa",
   vaikka se oli 3/3 LÄPI. Uusi lokimuoto → jäsennys ja testi samaan erään.
 - **Nykäysvahti ilman yhteenvetoja:** pelkkä "0 pitkää ruutua" ei todista mitään; siksi `Nykaysvahti.cs` ja tulos EI TODISTETTU.

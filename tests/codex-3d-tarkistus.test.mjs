@@ -145,3 +145,16 @@ test('kuvatoimitus ilman manifestia on HUOM; sisäkkäinen MANIFEST.json juuren 
   writeFileSync(join(d, 'alkupera', 'MANIFEST.json'), JSON.stringify({ files: [{ path: 'k1.png', sha256: createHash('sha256').update(b).digest('hex') }] }));
   t = tarkistaToimitus(d); assert.deepEqual(t.virheet, []); assert.deepEqual(t.tiedostot[0].virheet, []);
 });
+
+test('viitekuva: listaamaton kuva, jonka tiiviste on GENERATION.json referenceSHA256, on HUOM eikä virhe (ISS-ympyräikkuna 19.10.)', () => {
+  const d = mkdtempSync(join(tmpdir(), 'codex3d-viite-'));
+  const b = png(1024, 1536); const v = png(1179, 2556); const sha = (x) => createHash('sha256').update(x).digest('hex');
+  writeFileSync(join(d, 'ympyraikkuna.png'), b); writeFileSync(join(d, 'viite-cupola.jpg'), v);
+  writeFileSync(join(d, 'MANIFEST.json'), JSON.stringify({ files: [{ path: 'ympyraikkuna.png', sha256: sha(b) }] }));
+  sisaltaa(tarkistaToimitus(d).tiedostot.find((r) => r.polku === 'viite-cupola.jpg').virheet, 'ei SHA256SUMS-listassa');
+  writeFileSync(join(d, 'GENERATION.json'), JSON.stringify({ referenceSHA256: sha(v) }));
+  const t = tarkistaToimitus(d); const r = t.tiedostot.find((x) => x.polku === 'viite-cupola.jpg');
+  assert.deepEqual(t.virheet, []); assert.deepEqual(r.virheet, []); sisaltaa(r.huomiot, 'viitekuva');
+  writeFileSync(join(d, 'GENERATION.json'), JSON.stringify({ referenceSHA256: '0'.repeat(64) }));
+  sisaltaa(tarkistaToimitus(d).tiedostot.find((x) => x.polku === 'viite-cupola.jpg').virheet, 'ei SHA256SUMS-listassa');
+});
