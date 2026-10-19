@@ -310,7 +310,7 @@ export const OCEANIA = {
           + 'punahöyhenvyö, oli noin kuuden metrin pituinen, ja jokainen '
           + 'hallitsija lisäsi siihen oman liuskansa. Vyö lähetettiin '
           + '1820-luvulla Lontooseen, ja sen jäljet katoavat.',
-        kuva: 'assets/aarteet/aarre-oceania-star.jpg',
+        kuva: 'assets/aarteet/aarre-oceania-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Opaali', color: '#7fb7c9',

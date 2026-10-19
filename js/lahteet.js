@@ -389,7 +389,8 @@ export const LAHTEET = [
           + 'käyttöä): nähtävyyksien loistoaikakuvat, kohdekarttojen pienoispiirrokset, '
           + 'aarrekuvat, kohtaamisten kasvokuvat, eläinten ja historian hetkien kuvat '
           + 'sekä Viisaan Pöllön muotokuva. Sheban kuningattaren suitsukerasian, '
-          + 'Montezuman turkoosinaamion ja Kongon kuninkaan kruunun aarrekuvat on tuotettu ChatGPT/Codexin '
+          + 'Montezuman turkoosinaamion, Kongon kuninkaan kruunun, Mantan smaragdin ja '
+          + 'Raiatean kuninkaiden höyhenvyön aarrekuvat on tuotettu ChatGPT/Codexin '
           + 'kuvageneroinnilla (19.10.2026) ja katsottu täysikokoisina ennen käyttöä. '
           + 'Kuvan tiedoissa tai kuvatekstissä lukee "havainnekuva".',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',

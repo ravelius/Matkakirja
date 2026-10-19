@@ -988,8 +988,8 @@ const SHELL = [
   './assets/aarteet/aarre-middleeast-star-v2.jpg',
   './assets/aarteet/aarre-asia-star.jpg',
   './assets/aarteet/aarre-northamerica-star-v2.jpg',
-  './assets/aarteet/aarre-southamerica-star.jpg',
-  './assets/aarteet/aarre-oceania-star.jpg',
+  './assets/aarteet/aarre-southamerica-star-v2.jpg',
+  './assets/aarteet/aarre-oceania-star-v2.jpg',
   // Katselulautojen pääaarteet (28.8.2026): Istanbulin sulttaanin
   // timantti ja maailmankartan Magellanin kompassi saivat omat kuvansa
   // samassa erässä kuin mantereet.

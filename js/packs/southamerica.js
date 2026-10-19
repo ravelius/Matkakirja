@@ -314,7 +314,7 @@ export const SOUTHAMERICA = {
           + 'kokoiseksi. Espanjalaiset särkivät 1534 muita smaragdeja '
           + 'vasaralla luullen niitä lasiksi, mutta tämän kiven '
           + 'paikalliset kätkivät.',
-        kuva: 'assets/aarteet/aarre-southamerica-star.jpg',
+        kuva: 'assets/aarteet/aarre-southamerica-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Inkojen kultafiguuri', color: '#e0b02a',
