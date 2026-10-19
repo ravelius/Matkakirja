@@ -50,6 +50,8 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   >25 ms), kopio PK + PT. Oma simuajo vain kuvapareille. Kehote "Kiinni! Napauta nopeasti" (PT 01.5x): iPadin laatikko ei ole
   tummempi (molemmissa --lapinakyva, omistajan 14.10. 21.42 lausesääntö) → PT 02.0x: JÄTETÄÄN ENNALLEEN (ei poikkeusta).
   JU 02.0x: laitekäännös b8198b4e3 NS:llä L1 → LT mittaa iPadilla (kopio NUI + PT); simukäännös L2 jonossa vain kuvapareille.
+  LT 02.1x iPad Pro 13 (laiteäppi NS lokit/natiiviseppa-app-207-lasihaku-laite): 0,5 s NYKÄYS POISTUI (A1 41 → 2 pitkää, p99 33,2 → 16,9;
+  A2 ja jäädytetty 0) → PT:lle pyyntö OK → NS junaan 207 (b8198b4e3). Odottaa PT:n kuittausta.
   museo-iss-207-app KÄÄNNETTY 01.30 (e9bcee0d, sisältää 7a45cff6f + 81be0b791) → ajo-museo-iss-207.zsh SIMU NYT:sta.
 
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
