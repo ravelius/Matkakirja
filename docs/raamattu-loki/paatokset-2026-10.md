@@ -1908,3 +1908,7 @@ Omistajan kortti KK:ssa (sanatarkasti): "Aarnin luettelon Oseanian aarre Etelär
 ## PERUTTU 19.10.2026 klo 15.42: OSEANIAN HOYHENVIITTA (19.10.2026 klo 15.44)
 
 Omistaja KK:ssa klo 15.42 (sanatarkasti): "Hetkinen, vastasinkohan liian nopeasti, eikös arnin luettelon aarteet pitää olla sellaisia, joita ei ole vielä löytynyt?" Päätös 15.39 (höyhenviitta) peruttu: museossa oleva esine ei käy (tarina.md: kadonneet aarteet, joita kukaan ei enää etsi). Kaanonin Oseania-rivi palautettu; SK:n ja Codexin viittatyö pysäytetty. Sama vika Afrikassa (Zimbabwen linnut löydetty) ja Etelä-Amerikassa (Muiscan kultalautta 1969, Bogotá): KK tutkii korvaajat ja tuo omistajalle; näitä kolmea ei muuteta ennen sitä.
+
+## PAATOKSET 19.10.2026 klo 16.40: Aarnin luettelon korvaajat (19.10.2026 klo 16.42)
+
+Omistajan kortti KK:ssa (kaikki suositukset): Afrikka → Kongon kuninkaan kruunu (korvaa Suuren Zimbabwen kivilinnun); Etelä-Amerikka → Mantan smaragdi (aarteen nimi vaihtuu El Doradosta; korvaa Muiscojen kultalautan); Oseania → Raiatean kuninkaiden höyhenvyö (pyhä esine, josta kerrotaan kunnioittaen; korvaa Eteläristin helmen). Peruste omistajan 15.42: aarteet ovat yhä löytymättömiä. Tiedot ja lähteet: KK:n tutkimus aarnin-korvaajat-20261019.md. Kaanon (tarina.md, isoisan-raamattu.md) ja Raamattu 3.10 päivitetty.

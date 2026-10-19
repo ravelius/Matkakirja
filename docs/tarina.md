@@ -69,8 +69,8 @@ Peli on irrotettu Afrikan tähdestä kokonaan: aarre ei ole tähti missään
 tekstissä, symbolissa eikä nimessä. Tilalla on oma tarusto:
 
 **Tutkimusmatkailija Aarni** kirjasi 1800-luvun alussa luetteloonsa
-maailman kuuluisat kadonneet aarteet — Kolme veljestä -riipuksen, El Doradon,
-keisarin jadesinetin, Suuren Zimbabwen kivilinnut ja muut — yhden
+maailman kuuluisat kadonneet aarteet — Kolme veljestä -riipuksen, Mantan smaragdin,
+keisarin jadesinetin, Kongon kuninkaan kruunun ja muut — yhden
 jokaisesta maanosasta. Hän kutsui niitä **unohdetuiksi aarteiksi**:
 aarteiksi, joista kerrotaan tarinoita mutta joita kukaan ei enää etsi.
 Aikalaiset pitivät **Aarnin luetteloa** satukirjana. Nimi ei ole
@@ -79,7 +79,9 @@ aarteen päällä, ja *aarnihauta* on aarrekumpu.
 
 **Euroopan unohdettu aarre on Kolme veljestä** *(kaanonin muutos, omistaja 11.10.2026; korvaa
 Meripihkahuoneen)*: riipus vuodelta 1389 (Juhana Peloton), kateissa 1640-luvulta. Jokainen
-unohdettu aarre on yhden ihmisen kannettavissa: Suuren Zimbabwen kivilintu käy, kokonainen sali ei.
+unohdettu aarre on yhden ihmisen kannettavissa: Kongon kuninkaan kruunu käy, kokonainen sali ei.
+Jokainen unohdettu aarre on YHÄ LÖYTYMÄTÖN *(omistaja 19.10.2026)*: sitä ei ole löydetty eikä se ole
+museossa; jos aarre löytyy, se vaihdetaan.
 Euroopan pikkuaarre Itämeren meripihka säilyy. Pelin alussa pelaaja ei vielä tiedä Aarnin
 luettelosta mitään: isoisä kertoo aarteesta, ja luettelo esitellään vasta myöhemmin.
 
@@ -105,7 +107,7 @@ Sanasto (sitova, myös käännöksiin):
 | Aarnin luettelo | Aarni's Catalogue | tarinan erisnimi aarrekokoelmalle; kirjan koko nimi "Aarnin luettelo unohdetuista aarteista" / "Aarni's Catalogue of Forgotten Treasures" |
 | tutkimusmatkailija Aarni | the explorer Aarni | erisnimi säilyy käännöksessä sellaisenaan |
 
-Laudan omat aarrenimet (kivilintu, jadesinetti, Montezuman turkoosinaamio…)
+Laudan omat aarrenimet (Kongon kuninkaan kruunu, jadesinetti, Montezuman turkoosinaamio…)
 säilyvät — ne ovat luettelon rivejä. Maailmankartan unohdettua aarretta
 ei nimetä: se on revityn sivun arvoitus. Sanaa "pääaarre" saa käyttää
 koodin sisäisissä kommenteissa, mutta ei pelaajalle näkyvissä teksteissä.
