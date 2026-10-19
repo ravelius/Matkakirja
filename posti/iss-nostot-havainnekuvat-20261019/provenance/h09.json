@@ -1,0 +1,46 @@
+{
+  "taskNumber": 449,
+  "code": "h09",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:48:55.725719+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: curved horizon at y0.39, black space upper ~40%; wide oblique flattened storm below, small eye x0.50,y0.55, dense central shield about half width and outer bands nearly full field. Real references show asymmetric continuous cirrus canopy and irregular spiral rainbands, not evenly spaced concentric rings; hardware excluded.",
+  "promptSHA256": "c0c14215cc92a7d9cd09c17fc8b0d95a6feb7d378e41092d8a6a78ebf0e303bd",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h09/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:49:42.566460+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-7035a1df-ec40-44d6-8dea-147a102efbf0.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h09.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h09.png",
+  "nativeSHA256": "470f8fb1f92dc5156b5330a46d92acacfd7fed402149d1b7b9f335c53966d7e0",
+  "deliverySHA256": "ebfc7976aff35f5bddb70f473303ebff166fe5cac4a2659ff73ce77733f2944d",
+  "nativeBytes": 2331402,
+  "deliveryBytes": 2331770,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "9b0003e2cb7725249b93b3c99f0e5a6cda889c4814a50dd8514f976089aa0cc6",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "weather-appearance-reference-with-horizon-drift",
+    "photoRealism": "Broad asymmetric cloud shield, small eye and varied rainbands/cirrus read as orbital photography, no evenly spaced game rings.",
+    "cameraMatch": "Small eye roughly central lower-half and wide oblique view retained; generated horizon is higher than game and storm is somewhat less flattened. Exact FOV match unverified.",
+    "takenFromRealReferences": "Continuous bright canopy, small physical eyewall, irregular spiral convection, peripheral wispy cirrus and open Atlantic.",
+    "invented": "Cloud layout, storm radius, eye dimensions and illumination interpreted; no historical image registration or calibrated geometry.",
+    "excludedOverlays": "No visible hardware, frame, labels, markers or stars.",
+    "referenceCredit": "ESA/A. Gerst, CC BY-SA 3.0 IGO, visual references only per supplied order",
+    "metadataLabel": "havainnekuva"
+  }
+}

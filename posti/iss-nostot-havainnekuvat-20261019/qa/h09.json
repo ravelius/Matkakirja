@@ -1,0 +1,11 @@
+{
+  "personallyInspectedNative": true,
+  "visualDisposition": "weather-appearance-reference-with-horizon-drift",
+  "photoRealism": "Broad asymmetric cloud shield, small eye and varied rainbands/cirrus read as orbital photography, no evenly spaced game rings.",
+  "cameraMatch": "Small eye roughly central lower-half and wide oblique view retained; generated horizon is higher than game and storm is somewhat less flattened. Exact FOV match unverified.",
+  "takenFromRealReferences": "Continuous bright canopy, small physical eyewall, irregular spiral convection, peripheral wispy cirrus and open Atlantic.",
+  "invented": "Cloud layout, storm radius, eye dimensions and illumination interpreted; no historical image registration or calibrated geometry.",
+  "excludedOverlays": "No visible hardware, frame, labels, markers or stars.",
+  "referenceCredit": "ESA/A. Gerst, CC BY-SA 3.0 IGO, visual references only per supplied order",
+  "metadataLabel": "havainnekuva"
+}
