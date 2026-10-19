@@ -113,7 +113,7 @@ Vaiheet:
    aarrekaupunkien määrä (kaupungit miinus aloituskaupungit), ja pääaarteita
    (`star`-laattoja) on aina tasan yksi. **Keksi laudalle oma aarre:**
    Jokaisella laudalla on oma pääaarteensa — se on aina paikallinen
-   legenda, kuten Kolme veljestä -riipus (Eurooppa), Montezuman aarre
+   legenda, kuten Kolme veljestä -riipus (Eurooppa), Montezuman turkoosinaamio
    (Pohjois-Amerikka) tai Lapin kulta (Suomi), ja yhden ihmisen
    kannettavissa (Raamattu, luku 3, AARNI: MITTASÄÄNTÖ). Nimi annetaan
    `tokens.types`-kohdassa ja `texts`-teksteissä.
