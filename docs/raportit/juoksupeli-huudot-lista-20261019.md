@@ -453,3 +453,20 @@ Kuvaohje kaikille: REALISTINEN VÄRIVALOKUVA kaikissa kuplissa (ei piirros, maal
 8 riviä korjattu (norsuviittaukset pois: „sata kamelia“, „Kultaa ja helmiä“; loppuvälimerkit; kielioppi). **Tunnetagin kanssa** noin 12 970 merkkiä (236 riviä × 27 + 6 588) → omistajalle cap 13 000.
 
 **Näkyvyys:** kuplan alla vain nimi + dynastia + vuosi; huuto kuuluu äänenä (teksti vain, jos pelin yleinen tekstitysasetus on päällä).
+
+## Versiot (omistajan hyväksymä huutoerä 1, KK 19.10.)
+
+Muoto `juoksupeli.rikkoutuva.<id>.versio.<n>.kupla/.huuto/.tyyppi/.fakta` (PK:n versiomuoto). Kuva Codexilta `esineet/<id>-<n>.png`. Huuto = huudahdus + yksi lyhyt lause (25–37 mrk), sidottu kuplan tarinaan.
+
+| # | esine (`id`) | kupla (tyyppi) | huuto | fakta (KK) |
+|---|---|---|---|---|
+| 1 | `posliinimaljakko` | 6: Iloinen mestari ojentaa valmista maljakkoa seuraavalle työntekijälle palatsin posliinityöpajassa, työpöydillä vaaleita maljakoita, hymyileviä käsiä | „Voi ei! Tätä teki 72 eri kättä!“ | Song Yingxing, Tiangong Kaiwu 1637: posliiniesine kulkee 72 käden kautta |
+| 2 | `kello` | 4: Riemastunut eurooppalainen kauppias ojentaa kultaista kelloa hymyilevälle hovin virkamiehelle, hovi katsoo ihaillen, hovin naiset mantšuasuissa | „Eikä! Tämä tuli laivalla Englannista!“ | Qing-hovin kelloista monet Lontoossa tehtyjä, tuotu Kantonin kautta |
+| 3 | `kirjoittava-kellopeli` | 7: Iloinen pikku-Puyi (keltainen lapsen kaapu, letti, noin 8 v) katsoo ihastuneena, kun kullatun kellon mekaaninen hahmo kirjoittaa | „Ei! Pikkumies kirjoitti kiinaa!“ | Palatsimuseon kullattu kirjoittajakello (Williamson, Lontoo, 1700-l.), hahmo kirjoittaa 8 merkkiä |
+| 4 | `keltalasitteinen-kulho` | 7: Iloinen pikku-Puyi (keltainen lapsen kaapu, letti, noin 8 v) istuu pöydän ääressä, jolla on keltaisia astioita, ja pitelee keltaista kulhoa | „Hups! Keltainen on vain minun värini!“ | kirkkaankeltainen (minghuang) varattu keisarille |
+| 5 | `ruyi-valtikka` | 5: Hymyilevät ylimykset kumartavat ja tuovat lahjoja, yksi ojentaa ruyi-valtikkaa pikku-Puyin syntymäpäivänä, hovin naiset mantšuasuissa | „Voi ei! Sain tämän syntymäpäivänäni!“ | ruyi = tavallinen syntymäpäivälahja keisarille |
+| 6 | `jadesinetti` | 3: Riemastunut virkamies painaa jadesinettiä käskykirjeeseen valoisassa hovisalissa, vaaleat pylväät ja ikkunat | „Eikä! Tällä leimattiin käskyt!“ | 25 keisarillista sinettiä Jiaotai-salissa (Qianlong 1748) |
+| 7 | `kalakulho` | 7: Iloinen pikku-Puyi (keltainen lapsen kaapu, letti, noin 8 v) ja hymyilevä imettäjä ruokkivat kultakaloja kalakulhossa sisäpihalla | „Ai ai! Me ruokimme näitä joka aamu!“ | imettäjä Puyin luona noin 8-vuotiaaksi |
+| 8 | `lasimaljakko` | 6: Riemastunut lasinpuhaltaja muotoilee lasimaljakkoa palatsin lasipajassa, kirkas työpaja | „Oho! Keisarin lasipaja teki tämän!“ | Kangxi perusti hovin lasipajan 1696 |
+| 9 | `sivellin` | 3: Hymyilevä opettaja karttakeppi kädessä opettaa kalligrafiaa, pikku-Puyi (kaapu, letti, noin 8 v) kirjoittaa sivellimellä pulpetissa Yuqing-koulusalissa | „Apua! Tällä opin kirjoittamaan!“ | Puyi aloitti koulun 1911 Yuqing-palatsissa |
+| 10 | `bianqing-kivikellot` | 5: Hymyilevät hovin soittajat lyövät kivilevyjä nuijilla juhlassa, kivikellot telineessä, hovin naiset mantšuasuissa | „Kling! Tämä soi uudenvuoden juhlassa!“ | bianqing kuului hovin juhlamusiikkiin (zhonghe shaoyue) |
