@@ -1900,3 +1900,7 @@ Omistajan kortti KK:ssa (sanatarkasti, molemmat valittu): (1) "Äänimaisemat uu
 ## PAATOKSET 19.10.2026 klo 15.23: MAKSETUT TILAUKSET EIVAT OLE OSTOJA (J2) (19.10.2026 klo 15.38)
 
 Omistajan päätös KK:n kautta (sanatarkasti): "Raamattuun lista maksetuista tilauksista voimassaoloaikoineen (Soundly Pro 2.12. asti, Tripo Max noin 18.11. asti). Tilauksen käyttö ei ole ostamista: Soundlyn äänet ovat ensisijainen lähde kysymättä. Ei ostoja koskee vain uusia ostoja, ja generointi (ElevenLabs, Tripo, Lyria) vaatii yhä lupasi." Kirjattu Raamattu 12.24 KÄYTÖSSÄ OLEVAT TILAUKSET (yhdistetty Tripo Max -kohtaan), 11.5 ja 5.20 tarkennukset, 12.2:sta "API-saldo 0" pois. ElevenLabsin ja Codexin taso täydennetään tarkistuksen jälkeen.
+
+## PAATOKSET 19.10.2026 klo 15.39: OSEANIAN AARRE = HAVAIJIN KUNINKAAN HOYHENVIITTA (19.10.2026 klo 15.39)
+
+Omistajan kortti KK:ssa (sanatarkasti): "Aarnin luettelon Oseanian aarre Eteläristin helmi löytyi vasta 1883, joten 1800-luvun alun Aarni ei voi tuntea sitä. Mikä tilalle?" → "Havaijin kuninkaan höyhenviitta (Suositus)" (Kalaniʻōpuʻun keltapunainen höyhenviitta, Cookille 1779; nykyisin Bishop-museossa Te Papan pitkäaikaislainana 2016 alkaen). Hylätty: maro ʻura -vyö. Kirjattu isoisan-raamattu.md Oseania-riville; SK kuvaus + historia (50–73 sanaa, lähde per väite, kunnioittava sävy), kuva Codexilta.
