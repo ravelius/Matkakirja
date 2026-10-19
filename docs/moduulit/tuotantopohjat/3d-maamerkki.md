@@ -247,7 +247,39 @@ SUOJATUT TEOKSET KAIKISSA OMISSA JÄLJENNÖKSISSÄ, SUOJATUT VALAISTUKSET, HYVÄ
 
 ## 8. TÄYDENTÄÄ: Karttaseppä
 
-*(sijoitus: kohde.json, ortokuva ja LiDAR-pohja, pallokierroksen kulmat, laattojen karsinta)*
+*(Karttaseppä 19.10.2026, PT:n toimeksianto (omistaja 19.10. klo 15.35, Raamattu 8.1): rivit on siirretty luovutuksista ja
+muistista; uusia sääntöjä ei ole. Luovutukset `docs/raportit/viesti-karttaseppa-luovutus-<pvm>.md` ovat haarassa
+`karttaseppa-tyo-20260922`.)*
+
+**Sijoituksen lähdepaketti (`kohde.json` ja pohja-aineisto).** Malli on Tivolin vaihe 1 (17.10.), kansio
+`proto-3d/_tyo/karttaseppa/tivoli-20261017/`, jossa on `LUEMINUT.md` ja `LAHTEET.md`:
+
+- `kohde.json`: origo (lat/lon) ja ENU-kaavat (x itään, y pohjoiseen, z ylös, metreinä), puiston raja, kohteet Q-id:llä,
+  maanpinta, huippu, korkeus maasta, jalanjälki (OSM ja LiDAR-massa ENU-monikulmioina), varmuus ja huomio kohteittain sekä
+  krediitit. Kaikki kerrokset (DSM, DTM, nDSM, orto, OSM) ovat samassa ENU-ruudussa. Lähde: Tivolin `LUEMINUT.md`.
+- Korkeudet ellipsoidista: kansallinen korkeus + EGM2008-geoidi N (Tivolin origo 39,60 m = DVR90 3,34 m + N 36,265 m;
+  Ateenan merenpinta 38,25 m). Kenttien nimet kertovat järjestelmän (`*_ellipsoidi_m`, `*_dvr90_m`, `enu_z`). Lähde: Tivolin
+  `LUEMINUT.md`; luovutus 15.10. ilta3.
+- Massakuvat kohteittain (vinovalaistu nDSM, korkeuskäyrät, mittakaava, pohjoisnuoli; OSM syaanina, LiDAR magentana) ja
+  varmuus: ohut masto tai yhden pikselin kärki on "matala/keskitaso", ja lähteen korkeus kirjataan rinnalle (Himmelskibet 74,6 m
+  alaraja, valmistaja 80 m). Lähde: Tivolin `LUEMINUT.md` (Mittaukset).
+
+**Mittaukset omista aineistoista.** Googlen laatoista ei mitata kohteiden korkeuksia eikä mittoja; laattojen laatua mittaa vain
+3D-kattavuusmittari (`kuumailmapallokierros.md` luku 8). Korkeudet ja vertailut tehdään omista DSM:istä (ČÚZK, EA, GLO-30,
+kansalliset LiDARit). Lähde: luovutus 15.10. (Muistiinpanot); PT 19.10. (#4981).
+
+**Vertailuortot (luku 2.6 ja vertailuportti).** `_tyo/karttaseppa/vertailu/<kohde>/`: `orto.jpg` mallin ENU-ruudussa,
+`meta.json` ja `varjot.jpg`; Linnanrakentaja ajaa ne `vertaa_orto.py --meta`:lla, ja uudelle mallille ajo pyydetään, kun malli
+on `mallit.json`issa. Raa'at ilmakuvat ovat 1,6–2,1 × albedoa kirkkaampia, joten vertailuun on `orto-albedo.jpg` ja luokittainen
+`albedo-luokat.json`. Copernicus VHR on vain sisäiseen käyttöön. Lähde: luovutukset 10.10. aamu (VERTAILUORTOT) ja 10.10. ilta3.
+
+**Aukot lähteissä.** IGN maskaa osan rakennuksista LiDARista (Élysée- ja Alma-palatsit, `lidar_maskattu`); niille tehdään
+paikkausaineisto (`_tyo/karttaseppa/sumennukset-pariisi-20261010/`). Lähde: luovutus 10.10. ilta3.
+
+**Haut ja lisenssit.** robots.txt ennen jokaista skriptattua hakua: Overpassin `/api/` on kielletty → OSM Geofabrikin PBF:stä;
+OSM (ODbL) on jakoehtoinen eikä kuulu pysyvään latauslupaan. Lähde: luovutukset 10.10. aamu (Peking LS2) ja 17.10. yo2.
+
+**Laattojen karsinta.** Ei omia oppeja 10.–19.10.
 
 ## 9. TÄYDENTÄÄ: Natiiviseppä
 
