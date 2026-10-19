@@ -48,7 +48,9 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   (local_11aca9cd-…) + PT:lle → sitten NS:lle junaan 207 PT:n OK:lla.
   PT 01.5x TARKENNUS: simu ei näytä nykäystä → JU tekee LAITEKÄÄNNÖKSEN, .app LT:lle (local_36a45147) iPad Pro 13 -mittaukseen (p99,
   >25 ms), kopio PK + PT. Oma simuajo vain kuvapareille. Kehote "Kiinni! Napauta nopeasti" (PT 01.5x): iPadin laatikko ei ole
-  tummempi (molemmissa --lapinakyva, omistajan 14.10. 21.42 lausesääntö) → KYSYTTY PT:ltä, tehdäänkö mk-lasipohja juoksupelin kehotteelle.
+  tummempi (molemmissa --lapinakyva, omistajan 14.10. 21.42 lausesääntö) → PT 02.0x: JÄTETÄÄN ENNALLEEN (ei poikkeusta).
+  JU 02.0x: laitekäännös b8198b4e3 NS:llä L1 → LT mittaa iPadilla (kopio NUI + PT); simukäännös L2 jonossa vain kuvapareille.
+  museo-iss-207-app KÄÄNNETTY 01.30 (e9bcee0d, sisältää 7a45cff6f + 81be0b791) → ajo-museo-iss-207.zsh SIMU NYT:sta.
 
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
 - palsta-haku 03deb7b16 + SK #5015 tekstit e4c33a4fe → juna 206.
