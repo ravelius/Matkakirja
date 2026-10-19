@@ -28,10 +28,9 @@ AIKA (omistaja 26.9.2026, sitova): kartassa eletään NYKYAJASSA, vain estetiikk
 on vanhaa — nykyajan kohteet (maailmanpyörä, Korintin kanava) ovat sallittuja;
 älä hylkää ideaa "koska sitä ei ollut 1873". Raamattu, luku 1, AIKA.
 
-VAIN EUROOPPA — EI KOSKE LINSSEJÄ (omistaja 27.9.2026, sitova; linssit ja niiden uusi sisältö
-kattavat aina koko maailman, omistaja 28.9. ja 13.10.2026): muuta uutta sisältöä ja työtä tehdään vain
-Euroopalle, kunnes omistaja toteaa Euroopan valmiiksi; muihin maanosiin ei mitään uutta
-ilman omistajan erillistä päätöstä. Raamattu, luku 1, VAIN EUROOPPA.
+MUUT MAANOSAT (omistaja 19.10.2026 klo 13.39): VAIN EUROOPPA -esto on poistettu kokonaan.
+Muita maanosia aletaan tehdä vähitellen, mutta työtä ei aloiteta vielä: aloitus omistajan
+päätöksellä (linssit kattavat edelleen koko maailman). Raamattu, luku 1.
 
 UI-POHJAT (omistaja 1.10.2026, sitova): jokainen uusi ominaisuus, linssi, ikkuna, kortti,
 nosto ja paneeli käyttää olemassa olevia tyylimäärittelyjä ja pohjia. Jos jotain tarvittavaa
