@@ -28,7 +28,7 @@ PT: tavoite (havainnekuva / kuvakäsikirjoitus) + tilaus Codexille postilaatikko
 | 1. Tilaus | PT → Codex | Posti `posti/paatoimittaja-codex-<aihe>-<pvm>.md`, luvun 2 kohdat |
 | 2. Esikatselu | Codex | Pieni resoluutio, vähän näytteitä, toimitetaan heti |
 | 3. Täysi laatu | Codex | Pysty + vaaka, HEVC 10-bit, < 30 MiB / versio, renderöinti öisin |
-| 4. Vastaanotto | vastaanottaja (PT nimeää) | Luvun 4 tarkistukset läpi, kuvaparit PT:lle |
+| 4. Vastaanotto | Natiivi-UI (PT 19.10.2026; toistaa videon pelissä) | Luvun 4 tarkistukset läpi, kuvaparit PT:lle |
 | 5. Kytkentä | Natiivi-UI | Esilataus, puskurointi, toisto, UI-tekstit videon ajan mukaan |
 
 ## 2. Codexin tilausmuoto
@@ -50,7 +50,7 @@ Tilaus kirjoitetaan postilaatikkoon numeroituna listana kuten 4e62c3b21 ja 5d4f8
    versio, **ehdoton yläraja 30 MiB**. Applen soittimille MP4:n HEVC-tunniste `hvc1` (ffmpeg `-tag:v hvc1`).
 7. **Ei tekstejä videoon:** ei tekstityksiä, mittareita, logoja eikä havainnekuva-merkintää; ne tulevat käyttöliittymästä
    videon ajan mukaan (Raamattu 4.21).
-8. **Ääni:** puhe ja musiikki ääniraidalla (4.21). Tilaus sanoo erikseen, onko videossa ääntä; kokeiluissa ei ääntä (5d4f8bfea).
+8. **Ääni:** puhe ja musiikki ääniraidalla (4.21). Tilaus sanoo erikseen, onko videossa ääntä; kokeiluissa ei ääntä (5d4f8bfea). Ääniraidan kokoaa Äänittäjä videon ajan mukaan (kertoja, Pulu, radio, musiikki; ääniportti ja sokkokuuntelu 5.27), ja Natiivi-UI liittää sen videoon vastaanotossa (PT 19.10.2026); Codex toimittaa kuvan ilman ääntä, ellei tilaus muuta sano.
 9. **Kuorma:** renderöinti ei saa hidastaa junan Unity-käännöksiä. **Ensin kevyt esikatselu** (pieni resoluutio, vähän näytteitä)
    heti, **täysi laatu öisin** tai kuorman salliessa.
 10. **Toimitus PT:lle:** esikatselu ensin; sitten molemmat versiot ja 2–3 täysikokoista ruutua kummastakin (aarre: mallikuva vs.
