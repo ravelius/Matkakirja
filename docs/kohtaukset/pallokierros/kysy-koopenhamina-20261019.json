@@ -1,0 +1,86 @@
+{
+ "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-v13/koopenhamina.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä.",
+ "kaupunki": "koopenhamina",
+ "kohteet": {
+  "Q29157": [
+   "Miksi tornin kierre on ulkopuolella?",
+   "Kuka suunnitteli tornin huipun?",
+   "Kuinka monta porrasta huipulle on?",
+   "Miksi Christianshavn rakennettiin?",
+   "Miksi täällä on kanavia kuin Hollannissa?",
+   "Mikä oli kierteen esikuva?",
+   "Pääseekö aivan tornin huipulle asti?",
+   "Millainen Christianshavn on nykyään?"
+  ],
+  "Q943946": [
+   "Miksi Nyhavn kaivettiin?",
+   "Mikä on kanavan vanhin talo?",
+   "Missä H. C. Andersen asui täällä?",
+   "Millainen paikka Nyhavn oli ennen?",
+   "Miksi talot ovat näin värikkäitä?",
+   "Mitä laivat toivat tänne?",
+   "Kuka oli kuningas Kristian viides?",
+   "Mitä täällä tapahtuu nykyään?"
+  ],
+  "Q211053": [
+   "Miksi palatseja on neljä?",
+   "Kuka asuu Amalienborgissa nyt?",
+   "Miksi kuningasperhe muutti tänne?",
+   "Kenen patsas aukion keskellä on?",
+   "Miksi kirkko seisoi keskeneräisenä?",
+   "Kuinka iso Marmorikirkon kupoli on?",
+   "Mitä vartijat tekevät palatsin edessä?",
+   "Miksi aukio on kahdeksankulmainen?"
+  ],
+  "Q221812": [
+   "Miksi linnoitus on tähden muotoinen?",
+   "Kuka suunnitteli Kastelletin?",
+   "Onko linnoitus yhä sotilasaluetta?",
+   "Kuka on jumalatar Gefjon?",
+   "Mitä Gefjon teki härillään?",
+   "Miksi linnoitusta ympäröi vesi?",
+   "Mihin Kastelletia käytettiin ennen?",
+   "Voiko linnoituksessa kävellä vapaasti?"
+  ],
+  "Q206101": [
+   "Mitä linnan aarrekammiossa säilytetään?",
+   "Miksi Kristian neljäs rakensi linnan?",
+   "Miksi linna on punatiilinen?",
+   "Mitä ovat kruununinsignit?",
+   "Mitä linnan vieressä on?",
+   "Mikä on Kuninkaan puutarha?",
+   "Miksi linna alkoi huvilana?",
+   "Millainen kuningas Kristian neljäs oli?"
+  ],
+  "Q1140534": [
+   "Miksi huipulle ei ole portaita?",
+   "Miksi tornissa on tähtitorni?",
+   "Kuka ratsasti rampin ylös hevosella?",
+   "Mitä Trinitatis-kokonaisuuteen kuului?",
+   "Kuinka monta kierrosta ramppi tekee?",
+   "Mitä kirjoja kirjastossa säilytettiin?",
+   "Miksi torni on pyöreä?",
+   "Mitä huipulta näkee?"
+  ],
+  "Q940733": [
+   "Miksi linna on saarella?",
+   "Kuka rakensi ensimmäisen linnan?",
+   "Miksi aiemmat linnat paloivat?",
+   "Missä Tanskan parlamentti kokoontuu?",
+   "Kuka suunnitteli nykyisen palatsin?",
+   "Mitä raunioita linnan alla on?",
+   "Montako linnaa tässä on ollut?",
+   "Mitä muuta täällä on kuin parlamentti?"
+  ],
+  "Q110289": [
+   "Miksi Tivoli perustettiin?",
+   "Mikä oli puiston järvi ennen?",
+   "Kuka perusti Tivolin?",
+   "Mitä Andersen kirjoitti Tivolista?",
+   "Miten kuningas suostui Tivoliin?",
+   "Milloin Tivoli avattiin?",
+   "Mitä Tivolissa voi tehdä?",
+   "Mitä isoisä näki Tivolin teatterissa?"
+  ]
+ }
+}
