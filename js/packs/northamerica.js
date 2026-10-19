@@ -266,9 +266,9 @@ const NA_AIR_ROUTES = [
 
 export const NORTHAMERICA = {
   id: 'northamerica',
-  name: 'Montezuman aarre',
+  name: 'Montezuman turkoosinaamio',
   boardLabel: 'Pohjois-Amerikka',
-  tagline: 'Etsi Montezuman kadonnut aarre Kalliovuorilta, preerialta, Karibian saarilta ja Alaskan tundralta.',
+  tagline: 'Etsi Montezuman kadonnut turkoosinaamio Kalliovuorilta, preerialta, Karibian saarilta ja Alaskan tundralta.',
   ariaLabel: 'Pohjois-Amerikan aarrekartta',
 
   /*
@@ -303,10 +303,11 @@ export const NORTHAMERICA = {
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
       star: {
-        name: 'Montezuman aarre',
-        fakta: 'Kun espanjalaiset pakenivat Tenochtitlanista ’surullisena '
-          + 'yönä’ 1520, suuri osa Montezuman kullasta upposi järveen — '
-          + 'sitä etsitään yhä.',
+        name: 'Montezuman turkoosinaamio',
+        fakta: 'Atsteekit tekivät turkoosikivistä mosaiikkinaamioita. '
+          + 'Kun espanjalaiset pakenivat Tenochtitlanista ’surullisena '
+          + 'yönä’ 1520, osa Montezuman aarteesta katosi — sitä '
+          + 'etsitään yhä.',
         kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
       },
       mannerAarre: {
@@ -375,12 +376,12 @@ export const NORTHAMERICA = {
   ],
 
   texts: {
-    intro: 'Peli alkaa! Etsikää Montezuman aarre ja palatkaa New Yorkiin, San Franciscoon tai Los Angelesiin.',
-    starFound: '◈ {name} löysi MONTEZUMAN AARTEEN kaupungista {city}!',
-    starToast: 'MONTEZUMAN AARRE!',
+    intro: 'Peli alkaa! Etsikää Montezuman turkoosinaamio ja palatkaa New Yorkiin, San Franciscoon tai Los Angelesiin.',
+    starFound: '◈ {name} löysi MONTEZUMAN TURKOOSINAAMION kaupungista {city}!',
+    starToast: 'MONTEZUMAN TURKOOSINAAMIO!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Montezuman aarteen turvallisesti kotiin',
-    winnerStar: '{name} toi Montezuman aarteen kotiin {money} punnan kanssa.',
+    winStar: 'toi Montezuman turkoosinaamion turvallisesti kotiin',
+    winnerStar: '{name} toi Montezuman turkoosinaamion kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [
