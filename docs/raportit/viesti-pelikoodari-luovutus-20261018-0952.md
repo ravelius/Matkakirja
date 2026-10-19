@@ -100,3 +100,8 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
   ef189ffba (IssKameraKuva.NayttoElaa NUI:lle; simussa todennettava). NS:lle viimeisin iss-c2-204 = ef189ffba.
 - Rata v4 tasot 5316efacc (juoksupeli-202): taso 1 esteet + viitan esittely + taso 2 spurtti/korkea hyppy/liito. AVOIN Codexilta (PT:n kautta):
   esteiden mallit, puomiin tarttumisliike, tason 2 rinnakkainen kattoreitti. Codexin este-yhteenveto ei vielä saapunut.
+- 09.1x: runko 204 punainen korjattu iss-c2-204 71d9f6c43 (paikat.json + keskustat.json Natal/Mazatlán; NE:ssä jää kaksi lähes samaa
+  nimeä, poistetaan jos kupolissa näkyy tupla). NUI lukee IssKameraKuva.NayttoElaa (tekee 3 rivin muutoksen NS:n yhdistämisen jälkeen).
+- 09.3x Rata v4 84357cae9: elinvoima + rimpuilu, herkku/mätä omena, viitta-energia + lohikäärmeet, uupui → taso 2. AVOIN: mittarin UI-pohja
+  (kysytty PT:ltä: yläpalkin elämäpalkki?), SK:n tekstit Resources/JuoksuV4/tekstit.fi.json (avainmuoto sovittu), Codexin kattoreitti f1d6365fc,
+  esteiden mallit + tarttumisliike (KK:n linja), simuvuoro JU ~10.10 haarasta 84357cae9.
