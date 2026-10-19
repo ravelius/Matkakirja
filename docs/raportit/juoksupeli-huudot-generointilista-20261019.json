@@ -1,5 +1,5 @@
 {
- "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta). PUYIN ÄÄNI LUKITTU 11.23: 08 Kavya (voice_id kentässä \"aani\"). Sallitut alut kentässä \"sallitut_alut\". Tavoite: koominen käänne (huoleton alku, lause kauhistelee). Ei generointia ennen KK:n eriä. Aa!-alku POISTETTU (omistaja 11.29: \"tuo aa on huono\"); 10 huutoriviä odottavat uutta alkua. Ei generointia ennen sitä.",
+ "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta). PUYIN ÄÄNI LUKITTU 11.23: 08 Kavya (voice_id kentässä \"aani\"). Sallitut alut kentässä \"sallitut_alut\". Tavoite: koominen käänne (huoleton alku, lause kauhistelee). Ei generointia ennen KK:n eriä. Aa!-alku POISTETTU (omistaja 11.29: \"tuo aa on huono\"); 10 huutoriviä odottavat uutta alkua. Ei generointia ennen sitä. PÄIVITYS 19.10. klo 11.45: omistaja hyväksyi Puyin (Kavya) alut: Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!; Sis-sos! pois. 10 huutoriviä yhä ilman alkua kunnes KK tuo erät.",
  "rivit": [
   {
    "avain": "juoksupeli.rikkoutuva.posliinimaljakko.versio.1.huuto",
@@ -126,7 +126,6 @@
   "Noin!",
   "Katos vaan!",
   "Hups!",
-  "Sori!",
-  "Sis-sos!"
+  "Sori!"
  ]
 }
