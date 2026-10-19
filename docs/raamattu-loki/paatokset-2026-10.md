@@ -1896,3 +1896,7 @@ Omistajan kortti KK:ssa (sanatarkasti): "Kohta 4: tuotantopohjat ovat osin keske
 ## PAATOKSET 19.10.2026 klo 15.36: AANIMAISEMAT SOKKONA JA CC BY-SA -KUVAT (19.10.2026 klo 15.37)
 
 Omistajan kortti KK:ssa (sanatarkasti, molemmat valittu): (1) "Äänimaisemat uudella tavalla (Suositus)" = "Tehosteiden uusi tapa koskee myös äänimaisemia. Pallokierrosten kuusi taustasilmukkaa kuunnellaan ensin sokkona, ja vain hylätyt tehdään uudelleen Soundlysta ja Sonnissista." (2) "CC BY-SA -kuvat sallitaan (Suositus)" = "Commonsin CC BY-SA -kuvat sallitaan tekijän nimellä kuten CC BY. Suuri osa Commonsin parhaista valokuvista on tällä lisenssillä; muokattu kuva jaetaan samalla lisenssillä. Heikoimmat historiakuvat vaihdetaan parempiin." Kirjattu Raamattu 5.27 ja 11.1. Äänittäjä: silmukoiden sokkokuuntelu; SK: kuva.py:n BY-SA-suodatin pois, heikoimmat historiakuvat (Lontoon H4-kello ensin).
+
+## PAATOKSET 19.10.2026 klo 15.23: MAKSETUT TILAUKSET EIVAT OLE OSTOJA (J2) (19.10.2026 klo 15.38)
+
+Omistajan päätös KK:n kautta (sanatarkasti): "Raamattuun lista maksetuista tilauksista voimassaoloaikoineen (Soundly Pro 2.12. asti, Tripo Max noin 18.11. asti). Tilauksen käyttö ei ole ostamista: Soundlyn äänet ovat ensisijainen lähde kysymättä. Ei ostoja koskee vain uusia ostoja, ja generointi (ElevenLabs, Tripo, Lyria) vaatii yhä lupasi." Kirjattu Raamattu 12.24 KÄYTÖSSÄ OLEVAT TILAUKSET (yhdistetty Tripo Max -kohtaan), 11.5 ja 5.20 tarkennukset, 12.2:sta "API-saldo 0" pois. ElevenLabsin ja Codexin taso täydennetään tarkistuksen jälkeen.
