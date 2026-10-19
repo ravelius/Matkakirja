@@ -11,7 +11,7 @@ Ensimmäinen maa on Alankomaat, toinen Ranska (Louvre, Orsay, Marmottan, Rodin);
 Pohja ei kata museon 3D-salia (kartta- ja salityö), ääntä (`kertojan-teksti-ja-aani.md`) eikä pääkaupungin avausta
 (`paakaupungin-avaus.md`).
 
-**Rajaus:** maittain, yksi maa kerrallaan. Uusi maa on Euroopassa (VAIN EUROOPPA), kunnes omistaja toteaa Euroopan valmiiksi.
+**Rajaus:** maittain, yksi maa kerrallaan. Uusi maa on Euroopassa, kunnes omistaja aloittaa muut maanosat (MUUT MAANOSAT VÄHITELLEN).
 Italian museot: omistajan kortti 14.10. "Mukaan myös Italian museot, Italia pois App Storesta", ajoitus "Ei vielä".
 Kreikan valtion muistomerkit piilotetaan Kreikan App Storessa (storefront GRC).
 
@@ -167,5 +167,5 @@ Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
 `docs/raportit/museoteokset-ikortti-20261016.md`, `docs/raportit/ranska-kohdat-20261017.md`,
 `docs/kohtaukset/museoteokset/tyokalut/ohje-agentille.txt` ja `ohje-kohdat.txt`, `docs/moduulit/tuotantopohjat/kertojan-teksti-ja-aani.md`;
 Raamattu: TAIDEMUSEO-LINSSI (MAITTAIN, ALANKOMAAT ENSIN; KUVALÄHTEET JA PATSAAT; TAIDEHALLIN OHJAUS; TEKSTIT JA INFO; I-KORTTI JA
-YMPYRÄT; ITALIA; KREIKKA), VAIN EUROOPPA, TUOTANTOPOHJAT, TUOTANTOPOHJIEN SANASTO. Ranskan aineistoselvitys (13.10.2026):
+YMPYRÄT; ITALIA; KREIKKA), MUUT MAANOSAT VÄHITELLEN, TUOTANTOPOHJAT, TUOTANTOPOHJIEN SANASTO. Ranskan aineistoselvitys (13.10.2026):
 `git show 08f9e3d00:docs/raportit/taidemuseo-ranska-aineisto-20261013.md` (ei mainissa).

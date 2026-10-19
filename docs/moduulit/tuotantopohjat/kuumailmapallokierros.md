@@ -10,7 +10,7 @@ niiden välillä ja päättää kierroksen loppuun; kertoja William kertoo ja hi
 päätteeksi Pulu kutsuu vapaaseen lentoon. Pohja kattaa sisällön ja sen tarkistuksen; lennon, kameran, kaupungin 3D:n ja
 äänen työ on omissa osissaan (luvut 7–9). Ei kata 3D-maamerkkiä eikä pääkaupungin avausta (`paakaupungin-avaus.md`, oma pohja).
 
-**Rajaus:** uusi kierros on Euroopassa (VAIN EUROOPPA). Kreikan muistomerkkikohteisiin ei tehdä uusia kierroksia, ja Ateenan
+**Rajaus:** uusi kierros on Euroopassa, kunnes omistaja aloittaa muut maanosat (MUUT MAANOSAT VÄHITELLEN). Kreikan muistomerkkikohteisiin ei tehdä uusia kierroksia, ja Ateenan
 kierros piilotetaan Kreikan App Storessa (storefront GRC); Ateenan tilalle tuli Praha (Raamattu, KREIKKA, 12.10.).
 
 ## 1. Tuotantoputki ja roolit

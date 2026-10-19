@@ -15,7 +15,7 @@ faktatyö on tässä esimerkkinä) eikä kertojan tekstiä yleisesti (`kertojan-
 **Rajaus:** työ etenee yksi kohde kerrallaan omistajan käskyllä. Olavinlinna on toistaiseksi tauolla (13.10.: vain viisi
 keittiön tasoista tilaa peliin, ei uusia tiloja); Kielletyn kaupungin juoksupeli aloitetaan harmaasta pelattavasta
 versiosta heti (omistaja 17.10. 22.17, Codexin Pekingiä ei odoteta; tuotantoputki Raamatussa, JUOKSUPELIN LINJAUS); Giza vasta Olavinlinnan ja Kielletyn kaupungin jälkeen. Euroopan ulkopuoliset kohteet ovat omistajan
-nimetyt poikkeukset (VAIN EUROOPPA muuten); uutta kohdetta ei aloiteta ilman hänen päätöstään.
+nimetyt poikkeukset (muut maanosat vasta omistajan aloituspäätöksellä); uutta kohdetta ei aloiteta ilman hänen päätöstään.
 
 ## 1. Tuotantoputki ja roolit
 
@@ -175,5 +175,5 @@ Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
 `kiinan-dynastiat-faktatarkistus-20261016.md`, `docs/kohtaukset/kiinan-dynastiat/tarinarivit-20261016.md`,
 `docs/kohtaukset/juoksupeli/puyi-lapsuus-faktat.md`, `docs/kohtaukset/oppaan-esittelyt/tyokalut/ohje-puyi-agentille.txt`,
 `docs/moduulit/tuotantopohjat/kertojan-teksti-ja-aani.md`; Raamattu: HISTORIALLISET KOHTEET SEIKKAILUINA, OLAVINLINNAN PELIN
-TOTEUTUS, OLAVINLINNA OIKEANA VUODEN 1499 LINNANA, OLAVINLINNA TAUOLLA, HETKET JA TARINAT, VAIN EUROOPPA, TUOTANTOPOHJAT,
+TOTEUTUS, OLAVINLINNA OIKEANA VUODEN 1499 LINNANA, OLAVINLINNA TAUOLLA, HETKET JA TARINAT, MUUT MAANOSAT VÄHITELLEN, TUOTANTOPOHJAT,
 TUOTANTOPOHJIEN SANASTO; loki: KIELLETYN KAUPUNGIN JUOKSUPELI (16.10. 18.18).
