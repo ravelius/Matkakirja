@@ -24,7 +24,7 @@
   "africa": {
    "nimi": "Kongon kuninkaan kruunu",
    "kuvaus": "Kongon kuninkaan kruunu oli hopeasta tehty, jalokivin koristeltu kruunajaiskruunu, jonka paavi Innocentius X lähetti kuningas Garcia II:lle. Se tuotiin Kongoon kapusiinimunkkien mukana.",
-   "historia": "Kuningas António I kaatui Mbwilan taistelussa 29.10.1665. Kruunun kerrotaan lähetetyn sotasaaliina Portugaliin, mutta erään tutkijan mukaan se katosi Recifessä matkalla. Sen jälkeen kruunun jäljet katoavat, eikä säilymisestä ole tietoa.",
+   "historia": "Garcia II:n seuraaja, kuningas António I, kaatui Mbwilan taistelussa 29.10.1665. Kruunun kerrotaan lähetetyn sotasaaliina Portugaliin, mutta erään tutkijan mukaan se katosi Recifessä matkalla. Sen jälkeen kruunun jäljet katoavat, eikä säilymisestä ole tietoa.",
    "lahteet": [
     {
      "url": "https://archive.org/details/istoricadescrizi00cava",
@@ -59,7 +59,7 @@
      "tukee": "Gouveia 2024: Garcia II sai kruunun Innocentius X:ltä; António I:n kaatuminen Mbwilassa"
     }
    ],
-   "epavarmaa": "Korvaa Suuren Zimbabwen kivilinnun (omistaja 19.10.2026; kaikki kahdeksan lintua löydetty). Materiaali vaihtelee lähteittäin (hopea: Cavazzi, Labat; kullattu hopea: Fromont; messinki: Gouveia, Souza 2018), siksi 'hopeasta tehty'. Recifessä katoaminen on käytännössä yhden tutkijan (Souza 2018 ja 2020, AHU-asiakirjat; asiakirjaa ei nähty) tulkinta ja Lissabon-versio on toinen lähde, siksi teksti sanoo 'erään tutkijan mukaan'. Saapumisvuosi 1651 (Fromont) vs 1652 (Souza): vuotta ei mainita. Yhteys 'Mbwilassa löytynyt kruunu = paavin kruunu' on tutkijoiden tulkinta (Cavazzi ei sano sitä suoraan). 'Säilymisestä ei ole tietoa': museota tai etsintöjä ei löytynyt (portugalilaisia kokoelmia ei voitu hakea kattavasti). Kanonin 'kadonnut Recifessä 1666 matkalla Lissaboniin' on tämän tekstin mukaan pehmennetty (lähteet: Recife tai Lissabon, vuosi 1665 taistelu). Sävy: kuningas kaatui taistelussa, kerrotaan arvokkaasti."
+   "epavarmaa": "Korvaa Suuren Zimbabwen kivilinnun (omistaja 19.10.2026; kaikki kahdeksan lintua löydetty). Materiaali vaihtelee lähteittäin (hopea: Cavazzi, Labat; kullattu hopea: Fromont; messinki: Gouveia, Souza 2018), siksi 'hopeasta tehty'. Recifessä katoaminen on käytännössä yhden tutkijan (Souza 2018 ja 2020, AHU-asiakirjat; asiakirjaa ei nähty) tulkinta ja Lissabon-versio on toinen lähde, siksi teksti sanoo 'erään tutkijan mukaan'. Saapumisvuosi 1651 (Fromont) vs 1652 (Souza): vuotta ei mainita. Yhteys 'Mbwilassa löytynyt kruunu = paavin kruunu' on tutkijoiden tulkinta (Cavazzi ei sano sitä suoraan). 'Säilymisestä ei ole tietoa': museota tai etsintöjä ei löytynyt (portugalilaisia kokoelmia ei voitu hakea kattavasti). Kanonin 'kadonnut Recifessä 1666 matkalla Lissaboniin' on tämän tekstin mukaan pehmennetty (lähteet: Recife tai Lissabon, vuosi 1665 taistelu). Sävy: kuningas kaatui taistelussa, kerrotaan arvokkaasti. Päivitys 19.10. (tuore lukija): 'Garcia II:n seuraaja' ilman 'poika'-väitettä, koska lähteet eroavat: en.wikipedia (António I valittiin Garcia II:n kuoleman jälkeen; Kongon kuninkuus oli vaaliperusteinen) vs. toinen lähde 'toiseksi vanhin poika'; kuolinvuosi 1660 vs 1661."
   },
   "middleeast": {
    "nimi": "Sheban kuningattaren suitsukerasia",
@@ -135,7 +135,7 @@
   },
   "southamerica": {
    "nimi": "Mantan smaragdi",
-   "kuvaus": "Mantan smaragdi oli Ecuadorin rannikon manteño-kansan palvoma suuri jalokivi, jonka luo sairaat hakivat apua ja jonka Inka Garcilaso de la Vega kuvasi melkein strutsinmunan kokoiseksi.",
+   "kuvaus": "Mantan smaragdi oli Ecuadorin Mantan seudun kansan (manteño-kulttuuri) palvoma suuri jalokivi, jonka luo sairaat hakivat apua ja jonka kronikoitsija Inca Garcilaso de la Vega kuvasi melkein strutsinmunan kokoiseksi.",
    "historia": "Espanjalaiset särkivät vuonna 1534 vasaralla monia muita smaragdeja luullen niitä lasiksi, mutta suuren kiven paikalliset kätkivät, eikä sitä löydetty uhkauksillakaan. Myöhemmän kertomuksen mukaan sen nimi oli Umiña. Kivestä ei ole tietoa 1500-luvun jälkeen.",
    "lahteet": [
     {
@@ -172,7 +172,7 @@
   "oceania": {
    "nimi": "Raiatean kuninkaiden höyhenvyö",
    "kuvaus": "Raiatean kuninkaiden höyhenvyö, maro ʻura, oli punaisin höyhenin peitetty verkkovyö, noin kuuden metrin pituinen, ja jokainen hallitsija lisäsi siihen oman liuskansa.",
-   "historia": "Pyhä vyö oli kuninkaallisen vallan merkki ʻOro-jumalan palvonnassa Taputapuātean maraella, joka on nykyään UNESCOn maailmanperintökohde. Kuningas Tamatoa III luopui vanhasta uskosta 1815–16 ja lähetti vyön viimeistään 1822 Lontooseen lähetysseuran museoon. Sen jälkeen vyön jäljet katoavat.",
+   "historia": "Pyhä vyö oli kuninkaallisen vallan merkki ʻOro-jumalan palvonnassa Taputapuātean temppelialueella (marae), joka on nykyään UNESCOn maailmanperintökohde. Kuningas Tamatoa III luopui vanhasta uskosta 1815–16 ja lähetti vyön viimeistään 1822 Lontooseen lähetysseuran museoon. Sen jälkeen vyön jäljet katoavat.",
    "lahteet": [
     {
      "url": "https://archive.org/details/journalofvoyages02tyer",
