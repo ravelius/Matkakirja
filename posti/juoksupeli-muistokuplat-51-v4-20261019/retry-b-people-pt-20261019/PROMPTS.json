@@ -1,0 +1,361 @@
+{
+  "attempts": [
+    {
+      "code": "19-bianqing-kivikellot",
+      "sourceItemNumber": 19,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:08:51.936365+00:00",
+      "args": {
+        "prompt": "Generate a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086x1448 RGB OPAQUE PNG. REFERENCE is ONLY correct artifact SHAPE/SCALE, exact FRAME COMPOSITION, camera, background, daylight/material style. Create a WHOLE NEW image of same scene, NOT a partial edit. The OLD WHITE-GOATEED TEACHER IDENTITY MUST NOT appear at all: REPLACE every reference person with genuinely new people described below. Keep facepositions/size asreference and important eyes/nose/mouth centrallyprotected for gameellipse; do not enlargepeople orcopyoldfacialidentity. NEW PEOPLE: Qing musician age28, CLEAN-SHAVEN, lean narrow oval face, high cheekbones, slightly upswept thick eyebrows, straight narrow nose, blackhair shavedfront+queue, warmolive natural skin. Rich MAROON ceremonial roundcollar rightbuttoned robe. Listener is a DIFFERENT adult official age53, lean triangularface, broadroundednose, lowstraight eyebrows, clean-shaven, mutedGREEN ceremonialrobe. Two faces distinctlydifferent from eachother and from original teacher and fromB14/B22 men. No whitehair/beard. SOURCE ACTION AND ARTIFACT: Preserve main large hanging bent greenjade CHIME SLAB withgoldengraving andhole, decoratedmultistone rack, partialcompanionstones. Young musician tapsitwithwoodenmallet while otheradultofficiallistens. Do not replace correct artifact with a different form. Everyone naturallyhappy, candidsmile, authentic facialskintexture. Sharp mainartifact, mildlysoft people immediatelybehind, extremelysoft opticalf/1.4 backgroundbokeh, gentlebrightbacklight, realcamera details. No whitegoatee, no oldteacher, no whitebeard, no sharedor duplicatedfaces, nochild, no extra people. No illustration/CGI/plastic/artificialrepeatingtexture. No graphic/oval/mask/feather/vignette/border/padding/textoverlay/logo. WholeNEWgeneration, noedit/crop/composite; sameartifact/context alreadyapproved, only roleidentities/costumes changed.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/references/19-bianqing-kivikellot-accepted-object-v1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:11:21.633935+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-cdb45096-0960-4005-8cc3-ed373f01e9f8.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/19-bianqing-kivikellot-attempt1.png",
+      "nativeSHA256": "6c33b12609e17ac22db2ccb847ca667c46f2abb25de7be81b805e5e22df7c622",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "8ed1bc0cbc6374fc9c45b0bffdd1045a8e3a22f2782831219dab6e0a2840bb27",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.272,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here.",
+        "observations": "PT-correction: musician is now youngadult~28 CLEAN-SHAVEN withleanovalface,maroonceremonialrobe. Listener is adifferent~53clean-shaven man inmutedgreen, distinctface/proportions from musician and originalteacher; no whitegoatee. Both readclearly160px. Original correct bentjadechimeslab/rack/companionstones, scale~27.2%H andstrongbokeh preserved in wholeNEWgeneration.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:20:24.563684+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "personallyInspected160pxFeather": true,
+            "passed": true,
+            "artifactHeightFraction": 0.272,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true,
+            "personCorrectionPassed": true,
+            "noWhiteGoatee": true,
+            "mutualFaceComparison": "19 younglean face vs21 broadrectangular face; no sharedidentity observed visually; full five-way comparison pending",
+            "observations": "PT-correction: musician is now youngadult~28 CLEAN-SHAVEN withleanovalface,maroonceremonialrobe. Listener is adifferent~53clean-shaven man inmutedgreen, distinctface/proportions from musician and originalteacher; no whitegoatee. Both readclearly160px. Original correct bentjadechimeslab/rack/companionstones, scale~27.2%H andstrongbokeh preserved in wholeNEWgeneration."
+          }
+        }
+      ]
+    },
+    {
+      "code": "21-cloisonne",
+      "sourceItemNumber": 21,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:08:51.981110+00:00",
+      "args": {
+        "prompt": "Generate a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086x1448 RGB OPAQUE PNG. REFERENCE is ONLY correct artifact SHAPE/SCALE, exact FRAME COMPOSITION, camera, background, daylight/material style. Create a WHOLE NEW image of same scene, NOT a partial edit. The OLD WHITE-GOATEED TEACHER IDENTITY MUST NOT appear at all: REPLACE every reference person with genuinely new people described below. Keep facepositions/size asreference and important eyes/nose/mouth centrallyprotected for gameellipse; do not enlargepeople orcopyoldfacialidentity. NEW PEOPLE: ONE craftsman age44, CLEAN-SHAVEN with BROAD RECTANGULAR face, strong square jaw, wide flatnose, deep-seteyes and thick horizontal brows, weatheredtanskin, shavedfront+blackqueue, bareheaded. Darkolive workrobe, navy workAPRON, rolled sleeves, not formalblack tutorrobe. SOURCE ACTION AND ARTIFACT: Preserve shallow BLUE CLOISONNE DISH on darkwoodworktable, exact flatshape/lowrim, floralwirecells and naturaltilt. He uses a fine heated metal solderingpoint on a wire with a tinywisp; clearly doingmetalwirecraft, not calligraphy. Keep blue enamel and correctdish unchanged inform andapparentsize. Everyone naturallyhappy, candidsmile, authentic facialskintexture. Sharp mainartifact, mildlysoft people immediatelybehind, extremelysoft opticalf/1.4 backgroundbokeh, gentlebrightbacklight, realcamera details. No whitegoatee, no oldteacher, no whitebeard, no sharedor duplicatedfaces, nochild, no extra people. No illustration/CGI/plastic/artificialrepeatingtexture. No graphic/oval/mask/feather/vignette/border/padding/textoverlay/logo. WholeNEWgeneration, noedit/crop/composite; sameartifact/context alreadyapproved, only roleidentities/costumes changed.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/references/21-cloisonne-accepted-object-v1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:11:21.730501+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-6128c96c-dc6a-48be-8c92-79ef501b9122.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/21-cloisonne-attempt1.png",
+      "nativeSHA256": "721cb106827cd879f40f0ff6a52ca20213cad3f0f5af6045b69cf637725db4de",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "4c48bdd5f51b749bf487e0369fadbd4261a0e6b861c6e91d04ad7ef7ca5f7bad",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.195,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here.",
+        "observations": "PT-correction: broadrectangular clean-shaven middleaged~44craftsman, bareheadedshavedfront+blackqueue,navyworkapron/oliveworkrobe androlledsleeves, no whitebeard or teachercap. Newhead/body visuallydistinct fromB19 and originalteacher. Shallowbluecloisonnedish/wires,heatedmetalpointwithsmallwisp,sameapprovednaturaltilt/scale~19.5%H preserved in wholeNEWgeneration. Face/dish/action clear160px, f/1.4bokeh anddarktable intact.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:20:26.218231+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "personallyInspected160pxFeather": true,
+            "passed": true,
+            "artifactHeightFraction": 0.195,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true,
+            "personCorrectionPassed": true,
+            "noWhiteGoatee": true,
+            "mutualFaceComparison": "19 younglean face vs21 broadrectangular face; no sharedidentity observed visually; full five-way comparison pending",
+            "observations": "PT-correction: broadrectangular clean-shaven middleaged~44craftsman, bareheadedshavedfront+blackqueue,navyworkapron/oliveworkrobe androlledsleeves, no whitebeard or teachercap. Newhead/body visuallydistinct fromB19 and originalteacher. Shallowbluecloisonnedish/wires,heatedmetalpointwithsmallwisp,sameapprovednaturaltilt/scale~19.5%H preserved in wholeNEWgeneration. Face/dish/action clear160px, f/1.4bokeh anddarktable intact."
+          }
+        }
+      ]
+    },
+    {
+      "code": "23-zun-malja",
+      "sourceItemNumber": 23,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:12:19.916194+00:00",
+      "args": {
+        "prompt": "Generate a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086x1448 RGB OPAQUE PNG. REFERENCE is ONLY correct artifact SHAPE/SCALE, exact FRAME COMPOSITION, camera, background, daylight/material style. Create a WHOLE NEW image of same scene, NOT a partial edit. The OLD WHITE-GOATEED TEACHER IDENTITY MUST NOT appear at all: REPLACE every reference person with genuinely new people described below. Keep facepositions/size asreference and important eyes/nose/mouth centrallyprotected for gameellipse; do not enlargepeople orcopyoldfacialidentity. NEW PEOPLE: Main steward age46, clearly ROUND FULL face with soft fullcheeks, smallchin, wide-seteyes, clean-shaven, blackhair shavedfront+queue, lightwarmnaturalskin; BLUE Qing OFFICIAL ROBE roundcollar rightbutton and appropriateblackofficialcap. Listener is a DIFFERENT official age34 with slimheartshapedface, largeears, archedbrows, slendernose, clean-shaven, mutedochreceremonialrobe; not a twin of steward and not the oldteacher. SOURCE ACTION AND ARTIFACT: Preserve tall central BRONZE ZUN withflaredtrumpetmouth/narrowwaist/flaredfoot andagedbronzerelief. Steward pours a small clearwinestream fromplainmetalewer INTO itsmouth. Same artifact andformalpalacebackground, otherofficialjoyfullyobserves. Everyone naturallyhappy, candidsmile, authentic facialskintexture. Sharp mainartifact, mildlysoft people immediatelybehind, extremelysoft opticalf/1.4 backgroundbokeh, gentlebrightbacklight, realcamera details. No whitegoatee, no oldteacher, no whitebeard, no sharedor duplicatedfaces, nochild, no extra people. No illustration/CGI/plastic/artificialrepeatingtexture. No graphic/oval/mask/feather/vignette/border/padding/textoverlay/logo. WholeNEWgeneration, noedit/crop/composite; sameartifact/context alreadyapproved, only roleidentities/costumes changed.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/references/23-zun-malja-accepted-object-v1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:14:28.199522+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-46e077ce-ba84-41de-8df2-2d53eab90d37.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/23-zun-malja-attempt1.png",
+      "nativeSHA256": "b1b6b8e4b6af8b133fdfef49ea147aa2d55b8fd0ce3ea6c8dc9a58edaa89fa2d",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "4d881010c06826ff4fef0462cd2e653ea9479b621d632a2cbdbd1f32278c9f0b",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.344,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "observations": "PTpeople correction: clean-shaven middleagedROUNDfullcheekface steward in BLUE officialrobe, distinct youngerleanheartface ochreclothed listener, both different from oldteacher andfromeachother. Naturalhappy expressions clear160px. Correct mainbronzezun~34.4%H, pouringstream entersmouth, frame/light/material preserved in wholeNEWphoto.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here."
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:20:26.554825+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "personallyInspected160pxFeather": true,
+            "passed": true,
+            "artifactHeightFraction": 0.344,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true,
+            "personCorrectionPassed": true,
+            "noWhiteGoatee": true,
+            "observations": "PTpeople correction: clean-shaven middleagedROUNDfullcheekface steward in BLUE officialrobe, distinct youngerleanheartface ochreclothed listener, both different from oldteacher andfromeachother. Naturalhappy expressions clear160px. Correct mainbronzezun~34.4%H, pouringstream entersmouth, frame/light/material preserved in wholeNEWphoto."
+          }
+        }
+      ]
+    },
+    {
+      "code": "24-pronssikurki",
+      "sourceItemNumber": 24,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:12:20.091341+00:00",
+      "args": {
+        "prompt": "Generate a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086x1448 RGB OPAQUE PNG. REFERENCE is ONLY correct artifact SHAPE/SCALE, exact FRAME COMPOSITION, camera, background, daylight/material style. Create a WHOLE NEW image of same scene, NOT a partial edit. The OLD WHITE-GOATEED TEACHER IDENTITY MUST NOT appear at all: REPLACE every reference person with genuinely new people described below. Keep facepositions/size asreference and important eyes/nose/mouth centrallyprotected for gameellipse; do not enlargepeople orcopyoldfacialidentity. NEW PEOPLE: ONE young gardener age25, CLEAN-SHAVEN, youthful SHORT BROAD face with roundedjaw, straighthorizontalbrows, smallbroadnose, smoothmediumwarmskin, blackhair shavedFRONT+queue, no grayhair. SIMPLE BLUEGREY cotton workrobe, plainrolledcuffs, no richsilkbrocade, bareheaded so blackqueue visible. SOURCE ACTION AND ARTIFACT: Preserve exact sharp complete actualTaihe BRONZE CRANE withlongslimneck/upslantedbeak,foldedwings,pointedtail,twolegs on pale marblelotuspedestal. Same sunnySPRING softpinkwhiteblossoms andterracebokeh, sameartifactsize (~36%H), sameframing; younggardeneradmiresit. Everyone naturallyhappy, candidsmile, authentic facialskintexture. Sharp mainartifact, mildlysoft people immediatelybehind, extremelysoft opticalf/1.4 backgroundbokeh, gentlebrightbacklight, realcamera details. No whitegoatee, no oldteacher, no whitebeard, no sharedor duplicatedfaces, nochild, no extra people. No illustration/CGI/plastic/artificialrepeatingtexture. No graphic/oval/mask/feather/vignette/border/padding/textoverlay/logo. WholeNEWgeneration, noedit/crop/composite; sameartifact/context alreadyapproved, only roleidentities/costumes changed.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/references/24-pronssikurki-accepted-object-v1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:14:28.291053+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-dc589f50-4a42-4f64-9d65-68dba5ac1ce4.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/24-pronssikurki-attempt1.png",
+      "nativeSHA256": "1dcc2d371ec60f5aacf93dfd76718be1367be921672be9606c4783452e54ce1b",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "ca969f124943513c6ec9fb3157da2e7622a6d38b14ad7943f1520316f70e388e",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": false,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "historicalHairPassed": false,
+        "noWhiteGoatee": true,
+        "observations": "Correct young~25 clean-shaven newgardener face, workrobe and approvedartifact/composition, but MODERN slicked-back top/undercut hair remains rather than Qing shavedFRONT+queue. Whole new retry authorized by concretehistoricalcostume flaw; preserve this candidate."
+      }
+    },
+    {
+      "code": "24-pronssikurki",
+      "sourceItemNumber": 24,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T12:15:52.587456+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW photorealistic COLOR photo1086x1448 RGBopaque. Reference is correct youthful gardener FACE IDENTITY age25, no beard, correct bronzeCRANEartifact, frame, springblossombokeh, naturaldaylight. Preserve this SAME young SHORT BROAD face and happyexpression, same facescale/position, same completeTaihebronzecrane~36%photoheight on marblelotusplinth, no additionalpeople. CRITICAL historicalcostume correction: NO MODERN slickedback/topheadhair, no undercut hairstyle. Young Qing worker wears a plain LOW INDIGO CLOTH WORK CAP without ornament orredknob, high SHAVED FRONT FOREHEAD clearlyvisible belowcap, one long BLACK QUEUE braid hangingbehind. Simple BLUEGREY COTTON workrobe with ROUND collar, RIGHT-sidebuttons, rolledplaincuffs, no crossedHanrobe and no modern shirt. Do not copy originaloldteacher identity: young25 smoothskin, roundedshortjaw andbroadnose asreference, no grayhair orwhitebeard. Artifactexactshape/scaleunchanged: longslimneck/upslantedbeak/foldedwings/pointedtail/twolegs, sharpdarkagedbronze on lotusmarble. Same brightSPRING and extremelysoft opticalf/1.4 blossomterracebokeh, natural skin/materialtexture. Wholephoto newlygenerated, no partialedit/crop/padding/composite/graphic/ellipse/feather/vignette/text.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/24-pronssikurki-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:17:28.177124+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-751dec54-ce34-481b-b291-c492e41c60c3.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/24-pronssikurki-attempt2.png",
+      "nativeSHA256": "65f03e9c9d42971a64939e352e192327c2fc2aa77d34ebf6bead81d84eda8d67",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "213fea5d62e58102a0502f66eb84134450c8e932aa74685ade86745b783d11a5",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.359,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "historicalHairPassed": true,
+        "observations": "PTpeople correction: young~25 clean-shaven gardener, youthfulshortbroadface, plain lowindigoworkcap, visible shavedfront andblackqueue; bluegrey roundcollar/rightbutton cottonworkrobe/rolledcuffs. Modern slickedbackhair error of a1 removed in WHOLE NEW a2. Correct fullTaihebronzecrane~35.9%H, same spring/light/frame. Face andwholebronze legible160px.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here."
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:20:26.612957+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "personallyInspected160pxFeather": true,
+            "passed": true,
+            "artifactHeightFraction": 0.359,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true,
+            "personCorrectionPassed": true,
+            "noWhiteGoatee": true,
+            "historicalHairPassed": true,
+            "observations": "PTpeople correction: young~25 clean-shaven gardener, youthfulshortbroadface, plain lowindigoworkcap, visible shavedfront andblackqueue; bluegrey roundcollar/rightbutton cottonworkrobe/rolledcuffs. Modern slickedbackhair error of a1 removed in WHOLE NEW a2. Correct fullTaihebronzecrane~35.9%H, same spring/light/frame. Face andwholebronze legible160px."
+          }
+        }
+      ]
+    },
+    {
+      "code": "25-pronssikilpikonna",
+      "sourceItemNumber": 25,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:15:52.355712+00:00",
+      "args": {
+        "prompt": "Generate a COMPLETELY NEW photorealistic COLOR CAMERA PHOTOGRAPH,1086x1448 RGB OPAQUE PNG. REFERENCE is ONLY correct artifact SHAPE/SCALE, exact FRAME COMPOSITION, camera, background, daylight/material style. Create a WHOLE NEW image of same scene, NOT a partial edit. The OLD WHITE-GOATEED TEACHER IDENTITY MUST NOT appear at all: REPLACE every reference person with genuinely new people described below. Keep facepositions/size asreference and important eyes/nose/mouth centrallyprotected for gameellipse; do not enlargepeople orcopyoldfacialidentity. NEW PEOPLE: ONE caretaker age52, BUSHY DARK BLACK MOUSTACHE, clean-shavenCHIN, no beard, stockybroadjawface, heavyroundedbrows, deepwarmbrown eyes, ruddywinterweatheredskin, blackhair shavedfront+queue. THICK charcoalpadded quilted Qing WINTERCOAT with rightbutton fastenings, plainbrown FUR-EDGED wintercap, no blackteacherrobe/whitegoatee. SOURCE ACTION AND ARTIFACT: Preserve exact sharp actualTaihe DRAGONHEADED bronze TORTOISE withopenmouthhorns/mane,raisedscaledneck,domedengravedcarapace,4claws,flameadornments, marblelotusbase, NO stele. Same brightWINTERsnow/redlanternstrongbokeh, artifact~32.5%H, samecloseframing. Caretakerproudlypresentsit. Everyone naturallyhappy, candidsmile, authentic facialskintexture. Sharp mainartifact, mildlysoft people immediatelybehind, extremelysoft opticalf/1.4 backgroundbokeh, gentlebrightbacklight, realcamera details. No whitegoatee, no oldteacher, no whitebeard, no sharedor duplicatedfaces, nochild, no extra people. No illustration/CGI/plastic/artificialrepeatingtexture. No graphic/oval/mask/feather/vignette/border/padding/textoverlay/logo. WholeNEWgeneration, noedit/crop/composite; sameartifact/context alreadyapproved, only roleidentities/costumes changed.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/references/25-pronssikilpikonna-accepted-object-v1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:17:28.101660+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-3a70330e-5dbd-47e7-8457-a4d057dcca28.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/25-pronssikilpikonna-attempt1.png",
+      "nativeSHA256": "50b0822b4adf5b36c42be714ed9e4b4d8a733b96a06017e2f92d66a6e178e297",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "bdd8d8045bcfae510f28eb1fd14b28bc21aa73f18a1007cf70a027d3b36fa86f",
+      "technicalPass": true,
+      "nativeRequestedDimensions": false,
+      "nativeOriginalPreserved": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/assets/25-pronssikilpikonna/attempt-1/technical-size-export.png",
+      "deliveryDimensions": [
+        1086,
+        1448
+      ],
+      "technicalExport": {
+        "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+        "inputSHA256": "50b0822b4adf5b36c42be714ed9e4b4d8a733b96a06017e2f92d66a6e178e297",
+        "outputSHA256": "55bdec7ad01d87d090c532e2709b8e6b7ba172086d044602809932de523c9166",
+        "pixelSHA256": "ff99c6c7721ac5f37dd853706aee07f6c218f03ea16709541e2806c25c466c92",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false
+      },
+      "qa": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.325,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "historicalHairPassed": true,
+        "observations": "PTpeople correction: middleaged~52caretaker with BUSHY DARK moustache, cleanchin, roundedheavybrows andruddyweatheredface, thickpaddedcharcoalwintercoat/furcuffs and brownfuredgedcap. No whitegoatee or oldteacheridentity. Correct dragonheadedTaihebronzetortoise~32.5%H, snow/lanternbokeh andframe intact inwholeNEWphoto. Face/darkmoustache andbronzehead/body/feet legible160px. Native1px sizeexport disclosed,original preserved.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here."
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:20:26.661333+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "personallyInspected160pxFeather": true,
+            "passed": true,
+            "artifactHeightFraction": 0.325,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true,
+            "personCorrectionPassed": true,
+            "noWhiteGoatee": true,
+            "historicalHairPassed": true,
+            "observations": "PTpeople correction: middleaged~52caretaker with BUSHY DARK moustache, cleanchin, roundedheavybrows andruddyweatheredface, thickpaddedcharcoalwintercoat/furcuffs and brownfuredgedcap. No whitegoatee or oldteacheridentity. Correct dragonheadedTaihebronzetortoise~32.5%H, snow/lanternbokeh andframe intact inwholeNEWphoto. Face/darkmoustache andbronzehead/body/feet legible160px. Native1px sizeexport disclosed,original preserved."
+          }
+        }
+      ]
+    }
+  ]
+}

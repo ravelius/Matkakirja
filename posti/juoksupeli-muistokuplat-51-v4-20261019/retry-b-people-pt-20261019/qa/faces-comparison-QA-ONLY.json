@@ -1,0 +1,119 @@
+{
+  "qaOnlyNotProduction": true,
+  "entries": [
+    {
+      "label": "19-main",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/19-bianqing-kivikellot.png",
+      "sourceSHA256": "6c33b12609e17ac22db2ccb847ca667c46f2abb25de7be81b805e5e22df7c622",
+      "cropBoxQAOnly": [
+        320,
+        395,
+        525,
+        615
+      ]
+    },
+    {
+      "label": "21-main",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/21-cloisonne.png",
+      "sourceSHA256": "721cb106827cd879f40f0ff6a52ca20213cad3f0f5af6045b69cf637725db4de",
+      "cropBoxQAOnly": [
+        355,
+        390,
+        610,
+        650
+      ]
+    },
+    {
+      "label": "23-main",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/23-zun-malja.png",
+      "sourceSHA256": "b1b6b8e4b6af8b133fdfef49ea147aa2d55b8fd0ce3ea6c8dc9a58edaa89fa2d",
+      "cropBoxQAOnly": [
+        330,
+        410,
+        550,
+        635
+      ]
+    },
+    {
+      "label": "24-main",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/24-pronssikurki.png",
+      "sourceSHA256": "65f03e9c9d42971a64939e352e192327c2fc2aa77d34ebf6bead81d84eda8d67",
+      "cropBoxQAOnly": [
+        255,
+        445,
+        485,
+        680
+      ]
+    },
+    {
+      "label": "25-main",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/25-pronssikilpikonna.png",
+      "sourceSHA256": "55bdec7ad01d87d090c532e2709b8e6b7ba172086d044602809932de523c9166",
+      "cropBoxQAOnly": [
+        330,
+        355,
+        575,
+        600
+      ]
+    },
+    {
+      "label": "19-listener",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/19-bianqing-kivikellot.png",
+      "sourceSHA256": "6c33b12609e17ac22db2ccb847ca667c46f2abb25de7be81b805e5e22df7c622",
+      "cropBoxQAOnly": [
+        685,
+        440,
+        855,
+        645
+      ]
+    },
+    {
+      "label": "23-listener",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/23-zun-malja.png",
+      "sourceSHA256": "b1b6b8e4b6af8b133fdfef49ea147aa2d55b8fd0ce3ea6c8dc9a58edaa89fa2d",
+      "cropBoxQAOnly": [
+        735,
+        485,
+        915,
+        690
+      ]
+    },
+    {
+      "label": "OLD14-envoy",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-b-13to25/delivery-packet/14-ruyi-valtikka.png",
+      "sourceSHA256": "18eca0fc8ce554111137e23957f4d3465905683a2cc294ec22a14a62e6140454",
+      "cropBoxQAOnly": [
+        320,
+        420,
+        515,
+        615
+      ]
+    },
+    {
+      "label": "OLD22-servant",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-b-13to25/delivery-packet/22-ding-astia.png",
+      "sourceSHA256": "68e532b34deaca3dc6fdd6d5b50c87aa2964dedfc0b2018342cfebac5167f74e",
+      "cropBoxQAOnly": [
+        435,
+        415,
+        645,
+        605
+      ]
+    },
+    {
+      "label": "OLD-teacher",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-b-13to25/delivery-packet/19-bianqing-kivikellot.png",
+      "sourceSHA256": "88702f59b2752aee265db3c840b130e5aee7ba9bddc07161c41314e579daf959",
+      "cropBoxQAOnly": [
+        325,
+        405,
+        530,
+        620
+      ]
+    }
+  ],
+  "noProductionImageEdited": true,
+  "personallyInspected": true,
+  "assessment": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here.",
+  "productionImageEditing": false
+}

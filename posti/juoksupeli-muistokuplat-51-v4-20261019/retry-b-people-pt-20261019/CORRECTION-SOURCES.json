@@ -1,0 +1,57 @@
+{
+  "readInFull": [
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-era-a-lahikuvat-kuittaus-20261019.md",
+      "commit": "2be8c22385bdd2e81ee33ae11d207d8f9bf61a17",
+      "blob": "e072f7db801b7c827d13d4a07f386516e3cad048",
+      "sha256": "79778d9e0766da3979c036950d7f2b2ca0625b6b244a8b3bf9c502cec3dd6836",
+      "readInFull": true,
+      "taskNumber": 574
+    },
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-40to51-kuittaus-20261019.md",
+      "commit": "68a0bf6e0a963eb9d2dfc301bd9e59139ebd753c",
+      "blob": "033e9e7d826b0e9d7930a164657c5c4e43fc5200",
+      "sha256": "a865f34e4ee217444cae2ddf4a025897f0b9509126a7dc9442df3aa77ac2b657",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-era-b-kuittaus-20261019.md",
+      "commit": "a6e49cf1712210207011496bb34b9117389e0fd4",
+      "blob": "896db067d4e886e2dd1966dd57568edf84542f9a",
+      "sha256": "940e2b30d911bac08741959cc8191af6adcbfb570c77e48cec40201fdc86bc53",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+      "commit": "43e464bb68b591d5521d6c0eaa1118c265b86497",
+      "blob": "fb4c5d92e6d6e10336296173c8fc667a1789a99f",
+      "sha256": "42977c5a62fc4ce479512fb1f9334ca9e09319370b4ae71d42e3bc051b0e5de2",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-45-49-uusinta-kuittaus-20261019.md",
+      "commit": "a16fef6030e03ed12325be4cf0693fc3b4ad5a4d",
+      "blob": "ce2b39928abc1dec7231395cc23a8d9f7b12faf4",
+      "sha256": "8abd2c26066963a3e41af830b726e512484f2c452116350431034d762b336828",
+      "readInFull": true,
+      "taskNumber": 633
+    }
+  ],
+  "currentNumbers": [
+    19,
+    21,
+    23,
+    24,
+    25
+  ],
+  "wholeNewGeneration": true,
+  "maxSameFace": 2,
+  "namedRecurringExceptions": [
+    "Puyi",
+    "tutor",
+    "wet nurse"
+  ],
+  "currentMirror45RoundOverrideIfApplicable": false,
+  "pastPacketsPreserved": true
+}

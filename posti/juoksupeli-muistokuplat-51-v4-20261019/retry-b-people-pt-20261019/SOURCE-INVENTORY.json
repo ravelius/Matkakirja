@@ -1,0 +1,242 @@
+{
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "canonicalCount": 51,
+  "batchItems": [
+    {
+      "number": 19,
+      "id": "bianqing-kivikellot",
+      "nimi": "Bianqing-kivisoitin",
+      "kuplatyyppi": 5,
+      "kuplatyyppiRaw": "5",
+      "typeLabelFromMarkdown": "juhla/seremonia",
+      "kupla": "Hovin muusikko lyö iloisesti nuijalla ripustettua jadekivilevyä, hymyilevät juhlapukuiset virkamiehet kuuntelevat, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Bianqing on ripustettujen kivilevyjen soitin; Qianlongin aikana niitä tehtiin myös läntisten alueiden jadesta.",
+      "dynastia": "Qing",
+      "vuosi": "1760-luku",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi, 1760-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.bianqing-kivikellot.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.bianqing-kivikellot.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.bianqing-kivikellot.kupla",
+          "teksti": "juoksupeli.rikkoutuva.bianqing-kivikellot.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.bianqing-kivikellot.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.bianqing-kivikellot.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.bianqing-kivikellot.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.bianqing-kivikellot.kupla"
+        },
+        "mdHeading": "### Bianqing-kivisoitin (`bianqing-kivikellot`) — kupla 5: juhla/seremonia",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 21,
+      "id": "cloisonne",
+      "nimi": "Cloisonné-vati",
+      "kuplatyyppi": 6,
+      "kuplatyyppiRaw": "6",
+      "typeLabelFromMarkdown": "työpaja",
+      "kupla": "Innostunut hovin mestari juottaa metallilankoja cloisonné-vadin sinisiin emalilokeroihin vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Cloisonnéssa metallilangat rajaavat emalilokerot. Kangxin hovilla oli jo oma cloisonné-työpaja.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.cloisonne.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.cloisonne.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.cloisonne.kupla",
+          "teksti": "juoksupeli.rikkoutuva.cloisonne.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.cloisonne.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.cloisonne.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.cloisonne.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaaleassa työpajassa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.cloisonne.kupla"
+        },
+        "mdHeading": "### Cloisonné-vati (`cloisonne`) — kupla 6: työpaja",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 23,
+      "id": "zun-malja",
+      "nimi": "Pronssinen zun-malja",
+      "kuplatyyppi": 5,
+      "kuplatyyppiRaw": "5",
+      "typeLabelFromMarkdown": "juhla/seremonia",
+      "kupla": "Hymyilevä hovimestari kaataa viiniä pronssiseen zun-maljaan, riemastuneet juhlapukuiset virkamiehet seuraavat, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Zun on korkea viini- ja uhrimalja; Qianlongin hovi luetteloi muinaispronssit teokseen Xiqing gujian.",
+      "dynastia": "Shang ja Zhou",
+      "vuosi": "n. 1600–256 eaa.",
+      "ajoitus": "Shang- ja Zhou-dynastiat, n. 1600–256 eaa.",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.zun-malja.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.zun-malja.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.zun-malja.kupla",
+          "teksti": "juoksupeli.rikkoutuva.zun-malja.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.zun-malja.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.zun-malja.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.zun-malja.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.zun-malja.kupla"
+        },
+        "mdHeading": "### Pronssinen zun-malja (`zun-malja`) — kupla 5: juhla/seremonia",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 24,
+      "id": "pronssikurki",
+      "nimi": "Pronssikurki",
+      "kuplatyyppi": 8,
+      "kuplatyyppiRaw": "8",
+      "typeLabelFromMarkdown": "vuodenaika",
+      "kupla": "Pronssikurki marmoriterassilla kukkivien puiden keskellä, hymyilevä puutarhuri ihailee sitä, aurinkoinen kevät, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Pronssikurkupari seisoo Taihe-salin terassilla; kurki on pitkän iän vertauskuva.",
+      "dynastia": "Qing",
+      "vuosi": "sali 1695–1697",
+      "ajoitus": "Qing-aikainen terassi (sali 1695–1697); valuvuosi tuntematon",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.pronssikurki.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.pronssikurki.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.pronssikurki.kupla",
+          "teksti": "juoksupeli.rikkoutuva.pronssikurki.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.pronssikurki.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.pronssikurki.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.pronssikurki.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "marmoriterassilla kukkivien puiden keskellä"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.pronssikurki.kupla"
+        },
+        "mdHeading": "### Pronssikurki (`pronssikurki`) — kupla 8: vuodenaika",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 25,
+      "id": "pronssikilpikonna",
+      "nimi": "Pronssikilpikonna",
+      "kuplatyyppi": 8,
+      "kuplatyyppiRaw": "8",
+      "typeLabelFromMarkdown": "vuodenaika",
+      "kupla": "Pronssikilpikonna terassilla kirkkaassa lumipäivässä, iloinen vahtimestari esittelee sitä ylpeänä, koristelyhdyt, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Pronssikilpikonnapari seisoo Taihe-salin terassilla ja kuvaa toivetta kestävästä vallasta ja pitkästä iästä.",
+      "dynastia": "Qing",
+      "vuosi": "sali 1695–1697",
+      "ajoitus": "Qing-aikainen terassi (sali 1695–1697); valuvuosi tuntematon",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.pronssikilpikonna.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.pronssikilpikonna.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.pronssikilpikonna.kupla",
+          "teksti": "juoksupeli.rikkoutuva.pronssikilpikonna.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.pronssikilpikonna.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.pronssikilpikonna.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.pronssikilpikonna.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "terassilla kirkkaassa lumipäivässä"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.pronssikilpikonna.kupla"
+        },
+        "mdHeading": "### Pronssikilpikonna (`pronssikilpikonna`) — kupla 8: vuodenaika",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    }
+  ],
+  "orderSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe",
+    "readInFull": true
+  },
+  "sourceTaskNumbers": [
+    564
+  ],
+  "jadeAndVersionOnlyExtrasIncluded": false
+}
