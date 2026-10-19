@@ -102,3 +102,10 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   NS:n juna 204 sisältää juoksupelin; uusi sha PT:lle ja NS:lle. Simuvuoro ~11.05 (JU), app 897ae0f69 = dfae35317.
 - TYÖLISTA (PT 09.5x): HETI Rata v4:n jälkeen JuoksuV4Maailma.cs:n 2 kameran kirjoitusta Kamerajohtajaan (jousiseuranta LS:ltä) → kamerapoikkeukset pois;
   vaatii juoksupeli-202:een Kamerajohtajan (runko 4dfcadcc0 / LS 8d7e1feab, base 2ba609861).
+
+## TILA 10.05 (PT:n odotuserä tehty)
+- UUSI HAARA pelikoodari/juoksupeli-kamera-204 (wt/proto-pelikoodari-juoksupeli-kamera-204) = runko 4dfcadcc0 + juoksupeli 6bf405002, uusin **3da1369de**:
+  5a86ac666 kamera KameraKirjoittaja.Aseta (kamerapoikkeukset pois, kameravahti ok); 3da1369de esteet ankkuri + paikkamalli (EsteMallit, Codexin glb
+  vaihtuu itsestään), Puyin hang_grab/hang_loop, yleishuuto.1–30 tyhjinä. tarkista.sh rc 0, 629/629. JUNAAN VASTA SIMUN JÄLKEEN (PT → NS).
+- Codexin mallisopimus: proto-3d/_tyo/pelikoodari/juoksupeli/ESTEMALLIT-CODEXILLE.md (PT välittää).
+- Jatkotyö tähän haaraan (juoksupeli-202 = videohaara, app 897ae0f69 = dfae35317). Simu ~11.05 → videot PT:lle.
