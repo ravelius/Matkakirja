@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-19T09:12:04.376254+00:00",
+  "personallyInspectedNative": true,
+  "previewPersonallyInspected": true,
+  "deliveryFormatPass": true,
+  "deliveryDimensions": [
+    1086,
+    1448
+  ],
+  "decodedAlpha": [
+    255,
+    255
+  ],
+  "exactSurveyedGeometryVerified": false,
+  "historicalFinalReviewPending": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "assets": {
+    "01-posliinimaljakko-v4": {
+      "personallyInspectedNative": true,
+      "technicalSizePass": true,
+      "opaquePass": true,
+      "compositionPass": true,
+      "wholeNewGenerationNeeded": false,
+      "findings": "Qing roundcollar/rightclosure + blackmagua, roundcapswithredteacher/goldchildknobs, queues; darkhardwood. Sharp mainartifact, softlyfocusedpeople,strongpalacebokeh,clearbacklit edges. Mainheadwear andartifactabout20percentinsideframe. Lesson onlybrushpot/brushes/threadboundbook/inkstone;no map,pointerorvase.",
+      "historicalFinalReviewPending": true,
+      "actualGameMaskTested": false
+    },
+    "02-cloisonne-v4": {
+      "personallyInspectedNative": true,
+      "technicalSizePass": true,
+      "opaquePass": true,
+      "compositionPass": true,
+      "wholeNewGenerationNeeded": false,
+      "findings": "Full shallow upright cloisonne plate, no bowl. Liangbatou grayhair/courtrobe, boycap/queue,darktable,verysoftpalacebokeh,thinbrightbacklight. Allheadwearbelow29percent;mainface/plate/handscentral;platearound27-30percentheight,lowerendofrequestedscale. PeriodwardrobeandplacefinalassessmentremainsPT/KK.",
+      "historicalFinalReviewPending": true,
+      "actualGameMaskTested": false
+    },
+    "tyyppi2-sali-v4": {
+      "personallyInspectedNative": true,
+      "technicalSizePass": true,
+      "opaquePass": true,
+      "compositionPass": true,
+      "wholeNewGenerationNeeded": false,
+      "findings": "Vase on carved stand ON dark hardwood console beside folding screen, not on floor. Main vase/stand central; strong shallow optical background and mild golden rim. Vase near40-43percentheight, a little above earlier30-40target; actor-free. Reconstructed room/placement awaits PT/KK.",
+      "exactHistoricalPlacementVerified": false,
+      "ownerAccepted": false,
+      "recipientAccepted": false
+    },
+    "tyyppi3-oppitunti-v4": {
+      "personallyInspectedNative": true,
+      "technicalSizePass": true,
+      "opaquePass": true,
+      "compositionPass": true,
+      "wholeNewGenerationNeeded": false,
+      "findings": "Qing roundcollar/rightclosure + blackmagua, roundcapswithredteacher/goldchildknobs, queues; darkhardwood. Sharp mainartifact, softlyfocusedpeople,strongpalacebokeh,clearbacklit edges. Mainheadwear andartifactabout20percentinsideframe. Lesson onlybrushpot/brushes/threadboundbook/inkstone;no map,pointerorvase.",
+      "historicalFinalReviewPending": true,
+      "actualGameMaskTested": false
+    }
+  }
+}

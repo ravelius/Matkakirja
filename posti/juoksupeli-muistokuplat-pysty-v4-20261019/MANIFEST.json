@@ -1,0 +1,71 @@
+{
+  "at": "2026-10-19T09:12:04.456514+00:00",
+  "selectedCreativeImages": 4,
+  "files": [
+    {
+      "path": "01-posliinimaljakko-v4.png",
+      "bytes": 1956931,
+      "sha256": "82e69d78d18bdc1f42cad06c4b2b90263719bdfbf8c6daef0eb4811016e540e8"
+    },
+    {
+      "path": "02-cloisonne-v4.png",
+      "bytes": 2113743,
+      "sha256": "168f15238f4ae1a9636860764e9f297d1bf2e2b9e70f4ef2976fefe0ef73bdb3"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 50970,
+      "sha256": "8ff62bfeb99447ab2af87e59d6e008b445eb25561f2d6eae6bc5bc615c8fbaf7"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 28229,
+      "sha256": "f72c62d51f37e713b3fde99713d69c39ba193ecacdb740b8e170accc313c9e26"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2200,
+      "sha256": "82ec021964dda4795523f5d2ec38241e7b1aa645d949d361841744b0b78ac387"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 2927,
+      "sha256": "f28f67a13037bccf3a9c7a12e86149e515a8a64e04b3d1bdf14dae9835b75bc5"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 768,
+      "sha256": "c9a944da2297a5e7a7a30c9d7e64002e1be6f1470ba1328bc494a63dee9db052"
+    },
+    {
+      "path": "qa/160px-pystysoikio.png",
+      "bytes": 666015,
+      "sha256": "564130446e71d12463350f10fc6c741f7393e9832679536bc94dd6b2a15d9205"
+    },
+    {
+      "path": "qa/preview-specification.json",
+      "bytes": 240,
+      "sha256": "1e106fb4ed36d8a09bb4b5d98596c0ccd6b7bb89509f280460004195d9c56f28"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v3-kuittaus-20261019.md",
+      "bytes": 1266,
+      "sha256": "4c697d0da0b2b2bda596e8894972d44976d40e19f728b076111de1d243a42e02"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v4-lisays-20261019.md",
+      "bytes": 1752,
+      "sha256": "fb6e7204f654b4546d65c76830fec508d6e1eeb0dff1f261a3fd4e668dc8977f"
+    },
+    {
+      "path": "tyyppi2-sali-v4.png",
+      "bytes": 1988904,
+      "sha256": "53f295e0b248312cf02b5235d735bb2546302493a918afc426ba054d163113ed"
+    },
+    {
+      "path": "tyyppi3-oppitunti-v4.png",
+      "bytes": 1947921,
+      "sha256": "f68c5ff545d74c172a47c052f1059fe9c290af37a08056601242f3e1c3434bd9"
+    }
+  ]
+}

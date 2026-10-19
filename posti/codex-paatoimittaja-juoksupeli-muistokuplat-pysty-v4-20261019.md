@@ -1,0 +1,15 @@
+# Codex → Päätoimittaja: Muistokuplat v4
+
+Toimitetaan 4 uutta havainnekuvaa tarkistukseen, koko 1086×1448, RGB PNG, täysin peittäviä suorakaiteita. Sisäinen image_gen: 9 kokonaista generointia, 4 valittua kuvaa.
+
+Kansio posti/juoksupeli-muistokuplat-pysty-v4-20261019/ . Mukana QA, esikatselu, lähteet, kaikki todelliset generointiohjeet sekä tiedostojen tiivisteet.
+
+# Muistokuplat v4 — tarkastus ja rajaus
+Samat neljä aihetta #519–522, Keskustelukanavan lisäys #523 sovellettu ennen ensimmäistä generointia. Lisäys voittaa aiemman opettajan koristeettoman lakin ja kartan korvausohjeen. Sisäinen image_gen: yhdeksän kokonaista generointia, neljä valittua ja viisi säilytettyä muuta ehdokasta. V3 ja sen toimitushistoria säilyvät.
+Kaikki valitut ovat 1086×1448 RGB PNG -suorakaiteita, täysin peittäviä. Kuvien sisältöä ei rajattu, skaalattu, retusoitu tai osittain muokattu; vain tekstimuotoinen PNG-metadata lisättiin. Soikio on erillinen 160 px diagnostinen esikatselu.
+Korjaukset: esine terävä, ihmiset lievästi pehmeät, sali selvästi sumeana ja valoisana, hiusten/esineiden reunoilla erottuva kevyt vastavalo. Tummat Qing-kovapuupöydät. Opettajalla pyöreäkauluksinen changpao/musta magua, musta guapimao punanupilla ja palmikko. Pojalla keltainen asu, musta kalottilakki kultanupilla sekä palmikko. Äidillä mantšukaapu ja liangbatou. Oppitunnissa sivellinastia/siveltimet, lankasidottu kirja ja mustekivi; ei karttaa, karttakeppiä tai maljakkoa. Salissa maljakko jalustalla pöydän päällä sermin vieressä.
+Kokonaisten alkuperäisten henkilö- ja esinemuodot on katsottu. Pääosien reunavarat arvioidaan silmämääräisesti; täsmällistä segmentointimittausta ei väitetä. Vaatteiden ja toissijaisten pöytäesineiden reunoja voi olla keskiruudun ulkopuolella. 02:n lautanen on kokotavoitteen pienemmässä päässä, arviolta noin 27–30 prosenttia kuvan korkeudesta. Salin maljakko on hieman isompi, noin 40 prosenttia. Nämä arviot eivät ole pikselisegmentointituloksia.
+Hahmot ovat keksittyjä roolihahmoja, eivät todellisten ihmisten muotokuvia. Pojan asu/lakki/palmikko toistuvat; kuvien kasvoja ei ole teknisesti identiteettilukittu. Yuqing-opetustilan ja Qianqing-tyylisen salin lavastus ei ole dokumentoitu esinesijoittelun rekonstruktio. Päätoimittaja ja Keskustelukanava tarkistavat paikat ja asut ennen omistajaa. Omistajahyväksyntä, pelin oikea soikio/runtime, integraatio ja julkaisu ovat avoimia.
+Laajaa 51 esineen sarjaa ei aloitettu. Ei Tripo-työtä eikä peli-, merge- tai julkaisutoimia.
+
+Tämä ei ole vastaanottajan tai omistajan hyväksyntä eikä peli-integraatio/julkaisu.

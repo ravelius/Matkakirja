@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-v3-kuittaus-20261019.md",
+      "commit": "bdb9681eaaedf38c51203ebc62c7229b7970c511",
+      "blob": "dc8647ae93321bf587f657ad485626c8d27fb751",
+      "sha256": "4c697d0da0b2b2bda596e8894972d44976d40e19f728b076111de1d243a42e02",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-v4-lisays-20261019.md",
+      "commit": "c9cdc4961d9d55b23ffb270a51a0b5b4e8d19d6e",
+      "blob": "6c1f3f0f9294fea5a5b7c45abbb85c8bf112e793",
+      "sha256": "fb6e7204f654b4546d65c76830fec508d6e1eeb0dff1f261a3fd4e668dc8977f",
+      "readInFull": true
+    }
+  ],
+  "receivedAt": "2026-10-19T08:39:08.108789+00:00",
+  "sourcePriority": "v4 addition overrides v3 receipt"
+}
