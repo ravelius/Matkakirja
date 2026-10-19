@@ -3,7 +3,7 @@
 Menetelmä (Raamattu 5.27): ammattikirjastojen (Soundly Pro, Sonniss) valmiit kokonaiset tiedostot; Gemini 3.1 Pro kuuntelee sokkona (kertaäänet 1 kuuntelu, silmukat 3, ≥ 2/3). Ei generointia. Soundly-raakatiedostot NAS:lla, `soundly-saapuvat` tyhjä.
 
 ## Viedyt paketit (media.matkakirja.app)
-- `juoksupeli/aanet-v2/` — 49 tiedostoa: 44 kertaääntä (mono mp3 192k, huippu −3 dBFS, tarvekohtainen kovuuden tasaus), tuuli- ja sirkkasilmukka, pallokierroksen 3 maisemaa (taverna, Thames, Moldava, Praha vanhakaupunki = 4 kpl `maisema/`) + manifest. Ääniportti läpi (varoituksia 4, hylättyjä 0). Yksi Gemini-hyväksytty portti (19,9 s) jätetty pois kovuuden vuoksi.
+- `juoksupeli/aanet-v2/` — 48 ääntä + manifest: 42 kertaääntä (mono mp3 192k, huippu −3 dBFS, tarvekohtainen kovuuden tasaus), tuuli- ja sirkkasilmukka, pallokierroksen 4 maisemaa (`maisema/`: taverna, Thames, Moldava, Praha vanhakaupunki) + manifest. Ääniportti läpi (varoituksia 4, hylättyjä 0). Yksi Gemini-hyväksytty portti (19,9 s) jätetty pois kovuuden vuoksi.
 - `juoksupeli/aanet-v2-1/maisema/lontoo-katu.mp3` — Lontoon kadun silmukka (Sonniss, 2/3).
 - Viisi pallokierroksen maisemaa kaikki Gemini-hyväksytty; Moldava ja Thames samasta tiedostosta (Lachine-kanava, Kanada, ikkunat limittyvät osin), Praha vanhakaupunki on Pohjois-Italiasta.
 
