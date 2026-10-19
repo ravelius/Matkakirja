@@ -305,9 +305,9 @@ export const NORTHAMERICA = {
       star: {
         name: 'Montezuman turkoosinaamio',
         fakta: 'Atsteekit tekivät turkoosikivistä mosaiikkinaamioita. '
-          + 'Kun espanjalaiset pakenivat Tenochtitlanista ’surullisena '
-          + 'yönä’ 1520, osa Montezuman aarteesta katosi — sitä '
-          + 'etsitään yhä.',
+          + 'Kun espanjalaiset pakenivat atsteekkien Tenochtitlan-kaupungista '
+          + '1520 (“surullinen yö”), osa Montezuman aarteesta katosi. '
+          + 'Sitä etsitään yhä.',
         kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
       },
       mannerAarre: {
