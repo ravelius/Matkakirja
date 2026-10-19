@@ -5,6 +5,8 @@ Tee jatkossa kaikki tripo mallit pyytämällä ne codexilta." Codex tekee uudet 
 viimeistelee. Muoto on koottu juoksupelin hahmo- ja maailmatoimitusten (18.–19.10.) ja omien mallien vientiportin opeista. Jos tämä ja
 Raamattu ovat ristiriidassa, Raamattu voittaa. Pohjan muutokset hyväksyy PT.)*
 
+**Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva tilauksen liitteenä; vastaanotossa havainnekuva ja pelikuva täysikokoisina rinnakkain (9.11). Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
+
 **Portti:** `node tools/codex-3d-tarkistus.mjs <toimituskansio>` — paluuarvo 0 = vastaanotettu, 1 = hylätty (VIRHE-rivit
 kertovat syyn). HUOM-rivit ovat tiedoksi eivätkä hylkää. Codex voi ajaa saman komennon itse ennen toimitusta.
 Kaikki alla oleva, jonka perässä on **[portti]**, tarkistetaan koneellisesti; muut kohdat tarkistaa vastaanottaja.

@@ -5,6 +5,8 @@ vain nykyisten ohjeiden ja luovutusten opit (Lontoo, Praha, Ateena; Tukholma ja 
 Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muut osat
 täydentävät tekijänsä otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+**Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: KAMERA viitevideo tai kuvakäsikirjoitus lennosta ja pysähdyksistä ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
+
 Kuumailmapallokierros = kaupungin valmis esittelylento: pallo laskeutuu avaukseen, pysähtyy kahdeksalla kohteella, lentää
 niiden välillä ja päättää kierroksen loppuun; kertoja William kertoo ja historiaosiot kuuluvat reitin varrelle. Kierroksen
 päätteeksi Pulu kutsuu vapaaseen lentoon. Pohja kattaa sisällön ja sen tarkistuksen; lennon, kameran, kaupungin 3D:n ja
