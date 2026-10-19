@@ -65,6 +65,9 @@ vastaanotossa (älä toimita KTX2:ta).
 - Toimitus postilaatikkoon (`posti/codex-<vastaanottaja>-<aihe>-<pvm>.md`: polku tai zip ja zipin SHA-256), kuten tähänkin asti.
 - Manifesti `SHA256SUMS` tai `SHA256SUMS.txt`. Tiedosto, joka puuttuu listasta tai jonka tiiviste ei täsmää, hylätään.
 - Uusi versio = uusi kansio (`-v3`); vanhaa ei ylikirjoiteta.
+- Erilliset kuvat (havainne- ja referenssikuvat, tekstuurit; Työkaluseppä 19.10.): PNG tai JPEG, listassa ja tiiviste täsmää
+  (paitsi `esikatselu/`) **[portti]**; `tekstuurit/`-kansion kuvat kahden potenssi ja ≤ 2048 px **[portti]**. Pelkät kuvat
+  sisältävä toimitus kelpaa. LAHTEET.md puuttuu = HUOM **[portti]**. Koko putki ennen junaa: `tuotantoputken-tarkistukset.md`.
 
 ## 6. Vastaanotto (Linnanrakentaja)
 
