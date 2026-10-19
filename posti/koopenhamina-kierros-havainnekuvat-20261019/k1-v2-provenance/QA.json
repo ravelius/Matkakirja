@@ -1,0 +1,28 @@
+{
+  "personallyInspectedNative": true,
+  "personallyInspectedDiagnostic": true,
+  "RGB": true,
+  "opaque": true,
+  "newWholeImageCalls": 1,
+  "sourceHardCapObserved": true,
+  "visibleGoldExternalHelix": true,
+  "continuousDarkTaperedCore": true,
+  "fourAscendingFrontFlightsVisible": true,
+  "sphereChristBannerVisible": true,
+  "brickClockBaseVisible": true,
+  "limitations": [
+    "Individual tread count is not resolvable at native canal-view size; do not claim all400 steps counted.",
+    "Hidden rear runs and exact complete circulation/winding are not independently surveyed from this single view.",
+    "Interpreted photographic illustration, not a measured architectural record."
+  ],
+  "reviewScope": "Visible helical geometry improved; final architectural acceptance belongs to PT.",
+  "delivery": [
+    1920,
+    1080
+  ],
+  "native": [
+    1672,
+    941
+  ],
+  "technicalExport": "Whole frame sips resampling only; no crop, padding, semantic edit; native preserved."
+}

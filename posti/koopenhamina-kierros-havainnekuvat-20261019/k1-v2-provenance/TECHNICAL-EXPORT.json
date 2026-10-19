@@ -1,0 +1,18 @@
+{
+  "nativeSHA256": "d6aae3941c2ba88c018a1ff3dd710acdc1bfffa5fe4d3b0ca94aeafc59c1904b",
+  "unscaledMetadataPNG_SHA256": "46dce60e8372d872d9d8e1ba2d02f3bbb89e6005140a3eaa51af342b614e50eb",
+  "deliverySHA256": "2aff06d4bdd9b478ef89cacd90ed311f0c57946ea6c7187f0c5283a530902864",
+  "native": [
+    1672,
+    941
+  ],
+  "delivery": [
+    1920,
+    1080
+  ],
+  "method": "sips --resampleHeightWidth 1080 1920",
+  "crop": false,
+  "padding": false,
+  "semanticEdit": false,
+  "nativeOriginalPreserved": true
+}

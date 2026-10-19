@@ -1,0 +1,167 @@
+{
+  "family": "Copenhagen-k1-v2-single-correction",
+  "intakeKey": "copenhagenK1Correction534",
+  "productionRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-k1-v2-20261019",
+  "mirror": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-k1-v2-20261019",
+  "receivedAt": "2026-10-19T09:38:32.021186+00:00",
+  "startedAt": "2026-10-19T09:38:32.021186+00:00",
+  "taskNumbers": [
+    534
+  ],
+  "hardGenerationCallCap": 1,
+  "status": "single-authorized-correction-ready",
+  "productionActive": false,
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-koopenhamina-k1-k8-kuittaus-20261019.md",
+      "commit": "b1389d1868ff92728701a08da7c29ee6c41c376d",
+      "blob": "ae245c855fba06a0764f2bc49136cbc0af625bdb",
+      "sha256": "049b8d333d828a2749b3656312d25760e817d91f32af6654bed7b2fb4131feb1",
+      "readInFull": true
+    }
+  ],
+  "assets": {
+    "k1-v2": {
+      "code": "k1-v2",
+      "taskNumber": 534,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "QA-reviewed-single-variant-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:46:30.327848+00:00",
+          "args": {
+            "prompt": "Use case: architectural illustration, photorealistic contemporary travel photograph. Generate an ENTIRELY NEW whole photographic scene, landscape16:9 requested1920x1080. Reference1 is a real photograph of Copenhagen Church of Our Saviour spire and is the PRIMARY authoritative guide to its exact unusual architecture. Reference2 is a previous illustrated canal composition ONLY: preserve a similar Christianshavn canal/boats/summer trees framing, but replace the previous wrongly tiered spire with the authentic geometry of reference1. Do not partially edit, crop, or paste either reference. Full new image.\nCRITICAL SPIRE: one CONTINUOUS black/dark copper tapered octagonal conical HELMET with a real EXTERNAL HELICAL STAIRCASE spiralling FOUR TIMES around it. The gold balustrade and the stair treads form ONE continuous visibly SLOPING climbing helix, with four counterclockwise circuits ascending as seen from above, wrapping behind and in front of the uninterrupted black central helmet. Visible front diagonal stair segments must rise left-to-right in the photographed front view, with return segments passing behind. Make individual external stair treads clearly legible along the sloped runs, each becoming smaller toward the top. It is NOT four separate cylindrical drums, NOT stacked pagoda levels, NOT four flat horizontal balconies, NOT a conventional needle spire. Keep the black core seamless and smoothly tapering between flights as in real reference1. The four gold-rail spiral flights are the identifying feature. A small golden SPHERE with a little Christ statue holding a flag/banner tops the spire. Keep the dark octagonal decorative lantern below it and authentic red-brown BRICK CLOCK TOWER with gold clocks underneath; full top visible with sky margin. Tower should occupy enough image height that the climbing external stair and its four circuits read distinctly, approx70% imageheight; no tree occlusion over the spire. Similar canal scene, slightly closer if needed for readable stair geometry.\nNatural bright summer daylight, blue Copenhagen sky, realistic water ripples and reflections, canal boats, brick and ocher waterfront houses, natural few contemporary pedestrians/cyclists with plausible anatomy. High-quality REAL CAMERA appearance, no painterly or repeating procedural texture, no rendered plastic. Every pixel a coherent new photo-like scene. No text overlay, watermark, brands, artificial frame or alpha. This is the ONLY new attempt authorized for task534, so prioritize the real spire reference geometry above decorative surroundings.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-k1-v2-20261019/references/real-spire.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-k1-v2-20261019/references/composition.png"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-562f7658-3645-4fc3-a301-6edadc41710a.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-k1-v2-20261019/native/k1-v2-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-k1-v2-20261019/delivery-packet/k1-v2.png",
+          "nativeSHA256": "d6aae3941c2ba88c018a1ff3dd710acdc1bfffa5fe4d3b0ca94aeafc59c1904b",
+          "deliverySHA256": "46dce60e8372d872d9d8e1ba2d02f3bbb89e6005140a3eaa51af342b614e50eb",
+          "nativeBytes": 3340584,
+          "deliveryBytes": 3340876,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "2dba68ab95f07cdf3ad7406c579e9ce4960621c51e2154260e3b998005aa8928",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:48:00.458949+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "personallyInspectedDiagnostic": true,
+            "RGB": true,
+            "opaque": true,
+            "newWholeImageCalls": 1,
+            "sourceHardCapObserved": true,
+            "visibleGoldExternalHelix": true,
+            "continuousDarkTaperedCore": true,
+            "fourAscendingFrontFlightsVisible": true,
+            "sphereChristBannerVisible": true,
+            "brickClockBaseVisible": true,
+            "limitations": [
+              "Individual tread count is not resolvable at native canal-view size; do not claim all400 steps counted.",
+              "Hidden rear runs and exact complete circulation/winding are not independently surveyed from this single view.",
+              "Interpreted photographic illustration, not a measured architectural record."
+            ],
+            "reviewScope": "Visible helical geometry improved; final architectural acceptance belongs to PT.",
+            "delivery": [
+              1920,
+              1080
+            ],
+            "native": [
+              1672,
+              941
+            ],
+            "technicalExport": "Whole frame sips resampling only; no crop, padding, semantic edit; native preserved."
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:46:30.327678+00:00",
+      "activeAttempt": 1,
+      "attempt": 1,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-562f7658-3645-4fc3-a301-6edadc41710a.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-k1-v2-20261019/native/k1-v2-attempt1.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-k1-v2-20261019/delivery-packet/k1-v2.png",
+      "nativeSHA256": "d6aae3941c2ba88c018a1ff3dd710acdc1bfffa5fe4d3b0ca94aeafc59c1904b",
+      "deliverySHA256": "2aff06d4bdd9b478ef89cacd90ed311f0c57946ea6c7187f0c5283a530902864",
+      "nativeBytes": 3340584,
+      "deliveryBytes": 3965927,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "2dba68ab95f07cdf3ad7406c579e9ce4960621c51e2154260e3b998005aa8928",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:48:00.458949+00:00",
+      "selectedAttempt": 1,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "753724168a126f49d07aa009d60e4f6e6deb31506fec6bf543e3ae4b4b42601a",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "personallyInspectedDiagnostic": true,
+        "RGB": true,
+        "opaque": true,
+        "newWholeImageCalls": 1,
+        "sourceHardCapObserved": true,
+        "visibleGoldExternalHelix": true,
+        "continuousDarkTaperedCore": true,
+        "fourAscendingFrontFlightsVisible": true,
+        "sphereChristBannerVisible": true,
+        "brickClockBaseVisible": true,
+        "limitations": [
+          "Individual tread count is not resolvable at native canal-view size; do not claim all400 steps counted.",
+          "Hidden rear runs and exact complete circulation/winding are not independently surveyed from this single view.",
+          "Interpreted photographic illustration, not a measured architectural record."
+        ],
+        "reviewScope": "Visible helical geometry improved; final architectural acceptance belongs to PT.",
+        "delivery": [
+          1920,
+          1080
+        ],
+        "native": [
+          1672,
+          941
+        ],
+        "technicalExport": "Whole frame sips resampling only; no crop, padding, semantic edit; native preserved."
+      }
+    }
+  },
+  "ownerAccepted": false,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "updatedAt": "2026-10-19T09:49:18.684080+00:00",
+  "imagesProduced": 1,
+  "candidateImagesProduced": 1
+}

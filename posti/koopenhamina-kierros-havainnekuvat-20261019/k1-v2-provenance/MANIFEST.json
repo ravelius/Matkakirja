@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "k1-v2-provenance/CREDITS.md",
+      "bytes": 390,
+      "sha256": "77d1980f88f9fec1c30b4a070396ef6b95b210ddd916d25cf2834db30449e93e"
+    },
+    {
+      "path": "k1-v2-provenance/GENERATION.json",
+      "bytes": 9740,
+      "sha256": "847bc2b01e42d1981b7647ddf088e93ae205d92771cad69e4fdd6b56d70a937d"
+    },
+    {
+      "path": "k1-v2-provenance/PROMPTS.json",
+      "bytes": 2917,
+      "sha256": "51682acb1a51d32a1baf2c4ec3283e62014dc773802e0a3e8f8cb2cca68c6ce9"
+    },
+    {
+      "path": "k1-v2-provenance/QA-FI.md",
+      "bytes": 821,
+      "sha256": "e29419fb552d1b7c2c0c205f9242df97ed1a853a987ae14ab34f857a31224605"
+    },
+    {
+      "path": "k1-v2-provenance/QA.json",
+      "bytes": 981,
+      "sha256": "220973a3484b47725edfcf608de98b1f977a2375f5ff2eb38a531df8daa5a520"
+    },
+    {
+      "path": "k1-v2-provenance/SOURCE-MANIFEST.json",
+      "bytes": 312,
+      "sha256": "af0e12f744ad8da87f2615602b1b995a5237591111c2450f3b40a4440f6b477f"
+    },
+    {
+      "path": "k1-v2-provenance/TECHNICAL-EXPORT.json",
+      "bytes": 503,
+      "sha256": "5a10cb27a62e7503058131c978ebf3de822a5fa4ee7ad81b36bee3381b553edc"
+    },
+    {
+      "path": "k1-v2-provenance/paatoimittaja-codex-koopenhamina-k1-k8-kuittaus-20261019.md",
+      "bytes": 897,
+      "sha256": "049b8d333d828a2749b3656312d25760e817d91f32af6654bed7b2fb4131feb1"
+    },
+    {
+      "path": "k1-v2.png",
+      "bytes": 3965927,
+      "sha256": "2aff06d4bdd9b478ef89cacd90ed311f0c57946ea6c7187f0c5283a530902864"
+    }
+  ]
+}
