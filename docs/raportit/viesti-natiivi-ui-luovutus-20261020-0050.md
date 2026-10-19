@@ -27,7 +27,7 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   soikio lasketaan auringosta Kp 5:llä (oikea data oikealla ajalla); ukkonen: Salama.shader/Salamat.cs kirkkaus 3,2→4,6, hehku
   0,35→0,5, kanava 2,2→3,0, tiheys 0,5→0,7; 3) taivaskohteen nimi kohteen alla mutta skannerin viiva alkoi 27 pt yläpuolelta →
   viiva kohteesta, osuma-ala nimi + kohde (≥ 44 pt), revontulissa verhoon. Skenaario tyokalut/todistusajo/skenaariot/iss-207.txt.
-  AVOIMET PT:lle (lähetetty 01.0x): verhot oletuksena päällä ok? valitun hetken Kp 5 -oletus ok? ukkoskortti voi olla vaakarivin
+  PT 01.0x OK: verhot oletuksena päällä + valitun hetken Kp 5 (koodissa jo näin, ei muutoksia; simukuvat KK:lle, kopio PT). Yhä auki: ukkoskortti voi olla vaakarivin
   ulkopuolella (skenaario avaa komennolla); pimennys ilman sallittua lentoa = hetken musta (ei pohjaa).
 - Käännöspyyntö molemmista (7a45cff6f ja 81be0b791) lähetetty JU:lle 01.0x; simut juoksupelin jälkeen.
 - JU 01.1x: yhdistelmäkäännös 7a45cff6f + 81be0b791 L2:lla → /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/museo-iss-207-app (~01.20);
