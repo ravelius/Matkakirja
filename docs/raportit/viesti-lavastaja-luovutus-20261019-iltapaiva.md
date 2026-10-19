@@ -27,7 +27,7 @@ Yksi käännös, yksi simuvuoro JU:lta; kuvat ennen/jälkeen PT:lle.
    PT hyväksyi 15.0x. Vain arvot (alankomaat/sali.json kehysmateriaalit, MuseoSovitin AsetaKehysvalo), ei kuvia. Haara kehysvarjo-204:n päälle.
 2. **Kunniagallerian lähikuvat uudelleen:** zoom ehti ennen kävelyn loppua → `sk-kunniagalleria-kartoitus-204.txt`: odota 40 s valitse-komennon jälkeen.
    Ajo `zsh /Users/Shared/Claude/proto-3d/tyokalut/linnanrakentaja-ajot/ajo-kunniagalleria-kartoitus-204.zsh <app>` (UDID jo 484B130B).
-3. **Olavinlinna 6–10:** kun Codexin geometria tulee → `node tools/codex-3d-tarkistus.mjs <kansio>` → valot_6_10.py `--geometria` → leivonta
+3. **Olavinlinna 6–10:** (omistaja 15.21, Raamattu 9.11: omistaja ei ole ensimmäinen tarkistaja → Codexin 3D: havainnekuva + pelikuva rinnakkain täysikokoisina + portti ennen hyväksyntää) kun Codexin geometria tulee → `node tools/codex-3d-tarkistus.mjs <kansio>` → valot_6_10.py `--geometria` → leivonta
    (pikkupihan `lahde/leivo.py`-malli) → kokoaminen merkkeihin; 1 rivi PT:lle per valmis huone (PT 13.0x).
 4. Tripo-hahmot (kokki, portinvartija) Codexilta → keittiöön MetaHuman-kokin viereen (rajat edellisessä luovutuksessa).
 5. **Siivous:** `wt/proto-linnanrakentaja-kehykset` pois, kun 0e4d2f8cd ja a69ac7e05 ovat junassa 204 (`tools/uusi-worktree.sh --poista` ei koske proto-worktreeta – tarkista);
