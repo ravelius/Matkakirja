@@ -1,0 +1,45 @@
+{
+  "taskNumber": 447,
+  "code": "h07",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:46:18.565312+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: near-level limb high around y0.15, northern Spain/Iberian peninsula fills middle, Bay of Biscay foreground bottom, Portugal/right and Mediterranean/left; all dark with many map labels. Real 2024 example shows far soft dark oval; 2017 photo shows near-horizon dark band and brighter foreground clouds. Need low-angle sun but natural subdued warmth.",
+  "promptSHA256": "b75da3ce9202e1aef67bdc7323fb7c1e37deb552e963cceec38fff80ba7339f7",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h07/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:47:05.339578+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d31fdf46-c24a-45c3-87df-2f6a9bc29a4e.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h07.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h07.png",
+  "nativeSHA256": "26696c8c9bda09ca25b274e7ef48007eaada12d617c3dede96b39b8ef919d346",
+  "deliverySHA256": "31f23ea3419ccdd88212b675c05c17c86ced82f5e124dc67da96bff990bde425",
+  "nativeBytes": 2950560,
+  "deliveryBytes": 2950785,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "e30ad47728b51ea4d4026a8ab0e9ed3147fac205e52e9c7660bf7e41ad10a07e",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "far-shadow-reference-geography-not-verified",
+    "photoRealism": "Natural cloud detail, restrained low-angle sunlight and diffuse remote dark band; no film grading or obvious repeated texture.",
+    "cameraMatch": "High nearly level limb and distant shadow retained broadly; generated land/coast layout differs from game and identification as Iberia is unverified. Do not use as a geographic target.",
+    "takenFromRealReferences": "Remote elongated soft umbra and bright foreground cloud texture, subtle blue atmosphere and pale warm far highlights.",
+    "invented": "Clouds, land geometry and eclipse placement; exact 2026 ephemeris and solar/observer geometry not validated.",
+    "excludedOverlays": "No visible map labels/point markers, ISS hardware or stars.",
+    "metadataLabel": "havainnekuva"
+  }
+}
