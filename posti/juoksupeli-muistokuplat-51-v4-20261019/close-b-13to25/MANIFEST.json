@@ -1,0 +1,144 @@
+{
+  "files": [
+    {
+      "path": "13-jadevuori.png",
+      "bytes": 2033879,
+      "sha256": "6358be4881d5f8d811531347d47c93e9214c3aeebf9fe834df106eaad2f9f5a5"
+    },
+    {
+      "path": "14-ruyi-valtikka.png",
+      "bytes": 2221649,
+      "sha256": "18eca0fc8ce554111137e23957f4d3465905683a2cc294ec22a14a62e6140454"
+    },
+    {
+      "path": "15-mughal-jadekuppi.png",
+      "bytes": 2209365,
+      "sha256": "071ffa2b285e5020c9520068844083ecfc1527fbf7819754bdbc9f183a3bd424"
+    },
+    {
+      "path": "16-bi-kiekko.png",
+      "bytes": 1959267,
+      "sha256": "7166361d32bcfb99762c339db54728725176340c949009cd2acae8b26049c3aa"
+    },
+    {
+      "path": "17-norsunluupallo.png",
+      "bytes": 2146998,
+      "sha256": "fb047668f7856fb8ca39e03d9899fede3e0061a6a3502bdf9848a3c325ef64b6"
+    },
+    {
+      "path": "18-duan-mustekivi.png",
+      "bytes": 2052523,
+      "sha256": "78a8b47c619ada6f45faf316da58b4095790eb7f340a9e747805424fb1bcc773"
+    },
+    {
+      "path": "19-bianqing-kivikellot.png",
+      "bytes": 2193669,
+      "sha256": "88702f59b2752aee265db3c840b130e5aee7ba9bddc07161c41314e579daf959"
+    },
+    {
+      "path": "20-jadekirja.png",
+      "bytes": 2156470,
+      "sha256": "d77dfde0c3d134fa71f034c2a07df599746a65e35b994265b5757592568f591e"
+    },
+    {
+      "path": "21-cloisonne.png",
+      "bytes": 2118567,
+      "sha256": "8f33c8370fc518c33b84267dd05829dae5d45922d1c26ab5fce10171e47fdfe8"
+    },
+    {
+      "path": "22-ding-astia.png",
+      "bytes": 2012326,
+      "sha256": "68e532b34deaca3dc6fdd6d5b50c87aa2964dedfc0b2018342cfebac5167f74e"
+    },
+    {
+      "path": "23-zun-malja.png",
+      "bytes": 1999504,
+      "sha256": "0fc917f339a8653498313f278713809c8219c202b23f2621454adc7da2e5cd7c"
+    },
+    {
+      "path": "24-pronssikurki.png",
+      "bytes": 2180612,
+      "sha256": "6790f5232ebd0c9dd302d0eeeef8b9fdd087175ece9288f7a42f256ffd139ba9"
+    },
+    {
+      "path": "25-pronssikilpikonna.png",
+      "bytes": 2177799,
+      "sha256": "bb14950276670b011ca45878c69ecd730043fa3315f2e4df2079c3dff5951f50"
+    },
+    {
+      "path": "FRAMING-SOURCE.json",
+      "bytes": 294,
+      "sha256": "1023596a13e2c3f965cfaad195f1bd1e282c27710338eedded78b4a7ecc426ef"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 149334,
+      "sha256": "eda7b11aefbe23b187a45714c4a9768a87c3268cd64a528f4e418b3340a6b28b"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 96752,
+      "sha256": "a2b523a2f0c1b027a3f896e2a5a647398e27d434e3a6253f0c71f7cc2dd32edc"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 9019,
+      "sha256": "1b0ee254d37e11327b7ba0d01ff4489c59a8cab60ab90310de58a10f5f3be840"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 11487,
+      "sha256": "49b13718323a4cdefaae1079740b67fc3f8870127df23c9cce5522928135bfc3"
+    },
+    {
+      "path": "SOURCE-INVENTORY.json",
+      "bytes": 31013,
+      "sha256": "1c7278e05720cc811d4e12215b54151842f3d7eccb5caa0d6d7ef4635716e7cd"
+    },
+    {
+      "path": "qa/160px-wide-feather.json",
+      "bytes": 464,
+      "sha256": "6e5da44b05138659015fa01cdf95e01be88bf3715b42924c2712384c3871e2ed"
+    },
+    {
+      "path": "qa/160px-wide-feather.png",
+      "bytes": 601173,
+      "sha256": "22c0fcf5a6e18c3ecbfc590b5aa487340e34708d17278271e5e0f8c2a8a39034"
+    },
+    {
+      "path": "sources/juoksupeli-huudot-lista-20261019.md",
+      "bytes": 49226,
+      "sha256": "8c183579bdda90bee2b59c623249bb80fbaf6c592c49d1725ab80842e7a787fb"
+    },
+    {
+      "path": "sources/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+      "bytes": 73992,
+      "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+      "bytes": 1068,
+      "sha256": "103bb93507ece700362a0aa9ea2bcf25b95f228a87e6798903ee9bcd5b83949f"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-era-a-lahikuvat-kuittaus-20261019.md",
+      "bytes": 790,
+      "sha256": "79778d9e0766da3979c036950d7f2b2ca0625b6b244a8b3bf9c502cec3dd6836"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-loput-20261019.md",
+      "bytes": 1013,
+      "sha256": "8c13430dff4e22e9ee0bf883a1de001e216d2e77a7086bc923479cd51bed4ec8"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v3-kuittaus-20261019.md",
+      "bytes": 1266,
+      "sha256": "4c697d0da0b2b2bda596e8894972d44976d40e19f728b076111de1d243a42e02"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v4-lisays-20261019.md",
+      "bytes": 1752,
+      "sha256": "fb6e7204f654b4546d65c76830fec508d6e1eeb0dff1f261a3fd4e668dc8977f"
+    }
+  ]
+}
