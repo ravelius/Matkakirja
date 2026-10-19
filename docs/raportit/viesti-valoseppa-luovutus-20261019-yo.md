@@ -1,4 +1,4 @@
-# Valoseppä – luovutus 19.10.2026 klo 21.0x
+# Valoseppä – luovutus 19.10.2026 klo 21.1x (Postivahdin KOVA RAJA)
 
 Luovuttaja: Valoseppä (Opus, high). Id:t /Users/Shared/Claude/osoitekirja.md: PT local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 (≤ 3 riviä),
 JU local_24e63224-112c-449a-b6a3-e10e4ed43f4b, NS local_fcc10552-5810-49bf-b0cf-188456f1231c, PK local_11aca9cd-eda6-4db9-9019-8a153c8b8795,
@@ -7,8 +7,8 @@ D=/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2 (päiväkirja $D/JONO.md – l
 TÄRKEÄ: todistusajo.sh on gitissä 100644 → kutsu AINA `zsh $AJO` (omat skriptit korjattu).
 
 ## 0. TILA LUOVUTUSHETKELLÄ
-- Juna 206 julkaisupyyntö: muut simut PIDOSSA ~22.30 asti (JU). pimennys-lauta 5126cff3d käännös JU:lla (~21.05) → $D/tulivuoret-app.
-- Kun SIMU NYT tulee: `zsh $D/ajo-b5-lauta.zsh <KÄÄNNETTY-SHA>` (tulivuoret k13 + pimennys L1, iPad ~25 min) → SIMU VAPAA →
+- Juna 206 julkaisupyyntö: muut simut PIDOSSA ~22.30 asti (JU). pimennys-lauta 5126cff3d KÄÄNNETTY → 8560e5768 ($D/tulivuoret-app, 20.58).
+- Kun SIMU NYT tulee (~22.30 jälkeen): `zsh $D/ajo-b5-lauta.zsh 8560e5768` (tulivuoret k13 + pimennys L1, iPad ~25 min) → SIMU VAPAA →
   tuoreet Sonnet-arvioijat: tulivuoret/arvioija.md → kierrokset/k13/ARVIO.md, pimennys/arvioija.md → kierrokset/kL1/ARVIO.md → PT:lle 3 riviä.
   Vertailukohdat: tulivuoret paras k10 2,8 (k12 2,2), pimennys paras k4 4,8 (PT: k4 pysyy parhaana, kunnes uusi voittaa).
 
