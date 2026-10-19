@@ -109,3 +109,6 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   vaihtuu itsestään), Puyin hang_grab/hang_loop, yleishuuto.1–30 tyhjinä. tarkista.sh rc 0, 629/629. JUNAAN VASTA SIMUN JÄLKEEN (PT → NS).
 - Codexin mallisopimus: proto-3d/_tyo/pelikoodari/juoksupeli/ESTEMALLIT-CODEXILLE.md (PT välittää).
 - Jatkotyö tähän haaraan (juoksupeli-202 = videohaara, app 897ae0f69 = dfae35317). Simu ~11.05 → videot PT:lle.
+- 10.10: juoksupeli-kamera-204 uusin **26a6cff3e**: f03ffa397 unenomainen muistokupla (aalto 0,4 s tulo/lähtö, tyyni 2,1 s, leveä häivytys, musta 0,06,
+  rae 0,045; MuistokuplaAjoitus) – ODOTTAA PT/KK:n hyväksyntää (esikatselu _tyo/pelikoodari/muistokupla/kupla-unenomainen.mp4 + -arkki.png);
+  bd71ba510 SK:n 51 esinettä + 30 yleishuutoa (26d55c8a5). tarkista.sh rc 0, 630/630. Huutoraja testissä ≤ 60 (ääni); SK:lle 40 merkin huuto.
