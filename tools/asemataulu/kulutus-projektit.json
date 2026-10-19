@@ -1,23 +1,266 @@
 {
   "kuvaus": "Kulutus-osion projektijako (kulutus.py). Nimet ovat työlistan pakettien otsikot; Kippi ja kaupungit, Äänet ja musiikki sekä Junat ja julkaisu ovat kokoavia nimiä. Järjestys on prioriteetti: tasapelissä voittaa ylempi. Projekti on se, jonka sanoja vuoron aloittaneessa viestissä (ali-agentilla tehtävänannossa) on eniten. Sanat pienaakkosin alimerkkijonoina (kantamuodot, jotta taivutus osuu: aloituslen, lautapel); etuliite re: tekee sanasta säännöllisen lausekkeen (sanaraja \\b, numerot). poista = sanat, jotka poistetaan tekstistä ennen osumien laskentaa. Ei osumaa = oletus. Tiedoston muutos lukee lokit alusta (~10 s).",
   "oletus": "Muu työ",
-  "poista": ["linnanrakentaja"],
+  "poista": [
+    "linnanrakentaja"
+  ],
   "projektit": [
-    {"nimi": "Kööpenhaminan kippi ja esittely", "sanat": ["köpenhamina", "koopenhamina", "kobenhavn", "kööpenhamina", "copenhagen"]},
-    {"nimi": "Shakki Wieniin", "sanat": ["shakki", "shakin", "shakis", "chess"]},
-    {"nimi": "Aarretehtävät", "sanat": ["aarre", "aarte", "treasure"]},
-    {"nimi": "Lautapelit", "sanat": ["lautapel", "board game"]},
-    {"nimi": "Aloituslento", "sanat": ["aloituslen", "alkulen"]},
-    {"nimi": "Taidemuseo", "sanat": ["museo", "museum", "rijks", "yövartio", "näyttely", "maalaus", "taidehalli"]},
-    {"nimi": "Olavinlinna", "sanat": ["olavinlinna", "linna", "pikkupiha", "keittiö", "porttikäytävä", "linnantupa", "voudin", "palatsi", "tott", "metahuman", "kirkkotorni", "kuninkaansali", "ampumakäytävä", "re:\\bv4[5-9][a-z]\\b"]},
-    {"nimi": "Kuvan sävyt", "sanat": ["sävytoisto", "sävykäyrä", "tonemap", "agx", "re:\\bsävyt\\b"]},
-    {"nimi": "Asemataulu", "sanat": ["asemataulu", "kulutus.py", "laitteet.py"]},
-    {"nimi": "Kaupunkien alkuintro", "sanat": ["saapumisintro", "alkuintro", "nykyintro", "intro-prompt", "saapumistrailer"]},
-    {"nimi": "Retkikunta: pallot näkyviin ja pallokisa", "sanat": ["pallokis", "retkikunta", "pallomäär"]},
-    {"nimi": "Kippi ja kaupungit", "sanat": ["kipp", "kipin", "re:\\bkipis", "re:\\bkipil", "kuumailmapallo", "pallokierros", "elävä kaupunki", "elava", "aukio", "kaupunkierä", "kaupunkipaketti", "lontoo", "praha"]},
-    {"nimi": "Pariisi ja Tukholma", "sanat": ["pariisi", "tukholm"]},
-    {"nimi": "Tarkka maasto (Mapterhorn)", "sanat": ["mapterhorn", "maasto", "re:\\bdem\\b", "korkeusmalli", "vuoristo"]},
-    {"nimi": "Äänet ja musiikki", "sanat": ["äänisivu", "musiikki", "lyria", "elevenlabs", "äänitys"]},
-    {"nimi": "Junat ja julkaisu", "sanat": ["testflight", "lukitse", "lukitus", "muistiajo", "re:\\b(?:build|tf)[ -]?1\\d\\d", "re:\\bjuna[ -]?1\\d\\d"]}
+    {
+      "nimi": "ISS ja raketti",
+      "sanat": [
+        "re:\\biss\\b",
+        "raketti",
+        "cupola",
+        "savu",
+        "valas",
+        "auringonnousu",
+        "revontul",
+        "andøya",
+        "astronaut",
+        "kohdevalikko",
+        "tulivuori",
+        "salama",
+        "hurrikaani",
+        "yötaivas"
+      ]
+    },
+    {
+      "nimi": "Peking",
+      "sanat": [
+        "peking",
+        "beijing"
+      ]
+    },
+    {
+      "nimi": "Louvre",
+      "sanat": [
+        "louvre"
+      ]
+    },
+    {
+      "nimi": "Pallon kori ja köydet",
+      "sanat": [
+        "köyd",
+        "köysi",
+        "re:\\bkori",
+        "koriin",
+        "liekki"
+      ]
+    },
+    {
+      "nimi": "Aloitusvihjeet ja metrokartta",
+      "sanat": [
+        "vihje",
+        "metrokart",
+        "aloituskart",
+        "karttapaletti",
+        "kartan merkit"
+      ]
+    },
+    {
+      "nimi": "Kööpenhaminan kippi ja esittely",
+      "sanat": [
+        "köpenhamina",
+        "koopenhamina",
+        "kobenhavn",
+        "kööpenhamina",
+        "copenhagen"
+      ]
+    },
+    {
+      "nimi": "Shakki Wieniin",
+      "sanat": [
+        "shakki",
+        "shakin",
+        "shakis",
+        "chess"
+      ]
+    },
+    {
+      "nimi": "Aarretehtävät",
+      "sanat": [
+        "aarre",
+        "aarte",
+        "treasure"
+      ]
+    },
+    {
+      "nimi": "Lautapelit",
+      "sanat": [
+        "lautapel",
+        "board game"
+      ]
+    },
+    {
+      "nimi": "Aloituslento",
+      "sanat": [
+        "aloituslen",
+        "alkulen"
+      ]
+    },
+    {
+      "nimi": "Taidemuseo",
+      "sanat": [
+        "museo",
+        "museum",
+        "rijks",
+        "yövartio",
+        "näyttely",
+        "maalaus",
+        "taidehalli"
+      ]
+    },
+    {
+      "nimi": "Olavinlinna",
+      "sanat": [
+        "olavinlinna",
+        "linna",
+        "pikkupiha",
+        "keittiö",
+        "porttikäytävä",
+        "linnantupa",
+        "voudin",
+        "tott",
+        "metahuman",
+        "kirkkotorni",
+        "kuninkaansali",
+        "ampumakäytävä",
+        "re:\\bv4[5-9][a-z]\\b"
+      ]
+    },
+    {
+      "nimi": "Kuvan sävyt",
+      "sanat": [
+        "sävytoisto",
+        "sävykäyrä",
+        "tonemap",
+        "agx",
+        "re:\\bsävyt\\b"
+      ]
+    },
+    {
+      "nimi": "Asemataulu",
+      "sanat": [
+        "asemataulu",
+        "kulutus.py",
+        "laitteet.py"
+      ]
+    },
+    {
+      "nimi": "Kaupunkien alkuintro",
+      "sanat": [
+        "saapumisintro",
+        "alkuintro",
+        "nykyintro",
+        "intro-prompt",
+        "saapumistrailer"
+      ]
+    },
+    {
+      "nimi": "Retkikunta: pallot näkyviin ja pallokisa",
+      "sanat": [
+        "pallokis",
+        "retkikunta",
+        "pallomäär"
+      ]
+    },
+    {
+      "nimi": "Kippi ja kaupungit",
+      "sanat": [
+        "kipp",
+        "kipin",
+        "re:\\bkipis",
+        "re:\\bkipil",
+        "kuumailmapallo",
+        "pallokierros",
+        "elävä kaupunki",
+        "elava",
+        "aukio",
+        "kaupunkierä",
+        "kaupunkipaketti",
+        "lontoo",
+        "praha",
+        "ateena",
+        "kierrosten"
+      ]
+    },
+    {
+      "nimi": "Pariisi ja Tukholma",
+      "sanat": [
+        "pariisi",
+        "tukholm"
+      ]
+    },
+    {
+      "nimi": "Tarkka maasto (Mapterhorn)",
+      "sanat": [
+        "mapterhorn",
+        "maasto",
+        "re:\\bdem\\b",
+        "korkeusmalli",
+        "vuoristo"
+      ]
+    },
+    {
+      "nimi": "Äänet ja musiikki",
+      "sanat": [
+        "äänisivu",
+        "musiikki",
+        "lyria",
+        "elevenlabs",
+        "äänitys"
+      ]
+    },
+    {
+      "nimi": "Junat ja julkaisu",
+      "sanat": [
+        "testflight",
+        "lukitse",
+        "lukitus",
+        "muistiajo",
+        "re:\\b(?:build|tf)[ -]?1\\d\\d",
+        "re:\\bjuna[ -]?1\\d\\d"
+      ]
+    },
+    {
+      "nimi": "Tavoitekuvat ja havainnekuvat",
+      "sanat": [
+        "tavoitekuva",
+        "havainnekuva",
+        "valoseppä",
+        "kuvakierros",
+        "lähikuva"
+      ]
+    },
+    {
+      "nimi": "Lasipohja ja käyttöliittymä",
+      "sanat": [
+        "lasipohja",
+        "lasipaneel",
+        "lasikort",
+        "uitk",
+        "käyttöliittymä",
+        "paneeli"
+      ]
+    },
+    {
+      "nimi": "Bugikorjaukset ja palaute",
+      "sanat": [
+        "bugikorjaus",
+        "palaute",
+        "tf 19",
+        "pelaajapalaute"
+      ]
+    },
+    {
+      "nimi": "Unity ja natiivi",
+      "sanat": [
+        "unity",
+        "natiivi",
+        "urp",
+        "metal",
+        "ipad"
+      ]
+    }
   ]
 }

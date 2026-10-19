@@ -11,7 +11,9 @@
  *     lupatila ja Remote Control (tiedoksi);
  *  2) peili ajan tasalla (bash tools/tyotavat/peili.sh --tarkista);
  *  3) aloitusviestit olemassa (docs/tilinvaihto.md:n roolitaulukon Aloitusviesti-sarake);
- *  4) vanhoja id:itä ei ole jäänyt id:itä toistaviin tiedostoihin (paivita-idt.mjs:n KOHTEET).
+ *  4) vanhoja id:itä ei ole jäänyt id:itä toistaviin tiedostoihin (paivita-idt.mjs:n KOHTEET);
+ *  5) Asemataulu: työkansion kopiot = main ja tarkistin läpi (python3 -I tools/asemataulu/asemataulu.py --tarkista;
+ *     docs/moduulit/asemataulu.md luku 2).
  * Paluuarvo 0 = valmis, 1 = puutteita (tulostetaan).
  */
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
@@ -89,6 +91,11 @@ for (const polku of kohteet()) {
   const vanhat = [...new Set(readFileSync(polku, 'utf8').match(/local_[0-9a-f]{8}-[0-9a-f-]{27}/g) || [])].filter((i) => !nykyiset.has(i));
   if (vanhat.length) huom(`${polku}: id:t, joita osoitekirjassa ei ole: ${vanhat.map((i) => i.slice(0, 14)).join(', ')}`);
 }
+
+// 5) Asemataulu
+const at = spawnSync('python3', ['-I', join(REPO, 'tools/asemataulu/asemataulu.py'), '--tarkista'], { encoding: 'utf8' });
+if (at.status !== 0) huom(`Asemataulu ei valmis (python3 -I tools/asemataulu/asemataulu.py):\n${(at.stdout || '').split('\n').filter((r) => /^(PUUTE|VIRHE)/.test(r)).join('\n')}`);
+else console.log('Asemataulu: kopiot = main, tarkistin läpi.');
 
 console.log(puutteet.length ? `\nTILINVAIHTO EI VALMIS: ${puutteet.length} puutetta.` : '\nTilinvaihto valmis.');
 process.exit(puutteet.length ? 1 : 0);

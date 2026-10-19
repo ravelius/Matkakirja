@@ -103,3 +103,78 @@ test('eteneminen väärällä nimellä hylätään', () => {
 test('rikkinäinen juuri hylätään', () => {
   assert.equal(aja({ ts: 1 }).status, 1);
 });
+
+// Laajennus 19.10.2026 (omistaja 19.18–19.51, docs/moduulit/asemataulu.md luku 10)
+
+test('johdanto ennen otsikkoa hylätään', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Julkaisu pyydetty 22.45, lähtee heti.\n\nTyön alla:\n– a\n\nValmiina:\n– b';
+  const r = aja(d);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /johdannolla/);
+});
+
+test('valintamerkit hylätään', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Työn alla:\n☐ a\n\nValmiina:\n☑ b';
+  const r = aja(d);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /valintamerkit/);
+});
+
+test('lukittu juna: vain Valmiina kelpaa, Työn alla hylätään', () => {
+  const d = hyva();
+  d.rivit[0].tila = 'Lukittu';
+  d.rivit[0].teksti = 'Valmiina:\n– kuvanotto';
+  assert.equal(aja(d).status, 0);
+  d.rivit[0].teksti = 'Työn alla:\n– a\n\nValmiina:\n– b';
+  const r = aja(d);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /lukitulla junalla vain Valmiina/);
+});
+
+test('tila "Lukittu, matkalla TestFlightiin" hylätään (sana TestFlight sammuttaa valot)', () => {
+  const d = hyva();
+  d.rivit[0].tila = 'Lukittu, matkalla TestFlightiin';
+  d.rivit[0].teksti = 'Valmiina:\n– kuvanotto';
+  assert.equal(aja(d).status, 1);
+});
+
+test('matka: jakso, edistys 1–5 ja kirjoittaja tarkistetaan; matka lukitsee rivin', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Valmiina:\n– kuvanotto';
+  assert.equal(aja(d, { nimi: 'Juna 204', jakso: 'matka', edistys: 2, kirjoittaja: 'Natiiviseppä' }).status, 0);
+  assert.match(aja(d, { nimi: 'Juna 204', jakso: 'matka', edistys: 0 }).stdout, /matkan edistys/);
+  assert.match(aja(d, { nimi: 'Juna 204', jakso: 'matka', edistys: 4, kirjoittaja: 'Natiiviseppä' }).stdout, /kirjoittaja on Julkaisija/);
+  assert.match(aja(d, { nimi: 'Juna 204', jakso: 'lastaus', edistys: 2 }).stdout, /jakso on joko/);
+  const k = hyva();
+  assert.equal(aja(k, { nimi: 'Juna 204', jakso: 'matka', edistys: 1 }).status, 1, 'Työn alla lukitulla junalla');
+});
+
+test('ei-pelin asia junarivillä hylätään', () => {
+  const d = hyva();
+  d.rivit[0].teksti = 'Työn alla:\n– skanneri\n\nValmiina:\n– Raamattuun uusi linjaus';
+  const r = aja(d);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /ei-pelin asia/);
+});
+
+test('--kansio: roolikortti Levossa, vaikka odottaa.json sanoo odottaa, hylätään; tyolistan merkinnät hylätään', () => {
+  const k = mkdtempSync(join(tmpdir(), 'asemataulu-k-'));
+  writeFileSync(join(k, 'junat.json'), JSON.stringify(hyva()));
+  writeFileSync(join(k, 'roolit.json'), JSON.stringify({ rivit: [
+    { nimi: 'Valoseppä', tila: 'lepo', teksti: 'Levossa' },
+    { nimi: 'Lavastaja', tila: 'odottaa', teksti: 'odottaa simuvuoroa' },
+  ] }));
+  const od = join(k, 'odottaa.json');
+  writeFileSync(od, JSON.stringify({ Valoseppä: 'odottaa yön renderöintiä', Lavastaja: 'odottaa simuvuoroa' }));
+  let r = spawnSync('python3', ['-I', skripti, '--kansio', k, '--odottaa', od], { encoding: 'utf8' });
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /odotus ei ole lepo/);
+  assert.doesNotMatch(r.stdout, /Lavastaja/);
+  writeFileSync(od, JSON.stringify({}));
+  writeFileSync(join(k, 'tyolista.json'), JSON.stringify({ rivit: [{ otsikko: 'X', tilanne: 'tehty (palautteesi 12.10.)' }] }));
+  r = spawnSync('python3', ['-I', skripti, '--kansio', k, '--odottaa', od], { encoding: 'utf8' });
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /palautteesi/);
+});

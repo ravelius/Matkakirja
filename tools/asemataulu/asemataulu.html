@@ -159,6 +159,8 @@ details.juna .runko-tl .teksti { flex: 1 1 220px; min-width: 0; }
 .juna-edistys { display: inline-flex; gap: 2px; margin-top: -1px; }
 .juna-edistys i { display: block; width: 6px; height: 6px; border-radius: 1px; background: var(--reuna); }
 .juna-edistys i.on { background: var(--oranssi); }
+/* Lukitun junan matka kohti TF:ää omalla vihreällä (omistaja 19.10. 19.18): lastaus oranssi, matka vihreä */
+.juna-edistys.matka i.on { background: var(--vihrea); }
 .juna-edistys { align-items: center; }
 .laite-cpu { align-items: center; }
 .laite-cpu i { width: 4px; height: 10px; }
@@ -550,10 +552,11 @@ section:not(.kiinni) .yhteenveto { display: none; }
       b.addEventListener('click', function () { valittuJuna = valittuJuna === nimi ? null : nimi; piirra(); });
       if (kaannos && typeof r.edistys === 'number') {
         var solu = luo('span', 'juna-solu');
-        var ed = luo('span', 'juna-edistys');
+        var matka = r.jakso === 'matka';
+        var ed = luo('span', 'juna-edistys' + (matka ? ' matka' : ''));
         var n = Math.max(0, Math.min(5, Math.round(r.edistys)));
-        ed.setAttribute('aria-label', 'eteneminen ' + n + '/5');
-        ed.title = 'eteneminen ' + n + '/5';
+        ed.setAttribute('aria-label', (matka ? 'matka TF:ään ' : 'lastaus ') + n + '/5');
+        ed.title = (matka ? 'matka TF:ään ' : 'lastaus ') + n + '/5';
         for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
         // Arvioitu jäljellä oleva aika palkkien perässä (omistaja 10.10. 16.3x); kenttä valmis_arvio = ISO-aika.
         var jj = r.valmis_arvio ? new Date(r.valmis_arvio).getTime() - Date.now() : NaN;
@@ -682,6 +685,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
       var y = Object.assign({}, x);
       if (et.tila) y.tila = et.tila;
       if (typeof et.edistys === 'number') y.edistys = et.edistys;
+      if (et.jakso) y.jakso = et.jakso;
       if (et.valmis_arvio) y.valmis_arvio = et.valmis_arvio;
       return y;
     });

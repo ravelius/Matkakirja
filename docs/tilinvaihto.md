@@ -77,17 +77,16 @@ Vanhat docs/raportit/viesti-*-aloitus.md -tiedostot ovat roolien haaroissa usein
 
 ## 3. Uudet session id:t (kaikki samassa vuorossa)
 S/osoitekirja.md (taulukko: rooli, id, kansio, malli, alue) on ainoa id-lähde. Päivitä sen jälkeen id:t, joita tiedostot toistavat:
-S/Matkakirja-posti/KIERROS.md (PT ja KK otsikossa), NOLLAUS.md (PT), F/asemataulu/ASEMATAULU-ROOLI.md (PT, KK), F/keskustelukanava/aloitus.md,
+S/Matkakirja-posti/KIERROS.md (PT ja KK otsikossa), NOLLAUS.md (PT), F/keskustelukanava/aloitus.md,
 F/jonokierros-teksti.md (KK, Asemataulu), F/asemataulu/roolit.json ja data/talo/roolit.json sekä aloitusviestit. Skripti tekee kaiken:
 `node tools/tyotavat/paivita-idt.mjs "Julkaisija=local_<uusi>" "PÄÄTOIMITTAJA=local_<uusi>" …` (kuiva-ajo; sitten sama `--kirjoita`).
 Lopuksi `bash tools/tyotavat/peili.sh` ja commit PT:n työhaaraan (worktree `tools/uusi-worktree.sh fable <aihe>`, ks. VOIMASSA OLEVA ARVO).
 
 ## 4. Asemataulu (tilikohtainen kopio)
-Raamattu ASEMATAULU TILIKOHTAINEN: 1) Artifact list → onko tilillä oma taulu; julkaise tools/asemataulu/asemataulu.html (capabilities
-comments + db, icon dashboard) samaan tai uuteen osoitteeseen; 2) täytä kokoelma talo yhdellä ArtifactData-batchilla F/asemataulu/data/talo/*.json;
-3) kirjaa osoite F/asemataulu/osoitteet.md:hen, alla olevaan VOIMASSA OLEVA ARVO -tauluun (vanha "nykyinen tili" siirtyy riviksi
-osoitteet.md:hen), jonokierroksen kohtaan 7, ASEMATAULU-ROOLI.md:hen, F/keskustelukanava/aloitus.md:n kohtaan 2, Postivahdille
-ja omistajalle yhdellä rivillä. KK avaa taulun aina omaan keskustelunsa sivupaneeliin Artifact-työkalun open-toiminnolla (ei lukua eikä uudelleenjulkaisua) heti luonnin ja jokaisen nollauksensa jälkeen (omistaja 15.10.2026 klo 14.39); ulkoista Chrome-ikkunaa ei käytetä eikä ehdoteta (omistaja 15.10.2026 klo 12.27).
+Tee docs/moduulit/asemataulu.md:n luku 9 (ainoa speksi): osoite osoitekirjaan ("Asemataulu (tämän tilin taulu): …") ja
+F/asemataulu/osoitteet.md:hen (KÄYTÖSSÄ), `python3 -I tools/asemataulu/asemataulu.py`, julkaisu ja tyhjälle taululle batch komennon
+tulosteen mukaan; osoite jonokierroksen kohtaan 7, F/keskustelukanava/aloitus.md:n kohtaan 2, Postivahdille ja omistajalle yhdellä
+rivillä. ASEMATAULU-ROOLI.md:hen ei kirjoiteta osoitetta eikä id:itä (ne ovat TAULU/nykyinen.json:ssa). KK avaa taulun aina omaan keskustelunsa sivupaneeliin Artifact-työkalun open-toiminnolla (ei lukua eikä uudelleenjulkaisua) heti luonnin ja jokaisen nollauksensa jälkeen (omistaja 15.10.2026 klo 14.39); ulkoista Chrome-ikkunaa ei käytetä eikä ehdoteta (omistaja 15.10.2026 klo 12.27).
 Vanhan tilin artefakteja (taulu, äänisivu) ei voi muokata uudelta tililtä. Asemataulun HTML:n luku ja julkaisu sekä muut raskaat lukemat (list_sessions include_archived, kokonaiset muistikansiot) tehdään Sonnet-ali-agentilla, joka palauttaa tiivistelmän; PT ei lue niitä omaan kontekstiinsa.
 
 ## 5. Silmukat ja vahdit
@@ -128,7 +127,7 @@ VIIMEINEN VAIHE (omistaja 15.10.2026 klo 14.39): PT luovuttaa ja nollautuu heti,
 |---|---|---|
 | Postivahdin kierros | ScheduleWakeup 4–5 min (20 min, kun kaikki roolit lepäävät eikä junaa ole käynnissä; omistaja 14.10. klo 22.34), kehote "Lue S/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan"; KIERROS.md on sitova sisältö | 10 min (9.10.), Raamatun vanha sanatarkka kehote (loki TIIVISTYS 14.10.) |
 | Mittareiden vienti Asemataululle | Asemataulu-sessio: mittarit (kulutus, muisti, kone), roolit ja laitteet 5 min vain Boostin aikana (talo/boost → Postivahti herättää, sammuu 1 h; omistaja 14.10. klo 23.39); junat ja VAATII TOIMIA heti; sisällön tarkistus tunnin välein; Raati ja Testaajat klo 08 ja TF:n saapuessa (omistaja 14.10. klo 22.34 ja 22.40); Postivahti vie junan edistyksen ja lukee talo/boostin | Postivahti 5 min syke-ehdolla (11.10.); "5 min aina" (13.10.); Raati ja Testaajat Postivahdin kierroksella |
-| Asemataulun osoite | nykyinen tili (vvi@vvi.fi, koodaustili, 15.10.2026 klo 12.1x alkaen): https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm; muut tilit F/asemataulu/osoitteet.md | EekZDPMuAcsjT3awvn4jPb on VVI-tilin taulu (13.10.), Rq5ajPU4SraE2XKd7BYAix päätilin (10.10.) |
+| Asemataulun osoite | osoitekirjan rivi "Asemataulu (tämän tilin taulu): …" (sama TAULU/nykyinen.json:ssa ja osoitteet.md:n KÄYTÖSSÄ-rivillä; docs/moduulit/asemataulu.md luku 9); muut tilit F/asemataulu/osoitteet.md | EekZDPMuAcsjT3awvn4jPb on VVI-tilin taulu (13.10.), Rq5ajPU4SraE2XKd7BYAix päätilin (10.10.) |
 | Kontekstirajat | liukumat pehmeä–kova (omistaja 14.10. klo 22.55 ja 22.57): Postivahti 20–30 %; koodi-, kartta- ja sisältöroolit, Julkaisija ja Asemataulu 25–35 %; PT (oma nollaus), Laitetestaaja ja Äänittäjä 30–40 %; KK 40–50 % kortilla "Nollaanko nyt?" (vain KK:n nollaus kysytään omistajalta). Pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, uusi iso tehtävä → nollaus ensin; luovutus → Postivahti nollaa ilman omistajan vahvistusta. VALVONTA (omistaja 15.10. klo 14.39): KONTEKSTIVAHTI-koukku muistuttaa 30/35/40 % (muistutus on käsky), Postivahti lukee PT:n ja KK:n kontekstin joka kierroksella, PT ≥ 40 % = pakkonollaus; PT lukee get_usage selfin jokaisen pyynnön alussa (Raamattu VALVONTA JA PAKKONOLLAUS) | roolit 50 % (10.10.), 35 % (14.10. 22.4x); PT 65 %; KK 55/65 %; Postivahti ei nollaa KK:ta |
 | Viikkokiintiö | päätili: siirtoprompti 50 %:ssa; koodaustilit: vain rivi 99 %:ssa (Postivahti hälyttää 96 % ja 99 %); ei keventämistä | "ei siirtopromptia" koskee vain koodaustilejä |
 | Komentorivin tili | sama kuin sovelluksen tili; uudelleenkirjautuminen jokaisessa tilinvaihdossa | "toinen tili kuin sovellus" (7.10.) |

@@ -14,10 +14,14 @@ kierroksella heti ArtifactData listin jälkeen:
    mainin viimeisin commit) yli 45 min, tai tyolista yli 6 h päivällä (07–24), tulostaa
    "VANHA|<doc>|<ikä min>|<viimeisin tapahtuma HH.MM>" — Postivahti viestii sen Päätoimittajalle
    (enintään kerran tunnissa per dokumentti; tila data/.vanha-ilmoitettu.json).
+3) Tarkistin ennen vientiä (omistaja 19.10.2026 klo 19.51, docs/moduulit/asemataulu.md): junat (+ eteneminen) ja tyolista
+   ajetaan tarkista-junat.py:n läpi; dokumentti, jossa on VIRHE, jää viemättä ja tulostuu rivi
+   "ESTO|<doc>|<virheiden määrä>|<ensimmäinen virhe>" — Asemataulu-sessio kertoo sen PT:lle, PT korjaa tiedoston.
 Ei kirjoita tauluun itse eikä muuta data-tiedostoja.
 """
 import argparse
 import glob
+import importlib.util
 import json
 import os
 import subprocess
@@ -39,6 +43,21 @@ def lue(polku):
             return json.load(f)
     except (OSError, ValueError):
         return None
+
+
+def tarkistimen_virheet():
+    """{doc: [virheet]} tarkista-junat.py:n mukaan (sama kansio)."""
+    sp = importlib.util.spec_from_file_location("tarkista_junat", os.path.join(TAMA, "tarkista-junat.py"))
+    t = importlib.util.module_from_spec(sp)
+    sp.loader.exec_module(t)
+    tulos = {}
+    junat = lue(os.path.join(DATA, "junat.json"))
+    if junat is not None:
+        tulos["junat"] = t.tarkista(junat, lue(os.path.join(DATA, "eteneminen.json")))[0]
+    tl = lue(os.path.join(DATA, "tyolista.json"))
+    if tl is not None:
+        tulos["tyolista"] = t.tarkista_tyolista(tl)[0]
+    return tulos
 
 
 def doc_ts(doc, sisalto):
@@ -86,10 +105,14 @@ def main():
             versiot[k.strip()] = int(v)
 
     kirjoitukset = []
+    estot = tarkistimen_virheet()
     for doc in PT_DOCS:
         oma_polku = os.path.join(DATA, doc + ".json")
         oma = lue(oma_polku)
         if oma is None:
+            continue
+        if estot.get(doc):
+            print(f"ESTO|{doc}|{len(estot[doc])}|{estot[doc][0][:160]}")
             continue
         live = lue(os.path.join(a.lista, doc + ".json"))
         if live == oma:
