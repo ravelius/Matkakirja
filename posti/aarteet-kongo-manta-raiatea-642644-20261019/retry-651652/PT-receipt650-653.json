@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-19T14:10:33.032005+00:00",
+  "source": {
+    "path": "posti/paatoimittaja-codex-aarteet-kongo-manta-raiatea-kuittaus-20261019.md",
+    "commit": "d33adf39caf4e64919259c9cf56d0de30bc93be8",
+    "blob": "645a429ed5194fa863d69c59af954f08af65f665",
+    "sha256": "b450d0f44480ee9029c342890e775a49de319d48e985ebd464b95bf080fe272e",
+    "readInFull": true,
+    "readAt": "2026-10-19T14:10:33.032005+00:00"
+  },
+  "deliveryCommit": "1e13768507eb64b15550a578a3ee19acc5032427",
+  "acceptedTaskNumbers": [
+    642
+  ],
+  "correctionRequiredOriginalTasks": [
+    643,
+    644
+  ],
+  "correctionNewTasks": [
+    651,
+    652
+  ],
+  "maxNewWholeCallsPerTask": 1,
+  "noAdditionalRetryWithoutFeedback": true,
+  "dreamTask645HoldByTask653": true,
+  "dreamReleaseCondition": "Explicit PT acceptance of the new task651 emerald, pinned to that exact delivered version",
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

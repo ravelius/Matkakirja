@@ -1,0 +1,69 @@
+{
+  "taskNumber": 652,
+  "at": "2026-10-19T14:15:30.937665+00:00",
+  "selectedAttempt": 1,
+  "maxCalls": 1,
+  "actualImagegenCalls": 1,
+  "remainingCalls": 0,
+  "noAdditionalRetryWithoutNewFeedback": true,
+  "personallyInspected": {
+    "native": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/native/raiatea-maro-ura-652-attempt-1.png",
+      "sha256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+      "bytes": 2850288,
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1254,
+      "height": 1254,
+      "decodedRGBPixelSHA256": "f74197129ad3569f5fb6efd614eb9cd7e0c6254afe613359bc9e24d226a26f9b",
+      "fullyOpaque": true
+    },
+    "640JPEG": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/delivery-packet/aarre-oceania-star-v2.jpg",
+      "sha256": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+      "bytes": 449152,
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 640,
+      "height": 640,
+      "decodedRGBPixelSHA256": "c95b79189227dfad5ce4fb4def073a8f79197dd35e2f247a5e0ca9b55709a872",
+      "fullyOpaque": true
+    },
+    "seriesComparison": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/qa/series-comparison-640.png",
+      "sha256": "3174385ec6f63d69f96d5c9b4c9ec0177bd201003c52f626c095498c7aecf4fe"
+    },
+    "beforeAfter644652": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/qa/before-after-644-652.png",
+      "sha256": "62aa398df9efab3022989223074005d81b5cc4a9b404f717d87f79ba7d86ae71"
+    },
+    "museumStructurePhotoReViewed": true,
+    "approved639StylePhotoReViewed": true
+  },
+  "producerVisualReviewComplete": true,
+  "technicalPassed": true,
+  "definiteBlockingContentErrorObserved": false,
+  "readyForPTReview": true,
+  "observations": {
+    "lengthAndContinuity": "Single continuous narrow featherwork belt, multiple loose unequal waves. Entire route, turns and both frayed ends visible. Length impression stronger than rejected644. No scale object, so literal6m is interpretive and cannot be metrically certified from this image.",
+    "surface": "Dense separate small red feathers, layered rows and visible feather shafts/barbs. Uneven handworked vegetal-fiber net and knots seen along edges; natural slight irregular wear and lifted feather tips.",
+    "yellow": "Three sparse unequal yellow regions with irregular edges/coverage, not equal periodic stripes. Predominantly red.",
+    "ends": "Long loose rough vegetal-fiber tails/ends; no clean reinforced bars, buckles, comb-shaped terminals, clips or metal observed.",
+    "photography": "Warm dark brown textured ground, soft upper-left oblique light. Feather rows and rough edges cast soft dimensional shadows, with natural subtle red variation.",
+    "restrictions": "No people, labels, text, added treasure/ornaments, cape/headdress/skirt or second object observed.",
+    "640Readability": "Whole long object remains visible in640 square; red featherwork, sparse yellow patches, fibrous ends and repeated loose waves read.",
+    "referenceBoundary": "Input only Tahiti museum structural detail and accepted639 style. Old rejected644 not used as imagegen input; shown only in retrospective before/after comparison."
+  },
+  "qualifications": [
+    "Producer review is not PT/owner acceptance. This is the single authorized retry and awaits PT feedback.",
+    "Exact lost Raiatea appearance and literal scale cannot be certified. Tahiti fragment is a different surviving object used only for structural study.",
+    "Requested main-v2 reference absent; actual previously delivered/PT-accepted639 reference disclosed and labelled.",
+    "Whole-frame technical JPEG export only; no cropping, padding, compositing, retouch or mask."
+  ],
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "mailDeliveryByParentPending": true,
+  "R2DeliveryVerified": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

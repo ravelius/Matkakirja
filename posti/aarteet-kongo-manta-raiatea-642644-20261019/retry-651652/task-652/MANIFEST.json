@@ -1,0 +1,104 @@
+{
+  "taskNumber": 652,
+  "at": "2026-10-19T14:15:30.937665+00:00",
+  "productionScope": "Single authorized new candidate completed, PT review pending",
+  "maxCalls": 1,
+  "actualImagegenCalls": 1,
+  "remainingCalls": 0,
+  "noFurtherRetryWithoutFeedback": true,
+  "sourceCommit": "d33adf39caf4e64919259c9cf56d0de30bc93be8",
+  "sourceBlob": "645a429ed5194fa863d69c59af954f08af65f665",
+  "sourceSHA256": "b450d0f44480ee9029c342890e775a49de319d48e985ebd464b95bf080fe272e",
+  "nativeSHA256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+  "nativePixelSHA256": "f74197129ad3569f5fb6efd614eb9cd7e0c6254afe613359bc9e24d226a26f9b",
+  "jpegSHA256": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+  "jpegPixelSHA256": "c95b79189227dfad5ce4fb4def073a8f79197dd35e2f247a5e0ca9b55709a872",
+  "files": [
+    {
+      "path": "CALL-COUNTER.json",
+      "sha256": "ce987605aac2f7e6cedeb7eeeca263f7e8e068fecc3763d9526b44abb28c6ecd",
+      "bytes": 614
+    },
+    {
+      "path": "GENERATION.json",
+      "sha256": "b3c22edff487eb163a3869c631c848e1761bfe6b3db52cb34a8a0a49d63cb781",
+      "bytes": 2622
+    },
+    {
+      "path": "PREFLIGHT.json",
+      "sha256": "5aba5440ec19ffad68a721a9e2eff903a7356c7583339786abf48b7406310275",
+      "bytes": 633
+    },
+    {
+      "path": "PROMPTS.json",
+      "sha256": "6d727df7f7a475f4e8629579da469ed80404a6eb78bd081267ce53d90cabf0d0",
+      "bytes": 4564
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "29a43f25492201988732e07a6e4f0af13184d147229e7ba58552083db60f3d4d",
+      "bytes": 3458
+    },
+    {
+      "path": "QA.json",
+      "sha256": "9c1402c45a26c6c25bb4039541d93b908ceb7060f93f679e0652d19000c24175",
+      "bytes": 4253
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "sha256": "ba7137153c774bff77afa623f6bd2adb54f230bcfa06d95f0b91a3ce3211c98d",
+      "bytes": 2867
+    },
+    {
+      "path": "aarre-oceania-star-v2.jpg",
+      "sha256": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+      "bytes": 449152,
+      "width": 640,
+      "height": 640,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "c95b79189227dfad5ce4fb4def073a8f79197dd35e2f247a5e0ca9b55709a872"
+    },
+    {
+      "path": "before-after-644-652.png",
+      "sha256": "62aa398df9efab3022989223074005d81b5cc4a9b404f717d87f79ba7d86ae71",
+      "bytes": 1545097,
+      "width": 1280,
+      "height": 740,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "93185ea1776ecdd169c6c854b4cc775d4b180af998b7f87a5da1da89f5f1bb4c"
+    },
+    {
+      "path": "selected-native.png",
+      "sha256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+      "bytes": 2850288,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "f74197129ad3569f5fb6efd614eb9cd7e0c6254afe613359bc9e24d226a26f9b"
+    },
+    {
+      "path": "series-comparison-640.png",
+      "sha256": "3174385ec6f63d69f96d5c9b4c9ec0177bd201003c52f626c095498c7aecf4fe",
+      "bytes": 2003156,
+      "width": 1920,
+      "height": 740,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "14f6d6a655c1b31e52e542a53a6e035af44c1c24fa2bcccd7a8b4594758ec517"
+    }
+  ],
+  "museumPixelsExcludedFromDeliveryPacket": true,
+  "old644Unchanged": true,
+  "producerQAComplete": true,
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "deliveryByParentPending": true,
+  "R2DeliveryVerified": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "qualifications": [
+    "Producer review is not PT/owner acceptance. This is the single authorized retry and awaits PT feedback.",
+    "Exact lost Raiatea appearance and literal scale cannot be certified. Tahiti fragment is a different surviving object used only for structural study.",
+    "Requested main-v2 reference absent; actual previously delivered/PT-accepted639 reference disclosed and labelled.",
+    "Whole-frame technical JPEG export only; no cropping, padding, compositing, retouch or mask."
+  ]
+}

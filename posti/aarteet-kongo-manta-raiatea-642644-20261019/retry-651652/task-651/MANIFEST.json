@@ -1,0 +1,130 @@
+{
+  "taskNumber": 651,
+  "createdAt": "2026-10-19T14:15:44.126914+00:00",
+  "sourceCommit": "d33adf39caf4e64919259c9cf56d0de30bc93be8",
+  "maxCalls": 1,
+  "actualImageToolCalls": 1,
+  "candidateAttempt": 1,
+  "producerQAFullSourcePass": false,
+  "qualifiedForPTReview": true,
+  "materialQualification": "visible internal darkfissures remain;PTdecisionrequired",
+  "PTAcceptance": "pending",
+  "nativeByteExact": true,
+  "JPEGWholeFrameExport": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-651-emerald/delivery-packet/aarre-southamerica-star-v2.jpg",
+    "sha256": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+    "pixelSHA256": "48235496bcdc6ffb8b92b9d417801cf9bff974cd1f1d54be829edd421efb550f",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize then JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  },
+  "task645ProductionAndDeliveryHold": true,
+  "fileCount": 13,
+  "manifestExcludedFromOwnInventory": true,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "sha256": "2ad46e2d967abbcc7b1c09e05f284c6077fce09fd962fe7e3f36338556a539b1",
+      "bytes": 4127
+    },
+    {
+      "path": "PROMPTS.txt",
+      "sha256": "c353364ed0b4cd66a298a7f1319fed9dae44a0bd04a807bdfba9362f32303ce5",
+      "bytes": 2247
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "93dd793a2bc3bf8e3a600f5af93b19e1917d1d73561bac98bc5874b47e1f795d",
+      "bytes": 3271
+    },
+    {
+      "path": "QA.json",
+      "sha256": "24bf3d7f38f0d7047093a8ca30e5d1010e35f941c92dd118fc1cd61403b11e9a",
+      "bytes": 3623
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "sha256": "d0c3561aac715ae7313b0a827e446597ced1d1b871e7afd5b88df5d6b8ef75ee",
+      "bytes": 7692
+    },
+    {
+      "path": "aarre-southamerica-star-v2.jpg",
+      "sha256": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+      "bytes": 343517,
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "format": "JPEG",
+      "pixelSHA256": "48235496bcdc6ffb8b92b9d417801cf9bff974cd1f1d54be829edd421efb550f"
+    },
+    {
+      "path": "manta-emerald-retry651-native.png",
+      "sha256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+      "bytes": 2558981,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "83d9501212f708b2bb8063927c34284944d1e1efc1e28f177d44fcb387195ad0"
+    },
+    {
+      "path": "qa/rejected643-vs-retry651.png",
+      "sha256": "397291cf696d94db7082bdf3d8f6d66e64bbb5281f0a58f0a09c35c752e71b2f",
+      "bytes": 1484895,
+      "dimensions": [
+        1280,
+        690
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "f48ddb739c2e050bb068ece6a710e1d1fd6e79ceb89a8fafc5b6c08bd1cf2577"
+    },
+    {
+      "path": "qa/series-comparison.png",
+      "sha256": "64b9fec2a03036dcc9061379740275f307a7728c3d75b0c4b3f1ea191f694df6",
+      "bytes": 1919997,
+      "dimensions": [
+        1920,
+        700
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "a7efc7bf3291d24b0c1a85926551276259e9e761f877eb10506ae7afa8e02dbd"
+    },
+    {
+      "path": "source/RETRY-651652-READY.json",
+      "sha256": "3fe89d4cda97c877bd9279f4d6164d923a007c526a6a83cf938c3d13551670a4",
+      "bytes": 867
+    },
+    {
+      "path": "source/aarnin-korvaajat-20261019.md",
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43",
+      "bytes": 4686
+    },
+    {
+      "path": "source/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46",
+      "bytes": 1838
+    },
+    {
+      "path": "source/paatoimittaja-codex-aarteet-kongo-manta-raiatea-kuittaus-20261019.md",
+      "sha256": "b450d0f44480ee9029c342890e775a49de319d48e985ebd464b95bf080fe272e",
+      "bytes": 1374
+    }
+  ]
+}

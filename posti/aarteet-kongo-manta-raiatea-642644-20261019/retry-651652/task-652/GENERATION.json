@@ -1,0 +1,59 @@
+{
+  "taskNumber": 652,
+  "maxCalls": 1,
+  "actualImagegenCalls": 1,
+  "remainingCalls": 0,
+  "attempts": [
+    {
+      "taskNumber": 652,
+      "attempt": 1,
+      "maxCalls": 1,
+      "actualImagegenCalls": 1,
+      "remainingCalls": 0,
+      "noRetryWithoutNewFeedback": true,
+      "completedAt": "2026-10-19T14:13:55.333765+00:00",
+      "originalToolPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-120ec384-890f-4aa8-90bc-11f2e241f6f8.png",
+      "originalUnchanged": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-120ec384-890f-4aa8-90bc-11f2e241f6f8.png",
+        "sha256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+        "bytes": 2850288,
+        "format": "PNG",
+        "mode": "RGB",
+        "width": 1254,
+        "height": 1254,
+        "decodedRGBPixelSHA256": "f74197129ad3569f5fb6efd614eb9cd7e0c6254afe613359bc9e24d226a26f9b",
+        "fullyOpaque": true
+      },
+      "preservedNative": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/native/raiatea-maro-ura-652-attempt-1.png",
+        "sha256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+        "bytes": 2850288,
+        "format": "PNG",
+        "mode": "RGB",
+        "width": 1254,
+        "height": 1254,
+        "decodedRGBPixelSHA256": "f74197129ad3569f5fb6efd614eb9cd7e0c6254afe613359bc9e24d226a26f9b",
+        "fullyOpaque": true
+      },
+      "nativeCopyByteEqual": true,
+      "wholeFrameExport": {
+        "method": "Pillow RGB conversion then entire square frame Lanczos resize to640×640, JPEG quality98 subsampling0; no crop, pad, retouch, compositing or mask.",
+        "output": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/delivery-packet/aarre-oceania-star-v2.jpg",
+          "sha256": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+          "bytes": 449152,
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 640,
+          "height": 640,
+          "decodedRGBPixelSHA256": "c95b79189227dfad5ce4fb4def073a8f79197dd35e2f247a5e0ca9b55709a872",
+          "fullyOpaque": true
+        }
+      }
+    }
+  ],
+  "selectedAttempt": 1,
+  "noFurtherRetryWithoutFeedback": true,
+  "nativeUnchanged": true,
+  "old644Preserved": true
+}

@@ -1,0 +1,17 @@
+{
+  "taskNumber": 652,
+  "at": "2026-10-19T14:11:54.750282+00:00",
+  "ready": true,
+  "sourceReadAndBlobSHA1VerifiedLocally": true,
+  "sourceSHA256": "b450d0f44480ee9029c342890e775a49de319d48e985ebd464b95bf080fe272e",
+  "rootReadyVerified": true,
+  "referencesPersonallyViewed": true,
+  "wholeNewGeneration": true,
+  "maxCalls": 1,
+  "callsReserved": 1,
+  "callsDispatched": 0,
+  "noAdditionalRetryWithoutNewFeedback": true,
+  "oldFilesPreserved": true,
+  "sourceManifestSHA256": "ba7137153c774bff77afa623f6bd2adb54f230bcfa06d95f0b91a3ce3211c98d",
+  "argsSHA256": "761973f3055918af0d26a60eab06b4e1dbc3c0317a31d3d1b9bcadd901e23b2a"
+}

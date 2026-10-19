@@ -1,0 +1,47 @@
+{
+  "attempt": 1,
+  "issuedAt": "2026-10-19T14:12:02.888557+00:00",
+  "args": {
+    "prompt": "Create ONE completely NEW PHOTOREALISTIC gemological still-life COLOR PHOTOGRAPH, square RGBopaquePNG. A SINGLE GIANT PRECIOUS EMERALD CABOCHON, approximately12cm tall, EGG-SHAPED/OVOID (height about1.25timeswidth), smoothly and continuously HAND-POLISHED with gentlydomed curves, slightlynaturalasymmetry, NOfacets. It is a revered fine JEWEL-LIKE GEMSTONE, NOT roughrock. Deep saturated TRANSLUCENT EMERALD GREEN with beautiful clear opticaldepth and quiet luminousgreen interior caused by NATURALsofttransmittedlight. Interior ONLY a FEW extremely FINE delicate NATURAL inclusions, tinysoftfeather wisps/pinpoints: mostlyclear richgreentransparency. NO DARK CRACK NETWORKS, no opaquecloudiness, no shatteredmosaicplanes, no coarsegranularaventurine/fluorite/roughmineralbody. The OUTER SURFACE is flawlessly SMOOTH handpolished cabochon-like skin with one broad curved softwindowreflection and subtle naturalfinewear, not jagged/chipped/cracked. No modern angular diamond/emeraldcut facets or flatpolygoncutting. Object is an unmounted solid MINERAL cabochon, not ordinarygreenglass,jelly/plastic,not animalegg/eggshell. No fantasyneon/emissivehalo or impossiblegreenlightcast aroundit. Rest one OVATEEMERALD naturally on simple BROWN WOVEN LINEN with visibleFINE weaving about1mmspacing; enough tinythreads across this12cmstone toshow largehand-sizedscale, NOT rope-thickburlap or boulderscale. Stone alone centrally, entireovoidwithinframewithbreathingroom, about70%photoheight; NO METALFRAME/SETTING,gold,jewelleryset,box,necklace,stand,human,text,or extraartifact. SINGLE REFERENCE is ONLY the PT-approved639 camera/BACKGROUND/LIGHT SERIES STYLE: darkwarmbrown subtlytextured background, soft upper-left DIAGONAL light,gentle believablecontactshadow, rich realistic materialhighlights. DO NOT copy goldbox or its rough ambercontents fromreference. Naturalphotographicdetail,beautiful valuableemeraldclarity,NOTCGI/illustration/repeatingAIpattern. Whole NEW photograph fromtextdescription,allnewscene,not partialedit/retouch/crop/pad/backgroundreplacement. Continuousfullsquare,opaque,no border/vignetteframe/graphics/logos/watermarks. Interpretive visual reconstruction of a lost historicaltreasure,not a survivingartifactdocumentaryphoto.",
+    "transparent_background": false,
+    "referenced_image_paths": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg"
+    ]
+  },
+  "wholeNewGeneration": true,
+  "completed": true,
+  "completedAt": "2026-10-19T14:13:49.233744+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-e6834621-a3ec-498b-95a9-40ff19d4acf3.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-651-emerald/native/manta-emerald-retry651-attempt1.png",
+  "nativeSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeMode": "RGB",
+  "nativeAlphaExtrema": [
+    255,
+    255
+  ],
+  "nativePixelSHA256": "83d9501212f708b2bb8063927c34284944d1e1efc1e28f177d44fcb387195ad0",
+  "actualImageToolCalls": 1,
+  "export": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-651-emerald/delivery-packet/aarre-southamerica-star-v2.jpg",
+    "sha256": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+    "pixelSHA256": "48235496bcdc6ffb8b92b9d417801cf9bff974cd1f1d54be829edd421efb550f",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize then JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  }
+}

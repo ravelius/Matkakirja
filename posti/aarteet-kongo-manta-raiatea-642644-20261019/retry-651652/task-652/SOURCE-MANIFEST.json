@@ -1,0 +1,42 @@
+{
+  "taskNumber": 652,
+  "previousTask": 644,
+  "at": "2026-10-19T14:11:54.750282+00:00",
+  "newSourcePersonallyReadInFull": true,
+  "source": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/sources/paatoimittaja-codex-aarteet-kongo-manta-raiatea-kuittaus-20261019.md",
+    "commit": "d33adf39caf4e64919259c9cf56d0de30bc93be8",
+    "blob": "645a429ed5194fa863d69c59af954f08af65f665",
+    "sha256": "b450d0f44480ee9029c342890e775a49de319d48e985ebd464b95bf080fe272e"
+  },
+  "rootReady": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/sources/ROOT-RETRY-651652-READY.json",
+    "sha256": "3fe89d4cda97c877bd9279f4d6164d923a007c526a6a83cf938c3d13551670a4",
+    "ready": true
+  },
+  "originalSourceAndAttachmentQualifications": "Preserved in sources/PREVIOUS-644-SOURCE-MANIFEST.json and full original source/attachment archived in own sources. Lost Raiatea belt, surviving Tahiti fragment not identical. Interpretive visualization only.",
+  "museumStructure": {
+    "url": "https://www.fondationmartineaublet.fr/img/415/cp-maro-ura-web.pdf",
+    "pdfSHA256": "8891e4694ebcd7609a74242e36d26ed8a5197414b3d536ef9dcb4ceae5923e63",
+    "extractedPhotoSHA256": "a25c8cec4e21bf744de67b8bb555068f88f6a83b686c624a4d715a21211eb419",
+    "personallyReViewedFor652": true,
+    "identity": "Surviving Tahiti maro ʻura fragment, not lost Raiatea belt",
+    "role": "Rough hand-knotted/plaited vegetal-fiber net construction ONLY, not fragment shape or brown colors. Museum PDF and pixels archive only, excluded from delivery packet."
+  },
+  "reference639": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-652-maro-ura/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+    "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "personallyReViewedFor652": true,
+    "role": "Approved series warm brown background / soft upper-oblique lighting ONLY",
+    "deliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+    "PTAcceptanceCommit": "9c74aac21d6e42a043d71e095f13c002a9b0ae1c",
+    "requestedMainV2AbsentAt": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+    "qualification": "Exact PT-approved639 used, not claimed to be absent aarre-middleeast-star-v2.jpg in main."
+  },
+  "oldRejected644NotUsedAsImagegenInput": true,
+  "correctionScope": "One whole new photograph. Long narrow old handmade sacred belt, small red feathers in rows, irregular yellow parts, worn fibrous edges and rough terminals, multiple loose waves, dimensional soft upper-oblique light.",
+  "maxCalls": 1,
+  "noRetryWithoutNewFeedback": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

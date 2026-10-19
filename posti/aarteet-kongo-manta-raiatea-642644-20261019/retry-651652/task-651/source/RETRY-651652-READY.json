@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-19T14:10:33.032005+00:00",
+  "ready": true,
+  "source": {
+    "path": "posti/paatoimittaja-codex-aarteet-kongo-manta-raiatea-kuittaus-20261019.md",
+    "commit": "d33adf39caf4e64919259c9cf56d0de30bc93be8",
+    "blob": "645a429ed5194fa863d69c59af954f08af65f665",
+    "sha256": "b450d0f44480ee9029c342890e775a49de319d48e985ebd464b95bf080fe272e",
+    "readInFull": true,
+    "readAt": "2026-10-19T14:10:33.032005+00:00"
+  },
+  "sourceReadInFullByRoot": true,
+  "tasks": [
+    651,
+    652
+  ],
+  "maxCallsPerTask": 1,
+  "wholeNewGenerationOnly": true,
+  "noAdditionalRetryWithoutNewFeedback": true,
+  "oldFilesPreserved": true,
+  "styleReference": "references/PT-accepted-639640-aarre-middleeast-star.jpg",
+  "originalAttachmentQualificationsPreserved": true,
+  "dream645DeliveryHold": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

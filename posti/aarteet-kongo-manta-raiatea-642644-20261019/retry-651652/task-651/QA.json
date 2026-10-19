@@ -1,0 +1,73 @@
+{
+  "taskNumber": 651,
+  "attempt": 1,
+  "checkedAt": "2026-10-19T14:15:44.126914+00:00",
+  "personallyInspectedNative": true,
+  "personallyInspected640JPEG": true,
+  "personallyInspectedSeriesComparison": true,
+  "personallyInspectedRejected643Comparison": true,
+  "sourceReadInFullAndHashVerified": true,
+  "maxCalls": 1,
+  "actualImageToolCalls": 1,
+  "noFurtherCallsAllowedWithoutNewFeedback": true,
+  "technicalPass": true,
+  "sourceGeometryAndPolishPass": true,
+  "sourceTransparencyAndGreenColorPass": true,
+  "onlyFineInclusionsFullySatisfied": false,
+  "producerQAFullSourcePass": false,
+  "qualifiedForPTReview": true,
+  "PTMaterialDecisionRequired": true,
+  "candidateOnlyNotCurrentUseApproval": true,
+  "contentConcernFI": "Sileä munanmuoto, läpikuultavuus ja jalokivimäinen pinta korjaantuivat. Sisällä näkyy silti useita melko selviä tummia rakoja/juovia, myös640px:ssa. Vaatimusta vain hienoista sulkeumista ja tumman halkeamaverkon puuttumisesta ei merkitä varauksettomasti läpäistyksi.",
+  "observationsFI": [
+    "Uusi kokonaiskuva: yksi munanmuotoinen, sileäksi hiottu kabosonimainen syvänvihreä kivi. Ei kehystä, korusettiä, ihmisiä, tekstiä tai modernia symmetristä fasettihiontaa.",
+    "Läpikuultava vihreä ja pehmeä yläviistovalo antavat sisäisen valon tuntua. Ulkopinta on yhtenäinen ja kiiltävä, ei aiemman643:n rosoinen raakamineraalipinta.",
+    "Natiivissa ja640px:ssa näkyy kuitenkin edelleen selviä sisäisiä tummia rakoja. Tämä lähdepoikkeama/arvion epävarmuus säilytetään PT:n ratkaistavaksi; ei väitettä kaikkien sisältökriteerien läpäisystä.",
+    "Ruskean kankaan pienipiirteinen kudos antaa käsikokoisen noin12cm kiven visuaalista mittakaavaa; mittaa ei voi sertifioida valokuvasta. Tumma lämminruskea tausta kuuluu sarjaan.",
+    "Vanha643 ei ollut kuvageneroinnin syöte. Sitä käytettiin ainoastaan hylätyn historian rinnakkaisvertailussa. Ainoa generointireferenssi oli PT-hyväksytty639 tausta-/valomalli."
+  ],
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-651-emerald/native/manta-emerald-retry651-attempt1.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "sha256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+    "pixelSHA256": "83d9501212f708b2bb8063927c34284944d1e1efc1e28f177d44fcb387195ad0",
+    "byteExactOriginalPreserved": true
+  },
+  "JPEG": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/retry-651-emerald/delivery-packet/aarre-southamerica-star-v2.jpg",
+    "sha256": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+    "pixelSHA256": "48235496bcdc6ffb8b92b9d417801cf9bff974cd1f1d54be829edd421efb550f",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize then JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  },
+  "wholeNewGeneration": true,
+  "partialEdit": false,
+  "oldTask643Rejected": true,
+  "task645ProductionAndDelivery": "HOLD;newdreamonlyafterexplicitPTapprovalof651",
+  "newTask645GenerationStarted": false,
+  "PTAcceptance": "not received",
+  "postDelivery": "parent handles;not asserted",
+  "gameIntegration": "not performed",
+  "R2": "not performed",
+  "publication": "not performed"
+}

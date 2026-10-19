@@ -1,0 +1,128 @@
+{
+  "at": "2026-10-19T14:19:54.542801+00:00",
+  "sourceReadInFullByRoot": true,
+  "technicalPass": true,
+  "allContentRequirementsUnreservedlyPassed": false,
+  "qualifiedForPTReviewReportOnly": true,
+  "conditionalTasks": [
+    651
+  ],
+  "materialConcern": "The emerald is smoother, egg-shaped and translucent but internal dark fractures remain visible at native and640; PT must judge the fine-inclusions requirement. Not current-use approval.",
+  "assets": [
+    {
+      "taskNumber": 651,
+      "originalTask": 643,
+      "filename": "aarre-southamerica-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "maxCalls": 1,
+      "remainingCalls": 0,
+      "noFurtherCallsWithoutFeedback": true,
+      "JPEGPath": "aarre-southamerica-star-v2.jpg",
+      "JPEGSHA256": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+      "JPEG": {
+        "sha256": "8c80617254e8f10b34eed58eed63390a6c71fc493e77eaa422e85c3f6eda0d65",
+        "pixelSHA256": "48235496bcdc6ffb8b92b9d417801cf9bff974cd1f1d54be829edd421efb550f",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-651/manta-emerald-retry651-native.png",
+      "nativeSHA256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+      "native": {
+        "sha256": "ade0b81eac278cd8daaaa56cdd4b623091e0deb80cffec65d0cbf3ca04bcc9da",
+        "pixelSHA256": "83d9501212f708b2bb8063927c34284944d1e1efc1e28f177d44fcb387195ad0",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativePreservedByteExact": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "rootNativeAnd640AndBeforeAfterPersonallyViewed": true,
+      "technicalPass": true,
+      "fullSourceContentPass": false,
+      "PTReviewCandidateOnly": true,
+      "PTMaterialDecisionRequired": true,
+      "materialQualification": "Visible internal dark fissures remain; only-fine-inclusions requirement not unreservedly met",
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 652,
+      "originalTask": 644,
+      "filename": "aarre-oceania-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "maxCalls": 1,
+      "remainingCalls": 0,
+      "noFurtherCallsWithoutFeedback": true,
+      "JPEGPath": "aarre-oceania-star-v2.jpg",
+      "JPEGSHA256": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+      "JPEG": {
+        "sha256": "3a7180e7fba9438b5112a22a71cf5907324106dbb98dd5fd06656f4fe15894d4",
+        "pixelSHA256": "c95b79189227dfad5ce4fb4def073a8f79197dd35e2f247a5e0ca9b55709a872",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-652/selected-native.png",
+      "nativeSHA256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+      "native": {
+        "sha256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+        "pixelSHA256": "f74197129ad3569f5fb6efd614eb9cd7e0c6254afe613359bc9e24d226a26f9b",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativePreservedByteExact": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "rootNativeAnd640AndBeforeAfterPersonallyViewed": true,
+      "technicalPass": true,
+      "fullSourceContentPass": null,
+      "PTReviewCandidateOnly": true,
+      "PTMaterialDecisionRequired": false,
+      "materialQualification": "No definite blocking issue observed; long handmade sacred belt and approximate6m scale remain interpretive",
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "actualWholeGenerationCalls": 2,
+  "pendingCalls": 0,
+  "maxCallsPerTask": 1,
+  "remainingCallsPerTask": 0,
+  "noFurtherCallsWithoutFeedback": true,
+  "oldFilesPreserved": true,
+  "allChildPacketFilesHashAndMirrorVerified": true,
+  "dream645ProductionAndDeliveryHold": true,
+  "dreamReleaseRequiresExplicitPT651Acceptance": true,
+  "Tripo648OnHold": true,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

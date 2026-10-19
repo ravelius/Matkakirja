@@ -1,0 +1,16 @@
+{
+  "taskNumber": 652,
+  "maxCalls": 1,
+  "callsReserved": 0,
+  "callsDispatched": 1,
+  "actualImagegenCalls": 1,
+  "dispatchState": "returned-native-preserved",
+  "registeredAt": "2026-10-19T14:11:54.750282+00:00",
+  "argsSHA256": "761973f3055918af0d26a60eab06b4e1dbc3c0317a31d3d1b9bcadd901e23b2a",
+  "noAdditionalRetryWithoutNewFeedback": true,
+  "dispatchStartedAt": "2026-10-19T14:12:41.805028+00:00",
+  "remainingCalls": 0,
+  "completedAt": "2026-10-19T14:13:55.333765+00:00",
+  "nativeSHA256": "0c1b97858f7e3d40adebb90154e3750c3c1e513d55f39a3d35e04ab9dfa8b18b",
+  "nextGenerationRequiresNewFeedback": true
+}
