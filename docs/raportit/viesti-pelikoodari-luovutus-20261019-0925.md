@@ -124,3 +124,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - 11.07: **a871777f0** YKSI TEKSTITYS (omistaja 10.58): Asetukset Kytkin.Tekstitys (matkakirja-tekstitys, migraatio, säilyy Uusi pelissä), ⚙ Aanentasot ylin rivi,
   MuseoSovitin/IhmisenMatkaKerros delegoivat, juoksupelin huuto kaistaleelle 2,2 s. KYSYTTY PT:ltä: poistetaanko ☰-valikon Tekstitys-rivit (museo, IM2).
   Haaran kärki NS:lle simun jälkeen (sis. kaikki). Simu: SIMU NYT ei vielä tullut 11.07.
+- 11.09: **e5016f4ce** Tekstitys pois ☰-valikoista; LinssiValikko.Ratas (☰:n pohja) museoon ja Ihmisen matkaan ☰:n vasemmalle → Aanentasot. LS/NUI tiedoksi.
+  Haaran kärki e5016f4ce NS:lle simun jälkeen. SIMUSSA TODENNETTAVA: ⚙-paneelin Tekstitys-rivi, ⚙ linsseissä, juoksupelin huutokaistale.
