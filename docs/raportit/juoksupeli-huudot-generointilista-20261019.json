@@ -3,10 +3,10 @@
  "rivit": [
   {
    "avain": "juoksupeli.rikkoutuva.posliinimaljakko.versio.1.huuto",
-   "teksti": "Voi ei! Tätä teki 72 eri kättä!",
-   "aani_teksti": "Voi ei! Tätä teki 72 eri kättä!",
+   "teksti": "Noin! Tätä teki 72 eri kättä!",
+   "aani_teksti": "Noin! Tätä teki 72 eri kättä!",
    "tagi": "[shouting] [panicked] ",
-   "huom": "ei mukana omistajan 12.23 hyväksymissä 17 otossa (otto tehty/ratkaistaan erikseen)"
+   "huom": "otto jo äänitetty (alku Noin!/Katos vaan!/Auts!); ei mukana 17 otossa; teksti = ääni (Pelikoodari 19.10.)"
   },
   {
    "avain": "juoksupeli.rikkoutuva.kello.versio.1.huuto",
@@ -44,17 +44,17 @@
   },
   {
    "avain": "juoksupeli.rikkoutuva.jadesinetti.versio.1.huuto",
-   "teksti": "Eikä! Tällä leimattiin käskyt!",
-   "aani_teksti": "Eikä! Tällä leimattiin käskyt!",
+   "teksti": "Katos vaan! Tällä leimattiin käskyt!",
+   "aani_teksti": "Katos vaan! Tällä leimattiin käskyt!",
    "tagi": "[shouting] [panicked] ",
-   "huom": "ei mukana omistajan 12.23 hyväksymissä 17 otossa (otto tehty/ratkaistaan erikseen)"
+   "huom": "otto jo äänitetty (alku Noin!/Katos vaan!/Auts!); ei mukana 17 otossa; teksti = ääni (Pelikoodari 19.10.)"
   },
   {
    "avain": "juoksupeli.rikkoutuva.kalakulho.versio.1.huuto",
-   "teksti": "Ai ai! Me ruokimme näitä joka aamu!",
-   "aani_teksti": "Ai ai! Me ruokimme näitä joka aamu!",
+   "teksti": "Auts! Me ruokimme näitä joka aamu!",
+   "aani_teksti": "Auts! Me ruokimme näitä joka aamu!",
    "tagi": "[shouting] [panicked] ",
-   "huom": "ei mukana omistajan 12.23 hyväksymissä 17 otossa (otto tehty/ratkaistaan erikseen)"
+   "huom": "otto jo äänitetty (alku Noin!/Katos vaan!/Auts!); ei mukana 17 otossa; teksti = ääni (Pelikoodari 19.10.)"
   },
   {
    "avain": "juoksupeli.rikkoutuva.lasimaljakko.versio.1.huuto",
