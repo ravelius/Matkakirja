@@ -106,6 +106,9 @@ Jokainen ruutu kirjataan ja tarkistetaan.
 - **Viitekuva ei ole puute (ratkaistu 19.10.):** `posti/natiivi-ui-iss-ympyraikkuna-20261019/viite-cupola-peli-iphone.jpg` on
   Natiivi-UI:n tilauksen mukana lähettämä viite; Codexin MANIFEST listaa vain omat tiedostonsa ja kirjaa viitteen tiivisteen
   `GENERATION.json`in `referenceSHA256`-kenttään. Portti hyväksyy tiivisteellä täsmäävän listaamattoman kuvan viitteenä (HUOM).
+- **Suunta ratkaisee (PT 19.10. 18.5x):** ennen-junaa.sh tarkistaa vain peliin tuotavat Codex-toimitukset. Ohitetaan Clauden
+  toimitukset Codexille (LUEMINUT.md:n tai LAHTEET.md:n otsikossa "Codexille" tai rivi `suunta: Claude → Codex`, esim.
+  andoya-ymparisto-codex-v1) ja postilaatikon havainnekuvakansiot (`*havainne*`, omistajalle eikä peliin).
 - **Pelaava botti** kirjaa `botti: pelaa <kohta>[-n] x/y tekoa` eikä `botti: osa` -riviä; raportti luki tyrmän "ei yhteenvetoa",
   vaikka se oli 3/3 LÄPI. Uusi lokimuoto → jäsennys ja testi samaan erään.
 - **Nykäysvahti ilman yhteenvetoja:** pelkkä "0 pitkää ruutua" ei todista mitään; siksi `Nykaysvahti.cs` ja tulos EI TODISTETTU.
