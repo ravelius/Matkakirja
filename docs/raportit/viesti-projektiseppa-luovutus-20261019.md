@@ -1,40 +1,26 @@
-# Projektiseppä (ent. Siirtoseppä): luovutus 19.10.2026 klo 11.4x
+# Projektiseppä (ent. Siirtoseppä): luovutus 19.10.2026 klo 17.18
 
-Rooli: PT nimesi Siirtosepän 19.10. klo 08.48 Projektisepäksi (Opus, high, sama kansio). Projekti on Olavinlinna loppuun, ja tehtävälista on docs/raportit/olavinlinna-valmiiksi-lista-20261019.md.
+Rooli: Projektiseppä (Opus, high), kansio /Users/Shared/Claude/Matkakirja-siirtoseppa. Projektina on Olavinlinna, joka on **TAUOLLA omistajan päätöksellä 19.10. klo 17.05** (PT). Tauon aikana linnaan ei tehdä uusia eriä, käännöksiä, simuja eikä Codex- tai Tripo-tilauksia.
 Muisti: memory/projektiseppa-tila-20261019.md.
 
 ## KÄYNNISSÄ LUOVUTUSHETKELLÄ
-- Linjan 2 käännös 1286d90ed ja sen perään botin simuajo omalla simulla 8362879F. Julkaisija antoi KÄÄNNÖS NYT ja SIMULAATTORI NYT klo 11.4x, ja käännös odotti LS:n käännöstä lukkojonossa.
-  Tulokset: /Users/Shared/Claude/proto-3d/_tyo/siirtoseppa/linna-botti-1286d90ed/ (kaannos.out, ajo.out, yhteenveto.txt, repliikit-*.mp4).
-- **ENSIN:**
-  1. Lue kaannos.out:n viimeinen rivi ja ilmoita Julkaisijalle (local_24e63224-…) KÄÄNNETTY.
-  2. Kun ajo.out:ssa on SIMU LOPPU, ilmoita SIMU VAPAA. Todistusajo sammuttaa simun itse.
-  3. Lähetä PT:lle 3 riviä: botti 10/10 (tavoite) + tyrmä 1–3 + tyrmään viennin repliikki videolla (repliikit-tyrma.mp4, kaappaus nyt 45 s).
+- Ei mitään. Omia käännöksiä, simuajoja tai testisarjoja ei ole käynnissä, eikä mitään tarvitse irrottaa. Julkaisija poisti 6963950c3:n käännösjonosta klo 17.09.
 
-## Tehty tänään (proto-haara projektiseppa/linna-botti-10, worktree /Users/Shared/Claude/wt/proto-projektiseppa-linna-botti)
-- aa32f9a44: Sisältökirjurin M-osan tekstit (53 avainta) olavinlinna.fi.json:iin. Lähde tyokalut/olavinlinna-m-osa-tekstit.json, ja tekstit_olavinlinna.py yhdistää sen.
-- 15f7e89bc: ☰ › Vihje -teksti datana (Vihjeet.TekstiAvain, SeikkailuVihjeet.ViimeTeksti). **Valikkonäyttö puuttuu, ja se kuuluu Natiivi-UI:lle.**
-- 23ebd7a6e: pelaava botti.
-  - `poikki seikkailu botti pelaa [kohta]` tekee huoneiden 6–10 teot pelaajan syötteillä.
-  - `poikki seikkailu botti tyrma` hoitaa tyrmän.
-  - Ydin BottiPelaa sijoittaa teot merkeistä reittipisteisiin.
-- 0f6bb529f: repliikit-lapi-v4 (Äänittäjä, 20 kpl, omistaja 09.10); muunnelmat kiertävät.
-- 779ef1db9: LinnaOsat.Muurilla, eli Lavastajan osajako (harja 88–92, komero 93, pako 94) ja v49a toimivat molemmat.
-- 1286d90ed: kulho voudin pöytään vaakamatkalla, ja kulho asetetaan pöydälle. Kyseessä oli pelaajankin vika: kiista ei alkanut, joten avainrengas ja ovi jäivät. Botti laskee kulhon uudelleen.
-- Ensimmäinen simuajo (531bf3417, klo 11.17–11.36): 7/10 tekoa, tyrmä 1/2/3 LÄPI, kiinni 0, 522 s. Video äänellä: _tyo/siirtoseppa/linna-botti-0f6bb529f/repliikit-kello-30s.mp4 (PT:lle lähetetty).
-- Linssit-testit 2089/2089, tarkista.sh 0.
+## ENSIN seuraajalle
+1. Ilmoita PT:lle yhdellä rivillä, että olet aloittanut ja levossa, kunnes PT antaa uuden erän. Jos jono on tyhjä, rivi on "JONO TYHJÄ: Projektiseppä".
+2. Linnaan ei kosketa ennen kuin PT purkaa tauon. Jatko on kirjattu tiedostoon docs/raportit/olavinlinna-valmiiksi-lista-20261019.md osioon 6 (main fa9fc11da).
 
-## Avoimet
-- Tripo-pilotti (kokki + portinvartija, Codexin tilaus bacc15a84): kootaan keittiöön MetaHumanien viereen samaan valoon → kuvapari ja tieto siitä, liikkuvatko kasvot. PT ilmoittaa, kun mallit tulevat.
-- Codexin geometria huoneisiin 6–10 (e203239d0, palatsi ensin). Lavastaja kokoaa ja ilmoittaa siirretyt merkit. Tarkista silloin BottiOsat- ja Aloituskohdat-jako uusilla osanimillä (AloituskohdatTestit odottaa vielä TarkistusOsa muurikaytava).
-- Haaraa ei ole vielä mergetty masteriin. Juna ja merge kulkevat PT:n ja Julkaisijan kautta 10/10:n jälkeen.
-- Skenaario on tyokalut/siirtoseppa-ajot/skenaariot/botti-pelaa.txt, ja ajo tehdään skriptillä ajo-botti-pelaa.zsh (APP=… HAARA=…).
+## Tehty tänään 12.1x–17.1x (proto-haara projektiseppa/linna-botti-10, worktree /Users/Shared/Claude/wt/proto-projektiseppa-linna-botti, peili natiivi-backup peili/proto/projektiseppa/linna-botti-10 = a78533229, EI mergetty)
+- 7254653e5: pakon reittipisteet 0,35 m:n tarkkuudella ja jumissa paluu edelliselle pisteelle. Botti ajettiin simulla (käännös 586c9f105): 10/10 tekoa ja tyrmä 3/3 LÄPI.
+- 80b591b06: botti kiipeää tikkaat kuten pelaaja (junatarkistuksen jumi 88).
+- 2e3990d00: köysilasku pysyy irti törmäysmallista. Botti ajettiin simulla (käännös 82d984f28): osa-ajo 51/51, jumit 0, 10/10 ja tyrmä 3/3 LÄPI, ja PT kuittasi tuloksen. Videot ovat kansiossa proto-3d/_tyo/siirtoseppa/linna-botti-2e3990d00/.
+- 6963950c3 (EI ajettu): köysilasku pysyy irti myös näkyvästä kalliosta (NakyvaSade), ja botti kirjaa kameralokin joka otteelle. PT:n videohavainnot ovat vielä todistamatta: kamera kallion sisällä ja maisema ylösalaisin. Arvioni: ylösalaisin näkyvä kuva on järven heijastus.
+- a78533229 (testit EI ajettu): Lavastajan v49b on kiinnitetty (pala a36f4199985ef096, esittely 9c0897bec9044c1f, piste 86 irti tikkaista), ja kultaiset tiedostot on tehty paketista.
+- Ajoskripti proto-3d/tyokalut/siirtoseppa-ajot/ajo-botti-pelaa.zsh: video käännetään transpose=1:llä ja koodataan h264_videotoolboxilla, koska simun iPad-tallenne on pystyssä ja tallenteessa voi olla aukkoja.
+- Levystä vapautui ~1,5 Gi (vanhat appit 0f6bb529f ja 1286d90ed sekä vanhat todistuslokit).
 
-## LISÄYS 12.1x (uusinta tehty, ajot loppuneet)
-- KÄÄNNETTY e5a88985e (1286d90ed) klo 11.57, ja SIMU VAPAA ilmoitettiin Julkaisijalle klo 12.12. Mitään ei ole käynnissä.
-- Tulos: 6/10 tekoa, tyrmä 1/2/3 LÄPI, kiinni 0. Tyrmävideolla kuuluu tyrma-vartija-vienti-2 (_tyo/siirtoseppa/linna-botti-1286d90ed/repliikit-tyrma.mp4). Tulos on lähetetty PT:lle.
-- Juurisyy: kädessä ollut kulho irtosi 8 m pelaajasta ja +2,6 m, koska käden kahvan paikka ei seuraa ensimmäisessä persoonassa. Korjaus a67d881d8 (SeikkailuEsineet.Laske) on tarkista.sh 0, mutta sitä EI ole vielä ajettu simulla.
-- **ENSIN seuraajalle:** pyydä Julkaisijalta käännös ja simu a67d881d8:lle ja aja `APP=…/linna-botti-a67d881d8/Matkakirja3D.app HAARA=a67d881d8 zsh ajo-botti-pelaa.zsh` (käännä ensin PROTO_LINJA=2 PROTO_APP_KOPIO=<kansio> proto-kaanna.sh a67d881d8).
-- Auki on myös kaksi muuta asiaa:
-  - Pako ei ehtinyt K4:lle 30 s:ssa (ensimmäisessä ajossa ehti). Katso kallion reitin lokirivit.
-  - Todistusajo näki pääsäikeen 24–29 s jumit (pinonayte-1.txt kansiossa lokit/todistus-botti-pelaa-20261019-1157).
+## Avoimet (muiden roolien työ)
+- Junatarkistuksen botti-osat.sh ei lue "botti: pelaa tyrma" -rivejä → Työkaluseppä (PT tietää).
+- Komeron tiilet leijuvat, koska muurin täyttö puuttuu. Ne korjautuvat Codexin huone 9 -geometrialla (Lavastaja).
+- Tripo-pilotti ja Codexin huoneet 6–10 odottavat tauon purkua.
+- Pääsäikeen jumit (konsoli hiljaa 19–46 s) ovat ympäristön aiheuttamia: varjostimen käännös simussa, GPU-odotus ja kuorma. Ne eivät ole pelilogiikan vikoja.
