@@ -39,6 +39,14 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   `zsh /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ajo-museo-iss-207.zsh` (museo + ISS, iPhone + iPad; lokit
   proto-3d/lokit/natiivi-ui-ajot-207/) → AJA HETI JU:n SIMU NYT:sta.
 
+- 01.5x UUSI ERÄ PT:ltä (tärkeä, juna 207): LT:n BUILD 206 iPad 25–42 ms:n ruutu ~2×/s (proto-3d/lokit/laitetestaaja-206-ipad-20261020/
+  RAPORTTI.md; analyysi: pitkien ruutujen väli tasan 0,50 s). KORJAUS **natiivi-ui/lasihaku-207 b8198b4e3** (wt/proto-natiivi-ui-lasihaku-207,
+  pohja juna-207 63713c20d): Lasipohja.Etsi + KehysNapit.Hae/PidaNakyvissa ilman Querya ja ajastinta → Rakenne.Seuraa/Luokka
+  (AttachToPanelEvent); vartija Linssit-testit/Testit/UiSeuratutLuokatTestit.cs 4/4; unity-tarkistus 0 virhettä. Käännöspyyntö JU:lle
+  01.54 → _tyo/natiivi-ui/lasihaku-207-app. SIMU NYT:sta: `zsh /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ajo-ruutuaika-sokkelo-207.zsh
+  /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/lasihaku-207-app` (ennen = julkaisija/sokkelo-yhteinen14-207-app) → TULOS.md PK:lle
+  (local_11aca9cd-…) + PT:lle → sitten NS:lle junaan 207 PT:n OK:lla.
+
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
 - palsta-haku 03deb7b16 + SK #5015 tekstit e4c33a4fe → juna 206.
 - varjostimet 28ef55f1e (kokoelma 53 varianttia/57 tilaa, Cupolan pisin ruutu 1200 → 500 ms) → juna 206 (lokit/todistus-varjostimet2-b3-ipad-…/TULOS-NUI.md).
