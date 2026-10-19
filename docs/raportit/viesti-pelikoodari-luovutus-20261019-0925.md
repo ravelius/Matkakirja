@@ -116,3 +116,6 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   ODOTTAA: KK/omistaja yhteisestä Tekstitys-asetuksesta (ehdotus: MuseoSovitin.TekstitysPaalla rattaaseen, huuto sen kaistaleelle) – ei toteuteta ennen vastausta.
 - 10.29: **0956ff99f** laineilu 0,7 s (omistaja 10.2x) – ODOTTAA hyväksyntää (esikatselu muistokupla/kupla-laineilu-07.mp4); versiot (kupla, huuto):
   .versio.<n>.kupla/.huuto, kuva esineet/<id>-<n>; JuoksuVersio, RepliikkiValitsin.ValitseVersio, RikkoVersio → kupla.Nayta(e, versio).
+- 10.43: **ef127330a** kääretaulu (V4EsteLaji.Kaaretaulu, osa 15, repeää aina, liuskat heiluvat; Codex: kaaretaulu/-revitty/-liuska.glb, sopimus ESTEMALLIT-CODEXILLE.md).
+- TULEVA (omistaja 10.38): kun juoksupeli valmistuu Codexin grafiikalla → SIMUN KUVAKAAPPAUS (grafiikka, mittasuhteet, näkyvä alue) PT → KK → omistaja; ei videota.
+- Odottaa yhä: uniefekti 0,7 s hyväksyntä, tekstityskysymys (KK).
