@@ -317,7 +317,8 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(OPAS_AINEISTOT.historia_polut, { tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json' });
   // Yksityiskohtakuvat myös Prahalle, Ateenalle, Kööpenhaminalle (#4635) ja Lontoolle (#4638), juna 195; historiaosiot niille pallokierroksen kautta.
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), ['ateena', 'koopenhamina', 'lontoo', 'pariisi', 'praha', 'tukholma']);
-  for (const [k, p] of Object.entries(OPAS_AINEISTOT.historia_yksityiskohdat_polut)) assert.equal(p, `esittely/${k}-historia-v1/${k}-historia-yksityiskohdat.json`);
+  const kuvaVersio = { lontoo: 'v2', koopenhamina: 'v2' };   // CC BY-SA -kuvat (SK 19.10.), muut v1
+  for (const [k, p] of Object.entries(OPAS_AINEISTOT.historia_yksityiskohdat_polut)) assert.equal(p, `esittely/${k}-historia-${kuvaVersio[k] || 'v1'}/${k}-historia-yksityiskohdat.json`);
 });
 
 test('esittely_polut: Pariisi v1h (v1g + kipin aukiot Vendôme, Bastille, République, Saint-Michel; juna 183), äänet ennallaan', async () => {
