@@ -2,9 +2,9 @@
 
 Omistajan päätös 15.10.2026 (Raamattu PR #4631, ISOISÄN UNI). Teksti on äänisivun Tekstit → Odottaa hyväksyntääsi (matkakirja-aanet.pages.dev), tunnukset `isoisan-uni-alkusoitto` ja `pulu-saapuminen-ilman-luentaa`. Ääntä ei ole tehty; eleven_v3 vasta omistajan Hyvä-rastin jälkeen.
 
-## Isoisän uni (478 merkkiä)
+## Isoisän uni (päivitetty 19.10.2026: Mantan smaragdi El Doradon tilalle)
 
-> Maailma on unohtanut aarteensa, mutta minä en. Näen niitä unissani: kultaa, jota heitettiin vuoristojärven syvyyksiin. Naamion, jonka turkoosit kasvot katsovat yhä. Keisarin sinetin, joka katosi kuin savu vuosisatoja sitten. Yksi niistä on lähempänä kuin muut: kolme punaista kiveä, timantti keskellä ja helmet välissä. Kolme veljestä. Viimeksi siitä kuultiin Hollannissa yli kaksisataa vuotta sitten. Joku tietää, minne se meni. Kysyn jokaisessa kaupungissa, kunnes löydän sen.
+> Maailma on unohtanut aarteensa, mutta minä en. Näen niitä unissani: smaragdin, jota rannikon kansa palvoi ja kätki valloittajilta. Naamion, jonka turkoosit kasvot katsovat yhä. Keisarin sinetin, joka katosi kuin savu vuosisatoja sitten. Yksi niistä on lähempänä kuin muut: kolme punaista kiveä, timantti keskellä ja helmet välissä. Kolme veljestä. Viimeksi siitä kuultiin Hollannissa yli kaksisataa vuotta sitten. Joku tietää, minne se meni. Kysyn jokaisessa kaupungissa, kunnes löydän sen.
 
 Ainoa muutos KK:n luonnokseen: sinetti "katosi kuin savu lähes tuhat vuotta sitten" → "vuosisatoja sitten".
 
@@ -12,7 +12,7 @@ Ainoa muutos KK:n luonnokseen: sinetti "katosi kuin savu lähes tuhat vuotta sit
 
 | Väite | Tulos |
 | --- | --- |
-| Kultaa heitettiin vuoristojärveen | Pitää: Guatavitan järvi (3 000 m), muiscojen kultauhrit; El Dorado -tarun pohja (en.wikipedia Lake Guatavita). |
+| Smaragdi, jota rannikon kansa palvoi ja kätki valloittajilta | Pitää (korvaa El Dorado -kohdan 19.10.2026, omistaja): Mantan smaragdi, Cieza de León (Markham) luku L ja Garcilaso de la Vega, Comentarios Reales IX: Mantan herra/laakso palvoi suurta smaragdia; espanjalaiset (Alvarado 1534) särkivät muita, suuren kiven paikalliset kätkivät eikä sitä löydetty uhkauksillakaan. Teksti ei väitä sijaintia eikä nimeä; ei Umiñaa (nimi vasta Velascolla 1789). |
 | Turkoosikasvoinen naamio | Ei väitä sijaintia eikä esinettä; turkoosimosaiikkinaamiot ovat atsteekkien esineistöä. Montezuma-liitos on luettelon (Aarni) nimi, ei historiallinen väite. |
 | Keisarin sinetti katosi "lähes tuhat vuotta sitten" | EI PIDÄ kaikissa lähteissä: Valtakunnan sinetti katosi joko 900-luvulla (937/946) tai päätyi Yuan-keisareille ja oli kadonnut 1370 mennessä (en.wikipedia Heirloom Seal of the Realm). Siksi "vuosisatoja sitten", joka pitää kummassakin. |
 | Kolme punaista kiveä, timantti keskellä, helmet välissä | Pitää: Herman Ruissel 1389, kolme punaista spinelliä (balas-rubiinia) kolmiossa, keskellä suuri terävä (pointed) timantti, kolme pyöreää helmeä välissä, lisäksi riippuva helmi (en.wikipedia Three Brothers). |

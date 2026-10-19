@@ -22,36 +22,44 @@
    "epavarmaa": "Lähteet ovat ristiriidassa siitä, miten koru päätyi Baselille (Grandsonin taistelu 1476 vai Liègen piiritys 1467) ja milloin Fugger sen osti (1504 vs 1505); teksti jättää nämä auki. Ruisselin tekijyys perustuu vain Wikipediaan ja matkaopas-artikkeliin, joten teksti sanoo 'mainitaan'. Henrietta Marian 1640-luvun myynnin onnistuminen ja korun kohtalo (pilkottu, Mazarin, Kolme sisarta -teoria) ovat tuntemattomia. Korjaus 19.10.: Juhana oli 1389 vasta Nevers'n kreivi (herttuaksi 1404), joten teksti sanoo 'tuleva herttua'; timantin väriä ei mainita aikalaislähteissä (1419 'very big pointed diamond'), joten 'sininen' poistettu (docs/raportit/kolme-veljesta-faktat-20261011.md). Tilaaja: kaikki lähteet nimeävät Juhana Pelottoman, mutta lähteet eivät sulje pois, että hänen isänsä Filip Rohkea maksoi tai ohjasi hankinnan (Ruissel työskenteli 1385-89 enimmäkseen Filipille); siksi 'lähteiden mukaan'."
   },
   "africa": {
-   "nimi": "Suuren Zimbabwen kivilintu",
-   "kuvaus": "Shonojen esi-isien rakentaman Suuren Zimbabwen kivikaupungin muureilla ja pylväillä seisoi vuolukivestä veistettyjä lintuja, kukin noin 40 cm korkea (jalustoineen yli metrin). Ne esittävät luultavasti kotkaa, ja tutkijat kiistelevät lajista.",
-   "historia": "Metsästäjä Willi Posselt vei yhden linnuista 1889 ja myi sen Cecil Rhodesille, ja muut päätyivät Etelä-Afrikan museoihin; yksi jalusta vietiin Berliiniin ja palautettiin 2003. Kahdeksasta tunnetusta linnusta viimeinen luovutettiin Etelä-Afrikasta Zimbabwelle huhtikuussa 2026, joidenkin uutisten mukaan väliaikaisena siirtona. Zimbabwen lipun lintu perustuu näihin veistoksiin.",
+   "nimi": "Kongon kuninkaan kruunu",
+   "kuvaus": "Kongon kuninkaan kruunu oli hopeasta tehty, jalokivin koristeltu kruunajaiskruunu, jonka paavi Innocentius X lähetti kuningas Garcia II:lle. Se tuotiin Kongoon kapusiinimunkkien mukana.",
+   "historia": "Kuningas António I kaatui Mbwilan taistelussa 29.10.1665. Kruunun kerrotaan lähetetyn sotasaaliina Portugaliin, mutta erään tutkijan mukaan se katosi Recifessä matkalla. Sen jälkeen kruunun jäljet katoavat, eikä säilymisestä ole tietoa.",
    "lahteet": [
     {
-     "url": "https://en.wikipedia.org/wiki/Zimbabwe_Bird",
-     "tukee": "vuolukivi, noin 40 cm korkeat linnut pylväillä, shonojen esi-isien rakentama kaupunki, kotka (kalakotka tai kärpäskotka) tulkintana, Posselt 1889 ja myynti Rhodesille, Bentin 1891 kirjaamat kahdeksan lintua, Berliinin jalusta 1907, lintu Zimbabwen lipussa ja vaakunassa, viimeinen lintu palautettu huhtikuussa 2026"
+     "url": "https://archive.org/details/istoricadescrizi00cava",
+     "tukee": "Cavazzi 1687, kirja 5 §19: kapusiinit toivat paavilta kruunajaiskruunun Garcialle; kruunu oli pelkkää hopeaa mutta hienotyöinen ja monin jalokivin koristeltu; kirja 7 §141: Mbwilan jälkeen kuninkaan ohimoilta löytynyt kruunu lähetettiin Portugalin kuninkaalle"
     },
     {
-     "url": "https://www.graphic.com.gh/international/international-news/zimbabwes-iconic-stone-birds-were-taken-by-colonialists-finally-theyre-all-back-home.html",
-     "tukee": "kahdeksan tunnettua veistosta, Posseltin ja Rhodesin rooli, Bent siirsi neljä museoon Etelä-Afrikassa, tutkijoiden erimielisyys lajista (bateleur vs. kalakotka) ja tekijöistä, viimeinen lintu palasi huhtikuussa 2026"
+     "url": "https://archive.org/details/relationhistoriq03cava",
+     "tukee": "Labat 1732: sama kohta ranskaksi (kruunu hopeaa, arvokkain jalokivin)"
     },
     {
-     "url": "https://www.sahra.org.za/?p=14782",
-     "tukee": "viimeisen linnun luovutus Iziko-museossa 14.4.2026 Groote Schuurin kokoelmasta; Zimbabwe pyysi sitä virallisesti 2025"
+     "url": "https://www.encontro2020.pe.anpuh.org/resources/anais/22/anpuh-pe-eeh2020/1600961699_ARQUIVO_281f05e6037b51a0e70cb501435a60c1.pdf",
+     "tukee": "Souza 2020, alaviite 25: Garcia II:n kuuliaisuudenvala 9.5.1648, Innocentius X:n kirje 20.5.1648, kruunu Kongossa 1652; kruunun luovutus Negreirosilta Recifeen matkaavalle Antonio Curado Vidalille ja katoaminen tai varkaus matkalla (AHU-CU-ANGOLA Cx. 9)"
     },
     {
-     "url": "https://mg.co.za/article/2003-05-15-ancient-eagle-comes-home-to-roost-in-zimbabwe/",
-     "tukee": "Berliiniin päätyneen jalustan paluu Zimbabween 2003; yksi lintu oli tuolloin yhä Etelä-Afrikassa"
+     "url": "https://dialnet.unirioja.es/descarga/articulo/7832379.pdf",
+     "tukee": "Souza 2018: sama Recife-katoaminen, AHU-viitteet; kruunun kunniapaikka Luandassa ennen lähetystä"
     },
     {
-     "url": "https://english.news.cn/20260415/95808e147fab4f0aacfd0f0c29861660/c.html",
-     "tukee": "luovutus 14.4.2026"
+     "url": "https://www2.historia.uff.br/tempo/wp-content/uploads/2024/11/artg6-7.pdf",
+     "tukee": "Vainfas ja Mello e Souza 1998: kruunu ja valtikka lähetettiin Lissaboniin sotasaaliina Mbwilan jälkeen"
     },
     {
-     "url": "https://www.sahra.org.za/exile-repatriation/zimbabwe-soapstone-bird/",
-     "tukee": "luovutus, väliaikainen siirto"
+     "url": "https://www.scielo.br/j/anaismp/a/q5xByvmxMJwkQWQFw3qJkGM/?lang=en",
+     "tukee": "Fromont 2017: paavin antama kruunu (kullattua hopeaa) oli kuninkaiden tunnus ainakin 1651 ja menetettiin Mbwilassa"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Mbwila",
+     "tukee": "Mbwilan taistelu 29.10.1665, António I kaatui"
+    },
+    {
+     "url": "https://mdpi-res.com/d_attachment/religions/religions-15-00038/article_deploy/religions-15-00038.pdf",
+     "tukee": "Gouveia 2024: Garcia II sai kruunun Innocentius X:ltä; António I:n kaatuminen Mbwilassa"
     }
    ],
-   "epavarmaa": "Linnun laji (kalakotka vai kärpäskotka) ja veistosten tarkka tekijä ja merkitys ovat tutkijoiden kesken kiistanalaisia; kaupungin ajoitus vaihtelee lähteittäin (1000-luku–1400-luku). Peliin tehty lyhyt fakta oli epätarkka: lippuun ei ole kopioitu yhtä tiettyä lintua vaan se perustuu veistoksiin; sen ajankohdista (palautus 1980/81, Berliinin jalusta 2003/2004) lähteet poikkeavat, siksi ne jätettiin pois tekstistä. Faktatarkistus: lintujen korkeus vaihtelee lähteittäin (25–50 cm; jalustoineen yli metri); 2026 luovutuksen pysyvyys odottaa lakimuutosta (SAHRA, uutiset: väliaikainen siirto)."
+   "epavarmaa": "Korvaa Suuren Zimbabwen kivilinnun (omistaja 19.10.2026; kaikki kahdeksan lintua löydetty). Materiaali vaihtelee lähteittäin (hopea: Cavazzi, Labat; kullattu hopea: Fromont; messinki: Gouveia, Souza 2018), siksi 'hopeasta tehty'. Recifessä katoaminen on käytännössä yhden tutkijan (Souza 2018 ja 2020, AHU-asiakirjat; asiakirjaa ei nähty) tulkinta ja Lissabon-versio on toinen lähde, siksi teksti sanoo 'erään tutkijan mukaan'. Saapumisvuosi 1651 (Fromont) vs 1652 (Souza): vuotta ei mainita. Yhteys 'Mbwilassa löytynyt kruunu = paavin kruunu' on tutkijoiden tulkinta (Cavazzi ei sano sitä suoraan). 'Säilymisestä ei ole tietoa': museota tai etsintöjä ei löytynyt (portugalilaisia kokoelmia ei voitu hakea kattavasti). Kanonin 'kadonnut Recifessä 1666 matkalla Lissaboniin' on tämän tekstin mukaan pehmennetty (lähteet: Recife tai Lissabon, vuosi 1665 taistelu). Sävy: kuningas kaatui taistelussa, kerrotaan arvokkaasti."
   },
   "middleeast": {
    "nimi": "Sheban kuningattaren suitsukerasia",
@@ -126,52 +134,88 @@
    "epavarmaa": "Se, upposiko suuri osa kullasta järveen vai kätkettiinkö se, on legendaa eikä ole todistettu. Harkon yhteys nimenomaan Montezuman aarteeseen on tutkijoiden päätelmä (voi olla myös muuta sotasaalista). Lähteet eroavat harkon löytökuukaudesta (maalis/toukokuu 1981); päivämäärä jätetty pois. Pakoyön päivämäärä vaihtelee lähteissä (30.6.-1.7.1520); käytetty yleisintä 30.6. Korjaus 19.10. (mittasääntö 3.10): aarre on rajattu yhden ihmisen kannettavaan esineeseen, turkoosinaamioon (sama kuin isoisän unessa); mikään lähde ei yhdistä yhtä tiettyä naamiota Montezuman aarteeseen, joten naamio on legendan ja pelin tulkinta. Historiakappale kertoo koko aarteen tarinan."
   },
   "southamerica": {
-   "nimi": "El Doradon aarre",
-   "kuvaus": "Muiscojen kultalautta on vain noin 20 senttimetrin mittainen esine: ruokolautalla istuu päällikkö ja kymmenen pienempää hahmoa, kaikki valettu kullan, hopean ja kuparin seoksesta.",
-   "historia": "Legendan mukaan uusi hallitsija peitettiin kultapölyllä ja vietiin lautalla Guatavitan järven keskelle, jonne upotettiin kultalahjoja; tästä syntyi tarina kullatusta miehestä, El Doradosta, ja vuosisatoja kestäneet yritykset kuivattaa järvi. Talonpojat löysivät esineen vuonna 1969 luolasta lähellä Pascaa, ja se on nyt Bogotán Kultamuseossa, mutta osa tutkijoista kyseenalaistaa sen yhteyden Guatavitaan.",
+   "nimi": "Mantan smaragdi",
+   "kuvaus": "Mantan smaragdi oli Ecuadorin rannikon manteño-kansan palvoma suuri jalokivi, jonka luo sairaat hakivat apua ja jonka Inka Garcilaso de la Vega kuvasi melkein strutsinmunan kokoiseksi.",
+   "historia": "Espanjalaiset särkivät vuonna 1534 vasaralla monia muita smaragdeja luullen niitä lasiksi, mutta suuren kiven paikalliset kätkivät, eikä sitä löydetty uhkauksillakaan. Myöhemmän kertomuksen mukaan sen nimi oli Umiña. Kivestä ei ole tietoa 1500-luvun jälkeen.",
    "lahteet": [
     {
-     "url": "https://en.wikipedia.org/wiki/Muisca_raft",
-     "tukee": "Esineen koko (19,5 cm), seos (kulta, hopea, kupari), 11 hahmoa, löytö Pascasta 1969, Bogotán Kultamuseo, tutkijoiden erimielisyys Guatavita-yhteydestä, järven suojelu 1965, kuivatusyritys 1500-luvun lopulla"
+     "url": "https://www.gutenberg.org/ebooks/48770",
+     "tukee": "Cieza de León (Markham 1864), luku L: Mantan herralla oli suuri smaragdi, jota väki palvoi ja jonka luo sairaat tulivat; Alvaradon miehet särkivät smaragdeja vasaroilla luullen niitä lasiksi; suurta ei löydetty uhkauksillakaan; Markhamin alaviite: Velasco antaa nimen Umiña"
     },
     {
-     "url": "https://lacma.org/node/41468",
-     "tukee": "El Dorado alun perin henkilö ('kullattu'), 1599 kaiverrus kultapölyllä peitetystä cacique-päälliköstä, 1638 kuvaus kruunajaisista Guatavitan järvellä, kuivatusyritykset epäonnistuivat ja jatkuivat 1900-luvulle"
+     "url": "https://archive.org/details/royalcommentarie00vega_1",
+     "tukee": "Garcilaso de la Vega (Rycaut 1688), kirja IX: Mantan laakson palvottu smaragdi, ei paljoa strutsinmunaa pienempi; espanjalaiset särkivät suurimman osan vasaroilla alasimella, suuren jumalattaren kiven intiaanit veivät pois eikä sitä saatu takaisin uhkauksilla"
     },
     {
-     "url": "https://artsandculture.google.com/asset/votive-figure-in-the-shape-of-a-ceremony/LQEc8oIOPSDRcQ",
-     "tukee": "mitat 19,5 cm, tumbaga, hahmot (Kultamuseo)"
+     "url": "https://precolombino.cl/wp/en/culturas-americanas/culturas-precolombinas/intermedia/manta/",
+     "tukee": "Museo Chileno de Arte Precolombino: manteño-kulttuuri Manabín rannikolla (Mantan alue)"
     },
     {
-     "url": "https://world-archaeology.com/issues/bogotas-gold-rush",
-     "tukee": "löytö Pascassa"
+     "url": "https://archive.org/details/56663290HistoriaDelReinoDeQuitoEnLaAmericaMeridionalVol2",
+     "tukee": "Velasco 1789, Historia del Reino de Quito II: Mantan terveyden jumala Umiña ja suuri smaragdi; nimi vasta 1700-luvun kertomuksessa"
+    },
+    {
+     "url": "https://es.wikipedia.org/wiki/Umi%C3%B1a",
+     "tukee": "Umiña: Mantan smaragdi ja sen nimi; sijainti tuntematon, legendat myöhempiä"
+    },
+    {
+     "url": "https://quaibranly.fr/es/explora-colecciones/base/Bibliography/action/show/notice/000316805-death-in-the-snow-pedro-de-alvarado-and-the-illusive-conquest-of-peru",
+     "tukee": "Lovell: Alvarado nousi maihin Ecuadorin rannikolla helmikuussa 1534"
+    },
+    {
+     "url": "https://www.vistazo.com/actualidad/nacional/la-fundacion-de-quito-fue-al-tercer-intento-y-con-204-vecinos-XX1101198",
+     "tukee": "Alvaradon retkikunta 1534 Ecuadorin rannikolla ja Quiton suuntaan"
     }
    ],
-   "epavarmaa": "Seremonia tunnetaan vain espanjalaisajan kertomuksista (1599 ja 1638), ei silminnäkijöiltä; kultalautta ajoitetaan 1295-1410 ja sen yhteys Guatavitaan on tutkijoiden kesken kiistanalainen (löytyi Pascasta); El Doradon 'aarre' järven pohjalla on legenda eikä sitä ole löydetty."
+   "epavarmaa": "Korvaa El Doradon / Muiscojen kultalautan (omistaja 19.10.2026; lautta löytyi 1969). Strutsinmunavertaus on vain Garcilasolla (Cieza ei anna vertausta), siksi 'Garcilason mukaan'. Nimi Umiña ilmestyy vasta Velascolla 1789 (noin 250 v myöhemmin; Cieza ja Garcilaso eivät mainitse nimeä; es.wikipedia: etymologia tuntematon, legendat myöhempiä), siksi 'myöhemmän kertomuksen mukaan'. Pizarro ei kuulu vasaratarinaan, vaan Alvaradon miehet (Cieza, Garcilaso). 'Ei tietoa 1500-luvun jälkeen': mikään lähde ei väitä kenenkään omistavan kiveä; negatiivista todistetta ei voi saada. Kanonin 'vähän strutsinmunaa pienempi' ≈ Garcilasoa. Kerronnasta jätetty pois ihmisuhrit ja 'paholaisen palvonta' (Ciezan siirtomaa-ajan sävy) ja Umiña-prinsessalegenda; Umiña on yhä Manabín elävää perintöä, joten sävy on kunnioittava. Lähin lautakaupunki (Quito vs Guayaquil) tarkistamatta."
   },
   "oceania": {
-   "nimi": "Eteläristin helmi",
-   "kuvaus": "Eteläristi on yhdeksän luonnonhelmen ristinmuotoinen ryhmä, jonka koko on vain noin 3,7 senttiä. Laboratoriotutkimuksen mukaan vain kaksi liitoskohtaa on syntynyt luonnostaan, ja muut on kiinnitetty myöhemmin.",
-   "historia": "Sen kerrotaan löytyneen Länsi-Australian rannikolta 1883 (joidenkin lähteiden mukaan 1874), ja se voitti kultamitalin Pariisin maailmannäyttelyssä 1889. Viimeksi se oli julkisesti esillä Lontoossa 1924, minkä jälkeen se oli lähes 80 vuotta yksityisomistuksessa; nykyisin sen kerrotaan olevan pysyvässä lainassa Länsi-Australian museolla.",
+   "nimi": "Raiatean kuninkaiden höyhenvyö",
+   "kuvaus": "Raiatean kuninkaiden höyhenvyö, maro ʻura, oli punaisin höyhenin peitetty verkkovyö, noin kuuden metrin pituinen, ja jokainen hallitsija lisäsi siihen oman liuskansa.",
+   "historia": "Pyhä vyö oli kuninkaallisen vallan merkki ʻOro-jumalan palvonnassa Taputapuātean maraella, joka on nykyään UNESCOn maailmanperintökohde. Kuningas Tamatoa III luopui vanhasta uskosta 1815–16 ja lähetti vyön viimeistään 1822 Lontooseen lähetysseuran museoon. Sen jälkeen vyön jäljet katoavat.",
    "lahteet": [
     {
-     "url": "https://catalogue.slwa.wa.gov.au/record=b2644046",
-     "tukee": "Yhdeksän Pinctada maxima -helmen latinalaisen ristin muotoinen ryhmä; löytö Länsi-Australiassa 1874 tai 1883; Colonial and Indian Exhibition 1886; Pariisin näyttely 1889 ja kultamitali; Wembley 1924; sijainti myöhemmin tuntematon"
+     "url": "https://archive.org/details/journalofvoyages02tyer",
+     "tukee": "Tyerman ja Bennet (Montgomery 1831), osa II, s. 125: Raiatean maro oli punaisin höyhenin peitetty verkkovyö, 21 jalkaa pitkä ja 6 tuumaa leveä; jokaisen hallitsijan valtaantulossa lisättiin liuska; kuninkaallisen vallan tunnus; Tamatoa lähetti sen Lontoon lähetysseuran museoon"
     },
     {
-     "url": "https://ratty.com.au/?p=492",
-     "tukee": "Löytö 25.3.1883 Baldwin Creekin edustalla; koko noin 37,2 x 18,3 mm; yksityisomistus Lontoossa yli 70 vuotta, Wembley 1924 viimeinen julkinen esillepano; 1986 laboratorioraportti: kaikki helmet luonnollisia mutta vain kaksi liitosta luonnollista; pysyvä laina Länsi-Australian museolle"
+     "url": "https://www.theartnewspaper.com/2019/12/05/quai-branly-to-send-fragment-of-feather-belt-worn-by-first-king-of-tahiti-back-to-polynesia",
+     "tukee": "Art Newspaper 2019 (Alévêque): pisin tunnettu maro oli noin kuusimetrinen Tamatoan vyö Raiateassa; maro ʻura poliittisen ja uskonnollisen vallan tärkein esine; muut maro ʻuran jäljet katosivat 1800-luvun alussa"
     },
     {
-     "url": "https://mastoloni.com/history-lore/2023/Dec/14/southern-cross-pearl/",
-     "tukee": "löytövuosi 1874 tai 1883"
+     "url": "https://argonauts2022.net/10-two-of-the-tur-rursna/",
+     "tukee": "Wingfield 2022: Raiatean maro ʻura, liuskat hallitsijoittain, lähetys LMS-museoon (nojaa Tyermaniin)"
     },
     {
-     "url": "https://ratty.com.au/southern-cross-pearlback-from-long-exile/",
-     "tukee": "1981 laboratoriotutkimus, liitokset, laina"
+     "url": "https://la1ere.franceinfo.fr/musee-du-quai-branly-paris-on-retrouve-fragment-maro-ura-polynesie-663591.html",
+     "tukee": "La1ère: maro ʻura -aika alkoi ʻOro-kultin leviämisestä Raiateasta (Opoan marae)"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Tamatoa_III",
+     "tukee": "Tamatoa III hylkäsi vanhan uskonnon ja poltti ʻOron ja Hiron kuvat Taputapuāteassa"
+    },
+    {
+     "url": "https://www.berghahnbooks.com/blog/polynesian-iconoclasm",
+     "tukee": "Raiatean maraen tuhoaminen kesällä 1815–16"
+    },
+    {
+     "url": "https://openresearch-repository.anu.edu.au/items/a30a8c35-bdf2-4e30-8e74-e674868d0485",
+     "tukee": "Gunson 2018 (Threlkeldin kertomus): Tamatoa näytti vyön Threlkeldille 1821 ja aikoi lahjoittaa sen Lontoon lähetysseuralle"
+    },
+    {
+     "url": "https://www.fondationmartineaublet.fr/",
+     "tukee": "Quai Branlyn säilynyt maro ʻura -pala on ainoa tunnettu (tahitilainen, ei Raiatean)"
+    },
+    {
+     "url": "https://www.france.fr/en/article/the-taputapuatea-marae-has-been-classified-a-unesco-world-heritage-site/",
+     "tukee": "Taputapuātea marae UNESCOn maailmanperintökohde 9.7.2017"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Taputapuatea_marae",
+     "tukee": "Taputapuātea Raiateassa, ʻOro-kultin keskus, maailmanperintökohde 2017"
     }
    ],
-   "epavarmaa": "Löytövuosi ristiriitainen (1883 vs 1874; 1887 sanomalehti mainitsee 1884). Nykyinen sijainti (pysyvä laina Länsi-Australian museolle) tulee vain yhdestä lähteestä; SLWA:n kirjaston tietue pitää sijaintia tuntemattomana ja Vatikaani-huhu on kumottu. Liitosten korjaus perustuu yhteen laboratorioraporttiin (1986) ja foorumiväitteeseen. Pelin nykyinen fakta (löytö 1883, maailmannäyttelyt) pitää kutakuinkin paikkansa. Faktatarkistus: kultamitali 1889 ja pysyvä laina tulevat käytännössä yhdestä lähteestä (SLWA/Ratty); WA Museumin oma sivu tarkistamatta; yksityisomistuksen pituus ~80 v (1924–2005)."
+   "epavarmaa": "Korvaa Eteläristin helmen (omistaja 19.10.2026; helmi löytyi 1883). Vyön myöhemmästä kohtalosta Lontoossa ei löydetty yhtään lähdettä: 'jäljet katoavat' on päätelmä lähteiden vaikenemisesta (Alévêque: kaikki muut maro ʻuran jäljet katosivat 1800-luvun alussa; Quai Branlyn palan katsotaan olevan Tahitin vyö, 'hyvin todennäköisesti' Pomare I:n, ei Raiatean), ei lähteen väite; British Museumin esine Oc,LMS.85 on tarkistamatta (LMS-museon kokoelmat hajotettiin 1890-luvulta 1910). Mitat (21 jalkaa) vain Tyermanilla; 'noin kuusi metriä' sopii Art Newspaperin kuvaukseen. Tamatoan vyön lähetys: aikomus 1821 (Threlkeld/Gunson), lähetys viimeistään marraskuussa 1822 (Tyerman). Tyerman ja Bennet julkaistiin vasta 1831, joten painettu maininta on 1831; vyö oli kuitenkin esillä LMS-museossa Lontoossa 1820-luvulla. Kuninkaiden osa-lisäysväitteellä on käytännössä yksi alkuperäislähde (Tyerman; Wingfield toistaa). Sävy: pyhä esine ja elävä perintö (Taputapuātea UNESCOn maailmanperintökohde 2017); 'trofee', 'epäjumala' ja ihmisuhrit jätetty pois (lähetysseuran sanastoa). Tahiti ja Raiatea eivät ole nykyisellä Oseania-laudalla."
   }
  }
 }
