@@ -72,8 +72,9 @@ vastaanotossa (älä toimita KTX2:ta).
 ## 6. Vastaanotto (Linnanrakentaja)
 
 1. `node tools/codex-3d-tarkistus.mjs <kansio>` → 0. Hylätystä yksi viesti PT:lle (VIRHE-rivit), PT välittää Codexille.
-2. Silmämääräinen tarkistus: suunta (+Z eteen), animaatioiden silmukat, materiaalit Unityssä, ja hahmon koko pelissä muihin verrattuna.
-3. Viimeistely (LOD, ASTC, törmäysmuodot) ja vientipaketti `_valmiit/<aihe>-vN-vienti-<pvm>/` → Julkaisija `vie-paketti.sh`.
+2. Havainnekuva ja pelikuva rinnakkain täysikokoisina ennen hyväksyntää (Raamattu 9.11, omistaja 19.10.2026 klo 15.21); hylätty ei mene ämpäriin eikä junaan.
+3. Silmämääräinen tarkistus: suunta (+Z eteen), animaatioiden silmukat, materiaalit Unityssä, ja hahmon koko pelissä muihin verrattuna.
+4. Viimeistely (LOD, ASTC, törmäysmuodot) ja vientipaketti `_valmiit/<aihe>-vN-vienti-<pvm>/` → Julkaisija `vie-paketti.sh`.
 
 ## 7. Ensimmäinen ajo 19.10.2026 (juoksupeli)
 
