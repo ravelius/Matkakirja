@@ -100,3 +100,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   kuvateksti nimi · dynastia · vuosi; SK:n korjaukset 5e4364738 (huuto_aani.N = ääniversio, käyttöön kun äänet sallitaan). Simuvideot dfae35317:sta (JU kääntää).
 - 09.5x: **6bf405002** kameravahti (juna 204 -runko 1e77ee4cc, NS): JuoksuV4Maailma.cs:n 2 kameran kirjoitusta // kamerapoikkeus (Kamerajohtajaan Rata v4:n jälkeen).
   NS:n juna 204 sisältää juoksupelin; uusi sha PT:lle ja NS:lle. Simuvuoro ~11.05 (JU), app 897ae0f69 = dfae35317.
+- TYÖLISTA (PT 09.5x): HETI Rata v4:n jälkeen JuoksuV4Maailma.cs:n 2 kameran kirjoitusta Kamerajohtajaan (jousiseuranta LS:ltä) → kamerapoikkeukset pois;
+  vaatii juoksupeli-202:een Kamerajohtajan (runko 4dfcadcc0 / LS 8d7e1feab, base 2ba609861).
