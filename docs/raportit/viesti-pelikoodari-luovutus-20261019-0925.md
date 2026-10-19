@@ -98,3 +98,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   Esikatselu proto-3d/_tyo/pelikoodari/muistokupla/soikio-luonnokset.png (+ maski-esikatselu.py). JU:lle viimeinen vaihto simuvuoroon ~10.40.
 - 09.47: **6bc0bc555** esineen 1. rikkominen juoksussa = oma huuto + kupla, toisto = yleishuuto (juoksupeli.yleishuuto.<n>, SK tekee ~30) ilman kuplaa;
   kuvateksti nimi · dynastia · vuosi; SK:n korjaukset 5e4364738 (huuto_aani.N = ääniversio, käyttöön kun äänet sallitaan). Simuvideot dfae35317:sta (JU kääntää).
+- 09.5x: **6bf405002** kameravahti (juna 204 -runko 1e77ee4cc, NS): JuoksuV4Maailma.cs:n 2 kameran kirjoitusta // kamerapoikkeus (Kamerajohtajaan Rata v4:n jälkeen).
+  NS:n juna 204 sisältää juoksupelin; uusi sha PT:lle ja NS:lle. Simuvuoro ~11.05 (JU), app 897ae0f69 = dfae35317.
