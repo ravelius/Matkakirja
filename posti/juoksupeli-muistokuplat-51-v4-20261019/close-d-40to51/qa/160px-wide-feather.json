@@ -1,0 +1,22 @@
+{
+  "width": 160,
+  "height": 213,
+  "innerRadius": 0.45,
+  "outerRadius": 1,
+  "curve": "1-smoothstep",
+  "productionFilesUnmodified": true,
+  "assets": [
+    "40-sivellin",
+    "41-gaiwan-kansikuppi",
+    "42-mantsun-veitsisarja",
+    "43-palatsilyhty",
+    "44-linnunhakki",
+    "45-metallipeili",
+    "46-hattulaatikko",
+    "47-sirkka-astia",
+    "48-lasiset-go-kivet",
+    "49-zitan-jakkara",
+    "50-tinakannu",
+    "51-hiustanko-liangbatou"
+  ]
+}

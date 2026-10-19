@@ -1,0 +1,27 @@
+D40–51 — 12 toimitusehdokasta, lähikuvakorjaus 19.10.2026
+
+Tarkistettu 2026-10-19T11:30:15.624561+00:00. Kaikki valitut natiivit ja koko 160 px:n .45→1-smoothstep-soikioarkki on katsottu henkilökohtaisesti. Kaikki kuvat ovat kokonaan generoitujen kuvien valintoja; sisältöä ei retusoitu, rajattu tai koottu.
+
+Kutsut: 21 uutta sisäänrakennetun kuvatyökalun kokonaista generointia, kaikki palanneet. Näistä valittu 11, muut 10 säilytetty. Lisäksi 44-linnunhakki on auditoitu aiempi kokonaisgenerointi: 0 uutta kutsua, alkuperäinen yritysprovenienssi mukana. Yhteensä 12 valittua ehdokasta. Ei avoimia kutsuja.
+
+Lähde: täsmällinen 51 perusavaimen inventaario main ed1ce5c0415fc076ce252054a93feb164dbd229d, sekä PT:n uusi lähikuvaohje 86898a4be974d8449a65e6963f4b1deb81e3178c / blob d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe. Jokaisen rivin kupla, fakta, dynastia, vuosi ja ajoitus luettu. Kaikki roolit ovat historialliseen lähteeseen perustuvia fiktiivisiä havainnekuvia; eivät aitoja historiallisia valokuvia tai mitattuja sijoitteluja.
+
+Kaikki toimitus-PNG:t 1086×1448 RGB ja peittäviä. Natiivien 1 px:n kokoero korjattiin vain dokumentoidulla koko kehyksen sips-kokoviennillä kuvissa 40,42,43,46. Alkuperäiset natiivit ja niiden hashit säilyvät muuttumattomina. Ei sisältöretusointia, rajausta, paddingia tai kuviin leivottua soikiohäivytystä.
+
+Tarkat poikkeamat ja havainnot:
+- 40: siveltimet+purkki noin38 % korkeudesta; opettajan ulompi ohimo/korva varhaisessa häivytyksessä, tärkeät piirteet säilyvät.
+- 41: kuppi+kansi+lautanen noin31 %; kaksi mantšuhovinaista nostaa gaiwaneja. A06:n onnistunut naisrooli-/kasvosommittelu toimii viitteenä, uudet pikselit.
+- 42: veitsi-/puikkosarja noin39 %; silmät säteellä noin0.48 varhaisessa hyvin loivassa häivytyksessä. Root salli tämän pienen0.03 sädeylityksen; piirteet näkyvät160px:ssä.
+- 43: lyhtyrunko noin31 %, koko lyhty lyhyine tupsuineen noin42.5 %, hieman30–40 % tavoitteen yli. Kaksi naispuolista mantšupalvelijaa ripustaa lyhtyä lumipihalla; lähde ei rajaa palvelijoiden sukupuolta. Kasvot säilyvät.
+- 44: aiempi auditoitu reuse, häkki koukkuineen noin36.5 %. Root hyväksyi uudelleenkäytön. Sumeasta taustasta katon ääriviiva yhä tunnistuu.
+- 45: SUORAKAITEINEN kupariseospeilin koristeltu TAKAPUOLI, noin34.5 %. Aiempi pyöreä uusi yritys hylättiin lähteen fakta-kentän perusteella, säilytettiin ja poistettiin toimituskansiosta. Nyt oikea suorakaide, keskinuppi ja Han-tyylinen ornamentti.
+- 46: koko avoin hattulaatikko noin41 %. Kesä- ja talvihatut näkyvät; kaulanauhalokero ei erotu eikä sen näkyvyyttä väitetä.
+- 47: avoin posliininen sirkka-astia kansineen noin36.5 %, pieni sirkka reunalla, poika kurkistaa lattialla.
+- 48: KOKO kivikenttä noin30 %, mutta keskellä olevan kämmenen kiviryhmä yksin vain9–10 %. Oikeat litteän kuperat siniset/vihreät LASISET go-kivet erottuvat terävinä keskellä; poika pelaa lattialla olevalle laudalle. Tämä kokomäärittelyn poikkeama jätetään nimenomaan rootin lopulliseen lähikuva-arvioon. Alemmat laudalla olevat kivet menevät ulompaan häivytykseen. Ei pallomaisia marmorikuulia.
+- 49: zitan-jakkara noin36 %, oikea mantšuimettäjä. Silmät noinr0.50–0.51 varhaisessa häivytyksessä, piirteet näkyvät.
+- 50: leveä tinakannu jadeosineen noin28 % korkeudesta, hieman tavoitteen alle; leveä kahva–nokka-siluetti suuri ja luettava. Muotoa ei venytetty numerotavoitteeseen. Historiallinen tinateeastiaviite tukee materiaalityyppiä, ei täsmällistä esinereplikaa.
+- 51: erillinen litteä metallinen bianfang-hiustanko luonnollisessa viistossa noin29.5 % pystysuuntaisesta korkeudesta. Ei kokonainen peruukki. Silmät noinr0.48 varhaisessa loivassa häivytyksessä, koko kampauksen ulkoreunaa ei pakotettu ytimeen.
+
+Taustat tarkistettu vahvasti optisesti sumeiksi. Materiaalit, kasvot, pukeutuminen, kädet, esinetyyppi sekä160px:n luettavuus katsottu; mittasuhteet ovat visuaalisia arvioita, eivät pikselisegmentoinnilla mitattuja tosiasioita. Kaikkien numeroehtojen täsmällistä läpäisyä ei väitetä poikkeamien vuoksi.
+
+Tämä paketti ei ole PT:n/Fablen vastaanottokuittaus, omistajahyväksyntä, runtime-kytkentä tai julkaisu. Parent hoitaa postitoimituksen ja lopullisen arvioinnin. Vanha tuotanto-/toimitushistoria säilyy erillisenä.

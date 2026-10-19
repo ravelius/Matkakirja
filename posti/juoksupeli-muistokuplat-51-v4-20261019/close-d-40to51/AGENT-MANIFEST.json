@@ -1,0 +1,94 @@
+{
+  "createdAt": "2026-10-19T11:30:15.624561+00:00",
+  "batch": "close-d-40to51",
+  "selectedImages": 12,
+  "newWholeImageToolCalls": 21,
+  "auditedReuseCount": 1,
+  "files": [
+    {
+      "path": "40-sivellin.png",
+      "bytes": 2079260,
+      "sha256": "dbe3dde2e84ae0b7d710ec37dbf3a72859a32aa657afae5d8376957d06426b22"
+    },
+    {
+      "path": "41-gaiwan-kansikuppi.png",
+      "bytes": 2254586,
+      "sha256": "434bbe17da61cc6d8eebf988096ea1aaf4d688c83468fc11a181ede11a319867"
+    },
+    {
+      "path": "42-mantsun-veitsisarja.png",
+      "bytes": 2034641,
+      "sha256": "cc558776a84481c1ad439fafb328523c53f2e7a32445935b2d618ab5e292a75e"
+    },
+    {
+      "path": "43-palatsilyhty.png",
+      "bytes": 2377633,
+      "sha256": "70b11c5dd425e8e6fe7a8eb3bc7e83fe5739daef8a2ca176dfd7b67ba2fb3dc4"
+    },
+    {
+      "path": "44-linnunhakki.png",
+      "bytes": 1845314,
+      "sha256": "f9519ed487b2fd9afda60226814d18288feef9837e624c91e8f340f413b7daed"
+    },
+    {
+      "path": "45-metallipeili.png",
+      "bytes": 2044038,
+      "sha256": "7fe186fe907094e64a0bc4c09bf81523917774cf9508f6849dfdc04a8bdb6c02"
+    },
+    {
+      "path": "46-hattulaatikko.png",
+      "bytes": 2183319,
+      "sha256": "a4a7b00dcbf72e0b51155a2806c90ae80cfb919a8ae31f0e62bc901ee88c7bd9"
+    },
+    {
+      "path": "47-sirkka-astia.png",
+      "bytes": 1943134,
+      "sha256": "a149d59933d84ad6107f132556bd4ccdf8d0ce88f14740c4815fb9e22a6a1183"
+    },
+    {
+      "path": "48-lasiset-go-kivet.png",
+      "bytes": 1971472,
+      "sha256": "080609dd755ff8831881bd82117ccb6e6c56589078a77ed6bb5f3b10fa0b4424"
+    },
+    {
+      "path": "49-zitan-jakkara.png",
+      "bytes": 2105782,
+      "sha256": "18c026c0e79caabede1ddb9de390ce03443241d0632ce86aa8d68d3b67e113d2"
+    },
+    {
+      "path": "50-tinakannu.png",
+      "bytes": 1885838,
+      "sha256": "3142c8000fc132fb2d664b3472b8ec4c976979a6e2f048d3734bca7fde95509d"
+    },
+    {
+      "path": "51-hiustanko-liangbatou.png",
+      "bytes": 2296516,
+      "sha256": "b405158d792e04db82c7242ec0f3d35f512c0f43bcf5fbbbdf0041983646ac0b"
+    },
+    {
+      "path": "GENERATION-PROVENANCE.json",
+      "bytes": 97542,
+      "sha256": "11a016866aa4230143b043b4810dc39449973f1f7b127f09588f7e29223087e8"
+    },
+    {
+      "path": "QA-FI.txt",
+      "bytes": 4363,
+      "sha256": "b266b6b136037c77769252aea56f28d7c8e585174142f34154fb7d8f0d96d306"
+    },
+    {
+      "path": "SOURCE-FACTS.json",
+      "bytes": 6705,
+      "sha256": "28b1ab748fe39b607911d272f1e1bc2af18b8e32b819e7e0553f20a0e54fac3c"
+    },
+    {
+      "path": "qa/160px-wide-feather.json",
+      "bytes": 455,
+      "sha256": "41ed3dc352b8d643b9d406dff77e8d3a4f3f90ae46b19f3d213a8458a22ca08a"
+    },
+    {
+      "path": "qa/160px-wide-feather.png",
+      "bytes": 555950,
+      "sha256": "00ea8e3b57b1b62b24be0d8c8afb872a37955aa3dcdb1a8128f738ac59260ee8"
+    }
+  ]
+}

@@ -1,0 +1,985 @@
+{
+  "attempts": [
+    {
+      "code": "40-sivellin",
+      "sourceItemNumber": 40,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T10:52:05.762735+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO, 1086×1448 portrait RGB opaque PNG. Input1 is ONLY photographic light, genuine materials and Qing costume style; Input2 is the AUTHORITATIVE FULL-CANVAS COMPOSITION diagram. Keep the full-frame artifact scale and face positions of Input2. Pale central rectangle represents the SHARP main artifact, about35% of total photo height, NOT a blank rectangle. Tan ovals represent complete faces immediately BEHIND it, each about12% photo height, important eyes/nose/mouth inside central45% ellipse. People are medium close behind artifact, naturally visible, softer than artifact. Camera artifact level0.8m,100mm f/1.4; palace background EXTREMELY optically defocused into glowing colored light blobs. Bright luminous natural daylight, gentle rim backlight, authentic camera skin/material textures. Transform the diagram into continuous natural real photography, never a graphic. NO diagram lines/green ellipse/color blocks, text, logos, CGI, plastic skin, repeating artificial texture, masks, borders, feather or vignette. No copying pixels, partial editing, cropping or padding. Exact subject: a carved dark bamboo BRUSH POT holding two bamboo writing brushes, tallest brush tip to pot foot together35% imageheight, central foreground on a DARK zitan study table. Brush pot and soft black/cream brush hair clearly recognizable. A joyful elderly fictional Qing tutor left, gray beard/temples, shaved FRONT plus long queue braid, black ROUND guapimao RED knob, round-collar RIGHT-button changpao and black magua. A happy fictional8-year-old boy right, golden-yellow Qing robe, shaved front and queue, black ROUND cap GOLD knob. Tutor gestures toward writing brushes; boy watches with delight. Quiet closed thread-bound book and inkstone beside pot, no writing on show. Yuqing Palace schoolroom solely strongly blurred light behind. No map, no pointer, no vase. Keep TWO complete faces approximately at the tan ovals, not enlarged portraits.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v4-20261019/delivery-packet/tyyppi3-oppitunti-v4.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-2-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T10:53:34.448908+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-722bf6d7-887a-4c0e-9e59-92538e30f01f.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/40-sivellin-attempt1.png",
+      "nativeSHA256": "20c380f168921757064d943c85e8227e245f2bb18d70ea5a3b176bd4a180c4a5",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "dfac206578f60a91dd8725eeb8a089da51dd0a5789c43f7b46afb14249a13932",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "New first close candidate visually inspected: reference poses overrode diagram. Faces much too large/high and outside 45% core; artifact framing alone insufficient. Preserved whole native, no content edits.",
+        "artifactHeightFraction": 0.42,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "40-sivellin",
+      "sourceItemNumber": 40,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T10:54:20.255718+00:00",
+      "args": {
+        "prompt": "Create a completely NEW real-camera COLOR PHOTOGRAPH,1086×1448 portrait RGB opaque PNG. The attached photograph is the PASSED composition/style reference: preserve its modest face sizes and central sharp foreground artifact scale. DO NOT copy its vase, people or costumes unchanged; make the exact scene below from scratch. Second input is authoritative FULL-CANVAS COMPOSITION: pale rectangle=real central artifact35%totalimageheight, tan ovals=complete faces each12%totalheight directly behind artifact. The whole head is not a huge portrait; eyes,nose,mouth must be centered in the central45%ellipse. Keep their positions/sizes of Input2, not enlarged. Entire frame becomes natural continuous photography. Camera0.8m from artifact at artifactlevel,100mmf/1.4, artifact sharp, people mildlysoft, background ONLY extremely blurred natural light blobs. Gentle bright daylight and authentic surfaces. No graphics/diagramlines/ellipse/colorblocks, no mask/feather/vignette, no text/logo, CGI, repeated texture or skin smoothing; no crop/padding/partial edit. MAIN artifact is a carved dark bamboo BRUSH POT with TWO writing brushes. Total from tallest brush tip to pot foot35%photoheight, sharp foreground at the pale rectangle. Bamboo handles and black/cream brush hair. Happy gray-bearded elderly fictional Qing tutor LEFT and delighted8-year-old fictional boy RIGHT lean slightly forward directly behind; faces stay near tan ovals and remain fullyvisible above/beside brush tips. Teacher black round guapimao RED knob, shaved front+queue, black magua/roundcollarRIGHT-buttonrobe. Boy yellow Qing robe, black round cap GOLD knob, shaved front+queue. Teacher natural open palm gesture to writing brushes, boy smiling at pot. DARK zitan schooldesk, quiet closed threadbound book plus inkstone. Yuqing schoolroom only strong bokeh patches. NO vase, map or pointer.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt3.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-2-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T10:56:21.195160+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-9ef2c49e-048d-4a27-86d1-1c397009ae79.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/40-sivellin-attempt2.png",
+      "nativeSHA256": "84fc8cbd7e02f389f6502d7020b62deb7f7ab4b085b35f988d67d5ef5cd942ff",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "136e9e99e194a596a594ebe5884be5c9cc4e6c186f879319a7266cc37981ea9f",
+      "technicalPass": true,
+      "nativeRequestedDimensions": false,
+      "nativeOriginalPreserved": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/assets/40-sivellin/attempt-2/technical-size-export.png",
+      "deliveryDimensions": [
+        1086,
+        1448
+      ],
+      "technicalExport": {
+        "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+        "inputSHA256": "84fc8cbd7e02f389f6502d7020b62deb7f7ab4b085b35f988d67d5ef5cd942ff",
+        "outputSHA256": "dbe3dde2e84ae0b7d710ec37dbf3a72859a32aa657afae5d8376957d06426b22",
+        "pixelSHA256": "41b1d51c36a35b050517e0853e78f19821cc3c2ca05942660eefc704bb8c88b5",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false
+      },
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Brush+pot ~38% photo height; joyful tutor and boy, book and inkstone, right Qing costume. Important eyes/nose/mouth preserved near45%core; outer tutor temple/ear enter gentle feather and disclosed. Strong true optical bokeh, sharp carved bamboo pot. Native personally inspected.",
+        "artifactHeightFraction": 0.38,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "41-gaiwan-kansikuppi",
+      "sourceItemNumber": 41,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T10:52:05.850599+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO, 1086×1448 portrait RGB opaque PNG. Input1 is ONLY photographic light, genuine materials and Qing costume style; Input2 is the AUTHORITATIVE FULL-CANVAS COMPOSITION diagram. Keep the full-frame artifact scale and face positions of Input2. Pale central rectangle represents the SHARP main artifact, about35% of total photo height, NOT a blank rectangle. Tan ovals represent complete faces immediately BEHIND it, each about12% photo height, important eyes/nose/mouth inside central45% ellipse. People are medium close behind artifact, naturally visible, softer than artifact. Camera artifact level0.8m,100mm f/1.4; palace background EXTREMELY optically defocused into glowing colored light blobs. Bright luminous natural daylight, gentle rim backlight, authentic camera skin/material textures. Transform the diagram into continuous natural real photography, never a graphic. NO diagram lines/green ellipse/color blocks, text, logos, CGI, plastic skin, repeating artificial texture, masks, borders, feather or vignette. No copying pixels, partial editing, cropping or padding. Exact subject: central foreground CELADON GAIWAN lidded tea cup with lid knob and matching saucer, the whole cup+lid+saucer35% of imageheight through close perspective, realistic normal-size tea vessel. Two joyful fictional Qing court women just behind it toast with their own small gaiwan cups in an airy pale pavilion. Women wear festive long loose Manchu court robes and horizontal liangbatou hair wings. Their COMPLETE faces must occupy the TWO tan oval positions, looking warmly at each other; natural hands hold cups below their faces, no face occlusion. A DARK hardwood tea table under central foreground hero cup. Pale pavilion only strong creamy bokeh and soft sunlight, no defined architecture. Composition is the diagram geometry: don't spread women to side edges and don't enlarge them like Input1. No men or boys. Delicate ceramic glaze, real skin, natural tea ceremony.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v4-20261019/delivery-packet/tyyppi3-oppitunti-v4.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-2-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T10:53:34.596089+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-ba159d61-0c82-47fa-a941-9734e74c21ec.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/41-gaiwan-kansikuppi-attempt1.png",
+      "nativeSHA256": "9566371945796ccce71006da29747c69aaff94223c7e813d47b7ac1c20dde94f",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "7991f06f18a3fccba5be95bff4a0f0088b0ad31ecce0638a965869b7f7f2b754",
+      "technicalPass": false,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "New first close candidate visually inspected: reference poses overrode diagram. Faces much too large/high and outside 45% core; artifact framing alone insufficient. Preserved whole native, no content edits.",
+        "artifactHeightFraction": 0.29,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "41-gaiwan-kansikuppi",
+      "sourceItemNumber": 41,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T10:54:20.304748+00:00",
+      "args": {
+        "prompt": "Create a completely NEW real-camera COLOR PHOTOGRAPH,1086×1448 portrait RGB opaque PNG. The attached photograph is the PASSED composition/style reference: preserve its modest face sizes and central sharp foreground artifact scale. DO NOT copy its vase, people or costumes unchanged; make the exact scene below from scratch. Second input is authoritative FULL-CANVAS COMPOSITION: pale rectangle=real central artifact35%totalimageheight, tan ovals=complete faces each12%totalheight directly behind artifact. The whole head is not a huge portrait; eyes,nose,mouth must be centered in the central45%ellipse. Keep their positions/sizes of Input2, not enlarged. Entire frame becomes natural continuous photography. Camera0.8m from artifact at artifactlevel,100mmf/1.4, artifact sharp, people mildlysoft, background ONLY extremely blurred natural light blobs. Gentle bright daylight and authentic surfaces. No graphics/diagramlines/ellipse/colorblocks, no mask/feather/vignette, no text/logo, CGI, repeated texture or skin smoothing; no crop/padding/partial edit. MAIN artifact CELADON GAIWAN tea cup with lid knob and saucer, wholehero cup35%photoheight at pale rectangle, sharp foreground on DARK wood tea table. Normal real teacup dimensions, close-camera perspective. TWO joyful fictional Qing women in festive long loose Manchu robes and liangbatou horizontal hair wings, directly behind cup, raising other small gaiwans in a tea toast. Both faces are modest-sized12%photoheight and remain at tan oval positions, not wide apart or up near the top. Faces around39%downframe, fullyvisible, smiling at eachother; cups held below chins. Airy pale pavilion background ONLY very strong natural creamy bokeh with sunlight, no clear architecture. No boy, no male, no vase.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt3.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-2-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T10:56:21.716648+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-17005d8e-cc83-4298-b553-9c436eb645ca.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/41-gaiwan-kansikuppi-attempt2.png",
+      "nativeSHA256": "e5a7db8943828c2d90f1b0042a7cc23ad1a9ab0326dce4173ae0c76896df355b",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "63ff0558e30f28a7e1034109214413bd57a6c5bda17429053078295ad1ad48a6",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "Gaiwan foreground is clearer but both women still too far apart and enlarged. Important outer eyes start outside45%core; preserve as rejected whole candidate.",
+        "artifactHeightFraction": 0.28,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "41-gaiwan-kansikuppi",
+      "sourceItemNumber": 41,
+      "attempt": 3,
+      "issuedAt": "2026-10-19T11:00:31.374585+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW natural COLOR PHOTOGRAPH,1086x1448 portrait opaque RGBPNG. This input is an AUTHORITATIVE FULL-PHOTO composition plan, not an illustration to copy: replace each shape with reality, preserving the frame geometry closely. The PALE rectangle becomes a sharp foreground celadon GAIWAN tea cup, domed lid+knob+matching saucer together35% total photoheight. TWO tan ovals are complete faces of two joyful fictional Qing court women, each only12% total photoheight; keep faces CLOSE TO EACH OTHER at center, cheek-to-cheek behind the central cup, not separated to left/right margins. Women in festive long loose Manchu silk robes and liangbatou horizontal hair wings, modest-sized heads, both important eyes/nose/mouth inside the central45%oval. Their hands raise small lidded gaiwan cups in a cheerful tea toast BELOW chins; smiling at eachother. Both faces around39% downphoto, never giant portraits at the top. Close camera0.8m at the hero cup level,100mmf/1.4, hero sharp; people mildlysoft immediately behind; pale pavilion background ONLY extremely defocused bright cream and warm red light blobs. Dark polished hardwood tea table. Genuine porcelain glaze, real skin pores, natural daylight backlight. No graphic line, ellipse, drawing, blank background, colorblocks, mask, fade, border, text, logo, CGI or repeating texture. Real photo fills every pixel, no editing/cropping/padding. Do not enlarge the faces or spread the women apart; preserve the plan scale.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-2-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:02:52.514598+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-474b23c2-4d78-42dc-928b-0f6733ca9998.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/41-gaiwan-kansikuppi-attempt3.png",
+      "nativeSHA256": "ec9082a9951255f70eb82b071b6c992f0e4cc3735efb927281c655682c89d682",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "65040061b4d8b977169ea2aaffcfde5f39eeb16a9f29beef3b2dffc2b2f8f165",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "Cup~33%photoheight but foreground flowers/lid noticeably out of focus while faces sharp. Reject real focus failure.",
+        "artifactHeightFraction": 0.33,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "awaitingParentReview": false
+      }
+    },
+    {
+      "code": "41-gaiwan-kansikuppi",
+      "sourceItemNumber": 41,
+      "attempt": 4,
+      "issuedAt": "2026-10-19T11:12:49.395461+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW photorealistic COLOR camera photograph1086×1448 portraitRGBopaquePNG. Use attached photo as BOTH the EXACT PEOPLE COMPOSITION+SCALE and photographic lighting/material/style reference. Preserve the TWO older Manchu WOMEN's modest face sizes and positions EXACTLY as reference; their complete important faces remain in central45%ellipse. Keep their long loose festive Manchu robes, graytemples, liangbatou horizontal hairwings and delighted warm expressions. NEW subject/action: two court women raise small lidded GAIWAN tea cups in a cheerful toast belowchins in a bright pale pavilion. Replace brown teapot COMPLETELY with a sharp CELADON GAIWAN mainhero in the foreground, domedlid with knob+cup+saucer together about35% PHOTOHEIGHT, TWICE as high as original brownpot through moving artifact2xcloser to camera. Cup top around47%downphoto and bottom80%downphoto, faces remain ABOVE it at SAME scale/positions asreference; do not enlarge or move women. Mainhero porcelain gaiwan tacksharp, glazedfloralceladon naturalreflections; faces mildlysoft behind, background EXTREMELY defocused into cream/red/gold/green lightblobs,100mmf/1.4. Natural brightdaylight andgentlebacklight, real skin/silk/ceramictexture. A dark hardwood tea table. No brown teapot, no men/child, no diagram, overlay, text, logo, CGI/plastic, fade/mask/vignette/border, crop/padding or partialediting. Entirely new realphotograph, no copiedpixels. PRIORITY: foreground GAIWAN sharp focus; women NOT dominantlargeportraits.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/06-yixing-teekannu-attempt3.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:16:11.560665+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-0e2520cb-d267-4df8-8c75-87215e2788a9.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/41-gaiwan-kansikuppi-attempt4.png",
+      "nativeSHA256": "434bbe17da61cc6d8eebf988096ea1aaf4d688c83468fc11a181ede11a319867",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "8166b1d21151d6fcc1884f552d319240ca9707de457a72e224073ce22416b58e",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Correct two festive Manchu courtwomen joyfullytoast gaiwans in pale pavilion, faces modest and both importantfeatures protected. Hero celadon gaiwan cup+lid+saucer~31%photoheight, centered foreground, recognizable sharp rim/floralglaze, strong truebokeh. Wholeimage newlygenerated from A06 face/layoutreference, not edited.",
+        "artifactHeightFraction": 0.31,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "42-mantsun-veitsisarja",
+      "sourceItemNumber": 42,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T10:57:21.734530+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGB opaque PNG. Input1 ONLY photographic light/material/Qing costume STYLE, NOT face size or composition. Input2 AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: central pale rectangle becomes one SHARP main artifact (~35%totalphotoheight); tan oval becomes one complete FACE (~12%photoheight) centered immediately BEHIND artifact. KEEP fullframe object and face SCALE and POSITION from Input2. Body naturally behind, medium close, not far-away. Important eyes/nose/mouth inside central45%ellipse. Camera artifactlevel0.8m,100mmf/1.4; artifact sharp, person mildlysoft, background EXTREMELYblurred lightblobs. Luminous natural daylight,gentle rimbacklight, realcamera skin/material texture. Do NOT enlargeface likeInput1: follow diagramgeometry exactly. Entirely NEW continuous fullframe photograph, no copiedpixels/partialediting/crop/padding. No diagramlines,greenoval,colorblocks,border,vignette,feather,text,logo,illustration,CGI or artificialtexture.  A cheerful fictional adult MANCHU BANNER SOLDIER proudly presents a Manchu belt-trousse: ONE slim sheathed knife and paired chopsticks in a practical leather/metal belt sheath. Whole upright set ~35%photoheight, center sharp close foreground, natural hand gently supports from sides. Knife safely sheathed; no violent action. Soldier wears roundcollarRIGHT-button Qing changpao with dark magua, black ROUND cap RED knob, shavedfront+queue. His COMPLETE FACE centered near tan oval position just above set; friendly laughing smile, face modest size. Bright courtyard background only very creamy red/gold/green bokeh, no named palace. Authentic worn leather, brass and bone/wood chopsticks. No readable inscription or decorative character.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt3.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T10:59:33.554780+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-51e112fc-b025-444a-9da4-19c85f40648e.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/42-mantsun-veitsisarja-attempt1.png",
+      "nativeSHA256": "bb9bb1eb08c01e18dfad4fcee85fc42e9edc6d352ae9eda685c0a3d557bf6b85",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "911fd2ce7aa67a68027225522f4873942d3da5a02c4afd8e247c2d2c4fc42395",
+      "technicalPass": false,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "Actual knife+chopsticks story correct but set ~53%photoheight and face too high/large; important eyes outside45%core. Whole candidate rejected and preserved.",
+        "artifactHeightFraction": 0.53,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "42-mantsun-veitsisarja",
+      "sourceItemNumber": 42,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T11:00:31.418184+00:00",
+      "args": {
+        "prompt": "Create completely NEW real CAMERA COLOR PHOTO1086x1448 portrait opaqueRGBPNG. Input is AUTHORITATIVE FULL-CANVAS composition plan. Preserve its object/face scale and positions while turning every shape into a natural photograph. Pale central rectangle becomes a complete authentic Qing Manchu belt knife+chopsticks set, about35% total photoheight, from tip of compact ivory knife handle to sheath foot: NOT53% or full-frame. ONE safely sheathed small knife, paired chopsticks, fitted dark leather/brass trousse holder, worn true metal/leather, no characters/writing. Set centered foreground around58% downphoto, FULLYvisible, supported naturally by hands. Tan oval is ONE complete FACE of cheerful adult Manchu banner soldier, only12% photoheight, immediately behind above set at37% downphoto, not a huge portrait at top. Keep eyes,nose,mouth in central45%oval. Black ROUND capREDknob, shavedfront+queue, roundcollarRIGHTbuttonQingrobe/darkmagua. Happy proud smile. Cameraartifactlevel0.8m,100mmf/1.4; set sharp, person softlybehind, courtyard background extremely blurred luminous red/gold/green light blobs, bright daylight with gentle backlight. Entire fullframe is continuous genuine photography, not graphic, CGI or plastic. No diagramlines/ellipse/colorblocks, masks, vignette, border, feather, text, logo, crop/padding/partialedit. Follow exact compact artifact and face geometry; do not enlarge either.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:02:52.679431+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-e3f2fe45-b30d-46f7-9e4b-65fd6710425b.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/42-mantsun-veitsisarja-attempt2.png",
+      "nativeSHA256": "05176e4d1f8d0a7d98fa217b9299cfd5c9dc7c5ee84206b738d9de70ec7e9b42",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "b75ec47baee1b74ff6f59f3b7192e602cd3b34a6c4e31256747e6e733a235290",
+      "technicalPass": true,
+      "qa": {
+        "attempt": 2,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Manchu banner soldier presents safelysheathedknife and chopsticks, authentic leather/brass/bone materials; set~39%photoheight. Eyes~r0.48 justoutside45%opaque core, only~1% earlyfeather opacityloss: parent explicitly allows this small deviation if160pxfacefeatures remain visible. No additional call justfor0.03radius. Centered face, correctQingcostume andverystrongbokeh.",
+        "artifactHeightFraction": 0.39,
+        "facesProtected": true,
+        "strictAllFacePixelsInside45": false,
+        "earlyFeatherFaceCaveat": true,
+        "backgroundStrongBokeh": true
+      },
+      "nativeRequestedDimensions": false,
+      "nativeOriginalPreserved": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/assets/42-mantsun-veitsisarja/attempt-2/technical-size-export.png",
+      "deliveryDimensions": [
+        1086,
+        1448
+      ],
+      "technicalExport": {
+        "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+        "inputSHA256": "05176e4d1f8d0a7d98fa217b9299cfd5c9dc7c5ee84206b738d9de70ec7e9b42",
+        "outputSHA256": "cc558776a84481c1ad439fafb328523c53f2e7a32445935b2d618ab5e292a75e",
+        "pixelSHA256": "0b8de4144c5986b4bfc3a6fef4eccad07e12d9bead883d39b71890892e8b76bf",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T11:08:16.592584+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": false,
+            "observations": "Set~39%photoheight and correct story. Face centered but eyes at normalized radius~0.48, just beyond45%opaque core with slight feather. Holding for root review before any additional call; not selected yet.",
+            "artifactHeightFraction": 0.39,
+            "facesProtected": false,
+            "backgroundStrongBokeh": true,
+            "awaitingParentReview": true
+          }
+        }
+      ]
+    },
+    {
+      "code": "43-palatsilyhty",
+      "sourceItemNumber": 43,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T11:03:33.520044+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO1086×1448 portraitRGBopaquePNG. Input1 ONLY passed real-photo light/material style and modest face scale, not vase/people. Input2 FULL-CANVAS authoritative composition: pale rectangle becomes one SHARP silk PALACE LANTERN including short tassel (~35–38%totalphotoheight); two tan ovals become COMPLETE faces of two joyful Qing male servants immediately behind it, about12%photoheight each, not enlarged. Keep SCALE and POSITIONS of Input2. Two happy fictional elderly servants in plain warm roundcollarRIGHT-buttonQingrobes, shavedfront+queue, roundblackcaps with RED knobs, laughing gently while tying the lantern cord to a hanging hook. Lantern in centralforeground, cream silk over true bamboo ribs with subtle painted blossom decoration, no writing; body plus SHORT tassel allvisible, natural medium size. Hands at top of lantern in action, faces above/beside it, important eyes/nose/mouth protected in central45%ellipse. Bright SNOWY COURTYARD winterday, snowmounds/roof only EXTREMELYout-of-focus creamy white/red lightblobs. Closeartifactlevelcamera0.8m,100mmf/1.4, main lantern tacksharp, people mildlysoft immediatelybehind. Natural brightdaylight/backlight, true silk/skintexture. Transform diagram into continuous natural fullframephoto, no diagramlines/ellipse/colorblocks, no vignette/feather/border/text/logo/CGI. No partialedit/crop/padding. Do not enlarge faces or separate them to picture edges.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt3.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-2-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:05:48.360299+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-3035e93a-bf55-4bce-a957-89a858bcc672.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/43-palatsilyhty-attempt1.png",
+      "nativeSHA256": "c8d7b631608ede237e8edba6bbe6c81e6cef4d3e94dc3186cebb85f4d3d0310c",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "98bb818917eb2229f60e393e13eefcff5d796fc2b2c3eb53dfabc6ccbe474094",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "Lantern and longtassel still oversized (~61%photoheight), faces too far apart outside45%core despite correct snow/hangingstory. Rejected preserved.",
+        "artifactHeightFraction": 0.61,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "43-palatsilyhty",
+      "sourceItemNumber": 43,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T11:17:07.264079+00:00",
+      "args": {
+        "prompt": "Make a completely NEW REAL CAMERA COLOR PHOTO1086×1448 portraitRGBopaquePNG. Attached photo is the EXACT FACE SCALE/POSITIONS/PEOPLE COMPOSITION reference and photographic material/light style. KEEP those two modest face sizes and positions, do not enlarge or shift outward. Replace teacher and BOY with TWO smiling fictional ADULT male Qing servants, one grayelderleft, one youngeradultRIGHT, both shavedfront+queue, roundblackcapsREDknob, plain warm roundcollarRIGHT-buttonQingrobes. Replace brushpot ENTIRELY with a compact ROUND silk palace lantern, bamboo-rib globe with soft paintedblossoms, plus verySHORT tassel: WHOLE lantern topfinial-to-tassel end35%totalphotoheight, central sharpforeground from42%to77%downphoto. No long hangingtassel and no stretchedcylinder. Both servants happily tie its shortcord to an overheadhook, hands around topfinial while important eyes/nose/mouth remain at exact referencepositions protected nearcentral45%core. Bright SNOWY COURTYARD winterday, background only extremely defocused creamywhitesnow/redpalace lightblobs,100mmf/1.4. Camera0.8m atlanternlevel; silk/bamboo/lanternflowers tacksharp, peoplemildlysoft immediatelybehind. Gentle daylight/backlight, authentic skin/fabric, no CGI/textlogo. Fullframe continuous photo, no crop/padding/edit/feather/vignette/border. Entirely NEW generation, not modifying existingphoto. PRIMARY: preserve reference people scale while making whole compactlantern35%photoheight.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/40-sivellin-attempt2.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:19:49.045751+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-7511bf1b-2e8f-48cb-8a1c-047c80c0643f.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/43-palatsilyhty-attempt2.png",
+      "nativeSHA256": "98ae1d6a38a30ef785c2153e34c12445bbf6b51d23e494fdb02149cb3b6ff68a",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "5daa92e6b67eebae2e55582bc6fcc9d1caf3de9b7dac7e7e681f9fb0a46b0738",
+      "technicalPass": false,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "Round silk/bamboo lantern with shorter tassel but rightadult face too far toside and entirelantern~43%; composition still not sufficientlycentral. Correctsnow/hangingstory preserved, candidate rejected.",
+        "artifactHeightFraction": 0.43,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "sourceFormPass": true
+      }
+    },
+    {
+      "code": "43-palatsilyhty",
+      "sourceItemNumber": 43,
+      "attempt": 3,
+      "issuedAt": "2026-10-19T11:21:06.281224+00:00",
+      "args": {
+        "prompt": "Generate ENTIRELY NEW natural CAMERA COLOR PHOTO1086×1448 portraitRGBopaquePNG. Use attached photo as EXACT TWO WOMEN FACE SCALE+POSITIONS and photographic lighting/material style. Keep those modest complete faces in EXACT same relative positions/sizes, eyes/nose/mouth inside central45%ellipse. New role: TWO cheerful Manchu PALACE MAIDS/SERVANTS, mature women in plain long loose warm Manchurobes with simple horizontalhairwings (less jewellery, no male/boy). They happily hang a compact ROUND silk lantern in a bright SNOWY COURTYARD. Main artifact REPLACES teapot: one round cream SILK LANTERN over real bamboo globe ribs, fine blossomdecoration, shortfinial and VERYSHORTtassel, entire lantern fromfinialtoend about35% totalphotoheight, sharp CENTRAL foreground from44% to79%downphoto. Hands tie shortcord to hook just above lantern, faces stay at reference scale and NEVER enlarge or moveup/outwards. No longcylinder, no longtassel, no teapot. Camera0.8m atlanternlevel,100mmf/1.4, artifacttacksharp, women mildlysoft justbehind, snow/redpalacebackground ONLY extremelydefocusedcreamy white/redlightblobs; brightwinterdaylight/gentlebacklight, authentic silk/bamboo/skin. Continuous fullframe natural photography, no diagram/overlay/text/logo/CGI, masks/fade/vignette/border, partialedit/crop/padding. Preserve reference faces framing while completely changing scene/action/object.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/06-yixing-teekannu-attempt3.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:23:52.505162+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-4f7da0a3-e980-4760-9a68-1d5486c3780e.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/43-palatsilyhty-attempt3.png",
+      "nativeSHA256": "0e2c8508c3478c9f2845775bd56811a0127d7edb183fa3144fa2ad552d6ba93e",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "af99e61afffb192ff5e44bb89a6aa4caccec28f38f126c7025cd7e8480ae57f1",
+      "technicalPass": true,
+      "nativeRequestedDimensions": false,
+      "nativeOriginalPreserved": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/assets/43-palatsilyhty/attempt-3/technical-size-export.png",
+      "deliveryDimensions": [
+        1086,
+        1448
+      ],
+      "technicalExport": {
+        "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+        "inputSHA256": "0e2c8508c3478c9f2845775bd56811a0127d7edb183fa3144fa2ad552d6ba93e",
+        "outputSHA256": "70b11c5dd425e8e6fe7a8eb3bc7e83fe5739daef8a2ca176dfd7b67ba2fb3dc4",
+        "pixelSHA256": "76d4625a330a47af957658cb28179fc9b6e6bc702eec8a3656fd9161ca6ceb6c",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false
+      },
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Two joyful femaleManchu servants tie andhang ROUNDsilk/bamboo lantern in snowybrightcourtyard. Source has pluralservants without requiring malegender. Important faces now central, strongbokeh, lanternsharp true ribs/silk. Lanternbody~31%; wholefinial+shorttassel~42.5%photoheight slightlyover30–40goal, disclosed; clearclosehero notwidetableau.",
+        "artifactHeightFraction": 0.425,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "scaleCaveat": "wholelantern42.5%; body31%",
+        "earlyFeatherFaceCaveat": false
+      }
+    },
+    {
+      "code": "44-linnunhakki",
+      "sourceItemNumber": 44,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T10:10:08.063419+00:00",
+      "args": {
+        "prompt": "Use case: historical-scene. Render the layout reference as an ENTIRELY NEW REAL COLOR CAMERA PHOTO, native portrait1086x1448RGBPNG. Precisely PRESERVE THE SMALL SUBJECT POSITIONS AND SIZES of the diagram; do NOT zoom in. The blue ellipse and flatshapes are only layout guides: no ellipse,line,mask,graphic,frame or blankstudiobackground in finalimage. Full frame becomes naturally photographed Chinese palace atmosphere with gentlybacklit rims, airy luminous light and STRONGLY SOFT OPTICAL BOKEH. Artifact tacksharp, people slightlysoft; truecamera materialtexture, notillustration/CGI/plastic/sepia. No overlaytext or logos. Important faces and complete artifact fitcentral45%ellipse. Only specified roles and artifact, no extras. The camera arrangement follows the diagram, not a conventional portrait.\nOne fictional joyful8yearold Chinese boy emperor kneels on the palacefloor justbehind a round BAMBOO BIRDCAGE. A small realbird is perched inside. The entire cage INCLUDING hook andbase replaces the diagram central brownblock, same SIZE and POSITION. Boys small face replaces the head oval. Loose golden-yellow Qingrobe, roundblackcap with smallgoldknob, shavedfront and onequeue braid, no modernbangs. Candidlaugh as he watchesbird. Wholecage and face mustfitguideellipse. No adults or other people. Very bright airy Chinese palace floor setting, cage sharp, child slightlysofter, far architecture stronglyblurred.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/central-45-ellipse-1-people-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T10:15:17.523670+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-68749ba6-8592-4a71-ab93-1111f2ee78c5.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/44-linnunhakki-reused-original-attempt1.png",
+      "nativeSHA256": "f9519ed487b2fd9afda60226814d18288feef9837e624c91e8f340f413b7daed",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "f6d1094aa001a157969465e70272f38c763be7fedbb475fb21287c1a66787954",
+      "technicalPass": true,
+      "reusedPriorGeneration": true,
+      "actualImageToolCalls": 0,
+      "originBatch": "batch-d-40to51",
+      "originCode": "44-linnunhakki",
+      "originAttempt": 1,
+      "originNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/batch-d-40to51/native/44-linnunhakki-attempt1.png",
+      "originAttemptRecord": {
+        "attempt": 1,
+        "issuedAt": "2026-10-19T10:10:08.063419+00:00",
+        "args": {
+          "prompt": "Use case: historical-scene. Render the layout reference as an ENTIRELY NEW REAL COLOR CAMERA PHOTO, native portrait1086x1448RGBPNG. Precisely PRESERVE THE SMALL SUBJECT POSITIONS AND SIZES of the diagram; do NOT zoom in. The blue ellipse and flatshapes are only layout guides: no ellipse,line,mask,graphic,frame or blankstudiobackground in finalimage. Full frame becomes naturally photographed Chinese palace atmosphere with gentlybacklit rims, airy luminous light and STRONGLY SOFT OPTICAL BOKEH. Artifact tacksharp, people slightlysoft; truecamera materialtexture, notillustration/CGI/plastic/sepia. No overlaytext or logos. Important faces and complete artifact fitcentral45%ellipse. Only specified roles and artifact, no extras. The camera arrangement follows the diagram, not a conventional portrait.\nOne fictional joyful8yearold Chinese boy emperor kneels on the palacefloor justbehind a round BAMBOO BIRDCAGE. A small realbird is perched inside. The entire cage INCLUDING hook andbase replaces the diagram central brownblock, same SIZE and POSITION. Boys small face replaces the head oval. Loose golden-yellow Qingrobe, roundblackcap with smallgoldknob, shavedfront and onequeue braid, no modernbangs. Candidlaugh as he watchesbird. Wholecage and face mustfitguideellipse. No adults or other people. Very bright airy Chinese palace floor setting, cage sharp, child slightlysofter, far architecture stronglyblurred.",
+          "transparent_background": false,
+          "referenced_image_paths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/central-45-ellipse-1-people-layout.png"
+          ]
+        },
+        "completed": true,
+        "completedAt": "2026-10-19T10:15:17.523670+00:00",
+        "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-68749ba6-8592-4a71-ab93-1111f2ee78c5.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/batch-d-40to51/native/44-linnunhakki-attempt1.png",
+        "nativeSHA256": "f9519ed487b2fd9afda60226814d18288feef9837e624c91e8f340f413b7daed",
+        "nativeDimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "pixelSHA256": "f6d1094aa001a157969465e70272f38c763be7fedbb475fb21287c1a66787954",
+        "technicalPass": true,
+        "qa": {
+          "personallyInspectedNative": true,
+          "passed": false,
+          "reason": "Whole cage base reaches y77%, outside45% ellipse; subject scale too large."
+        }
+      },
+      "reuseRecordedAt": "2026-10-19T10:53:34.694393+00:00",
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Audited and hash-verified old complete whole-generation candidate. Native+160px inspected personally and root independently approved reuse. Full cage with hook ~36.5% photo height; face protected; bird and bamboo cage read at160px. Strong soft bokeh, palace roof outline remains recognizable and is disclosed. No new generation.",
+        "artifactHeightFraction": 0.365,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "originalAttempt": 1,
+        "auditedReuse": true
+      }
+    },
+    {
+      "code": "45-metallipeili",
+      "sourceItemNumber": 45,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T10:57:21.793332+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGB opaque PNG. Input1 ONLY photographic light/material/Qing costume STYLE, NOT face size or composition. Input2 AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: central pale rectangle becomes one SHARP main artifact (~35%totalphotoheight); tan oval becomes one complete FACE (~12%photoheight) centered immediately BEHIND artifact. KEEP fullframe object and face SCALE and POSITION from Input2. Body naturally behind, medium close, not far-away. Important eyes/nose/mouth inside central45%ellipse. Camera artifactlevel0.8m,100mmf/1.4; artifact sharp, person mildlysoft, background EXTREMELYblurred lightblobs. Luminous natural daylight,gentle rimbacklight, realcamera skin/material texture. Do NOT enlargeface likeInput1: follow diagramgeometry exactly. Entirely NEW continuous fullframe photograph, no copiedpixels/partialediting/crop/padding. No diagramlines,greenoval,colorblocks,border,vignette,feather,text,logo,illustration,CGI or artificialtexture.  A smiling fictional elderly Qing COURT MASTER proudly shows the DECORATED BACK of a COPPER ALLOY HAND MIRROR. One round bronze/copper mirror, warm aged metal, central small round boss and fine floral relief, whole mirror ~35%photoheight, centrally sharp in foreground, upright slightly angled naturally; no modern handle, no glass reflection, no characters or writing. Master holds it naturally by lower/sides at a dark hardwood table. His modest-sized complete happy face immediately behind/above, visible at tan oval, graytemples/beard, shavedfront+queue, black ROUND guapimao RED knob, black magua and roundcollarRIGHT-button Qing robe. Bright courtroom only extremely defocused light blobs. True metal patina and relief, real warm smile, no giant portrait.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt3.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T10:59:33.672824+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-896bcc2b-d0a3-4bed-8986-211164dd7a0d.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/45-metallipeili-attempt1.png",
+      "nativeSHA256": "0e9a6a2678d925f131981a8b17c65c9e598532bcafe11d4b0ab7f9a5731d5581",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "cc504bac0c0eb7a4cafaa64c7347654ecb3df6e3ec76bdf1a11d69d6e5edd46c",
+      "technicalPass": true,
+      "qa": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "ROOT SOURCE AUDIT: canonical fakta explicitly requires RECTANGULAR copper-alloy mirror back. Candidate is ROUND and therefore rejected, independent of its successful face/bokeh composition. Native preserved; requires whole new rectangular mirror.",
+        "artifactHeightFraction": 0.33,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "sourceFormPass": false
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T11:16:11.777826+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": true,
+            "observations": "Decorated copper-alloy mirror BACK with central boss and floral relief; full mirror~33%photoheight, smiling gray Qing courtmaster behind. Eyes/nose/mouth protected in centralcore, strong true bokeh, warm authentic metal. Lower mirror enters feather but stays legible in160px preview to confirm.",
+            "artifactHeightFraction": 0.33,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true
+          }
+        }
+      ]
+    },
+    {
+      "code": "45-metallipeili",
+      "sourceItemNumber": 45,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T11:17:07.322516+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC CAMERA COLOR PHOTO1086×1448 portraitRGBopaquePNG. Input1 ONLY camera lighting/material style and successful CENTERED COURTMASTER FACE SCALE/POSITION. Input2 ONLY the REQUIRED RECTANGULAR MIRROR FORM, not its widerroom composition. Canonical source specifically requires a Qianlong-era RECTANGULAR COPPER-ALLOY MIRROR: straight FOUR EDGES, FOUR CORNERS, portraitrectangle widthabout0.70height. NOTROUND, NOTOVAL, NOTSQUARE. Show its DECORATED BACK with central raised roundboss and Han-bronzemirror-inspired coilingdragon/cloud-relief ornament. Real warm aged metal, shallow true relief, no writing. Whole rectangular mirror35%photoheight, central sharpforeground, leaning naturally a fewdegrees and held bylower/sides onDARKhardwoodtable. Happy gray Qing courtmaster immediatelybehind at EXACT Input1 faceposition/size; important eyes/nose/mouth nearcentral45%core, blackroundcapREDknob, shavedfront+queue, blackmagua/rightbuttonroundcollarrobe. Extremelydefocused luminousred/gold/whitepalacelightblobs,100mmf/1.4, bright daylight/gentlebacklight. Mirror tacksharp, master mildlysoft. Preserve authentic real skin/materialtexture. No CGI/plastic/repeatingtexture, text/logo/mask/fade/border/vignette. Entirely NEW fullphoto, no copiedpixels/partialediting/crop/padding. IMPORTANT shape: RECTANGULAR Han-inspired decorated copper-alloy BACK per Input2, with successful face composition of Input1.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/45-metallipeili-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/batch-d-40to51/native/45-metallipeili-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:19:50.105106+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-612f3c0f-396d-40da-b87b-64bb1d4fe6b9.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/45-metallipeili-attempt2.png",
+      "nativeSHA256": "7fe186fe907094e64a0bc4c09bf81523917774cf9508f6849dfdc04a8bdb6c02",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "e3a5f388952ff45692e33d4c50258ce9f05af888467293b2994323903b19373d",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "REQUIRED RECTANGULAR copperalloymirror BACK now correct: four straightedges/corners, centralboss, archaisticHanstyle dragon/cloud relief, no legibletext. Wholemirror~34.5%photoheight. HappygrayQingcourtmaster, faceimportantfeaturesprotected,strongtruebokeh, sharpmetal. Replaces rejectedroundcandidate by wholeNEWgeneration.",
+        "artifactHeightFraction": 0.345,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "sourceFormPass": true
+      }
+    },
+    {
+      "code": "46-hattulaatikko",
+      "sourceItemNumber": 46,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T11:03:33.728391+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGB opaque PNG. Input1 ONLY photographic light/material/Qing costume STYLE, NOT face size or composition. Input2 AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: central pale rectangle becomes one SHARP main artifact (~35%totalphotoheight); tan oval becomes one complete FACE (~12%photoheight) centered immediately BEHIND artifact. KEEP fullframe object and face SCALE and POSITION from Input2. Body naturally behind, medium close, not far-away. Important eyes/nose/mouth inside central45%ellipse. Camera artifactlevel0.8m,100mmf/1.4; artifact sharp, person mildlysoft, background EXTREMELYblurred lightblobs. Luminous natural daylight,gentle rimbacklight, realcamera skin/material texture. Do NOT enlargeface likeInput1: follow diagramgeometry exactly. Entirely NEW continuous fullframe photograph, no copiedpixels/partialediting/crop/padding. No diagramlines,greenoval,colorblocks,border,vignette,feather,text,logo,illustration,CGI or artificialtexture.  MAIN artifact is an open traditional Qing multi-level HAT BOX, lacquered darkwood, hinged upper compartment raised and lower compartment open; real straw conical SUMMER COURT HAT with red tassel visible in upper part, real black domed WINTER HAT with red top visible in lower part. Whole openbox+lid about35–38%photoheight central sharpforeground, no text or characters. A joyful fictional adult Qing OFFICIAL proudly presents it on DARK hardwood table. ONE complete face modest-sized in tan oval, immediatelybehind andabove box; shavedfront+queue, roundcollarRIGHT-buttonQingrobe with blackmagua, roundblackcapREDknob. Natural welcoming openhand/holdinggesture from sides, don't block hats. Luminous Qing interior background ONLY extreme golden/red/white opticalbokeh, no namedhall. Authentic lacquer/straw/blackvelvetmaterials, natural daylightandbacklight. Preserve diagram's compact face/artifact scale, no giantportrait.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/45-metallipeili-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:05:48.465642+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-f0b8cb4a-d7c7-4fb6-ab3a-db042f417ce5.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/46-hattulaatikko-attempt1.png",
+      "nativeSHA256": "ffae6530ccc977e439548eb471075270a8ac590c743c2330a785888ce21def3f",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "9d5e0a3f8c6c98132543c6cf55d9736caba024171a14c21047ae72efcd0df359",
+      "technicalPass": true,
+      "nativeRequestedDimensions": false,
+      "nativeOriginalPreserved": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/assets/46-hattulaatikko/attempt-1/technical-size-export.png",
+      "deliveryDimensions": [
+        1086,
+        1448
+      ],
+      "technicalExport": {
+        "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+        "inputSHA256": "ffae6530ccc977e439548eb471075270a8ac590c743c2330a785888ce21def3f",
+        "outputSHA256": "a4a7b00dcbf72e0b51155a2806c90ae80cfb919a8ae31f0e62bc901ee88c7bd9",
+        "pixelSHA256": "4eed094fa8727f1805bfe0a8ddf4c01330917a152b827e20ecf2dcaff26e138e",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false
+      },
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Open two-level lacquer hatbox, summer conical straw/redtassel hat and black winter/redknob hat both visible. Entire openbox~41%photoheight, slightly above30–40 target; face importantfeatures safelycore, realmaterials,strongbokeh. Slight oversize disclosed, not a tinyobject/wide scene.",
+        "artifactHeightFraction": 0.413,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "47-sirkka-astia",
+      "sourceItemNumber": 47,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T11:06:25.069149+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGB opaque PNG. Input1 ONLY photographic light/material/Qing costume STYLE, NOT face size or composition. Input2 AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: central pale rectangle becomes one SHARP main artifact (~35%totalphotoheight); tan oval becomes one complete FACE (~12%photoheight) centered immediately BEHIND artifact. KEEP fullframe object and face SCALE and POSITION from Input2. Body naturally behind, medium close, not far-away. Important eyes/nose/mouth inside central45%ellipse. Camera artifactlevel0.8m,100mmf/1.4; artifact sharp, person mildlysoft, background EXTREMELYblurred lightblobs. Luminous natural daylight,gentle rimbacklight, realcamera skin/material texture. Do NOT enlargeface likeInput1: follow diagramgeometry exactly. Entirely NEW continuous fullframe photograph, no copiedpixels/partialediting/crop/padding. No diagramlines,greenoval,colorblocks,border,vignette,feather,text,logo,illustration,CGI or artificialtexture.  Main artifact: an OPEN BLUE-AND-WHITE PORCELAIN CRICKET JAR standing on the FLOOR, with its perforated porcelain lid leaning naturally at its base, together35%totalphotoheight in sharp central foreground. Real cylindrical Qing insectjar, bluefloral handpaint on whiteglaze, no text. A tiny real brown cricket on inner rim, never giant insect. Happy fictional8-year-oldboy in golden-yellowQingrobe laughs and peeks INTO jar from just behind, head leaning gently forward. Complete face remains in tan oval, modest-sized and center, don't make a giantportrait. ShavedFRONT+longqueue, roundblackcapGOLDknob, no modernfringe. Visible hand loosely besidejar, playful curious expression. Camera down at jarlevel0.6m; child seated/kneeling onfloor but only mediumclose upperbody is important. Background bright Qing interior ONLY extremely defocused gold/red/whitebokeh. Sharp authentic ceramic, mildlysoft boy, real daylightandgentlebacklight. No birdcage or vase.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/batch-d-40to51/native/44-linnunhakki-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:08:15.929626+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-a92e9f0e-918d-400e-89b8-d120eb297cbb.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/47-sirkka-astia-attempt1.png",
+      "nativeSHA256": "a149d59933d84ad6107f132556bd4ccdf8d0ce88f14740c4815fb9e22a6a1183",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "6d5f57de8c40914c09b8197b1320dc7c1a1ca66257460dc78ed9c3d26d3a3025",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Open bluewhite porcelain cricketjar onfloor~36.5%photoheight, perforatedlid beside it, small cricket at rim, smiling correct Qingboy peeks inside. Importantfacefeatures protected, strong opticalbokeh, jar tacksharp, natural materials.",
+        "artifactHeightFraction": 0.365,
+        "facesProtected": true,
+        "strictAllFacePixelsInside45": true,
+        "earlyFeatherFaceCaveat": false,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "48-lasiset-go-kivet",
+      "sourceItemNumber": 48,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T11:12:49.507920+00:00",
+      "args": {
+        "prompt": "Create a completely NEW REAL COLOR CAMERA PHOTOGRAPH1086x1448 portraitRGBopaquePNG. Reference1 is composition/scale of the BOY's complete face exactly and authentic materials/light; ref2 is central protected-face geometry. NEW artifact: colorful Qing GLASS GO STONES, small flat-domed LENTIL-SHAPED lens disks, cobaltblue andemeraldgreen, NOT spherical marbles. A playful joyful fictional8yearoldboy in goldenyellowQingrobe, blackroundcapGOLDknob, shavedFRONT+longqueue, plays GO seated onFLOOR. Main artifact is the large SHARP FOREGROUND CLUSTER of about12 blue/green glass flatstones across an angled dark low wooden Go board on the floor. Entire clustered stones field from45% to78% downphoto (about33% totalphotoheight), in the CENTRAL foreground, not tiny stones down at bottomedge. Natural camera perspective emphasizes these real2cm stones CLOSE to lens, some nearer/bigger, some behind; allcontactboard, boy's hand gently places onecentralstone. Do not make giantstones or glassballs; correct flat silhouettes, realtranslucentcoloredglass and highlights. Camera0.6m atboardlevel obliqueview; important boy eyes/nose/mouth remain at reference small central faceposition above stones, mildlysoft; artifact tacksharp; Qing room ONLY extremely defocusedgold/red/whitelightblobs f/1.4. Real skin/silk/wood, brightdaylight/backlight. No cricketjar, no cage, no text/logo, diagramline/colorblock/ellipse, CGI/plastic/repeatingtexture, fade/vignette/mask/border, crop/padding or partialedit. Continuous fullframe natural photo.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/47-sirkka-astia-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:16:11.713561+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-6484a8ca-9d23-4951-8f67-a16ea4739533.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/48-lasiset-go-kivet-attempt1.png",
+      "nativeSHA256": "acfe019042b7ae416c5053de74ecfef7adade72dd1cd604fbc0f25d2fbe6d8cf",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "417841631af1ebd22b4f476c63431317b3c3dbbb0c53b8f034289a02dd1104f1",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "Flatdomed colored glassstones material correct and boyonfloor correct, but entire stonefield is too LOW at69–95%photoheight and frontstones blurred; central feather removes too much. Reject and preserve.",
+        "artifactHeightFraction": 0.26,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "48-lasiset-go-kivet",
+      "sourceItemNumber": 48,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T11:24:50.120679+00:00",
+      "args": {
+        "prompt": "Generate an entirely NEW PHOTOREALISTIC COLOR CAMERA PHOTO1086x1448 portraitopaqueRGBPNG. Attached photo defines EXACT modest Qing BOY FACE SCALE/POSITION, daylight and genuine materials; preserve that face framing. New scene: happyfictional8yearoldboy in goldenyellowQingrobe, roundblackcapGOLDknob, shavedFRONT+longqueue, sits onFLOOR playing with precious cobaltBLUE andemeraldGREEN GLASS GO STONES. Main artifacts are SMALL REAL FLAT-DOMED LENTIL-SHAPED GO DISKS, about2cm each, NOT sphericalmarbles. His left OPEN PALM reaches towardlens at CENTER and cradles about8 blue/green flatstones, right fingers pick one toplay onto smalllow darkwoodGo board onfloorbelow. Sharp central close foreground STONE+HAND cluster occupies about30–35%photoheight from43%to76%downframe. Stones must be nearcenter ofphoto, NOT alongbottomedge. Real 2cm-to-childhand scale, actual flat lentil silhouettes, transparentcoloredglass with truehighlights; do not create giantstones or balls. Child laughs warmly looking atstones, face mildlysoft behind and important eyes/nose/mouth remain at reference centralposition. A little Go board grid visible belowhand confirms play; boy is seated/kneelingonfloor. Camera0.8m atstonelevel,100mmf/1.4, focus specifically SHARP ON CENTRAL HANDHELD GLASS STONES, not onface, floorboard lowerframe canblur naturally. BackgroundQingroom ONLY extremelydefocusedgold/red/whitelightblobs, bright naturaldaylight/backlight, authentic skin/silk/wood. No jar/cage/otherforegroundobject, no text/logo/diagram/CGI/plastic/repeatingtexture/mask/fade/vignette/border/crop/padding/partialedit. Whole continuous realphotograph, preserve compactfaceframing while bringing GLASS STONES into centralsharpforeground.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/47-sirkka-astia-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:27:16.447171+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-d6c988a9-c259-4243-af6c-75a006b083d2.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/48-lasiset-go-kivet-attempt2.png",
+      "nativeSHA256": "080609dd755ff8831881bd82117ccb6e6c56589078a77ed6bb5f3b10fa0b4424",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "3bcfd1ebe0512c223f00e0bd748841c2eecb3a422f3354343066b490381cde76",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Correct flat-domed cobaltblue/emeraldgreen GLASS GO STONES, not marbles. Joyful correctQingboy seated onfloor; openpalm shows sharp coloredstones centrally, otherhand plays one onto lowfloorGoboard. Entire combined stonefield ~30%photoheight; CENTRAL PALM CLUSTER ONLY~9–10%H, explicitly disclosed as broad/small-multiple artifact scale exception for root final review. Mainpalmstones center is inside45%core, bottomboardstones enter outerfeather. Important boyfacefeatures aroundr0.48–0.50 gentlefeather, no loss at160px. True glass/skin andstrongopticalbokeh. No sourceform discrepancy.",
+        "artifactHeightFraction": 0.3,
+        "centralPalmClusterHeightFraction": 0.095,
+        "scaleCaveat": "30% is the WHOLE stones field, not the palmcluster (9–10%); requires final root comparison to close-object source.",
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "rootFinalScaleReviewRecommended": true
+      }
+    },
+    {
+      "code": "49-zitan-jakkara",
+      "sourceItemNumber": 49,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T11:06:25.118992+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGB opaque PNG. Input1 ONLY photographic light/material/Qing costume STYLE, NOT face size or composition. Input2 AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: central pale rectangle becomes one SHARP main artifact (~35%totalphotoheight); tan oval becomes one complete FACE (~12%photoheight) centered immediately BEHIND artifact. KEEP fullframe object and face SCALE and POSITION from Input2. Body naturally behind, medium close, not far-away. Important eyes/nose/mouth inside central45%ellipse. Camera artifactlevel0.8m,100mmf/1.4; artifact sharp, person mildlysoft, background EXTREMELYblurred lightblobs. Luminous natural daylight,gentle rimbacklight, realcamera skin/material texture. Do NOT enlargeface likeInput1: follow diagramgeometry exactly. Entirely NEW continuous fullframe photograph, no copiedpixels/partialediting/crop/padding. No diagramlines,greenoval,colorblocks,border,vignette,feather,text,logo,illustration,CGI or artificialtexture.  Main artifact is a six-sided HEXAGONAL ZITAN WOOD STOOL, exactly a small sturdy Qing hardwood stool, not a large chair. Whole stool35%totalphotoheight sharp central foreground on FLOOR; polished deep reddishdark densehardwood, subtle irregular realgrain, carved openwork floral sidepanels, six shortfeet. Proud smiling fictional mature MANCHU NURSEMAID kneels immediately behind it, complete modest-sized face at tanoval; older graytemples, long looseblueManchurobe and horizontal liangbatou hair wings, no modernnurseuniform. Natural gentle openpalm presentationgesture at stool sides, loving happyexpression. Bright airyroom only extremely blurred creamy white/golden/redbokeh. Face above stool stays45%core, stool fullform legibleafterfeather. Don't enlarge stool to fullframe or move face to the top. Real wood/skintextured camera photograph, not plastic. Replace all male/boy identity of styleinput with an authentic older Manchu woman.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/45-metallipeili-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:08:16.129603+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-78095d06-22a8-4f6b-89df-c019a326bf9f.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/49-zitan-jakkara-attempt1.png",
+      "nativeSHA256": "18c026c0e79caabede1ddb9de390ce03443241d0632ce86aa8d68d3b67e113d2",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "cbcfb4cf3a375a0bd2c764d14e9546ad8bc3e03bd7a6b84e62f2d1ba48372c85",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Six-sided zitan stool~36%photoheight, older gray Manchu nursemaid smiling and presenting onfloor. True dense irregular woodgrain, strongbokeh. Eyes approximatelyr0.50–0.51 at top earlyfeather, forehead somewhat higher; slight softening disclosed, no feature disappears at160px. Whole stool remains legible despitefeet in outerfeather.",
+        "artifactHeightFraction": 0.36,
+        "facesProtected": true,
+        "strictAllFacePixelsInside45": false,
+        "earlyFeatherFaceCaveat": true,
+        "backgroundStrongBokeh": true
+      }
+    },
+    {
+      "code": "50-tinakannu",
+      "sourceItemNumber": 50,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T11:09:31.840759+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGB opaque PNG. Input1 ONLY photographic light/material/Qing costume STYLE, NOT face size or composition. Input2 AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: central pale rectangle becomes one SHARP main artifact (~35%totalphotoheight); tan oval becomes one complete FACE (~12%photoheight) centered immediately BEHIND artifact. KEEP fullframe object and face SCALE and POSITION from Input2. Body naturally behind, medium close, not far-away. Important eyes/nose/mouth inside central45%ellipse. Camera artifactlevel0.8m,100mmf/1.4; artifact sharp, person mildlysoft, background EXTREMELYblurred lightblobs. Luminous natural daylight,gentle rimbacklight, realcamera skin/material texture. Do NOT enlargeface likeInput1: follow diagramgeometry exactly. Entirely NEW continuous fullframe photograph, no copiedpixels/partialediting/crop/padding. No diagramlines,greenoval,colorblocks,border,vignette,feather,text,logo,illustration,CGI or artificialtexture.  Main artifact: a gleaming SILVER-GRAY PEWTER QING TEAPOT, entire liddedpot about35%totalphotoheight, central foreground on DARK hardwood teatable. Real pewter-clad grey body with subtle metal wear/soft reflections, short curved spout, small lid, pale green jade handle/spout/knob accents consistent with Qing pewter teaware. No modern electric kettle, no goldbrassbody, no writing. A cheerful fictional Qing MALE SERVANT proudly presents it with a natural openhand gesture and joyfulsmile. One complete modest-sized FACE immediatelybehind/above pot at tanoval, important eyes/nose/mouth central45%core. Shavedfront+queue, roundblackcapREDknob, plain dark roundcollarRIGHT-buttonQingrobe; authentic servant, no modernuniform. Airy pale TEAROOM background ONLY extremely blurred white/red/gold lightblobs. Sharp true metal in foreground, person softer behind. Whole teapot inclhandle/spout visible afterfeather. Keep compact face and35%artifact, not hugeportrait.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/45-metallipeili-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:11:46.899495+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-aba808b0-0b7d-4abf-bc8e-78a56f44546d.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/50-tinakannu-attempt1.png",
+      "nativeSHA256": "3142c8000fc132fb2d664b3472b8ec4c976979a6e2f048d3734bca7fde95509d",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "694f02ff3f2cb5b77e5ff4094f1aaddf1a9f10f0f47a403c21835d9838da5525",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Pewter-clad Qingteapot with palejade handle/spout/knob, gleaming graymetal body, smilingservant. Fullheight~28%, slightlybelow30 target, but broad handle-spout silhouette is large/sharp/intelligible, no shape distortion. Important facefeatures safelycore, verystrong truebokeh. Museumtype provenance recorded in previous shape research; no claim exactreplica.",
+        "artifactHeightFraction": 0.28,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "broadArtifactScaleCaveat": true
+      }
+    },
+    {
+      "code": "51-hiustanko-liangbatou",
+      "sourceItemNumber": 51,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T11:09:31.923256+00:00",
+      "args": {
+        "prompt": "Generate a completely NEW real-camera COLOR PHOTOGRAPH1086×1448 portraitRGBopaquePNG. Input1 for gentle light, authentic Manchu woman's material/costume style and modest face size only. Input2 authoritative fullframe geometry, ONE modest complete FACE at tanoval immediatelybehind artifact, important eyes/nose/mouth central45%ellipse. Replace pale rectangle with a separate FLAT SILVER BIANFANG HAIR BAR, length30cm/width3.6cm/thinplate proportions, long slender8:1 strip with gently shaped ends, fine engraved florals but NOcharacters. This is a SINGLE rigid flat metal strip held in hands, NOT a wholewig, giantblackhairpiece, comb, knife, jewellerynecklace or bundle. Show whole bar at a natural diagonal almostvertical in sharp centralforeground, so its diagonal projected height is30–35%totalphotoheight; do not thicken/distortrealbarshape. Cheerful fictional Manchu COURT WOMAN in long loose palegreen embroideredManchurobe, natural horizontal liangbatou hairstyle onherhead, smiles proudly while holding this SEPARATE sparehairbar byitsends. Her whole face modest~12–15%photoheight, behind and just above it, never huge highportrait. Camera0.8m atartifactlevel,100mmf/1.4: silverbar tacksharp, woman mildlysoft, background ONLY extremely defocused cream/red/goldQingpalacelightblobs, no namedhall. Brightdaylight/gentlebacklight, true skin/silk/silvertexture, no CGI/plastic/repeatingpattern. Fullframe natural photo; no diagramlines/ellipse/colorblocks, mask, vignette, fade, text, logo, border or crop/padding/partialediting.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/49-zitan-jakkara-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-1-faces-layout.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:11:53.908047+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-23567db9-f3aa-4cf4-8fc6-ebaa1503848c.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/51-hiustanko-liangbatou-attempt1.png",
+      "nativeSHA256": "649e73d679596027831b7a66eea19e0d35dfb02dac7bc30792ee12656697a1f9",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "3ede57044e743e5ffa5e8475a9d3d4f9988d197a9a84b9e94073108ce1c6f46b",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "observations": "Separate flat silverhairbar form correct, longlooseManchurobe and maturewoman. But bar spans~49%photoheight, composition tighter than requested30–40%. Wholecandidate rejectedpreserved for real scale defect.",
+        "artifactHeightFraction": 0.49,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "broadArtifactScaleCaveat": false
+      }
+    },
+    {
+      "code": "51-hiustanko-liangbatou",
+      "sourceItemNumber": 51,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T11:21:06.319044+00:00",
+      "args": {
+        "prompt": "Create a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO1086×1448 portraitRGBopaquePNG. The reference sets EXACT WOMAN FACE SIZE/POSITION, body framing and true material/daylight/bokeh; keep those exactly, do NOT zoomin. Smiling fictional Manchu courtwoman in a long loose palegreen embroideredManchurobe and horizontal liangbatou hairstyle proudly holds ONE SEPARATE FLAT SILVER BIANFANG HAIR BAR. Replace stool COMPLETELY. This artifact is one rigid thin silverstrip,30cm by3.6cm real8:1proportions, gentlyshapedends and finefloralengraving, NOcharacters. NOT a wig/hairpiece/comb/knife. Whole separatebar35% totalphotoheight, sharp CENTRAL foreground held naturally atends, diagonally between point40%across/45%down and60%across/77%down. So bar stays BELOW woman'sface, not a longstrip reaching up besideface; no endpoint above45% downphoto and no endpoint below77%downphoto. Preserve realthinstripshape, do not thicken. Woman's modest complete happyface exactly same position/scale asreference, importantfeatures visible nearcentral45%core. Camera0.8m atartifactlevel,100mmf/1.4, silverbar sharp, womansoftbehind, background ONLY verystrong creamyred/gold/whitelightblobs. Natural skin/silk/metaltexture, gentlebrightdaylight/backlight, fullframe genuinephoto. No stool, no text/logo/diagram, CGI/plastic/repeatingtexture, fade/mask/vignette/border, crop/padding/partialedit. WHOLE NEW generation, not retouchingexistingimage.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/49-zitan-jakkara-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T11:23:52.871049+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-249ac787-3ffe-4e59-909a-e774adb42dd1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-d-40to51/native/51-hiustanko-liangbatou-attempt2.png",
+      "nativeSHA256": "b405158d792e04db82c7242ec0f3d35f512c0f43bcf5fbbbdf0041983646ac0b",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "7ee19c58dc5aca71bbb08d75a7e97a96713a84f3099aa55e1ff247b0cf8a6c0a",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "observations": "Separate FLAT SILVER BIANFANGhairbar, natural8:1 strip andgentlyshapedends, held atdiagonal bysmilinggrayManchucourtwoman. Projectedverticalextent~29.5%photoheight; preservesnaturalflatshape, notwig. Eyes~r0.48 earlygentlefeather, no importantfeature disappears, hat extendsoutside asallowed. Strongbokeh, silverengraving sharp, true longlooserobe.",
+        "artifactHeightFraction": 0.295,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "scaleCaveat": "flatdiagonalbar29.5% projectedverticalextent",
+        "earlyFeatherFaceCaveat": true
+      }
+    }
+  ]
+}

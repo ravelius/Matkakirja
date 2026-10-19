@@ -1,0 +1,567 @@
+{
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "canonicalCount": 51,
+  "batchItems": [
+    {
+      "number": 40,
+      "id": "sivellin",
+      "nimi": "Kirjoitussivellin",
+      "kuplatyyppi": 3,
+      "kuplatyyppiRaw": "3",
+      "typeLabelFromMarkdown": "oppitunti (Yuqing-koulusali)",
+      "kupla": "Iloinen opettaja karttakeppi kädessä näyttää sivellintä, pikku-Puyi (kaapu, letti, 8 v) hymyilee pulpetissa, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Siveltimen kärki on eläimen karvaa ja varsi yleensä bambua; harvinaisemmissa varsi on jadea tai norsunluuta.",
+      "dynastia": "Qing",
+      "vuosi": "1644–1912",
+      "ajoitus": "Qing-dynastia, 1644–1912 (tyypillinen)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.sivellin.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.sivellin.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.sivellin.kupla",
+          "teksti": "juoksupeli.rikkoutuva.sivellin.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.sivellin.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.sivellin.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.sivellin.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.sivellin.kupla"
+        },
+        "mdHeading": "### Kirjoitussivellin (`sivellin`) — kupla 3: oppitunti (Yuqing-koulusali)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": "Yuqing-koulusali",
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": false,
+        "applicableExplicitPlaceCorrection": {
+          "sourceId": "paatoimittaja-codex-muistokuplat-tarkennus-1058-20261019.md",
+          "quote": "oppitunti Yuqing-palatsin koulusalissa (毓慶宮)",
+          "reason": "The base row is explicitly an oppitunti; this named place is in the source, not inferred."
+        },
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 41,
+      "id": "gaiwan-kansikuppi",
+      "nimi": "Kansikuppi (gaiwan)",
+      "kuplatyyppi": 5,
+      "kuplatyyppiRaw": "5",
+      "typeLabelFromMarkdown": "juhla/seremonia",
+      "kupla": "Hymyilevät juhlapukuiset hovinaiset mantšuasuissa nostavat gaiwan-kuppeja teejuhlassa, vaalea paviljonki, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Gaiwan on kuppi, kansi ja lautanen; nykymuoto vakiintui 1700-luvulla, Qianlongin ajalta on kultainen gaiwan.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku (Qianlongin kausi)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.kupla",
+          "teksti": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaalea paviljonki"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.kupla"
+        },
+        "mdHeading": "### Kansikuppi (gaiwan) (`gaiwan-kansikuppi`) — kupla 5: juhla/seremonia",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 42,
+      "id": "mantsun-veitsisarja",
+      "nimi": "Mantšun vyöveitsisarja",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Innostunut mantšubanneri-sotilas esittelee nauraen vyöveitsi- ja puikkosarjaa lähikuvassa, kirkas piha, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Mantšubannerimiehet kantoivat vyöllä veitsi- ja puikkosarjaa; Qianlong kielsi pilkkomasta heidän lihaansa.",
+      "dynastia": "Qing",
+      "vuosi": "1700–1800-luku",
+      "ajoitus": "Qing-dynastia, 1700–1800-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.mantsun-veitsisarja.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.mantsun-veitsisarja.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.mantsun-veitsisarja.kupla",
+          "teksti": "juoksupeli.rikkoutuva.mantsun-veitsisarja.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.mantsun-veitsisarja.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.mantsun-veitsisarja.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.mantsun-veitsisarja.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "kirkas piha"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.mantsun-veitsisarja.kupla"
+        },
+        "mdHeading": "### Mantšun vyöveitsisarja (`mantsun-veitsisarja`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 43,
+      "id": "palatsilyhty",
+      "nimi": "Palatsilyhty",
+      "kuplatyyppi": 8,
+      "kuplatyyppiRaw": "8",
+      "typeLabelFromMarkdown": "vuodenaika",
+      "kupla": "Iloiset palvelijat ripustavat silkkilyhdyn koristeeksi lumiseen pihaan, kirkas lumipäivä, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Hovin lyhdyn kehys oli bambua, kangas silkkiä tai harsoa; keisarit antoivat niitä uudenvuoden lahjaksi.",
+      "dynastia": "Qing",
+      "vuosi": "1644–1911",
+      "ajoitus": "Qing-dynastia (1644–1911)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.palatsilyhty.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.palatsilyhty.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.palatsilyhty.kupla",
+          "teksti": "juoksupeli.rikkoutuva.palatsilyhty.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.palatsilyhty.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.palatsilyhty.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.palatsilyhty.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "lumiseen pihaan"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.palatsilyhty.kupla"
+        },
+        "mdHeading": "### Palatsilyhty (`palatsilyhty`) — kupla 8: vuodenaika",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 44,
+      "id": "linnunhakki",
+      "nimi": "Linnunhäkki",
+      "kuplatyyppi": 7,
+      "kuplatyyppiRaw": "7",
+      "typeLabelFromMarkdown": "leikki (pikku-Puyi)",
+      "kupla": "Riemastunut pikku-Puyi (keltainen kaapu, letti, 8 v) nauraa bambuisen linnunhäkin luona lattialla, pieni lintu häkissä, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Qing-hovissa linnunpito oli ylhäisön harrastus, ja Qianlongin kerrotaan ihailleen lemmikkilintuja.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.linnunhakki.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.linnunhakki.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.linnunhakki.kupla",
+          "teksti": "juoksupeli.rikkoutuva.linnunhakki.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.linnunhakki.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.linnunhakki.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.linnunhakki.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "lattialla"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.linnunhakki.kupla"
+        },
+        "mdHeading": "### Linnunhäkki (`linnunhakki`) — kupla 7: leikki (pikku-Puyi)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 45,
+      "id": "metallipeili",
+      "nimi": "Hovin metallipeili",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Hymyilevä hovimestari esittelee ylpeänä kupariseospeiliä ja sen koristeltua takapuolta, valoisa hovihuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Qianlongin kauden suorakaiteisen kupariseospeilin takapuoli jäljittelee han-ajan pronssipeilejä.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.metallipeili.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.metallipeili.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.metallipeili.kupla",
+          "teksti": "juoksupeli.rikkoutuva.metallipeili.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.metallipeili.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.metallipeili.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.metallipeili.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "valoisa hovihuone"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.metallipeili.kupla"
+        },
+        "mdHeading": "### Hovin metallipeili (`metallipeili`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 46,
+      "id": "hattulaatikko",
+      "nimi": "Hattulaatikko",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Iloinen virkamies esittelee ylpeänä tasoista hattulaatikkoa, kesä- ja talvihattu esillä, lähikuva, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Virkamiehen hattulaatikossa oli tasot kesä- ja talvihatulle sekä lokero hovikaulanauhalle.",
+      "dynastia": "Qing",
+      "vuosi": "1800-luku",
+      "ajoitus": "Qing-dynastia, 1800-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.hattulaatikko.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.hattulaatikko.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.hattulaatikko.kupla",
+          "teksti": "juoksupeli.rikkoutuva.hattulaatikko.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.hattulaatikko.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.hattulaatikko.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.hattulaatikko.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.hattulaatikko.kupla"
+        },
+        "mdHeading": "### Hattulaatikko (`hattulaatikko`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 47,
+      "id": "sirkka-astia",
+      "nimi": "Sirkka-astia",
+      "kuplatyyppi": 7,
+      "kuplatyyppiRaw": "7",
+      "typeLabelFromMarkdown": "leikki (pikku-Puyi)",
+      "kupla": "Iloinen pikku-Puyi (keltainen kaapu, letti, 8 v) kurkistaa naureskellen posliiniseen sirkka-astiaan lattialla, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Puyi kasvatti sirkkoja ja kastematoja vanhoissa posliinikulhoissa ja -ruukuissa.",
+      "dynastia": "Qing",
+      "vuosi": "1910-luku",
+      "ajoitus": "Qing-aika, Puyin lapsuus 1910-luvulla",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.sirkka-astia.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.sirkka-astia.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.sirkka-astia.kupla",
+          "teksti": "juoksupeli.rikkoutuva.sirkka-astia.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.sirkka-astia.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.sirkka-astia.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.sirkka-astia.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "lattialla"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.sirkka-astia.kupla"
+        },
+        "mdHeading": "### Sirkka-astia (`sirkka-astia`) — kupla 7: leikki (pikku-Puyi)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 48,
+      "id": "lasiset-go-kivet",
+      "nimi": "Lasiset go-kivet",
+      "kuplatyyppi": 7,
+      "kuplatyyppiRaw": "7",
+      "typeLabelFromMarkdown": "leikki (pikku-Puyi)",
+      "kupla": "Riemukas pikku-Puyi (keltainen kaapu, letti, 8 v) pelaa nauraen värikkäillä lasisilla go-kivillä lattialla, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Qianlong tilasi lasisia go-kiviä 16 värissä; neljä väriä on säilynyt Taipein palatsimuseossa.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku (Qianlongin kausi)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.lasiset-go-kivet.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.lasiset-go-kivet.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.lasiset-go-kivet.kupla",
+          "teksti": "juoksupeli.rikkoutuva.lasiset-go-kivet.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.lasiset-go-kivet.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.lasiset-go-kivet.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.lasiset-go-kivet.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "lattialla"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.lasiset-go-kivet.kupla"
+        },
+        "mdHeading": "### Lasiset go-kivet (`lasiset-go-kivet`) — kupla 7: leikki (pikku-Puyi)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 49,
+      "id": "zitan-jakkara",
+      "nimi": "Zitan-jakkara",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Hymyilevä imettäjä esittelee ylpeänä zitan-puista jakkaraa, lähikuva, vaalea huone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Zitan-puuta käytettiin lähinnä Qing-palatsien huonekaluissa; Palace Museumissa niitä on yli 2 800.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.zitan-jakkara.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.zitan-jakkara.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.zitan-jakkara.kupla",
+          "teksti": "juoksupeli.rikkoutuva.zitan-jakkara.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.zitan-jakkara.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.zitan-jakkara.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.zitan-jakkara.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaalea huone"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.zitan-jakkara.kupla"
+        },
+        "mdHeading": "### Zitan-jakkara (`zitan-jakkara`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 50,
+      "id": "tinakannu",
+      "nimi": "Tinakannu",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Iloinen palvelija esittelee hymyillen kiiltävää tinakannua, innostunut ele, vaalea teehuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Jiangsun Mudun ja Changshun tinakannuja pidettiin parhaina, ja osa lähetettiin lahjaksi hoville.",
+      "dynastia": "Qing",
+      "vuosi": "1644–1911",
+      "ajoitus": "Qing-dynastia, 1644–1911",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.tinakannu.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.tinakannu.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.tinakannu.kupla",
+          "teksti": "juoksupeli.rikkoutuva.tinakannu.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.tinakannu.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.tinakannu.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.tinakannu.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaalea teehuone"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.tinakannu.kupla"
+        },
+        "mdHeading": "### Tinakannu (`tinakannu`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 51,
+      "id": "hiustanko-liangbatou",
+      "nimi": "Hovinaisen hiustanko",
+      "kuplatyyppi": 1,
+      "kuplatyyppiRaw": "1",
+      "typeLabelFromMarkdown": "esittely",
+      "kupla": "Hymyilevä hovinainen mantšuasussa pitelee riemuissaan liangbatou-hiustankoa, lähikuva, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Mantšunaisen liangbatou-kampaus kierrettiin litteän tangon ympärille; tanko: norsunluuta, puuta tai metallia.",
+      "dynastia": "Qing",
+      "vuosi": "1800-luku",
+      "ajoitus": "Qing-dynastia, 1800-luvun loppu – 1900-luvun alku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.hiustanko-liangbatou.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.hiustanko-liangbatou.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.hiustanko-liangbatou.kupla",
+          "teksti": "juoksupeli.rikkoutuva.hiustanko-liangbatou.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.hiustanko-liangbatou.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.hiustanko-liangbatou.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.hiustanko-liangbatou.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.hiustanko-liangbatou.kupla"
+        },
+        "mdHeading": "### Hovinaisen hiustanko (`hiustanko-liangbatou`) — kupla 1: esittely",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    }
+  ],
+  "orderSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe",
+    "sha256": "103bb93507ece700362a0aa9ea2bcf25b95f228a87e6798903ee9bcd5b83949f",
+    "readInFull": true
+  },
+  "sourceTaskNumbers": [
+    564
+  ],
+  "jadeAndVersionOnlyExtrasIncluded": false
+}

@@ -1,0 +1,128 @@
+{
+  "checkedAt": "2026-10-19T11:16:11.821039+00:00",
+  "sourceFactsPersonallyRead": true,
+  "fields": [
+    "nimi",
+    "kupla",
+    "fakta",
+    "dynastia",
+    "vuosi",
+    "ajoitus"
+  ],
+  "rows": [
+    {
+      "code": "40-sivellin",
+      "nimi": "Kirjoitussivellin",
+      "kupla": "Iloinen opettaja karttakeppi kädessä näyttää sivellintä, pikku-Puyi (kaapu, letti, 8 v) hymyilee pulpetissa, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Siveltimen kärki on eläimen karvaa ja varsi yleensä bambua; harvinaisemmissa varsi on jadea tai norsunluuta.",
+      "dynastia": "Qing",
+      "vuosi": "1644–1912",
+      "ajoitus": "Qing-dynastia, 1644–1912 (tyypillinen)"
+    },
+    {
+      "code": "41-gaiwan-kansikuppi",
+      "nimi": "Kansikuppi (gaiwan)",
+      "kupla": "Hymyilevät juhlapukuiset hovinaiset mantšuasuissa nostavat gaiwan-kuppeja teejuhlassa, vaalea paviljonki, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Gaiwan on kuppi, kansi ja lautanen; nykymuoto vakiintui 1700-luvulla, Qianlongin ajalta on kultainen gaiwan.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku (Qianlongin kausi)"
+    },
+    {
+      "code": "42-mantsun-veitsisarja",
+      "nimi": "Mantšun vyöveitsisarja",
+      "kupla": "Innostunut mantšubanneri-sotilas esittelee nauraen vyöveitsi- ja puikkosarjaa lähikuvassa, kirkas piha, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Mantšubannerimiehet kantoivat vyöllä veitsi- ja puikkosarjaa; Qianlong kielsi pilkkomasta heidän lihaansa.",
+      "dynastia": "Qing",
+      "vuosi": "1700–1800-luku",
+      "ajoitus": "Qing-dynastia, 1700–1800-luku"
+    },
+    {
+      "code": "43-palatsilyhty",
+      "nimi": "Palatsilyhty",
+      "kupla": "Iloiset palvelijat ripustavat silkkilyhdyn koristeeksi lumiseen pihaan, kirkas lumipäivä, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Hovin lyhdyn kehys oli bambua, kangas silkkiä tai harsoa; keisarit antoivat niitä uudenvuoden lahjaksi.",
+      "dynastia": "Qing",
+      "vuosi": "1644–1911",
+      "ajoitus": "Qing-dynastia (1644–1911)"
+    },
+    {
+      "code": "44-linnunhakki",
+      "nimi": "Linnunhäkki",
+      "kupla": "Riemastunut pikku-Puyi (keltainen kaapu, letti, 8 v) nauraa bambuisen linnunhäkin luona lattialla, pieni lintu häkissä, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Qing-hovissa linnunpito oli ylhäisön harrastus, ja Qianlongin kerrotaan ihailleen lemmikkilintuja.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku"
+    },
+    {
+      "code": "45-metallipeili",
+      "nimi": "Hovin metallipeili",
+      "kupla": "Hymyilevä hovimestari esittelee ylpeänä kupariseospeiliä ja sen koristeltua takapuolta, valoisa hovihuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Qianlongin kauden suorakaiteisen kupariseospeilin takapuoli jäljittelee han-ajan pronssipeilejä.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795"
+    },
+    {
+      "code": "46-hattulaatikko",
+      "nimi": "Hattulaatikko",
+      "kupla": "Iloinen virkamies esittelee ylpeänä tasoista hattulaatikkoa, kesä- ja talvihattu esillä, lähikuva, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Virkamiehen hattulaatikossa oli tasot kesä- ja talvihatulle sekä lokero hovikaulanauhalle.",
+      "dynastia": "Qing",
+      "vuosi": "1800-luku",
+      "ajoitus": "Qing-dynastia, 1800-luku"
+    },
+    {
+      "code": "47-sirkka-astia",
+      "nimi": "Sirkka-astia",
+      "kupla": "Iloinen pikku-Puyi (keltainen kaapu, letti, 8 v) kurkistaa naureskellen posliiniseen sirkka-astiaan lattialla, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Puyi kasvatti sirkkoja ja kastematoja vanhoissa posliinikulhoissa ja -ruukuissa.",
+      "dynastia": "Qing",
+      "vuosi": "1910-luku",
+      "ajoitus": "Qing-aika, Puyin lapsuus 1910-luvulla"
+    },
+    {
+      "code": "48-lasiset-go-kivet",
+      "nimi": "Lasiset go-kivet",
+      "kupla": "Riemukas pikku-Puyi (keltainen kaapu, letti, 8 v) pelaa nauraen värikkäillä lasisilla go-kivillä lattialla, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Qianlong tilasi lasisia go-kiviä 16 värissä; neljä väriä on säilynyt Taipein palatsimuseossa.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku (Qianlongin kausi)"
+    },
+    {
+      "code": "49-zitan-jakkara",
+      "nimi": "Zitan-jakkara",
+      "kupla": "Hymyilevä imettäjä esittelee ylpeänä zitan-puista jakkaraa, lähikuva, vaalea huone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Zitan-puuta käytettiin lähinnä Qing-palatsien huonekaluissa; Palace Museumissa niitä on yli 2 800.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795"
+    },
+    {
+      "code": "50-tinakannu",
+      "nimi": "Tinakannu",
+      "kupla": "Iloinen palvelija esittelee hymyillen kiiltävää tinakannua, innostunut ele, vaalea teehuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Jiangsun Mudun ja Changshun tinakannuja pidettiin parhaina, ja osa lähetettiin lahjaksi hoville.",
+      "dynastia": "Qing",
+      "vuosi": "1644–1911",
+      "ajoitus": "Qing-dynastia, 1644–1911"
+    },
+    {
+      "code": "51-hiustanko-liangbatou",
+      "nimi": "Hovinaisen hiustanko",
+      "kupla": "Hymyilevä hovinainen mantšuasussa pitelee riemuissaan liangbatou-hiustankoa, lähikuva, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "fakta": "Mantšunaisen liangbatou-kampaus kierrettiin litteän tangon ympärille; tanko: norsunluuta, puuta tai metallia.",
+      "dynastia": "Qing",
+      "vuosi": "1800-luku",
+      "ajoitus": "Qing-dynastia, 1800-luvun loppu – 1900-luvun alku"
+    }
+  ],
+  "mandatoryCorrections": {
+    "45-metallipeili": "RECTANGULAR; round candidate rejected and quarantined"
+  },
+  "disclosures": {
+    "46-hattulaatikko": "Both hats visible; necklace compartment not separately visible and no claim that it is shown."
+  }
+}
