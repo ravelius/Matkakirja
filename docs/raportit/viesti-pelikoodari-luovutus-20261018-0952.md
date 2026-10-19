@@ -71,3 +71,8 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
 - SEIS 19.10. ASTI (OMISTAJAN PÄÄTÖS 16.15 KK:n kautta "ÄLÄ TEE HUOMISEN TÖITÄ"; PT vahvisti): EI junaan eikä NS:lle tänään. JUNA 204: B6 + B7 proto pelikoodari/iss-nopeus-204 7c3448de0 (wt/proto-pelikoodari-iss-nopeus-204,
   rungon 203 6d67d042d päällä) → NS. Avoin PT:lle: iPadin fyysisesti pidempi vipu (uusi pohjarender + sivulevy) vai nykyinen pituus koko välillä.
   Video B6/B7 KK:lle + PT:lle 203:n todisteiden jälkeen (204:n käännöksestä).
+
+## LISÄYS 19.10. 07.1x (gmail-tili)
+- B6+B7 automaattiset testit valmiit: proto pelikoodari/iss-nopeus-204 58cabb404 (NopeusVipuTestit, IssEtsinTestit.LentotilanNipistys…,
+  vivun ±1×-reunan korjaus; Linssit-testit 2092/2092, tarkista.sh 0). Kuitattu PT:lle → NS junaan 204.
+- Avoin PT:lle/KK:lle: iPadin vivun fyysinen pituus (nykyinen vai pidempi vipu + uusi pohjarender). Ei laitetestejä.
