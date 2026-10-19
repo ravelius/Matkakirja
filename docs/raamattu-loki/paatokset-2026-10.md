@@ -1966,3 +1966,16 @@ Omistaja KK:ssa sanatarkasti: "käskin codexia tehdä riipuksen renderöinnin y�
 ## PAATOKSET 19.10.2026 klo 19.02 ja 19.03: juna 205 illaksi ilman testejä, yöjuna 206 testeineen aamuksi, yöllä juoksupeli ennen videoita (19.10.2026 klo 19.04)
 
 OMISTAJA PYYSI JULKAISUA 19.02 sanatarkasti: "julkaise 205 ilman testejä, niin ehdin itse nähdä sen ennen nukkumaanmenoa". 19.03: "sitten aamuksi uusi versio johon voi ajaa myös testit. ei aloiteta vielä tänä yönä videoiden renderöintejä jos se hidastaa juoksupelin kehitystä". Toteutus: juna 204 kulkee junassa 205 (204 + juoksupelin ensimmäinen pelattava versio), ei Laitetestaajaa eikä muistiajoa, automaattiset tarkistukset ja PT/KK:n simutodisteet; TF tavoite 22.30–23.00. Sen jälkeen yöjuna 206 laitekierroksella (9.11) aamuksi. Yöllä juoksupeli etusijalla; videoita renderöidään vain, kun kone on muuten vapaa (posti Codexille 81489a395).
+
+## ASEMATAULU: ILLAN NELJA LINJAUSTA JA YKSI SPEKSI (19.10.) (19.10.2026 klo 19.53)
+
+Omistaja 19.10.2026 (KK:n välittämänä):
+- 19.18 VALOT: talo/eteneminen.jakso. Lastaus (ehtoja kootaan) = ei jaksoa, oranssi. Lukituksesta TF:ään jakso "matka", vihreä, edistys 1–5 (1 lukittu + käännös alkoi, 2 käännös valmis, 3 testit +
+IPA, 4 Applelle, 5 TF:ssä). NS kirjoittaa 1 ja 2, Julkaisija 3–5.
+- 19.20 JUNARIVI: ei ☑/☐-merkkejä eikä lähtö-/lukitusjohdantoa ("Julkaisu pyydetty …, lähtee heti" ym.); vain otsikot Työn alla + Valmiina.
+- 19.24 ODOTUS EI OLE LEPO: roolikortissa "Levossa" vain kun rooli ei odota mitään; muuten "odottaa …" (käännös-/simuvuoro, yöjuna, yön renderöinti, Codexin malli).
+- 19.48 LUKITUN JUNAN RIVI: lukitun junan rivi näytetään omana tilanaan (kertyvä / lukittu / TF) speksin mukaisesti.
+- 19.51 (sanatarkasti): "ovatko nämä raamatussa? asemataulu pitää olla yksi tarkkaan speksattu työnkulku jotta se ei hajoa aina tilin vaihdon yhteydessä jollain tavalla".
+Toteutus: YKSI spesifikaatio docs/moduulit/asemataulu.md (dokumentit ja kirjoittajat, junarivit, valot, roolikortit, päivitysrytmi, käyttöönotto uudella tilillä); kaikki tiedostot vain repossa
+tools/asemataulu/ (HTML, hoitaja, ohje), scratchpadin kopiot syntyvät reposta; yksi komento rakentaa/päivittää taulun millä tahansa tilillä; tarkistin valvoo sääntöjä ennen jokaista vientiä ja
+tilinvaihto-valmis.mjs ajaa sen. Raamattu 7.39 viittaa speksiin. Tekijä Projektiseppä (PT 19.5x).
