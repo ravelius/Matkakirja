@@ -1958,3 +1958,7 @@ Omistaja 18.26: "mutta saako raketin ajettua jotenkin paremmilla asetuksilla, jo
 ## PAATOKSET 19.10.2026 klo 18.51: yli 48 h koskemattomat T7:lle nyt ja joka yö (19.10.2026 klo 18.54)
 
 Omistaja kysyi KK:ssa, voiko proto-3d:n lokit (33 Gt) siirtää T7:lle ja onko Claude-kansiossa muuta siirrettävää. Kortti "Siirränkö T7:lle kaiken, mihin ei ole koskettu kahteen vuorokauteen (noin 45 Gt), ja tehdäänkö sama jatkossa joka yö?" → "Kyllä, nyt ja joka yö (Suositus)"; vanhaan paikkaan jää linkki. KK ajoi kertasiirron (295 kohdetta, noin 38 Gt). Yöajo: tools/levy/ika_kartoitus.py + siirra_t7.py --aja (PT vastaa, Postivahti ajaa). Raamattu 12.19 YÖSIIRTO T7:LLE.
+
+## PAATOKSET 19.10.2026 klo 18.55: videot vasta yöllä, ensin juna 204 ja juoksupelin ensimmäinen pelattava versio (19.10.2026 klo 18.56)
+
+Omistaja KK:ssa sanatarkasti: "käskin codexia tehdä riipuksen renderöinnin yöllä ja keskittymään juoksupeliin. tehdään kaikki muutkin videot vasta yöllä. nyt tärkeintä saada juna julkaistua sekä kehitettyä juoksupeliä niin että saadaan ensimmäinen pelattava versio ulos". Toteutus: päivällä ei renderöidä videoita (rakettikokeilu, Kolme veljestä, uni yöllä); ensin juna 204 ulkoisille, sitten juoksupelin ensimmäinen pelattava versio seuraavaan junaan (Pelit › Keskeneräiset): valikosta alkava juoksu, ohjaukset liuku/hyppy/väylä/käännös, kiinnijäänti ja uusi yritys, drone-kamera oviaukon läpi, normaalikorkuiset seinät, sulava iPhonella ja iPadilla. Muut projektit odottavat.
