@@ -1,0 +1,46 @@
+{
+  "taskNumber": 448,
+  "code": "h08",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:47:39.318123+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: near-nadir full cloud shield crop, eye centered x~0.50,y~0.40, opening width about quarter frame; clouds fill all edges. Real Gerst photos: uneven tall stadium eyewall, blue-gray shadow, brighter sunlit opposing side, textured low cloud at floor; not black sea hole.",
+  "promptSHA256": "5aaa03e854653cf0d11a4e0b82e4f81795dae0ad34084c9d2584b40558244047",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h08/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:48:25.228817+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c075f762-2cc1-46ed-9952-79956d366a50.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h08.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h08.png",
+  "nativeSHA256": "e33448ca3824b5e5eedcf1be1f0b9a1f09455fa2ab0c259c601da956ea365385",
+  "deliverySHA256": "f828a996f731e71b976dd4dcabfc77c51b4b5ce4ddf512b4bf95d0798a0b80ab",
+  "nativeBytes": 2690805,
+  "deliveryBytes": 2691173,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "3ca813bafe363cbaefdfd2b35cbd393f2fa844ff1b1e5d3da798c6c924cdf03a",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "cloud-structure-reference-camera-scale-drift",
+    "photoRealism": "Convective cloud towers, sunlit eyewall and shaded floor have convincing natural fine texture, no repeated game tiles.",
+    "cameraMatch": "Eye is roughly upper-middle but larger and slightly right/lower than game; generated stadium view is somewhat more oblique. Exact camera/zoom lock not achieved.",
+    "takenFromRealReferences": "High uneven stadium eyewall, blue-gray shaded inner wall, low cloud floor, mixed rough convection and smooth cirrus.",
+    "invented": "Exact storm snapshot, eyewall height, small-scale clouds and Sun/observer geometry interpreted; no calibrated hurricane geometry.",
+    "excludedOverlays": "No visible frame, interface, locator dot, labels, logos or ocean border.",
+    "referenceCredit": "ESA/A. Gerst, CC BY-SA 3.0 IGO, visual references only per supplied order",
+    "metadataLabel": "havainnekuva"
+  }
+}

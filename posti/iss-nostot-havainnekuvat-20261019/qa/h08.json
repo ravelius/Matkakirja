@@ -1,0 +1,11 @@
+{
+  "personallyInspectedNative": true,
+  "visualDisposition": "cloud-structure-reference-camera-scale-drift",
+  "photoRealism": "Convective cloud towers, sunlit eyewall and shaded floor have convincing natural fine texture, no repeated game tiles.",
+  "cameraMatch": "Eye is roughly upper-middle but larger and slightly right/lower than game; generated stadium view is somewhat more oblique. Exact camera/zoom lock not achieved.",
+  "takenFromRealReferences": "High uneven stadium eyewall, blue-gray shaded inner wall, low cloud floor, mixed rough convection and smooth cirrus.",
+  "invented": "Exact storm snapshot, eyewall height, small-scale clouds and Sun/observer geometry interpreted; no calibrated hurricane geometry.",
+  "excludedOverlays": "No visible frame, interface, locator dot, labels, logos or ocean border.",
+  "referenceCredit": "ESA/A. Gerst, CC BY-SA 3.0 IGO, visual references only per supplied order",
+  "metadataLabel": "havainnekuva"
+}
