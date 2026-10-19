@@ -1,62 +1,59 @@
-# Codex → Päätoimittaja: kirjoitukset ja käärön uusi hyväksytty suunta (#505–507 / #516)
+# Codex → Päätoimittaja: käärö v2 valmis paikalliseen vastaanottotestiin (#539)
 
-Omistajan pyynnöstä tehty juoksupelin grafiikkatyö. Tämä viesti toimittaa paikallisen kirjoituspaketin tarkistettavaksi ja kertoo käärön uusimman tilan. Ei väitettä peli-integraatiosta tai päätoimittajan hyväksynnästä.
+Omistajan hyväksymä matala paperikäärö on tehty Tripolla ja viimeistelty paikallisesti. **Uusi toimituspaketti on tarkistettu ja sinetöity.** Se sisältää ehjän mallin, erillisen vaihdettavan paperin, revenneen tilan ja neljä irtopalaa. Pelikoodarin Unity-/fysiikkatesti ja omistajan lopullinen 3D-ulkoasuhyväksyntä ovat erikseen; peliä ei muutettu.
 
-## Kirjoituspaketti: paikallinen tarkistusehdokas
+## Uusi paketti
 
-Polku: /Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kirjoitukset-20261019/kirjoitukset-v1.zip
+`/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kirjoitukset-20261019/scroll-tripo-v2/kaaro-tripo-v2.zip`
 
-SHA256: 554d445c08c062516e58177ec1a7987274b44c7e5a7cfedfbe97526ece844be2  
-Koko: 1734544 tavua, 49 tiedostoa.
+SHA256 `cd8533d60171797a23e205b5169d2e6f7eb5919ac2b1aa1005c16db3c50c7953`  
+59 835 163 tavua, 31 tiedostoa, 8 GLB:tä ja 9 esikatselua. ZIP CRC sekä kaikkien jäsenten SHA256:t tarkistettu. Purkamattomat tiedostot ovat saman hakemiston `delivery/`-kansiossa. GLB:t eivät mene gitiin.
 
-8 GLB:tä / 5824 kolmiota: Qianqing-, Yangxin-, Sanxi- ja Yuqing-taulut, Sanxi-pariskirjoitus sekä aiemman kääröprototyypin kolme tilaa. 9 malliesikatselua, mukana keisarin takaa yläviistosta. Portti 8/8, paikallinen ja riippumaton QA läpäisty; ZIP CRC ja kaikkien jäsenten hashit varmennettu.
+| Tiedosto paketissa | Sisältö | Kolmiota |
+|---|---|---:|
+| models/kaaretaulu.glb | Tuet + erillinen ehjä paperi | 14 342 |
+| models/kaaretaulu-paperi.glb | Sama paperi yksin | 8 096 |
+| models/kaaretaulu-revitty.glb | Tuet + kaksi revennyttä sivulievettä | 14 022 |
+| models/kaaretaulu-liuskat.glb | Neljä irtopalaa erillisinä nodeina | 8 320 |
+| models/kaaretaulu-liuska-0.glb … -3.glb | Samat palat myös neljänä yksittäisenä GLB:nä | 2 260 / 2 316 / 1 884 / 1 860 |
 
-Paikka → id: metadata/placements.json. Kokonaiset lähderivit: metadata/selected-source-entries.json. Käytetty vain viittä kayta-id:tä, ei keksittyä manchua. V1:n SongtiTC-fonttiladonta on typografinen sovitus, ei alkuperäisen käsialan jäljennös. Sanxi/Yuqing-paikkojen ajallinen varmuus ja näiden kahden vaakataulun lukusuunta jäävät PT:n tarkistukseen. Sijoituskuvat ovat ehdotuksia, eivät varmennettuja historiallisia huoneita. Nykyinen v4-huone on vain erillisen käärörekvisiitan esikatselutausta.
+Käytä joko fragmenttiryhmää tai yksittäisiä fragmentteja, älä molempia päällekkäin. Nimet `support_left`, `support_right`, `paper_intact` ja `paper_fragment_0…3`. Yksikkö metri; +Y ylös, kirjoitettu etupuoli +Z. Kokonaisuus 2,30 × 1,30 × 0,612 m. Syvyys tulee tukijaloista. Paperin todellinen alareuna noin 0,202 m ja yläreuna 1,139 m; aiempi 0,30 m:n alareuna oli suunnittelutavoite, josta poikettiin hyväksytyn matalan kaarevan siluetin säilyttämiseksi.
 
-## Olennainen muutos: v1:n käärö ei ole omistajan valitsema lopullinen ulkoasu
+## QA ja todellinen hyöty Triposta
 
-Omistaja pyysi matalamman, aidon vanhanaikaisen käärön kahden pystysuuntaisen puukepin/rullaimen varaan. Hän hyväksyi ensin konseptin ja sen jälkeen tarkennetun lähdekuvan: leveämmät tukijalat, selvästi paperinen pinta ja tarkistettu kiinalainen kirjoitus.
+Paikallinen pääagentin ja erillisen tarkistajan tulos **LOCAL_REVIEW_CANDIDATE_PASS**. Kaikkien kahdeksan GLB:n paperikuoret/tukiosat sulkeutuvat; ei havaittuja avoimia reunoja, ei-monistoisia reunoja, winding-ristiriitoja tai degeneroituneita kolmioita. Paperin etu- ja takapuolella samat XY-kolmiot, vastinpintojen rako noin 2 mm. Riippumattoman 1 189 säteen tarkistuksessa jokaisella kaksi pintaosumaa, paksuus 1,999996…2,000005 mm.
 
-Uusi hyväksytty lähdekuva:
- /Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kirjoitukset-20261019/scroll-tripo-v2/kaaro-paperi-vahvat-jalat-kiina-source.png
+Ensimmäisen paikallisen ohennuskokeen pintaristeämät ja repeämäsaumojen ruskeat UV-kolmiot löydettiin tarkistuksessa ja korjattiin ennen pakkaamista. Hylätty kokeilu säilyy auditointia varten; sitä ei toimiteta käyttöön.
 
-SHA256: 51192ff86fc5efcf6e72ef4b5aab655362b8bc51adebdde6a8db98d52e421276
+Tripo H3.1 tuotti hyväksytyn lähdekuvan mukaisen rungon. **Segment** erotti paperin ja kaksi puutukea: osajako vastasi alkuperäisen geometrian kaikkia 17 982 kolmiota ja nopeutti erillisen paperin valmistelua. Lopullinen ohut paperikuori ja repeämätilat tehtiin paikallisesti; niitä ei väitetä Tripon valmiiksi fysiikaksi. Smart Mesh P2.0- tai Smart UV -vertailukoetta ei tehty tässä työssä.
 
-Teksti: 懷抱觀古今，深心託豪素。  
-Lähde-id: yangxindian-sanxitang-duilian. Katsojan oikea sarake ylhäältä alas 懷抱觀古今, vasen 深心託豪素. Kuvassa välimerkit on tarkoituksella jätetty pois; tarkka lähdeteksti on metadatassa. Kaikki kymmenen merkkiä on tarkistettu myös riippumattomasti. Kuvan käsiala on kuvitussovitus, ei historiallinen faksimile. Kääröeste on pelisovitus, ei väite historiallisesta läpijuostavasta esineestä.
+Puuosien alkuperäiset 2K PBR-kuvat säilyvät tavuntarkasti. Paperin etu-/takakuvat 2048 × 1024 ovat alkuperäisen kuvioinnin valottomat uudelleenprojektiot. Niihin ei leivottu esikatseluvalaistusta. Vanhan UV-asettelun normal-karttaa ei käytetä uudella paperilla. Repeämäreunalla on oma vaalea mattamateriaali.
 
-Lähdekuvan QA: scroll-tripo-v2/qa/source-image-review.md. Yksi uusi Imagegen-kutsu; työkalun kustannusta ei ilmoitettu. Uutta Tripo-mallia ei ole vielä generoitu, 0 jobia / 0 Tripo-krediittiä. Kuvaa ei tarvitse generoida uudelleen.
+**Tunnettu ulkoasuraja:** rullien takakiinnitysten lähellä näkyy kapeita vaaleita/tummia saumoja. Paperin keskialue on puhdas. Toinen puutuki alkaa noin 0,55 mm toista korkeammalta. CPU-esikatselu ei todista Unityn täyttä PBR-ulkoasua tai mobiilisuorituskykyä.
 
-Tripo-upload jäi varmistamatta: tiedostonvalinnan aikakatkaisu, sen jälkeen selaimen ohjausyhteyden virhe. Tavallisessa macOS-tiedostonvalinnassa oikea PNG valittiin, mutta sivun tekstitiedot ja kuvakaappaus olivat ristiriitaisia eikä oikean lähdekuvan latausta voitu vahvistaa. Generatea ei painettu. Käyttöoikeuksia ei muutettu tätä varten.
+## Kirjoitukset
 
-## Vastaanottajan pelitoteutusta varten
+Lähde-id `yangxindian-sanxitang-duilian`, tarkka teksti **懷抱觀古今，深心託豪素。** Katsojan oikea sarake ylhäältä alas **懷抱觀古今**, vasen **深心託豪素**. Kaikki kymmenen merkkiä tarkistettu myös lopullisesta 3D-esikatselusta. Perinteiset 懷/觀/託 ja 豪 (ei 毫) säilyvät. Takapinta on tekstittä. Fragmentit säilyttävät omat tekstikatkelmansa; koko kirjoitus ei toistu joka palassa.
 
-Omistajan vaatimus: paperin on revettävä, kun Puyi juoksee siitä läpi. Puuosat ja jalat pysyvät jäykkinä; paperiosa tarvitaan erillisenä vaihdettavana mesh-osana ja rikkoutumistilana. Tekstuuriin kuuluvien merkkien pitää hajota paperin mukana, ei jäädä kelluvaksi tekstikerrokseksi. Pysyvää umpiseinän collideria ei saa jäädä repeämisen jälkeen.
+Välimerkit on tarkoituksella jätetty koristekirjoituksesta pois. Historiallinen lähderivi on `metadata/chinese-source.json`:ssa. Tämä on tekstin kuvitussovitus, ei alkuperäiskäsialan faksimile tai historiallinen väite läpijuostavasta kääröesteestä.
 
-Uuden mallin ehdotettu mitoitus on noin 2,3 m leveä / 1,3 m korkea, paperin alareuna noin 0,3 m. Nämä ovat suunnittelutavoitteita, eivät mitattuja Tripo-mittoja. Uusi matala kahden tuen muoto korvaa v1:n korkeamman kääröprototyypin; vanhoja ankkurikoordinaatteja ei pidä siirtää siihen suoraan. Repeämislogiikka, triggerit, collisionit ja paperin heilunta kuuluvat vastaanottajan peli-integraatioon.
+## Pelikoodarin kytkentä
 
-V1 säilytetty vertailua varten. GLB:t eivät mene gitiin. Peliä, lähdemalleja tai muita haaroja ei ole muutettu. Seuraava toimitettava vaihe on uuden Tripo-ehdokkaan valmis GLB, sen merkkien/geometrian QA ja tarvittavat paperiosat; niitä ei väitetä valmiiksi tässä raportissa.
+Jäykät colliderit vain puutukiin. Paperi triggeriksi tai rikkoutumisessa poistuvaksi collisioniksi. Läpijuoksussa piilota ehjä paperi, näytä revenneet sivuliepeet ja käynnistä irtopalojen liike. Älä jätä umpiseinän collideria aukkoon tai kahdenna puutukia tilanvaihdossa. Revenneen mallin keskiaukko on vähintään noin 0,904 m leveä; Puyin collider/suoritusnopeus on testattava pelissä.
 
-## Päivitys 19.10.2026: PT #537–539 vastaanotettu, RTL 4/4 varmennettu
+Fragmenttien keskipisteet ja palautussiirrot ovat GLB-nodeissa ja `metadata/runtime-contract.json`:ssa. Liike, fysiikka, äänet, heilunta ja Puyin kontaktit ovat vastaanottajan toteutusta. Paketissa on staattiset tilat ja palat, ei valmista repeämäanimaatiota.
 
-Luettu kokonaan päätoimittajan kuittaus `posti/paatoimittaja-codex-kirjoitukset-kaaro-kuittaus-20261019.md`, commit `b209cfae63fd1dbb92fc040ec1340d862c534341`, blob `8ac1e08d24cf2746f2d2bee4ff0a38a81b6c9b15`. Paikallinen lähdekopio vastaa blobia tavuntarkasti. PT hyväksyy Sanxitangin ja Yuqinggongin Qing/Puyi-aikaisen sijoitusehdotuksen ja vahvistaa kaikkien vaakataulujen lukusuunnaksi oikealta vasemmalle. Tämä täsmentää yllä mainitut avoimet kohdat.
+Katsottavat kuvat: `previews/kaaro-nakymat.png`, `kaaro-revennyt.png`, `kaaro-fragmentit.png`. Täysi QA `QA.md`; numeeriset todisteet `qa/independent-evidence.json`. Kuvien tekstit ovat erillisillä alaraidoilla.
 
-Pääagentti ja erillinen tarkistaja varmensivat kaikki neljä nykyisistä GLB-tiedostoista: upotettu tekstuuri, todelliset UV:t, pintanormaalit, solmujen muunnokset ja etukuva. Kaikki ovat jo oikein: 正大光明, 中正仁和, 三希堂 ja 繼德堂 luetaan oikealta vasemmalle. Merkkien muodot eivät ole peilattuja. V1.1-korjausta ei tarvita. GLB-hashit ja sinetöity ZIP säilyvät ennallaan.
+## Kustannukset ja säilytetyt lähteet
 
-Pelikoodarille tästä paketista **viisi käytettävää mallia**:
-- `models/taulu-qianqing.glb`
-- `models/taulu-yangxin.glb`
-- `models/taulu-sanxi.glb`
-- `models/taulu-yuqing.glb`
-- `models/parikirjoitus-sanxi.glb`
+H3.1/Ultra Mesh/20k-tavoite/2K/Remove Lighting/PBR: job `eae58a23-abe7-4274-9b47-32806010ade1`, 45 krediittiä. Simple Segment: 40 krediittiä. **Yhteensä 85 Tripo-krediittiä**, saldo 23 700 → 23 615. Segmentin tallennuksen jälkeen UI vaihtoi selitteen Balancediksi ilman uutta maksullista generointia; lopputulos säilyi kolmena osana. Erillistä alijobin tunnusta UI ei näyttänyt, joten lokissa on pääjobi, toiminto, ajankohta ja saldomuutos.
 
-**Älä kytke peliin** vanhoja kääröprototyyppejä `models/kaaretaulu.glb`, `models/kaaretaulu-revitty.glb` tai `models/kaaretaulu-liuska.glb`. Uusi omistajan hyväksymä matala paperikäärö korvaa ne myöhemmässä erillisessä toimituksessa. Säilytä taulujen positiivinen skaala ja etupuoli; älä peilaa mallia tai UV:tä.
+Lähdekuva oli aiemmin omistajan hyväksymä; tämän mallityön aikana ei tehty uutta kuvagenerointia. Aiemman yhden Imagegen-kutsun rahakustannusta työkalu ei ilmoittanut. Alkuperäinen ja segmentoitu GLB sekä hyväksytty PNG on säilytetty; polut ja hajautukset paketissa `metadata/preserved-sources.json`. Ei ostoja, asennuksia tai pelimuutoksia.
 
-Paikalliset lisätodisteet samassa output/juoksupeli-kirjoitukset-20261019-hakemistossa:
-- `integration-selection-pt537.json`: yksiselitteinen viiden mallin valinta ja kolmen käärön poissulku.
-- `qa/pt538-rtl-parent-check.json`: pääagentin GLB-tarkistus.
-- `qa/reviewer/pt538-rtl-review.md` ja `pt538-rtl-evidence.json`: riippumaton tarkistus.
+## Aiempi kirjoituspaketti: PT #537–538:n valinta säilyy
 
-Käärö v2: lähde on edelleen hyväksytty, mutta mallia ei ole vielä tehty. Viimeisin täsmällinen este on ChatGPT-laajennuksen puuttuva **Allow access to file URLs** -asetus. Omistaja on nimenomaisesti sallinut sen käyttöönoton. Selaintyökalun URL-turvakäytäntö kuitenkin esti `chrome://extensions`-asetussivun avaamisen ja kielsi kiertoreitit, joten agentti ei muuttanut asetusta. Omistajalle annettiin käsin tehtävä asetuspolku; odotetaan toteutuksen vahvistusta, jonka jälkeen hyväksytty kuva ladataan ja oikea esikatselu varmistetaan ennen generointia. PT:n viittaus aiemmin korjattuihin oikeuksiin ei vielä varmista tätä latausta.
+`/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kirjoitukset-20261019/kirjoitukset-v1.zip`  
+SHA256 `554d445c08c062516e58177ec1a7987274b44c7e5a7cfedfbe97526ece844be2`.
 
-Uuden käärön toteutustavoite pysyy: noin 2,3 × 1,3 m, jäykät kaksi puutukea vahvoine jalkoineen, paperi erillisenä vaihdettavana mesh-osana sekä revennyt tila. Uusia Tripo-jobeja **0**, kulutus **0 krediittiä**. PT:n vastaanotto ja tämä mallien QA eivät ole näyttöä peli-integraatiosta; vastaanottajan Unity-/pelitarkistus jää tehtäväksi.
+PT:n kuittaus commitissa `b209cfae63fd1dbb92fc040ec1340d862c534341` hyväksyy viisi mallia vastaanottajan kytkentään: `taulu-qianqing`, `taulu-yangxin`, `taulu-sanxi`, `taulu-yuqing` ja `parikirjoitus-sanxi`. Kaikki neljä vaakataulua on varmennettu oikein oikealta vasemmalle; niitä ei muutettu eikä v1.1:tä tarvita. **V1-paketin kolmea vanhaa kääröprototyyppiä ei kytketä peliin.** Tämä uusi erillinen kääröpaketti korvaa ne. V1:n aineistot ja aiemmat maailmaerät säilyvät muuttumattomina.
