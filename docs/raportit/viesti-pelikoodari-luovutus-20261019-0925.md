@@ -96,3 +96,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - 09.44: **dfae35317** muistokupla = Codexin valokuva + YHTEINEN soikea häivytys (MuistokuplaSoikio.shader, Blit → RT 512; omistaja 09.37, PT 09.4x),
   pystysoikio 0,42 × 0,5, Sisa 0,7; kuvat Resources/JuoksuV4/esineet/<id>.png (alfa 255; tuonnissa maxTextureSize 512); dynastia · vuosi paperiraidalla.
   Esikatselu proto-3d/_tyo/pelikoodari/muistokupla/soikio-luonnokset.png (+ maski-esikatselu.py). JU:lle viimeinen vaihto simuvuoroon ~10.40.
+- 09.47: **6bc0bc555** esineen 1. rikkominen juoksussa = oma huuto + kupla, toisto = yleishuuto (juoksupeli.yleishuuto.<n>, SK tekee ~30) ilman kuplaa;
+  kuvateksti nimi · dynastia · vuosi; SK:n korjaukset 5e4364738 (huuto_aani.N = ääniversio, käyttöön kun äänet sallitaan). Simuvideot dfae35317:sta (JU kääntää).
