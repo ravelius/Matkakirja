@@ -11,6 +11,13 @@ Raportti kaikista simuista: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/rapor
      loki raketti-video-vertailu/aja.log; pelikoodari-iPhone 3E6A1D4D pystyssä, app juna204-valikko-jatko-app 396021ef)
 - ENSIN: `pgrep -fl todistusajo` + lokien tail. Jos kuolleet: aja puuttuvat uudelleen (taustalle). Molempien jälkeen JU:lle "SIMU VAPAA".
 
+## LISÄYS 17.45: käärö v2b -simu VALMIS (AJO 0) – lokit/todistus-kaaro204b-ipad-20261019-1736
+- Exception 0, maailma 10/10 (avoimet v2: normaalit seinät, taivas näkyy, ei kattoja), käärön kaikki 3 mallia paikalleen ennen
+  uusintaa; repesi z73 ja Codexin irtopalat kirjoituksineen lattialla (R-0.png); "drone nousee ovella 4,50 m" / "drone palaa"
+  jokaisella ovella (~10 m reittiä kerrallaan). Kuvissa E-04…E-08, R-0…R-30 + kaaro-v2b-botti.mp4 → kohta 1 = kuvapari PT:lle
+  (vertaa Codexin esikatseluihin täysikokoisina; tarkista videosta kallistus kaarteen sisään ja ettei kamera mene seiniin).
+- Rakettivideo lähti perään (raketti-video-vertailu/aja.log).
+
 ## ENSIN (järjestys)
 1. **Käärö v2b -simun tarkistus** (lokit/todistus-kaaro204b-ipad-*): (a) ehjä käärö edessä E-kuvissa + repeämä R-kuvissa Codexin
    mallilla (ei harmaita paikkamalleja); (b) "maailma osia 10/10" = avoimet-v2 (normaalit seinät, ei kattoja); (c) lokissa "drone
