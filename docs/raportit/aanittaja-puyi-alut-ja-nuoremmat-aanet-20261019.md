@@ -48,3 +48,8 @@ Omistajan 11.02: "nykyinen on hyvä, mutta saisi kuulostaa vielä nuoremmalle la
 | 6 | Mithi - Moral Kids Stories Character | https://storage.googleapis.com/eleven-public-prod/database/workspace/ed9b05e6324c457685490352e9a1ec90/voices/MIl0Flub6Sc9KSkX2A42/lVgyczia8hhSTuOf4Gh6.mp3 |
 | 7 | Kavya - Expressive Kid Narrator | https://storage.googleapis.com/eleven-public-prod/database/workspace/ed9b05e6324c457685490352e9a1ec90/voices/uyv82ARGSiPieXDxTMOc/NjKuGiXix5B4d2Hdb374.mp3 |
 | 8 | Kavya - Cute & Engaging Character | https://api.us.elevenlabs.io/v1/voices/bA58y3FqVI6b6gTNh0oT/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJjdXN0b20iLCJ3b3Jrc3BhY2VfaWQiOiJlZDliMDVlNjMyNGM0NTc2ODU0OTAzNTJlOWExZWM5MCIsImZpbGVuYW1lIjoiTnhoSXlDVll4VktMdDFXeE81T0kubXAzIiwidGltZXN0YW1wIjoxNzkyMzg5NjAwMDAwMDAwfQ%3D%3D |
+
+## 3. Ajettu: äänitesti A + lisäalut B (omistajan päätös 11.08, KK)
+**A: 8 ottoa, 448 mrk** (≤ 500): kirjaston äänet 1–8, "[shouting] [panicked] Oho! Keisarin lasipaja teki tämän!", speed 1,2 natiivisti, fi pakotettu, ei jälkikäsittelyä; Remixiä/Voice Designia ei ajettu. **B: 5 ottoa, 282 mrk** (≤ 350), Horatius samoin asetuksin. Ääniportti: 0 hylättyä (varoitus: A-02 Donnel true peak −0,2 dBTP + 1 muu).
+`/Users/Shared/Claude/proto-3d/_tyo/puyi-koeaanet-20261019/ulos-nuoremmat/`: 01-quang-anh 3,0 s · 02-donnel-kuya-totoy 3,3 · 03-piku 3,4 · 04-munni 3,4 · 05-gudiya 3,2 · 06-mithi 3,4 · 07-kavya-kid-narrator 3,4 · 08-kavya-cute-engaging 3,4.
+`…/ulos-alut2/`: 01-hui 3,0 s · 02-hoplaa 3,7 · 03-iik 3,2 · 04-ai-kamala 3,5 · 05-voi-raka 4,6.
