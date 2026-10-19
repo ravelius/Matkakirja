@@ -95,3 +95,8 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
 - RATA V4 (omistajan päätös 08.15): proto pelikoodari/juoksupeli-202 572d4eb97 (JuoksuV4 + JuoksuV4Maailma + rajapinta JuoksuKierrokset).
   Maailman vienti _valmiit/juoksupeli-maailma-v4-vienti-20261019 → JU. SEURAAVA: JU:n simuvuoro rata 1 + v4 kerralla → video PT:lle;
   todennäköiset hionnat: kamera seinien läpi (ei estesäteitä), materiaalien sävyt, vartijoiden paikat.
+- 09.0x–09.4x: k-mazatlan e1c172d79 + k-natal-brasilia b467d2f6d (iss-c2-204; työkalut scratchpadissa: korkeus.py/viivat.py, menetelmä
+  = Copernicus GLO-30 4×4/solu + NE 10m + alueelliset joet/järvet), docs main #4902 #4903; SK:lle kerrottu. B2 erillinen kuvauskamera
+  ef189ffba (IssKameraKuva.NayttoElaa NUI:lle; simussa todennettava). NS:lle viimeisin iss-c2-204 = ef189ffba.
+- Rata v4 tasot 5316efacc (juoksupeli-202): taso 1 esteet + viitan esittely + taso 2 spurtti/korkea hyppy/liito. AVOIN Codexilta (PT:n kautta):
+  esteiden mallit, puomiin tarttumisliike, tason 2 rinnakkainen kattoreitti. Codexin este-yhteenveto ei vielä saapunut.
