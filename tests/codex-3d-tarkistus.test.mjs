@@ -127,3 +127,21 @@ test('toimituskansio: erilliset kuvat ja tekstuurit tarkistetaan (Codex toimitta
   writeFileSync(join(d, 'SHA256SUMS'), sums + `${'0'.repeat(64)}  tekstuurit/puuttuu.png\n`);
   sisaltaa(tarkistaToimitus(d).virheet, 'puuttuu kansiosta');
 });
+
+test('toimituskansio: Codexin MANIFEST.json kelpaa manifestiksi alikansioittain, qa/ ohitetaan', () => {
+  const d = mkdtempSync(join(tmpdir(), 'codex3d-manifest-')); mkdirSync(join(d, 'erä-b', 'qa'), { recursive: true });
+  const b = png(1600, 900); writeFileSync(join(d, 'erä-b', '13-kuva.png'), b); writeFileSync(join(d, 'erä-b', 'qa', 'arkki.png'), png(160, 90));
+  writeFileSync(join(d, 'erä-b', 'MANIFEST.json'), JSON.stringify({ files: [{ path: '13-kuva.png', sha256: createHash('sha256').update(b).digest('hex') }] }));
+  let t = tarkistaToimitus(d);
+  assert.deepEqual(t.virheet, []); assert.ok(t.tiedostot.every((r) => !r.virheet.length));
+  writeFileSync(join(d, 'erä-b', 'MANIFEST.json'), JSON.stringify({ files: [{ path: '13-kuva.png', sha256: '0'.repeat(64) }] }));
+  sisaltaa(tarkistaToimitus(d).tiedostot.find((r) => r.polku === 'erä-b/13-kuva.png').virheet, 'SHA-256 ei täsmää');
+});
+
+test('kuvatoimitus ilman manifestia on HUOM; sisäkkäinen MANIFEST.json juuren suhteen kelpaa', () => {
+  const d = mkdtempSync(join(tmpdir(), 'codex3d-kuvat2-')); mkdirSync(join(d, 'alkupera'));
+  const b = png(1600, 900); writeFileSync(join(d, 'k1.png'), b);
+  let t = tarkistaToimitus(d); assert.deepEqual(t.virheet, []); sisaltaa(t.huomiot, 'ei manifestia');
+  writeFileSync(join(d, 'alkupera', 'MANIFEST.json'), JSON.stringify({ files: [{ path: 'k1.png', sha256: createHash('sha256').update(b).digest('hex') }] }));
+  t = tarkistaToimitus(d); assert.deepEqual(t.virheet, []); assert.deepEqual(t.tiedostot[0].virheet, []);
+});
