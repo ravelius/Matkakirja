@@ -1,0 +1,86 @@
+{
+ "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-ateena-v13/ateena.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä.",
+ "kaupunki": "ateena",
+ "kohteet": {
+  "Q208811": [
+   "Miksi stadion on hevosenkengän muotoinen?",
+   "Kuka maksoi stadionin jälleenrakennuksen?",
+   "Mitä nimi Kallimarmaro tarkoittaa?",
+   "Mistä vuoresta marmori louhittiin?",
+   "Miksi marmoriasu valmistui vasta 1906?",
+   "Milloin täällä pidettiin ensimmäiset kisat?",
+   "Kenen patsas sisäänkäynnillä seisoo?",
+   "Mitä stadionilla tapahtuu nykyään?"
+  ],
+  "Q1123019": [
+   "Kuinka korkeita pylväät ovat?",
+   "Miksi pylväitä on jäljellä niin vähän?",
+   "Miksi yksi pylväs makaa maassa?",
+   "Kuka sai temppelin lopulta valmiiksi?",
+   "Mikä erottaa korinttilaisen pylvään?",
+   "Mikä portti seisoo temppelin lähellä?",
+   "Miksi rakentaminen kesti vuosisatoja?",
+   "Kuinka paksu yksi pylväs on?"
+  ],
+  "Q372717": [
+   "Miksi torni on kahdeksankulmainen?",
+   "Millaisia jumalia seinillä on?",
+   "Miten vesikello näytti aikaa?",
+   "Kuka tornin rakensi?",
+   "Milloin torni valmistui?",
+   "Mitä tornin katolla oli aikoinaan?",
+   "Miksi tornin ajoitus on epävarma?",
+   "Mitä muuta roomalaisella torilla on?"
+  ],
+  "Q395367": [
+   "Mitä agoralla tehtiin muinoin?",
+   "Kuka rakennutti Attaloksen stoan?",
+   "Miksi stoa on rakennettu uudelleen?",
+   "Mitä Agora-museossa on esillä?",
+   "Mikä on stoa?",
+   "Miten demokratia liittyy agoraan?",
+   "Missä Sokrates keskusteli ihmisten kanssa?",
+   "Miksi agoran temppeli on näin ehjä?"
+  ],
+  "Q756824": [
+   "Miksi temppeli on säilynyt näin ehjänä?",
+   "Mistä marmori tuotiin?",
+   "Kuka oli Hefaistos?",
+   "Milloin temppelistä tuli kirkko?",
+   "Montako pylvästä temppelissä on?",
+   "Miksi temppeliä sanottiin ennen Theseionksi?",
+   "Milloin rakennustyö alkoi?",
+   "Mitä kivenotto tuhosi agoralla?"
+  ],
+  "Q131013": [
+   "Miksi Propylaiassa on viisi ovea?",
+   "Kuka suunnitteli portin?",
+   "Miksi portin rakennus keskeytyi?",
+   "Kuka oli Perikles?",
+   "Kenelle Niken temppeli oli omistettu?",
+   "Miksi portissa on kahta pylvästyyliä?",
+   "Miten raskaita kiviä nostettiin kukkulalle?",
+   "Mitä sana Akropolis tarkoittaa?"
+  ],
+  "Q242741": [
+   "Keitä naispatsaat esittävät?",
+   "Miten kuudes patsas päätyi pois Ateenasta?",
+   "Miksi alkuperäiset patsaat vietiin sisälle?",
+   "Miksi lattia on eri korkeudella?",
+   "Mikä on karyatidi?",
+   "Kenelle Erekhtheion oli omistettu?",
+   "Mikä pyhä puu kasvoi temppelin vieressä?",
+   "Kuinka kauan temppelin rakentaminen kesti?"
+  ],
+  "Q10288": [
+   "Miksi Parthenon räjähti vuonna 1687?",
+   "Millainen Athenan patsas sisällä oli?",
+   "Mikä oli temppelin alkuperäinen tehtävä?",
+   "Missä Parthenonin veistokset ovat nyt?",
+   "Kuka rakennutti Parthenonin?",
+   "Miksi temppelistä tuli moskeija?",
+   "Miksi pylväät ovat hieman kaarevia?",
+   "Miten Parthenonia kunnostetaan nykyään?"
+  ]
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-praha-v7/praha.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä.",
+ "kaupunki": "praha",
+ "kohteet": {
+  "Q12256": [
+   "Miksi Prahaan rakennettiin oma torni?",
+   "Kuka halusi tornin Petřínin kukkulalle?",
+   "Miksi torni muistuttaa Eiffel-tornia?",
+   "Milloin torni valmistui?",
+   "Mitä tornissa tehtiin television aikaan?",
+   "Miksi muuria kutsutaan nälkämuuriksi?",
+   "Kuka rakennutti muurin kukkulalle?",
+   "Mitä tornista näkee nykyään?"
+  ],
+  "Q753289": [
+   "Kuka perusti Malá Stranan?",
+   "Miksi kupoli on vihreä?",
+   "Kuka rakensi Pyhän Nikolauksen kirkon?",
+   "Miksi kellotorni seisoo kirkosta erillään?",
+   "Mitä Mozart teki täällä vuonna 1787?",
+   "Miksi Malá Strana on niin barokkinen?",
+   "Mitä Malá Stranan nimi tarkoittaa?",
+   "Millainen paikka Malá Strana on nykyään?"
+  ],
+  "Q193369": [
+   "Miksi linna on maailman suurin?",
+   "Kuka linnassa asuu nykyään?",
+   "Miksi katedraalin rakennus kesti niin kauan?",
+   "Kuka oli Arrasin Matthias?",
+   "Mitä Peter Parler rakensi katedraaliin?",
+   "Mistä katedraalin kaksi vaihetta erottaa?",
+   "Miksi länsiosa valmistui vasta 1900-luvulla?",
+   "Pääseekö linnaan ja katedraaliin sisälle?"
+  ],
+  "Q204871": [
+   "Miksi siltaa alettiin rakentaa 1357?",
+   "Miksi silta oli ainoa ylityspaikka?",
+   "Kuka oli Johannes Nepomukilainen?",
+   "Miksi kuningas heitti hänet jokeen?",
+   "Miksi kävijät silittävät yhtä reliefiä?",
+   "Missä alkuperäiset patsaat nykyään ovat?",
+   "Saako sillalla ajaa autolla?",
+   "Mitä sillantorneissa on?"
+  ],
+  "Q443107": [
+   "Miksi suuri osa korttelista purettiin?",
+   "Miksi synagogaa kutsuttiin ensin uudeksi?",
+   "Kuinka vanha Vanhauusi synagoga on?",
+   "Mikä on Golem?",
+   "Kuka Golemin muovasi savesta?",
+   "Missä Golem on tarun mukaan nykyään?",
+   "Miksi päätykolmio on porrastettu?",
+   "Käytetäänkö synagogaa vielä nykyään?"
+  ],
+  "Q421678": [
+   "Miksi Týnin tornit ovat Aatami ja Eeva?",
+   "Kuinka vanha astronominen kello on?",
+   "Mitä kellon viisarit näyttävät taivaalta?",
+   "Mitä kello tekee tasatunnein?",
+   "Keitä ikkunoissa kulkee tasatunnein?",
+   "Kuka Tyko Brahe oli?",
+   "Miksi Tyko Brahe on haudattu Prahaan?",
+   "Miksi aukio täyttyy ihmisistä tasatunnein?"
+  ],
+  "Q847613": [
+   "Miksi aukio on oikeasti bulevardi?",
+   "Mistä museon seinän luodinjäljet ovat?",
+   "Mitä aukiolla tapahtui elokuussa 1968?",
+   "Kuka veisti Venceslauksen patsaan?",
+   "Kuka Pyhä Venceslaus oli?",
+   "Mitä aukiolla myytiin ennen 1800-lukua?",
+   "Milloin aukio sai nykyisen nimensä?",
+   "Mitä aukiolla tapahtui marraskuussa 1989?"
+  ],
+  "Q616334": [
+   "Miksi Vyšehrad rakennettiin kalliolle?",
+   "Kuka Libuše oli?",
+   "Mitä Libuše ennusti Prahasta?",
+   "Keitä Vyšehradin hautausmaalle on haudattu?",
+   "Milloin Smetana sävelsi Vyšehradista?",
+   "Millainen on Smetanan sävelruno alussa?",
+   "Millaisen asun kirkko sai 1800-luvulla?",
+   "Mitä kallion päältä näkee?"
+  ]
+ }
+}
