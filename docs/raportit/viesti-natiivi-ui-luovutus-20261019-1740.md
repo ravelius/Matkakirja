@@ -73,3 +73,9 @@ uusi teksti luetaan pelikuvasta Sonnet-agentilla ennen PT:n kuittausta.
   docs/raportit/aarnin-luettelo-tekstit-20261019.json (nimi/kuvaus/historia), kuvat ämpärissä kohtaamiset/aarteet/aarre-{africa,southamerica,oceania}-star-v2.jpg.
 - Tee valikko-jatkon päälle uusi haara: poista AarreTulossa-joukosta 3 mannerta, lisää .nimi/.kuvaus/.historia aarnin-luettelo.fi.json:iin,
   AarreKuvaV2:een ämpärin v2-kuvat (tai buildiin). Simu luettelosta JU:n sisältöpaketin julkaisun jälkeen. EI junaan 204.
+
+## UNIKUVA HYVÄKSYTTY (PT 17.4x, seuraava juna, ei junaehto)
+- Codex 57463fc24: posti/mantan-smaragdi-unikuva-645-20261019/approved651-new-dream/mantan-smaragdi-unikuva-native.png (1254×1254, claude/postilaatikko).
+  Kytke natiivi-ui/uni-smaragdi-204:ään: kopioi StreamingAssets/mukana/isoisan-uni-mantan-smaragdi.png (+ .meta DefaultImporter, uusi guid),
+  LAHDE.txt-rivi, poista isoisan-uni-el-dorado.png(+meta) ja LAHDE-rivi; tarkista alfa-reunat kuten muut (tyokalut/unikuva.py). Simu `ui aloitus uni`.
+  Järjestys PT:n mukaan: aarrevideo ja B3 ensin.
