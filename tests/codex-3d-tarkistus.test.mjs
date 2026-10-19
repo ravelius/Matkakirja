@@ -1,0 +1,110 @@
+/*
+ * Codexin 3D-toimitusten tuontitarkistus (tools/codex-3d-tarkistus.mjs) hylkää toimitusmuodosta
+ * (docs/moduulit/tuotantopohjat/codex-3d-toimitus.md) poikkeavat tiedostot. Synteettiset glb:t, ei verkkoa.
+ */
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync, writeFileSync, mkdirSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createHash } from 'node:crypto';
+import { tarkistaGlb, tarkistaToimitus, PAKOLLISET_LUUT } from '../tools/codex-3d-tarkistus.mjs';
+
+// glb: json + binäärilohko (Float32/Uint8/Uint16-taulukot peräkkäin, 4 tavun tasaus)
+function glb(json, osat = []) {
+  const palat = []; let o = 0; json.bufferViews = [];
+  for (const t of osat) {
+    const b = Buffer.from(t.buffer, t.byteOffset, t.byteLength); const pad = (4 - (b.length % 4)) % 4;
+    json.bufferViews.push({ buffer: 0, byteOffset: o, byteLength: b.length }); palat.push(b, Buffer.alloc(pad)); o += b.length + pad;
+  }
+  const bin = Buffer.concat(palat);
+  if (bin.length) json.buffers = [{ byteLength: bin.length }];
+  let js = Buffer.from(JSON.stringify(json)); js = Buffer.concat([js, Buffer.alloc((4 - (js.length % 4)) % 4, 0x20)]);
+  const h = Buffer.alloc(12); h.write('glTF', 0, 'latin1'); h.writeUInt32LE(2, 4); h.writeUInt32LE(12 + 8 + js.length + (bin.length ? 8 + bin.length : 0), 8);
+  const jh = Buffer.alloc(8); jh.writeUInt32LE(js.length, 0); jh.write('JSON', 4, 'latin1');
+  const bh = Buffer.alloc(8); bh.writeUInt32LE(bin.length, 0); bh.write('BIN\0', 4, 'latin1');
+  return Buffer.concat([h, jh, js, ...(bin.length ? [bh, bin] : [])]);
+}
+const png = (w, h) => { const b = Buffer.alloc(33); Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]).copy(b); b.writeUInt32BE(13, 8); b.write('IHDR', 12, 'latin1'); b.writeUInt32BE(w, 16); b.writeUInt32BE(h, 20); return new Uint8Array(b); };
+
+// laatikko (12 kolmiota) w × h × d, pohja y = y0
+function laatikko(w, h, d, y0 = 0) {
+  const P = []; for (const c of [0, 1, 2, 3, 4, 5, 6, 7]) P.push(c & 1 ? w / 2 : -w / 2, y0 + (c & 2 ? h : 0), c & 4 ? d / 2 : -d / 2);
+  const I = [0, 1, 3, 0, 3, 2, 4, 6, 7, 4, 7, 5, 0, 4, 5, 0, 5, 1, 2, 3, 7, 2, 7, 6, 0, 2, 6, 0, 6, 4, 1, 5, 7, 1, 7, 3];
+  return { P: new Float32Array(P), I: new Uint16Array(I), min: [-w / 2, y0, -d / 2], max: [w / 2, y0 + h, d / 2] };
+}
+function esine({ koko = [2, 1, 3], kuva = null, lisa = {}, kolmioKerroin = 1 } = {}) {
+  const l = laatikko(...koko); const osat = [l.P, l.I]; const j = {
+    asset: { version: '2.0' }, scene: 0, scenes: [{ nodes: [0] }], nodes: [{ name: 'penkki', mesh: 0 }],
+    meshes: [{ primitives: [{ attributes: { POSITION: 0 }, indices: 1, material: 0 }] }], materials: [{ name: 'puu' }],
+    accessors: [{ bufferView: 0, componentType: 5126, count: 8, type: 'VEC3', min: l.min, max: l.max },
+      { bufferView: 1, componentType: 5123, count: 36 * kolmioKerroin, type: 'SCALAR' }], ...lisa,
+  };
+  if (kuva) { osat.push(kuva); j.images = [{ bufferView: 2, mimeType: 'image/png' }]; j.textures = [{ source: 0 }]; }
+  return glb(j, osat);
+}
+// hahmo: laatikko 0,5 × korkeus × 0,3, jokainen piste painolla 1 luuhun 0 (Hips origossa), Mixamo-luut, animaatiot
+function hahmo({ korkeus = 1.7, y0 = 0, luut = PAKOLLISET_LUUT, animaatiot = ['idle', 'run'], juuriSkaala = null } = {}) {
+  const l = laatikko(0.5, korkeus, 0.3, y0);
+  const J = new Uint8Array(8 * 4); const W = new Float32Array(8 * 4); for (let v = 0; v < 8; v++) W[v * 4] = 1;
+  const IB = new Float32Array(16 * luut.length); for (let k = 0; k < luut.length; k++) [0, 5, 10, 15].forEach((x) => { IB[k * 16 + x] = 1; });
+  const nodes = luut.map((n) => ({ name: n }));
+  nodes.push({ name: 'keho', mesh: 0, skin: 0 }, { name: 'Armature', children: [...luut.keys(), luut.length], ...(juuriSkaala ? { scale: [juuriSkaala, juuriSkaala, juuriSkaala] } : {}) });
+  const aika = new Float32Array([0, 1]); const rot = new Float32Array([0, 0, 0, 1, 0, 0, 0, 1]);
+  return glb({
+    asset: { version: '2.0' }, scene: 0, scenes: [{ nodes: [nodes.length - 1] }], nodes,
+    meshes: [{ primitives: [{ attributes: { POSITION: 0, JOINTS_0: 2, WEIGHTS_0: 3 }, indices: 1, material: 0 }] }], materials: [{ name: 'iho' }],
+    skins: [{ joints: [...luut.keys()], inverseBindMatrices: 4 }],
+    accessors: [{ bufferView: 0, componentType: 5126, count: 8, type: 'VEC3', min: l.min, max: l.max },
+      { bufferView: 1, componentType: 5123, count: 36, type: 'SCALAR' }, { bufferView: 2, componentType: 5121, count: 8, type: 'VEC4' },
+      { bufferView: 3, componentType: 5126, count: 8, type: 'VEC4' }, { bufferView: 4, componentType: 5126, count: luut.length, type: 'MAT4' },
+      { bufferView: 5, componentType: 5126, count: 2, type: 'SCALAR', min: [0], max: [1] }, { bufferView: 6, componentType: 5126, count: 2, type: 'VEC4' }],
+    animations: animaatiot.map((name) => ({ name, samplers: [{ input: 5, output: 6 }], channels: [{ sampler: 0, target: { node: 0, path: 'rotation' } }] })),
+  }, [l.P, l.I, J, W, IB, aika, rot]);
+}
+const virheet = (b, nimi = 'malli.glb') => tarkistaGlb(b, nimi).virheet;
+const sisaltaa = (lista, osa) => assert.ok(lista.some((v) => v.includes(osa)), `odotettiin virhettä "${osa}", saatiin: ${JSON.stringify(lista)}`);
+
+test('kelvollinen esine ja hahmo menevät läpi', () => {
+  assert.deepEqual(virheet(esine({ kuva: png(1024, 512) }), 'penkki.glb'), []);
+  const r = tarkistaGlb(hahmo(), 'vartija.glb');
+  assert.deepEqual(r.virheet, []); assert.equal(r.tiedot.tyyppi, 'hahmo'); assert.equal(r.tiedot.rajat.koko[1], 1.7);
+});
+
+test('nimi, ulkoinen tiedosto, pakkauslaajennus ja muu kuin glb hylätään', () => {
+  sisaltaa(virheet(esine(), 'Penkki Iso.glb'), 'nimi');
+  sisaltaa(virheet(esine({ lisa: { images: [{ uri: 'puu.png' }] } })), 'ulkoinen tiedosto');
+  sisaltaa(virheet(esine({ lisa: { extensionsRequired: ['KHR_draco_mesh_compression'] } })), 'KHR_draco_mesh_compression');
+  sisaltaa(virheet(Buffer.from('Kaydara FBX Binary  \0')), 'ei glb-tiedosto');
+});
+
+test('väärä yksikkö ja liian raskas malli hylätään', () => {
+  sisaltaa(virheet(esine({ koko: [2000, 500, 3000] })), 'pisin sivu');            // millimetreinä vietty
+  sisaltaa(virheet(esine({ koko: [0.002, 0.001, 0.003] })), 'pisin sivu');        // kilometreinä / väärä skaala
+  sisaltaa(virheet(esine({ kolmioKerroin: 9000 })), 'kolmiota');                  // 108 000 kolmiota > 100 000
+  sisaltaa(virheet(esine({ kuva: png(4096, 4096) })), '4096');
+  sisaltaa(virheet(esine({ kuva: png(1000, 1000) })), 'kahden potenssi');
+});
+
+test('hahmon mittakaava, pivot, luut ja animaatiot tarkistetaan', () => {
+  sisaltaa(virheet(hahmo({ korkeus: 170 })), 'korkeus');                          // senttimetreinä
+  sisaltaa(virheet(hahmo({ y0: -0.85 })), 'jalat');                               // pivot keskellä, ei jaloissa
+  sisaltaa(virheet(hahmo({ luut: PAKOLLISET_LUUT.filter((l) => !l.endsWith('Head')) })), 'mixamorig:Head');
+  sisaltaa(virheet(hahmo({ animaatiot: ['Run'] })), 'idle');
+  sisaltaa(virheet(hahmo({ animaatiot: ['idle', 'Armature|Run'] })), 'Armature|Run');
+  const r = tarkistaGlb(hahmo({ korkeus: 1.0, juuriSkaala: 1.5 }), 'puyi.glb');   // skaala soveltamatta: 1,5 m, vain HUOM
+  assert.deepEqual(r.virheet, []); assert.equal(r.tiedot.rajat.koko[1], 1.5); sisaltaa(r.huomiot, 'skaala');
+});
+
+test('toimituskansio: SHA256SUMS pakollinen ja täsmää, FBX hylätään', () => {
+  const d = mkdtempSync(join(tmpdir(), 'codex3d-')); mkdirSync(join(d, 'hahmot'));
+  const b = hahmo(); writeFileSync(join(d, 'hahmot', 'vartija.glb'), b);
+  assert.ok(tarkistaToimitus(d).virheet.some((v) => v.includes('SHA256SUMS')));
+  const sha = createHash('sha256').update(b).digest('hex');
+  writeFileSync(join(d, 'SHA256SUMS'), `${sha}  hahmot/vartija.glb\n`);
+  let t = tarkistaToimitus(d); assert.deepEqual(t.virheet, []); assert.deepEqual(t.tiedostot[0].virheet, []);
+  writeFileSync(join(d, 'SHA256SUMS'), `${'0'.repeat(64)}  hahmot/vartija.glb\n`);
+  sisaltaa(tarkistaToimitus(d).tiedostot[0].virheet, 'SHA-256 ei täsmää');
+  writeFileSync(join(d, 'SHA256SUMS'), `${sha}  hahmot/vartija.glb\n`); writeFileSync(join(d, 'hahmot', 'vartija.fbx'), 'x');
+  sisaltaa(tarkistaToimitus(d).virheet, '.fbx');
+});
