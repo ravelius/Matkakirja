@@ -1,0 +1,25 @@
+{
+ "_meta": "Aarnin luettelon aarteiden kuvaus + historia (omistaja 19.10. klo 13.31; näytetään kuvan yhteydessä luettelossa). VAIN EUROOPPA (PT 19.10.): vain europe; muut 6 mannerta odottavat omistajan päätöstä. Avaimet tekstitauluun: ui.aarnin-luettelo.<manner>.kuvaus / .historia. Manner-id = laatat.json mannerTypes. Faktat tarkistettu verkosta (2 riippumatonta lähdettä: Wikipedia + Tudor Travel Guide; ei museolähdettä). Epävarmat kohdat on jätetty tekstistä auki (kenttä epavarmaa). 13+.",
+ "aarteet": {
+  "europe": {
+   "nimi": "Kolme veljestä -riipus",
+   "kuvaus": "Kolme veljestä oli Pariisissa 1389 Burgundin herttua Juhana Pelottomalle tehty koru: kolme suorakaiteen muotoista punaista spinelliä, välissään helmiä, ja keskellä suuri sinertävä timantti. Tekijäksi mainitaan kultaseppä Hermann Ruissel.",
+   "historia": "Burgundin aarteista se päätyi Baselin kaupungille, 1500-luvulla Fuggerin pankkiirisuvulle ja 1551 Englannin kruunulle; Elisabet I esiintyy sen kanssa muotokuvissa. Sisällissodan aikana kuningatar Henrietta Maria yritti myydä sen ulkomailla, ja vuoden 1645 jälkeen siitä ei ole varmaa havaintoa.",
+   "lahteet": [
+    {
+     "url": "https://en.wikipedia.org/wiki/Three_Brothers_(jewel)",
+     "tukee": "Valmistus Pariisissa 1389 Juhana Pelottomalle; kolme punaista spinelliä, helmiä ja sininen timantti; Basel, Fugger, Edward VI 1551, Elisabet I; Henrietta Maria 1642-1645; kohtalo tuntematon"
+    },
+    {
+     "url": "https://thetudortravelguide.com/?p=10519",
+     "tukee": "Herman Ruissel tekijänä, Burgundin hovi, Basel, Fuggerit, Edward VI 1551, Elisabet I:n muotokuvat ja hautakuvapatsas, Henrietta Maria, ei havaintoja 1645 jälkeen"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Hermann_Ruissel",
+     "tukee": "Ruissel pariisilaisena kultaseppänä ja Kolmen veljeksen tekijänä 1389 (päivämäärällä ei omaa lähdeviitettä)"
+    }
+   ],
+   "epavarmaa": "Lähteet ovat ristiriidassa siitä, miten koru päätyi Baselille (Grandsonin taistelu 1476 vai Liègen piiritys 1467) ja milloin Fugger sen osti (1504 vs 1505); teksti jättää nämä auki. Ruisselin tekijyys perustuu vain Wikipediaan ja matkaopas-artikkeliin, joten teksti sanoo 'mainitaan'. Henrietta Marian 1640-luvun myynnin onnistuminen ja korun kohtalo (pilkottu, Mazarin, Kolme sisarta -teoria) ovat tuntemattomia."
+  }
+ }
+}
