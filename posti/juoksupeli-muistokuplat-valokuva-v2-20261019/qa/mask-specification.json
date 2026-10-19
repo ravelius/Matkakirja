@@ -1,0 +1,30 @@
+{
+  "diagnosticOnly": true,
+  "notActualGameShader": true,
+  "sourcePhotographsUnmodified": true,
+  "widthPx": 160,
+  "ovalAspectMatchesNative": true,
+  "fullOpacityNormalizedRadius": 0.78,
+  "outerRadius": 1,
+  "feather": "smoothstep",
+  "previews": [
+    {
+      "code": "01-posliinimaljakko-v2",
+      "selectedAttempt": 3,
+      "nativeSHA256": "dda1c16a8428e7263f7a055d816fbe6364879193849c8094568585dcc578d35d",
+      "previewSize": [
+        160,
+        120
+      ]
+    },
+    {
+      "code": "02-cloisonne-v2",
+      "selectedAttempt": 4,
+      "nativeSHA256": "b8deb09487c9da8d6d715d7997cbc061b09eeb3d5eece6b6e1866923310bd979",
+      "previewSize": [
+        160,
+        120
+      ]
+    }
+  ]
+}

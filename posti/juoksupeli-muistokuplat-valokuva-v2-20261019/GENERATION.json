@@ -1,0 +1,442 @@
+{
+  "selectedImages": 2,
+  "callsIssued": 7,
+  "callsCompleted": 7,
+  "assets": [
+    {
+      "code": "01-posliinimaljakko-v2",
+      "taskNumber": 490,
+      "callsIssued": 3,
+      "callsCompleted": 3,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T06:49:57.130785+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce one entirely NEW REALISTIC COLOR PHOTOGRAPH of a fictional joyful Chinese palace teacher showing an intact historical artifact to a young boy emperor. This is the FULL UNCROPPED RECTANGULAR source photograph; later software adds its own oval fade. Landscape4:3 PNG about1536x1152. Full opaque photograph fills ALL four corners. Alpha255 everywhere. NO oval, circle, vignette, feather, border, matte, transparency, glow, inset or collage. Natural skin, silk and artifact surfaces, restrained real colors, soft window daylight, candid warm joy, no painting/sepia/cartoon/CGI, no writing, dates, dynasty labels or watermark. Fictional people, no real-person portrait claim.\nCRITICAL COMPOSITION: reserve at least20percent of image width at LEFT and RIGHT, and20percent of image height at TOP and BOTTOM, as calm nearly uniform pale warm-gray photographed background/foreground. Place ALL faces, hair/headwear, hands and the ENTIRE artifact inside the CENTRAL60percent rectangle: x20-80percent, y20-80percent, with a little extra safety. Do not draw this box. Wider camera framing, subjects only about55percent of frame height. Calm pale plaster wall above/at sides, plain neutral table foreground occupying bottom fifth with absolutely no object/hands/body there; these are real photographed parts of the scene, NOT added graphic borders. Two seated people behind that plain table, no extra furniture, ornaments, vases, windows, columns or patterned background. Heads and held artifact must NOT enter reserved margins. Object and joyous adult face dominate central area and remain readable in a160px-wide preview; child small secondary listener. Adult's two hands visibly hold intact object securely; natural fingers, no extra hands. Smile spontaneously toward child/object rather than posing toward camera. No shards or broken areas. Keep background quiet enough that an oval mask can later fade the margins without clipping faces, hands or artifact.\nSubject01: a delighted fictional Chinese male palace teacher about50 in plain dark-blue traditional silk, seated central-left. His natural smiling face and dark simple cap fit near x40%,y33%, never above20percent. Small fictional boy emperor in a simple yellow robe and dark round cap seated central-right, his side-profile head near x66%,y46%; listening eagerly. Teacher presents one intact Qing-inspired imperial Jingdezhen BLUE-AND-WHITE PORCELAIN VASE in central lower area: rounded body, short flared neck/mouth, readable cobalt-blue floral panels on white glaze, no handles. Vase occupies approximately24percent of full image width and32percent of height, fully within x38-62%,y44-76%. Both hands support it at base and side inside the central safe region. Hands/object clearly separate from blue robe. Keep the entire tabletop bottom20percent empty and softly lit. Historic costume/ceramic interpretation, not a documented museum artifact. Absolutely no baked memory-bubble shape or faded edges; a normal wide rectangular color photograph.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-3eeb46df-272f-471c-977a-d45d776faf80.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/01-posliinimaljakko-v2-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/01-posliinimaljakko-v2.png",
+          "nativeSHA256": "56a47eb78911247463930562abfa6c11504729cf88599ac0862c382ccfc3b548",
+          "deliverySHA256": "64cad65d238870ee74210513ec1edca77592d847c0ff8d8bca12d753a468f358",
+          "nativeBytes": 1957263,
+          "deliveryBytes": 1957547,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "7c809767049843865ed7c44e0215c8d38c165505cdfa61f3392da0efd160a297",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T06:51:52.083388+00:00"
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T06:55:54.436980+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce one entirely NEW REALISTIC COLOR PHOTOGRAPH of a fictional joyful Chinese palace teacher showing an intact historical artifact to a young boy emperor. This is the FULL UNCROPPED RECTANGULAR source photograph; later software adds its own oval fade. Landscape4:3 PNG about1536x1152. Full opaque photograph fills ALL four corners. Alpha255 everywhere. NO oval, circle, vignette, feather, border, matte, transparency, glow, inset or collage. Natural skin, silk and artifact surfaces, restrained real colors, soft window daylight, candid warm joy, no painting/sepia/cartoon/CGI, no writing, dates, dynasty labels or watermark. Fictional people, no real-person portrait claim.\nCRITICAL COMPOSITION: reserve at least20percent of image width at LEFT and RIGHT, and20percent of image height at TOP and BOTTOM, as calm nearly uniform pale warm-gray photographed background/foreground. Place ALL faces, hair/headwear, hands and the ENTIRE artifact inside the CENTRAL60percent rectangle: x20-80percent, y20-80percent, with a little extra safety. Do not draw this box. Wider camera framing, subjects only about55percent of frame height. Calm pale plaster wall above/at sides, plain neutral table foreground occupying bottom fifth with absolutely no object/hands/body there; these are real photographed parts of the scene, NOT added graphic borders. Two seated people behind that plain table, no extra furniture, ornaments, vases, windows, columns or patterned background. Heads and held artifact must NOT enter reserved margins. Object and joyous adult face dominate central area and remain readable in a160px-wide preview; child small secondary listener. Adult's two hands visibly hold intact object securely; natural fingers, no extra hands. Smile spontaneously toward child/object rather than posing toward camera. No shards or broken areas. Keep background quiet enough that an oval mask can later fade the margins without clipping faces, hands or artifact.\nComposition safety: use a MUCH WIDER CAMERA than a typical waist-up portrait. ENTIRE visible human silhouettes INCLUDING HATS AND CLOTHING stay between x25-75percent and y25-73percent, not merely faces. Reserve full TOP QUARTER pure quiet wall, LEFT/RIGHT QUARTERS quiet wall, BOTTOM QUARTER plain empty light-neutral tabletop. Leave generous empty photographed space all around. Subjects are compact in the middle; do not zoom in. All important content must survive an oval mask without even touching its fade zone. No drawn box, no blank graphic border; one continuous softly lit real setting.\nSubject01: seated delighted fictional male Chinese palace teacher in a simple dark-blue loose traditional robe and dark round cap. Top of cap NOT before y27percent; face roughly x42percent,y38percent. Small fictional boy emperor seated alongside at center-right, yellow robe and dark cap fully within the central safe region, looking eagerly toward teacher and vase. Teacher holds one intact blue-and-white Qing-inspired Jingdezhen porcelain vase: rounded body, short flared neck, cobalt-blue floral decoration on white glaze. Vase fully visible between approximately x40-58percent,y46-70percent, two natural hands supporting base and side. Teacher and boy smile naturally at each other/object, not toward camera. All clothing stops behind the tabletop at y73percent. The whole lower quarter is EMPTY TABLE. Beautiful but physically realistic porcelain, skin and cloth, plain softly illuminated beige-gray plaster background, no architectural details or background objects. Natural color photograph, full opaque rectangle.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f0daacf9-705e-4fd6-b71e-1701540942a2.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/01-posliinimaljakko-v2-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/01-posliinimaljakko-v2.png",
+          "nativeSHA256": "be264b22fdd8d8daff5fcca374a116e5e04f7c4f9df973bbf66534ceb2c38f80",
+          "deliverySHA256": "dad2966acc0d4e5d07de3bb40cb35fc600a2d2cfe5af8ff9bb7a6ffd212e1845",
+          "nativeBytes": 1809021,
+          "deliveryBytes": 1809305,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "e8a62e3649340ac799ea4b5fbec55d5cf2729ccd9fcf947714d5ec796a4d20db",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T06:58:02.777131+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "not-selected-right-margin-just-under-target",
+            "rectangleOpaque": true,
+            "visualFindings": "Critical faces, hands and vase centrally safe. Hat top about22percent, clothing left about21percent, rightmost child's clothing about81percentx giving only19percent quiet right background. Wider whole new candidate requested under permanent image authorization.",
+            "marginCheckMethod": "Manual approximate visual estimate; not exact segmentation",
+            "wholeNewGenerationNeeded": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T06:58:03.839415+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce one entirely NEW REALISTIC COLOR PHOTOGRAPH of a fictional joyful Chinese palace teacher showing an intact historical artifact to a young boy emperor. This is the FULL UNCROPPED RECTANGULAR source photograph; later software adds its own oval fade. Landscape4:3 PNG about1536x1152. Full opaque photograph fills ALL four corners. Alpha255 everywhere. NO oval, circle, vignette, feather, border, matte, transparency, glow, inset or collage. Natural skin, silk and artifact surfaces, restrained real colors, soft window daylight, candid warm joy, no painting/sepia/cartoon/CGI, no writing, dates, dynasty labels or watermark. Fictional people, no real-person portrait claim.\nCRITICAL COMPOSITION: reserve at least20percent of image width at LEFT and RIGHT, and20percent of image height at TOP and BOTTOM, as calm nearly uniform pale warm-gray photographed background/foreground. Place ALL faces, hair/headwear, hands and the ENTIRE artifact inside the CENTRAL60percent rectangle: x20-80percent, y20-80percent, with a little extra safety. Do not draw this box. Wider camera framing, subjects only about55percent of frame height. Calm pale plaster wall above/at sides, plain neutral table foreground occupying bottom fifth with absolutely no object/hands/body there; these are real photographed parts of the scene, NOT added graphic borders. Two seated people behind that plain table, no extra furniture, ornaments, vases, windows, columns or patterned background. Heads and held artifact must NOT enter reserved margins. Object and joyous adult face dominate central area and remain readable in a160px-wide preview; child small secondary listener. Adult's two hands visibly hold intact object securely; natural fingers, no extra hands. Smile spontaneously toward child/object rather than posing toward camera. No shards or broken areas. Keep background quiet enough that an oval mask can later fade the margins without clipping faces, hands or artifact.\nSTRONG COMPOSITION OVERRIDE: VERY WIDE MEDIUM SHOT. People are SMALLER than usual in the frame. Keep the ENTIRE man+boy group including every hat, sleeve, shoulder inside x30-70percent and y30-70percent. Top30percent is featureless pale wall, left30percent and right30percent are pale wall; bottom30percent is plain EMPTY matching tabletop. Actual photographed quiet space, never graphic borders. Do NOT fill the frame with the people; the extra room is mandatory. The human faces plus artifact themselves still clear, naturally lit and colorful.\n01: joyful fictional Chinese male palace teacher in dark-blue loose Qing-inspired robe and round dark cap at x43%,y40%, warmly smiling to a small fictional boy in yellow robe at x61%,y51%. Both seated behind the light neutral table, all clothing ends behind table at y70%. Teacher holds one intact medium rounded blue-and-white Jingdezhen-style porcelain vase in front of his chest with TWO natural hands. Vase at x47%,y56%, about16percent full frame width and25percent frame height; no handles, short flared neck, clean cobalt floral design on white glossy glaze. All face/hand/vase extremities strictly within x30-70%,y30-70%. Child is secondary and small but clearly delighted. Broad calm background everywhere else. Realistic color camera photograph, no retouch/filter/sepia, FULL OPAQUE RECTANGLE with no oval/feather/circle. No extra objects or architectural details.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f0edf875-17df-43a6-8497-6778f03c145e.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/01-posliinimaljakko-v2-attempt3.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/01-posliinimaljakko-v2.png",
+          "nativeSHA256": "dda1c16a8428e7263f7a055d816fbe6364879193849c8094568585dcc578d35d",
+          "deliverySHA256": "afbc9835c5cadbdfa088b5ea1dfa968df8550378fe3c92a517fe0f73dcc7c56c",
+          "nativeBytes": 1848969,
+          "deliveryBytes": 1849237,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "6ec47bba7d20b394c0cbee85a7874a638307693d291315986c2df1ac2fe5d5df",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T06:59:59.594104+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "selected-for-oval-QA-and-PT-review",
+            "photoRealism": "Natural color faces, porcelain and silk; fictional costumes, artifact decoration and scene.",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalContentInsideCentral60Percent": true,
+            "estimatedCalmMarginsPercent": {
+              "left": 23,
+              "right": 23,
+              "top": 27,
+              "bottom": 23
+            },
+            "marginCheckMethod": "Manually estimated silhouette bounding box, approximately335,294 to1108,833 within1448x1086; not calibrated segmentation.",
+            "full20PercentCalmMarginsVisuallySatisfied": true,
+            "visualFindings": "Joyful teacher, child listener, whole blue-white vase and both hands contained in center; plain wall and empty table around. Fine vase ornament interpreted, not museum replica.",
+            "thumbnailQAPending": true,
+            "pixelsNotRetouched": true
+          },
+          "metadataProvenanceVerified": true
+        }
+      ],
+      "callIssuedAt": "2026-10-19T06:58:03.839248+00:00",
+      "activeAttempt": 3,
+      "attempt": 3,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f0edf875-17df-43a6-8497-6778f03c145e.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/01-posliinimaljakko-v2-attempt3.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/01-posliinimaljakko-v2.png",
+      "nativeSHA256": "dda1c16a8428e7263f7a055d816fbe6364879193849c8094568585dcc578d35d",
+      "deliverySHA256": "afbc9835c5cadbdfa088b5ea1dfa968df8550378fe3c92a517fe0f73dcc7c56c",
+      "nativeBytes": 1848969,
+      "deliveryBytes": 1849237,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "pixelSHA256": "6ec47bba7d20b394c0cbee85a7874a638307693d291315986c2df1ac2fe5d5df",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T06:59:59.594104+00:00",
+      "selectedAttempt": 3,
+      "qa": {
+        "personallyInspectedNative": true,
+        "disposition": "selected-for-oval-QA-and-PT-review",
+        "photoRealism": "Natural color faces, porcelain and silk; fictional costumes, artifact decoration and scene.",
+        "rectangleOpaque": true,
+        "bakedOval": false,
+        "criticalContentInsideCentral60Percent": true,
+        "estimatedCalmMarginsPercent": {
+          "left": 23,
+          "right": 23,
+          "top": 27,
+          "bottom": 23
+        },
+        "marginCheckMethod": "Manually estimated silhouette bounding box, approximately335,294 to1108,833 within1448x1086; not calibrated segmentation.",
+        "full20PercentCalmMarginsVisuallySatisfied": true,
+        "visualFindings": "Joyful teacher, child listener, whole blue-white vase and both hands contained in center; plain wall and empty table around. Fine vase ornament interpreted, not museum replica.",
+        "thumbnailQAPending": true,
+        "pixelsNotRetouched": true,
+        "static160pxOvalPreviewPersonallyInspected": true,
+        "static160pxContentRecognizable": true,
+        "static160pxFindings": "Sinivalkoinen maljakko ja kaksi iloisesti keskustelevaa hahmoa erottuvat; hienot koristeet eivät ole luettavaa tietoa pienessä koossa.",
+        "actualGame2to3SecondRuntimeTested": false,
+        "previewMaskIsDiagnosticOnly": true,
+        "lightnessRequirement498Checked": true,
+        "noBakedGrainLiftedBlackPointOrWaves": true
+      },
+      "metadataProvenanceVerified": true
+    },
+    {
+      "code": "02-cloisonne-v2",
+      "taskNumber": 491,
+      "callsIssued": 4,
+      "callsCompleted": 4,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T07:00:00.758408+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce one entirely NEW REALISTIC COLOR PHOTOGRAPH of a fictional joyful Chinese palace teacher showing an intact historical artifact to a young boy emperor. This is the FULL UNCROPPED RECTANGULAR source photograph; later software adds its own oval fade. Landscape4:3 PNG about1536x1152. Full opaque photograph fills ALL four corners. Alpha255 everywhere. NO oval, circle, vignette, feather, border, matte, transparency, glow, inset or collage. Natural skin, silk and artifact surfaces, restrained real colors, soft window daylight, candid warm joy, no painting/sepia/cartoon/CGI, no writing, dates, dynasty labels or watermark. Fictional people, no real-person portrait claim.\nCRITICAL COMPOSITION: reserve at least20percent of image width at LEFT and RIGHT, and20percent of image height at TOP and BOTTOM, as calm nearly uniform pale warm-gray photographed background/foreground. Place ALL faces, hair/headwear, hands and the ENTIRE artifact inside the CENTRAL60percent rectangle: x20-80percent, y20-80percent, with a little extra safety. Do not draw this box. Wider camera framing, subjects only about55percent of frame height. Calm pale plaster wall above/at sides, plain neutral table foreground occupying bottom fifth with absolutely no object/hands/body there; these are real photographed parts of the scene, NOT added graphic borders. Two seated people behind that plain table, no extra furniture, ornaments, vases, windows, columns or patterned background. Heads and held artifact must NOT enter reserved margins. Object and joyous adult face dominate central area and remain readable in a160px-wide preview; child small secondary listener. Adult's two hands visibly hold intact object securely; natural fingers, no extra hands. Smile spontaneously toward child/object rather than posing toward camera. No shards or broken areas. Keep background quiet enough that an oval mask can later fade the margins without clipping faces, hands or artifact.\nReference image1 is a PUBLIC-DOMAIN MUSEUM GARMENT CONSTRUCTION reference ONLY: late-Qing/early20th-century MANCHU woman's loose robe with broad sleeves/cuffs, broad embroidered edging and asymmetric curving right-side front fastening. Do NOT copy the black-and-white image, its framing, mannequin, texture age, grayscale or museum inventory digits. Output a natural COLOR photograph; robe color is interpreted.\nSTRONG MARGIN SAFETY: VERY WIDE framing, the entire tutor+boy group including hair, hats, clothes and hands inside x30-70percent,y30-70percent. Full top30percent, side30percent are calm plain warm-gray wall; full bottom30percent plain EMPTY light-neutral tabletop. Do not zoom in. Background space must remain photographed natural wall/table, not a matte/border.\n02: joyful fictional Chinese female palace tutor, about45, in1910s MANCHU attire: long loose straight-cut plum silk robe, broad dark embroidered bands curving around neck/down the right closure, wide relaxed long sleeves and wide contrasting cuffs like reference. NO fitted modern qipao/cheongsam, no tailored waist, modern blouse, tight short sleeves or modern hairstyle. Hair neatly in a simple period pinned arrangement without a theatrical crown. Her smiling face near x42%,y39%, warmly talking to a small boy emperor at x62%,y51%, in simple yellow robe/dark cap. Two anatomically natural hands hold one intact shallow CLOISONNE DISH toward him, centered about x48%,y57%, around20percent of full frame width. Dish has turquoise-blue enamel, strong readable gold-wire floral compartments with red/white flower shapes, narrow gold rim, gentle visible shallow curvature, no lettering; looks like a plate, not gong/mirror/deep bowl. Object and all fingers entirely inside central safe area. Child secondary, listening with delight. No background objects, no decorative vase. Full opaque rectangular real color photograph; no oval fade/alpha/vignette.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/references/manchu-robe-met-47.136.1.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e40b067d-8eb6-4af7-8c86-827aabe67a26.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/02-cloisonne-v2-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/02-cloisonne-v2.png",
+          "nativeSHA256": "9fb34aa1fa4263047af4bfb9f4a86a906330a309f41a7f2cace4cb7805c434bd",
+          "deliverySHA256": "ae67ad116cb6418817583c70c7aae2a5d34861223a29b309bd827776ef6307de",
+          "nativeBytes": 1975548,
+          "deliveryBytes": 1975832,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "f929b59aaf9e102f601db75af5afe3125599d0032fa3c02a4a5ec4bd93593e8f",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:02:10.798747+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "not-selected-margins-too-tight",
+            "rectangleOpaque": true,
+            "visualFindings": "Manchu-style loose sleeves and asymmetric wide borders achieved, natural color photo, no oval. Hair starts around15percent from top; child's clothing reaches about86percentx.20percent quiet margins not met. Critical object/hands central. Further whole generation planned.",
+            "historicalLimitations": "Garment shape guided by Met47.136.1; color and portrait fictional, not exact costume authentication.",
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T07:02:11.921160+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. One COMPLETELY NEW real-camera COLOR photograph, wide landscape4:3, full opaque rectangle, no alpha, oval, circles, vignette, border, graphic padding, writing or watermark. A very wide static camera observes a compact seated Chinese palace tutor and child behind one pale neutral table, surrounded by generous EMPTY pale-gray plaster wall and empty pale tabletop. MOST of the frame is quiet background. The ENTIRE two-person group must occupy only x30-70percent and y30-70percent; top30percent, left30percent, right30percent quiet wall, bottom30percent EMPTY tabletop. These are photographed surfaces, not added borders. This miniature central composition is mandatory; no medium-close portrait or oversized head. Faces, hands and artifact stay well within the central40percent for later software oval fade.\nThe joyful fictional female court tutor is LEFT of the child, her smiling face centered near x43%,y43%, top of her neatly pinned hair begins below y30%. She wears historically inspired1910s MANCHU clothing: a loose straight-cut plum silk long robe with ample broad sleeves, wide contrast embroidered cuffs, broad curving dark embroidered borders from neck to an ASYMMETRIC right-front closure. No fitted waist, bodyhugging modern qipao, contemporary blouse, short sleeves or modern hairstyle. Costume construction inspired by Met Manchu robe47.136.1, not copied as a museum reproduction; real plum/black colors and detailed silk remain natural. All robe fabric stays within the compact central group, never spreads into reserved side margins.\nSmall fictional boy emperor sits to right at x62%,y54% wearing yellow robe and dark round cap, looking joyfully at tutor and treasured object. Teacher's TWO natural hands hold one INTACT shallow CLOISONNE DISH centered at x50%,y60%, approximately16percent of full frame width, fully within central region. Turquoise enamel and distinct gold-wire floral compartments with red/white accents; small gold rim, clearly shallow ceramic/metal dish, not mirror/gong/bowl. Face, hands and full dish all visible, nothing cut off. Teacher smiles warmly toward child. No other people, objects, furniture clutter, windows, columns or wall decorations. Soft neutral daylight; no sepia/painting/CGI, correct natural skin/hands/material surfaces. Table covers all bottom30percent with absolutely no hands, artifact or body there.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d3ee8c20-51bc-4cdf-be62-7a0cc3980bf7.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/02-cloisonne-v2-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/02-cloisonne-v2.png",
+          "nativeSHA256": "aa9141476b92316c2cdb587c7d77be939d0d7b8a1c6163dcb91a51769060474e",
+          "deliverySHA256": "2fc51db0d0dcf725dbeb0644fa3da687109a9f5512384cfc3855aaaf05d5f6d7",
+          "nativeBytes": 1857699,
+          "deliveryBytes": 1857983,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "e52233b524277f2635727b488d6b005001945cb970c89f012ccc9b590dbbc1a5",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:04:08.335157+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "candidate-for-small-oval-legibility-check",
+            "photoRealism": "Real-color natural joyful tutor/child, loose Manchu-inspired robe with broad asymmetric bands and wide embroidered cuffs; not a fitted modern qipao.",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalContentInsideCentral60Percent": true,
+            "estimatedCalmMarginsPercent": {
+              "left": 28,
+              "right": 27,
+              "top": 26,
+              "bottom": 31
+            },
+            "marginCheckMethod": "Manual approximate silhouette bounds; uncalibrated",
+            "full20PercentCalmMarginsVisuallySatisfied": true,
+            "visualFindings": "Both hands and entire shallow turquoise cloisonne dish visible in center. Dish is rather small and tilted low; actual160px legibility must be checked before selecting.",
+            "historicalLimitations": "Costume construction informed by Met47.136.1; color, exact fit and identities fictional. Not full historical authenticity proof.",
+            "thumbnailQAPending": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T07:12:11.407164+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Entirely NEW light airy COLOR camera photograph, opaque FULL rectangular landscape4:3 image, no circle/oval/feather/vignette/borders/text. Broad quiet pale warm-gray plaster wall plus empty pale tabletop, soft even daylight, authentic silk/enamel/skin colors, no grain, aged filters, sepia, lifted black point or waves. Two fictional Chinese palace people circa1910s, no real-person portrait.\nCOMPOSITION: people remain a compact group only in central area x28-72%,y27-73%. At least top25%, left25%, right25% are calm empty photographed wall; bottom25% empty neutral tabletop. No hats/hair/clothing/hands enter those margins. Joyful adult female tutor left, small boy emperor listener right. Her smiling face center x42%,y39%; boy's face x64%,y48%. Woman wears loose straight-cut plum MANCHU robe: wide relaxed sleeves with broad embroidered contrasting cuffs and a broad dark embroidered border CURVING ASYMMETRICALLY from neck to right-front closure, inspired by late Qing/early20th-century museum garments. No modern fitted qipao, blouse, narrow waist or tight short sleeves. Neatly pinned hair, modest traditional ornament, no theatrical crown. Boy in yellow loose silk robe and dark round cap, looking delighted at tutor.\nCRITICAL OBJECT: an intact turquoise-and-gold CLOISONNE SHALLOW DISH, held ALMOST UPRIGHT at about70degrees facing the viewer slightly turned toward the child. Show its FULL broad nearly ROUND FRONT face, not an edge-on horizontal bowl. It must be VISUALLY LARGE: approximately24% of whole photo width and26% of height, centered x50%,y61%, boundaries about x38-62%,y48-74%. Brilliant but natural turquoise enamel, bold clearly legible red/white floral shapes separated by gold-wire compartments and slim gold rim, physically shallow dish curvature. Exactly two natural tutor hands support lower left and lower right of rim; no fingers crossing the front pattern, no extra hands, no support stand. Make the DISH the most readable colored shape, not tiny between people. Teacher smiles naturally at child rather than posing at camera; faces visible above/alongside dish, never hidden by it. Whole held object, faces and hands all central. Photo remains wide with quiet margins; no background objects or ornate palace architecture. No glassy plastic or repetitive embossed texture.",
+            "transparent_background": false
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-89ed7d47-ebac-4077-9198-babc91711e1a.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/02-cloisonne-v2-attempt3.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/02-cloisonne-v2.png",
+          "nativeSHA256": "14ccc13ca912098fa92dc8447f5f8c73987cee9c1b026126e4441b6ddc3b994f",
+          "deliverySHA256": "392afaeb843bbf913335b7bde1c5abbdf19e7c49bc715a33c5f7cf06a771d645",
+          "nativeBytes": 1998822,
+          "deliveryBytes": 1999106,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "0057e3fd80f8aef00c0aeec731a12cb53026e729f1caf9e9e2e9c43e805e9564",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:17:48.811844+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "not-selected-readable-object-but-insufficient-margins",
+            "photoRealism": "Natural color, front-facing intact cloisonne dish is now readable; loose Manchu-inspired robe maintained.",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "full20PercentCalmMarginsVisuallySatisfied": false,
+            "visualFindings": "Dish enlarged appropriately, but teacher hair at~14percent from top, sleeve at~18percent from left, boy outer sleeve at~84percentx. Need a wider whole new scene preserving artifact readability.",
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 4,
+          "issuedAt": "2026-10-19T07:17:52.542151+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Create an ENTIRELY NEW color photograph from a different significantly WIDER camera position. Image1 is ONLY a reference for the joyful fictional tutor, Manchu robe construction, child and the readable turquoise cloisonne dish. Do not edit, outpaint, reuse or place that bitmap on a border. Re-render every pixel as one new coherent naturally photographed scene, with substantially changed pose and much more photographed wall/table all around.\nThe compact tutor/child group must fit ENTIRELY inside central x30-70percent,y30-72percent. Leave TOP30percent plain pale wall, LEFT/RIGHT30percent plain pale wall and BOTTOM25percent EMPTY pale tabletop. Native full rectangular4:3 landscape, opaque alpha255 everywhere, all corners filled with scene. No oval, vignette, alpha fade, border, graphic matte or inset. The teacher's HAIR TOP begins at y31percent or lower, never at15percent. The outermost shoulders/sleeves stay beyond30percent from side edges.\nRecompose: tutor sits centrally near x46%, face near y43%, turning a little toward a SMALL boy listener peeking from behind her right shoulder at x62%,y48%. His torso is mostly hidden behind hers, so group stays NARROW; not two large bodies side by side. Both smile with delighted natural eyes. Woman's loose long plum MANCHU robe has broad flowing sleeves/embroidered contrasting cuffs and asymmetric curving dark embroidered front border like reference, not fitted modern qipao. Hair pinned modestly. Child yellow robe/dark round cap. Tutor holds one intact turquoise-and-gold shallow CLOISONNE DISH almost upright, facing camera enough that full round decorated front is clear, while naturally explaining it to child. Center x50%,y61%, width~21percent of whole photo, height~23percent. Exactly two natural hands support lower rim, all inside safe central region. True saturated enamel colors/cobalt/turquoise/gold floral compartments, not a mirror/gong/deep bowl. Every face, hand, full rim safely central. Calm pale photographed wall and empty table everywhere else, bright airy soft natural daylight, no heavy shadows/dark background. Real camera skin/silk/metal, no drawing, sepia, faded colors, grain, lifted blacks, wave effect, writing or other people/objects.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-89ed7d47-ebac-4077-9198-babc91711e1a.png"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-145ebb07-629b-4fb2-846c-c5e5ac64f425.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/02-cloisonne-v2-attempt4.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/02-cloisonne-v2.png",
+          "nativeSHA256": "b8deb09487c9da8d6d715d7997cbc061b09eeb3d5eece6b6e1866923310bd979",
+          "deliverySHA256": "4e9fb329a9946e9cf0b56072b3c1b6092c9b5a36a3668b3a4e2a323dc5e0b3f0",
+          "nativeBytes": 1907591,
+          "deliveryBytes": 1907859,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "c3e01b068bf095bcdb36f555aeb1d0262848c000b25b93566d883f48749bef8b",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T07:20:37.217557+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "disposition": "selected-for-final-oval-QA-and-PT",
+            "rectangleOpaque": true,
+            "bakedOval": false,
+            "criticalContentInsideCentral60Percent": true,
+            "full20PercentCalmMarginsVisuallySatisfied": true,
+            "estimatedCalmMarginsPercent": {
+              "left": 24,
+              "right": 32,
+              "top": 22,
+              "bottom": 23
+            },
+            "marginCheckMethod": "Manual approximate outer silhouette bounds, not calibrated segmentation",
+            "photoRealism": "Light airy real-color teacher and boy, large almost-front shallow cloisonne dish, natural skin/cloth/enamel.",
+            "visualFindings": "Full dish and hands central; child closer behind teacher keeps group narrow, joyful expression clear. Loose robe/wide cuffs/asymmetric trim follow Manchu construction rather than modern fitted qipao.",
+            "historicalLimitations": "Costume construction guided by Met47.136.1; exact color, decoration and identities fictional, not museum-verified costume reproduction.",
+            "noBakedMemoryEffects": true,
+            "thumbnailQAPending": true,
+            "pixelsNotRetouched": true
+          },
+          "metadataProvenanceVerified": true
+        }
+      ],
+      "callIssuedAt": "2026-10-19T07:17:52.541976+00:00",
+      "activeAttempt": 4,
+      "attempt": 4,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-145ebb07-629b-4fb2-846c-c5e5ac64f425.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/native/02-cloisonne-v2-attempt4.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-valokuva-v2-20261019/delivery-packet/02-cloisonne-v2.png",
+      "nativeSHA256": "b8deb09487c9da8d6d715d7997cbc061b09eeb3d5eece6b6e1866923310bd979",
+      "deliverySHA256": "4e9fb329a9946e9cf0b56072b3c1b6092c9b5a36a3668b3a4e2a323dc5e0b3f0",
+      "nativeBytes": 1907591,
+      "deliveryBytes": 1907859,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "pixelSHA256": "c3e01b068bf095bcdb36f555aeb1d0262848c000b25b93566d883f48749bef8b",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T07:20:37.217557+00:00",
+      "selectedAttempt": 4,
+      "qa": {
+        "personallyInspectedNative": true,
+        "disposition": "selected-for-final-oval-QA-and-PT",
+        "rectangleOpaque": true,
+        "bakedOval": false,
+        "criticalContentInsideCentral60Percent": true,
+        "full20PercentCalmMarginsVisuallySatisfied": true,
+        "estimatedCalmMarginsPercent": {
+          "left": 24,
+          "right": 32,
+          "top": 22,
+          "bottom": 23
+        },
+        "marginCheckMethod": "Manual approximate outer silhouette bounds, not calibrated segmentation",
+        "photoRealism": "Light airy real-color teacher and boy, large almost-front shallow cloisonne dish, natural skin/cloth/enamel.",
+        "visualFindings": "Full dish and hands central; child closer behind teacher keeps group narrow, joyful expression clear. Loose robe/wide cuffs/asymmetric trim follow Manchu construction rather than modern fitted qipao.",
+        "historicalLimitations": "Costume construction guided by Met47.136.1; exact color, decoration and identities fictional, not museum-verified costume reproduction.",
+        "noBakedMemoryEffects": true,
+        "thumbnailQAPending": true,
+        "pixelsNotRetouched": true,
+        "static160pxOvalPreviewPersonallyInspected": true,
+        "static160pxContentRecognizable": true,
+        "static160pxFindings": "Etupuolelta nähty turkoosi-kultainen vati erottuu selvästi aiempaa reunakkain pidettyä pienempää ehdokasta paremmin; lapsi lähellä opettajaa kaventaa ryhmää.",
+        "actualGame2to3SecondRuntimeTested": false,
+        "previewMaskIsDiagnosticOnly": true,
+        "lightnessRequirement498Checked": true,
+        "noBakedGrainLiftedBlackPointOrWaves": true
+      },
+      "metadataProvenanceVerified": true
+    }
+  ],
+  "oldDraftNativesPreserved": true,
+  "fullSeriesStarted": false
+}

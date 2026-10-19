@@ -1,0 +1,49 @@
+{
+  "selectedCreativeImages": 2,
+  "actualGenerationCalls": 7,
+  "unselectedWholeCandidates": 5,
+  "images": [
+    {
+      "code": "01-posliinimaljakko-v2",
+      "taskNumber": 490,
+      "path": "posti/juoksupeli-muistokuplat-valokuva-v2-20261019/01-posliinimaljakko-v2.png",
+      "bytes": 1849237,
+      "sha256": "afbc9835c5cadbdfa088b5ea1dfa968df8550378fe3c92a517fe0f73dcc7c56c",
+      "nativeSHA256": "dda1c16a8428e7263f7a055d816fbe6364879193849c8094568585dcc578d35d",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "selectedAttempt": 3,
+      "generationCalls": 3
+    },
+    {
+      "code": "02-cloisonne-v2",
+      "taskNumber": 491,
+      "path": "posti/juoksupeli-muistokuplat-valokuva-v2-20261019/02-cloisonne-v2.png",
+      "bytes": 1907859,
+      "sha256": "4e9fb329a9946e9cf0b56072b3c1b6092c9b5a36a3668b3a4e2a323dc5e0b3f0",
+      "nativeSHA256": "b8deb09487c9da8d6d715d7997cbc061b09eeb3d5eece6b6e1866923310bd979",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": true,
+      "selectedAttempt": 4,
+      "generationCalls": 4
+    }
+  ]
+}

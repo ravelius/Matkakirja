@@ -1,0 +1,63 @@
+{
+  "technicalOpaqueRectangleVerified": true,
+  "layoutMarginsVisuallyChecked": true,
+  "layoutMarginMethod": "manual approximate bounds, not calibrated segmentation",
+  "static160pxOvalPreviewPersonallyInspected": true,
+  "actualGameRuntimeTested": false,
+  "assets": {
+    "01-posliinimaljakko-v2": {
+      "personallyInspectedNative": true,
+      "disposition": "selected-for-oval-QA-and-PT-review",
+      "photoRealism": "Natural color faces, porcelain and silk; fictional costumes, artifact decoration and scene.",
+      "rectangleOpaque": true,
+      "bakedOval": false,
+      "criticalContentInsideCentral60Percent": true,
+      "estimatedCalmMarginsPercent": {
+        "left": 23,
+        "right": 23,
+        "top": 27,
+        "bottom": 23
+      },
+      "marginCheckMethod": "Manually estimated silhouette bounding box, approximately335,294 to1108,833 within1448x1086; not calibrated segmentation.",
+      "full20PercentCalmMarginsVisuallySatisfied": true,
+      "visualFindings": "Joyful teacher, child listener, whole blue-white vase and both hands contained in center; plain wall and empty table around. Fine vase ornament interpreted, not museum replica.",
+      "thumbnailQAPending": true,
+      "pixelsNotRetouched": true,
+      "static160pxOvalPreviewPersonallyInspected": true,
+      "static160pxContentRecognizable": true,
+      "static160pxFindings": "Sinivalkoinen maljakko ja kaksi iloisesti keskustelevaa hahmoa erottuvat; hienot koristeet eivät ole luettavaa tietoa pienessä koossa.",
+      "actualGame2to3SecondRuntimeTested": false,
+      "previewMaskIsDiagnosticOnly": true,
+      "lightnessRequirement498Checked": true,
+      "noBakedGrainLiftedBlackPointOrWaves": true
+    },
+    "02-cloisonne-v2": {
+      "personallyInspectedNative": true,
+      "disposition": "selected-for-final-oval-QA-and-PT",
+      "rectangleOpaque": true,
+      "bakedOval": false,
+      "criticalContentInsideCentral60Percent": true,
+      "full20PercentCalmMarginsVisuallySatisfied": true,
+      "estimatedCalmMarginsPercent": {
+        "left": 24,
+        "right": 32,
+        "top": 22,
+        "bottom": 23
+      },
+      "marginCheckMethod": "Manual approximate outer silhouette bounds, not calibrated segmentation",
+      "photoRealism": "Light airy real-color teacher and boy, large almost-front shallow cloisonne dish, natural skin/cloth/enamel.",
+      "visualFindings": "Full dish and hands central; child closer behind teacher keeps group narrow, joyful expression clear. Loose robe/wide cuffs/asymmetric trim follow Manchu construction rather than modern fitted qipao.",
+      "historicalLimitations": "Costume construction guided by Met47.136.1; exact color, decoration and identities fictional, not museum-verified costume reproduction.",
+      "noBakedMemoryEffects": true,
+      "thumbnailQAPending": true,
+      "pixelsNotRetouched": true,
+      "static160pxOvalPreviewPersonallyInspected": true,
+      "static160pxContentRecognizable": true,
+      "static160pxFindings": "Etupuolelta nähty turkoosi-kultainen vati erottuu selvästi aiempaa reunakkain pidettyä pienempää ehdokasta paremmin; lapsi lähellä opettajaa kaventaa ryhmää.",
+      "actualGame2to3SecondRuntimeTested": false,
+      "previewMaskIsDiagnosticOnly": true,
+      "lightnessRequirement498Checked": true,
+      "noBakedGrainLiftedBlackPointOrWaves": true
+    }
+  }
+}
