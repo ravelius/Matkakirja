@@ -1904,3 +1904,7 @@ Omistajan päätös KK:n kautta (sanatarkasti): "Raamattuun lista maksetuista ti
 ## PAATOKSET 19.10.2026 klo 15.39: OSEANIAN AARRE = HAVAIJIN KUNINKAAN HOYHENVIITTA (19.10.2026 klo 15.39)
 
 Omistajan kortti KK:ssa (sanatarkasti): "Aarnin luettelon Oseanian aarre Eteläristin helmi löytyi vasta 1883, joten 1800-luvun alun Aarni ei voi tuntea sitä. Mikä tilalle?" → "Havaijin kuninkaan höyhenviitta (Suositus)" (Kalaniʻōpuʻun keltapunainen höyhenviitta, Cookille 1779; nykyisin Bishop-museossa Te Papan pitkäaikaislainana 2016 alkaen). Hylätty: maro ʻura -vyö. Kirjattu isoisan-raamattu.md Oseania-riville; SK kuvaus + historia (50–73 sanaa, lähde per väite, kunnioittava sävy), kuva Codexilta.
+
+## PERUTTU 19.10.2026 klo 15.42: OSEANIAN HOYHENVIITTA (19.10.2026 klo 15.44)
+
+Omistaja KK:ssa klo 15.42 (sanatarkasti): "Hetkinen, vastasinkohan liian nopeasti, eikös arnin luettelon aarteet pitää olla sellaisia, joita ei ole vielä löytynyt?" Päätös 15.39 (höyhenviitta) peruttu: museossa oleva esine ei käy (tarina.md: kadonneet aarteet, joita kukaan ei enää etsi). Kaanonin Oseania-rivi palautettu; SK:n ja Codexin viittatyö pysäytetty. Sama vika Afrikassa (Zimbabwen linnut löydetty) ja Etelä-Amerikassa (Muiscan kultalautta 1969, Bogotá): KK tutkii korvaajat ja tuo omistajalle; näitä kolmea ei muuteta ennen sitä.

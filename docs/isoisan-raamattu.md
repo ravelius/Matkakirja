@@ -559,16 +559,9 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
 - **Etelä-Amerikka — El Doradon aarre.** Motiivilanka: kulta joka
   ei kiillä — joet, sumu ja legendat, joita kukaan ei kartoita.
   Sävelpaino: ihmetys ja arvoitus; El Dorado on tarina tarinasta.
-- **Oseania — Havaijin kuninkaan höyhenviitta** (omistaja 19.10.2026
-  klo 15.39; korvaa Eteläristin helmen, joka löytyi vasta 1883, eikä
-  Aarni voinut tuntea sitä). Kalaniʻōpuʻun keltapunainen ʻahu ʻula,
-  jonka kuningas antoi kapteeni Cookille 1779; nykyään takaisin
-  Havaijilla Bishop-museossa (Te Papan pitkäaikaislaina 2016 alkaen).
-  Kuninkaallinen pyhä esine: sävy aina kunnioittava, ei ryöstö- eikä
-  aarteenmetsästyskieltä. Motiivilanka: tähtitaivas, jota Horatio ei
-  tunne — kartanpiirtäjä oppii navigoimaan uudestaan, ja höyhenet,
-  jotka kerättiin linnuista yksi kerrallaan. Sävelpaino: meri, valo
-  ja hengähdys; laudan rauhallisin.
+- **Oseania — Eteläristin helmi.** Motiivilanka: tähtitaivas, jota
+  Horatio ei tunne — kartanpiirtäjä oppii navigoimaan uudestaan.
+  Sävelpaino: meri, valo ja hengähdys; laudan rauhallisin.
 - **Maailmankartta — Magellanin kompassi.** Motiivilanka:
   kompassineula ja suunnat; risteysten lauta, jonka merkinnät
   sitovat maanosia yhteen. Ei uutta jännitystä — Grimshaw pysyy
