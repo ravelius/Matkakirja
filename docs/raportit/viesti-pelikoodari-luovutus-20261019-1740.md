@@ -18,6 +18,11 @@ Raportti kaikista simuista: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/rapor
   (vertaa Codexin esikatseluihin täysikokoisina; tarkista videosta kallistus kaarteen sisään ja ettei kamera mene seiniin).
 - Rakettivideo lähti perään (raketti-video-vertailu/aja.log).
 
+- RAKETTIVIDEO 1. AJO 17.40 EI KELPAA (lokit/todistus-raketti-pysty-iphone-20261019-1739, app 396021ef, kuorma 31): simun tallenne
+  jumittaa 12,2–23 s (freezedetect) ja hyppää T−0:03 → T+0:25 (sytytys puuttuu); valaasta näkyy vain roiske ruudun alareunassa
+  (kamera 7–12 s alustan lähikuvassa). → Uusi ajo, kun kuorma pieni (ei Unity/xcodebuild käynnissä), sama skenaario
+  raketti-video-vertailu/aja.zsh; tarkista freezedetect ennen leikkausta. Simu on vapautettu JU:lle (17.45).
+
 ## ENSIN (järjestys)
 1. **Käärö v2b -simun tarkistus** (lokit/todistus-kaaro204b-ipad-*): (a) ehjä käärö edessä E-kuvissa + repeämä R-kuvissa Codexin
    mallilla (ei harmaita paikkamalleja); (b) "maailma osia 10/10" = avoimet-v2 (normaalit seinät, ei kattoja); (c) lokissa "drone
