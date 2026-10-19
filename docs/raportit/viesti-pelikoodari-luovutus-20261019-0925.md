@@ -67,3 +67,11 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - Vahti tyokalut/kameravahti.py (tarkista.sh): Juoksupelin suorat camera.transform-kirjoitukset (1 tiedosto lähtötasossa) vain vähenevät;
   siirron jälkeen --kirjaa. CI: liikkeet KameraliikeTestit.cs:ään (Kameratarkastus → Oleta.Tosi(r.Ok)).
 - Malli: MuseoKierros.Ovensuu.cs (35067491f). Kysymykset LS:lle.
+
+## LISÄYS: MUISTOKUPLA (PT, omistaja 09.2x; sitova, Rata v4)
+- Esineen rikkoutuessa ruudun yläkulmaan 2–3 s muistokupla: esine EHJÄNÄ riemastuneen opettajan/hovin ihmisen kädessä + Puyin huudahdus
+  samaan aikaan (repliikkivalitsimesta); juoksu EI pysähdy. Kuvat Codexilta 1 per esine (esineluettelon json: kenttä kuva), sillä välin
+  harmaa paikkamerkki.
+- UI-POHJA LÖYTYY (ei omistajan kysymystä): KUVANOSTO, OpasKuvanosto.cs (UI/Linssit): mk-nosto mk-nosto--kuvanosto + kuvakehys
+  mk-nosto__kuvakehys--nyky + mk-nosto__kuvateksti (huudahdus), siirtymät Tyylikirja.Kesto.Avaus, pieni kuva reunaan ylänappien alle
+  (KuvanostoAsettelu.Pieni). Juoksupelissä ilman napautusta (ei suurennusta), ajastin 2,5 s; uusi rikkoutuminen vaihtaa kuvan.
