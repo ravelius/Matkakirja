@@ -1912,3 +1912,7 @@ Omistaja KK:ssa klo 15.42 (sanatarkasti): "Hetkinen, vastasinkohan liian nopeast
 ## PAATOKSET 19.10.2026 klo 16.40: Aarnin luettelon korvaajat (19.10.2026 klo 16.42)
 
 Omistajan kortti KK:ssa (kaikki suositukset): Afrikka → Kongon kuninkaan kruunu (korvaa Suuren Zimbabwen kivilinnun); Etelä-Amerikka → Mantan smaragdi (aarteen nimi vaihtuu El Doradosta; korvaa Muiscojen kultalautan); Oseania → Raiatean kuninkaiden höyhenvyö (pyhä esine, josta kerrotaan kunnioittaen; korvaa Eteläristin helmen). Peruste omistajan 15.42: aarteet ovat yhä löytymättömiä. Tiedot ja lähteet: KK:n tutkimus aarnin-korvaajat-20261019.md. Kaanon (tarina.md, isoisan-raamattu.md) ja Raamattu 3.10 päivitetty.
+
+## PAATOKSET 19.10.2026 klo 16.43: Isoisän uneen Mantan smaragdi (19.10.2026 klo 16.44)
+
+Omistajan kortti KK:ssa: Mantan smaragdi uneen (Suositus) = unen teksti kirjoitetaan uudelleen, kertojan repliikki äänitetään uudelleen ja Codex tekee smaragdista unikuvan. Uni ja luettelo pysyvät yhtenäisinä. Raamattu 2.159 päivitetty.
