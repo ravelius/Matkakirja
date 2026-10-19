@@ -1746,3 +1746,7 @@ täysikokoisina ennen peliä. Yksi toimitusmuoto Codexille + automaattinen tuont
 vaikuttavat pelimuutokset. Generoinnin määrät omistajan luvalla. Korvaa ristiriitaiset vanhat kohdat. Raamatusta korvattiin: luku 12 AVAIMET "omistaja 18.10.2026: Tripo-työt tehdään toistaiseksi
 selaimessa (Chrome, Max-tilauksen krediitit) Sonnet-apulaisella pienellä muistilla" ja luku 7 3D-MALLIT CODEXILLE "Louvre Claudella (Linnanrakentaja, tavoiteluuppi) vertailuksi Codexin seuraavaan
 maamerkkiin."
+
+## PAATOKSET 19.10.2026 klo 08.42–08.46 (KK:n välittämät) (19.10.2026 klo 08.50)
+
+Codexin kuvat pysyvällä luvalla, sanatarkasti: "Kyllä saa, ja jatkossa minulta ei tarvitse kysyä erikseen generointilupaa Codexin havainnekuvia varten. Saat aina tehdä niitä tarpeen mukaan, jotta laatu säilyy mahdollisimman korkeana." → havainne- ja Tripon pohjakuvat ilman määräkorttia; Tripo-mallit, ElevenLabs ja muut maksulliset yhä luvalla. Olavinlinnan Tripo-pilotti (kokki + portinvartija, Tripo ≤ 4) hyväksytty, tilattu Codexilta bacc15a84. Juoksupeli (08.46): taso 1 maan tasolla ilman viittaa, tason 1 lopussa spurttiviitta, taso 2 muurit ja katot (spurtti + lyhyt liito).
