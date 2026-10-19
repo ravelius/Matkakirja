@@ -67,3 +67,9 @@ uusi teksti luetaan pelikuvasta Sonnet-agentilla ennen PT:n kuittausta.
 - Kielivahti hyväksyy dynaamiset avaimet vain $"…{x}"-muodossa (ei "a." + x).
 - C#: nimetyn argumentin jälkeen ei positionaalista → valinnainen parametri viimeiseksi (`}, s, paa: true)`).
 - pohjavahti: transition-duration > lähtötaso → var(--tk-kesto-maksimi).
+
+## SEURAAVA JUNA: Aarnin kolme uutta (SK 17.4x, PR 4984 mergetty)
+- Afrikka = Kongon kuninkaan kruunu, Etelä-Amerikka = Mantan smaragdi, Oseania = Raiatean kuninkaiden höyhenvyö; tekstit main
+  docs/raportit/aarnin-luettelo-tekstit-20261019.json (nimi/kuvaus/historia), kuvat ämpärissä kohtaamiset/aarteet/aarre-{africa,southamerica,oceania}-star-v2.jpg.
+- Tee valikko-jatkon päälle uusi haara: poista AarreTulossa-joukosta 3 mannerta, lisää .nimi/.kuvaus/.historia aarnin-luettelo.fi.json:iin,
+  AarreKuvaV2:een ämpärin v2-kuvat (tai buildiin). Simu luettelosta JU:n sisältöpaketin julkaisun jälkeen. EI junaan 204.
