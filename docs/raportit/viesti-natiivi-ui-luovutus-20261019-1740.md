@@ -24,6 +24,12 @@ uusi teksti luetaan pelikuvasta Sonnet-agentilla ennen PT:n kuittausta.
 - **JU:n jonossa aarrevideo 304b84312** (L1 viimeisenä, ~20.00) → juna204-aarrevideo-app; skenaario tyokalut/todistusajo/skenaariot/aarrevideo.txt
   (iPhone, pysty + vaaka) → kuvat PT:lle. SEURAAVAAN junaan (ei 204).
 
+## B3 iPad TULOS (17.41, PT:lle kerrottu)
+- Simu 17.34 (todistus-b3-vieritys-ipad-20261019-1734, konsoli-stdout.log kehysajat): vedon/inertian aikana p50 33 ms = 30 fps, tila LEPO,
+  "näkymän katto 30 Hz" → VIKA. Korjaus **natiivi-ui/b3-ipad-204 04d8dc98d** (juna-204:n päällä): kokoLista.valueChanged →
+  Ruudunpaivitys.Vierita. EI käännetty: pyydä JU:lta käännös → aja SP/b3-vieritys-ipad.txt uudelleen (`--haara 04d8dc98d`), tavoite
+  kehykset ~16,7 ms vedossa → PT. Skenaarion "ohjaamo näkyy" -PUUTE = haku (sauvakuva), ei vaikuta mittaukseen.
+
 ## HAARAT (kaikki proto, peili natiivi-backup/peili/proto/<haara> pushattu)
 - **natiivi-ui/valikko-204 348fa6b76**: PT kuittasi → **viety NS:lle junaan 204** (17.0x). Kutsuohjeen tekstit tuoreen lukijan mukaan.
 - **natiivi-ui/valikko-jatko-204 9eb354a3a** (pohja valikko-204, junaan 204 simun + PT:n jälkeen): aarre palstana (Kuvasuurennos.Palsta:
