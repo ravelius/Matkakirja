@@ -1,0 +1,24 @@
+# Juoksupelin äänet v2 ja pallokierrosten maisemat (Äänittäjä 19.10.2026, klo ~19.50)
+
+Menetelmä (Raamattu 5.27): ammattikirjastojen (Soundly Pro, Sonniss) valmiit kokonaiset tiedostot; Gemini 3.1 Pro kuuntelee sokkona (kertaäänet 1 kuuntelu, silmukat 3, ≥ 2/3). Ei generointia. Soundly-raakatiedostot NAS:lla, `soundly-saapuvat` tyhjä.
+
+## Viedyt paketit (media.matkakirja.app)
+- `juoksupeli/aanet-v2/` — 49 tiedostoa: 44 kertaääntä (mono mp3 192k, huippu −3 dBFS, tarvekohtainen kovuuden tasaus), tuuli- ja sirkkasilmukka, pallokierroksen 3 maisemaa (taverna, Thames, Moldava, Praha vanhakaupunki = 4 kpl `maisema/`) + manifest. Ääniportti läpi (varoituksia 4, hylättyjä 0). Yksi Gemini-hyväksytty portti (19,9 s) jätetty pois kovuuden vuoksi.
+- `juoksupeli/aanet-v2-1/maisema/lontoo-katu.mp3` — Lontoon kadun silmukka (Sonniss, 2/3).
+- Viisi pallokierroksen maisemaa kaikki Gemini-hyväksytty; Moldava ja Thames samasta tiedostosta (Lachine-kanava, Kanada, ikkunat limittyvät osin), Praha vanhakaupunki on Pohjois-Italiasta.
+
+## Aukot (PT:n lista)
+| Tarve | Hyväksytty / tavoite |
+|---|---|
+| posliini | 4/5 |
+| portti | 3/4 (+1 hylätty portin kovuus) |
+| askel-puu | 3/4 |
+| viitta-lepatus | 3/2 ✓, viitta-aktivointi 1/2 |
+| huohotus | 4/3 ✓ |
+
+## Muut aukot (ehdotus: mitkä oikeasti tarvitaan)
+Nolla ääntä: askel-katto, liuku, paperilohikaarme, laulukulho, kivi-jade, puu, piha. Alle tavoitteen mutta ≥ 1: hyppy 2/3, laskeutuminen 1/3, kaistanvaihto 2/3, kolikko 1/4, kello-chime 1/3, gong 1/3, rumpu 1/3, metalli 1/3, kyyhky-siivet 1/3, tuuli 1/2.
+Ehdotus: haetaan ensin vain ne nollat, joita peli oikeasti soittaa (askel-katto, liuku, puu, kivi-jade); muut tarvitsevat vain 1 ääntä, joka jo on.
+
+## Tiedostot
+`_tyo/juoksupeli-aanet-v2-20261019/`: `rakenna_v2.py`, `silmukat_v4*.py`, `*-tulos.json`.
