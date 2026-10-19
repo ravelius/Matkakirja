@@ -1,0 +1,99 @@
+{
+  "taskNumber": 639,
+  "createdAt": "2026-10-19T13:29:52.564155+00:00",
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 1292,
+      "sha256": "b4fe0da3b5041a32b477e2b9dbaf420cca0d066e7414ed705fe15b221e9244ec"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 10184,
+      "sha256": "3df332c36827490ea05f25aa018112c360ed45b8953634eef995dbb6cf44b7b1"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 4564,
+      "sha256": "a94f78863db48f569fca546f16c621d7747832aaf672ccbc16cb06283a5fdb64"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2053,
+      "sha256": "132ccea427283b4575102fefdba9d8d8a60f33ffcecedc5ea676f6893545507c"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 2687,
+      "sha256": "66b1851784489c27b16a4334b8f93768ace3153381a6df6df5dc069c77c007ac"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 2119,
+      "sha256": "26cb2f559698da279c0a203b1fdfa3f06c1fcbe375cfe5f1089a2d4a2b46c401"
+    },
+    {
+      "path": "aarre-middleeast-star.jpg",
+      "bytes": 360121,
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5"
+    },
+    {
+      "path": "native/aarre-middleeast-star-attempt1.png",
+      "bytes": 2446520,
+      "sha256": "cebaf68aa506c30e660cf540e295d1d31126e58d6e398c2bdb75e1564647a16d"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 2617,
+      "sha256": "36cc71ba22476fe2f2f2af31b5491566b55fc55d4cfe689df91e976c571ac323"
+    },
+    {
+      "path": "qa/series-comparison.png",
+      "bytes": 1626591,
+      "sha256": "16af250416077fc99a80630ea7b090e71bf2f699c08daca4d98fb73e6c4bcf07"
+    },
+    {
+      "path": "references/PT-accepted-paa-middleeast.png",
+      "bytes": 1733489,
+      "sha256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a"
+    },
+    {
+      "path": "references/aarre-europe-kolme-veljesta.jpg",
+      "bytes": 74055,
+      "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd"
+    },
+    {
+      "path": "references/aarre-middleeast-star.jpg",
+      "bytes": 89360,
+      "sha256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567"
+    },
+    {
+      "path": "references.json",
+      "bytes": 1057,
+      "sha256": "bbd0457990ad5611541fe81135009f424a6a5e4ec568ac9dcea69af13777964f"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+      "bytes": 1113,
+      "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a"
+    },
+    {
+      "path": "technical-export.json",
+      "bytes": 1245,
+      "sha256": "6775ec03dc4b78bccefff66bbeb179feb11c15ec54e9200c04baa2f9f909e6ae"
+    },
+    {
+      "path": "tool-arguments.json",
+      "bytes": 3164,
+      "sha256": "6050aaa7811ddc6ceb1341530005ebe426bc0d79874e6fe67da12d25ac72cb4e"
+    }
+  ],
+  "imageFiles": [
+    "aarre-middleeast-star.jpg",
+    "native/aarre-middleeast-star-attempt1.png"
+  ],
+  "qaPassed": true,
+  "imagegenCalls": 1,
+  "retries": 0,
+  "readyForRootMailDelivery": true
+}

@@ -1,0 +1,271 @@
+{
+  "at": "2026-10-19T13:31:45.098919+00:00",
+  "family": "aarteet-tumma-pelitausta-639640-20261019",
+  "taskNumbers": [
+    639,
+    640
+  ],
+  "imageCount": 2,
+  "actualWholeGenerationCalls": 2,
+  "assets": [
+    {
+      "taskNumber": 639,
+      "filename": "aarre-middleeast-star.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-middleeast-star.jpg",
+      "JPEGDimensions": [
+        640,
+        640
+      ],
+      "JPEGQuality": 98,
+      "JPEGSHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+      "JPEGPixelSHA256": "3764d2bc0c8780b416aeb07dd06b758433c600135b0bca9b0a323ddf9e653370",
+      "nativePath": "task-639/native/aarre-middleeast-star-attempt1.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeSHA256": "cebaf68aa506c30e660cf540e295d1d31126e58d6e398c2bdb75e1564647a16d",
+      "nativePixelSHA256": "ad67b7dbf8e5f82747e7a4cdd81d014e364bf2bd04cb6a62b159cd47064365cd",
+      "nativeByteExactUnchanged": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-639/qa/series-comparison.png",
+      "producerQAPassed": true,
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 640,
+      "filename": "aarre-northamerica-star.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-northamerica-star.jpg",
+      "JPEGDimensions": [
+        640,
+        640
+      ],
+      "JPEGQuality": 98,
+      "JPEGSHA256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+      "JPEGPixelSHA256": "3e2359138fe0b90bbe39e8c94cb8affa36193c1a2345619e2e7d13a1f061c0bf",
+      "nativePath": "task-640/montezuma-native-attempt1.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeSHA256": "9223ca77ac0f6adfdd308536599f2ce047c7b8cf6caa5e830ebf305fa19316a0",
+      "nativePixelSHA256": "843741f9404a3f825b5932a16e3acda9b42c4a4736e6a6936bc36bc78f2dd282",
+      "nativeByteExactUnchanged": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-640/qa/series-comparison.png",
+      "producerQAPassed": true,
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 3313,
+      "sha256": "72252b6cc89f59b4c44446682dea6491f2744ce549201f1dd76566cee0c69431"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 1615,
+      "sha256": "aa9da5b6724abb662b7805aa49c3f712986a0fa4e50b4ed9b61856f62100f0b5"
+    },
+    {
+      "path": "REFERENCE-READY.json",
+      "bytes": 1124,
+      "sha256": "92f940399e66cba43bc0ca1960ef1f6b63b53325b50feb306e706de42f7e2544"
+    },
+    {
+      "path": "ROOT-QA.json",
+      "bytes": 3653,
+      "sha256": "6ee6f28fd6211dd9f66222c4a5fc72efd8444c2d7ab81bc14ba745850897aaa0"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 2706,
+      "sha256": "ee4fb2e3c67c7140a910fff2c2a4d2bebff09045dc0c13af518834152d06c5f4"
+    },
+    {
+      "path": "aarre-middleeast-star.jpg",
+      "bytes": 360121,
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5"
+    },
+    {
+      "path": "aarre-northamerica-star.jpg",
+      "bytes": 410161,
+      "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+      "bytes": 1113,
+      "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a"
+    },
+    {
+      "path": "task-639/DELIVERY.json",
+      "bytes": 1292,
+      "sha256": "b4fe0da3b5041a32b477e2b9dbaf420cca0d066e7414ed705fe15b221e9244ec"
+    },
+    {
+      "path": "task-639/GENERATION.json",
+      "bytes": 10184,
+      "sha256": "3df332c36827490ea05f25aa018112c360ed45b8953634eef995dbb6cf44b7b1"
+    },
+    {
+      "path": "task-639/MANIFEST.json",
+      "bytes": 3020,
+      "sha256": "7820822373c8da5e3a09761837dad8f0b4b305d2b6e2235de4ce21a80f787c20"
+    },
+    {
+      "path": "task-639/PROMPTS.json",
+      "bytes": 4564,
+      "sha256": "a94f78863db48f569fca546f16c621d7747832aaf672ccbc16cb06283a5fdb64"
+    },
+    {
+      "path": "task-639/QA-FI.md",
+      "bytes": 2053,
+      "sha256": "132ccea427283b4575102fefdba9d8d8a60f33ffcecedc5ea676f6893545507c"
+    },
+    {
+      "path": "task-639/QA.json",
+      "bytes": 2687,
+      "sha256": "66b1851784489c27b16a4334b8f93768ace3153381a6df6df5dc069c77c007ac"
+    },
+    {
+      "path": "task-639/SOURCE-MANIFEST.json",
+      "bytes": 2119,
+      "sha256": "26cb2f559698da279c0a203b1fdfa3f06c1fcbe375cfe5f1089a2d4a2b46c401"
+    },
+    {
+      "path": "task-639/aarre-middleeast-star.jpg",
+      "bytes": 360121,
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5"
+    },
+    {
+      "path": "task-639/native/aarre-middleeast-star-attempt1.png",
+      "bytes": 2446520,
+      "sha256": "cebaf68aa506c30e660cf540e295d1d31126e58d6e398c2bdb75e1564647a16d"
+    },
+    {
+      "path": "task-639/prompt.txt",
+      "bytes": 2617,
+      "sha256": "36cc71ba22476fe2f2f2af31b5491566b55fc55d4cfe689df91e976c571ac323"
+    },
+    {
+      "path": "task-639/qa/series-comparison.png",
+      "bytes": 1626591,
+      "sha256": "16af250416077fc99a80630ea7b090e71bf2f699c08daca4d98fb73e6c4bcf07"
+    },
+    {
+      "path": "task-639/references/PT-accepted-paa-middleeast.png",
+      "bytes": 1733489,
+      "sha256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a"
+    },
+    {
+      "path": "task-639/references/aarre-europe-kolme-veljesta.jpg",
+      "bytes": 74055,
+      "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd"
+    },
+    {
+      "path": "task-639/references/aarre-middleeast-star.jpg",
+      "bytes": 89360,
+      "sha256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567"
+    },
+    {
+      "path": "task-639/references.json",
+      "bytes": 1057,
+      "sha256": "bbd0457990ad5611541fe81135009f424a6a5e4ec568ac9dcea69af13777964f"
+    },
+    {
+      "path": "task-639/sources/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+      "bytes": 1113,
+      "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a"
+    },
+    {
+      "path": "task-639/technical-export.json",
+      "bytes": 1245,
+      "sha256": "6775ec03dc4b78bccefff66bbeb179feb11c15ec54e9200c04baa2f9f909e6ae"
+    },
+    {
+      "path": "task-639/tool-arguments.json",
+      "bytes": 3164,
+      "sha256": "6050aaa7811ddc6ceb1341530005ebe426bc0d79874e6fe67da12d25ac72cb4e"
+    },
+    {
+      "path": "task-640/GENERATION.json",
+      "bytes": 4152,
+      "sha256": "595e76eb2864a3488690f06e8f0f584a5f44431548068163869df698cdd0e9eb"
+    },
+    {
+      "path": "task-640/MANIFEST.json",
+      "bytes": 2866,
+      "sha256": "8315bf45f92e26624b5d90ffd972e58d9fec9282b84d10b83bbaab7124d47c2b"
+    },
+    {
+      "path": "task-640/PROMPTS.txt",
+      "bytes": 2012,
+      "sha256": "e719ccc38286cf5bd26babbbcc83e2285a4e430f82d8645cd0c1591d519a61aa"
+    },
+    {
+      "path": "task-640/QA-FI.md",
+      "bytes": 2728,
+      "sha256": "e2a23c137d0f8513edfea98a34fea503992c8a0a7a5a470c24988e70ab01d140"
+    },
+    {
+      "path": "task-640/QA.json",
+      "bytes": 3988,
+      "sha256": "4f91d64e0e6016fc39690f008cc746493c1dd2b8eeda6a9811551b1acd13ba78"
+    },
+    {
+      "path": "task-640/aarre-northamerica-star.jpg",
+      "bytes": 410161,
+      "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd"
+    },
+    {
+      "path": "task-640/montezuma-native-attempt1.png",
+      "bytes": 2754171,
+      "sha256": "9223ca77ac0f6adfdd308536599f2ce047c7b8cf6caa5e830ebf305fa19316a0"
+    },
+    {
+      "path": "task-640/qa/series-comparison.png",
+      "bytes": 1796263,
+      "sha256": "07faf64897c918b1d6808e9a2f19ea131ac657d1490125dd7680f157ae2dffde"
+    },
+    {
+      "path": "task-640/source-provenance.json",
+      "bytes": 4576,
+      "sha256": "7eaeaf654313cda0eeecf894987193924d1e8e0afb0040b120b3291ea9169823"
+    }
+  ],
+  "manifestExcludedFromOwnInventory": true,
+  "rootQA": "ROOT-QA.json",
+  "source": {
+    "path": "posti/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+    "commit": "99769ad3f321c2f595ad09c87c54169bb647192b",
+    "blob": "120455f811f7ea98206a869cdd2557691d256d45",
+    "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a",
+    "readInFull": true
+  },
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

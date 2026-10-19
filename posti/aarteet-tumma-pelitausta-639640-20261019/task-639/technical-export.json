@@ -1,0 +1,39 @@
+{
+  "method": "Pillow full-frame resize LANCZOS then JPEG quality 98, chroma subsampling 0, optimize true",
+  "input": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-639/native/aarre-middleeast-star-attempt1.png",
+    "bytes": 2446520,
+    "sha256": "cebaf68aa506c30e660cf540e295d1d31126e58d6e398c2bdb75e1564647a16d",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "pixelSHA256": "ad67b7dbf8e5f82747e7a4cdd81d014e364bf2bd04cb6a62b159cd47064365cd",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "output": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-639/delivery-packet/aarre-middleeast-star.jpg",
+    "bytes": 360121,
+    "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "format": "JPEG",
+    "pixelSHA256": "3764d2bc0c8780b416aeb07dd06b758433c600135b0bca9b0a323ddf9e653370",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "crop": false,
+  "padding": false,
+  "contentRetouch": false,
+  "nativeOriginalPreserved": true
+}

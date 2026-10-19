@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-19T13:26:04.864972+00:00",
+  "ready": true,
+  "sourceReadInFullByRoot": true,
+  "source": {
+    "path": "posti/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+    "commit": "99769ad3f321c2f595ad09c87c54169bb647192b",
+    "blob": "120455f811f7ea98206a869cdd2557691d256d45",
+    "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a",
+    "readInFull": true
+  },
+  "mainReferenceCommit": "b6666b3f66da8e3a9a81b9bc202bf154377ae730",
+  "referencesPersonallyInspectedByRoot": [
+    "aarre-middleeast-star.jpg",
+    "aarre-northamerica-star.jpg",
+    "aarre-europe-kolme-veljesta.jpg"
+  ],
+  "approvedObjectDesignsPersonallyInspectedInPreviousWork": true,
+  "allReferenceHashesAndMirrorBytesVerified": true,
+  "targetDimensions": [
+    640,
+    640
+  ],
+  "targetFormat": "JPEG plus unchanged native PNG",
+  "wholeNewGeneration": true,
+  "partialImageEdit": false,
+  "oldVersionsPreserved": true,
+  "background": "dark warm brown textured; soft upper diagonal light",
+  "approvedDesignChangeAuthorized": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

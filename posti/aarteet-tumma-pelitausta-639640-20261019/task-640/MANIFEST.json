@@ -1,0 +1,94 @@
+{
+  "taskNumber": 640,
+  "createdAt": "2026-10-19T13:30:03.334383+00:00",
+  "sourceCommit": "99769ad3f321c2f595ad09c87c54169bb647192b",
+  "actualImageToolCalls": 1,
+  "selectedAttempt": 1,
+  "producerQAPassed": true,
+  "PTAcceptance": "pending",
+  "nativeByteExact": true,
+  "JPEGWholeFrameExport": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-640/delivery-packet/aarre-northamerica-star.jpg",
+    "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+    "pixelSHA256": "3e2359138fe0b90bbe39e8c94cb8affa36193c1a2345619e2e7d13a1f061c0bf",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize followed by JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  },
+  "fileCount": 8,
+  "manifestExcludedFromOwnInventory": true,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "sha256": "595e76eb2864a3488690f06e8f0f584a5f44431548068163869df698cdd0e9eb",
+      "bytes": 4152
+    },
+    {
+      "path": "PROMPTS.txt",
+      "sha256": "e719ccc38286cf5bd26babbbcc83e2285a4e430f82d8645cd0c1591d519a61aa",
+      "bytes": 2012
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "e2a23c137d0f8513edfea98a34fea503992c8a0a7a5a470c24988e70ab01d140",
+      "bytes": 2728
+    },
+    {
+      "path": "QA.json",
+      "sha256": "4f91d64e0e6016fc39690f008cc746493c1dd2b8eeda6a9811551b1acd13ba78",
+      "bytes": 3988
+    },
+    {
+      "path": "aarre-northamerica-star.jpg",
+      "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+      "bytes": 410161,
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "format": "JPEG",
+      "pixelSHA256": "3e2359138fe0b90bbe39e8c94cb8affa36193c1a2345619e2e7d13a1f061c0bf"
+    },
+    {
+      "path": "montezuma-native-attempt1.png",
+      "sha256": "9223ca77ac0f6adfdd308536599f2ce047c7b8cf6caa5e830ebf305fa19316a0",
+      "bytes": 2754171,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "843741f9404a3f825b5932a16e3acda9b42c4a4736e6a6936bc36bc78f2dd282"
+    },
+    {
+      "path": "qa/series-comparison.png",
+      "sha256": "07faf64897c918b1d6808e9a2f19ea131ac657d1490125dd7680f157ae2dffde",
+      "bytes": 1796263,
+      "dimensions": [
+        1920,
+        700
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "bd194dd63380884ac28ec20c285b1881eb6a3a26fc87c192cd0c22c6739e69e3"
+    },
+    {
+      "path": "source-provenance.json",
+      "sha256": "7eaeaf654313cda0eeecf894987193924d1e8e0afb0040b120b3291ea9169823",
+      "bytes": 4576
+    }
+  ]
+}

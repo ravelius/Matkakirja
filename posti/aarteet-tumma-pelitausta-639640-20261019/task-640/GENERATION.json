@@ -1,0 +1,49 @@
+{
+  "attempt": 1,
+  "issuedAt": "2026-10-19T13:27:04.669763+00:00",
+  "args": {
+    "prompt": "Create a completely NEW high-quality PHOTOREALISTIC museum artifact COLOR PHOTOGRAPH, SQUARE 1024x1024 RGB opaque PNG. FIRST reference is the PT-APPROVED Montezuma turquoise/shell MOSAIC MASK DESIGN and is authoritative for the complete mask: preserve precisely its overall forehead and chin contour, forehead-to-nose silhouette, protruding sculpted nose, almond-shaped mother-of-pearl/shell white eyes with black circular pupils, visible short row of WHITE TEETH, lipshape and mouthopening, irregular individually cut blue/turquoise/green tesserae with dark naturalveins, fine joins and realistic mineral/shell aging. Same front three-quarter orientation and generous close artifact framing, entire mask inside frame, ~78%photoheight, center with slight breathingroom around all edges. NO jewellery design substitution. SECOND reference is authoritative game-series BACKGROUND/LIGHT style: VERY DARK WARM BROWN subtly mottled/textured surface, deep earthbrown/umber, NOT parchment/palecream. THIRD reference provides series darkwarm-brown contrast and softshadow style, NOT its jewellery. One mask ONLY, resting naturally alone on the darkwarmbrown textured surface; no person, mannequin/headbody, stand, prop, breastplate, brooch, necklace, chain, goldornament, extra artifact. Soft light from upper-left DIAGONAL, gentle natural shadow/falloff, softly luminous mineralhighlights and shellreflections, black shadows retain subtle texturedetail; mask remains readable vivid turquoise against DARK warmbrown, not blackcutout. Realcamera materialmicrotexture and natural patina, not CGI/game3Drender, glossyplastic, illustration, stamped repeatingtiletexture. This is a WHOLE NEW photograph with everypixel newlygenerated, not a partialedit/backgroundreplacement/retouch or compositing of existing pixels. Preserve approved mask's DESIGN exactly, no added decorations and no exaggerated crackedteeth. Full square continuousphoto, no crop/padding, no vignetteborder/oval/fade/transparency, no text/logo/watermark.",
+    "transparent_background": false,
+    "referenced_image_paths": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/PT-accepted-paa-northamerica.png",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-middleeast-star.jpg",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-europe-kolme-veljesta.jpg"
+    ]
+  },
+  "wholeNewGeneration": true,
+  "completed": true,
+  "completedAt": "2026-10-19T13:28:43.019513+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-c6edb13b-9865-4034-97d2-88ad26acd57e.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-640/native/montezuma-attempt1.png",
+  "nativeSHA256": "9223ca77ac0f6adfdd308536599f2ce047c7b8cf6caa5e830ebf305fa19316a0",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeMode": "RGB",
+  "nativeAlphaExtrema": [
+    255,
+    255
+  ],
+  "nativePixelSHA256": "843741f9404a3f825b5932a16e3acda9b42c4a4736e6a6936bc36bc78f2dd282",
+  "actualImageToolCalls": 1,
+  "export": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-640/delivery-packet/aarre-northamerica-star.jpg",
+    "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+    "pixelSHA256": "3e2359138fe0b90bbe39e8c94cb8affa36193c1a2345619e2e7d13a1f061c0bf",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize followed by JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  }
+}

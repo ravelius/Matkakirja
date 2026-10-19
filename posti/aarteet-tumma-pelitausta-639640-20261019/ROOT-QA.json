@@ -1,0 +1,97 @@
+{
+  "at": "2026-10-19T13:31:45.098919+00:00",
+  "reviewer": "root",
+  "sourceReadInFull": true,
+  "passed": true,
+  "actualWholeGenerationCalls": 2,
+  "returnedWholeGenerationCalls": 2,
+  "pendingCalls": 0,
+  "assets": [
+    {
+      "taskNumber": 639,
+      "filename": "aarre-middleeast-star.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-middleeast-star.jpg",
+      "JPEGDimensions": [
+        640,
+        640
+      ],
+      "JPEGQuality": 98,
+      "JPEGSHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+      "JPEGPixelSHA256": "3764d2bc0c8780b416aeb07dd06b758433c600135b0bca9b0a323ddf9e653370",
+      "nativePath": "task-639/native/aarre-middleeast-star-attempt1.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeSHA256": "cebaf68aa506c30e660cf540e295d1d31126e58d6e398c2bdb75e1564647a16d",
+      "nativePixelSHA256": "ad67b7dbf8e5f82747e7a4cdd81d014e364bf2bd04cb6a62b159cd47064365cd",
+      "nativeByteExactUnchanged": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-639/qa/series-comparison.png",
+      "producerQAPassed": true,
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 640,
+      "filename": "aarre-northamerica-star.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-northamerica-star.jpg",
+      "JPEGDimensions": [
+        640,
+        640
+      ],
+      "JPEGQuality": 98,
+      "JPEGSHA256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+      "JPEGPixelSHA256": "3e2359138fe0b90bbe39e8c94cb8affa36193c1a2345619e2e7d13a1f061c0bf",
+      "nativePath": "task-640/montezuma-native-attempt1.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeSHA256": "9223ca77ac0f6adfdd308536599f2ce047c7b8cf6caa5e830ebf305fa19316a0",
+      "nativePixelSHA256": "843741f9404a3f825b5932a16e3acda9b42c4a4736e6a6936bc36bc78f2dd282",
+      "nativeByteExactUnchanged": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-640/qa/series-comparison.png",
+      "producerQAPassed": true,
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "personalContentChecks": [
+    "approved object geometry retained",
+    "one artifact only, no necklace, bracelets or pectoral",
+    "dark warm brown textured game-series background",
+    "soft upper diagonal light and photographic material surfaces",
+    "entire artifacts visible with margin",
+    "both native PNGs and 640JPEGs and three-column comparisons personally viewed"
+  ],
+  "qualification": "New backgrounds catch somewhat more warm light than old game models; same dark warm brown family. No pixel-identical brightness or exact museum replica claimed.",
+  "allChildManifestHashesAndMirrorBytesVerified": true,
+  "parchmentFilesPreservedAndNotForGame": true,
+  "Oceania636StillCancelled": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

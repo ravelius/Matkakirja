@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/PT-accepted-paa-middleeast.png",
+    "sha256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "personallyInspected": true
+  },
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-middleeast-star.jpg",
+    "sha256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "personallyInspected": true
+  },
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-europe-kolme-veljesta.jpg",
+    "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "personallyInspected": true
+  }
+]

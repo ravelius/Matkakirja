@@ -1,0 +1,106 @@
+{
+  "taskNumber": 640,
+  "source": {
+    "path": "posti/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+    "commit": "99769ad3f321c2f595ad09c87c54169bb647192b",
+    "blob": "120455f811f7ea98206a869cdd2557691d256d45",
+    "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a",
+    "readInFull": true
+  },
+  "rootReferenceReadyEvidence": {
+    "at": "2026-10-19T13:26:04.864972+00:00",
+    "ready": true,
+    "sourceReadInFullByRoot": true,
+    "source": {
+      "path": "posti/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+      "commit": "99769ad3f321c2f595ad09c87c54169bb647192b",
+      "blob": "120455f811f7ea98206a869cdd2557691d256d45",
+      "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a",
+      "readInFull": true
+    },
+    "mainReferenceCommit": "b6666b3f66da8e3a9a81b9bc202bf154377ae730",
+    "referencesPersonallyInspectedByRoot": [
+      "aarre-middleeast-star.jpg",
+      "aarre-northamerica-star.jpg",
+      "aarre-europe-kolme-veljesta.jpg"
+    ],
+    "approvedObjectDesignsPersonallyInspectedInPreviousWork": true,
+    "allReferenceHashesAndMirrorBytesVerified": true,
+    "targetDimensions": [
+      640,
+      640
+    ],
+    "targetFormat": "JPEG plus unchanged native PNG",
+    "wholeNewGeneration": true,
+    "partialImageEdit": false,
+    "oldVersionsPreserved": true,
+    "background": "dark warm brown textured; soft upper diagonal light",
+    "approvedDesignChangeAuthorized": false,
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "mainReferenceCommit": "b6666b3f66da8e3a9a81b9bc202bf154377ae730",
+  "references": [
+    {
+      "path": "assets/aarteet/aarre-middleeast-star.jpg",
+      "commit": "b6666b3f66da8e3a9a81b9bc202bf154377ae730",
+      "blob": "58454597a93a77f126933acebd4d278a52d30628",
+      "sha256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-middleeast-star.jpg",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyViewed": true
+    },
+    {
+      "path": "assets/aarteet/aarre-northamerica-star.jpg",
+      "commit": "b6666b3f66da8e3a9a81b9bc202bf154377ae730",
+      "blob": "fe3697f4276b2013ab6f1c9fe32087cc6532823e",
+      "sha256": "9fa31bb142ff79c5c623a1f30e2fb1377b7d00a8a0ce4aeae7f40a518ed97ead",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-northamerica-star.jpg",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyViewed": true
+    },
+    {
+      "path": "assets/aarteet/aarre-europe-kolme-veljesta.jpg",
+      "commit": "b6666b3f66da8e3a9a81b9bc202bf154377ae730",
+      "blob": "8da22f94d7f25982495ffcd863a53387952a4cd0",
+      "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-europe-kolme-veljesta.jpg",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyViewed": true
+    },
+    {
+      "role": "approved design reference",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/PT-accepted-paa-northamerica.png",
+      "previousDeliveryCommit": "a90ac01601dd265102081f68ab82a054ceb024ea",
+      "sha256": "db67cf2f39bab92008c5db1fcf2460b9655731c2ff0b2dcde37e3590787eff1d",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "personallyViewed": true
+    }
+  ],
+  "generationReferences": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/PT-accepted-paa-northamerica.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-middleeast-star.jpg",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-europe-kolme-veljesta.jpg"
+  ],
+  "oldNorthAmericaReferenceRole": "comparison only;its jewellery explicitly not copied",
+  "approvedObjectPreviousDelivery": "a90ac01601dd265102081f68ab82a054ceb024ea",
+  "wholeNewGenerationRequired": true,
+  "cancelledTask636NotExecuted": true,
+  "oldVersionsModified": false
+}

@@ -1,0 +1,88 @@
+{
+  "taskNumber": 640,
+  "attempt": 1,
+  "checkedAt": "2026-10-19T13:30:03.334383+00:00",
+  "personallyInspectedNative": true,
+  "personallyInspected640JPEG": true,
+  "personallyInspectedSeriesComparison": true,
+  "allFourReferencesPersonallyViewedBeforeGeneration": true,
+  "sourceReadInFull": true,
+  "producerQAPassed": true,
+  "approvedDesignPreserved": true,
+  "singleArtifactOnly": true,
+  "background": "dark warm brown textured,softupperdiagonallight",
+  "material": "photoreal turquoise/green mosaic tesserae with mineralveins,naturaljoins,shellalmond eyes with black circular pupils,white teeth",
+  "forbiddenExtrasAbsent": [
+    "jewellery",
+    "brooch",
+    "breastplate",
+    "necklace",
+    "chains",
+    "other artifacts",
+    "people",
+    "mannequin"
+  ],
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-640/native/montezuma-attempt1.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "sha256": "9223ca77ac0f6adfdd308536599f2ce047c7b8cf6caa5e830ebf305fa19316a0",
+    "pixelSHA256": "843741f9404a3f825b5932a16e3acda9b42c4a4736e6a6936bc36bc78f2dd282",
+    "byteExactOriginalPreserved": true
+  },
+  "JPEG": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-640/delivery-packet/aarre-northamerica-star.jpg",
+    "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+    "pixelSHA256": "3e2359138fe0b90bbe39e8c94cb8affa36193c1a2345619e2e7d13a1f061c0bf",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize followed by JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  },
+  "comparison": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-640/delivery-packet/qa/series-comparison.png",
+    "columns": [
+      "new aarre-northamerica-star.jpg",
+      "old main aarre-northamerica-star.jpg",
+      "main aarre-europe-kolme-veljesta.jpg"
+    ],
+    "width": 1920,
+    "height": 700,
+    "wholeImagesWithExternalLabels": true,
+    "leftDarkWarmBrownTextured": true,
+    "qualification": "New foreground/background texture catches slightly more warm light than oldNorthAmerica; no claim pixel-identical brightness/color. Same darkwarmbrown family, no parchment. Old jewellery is comparison-only and not reproduced."
+  },
+  "observationsFI": [
+    "Kokonainen yksittäinen turkoosi-/simpukkamosaiikkinaamio; otsan yläreuna, nenän profiili, mantelimaiset simpukkasilmät mustine pupilleineen ja valkoiset hampaat säilyvät hyväksytyn muotoilun mukaisina.",
+    "Yksittäin leikatut erimuotoiset turkoosi-/vihreät palat, mineraalisuonet ja simpukan helmiäisheijastus näyttävät valokuvamaisilta. Ei yhtenäistä muovipintaa tai toistuvaa päälle leimattua kuviota.",
+    "Tumma lämmin ruskea kuvioitu alusta/tausta, pehmeä yläviistovalo ja luonnollinen varjo. Uuden taustan pintakuvio valaistuu hieman vanhaa Pohjois-Amerikan kuvaa enemmän; sarjavertailu mukana arviointia varten.",
+    "Koko naamio näkyy reunavaroineen; ei ihmiskehoa, koruja, ketjuja, rintakorua tai muuta ylimääräistä esinettä.",
+    "Natiivi1254×1254RGBPNG säilytetty muuttamattomana. JPEG640×640 tehty koko natiiviruudusta LANCZOS-kokoviennillä,laatu98,subsampling0; ei rajausta,täytepaloja tai sisältöretusointia."
+  ],
+  "actualImageToolCalls": 1,
+  "wholeNewGeneration": true,
+  "partialEdit": false,
+  "failedAttempts": 0,
+  "PTAcceptanceOfNewFiles": "not yet received",
+  "postDelivery": "parent handles;not asserted",
+  "gameIntegration": "not performed",
+  "R2": "not performed",
+  "publication": "not performed"
+}

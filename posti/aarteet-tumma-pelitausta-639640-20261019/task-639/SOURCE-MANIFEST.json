@@ -1,0 +1,50 @@
+{
+  "taskNumber": 639,
+  "readInFull": true,
+  "verifiedAt": "2026-10-19T13:25:54.272467+00:00",
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md",
+      "commit": "99769ad3f321c2f595ad09c87c54169bb647192b",
+      "gitBlob": "120455f811f7ea98206a869cdd2557691d256d45",
+      "sha256": "ae9e767dbc094633437ca3ca03c636a88542838b32ce25236844f33a6496858a",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-639/sources/paatoimittaja-codex-aarteet-sheba-montezuma-kuittaus-20261019.md"
+    }
+  ],
+  "referenceReadySHA256": "92f940399e66cba43bc0ca1960ef1f6b63b53325b50feb306e706de42f7e2544",
+  "rootReferenceSourceManifestSHA256": "ee4fb2e3c67c7140a910fff2c2a4d2bebff09045dc0c13af518834152d06c5f4",
+  "mainReferenceCommit": "b6666b3f66da8e3a9a81b9bc202bf154377ae730",
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/PT-accepted-paa-middleeast.png",
+      "sha256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "personallyInspected": true
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-middleeast-star.jpg",
+      "sha256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyInspected": true
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/references/aarre-europe-kolme-veljesta.jpg",
+      "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyInspected": true
+    }
+  ],
+  "referenceHashesIndependentlyReverifiedAt": "2026-10-19T13:29:52.564155+00:00"
+}

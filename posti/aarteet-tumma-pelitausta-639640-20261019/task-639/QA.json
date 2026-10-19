@@ -1,0 +1,65 @@
+{
+  "taskNumber": 639,
+  "passed": true,
+  "checkedAt": "2026-10-19T13:29:52.564155+00:00",
+  "personallyInspectedNative": true,
+  "personallyInspected640JPEG": true,
+  "personallyInspectedSeriesComparison": true,
+  "approvedReferenceDesignCompared": true,
+  "checks": {
+    "singleIncenseCasketWithAttachedLid": true,
+    "acceptedGeometryGranulationLidResinRetained": true,
+    "resinInsideOnly": true,
+    "wholeObjectVisible": true,
+    "noJewelryOrOtherTreasures": true,
+    "darkWarmBrownTexturedBackground": true,
+    "softUpperDiagonalLight": true,
+    "photorealisticMaterialAppearance": true,
+    "noTextLogoFrameOrPeople": true,
+    "target640RGBJPEG": true,
+    "jpegQuality98": true,
+    "nativePreservedByteExact": true,
+    "wholeFrameExportNoCropPadRetouch": true
+  },
+  "observationsFI": [
+    "Rasia jatkaa hyväksytyn 634-kuvan matalaa suorakulmaista muotoa, pallojalkoja, avointa harjakantta, kolmiopaneelien granulaatiota ja sisällä olevia hartsimöhkäleitä. Uusi kokonainen generointi ei ole pikselikopio.",
+    "Lämmin tumma ruskea tausta, pehmeä mottlaus ja ylävasemman viistovalo vastaavat lähteen pelisarjan suuntaa. Uuden kuvan alareuna on hieman valoisampi ja tausta lämpimämpi kuin vanhassa Lähi-idän mallissa; se säilyy selvästi tummanruskeana.",
+    "640-pikselin JPEGissä hartsin läpikuultavuus ja kultapinnan yksityiskohdat erottuvat; koko esine on rajauksen sisällä. Kaulakorua, rannerenkaita, rintakorua tai muita aarteita ei ole."
+  ],
+  "seriesComparison": "qa/series-comparison.png",
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-639/native/aarre-middleeast-star-attempt1.png",
+    "bytes": 2446520,
+    "sha256": "cebaf68aa506c30e660cf540e295d1d31126e58d6e398c2bdb75e1564647a16d",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "pixelSHA256": "ad67b7dbf8e5f82747e7a4cdd81d014e364bf2bd04cb6a62b159cd47064365cd",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "delivery": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-tumma-pelitausta-639640-20261019/task-639/delivery-packet/aarre-middleeast-star.jpg",
+    "bytes": 360121,
+    "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "format": "JPEG",
+    "pixelSHA256": "3764d2bc0c8780b416aeb07dd06b758433c600135b0bca9b0a323ddf9e653370",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "PTAcceptance": "pending_new_version_review",
+  "gameIntegrationVerified": false,
+  "published": false
+}
