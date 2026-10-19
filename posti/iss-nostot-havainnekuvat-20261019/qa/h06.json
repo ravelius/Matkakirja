@@ -1,0 +1,10 @@
+{
+  "personallyInspectedNative": true,
+  "visualDisposition": "reference-with-camera-and-eclipse-geometry-caveats",
+  "photoRealism": "Cloud details persist within soft dark oval; bright surrounding day, restrained blue limb, natural orbital appearance.",
+  "cameraMatch": "Level broad limb and roughly upper-half black space retained; generated limb sits somewhat higher than game. Exact registration not proven.",
+  "takenFromRealReferences": "Broad diffuse umbra and penumbra, blue atmosphere, gradual shading over textured clouds.",
+  "invented": "2026 cloud field, shadow position/diameter and land details inferred from different-eclipse 2024 photographs; not an ephemeris-validated eclipse simulation.",
+  "excludedOverlays": "No visible spacecraft, frame, text, point marker or stars.",
+  "metadataLabel": "havainnekuva"
+}
