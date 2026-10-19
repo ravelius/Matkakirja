@@ -211,10 +211,10 @@ export const MIDDLE_EAST = {
     types: themedTokenTypes({
       star: {
         name: 'Sheban kuningattaren suitsukerasia',
-        fakta: 'Tarun mukaan Sheban kuningatar toi Salomolle kultaisen '
-          + 'suitsukerasian. Saban valtakunta nykyisen Jemenin mailla '
-          + 'rikastui suitsukekaupalla, ja sen tuoksut tunnettiin '
-          + 'temppeleissä Roomaa myöten.',
+        fakta: 'Tarun mukaan Sheban kuningatar toi kuningas Salomolle '
+          + 'kultaisen suitsukerasian. Hänen valtakuntansa nykyisen '
+          + 'Jemenin mailla rikastui suitsukekaupalla, ja suitsukkeen '
+          + 'tuoksu tunnettiin temppeleissä Roomaa myöten.',
         kuva: 'assets/aarteet/aarre-middleeast-star.jpg',
       },
       mannerAarre: {
