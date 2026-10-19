@@ -482,3 +482,7 @@ Omistaja: "tuo aa on huono" → **Aa!-alku pois** Puyin huudoista (Eei!! ei myö
 ## Päivitys 19.10. klo 11.45
 
 Omistaja hyväksyi Puyin (08 Kavya) alut: **Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!**. **Sis-sos! pois.** Sallitut alut yllä korvaavat 11.29:n listan. 10 huutoriviä on yhä ilman alkua, kunnes KK tuo erät. Ei generointia ennen sitä.
+
+## Päivitys 19.10. klo 12.23: erä 1 puuttuvat 7 ottoa + erä 2 (omistaja hyväksyi muutoksin)
+
+Avainpaketissa erän 1 viisi puuttuvaa huutoa saivat hyväksytyn alun (kello "Soriii!", kellopeli "Hoplaa!", ruyi "Oho!", sivellin "Hups!", bianqing "Katos vaan!"); erä 2 (10 versiota) on viety `.versio.<n>`-muodossa (uudet esineet: kanakuppi-ming, sinivalkoinen-maljakko-ming, lohikaarmekulho-ming, kaaretaulu ×2, dayazhai-posliini; lisäksi famille-rose-maljakko, doucai-kuppi, gaiwan-kansikuppi, yixing-teekannu). Muutokset: erä 2 nro 2 "aiyaa" pois; nro 4 "Hoplaa! Enää ei tarvitse näitä päntätä! Kunhan pääsen vain Shifua karkuun." (omistajan oma). Generointilistassa **tasan 17 ottoa, 1 136 merkkiä** (kenttä `otto` = lopullinen teksti tunnetageineen, `jarjestys` 1–17); omistajan omat O1 "Auts! Siinä meni miljoonien Ming!" ja O2 "Noin! Tämä oli herttuan lahja isälle!" on ilman esinettä ja kuplaa (KK/PT sitoo). Ei generointia ennen omistajan lupaa; ei uusia huutoeriä ennen omistajan pelitestiä.
