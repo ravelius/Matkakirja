@@ -5,6 +5,10 @@
 Neljä tarkistusta, yksi ajo. Juna = TestFlight-julkaisuerä. Proto-polut ovat repossa `proto-3d/Matkakirja-proto`
 (haara `tyokaluseppa/tarkistukset-204`, junan 204 päällä), pelirepon polut tässä repossa.
 
+**Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** uuden tarkistuksen tavoite on esimerkkiraportti ennen
+koodausta: valmis `JUNATARKISTUS.md`-rivi sekä yksi tahallaan rikottu tapaus (esim. pitkä ruutu, väärä mittakaava, liike ilman
+testiä), jonka tarkistuksen pitää hylätä. PT hyväksyy; omistajalle vain, jos tarkistus muuttaa pelaajan näkemää.
+
 ## Yksi komento
 
 ```
@@ -83,3 +87,24 @@ Jokainen ruutu kirjataan ja tarkistetaan.
 - Kamerajohtajan koodi on Linssisepän.
 - Bottien logiikka on Projektisepän.
 - Simuvuorot jakaa Julkaisija.
+
+## Valmiin junan tarkistuslista
+
+- [ ] `zsh tyokalut/ennen-junaa.sh --loki <simuajo>` → viimeinen rivi `ENNEN JUNAA: OK` (KESKEN ei riitä junaan).
+- [ ] Codex-vaiheen hylkäykset käsitelty: oikea puute → kooste Codexille PT:n kautta; portin virhe → portti korjattu ja testi lisätty.
+- [ ] Kameratesti läpi ja kattavuuden lähtötaso ei kasvanut (`tyylikirja/kameratesti.json`).
+- [ ] Nykäysvahti OK laitteella tai kuormattomalla koneella (HUOM kuormassa ei todista sulavuutta).
+- [ ] Botti: logiikka ja simun läpipeluu LÄPI (`botti-osat.sh --loki`, myös pelaavan botin `botti: pelaa` -rivit).
+- [ ] Opit kirjattu alle.
+
+## Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
+
+- **19.10.2026, ensimmäinen ajo:** `_valmiit/*-vienti-*` ovat Clauden viimeistelemiä paketteja (KTX2, Draco), eivät Codexin
+  toimituksia → 346 väärää hylkäystä; ennen-junaa.sh ohittaa ne. Porttia ei löysätä vientipakettien vuoksi.
+- **Codexin kuvatoimitukset postilaatikossa:** käyttävät `MANIFEST.json`ia (files[].sha256, sisäkkäisissä myös juuren suhteen)
+  ja `qa/`-kansiota; portti lukee ne, Clauden "→ Codex" -viestit ohitetaan. Kuvatoimitus ilman manifestia = HUOM.
+- **Avoin löydös:** `posti/natiivi-ui-iss-ympyraikkuna-20261019/viite-cupola-peli-iphone.jpg` puuttuu toimituksen SHA-listasta
+  (ainoa oikea puute vuorokauden 11 postikansiosta).
+- **Pelaava botti** kirjaa `botti: pelaa <kohta>[-n] x/y tekoa` eikä `botti: osa` -riviä; raportti luki tyrmän "ei yhteenvetoa",
+  vaikka se oli 3/3 LÄPI. Uusi lokimuoto → jäsennys ja testi samaan erään.
+- **Nykäysvahti ilman yhteenvetoja:** pelkkä "0 pitkää ruutua" ei todista mitään; siksi `Nykaysvahti.cs` ja tulos EI TODISTETTU.
