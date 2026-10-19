@@ -1759,3 +1759,7 @@ viitta-energiaa, varanto riittää aina yhteen alashyppyyn; paperilohikäärmeet
 alusta tai tasolta 2; herkulliset omenat antavat elinvoimaa, mädillä heitetään vartijoita; rimpuilu = 10 napautusta palkilla, elinvoima kuluu koko ajan. 09.03 yläreitti tilattu Codexilta lisäosana
 (f1d6365fc); esteet ja Puyin tarttumisliike tilattu (65ce124f2). 09.10 kaikki KK:n juoksupeliehdotukset hyväksytty (reitit kohtaavat porteilla ja pihoilla, kattoreitti nopeampi mutta riskialttiimpi,
 ovi maahan joka huoneesta, mätä omena horjauttaa vartijan, värähdys per napautus). 09.10 Olavinlinnan M-osan äänet: TASAN 20 repliikkiä, 685 merkkiä, suomi pakotettuna, yksi otto per repliikki.
+
+## PAATOKSET 19.10.2026 klo 09.13–09.2x (KK:n välittämät) (19.10.2026 klo 09.24)
+
+Juoksupeli: paperilohikäärmeet kahtena lajina, yleinen punainen +1/3 viitta-energiaa, harvinainen keisarillisen keltainen täyttää (09.13, 'Sopii.' 09.14). Herkullinen omena +1/10 elinvoimaa, harvinainen jade-esine täysiin elinvoimiin (09.19). Rikkoutuvia arvoesineitä paljon (1. erä 40); Puyi huudahtaa rikkomastaan esineestä, useita repliikkejä per esine, historiallista opetustietoa (09.19). Rikkoutunut esine näkyy ehjänä muistokuplassa iloisen opettajan tai hovin ihmisen kädessä; kuplan alla dynastia ja vuosi (09.2x). Keisarin koeäänet: tasan 10 ottoa, 1 020 merkkiä, ElevenLabsin parhaat poikaäänet kielestä riippumatta, suomi pakotettuna (09.22).
