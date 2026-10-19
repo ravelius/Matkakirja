@@ -280,7 +280,7 @@ export const AFRICA = {
           + 'kuninkaalle Garcia II:lle hopeisen kruunajaiskruunun. '
           + 'Kun kuningas António I kaatui Mbwilan taistelussa 1665, '
           + 'kruunun jäljet katoavat.',
-        kuva: 'assets/aarteet/aarre-africa-star.jpg',
+        kuva: 'assets/aarteet/aarre-africa-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Kimberleyn timantti', color: '#bcd6e8',

@@ -984,7 +984,7 @@ const SHELL = [
   // Nämä puuttuivat esilatauksesta kokonaan, vaikka paljastuskortti on
   // pelin tärkein kuva.
   './assets/aarteet/aarre-europe-star.jpg',
-  './assets/aarteet/aarre-africa-star.jpg',
+  './assets/aarteet/aarre-africa-star-v2.jpg',
   './assets/aarteet/aarre-middleeast-star.jpg',
   './assets/aarteet/aarre-asia-star.jpg',
   './assets/aarteet/aarre-northamerica-star.jpg',
