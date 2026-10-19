@@ -43,3 +43,7 @@ Edellinen: viesti-pelikoodari-luovutus-20261019-2240.md. Rooli: Pelikoodari (Opu
 
 ## MUUT AVOIMET (ennallaan)
 - Rakettivideo Mac-tallenteena yöllä (videot siirretty päivälle, omistaja 22.37); Mac WASD 4814ab2d1; hiha-uv1 kainalopatch c7d85b1a.
+
+## LISÄYS 23.4x
+- PT/KK: sokkelossa ei maalia → loppukortti ei "Rata v4 / Maali!" vaan "Jäit kiinni!" + matka, aarteet, pisteet (sama Vahvistus-pohja; JuoksupeliNakyma.cs r. 219–230, V4Kierros.TulosSyy/Nimi JuoksuKierrokset.cs r. 153/221). Samaan sokkeloerään.
+- JU: 4947c5620 kääntyy → _tyo/julkaisija/sokkelo-taso1-206-app (~23.50); f935865d6 → sokkelo-206-app. Aja simu sillä, joka on valmis (taso1 ensisijaisesti, sama aja.zsh, APP-polku argumenttina).
