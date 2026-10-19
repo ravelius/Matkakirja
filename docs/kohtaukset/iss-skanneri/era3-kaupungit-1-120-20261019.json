@@ -1232,29 +1232,6 @@
    ]
   },
   {
-   "tunnus": "v-riad",
-   "nimi": "Riad",
-   "aloitus": "Saudi-Arabian historiallinen ydin",
-   "luonne": "1700-luvulla muurein ympäröity keidaskaupunki, josta Ibn Saud aloitti maan yhdistämisen 1902.",
-   "rivit": [
-    [
-     "Nimen ensimaininta",
-     "1590"
-    ],
-    [
-     "Pääkaupunki",
-     "vuodesta 1824"
-    ],
-    [
-     "Muuri rakennettu",
-     "n. 1745"
-    ]
-   ],
-   "lahteet": [
-    "https://en.wikipedia.org/wiki/Riyadh"
-   ]
-  },
-  {
    "tunnus": "k-hongkong",
    "nimi": "Hongkong",
    "aloitus": "Yksi maailman suurista rahoituskeskuksista",
@@ -1985,30 +1962,6 @@
    ],
    "lahteet": [
     "https://en.wikipedia.org/wiki/Yangzhou"
-   ]
-  },
-  {
-   "tunnus": "v-kabul",
-   "nimi": "Kabul",
-   "aloitus": "Afganistanin pääkaupunki",
-   "luonne": "Kabul-joen kaupunki, jossa ovat Baburin puutarhat ja Bala Hissarin vanha linnake.",
-   "rivit": [
-    [
-     "Asukasluku (arvio)",
-     "n. 5,3 milj. (2025)"
-    ],
-    [
-     "Korkeus",
-     "1 791 m"
-    ],
-    [
-     "Pääkaupunki",
-     "vuodesta 1776"
-    ]
-   ],
-   "lahteet": [
-    "https://en.wikipedia.org/wiki/Kabul",
-    "https://en.wikipedia.org/wiki/Bala_Hissar,_Kabul"
    ]
   },
   {

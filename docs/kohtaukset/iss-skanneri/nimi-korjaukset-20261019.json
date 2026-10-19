@@ -100,6 +100,26 @@
   "k-jian": {
    "vanha": "Jian",
    "uusi": "Ji’an"
+  },
+  "k-jinxi": {
+   "vanha": "Jinxi",
+   "uusi": "Huludao"
+  },
+  "k-jianmen": {
+   "vanha": "Jianmen",
+   "uusi": "Jingmen"
+  },
+  "k-vishakhapatnam": {
+   "vanha": "Vishakhapatnam",
+   "uusi": "Visakhapatnam"
+  },
+  "k-nasik": {
+   "vanha": "Nasik",
+   "uusi": "Nashik"
+  },
+  "k-xiangtai": {
+   "vanha": "Xiangtai",
+   "uusi": "Xingtai"
   }
  }
 }

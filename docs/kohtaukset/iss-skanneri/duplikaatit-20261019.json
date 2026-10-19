@@ -1,0 +1,112 @@
+{
+ "_meta": "Duplikaattihaku 19.10.2026: 1 190 kohdetta, 1 169 koordinaateilla; sama nimi tai alle 20 km. Ryhmä A = sama paikka kahdesti (säilytä \"pidä\", \"kaksoiskappale\" viittaa siihen tai poistetaan luettelosta). Ryhmä B = eri paikat samalla nimellä (ok, nimeä erottavasti). Ryhmä C = lähekkäiset eri kaupungit (ok).",
+ "A_sama_paikka": [
+  {
+   "pida": "k-denver",
+   "kaksoiskappale": "v-denver",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "pk-reykjavik",
+   "kaksoiskappale": "reykjavik",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-luxor",
+   "kaksoiskappale": "v-luxor",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-salta",
+   "kaksoiskappale": "v-salta",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-quito",
+   "kaksoiskappale": "v-quito",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-kabul",
+   "kaksoiskappale": "v-kabul",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-kathmandu",
+   "kaksoiskappale": "v-kathmandu",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-medina",
+   "kaksoiskappale": "v-medina",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-riyadh",
+   "kaksoiskappale": "v-riad",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  },
+  {
+   "pida": "k-kilimandzaro",
+   "kaksoiskappale": "v-kilimanjaro",
+   "huom": "tunnus b: viittaa a:n tekstiin tai poista luettelosta (NUI päättää)"
+  }
+ ],
+ "B_sama_nimi_eri_paikka": [
+  [
+   "k-vancouver",
+   "k-vancouver-yhdysvallat"
+  ],
+  [
+   "k-suzhou",
+   "k-suzhou-kiina"
+  ],
+  [
+   "k-al-hillah",
+   "k-al-hillah-saudi-arabia"
+  ],
+  [
+   "k-hyderabad",
+   "k-hyderabad-pakistan"
+  ],
+  [
+   "k-yichun",
+   "k-yichun-kiina"
+  ],
+  [
+   "k-natal",
+   "k-natal-brasilia"
+  ],
+  [
+   "k-vila-velha",
+   "k-vila-velha-brasilia"
+  ],
+  [
+   "pk-sanjose",
+   "k-san-jose"
+  ],
+  [
+   "k-birmingham",
+   "k-birmingham-yhdysvallat"
+  ],
+  [
+   "k-valencia",
+   "k-valencia-espanja"
+  ]
+ ],
+ "D_saman_vuoriston_eri_ruudut_ok": [
+  [
+   "v-alpit",
+   "v-alpit-x"
+  ],
+  [
+   "v-ahaggar",
+   "v-ahaggar-x"
+  ],
+  [
+   "k-appalakit",
+   "v-appalakit"
+  ]
+ ],
+ "C_lahekkaiset_eri_kaupungit_ok": "Barranquilla/Soledad, Medellín/Bello, Vitória/Vila Velha, Zhuhai/Macau, Cincinnati/Covington, Ciudad Juárez/El Paso, Recife/Olinda/Jaboatão, Leeds/Bradford, Phoenix/Glendale, Portland/Vancouver WA, Katowice/Bytom/Gliwice, Minneapolis/St. Paul, Denver/Aurora, Medan/Binjai, Essen/Duisburg, Taichung/Changhua, Zhenjiang/Yangzhou, Kalyan/Bhiwandi, Amaravati/Vijayawada, Vatikaani/Rooma, Brazzaville/Kinshasa"
+}
