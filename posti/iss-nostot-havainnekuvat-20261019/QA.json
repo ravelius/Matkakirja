@@ -1,0 +1,124 @@
+{
+  "classification": "havainnekuva",
+  "allOriginalReferencesPersonallyInspected": true,
+  "allAssetsPersonallyInspected": true,
+  "allImagesPassedQA": false,
+  "exactCameraRegistrationVerified": false,
+  "perAsset": {
+    "h01": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "reference-delivered-with-camera-and-reconstruction-caveats",
+      "photoRealism": "Ash lobes, smooth white pileus, ocean and broken cloud deck read as an orbital photograph; no obvious tiled surface.",
+      "cameraMatch": "Oblique look-down and lower-central plume retained approximately; plume top appears somewhat higher/smaller than simulated cap. Exact camera/FOV match not proven.",
+      "takenFromRealReferences": "Tan cauliflower column, smooth white pileus, island slopes, cloud clearing, soft cast shadow.",
+      "invented": "Cloud layout, plume snapshot, island details and lighting interpreted; historical image registration and exact eruption dimensions not verified.",
+      "excludedOverlays": "No visible frame, controls, astronaut silhouette, globe, labels or watermark.",
+      "nativeSizeCaveat": "Native 3:4 checked separately; no resize to the iPad reference dimensions.",
+      "metadataLabel": "havainnekuva"
+    },
+    "h02": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "camera-centering-and-geographic-QA-failed",
+      "photoRealism": "Fine land/cloud texture, muted blue sea and broad buff ash veil; near-vent column more sculpted than real reference.",
+      "cameraMatch": "Wide steep obliquity retained, but source-authorized re-centering FAILED: vent remains at about x0.62,y0.70 rather than center.",
+      "takenFromRealReferences": "Broad diffuse tan ash plume, translucent downwind filaments and muted sea/land colors.",
+      "invented": "Exact ash shape/cloud positions; crater and local coastline relation not reliable. Etna appears close to Sicily's northeastern tip; location not independently verified.",
+      "excludedOverlays": "No visible Cupola frame, interface or text.",
+      "noRetry": true,
+      "metadataLabel": "havainnekuva"
+    },
+    "h03": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "reference-with-unverified-exact-camera-registration",
+      "photoRealism": "Fine irregular marine clouds, turbulent ash umbrella and shadow read as a natural orbital photograph.",
+      "cameraMatch": "Small lower-central eruption and distant elongated island broadly follow game field of view; exact pixel/FOV match not proven.",
+      "takenFromRealReferences": "Rough flattened tan umbrella, dark vertical ash column, white low cloud collar and long dark shadow.",
+      "invented": "Exact cloud field, plume geometry, distant island surface detail and instantaneous illumination; no survey or historical-geographic validation.",
+      "excludedOverlays": "No visible frame/interface/text.",
+      "metadataLabel": "havainnekuva"
+    },
+    "h04": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "reference-with-inferred-color-scale-and-cloud-geometry",
+      "photoRealism": "Irregular natural cloud/ash microstructure, soft sunlight and subdued ocean; no apparent plastic or repeated pattern.",
+      "cameraMatch": "Huge partially cropped umbrella and curved far edge at upper-third broadly follow game; lower central bulge added from real reference. Exact FOV/scale not calibrated.",
+      "takenFromRealReferences": "GOES turbulent overshoot dome, layered umbrella and uneven concentric rings; next-day ISS atmospheric softness.",
+      "invented": "Color from grayscale source interpreted; exact 15 January plume snapshot, 500 km diameter and ring altitude not validated. Next-day ISS source is not same event instant.",
+      "excludedOverlays": "No frame, UI, text, logos or stars.",
+      "metadataLabel": "havainnekuva"
+    },
+    "h05": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "requires-review-possible-residual-map-marker-and-unverified-geography",
+      "photoRealism": "Dark regional night view, narrow fissure, broken glowing lava crust and orange-lit steam; white-hot fissure core somewhat intense.",
+      "cameraMatch": "Low-central fissure, upper city cluster and coast roughly match game; exact orbital camera/scale unverified.",
+      "takenFromRealReferences": "Cracked lava crust, local orange illumination of turbulent steam, darkness beyond.",
+      "invented": "Regional light pattern/coast geometry and eruption snapshot interpreted; close-range and other-eruption references are appearance guidance, not proof of Sundhnukur historical geography.",
+      "excludedOverlays": "Frame/panels/labels/astronaut removed, BUT a small pale circular spot within the main city lights may retain the game's location marker; not accepted as clean photo without recipient review.",
+      "noRetry": true,
+      "metadataLabel": "havainnekuva"
+    },
+    "h06": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "reference-with-camera-and-eclipse-geometry-caveats",
+      "photoRealism": "Cloud details persist within soft dark oval; bright surrounding day, restrained blue limb, natural orbital appearance.",
+      "cameraMatch": "Level broad limb and roughly upper-half black space retained; generated limb sits somewhat higher than game. Exact registration not proven.",
+      "takenFromRealReferences": "Broad diffuse umbra and penumbra, blue atmosphere, gradual shading over textured clouds.",
+      "invented": "2026 cloud field, shadow position/diameter and land details inferred from different-eclipse 2024 photographs; not an ephemeris-validated eclipse simulation.",
+      "excludedOverlays": "No visible spacecraft, frame, text, point marker or stars.",
+      "metadataLabel": "havainnekuva"
+    },
+    "h07": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "far-shadow-reference-geography-not-verified",
+      "photoRealism": "Natural cloud detail, restrained low-angle sunlight and diffuse remote dark band; no film grading or obvious repeated texture.",
+      "cameraMatch": "High nearly level limb and distant shadow retained broadly; generated land/coast layout differs from game and identification as Iberia is unverified. Do not use as a geographic target.",
+      "takenFromRealReferences": "Remote elongated soft umbra and bright foreground cloud texture, subtle blue atmosphere and pale warm far highlights.",
+      "invented": "Clouds, land geometry and eclipse placement; exact 2026 ephemeris and solar/observer geometry not validated.",
+      "excludedOverlays": "No visible map labels/point markers, ISS hardware or stars.",
+      "metadataLabel": "havainnekuva"
+    },
+    "h08": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "cloud-structure-reference-camera-scale-drift",
+      "photoRealism": "Convective cloud towers, sunlit eyewall and shaded floor have convincing natural fine texture, no repeated game tiles.",
+      "cameraMatch": "Eye is roughly upper-middle but larger and slightly right/lower than game; generated stadium view is somewhat more oblique. Exact camera/zoom lock not achieved.",
+      "takenFromRealReferences": "High uneven stadium eyewall, blue-gray shaded inner wall, low cloud floor, mixed rough convection and smooth cirrus.",
+      "invented": "Exact storm snapshot, eyewall height, small-scale clouds and Sun/observer geometry interpreted; no calibrated hurricane geometry.",
+      "excludedOverlays": "No visible frame, interface, locator dot, labels, logos or ocean border.",
+      "referenceCredit": "ESA/A. Gerst, CC BY-SA 3.0 IGO, visual references only per supplied order",
+      "metadataLabel": "havainnekuva"
+    },
+    "h09": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "weather-appearance-reference-with-horizon-drift",
+      "photoRealism": "Broad asymmetric cloud shield, small eye and varied rainbands/cirrus read as orbital photography, no evenly spaced game rings.",
+      "cameraMatch": "Small eye roughly central lower-half and wide oblique view retained; generated horizon is higher than game and storm is somewhat less flattened. Exact FOV match unverified.",
+      "takenFromRealReferences": "Continuous bright canopy, small physical eyewall, irregular spiral convection, peripheral wispy cirrus and open Atlantic.",
+      "invented": "Cloud layout, storm radius, eye dimensions and illumination interpreted; no historical image registration or calibrated geometry.",
+      "excludedOverlays": "No visible hardware, frame, labels, markers or stars.",
+      "referenceCredit": "ESA/A. Gerst, CC BY-SA 3.0 IGO, visual references only per supplied order",
+      "metadataLabel": "havainnekuva"
+    },
+    "h10": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "contrail-age-reference-with-camera-and-line-regularity-caveats",
+      "photoRealism": "Narrow fresh trails contrast with softer broad feathered older trails and scattered cumulus; some youngest trails remain extremely ruler-straight.",
+      "cameraMatch": "Wide Atlantic look retained but horizon shifted higher than game, around upper third rather than 40%; exact FOV not matched.",
+      "takenFromRealReferences": "Thin bright young trail, very faint aged cirrus, crossing routes and irregular spreading edges.",
+      "invented": "Trail number, positions/ages, wind curvature, cloud layout and far land silhouette; no actual aviation-route or weather reconstruction.",
+      "excludedOverlays": "No visible frame/interface/text/point markers or spacecraft.",
+      "metadataLabel": "havainnekuva"
+    },
+    "h11": {
+      "personallyInspectedNative": true,
+      "visualDisposition": "contrail-and-shadow-reference-with-pattern-and-camera-caveats",
+      "photoRealism": "Young narrow trail and older spreading feathered cirrus distinct, low cloud deck and soft darker offset traces visible; older filaments somewhat regular/repetitive.",
+      "cameraMatch": "High limb, ocean and far-left land retained broadly; exact camera/FOV not registered and principal route arrangement changed.",
+      "takenFromRealReferences": "Thin fresh trail, broad wind-sheared fibrous veil, faint displaced shadows below high ice clouds.",
+      "invented": "Aircraft route arrangement, trail ages and altitudes, Sun vector, shadow separation and weather layout are interpreted; shadow physics/height not quantitatively validated.",
+      "excludedOverlays": "No visible frame, interface, map labels, timestamps or source captions.",
+      "metadataLabel": "havainnekuva"
+    }
+  }
+}

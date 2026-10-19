@@ -1,0 +1,443 @@
+{
+  "sourcePath": "posti/valoseppa-codex-iss-nostot-havainnekuvat-20261019.md",
+  "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+  "sourceBlob": "39ee8dc885b843581eae8bbd3c28e4db59913754",
+  "sourceSHA256": "9853256e820b55084dc02115c82aeb90de6de0e8da19caec1c0cdd765badf328",
+  "sourceReadInFull": true,
+  "references": [
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h01-aito1-t1a-sarytsev-pilvihattu-iss-ylhaalta.jpg",
+      "sha": "5dd2a28f0803c672d0b3b1ccb6412aac89094cfc",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 213438,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h01-aito1-t1a-sarytsev-pilvihattu-iss-ylhaalta.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h01-aito1-t1a-sarytsev-pilvihattu-iss-ylhaalta.jpg",
+      "sha256": "33b1d894a20eb2535cf3e3e9b6f8dd3c3fc593567f2137008e6e8c6a2d158b46",
+      "dimensions": [
+        1600,
+        1062
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h01-aito2-t1b-sarytsev-pilvihattu-ja-tuhkapylvaat-iss-vinosti.jpg",
+      "sha": "9bd9bf403d1bebb019aa823304e93f031c639ef4",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 364085,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h01-aito2-t1b-sarytsev-pilvihattu-ja-tuhkapylvaat-iss-vinosti.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h01-aito2-t1b-sarytsev-pilvihattu-ja-tuhkapylvaat-iss-vinosti.jpg",
+      "sha256": "8182d0b25c08bf88257cb616c8c4566a4e6c27879075753d698dbea1df7d0863",
+      "dimensions": [
+        1600,
+        1059
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h01-pelikulma.jpg",
+      "sha": "92fcefb5b13e31560363497c90e302e4ee870acc",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 172137,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h01-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h01-pelikulma.jpg",
+      "sha256": "8d0ef6961564c34af5a177beebaa51bb484741e816aea1e064d526edd5923d18",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h02-aito1-t2a-etna-tuhkavana-valimeri-iss-vinosti.jpg",
+      "sha": "27323706112f645d4433278f25067d092e160dac",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 266168,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h02-aito1-t2a-etna-tuhkavana-valimeri-iss-vinosti.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h02-aito1-t2a-etna-tuhkavana-valimeri-iss-vinosti.jpg",
+      "sha256": "ee0778b402bf707b0d8e1d409988345e373fe7e04e79c1e12db21622cab0b3e2",
+      "dimensions": [
+        1600,
+        1058
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h02-pelikulma.jpg",
+      "sha": "6ee393eb8ea556b49572f757e77058dd4035ecc7",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 233206,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h02-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h02-pelikulma.jpg",
+      "sha256": "78959d405c19ba3a8f35d77024938dd5f0f57c9a6c0c1e7e1b000def79ff2276",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h03-aito1-t3a-raikoke-sateenvarjopilvi-iss-ylhaalta.jpg",
+      "sha": "20e1acbac0ecbcf5abe6b2202b0992e5d59474c5",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 96634,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h03-aito1-t3a-raikoke-sateenvarjopilvi-iss-ylhaalta.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h03-aito1-t3a-raikoke-sateenvarjopilvi-iss-ylhaalta.jpg",
+      "sha256": "1edd87f310df91e1a2257899ed87b79e65e2d15e581978879b11b3feb4791741",
+      "dimensions": [
+        720,
+        480
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h03-pelikulma.jpg",
+      "sha": "16fc1ed784478b0e1c0cc5048c59530e40145945",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 160358,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h03-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h03-pelikulma.jpg",
+      "sha256": "f6531ef5517dd7d610823ef74ab7800d8ce0eac5752e7dd39e0810cbb9fcee49",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h04-aito1-t4b-tonga-sateenvarjo-goes17-vinosti-harmaasavy.jpg",
+      "sha": "7889c5d9977ec4b17ab218086274cbae4f6c3dea",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 198792,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h04-aito1-t4b-tonga-sateenvarjo-goes17-vinosti-harmaasavy.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h04-aito1-t4b-tonga-sateenvarjo-goes17-vinosti-harmaasavy.jpg",
+      "sha256": "2c16b5e3e6008bdffd1eb23fc29614cd51535524dcaee4d532639ce002ae8dc0",
+      "dimensions": [
+        1080,
+        1080
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h04-aito2-t4c-tonga-tuhkapilvi-horisontissa-iss-seuraava-paiva.jpg",
+      "sha": "87608143aa6ad99c9f2647f22eb64c7aa82c2e2c",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 281470,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h04-aito2-t4c-tonga-tuhkapilvi-horisontissa-iss-seuraava-paiva.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h04-aito2-t4c-tonga-tuhkapilvi-horisontissa-iss-seuraava-paiva.jpg",
+      "sha256": "6bf25e2191c25e6741979489552a20b4ac9f81a5c039d2a500a5d9ba59c1aefa",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h04-pelikulma.jpg",
+      "sha": "6cb6e20d80f878f9e7715e742dcb13a0fa1bec2c",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 131650,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h04-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h04-pelikulma.jpg",
+      "sha256": "f79d1448872570baa2c0c6a38fcb6534b775847a352f6e7db248140516efae64",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h05-aito1-t5d-reykjanes-laava-yolla-iss-cc0.jpg",
+      "sha": "548f8b4780e7a4ed74e1c5b21d41ee55d44ea47b",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 90924,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h05-aito1-t5d-reykjanes-laava-yolla-iss-cc0.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h05-aito1-t5d-reykjanes-laava-yolla-iss-cc0.jpg",
+      "sha256": "3c16a2a62295f1e00a4025ad02d79d9ab0aafda6f438d810923cbc427e3d5c67",
+      "dimensions": [
+        1600,
+        901
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h05-aito2-t5a-fagradalsfjall-laava-valaisee-pilvia-yolla-landsat.jpg",
+      "sha": "4dc4d9e3643affbcf7bb161996735c7c216441de",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 27805,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h05-aito2-t5a-fagradalsfjall-laava-valaisee-pilvia-yolla-landsat.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h05-aito2-t5a-fagradalsfjall-laava-valaisee-pilvia-yolla-landsat.jpg",
+      "sha256": "6ec2c6836a631c1cb6255c0a77b82a20884d063bfa367fcbe1eb138d640ca323",
+      "dimensions": [
+        720,
+        480
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h05-pelikulma.jpg",
+      "sha": "f01d41f13094782005d3bcf27adaa7ccefbe3aa5",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 213680,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h05-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h05-pelikulma.jpg",
+      "sha256": "762c84702f9707be5653ec8ab63f0f807137cc109d75dadb68b6d19d73d5cb24",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h06-aito1-t1a-iss071e002844-umbra-quebec-2024-iss.jpg",
+      "sha": "3b09feda64c8552c2f424f1e351192de9e04e578",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 405289,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h06-aito1-t1a-iss071e002844-umbra-quebec-2024-iss.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h06-aito1-t1a-iss071e002844-umbra-quebec-2024-iss.jpg",
+      "sha256": "56d94d4a1a25bc017d9520bcbc27531812f4b6d10c26e0640757524c24916e65",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h06-aito2-t1d-iss071e002694-umbra-pilvikansi-2024-iss.jpg",
+      "sha": "09ce9e62c0b793102e36033fc42ff77d41f7f5b7",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 140813,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h06-aito2-t1d-iss071e002694-umbra-pilvikansi-2024-iss.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h06-aito2-t1d-iss071e002694-umbra-pilvikansi-2024-iss.jpg",
+      "sha256": "18cc22d14dfb51ec6ff55fdda502109b5fdc445e27a3e33b4d081ba6e8a42aae",
+      "dimensions": [
+        1600,
+        898
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h06-pelikulma.jpg",
+      "sha": "22e7112d56f1b45b472e95aba06f2cd923795e81",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 103025,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h06-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h06-pelikulma.jpg",
+      "sha256": "f767be08ed51174f6f531b76d693c4abcd3ee4828a52fbbee2cdb5c5529b644d",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h07-aito1-t1c-iss071e002836-umbra-horisontissa-2024-iss.jpg",
+      "sha": "7aef839dcd7691a5556d59afb1015f6ad81c911f",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 422998,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h07-aito1-t1c-iss071e002836-umbra-horisontissa-2024-iss.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h07-aito1-t1c-iss071e002836-umbra-horisontissa-2024-iss.jpg",
+      "sha256": "dc973cff1348edd2f6a178a2633620827eb0a3ee68d015e4b5ea9a8670634799",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h07-aito2-t1e-iss52-umbra-horisontti-2017-iss.jpg",
+      "sha": "48cabb1ca9af62bfc0e45abbda9fc4cc30fbbf14",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 154987,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h07-aito2-t1e-iss52-umbra-horisontti-2017-iss.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h07-aito2-t1e-iss52-umbra-horisontti-2017-iss.jpg",
+      "sha256": "94a526c7969718fe4020ef61f76a598f96a342918ff7f156613e60b1d587597b",
+      "dimensions": [
+        1600,
+        1065
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h07-pelikulma.jpg",
+      "sha": "9e53029a784e88a9b2839f7095c28a0044fa8559",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 149147,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h07-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h07-pelikulma.jpg",
+      "sha256": "3ae903e09929f05e4097d25ad692d9876817b5988037ab2c4a48789e5bef941b",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h08-aito1-t1a-florence-gerst-silma-ylhaalta-12-9.jpg",
+      "sha": "685db81bd6b7829df3f9e17f4422be4b27133d35",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 301771,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h08-aito1-t1a-florence-gerst-silma-ylhaalta-12-9.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h08-aito1-t1a-florence-gerst-silma-ylhaalta-12-9.jpg",
+      "sha256": "f4c92f8d3f7f9f92fb410048068ab42bf54bcc3048da817fd96a1ec9052bb32e",
+      "dimensions": [
+        1600,
+        1070
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h08-aito2-t1b-florence-gerst-silman-seina-zoom-12-9-attrib.jpg",
+      "sha": "49862fb2a6cabf781273b2c1bcde5bbe70a5e686",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 306391,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h08-aito2-t1b-florence-gerst-silman-seina-zoom-12-9-attrib.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h08-aito2-t1b-florence-gerst-silman-seina-zoom-12-9-attrib.jpg",
+      "sha256": "4880e27c73fb16aa42c103d8f965b0c4ec0bb81e62364532b5996e99b38e1415",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h08-pelikulma.jpg",
+      "sha": "19ee8d24bafc8db26516611165a59567c620d65c",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 326667,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h08-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h08-pelikulma.jpg",
+      "sha256": "4d98f71ee1c8c953e26d60411a4b8bed69ed37afe15eb20f29aa2614467afa12",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h09-aito1-t1c-florence-iss-vinosti-silma-ja-kilpi-12-9-attrib.jpg",
+      "sha": "d34672f6063c6fb427197c9dd11f7d6151dc3d91",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 404579,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h09-aito1-t1c-florence-iss-vinosti-silma-ja-kilpi-12-9-attrib.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h09-aito1-t1c-florence-iss-vinosti-silma-ja-kilpi-12-9-attrib.jpg",
+      "sha256": "e76949ba6174bd5df046933d6c686a5702d673994369e857b43dc1b592b855eb",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h09-aito2-t1d-florence-gerst-vinosti-kilpi-ja-silma-12-9-attrib.jpg",
+      "sha": "1b4e94668470eb411685fa099609d508ce1f2a9a",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 373594,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h09-aito2-t1d-florence-gerst-vinosti-kilpi-ja-silma-12-9-attrib.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h09-aito2-t1d-florence-gerst-vinosti-kilpi-ja-silma-12-9-attrib.jpg",
+      "sha256": "2f436201dd05cb5a176ba87ae02becd15a7c1e47f23f33846e4647a030cd5eed",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h09-pelikulma.jpg",
+      "sha": "78a5c23bf611be28355e3cea054e589c259cb107",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 270071,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h09-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h09-pelikulma.jpg",
+      "sha256": "e7f8ec1f1a0241ddc4dfbf10fce15ad28c729cd88097a7a9a0619d65dfb8865a",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h10-aito1-t1e-pohjois-atlantti-nuori-vana-iss-2019.jpg",
+      "sha": "11029143cb9680e63a8ad345d80ee215bffa9916",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 351811,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h10-aito1-t1e-pohjois-atlantti-nuori-vana-iss-2019.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h10-aito1-t1e-pohjois-atlantti-nuori-vana-iss-2019.jpg",
+      "sha256": "601afe3f7d841426ccf69b61a01e4bd8a7c205f3ece8a825e033c3049b5c00a3",
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h10-aito2-t1a-lissabon-vanat-meren-ylla-ylhaalta.jpg",
+      "sha": "98314def34f93822c77579a8995f726323c54af6",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 637239,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h10-aito2-t1a-lissabon-vanat-meren-ylla-ylhaalta.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h10-aito2-t1a-lissabon-vanat-meren-ylla-ylhaalta.jpg",
+      "sha256": "0d1155e7e6d56a4b5470149f3da6a2b3a836e7b3f0e8463004ee8ab56334b1e6",
+      "dimensions": [
+        1600,
+        1064
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h10-pelikulma.jpg",
+      "sha": "9385f604cad1244e20a9ac96e6d84eace94d9659",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 144029,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h10-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h10-pelikulma.jpg",
+      "sha256": "e611a27f999ed8a4401b7d4adb79cda2ad339b9eaa8175b2a90548c19d4d61c4",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h11-aito1-t1d-kanaalisaaret-nuoret-ja-leventyneet-vanat-iss.jpg",
+      "sha": "ccf4cdcaaea0b6e118c9fa06a5cf0b895b18ea04",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 497406,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h11-aito1-t1d-kanaalisaaret-nuoret-ja-leventyneet-vanat-iss.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h11-aito1-t1d-kanaalisaaret-nuoret-ja-leventyneet-vanat-iss.jpg",
+      "sha256": "386eb44d11b970f6e8cfaa0ea5ee90e4bedd7101161afa83643c19c031d6dbc1",
+      "dimensions": [
+        1600,
+        1094
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h11-aito2-t3f-vana-ja-varjo-pilvikannella-atlantti-iss.jpg",
+      "sha": "f168c430e3018aae30e56219f3a9ed2c93140a40",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 193375,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h11-aito2-t3f-vana-ja-varjo-pilvikannella-atlantti-iss.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h11-aito2-t3f-vana-ja-varjo-pilvikannella-atlantti-iss.jpg",
+      "sha256": "ca97daeb2e814103cf7b878848858caf7fccf66487e43aca53ec5dd2545c5062",
+      "dimensions": [
+        1600,
+        1089
+      ],
+      "role": "natural-phenomenon-reference"
+    },
+    {
+      "path": "posti/valoseppa-iss-nostot-pelikulmat/h11-pelikulma.jpg",
+      "sha": "d5523413434152a2e2d6218fa0b8127eeb9c1af3",
+      "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+      "bytes": 144832,
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/intake-0def981a/h11-pelikulma.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/references/h11-pelikulma.jpg",
+      "sha256": "beb17393f89c005785101d1e0e726e59871b408569cd6546cc2848c3c5f5876a",
+      "dimensions": [
+        1300,
+        1600
+      ],
+      "role": "camera-framing"
+    }
+  ]
+}

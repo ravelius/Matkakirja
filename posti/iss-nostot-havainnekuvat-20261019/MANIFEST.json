@@ -1,0 +1,215 @@
+{
+  "sourceCommit": "0def981a57d7f05ac995355d02969f0b8affdd40",
+  "imageCount": 11,
+  "assets": [
+    {
+      "code": "h01",
+      "taskNumber": 441,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h01.png",
+      "nativeSHA256": "a36e20d102ede876211c0951cd5b0920adcc95b5b49b881f223df2fd664728f1",
+      "deliverySHA256": "af2778a1b6c3916720f0526a168010539034444cf5e4db63541270b713c8a79c",
+      "bytes": 2428671,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "0df6266ff05198e3af0ee869e980be54b08c64d8",
+      "visualDisposition": "reference-delivered-with-camera-and-reconstruction-caveats",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h02",
+      "taskNumber": 442,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h02.png",
+      "nativeSHA256": "50b0a688cbcf0ede6aad877b52b6f134d9bc35df44597304d97d19c637595938",
+      "deliverySHA256": "12d15efccf8f5daa601730f5ac2196b4891ec4316bdda946037cbab519da8a31",
+      "bytes": 2766288,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "0df6266ff05198e3af0ee869e980be54b08c64d8",
+      "visualDisposition": "camera-centering-and-geographic-QA-failed",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h03",
+      "taskNumber": 443,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h03.png",
+      "nativeSHA256": "8505d6ae00f5bc7c37adf2dbb810d1e76cb2ed7799e099556a378f77cb00e9ca",
+      "deliverySHA256": "2b28402778b85045f40111d78d0f8160de0f32035973b8c24b6b77d513b1eac0",
+      "bytes": 2681086,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "c47c135726ddd6885dd197acec4ddea368c1a3d7",
+      "visualDisposition": "reference-with-unverified-exact-camera-registration",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h04",
+      "taskNumber": 444,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h04.png",
+      "nativeSHA256": "1dce78dc58388bcb12e030d94a0c92ab1133d9050994a0a6ea1890e220629ad0",
+      "deliverySHA256": "7b2d7aa68a5051d001ca82967bb295ef36a66cc7c83163b8461d58c5ab1310e5",
+      "bytes": 2559382,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "2c983215127456ff54ec04361121fc3ffc30ee93",
+      "visualDisposition": "reference-with-inferred-color-scale-and-cloud-geometry",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h05",
+      "taskNumber": 445,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h05.png",
+      "nativeSHA256": "a42b4f9e2e77c94d624a941866cd000281267ea9ed72692c3758eb4124576108",
+      "deliverySHA256": "52d3ca5b6c688a733edae64a58b4f04654db6e075e3deadb905b140a7a87bcbe",
+      "bytes": 1841589,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "e6e4f150c5e71c310ae16157a974f73fc3658251",
+      "visualDisposition": "requires-review-possible-residual-map-marker-and-unverified-geography",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h06",
+      "taskNumber": 446,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h06.png",
+      "nativeSHA256": "f4b3b86cfeda358be6cd9405e52f1ec7841192de4abce1d2aa556f0cc9a9c93e",
+      "deliverySHA256": "095fcef28138954b5d6f44b4e55ea9f57322520d2fd585140a1b9beeb58102e3",
+      "bytes": 2022605,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "c5ff1b845bea6ea2043f4776db5821401a189643",
+      "visualDisposition": "reference-with-camera-and-eclipse-geometry-caveats",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h07",
+      "taskNumber": 447,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h07.png",
+      "nativeSHA256": "26696c8c9bda09ca25b274e7ef48007eaada12d617c3dede96b39b8ef919d346",
+      "deliverySHA256": "31f23ea3419ccdd88212b675c05c17c86ced82f5e124dc67da96bff990bde425",
+      "bytes": 2950785,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "2784b69b66d0c2118af11dd925fd86d379478545",
+      "visualDisposition": "far-shadow-reference-geography-not-verified",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h08",
+      "taskNumber": 448,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h08.png",
+      "nativeSHA256": "e33448ca3824b5e5eedcf1be1f0b9a1f09455fa2ab0c259c601da956ea365385",
+      "deliverySHA256": "f828a996f731e71b976dd4dcabfc77c51b4b5ce4ddf512b4bf95d0798a0b80ab",
+      "bytes": 2691173,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "f2f26e6a6acd2d98989f014e3ebc174ec23ce110",
+      "visualDisposition": "cloud-structure-reference-camera-scale-drift",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h09",
+      "taskNumber": 449,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h09.png",
+      "nativeSHA256": "470f8fb1f92dc5156b5330a46d92acacfd7fed402149d1b7b9f335c53966d7e0",
+      "deliverySHA256": "ebfc7976aff35f5bddb70f473303ebff166fe5cac4a2659ff73ce77733f2944d",
+      "bytes": 2331770,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "fc48a301a42d8ac7a9b9bbcfffd6fe0b780d36bb",
+      "visualDisposition": "weather-appearance-reference-with-horizon-drift",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h10",
+      "taskNumber": 450,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h10.png",
+      "nativeSHA256": "3ec7b4b2ec7b14b0ff517b359599e57c834dd39be3e970e07ac9845079e9a695",
+      "deliverySHA256": "43f8545c3cd4de71862e3b05ed5ad690a6402c350d5019d2f991826ba55c199f",
+      "bytes": 2172154,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "df5e1980acdb3e4aea9ab0426ec0176656b2d2c3",
+      "visualDisposition": "contrail-age-reference-with-camera-and-line-regularity-caveats",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "code": "h11",
+      "taskNumber": 451,
+      "mailboxPath": "posti/iss-nostot-havainnekuvat-20261019/h11.png",
+      "nativeSHA256": "270370d464d3b420cca9d72092de3ed7a1902abb4d19b4706a28b68f3f17a38e",
+      "deliverySHA256": "6725aecb242bc30e694314045875eef4d577b82be3be09aa965fd75e0b8e56fa",
+      "bytes": 2665989,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "nativePixelsUnchanged": true,
+      "metadataLabel": "havainnekuva",
+      "imageDeliveryCommit": "a1653d8131305e768da963b45b364968153d091c",
+      "visualDisposition": "contrail-and-shadow-reference-with-pattern-and-camera-caveats",
+      "exactCameraRegistrationVerified": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false
+    }
+  ]
+}
