@@ -366,8 +366,8 @@ Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
 
 Raamattu: TUOTANTOPOHJAT, TUOTANTOPOHJIEN SANASTO, LINSSIT — YHTEISET SÄÄNNÖT, LINSSIT EIVÄT KUULU RAJAUKSEEN, LINSSIT KYTKETÄÄN
 VAIN MATKALAUKUSTA, UI-POHJAT, DATALINSSIT (lisenssit); loki `docs/raamattu-loki/paatokset-2026-10.md` #PAATOKSET 16.10.2026 klo
-18.3x: KIINAN DYNASTIAT -LINSSI, #… klo 19.19: KIINAN DYNASTIAT -LINSSI KARTTAPALLOLLE, #… klo 20.35: QINGIN VÄRI VIILEÄ,
-#OMISTAJAN PAATOKSET 17.10. YO: JULKAISU, KIINAN DYNASTIAT, KEHYS-KAARO; `docs/linssikatalogi.md`;
+18.3x: KIINAN DYNASTIAT -LINSSI, #… klo 19.19: KIINAN DYNASTIAT -LINSSI KARTTAPALLOLLE, #… klo 20.35: QINGIN VÄRI VIILEÄ, ja
+`#OMISTAJAN PAATOKSET 17.10. YO`: JULKAISU, KIINAN DYNASTIAT, KEHYS-KAARO; `docs/linssikatalogi.md`;
 `data/linssit/kiinan-dynastiat/MUOTO-KERROKSET.md`; `docs/moduulit/linssit.md` (webin linssisopimus);
 `docs/moduulit/tuotantopohjat/historiapeli.md`, `kertojan-teksti-ja-aani.md`; Linssisepän luovutukset 16.–17.10.2026
 haarassa `linssiseppa-tyo-20260923` (`docs/raportit/viesti-linssiseppa-luovutus-20261016-2349.md`, `…-20261017-0157.md`).
