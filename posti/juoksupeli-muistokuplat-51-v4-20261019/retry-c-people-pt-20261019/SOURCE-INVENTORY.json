@@ -1,0 +1,197 @@
+{
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "canonicalCount": 51,
+  "batchItems": [
+    {
+      "number": 26,
+      "id": "kullattu-vesiastia",
+      "nimi": "Kullattu vesiastia",
+      "kuplatyyppi": 8,
+      "kuplatyyppiRaw": "8",
+      "typeLabelFromMarkdown": "vuodenaika",
+      "kupla": "Iso kullattu vesiastia pihalla, nauravat palvelijat täyttävät sitä ämpäreillä, virkamies hymyilee, ensilumi, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Kullatut pronssiastiat olivat palatsin vesiastioista arvokkaimpia; vettä käytettiin tulipalojen sammutukseen.",
+      "dynastia": "Qing",
+      "vuosi": "1644–1912",
+      "ajoitus": "Qing-dynastia, 1644–1912",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.kullattu-vesiastia.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.kullattu-vesiastia.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.kullattu-vesiastia.kupla",
+          "teksti": "juoksupeli.rikkoutuva.kullattu-vesiastia.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.kullattu-vesiastia.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.kullattu-vesiastia.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.kullattu-vesiastia.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "pihalla"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.kullattu-vesiastia.kupla"
+        },
+        "mdHeading": "### Kullattu vesiastia (`kullattu-vesiastia`) — kupla 8: vuodenaika",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 27,
+      "id": "vuoripoltin",
+      "nimi": "Vuoripoltin",
+      "kuplatyyppi": 6,
+      "kuplatyyppiRaw": "6",
+      "typeLabelFromMarkdown": "työpaja",
+      "kupla": "Iloinen valumestari kaataa sulaa pronssia muottiin vuoripolttimen tekoa varten kirkkaassa, avarassa palatsin valimossa; valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Vuoripoltin jäljittelee Han-ajan mallia; Qianlong tilasi 1743 valimolta astioita muinaisten mallien mukaan.",
+      "dynastia": "Qing",
+      "vuosi": "1736–1795",
+      "ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.vuoripoltin.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.vuoripoltin.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.vuoripoltin.kupla",
+          "teksti": "juoksupeli.rikkoutuva.vuoripoltin.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.vuoripoltin.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.vuoripoltin.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.vuoripoltin.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "kirkkaassa, avarassa palatsin valimossa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.vuoripoltin.kupla"
+        },
+        "mdHeading": "### Vuoripoltin (`vuoripoltin`) — kupla 6: työpaja",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 29,
+      "id": "falangcai",
+      "nimi": "Falangcai-posliini",
+      "kuplatyyppi": 6,
+      "kuplatyyppiRaw": "6",
+      "typeLabelFromMarkdown": "työpaja",
+      "kupla": "Hymyilevä hovin maalari maalaa ohuella siveltimellä pioneja falangcai-posliinikulhoon vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Falangcai: Jingdezhenin posliinille Kielletyssä kaupungissa maalattua emalia, tehty vain keisarin käyttöön.",
+      "dynastia": "Qing",
+      "vuosi": "1662–1795",
+      "ajoitus": "Qing-dynastia, Kangxin–Qianlongin kausi, 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.falangcai.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.falangcai.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.falangcai.kupla",
+          "teksti": "juoksupeli.rikkoutuva.falangcai.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.falangcai.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.falangcai.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.falangcai.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaaleassa työpajassa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.falangcai.kupla"
+        },
+        "mdHeading": "### Falangcai-posliini (`falangcai`) — kupla 6: työpaja",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 33,
+      "id": "kirjoittava-kellopeli",
+      "nimi": "Kirjoittava kellopeli",
+      "kuplatyyppi": 4,
+      "kuplatyyppiRaw": "4",
+      "typeLabelFromMarkdown": "lahja (lähettiläs)",
+      "kupla": "Hymyilevä eurooppalainen lähettiläs ojentaa kullattua kirjoittavaa kellopeliä, mantšupukuinen hovi riemastuu, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "fakta": "Kielletyn kaupungin kuuluisassa kullatussa kellossa mekaaninen hahmo kirjoittaa kiinalaisia merkkejä.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luvun loppu",
+      "ajoitus": "Qing-dynastia, 1700-luvun loppu (länsimainen kello)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.kupla",
+          "teksti": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.kupla"
+        },
+        "mdHeading": "### Kirjoittava kellopeli (`kirjoittava-kellopeli`) — kupla 4: lahja (lähettiläs)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    }
+  ],
+  "orderSource": {
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe",
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md"
+  },
+  "sourceTaskNumbers": [
+    564
+  ],
+  "jadeAndVersionOnlyExtrasIncluded": false
+}

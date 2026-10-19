@@ -1,0 +1,395 @@
+{
+  "attempts": [
+    {
+      "code": "26-kullattu-vesiastia",
+      "sourceItemNumber": 26,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:09:00.969557+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW photorealistic COLOR camera photograph in VERTICAL PORTRAIT orientation,1086 pixels wide×1448 pixels tall, opaque RGB PNG. Reference supplies ONLY the already-approved artifact form, artifact prominence, close camera framing, bright natural light and very strong f/1.4 optical bokeh. Do NOT copy the old white-bearded man's identity, age, face, cap or clothing. Recreate every pixel anew, not a partial edit or face replacement. Preserve the beautiful complete sharp foreground ARTIFACT and source story, but cast the NEW DISTINCT people specified below. Keep important faces compact and centered behind the artifact within the central45% ellipse, medium-close behind, never far-away tiny figures. Natural skin, hair, material textures and gentle backlight, no artificial repeated texture. All output a continuous real camera photo, no baked mask, feather, border, graphics, text overlay, logo, crop, padding or CGI. NEW CAST AND SCENE:\nThe COMPLETE central gilded bronze firefighting WATER VAT, rolled rim/ring handles, first snow in an outdoor palace courtyard, remains close, sharp and about35–40%photoheight. TWO CLEARLY DIFFERENT YOUNG ADULT SERVANTS pour wooden buckets into it: left age23, SLIM narrow triangular face, high cheekbones, fine straight eyebrows; right age29, ROUND fuller cheeks, broad flat nose, slightly dimpled smile. Both clean-shaven, black hair with shaved front and queue, plain earth-brown / indigo work robes, no identical faces. Between/behind them a smiling MIDDLE-AGED OFFICIAL age46, angular rectangular face, neatly trimmed BLACK moustache only, formal muted burgundy official robe and correct Qing cap, not an elderly white-bearded teacher. Compact triangular head placement: official center x50%/y38%, servants x43%/57% and y46%; mouths/eyes protected centrally. All are laughing/smiling at the pouring water. No beard, grey goatee, old-man face, twins or child. Background only soft snowy red/gold palace light patches.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/delivery-packet/26-kullattu-vesiastia.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:11:45.802694+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-f5ce59e4-bb3e-48be-894d-1fc5f567ba20.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/26-kullattu-vesiastia-attempt1.png",
+      "nativeSHA256": "b2e8a40ef4c6f0b1f3d5dc926f9f15c8aed5e0c7ec2168bb07678426f6fe5d30",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "d5b287b3f20a795efe05e47546ac56915ee2b734336d1123ad0172adfe21707e",
+      "technicalPass": true,
+      "nativeRequestedDimensions": false,
+      "nativeOriginalPreserved": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/assets/26-kullattu-vesiastia/attempt-1/technical-size-export.png",
+      "deliveryDimensions": [
+        1086,
+        1448
+      ],
+      "technicalExport": {
+        "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+        "inputSHA256": "b2e8a40ef4c6f0b1f3d5dc926f9f15c8aed5e0c7ec2168bb07678426f6fe5d30",
+        "outputSHA256": "f825a192b0b599d565a473c82cb4633c408c796e286c90e85682cc328f5c5fbe",
+        "pixelSHA256": "0fb11fa0c0d849c0cddafc40919229f6ca82c0cd4b5f897a6da093bb0db58368",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false
+      },
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.37,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "Two distinct young clean-shaven servants: slim triangular left face and round cheeked right face; middle-aged moustached official in burgundy formal robe. No twins or copied elderly white-goatee identity. Whole gildedvat,woodenbuckets pouring,firstsnow preserved. All smiles clear; faces partly in early feather, not falsely claimed entirely r<=.45.160px review next.",
+          "PTConditionalCompositionReview=true; readable expressions enter early smooth feather, not all important face features r<=.45. Disclosed in QA-FI and manifest."
+        ],
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "earlyFeatherExceptionForPTReview": true,
+        "PTConditionalCompositionReview": true,
+        "smallScaleExpressionsReadable": true,
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Kaksi nuorta parrattomaksi kuvattua palvelijaa on nyt erinäköisiä: vasemmalla hoikka/kapeampi kasvo, oikealla pyöreämpi täysi poski. Keskellä keski-ikäinen mustaviiksinen virkamies burgundin virka-asussa. Ei vanhaa valkopartaa eikä kaksosia. Kokonainen kullattu vesiastia, puuämpärien kaato ja pihan ensilumi säilyvät. Ilmeet luettavat160px:ssa; tärkeät piirteet ulottuvat varhaiseen loivaan häivytykseen, eivät kaikki45%ytimeen.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00"
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:17:36.396261+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": true,
+            "artifactHeightFraction": 0.37,
+            "facesProtected": false,
+            "backgroundStrongBokeh": true,
+            "faceDiversityPass": true,
+            "oldWhiteBeardedIdentityRemoved": true,
+            "observations": [
+              "Two distinct young clean-shaven servants: slim triangular left face and round cheeked right face; middle-aged moustached official in burgundy formal robe. No twins or copied elderly white-goatee identity. Whole gildedvat,woodenbuckets pouring,firstsnow preserved. All smiles clear; faces partly in early feather, not falsely claimed entirely r<=.45.160px review next."
+            ],
+            "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+            "earlyFeatherExceptionForPTReview": true
+          }
+        },
+        {
+          "replacedAt": "2026-10-19T12:21:47.626852+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": true,
+            "artifactHeightFraction": 0.37,
+            "facesProtected": false,
+            "backgroundStrongBokeh": true,
+            "faceDiversityPass": true,
+            "oldWhiteBeardedIdentityRemoved": true,
+            "observations": [
+              "Two distinct young clean-shaven servants: slim triangular left face and round cheeked right face; middle-aged moustached official in burgundy formal robe. No twins or copied elderly white-goatee identity. Whole gildedvat,woodenbuckets pouring,firstsnow preserved. All smiles clear; faces partly in early feather, not falsely claimed entirely r<=.45.160px review next."
+            ],
+            "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+            "earlyFeatherExceptionForPTReview": true,
+            "PTConditionalCompositionReview": true,
+            "smallScaleExpressionsReadable": true
+          }
+        }
+      ]
+    },
+    {
+      "code": "27-vuoripoltin",
+      "sourceItemNumber": 27,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:09:01.023793+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW photorealistic COLOR camera photograph in VERTICAL PORTRAIT orientation,1086 pixels wide×1448 pixels tall, opaque RGB PNG. Reference supplies ONLY the already-approved artifact form, artifact prominence, close camera framing, bright natural light and very strong f/1.4 optical bokeh. Do NOT copy the old white-bearded man's identity, age, face, cap or clothing. Recreate every pixel anew, not a partial edit or face replacement. Preserve the beautiful complete sharp foreground ARTIFACT and source story, but cast the NEW DISTINCT people specified below. Keep important faces compact and centered behind the artifact within the central45% ellipse, medium-close behind, never far-away tiny figures. Natural skin, hair, material textures and gentle backlight, no artificial repeated texture. All output a continuous real camera photo, no baked mask, feather, border, graphics, text overlay, logo, crop, padding or CGI. NEW CAST AND SCENE:\nThe same complete BRONZE MOUNTAIN INCENSE CENSER, jagged pierced mountain lid, low bowl, stem and dish-foot with gold inlay, stays sharp central foreground about35%photoheight. Behind it ONE MIDDLE-AGED MUSCULAR BRONZE FOUNDER age44: broad square jaw, deep-set dark eyes, heavy straight brows, short cropped dark hair/shaved front and queue behind, clean-shaven with no long beard. Strong forearms, soot marks on skin, dark brown worn LEATHER APRON, plain charcoal work robe with SLEEVES ROLLED UP. He smiles while pouring molten bronze from a handled ladle into a mould next to the censer. Bright airy imperial foundry, extreme warm/pale optical bokeh, no sharp workshop architecture. This is a physically strong working foundryman, absolutely NOT the thin old white-bearded tutor or black scholar outfit. Face centered above artifact, eyes/nose/mouth in protected core.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/delivery-packet/27-vuoripoltin.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:11:46.301188+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-c9502359-b4c8-4e83-b000-b21623830811.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/27-vuoripoltin-attempt1.png",
+      "nativeSHA256": "5f7ad9a72793a4badeedcb3162603c29e0570cfc63c7662fc360cb7e3ff0d33b",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "8edca259bc8663538c4f1a09b9039d8a73eda5327c3114d6e075060e1a1c1299",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.345,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "Middle-aged muscular square-jawed foundryman, soot marks, leatherapron,rolledsleeves,strongforearms,short darkhair andvisiblequeue; clean-shaven, notoldwhitebeardedteacher. Correctmountaincenser+pouringbronze/mould,closeframing/strongbokeh retained."
+        ],
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "PTConditionalCompositionReview": false,
+        "faceEssentialFeaturesFullyInsideOpaqueCore": true,
+        "smallScaleExpressionsReadable": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Keski-ikäinen lihaksikas, neliöleukainen valumestari: lyhyt tumma tukka/queue, tumma nahkaesiliina, nokiset käsivarret, käärityt hihat, ei partaa eikä valkoista vanhushahmoa. Vuorikansi, pronssipoltin, sulan pronssin kaato ja muotti säilyvät. Kasvojen tärkeät piirteet ytimessä, voimakas optinen taustasumeus.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00"
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:21:48.063073+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": true,
+            "artifactHeightFraction": 0.345,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true,
+            "faceDiversityPass": true,
+            "oldWhiteBeardedIdentityRemoved": true,
+            "observations": [
+              "Middle-aged muscular square-jawed foundryman, soot marks, leatherapron,rolledsleeves,strongforearms,short darkhair andvisiblequeue; clean-shaven, notoldwhitebeardedteacher. Correctmountaincenser+pouringbronze/mould,closeframing/strongbokeh retained."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "29-falangcai",
+      "sourceItemNumber": 29,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:12:33.864699+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW photorealistic COLOR camera photograph in VERTICAL PORTRAIT orientation,1086 pixels wide×1448 pixels tall, opaque RGB PNG. Reference supplies ONLY the already-approved artifact form, artifact prominence, close camera framing, bright natural light and very strong f/1.4 optical bokeh. Do NOT copy the old white-bearded man's identity, age, face, cap or clothing. Recreate every pixel anew, not a partial edit or face replacement. Preserve the beautiful complete sharp foreground ARTIFACT and source story, but cast the NEW DISTINCT people specified below. Keep important faces compact and centered behind the artifact within the central45% ellipse, medium-close behind, never far-away tiny figures. Natural skin, hair, material textures and gentle backlight, no artificial repeated texture. All output a continuous real camera photo, no baked mask, feather, border, graphics, text overlay, logo, crop, padding or CGI. NEW CAST AND SCENE:\nThe same naturally tilted OPEN WHITE PORCELAIN FALANGCAI BOWL with painted pink peonies/green leaves, no neck/lid/metal wires. ONE male COURT PAINTER about35: slender OBLONG face, pointed chin, straight slim nose, long smooth eyebrows, tidy THIN BLACK MOUSTACHE above the lip, no beard/goatee, no white hair or old-man wrinkles. Dark hair/shaved front and queue, muted cobalt BLUE long right-button Qing robe with plain rolled pale cuffs. He smiles and uses a fine brush to paint a peony on the porcelain. Keep complete bowl large in sharp foreground, painter medium-close behind with face centered around x47%/y41%, key features inside45%core. Bright imperial enamel-painting workshop, all distant architecture strongly optically blurred. No child, no generic elderly scholar.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/delivery-packet/29-falangcai.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:14:55.628257+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-63095e3b-e300-48b6-9c6c-e52c519727f8.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/29-falangcai-attempt1.png",
+      "nativeSHA256": "35fcdd0ba6f10c64a2616639e4ff499296786be16a2f836524d43bc43d334067",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "b12be87ab7ff21804fb6238dfd1b03d8a80931aae537cf5ab2abd1e13507a46d",
+      "technicalPass": false,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": false,
+        "artifactHeightFraction": 0.23,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "New35yearold thinmoustache blue-robed painter and peonybowl correct.",
+          "REJECT: Qing hair requirement violated: fullfront hair swept into a TOPKNOT/ornament, not shaved-front/queue underQingcap. Whole-new photo with correct blackround guapimao/redknob and no topknot required."
+        ]
+      }
+    },
+    {
+      "code": "29-falangcai",
+      "sourceItemNumber": 29,
+      "attempt": 2,
+      "issuedAt": "2026-10-19T12:15:54.518720+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW photorealistic COLOR camera photograph, VERTICAL PORTRAIT1086pixels wide×1448pixels tall, opaque RGB PNG. Recreate the reference's NEW young35year-old male painter identity, thin neat BLACK MOUSTACHE, slender oblong face/pointed chin, blue right-button long Qing robe, same beautiful OPEN WHITE PORCELAIN PEONY BOWL and finebrush painting action, close framing and strong natural f/1.4 bokeh. This man is NOT the old white-bearded tutor. Correct Qing headwear/hair in the new whole photograph: a SIMPLE TIGHT BLACK ROUND GUAPIMAO CAP with small RED TOP KNOB, SHAVED FRONT forehead/scalp beneath the cap and a LONG QUEUE BRAID hanging behind. Absolutely NO HAIR TOPKNOT, no Ming full-front hairstyle, no ornamented hair bun, no long beard. Hat is a real black fitted cap, not hair. Keep his compact eyes/nose/mouth centrally around x48%,y41%, medium-close behind the sharp naturally tilted bowl. One happy adult painter only, no child. Bowl has a clearly open mouth, peonies smoothly painted in enamel directly on whiteporcelain, no metalcloisonne wires, no neck or lid. Genuine camera skin/porcelain/wood texture, bright pale palace workshop dissolved into large soft warm light patches. No graphics, text overlay, border, vignette, mask, CGI, copied pixels, crop or padding. ENTIRELY NEW whole photo, NOT partial editing.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/29-falangcai-attempt1.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:17:36.325427+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-1d1e75bb-5eac-45f2-a668-e6684abfd639.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/29-falangcai-attempt2.png",
+      "nativeSHA256": "6837e1295b156ff81fc04ba53c1cd2c268d466dca36539e87395c7c0a72fa068",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "f5ffdc581df2ca74d13a8832e6af44b29d83aba66f3db279762f33dafc2075a2",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.25,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "Distinct35yearold slender oblong-faced painter, thin tidy black moustache, blue right-button robe; no whitegoatee/oldreferenceidentity.",
+          "Correct black ROUNDguapimao withREDknob, shavedfront and visiblequeue; no Mingtopknot. Complete openwhitepeonybowl/finebrushpainting/strongbokeh retained. Eyes/nose/mouth centrally readable; outercap/forehead not claimed fullyopaque.",
+          "PTConditionalCompositionReview=true; readable expressions enter early smooth feather, not all important face features r<=.45. Disclosed in QA-FI and manifest."
+        ],
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "PTConditionalCompositionReview": true,
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "smallScaleExpressionsReadable": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Noin35-vuotias kapeampi/soikea maalari, siistit ohuet mustat viikset ja sininen kaapu. Uusi kokonainen a2 korjasi a1:n väärän hiusnutturan: pyöreä musta Qing-kalotti/punanuppi, ajeltu otsa ja queue. Avoin valkoinen pionikulho ja ohuen siveltimen työ säilyvät. Yhden silmän r~.47 on aivan häivytyksen alussa (alpha~.996); ilme selvä, mutta täyttä45%kasvosuojaa ei väitetä.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00",
+        "manualEyePoint": {
+          "pixel": [
+            573,
+            387
+          ],
+          "radius": 0.4681607936829296,
+          "alpha": 0.996801115423963,
+          "method": "manualapproxpointfrom100%QAgrid;notautomaticdetector;about10pxuncertainty"
+        }
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:21:48.202046+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": true,
+            "artifactHeightFraction": 0.25,
+            "facesProtected": true,
+            "backgroundStrongBokeh": true,
+            "faceDiversityPass": true,
+            "oldWhiteBeardedIdentityRemoved": true,
+            "observations": [
+              "Distinct35yearold slender oblong-faced painter, thin tidy black moustache, blue right-button robe; no whitegoatee/oldreferenceidentity.",
+              "Correct black ROUNDguapimao withREDknob, shavedfront and visiblequeue; no Mingtopknot. Complete openwhitepeonybowl/finebrushpainting/strongbokeh retained. Eyes/nose/mouth centrally readable; outercap/forehead not claimed fullyopaque."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "code": "33-kirjoittava-kellopeli",
+      "sourceItemNumber": 33,
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:12:33.921432+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW photorealistic COLOR camera photograph in VERTICAL PORTRAIT orientation,1086 pixels wide×1448 pixels tall, opaque RGB PNG. Reference supplies ONLY the already-approved artifact form, artifact prominence, close camera framing, bright natural light and very strong f/1.4 optical bokeh. Do NOT copy the old white-bearded man's identity, age, face, cap or clothing. Recreate every pixel anew, not a partial edit or face replacement. Preserve the beautiful complete sharp foreground ARTIFACT and source story, but cast the NEW DISTINCT people specified below. Keep important faces compact and centered behind the artifact within the central45% ellipse, medium-close behind, never far-away tiny figures. Natural skin, hair, material textures and gentle backlight, no artificial repeated texture. All output a continuous real camera photo, no baked mask, feather, border, graphics, text overlay, logo, crop, padding or CGI. NEW CAST AND SCENE:\nThe same complete GILDED WRITING AUTOMATON CLOCK on a stable dark console, analog dial plus miniature MECHANICAL HUMAN SCRIBE holding brush at a desk, central sharp foreground~35%photoheight. A smiling EUROPEAN ENVOY with gray wavy hair and eighteenth-century diplomatic coat presents it by open-hand gesture; he may resemble reference envoy. Receiving court MUST CHANGE: one joyful CLEAN-SHAVEN YOUNG QING OFFICIAL age25, smooth heart-shaped face, high curved brows, narrow chin, dark hair/shavedfront+queue and jade-blue formal right-button robe, black correct Qing cap. Also a joyful court WOMAN age39 just behind him, distinctive diamond-shaped face, dark horizontal liangbatou hair wings, long loose muted coral Manchu robe. Compact three-person reception, faces overlapping in depth centrally above/behind clock, not spread to edges. No white-bearded old man anywhere, no tutor or child. Clock is not carried; symbolic court presentation, no exact museum scale claim. Same bright hall dissolved into red/gold bokeh.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-c-26to39/delivery-packet/33-kirjoittava-kellopeli.png"
+        ]
+      },
+      "completed": true,
+      "completedAt": "2026-10-19T12:14:55.755489+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-276f14d3-4985-4241-87bb-cfc564ab9567.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/33-kirjoittava-kellopeli-attempt1.png",
+      "nativeSHA256": "e691e8e92f19b982bfd686028388e751f1f3acd393027d0a4395a7b3db07bb64",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "df9534546031b091edfa9bb8e80e887531368ac1304c93dc413a2da84e33cb1e",
+      "technicalPass": true,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.34,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "European envoy retained as allowed; receiving court now joyful clean-shaven young official and distinct adult Manchu courtwoman. No old whitebeardedteacher. Mechanical writingclock/scribe/dial stays correct, complete on console.",
+          "Three expressions partly in early feather rather than allr<=.45; personally reviewed160px needed and explicitly disclosed.",
+          "PTConditionalCompositionReview=true; readable expressions enter early smooth feather, not all important face features r<=.45. Disclosed in QA-FI and manifest."
+        ],
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "earlyFeatherExceptionForPTReview": true,
+        "PTConditionalCompositionReview": true,
+        "smallScaleExpressionsReadable": true,
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Eurooppalainen lähettiläs säilyy lähteen sallimana; vastaanottajina nyt parrattoman nuoren virkamiehen sileä kapealeukainen kasvo ja selvästi erinäköinen aikuisen mantšuhovinaisen kasvo/korallikaapu/liangbatou. Ei valkopartaista opettajaa. Kirjoittava automaatti/sivellin/kellotaulu ja vakaa konsoli säilyvät. Vastaanottajan keskikasvo selvä, ulommat lähettilään/hovinaisen piirteet loivassa häivytyksessä, ei täyttä45%kasvosuojaa.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00"
+      },
+      "qaHistory": [
+        {
+          "replacedAt": "2026-10-19T12:17:36.565637+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": true,
+            "artifactHeightFraction": 0.34,
+            "facesProtected": false,
+            "backgroundStrongBokeh": true,
+            "faceDiversityPass": true,
+            "oldWhiteBeardedIdentityRemoved": true,
+            "observations": [
+              "European envoy retained as allowed; receiving court now joyful clean-shaven young official and distinct adult Manchu courtwoman. No old whitebeardedteacher. Mechanical writingclock/scribe/dial stays correct, complete on console.",
+              "Three expressions partly in early feather rather than allr<=.45; personally reviewed160px needed and explicitly disclosed."
+            ],
+            "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+            "earlyFeatherExceptionForPTReview": true
+          }
+        },
+        {
+          "replacedAt": "2026-10-19T12:21:48.305389+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": true,
+            "artifactHeightFraction": 0.34,
+            "facesProtected": false,
+            "backgroundStrongBokeh": true,
+            "faceDiversityPass": true,
+            "oldWhiteBeardedIdentityRemoved": true,
+            "observations": [
+              "European envoy retained as allowed; receiving court now joyful clean-shaven young official and distinct adult Manchu courtwoman. No old whitebeardedteacher. Mechanical writingclock/scribe/dial stays correct, complete on console.",
+              "Three expressions partly in early feather rather than allr<=.45; personally reviewed160px needed and explicitly disclosed."
+            ],
+            "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+            "earlyFeatherExceptionForPTReview": true,
+            "PTConditionalCompositionReview": true,
+            "smallScaleExpressionsReadable": true
+          }
+        }
+      ]
+    }
+  ]
+}

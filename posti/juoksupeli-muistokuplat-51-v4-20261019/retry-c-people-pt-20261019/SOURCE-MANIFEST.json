@@ -1,0 +1,71 @@
+{
+  "sourceOrder": 536,
+  "sourceTaskNumbers": [
+    564
+  ],
+  "correctionTaskNumber": 564,
+  "canonicalMainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "canonicalSourceBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+  "canonicalSourceSHA256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+  "latestCompositionSource": {
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe",
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md"
+  },
+  "correctionSource": {
+    "commit": "43e464bb68b591d5521d6c0eaa1118c265b86497",
+    "blob": "fb4c5d92e6d6e10336296173c8fc667a1789a99f",
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+    "readInFull": true
+  },
+  "sourceReadInFull": [
+    "C-PTreceipt",
+    "B-PTreceipt"
+  ],
+  "sourceFiles": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/sources/._paatoimittaja-codex-muistokuplat-era-b-kuittaus-20261019.md",
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/sources/._paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/sources/paatoimittaja-codex-muistokuplat-era-b-kuittaus-20261019.md",
+      "sha256": "940e2b30d911bac08741959cc8191af6adcbfb570c77e48cec40201fdc86bc53"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/sources/paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+      "sha256": "42977c5a62fc4ce479512fb1f9334ca9e09319370b4ae71d42e3bc051b0e5de2"
+    }
+  ],
+  "referenceRoles": "Old photographs used only for PT-approved artifact/background/light/framing. New whole photographs with deliberately different cast, not partial face edits. Europeanenvoy retention specifically allowed.",
+  "accepted6UntouchedVerified": [
+    {
+      "number": 31,
+      "sha256": "069f28459068bb2aa769d0e62d09a79f162e9190258f392bf7f7fea4adba5e84"
+    },
+    {
+      "number": 32,
+      "sha256": "205c9e9a2c0b836b4bdacd9e128d898ba8d1bbf2c3d869ae6a6b57d551fe8f33"
+    },
+    {
+      "number": 35,
+      "sha256": "707a588ee93af83d146d78d1df64a10507c29912da4c45f2eda0a96268a367ee"
+    },
+    {
+      "number": 36,
+      "sha256": "d7cd5666fab743682e749c99ad91852cb0cfa6f0133db4bf7f26e839bd495ca4"
+    },
+    {
+      "number": 38,
+      "sha256": "326b733a46c23ccefc8b20ed444dcdb5ec1b53fb9581f325161f0c9efc3f2c36"
+    },
+    {
+      "number": 39,
+      "sha256": "3447f54d6341f5e03a1293728923457a95042de45d11d7fd17bb69c67250ef9f"
+    }
+  ],
+  "namedPlaces": "No invented namedrooms; workshop/foundry/courtyard/hall remains unspecified where source unspecified."
+}
