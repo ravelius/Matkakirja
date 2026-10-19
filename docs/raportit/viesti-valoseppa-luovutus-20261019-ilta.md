@@ -12,8 +12,8 @@ LUKULISTA (PT 15.2x): Raamattu 7.20 TAVOITELUUPPI (pysähdys 2 kierrosta ilman p
   nostokortti-app e7f76a088) + parit → $D/nostokortti/parit3, lopuksi rivi "k4-jatko valmis → SIMU VAPAA JU:lle" JONO.md:hen.
   JOS RIVI ON JONO.md:ssä: lähetä JU:lle SIMU VAPAA (jos en ehtinyt). Jos ajo kesken: odota; älä tapa.
 - Pimennys k6 VALMIS koodissa: c2420def7 (iss-nostot-204, tarkista.sh 0, varjostimet kääntyvät vasta JU:lla). _IlmaReuna jätetty 0,25:een
-  (agentti: 0,6 tummentaisi kaarta; ohut tumma kaari tulee Ilmakeha2:n perusasetuksista) → KÄÄNNÖSPYYNTÖ JU:lle c2420def7 (pimennys 6 + vanat 10 jos k9 < 7).
-- Sonnet-arvioija vanat k9 (uusinta) kirjoittaa $D/vanat/kierrokset/k9/ARVIO.md.
+  (agentti: 0,6 tummentaisi kaarta; ohut tumma kaari tulee Ilmakeha2:n perusasetuksista) → KÄÄNNÖSPYYNTÖ JU:lle c2420def7 (vain pimennys 6; HUOM: haarassa vanat = k9-koodi, k7-palautus vain jos PT kytkee vanat).
+- Vanat k9 arvio valmis: 4,8 ($D/vanat/kierrokset/k9/ARVIO.md).
 
 ## 1. NOSTOKORTTI (omistaja 19.10. 12.11 + 13.31, junan 204 kriittinen polku)
 - linssiseppa2/nostokortti-204 5ffefb69e (kohdat 1,5,6,7,8,9 + NUI x-sulku 1335f92ba): PT KUITTASI, merge-pyyntö NS:lle lähetetty 16.1x.
@@ -30,7 +30,7 @@ Päätökset 15.2x (PT, 7.20) kirjattu $D/B5-iss-nostot-lista.md:
 |---|---|
 | Hurrikaani | PÄÄTTYI k10:een (4,5; paras k9 4,8). Kaytossa = false. Raportoi PT:lle paras pari k9 (hurrikaani/kierrokset/k9/). |
 | Tulivuoret | PÄÄTTYI: k12 kuvapohjainen testi 2,2 < 4 → pois ISS-valikosta (Kaytossa = false), ei uusia kierroksia. Kerro PT:lle. |
-| Vanat | k7 7,0 → k8 taantui 4,3 → k9 93bc7cef4 = k7:n koodi + _Harmaa 0,85, _VanhaAlfa 0,42. Arvio tulossa. ≥ 7 → Kaytossa = true + kuvaparit PT:lle. |
+| Vanat | k7 7,0 (havainne 5,5) → k8 4,3 → k9 4,8 (harso sininen/ohut, liikaa ohuita nuoria vanoja). 7.20: 2 kierrosta ilman parannusta k7:stä → PYSÄHDYS. PT:lle: paras k7 (vanat/kierrokset/k7/) – kysy, kytketäänkö k7-tila (Kaytossa) vai pois valikosta. |
 | Pimennys | k4 4,8, k5 4,7 (ei parannusta 1/2) → k6 c2420def7 VIIMEINEN (seepia vain umbraan, peitto 0,85, _Loiva, _Venyma 1,8). Jos k6 ≤ 4,8 → pysähdys, paras pari PT:lle. |
 Kierroksen ajo: kopioi ajo-nostot-204-k4.zsh → k5 (vanat 10 jos tarpeen, pimennys 6 POHJA=sk-pohja-k4.txt), KÄÄNNÖSPYYNTÖ JU:lle, SIMU NYT → ajo → tuoreet Sonnet-arvioijat.
 
