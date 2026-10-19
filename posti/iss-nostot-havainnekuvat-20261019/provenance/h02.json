@@ -1,0 +1,46 @@
+{
+  "taskNumber": 442,
+  "code": "h02",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:36:20.558145+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game shows Messina strait, Calabria dominant upper/right and only northeastern Sicily at bottom; source explicitly authorizes re-centering south-west onto Etna while preserving the steep oblique view and wide angular scale. Real ISS reference shows a long translucent broad buff-brown plume curving over blue sea, finely striated and fading, not an opaque dome.",
+  "promptSHA256": "6a6a0d60a937401e2befe8d7cd760202a6ce592240aaf9c758ccf72c9ae85d82",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h02/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:37:55.961616+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c5bff639-3215-4fbe-9018-899472f501a3.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h02.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h02.png",
+  "nativeSHA256": "50b0a688cbcf0ede6aad877b52b6f134d9bc35df44597304d97d19c637595938",
+  "deliverySHA256": "12d15efccf8f5daa601730f5ac2196b4891ec4316bdda946037cbab519da8a31",
+  "nativeBytes": 2766063,
+  "deliveryBytes": 2766288,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "bb21863d2ef78fd8913af350ca12fbdb5b777f67d80bb1096bd31b705439bc68",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "camera-centering-and-geographic-QA-failed",
+    "photoRealism": "Fine land/cloud texture, muted blue sea and broad buff ash veil; near-vent column more sculpted than real reference.",
+    "cameraMatch": "Wide steep obliquity retained, but source-authorized re-centering FAILED: vent remains at about x0.62,y0.70 rather than center.",
+    "takenFromRealReferences": "Broad diffuse tan ash plume, translucent downwind filaments and muted sea/land colors.",
+    "invented": "Exact ash shape/cloud positions; crater and local coastline relation not reliable. Etna appears close to Sicily's northeastern tip; location not independently verified.",
+    "excludedOverlays": "No visible Cupola frame, interface or text.",
+    "noRetry": true,
+    "metadataLabel": "havainnekuva"
+  }
+}

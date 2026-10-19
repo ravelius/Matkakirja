@@ -1,0 +1,11 @@
+{
+  "personallyInspectedNative": true,
+  "visualDisposition": "camera-centering-and-geographic-QA-failed",
+  "photoRealism": "Fine land/cloud texture, muted blue sea and broad buff ash veil; near-vent column more sculpted than real reference.",
+  "cameraMatch": "Wide steep obliquity retained, but source-authorized re-centering FAILED: vent remains at about x0.62,y0.70 rather than center.",
+  "takenFromRealReferences": "Broad diffuse tan ash plume, translucent downwind filaments and muted sea/land colors.",
+  "invented": "Exact ash shape/cloud positions; crater and local coastline relation not reliable. Etna appears close to Sicily's northeastern tip; location not independently verified.",
+  "excludedOverlays": "No visible Cupola frame, interface or text.",
+  "noRetry": true,
+  "metadataLabel": "havainnekuva"
+}
