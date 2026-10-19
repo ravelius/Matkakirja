@@ -1,6 +1,6 @@
 # Juoksupeli: huudahduslista omistajan hyväksyttäväksi (Sisältökirjuri 19.10.2026)
 
-**EI generoitu.** 51 rikkoutuvaa esinettä × 4 huutoa + 30 yleishuutoa + jadepersikan 2 poimintahuutoa. Huutoja on vain YKSI versio (sama teksti kuplassa ja äänenä), kukin ≤ 39 merkkiä. Tunnetagi joka riville: `[out of breath] [panicked] ` (Äänittäjän; = puhuja JUOKSEE ja PARKAISEE). Avainpaketti `docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json`; generointilista (rivi + tagi) `docs/raportit/juoksupeli-huudot-generointilista-20261019.json`.
+**EI generoitu.** 51 rikkoutuvaa esinettä × 4 huutoa + 30 yleishuutoa + jadepersikan 2 poimintahuutoa. Huutoja on vain YKSI versio (sama teksti kuplassa ja äänenä), kukin ≤ 39 merkkiä. Tunnetagi joka riville: `[shouting] [panicked] ` (Äänittäjän; = puhuja JUOKSEE ja PARKAISEE). Avainpaketti `docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json`; generointilista (rivi + tagi) `docs/raportit/juoksupeli-huudot-generointilista-20261019.json`.
 
 ## Merkkimäärät
 
@@ -470,3 +470,7 @@ Muoto `juoksupeli.rikkoutuva.<id>.versio.<n>.kupla/.huuto/.tyyppi/.fakta` (PK:n 
 | 8 | `lasimaljakko` | 6: Riemastunut lasinpuhaltaja muotoilee lasimaljakkoa palatsin lasipajassa, kirkas työpaja | „Oho! Keisarin lasipaja teki tämän!“ | Kangxi perusti hovin lasipajan 1696 |
 | 9 | `sivellin` | 3: Hymyilevä opettaja karttakeppi kädessä opettaa kalligrafiaa, pikku-Puyi (kaapu, letti, noin 8 v) kirjoittaa sivellimellä pulpetissa Yuqing-koulusalissa | „Apua! Tällä opin kirjoittamaan!“ | Puyi aloitti koulun 1911 Yuqing-palatsissa |
 | 10 | `bianqing-kivikellot` | 5: Hymyilevät hovin soittajat lyövät kivilevyjä nuijilla juhlassa, kivikellot telineessä, hovin naiset mantšuasuissa | „Kling! Tämä soi uudenvuoden juhlassa!“ | bianqing kuului hovin juhlamusiikkiin (zhonghe shaoyue) |
+
+## Tunnetagi lukittu (omistaja 10.44)
+
+Tagi `[shouting] [panicked]`; huudon alkuun "Aa!" tai "Eei!!" (Äänittäjän muoto). Generointilistassa vain hyväksytyt KK-erät (nyt erä 1, 10 riviä). Aiemmat maininnat `[out of breath]` korvattu.
