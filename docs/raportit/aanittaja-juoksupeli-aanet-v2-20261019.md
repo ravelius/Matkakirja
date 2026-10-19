@@ -22,3 +22,6 @@ Ehdotus: haetaan ensin vain ne nollat, joita peli oikeasti soittaa (askel-katto,
 
 ## Tiedostot
 `_tyo/juoksupeli-aanet-v2-20261019/`: `rakenna_v2.py`, `silmukat_v4*.py`, `*-tulos.json`.
+
+## Nollakierros (PT 19.10. ~19.55: askel-katto, liuku, puu, kivi-jade)
+Soundlysta haettu ja ladattu 14 kokonaista valmista tiedostoa (askel-katto 4, liuku 3, puu 4, kivi-jade 3; raakatiedostot NAS:lla). Gemini 3.1 Pro -sokko hyväksyi vain 1: puu = "Wood, Break, Panel, Plywood, Bend, Splinter, Snap 03" (2,3 s). Muut hylättiin tarvetta vasten: Gemini kuuli esim. vaahtomuovialustan liu'un "vetoketjuna", paljasjalka-askeleet "märkinä läiskäyksinä" ja kivi-iskut "lasin tai korkeiden klikkausten" kuuloisina. Tulos: askel-katto 0, liuku 0, puu 1, kivi-jade 0. Ei viety (yksi puu-ääni ei ole oma pakettinsa; lisään sen seuraavaan pakettiin).
