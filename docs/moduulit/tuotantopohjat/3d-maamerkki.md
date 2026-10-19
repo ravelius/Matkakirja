@@ -62,7 +62,7 @@ yksityiskohdat `VERTAILU.md`:hen ja luovutukseen. Agentit vain Opus ja Sonnet.
 4. **Suojatut veistokset ja yksityiskohdat pois mallista ja tilauksista** (alle 70 vuotta tekijän kuolemasta), samoin
    suojatut valaistussuunnitelmat (Raamattu, SUOJATUT VALAISTUKSET). Vanha teos, jolla on uusi valos, on vapaa, jos alkuperäinen
    on (Ludvig XIV:n ratsastajapatsas, Berninin teoksen lyijyvalos).
-5. **Euroopan ulkopuolelle ei uutta ilman omistajan päätöstä** (VAIN EUROOPPA); kartta nykyajassa (AIKA): nykyiset rakenteet saa
+5. **Euroopan ulkopuolelle ei uutta ennen omistajan aloituspäätöstä** (MUUT MAANOSAT VÄHITELLEN); kartta nykyajassa (AIKA): nykyiset rakenteet saa
    tehdä, vaikka niitä ei ollut 1873.
 
 ### 2.2 Lähteet

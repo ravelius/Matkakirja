@@ -10,7 +10,7 @@ Pääkaupungin avaus = kaikki, mitä pelaaja saa, kun pääkaupunki avataan: kau
 Pulun repliikit. Pohja kattaa tekstin ja sen tarkistuksen; kartan, natiivin ja äänen työ on omissa osissaan (luvut 7–9).
 Se ei kata 3D-maamerkkiä (oma pohja), eikä uuden maanosan kaaritekstejä (`tarinakaari.md`).
 
-**Rajaus (Raamattu, VAIN EUROOPPA ja KAIKKI MAAT JA PÄÄKAUPUNGIT):** uusi pääkaupunkisisältö tehdään Euroopalle; muille
+**Rajaus (Raamattu, MUUT MAANOSAT VÄHITELLEN ja KAIKKI MAAT JA PÄÄKAUPUNGIT):** uusi pääkaupunkisisältö tehdään Euroopalle; muille
 maanosille vain omistajan erillisellä päätöksellä. **Avaamisen ehto:** esittelyt ovat valmiit ja pääkaupungin 3D-mittaus on
 läpäisty (esim. Varsova, Tallinna, Sarajevo ja Vaduz eivät 16.10. läpäisseet 3D-laatua, joten niiden avausta ei aloiteta).
 
@@ -162,5 +162,5 @@ Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttuu pohjassa.
 (luvut 4–6, 8), `docs/moduulit/livia-aani.md`, `docs/moduulit/tuotantopohjat/kertojan-teksti-ja-aani.md`,
 `docs/kohtaukset/oppaan-esittelyt/tyokalut/ohje-agentille.txt`, raportit `docs/raportit/oppaan-esittelyt-7-20261016.md`,
 `kaupunkiesittelyt-7-20261016.md`, `paakaupunkilehdet-pistokoe-20261012.md`, `paakaupunkikysymykset-pistokoe-20261012.md`;
-Raamattu: PÄÄKAUPUNKIEN ESITTELYT ARVIOIDAAN ITSE, KAIKKI MAAT JA PÄÄKAUPUNGIT, VAIN EUROOPPA, AIKA, TUOTANTOPOHJAT,
+Raamattu: PÄÄKAUPUNKIEN ESITTELYT ARVIOIDAAN ITSE, KAIKKI MAAT JA PÄÄKAUPUNGIT, MUUT MAANOSAT VÄHITELLEN, AIKA, TUOTANTOPOHJAT,
 TUOTANTOPOHJIEN SANASTO.
