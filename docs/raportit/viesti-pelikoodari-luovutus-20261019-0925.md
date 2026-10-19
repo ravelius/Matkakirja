@@ -119,3 +119,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - 10.43: **ef127330a** kääretaulu (V4EsteLaji.Kaaretaulu, osa 15, repeää aina, liuskat heiluvat; Codex: kaaretaulu/-revitty/-liuska.glb, sopimus ESTEMALLIT-CODEXILLE.md).
 - TULEVA (omistaja 10.38): kun juoksupeli valmistuu Codexin grafiikalla → SIMUN KUVAKAAPPAUS (grafiikka, mittasuhteet, näkyvä alue) PT → KK → omistaja; ei videota.
 - Odottaa yhä: uniefekti 0,7 s hyväksyntä, tekstityskysymys (KK).
+- 10.4x PT: omistaja HYVÄKSYI aaltoilun 10.44 ("Sopii") → koko haara juoksupeli-kamera-204 kärki ef127330a (⊃ 3da1369de, 0956ff99f) NS:lle SIMUN JÄLKEEN junaan 204.
+  Puyin ääni lukittu: 23 Horatius [shouting] [panicked]; huudot tulevat Äänittäjältä erissä → kytke RikkoRepliikki/yleishuuto ääniksi kun saapuvat.
