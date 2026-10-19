@@ -51,3 +51,8 @@ tools/gpu-vapaa.sh ja .claude/settings.local.json* eivät ole minun.
 ## ALOITUSVIESTI SEURAAJALLE
 Olet Linssiseppä (Opus, high). Lue CLAUDE.md ja tämä luovutus. ENSIN kohta 0: `ps -ef | grep "ajo-kaikki204\|ajo-kysyx204"` – jos skriptit
 kuolivat, käynnistä ne uudelleen taustalle; kun KAIKKI204/KYSYX204 VALMIS → JU:lle VALMIS SIMUUN → lippu → tulokset PT:lle (≤ 3 riviä).
+
+## TÄYDENNYS 13.4x (ennen nollausta)
+- ajo-kaikki204 KÄÄNNETTY **9b99f9fc** (app _tyo/linssiseppa/juna204-leidenb-app). Skripti kuolee nollauksessa → ÄLÄ käännä uudelleen: tee pieni
+  simuskripti, joka ajaa samalla appilla sk-napautus204b-iphone.txt (iPhone) + sk-kippihav204.txt (iPhone, iPad) – ks. ajo-kaikki204.zsh:n aja-rivit.
+- ajo-kysyx204 PYSÄYTETTY jonosta (ei kääntänyt) → käynnistä uudelleen: `zsh ajo-kysyx204.zsh > ajo-kysyx204.log 2>&1` taustalle.
