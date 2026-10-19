@@ -5,6 +5,8 @@ klo 17.25–17.29), 2.19 LÖYTÖHETKI VIDEONA, 2.105 LENTO VIDEONA, 2.159 UNI VI
 (posti 4e62c3b21 ja 5d4f8bfea), Natiivi-UI:n löytövideon kytkentä (304b84312) ja `codex-3d-toimitus.md`; uusia sääntöjä ei ole.
 Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Pohjan muutokset hyväksyy PT.)*
 
+**MUUTOS 19.10.2026 klo 18.25 ja 18.29 (omistaja, Raamattu 4.21 KUKA TEKEE ja 2.105 SAVU VIDEOSSA):** raketti, valas ja uni kuvataan pelin omasta Unity-kohtauksesta kuva kerrallaan täydellä laadulla (Claude: oma video-laatutaso, savun puhelinrajat pois, Unity Recorder tai oma tallennin). Tämän pohjan Codex/Blender-kulku koskee enää vain aarteen löytöhetkeä. Codexin rakettikokeilu 665–667/670 pysäytetty (posti 34f60ff35).
+
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen tilausta tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva tai mallikuva (aarre: hyväksytty mallikuva, jonka valoon ja materiaaleihin videon ruutua verrataan); KAMERA kuvakäsikirjoitus (raketti, uni: kohtaukset aikaleimoineen, esim. "0–3 s sytytys ja pölypilvi, kamera alustan tasolla"); ÄÄNI mallinäyte ja lyhyt kuvaus, jos videolla on ääniraita (9.11); KÄYTTÖLIITTYMÄ kuvakaappaus, johon videon päälle tulevat tekstit, mittarit ja havainnekuva-merkintä on piirretty. Tavoite liitetään Codexin tilaukseen. Omistajalle tuodaan vain uudet asiat ja makuvalinnat (esim. ensimmäinen kokeilu); muut tavoitteet hyväksyy PT.
 
 Pohja kattaa kohtaukset, joissa ei tarvita vuorovaikutusta ja joissa laatu ratkaisee: aarteen löytöhetki, raketin lento ja
