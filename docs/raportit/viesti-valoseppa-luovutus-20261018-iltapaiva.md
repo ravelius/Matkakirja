@@ -25,7 +25,8 @@ linssiseppa2/kyyti-sininen-diag (diag-commitit + a7c0afa1a) EI junaan; diag-appi
 - se-atlas leivottu vanhoilla arvoilla; LR ei leivo uusilla ennen louvre4-kuvia – jos leipoo, palauta ajonaikainen heijastus/ambient samalla.
 - MuseoHenkilot.Paalla yhä false (kehityslippu) → true + testi, kun KK hyväksyy pelikuvat.
 
-## 3. TRIPO (19.10. CHROMESSA Max-tilauksella Sonnet-apulaisella pienellä muistilla, EI rajapintaa – OMISTAJAN PÄÄTÖS 13.24 kumoaa 12.46:n; API-saldo 0, ei osteta)
+## 3. TRIPO – PERUTTU (19.10.): omistaja 07.20 "Työstän tätä codexin kanssa, ei pyydetä mitään muutoksia." (hahmot Pulu, Puyi, vartija, Louvren nainen: omistaja ohjaa Codexin kanssa suoraan) ja 08.28 "Tee jatkossa kaikki tripo mallit pyytämällä ne codexilta." → alla oleva EI ole enää Valosepän työtä, ei Codex-pyyntöjä. Vanha teksti:
+## (vanha) 3. TRIPO (19.10. CHROMESSA Max-tilauksella Sonnet-apulaisella pienellä muistilla, EI rajapintaa – OMISTAJAN PÄÄTÖS 13.24 kumoaa 12.46:n; API-saldo 0, ei osteta)
 - k2 + vartija valmiina: media.matkakirja.app/taidemuseo/louvre-ihmiset-v1/{k2,vartija}.glb (30 k, 2K; kevennys $L/tripo/kevenna.py).
 - 19.10. klo 10 jälkeen: k1:n hiukset, Pulun korjaukset (niskasauma; silmät ORANSSEIKSI #E07A1F – Tripo-Pulun 11.41 silmät olivat RUSKEAT, pelin piirroksessa oranssit (PT 18.10. korjaus); pyrstö viuhkaksi), Puyi + vartija luurankoineen
   (rig-check → rig → retarget; Humanoid; Quaternius UAL CC0 lisäliikkeet). Kaikki Tripo-sivuston kautta Chromessa (Max-tilaus), apulaisena
