@@ -1,0 +1,658 @@
+{
+ "esineet": [
+  {
+   "id": "posliinimaljakko",
+   "nimi": "Posliinimaljakko",
+   "repliikit": [
+    "Hups! Maljakko meni sirpaleiksi!",
+    "Jingdezhenin keisarillisista uuneista!",
+    "Vahtimestari kalpenee, hui!",
+    "Kilahti kuin pieni kulkunen, hih!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Qing-hovin posliini tehtiin Jingdezhenin keisarillisissa uuneissa, ja hovituotanto päättyi vasta vuonna 1911.",
+   "kupla": "Qing-ajan vaatteisiin pukeutunut hovin virkamies pitelee ehjää posliinimaljakkoa ja kertoo siitä, punaisten pylväiden välissä, aamuvalo."
+  },
+  {
+   "id": "sinivalkoinen-maljakko",
+   "nimi": "Sinivalkoinen maljakko",
+   "repliikit": [
+    "Sinivalkoinen maljakko on palasina!",
+    "Koboltti tuotiin Persiasta asti!",
+    "Opettaja suuttuu, näytti sen juuri!",
+    "Sininen sirpale jäi kengän alle!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Sinivalkoisen posliinin koboltti tuotiin Persiasta, ja Jingdezhenissä sitä alettiin tehdä paljon 1300-luvulla.",
+   "kupla": "Riemastunut vanha opettaja pitelee ehjää sinivalkoista maljakkoa ja kertoo siitä, ikkunasta tulvii lämmin iltavalo, kirjahyllyjä taustalla."
+  },
+  {
+   "id": "famille-rose-maljakko",
+   "nimi": "Famille rose -maljakko",
+   "repliikit": [
+    "Famille rose! Nyt famille roskaa!",
+    "Tyyli on yli 150 vuotta vanhaa!",
+    "Isoäiti pitää taas äänekkään puheen!",
+    "Pam ja kilinä, korvia särki!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1723–1795",
+   "fakta": "Vaaleanpunaiseen sävyyn perustuva famille rose -tyyli kehittyi täyteen mittaansa Yongzhengin kaudella.",
+   "kupla": "Ylpeä vanha keräilijä pitelee ehjää vaaleanpunaista famille rose -maljakkoa, kertoo siitä vihreän lampun valossa vanhassa kabinetissa."
+  },
+  {
+   "id": "keltalasitteinen-kulho",
+   "nimi": "Keltalasitteinen kulho",
+   "repliikit": [
+    "Keltainen kulho, keisarin oma väri!",
+    "Keltaista varattiin keisarin käyttöön!",
+    "Hovin virkamies pitää kauhean metelin!",
+    "Kulho pomppasi kuin kolikko, hihhei!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700–1800-luku",
+   "fakta": "Keltaista pidettiin keisarin värinä, ja sitä varattiin keramiikassa ja kankaissa pääosin keisarin käyttöön.",
+   "kupla": "Hoviviskaali kultaisessa silkkitakissa pitelee ehjää keltaista kulhoa ja kertoo siitä, keltaverhoisessa salissa lyhdyn valossa."
+  },
+  {
+   "id": "celadon-kulho",
+   "nimi": "Celadon-kulho",
+   "repliikit": [
+    "Jadenvihreä celadon on nyt rikki!",
+    "Vihreä kuin jade, tehty vuosisatoja!",
+    "Palvelija huokaa: taas lakaistavaa!",
+    "Pirstaleet ovat vihreitä kuin sammakko!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Celadonin jadenvihreä väri syntyy lasitteen rautaoksidista; Zhejiangin Longquanin uunit ovat kuuluisia siitä.",
+   "kupla": "Hymyilevä nuori museoopas pitelee ehjää jadenvihreää celadon-kulhoa ja kertoo siitä, valkoisessa kivihuoneessa viileässä aamuvalossa."
+  },
+  {
+   "id": "yixing-teekannu",
+   "nimi": "Yixing-teekannu",
+   "repliikit": [
+    "Teekannu! Ei teetä enää tänään!",
+    "Savi on imenyt teetä vuosien ajan!",
+    "Isoäiti jäi ilman teehetkeään!",
+    "Kansi vielä kierii kuin pieni pyörä!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700–1800-luku",
+   "fakta": "Yixingin teekannut tehtiin Jiangsun purppurasavesta, ja savi imee itseensä hieman teetä käytön myötä.",
+   "kupla": "Hellä isoäiti pitelee ehjää punaruskeaa Yixing-teekannua ja kertoo siitä, keittiössä höyryävän teen ja kynttilän valossa."
+  },
+  {
+   "id": "doucai-kuppi",
+   "nimi": "Doucai-kuppi",
+   "repliikit": [
+    "Pikku doucai-kuppi meni rikki!",
+    "Maalattu ja poltettu kahteen kertaan!",
+    "Kai joku hovin virkamies suuttuu!",
+    "Kilks! Niin pieni, ei ehtinyt huutaa!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Doucai-koristeessa sininen ääriviiva maalataan lasitteen alle ja värit lisätään päälle toisessa poltossa.",
+   "kupla": "Utelias kalligrafi pitelee ehjää pientä doucai-kuppia lähikuvassa ja kertoo siitä, tussikivien ja paperirullien ääressä, pehmeä päivänvalo."
+  },
+  {
+   "id": "nuuskapullo",
+   "nimi": "Posliininen nuuskapullo",
+   "repliikit": [
+    "Nuuskapullo! Mahtui kokonaan kämmeneen!",
+    "Pieni mutta keisarillisen arvokas!",
+    "Opettaja sanoo: muista käytöstavat!",
+    "Ptruu, korkki lensi ihan itsekseen!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700–1800-luku",
+   "fakta": "Nuuskapulloja tehtiin lasista ja posliinista, ja ne olivat niin pieniä, että ne mahtuivat kämmeneen.",
+   "kupla": "Hymyilevä vanha kauppias pitelee ehjää posliinista nuuskapulloa kämmenellään ja kertoo siitä, toria ja lyhtyjä sumeana taustalla illalla."
+  },
+  {
+   "id": "kalakulho",
+   "nimi": "Kalakulho",
+   "repliikit": [
+    "Kalakulho! Vettä lensi kaikkialle!",
+    "Kultakalat sisälle jo Ming-aikana!",
+    "Isoäiti näkee lammikon ennen minua!",
+    "Splash! Kengät ovat ihan märät!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Kultakaloja alettiin pitää sisätiloissa Ming-kaudella, ja silloin syntyivät koristepyrstöiset lajikkeet.",
+   "kupla": "Naurava puutarhuri pitelee ehjää suurta kalakulhoa kultakaloineen ja kertoo siitä, lootuslammen äärellä, vihreää heijastusvaloa."
+  },
+  {
+   "id": "tuoksupoltin",
+   "nimi": "Tuoksupoltin",
+   "repliikit": [
+    "Tuoksupoltin kaatui, tuhka pölisi!",
+    "Näitä tehty yli kaksi tuhatta vuotta!",
+    "Palatsin siivooja yskii ja yskii!",
+    "Hatsii! Nyt kaikki tuoksuu minulle!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Vanhimmat kiinalaiset tuoksupolttimet eli xianglu ovat Taistelevien valtioiden ajalta, noin 400-luvulta eaa.",
+   "kupla": "Rauhallinen vanha munkki pitelee ehjää pronssista tuoksupoltinta, josta nousee kevyt savu, hämärässä temppelissä kynttilänvalossa."
+  },
+  {
+   "id": "jadeastia",
+   "nimi": "Jadeastia",
+   "repliikit": [
+    "Jadeastia! Vihreä ja jääkylmä!",
+    "Jade oli kultaakin arvokkaampaa!",
+    "Isoäiti suuttuu, tämä oli jadea!",
+    "Voi! Se kilahti kuin pieni kello!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Kiinassa jadea arvostettiin kulta- ja hopeaakin enemmän; jadeveisto huipentui Qianlongin aikana.",
+   "kupla": "Riemastunut vanha opettaja pitelee vihreää jadeastiaa ehjänä kynttilänvalossa kirjastohuoneessa, kertoo innoissaan; ei tekstiä kuvaan."
+  },
+  {
+   "id": "jadesinetti",
+   "nimi": "Keisarin jadesinetti",
+   "repliikit": [
+    "Sinetti! Ihan oikeaa vihreää jadea!",
+    "Qianlongin sinetti, Palatsin suurin!",
+    "Hovin vahtimestari huutaa taas!",
+    "Pamahti! Sinetti sanoi viimeisen sanan!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luvun loppu",
+   "fakta": "Qianlongin eläkeaikojen jadesinetti on Wienin museon mukaan Palace Museumin suurin jadesinetti.",
+   "kupla": "Hovin virkamies Qing-ajan viitassa pitelee ehjää vihreää jadesinettiä molemmin käsin punaisessa seremoniasalissa; ei tekstiä kuvaan."
+  },
+  {
+   "id": "jadevuori",
+   "nimi": "Jadevuori",
+   "repliikit": [
+    "Vuori! Pieni vuori, ja ihan jadea!",
+    "Keisari tilasi sen ennen syntymääni!",
+    "Isoäiti valittaa: ei vuorta käytävälle!",
+    "Vanhukset tipahtivat vuoren kyydistä!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1787",
+   "fakta": "Qianlong tilasi vuonna 1787 yli metrin korkuisen jadevuoren, jossa on Huichangin yhdeksän vanhusta.",
+   "kupla": "Iäkäs jadenveistäjä esittelee ehjää jadevuorta pajansa himmeässä ikkunavalossa, ylpeä ilme; ei tekstiä kuvaan."
+  },
+  {
+   "id": "ruyi-valtikka",
+   "nimi": "Ruyi-valtikka",
+   "repliikit": [
+    "Ruyi! Se kiemurainen onnenvaltikka!",
+    "Qing-hovin vallan ja onnen merkki!",
+    "Hovin puolisot parkuvat: onni karkasi!",
+    "'Niin kuin haluat' - halusin juosta!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Ruyi oli Qing-hovin vallan ja onnen merkki; Palace Museumissa on lähes 3000 ruyi-valtikkaa.",
+   "kupla": "Iäkäs hovin kamarineito pitelee ehjää ruyi-valtikkaa punalakkaisen käytävän pylväiden välissä, hellä hymy; ei tekstiä kuvaan."
+  },
+  {
+   "id": "mughal-jadekuppi",
+   "nimi": "Mughal-jadekuppi",
+   "repliikit": [
+    "Kuppi! Tällaisia tehtiin Intiassa!",
+    "Keisari ihaili näitä ja runoili!",
+    "Virkamiehet suuttuvat aina, tiedän sen.",
+    "Kilahti! Jadekin pitää ääntä!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Mughal-tyyli",
+   "vuosi": "tuotu 1700-luvulla",
+   "fakta": "Qianlong ihaili Mughal-jadeita ja kirjoitti niistä runoja; Palace Museumilla on niitä kokoelmassaan.",
+   "kupla": "Silkkitien kauppias turbaanissa pitelee ohutta ehjää jadekuppia karavaanimajatalon lyhdynvalossa, ihaileva ilme; ei tekstiä kuvaan."
+  },
+  {
+   "id": "bi-kiekko",
+   "nimi": "Muinainen bi-kiekko",
+   "repliikit": [
+    "Reikäkiekko! Sanottiin sitä biksi!",
+    "Näitä tehtiin jo kivikaudella asti!",
+    "Opettaja suuttuu, sotkin historian!",
+    "Se vierähti pitkin lattiaa kuin vanne!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Liangzhu",
+   "vuosi": "n. 3400–2250 eaa.",
+   "fakta": "Bi on reikäinen jadekiekko, vanhimmat uudelta kivikaudelta; Qianlong kaiversutti vanhaan biin tekstin.",
+   "kupla": "Nuori arkeologi pitelee ehjää reikäistä jadekiekkoa kaivauksella aamuauringossa, hämmästynyt ilme; ei tekstiä kuvaan."
+  },
+  {
+   "id": "norsunluupallo",
+   "nimi": "Norsunluinen kerrospallo",
+   "repliikit": [
+    "Pallo, jonka sisällä on pallo...",
+    "Yhdestä norsunluusta, ihan taidetta!",
+    "Imettäjä parkuu: pallo meni sekaisin!",
+    "Kerrokset pyörivät nyt lattialla!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Kerrospallo veistetään yhdestä norsunluusta, ja sen kerrokset pyörivät; muodon uskotaan syntyneen Kantonissa.",
+   "kupla": "Hymyilevä isoäiti pitelee ehjää norsunluista kerrospalloa ja pyöräyttää sitä, lämmin lampunvalo keittiössä; ei tekstiä kuvaan."
+  },
+  {
+   "id": "duan-mustekivi",
+   "nimi": "Duan-mustekivi",
+   "repliikit": [
+    "Mustekivi! Siinä hierotaan mustetta.",
+    "Yksi tutkijan neljästä aarteesta!",
+    "Opettaja suuttuu, muste ei hierry!",
+    "Vakava kivi, ei edes hievahtanut!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1644–1912",
+   "fakta": "Duan-mustekivi on Zhaoqingin seudun purppuranpunertavaa tuffia, yksi tutkijan neljästä aarteesta.",
+   "kupla": "Vanha tutkija-virkamies pitelee ehjää purppuranpunaista mustekiveä kirjoituspöytänsä kynttilänvalossa, tyytyväinen; ei tekstiä kuvaan."
+  },
+  {
+   "id": "bianqing-kivikellot",
+   "nimi": "Bianqing-kivisoitin",
+   "repliikit": [
+    "Kivikellot! Niitä lyödään nuijalla!",
+    "Juhlamusiikissa soitettu ikiajoista!",
+    "Virkamiehet suuttuvat, musiikki mykkä!",
+    "Kolahti! Soi vielä kerran, ei enää!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1760-luku",
+   "fakta": "Bianqing on ripustettujen kivilevyjen soitin; Qianlongin aikana niitä tehtiin myös läntisten alueiden jadesta.",
+   "kupla": "Hovin muusikko pitelee ehjää jadekivilevyä ja pientä nuijaa juhlasalin kultaisessa valossa, keskittynyt ilme; ei tekstiä kuvaan."
+  },
+  {
+   "id": "jadekirja",
+   "nimi": "Jadekirja",
+   "repliikit": [
+    "Kirja, jonka sivut ovat kiveä!",
+    "Keisarin essee on täytetty kullalla!",
+    "Opettaja suuttuu, pudotin lukematta!",
+    "Sivut kilisivät kuin kolikot!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Jadekirjan sivut ovat jadelevyjä; Metin Qianlongin jadekirjassa keisarin essee on täytetty kullalla.",
+   "kupla": "Hiljainen munkki pitelee ehjää jadekirjaa ja kääntää sen kultakirjoitteista levyä luostarihuoneen pehmeässä valossa; ei tekstiä kuvaan."
+  },
+  {
+   "id": "cloisonne",
+   "nimi": "Cloisonné-vati",
+   "repliikit": [
+    "Ups, emalivati kolahti lattiaan!",
+    "Hovilla oli oma emalipaja tähän!",
+    "Vahtimestari tulee huokailemaan!",
+    "Hih, langat jäi kuin seitti!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Cloisonnéssa metallilangat rajaavat emalilokerot. Kangxin hovilla oli jo oma cloisonné-työpaja.",
+   "kupla": "Riemastunut vanha opettaja pitelee ehjää cloisonné-vatia kämmenillään ja selittää, himmeä lamppu ja punaiset verhot taustalla; ei tekstiä."
+  },
+  {
+   "id": "ding-astia",
+   "nimi": "Pronssinen ding-astia",
+   "repliikit": [
+    "Ding! Iso pronssipata kaatui!",
+    "Tällaisia on tehty tuhansia vuosia!",
+    "Opettaja näytti tämän. Nyt on rikki!",
+    "Ei se keitä enää mitään! Hih!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Shang ja Zhou",
+   "vuosi": "n. 1600–256 eaa.",
+   "fakta": "Ding on jaloilla seisova pronssikattila, jota käytettiin ruoanlaittoon ja uhrilahjoihin esi-isille.",
+   "kupla": "Kunnioittava vanha kirjanoppinut pitelee ehjää pronssista ding-astiaa, taustalla kynttilöin valaistu uhrisali; ei tekstiä."
+  },
+  {
+   "id": "zun-malja",
+   "nimi": "Pronssinen zun-malja",
+   "repliikit": [
+    "Zun! Korkea viinimalja kilahti!",
+    "Hovi luetteloi vanhoja pronsseja!",
+    "Isoäiti päivittelee kolahdusta!",
+    "Ai että soi! Kuin temppelikello!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Shang ja Zhou",
+   "vuosi": "n. 1600–256 eaa.",
+   "fakta": "Zun on korkea viini- ja uhrimalja; Qianlongin hovi luetteloi muinaispronssit teokseen Xiqing gujian.",
+   "kupla": "Ylpeä hovin arkistovirkamies Qing-ajan viitassa nostaa ehjää zun-maljaa ja hymyilee, taustalla puinen kirjahylly ja aamuvalo; ei tekstiä."
+  },
+  {
+   "id": "pronssikurki",
+   "nimi": "Pronssikurki",
+   "repliikit": [
+    "Kurki! Pronssikurki kaatui kyljelleen!",
+    "Pitkän iän lintu, nyt lyhyempi ikä!",
+    "Virkamiehet hätääntyvät: lintu kaatui!",
+    "Hih! Kurki sanoi kling, ei lentänyt!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "sali 1695–1697",
+   "fakta": "Pronssikurkupari seisoo Taihe-salin terassilla; kurki on pitkän iän vertauskuva.",
+   "kupla": "Iloinen vanha puutarhuri pitelee pientä ehjää pronssikurkea sylissään marmoriterassilla, kirkas aurinko ja kaide taustalla; ei tekstiä."
+  },
+  {
+   "id": "pronssikilpikonna",
+   "nimi": "Pronssikilpikonna",
+   "repliikit": [
+    "Kilpikonna! Ei se kävellyt karkuun!",
+    "Pitkän iän merkki, ja minä kaadoin!",
+    "Vanha vartija ottaa tämän tosissaan!",
+    "Ei se vetäytynyt kuoreen! Hih!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "sali 1695–1697",
+   "fakta": "Pronssikilpikonnapari seisoo Taihe-salin terassilla ja kuvaa toivetta kestävästä vallasta ja pitkästä iästä.",
+   "kupla": "Hymyilevä vanha portinvartija pitelee ehjää pronssikilpikonnaa, taustalla kirkas taivas ja punaiset pilarit; ei tekstiä."
+  },
+  {
+   "id": "kullattu-vesiastia",
+   "nimi": "Kullattu vesiastia",
+   "repliikit": [
+    "Vesiastia! Se iso kultainen kaatui!",
+    "Yksi palatsin arvokkaimmista astioista!",
+    "Imettäjä huutaa, lattia on märkä!",
+    "Splash! Vettä tulipalon varalle!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1644–1912",
+   "fakta": "Kullatut pronssiastiat olivat palatsin vesiastioista arvokkaimpia; vettä käytettiin tulipalojen sammutukseen.",
+   "kupla": "Innostunut nuori palomestari näyttää pientä ehjää kullattua pronssiastiaa sisäpihalla, lämmin iltavalo; ei tekstiä."
+  },
+  {
+   "id": "vuoripoltin",
+   "nimi": "Vuoripoltin",
+   "repliikit": [
+    "Tuoksupoltin! Pikku vuori vieri!",
+    "Han-ajan mallin jäljennös, hieno!",
+    "Vanha hovinainen ei ilahdu tästä!",
+    "Hihii, vuori vieri alas kuin kivi!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1736–1795",
+   "fakta": "Vuoripoltin jäljittelee Han-ajan mallia; Qianlong tilasi 1743 valimolta astioita muinaisten mallien mukaan.",
+   "kupla": "Haltioitunut vanha antiikkikauppias pitelee ehjää vuorenmuotoista polttimea, josta nousee savua, hämärä työhuone; ei tekstiä."
+  },
+  {
+   "id": "cloisonne-poltin",
+   "nimi": "Cloisonné-tuoksupoltin",
+   "repliikit": [
+    "Tuoksupoltin! Emalikuviot kilisivät!",
+    "Raskas runko ja emalia päällä, kallis!",
+    "Palvelijat huomaavat: tuoksu loppui!",
+    "Hups! Painava, mutta kaatui silti!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Cloisonnén metallilangat rajaavat emalilokerot; varhaiset rungot olivat raskasta pronssia tai messinkiä.",
+   "kupla": "Ylpeä hovin palvelija pitelee ehjää cloisonné-tuoksupoltinta, taustalla sininen silkkiverho ja pehmeä ikkunavalo; ei tekstiä."
+  },
+  {
+   "id": "falangcai",
+   "nimi": "Falangcai-posliini",
+   "repliikit": [
+    "Falangcai! Kukat oli maalattu käsin!",
+    "Tehtiin vain keisarin omaan käyttöön!",
+    "Hovin kirjuri kalpenee kuin posliini!",
+    "Plink! Kuin pieni kello soisi!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1662–1795",
+   "fakta": "Falangcai: Jingdezhenin posliinille Kielletyssä kaupungissa maalattua emalia, tehty vain keisarin käyttöön.",
+   "kupla": "Hurmaantunut vanha maalari pitelee ehjää kukkamaalattua posliinikulhoa valoa vasten, kirkas työpajan ikkuna; ei tekstiä."
+  },
+  {
+   "id": "maalattu-emalirasia",
+   "nimi": "Maalattu emalirasia",
+   "repliikit": [
+    "Emalirasia! Maalattuja kukkia siinä!",
+    "Tätä emalia tehtiin ensin täällä!",
+    "Puolisot kysyvät, kuka rikkoi rasian!",
+    "Hups, kansi kieri kuin pyörä!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Kuparille maalattua emalia tehtiin ensin Kielletyn kaupungin keisarillisissa työpajoissa Kangxin ajan lopulla.",
+   "kupla": "Hymyilevä vanha hovirouva nostaa ehjän maalatun emalirasian kantta, taustalla hämärä sisähuone ja kynttilänvalo; ei tekstiä."
+  },
+  {
+   "id": "kello",
+   "nimi": "Hovin kello",
+   "repliikit": [
+    "Oho, hovin kello! Tikitti äsken vielä!",
+    "Kelloja yli tuhat, yksi vähemmän nyt!",
+    "Vahtimestari marisee: aika meni rikki!",
+    "Tik-tik-pam! Ei tikitä enää, hihii!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700–1800-luku",
+   "fakta": "Qing-hovin kelloja on säilynyt Kielletyssä kaupungissa yli tuhat; osa tehtiin hovissa, osa tuotiin ulkomailta.",
+   "kupla": "Riemastunut vanha hovin kelloseppä Qing-ajan viitassa pitelee ehjää kultaista pöytäkelloa, lämmin lyhtyvalo työpajassa, ei tekstiä."
+  },
+  {
+   "id": "lakkarasia",
+   "nimi": "Lakkarasia",
+   "repliikit": [
+    "Voi ei, lakkarasia kolahti kumoon!",
+    "Lakkaa levitetty kerros kerrokselta!",
+    "Isoäiti suuttuu tästä lakkarasiasta!",
+    "Se kimalsi niin, etten nähnyt! Hups!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1644–1912",
+   "fakta": "Lakka on lakkapuun kuivattua mahlaa; Qing-hovin työpajat levittivät sitä esineisiin kerros kerrokselta.",
+   "kupla": "Iloinen vanha täti Qing-ajan silkkitakissa pitelee ehjää mustaa lakkarasiaa ja kertoo siitä; punaiset lyhdyt, hämärä sisäpiha, ei tekstiä."
+  },
+  {
+   "id": "kirjoittava-kellopeli",
+   "nimi": "Kirjoittava kellopeli",
+   "repliikit": [
+    "Kirjoittava kello! Ei kirjoita enää!",
+    "Kullattu ja kuuluisa, sisällä kirjuri!",
+    "Virkamiehet nostavat metelin tästä!",
+    "Pikkumies pysähtyi kesken merkin! Hih!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luvun loppu",
+   "fakta": "Kielletyn kaupungin kuuluisassa kullatussa kellossa mekaaninen hahmo kirjoittaa kiinalaisia merkkejä.",
+   "kupla": "Hämmästynyt nuori virkamies Qing-ajan puvussa näyttää ehjää kullattua kelloa, jossa pieni hahmo kirjoittaa; aamuvalo, ei tekstiä."
+  },
+  {
+   "id": "punalakka-veisto",
+   "nimi": "Veistetty punalakka",
+   "repliikit": [
+    "Veistetty punalakka-astia kolahti!",
+    "Kuviot veistetty lakkakerrosten sisään!",
+    "Opettaja: käytävällä ei juosta!",
+    "Pam! Punainen ilotulitus lattialla!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1736–1795",
+   "fakta": "Veistetyssä lakassa kuviot leikataan veitsillä monen lakkakerroksen sisään; Qianlong rakasti sitä.",
+   "kupla": "Ylpeä vanha lakkamestari esittelee ehjää punaista veistettyä lakka-astiaa, työpajan viileä päivänvalo ikkunasta, ei tekstiä."
+  },
+  {
+   "id": "musteliuska",
+   "nimi": "Mustetanko",
+   "repliikit": [
+    "Mustetanko tippui ja pyörähti nurkkaan!",
+    "Nokea ja liimaa, hiotaan musteeksi!",
+    "Vahtimestari hakee rätin, lattia musta!",
+    "Sormet mustuivat, mustetta ei! Hih!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1644–1912",
+   "fakta": "Mustetanko tehdään nokesta ja liimasta; sitä hierotaan mustekivellä veden kanssa musteeksi.",
+   "kupla": "Riemastunut vanha opettaja pitelee ehjää mustaa mustetankoa ja mustekiveä, kirjoituskammarin pehmeä kynttilänvalo, ei tekstiä."
+  },
+  {
+   "id": "lasimaljakko",
+   "nimi": "Lasimaljakko",
+   "repliikit": [
+    "Lasimaljakko! Kilahti ja hajosi!",
+    "Palatsin lasipaja perustettiin 1696!",
+    "Imettäjä huolestuu lasinsiruista!",
+    "Kilin-kolin! Soi vielä kaatuessaan!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1700-luku",
+   "fakta": "Palatsin lasipaja perustettiin 1696 Kangxi-keisarin käskystä; sitä johti saksalainen jesuiitta Kilian Stumpf.",
+   "kupla": "Hovin vanha lasinpuhaltaja Qing-ajan takissa kohottaa ehjää kirkasta maljakkoa valoa vasten, uunin hehku taustalla työpajassa, ei tekstiä."
+  },
+  {
+   "id": "viuhka",
+   "nimi": "Keisarin viuhka",
+   "repliikit": [
+    "Voi, keisarin viuhka rutistui kasaan!",
+    "Keisari antoi tällaisia lahjaksi!",
+    "Virkamiehet murehtivat lahjaviuhkaa!",
+    "Heilautin, ja se meni naps! Hupsis!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "Kangxista alkaen",
+   "fakta": "Kangxi-keisarista alkaen keisarin kirjoittama taittoviuhka oli arvostettu lahja hovin virkamiehille.",
+   "kupla": "Liikuttunut vanha virkamies Qing-ajan viitassa avaa varovasti ehjää kirjoitettua viuhkaa, puutarhapaviljongin pehmeä iltavalo, ei tekstiä."
+  },
+  {
+   "id": "kalligrafiarulla",
+   "nimi": "Kalligrafiarulla",
+   "repliikit": [
+    "Kalligrafiarulla kieri pitkin käytävää!",
+    "Keisari säilytti näitä työhuoneessaan!",
+    "Opettaja: kalligrafiaa kunnioitetaan!",
+    "Rullaa, rullaa... tekstiä kaikkialla!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1736–1795",
+   "fakta": "Qianlong-keisari säilytti kalligrafiaa työhuoneessaan, jonka nimi tarkoittaa Kolmen harvinaisuuden salia.",
+   "kupla": "Innostunut vanha opettaja levittää ehjää kalligrafiarullaa pöydälle, kirjastosalin kultainen iltapäivävalo, ei tekstiä."
+  },
+  {
+   "id": "qingming-rulla",
+   "nimi": "Qingming-silkkirulla",
+   "repliikit": [
+    "Siinä on kokonainen kaupunki ja joki!",
+    "Yli viisi metriä silkkiä! Vau!",
+    "Hovin vanha rouva valittaa rullasta!",
+    "Rulla venyi käytävälle kuin käärme!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Song",
+   "vuosi": "1100-luku",
+   "fakta": "Song-ajan rulla kuvaa kaupunkia ja jokea; se on maalattu silkille ja on 5,25 metriä pitkä.",
+   "kupla": "Hämmästynyt nuori hovin kirjuri Qing-ajan vaatteissa pitelee ehjää pitkää silkkirullaa auki, kynttilävalo arkistohuoneessa, ei tekstiä."
+  },
+  {
+   "id": "sivellin",
+   "nimi": "Kirjoitussivellin",
+   "repliikit": [
+    "Kirjoitussivellin napsahti kahtia!",
+    "Kärki on karvaa, varsi bambua!",
+    "Opettaja näytti tällaisen, nyt kahtia!",
+    "Kärki kutitti nenää! Atsiuu!"
+   ],
+   "elinvoimahinta": 15,
+   "kuva": "",
+   "dynastia": "Qing",
+   "vuosi": "1644–1912",
+   "fakta": "Siveltimen kärki on eläimen karvaa ja varsi yleensä bambua; harvinaisemmissa varsi on jadea tai norsunluuta.",
+   "kupla": "Hymyilevä vanha opettaja Qing-ajan puvussa pitelee ehjää bambuvartista kirjoitussivellintä, aurinko tulee paperi-ikkunasta, ei tekstiä."
+  }
+ ],
+ "elinvoimaesineet": [
+  {
+   "id": "jade-persikka",
+   "nimi": "Jadepersikka",
+   "poimintahuudot": [
+    "Persikka! Nam, pitkää ikää!",
+    "Jadepersikka! Nyt riittää virtaa!"
+   ],
+   "dynastia": "Qing",
+   "vuosi": "1700–1800-luku",
+   "fakta": "Persikka on Kiinassa pitkäikäisyyden symboli, ja Qing-ajan jadeesineissä persikat toivottavat pitkää ikää.",
+   "kupla": "Riemuitseva vanha puutarhuri pitelee ehjää jadepersikkaa molemmin käsin hedelmätarhassa iltaauringon valossa; ei tekstiä kuvaan."
+  }
+ ]
+}
