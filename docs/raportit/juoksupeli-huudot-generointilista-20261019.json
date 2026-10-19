@@ -1,65 +1,75 @@
 {
- "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta). PUYIN ÄÄNI LUKITTU 11.23: 08 Kavya (voice_id kentässä \"aani\"). Sallitut alut kentässä \"sallitut_alut\". Tavoite: koominen käänne (huoleton alku, lause kauhistelee). Ei generointia ennen KK:n eriä.",
+ "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta). PUYIN ÄÄNI LUKITTU 11.23: 08 Kavya (voice_id kentässä \"aani\"). Sallitut alut kentässä \"sallitut_alut\". Tavoite: koominen käänne (huoleton alku, lause kauhistelee). Ei generointia ennen KK:n eriä. Aa!-alku POISTETTU (omistaja 11.29: \"tuo aa on huono\"); 10 huutoriviä odottavat uutta alkua. Ei generointia ennen sitä.",
  "rivit": [
   {
    "avain": "juoksupeli.rikkoutuva.posliinimaljakko.versio.1.huuto",
    "teksti": "Voi ei! Tätä teki 72 eri kättä!",
-   "aani_teksti": "Aa! Voi ei! Tätä teki 72 eri kättä!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Voi ei! Tätä teki 72 eri kättä!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.kello.versio.1.huuto",
    "teksti": "Eikä! Tämä tuli laivalla Englannista!",
-   "aani_teksti": "Aa! Eikä! Tämä tuli laivalla Englannista!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Eikä! Tämä tuli laivalla Englannista!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.versio.1.huuto",
    "teksti": "Ei! Pikkumies kirjoitti kiinaa!",
-   "aani_teksti": "Aa! Ei! Pikkumies kirjoitti kiinaa!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Ei! Pikkumies kirjoitti kiinaa!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.versio.1.huuto",
    "teksti": "Hups! Keltainen on vain minun värini!",
-   "aani_teksti": "Aa! Hups! Keltainen on vain minun värini!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Hups! Keltainen on vain minun värini!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.ruyi-valtikka.versio.1.huuto",
    "teksti": "Voi ei! Sain tämän syntymäpäivänäni!",
-   "aani_teksti": "Aa! Voi ei! Sain tämän syntymäpäivänäni!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Voi ei! Sain tämän syntymäpäivänäni!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.jadesinetti.versio.1.huuto",
    "teksti": "Eikä! Tällä leimattiin käskyt!",
-   "aani_teksti": "Aa! Eikä! Tällä leimattiin käskyt!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Eikä! Tällä leimattiin käskyt!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.kalakulho.versio.1.huuto",
    "teksti": "Ai ai! Me ruokimme näitä joka aamu!",
-   "aani_teksti": "Aa! Ai ai! Me ruokimme näitä joka aamu!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Ai ai! Me ruokimme näitä joka aamu!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.lasimaljakko.versio.1.huuto",
    "teksti": "Oho! Keisarin lasipaja teki tämän!",
-   "aani_teksti": "Aa! Oho! Keisarin lasipaja teki tämän!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Oho! Keisarin lasipaja teki tämän!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.sivellin.versio.1.huuto",
    "teksti": "Apua! Tällä opin kirjoittamaan!",
-   "aani_teksti": "Aa! Apua! Tällä opin kirjoittamaan!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Apua! Tällä opin kirjoittamaan!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.rikkoutuva.bianqing-kivikellot.versio.1.huuto",
    "teksti": "Kling! Tämä soi uudenvuoden juhlassa!",
-   "aani_teksti": "Aa! Kling! Tämä soi uudenvuoden juhlassa!",
-   "tagi": "[shouting] [panicked] "
+   "aani_teksti": "Kling! Tämä soi uudenvuoden juhlassa!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "odottaa uutta alkua (KK tuo omistajan hyväksymän alkulistan); Aa!-alku poistettu 19.10. klo 11.29"
   },
   {
    "avain": "juoksupeli.yleishuuto.1",
@@ -110,7 +120,6 @@
   "lukittu": "omistaja 19.10. klo 11.23 (korvaa Horatiuksen; loki #4934)"
  },
  "sallitut_alut": [
-  "Aa!",
   "Oho!",
   "Auts!",
   "Hoplaa!",
