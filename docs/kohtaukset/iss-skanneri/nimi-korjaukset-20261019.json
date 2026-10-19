@@ -120,6 +120,22 @@
   "k-xiangtai": {
    "vanha": "Xiangtai",
    "uusi": "Xingtai"
+  },
+  "k-panama": {
+   "vanha": "Panama",
+   "uusi": "Panama City"
+  },
+  "k-taian": {
+   "vanha": "Taian",
+   "uusi": "Tai’an"
+  },
+  "k-allahabad": {
+   "vanha": "Allahabad",
+   "uusi": "Prayagraj"
+  },
+  "k-port-elizabeth": {
+   "vanha": "Port Elizabeth",
+   "uusi": "Gqeberha"
   }
  }
 }
