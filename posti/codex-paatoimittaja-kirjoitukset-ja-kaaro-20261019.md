@@ -1,4 +1,66 @@
-# Codex → Päätoimittaja: käärö v2 valmis paikalliseen vastaanottotestiin (#539)
+# Codex → Päätoimittaja: käärön v2.1-repeämäkorjaus toimitettu paikalliseen arvioon (19.10.2026)
+
+**PT #568–573 luettu kokonaan. #568:n hyväksytty ehjä malli säilyy tavuntarkasti. #569–573:n korjatut repeämäosat ovat valmiit paikalliseen PT-arvioon.** Uuden ulkoasun vastaanottajahyväksyntää tai peliin kytkentää ei väitetä tehdyksi.
+
+Tilauksen lähde: `90f1e6b67fdc0f446d477a6002560f99cde2bce4`, blob `9b38d3ebae81c69054c16726992c7062860148cd`. Paikallinen tilauskopio on tavuntarkka.
+
+## Uusin toimitus — v2.1
+
+ZIP:
+`/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kirjoitukset-20261019/scroll-tripo-v2.1/kaaro-tripo-v2.1.zip`
+
+- SHA256: `5b6edd9ddce4a070c7f33364a10104d4018ca53b83301a6c96946f6a04f6df78`
+- 62 122 986 tavua; 38 tiedostoa; **8 GLB:tä ja 12 PNG-esikatselua**.
+- ZIP CRC ja kaikkien manifestitiedostojen hashit PASS. GLB:t eivät ole gitissä.
+- Purettu toimitus saman `scroll-tripo-v2.1/`-kansion `delivery/`-hakemistossa.
+- **0 uutta Tripo-krediittiä, 0 kuvagenerointia.** V2:n aiempi 85 krediitin kulutus ei toistu.
+
+## Mitä korjattiin ja mitä säilyi
+
+Sivuliepeiden ja irtopalojen 0–3 toistuva 4–5 kolmiohampaan reuna on korvattu erimittaisilla vinoilla ja kaartuvilla repeämillä. Mukana pieniä epäsäännöllisiä kuitumaisia ulokkeita sekä paikallista taipumista. Säikeet ovat osa suljettua paperikuorta. Tekstikatkelmat pysyvät kunkin palan alkuperäisessä paperikohdassa.
+
+Ehjä `kaaretaulu.glb` ja `kaaretaulu-paperi.glb` säilyvät tavuntarkasti. Revenneen mallin puutukien geometriapayloadit, kaikki upotetut tekstuurikuvat ja materiaalit, nimet, koordinaatisto sekä fragmenttien vanhat solmusiirrot/pivotit säilyvät. **`runtime-contract.json` on tavuntarkasti sama** kuin v2:ssa. V2.1:n muuttunutta fragmenttia ei tarvitse keskittää uudelleen. Vanhat v2-mallit ja ZIP ovat säilyneet muuttumattomina.
+
+| Malli | Kolmiota |
+|---|---:|
+| Ehjä kokonaisuus | 14 342 |
+| Ehjä paperi | 8 096 |
+| Revennyt kokonaisuus tukineen | 28 606 |
+| Neljä fragmenttia koosteena | 27 932 |
+| Liuska 0 / 1 / 2 / 3 | 7 588 / 7 216 / 6 512 / 6 616 |
+
+Ensimmäinen paikallinen kevennysyritys tuotti pinnalle pitkiä diagonaalijuovia ja hylättiin. Lopullinen korjaus käyttää suurempaa, yhtenäistä leikkausverkkoa. Pieniä kapeita kolmioita jää kuitujen lähelle; nämä on dokumentoitu QA:ssa, ei piilotettu optimointiväitteeseen.
+
+## Vertailu ja QA
+
+Kuvat ovat `delivery/previews/`:
+
+- `kaaro-repeama-ennen-jalkeen.png`: v2 vasemmalla, korjattu v2.1 oikealla.
+- `kaaro-revennyt.png`: edestä ja yläviistosta.
+- `kaaro-fragmentit.png`: kaikki neljä irtopalaa.
+- `kaaro-reuna-lahikuva.png` ja `kaaro-liuska-lahikuva.png`: kuitureuna ja paikallinen taipuminen.
+- Viisi ehjän mallin aiempaa kuvaa säilyvät tavuntarkasti.
+
+**Riippumaton paikallinen QA: LOCAL_REVIEW_CANDIDATE_PASS, ei avointa estävää löydöstä.** Paperiosat sulkeutuvat; ei avoimia/ei-monistoisia reunoja, winding-ristiriitoja, 3D-degeneraatteja tai vastakkaisia keskinormaaleja. Yhteiset XY-vastinpinnat ja noin 2 mm:n Z-paksuus varmennettu. Kooste ja yksittäiset irtopalat ovat samat. UV:t osoittavat oikeisiin alkuperäisiin kuvan kohtiin.
+
+Konservatiivinen aukko on nyt noin **0,96408 m**, joten runtime-contractin vanha vähintään 0,90418 m:n alaraja säilyy totena. Tämä ei ole Puyin collider-testi.
+
+Yhden säikeen kohdalla näkyy lähikuvassa erittäin hieno lyhyt paikallinen taite-/varjostusjuova. Tarkistus ei osoita reikää, UV-katkoa tai kuoriristeämää. Tämä jää vähäiseksi ulkoasurajaukseksi PT-arvioon. Takakiinnityksen saumat ovat #568:n hyväksymä ennallaan säilyvä rajaus.
+
+Täysi raportti `delivery/QA.md`; todisteet `delivery/qa/scroll-v21-final-evidence.json`, `v21-invariance-evidence.json` ja `v21-geometry-evidence.json`. Tarkistajan raportin SHA256 `5798bee9d8015baafcdab5b06728178f6c73df6d411070c42e0d9ff8e67f4805`.
+
+## Vastaanottajalle ja työjonosta
+
+Pelikoodari voi käyttää #568:ssa hyväksyttyä ehjää mallia, tukia ja collidereita aiemman sopimuksen mukaan. Korjattujen repeämäosien uusi ulkoasuhyväksyntä jää PT:lle. Repeämisen tilanvaihto, fragmenttien liike, fysiikka, Unity-/mobiilitesti ja Puyin kontaktit eivät sisälly tähän paikalliseen todistukseen. Pelin koodia ei muutettu.
+
+**Aiemmat #565–567 (avoimet rakennukset, v4-pintojen tilanne, ennen/jälkeen-paketti) pysyvät jonossa seuraavana.** Niiden mallitöitä ei tässä korjauserässä väitetä tehdyiksi.
+
+---
+
+## Edellisen v2-toimituksen lähde- ja menetelmätiedot
+
+Alla säilytetään aiemman v2-toimituksen tiedot historiallisena lähdekuvauksena. Uusin toimitus ja repeämäosien kolmiomäärät ovat yllä olevassa v2.1-osassa. Vanhaa v2-ZIPiä ei muutettu.
+
 
 Omistajan hyväksymä matala paperikäärö on tehty Tripolla ja viimeistelty paikallisesti. **Uusi toimituspaketti on tarkistettu ja sinetöity.** Se sisältää ehjän mallin, erillisen vaihdettavan paperin, revenneen tilan ja neljä irtopalaa. Pelikoodarin Unity-/fysiikkatesti ja omistajan lopullinen 3D-ulkoasuhyväksyntä ovat erikseen; peliä ei muutettu.
 
