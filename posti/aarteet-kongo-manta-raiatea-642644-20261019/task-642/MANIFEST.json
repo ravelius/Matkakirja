@@ -1,0 +1,109 @@
+{
+  "taskNumber": 642,
+  "createdAt": "2026-10-19T13:53:52.321745+00:00",
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 1482,
+      "sha256": "b7b661dd07b1da002693e913f3779ac7887fc1b5a45eb421155d2871e688f17a"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 10505,
+      "sha256": "916611bc371704d8e673aa35322a742f75438cd4f722c673506eb52e36ef42ab"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 4268,
+      "sha256": "8bf40d509bf130f9c25abc852924327a5222e20b7f664f5ebdbdf70696965974"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2956,
+      "sha256": "29939301b84ebcf45c484abb63289d2a15205baf3bc04bbcf419032e8ca7674e"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 3250,
+      "sha256": "8b9b4af499fca75c7b0670f03cf6b309449772c1b22251bf9615998a10352c19"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 4290,
+      "sha256": "6b43aa433a1e31c8d31c71e144bc4ef1a11b9a1e9578064f2380511392cb91a0"
+    },
+    {
+      "path": "aarre-africa-star-v2.jpg",
+      "bytes": 281226,
+      "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6"
+    },
+    {
+      "path": "native/aarre-africa-star-v2-attempt1.png",
+      "bytes": 2356416,
+      "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 2811,
+      "sha256": "016e7a7b0de55a82d94af537a02fb3cc716c41b93c1c7caf36b93617fade6d01"
+    },
+    {
+      "path": "qa/series-comparison.png",
+      "bytes": 1763864,
+      "sha256": "aa181982e548198c8f5f6dc55d04509ccce394dea8054c26359e3559dc3714cf"
+    },
+    {
+      "path": "references/PT-accepted-639640-aarre-middleeast-star.jpg",
+      "bytes": 360121,
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5"
+    },
+    {
+      "path": "references/aarre-africa-star.jpg",
+      "bytes": 52977,
+      "sha256": "0b3d80c04b280b3899edc3574038a340c6c64845479778fb99af2e3fbcb07dde"
+    },
+    {
+      "path": "references.json",
+      "bytes": 914,
+      "sha256": "4d1794dcd4bebcf5e012de57299e8d3070a2ae1d844ea2ea9c2461ae75e818f4"
+    },
+    {
+      "path": "root-reference-ready.json",
+      "bytes": 3447,
+      "sha256": "217c6d3dbdcee8fd1fd1b10a05f778d8763cfd608983128a2febed4e53311d6a"
+    },
+    {
+      "path": "root-source-manifest.json",
+      "bytes": 5110,
+      "sha256": "075ab5df8a1b8b3a87ca46cd4627fb9f03b3a27472a510b6b8f7ad99d9bad132"
+    },
+    {
+      "path": "sources/aarnin-korvaajat-20261019.md",
+      "bytes": 4686,
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "bytes": 1838,
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46"
+    },
+    {
+      "path": "technical-export.json",
+      "bytes": 1249,
+      "sha256": "cc49773e8e57141c60b301e81db5209d7aa273c27e9ecc04cfb3ae97a3b9a363"
+    },
+    {
+      "path": "tool-arguments.json",
+      "bytes": 3071,
+      "sha256": "50c5a3a34c749bd895d64d142c909715836cf057738ffa7a52d082c0f67a30a3"
+    }
+  ],
+  "imageFiles": [
+    "aarre-africa-star-v2.jpg",
+    "native/aarre-africa-star-v2-attempt1.png"
+  ],
+  "qaPassed": true,
+  "imagegenCalls": 1,
+  "retries": 0,
+  "readyForRootMailDelivery": true
+}

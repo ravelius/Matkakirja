@@ -1,0 +1,75 @@
+{
+  "taskNumber": 642,
+  "readInFull": true,
+  "verifiedAt": "2026-10-19T13:47:45.249464+00:00",
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "commit": "ceaaefe835e1d11aba21467d6367e8ba69e9c33a",
+      "gitBlob": "233ddb2dfbc79966306a92bebf8010bb2e761f3b",
+      "gitBlobVerified": true,
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/sources/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md"
+    },
+    {
+      "originalPath": "/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aarnin-korvaajat-20261019.md",
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/sources/aarnin-korvaajat-20261019.md",
+      "readInFull": true
+    }
+  ],
+  "sourceConflicts": [
+    {
+      "field": "crown metal",
+      "order": "silver",
+      "attachment": "silver, with one researcher describing brass",
+      "decision": "Depict silver according to newer explicit PT order; keep historical material uncertainty disclosed.",
+      "historicalMaterialDefinitivelyVerified": false
+    }
+  ],
+  "representation": "Interpretive visualization from written description; no surviving object image supplied or asserted.",
+  "historicalClaimVerification": "Research attachment read and preserved; primary historical documents not independently audited in this image task.",
+  "rootReferenceReadySHA256": "217c6d3dbdcee8fd1fd1b10a05f778d8763cfd608983128a2febed4e53311d6a",
+  "rootSourceManifestSHA256": "075ab5df8a1b8b3a87ca46cd4627fb9f03b3a27472a510b6b8f7ad99d9bad132",
+  "mainReferenceCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyInspected": true,
+      "role": "generation style and comparison; exact PT-accepted 639 delivered JPEG, not main v2"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/aarre-africa-star.jpg",
+      "sha256": "0b3d80c04b280b3899edc3574038a340c6c64845479778fb99af2e3fbcb07dde",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyInspected": true,
+      "role": "comparison only; legacy Africa stone-bird artifact is NOT a crown-design reference"
+    }
+  ],
+  "referenceSubstitution": {
+    "missingRequestedMainFile": "assets/aarteet/aarre-middleeast-star-v2.jpg",
+    "usedInstead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+    "usedSHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "authority": "Root ready: explicit PT order prescribes accepted 639/640 style; exact accepted delivered 639 JPEG used.",
+    "notClaimedAsMainV2": true
+  },
+  "sourceQualifications": {
+    "crownMaterial": "PT explicitly chooses silver; attachment notes scholar brass conflict, not resolved",
+    "emeraldSize": "about12cm is PT visual instruction, historical narrative compares ostrich egg",
+    "RaiateaLength": "PT about6m; attachment21feet/6.4m and6incheswidth, approximate",
+    "RaiateaIdentity": "lost Raiatea belt; surviving Quai Branly Tahiti fragment only construction reference, not same object or exact color template",
+    "historicalAccuracy": "interpretive visual reconstructions from descriptions, not known surviving object photographs",
+    "attachmentOpenSources": "Cavazzi original and Aleveque2018 not verified; research says blocked; not certified by image production"
+  },
+  "referenceHashesIndependentlyReverifiedAt": "2026-10-19T13:53:52.321745+00:00"
+}

@@ -1,0 +1,62 @@
+{
+  "taskNumber": 644,
+  "at": "2026-10-19T13:59:37.179111+00:00",
+  "selectedAttempt": 1,
+  "actualImagegenCalls": 1,
+  "rejectedAttempts": [],
+  "personallyInspected": {
+    "native": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/native/raiatea-maro-ura-attempt-1.png",
+      "sha256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+      "bytes": 2469287,
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1254,
+      "height": 1254,
+      "decodedRGBPixelSHA256": "f0b40924a9d1cebb5630979ca50a9f63df199c47a4ab801aca09ef8edcc55045",
+      "fullyOpaque": true
+    },
+    "640DeliveryJPEG": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/delivery-packet/aarre-oceania-star-v2.jpg",
+      "sha256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+      "bytes": 364671,
+      "format": "JPEG",
+      "mode": "RGB",
+      "width": 640,
+      "height": 640,
+      "decodedRGBPixelSHA256": "14a37601531b1a93d12c3fe2ad2445399ad6abaee4eea021dd9f75b1ee48cb1e",
+      "fullyOpaque": true
+    },
+    "seriesBoard": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/qa/series-comparison-640.png",
+      "sha256": "21c603e04b9f03b838a31ec2ed3d677b408c4e541a5c8377d5ac514c59ae1d84"
+    },
+    "museumPhotoAndPageOne": true,
+    "approved639640AndLegacyPearl": true
+  },
+  "contentPassed": true,
+  "technicalPassed": true,
+  "observations": {
+    "singleContinuousObject": "One long narrow flat serpentine belt. Two squared terminals and both connecting U-turns visible. No overlaps, no detached objects; entire path traceable.",
+    "proportions": "Long thin strip, approximately 40:1 in its depicted total path versus local width; approximate visual/manual estimate under perspective, not a metric measurement or historical certification. Three stretches with generous brown gaps preserve length impression.",
+    "colors": "Dense red featherwork with short yellow transverse bands, as requested. No fragment-brown color copied as the completed belt palette.",
+    "surface": "Individual short flat feathers, natural barbs and shafts, fibrous plaited/net margins and terminal substrate. No shaggy fur/boa or painted/procedural-texture defect observed.",
+    "identity": "Interpretive depiction of the lost Raiatea royal belt. Tahiti surviving fragment used only as construction study, not identical object.",
+    "restrictions": "No people, text, jewels, treasure chest, trophy display, skirt/cape/headdress shapes, masks or border.",
+    "series": "Dark warm brown textured ground, soft upper-left oblique light and realistic material relief consistent with actual approved639 style reference. Legacy pearl comparison only.",
+    "nativeAnd640": "Whole object and both ends remain inside the full frame. At640 red feathers, yellow bands, continuous form and margins still read."
+  },
+  "qualifications": [
+    "Exact lost-object appearance cannot be certified; no surviving Raiatea image was used.",
+    "The approximate6m×15cm source dimensions are represented by long/narrow proportions, not a scale bar.",
+    "Requested main aarre-middleeast-star-v2.jpg absent at verified main; authorized exact PT-approved639 file used and labelled honestly.",
+    "No runtime, R2, game publication, owner or PT acceptance claimed by this QA."
+  ],
+  "noCropPadRetouchMask": true,
+  "wholeFrameTechnicalExport": "Pillow RGB conversion then entire square frame Lanczos resize to640×640, JPEG quality98, subsampling0. No crop, pad, retouch, mask or compositing.",
+  "productionComplete": true,
+  "mailDeliveryByParentPending": true,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

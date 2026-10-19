@@ -1,0 +1,143 @@
+{
+  "taskNumber": 643,
+  "source": {
+    "path": "posti/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+    "commit": "ceaaefe835e1d11aba21467d6367e8ba69e9c33a",
+    "blob": "233ddb2dfbc79966306a92bebf8010bb2e761f3b",
+    "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46",
+    "readInFull": true
+  },
+  "attachment": {
+    "path": "/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aarnin-korvaajat-20261019.md",
+    "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43",
+    "readInFull": true,
+    "role": "KK research attachment; explicit uncertainties preserved"
+  },
+  "sourceQualifications": {
+    "crownMaterial": "PT explicitly chooses silver; attachment notes scholar brass conflict, not resolved",
+    "emeraldSize": "about12cm is PT visual instruction, historical narrative compares ostrich egg",
+    "RaiateaLength": "PT about6m; attachment21feet/6.4m and6incheswidth, approximate",
+    "RaiateaIdentity": "lost Raiatea belt; surviving Quai Branly Tahiti fragment only construction reference, not same object or exact color template",
+    "historicalAccuracy": "interpretive visual reconstructions from descriptions, not known surviving object photographs",
+    "attachmentOpenSources": "Cavazzi original and Aleveque2018 not verified; research says blocked; not certified by image production"
+  },
+  "interpretiveReconstructionNotKnownSurvivingObjectPhoto": true,
+  "mainReferenceCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+  "references": [
+    {
+      "path": "assets/aarteet/aarre-southamerica-star.jpg",
+      "commit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+      "blob": "c47cfe670b705901dbe4b529a3006dc3225ad5b2",
+      "sha256": "60334fd46d379e79480564ba630c25ad06349ef8f61983f0cf8a5c62929be8a6",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/aarre-southamerica-star.jpg",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyViewed": true
+    },
+    {
+      "role": "PT-accepted 639/640 style; exact prior delivered JPEG",
+      "previousDeliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyViewed": true
+    },
+    {
+      "role": "PT-accepted 639/640 style; exact prior delivered JPEG",
+      "previousDeliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-northamerica-star.jpg",
+      "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyViewed": true
+    }
+  ],
+  "generationReferencePaths": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg"
+  ],
+  "referenceAvailabilityQualification": {
+    "requestedPath": "assets/aarteet/aarre-middleeast-star-v2.jpg",
+    "absentAtMainCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+    "mainSearchScope": "all tracked assets/ paths with aarre-middleeast-star name; only legacy base jpg present",
+    "legacyBaseSHA256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567",
+    "approved639FileUsedInstead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+    "approved639SHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "priorDeliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+    "PTAcceptanceCommit": "9c74aac21d6e42a043d71e095f13c002a9b0ae1c",
+    "basis": "New source explicitly requires approved639640 series style; exact previously delivered and PT-accepted639 image is used as authoritative style baseline. Not claimed to be fetched from absent main/v2 path.",
+    "comparisonLabelMustDiscloseActualSource": true,
+    "rootApprovedRoutineReferenceSubstitution": true
+  },
+  "rootReferenceReadyEvidence": {
+    "at": "2026-10-19T13:49:53.944014+00:00",
+    "ready": true,
+    "sourceReadInFullByRoot": true,
+    "attachmentReadInFullByRoot": true,
+    "source": {
+      "path": "posti/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "commit": "ceaaefe835e1d11aba21467d6367e8ba69e9c33a",
+      "blob": "233ddb2dfbc79966306a92bebf8010bb2e761f3b",
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46",
+      "readInFull": true
+    },
+    "attachment": {
+      "path": "/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aarnin-korvaajat-20261019.md",
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43",
+      "readInFull": true,
+      "role": "KK research attachment; explicit uncertainties preserved"
+    },
+    "mainReferenceCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+    "allAvailableReferenceFilesHashAndMirrorVerified": true,
+    "requestedMainV2ReferenceExists": false,
+    "referenceAvailabilityQualification": {
+      "requestedPath": "assets/aarteet/aarre-middleeast-star-v2.jpg",
+      "absentAtMainCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+      "mainSearchScope": "all tracked assets/ paths with aarre-middleeast-star name; only legacy base jpg present",
+      "legacyBaseSHA256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567",
+      "approved639FileUsedInstead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+      "approved639SHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+      "priorDeliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+      "PTAcceptanceCommit": "9c74aac21d6e42a043d71e095f13c002a9b0ae1c",
+      "basis": "New source explicitly requires approved639640 series style; exact previously delivered and PT-accepted639 image is used as authoritative style baseline. Not claimed to be fetched from absent main/v2 path.",
+      "comparisonLabelMustDiscloseActualSource": true,
+      "rootApprovedRoutineReferenceSubstitution": true
+    },
+    "rootPersonallyInspectedLegacyMainComparators": true,
+    "rootPersonallyInspectedExactApproved639640StyleFilesInPreviousWork": true,
+    "oldComparatorArtworkIsNotNewObjectDesignReference": true,
+    "targetDimensions": [
+      640,
+      640
+    ],
+    "targetFormat": "RGB JPEG98 plus unchanged returned native",
+    "wholeNewGeneration": true,
+    "sourceQualifications": {
+      "crownMaterial": "PT explicitly chooses silver; attachment notes scholar brass conflict, not resolved",
+      "emeraldSize": "about12cm is PT visual instruction, historical narrative compares ostrich egg",
+      "RaiateaLength": "PT about6m; attachment21feet/6.4m and6incheswidth, approximate",
+      "RaiateaIdentity": "lost Raiatea belt; surviving Quai Branly Tahiti fragment only construction reference, not same object or exact color template",
+      "historicalAccuracy": "interpretive visual reconstructions from descriptions, not known surviving object photographs",
+      "attachmentOpenSources": "Cavazzi original and Aleveque2018 not verified; research says blocked; not certified by image production"
+    },
+    "task644AdditionalRequirement": "Producer must view and document Tahiti museum fragment for construction only before generation; distinguish from lost Raiatea belt.",
+    "oldVersionsPreserved": true,
+    "ownerAccepted": false,
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "rawSourcesIncluded": [
+    "source/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+    "source/aarnin-korvaajat-20261019.md"
+  ],
+  "oldImagesModified": false
+}

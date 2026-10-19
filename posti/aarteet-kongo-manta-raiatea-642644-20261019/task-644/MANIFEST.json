@@ -1,0 +1,85 @@
+{
+  "taskNumber": 644,
+  "at": "2026-10-19T13:59:37.179111+00:00",
+  "productionComplete": true,
+  "actualImagegenCalls": 1,
+  "selectedAttempt": 1,
+  "assetName": "aarre-oceania-star-v2.jpg",
+  "sourcePostCommit": "ceaaefe835e1d11aba21467d6367e8ba69e9c33a",
+  "sourcePostBlob": "233ddb2dfbc79966306a92bebf8010bb2e761f3b",
+  "nativeSHA256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+  "nativePixelSHA256": "f0b40924a9d1cebb5630979ca50a9f63df199c47a4ab801aca09ef8edcc55045",
+  "deliverySHA256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+  "deliveryPixelSHA256": "14a37601531b1a93d12c3fe2ad2445399ad6abaee4eea021dd9f75b1ee48cb1e",
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "sha256": "fbf48671caa33a54aa2dc9252bc4e7179c0d29417b68f9585e5b6756b0593080",
+      "bytes": 2472
+    },
+    {
+      "path": "PROMPTS.json",
+      "sha256": "daf056e4177324f1cc059c42d559edf91f739e0de4a8f94dae3e365ab50c9ac5",
+      "bytes": 5295
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "a29c4d6b31057052ae8fdd5f785ec563416a6dd962b0930400c295a56b67fce0",
+      "bytes": 2489
+    },
+    {
+      "path": "QA.json",
+      "sha256": "2d1137047b5b08bf6bfe3e428fdcee940197e958d4fc06a44caf97bcfc7f5ec8",
+      "bytes": 3907
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "sha256": "4dd819d4e2006da77f107dce033c0b347518b5951cb3a558bd759f2351ecfd5a",
+      "bytes": 5517
+    },
+    {
+      "path": "STRUCTURE-PREFLIGHT.json",
+      "sha256": "4f1ca21ddc2da9333e8fcd0d5ce72fca70f446486459e07f67ba8c9ab2d02007",
+      "bytes": 6312
+    },
+    {
+      "path": "aarre-oceania-star-v2.jpg",
+      "sha256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+      "bytes": 364671,
+      "width": 640,
+      "height": 640,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "14a37601531b1a93d12c3fe2ad2445399ad6abaee4eea021dd9f75b1ee48cb1e"
+    },
+    {
+      "path": "selected-native.png",
+      "sha256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+      "bytes": 2469287,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "f0b40924a9d1cebb5630979ca50a9f63df199c47a4ab801aca09ef8edcc55045"
+    },
+    {
+      "path": "series-comparison-640.png",
+      "sha256": "21c603e04b9f03b838a31ec2ed3d677b408c4e541a5c8377d5ac514c59ae1d84",
+      "bytes": 1899403,
+      "width": 1920,
+      "height": 740,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "dbc5ff42dd3ea14a3961eef64deef6f8e5b5e9df62509ef54950bc53501176f3"
+    }
+  ],
+  "deliveryByParentPending": true,
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "R2DeliveryVerified": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "qualifications": [
+    "Exact lost-object appearance cannot be certified; no surviving Raiatea image was used.",
+    "The approximate6m×15cm source dimensions are represented by long/narrow proportions, not a scale bar.",
+    "Requested main aarre-middleeast-star-v2.jpg absent at verified main; authorized exact PT-approved639 file used and labelled honestly.",
+    "No runtime, R2, game publication, owner or PT acceptance claimed by this QA."
+  ]
+}

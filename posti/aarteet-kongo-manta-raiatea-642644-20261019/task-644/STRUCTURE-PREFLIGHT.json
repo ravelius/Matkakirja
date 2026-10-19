@@ -1,0 +1,112 @@
+{
+  "taskNumber": 644,
+  "ready": true,
+  "at": "2026-10-19T13:55:57.011652+00:00",
+  "scope": "Only task-644 own files and T7 mirror; root owns common ledger and delivery",
+  "rootReferenceReady": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/REFERENCE-READY.json",
+    "sha256": "217c6d3dbdcee8fd1fd1b10a05f778d8763cfd608983128a2febed4e53311d6a",
+    "bytes": 3447
+  },
+  "rootReferenceReadyReadInFull": true,
+  "sourcePost": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/sources/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+    "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46",
+    "bytes": 1838,
+    "commit": "ceaaefe835e1d11aba21467d6367e8ba69e9c33a",
+    "blob": "233ddb2dfbc79966306a92bebf8010bb2e761f3b",
+    "personallyReadInFull": true
+  },
+  "researchAttachment": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/sources/aarnin-korvaajat-20261019.md",
+    "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43",
+    "bytes": 4686,
+    "personallyReadInFull": true
+  },
+  "primaryMuseumStructureReference": {
+    "url": "https://www.fondationmartineaublet.fr/img/415/cp-maro-ura-web.pdf",
+    "title": "Maro ‘ura. Un trésor polynésien",
+    "publisher": "Musée du quai Branly – Jacques Chirac",
+    "documentDate": "2021-08-30",
+    "pdf": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/sources/quai-branly-tahiti-maro-ura-2021.pdf",
+      "sha256": "8891e4694ebcd7609a74242e36d26ed8a5197414b3d536ef9dcb4ceae5923e63",
+      "bytes": 273947
+    },
+    "personallyReadAllFourPagesText": true,
+    "extractedPhoto": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/sources/page1-image0-Im0.jpg",
+      "sha256": "a25c8cec4e21bf744de67b8bb555068f88f6a83b686c624a4d715a21211eb419",
+      "bytes": 125128,
+      "width": 726,
+      "height": 461,
+      "mode": "RGB"
+    },
+    "personallyViewedExtractedPhoto": true,
+    "pageOneRender": {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/tmp/pdfs/quai-branly-page1.png",
+      "sha256": "2728781442d6b14f6309250c6e94acee83985f479353c8721616b0610ac541e2",
+      "bytes": 680478,
+      "width": 993,
+      "height": 1404,
+      "mode": "RGB"
+    },
+    "personallyViewedRenderedPageOne": true,
+    "photographIdentity": "Surviving Tahiti maro ‘ura fragment before 1818, 35 × 18 × 2 cm. Photograph Pauline Guyon / musée du quai Branly – Jacques Chirac. NOT the lost Raiatea royal belt.",
+    "personallyObservedConstruction": "Exposed tan/brown rough vegetal-fiber cords form a knotted/plaited lattice: roughly parallel cords with transverse tied bindings, sparse thin reddish remnants. This is a close detail of construction, not an intact six-metre densely red-feathered belt.",
+    "permittedInference": "Use knotted/plaited vegetal-fiber net support and individually fixed feathers as structure vocabulary. Dense red feathers with occasional yellow bands come from the Raiatea order/attachment, not copied from weathered Tahiti fragment colors.",
+    "notClaimed": [
+      "actual surviving Raiatea object photograph",
+      "exact lost-object weave pattern",
+      "specific net fiber species",
+      "precise feather species",
+      "verified attribution of Tahiti fragment to Raiatea",
+      "access to blocked Aleveque original"
+    ]
+  },
+  "seriesReferencesPersonallyViewed": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+      "bytes": 360121,
+      "width": 640,
+      "height": 640,
+      "mode": "RGB",
+      "use": "Only style and lighting"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-northamerica-star.jpg",
+      "sha256": "26c0ea2b4986d54439c49003401da30ec9448bfafaf42d58a6aae288e39063bd",
+      "bytes": 410161,
+      "width": 640,
+      "height": 640,
+      "mode": "RGB",
+      "use": "Only style and lighting"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/aarre-oceania-star.jpg",
+      "sha256": "5eadbe1b8436f93b8826734ce3a2c5c992f84250b35c887a104ff9869f17c811",
+      "bytes": 59270,
+      "width": 640,
+      "height": 640,
+      "mode": "RGB",
+      "use": "Legacy main comparison only"
+    }
+  ],
+  "referenceQualification": {
+    "missingRequestedMainPath": "assets/aarteet/aarre-middleeast-star-v2.jpg",
+    "mainCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+    "actualStyleReference": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+    "actualStyleReferenceSHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "previousDeliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+    "PTAcceptanceCommit": "9c74aac21d6e42a043d71e095f13c002a9b0ae1c",
+    "rootAuthorizedSubstitution": true,
+    "boardThirdLabel": "PT-hyväksytty639 / toimitus72db6 (main-v2puuttuu)"
+  },
+  "plannedObject": "Interpretive visualization of ONE lost Raiatea kings narrow maro ʻura, approximate 6 m × 15 cm (~40:1), dense small flat RED feathers and occasional short YELLOW cross bands. Entire continuous belt in loose serpentine arrangement, both ends visible. Not cape/headdress/skirt/boa, no people/text/jewels/trophy framing.",
+  "generationNotYetDispatched": true,
+  "output": "Native unchanged + whole-frame 640 × 640 RGB JPEG quality98, no crop/pad/retouch",
+  "gameIntegrationVerified": false,
+  "ownerAccepted": false,
+  "published": false
+}

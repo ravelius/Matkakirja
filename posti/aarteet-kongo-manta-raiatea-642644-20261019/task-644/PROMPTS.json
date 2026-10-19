@@ -1,0 +1,35 @@
+{
+  "taskNumber": 644,
+  "attempts": [
+    {
+      "attempt": 1,
+      "wholeNewGeneration": true,
+      "tool": "image_gen.imagegen",
+      "args": {
+        "prompt": "Generate ONE ENTIRELY NEW square photoreal museum-object photograph. This is an interpretive visualization of the lost sacred royal maro ʻura of the kings of Raiatea, based on a description, NOT a photograph of a known surviving object.\n\nREFERENCE PHOTO: use the attached photograph ONLY for its warm dark brown mottled textured tabletop/background, natural materials, subdued soft upper-left oblique lighting, and convincing photographic detail. Do not include its chest, gold, stones, jewels, lid or any object from that photograph. The subject is ONLY the following long narrow feather BELT.\n\nOBJECT GEOMETRY IS THE PRIMARY REQUIREMENT: one single very long, NARROW, FLAT, flexible ribbon-like belt, approximately six metres long and fifteen centimetres wide, about FORTY TIMES AS LONG AS IT IS WIDE. Keep two parallel long edges and a nearly constant narrow width for the complete length. Lay the entire continuous belt loosely and fully flat in one clear elongated serpentine S: three gently curving horizontal stretches, connected by two broad rounded U-turns on opposite sides. The whole path must be traceable from one visible end to the other with generous visible brown gaps between the stretches. NO overlap, no extra detached pieces. Width of the narrow feather band approximately 7 percent of the square frame; total visible path length approximately 2.8 times the frame width. Both small squared-off ends and every connecting bend remain fully inside the frame, with comfortable margins. This is a long slender feather-covered textile belt resting naturally under its own weight, NOT a crescent cape, collar, fan, headdress, skirt, lei, boa, wreath, necklace, oval mat or broad mantle. Do not turn its bends into broad feather fans. Do not make a short wide decorated swatch.\n\nCONSTRUCTION: visible natural hand-knotted and plaited vegetal-fiber net support, with individual small feathers physically fixed into it. The narrow strip is densely faced with short flat overlapping brilliant RED feathers, mostly deep scarlet and warm red with natural subtle variation. Several short transverse bands of YELLOW feathers interrupt the red at intervals. Yellow bands are narrow regions along the same single belt, not separate ribbons. Keep the belt flat and its feather depth low, like dense featherwork attached to a flat fiber lattice. Individual feather shafts and fine natural barbs are visible on close inspection; no shaggy fur, hair, fuzzy tube, plastic, procedural repeated marks or painted feather pattern. At one small terminal edge and a few outer edges, the rough tan knotted fiber substrate can be glimpsed beneath the feathers without exposing a large bare patch. The intact vivid red and yellow reconstruction colors come from the Raiatea description, not from the weathered brown colors of a surviving Tahiti fragment.\n\nFRAMING: elevated near-overhead view with slight obliqueness, the entire long serpentine narrow belt centered on the same quiet dark warm brown subtly textured ground as the reference style. Respectful uncluttered museum study of sacred royal regalia. Soft warm upper-left diagonal light gives truthful fine shadows and feather relief. Real photographic surface, crisp but natural fibers and feathers, no artificial painterly texture. Enough separation and contrast to read the one continuous long belt at 640 pixels. No people, hands, mannequins, stands, costume display, jewelry, ornaments, shells, treasure chest, coins, weapons, trophies, writing, museum labels, text, watermarks or border. The photograph itself is fully opaque, all background pixels filled. One object only. Square image.",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg"
+        ],
+        "transparent_background": false
+      },
+      "registration": {
+        "taskNumber": 644,
+        "attempt": 1,
+        "registeredAt": "2026-10-19T13:56:48.658657+00:00",
+        "dispatchState": "completed-native-preserved",
+        "tool": "image_gen.imagegen",
+        "wholeNewGeneration": true,
+        "intent": "Full new Raiatea narrow belt photograph; no editing",
+        "referencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+        "referenceSHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+        "referenceRole": "Approved639 style/light/background ONLY, absent main-v2 qualification in STRUCTURE-PREFLIGHT.json",
+        "preflightSHA256": "4f1ca21ddc2da9333e8fcd0d5ce72fca70f446486459e07f67ba8c9ab2d02007",
+        "argsSHA256": "df3f889be3d254aa62f7b78064b3a490b5c719d260fd0d62f76cd60925a0ea63",
+        "dispatchStartedAt": "2026-10-19T13:57:00.813448+00:00",
+        "completedAt": "2026-10-19T13:58:21.059077+00:00",
+        "actualImagegenCalls": 1,
+        "nativeSHA256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7"
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "taskNumber": 642,
+  "wholeNewImagegenCalls": 1,
+  "retries": 0,
+  "partialEdits": 0,
+  "allReturnedNativeImagesPreserved": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "issuedAt": "2026-10-19T13:51:16.354562+00:00",
+      "completed": true,
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW full PHOTOREALISTIC STILL-LIFE CAMERA PHOTOGRAPH, square 1:1, high-resolution opaque RGB PNG. Do not edit or composite the reference. The attached reference supplies ONLY the approved treasure-series dark warm brown textured background, soft upper-left oblique illumination, photographed-material realism and whole-object framing. Do NOT reproduce its gold casket or resin. Create a completely new scene with ONE DIFFERENT OBJECT described below.\nONE SILVER 17TH-CENTURY EUROPEAN ROYAL CORONATION CROWN, an interpretive visualization of the lost crown given to King Garcia II of Kongo by Pope Innocent X, rather than a claimed replica of a surviving object. A dignified, restrained portable closed crown, centred and fully visible in three-quarter frontal view. Its coherent structure is one substantial circular SILVER circlet band, a few modest upright silver fleur/leaf-shaped points, and two perpendicular gently rounded silver arches (four half-arches) rising above the band and meeting under ONE SMALL SIMPLE CROSS at the very top. The ring, arches and cross must all be clearly visible and structurally connected. Four modest jewel settings spaced around the circlet, small rich red and muted blue-green cabochons in understated silver bezels; only a few stones visible from this viewpoint. Restrained shallow hand-engraved 1600s scrollwork and a slightly aged polished SILVER finish, light real tarnish in recesses. Graceful and valuable but NOT lavishly ornamented, not a fantasy crown. Arches remain mostly plain silver, no rows of sparkling gems. No gold gilding or yellow brass: metal clearly SILVER with natural neutral silvery grey highlights and subtle warm reflections from the brown surroundings. No velvet cushion, no velvet cap, no fabric liner; the open space within the silver arches shows the dark background. Silver crown alone rests directly on the brown matte ground with a genuine soft contact shadow.\nWhole crown about 66 percent image width and 70 percent image height, generous clear margins on every edge, cross uncut. Entire background and ground edge-to-edge are the same DARK WARM UMBER/CHOCOLATE BROWN, softly mottled natural matte texture similar to the reference, softly darker toward corners. No pale parchment, white sheet, frame, horizon line or studio equipment. Gentle diffused upper-left/above light shapes the silver relief without blown glare. Photorealistic hand-worked metal, physically believable reflections and natural stone surfaces, camera macro detail, NOT illustration, painting, CGI, plastic or procedural texture. NO stone bird, scepter, orb placed beside the crown, necklace, bracelet, pendant, brooch, loose gems, coins, pearls, treasure chest, other object, person, hands, text, logo or label. Output the entire new photo only.",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+          "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+          "dimensions": [
+            640,
+            640
+          ],
+          "mode": "RGB",
+          "personallyInspected": true,
+          "role": "generation style and comparison; exact PT-accepted 639 delivered JPEG, not main v2"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/aarre-africa-star.jpg",
+          "sha256": "0b3d80c04b280b3899edc3574038a340c6c64845479778fb99af2e3fbcb07dde",
+          "dimensions": [
+            640,
+            640
+          ],
+          "mode": "RGB",
+          "personallyInspected": true,
+          "role": "comparison only; legacy Africa stone-bird artifact is NOT a crown-design reference"
+        }
+      ],
+      "completedAt": "2026-10-19T13:52:30.514321+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-1b2d43d3-9882-4b94-8c26-cb86e0326dcd.png",
+      "native": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/native/aarre-africa-star-v2-attempt1.png",
+        "bytes": 2356416,
+        "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "pixelSHA256": "71d603c1b1e572176664cb3bb512d9b52c16094a3af6c485f3d850f19d6239c1",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "export": {
+        "method": "Pillow full-frame resize LANCZOS then JPEG quality 98, chroma subsampling 0, optimize true",
+        "input": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/native/aarre-africa-star-v2-attempt1.png",
+          "bytes": 2356416,
+          "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "pixelSHA256": "71d603c1b1e572176664cb3bb512d9b52c16094a3af6c485f3d850f19d6239c1",
+          "alphaExtrema": [
+            255,
+            255
+          ]
+        },
+        "output": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/delivery-packet/aarre-africa-star-v2.jpg",
+          "bytes": 281226,
+          "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+          "dimensions": [
+            640,
+            640
+          ],
+          "mode": "RGB",
+          "format": "JPEG",
+          "pixelSHA256": "c3863b0af7d95edf7fe2274beb8e9d7dbda003f32af0ecd3c5e0e706d1778c15",
+          "alphaExtrema": [
+            255,
+            255
+          ]
+        },
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false,
+        "nativeOriginalPreserved": true
+      },
+      "qa": {
+        "taskNumber": 642,
+        "passed": true,
+        "checkedAt": "2026-10-19T13:53:52.321745+00:00",
+        "personallyInspectedNative": true,
+        "personallyInspected640JPEG": true,
+        "personallyInspectedSeriesComparison": true,
+        "checks": {
+          "oneSilverCrownOnly": true,
+          "ringArchesAndTopCrossClearlyVisible": true,
+          "restrainedJewelDecoration": true,
+          "wholeObjectVisibleWithMargins": true,
+          "noScepterOrOtherArtifacts": true,
+          "noLegacyStoneBirdCopied": true,
+          "darkWarmBrownSeriesBackground": true,
+          "softUpperDiagonalLight": true,
+          "photorealisticSilverAndStoneAppearance": true,
+          "noTextLogoFrameOrPeople": true,
+          "target640RGBJPEG": true,
+          "jpegQuality98": true,
+          "nativePreservedByteExact": true,
+          "wholeFrameExportNoCropPadRetouch": true
+        },
+        "observationsFI": [
+          "Yksi hopeinen suljettu kruunu: rengas, liitetyt kaaret ja risti ylhäällä erottuvat selvästi. Kohtuullinen määrä punaisia ja vihreitä kivikoristeita; ei valtikkaa tai muita esineitä.",
+          "Hopean vaaleat harmaat heijastukset ja tummentumat erottuvat lämpimistä taustaheijastuksista. 640-JPEGissä muoto ja pintatyö säilyvät luettavina.",
+          "Sarjavertailun kolmas kuva on tarkalleen PT-hyväksytty 639-JPEG toimituksesta 72db6e148f8709760ecf146ca0300e46e982a915; pyydetty main-v2 oli tarkistetusta mainista puuttuva. Vertailutaulu kertoo tämän.",
+          "Tämä on kirjoitetusta kuvauksesta tehty havainnekuva. Kruunun tarkkaa muotoa, jalokivien värejä tai kaiverruksia ei väitetä säilyneestä esineestä varmennetuiksi."
+        ],
+        "sourceQualifications": {
+          "silverVsBrass": "New PT order explicitly chooses silver. Research attachment also notes a brass description by one researcher. Contradiction preserved and not resolved by this image.",
+          "representation": "Interpretive reconstruction, not a museum-copy claim or archival object photograph.",
+          "historicalPrimarySourcesIndependentlyAudited": false,
+          "mainV2MissingReferenceSubstitutionDisclosed": true
+        },
+        "seriesComparison": "qa/series-comparison.png",
+        "native": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/native/aarre-africa-star-v2-attempt1.png",
+          "bytes": 2356416,
+          "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "pixelSHA256": "71d603c1b1e572176664cb3bb512d9b52c16094a3af6c485f3d850f19d6239c1",
+          "alphaExtrema": [
+            255,
+            255
+          ]
+        },
+        "delivery": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/delivery-packet/aarre-africa-star-v2.jpg",
+          "bytes": 281226,
+          "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+          "dimensions": [
+            640,
+            640
+          ],
+          "mode": "RGB",
+          "format": "JPEG",
+          "pixelSHA256": "c3863b0af7d95edf7fe2274beb8e9d7dbda003f32af0ecd3c5e0e706d1778c15",
+          "alphaExtrema": [
+            255,
+            255
+          ]
+        },
+        "PTAcceptance": "pending_new_image_review",
+        "ownerAcceptance": "not_recorded_for_new_image",
+        "gameIntegrationVerified": false,
+        "published": false
+      }
+    }
+  ]
+}

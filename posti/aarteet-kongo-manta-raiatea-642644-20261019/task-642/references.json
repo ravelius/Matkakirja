@@ -1,0 +1,24 @@
+[
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+    "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "personallyInspected": true,
+    "role": "generation style and comparison; exact PT-accepted 639 delivered JPEG, not main v2"
+  },
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/aarre-africa-star.jpg",
+    "sha256": "0b3d80c04b280b3899edc3574038a340c6c64845479778fb99af2e3fbcb07dde",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "personallyInspected": true,
+    "role": "comparison only; legacy Africa stone-bird artifact is NOT a crown-design reference"
+  }
+]

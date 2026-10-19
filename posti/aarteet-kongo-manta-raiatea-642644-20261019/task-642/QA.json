@@ -1,0 +1,73 @@
+{
+  "taskNumber": 642,
+  "passed": true,
+  "checkedAt": "2026-10-19T13:53:52.321745+00:00",
+  "personallyInspectedNative": true,
+  "personallyInspected640JPEG": true,
+  "personallyInspectedSeriesComparison": true,
+  "checks": {
+    "oneSilverCrownOnly": true,
+    "ringArchesAndTopCrossClearlyVisible": true,
+    "restrainedJewelDecoration": true,
+    "wholeObjectVisibleWithMargins": true,
+    "noScepterOrOtherArtifacts": true,
+    "noLegacyStoneBirdCopied": true,
+    "darkWarmBrownSeriesBackground": true,
+    "softUpperDiagonalLight": true,
+    "photorealisticSilverAndStoneAppearance": true,
+    "noTextLogoFrameOrPeople": true,
+    "target640RGBJPEG": true,
+    "jpegQuality98": true,
+    "nativePreservedByteExact": true,
+    "wholeFrameExportNoCropPadRetouch": true
+  },
+  "observationsFI": [
+    "Yksi hopeinen suljettu kruunu: rengas, liitetyt kaaret ja risti ylhäällä erottuvat selvästi. Kohtuullinen määrä punaisia ja vihreitä kivikoristeita; ei valtikkaa tai muita esineitä.",
+    "Hopean vaaleat harmaat heijastukset ja tummentumat erottuvat lämpimistä taustaheijastuksista. 640-JPEGissä muoto ja pintatyö säilyvät luettavina.",
+    "Sarjavertailun kolmas kuva on tarkalleen PT-hyväksytty 639-JPEG toimituksesta 72db6e148f8709760ecf146ca0300e46e982a915; pyydetty main-v2 oli tarkistetusta mainista puuttuva. Vertailutaulu kertoo tämän.",
+    "Tämä on kirjoitetusta kuvauksesta tehty havainnekuva. Kruunun tarkkaa muotoa, jalokivien värejä tai kaiverruksia ei väitetä säilyneestä esineestä varmennetuiksi."
+  ],
+  "sourceQualifications": {
+    "silverVsBrass": "New PT order explicitly chooses silver. Research attachment also notes a brass description by one researcher. Contradiction preserved and not resolved by this image.",
+    "representation": "Interpretive reconstruction, not a museum-copy claim or archival object photograph.",
+    "historicalPrimarySourcesIndependentlyAudited": false,
+    "mainV2MissingReferenceSubstitutionDisclosed": true
+  },
+  "seriesComparison": "qa/series-comparison.png",
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/native/aarre-africa-star-v2-attempt1.png",
+    "bytes": 2356416,
+    "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "pixelSHA256": "71d603c1b1e572176664cb3bb512d9b52c16094a3af6c485f3d850f19d6239c1",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "delivery": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/delivery-packet/aarre-africa-star-v2.jpg",
+    "bytes": 281226,
+    "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "format": "JPEG",
+    "pixelSHA256": "c3863b0af7d95edf7fe2274beb8e9d7dbda003f32af0ecd3c5e0e706d1778c15",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "PTAcceptance": "pending_new_image_review",
+  "ownerAcceptance": "not_recorded_for_new_image",
+  "gameIntegrationVerified": false,
+  "published": false
+}

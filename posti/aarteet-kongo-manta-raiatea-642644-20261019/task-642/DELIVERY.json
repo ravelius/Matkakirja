@@ -1,0 +1,46 @@
+{
+  "taskNumber": 642,
+  "packetStatus": "ready_for_root_mail_delivery",
+  "createdAt": "2026-10-19T13:53:52.321745+00:00",
+  "imagegenCalls": 1,
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/native/aarre-africa-star-v2-attempt1.png",
+    "bytes": 2356416,
+    "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "pixelSHA256": "71d603c1b1e572176664cb3bb512d9b52c16094a3af6c485f3d850f19d6239c1",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "output": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-642/delivery-packet/aarre-africa-star-v2.jpg",
+    "bytes": 281226,
+    "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "format": "JPEG",
+    "pixelSHA256": "c3863b0af7d95edf7fe2274beb8e9d7dbda003f32af0ecd3c5e0e706d1778c15",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "qaPassed": true,
+  "interpretiveReconstruction": true,
+  "silverVsBrassUnresolvedConflictDisclosed": true,
+  "mainV2ReferenceSubstitutionDisclosed": true,
+  "PTAcceptance": "pending",
+  "ownerAcceptance": "pending_or_not_recorded",
+  "gameIntegrationVerified": false,
+  "published": false
+}

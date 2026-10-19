@@ -1,0 +1,111 @@
+{
+  "taskNumber": 643,
+  "createdAt": "2026-10-19T13:54:15.757414+00:00",
+  "sourceCommit": "ceaaefe835e1d11aba21467d6367e8ba69e9c33a",
+  "actualImageToolCalls": 1,
+  "selectedAttempt": 1,
+  "producerQAPassed": true,
+  "PTAcceptance": "pending",
+  "interpretiveReconstruction": true,
+  "nativeByteExact": true,
+  "JPEGWholeFrameExport": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-643/delivery-packet/aarre-southamerica-star-v2.jpg",
+    "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+    "pixelSHA256": "8dd5d3b9471063abe3834fb2d7b432f3a5f59bbc8e86174903f7702f5365b767",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize then JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  },
+  "referenceFallbackDisclosed": true,
+  "fileCount": 11,
+  "manifestExcludedFromOwnInventory": true,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "sha256": "6dcd79ad071e360f5f7cc79d7221e169ceedad75f000fb3e3b93152fce52fa71",
+      "bytes": 4176
+    },
+    {
+      "path": "PROMPTS.txt",
+      "sha256": "7e304abed5ac6a72c90215aaa31d97f32ce237d0a025a8538039ca5fcd509b3b",
+      "bytes": 2323
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "80f36bfbf040934db8296cff569bb56dc9a08aa974f840cbc37e2a083d2d94d6",
+      "bytes": 3213
+    },
+    {
+      "path": "QA.json",
+      "sha256": "40a9c0a386191e3a5d7fc77b4984124056258623a17a1d81e215382cf9dd1c9b",
+      "bytes": 5295
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "sha256": "cb19495593d33930a768a23c3281336dc3cec1eeacc2c600a7fb52e89869dcb6",
+      "bytes": 8308
+    },
+    {
+      "path": "aarre-southamerica-star-v2.jpg",
+      "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+      "bytes": 397253,
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "format": "JPEG",
+      "pixelSHA256": "8dd5d3b9471063abe3834fb2d7b432f3a5f59bbc8e86174903f7702f5365b767"
+    },
+    {
+      "path": "manta-emerald-native-attempt1.png",
+      "sha256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592",
+      "bytes": 2925364,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "be4b2904dec87e9a4c251ea8a8cdcf5fed2b53182efea750208803a024050242"
+    },
+    {
+      "path": "qa/series-comparison.png",
+      "sha256": "2e2ceb24e562273f3535c7096034cf1c9525fd45cb19dc60e2c5ee5f5d8fc916",
+      "bytes": 1990743,
+      "dimensions": [
+        1920,
+        700
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "pixelSHA256": "2809dcb9f7d44bcfd5b1b8a27689b31e809830b3988c818d757aad70ddbb3589"
+    },
+    {
+      "path": "source/REFERENCE-READY.json",
+      "sha256": "217c6d3dbdcee8fd1fd1b10a05f778d8763cfd608983128a2febed4e53311d6a",
+      "bytes": 3447
+    },
+    {
+      "path": "source/aarnin-korvaajat-20261019.md",
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43",
+      "bytes": 4686
+    },
+    {
+      "path": "source/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46",
+      "bytes": 1838
+    }
+  ]
+}

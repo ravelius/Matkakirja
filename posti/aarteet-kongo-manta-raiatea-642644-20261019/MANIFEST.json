@@ -1,0 +1,424 @@
+{
+  "at": "2026-10-19T14:03:10.733967+00:00",
+  "family": "aarteet-kongo-manta-raiatea-642644-20261019",
+  "taskNumbers": [
+    642,
+    643,
+    644
+  ],
+  "imageCount": 3,
+  "actualWholeGenerationCalls": 3,
+  "source": {
+    "path": "posti/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+    "commit": "ceaaefe835e1d11aba21467d6367e8ba69e9c33a",
+    "blob": "233ddb2dfbc79966306a92bebf8010bb2e761f3b",
+    "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46",
+    "readInFull": true
+  },
+  "assets": [
+    {
+      "taskNumber": 642,
+      "filename": "aarre-africa-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-africa-star-v2.jpg",
+      "JPEGSHA256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+      "JPEG": {
+        "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+        "pixelSHA256": "c3863b0af7d95edf7fe2274beb8e9d7dbda003f32af0ecd3c5e0e706d1778c15",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-642/native/aarre-africa-star-v2-attempt1.png",
+      "nativeSHA256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+      "native": {
+        "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+        "pixelSHA256": "71d603c1b1e572176664cb3bb512d9b52c16094a3af6c485f3d850f19d6239c1",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativeByteExactUnchanged": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-642/qa/series-comparison.png",
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "producerQAPassed": true,
+      "interpretiveReconstruction": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 643,
+      "filename": "aarre-southamerica-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-southamerica-star-v2.jpg",
+      "JPEGSHA256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+      "JPEG": {
+        "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+        "pixelSHA256": "8dd5d3b9471063abe3834fb2d7b432f3a5f59bbc8e86174903f7702f5365b767",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-643/manta-emerald-native-attempt1.png",
+      "nativeSHA256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592",
+      "native": {
+        "sha256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592",
+        "pixelSHA256": "be4b2904dec87e9a4c251ea8a8cdcf5fed2b53182efea750208803a024050242",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativeByteExactUnchanged": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-643/qa/series-comparison.png",
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "producerQAPassed": true,
+      "interpretiveReconstruction": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 644,
+      "filename": "aarre-oceania-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-oceania-star-v2.jpg",
+      "JPEGSHA256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+      "JPEG": {
+        "sha256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+        "pixelSHA256": "14a37601531b1a93d12c3fe2ad2445399ad6abaee4eea021dd9f75b1ee48cb1e",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-644/selected-native.png",
+      "nativeSHA256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+      "native": {
+        "sha256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+        "pixelSHA256": "f0b40924a9d1cebb5630979ca50a9f63df199c47a4ab801aca09ef8edcc55045",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativeByteExactUnchanged": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-644/series-comparison-640.png",
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "producerQAPassed": true,
+      "interpretiveReconstruction": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 7659,
+      "sha256": "7e8c9e9ef06cbf32484d15015d1835022da4d348980341cee44c7caa137d2212"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2130,
+      "sha256": "72d75eefbf450c8107f876796b603e533b22787360f57097d727e2c2ba0a2558"
+    },
+    {
+      "path": "REFERENCE-READY.json",
+      "bytes": 3447,
+      "sha256": "217c6d3dbdcee8fd1fd1b10a05f778d8763cfd608983128a2febed4e53311d6a"
+    },
+    {
+      "path": "ROOT-QA.json",
+      "bytes": 7487,
+      "sha256": "b64720807a42e5f4dd861ad57af3673b2b8d56ae1267bba057b6ac5da6a677b5"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 5110,
+      "sha256": "075ab5df8a1b8b3a87ca46cd4627fb9f03b3a27472a510b6b8f7ad99d9bad132"
+    },
+    {
+      "path": "aarre-africa-star-v2.jpg",
+      "bytes": 281226,
+      "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6"
+    },
+    {
+      "path": "aarre-oceania-star-v2.jpg",
+      "bytes": 364671,
+      "sha256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8"
+    },
+    {
+      "path": "aarre-southamerica-star-v2.jpg",
+      "bytes": 397253,
+      "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b"
+    },
+    {
+      "path": "sources/aarnin-korvaajat-20261019.md",
+      "bytes": 4686,
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "bytes": 1838,
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46"
+    },
+    {
+      "path": "task-642/DELIVERY.json",
+      "bytes": 1482,
+      "sha256": "b7b661dd07b1da002693e913f3779ac7887fc1b5a45eb421155d2871e688f17a"
+    },
+    {
+      "path": "task-642/GENERATION.json",
+      "bytes": 10505,
+      "sha256": "916611bc371704d8e673aa35322a742f75438cd4f722c673506eb52e36ef42ab"
+    },
+    {
+      "path": "task-642/MANIFEST.json",
+      "bytes": 3332,
+      "sha256": "0601e25361ac18346f05ab553d645e02cabb19265e77c889e11511b3cf816370"
+    },
+    {
+      "path": "task-642/PROMPTS.json",
+      "bytes": 4268,
+      "sha256": "8bf40d509bf130f9c25abc852924327a5222e20b7f664f5ebdbdf70696965974"
+    },
+    {
+      "path": "task-642/QA-FI.md",
+      "bytes": 2956,
+      "sha256": "29939301b84ebcf45c484abb63289d2a15205baf3bc04bbcf419032e8ca7674e"
+    },
+    {
+      "path": "task-642/QA.json",
+      "bytes": 3250,
+      "sha256": "8b9b4af499fca75c7b0670f03cf6b309449772c1b22251bf9615998a10352c19"
+    },
+    {
+      "path": "task-642/SOURCE-MANIFEST.json",
+      "bytes": 4290,
+      "sha256": "6b43aa433a1e31c8d31c71e144bc4ef1a11b9a1e9578064f2380511392cb91a0"
+    },
+    {
+      "path": "task-642/aarre-africa-star-v2.jpg",
+      "bytes": 281226,
+      "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6"
+    },
+    {
+      "path": "task-642/native/aarre-africa-star-v2-attempt1.png",
+      "bytes": 2356416,
+      "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63"
+    },
+    {
+      "path": "task-642/prompt.txt",
+      "bytes": 2811,
+      "sha256": "016e7a7b0de55a82d94af537a02fb3cc716c41b93c1c7caf36b93617fade6d01"
+    },
+    {
+      "path": "task-642/qa/series-comparison.png",
+      "bytes": 1763864,
+      "sha256": "aa181982e548198c8f5f6dc55d04509ccce394dea8054c26359e3559dc3714cf"
+    },
+    {
+      "path": "task-642/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+      "bytes": 360121,
+      "sha256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5"
+    },
+    {
+      "path": "task-642/references/aarre-africa-star.jpg",
+      "bytes": 52977,
+      "sha256": "0b3d80c04b280b3899edc3574038a340c6c64845479778fb99af2e3fbcb07dde"
+    },
+    {
+      "path": "task-642/references.json",
+      "bytes": 914,
+      "sha256": "4d1794dcd4bebcf5e012de57299e8d3070a2ae1d844ea2ea9c2461ae75e818f4"
+    },
+    {
+      "path": "task-642/root-reference-ready.json",
+      "bytes": 3447,
+      "sha256": "217c6d3dbdcee8fd1fd1b10a05f778d8763cfd608983128a2febed4e53311d6a"
+    },
+    {
+      "path": "task-642/root-source-manifest.json",
+      "bytes": 5110,
+      "sha256": "075ab5df8a1b8b3a87ca46cd4627fb9f03b3a27472a510b6b8f7ad99d9bad132"
+    },
+    {
+      "path": "task-642/sources/aarnin-korvaajat-20261019.md",
+      "bytes": 4686,
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43"
+    },
+    {
+      "path": "task-642/sources/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "bytes": 1838,
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46"
+    },
+    {
+      "path": "task-642/technical-export.json",
+      "bytes": 1249,
+      "sha256": "cc49773e8e57141c60b301e81db5209d7aa273c27e9ecc04cfb3ae97a3b9a363"
+    },
+    {
+      "path": "task-642/tool-arguments.json",
+      "bytes": 3071,
+      "sha256": "50c5a3a34c749bd895d64d142c909715836cf057738ffa7a52d082c0f67a30a3"
+    },
+    {
+      "path": "task-643/GENERATION.json",
+      "bytes": 4176,
+      "sha256": "6dcd79ad071e360f5f7cc79d7221e169ceedad75f000fb3e3b93152fce52fa71"
+    },
+    {
+      "path": "task-643/MANIFEST.json",
+      "bytes": 3480,
+      "sha256": "c873628f2a61b31a0925f26f854e1f9a827e46adaea82be569fffc8e88245c22"
+    },
+    {
+      "path": "task-643/PROMPTS.txt",
+      "bytes": 2323,
+      "sha256": "7e304abed5ac6a72c90215aaa31d97f32ce237d0a025a8538039ca5fcd509b3b"
+    },
+    {
+      "path": "task-643/QA-FI.md",
+      "bytes": 3213,
+      "sha256": "80f36bfbf040934db8296cff569bb56dc9a08aa974f840cbc37e2a083d2d94d6"
+    },
+    {
+      "path": "task-643/QA.json",
+      "bytes": 5295,
+      "sha256": "40a9c0a386191e3a5d7fc77b4984124056258623a17a1d81e215382cf9dd1c9b"
+    },
+    {
+      "path": "task-643/SOURCE-MANIFEST.json",
+      "bytes": 8308,
+      "sha256": "cb19495593d33930a768a23c3281336dc3cec1eeacc2c600a7fb52e89869dcb6"
+    },
+    {
+      "path": "task-643/aarre-southamerica-star-v2.jpg",
+      "bytes": 397253,
+      "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b"
+    },
+    {
+      "path": "task-643/manta-emerald-native-attempt1.png",
+      "bytes": 2925364,
+      "sha256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592"
+    },
+    {
+      "path": "task-643/qa/series-comparison.png",
+      "bytes": 1990743,
+      "sha256": "2e2ceb24e562273f3535c7096034cf1c9525fd45cb19dc60e2c5ee5f5d8fc916"
+    },
+    {
+      "path": "task-643/source/REFERENCE-READY.json",
+      "bytes": 3447,
+      "sha256": "217c6d3dbdcee8fd1fd1b10a05f778d8763cfd608983128a2febed4e53311d6a"
+    },
+    {
+      "path": "task-643/source/aarnin-korvaajat-20261019.md",
+      "bytes": 4686,
+      "sha256": "fd2358cbb499b99b20f24e181dd90ffef03a5ae1cdbbeb60753f2a97c864ad43"
+    },
+    {
+      "path": "task-643/source/paatoimittaja-codex-aarteet-kongo-manta-raiatea-20261019.md",
+      "bytes": 1838,
+      "sha256": "c4e4a28e2199ec761bec2f17ab0298511927cbfffa2b5f1053d25d4cc3083b46"
+    },
+    {
+      "path": "task-644/GENERATION.json",
+      "bytes": 2472,
+      "sha256": "fbf48671caa33a54aa2dc9252bc4e7179c0d29417b68f9585e5b6756b0593080"
+    },
+    {
+      "path": "task-644/MANIFEST.json",
+      "bytes": 3191,
+      "sha256": "032dd795f8b93498b2d7fed84c1d8c48b43078a06e2dd4271eb9e1ebc176e761"
+    },
+    {
+      "path": "task-644/PROMPTS.json",
+      "bytes": 5295,
+      "sha256": "daf056e4177324f1cc059c42d559edf91f739e0de4a8f94dae3e365ab50c9ac5"
+    },
+    {
+      "path": "task-644/QA-FI.md",
+      "bytes": 2489,
+      "sha256": "a29c4d6b31057052ae8fdd5f785ec563416a6dd962b0930400c295a56b67fce0"
+    },
+    {
+      "path": "task-644/QA.json",
+      "bytes": 3907,
+      "sha256": "2d1137047b5b08bf6bfe3e428fdcee940197e958d4fc06a44caf97bcfc7f5ec8"
+    },
+    {
+      "path": "task-644/SOURCE-MANIFEST.json",
+      "bytes": 5517,
+      "sha256": "4dd819d4e2006da77f107dce033c0b347518b5951cb3a558bd759f2351ecfd5a"
+    },
+    {
+      "path": "task-644/STRUCTURE-PREFLIGHT.json",
+      "bytes": 6312,
+      "sha256": "4f1ca21ddc2da9333e8fcd0d5ce72fca70f446486459e07f67ba8c9ab2d02007"
+    },
+    {
+      "path": "task-644/aarre-oceania-star-v2.jpg",
+      "bytes": 364671,
+      "sha256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8"
+    },
+    {
+      "path": "task-644/selected-native.png",
+      "bytes": 2469287,
+      "sha256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7"
+    },
+    {
+      "path": "task-644/series-comparison-640.png",
+      "bytes": 1899403,
+      "sha256": "21c603e04b9f03b838a31ec2ed3d677b408c4e541a5c8377d5ac514c59ae1d84"
+    }
+  ],
+  "manifestExcludedFromOwnInventory": true
+}

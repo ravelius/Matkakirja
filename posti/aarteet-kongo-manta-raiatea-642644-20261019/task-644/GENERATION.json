@@ -1,0 +1,54 @@
+{
+  "taskNumber": 644,
+  "actualImagegenCalls": 1,
+  "selectedAttempt": 1,
+  "attempts": [
+    {
+      "taskNumber": 644,
+      "attempt": 1,
+      "completedAt": "2026-10-19T13:58:21.059077+00:00",
+      "originalToolPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-ec204368-5ad5-4170-81a8-a4ebc2ec56b5.png",
+      "originalUnchanged": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15394-309d-7c03-91d7-a2934d0863c3/exec-ec204368-5ad5-4170-81a8-a4ebc2ec56b5.png",
+        "sha256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+        "bytes": 2469287,
+        "format": "PNG",
+        "mode": "RGB",
+        "width": 1254,
+        "height": 1254,
+        "decodedRGBPixelSHA256": "f0b40924a9d1cebb5630979ca50a9f63df199c47a4ab801aca09ef8edcc55045",
+        "fullyOpaque": true
+      },
+      "preservedNative": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/native/raiatea-maro-ura-attempt-1.png",
+        "sha256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+        "bytes": 2469287,
+        "format": "PNG",
+        "mode": "RGB",
+        "width": 1254,
+        "height": 1254,
+        "decodedRGBPixelSHA256": "f0b40924a9d1cebb5630979ca50a9f63df199c47a4ab801aca09ef8edcc55045",
+        "fullyOpaque": true
+      },
+      "nativeCopyByteEqual": true,
+      "wholeFrameExport": {
+        "method": "Pillow RGB conversion then entire square frame Lanczos resize to640×640, JPEG quality98, subsampling0. No crop, pad, retouch, mask or compositing.",
+        "output": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-644/delivery-packet/aarre-oceania-star-v2.jpg",
+          "sha256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+          "bytes": 364671,
+          "format": "JPEG",
+          "mode": "RGB",
+          "width": 640,
+          "height": 640,
+          "decodedRGBPixelSHA256": "14a37601531b1a93d12c3fe2ad2445399ad6abaee4eea021dd9f75b1ee48cb1e",
+          "fullyOpaque": true
+        }
+      },
+      "originalPreservedInPlace": true
+    }
+  ],
+  "noOtherGenerator": true,
+  "noContentEdits": true,
+  "nativeOriginalPreserved": true
+}

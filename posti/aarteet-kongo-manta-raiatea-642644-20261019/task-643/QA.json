@@ -1,0 +1,102 @@
+{
+  "taskNumber": 643,
+  "attempt": 1,
+  "checkedAt": "2026-10-19T13:54:15.757414+00:00",
+  "personallyInspectedNative": true,
+  "personallyInspected640JPEG": true,
+  "personallyInspectedSeriesComparison": true,
+  "allUsedReferencesPersonallyViewedBeforeGeneration": true,
+  "sourceAndFullAttachmentReadInFull": true,
+  "producerQAPassed": true,
+  "singleArtifactOnly": true,
+  "interpretiveReconstructionNotSurvivingObjectPhotograph": true,
+  "approximate12cmIsPTVisualInstructionNotMeasuredHistoricalCertification": true,
+  "object": "one deepgreen slightlyasymmetric near-round polished naturalemerald,unmounted,dense mineralbody,irregular internalfractures/cloudy inclusions,softtransmittedlightdepth",
+  "notPresent": [
+    "metal setting/frame",
+    "modern symmetric diamondfaceting",
+    "jewelleryset",
+    "animalegg",
+    "people",
+    "text",
+    "fantasyneonhalo",
+    "extraartifacts"
+  ],
+  "support": "simple brown wovencloth,explicitly allowed bysource",
+  "background": "darkwarmbrown textured,softupperdiagonallight",
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-643/native/manta-emerald-attempt1.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "sha256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592",
+    "pixelSHA256": "be4b2904dec87e9a4c251ea8a8cdcf5fed2b53182efea750208803a024050242",
+    "byteExactOriginalPreserved": true
+  },
+  "JPEG": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-643/delivery-packet/aarre-southamerica-star-v2.jpg",
+    "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+    "pixelSHA256": "8dd5d3b9471063abe3834fb2d7b432f3a5f59bbc8e86174903f7702f5365b767",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize then JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  },
+  "comparison": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-643/delivery-packet/qa/series-comparison.png",
+    "columns": [
+      "newMantaEmerald",
+      "oldSouthAmerica main3154a1b goldraft,comparisononly",
+      "exactPTaccepted639JPEG delivery72db6,main/v2missing"
+    ],
+    "requestedMainV2Available": false,
+    "actualThirdImageDisclosedInLabel": true,
+    "fallbackApprovedByRoot": true,
+    "referenceAvailabilityQualification": {
+      "requestedPath": "assets/aarteet/aarre-middleeast-star-v2.jpg",
+      "absentAtMainCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+      "mainSearchScope": "all tracked assets/ paths with aarre-middleeast-star name; only legacy base jpg present",
+      "legacyBaseSHA256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567",
+      "approved639FileUsedInstead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+      "approved639SHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+      "priorDeliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+      "PTAcceptanceCommit": "9c74aac21d6e42a043d71e095f13c002a9b0ae1c",
+      "basis": "New source explicitly requires approved639640 series style; exact previously delivered and PT-accepted639 image is used as authoritative style baseline. Not claimed to be fetched from absent main/v2 path.",
+      "comparisonLabelMustDiscloseActualSource": true,
+      "rootApprovedRoutineReferenceSubstitution": true
+    }
+  },
+  "observationsFI": [
+    "Yksi pyöreähkö hieman epäsymmetrinen luonnonmuotoinen hiottu syvänvihreä kivi. Ei kehystä, koruja, metallia, säännöllistä modernia timanttifasetointia tai eläinmunaa.",
+    "Mineraalipinnassa epäsäännöllisiä halkeamia/sulkeumia ja tummempia/vaaleampia kohtia, tiheän kiinteän kiven vaikutelma; satunnaiset heijastuspinnat eivät muodosta modernia symmetristä fasettihiontaa. Ei yhtenäistä lasi-/jellypintaa tai toistuvaa leimattua kuviota.",
+    "Syvä vihreä valo näyttää valon läpäisemältä mineraalisyvyydeltä, ei itsevalaisevalta neonilta: ei ympäröivää valokehää tai värillistä fantasiahohdetta kankaassa.",
+    "Yksinkertainen punottu ruskea kangas toimii alustana. Koko kivi näkyy tummalla lämpimänruskealla taustalla, pehmeä yläviistovalo ja luonnollinen kosketusvarjo.",
+    "Natiivi1254×1254RGBPNG säilytetty muuttamattomana.640×640JPEG laatu98/subsampling0,koko ruudun LANCZOS-vienti ilman crop/pad/contentretouch."
+  ],
+  "actualImageToolCalls": 1,
+  "wholeNewGeneration": true,
+  "partialEdit": false,
+  "failedAttempts": 0,
+  "PTAcceptanceOfNewFiles": "pending",
+  "postDelivery": "parent handles;not asserted",
+  "task645": "not started;selectednative retained for future coordinateddesignreference",
+  "gameIntegration": "not performed",
+  "R2": "not performed",
+  "publication": "not performed"
+}

@@ -1,0 +1,180 @@
+{
+  "at": "2026-10-19T14:03:10.733967+00:00",
+  "passed": true,
+  "reviewer": "root",
+  "sourceAndAttachmentReadInFull": true,
+  "actualWholeGenerationCalls": 3,
+  "returnedWholeGenerationCalls": 3,
+  "pendingCalls": 0,
+  "assets": [
+    {
+      "taskNumber": 642,
+      "filename": "aarre-africa-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-africa-star-v2.jpg",
+      "JPEGSHA256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+      "JPEG": {
+        "sha256": "b93f67e9564217fb4cbff09dee1cb3c8e7daad4e091736d55ef62187a9a62eb6",
+        "pixelSHA256": "c3863b0af7d95edf7fe2274beb8e9d7dbda003f32af0ecd3c5e0e706d1778c15",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-642/native/aarre-africa-star-v2-attempt1.png",
+      "nativeSHA256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+      "native": {
+        "sha256": "69462838cc7965396ac62c95f915392c258a36cb396d821ca1eee2cf99757b63",
+        "pixelSHA256": "71d603c1b1e572176664cb3bb512d9b52c16094a3af6c485f3d850f19d6239c1",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativeByteExactUnchanged": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-642/qa/series-comparison.png",
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "producerQAPassed": true,
+      "interpretiveReconstruction": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 643,
+      "filename": "aarre-southamerica-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-southamerica-star-v2.jpg",
+      "JPEGSHA256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+      "JPEG": {
+        "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+        "pixelSHA256": "8dd5d3b9471063abe3834fb2d7b432f3a5f59bbc8e86174903f7702f5365b767",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-643/manta-emerald-native-attempt1.png",
+      "nativeSHA256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592",
+      "native": {
+        "sha256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592",
+        "pixelSHA256": "be4b2904dec87e9a4c251ea8a8cdcf5fed2b53182efea750208803a024050242",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativeByteExactUnchanged": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-643/qa/series-comparison.png",
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "producerQAPassed": true,
+      "interpretiveReconstruction": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 644,
+      "filename": "aarre-oceania-star-v2.jpg",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "JPEGPath": "aarre-oceania-star-v2.jpg",
+      "JPEGSHA256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+      "JPEG": {
+        "sha256": "e20b4f1183976ede9e01a8f5b47eed01edff31eb4306ab66c1cdcad8a8f827b8",
+        "pixelSHA256": "14a37601531b1a93d12c3fe2ad2445399ad6abaee4eea021dd9f75b1ee48cb1e",
+        "dimensions": [
+          640,
+          640
+        ],
+        "format": "JPEG",
+        "mode": "RGB",
+        "quality": 98
+      },
+      "nativePath": "task-644/selected-native.png",
+      "nativeSHA256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+      "native": {
+        "sha256": "abfc3087230fb8526950a56a25be317a720a6761d32812f741f4663cac2689f7",
+        "pixelSHA256": "f0b40924a9d1cebb5630979ca50a9f63df199c47a4ab801aca09ef8edcc55045",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "mode": "RGB"
+      },
+      "nativeByteExactUnchanged": true,
+      "wholeNewGeneration": true,
+      "wholeFrameExport": true,
+      "crop": false,
+      "padding": false,
+      "contentRetouch": false,
+      "seriesComparisonPath": "task-644/series-comparison-640.png",
+      "rootPersonallyInspectedNative": true,
+      "rootPersonallyInspected640JPEG": true,
+      "rootPersonallyInspectedSeriesComparison": true,
+      "producerQAPassed": true,
+      "interpretiveReconstruction": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "sourceQualifications": {
+    "crownMaterial": "PT explicitly chooses silver; attachment notes scholar brass conflict, not resolved",
+    "emeraldSize": "about12cm is PT visual instruction, historical narrative compares ostrich egg",
+    "RaiateaLength": "PT about6m; attachment21feet/6.4m and6incheswidth, approximate",
+    "RaiateaIdentity": "lost Raiatea belt; surviving Quai Branly Tahiti fragment only construction reference, not same object or exact color template",
+    "historicalAccuracy": "interpretive visual reconstructions from descriptions, not known surviving object photographs",
+    "attachmentOpenSources": "Cavazzi original and Aleveque2018 not verified; research says blocked; not certified by image production"
+  },
+  "requestedReferenceAvailabilityQualification": {
+    "requestedPath": "assets/aarteet/aarre-middleeast-star-v2.jpg",
+    "absentAtMainCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+    "mainSearchScope": "all tracked assets/ paths with aarre-middleeast-star name; only legacy base jpg present",
+    "legacyBaseSHA256": "4e61557ec148b738696e2f57ad391bc7fa2df79baf779021e5676f98fc42b567",
+    "approved639FileUsedInstead": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg",
+    "approved639SHA256": "9c3999616549479e0517416b47172765e4b46d203c6a2b9515deb8bcb82148b5",
+    "priorDeliveryCommit": "72db6e148f8709760ecf146ca0300e46e982a915",
+    "PTAcceptanceCommit": "9c74aac21d6e42a043d71e095f13c002a9b0ae1c",
+    "basis": "New source explicitly requires approved639640 series style; exact previously delivered and PT-accepted639 image is used as authoritative style baseline. Not claimed to be fetched from absent main/v2 path.",
+    "comparisonLabelMustDiscloseActualSource": true,
+    "rootApprovedRoutineReferenceSubstitution": true
+  },
+  "oldFilesPreserved": true,
+  "allChildManifestFilesHashAndMirrorVerified": true,
+  "newObjectsAreInterpretiveNotCertifiedSurvivingObjectPhotographs": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

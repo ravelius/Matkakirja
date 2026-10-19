@@ -1,0 +1,47 @@
+{
+  "attempt": 1,
+  "issuedAt": "2026-10-19T13:51:13.463536+00:00",
+  "args": {
+    "prompt": "Generate a COMPLETELY NEW PHOTOREALISTIC color camera still-life photograph, SQUARE1024x1024RGBopaquePNG. ONE LARGE UNMOUNTED NATURAL EMERALD, a historically described lost Manta emerald interpreted as a real physical stone around12cm across. It is a broad rounded irregular natural stone HAND-POLISHED into gentle uneven roundedcurves, slightly asymmetrical stout near-round mass, not a mathematically perfect sphere and NOT an egg, no modern diamond facets orcutgemgeometry. Deep rich emeraldFORESTGREEN with convincing natural beryl mineraldepth: fine irregular internalfractures/featherinclusions, subtly cloudy naturalzones, tiny mineralveins, carefully worn hand-polishedsurface with realstone luster. Strong sense of INNER GREEN LIGHT is caused ONLY by soft NATURAL transmitted windowlight through the semitranslucent solidmineral, quiet luminousdepth in selectedclearareas, dark solidgreenbody and naturalsoftreflections. It must look DENSE SOLID MINERAL, NOT uniformglass/jelly/plastic, no fantasy neon/laser/emissiveglow, no luminoushalo or coloredlightcast around it, no stamped/repeating AIpattern. One stone only, NOgold/silver FRAME/MOUNT, jewels/jewellery,ring,necklace,box,props,people,text. Stone rests naturally on a SIMPLE FLAT small patch of darktawny BROWN WOVEN CLOTH with honest coarseweave and just a few loose naturalfolds, not a cushion/throne, cloth subordinate belowstone. Entire stone centered and comfortably inside squareframe, about60–65%frameheight, visible naturalcontactshadow. Single reference is AUTHORITATIVE BACKGROUND/LIGHT/PHOTOGRAPHY STYLE ONLY, do NOT copy itsgoldbox or contents: verydarkwarmBROWN subtlytextured surroundings, soft upper-left diagonaldaylight, gentlylit foreground fading todarkerbackground, realcamera mineral/clothtexture and naturalshadows. Polishedstone remains richlyGREEN/readable against DARK warmearthbrown, no paleparchment. Careful productartifact photography, detailed real optics,notCGI/game3Drender/illustration. This is a whole NEW generated photograph, not partialediting/backgroundreplacement/retouch/copypixels. Opaque continuous fullsquare, no crop/padding,border/vignette/oval/fade,logos/watermarks or graphiclabels. This is an interpretive visual reconstruction from a historicaldescription, not a photograph of a surviving known artifact.",
+    "transparent_background": false,
+    "referenced_image_paths": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/references/PT-accepted-639640-aarre-middleeast-star.jpg"
+    ]
+  },
+  "wholeNewGeneration": true,
+  "completed": true,
+  "completedAt": "2026-10-19T13:52:32.046008+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a15385-7d68-7a01-8552-a6db306cc80a/exec-7a688bc7-82b9-40b0-a730-1499ade03564.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-643/native/manta-emerald-attempt1.png",
+  "nativeSHA256": "03459833216db7c9f452d86b5a2f5eb67a46c30663d3c13020c92fd6e72da592",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeMode": "RGB",
+  "nativeAlphaExtrema": [
+    255,
+    255
+  ],
+  "nativePixelSHA256": "be4b2904dec87e9a4c251ea8a8cdcf5fed2b53182efea750208803a024050242",
+  "actualImageToolCalls": 1,
+  "export": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-kongo-manta-raiatea-642644-20261019/task-643/delivery-packet/aarre-southamerica-star-v2.jpg",
+    "sha256": "83705bdf1ec790b5e361cef411bc48e220690443b6330e67bd4658e251dcd45b",
+    "pixelSHA256": "8dd5d3b9471063abe3834fb2d7b432f3a5f59bbc8e86174903f7702f5365b767",
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "method": "Pillow LANCZOS whole-frame resize then JPEG encoding",
+    "quality": 98,
+    "subsampling": 0,
+    "optimize": true,
+    "crop": false,
+    "padding": false,
+    "contentRetouch": false,
+    "nativePreservedByteExact": true
+  }
+}
