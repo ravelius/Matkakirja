@@ -1767,3 +1767,7 @@ Juoksupeli: paperilohikäärmeet kahtena lajina, yleinen punainen +1/3 viitta-en
 ## PAATOS 19.10.2026 klo 09.29 (kortti) (19.10.2026 klo 09.29)
 
 Juoksupelin täyden elinvoiman esine on vihreä jadeinen pitkäikäisyyden persikka (harvinainen); herkullinen omena antaa 1/10. Codexille 6cc488185.
+
+## PAATOKSET 19.10.2026 klo 09.36–09.37: keisarin koeäänet ja muistokupla valokuvana (19.10.2026 klo 09.42)
+
+Klo 09.36 koeäänet (sanatarkasti): "Kaikki kuulostivat liian vanhoille. Pitää olla nopea ja nuori ääni ja muista että henkilö juoksee kun parkaisee repliikin, niin ota tämä myös huomioon tekstin tunne tagissa. Nr. 6 oli lähimpänä mutta sekään ei ollut hyvä. Etsi 10 seuraavaa" → Äänittäjä etsii 10 uutta ääntä (≤ 1 400 mrk); tunnetagi (juoksee + parkaisee) koskee kaikkia 162 huutoa. Klo 09.37 muistokupla (sanatarkasti): "Kupla voisi olla pelkkä generoitu kuva josta on häivytetty reunat läpinäkyviksi soikion muotoon. Tilatessa pitää pyytää jättämään tarpeeksi tilaa reunoille jotta häivytys onnistuu" + "Pitää olla realistisen näköinen valokuva" → Codexin realistinen värivalokuva, esine ja hahmo keskimmäisellä ~60 %:lla, reunoilla ≥ 20 % rauhallista taustaa, ei tekstiä eikä kuvaan leivottua alfaa; peli häivyttää yhdellä yhteisellä soikealla maskilla; dynastia + vuosi omalla raidallaan soikion alla. Codex-tilaus fd77c79d9 (postilaatikko). KK korjasi 24 huutoa + 3 kuplakuvausta → SK.
