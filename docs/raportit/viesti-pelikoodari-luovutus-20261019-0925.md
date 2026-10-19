@@ -84,3 +84,10 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - SK: esineluettelon muoto lähetetty, odottaa 40 esinettä + huudahdukset (nyt 5 paikkamerkein) → kopioi protoon.
 - JU: simuvuoro ~10.15 sha da1f9bd84, PK ajaa videot itse (skenaario kohdassa 4) → PT (KK).
 - Jäljellä: kerättävien aarteiden paikat tasolla 2 (odottaa Codexin yläreittiä), Kamerajohtaja Rata v4:n jälkeen.
+
+## TILA 09.37 (korvaa edellisen sha:n)
+- juoksupeli-202 uusin **d752eda14**: SK:n 40 rikkoutuvaa + jadepersikka (main 4c52f68d9 + 956001ae2) yhdistetty tekstit.fi.json:iin
+  (353 avainta); JuoksuEsineet.Lue lukee luettelon suoraan avaimista (esineet.json poistettu). Kuplan KUVATEKSTI = .ajoitus (omistaja 09.2x,
+  PT 09.3x); huudahdus = ÄÄNI (ei tekstinä; äänet odottavat omistajan lupaa, nyt RikkoRepliikki vain lokiin). Kuvat Codexilta polkuun
+  Resources/JuoksuV4/esineet/<id> (.kupla = kuvaus Codexille). Jadepersikan poiminta.1–2 (Puyin repliikit) samoin ääntä odottamassa.
+- Simuvuoro siirtyi ~10.40 (JU), käännös d752eda14; PK ajaa videot → PT.
