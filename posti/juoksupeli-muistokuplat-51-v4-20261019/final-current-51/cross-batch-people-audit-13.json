@@ -1,0 +1,706 @@
+{
+  "auditType": "read-only cross-batch people/content review",
+  "reviewer": "memory51_batch_b",
+  "completedAt": "2026-10-19T12:28:52.906476+00:00",
+  "scope": {
+    "mainNativeCount": 13,
+    "mainCEightNumbers": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      33,
+      34,
+      37
+    ],
+    "ownBFiveNumbers": [
+      19,
+      21,
+      23,
+      24,
+      25
+    ],
+    "extraComparatorNativeCount": 2,
+    "extraComparatorNumbers": [
+      45,
+      49
+    ],
+    "notFull51Audit": true
+  },
+  "PTSource": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/sources/paatoimittaja-codex-muistokuplat-era-c-kuittaus-20261019.md",
+    "commit": "43e464bb68b591d5521d6c0eaa1118c265b86497",
+    "sha256": "42977c5a62fc4ce479512fb1f9334ca9e09319370b4ae71d42e3bc051b0e5de2",
+    "readInFull": true
+  },
+  "decision": "NO_DEFINITE_NEW_BLOCKING_CONTENT_ERROR_OBSERVED; existing PT feather exceptions remain",
+  "blockingContentErrors": [],
+  "entries": [
+    {
+      "batch": "retry-c-people-pt-20261019",
+      "code": "26-kullattu-vesiastia",
+      "number": 26,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/26-kullattu-vesiastia-attempt1.png",
+      "nativeSHA256": "b2e8a40ef4c6f0b1f3d5dc926f9f15c8aed5e0c7ec2168bb07678426f6fe5d30",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Iso kullattu vesiastia pihalla, nauravat palvelijat täyttävät sitä ämpäreillä, virkamies hymyilee, ensilumi, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.37,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "Two distinct young clean-shaven servants: slim triangular left face and round cheeked right face; middle-aged moustached official in burgundy formal robe. No twins or copied elderly white-goatee identity. Whole gildedvat,woodenbuckets pouring,firstsnow preserved. All smiles clear; faces partly in early feather, not falsely claimed entirely r<=.45.160px review next.",
+          "PTConditionalCompositionReview=true; readable expressions enter early smooth feather, not all important face features r<=.45. Disclosed in QA-FI and manifest."
+        ],
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "earlyFeatherExceptionForPTReview": true,
+        "PTConditionalCompositionReview": true,
+        "smallScaleExpressionsReadable": true,
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Kaksi nuorta parrattomaksi kuvattua palvelijaa on nyt erinäköisiä: vasemmalla hoikka/kapeampi kasvo, oikealla pyöreämpi täysi poski. Keskellä keski-ikäinen mustaviiksinen virkamies burgundin virka-asussa. Ei vanhaa valkopartaa eikä kaksosia. Kokonainen kullattu vesiastia, puuämpärien kaato ja pihan ensilumi säilyvät. Ilmeet luettavat160px:ssa; tärkeät piirteet ulottuvat varhaiseen loivaan häivytykseen, eivät kaikki45%ytimeen.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00"
+      },
+      "observationsFI": [
+        "Kaksi nuorta palvelijaa erottuu: vasen hoikka/kapeampi, oikea pyöreämpi ja täysiposki. Keskellä keski-ikäinen tummaviiksinen virkamies burgundin juhlavaatteessa, ei valkopartaista opettajaa.",
+        "Kullattu suuri vesiastia leijonarenkain, kaksi puuämpäriä kaataa vettä siihen ja pihalla ensilumi. Roolit, toiminta ja esinemuoto vastaavat kuplaa.",
+        "Mustat Qing-päähineet ja näkyvät palmikot. Varhainen feather on ilmoitettu PT-poikkeamaksi; sitä ei koroteta uudeksi sisältövirheeksi."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": true
+    },
+    {
+      "batch": "retry-c-people-pt-20261019",
+      "code": "27-vuoripoltin",
+      "number": 27,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/27-vuoripoltin-attempt1.png",
+      "nativeSHA256": "5f7ad9a72793a4badeedcb3162603c29e0570cfc63c7662fc360cb7e3ff0d33b",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Iloinen valumestari kaataa sulaa pronssia muottiin vuoripolttimen tekoa varten kirkkaassa, avarassa palatsin valimossa; valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.345,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "Middle-aged muscular square-jawed foundryman, soot marks, leatherapron,rolledsleeves,strongforearms,short darkhair andvisiblequeue; clean-shaven, notoldwhitebeardedteacher. Correctmountaincenser+pouringbronze/mould,closeframing/strongbokeh retained."
+        ],
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "PTConditionalCompositionReview": false,
+        "faceEssentialFeaturesFullyInsideOpaqueCore": true,
+        "smallScaleExpressionsReadable": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Keski-ikäinen lihaksikas, neliöleukainen valumestari: lyhyt tumma tukka/queue, tumma nahkaesiliina, nokiset käsivarret, käärityt hihat, ei partaa eikä valkoista vanhushahmoa. Vuorikansi, pronssipoltin, sulan pronssin kaato ja muotti säilyvät. Kasvojen tärkeät piirteet ytimessä, voimakas optinen taustasumeus.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00"
+      },
+      "observationsFI": [
+        "Keski-ikäinen lihaksikas valumestari, tumma lyhyt hius ja näkyvä palmikko, nokiset kädet, nahkaesiliina ja käärityt hihat. Ei valkoista pukinpartaa tai opettajan kasvoa.",
+        "Sulaa metallia kaadetaan muottiin vuorikantisen pronssipolttimen vieressä; oikea työpajatoiminta ja PT:n hyväksymä vuoripolttimen muoto.",
+        "Kasvon/leuan/profiilin vaikutelma erottuu B21:n leveämmästä käsityöläisestä ja B23:n pyöreäkasvoisesta hovimestarista; ei varmaa samaa identiteettiä toistavaa sisältöestettä."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-c-people-pt-20261019",
+      "code": "29-falangcai",
+      "number": 29,
+      "selectedAttempt": 2,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/29-falangcai-attempt2.png",
+      "nativeSHA256": "6837e1295b156ff81fc04ba53c1cd2c268d466dca36539e87395c7c0a72fa068",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Hymyilevä hovin maalari maalaa ohuella siveltimellä pioneja falangcai-posliinikulhoon vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.25,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "Distinct35yearold slender oblong-faced painter, thin tidy black moustache, blue right-button robe; no whitegoatee/oldreferenceidentity.",
+          "Correct black ROUNDguapimao withREDknob, shavedfront and visiblequeue; no Mingtopknot. Complete openwhitepeonybowl/finebrushpainting/strongbokeh retained. Eyes/nose/mouth centrally readable; outercap/forehead not claimed fullyopaque.",
+          "PTConditionalCompositionReview=true; readable expressions enter early smooth feather, not all important face features r<=.45. Disclosed in QA-FI and manifest."
+        ],
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "PTConditionalCompositionReview": true,
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "smallScaleExpressionsReadable": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Noin35-vuotias kapeampi/soikea maalari, siistit ohuet mustat viikset ja sininen kaapu. Uusi kokonainen a2 korjasi a1:n väärän hiusnutturan: pyöreä musta Qing-kalotti/punanuppi, ajeltu otsa ja queue. Avoin valkoinen pionikulho ja ohuen siveltimen työ säilyvät. Yhden silmän r~.47 on aivan häivytyksen alussa (alpha~.996); ilme selvä, mutta täyttä45%kasvosuojaa ei väitetä.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00",
+        "manualEyePoint": {
+          "pixel": [
+            573,
+            387
+          ],
+          "radius": 0.4681607936829296,
+          "alpha": 0.996801115423963,
+          "method": "manualapproxpointfrom100%QAgrid;notautomaticdetector;about10pxuncertainty"
+        }
+      },
+      "observationsFI": [
+        "Noin30–40-vuotiaan vaikutelma, siistit ohuet tummat viikset ja sininen Qing-kaapu. Musta pyöreä punanappinen kalotti ja näkyvä palmikko; a2:ssa ei aiempaa hiusnutturaa.",
+        "Ohut sivellin maalaa pioneja avoimeen valkoiseen posliinikulhoon. Eri viiksi-/kasvotyyppi kuin B25:n tuuheaviiksinen talvivahtimestari.",
+        "Kasvon varhainen häivytys on jo ilmoitettu PT:n harkintaan. Ei uutta kutsua pelkän r-luvun vuoksi."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": true
+    },
+    {
+      "batch": "retry-c-people-pt-20261019",
+      "code": "33-kirjoittava-kellopeli",
+      "number": 33,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/native/33-kirjoittava-kellopeli-attempt1.png",
+      "nativeSHA256": "e691e8e92f19b982bfd686028388e751f1f3acd393027d0a4395a7b3db07bb64",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Hymyilevä eurooppalainen lähettiläs ojentaa kullattua kirjoittavaa kellopeliä, mantšupukuinen hovi riemastuu, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "artifactHeightFraction": 0.34,
+        "facesProtected": false,
+        "backgroundStrongBokeh": true,
+        "faceDiversityPass": true,
+        "oldWhiteBeardedIdentityRemoved": true,
+        "observations": [
+          "European envoy retained as allowed; receiving court now joyful clean-shaven young official and distinct adult Manchu courtwoman. No old whitebeardedteacher. Mechanical writingclock/scribe/dial stays correct, complete on console.",
+          "Three expressions partly in early feather rather than allr<=.45; personally reviewed160px needed and explicitly disclosed.",
+          "PTConditionalCompositionReview=true; readable expressions enter early smooth feather, not all important face features r<=.45. Disclosed in QA-FI and manifest."
+        ],
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "earlyFeatherExceptionForPTReview": true,
+        "PTConditionalCompositionReview": true,
+        "smallScaleExpressionsReadable": true,
+        "personallyInspected160px": true,
+        "personallyComparedOwnEightFaces": true,
+        "faceDiversityScope": "8realpeopleinowned4images;full51crossbatchauditbyroot",
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "faceComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/face-diversity-8-persons.png",
+        "qaFinnish": "Eurooppalainen lähettiläs säilyy lähteen sallimana; vastaanottajina nyt parrattoman nuoren virkamiehen sileä kapealeukainen kasvo ja selvästi erinäköinen aikuisen mantšuhovinaisen kasvo/korallikaapu/liangbatou. Ei valkopartaista opettajaa. Kirjoittava automaatti/sivellin/kellotaulu ja vakaa konsoli säilyvät. Vastaanottajan keskikasvo selvä, ulommat lähettilään/hovinaisen piirteet loivassa häivytyksessä, ei täyttä45%kasvosuojaa.",
+        "qaReviewedAt": "2026-10-19T12:21:46.956892+00:00"
+      },
+      "observationsFI": [
+        "Eurooppalainen lähettiläs säilyy sallitusti; vastaanottajina nuori puhdasleukainen virkamies ja erilainen aikuisen mantšuhovinaisen kasvo/korallikaapu/liangbatou. Ei opettajan vanhusta.",
+        "Kullattu kirjoittava automaatti, pieni mekaaninen kirjoittajahahmo ja kellotaulu muodostavat esineen, eivät ylimääräistä todellista lasta.",
+        "Hovinainen ei ole C28:n tai C30:n työpajanaisen eikä D49:n vanhan imettäjän sama kasvo. Varhainen feather säilyy rehellisenä PT-poikkeamana."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": true
+    },
+    {
+      "batch": "retry-c-more-people-pt-20261019",
+      "code": "28-cloisonne-poltin",
+      "number": 28,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/28-cloisonne-poltin-attempt1.png",
+      "nativeSHA256": "d143e700641a00fadda087ea969b92877dcf057950d297c136ed78a444271a0a",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Hymyilevä emalimestari täyttää cloisonné-tuoksupolttimen lokeroita värillä pitkällä pensselillä vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.285,
+        "backgroundStrongBokeh": true,
+        "observationsFI": [
+          "Nuorempi noin 30–35-vuotias kapeampi- ja kulmikkaampikasvoinen nainen indigossa työkaavussa, selvästi eri kuin 30:n nainen, imettäjä tai vanha mies.",
+          "Pitkä pensseli koskettaa cloisonné-polttimen metallilangan rajaamaa emalilokeroa; pyöreä runko, kaksi korvaa, kolme jalkaa ja viereinen rei'itetty kansi. Materiaali ja toiminta lähteen mukaiset.",
+          "Esine noin 28–29 % kuvan korkeudesta, hieman alle yleisen 30–40 % tavoitteen; hyväksytyn esineen luonnollinen muoto ja alkuperäinen lähirajaus säilyvät. Kasvojen silmät/nenä/suu lähellä ydintä. Erittäin pehmeä optinen työpajabokeh."
+        ],
+        "personallyInspected160px": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Lopullinen neljän valinnan160px-arkki henkilökohtaisesti katsottu; esine ja lähteen toiminta luettavat. Kasvojen uudet identiteetit erottuvat keskenään."
+      },
+      "observationsFI": [
+        "Nuorempi kapeampi/kulmikkaampi nainen indigossa työkaavussa, hiukset koottuna työskentelyä varten. Eri kasvo kuin C30:n pyöreäposkinen keski-ikäinen nainen, C33:n hovinainen tai D49:n harmaahiuksinen imettäjä.",
+        "Pitkä pensseli koskettaa cloisonné-tuoksupolttimen emalilokeroa. Pyöreä runko, kaksi korvaa, kolme jalkaa ja erillinen reiällinen kansi; ei B21:n matala vati."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-c-more-people-pt-20261019",
+      "code": "30-maalattu-emalirasia",
+      "number": 30,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/30-maalattu-emalirasia-attempt1.png",
+      "nativeSHA256": "89ac70835472d25b2a923359399f231d3df0f3ab3489b68e506ee0480b43e246",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Riemastunut mestari maalaa kuparille emalikukkia pieneen rasiaan, kirkkaat silmät, vaalea palatsin työpaja; valoisa, ilmava, pehmeä päivänvalo ikkunasta; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.235,
+        "backgroundStrongBokeh": true,
+        "observationsFI": [
+          "Noin 50-vuotias pyöreäkasvoinen nainen, leveämmät posket ja harmaata ohimoilla, vihertävä pitkä työkaapu ja vaalea pellavaesiliina. Ei sama kuin 28:n nuorempi kapeakasvoinen nainen tai imettäjä.",
+          "Pitkä pensseli maalaa emalikukkia avatun suorakaiteisen kuparirasian kanteen. Näkyvä kuparireuna/sarana ja laatikon pohja, ei cloisonné-lankalokeroita.",
+          "Avattu matala rasia noin 23–24 % korkeudesta; yleinen 30–40 % korkeus ei täyty, mutta sama PT:n hyväksymä leveä matala esinemuoto säilyy vääristämättä. Kasvon tärkeät piirteet lähellä ydintä ja ilme luettava natiivissa. Voimakas optinen bokeh."
+        ],
+        "personallyInspected160px": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Lopullinen neljän valinnan160px-arkki henkilökohtaisesti katsottu; esine ja lähteen toiminta luettavat. Kasvojen uudet identiteetit erottuvat keskenään."
+      },
+      "observationsFI": [
+        "Keski-ikäinen pyöreäkasvoinen nainen, leveät posket, hieman harmaata ohimoilla, vihertävä pitkä työkaapu ja vaalea työesiliina. Eri kuin C28:n nuorempi kapea nainen sekä C33/D49.",
+        "Pensseli maalaa emalikukkia avatun kuparireunaisen suorakaiderasian kanteen; pohjalaatikko, sarana ja kuparireuna näkyvät. Oikea maalattu emalirasia, ei cloisonné-poltin."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-c-more-people-pt-20261019",
+      "code": "34-punalakka-veisto",
+      "number": 34,
+      "selectedAttempt": 2,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/34-punalakka-veisto-attempt2.png",
+      "nativeSHA256": "1a59336d89239307f3ea249f84c2808972576174c28c7431f79676a8861dd38e",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Iloinen vanha lakkamestari veistää veitsellä kuvioita punaisen lakka-astian kerroksiin vaaleassa palatsin työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "attempt": 2,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.36,
+        "backgroundStrongBokeh": true,
+        "observationsFI": [
+          "Noin 65-vuotias kalju pyöreäkasvoinen vanha lakkamestari, ei partaa tai pukinpartaa. Sama eri-kasvoinen uusi lakkamestari kuin a1:ssä, ei vanhan sarjan toistuva opettaja.",
+          "Punainen veistetty lakka-astia pieneni noin 36 %:iin kuvan korkeudesta; koko astia näkyy ja on lähellä keskialuetta (keskilinja hieman oikealla, noin x61%). Muoto ja materiaalivaikutelma oikein: punainen syvä kerroksellinen kukkareliefi, kapeneva kaula ja levenevä suu.",
+          "Veitsi aidosti koskettaa reliefiä, toinen käsi tukee astiaa, punaiset lastut tummalla puupöydällä; vaalea palatsin työpaja erittäin optisesti sumea. Kasvojen tärkeät ilmeet lähellä keskialuetta/varhaisen loivan häivytyksen alussa."
+        ],
+        "personallyInspected160px": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Lopullinen neljän valinnan160px-arkki henkilökohtaisesti katsottu; esine ja lähteen toiminta luettavat. Kasvojen uudet identiteetit erottuvat keskenään."
+      },
+      "observationsFI": [
+        "Valittuna nimenomaan a2. Vanha kalju, leveä/pyöreäkasvoinen lakkamestari, lyhyt harmaa sänki pään takaosassa; ei partaa, viiksiä tai valkoista pukinpartaa.",
+        "Veitsen kärki työstää punaisen lakka-astian reliefiä. Punainen kapeakaulainen astia säilyttää oikean kokonaisen muodon ja lähirajauksen.",
+        "Kasvo erottuu vanhasta valkopartaisesta opettajasta sekä B21:n keski-ikäisestä ja D45:n pitkänomaisesta hovimestarista."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-c-more-people-pt-20261019",
+      "code": "37-viuhka",
+      "number": 37,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/native/37-viuhka-attempt1.png",
+      "nativeSHA256": "ac790b3753b58a7d04b438a649268b1799a3a5705cdada17056f03df5fb14a1a",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Hymyilevä lähettiläs ojentaa taittoviuhkan iloiselle virkamiehelle, hovi taputtaa, vaalea sali, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "attempt": 1,
+        "personallyInspectedNative": true,
+        "passed": true,
+        "personDiversityVerified": true,
+        "artifactHeightFraction": 0.24,
+        "backgroundStrongBokeh": true,
+        "qualifiedForPTReview": true,
+        "faceEssentialFeaturesFullyInsideOpaqueCore": false,
+        "observationsFI": [
+          "Uusi noin 40-vuotias hoikempi lähettiläs ja noin 55-vuotias leveäkasvoinen harmaantunut virkamies; molemmat parrattomia ja keskenään eri näköisiä, eivät aiempia kolmea identtistä vanhusta. Taustalla eri nuori nainen taputtaa pehmeästi sumeana.",
+          "Avoin taittoviuhka: paperinen puoliympyrä, maisema ja bamburivat, oikea lahjaluovutus käsistä käsiin. Ei jäykkä pyöreä viuhka.",
+          "Viuhka noin 24 % kuvan korkeudesta, luonnollinen leveä muoto; yleinen 30–40 % korkeus ei täyty kuten vanhassakaan hyväksytyn esineen muodossa. Päähenkilöiden kasvot ovat suuria ja sivuilla, eivät pieniä kaukana. Oikean kasvon uloimmat piirteet ulottuvat 0,45-ytimestä häivytykseen; tarkistetaan 160 px:n arkilla ennen lopullista valintaa."
+        ],
+        "facesProtected": false,
+        "PTConditionalCompositionReview": true,
+        "personallyInspected160px": true,
+        "rootNativeAnd160pxReviewed": true,
+        "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+        "previewInspectedAt": "2026-10-19T12:22:05.145557+00:00",
+        "wholeNewGeneration": true,
+        "previewResultFI": "Ehdollinen PT-arvio: oikean kasvon ulompi silmä on noin r0.71/alpha0.54; suu noin r0.60/alpha0.83. Ilmeet näkyvät160px:ssa, mutta kaikki kasvonpiirteet eivät ole ytimessä. Root katsoi natiivin ja160px ja pyysi toimitusta ilman uutta37-kutsua.",
+        "faceLandmarkMeasurements": {
+          "leftOuterEye": {
+            "manualPixelPoint": [
+              360,
+              397
+            ],
+            "radius": 0.5635376042656846,
+            "smoothstepAlpha": 0.8897513374452869
+          },
+          "leftMouth": {
+            "manualPixelPoint": [
+              387,
+              463
+            ],
+            "radius": 0.4609722566328516,
+            "smoothstepAlpha": 0.9988219247080647
+          },
+          "rightInnerEye": {
+            "manualPixelPoint": [
+              838,
+              523
+            ],
+            "radius": 0.6101035440780856,
+            "smoothstepAlpha": 0.7951208156371781
+          },
+          "rightOuterEye": {
+            "manualPixelPoint": [
+              904,
+              543
+            ],
+            "radius": 0.7102762433326725,
+            "smoothstepAlpha": 0.5401173294697242
+          },
+          "rightMouth": {
+            "manualPixelPoint": [
+              856,
+              613
+            ],
+            "radius": 0.5964678073931446,
+            "smoothstepAlpha": 0.8250166425966763
+          }
+        }
+      },
+      "observationsFI": [
+        "Vasemmalla nuorempi/hoikempi lähettiläs, oikealla vanhempi leveäkasvoinen harmaantunut virkamies. Molemmat parrattomia, keskenään eri-ikäisiä/erilaisia. Taustalla pehmeästi sumea taputtava hovinainen.",
+        "Avoin paperinen puoliympyräinen taittoviuhka, bamburivat ja käsistä käsiin lahjaluovutus; ei jäykkä pyöreä viuhka.",
+        "Oikean kasvon ulommat piirteet häipyvät selvästi osittain. Tuottaja/root on ilmoittanut tämän PT:n ehdolliseen arvioon; ei uutta sisältövirhettä eikä lisäkutsua pelkän feather-arvon perusteella."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": true
+    },
+    {
+      "batch": "retry-b-people-pt-20261019",
+      "code": "19-bianqing-kivikellot",
+      "number": 19,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/19-bianqing-kivikellot-attempt1.png",
+      "nativeSHA256": "6c33b12609e17ac22db2ccb847ca667c46f2abb25de7be81b805e5e22df7c622",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Hovin muusikko lyö iloisesti nuijalla ripustettua jadekivilevyä, hymyilevät juhlapukuiset virkamiehet kuuntelevat, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.272,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here.",
+        "observations": "PT-correction: musician is now youngadult~28 CLEAN-SHAVEN withleanovalface,maroonceremonialrobe. Listener is adifferent~53clean-shaven man inmutedgreen, distinctface/proportions from musician and originalteacher; no whitegoatee. Both readclearly160px. Original correct bentjadechimeslab/rack/companionstones, scale~27.2%H andstrongbokeh preserved in wholeNEWgeneration.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true
+      },
+      "observationsFI": [
+        "B:n uusi nuori puhdasleukainen muusikko viininpunaisessa juhlakaavussa ja erinäköinen keski-ikäinen kuuntelija vihreässä. Ei valkopartaista opettajaa.",
+        "Oikea sarjan soitettava taivutettu jadekivilevy telineessä, rinnakkaislevyt reunoilla; nuija ja kuuntelutoiminta."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-b-people-pt-20261019",
+      "code": "21-cloisonne",
+      "number": 21,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/21-cloisonne-attempt1.png",
+      "nativeSHA256": "721cb106827cd879f40f0ff6a52ca20213cad3f0f5af6045b69cf637725db4de",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Innostunut hovin mestari juottaa metallilankoja cloisonné-vadin sinisiin emalilokeroihin vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.195,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here.",
+        "observations": "PT-correction: broadrectangular clean-shaven middleaged~44craftsman, bareheadedshavedfront+blackqueue,navyworkapron/oliveworkrobe androlledsleeves, no whitebeard or teachercap. Newhead/body visuallydistinct fromB19 and originalteacher. Shallowbluecloisonnedish/wires,heatedmetalpointwithsmallwisp,sameapprovednaturaltilt/scale~19.5%H preserved in wholeNEWgeneration. Face/dish/action clear160px, f/1.4bokeh anddarktable intact.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true
+      },
+      "observationsFI": [
+        "B:n uusi leveä/suorakaiteinen keski-ikäinen puhdasleukainen käsityöläinen, paljas pää/palmikko, työesiliina ja käärityt hihat.",
+        "Oikea matala sininen cloisonné-vati ja metallilankatyö. Erottuu C27:n valumestarista; ei varmaa valkopartaisen opettajan kierrätystä."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-b-people-pt-20261019",
+      "code": "23-zun-malja",
+      "number": 23,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/23-zun-malja-attempt1.png",
+      "nativeSHA256": "b1b6b8e4b6af8b133fdfef49ea147aa2d55b8fd0ce3ea6c8dc9a58edaa89fa2d",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Hymyilevä hovimestari kaataa viiniä pronssiseen zun-maljaan, riemastuneet juhlapukuiset virkamiehet seuraavat, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.344,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "observations": "PTpeople correction: clean-shaven middleagedROUNDfullcheekface steward in BLUE officialrobe, distinct youngerleanheartface ochreclothed listener, both different from oldteacher andfromeachother. Naturalhappy expressions clear160px. Correct mainbronzezun~34.4%H, pouringstream entersmouth, frame/light/material preserved in wholeNEWphoto.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here."
+      },
+      "observationsFI": [
+        "B:n pyöreäkasvoinen täysiposki puhdasleukainen keski-ikäinen hovimestari sinisessä virka-asussa; vieressä eri nuorempi kuuntelija.",
+        "Viini kaadetaan korkean pronssisen zun-maljan suuhun. Hovimestarin kasvo selvästi pyöreämpi kuin D45:n pitkänomainen/kulmikas peiliesittelijä."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-b-people-pt-20261019",
+      "code": "24-pronssikurki",
+      "number": 24,
+      "selectedAttempt": 2,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/24-pronssikurki-attempt2.png",
+      "nativeSHA256": "65f03e9c9d42971a64939e352e192327c2fc2aa77d34ebf6bead81d84eda8d67",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Pronssikurki marmoriterassilla kukkivien puiden keskellä, hymyilevä puutarhuri ihailee sitä, aurinkoinen kevät, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.359,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "historicalHairPassed": true,
+        "observations": "PTpeople correction: young~25 clean-shaven gardener, youthfulshortbroadface, plain lowindigoworkcap, visible shavedfront andblackqueue; bluegrey roundcollar/rightbutton cottonworkrobe/rolledcuffs. Modern slickedbackhair error of a1 removed in WHOLE NEW a2. Correct fullTaihebronzecrane~35.9%H, same spring/light/frame. Face andwholebronze legible160px.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here."
+      },
+      "observationsFI": [
+        "B:n valittu a2: nuori parrattoman25-vuotiaan vaikutelma, lyhyt leveä kasvo, yksinkertainen indigotyökalotti, näkyvä ajeltu otsa ja musta palmikko; siniharmaa työasu.",
+        "Oikea pronssikurki marmorijalustalla kevään kukkabokehissa. Ei ensimmäisen yrityksen modernia slicked-back-hiusta."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    },
+    {
+      "batch": "retry-b-people-pt-20261019",
+      "code": "25-pronssikilpikonna",
+      "number": 25,
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/native/25-pronssikilpikonna-attempt1.png",
+      "nativeSHA256": "50b0822b4adf5b36c42be714ed9e4b4d8a733b96a06017e2f92d66a6e178e297",
+      "nativeDimensions": [
+        1087,
+        1447
+      ],
+      "nativeMode": "RGB",
+      "personallyInspectedNativeThisAudit": true,
+      "sourceKupla": "Pronssikilpikonna terassilla kirkkaassa lumipäivässä, iloinen vahtimestari esittelee sitä ylpeänä, koristelyhdyt, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.",
+      "PTPersonCorrectionReadInFull": true,
+      "ownerQARead": true,
+      "ownerQaPassed": true,
+      "ownerQAFromStateSnapshot": {
+        "personallyInspectedNative": true,
+        "personallyInspected160pxFeather": true,
+        "passed": true,
+        "artifactHeightFraction": 0.325,
+        "facesProtected": true,
+        "backgroundStrongBokeh": true,
+        "personCorrectionPassed": true,
+        "noWhiteGoatee": true,
+        "historicalHairPassed": true,
+        "observations": "PTpeople correction: middleaged~52caretaker with BUSHY DARK moustache, cleanchin, roundedheavybrows andruddyweatheredface, thickpaddedcharcoalwintercoat/furcuffs and brownfuredgedcap. No whitegoatee or oldteacheridentity. Correct dragonheadedTaihebronzetortoise~32.5%H, snow/lanternbokeh andframe intact inwholeNEWphoto. Face/darkmoustache andbronzehead/body/feet legible160px. Native1px sizeexport disclosed,original preserved.",
+        "personallyInspectedFinal160pxSheet": true,
+        "personallyComparedFaces": true,
+        "mutualFaceComparison": "Personally inspected five new main faces plus19/23 listeners side-by-side, also compared listener19 with acceptedB14 envoy/B22 servant and originalwhitegoateedteacher. Younglean19, broadrectangular44yo21, roundfullcheek46yo23, youthfulshortbroad25yo24 andbushydarkmoustache52yo25 are visually differentiated. No oldwhitegoatee identity remains. Full51 cross-batch comparison is parent-owned, not claimed here."
+      },
+      "observationsFI": [
+        "B:n keski-ikäinen tuuhean tummaviiksinen vahtimestari, puhdas leuka, paksu pehmustettu talvitakki ja turkisreunainen lakki.",
+        "Oikea lohikäärmepäinen pronssikilpikonna lumen/lyhtyjen keskellä; ei tavallinen kilpikonna eikä steela. Viiksityyppi/vaate/ikä erottuu C29:n ohuviiksisestä maalarista."
+      ],
+      "definiteBlockingContentError": false,
+      "earlyFeatherPTExceptionPreserved": false
+    }
+  ],
+  "extraComparisonOnly": [
+    {
+      "number": 45,
+      "code": "45-metallipeili",
+      "selectedAttempt": 2,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/native/45-metallipeili-attempt2.png",
+      "nativeSHA256": "b8fdb3aa9af20f805701f94b1d74a8f8e602334b6501f71380f8f84683d3af21",
+      "personallyInspectedNativeThisAudit": true,
+      "scope": "FACE COMPARISON ONLY; not a substitute for D production/source QA",
+      "observationsFI": "Noin50-vuotiaan vaikutelma, pitkänomainen/kulmikas puhdasleukainen hovimestari; selvästi eri kuin B23:n pyöreäkasvoinen siniasuinen hovimestari."
+    },
+    {
+      "number": 49,
+      "code": "49-zitan-jakkara",
+      "selectedAttempt": 1,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-d-45-49-pt-20261019/native/49-zitan-jakkara-attempt1.png",
+      "nativeSHA256": "f26ce48e75888888320d7e2c9cc21371d347d05f6f3b8801935a039f65bb2943",
+      "personallyInspectedNativeThisAudit": true,
+      "scope": "FACE COMPARISON ONLY; not a substitute for D production/source QA",
+      "observationsFI": "Vanha harmaantunut imettäjä, sininen pitkä mantšuasu ja liangbatou; eri ikä/kasvomuoto kuin C28/C30:n työpajanaiset ja C33:n hovinainen."
+    }
+  ],
+  "personallyInspectedAdditionalQAVisuals": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+      "sha256": "99e24326cd9a4eb81eb121fc1191e47b4cb851397f397ec30c2c546a67169192"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-c-more-people-pt-20261019/delivery-packet/qa/160px-wide-feather.png",
+      "sha256": "b362d81c53f6185643718289235dc55978e85ddae9816c0f3d736d89de2e4da8"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/retry-b-people-pt-20261019/delivery-packet/qa/faces-comparison-QA-ONLY.png",
+      "sha256": "de2fc6108a74c0bf3893157f230f8c90a27c33945d7af89960020a6f66ad7ad4"
+    }
+  ],
+  "crossBatchObservationsFI": [
+    "C28/C30/C33/D49-nainen: nuori kapeampi työpajakasvo, keski-ikäinen pyöreä työpajakasvo, koralliasuinen hovinainen ja vanha harmaantunut imettäjä erottuvat visuaalisesti.",
+    "C37:n miehet eri-ikäisiä ja erinäköisiä; C26:n palvelijat eivät ole ilmeisiä kaksosia.",
+    "B:n viisi pääkasvoa ja C:n uudet pääkasvot eivät kierrätä vanhaa valkopartaista opettajaa. Tarkastelluissa kuvissa ei todettu varmaa yli kahden kuplan samaa identiteettiä. Tämä on laadullinen kuvavertailu, ei biometrinen eikä koko51:n väite.",
+    "D45 a2 ja D49 a1 on oikeasti katsottu natiiveina vertailua varten; niiden koko tuotantoauditointia ei väitetä tehdyksi tässä.",
+    "26/29/33/37:n jo ilmoitetut varhaisen häivytyksen poikkeamat jätetään PT:n harkintaan. Ei lisäkutsupäätöstä pelkän r-luvun tai esineen luonnollisen leveän muodon perusteella."
+  ],
+  "mutations": {
+    "onlyAuditFileWritten": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/cross-batch-people-audit-13.json",
+    "imageGenerationCalls": 0,
+    "productionStateEdits": 0,
+    "deliveryPackageEdits": 0,
+    "ledgerEdits": 0,
+    "gameR2UnityTripoPublication": false
+  },
+  "receiverAcceptanceNotChanged": true
+}

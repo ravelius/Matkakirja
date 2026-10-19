@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-19T12:37:57.558327+00:00",
+  "newGenerationCalls": 0,
+  "newImagesInThisSummary": 0,
+  "currentImagesReferenced": 51,
+  "files": [
+    {
+      "path": "CURRENT-51-MANIFEST.json",
+      "bytes": 225561,
+      "sha256": "76627c2e234002cb0cff0407aba4ffd4772d0ddaa8fd0c4d95f8d6525a9b3679"
+    },
+    {
+      "path": "DELIVERED-VERSIONS.md",
+      "bytes": 5396,
+      "sha256": "79f9f741f1e471e4ea00a39675655b2cf200aa2d2f1b5dad9ce7923fd1aa0297"
+    },
+    {
+      "path": "NATIVE-ARCHIVE-MIRROR-VERIFIED.json",
+      "bytes": 135357,
+      "sha256": "8bc65706427d7cfa2790186f90ac6e4d0d03acefab9adb006cc0e8a003d8e6d5"
+    },
+    {
+      "path": "QA-FINAL-FI.md",
+      "bytes": 1801,
+      "sha256": "7d5e8a36b65d79964de4054f576e0cead1200689598c4c2d40f82b06f92b4190"
+    },
+    {
+      "path": "cross-batch-people-audit-13.json",
+      "bytes": 45969,
+      "sha256": "1a146b3176c72415ca40ba36710f68ff4fc072ee4b642156cacb1f46878fc730"
+    }
+  ]
+}
