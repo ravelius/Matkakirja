@@ -1843,3 +1843,12 @@ kohteen CC-kuvat + 8 havainnekuvaa 7caf8ca1d). Simukuvat KK:lle ennen junaa.
 ## PAATOKSET 19.10.2026 klo 11.41–11.45: PUYIN ALUT JA KIPIN TAUKORIVI (omistaja KK:n kautta, sanatarkasti) (19.10.2026 klo 11.45)
 
 Klo 11.41: "Generoi pelkät hyväksymäni alut ilman muuta tekstiä, niin kuuntelen ne kaikki vielä kerran läpi." Klo 11.43: "kun kierroksella painetaan pause niin se muuttuu play napiksi ja playn ja stop napin kummallakin puolella on "<" ja ">" napit sekä loput napit kuten ehdotit". Klo 11.45: "Kipin painikkeet muuten hyvin, mutta play ja stop pitää olla toisinpäin. Kaikki huudahdukset hyviä, mutta jätä viimeinen niistä pois. Voit seuraavaksi nollata itsesi." → KIPIN TAUKORIVI kaikkiin kippeihin: Lennä itse | < ■ ▶ > | Kysy (⏸ muuttuu ▶:ksi, < edellinen, > seuraava kohde korvaa ⏭:n, kompassi ☰:iin, muut napit pois paitsi ☰). PUYIN HYVÄKSYTYT ALUT (08 Kavya): Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!; Sis-sos! ja Aa! pois. Hyväksytyt otot ämpäriin (Äänittäjä). Omistaja ei halua äänistä kysymyskortteja (11.4x): KK hoitaa ääniasiat tekstinä.
+
+## PAATOKSET 19.10.2026 klo 12.11–12.23 (omistaja KK:ssa): nostojen korjaukset ja Puyin huudot (19.10.2026 klo 12.23)
+
+12.11 junaan 204: täysikokoisen kuvan alle oma raita (kuvateksti asteen isompi, rivi 2 Havainnekuva tai pienempi lähde); kuvien vaihto pyyhkäisyllä ja kuvan/ruudun reunanapautuksella, sulku vain kuvan
+ulkopuolelta; noston Kysy aina hiljaa, kysymyslaatikko korkeampi; Kysy-kysymykset eivät saa olla tekstistä vastattavia, vaan antavat lisätietoa monesta suunnasta (SK vaihtoi 147/256, #4947); Pulun
+laatikon puoliksi ulkona oleva X malliksi kaikkiin kortteihin; nostokortti aukeaa yläreunaan ja suurennuslasi piiloon kortin ajaksi; mini-☰: otsikko Lisätoiminnot, päällä→näkyvillä, kytkin vain
+näyttää Auto-napin; Visa-nappiin (+25 £) pienemmin, Kysy ja Visa samankokoisina; pinnatun noston pikkukuva pysyy uuden noston aikana ja otsikkoon (2/5); Auto-nappi ennen taukoa. 12.23: Puyin huudot
+erä 1 puuttuvat 7 + erä 2 (10) hyväksytty muutoksin (aiyaa pois kohdasta 2; kohta 4 'Hoplaa, enää ei tarvitse näitä päntätä! Kunhan pääsen vain Shifua karkuun.'; muutamat pidemmät sallittuja, kun
+suurin osa lyhyitä); jatkossa omistajalle näytetään myös uneksinnan teksti; uusia huutoeriä ei ennen pelitestiä.
