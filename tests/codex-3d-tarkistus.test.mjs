@@ -108,3 +108,22 @@ test('toimituskansio: SHA256SUMS pakollinen ja täsmää, FBX hylätään', () =
   writeFileSync(join(d, 'SHA256SUMS'), `${sha}  hahmot/vartija.glb\n`); writeFileSync(join(d, 'hahmot', 'vartija.fbx'), 'x');
   sisaltaa(tarkistaToimitus(d).virheet, '.fbx');
 });
+
+test('toimituskansio: erilliset kuvat ja tekstuurit tarkistetaan (Codex toimittaa kaiken grafiikan)', () => {
+  const d = mkdtempSync(join(tmpdir(), 'codex3d-kuvat-')); mkdirSync(join(d, 'tekstuurit')); mkdirSync(join(d, 'havainne')); mkdirSync(join(d, 'esikatselu'));
+  const kirjoita = (p, b) => { writeFileSync(join(d, p), b); return `${createHash('sha256').update(b).digest('hex')}  ${p}\n`; };
+  let sums = kirjoita('tekstuurit/kivi.png', png(1024, 512)) + kirjoita('havainne/linna.png', png(1600, 900));
+  kirjoita('esikatselu/linna.png', png(640, 360));                                  // esikatselu ei tarvitse listaa
+  writeFileSync(join(d, 'SHA256SUMS'), sums);
+  let t = tarkistaToimitus(d);
+  assert.deepEqual(t.virheet, []); assert.ok(t.tiedostot.every((r) => !r.virheet.length)); sisaltaa(t.huomiot, 'LAHTEET.md');
+  writeFileSync(join(d, 'LAHTEET.md'), 'Codex');
+  assert.equal(tarkistaToimitus(d).huomiot, undefined);
+  sums += kirjoita('tekstuurit/seina.png', png(1000, 1000)) + kirjoita('tekstuurit/katto.png', png(4096, 4096));
+  writeFileSync(join(d, 'SHA256SUMS'), sums); kirjoita('tekstuurit/listaton.png', png(256, 256));
+  const r = Object.fromEntries(tarkistaToimitus(d).tiedostot.map((x) => [x.polku, x.virheet]));
+  sisaltaa(r['tekstuurit/seina.png'], 'kahden potensseja'); sisaltaa(r['tekstuurit/katto.png'], '2048');
+  sisaltaa(r['tekstuurit/listaton.png'], 'ei SHA256SUMS-listassa');
+  writeFileSync(join(d, 'SHA256SUMS'), sums + `${'0'.repeat(64)}  tekstuurit/puuttuu.png\n`);
+  sisaltaa(tarkistaToimitus(d).virheet, 'puuttuu kansiosta');
+});
