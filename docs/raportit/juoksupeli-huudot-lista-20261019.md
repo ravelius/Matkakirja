@@ -67,7 +67,7 @@ Tunnetagit eivät lisää kuultavaa tekstiä. Kuplatyyppien jakauma: 1 esittely:
 | 48 | Lasiset go-kivet (`lasiset-go-kivet`) | Qing / 1700-luku | 7 | „Go-kivet! Ne vierivät kaikkialle!“ · „Nämä maksoivat varmaan miljoonan!“ · „Hovimestari kerää kiviä koko yön!“ · „Klik-klik-klik, sateenkaarikiviä!“ |
 | 49 | Zitan-jakkara (`zitan-jakkara`) | Qing / 1700-luku | 1 | „Jakkara! Nyt saa seistä!“ · „Puu on varmaan kovempaa kuin kivi!“ · „Esi-isät suuttuvat, heidän jakkaransa!“ · „Rämps! Pyllylleni se vei!“ |
 | 50 | Tinakannu (`tinakannu`) | Qing / 1644–1911 | 1 | „Tinakannu! Kolahti kovaa!“ · „Tämä on varmaan maailman paras kannu!“ · „Palvelija marisee, kun tee valui!“ · „Dong! Kaikki kuulivat sen!“ |
-| 51 | Hovinaisen hiustanko (`hiustanko-liangbatou`) | Qing / 1800-luku | 1 | „Hiustanko! Kampaus meni sekaisin!“ · „Kultaa ja helmiä, varmaan miljoona!“ · „Keisarinnaäiti suuttuu, tanko oli hänen!“ · „Tink! Tanko vierii pöydän alle!“ |
+| 51 | Hovinaisen hiustanko (`hiustanko-liangbatou`) | Qing / 1800-luku | 1 | „Hiustanko! Kampaus meni sekaisin!“ · „Kultaa ja helmiä, varmaan miljoona!“ · „Keisarinnaäiti suuttuu, se oli hänen!“ · „Tink! Tanko vierii pöydän alle!“ |
 
 ## Yleishuudot (30, toistoihin; ei kuplaa)
 
