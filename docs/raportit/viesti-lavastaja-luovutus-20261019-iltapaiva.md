@@ -18,9 +18,13 @@ PT:lle enintään 3 riviä, absoluuttiset polut. **Ei käynnissä olevia käänn
   Testattu muurikäytävällä (`valot-koe-muurikaytava/`); tehot säädetään Codexin seinien kanssa.
 - **Siivous (Postivahti, levy):** 4 vanhaa appia + 18 eilistä omaa todistuslokia pois (~3,3 Gi); `wt/linnanrakentaja-codex-3d` poistettu (#4895 mergetty).
 
+## ENSIN (PT 15.0x: ok – seuraava erä = kohdat 1 + 2 yhdessä)
+Kehysmateriaalien sävyerä (vain arvot: kulta-aaltolista, eebenpuu) + Kunniagallerian lähikuvien uusinta (zoom vasta kävelyn jälkeen).
+Yksi käännös, yksi simuvuoro JU:lta; kuvat ennen/jälkeen PT:lle.
+
 ## Avoimet (seuraava sessio)
 1. **Kehysmateriaalien sävy (Kunniagalleria):** kultainen aaltolista näkyy punaruskeana, musta eebenpuu keskiruskeana (HAVAINNOT.md).
-   Ehdotettu PT:lle, odottaa päätöstä. Vain arvot (alankomaat/sali.json kehysmateriaalit, MuseoSovitin AsetaKehysvalo), ei kuvia. Haara kehysvarjo-204:n päälle.
+   PT hyväksyi 15.0x. Vain arvot (alankomaat/sali.json kehysmateriaalit, MuseoSovitin AsetaKehysvalo), ei kuvia. Haara kehysvarjo-204:n päälle.
 2. **Kunniagallerian lähikuvat uudelleen:** zoom ehti ennen kävelyn loppua → `sk-kunniagalleria-kartoitus-204.txt`: odota 40 s valitse-komennon jälkeen.
    Ajo `zsh /Users/Shared/Claude/proto-3d/tyokalut/linnanrakentaja-ajot/ajo-kunniagalleria-kartoitus-204.zsh <app>` (UDID jo 484B130B).
 3. **Olavinlinna 6–10:** kun Codexin geometria tulee → `node tools/codex-3d-tarkistus.mjs <kansio>` → valot_6_10.py `--geometria` → leivonta
