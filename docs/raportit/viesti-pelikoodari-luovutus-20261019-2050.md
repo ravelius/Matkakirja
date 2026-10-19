@@ -21,6 +21,8 @@ Edellinen: viesti-pelikoodari-luovutus-20261019-1930.md. Rooli: Pelikoodari (Opu
    proto-3d/_tyo/pelikoodari/raportit/juoksupeli-206-simu-20261019.md (lisää osio "2. ajo 620227d37").
 4. PT:n ok:lla merge-pyyntö NS:lle (local_fcc10552-5810-49bf-b0cf-188456f1231c): haara pelikoodari/juoksupeli-kerattavat-206 kärki
    620227d37. Yhdistyy puhtaasti Valosepän juoksu-valoon (0654b1763, sama .gamma-rivi) – tarkistettu merge-tree.
+5. PT 20.5x: Valosepän (VS) juoksuvalo k3 liitetään 206:n JÄLKEEN (riippuu .gamma-rivistä 9ed9e57ff) – ei osa tätä kuvaparia.
+   Seuraava juna: hang_release (Codex puomilta-irti-v1, zip 61033ea2).
 
 ## HAARAN 206 SISÄLTÖ (a4e3b86f3 → 620227d37), kaikki PT:n pyytämiä
 - 4d237d61d kerättävät aarteet (valkoiset kuutiot) → aarteet-v1-ehjät mallit (simussa OK 10f80d13).
