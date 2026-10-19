@@ -1801,3 +1801,7 @@ käsinkirjoitetun kääretaulun läpi ja rikkoa sen vahingossa. / mietitään ku
 valmistua. ei tarvitse välttämättä olla edes video, mutta missä näkyisi jo grafiikkaa sekä mittasuhteita ja kuinka paljon ruudulla näkyy kerralla." → KK:n huutoerä 1 hyväksytty → SK avainpakettiin; KK
 jatkaa erillä (enemmän posliinia, kiinan sanoja). Kiinankieliset kirjoitukset vain tarkistetuista oikeista teksteistä (SK lista → Codex 4cb118315), ei generoituja merkkejä. Uusi rikkoutuva: kääretaulu
 (PK + Codex + huudot). Äänen lukituksen jälkeen ääniefektit ja musiikki (luvat erikseen). PK: kuvakaappaus simusta kun grafiikka valmistuu → KK.
+
+## PAATOKSET 19.10.2026 klo 10.40–10.44: Puyin ääni lukittu, uniefekti hyväksytty (19.10.2026 klo 10.45)
+
+Klo 10.40 tagikokeilusta (sanatarkasti): "6 ja 9 olivat parhaat. voisi kokeilla vielä toisella repliikillä ja alkuun voi lisätä pelkän huudon "aa!" tai "eei!!"" → 4 ottoa. Klo 10.44 (kortti): "11 ja 13 parhaat." → PUYIN ÄÄNI LUKITTU: 23 Horatius – Energetic Character Voice, tagi [shouting] [panicked], alkuun "Aa!" tai "Eei!!". Aaltoilu "Sopii (Suositus)" → muistokuplan uniefekti (PK 0956ff99f, 0,7 s) junaan 204. "generoi uusia repliikkejä noilla kahdella valitsemallani tavalla ja generoi muutama pelkkä geneerinen huudahdus myös listasta" → Äänittäjä 26 ottoa (≤ 1 400 mrk); koko huutolistan generointi vasta, kun omistaja on hyväksynyt erät ja määrän. Ääniefektien ja musiikin suunnittelu alkaa (Äänittäjä, luvat KK:n kautta).
