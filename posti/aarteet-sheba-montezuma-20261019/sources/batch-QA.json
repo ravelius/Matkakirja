@@ -1,0 +1,124 @@
+{
+  "taskNumbers": [
+    280,
+    281,
+    282,
+    283,
+    292,
+    297
+  ],
+  "checkedAt": "2026-10-15T15:03:49.861553+00:00",
+  "sources": [
+    {
+      "taskNumber": 292,
+      "commit": "998b1fe5a8b36d9318f511bda68b93f7f10b3e57",
+      "blob": "a8813dbcf2977b0f28f43961f1cbfd022cfc5278",
+      "path": "posti/fable-codex-isoisan-uni-280-vastaus-20261015.md",
+      "sha256": "1710d65aa86ec67580eb06605f48e26236e1680cbd32abb7c9d1d118a94387ab",
+      "sourceReadInFull": true,
+      "acknowledgedAt": "2026-10-15T14:57:02.986895+00:00"
+    },
+    {
+      "taskNumber": 297,
+      "commit": "bacc7f7f62b12d73f8547e549c0d5f9a13030a75",
+      "blob": "e8a60aafc77b6db185b1c2443fb603d7e87e0450",
+      "path": "posti/fable-codex-isoisan-uni-281-283-jatko-20261015.md",
+      "sha256": "27df92c6f85318f791ef05e6cf08128dd7102fc325cd7cac2a1d5426dc0c132b",
+      "sourceReadInFull": true,
+      "acknowledgedAt": "2026-10-15T14:57:02.986895+00:00"
+    }
+  ],
+  "newCallsThisContinuation": 3,
+  "totalCallsThisOrder": 4,
+  "orderedCalls": [
+    281,
+    282,
+    283
+  ],
+  "allNative1254Square": true,
+  "imageAssetsEdited": false,
+  "upscaled": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "ElDoradoOriginalHashPreserved": true,
+  "ElDoradoAcceptedAsIs": true,
+  "otherThreeOwnerAndPTAcceptancePending": true,
+  "contactSheetContainsResizedThumbnailsOnlyNativeAssetsUnchanged": true,
+  "items": [
+    {
+      "taskNumber": 280,
+      "title": "El Dorado — hyväksytty",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/280-el-dorado/v1/el-dorado-v1-native.png",
+      "sha256": "78c4fd5b538e3c6720bb6167090cce56fd2deea42538aaab68c8d19864825cd4",
+      "bytes": 2083550,
+      "upscaled": false,
+      "APIUsed": false,
+      "ownerAccepted": true,
+      "PTAccepted": true,
+      "firstVersionNewThisContinuation": false
+    },
+    {
+      "taskNumber": 281,
+      "title": "Montezuman turkoosinaamio",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/281-montezuman-naamio/v1/montezuman-naamio-v1-native.png",
+      "sha256": "fed6e1d09573c9c406e6839a10e4192304daafaa0cb6f892d75fee47aee8db78",
+      "bytes": 2186086,
+      "upscaled": false,
+      "APIUsed": false,
+      "ownerAccepted": false,
+      "PTAccepted": false,
+      "firstVersionNewThisContinuation": true
+    },
+    {
+      "taskNumber": 282,
+      "title": "Keisarin jadesinetti",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/282-jadesinetti/v1/jadesinetti-v1-native.png",
+      "sha256": "5887075d1a9005b855001b739fc28e9ea820598ba1454e9b95e08eb0eca17391",
+      "bytes": 1842362,
+      "upscaled": false,
+      "APIUsed": false,
+      "ownerAccepted": false,
+      "PTAccepted": false,
+      "firstVersionNewThisContinuation": true
+    },
+    {
+      "taskNumber": 283,
+      "title": "Kolme veljestä -riipus",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/283-kolme-veljesta/v1/kolme-veljesta-v1-native.png",
+      "sha256": "ef4611bf1815f4c8f5d70e69e09aecd3b103782c111d45f34760ac05d17d82b1",
+      "bytes": 2040237,
+      "upscaled": false,
+      "APIUsed": false,
+      "ownerAccepted": false,
+      "PTAccepted": false,
+      "firstVersionNewThisContinuation": true
+    }
+  ],
+  "visualContentChecks": {
+    "mask": "turquoise mosaic, shell eyes, dark obsidian pupils",
+    "seal": "white jade square base and intertwined dragons, no green replacement",
+    "pendant": "three red spinels, one central clear diamond, three pearls between",
+    "all": "centered fully visible artifacts, near-black empty margins, photographic material and soft light, no people/text/logo/frame"
+  },
+  "sourceDescriptionUncertainty": "Current mailbox game code did not provide a separate matching Three Brothers treasure passage; exact three-red/central-diamond/pearls layout follows the authorized source description. No historical replica/material certification claimed.",
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false
+}

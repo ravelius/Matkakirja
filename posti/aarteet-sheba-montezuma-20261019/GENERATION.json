@@ -1,0 +1,158 @@
+{
+  "taskNumbers": [
+    634,
+    635
+  ],
+  "actualNewImageToolCalls": 2,
+  "completed": 2,
+  "pending": 0,
+  "eachInitialWholeNewCandidate": true,
+  "retries": 0,
+  "partialEdits": 0,
+  "APIorCLIImageCalls": 0,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "deliverySize": [
+    1024,
+    1024
+  ],
+  "technicalWholeFrameExports": 2,
+  "nativePixelsPreserved": true,
+  "attempts": [
+    {
+      "code": "paa-middleeast",
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:37:25.473284+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW PHOTOREALISTIC COLOR STILL-LIFE CAMERA PHOTOGRAPH, SQUARE1:1, exactly1024×1024pixels, opaque RGB PNG. First reference is ONLY AARRE-series pale warm cream aged PARCHMENT background, muted antique palette, centered artifact and clean margins. Do NOT copy its illustrated/gouache/ink surface style or amber objects. Artifact looks like a real physical museum object photographed with genuine material/reflection/texture/light, not illustration, CGI, plastic or fake repeated pattern. Plain light cream parchment fills ENTIRE square edge to edge, no dark corners/vignette/frame/text/logo/scenery/people/hands/stand. Gentle diffused top-left daylight, subtle soft real shadow beneath object. Whole NEW photo, no copiedpixels, partialediting, crop or padding. SUBJECT: ONE SINGLE SMALL PORTABLE GOLDEN INCENSE CASKET, ancient South Arabia/Sabaean style around tenth centuryBCE as fictional game inspiration, not a certified replica. Low rectangular gilt-bronze box easily carried by one person; warm real gold gilding, restrained ancient geometric decoration, delicate hand-applied GRANULATION of tiny irregular soldered gold beads. Attached LID partly open naturally, revealing a few translucent golden FRANKINCENSE RESIN LUMPS INSIDE this ONE box. Entire casket/lid fully visible, centered three-quarter view,~65%framewidth/45%height. No resin outside, smoke, necklace, collar, bracelets, jewelry, coins, gems, other treasures, overflowing chest, Arabic/Islamic ornament, writing or modern lock. Lid/resin belong to the one casket. Subtle true gold wear/reflections and handcrafted bead variation, not procedural texture.",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/meripihka-vaalea.png"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/meripihka-vaalea.png",
+          "sha256": "e80d8390f0237a3629694b70b967baa45bb6e00eb1fc22020cbfda2a7c2609fc"
+        }
+      ],
+      "completed": true,
+      "completedAt": "2026-10-19T12:39:25.919755+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-c89c2059-43fe-4a07-8aec-f0e31ae6b728.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/native/paa-middleeast-attempt1.png",
+      "nativeSHA256": "cde1119c5e7df679a663d67d362c14d9a7e5fb67d6f0acd2d2d07ccf3ae03b5f",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "17c0b01147f4f8cd09ac3bd2a66da0991f114420292deb3450eaff566df9edbf",
+      "technicalPass": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/assets/paa-middleeast/attempt-1/technical-size-export-1024.png",
+      "deliveryDimensions": [
+        1024,
+        1024
+      ],
+      "nativeOriginalPreserved": true,
+      "technicalExport": {
+        "method": "sips whole-frame1254square to requested1024square PNG; downsample only",
+        "inputSHA256": "cde1119c5e7df679a663d67d362c14d9a7e5fb67d6f0acd2d2d07ccf3ae03b5f",
+        "outputSHA256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a",
+        "outputPixelSHA256": "21e136ede60849ee3d767cb502dbaf7e7b7f6e1a004fa72434b1a57e39f68b46",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false,
+        "nativesUnchanged": true
+      },
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "materialSurfacePhotographic": true,
+        "sourceStoryPass": true,
+        "singlePortableArtifact": true,
+        "AARRELightParchmentPalettePass": true,
+        "wholeNewGeneration": true,
+        "partialImageEdit": false,
+        "observations": [
+          "One compact giltincensecasket,geometricgranulation,attachedopenlid,frankincenseresinINSIDE; no jewelry/necklace/bangles/coins/other artifact. Real gold surface,beadwork/resintexture,naturalsoftshadow on lightcreamparchment.",
+          "FictionalancientSouthArabianinspiration,notdatedmuseumreplicacertification."
+        ]
+      }
+    },
+    {
+      "code": "paa-northamerica",
+      "attempt": 1,
+      "issuedAt": "2026-10-19T12:37:25.514607+00:00",
+      "args": {
+        "prompt": "Generate an ENTIRELY NEW PHOTOREALISTIC COLOR STILL-LIFE CAMERA PHOTOGRAPH, SQUARE1:1, exactly1024×1024pixels, opaque RGB PNG. First reference is ONLY AARRE-series pale warm cream aged PARCHMENT background, muted antique palette, centered artifact and clean margins. Do NOT copy its illustrated/gouache/ink surface style or amber objects. Artifact looks like a real physical museum object photographed with genuine material/reflection/texture/light, not illustration, CGI, plastic or fake repeated pattern. Plain light cream parchment fills ENTIRE square edge to edge, no dark corners/vignette/frame/text/logo/scenery/people/hands/stand. Gentle diffused top-left daylight, subtle soft real shadow beneath object. Whole NEW photo, no copiedpixels, partialediting, crop or padding. SUBJECT: ONE SINGLE PORTABLE AZTEC TURQUOISE AND SHELL MOSAIC FACE MASK. Input2 is the ACTUAL grandfather-dream mask DESIGN: same face silhouette, broad curved rectangular forehead, low brows, bulbous nose, chin/jaw, almond mother-of-pearl SHELL EYES/dark OBSIDIAN PUPILS, irregular blue-green TURQUOISE MOSAIC and neutral expression. SAME fictional game mask design as whole NEW photo on pale parchment, NEVER Input2black background. NEW SOURCE CORRECTION: slightly parted mouth shows a distinct short row of WHITE SHELL TEETH, no fangs or grin. Old reference dark narrow mouth must not hide new white teeth. Match form/design, not old pixels. Genuine individual irregular cut stones/seams/varied turquoise veins, slight natural wear/shell nacre, no procedural speckles. Whole mask central,~68%frameheight, subtlethree-quarter view likeInput2, alone resting on parchment with softshadow. No gold pectoral, jewelry, chain, feathers, stand, skull, body/person/other treasure. A physical mosaic artifact, not living face/plastic theatricalmask.",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/meripihka-vaalea.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/montezuman-naamio-v1-native.png"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/meripihka-vaalea.png",
+          "sha256": "e80d8390f0237a3629694b70b967baa45bb6e00eb1fc22020cbfda2a7c2609fc"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/montezuman-naamio-v1-native.png",
+          "sha256": "fed6e1d09573c9c406e6839a10e4192304daafaa0cb6f892d75fee47aee8db78"
+        }
+      ],
+      "completed": true,
+      "completedAt": "2026-10-19T12:39:25.997227+00:00",
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-8b24dd18-a137-4f3e-98b2-ac60d7ea92c7.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/native/paa-northamerica-attempt1.png",
+      "nativeSHA256": "14969ef990cdfd27ecdf62aa850644e0e34a2d0244767fc608fc0e73188959d3",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "pixelSHA256": "09fbf891ff2a4cebacafe686960fbfd9cc475d1679cd608cb98b9dd5836c2934",
+      "technicalPass": true,
+      "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/assets/paa-northamerica/attempt-1/technical-size-export-1024.png",
+      "deliveryDimensions": [
+        1024,
+        1024
+      ],
+      "nativeOriginalPreserved": true,
+      "technicalExport": {
+        "method": "sips whole-frame1254square to requested1024square PNG; downsample only",
+        "inputSHA256": "14969ef990cdfd27ecdf62aa850644e0e34a2d0244767fc608fc0e73188959d3",
+        "outputSHA256": "db67cf2f39bab92008c5db1fcf2460b9655731c2ff0b2dcde37e3590787eff1d",
+        "outputPixelSHA256": "e13526ea35882d63ff6d94e3cee4f24836092fd880dbb4cdb451391414e218e4",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false,
+        "nativesUnchanged": true
+      },
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "materialSurfacePhotographic": true,
+        "sourceStoryPass": true,
+        "singlePortableArtifact": true,
+        "AARRELightParchmentPalettePass": true,
+        "wholeNewGeneration": true,
+        "partialImageEdit": false,
+        "observations": [
+          "One complete turquoise/shell mosaic mask, same grandfather-dream silhouette,brow/nose/jaw,almondshell/obsidianeyes and bluegreenturquoisedesign; darkbackgroundnotcopied.",
+          "Newsource white shellteeth clearlyvisible, oldmaskdarkmouthconflictpreserved. Nopectoral/jewelry/chain/skull/person. Stone/shell surfaces photographic, notplastic or illustration."
+        ]
+      }
+    }
+  ]
+}

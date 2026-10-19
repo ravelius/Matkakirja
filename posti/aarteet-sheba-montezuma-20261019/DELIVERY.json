@@ -1,0 +1,128 @@
+{
+  "family": "aarteet-sheba-montezuma-20261019",
+  "taskNumbers": [
+    634,
+    635
+  ],
+  "createdAt": "2026-10-19T12:42:34.939307+00:00",
+  "sourceCommit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+  "sourceBlob": "97a04f2e747f873cb50cef462e8c470b8387529f",
+  "count": 2,
+  "callsIssued": 2,
+  "callsCompleted": 2,
+  "callsPending": 0,
+  "readyForParentCollection": true,
+  "externalMailDeliverySent": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "r2Delivery": false,
+  "game640JPEGProduced": false,
+  "assets": [
+    {
+      "code": "paa-middleeast",
+      "taskNumber": 634,
+      "filename": "paa-middleeast.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/delivery-packet/paa-middleeast.png",
+      "deliveryDimensions": [
+        1024,
+        1024
+      ],
+      "deliveryMode": "RGB",
+      "opaque": true,
+      "deliverySHA256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a",
+      "deliveryPixelSHA256": "21e136ede60849ee3d767cb502dbaf7e7b7f6e1a004fa72434b1a57e39f68b46",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/native/paa-middleeast-attempt1.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeSHA256": "cde1119c5e7df679a663d67d362c14d9a7e5fb67d6f0acd2d2d07ccf3ae03b5f",
+      "nativePixelSHA256": "17c0b01147f4f8cd09ac3bd2a66da0991f114420292deb3450eaff566df9edbf",
+      "technicalExport": {
+        "method": "sips whole-frame1254square to requested1024square PNG; downsample only",
+        "inputSHA256": "cde1119c5e7df679a663d67d362c14d9a7e5fb67d6f0acd2d2d07ccf3ae03b5f",
+        "outputSHA256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a",
+        "outputPixelSHA256": "21e136ede60849ee3d767cb502dbaf7e7b7f6e1a004fa72434b1a57e39f68b46",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false,
+        "nativesUnchanged": true
+      },
+      "generationCalls": 1,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "materialSurfacePhotographic": true,
+        "sourceStoryPass": true,
+        "singlePortableArtifact": true,
+        "AARRELightParchmentPalettePass": true,
+        "wholeNewGeneration": true,
+        "partialImageEdit": false,
+        "observations": [
+          "One compact giltincensecasket,geometricgranulation,attachedopenlid,frankincenseresinINSIDE; no jewelry/necklace/bangles/coins/other artifact. Real gold surface,beadwork/resintexture,naturalsoftshadow on lightcreamparchment.",
+          "FictionalancientSouthArabianinspiration,notdatedmuseumreplicacertification."
+        ],
+        "personallyInspectedSeriesComparison": true,
+        "personallyCheckedDeliveryFormat": true,
+        "seriesComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/delivery-packet/qa/series-comparison.png",
+        "reviewedAt": "2026-10-19T12:42:34.939307+00:00",
+        "recipientAcceptance": "PENDING",
+        "ownerAcceptance": "NOT_CLAIMED"
+      }
+    },
+    {
+      "code": "paa-northamerica",
+      "taskNumber": 635,
+      "filename": "paa-northamerica.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/delivery-packet/paa-northamerica.png",
+      "deliveryDimensions": [
+        1024,
+        1024
+      ],
+      "deliveryMode": "RGB",
+      "opaque": true,
+      "deliverySHA256": "db67cf2f39bab92008c5db1fcf2460b9655731c2ff0b2dcde37e3590787eff1d",
+      "deliveryPixelSHA256": "e13526ea35882d63ff6d94e3cee4f24836092fd880dbb4cdb451391414e218e4",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/native/paa-northamerica-attempt1.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeSHA256": "14969ef990cdfd27ecdf62aa850644e0e34a2d0244767fc608fc0e73188959d3",
+      "nativePixelSHA256": "09fbf891ff2a4cebacafe686960fbfd9cc475d1679cd608cb98b9dd5836c2934",
+      "technicalExport": {
+        "method": "sips whole-frame1254square to requested1024square PNG; downsample only",
+        "inputSHA256": "14969ef990cdfd27ecdf62aa850644e0e34a2d0244767fc608fc0e73188959d3",
+        "outputSHA256": "db67cf2f39bab92008c5db1fcf2460b9655731c2ff0b2dcde37e3590787eff1d",
+        "outputPixelSHA256": "e13526ea35882d63ff6d94e3cee4f24836092fd880dbb4cdb451391414e218e4",
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false,
+        "nativesUnchanged": true
+      },
+      "generationCalls": 1,
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "materialSurfacePhotographic": true,
+        "sourceStoryPass": true,
+        "singlePortableArtifact": true,
+        "AARRELightParchmentPalettePass": true,
+        "wholeNewGeneration": true,
+        "partialImageEdit": false,
+        "observations": [
+          "One complete turquoise/shell mosaic mask, same grandfather-dream silhouette,brow/nose/jaw,almondshell/obsidianeyes and bluegreenturquoisedesign; darkbackgroundnotcopied.",
+          "Newsource white shellteeth clearlyvisible, oldmaskdarkmouthconflictpreserved. Nopectoral/jewelry/chain/skull/person. Stone/shell surfaces photographic, notplastic or illustration."
+        ],
+        "personallyInspectedSeriesComparison": true,
+        "personallyCheckedDeliveryFormat": true,
+        "seriesComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/delivery-packet/qa/series-comparison.png",
+        "reviewedAt": "2026-10-19T12:42:34.939307+00:00",
+        "recipientAcceptance": "PENDING",
+        "ownerAcceptance": "NOT_CLAIMED"
+      }
+    }
+  ]
+}

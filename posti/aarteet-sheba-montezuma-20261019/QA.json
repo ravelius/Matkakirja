@@ -1,0 +1,61 @@
+{
+  "reviewedAt": "2026-10-19T12:42:34.939307+00:00",
+  "personallyInspectedBothNative": true,
+  "personallyInspectedSeriesComparison": true,
+  "referencePaletteAndFramingCompared": true,
+  "oldDreamDesignActuallyFoundAndCompared": true,
+  "all2NativeFileAndPixelSHAReverified": true,
+  "all2DeliveryTechnicalAndSHAReverified": true,
+  "oldDreamMaskHashUnchanged": true,
+  "referenceParchmentHashUnchanged": true,
+  "partialEdits": false,
+  "historicalReplicaCertification": false,
+  "assets": [
+    {
+      "code": "paa-middleeast",
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "materialSurfacePhotographic": true,
+        "sourceStoryPass": true,
+        "singlePortableArtifact": true,
+        "AARRELightParchmentPalettePass": true,
+        "wholeNewGeneration": true,
+        "partialImageEdit": false,
+        "observations": [
+          "One compact giltincensecasket,geometricgranulation,attachedopenlid,frankincenseresinINSIDE; no jewelry/necklace/bangles/coins/other artifact. Real gold surface,beadwork/resintexture,naturalsoftshadow on lightcreamparchment.",
+          "FictionalancientSouthArabianinspiration,notdatedmuseumreplicacertification."
+        ],
+        "personallyInspectedSeriesComparison": true,
+        "personallyCheckedDeliveryFormat": true,
+        "seriesComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/delivery-packet/qa/series-comparison.png",
+        "reviewedAt": "2026-10-19T12:42:34.939307+00:00",
+        "recipientAcceptance": "PENDING",
+        "ownerAcceptance": "NOT_CLAIMED"
+      }
+    },
+    {
+      "code": "paa-northamerica",
+      "qa": {
+        "personallyInspectedNative": true,
+        "passed": true,
+        "materialSurfacePhotographic": true,
+        "sourceStoryPass": true,
+        "singlePortableArtifact": true,
+        "AARRELightParchmentPalettePass": true,
+        "wholeNewGeneration": true,
+        "partialImageEdit": false,
+        "observations": [
+          "One complete turquoise/shell mosaic mask, same grandfather-dream silhouette,brow/nose/jaw,almondshell/obsidianeyes and bluegreenturquoisedesign; darkbackgroundnotcopied.",
+          "Newsource white shellteeth clearlyvisible, oldmaskdarkmouthconflictpreserved. Nopectoral/jewelry/chain/skull/person. Stone/shell surfaces photographic, notplastic or illustration."
+        ],
+        "personallyInspectedSeriesComparison": true,
+        "personallyCheckedDeliveryFormat": true,
+        "seriesComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/delivery-packet/qa/series-comparison.png",
+        "reviewedAt": "2026-10-19T12:42:34.939307+00:00",
+        "recipientAcceptance": "PENDING",
+        "ownerAcceptance": "NOT_CLAIMED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "taskNumbers": [
+    634,
+    635
+  ],
+  "sourceCommit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+  "sourcePath": "posti/paatoimittaja-codex-aarteet-sheba-montezuma-20261019.md",
+  "sourceBlob": "97a04f2e747f873cb50cef462e8c470b8387529f",
+  "readInFull": true,
+  "files": [
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "posti/paatoimittaja-codex-aarteet-sheba-montezuma-20261019.md",
+      "blob": "97a04f2e747f873cb50cef462e8c470b8387529f",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/sources/paatoimittaja-codex-aarteet-sheba-montezuma-20261019.md",
+      "sha256": "5aa8c0d5230bb862ec2eceb0b33b13b02a1087eca2af9eee55b6a975d545609a"
+    },
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "docs/mantereet-tyoaineisto/aarreleiskat/README.md",
+      "blob": "29ec41bdb237edf745bdc26ef4bbbba5ea46ce05",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/sources/README.md",
+      "sha256": "bd9a29cb4ed17bc0b811ad17807aaa8d32553ef4055f246c946a58f084f5756e"
+    },
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "docs/mantereet-tyoaineisto/aarreleiskat/promptit-paaaarteet-ja-ihmeet.md",
+      "blob": "dc8cc553cc4f8bc508870d39b0f3c33fe618bbd9",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/sources/promptit-paaaarteet-ja-ihmeet.md",
+      "sha256": "24701cc8c600db81f03d616b96f843b7f2e1fd8568ccbbec1331c5950c02e6fa"
+    },
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "tools/aarrekuvat-promptit.md",
+      "blob": "e2af5a93d4ce34bc414f4497a564d2c3073da023",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/sources/aarrekuvat-promptit.md",
+      "sha256": "3e043b09ddd7dc5ce93072423564b4ac5dbefb381a00ab1917ec90715aee89db"
+    },
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "tools/generoi-aarrekuvat.mjs",
+      "blob": "e3e444089cb2af4ef06d1c7e8fe8551ab5962360",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/sources/generoi-aarrekuvat.mjs",
+      "sha256": "0948c1553d4a649c876c8744b3c3942dd48f2b0a21dfea35c5efd33c77827ac5"
+    },
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "docs/mantereet-tyoaineisto/aarreleiskat/meripihka-vaalea.png",
+      "blob": "eab01bc1f5070b64b5e345ca1beb93a6cf54dfc6",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/meripihka-vaalea.png",
+      "sha256": "e80d8390f0237a3629694b70b967baa45bb6e00eb1fc22020cbfda2a7c2609fc"
+    },
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "posti/isoisan-uni-281-283-v1/batch-QA.json",
+      "blob": "e3ca0ae5318375f45efd0e84c282faca31772907",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/sources/batch-QA.json",
+      "sha256": "922eb24a32b1783e657e6738928e23aa675f8099547675939602b338063c0405"
+    },
+    {
+      "commit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "sourcePath": "posti/codex-fable-isoisan-uni-281-283-v1-20261015.md",
+      "blob": "c5cd78d631d26356a13bd15dd8e36ba89b06a063",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/sources/codex-fable-isoisan-uni-281-283-v1-20261015.md",
+      "sha256": "2fc0b9d71b14d0fea9d4e236ebf4f0c819c9704c06c9573b68339c48128bebe9"
+    },
+    {
+      "originalNASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/281-montezuman-naamio/v1/montezuman-naamio-v1-native.png",
+      "gitCommit": "0d3ff560e548c7adf1c36bf28dc53f60b8b6e096",
+      "gitPath": "posti/isoisan-uni-281-283-v1/montezuman-naamio-v1-native.png",
+      "gitBlob": "f0f6cf895236ceb3f6140b4c440e3a8d671918ee",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aarteet-sheba-montezuma-20261019/references/montezuman-naamio-v1-native.png",
+      "sha256": "fed6e1d09573c9c406e6839a10e4192304daafaa0cb6f892d75fee47aee8db78",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "personallyViewed": true,
+      "previousTask": 281,
+      "role": "Shape/design continuity ONLY, not black background",
+      "conflict": "Old generated mask has dark narrow mouth without visible white teeth. New635sourceadds white shell teeth while keeping silhouette/eyes/mosaicdesign."
+    }
+  ],
+  "targetDimensions": [
+    1024,
+    1024
+  ],
+  "targetMode": "RGBopaquePNG",
+  "pipeline": "NewestPT/28Aug lightparchment stilllife override9Augblackgouache/APIexample. Built-inimagegen only; no640JPEG/gameintegration.",
+  "styleReference": "meripihka-vaalea.png only parchment/palette/framing; artifact surfaces photographic",
+  "missingReferences": "No paa-*.png in Git sourceCommit/originmain trees or targeted T7output/game-srcscan. README explicitly names meripihka-vaalea.png. Root confirmed fallback beforecalls.",
+  "targetedSearches": [
+    "Gitls-tree sourceCommit/originmain exactaarreleiskatdirectory",
+    "Gitgrep isoisa/unikuva/Montezuma/Xiuhtecuhtli/turkoosinaamio in docs/posti",
+    "localoutput/game-srcfilenames paa-*.png",
+    "Found localoutputandNAS isoisan-uni-unikuvat-20261015/281; compared with GitSHA"
+  ],
+  "museumPixelsUsed": false,
+  "existingDreamMaskActuallyFound": true,
+  "oldFilesOverwritten": false,
+  "allReferencedImagesPersonallyViewed": true,
+  "seriesComparisonPersonallyViewed": true,
+  "rootConfirmedFallbackAnd1024TargetBeforeCalls": true
+}

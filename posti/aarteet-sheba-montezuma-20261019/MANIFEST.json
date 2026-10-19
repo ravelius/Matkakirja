@@ -1,0 +1,79 @@
+{
+  "taskNumbers": [
+    634,
+    635
+  ],
+  "deliveryPNGCount": 2,
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 5916,
+      "sha256": "3e3405a65ad1392370bebdc8a037dd387364ac0a5c18eafa1bfec286ff349a58"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 10317,
+      "sha256": "1afb40635f32c1b5bf7c7c84b551a460282820ca712108fd52d76fe1a66c79ac"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 5741,
+      "sha256": "1d42ea420aa39549d5562c8b209dfeaf7e8f4662db776fc50ccb851eec2d9754"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 4261,
+      "sha256": "5144fc50a2f51587a9a6d145dd4dd171675a1126c128e239c14bbbd4ddbada3c"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 2851,
+      "sha256": "e76427b8bafc34c2f8949d11571258796d1eae66f093c5e5703ab52218afe830"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 5935,
+      "sha256": "f7f645bed35ad34cbcb939ebf575e180291a45aa06d2d1f580d7336d77ac2cef"
+    },
+    {
+      "path": "paa-middleeast.png",
+      "bytes": 1733489,
+      "sha256": "620c4f805b95181300ba0dd3deb30dc2a5354f4b8cd480340f7aa9ebee3a441a"
+    },
+    {
+      "path": "paa-northamerica.png",
+      "bytes": 1855996,
+      "sha256": "db67cf2f39bab92008c5db1fcf2460b9655731c2ff0b2dcde37e3590787eff1d"
+    },
+    {
+      "path": "qa/series-comparison.png",
+      "bytes": 599360,
+      "sha256": "0282315015e9e2ef9981124eec981855115bb1e92f8ca37a81bd42da8fb9d87a"
+    },
+    {
+      "path": "sources/README.md",
+      "bytes": 2508,
+      "sha256": "bd9a29cb4ed17bc0b811ad17807aaa8d32553ef4055f246c946a58f084f5756e"
+    },
+    {
+      "path": "sources/batch-QA.json",
+      "bytes": 4451,
+      "sha256": "922eb24a32b1783e657e6738928e23aa675f8099547675939602b338063c0405"
+    },
+    {
+      "path": "sources/codex-fable-isoisan-uni-281-283-v1-20261015.md",
+      "bytes": 2667,
+      "sha256": "2fc0b9d71b14d0fea9d4e236ebf4f0c819c9704c06c9573b68339c48128bebe9"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-aarteet-sheba-montezuma-20261019.md",
+      "bytes": 1099,
+      "sha256": "5aa8c0d5230bb862ec2eceb0b33b13b02a1087eca2af9eee55b6a975d545609a"
+    },
+    {
+      "path": "sources/promptit-paaaarteet-ja-ihmeet.md",
+      "bytes": 5500,
+      "sha256": "24701cc8c600db81f03d616b96f843b7f2e1fd8568ccbbec1331c5950c02e6fa"
+    }
+  ]
+}

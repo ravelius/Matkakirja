@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-19T12:46:13.624121+00:00",
+  "reviewer": "root",
+  "bothNativesPersonallyInspectedEarlierInThisWork": true,
+  "finalSeriesComparisonPersonallyInspected": true,
+  "comparisonSHA256": "0282315015e9e2ef9981124eec981855115bb1e92f8ca37a81bd42da8fb9d87a",
+  "allManifestHashesAndMirrorBytesVerified": true,
+  "deliveryDimensions": [
+    1024,
+    1024
+  ],
+  "format": "RGB opaque PNG",
+  "actualWholeImageCalls": 2,
+  "returnedCalls": 2,
+  "pendingCalls": 0,
+  "contentQA": "PASS",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
