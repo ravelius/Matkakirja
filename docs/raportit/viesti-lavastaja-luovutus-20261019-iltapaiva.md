@@ -21,6 +21,9 @@ PT:lle enintään 3 riviä, absoluuttiset polut. **Ei käynnissä olevia käänn
 ## ENSIN (PT 15.0x: ok – seuraava erä = kohdat 1 + 2 yhdessä)
 Kehysmateriaalien sävyerä (vain arvot: kulta-aaltolista, eebenpuu) + Kunniagallerian lähikuvien uusinta (zoom vasta kävelyn jälkeen).
 Yksi käännös, yksi simuvuoro JU:lta; kuvat ennen/jälkeen PT:lle.
+**TILA 16.2x:** TEHTY, odottaa PT:n kuittausta. Proto `linnanrakentaja/kehyssavy-204` **429cb6099** (KultaUusi 150/134/104 → 215/196/150,
+QA "museo nlkulta r g b"; musta ennallaan, PT 15.1x samaa mieltä), app 12a62794b, kulta ruudulla 61/35/11 → 144/97/43.
+Kuvat + HAVAINNOT `_valmiit/rijks-kehyssavy-204/`. PT:ltä kysytty: ok junaan 204 vai kiilto vielä (kulta mattaa okraa). Hyväksynnän jälkeen merge-pyyntö NS:lle.
 
 ## Avoimet (seuraava sessio)
 1. **Kehysmateriaalien sävy (Kunniagalleria):** kultainen aaltolista näkyy punaruskeana, musta eebenpuu keskiruskeana (HAVAINNOT.md).
