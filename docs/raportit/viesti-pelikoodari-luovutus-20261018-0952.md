@@ -82,3 +82,6 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
 - JUOKSUPELI (PT 07.3x; omistaja 07.20 "ei pyydetä mitään muutoksia" Codexilta): proto pelikoodari/juoksupeli-202 dd7009250 Puyi v7 + vartija
   hahmoina (JuoksuHahmot, GlbLeikeLainaus, JuoksuLiikkeet). Vientipaketti proto-3d/_valmiit/juoksupeli-hahmot-v1-vienti-20261019 → JU:n
   vie-paketti.sh pyydetty. Seuraavaksi rata 1 (RATA1-SUUNNITELMA.md) samaan haaraan. Kääntö (KaantoAste 180) ja mitoitus todentamatta laitteella.
+- RATA 1 VALMIS (08.2x): proto pelikoodari/juoksupeli-202 57f0f0afe (⊃ hahmot dd7009250): JuoksuRata1 + valikko "Juoksupeli: Rata 1" + "Maali!"-tulos,
+  botti 20/20 maaliin 33–40 s. Avoin PT:lle: pidennys (suunnitelma 2–3 min) vai 1. versioksi. Ei simu-/laitetodistetta (19.10. ei laitetestejä).
+  Odottaa: JU:n vienti juoksupeli-hahmot-v1 ämpäriin (ilman sitä harmaat laatikot); haara NS:lle junaan vasta PT:n luvalla.
