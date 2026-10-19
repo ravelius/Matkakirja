@@ -140,6 +140,24 @@ Karttaseppä.)*
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
 
+*(Rivit 15.–19.10.2026 on siirretty lokista, muistista ja KK:n katselmuksesta omistajan päätöksellä 19.10. klo 15.35; uusia sääntöjä ei ole.)*
+
+- **19.10.2026, Kööpenhaminan kierroksen napit ("kippi").** Omistajan linjaus: taukoa painettaessa ⏸ muuttuu ▶:ksi ja
+  rivi on `Lennä itse | < ■ ▶ > | Kysy` (< edellinen, > seuraava kohde, muut napit pois paitsi yläreunan ☰); Kysy-nappi
+  tuo tähtäimen, napin "mikä tämä on" ja neljä kerrallaan näkyvää kysymystä (8 per kohde, reunat feidautuvat); vapaassa
+  lennossa vain ohjaimet sekä `<` ja `Kysy`; Mac: WASD = vasen tikku, nuolet = oikea. Päivitetään kaikkiin kierroksiin, ja
+  kierroksen jokaisesta kohteesta CC-kuva ja havainnekuva. Muuttuu: nappilogiikka päivitetään kaikkiin kierroksiin.
+  Lähde: loki "PAATOKSET 19.10.2026 klo 11.27–11.40" ja "klo 11.41–11.45".
+- **17.10.2026, pallokierrosten äänimaisemasilmukat (KK-katselmus).** Hidasti: 6 silmukkaa tehtiin Freesoundin
+  esikuuntelu-mp3:ista AST- ja Whisper-valinnalla (`luokita.py`), silmukkakohta koneella (`tee.py`), ja PT kuittasi
+  kuulematta; silmukat olivat junan lukitusehtona. Raamattu 5.27 (sokkokuuntelu, Soundly ja Sonniss ensin) koskee
+  tehosteita; äänimaisemiin laajennus on KK:n suositus, joka odottaa omistajan päätöstä. Lähde: scratchpad
+  putket-lapikaynti-20261019, ääni V1; loki "OMISTAJA: ÄÄNITEHOSTEIDEN OLETUSTAPA HYVÄKSYTTY (19.10.2026 klo 14.35)".
+- **15.10.2026, Ateena v12 kahteen kertaan.** Hidasti: Pelikoodari ja Linssiseppä tekivät kumpikin saman v12:n samalla
+  Zeus-muutoksella (edb351a43, 08ac5caee); CDN:n ämpäri on muuttumaton, joten vain ensin viety kelpaa ja Natiivisepälle
+  piti erikseen kertoa, kumpi haara junaan otetaan. Muuttuu: ennen uutta versiota `ls /Users/Shared/Claude/proto-3d/_valmiit
+  | grep <kaupunki>-v` ja sovi viestillä kaupunkia työstävän roolin kanssa, kuka tekee version N. Lähde: muisti
+  pallokierros-versio-tarkista-valmiit.
 - **15.10.2026, Lontoon historiaosiot A.** Riippumattoman tarkistuksen tulos: 39 OK, 9 KORJAA, 0 POISTA (yksi aito faktavirhe,
   yksi kielivirhe, loput pehmennyksiä). Muuttuu: tarkistajat hakevat omat lähteet ennen faktaliitteen lukemista (kultainen polku 7).
 - **14.10.2026, Praha ja Ateena (16 historiaosiota, Ateenan avaus, loppu ja 8 pysäkkiä).** Kolme riippumatonta tarkistajaa:

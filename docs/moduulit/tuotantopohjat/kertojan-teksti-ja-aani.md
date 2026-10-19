@@ -101,6 +101,31 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttuu pohjassa.
 
+*(Rivit 19.10.2026 on siirretty lokista ja muistista omistajan päätöksellä 19.10. klo 15.35; uusia sääntöjä ei ole.)*
+
+- **19.10.2026, omistaja ei ensimmäinen kuuntelija (J1).** Hidasti: puheessa omistaja löysi virheet ensin (ranskan aksentti
+  17.10.). Muuttuu: Gemini kuuntelee otot sokkona ennen omistajaa. Ristiriita: kultaisen polun kohta 10 ("kuuntelematta saa
+  viedä") on tämän päätöksen vastainen; PT päättää rivin korjauksesta. Lähde: loki "OMISTAJAN PÄÄTÖS 19.10.2026 klo 15.21".
+- **19.10.2026, ei jälkisäätöjä puheeseen.** Hidasti: nopeutus ffmpeg-atempolla (17- ja 20-ääni) kuulosti omistajasta
+  huonolta. Muuttuu: nopeus ja tunne vain ElevenLabsin `speed`-asetuksella (natiivisti noin 1,2:een), tageilla ja äänen
+  asetuksilla; tasoitus, leikkaus ja häivytys sallittuja. Pohjan vanhat rivit "tempo 1,10×" (kohdat 2.6 ja 3) ovat tämän
+  vastaisia; vanhat julkaistut otot eivät muutu ilman omistajan päätöstä. Lähde: loki "PAATOS 19.10.2026 klo 10.19
+  (kortti)"; muisti puhe-ei-jalkisaatoja.
+- **19.10.2026, äänistä ei kysymyskortteja.** Muuttuu: otot lähetetään omistajalle tiedostoina ja palaute tulee tekstinä;
+  generointilupa (määrä, merkit, tekstit) pyydetään tekstinä, ei kortilla. Lähde: muisti aanet-ei-kysymyskortteja.
+- **19.10.2026, Olavinlinnan M-osa (KK-katselmus).** Hidasti: 16 repliikkiä oli jo ämpärissä kolmena versiona, mutta lupa
+  pyydettiin "ääntä ei ole" ja generoitiin silti 20 (a60da1d3c, ac29287f5). Muuttuu: ämpärin manifesti tarkistetaan ennen
+  lupapyyntöä (KK:n katselmuksen suositus, ei vielä Raamatussa). Lähde: scratchpad putket-lapikaynti-20261019, ääni V5.
+- **17.10.2026, Louvren alut ilman `language_code: fi`.** Hidasti: lähestymispuhe ja salien avaukset äännettiin ranskan
+  aksentilla; 47 riskiottoa (24 411 mrk) jätettiin uusimatta omistajan päätöksellä ja uusittiin vain Louvren lähestymispuhe
+  ja salien avaukset (louvre-inv-* ennallaan). Muuttuu: kultainen polku 6 (suomi aina pakotettuna, testi kaatuu ilman
+  `fi`:tä). Lähde: loki "AANIGENEROINTI: SUOMI AINA PAKOTETTUNA; LOUVREN ALUT UUSITAAN (17.10.2026 klo 23.05)".
+- **17.10.2026, maalehtierä 831 (luennat).** Hidasti: kustannusarvio 0,226 × 369 643 = ~83 500, toteutui 90 067
+  (374 867 lähetettyä merkkiä). Muuttuu: arvio 0,240 kr / lähetetty merkki, `[pause]`-tagit (+8 mrk/pala) mukaan lukien.
+  Lähde: muisti aanityksen-hinta-0240-tagit-mukaan.
+- **28.9.2026, Pulun tagit.** Hidasti: `[softly]` kuulosti omistajasta liian surulliselta (sävel ja taso laskevat loppua
+  kohti). Muuttuu: Pulun teksteissä ei `[softly]`/`[whispers]`; tilalle `[warmly]`, `[amused]`, `[mischievously]`, yksi tagi
+  per virke. Lähde: muisti pulun-tagit-ei-softly.
 - **17.10.2026, Louvren ympyrät.** Hidasti: tekstit ja skriptit valmisteltiin ennen kuin tiedettiin, että peli lukee ne
   suoralla lukijalla. Muuttuu: kultainen polku 1, lukutarkistus ensin.
 - **17.10.2026, luvut sanoiksi.** Hidasti: merkkimäärä kasvoi puhutussa muodossa (+662), joten lupapyyntö olisi ylittynyt.

@@ -152,6 +152,36 @@ kantele löydössä ja lopussa, äänitehosteet CC0-lähteistä, vienti ja mykis
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
 
+*(Rivit 19.10.2026 on siirretty lokista ja muistista omistajan päätöksellä 19.10. klo 15.35; uusia sääntöjä ei ole.)*
+
+- **19.10.2026, Puyin huudot (juoksupeli).** Omistajan linjaus: huudot lyhyiksi (esim. "Voi ei! Maljakko maksoi miljoonia!"),
+  usein sidottuna kuplan tarinaan, samalle esineelle useita versioita ja hinta vain harvoin; puhuja on juokseva lapsi, joten
+  vaihtelu ja hauskuus painavat enemmän kuin täydellinen faktatieto; toistuvalle esineelle lyhyt yleishuuto ("Voi ei taas").
+  Hidasti: omistaja ei ymmärtänyt huutoa ilman kuplan sisältöä. Muuttuu: huutorivin mukana näytetään aina uneksinnan
+  (kuplan) teksti ("Uni: …, teksti: dynastia + vuosi"); uusia huutoeriä ei ennen kuin erät 1–2 on testattu pelissä. Lähde:
+  loki "PAATOS 19.10.2026 klo 09.41", "PYYNNOT 19.10.2026 klo 10.2x–10.27", "PAATOKSET 19.10.2026 klo 12.11–12.23"; muisti
+  huudot-uneksinnan-teksti-mukaan.
+- **19.10.2026, Puyin ääni.** Hidasti: koeäänet kuulostivat liian vanhoilta (6 oli lähimpänä); lapsi juoksee huutaessaan,
+  joten tunnetagi huomioi sen. Valittu 08 Kavya (bA58y3FqVI6b6gTNh0oT), tagi `[shouting] [panicked]`, `speed` 1,2 natiivisti,
+  suomi pakotettuna, ei jälkikäsittelyä; huudon alut ("Oho!", "Auts!", "Hoplaa!", "Noin!", "Katos vaan!", "Hups!", "Sori!"
+  iloisena kiljahduksena) valitsi omistaja kuuntelemalla. Hahmoäänille ei ole omaa pohjaa. Lähde: loki "PAATOKSET
+  19.10.2026 klo 11.08–11.23" ja "klo 11.41–11.45"; muisti aanet-ei-kysymyskortteja.
+- **19.10.2026, muistokuplan kuvatilaus (Codex).** Hyväksytty tyyli: realistinen värivalokuva, esine ja hahmo keskimmäisellä
+  noin 60 %:lla, reunoilla vähintään 20 % rauhallista taustaa (peli häivyttää yhdellä soikiomaskilla, ei alfaa kuvaan),
+  vaaleat ilmavat sävyt, oikea ympäristö, läheltä (pehmeä syväterävyys) ja kevyt vastavalo, paljon harmaantuneita
+  vanhoja opettajia; muistotyypit vaihtelevat (sali ja jalustalla esine ilman ihmisiä, oppitunti, lahja, juhla). Hidasti:
+  kuplatilaus "läheltä" ilman mittaa → 10 uusintaa (A-erä 10/12 hylättiin PT:n katselmuksessa). Muuttuu: tilaukseen mitta ja
+  pohjakuva. Lähde: loki "PAATOKSET 19.10.2026 klo 09.36–09.37", "klo 09.47", "klo 09.5x–10.03", "klo 10.58–11.02";
+  KK-katselmus (scratchpad putket-lapikaynti-20261019, kuvat).
+- **19.10.2026, kiinankieliset kirjoitukset.** Muuttuu: pelissä näkyvä kiinankielinen kirjoitus vain tarkistetuista oikeista
+  teksteistä (SK:n lista Codexille), ei generoituja merkkejä; kiinan ilmaukset (shifu) sivuhuomiona. Lähde: loki "PAATOS JA
+  PYYNNOT 19.10.2026 klo 10.38".
+- **19.10.2026, juoksupelin äänitehosteet.** Hidasti: aanet-v1 (61) ja v1.1 (7) leikattiin koneellisesti Freesoundin
+  esikuuntelu-mp3:ista AST-tunnistimen valinnalla, kukaan ei kuunnellut, ja omistaja kuuli virheet ensin (puuaskel =
+  korkokengät, jade = lusikka kivimukissa). Muuttuu: Soundly Pro ja Sonniss ensin, Freesound vain aukkoihin alkuperäisinä,
+  valmiit yksittäiset tehosteet, tekoäly kuvaa jokaisen äänen sokkona ennen peliä (Raamattu 5.27). Pohjan luvun 9 rivi
+  "äänitehosteet CC0-lähteistä" on tämän vastainen; PT päättää korjauksesta. Lähde: loki "OMISTAJA: ÄÄNITEHOSTEIDEN
+  OLETUSTAPA HYVÄKSYTTY (19.10.2026 klo 14.35)"; muisti aanitehosteet-kuuntelu-ennen-omistajaa.
 - **16.10.2026, lapsi-Puyin faktapohja 1912–1918.** Neljä Sonnet-tutkijaa; noin 120 riviä merkittiin [EPÄVARMA], koska muistelmaa
   ja Johnstonia ei saatu kokotekstinä; vain merkinnätön kelpaa peliin. Muuttuu: aikaikkuna ja ikälaskenta kirjataan ennen tutkimusta
   (kultainen polku 3 ja 10).
