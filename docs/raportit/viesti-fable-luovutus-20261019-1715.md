@@ -35,4 +35,6 @@ Runko NS 48924e0d8 vihreä (sis. Lavastajan kehyssävy 429cb6099). Arvio KK:lle:
 - Valoseppä: B5-ilmiöt eivät junaan 204; jatkuvat seuraavaan (pimennys k6 kääntyy). Nollattu Postivahdilla 17.11.
 - Projektiseppä ja Lavastaja: linna tauolla → Projektiseppä levossa (ei uutta projektia vielä); Lavastaja kehyskiilto.
 - SK: PR 4984 pidossa (ks. 0.4). Äänittäjä: juoksupelin maisemat Gemini-arviossa.
+- 17.16 omistajan pyyntö: iPhonella pinnattu nosto yläriville, matkakirja M-napiksi → VS (nostokortti-b-204:n päälle), junaan 204 jos kuitattu ennen lukitusta; työlistalla.
+- Luettelo: NUI valikko-jatko-204 90127efc5 (sis. luettelo, Sheba/Montezuma -v2 natiivissa); 1b25928b5 peruttu. Karttaseppä: Britannian kartan nimien väistö (ei junaehto). Pariisin valkoiset laatikot = testiajon varadata, ei riski.
 - Junan 204 jälkeen PT kokoaa retrospektiivin omistajan löydöksistä (päätös 15.35).
