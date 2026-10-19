@@ -1,5 +1,5 @@
 {
- "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta).",
+ "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta). PUYIN ÄÄNI LUKITTU 11.23: 08 Kavya (voice_id kentässä \"aani\"). Sallitut alut kentässä \"sallitut_alut\". Tavoite: koominen käänne (huoleton alku, lause kauhistelee). Ei generointia ennen KK:n eriä.",
  "rivit": [
   {
    "avain": "juoksupeli.rikkoutuva.posliinimaljakko.versio.1.huuto",
@@ -103,5 +103,21 @@
    "tagi": "[shouting] [panicked] ",
    "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
   }
+ ],
+ "aani": {
+  "nimi": "08 Kavya",
+  "voice_id": "bA58y3FqVI6b6gTNh0oT",
+  "lukittu": "omistaja 19.10. klo 11.23 (korvaa Horatiuksen; loki #4934)"
+ },
+ "sallitut_alut": [
+  "Aa!",
+  "Oho!",
+  "Auts!",
+  "Hoplaa!",
+  "Noin!",
+  "Katos vaan!",
+  "Hups!",
+  "Sori!",
+  "Sis-sos!"
  ]
 }
