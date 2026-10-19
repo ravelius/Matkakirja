@@ -58,3 +58,12 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   ei toistu peräkkäin samasta esineestä. Tee DATAPOHJAINEN esineluettelo (json: id, nimi, repliikit[], elinvoimahinta) + REPLIIKKIVALITSIN
   (puhdas, testattava: ei samaa kahdesti peräkkäin per esine). Nyt rikkoutuvat = Väistö-esteet (V4EsteLaji.Vaisto, AarreRikko 15);
   SK:n juoksupeli.rikkoutuva.<id>.* (5 kpl) pohjaksi.
+
+## LISÄYS: KAMERAJOHTAJA (LS 19.10., PT: vasta Rata v4:n JÄLKEEN, ei nyt)
+- Proto linssiseppa/kamerajohtaja-204 **8d7e1feab** (junassa 204). Rajapinta Ydin/Kamera/Kamerajohtaja.cs: Kamerajohtaja(KameraAsento) +
+  Lisaa(Kisko | Orbit | Kaanto | Zoom | Paikallaan), joka ruutu Paivita(dt); esilataus Valmistele/Valmis.
+- Kameraan VAIN KameraKirjoittaja.Aseta(camera, a, muunnos, liikkuu, "juoksupeli") (+ ruutuaikavahti > 20 ms).
+- Pelaajan perässä -kamera → pyydä LS:ltä jousiseuranta (Liikepohja.Jousi) johtajaan.
+- Vahti tyokalut/kameravahti.py (tarkista.sh): Juoksupelin suorat camera.transform-kirjoitukset (1 tiedosto lähtötasossa) vain vähenevät;
+  siirron jälkeen --kirjaa. CI: liikkeet KameraliikeTestit.cs:ään (Kameratarkastus → Oleta.Tosi(r.Ok)).
+- Malli: MuseoKierros.Ovensuu.cs (35067491f). Kysymykset LS:lle.
