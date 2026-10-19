@@ -197,6 +197,23 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttuu pohjassa.
 
+*(Rivit 17.–19.10.2026 on siirretty lokista ja muistista omistajan päätöksellä 19.10. klo 15.35; uusia sääntöjä ei ole.)*
+
+- **19.10.2026, tavoiteluupit (KK-katselmus).** Hidasti: tulivuorten luuppi ajettiin 12 kierrosta, vaikka pisteet kierroksilla
+  8–11 olivat 2,4 / 0,4 / 2,8 / 2,4 (`KIERROSLOKI.md`, `ARVIO.md`) ja pysähdys (kohta 23) vaatii 2 parantumatonta tai 10
+  kierrosta; Louvressa kierroksia kertyi 75, eikä kulutusta kirjata. Valosepän ja Lavastajan lukulistoilla ei ole 7.20–7.21:tä.
+  Muuttuu: kohdan 23 pysähdys pidetään; pysähdyksessä paras versio PT:lle (menetelmän vaihdosta päättää PT; ehdotus
+  katselmuksesta, ei vielä Raamatussa). Lähde: scratchpad putket-lapikaynti-20261019, 3D V3.
+- **18.10.2026, kuvatekstit kuvan ulkopuolelle.** Hidasti: Louvren pareissa (3) k2:n jalat ja kontaktivarjo jäivät
+  kuvatekstin alle, joten niitä ei voinut tarkistaa. Muuttuu: kaikissa kuvapareissa, arkeissa ja vertailukuvissa teksti omalla
+  raidallaan kuvan ylä- tai alapuolella. Lähde: loki "KUVATEKSTIT KUVAN ULKOPUOLELLE (18.10.2026 klo 12.15)"; muisti
+  kuvatekstit-kuvan-ulkopuolelle.
+- **17.10.2026, Louvren lasipyramidi G1z ja varjo.** Hidasti: PT suositteli pyramidia pienen esikatselun perusteella;
+  täysikokoisesta kuvasta olisi nähty, ettei se näyttänyt lasilta, ristikko oli liian paksu, pohja upposi karttaan ja malli
+  peitti Pariisi-kortin ("Ei hyvä. Katso itse", 20.21). Varjon v2.2 hyväksyttiin, mutta pyramidi näytti leijuvan, koska
+  varjo alkoi raon päästä pohjan alta (23.46). Muuttuu: kuva avataan täysikokoisena ja käydään läpi omistajan pyynnön
+  jokainen sana (materiaali, väri, koko, varjo, päällekkäisyydet); varjosta tarkistetaan aina kontakti (ei vaaleaa rakoa).
+  Lähde: muisti pt-kuvan-tarkistus-taysikokoisena (lisäykset 17.10.).
 - **17.10.2026, Louvre k61–k62 (L2-sora).** Hidasti: laikkuisuus ei muuttunut, kun AO-kohinaa puolitettiin, koska raidat tulivat
   asfalttitekstuurin kaarista ja 4 m:n toistosta. Muuttuu: mittaa pelikuvasta, mistä vaihtelu tulee, ennen säätöä; toistuva
   tekstuuri tarkistetaan pelikuvasta (kohta 8).

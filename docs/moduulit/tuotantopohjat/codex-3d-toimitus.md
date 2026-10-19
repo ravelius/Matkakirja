@@ -73,7 +73,13 @@ vastaanotossa (älä toimita KTX2:ta).
 
 1. `node tools/codex-3d-tarkistus.mjs <kansio>` → 0. Hylätystä yksi viesti PT:lle (VIRHE-rivit), PT välittää Codexille.
 2. Havainnekuva ja pelikuva rinnakkain täysikokoisina ennen hyväksyntää (Raamattu 9.11, omistaja 19.10.2026 klo 15.21); hylätty ei mene ämpäriin eikä junaan.
+   Kuvateksti omalla raidallaan kuvan ylä- tai alapuolella, ei kuvan päällä (omistaja 18.10.2026 klo 12.14).
 3. Silmämääräinen tarkistus: suunta (+Z eteen), animaatioiden silmukat, materiaalit Unityssä, ja hahmon koko pelissä muihin verrattuna.
+   Katselulista (opit 17.–18.10.2026): kuva avataan täysikokoisena, ei pienestä esikatselusta ("Katso itse", pyramidi
+   17.10. klo 20.21); varjosta tarkistetaan kontakti, eli ei vaaleaa rakoa esineen ja varjon välissä (pyramidi leijui, 17.10.
+   klo 23.46); hahmosta katsotaan edestä, sivulta ja takaa kasvot (silmät, nenä, profiili), kädet ja saumat jokaisesta
+   kulmasta erikseen (Tripo-hahmon hiukset peittivät silmät sivukuvassa, PT ohitti, 18.10. klo 11.41), ja liikevideo ennen
+   peliä (omistaja 18.10. klo 11.34). Lähde: loki "PAATOKSET 18.10.2026 klo 11.34"; muisti pt-kuvan-tarkistus-taysikokoisena.
 4. Viimeistely (LOD, ASTC, törmäysmuodot) ja vientipaketti `_valmiit/<aihe>-vN-vienti-<pvm>/` → Julkaisija `vie-paketti.sh`.
 
 ## 7. Ensimmäinen ajo 19.10.2026 (juoksupeli)
@@ -82,3 +88,17 @@ vastaanotossa (älä toimita KTX2:ta).
   HUOM kaikissa kolmessa: juurisolmun skaala soveltamatta (1,37–1,79).
 - **maailma v4** (10 osaa): 9 läpi; **sisapiha.glb hylätty**: 1 721 primitiiviä (1 707 erillistä meshiä penkeille, patsaille ja
   portille) > 300. Saman materiaalin kappaleet yhdistetään ennen seuraavaa toimitusta.
+- **maailma v4 ennen porttia:** v4 vietiin peliin ennen tuontiportin ajoa (08.28 vs 08.41), ja portin hylkäämä
+  `sisapiha.glb` oli yhä junassa 204 (`JuoksuV4Maailma.cs:28`). Portti ajetaan ennen kuin toimitus kytketään peliin
+  (KK-katselmus 19.10., 3D V2).
+- **Hahmojen referenssikuvien tilaus (18.10.):** kuvat edestä, sivulta ja takaa (Louvren ihmiset: ei oikeiden ihmisten
+  valokuvia; juoksupelin Puyi ja vartija: kädet irti vartalosta, tasainen valo, harmaa tausta). Lähde: loki "PAATOKSET 18.10.2026
+  klo 09.04" ja "klo 11.34".
+- **Luvat ja tilaukset (K4):** Codexin havainne- ja Tripon pohjakuvat pysyvällä luvalla (omistaja 19.10. klo 08.42); Tripo-mallit,
+  ElevenLabs ja muut maksulliset generoinnit luvalla. Tripo Max -kuukausitilaus (omistaja 18.10., voimassa noin 18.11. asti,
+  selaimella; API-saldo 0, API-krediittejä ei osteta) on olemassa oleva tilaus eikä uusi osto (Raamattu 12.24). Lähde: loki
+  "PAATOKSET 19.10.2026 klo 08.42–08.46", "TRIPO: SELAIMELLA, EI RAJAPINTAA", "TARKENNUS 19.10.2026 klo 15.06".
+- **Googlen laattoja sisältäviä pelikuvia ei anneta Codexille pohjaksi eikä referenssiksi** (Googlen ehdot): referenssi
+  omasta aineistosta (OSM-vesimaski, oma renderi); omien 3D-näkymien kuvat käyvät. Tilauksen sääntölistaan rivi: ei
+  tekijänoikeudella suojattuja teoksia (tekijän kuolemasta alle 70 v, Espanjassa 80); kohde jätetään pois ja mainitaan
+  kuittauksessa. Lähde: muisti ei-googlen-3d-laattoja-codexille, codex-tilaus-ei-suojattuja-teoksia.

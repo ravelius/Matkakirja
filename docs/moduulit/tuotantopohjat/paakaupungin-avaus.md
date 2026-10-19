@@ -146,6 +146,24 @@ junaan liittäminen. Täydentää Äänittäjä ja Julkaisija.)*
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttuu pohjassa.
 
+*(Rivit 13.–19.10.2026 on siirretty lokista, muistista ja KK:n katselmuksesta omistajan päätöksellä 19.10. klo 15.35; uusia sääntöjä ei ole.)*
+
+- **19.10.2026, nostojen Kysy-kysymykset ja tekstin luku pelinäkymässä.** Hidasti: Kysy-kysymyksistä tarkistettiin vain
+  pituus (ja kysymysmerkki), ja omistaja huomasi vastaukset suoraan tekstissä; 147/256 kysymystä vaihdettiin (#4947).
+  Omistajan linjaus: Kysy-kysymykset eivät saa olla tekstistä vastattavia, vaan antavat lisätietoa monesta suunnasta. Muuttuu:
+  tekstit luetaan pelinäkymässä (tuore agentti) ennen PT:tä, omistaja ei ole ensimmäinen lukija. Lähde: loki "PAATOKSET
+  19.10.2026 klo 12.11–12.23" ja "OMISTAJAN PÄÄTÖS 19.10.2026 klo 15.21".
+- **17.–19.10.2026, nykypaikan kuvan aitous (Kööpenhamina, Tivoli).** Omistaja hylkäsi Codexin Tivoli-kuvat A1–A2 ja C1–C6
+  ("Ei näytä aidoille, ei käytetä"); käyttöön tuli Commonsin CC-valokuva (Tivoli at night, Leif Jørgensen, CC BY-SA 4.0).
+  Opetus: todellisen nykypaikan kuvan pitää näyttää aidolta valokuvalta; ylikylläiset värit, liika valo (jokainen lamppu
+  palaa), liian täydelliset istutukset ja kiiltävä pinta paljastavat tekoälykuvan, ja tarkistuksessa kysytään paikan
+  oikeellisuuden lisäksi "Uskoisiko tätä valokuvaksi?". Tivoli v2 hyväksyttiin pohjakuvalla (18.10.), mutta k8 (pagodi
+  illalla, 19.10.) tilattiin ilman v2:n aitousvaatimuksia ja arvioija näki samat viat (KK-katselmus). Muuttuu: nykypaikan
+  tilaukseen pohjakuva ja aitousvaatimus. Lähde: loki "TIVOLIN CODEX-KUVAT EI KAYTETA (17.10.2026 klo 22.13)", "TIVOLIN
+  ILTAKUVA", "PAATOKSET 18.10.2026 klo 10.14"; muisti nykypaikan-kuva-aito-valokuva, codex-kuvat-fotorealistiset.
+- **13.10.2026, pääkaupunkikuvat Commonsista.** Omistaja: nykyiset voi jättää, jatkossa vain Commons, ja riittää tarkastaa
+  ensin osa. Muuttuu: pistokoe kuvatyypeittäin (ruoka, luonto, nähtävyydet, Commons) ennen kytkentää; vasta toistuva vika
+  laajentaa tarkistusta. Lähde: muisti paakaupunkikuvat-commons-pistokoe.
 - **16.10.2026, 7 pääkaupungin oppaan ja kartan esittelyt** (Monaco, Bern, Belgrad, Zagreb, Bratislava, Tirana, Podgorica).
   Hidasti: PT:n riippumaton tarkistus löysi faktakorjauksia kaikista seitsemästä (Tiranan moskeijan ajoitus ja Taiwan-lempinimi,
   Monacon aukiolo, Bernin kukko-esitys, Bratislavan raatihuone, Belgradin Skadarlija, Zagrebin Lotrščakin torni).

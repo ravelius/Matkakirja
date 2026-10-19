@@ -52,7 +52,7 @@ Sisältökirjuri: teksti (hyväksytty, faktat tarkistettu)
    yhdessä erässä), joten lupapyynnön merkkimäärä lasketaan puhutusta muodosta. Muuten lupa ylittyy ja tarvitaan uusi.
 6. **Ääni ja malli oikein.**
    - Isoisä: AINA `eleven_v3` (omistaja 14.10.), text-to-dialogue, yksi otto, loppufade 150 ms + hiljaisuus.
-   - Kertoja William (`oae6GCCzwoEbfc5FHdEu`): `eleven_v4_turbo`, tempo 1,10×. Pelin lukijana workerin avaimessa on
+   - Kertoja William (`oae6GCCzwoEbfc5FHdEu`): `eleven_v4_turbo`, nopeus vain ElevenLabsin `speed`-asetuksella (ei atempoa, omistaja 19.10. klo 10.19). Pelin lukijana workerin avaimessa on
      `eleven_v4` (säilöavain sha256 `malli|ääni|ohje|teksti`).
    - Pulu (`piI8Kku0DcvcL6TTSeQt`): `eleven_v4_turbo`, stability 0,5, `language_code fi`, −17,2 LUFS, ei ffmpeg-nopeutusta
      (`livia-aani.md`).
@@ -69,8 +69,8 @@ Sisältökirjuri: teksti (hyväksytty, faktat tarkistettu)
    sekä täysi ajat- ja manifestirivi-tiedosto; ilmoita kytkijälle, mikä rivi vaihtuu. Kansion nimessä on `-vienti-`.
 9. **Mykistys.** Kun hyväksytty tekstimuutos viedään dataan, vanha luenta merkitään `mykistetyt`-kenttään, kunnes uusi
    on generoitu ja kytketty. Peli ei koskaan soita vanhoilla sanoilla.
-10. **Kuuntelematta saa viedä.** Generoituja ääniä ei tarkisteta kuuntelemalla eikä omistajalta (Raamattu 11.10.);
-    puheentunnistuksen epäilyt eivät pysäytä vientiä. Whisper-vertailu (sanasuhde) on tiedoksi, ei tuomari:
+10. **Gemini kuuntelee sokkona ennen omistajaa** (Raamattu 9.11, omistaja 19.10. klo 15.21; korvaa 11.10. linjauksen
+    "kuuntelematta saa viedä"): omistaja ei ole ensimmäinen kuuntelija. Whisper-vertailu (sanasuhde) on tiedoksi, ei tuomari:
     vieraat nimet se kirjoittaa suomalaisittain.
 11. **Avaimet.** `source ~/.zshrc` samaan komentoon (ELEVEN_API_KEY); avainta ei koskaan repoon, lokiin eikä viestiin.
 
@@ -83,7 +83,7 @@ Paketti ei ole valmis ennen kuin kaikki kohdat täyttyvät:
 - [ ] Lupa on KK:n suoralla rivillä, ja leikemäärä ja merkkimäärä (puhutussa muodossa) pitävät.
 - [ ] Luvut ja lyhenteet sanoiksi: tarkistettu 100–199 ("sata…", 104 = sataneljä), "eaa./jaa." lauseen lopussa saa pisteen,
       vuosiluvut yhteen, taivutukset oikein.
-- [ ] Oikea ääni ja malli (isoisä `eleven_v3`, kertoja turbo tempo 1,10×, Pulu oma resepti); kieli `fi`.
+- [ ] Oikea ääni ja malli (isoisä `eleven_v3`, kertoja turbo, nopeus vain `speed`-asetuksella, Pulu oma resepti); kieli `fi`.
 - [ ] Vieraiden nimien ääntämysvihjeet tehty (esim. `orsay-rf-2027b`); Whisper-poikkeamat luettu.
 - [ ] Taso mitattu: kaari −14,6 LUFS, fokus ja Pulu −17 LUFS, muut tyypin mukaan; fade ja hiljainen häntä.
 - [ ] Aikaleimat tehty, jos peli ajoittaa niillä (huudahdukset, tekstin eteneminen).
@@ -101,6 +101,29 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttuu pohjassa.
 
+*(Rivit 19.10.2026 on siirretty lokista ja muistista omistajan päätöksellä 19.10. klo 15.35; uusia sääntöjä ei ole.)*
+
+- **19.10.2026, omistaja ei ensimmäinen kuuntelija (J1).** Hidasti: puheessa omistaja löysi virheet ensin (ranskan aksentti
+  17.10.). Muuttuu: Gemini kuuntelee otot sokkona ennen omistajaa. Kultaisen polun kohta 10 korjattu (PT 19.10.). Lähde: loki "OMISTAJAN PÄÄTÖS 19.10.2026 klo 15.21".
+- **19.10.2026, ei jälkisäätöjä puheeseen.** Hidasti: nopeutus ffmpeg-atempolla (17- ja 20-ääni) kuulosti omistajasta
+  huonolta. Muuttuu: nopeus ja tunne vain ElevenLabsin `speed`-asetuksella (natiivisti noin 1,2:een), tageilla ja äänen
+  asetuksilla; tasoitus, leikkaus ja häivytys sallittuja. Pohjan vanhat "tempo 1,10×" -rivit korjattu (PT 19.10.); vanhat julkaistut otot eivät muutu ilman omistajan päätöstä. Lähde: loki "PAATOS 19.10.2026 klo 10.19
+  (kortti)"; muisti puhe-ei-jalkisaatoja.
+- **19.10.2026, äänistä ei kysymyskortteja.** Muuttuu: otot lähetetään omistajalle tiedostoina ja palaute tulee tekstinä;
+  generointilupa (määrä, merkit, tekstit) pyydetään tekstinä, ei kortilla. Lähde: muisti aanet-ei-kysymyskortteja.
+- **19.10.2026, Olavinlinnan M-osa (KK-katselmus).** Hidasti: 16 repliikkiä oli jo ämpärissä kolmena versiona, mutta lupa
+  pyydettiin "ääntä ei ole" ja generoitiin silti 20 (a60da1d3c, ac29287f5). Muuttuu: ämpärin manifesti tarkistetaan ennen
+  lupapyyntöä (KK:n katselmuksen suositus, ei vielä Raamatussa). Lähde: scratchpad putket-lapikaynti-20261019, ääni V5.
+- **17.10.2026, Louvren alut ilman `language_code: fi`.** Hidasti: lähestymispuhe ja salien avaukset äännettiin ranskan
+  aksentilla; 47 riskiottoa (24 411 mrk) jätettiin uusimatta omistajan päätöksellä ja uusittiin vain Louvren lähestymispuhe
+  ja salien avaukset (louvre-inv-* ennallaan). Muuttuu: kultainen polku 6 (suomi aina pakotettuna, testi kaatuu ilman
+  `fi`:tä). Lähde: loki "AANIGENEROINTI: SUOMI AINA PAKOTETTUNA; LOUVREN ALUT UUSITAAN (17.10.2026 klo 23.05)".
+- **17.10.2026, maalehtierä 831 (luennat).** Hidasti: kustannusarvio 0,226 × 369 643 = ~83 500, toteutui 90 067
+  (374 867 lähetettyä merkkiä). Muuttuu: arvio 0,240 kr / lähetetty merkki, `[pause]`-tagit (+8 mrk/pala) mukaan lukien.
+  Lähde: muisti aanityksen-hinta-0240-tagit-mukaan.
+- **28.9.2026, Pulun tagit.** Hidasti: `[softly]` kuulosti omistajasta liian surulliselta (sävel ja taso laskevat loppua
+  kohti). Muuttuu: Pulun teksteissä ei `[softly]`/`[whispers]`; tilalle `[warmly]`, `[amused]`, `[mischievously]`, yksi tagi
+  per virke. Lähde: muisti pulun-tagit-ei-softly.
 - **17.10.2026, Louvren ympyrät.** Hidasti: tekstit ja skriptit valmisteltiin ennen kuin tiedettiin, että peli lukee ne
   suoralla lukijalla. Muuttuu: kultainen polku 1, lukutarkistus ensin.
 - **17.10.2026, luvut sanoiksi.** Hidasti: merkkimäärä kasvoi puhutussa muodossa (+662), joten lupapyyntö olisi ylittynyt.

@@ -147,6 +147,18 @@ yhdessä Linssisepän kanssa. Täydentää Äänittäjä; ks. `kertojan-teksti-j
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
 
+*(Rivit 17.10.2026 on siirretty lokista ja muistista omistajan päätöksellä 19.10. klo 15.35; uusia sääntöjä ei ole.)*
+
+- **17.10.2026, Louvren lähestymispuhe ja salien alut.** Hidasti: puhe tehtiin ilman `language_code: fi`, ja suomi äännettiin
+  ensimmäisessä lauseessa ranskan aksentilla (omistajan havainto 22.54). Omistaja: uusitaan vain alut; 47 riskiottoa
+  (24 411 mrk) jätettiin ennalleen, uusittiin vain lähestymispuhe (ranska-louvre-puhe-2) ja salien avaukset
+  (ranska-sali1-avaus ym.), louvre-inv-* ennallaan. Muuttuu: suomi pakotettuna jokaisessa suomenkielisessä äänigeneroinnissa
+  (ks. `kertojan-teksti-ja-aani.md`, kultainen polku 6). Lähde: loki "AANIGENEROINTI: SUOMI AINA PAKOTETTUNA; LOUVREN ALUT
+  UUSITAAN (17.10.2026 klo 23.05)".
+- **17.10.2026, museoskenaarion simu meni kolmesti uusiksi.** Hidasti: lähestymiskuva peitti salin, koska `linssi museo
+  lahestyminen pois` annettiin liian myöhään, ja `ui museolista valitse n` vain korostaa rivin. Muuttuu: `lahestyminen pois`
+  ENNEN `linssi linssi taidemuseo`; näyttelyyn siirrytään vierityksellä, `tap-teksti <nimi>` ja `tap-teksti Siirry
+  näyttelyyn`; kuva-arkki katsotaan aina ennen OK-raporttia. Lähde: muisti museo-skenaario-napautukset.
 - **17.10.2026, Ranskan i-kortin avaimet (#4745).** Hidasti: `taiteilijat.json`:n neljä avainta poikkesi `teokset.json`:n
   kirjoitusasusta, joten kortti ei olisi löytänyt kuvia. Muuttuu: avainten koneellinen vertailu on valmiin määritelmän kohta.
 - **17.10.2026, Ranskan kohdat (152 ympyrää, 51 teosta).** Kuusi Sonnet-agenttia katsoi kuvat rinnakkain (~10 min); paikat
