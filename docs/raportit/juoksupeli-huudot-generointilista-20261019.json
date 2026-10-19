@@ -1,5 +1,5 @@
 {
- "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi).",
+ "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta).",
  "rivit": [
   {
    "avain": "juoksupeli.rikkoutuva.posliinimaljakko.versio.1.huuto",
@@ -60,6 +60,48 @@
    "teksti": "Kling! Tämä soi uudenvuoden juhlassa!",
    "aani_teksti": "Aa! Kling! Tämä soi uudenvuoden juhlassa!",
    "tagi": "[shouting] [panicked] "
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.1",
+   "teksti": "Hups!",
+   "aani_teksti": "Hups!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.2",
+   "teksti": "Voi ei taas!",
+   "aani_teksti": "Voi ei taas!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.4",
+   "teksti": "Aijai!",
+   "aani_teksti": "Aijai!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.18",
+   "teksti": "Voi kökkö!",
+   "aani_teksti": "Voi kökkö!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.19",
+   "teksti": "Eipä kestänyt!",
+   "aani_teksti": "Eipä kestänyt!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.26",
+   "teksti": "Apua!",
+   "aani_teksti": "Apua!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
   }
  ]
 }
