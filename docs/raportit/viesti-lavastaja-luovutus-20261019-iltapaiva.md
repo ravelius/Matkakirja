@@ -39,6 +39,18 @@ ennen-v49b/ tallessa). Vienti `vie_v49b.zsh` käynnissä 16.23 (worktree `wt/lin
 → **VIETY 16.5x: pala 1499 a36f4199985ef096, nyky 9c0897bec9044c1f** (v45k 1c69c4c43 / c0abe3769); Projektisepälle (kiinnitys + botti) ja PT:lle ilmoitettu.
    Komeron tiilet huone 9:n Codex-geometrian kanssa (v49c).
 
+## JUOKSUPELIN KAUKOMAISEMA (PT 22.3x, omistaja 22.27 "Rakennuksia pitää näkyä enemmän horisontista"; 206 jos hyvä tänään)
+- Malli: Pekingin v11-laatat LOD2 (Kielletty kaupunki + Jingshan) → `proto-3d/_tyo/linnanrakentaja/juoksu-kaukomaisema/` (lahde/kokoa_peking.py
+  → peking-koottu.blend; lahde/kaukomaisema.py args `−170 260 25 715 0.06 1 200 70 0.385`; esikatselu lahde/esikatsele.py + esikatselu/arkki*.png).
+  Rata = Yangxindian, +z = pohjoinen; radan alue + 25 m pois kokonaisina saarina; säteittäinen tiivistys 70 m:n jälkeen × 0,385; ≤ ~400 m (far clip 400);
+  usva on VS:n JuoksuUsva (30–170 m, 30 %). 54 003 kolm, 13 mat, 3,7 Mt, codex-3d-tarkistus OK. PK:n ymparisto.glb (x −18…47, z −31…69) mahtuu tyhjään vyöhykkeeseen.
+  Opit: glTF-tuonnin isäobjektit → parent_clear(KEEP_TRANSFORM) ennen kärkimuunnosta; atlas-kuva ladattava ja pakattava ennen skaalausta;
+  hutong-seinien poisto jätti stage6-katot leijumaan → stage6_roof/atlas pois.
+- Vienti `_valmiit/juoksupeli-kaukomaisema-v1-vienti-20261019` → JU (vie-paketti.sh). Koodi proto `linnanrakentaja/juoksu-kaukomaisema-207` **1677ed563**
+  (= PK 319044008 + Lisaosat "kaukomaisema"), worktree `wt/proto-linnanrakentaja-kaukomaisema`. JU: käännös + simu iPhone + iPad
+  `zsh tyokalut/linnanrakentaja-ajot/ajo-juoksu-kaukomaisema.zsh <app>` (sk-juoksu-kaukomaisema.txt, ENNEN = PK:n 206c U3/U4).
+  Sitten kuvaparit KK + PT, sha NS:lle. VS:ltä ja PK:lta kysytty (usva, far clip) – ei vastausta vielä.
+
 ## OLAVINLINNA TAUOLLA (omistajan päätös 19.10. 17.05 PT:n kautta)
 Ei uusia linnaeriä eikä Codex-tilauksia (huoneet 6–10, komeron tiilet, Tripo-hahmot). Tila kirjattu `docs/raportit/olavinlinna-valmiiksi-lista-20261019.md`
 osioon 5 (PR #4986 mergetty). Alla olevat Olavinlinna-kohdat (3, 3b, 4) jäädytetty, kunnes tauko puretaan. v45k-worktree poistettu, haara pushattu.
