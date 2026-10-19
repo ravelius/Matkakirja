@@ -1839,3 +1839,7 @@ lennossa pitää näkyä pelkät ohjaimet sekä keskellä vain kaksi nappia: "<"
 nappi toisi näkyviin tähtäimen ruudun keskelle ja alariviin napin "mikä tämä on" sekä normaalit vapaan kysymyksen syöttönapit sekä vasempaan reunaan "<" paluu napin takaisin vapaaseen lentoon. päivitä
 nappilogiikka kaikkiin kippeihin" → Natiivi-UI (napit, kaikki kipit), Sisältökirjuri (8 kysymystä/kohde), Pelikoodari (Mac WASD = vasen tikku, nuolet = oikea), Linssiseppä + Codex (Kööpenhaminan 8
 kohteen CC-kuvat + 8 havainnekuvaa 7caf8ca1d). Simukuvat KK:lle ennen junaa.
+
+## PAATOKSET 19.10.2026 klo 11.41–11.45: PUYIN ALUT JA KIPIN TAUKORIVI (omistaja KK:n kautta, sanatarkasti) (19.10.2026 klo 11.45)
+
+Klo 11.41: "Generoi pelkät hyväksymäni alut ilman muuta tekstiä, niin kuuntelen ne kaikki vielä kerran läpi." Klo 11.43: "kun kierroksella painetaan pause niin se muuttuu play napiksi ja playn ja stop napin kummallakin puolella on "<" ja ">" napit sekä loput napit kuten ehdotit". Klo 11.45: "Kipin painikkeet muuten hyvin, mutta play ja stop pitää olla toisinpäin. Kaikki huudahdukset hyviä, mutta jätä viimeinen niistä pois. Voit seuraavaksi nollata itsesi." → KIPIN TAUKORIVI kaikkiin kippeihin: Lennä itse | < ■ ▶ > | Kysy (⏸ muuttuu ▶:ksi, < edellinen, > seuraava kohde korvaa ⏭:n, kompassi ☰:iin, muut napit pois paitsi ☰). PUYIN HYVÄKSYTYT ALUT (08 Kavya): Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!; Sis-sos! ja Aa! pois. Hyväksytyt otot ämpäriin (Äänittäjä). Omistaja ei halua äänistä kysymyskortteja (11.4x): KK hoitaa ääniasiat tekstinä.
