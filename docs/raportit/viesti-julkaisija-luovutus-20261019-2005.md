@@ -21,9 +21,8 @@ Osoitekirja /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt_
 - Paikallinen TF-varasuunnitelma EI mahdollinen: ASC-avaimet vain GitHub-secreteissä (kerrottu PT:lle).
 
 ## 2. KÄYNNISSÄ NYT (irrotettu nohup)
-- **L1:** VS juoksu-valo k2 b6a99aad4 (206) `vs-juoksuvalo2-205-kaanna.zsh` pid 2280, alkoi 20.01 → _tyo/linssiseppa2/juoksuvalo-app → KÄÄNNETTY + SIMU NYT VS iPad + iPhone ~15 min.
-- **L2:** vapaa.
-- **Simu:** PK 206 juoksupeli 10f80d13c (_tyo/julkaisija/juoksupeli-206-app) SIMU NYT 20.05 → odota SIMU VAPAA.
+- **L1 ja L2 vapaat** (VS juoksu-valo k2 b6a99aad4 → 1aa0d3fcd KÄÄNNETTY 20.05).
+- **Simuilla:** PK 206 juoksupeli 10f80d13c (SIMU NYT 20.05) + VS juoksuvalo-app iPad + iPhone (SIMU NYT 20.07) → odota molempien SIMU VAPAA.
 
 ## 3. PIDOSSA (`julkaisija-tyokalut/pidossa-juna205.txt`, skriptit valmiina – vaihda until-rivi `true`:ksi tai edellisen lokiin ennen nohup-käynnistystä)
 Käynnistä kun 205 sisäinen valmis (PT: muut odottavat 205:tä):
