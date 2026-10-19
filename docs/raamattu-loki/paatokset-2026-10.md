@@ -1954,3 +1954,7 @@ Omistajan kysymys KK:ssa 18.2x: "Miksi ihmeessä videoita tehdään Codexin puol
 ## PAATOKSET 19.10.2026 klo 18.29: raketin savu videoon pelin omana savuna täysillä (19.10.2026 klo 18.31)
 
 Omistaja 18.26: "mutta saako raketin ajettua jotenkin paremmilla asetuksilla, jotta esim, savu olisi realistisempi?" ja 18.27 "mitä vaihtoehtoja meillä on?" Kortti "Millä tavalla raketin savu tehdään videoon, jotta se näyttää aidolta?", vastaus 18.29: "Pelin savu täysillä (Suositus)": oma video-laatutaso ilman puhelimen rajoja (hiukkasia moninkertaisesti, tarkemmat flipbookit, liike-epäterävyys; ei koske puhelinpeliä). Todennetaan 10 s + 3 s -kokeilulla; Blender-savu liitettynä vain omistajan uudella päätöksellä. Raamattu 2.105 SAVU VIDEOSSA.
+
+## PAATOKSET 19.10.2026 klo 18.51: yli 48 h koskemattomat T7:lle nyt ja joka yö (19.10.2026 klo 18.54)
+
+Omistaja kysyi KK:ssa, voiko proto-3d:n lokit (33 Gt) siirtää T7:lle ja onko Claude-kansiossa muuta siirrettävää. Kortti "Siirränkö T7:lle kaiken, mihin ei ole koskettu kahteen vuorokauteen (noin 45 Gt), ja tehdäänkö sama jatkossa joka yö?" → "Kyllä, nyt ja joka yö (Suositus)"; vanhaan paikkaan jää linkki. KK ajoi kertasiirron (295 kohdetta, noin 38 Gt). Yöajo: tools/levy/ika_kartoitus.py + siirra_t7.py --aja (PT vastaa, Postivahti ajaa). Raamattu 12.19 YÖSIIRTO T7:LLE.
