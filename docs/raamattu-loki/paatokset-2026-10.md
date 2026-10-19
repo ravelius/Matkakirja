@@ -1791,3 +1791,13 @@ Omistaja (sanatarkasti): "älä koskaan käytä puheille mitään jälkisäätö
 ## PYYNNOT 19.10.2026 klo 10.2x–10.27: huudot lyhyiksi ja tarinaan, uniefekti voimakkaammaksi (19.10.2026 klo 10.28)
 
 Klo 10.27 (sanatarkasti): "Muuta huudahdukset lyhemmiksi ja sido ne kuvan tarinaan ainakin välillä. Samaan esineeseen voi tehdä muutamia eri versioita. Ja tuo hinta oli vain yksi idea. Se ei voi toistua monessa. Pitää keksiä paljon eri vaihtoehtoja. Tässä kaksi esimerkkiä joissa sopiva mitta. Tee kymmenen uutta niin katsotaan näitä erissä. Ja tarkista sinä nuo faktat ja nimitykset oikein. / Voi ei! Maljakko maksoi miljoonia! / Eikä! Tämä oli herttuan lahja isälle!" → KK tekee omistajan kanssa 10 rivin eriä ja tarkistaa faktat; muoto huudahdus + lyhyt lause (~25–37 mrk), usein kuplan tarinaan sidottu, samalle esineelle useita versioita (oma kupla + huuto), hinta harvoin; SK:n 51 esineen lista pohjana, ei generointia. Klo 10.2x uniefektistä: "laineilu saa olla vähän voimakkaampi ja pidempi" → PK aaltoilu ~0,7 s, tyyni vaihe ennallaan; esikatselu KK:lle.
+
+## PAATOS JA PYYNNOT 19.10.2026 klo 10.38: huutoerä 1, posliini, kiinan kieli, kääretaulu, kuvakaappaus (19.10.2026 klo 10.39)
+
+Omistaja (sanatarkasti): "joo hyviä. Ja voisi hivenen suosia määrässä posliinia ja niissä voisi olla huudahduksia kuten "Siinä meni miljoonien Ming!". Minkä nimisiä hahmoja (virkanimikkeet ja
+perhesuhteet) Puyin ympärillä oli? ja mitä historiallisia tapahtumia hän olisi voinut nähdä ja minkä nimikkeen ja nimisiä ihmisiä niissä olisi voinut olla? ja voidaan käyttää myös jonkun verran kiinan
+kielisiä ilmaisuja kuten shifu jne. sivuhuomiona, pelissä saisi olla kiinankielistä kirjoitusta näkyvissä temppeleissä mihin vain sitä saa luontevasti istumaan. pelaaja voisi myös juosta jonkun pitkän
+käsinkirjoitetun kääretaulun läpi ja rikkoa sen vahingossa. / mietitään kun on saatu puheääni lukittua, niin sen jälkeen ääniefektejä ja musiikkeja taustalle ja näytä joku kohtaus pelistä kun alkaa
+valmistua. ei tarvitse välttämättä olla edes video, mutta missä näkyisi jo grafiikkaa sekä mittasuhteita ja kuinka paljon ruudulla näkyy kerralla." → KK:n huutoerä 1 hyväksytty → SK avainpakettiin; KK
+jatkaa erillä (enemmän posliinia, kiinan sanoja). Kiinankieliset kirjoitukset vain tarkistetuista oikeista teksteistä (SK lista → Codex 4cb118315), ei generoituja merkkejä. Uusi rikkoutuva: kääretaulu
+(PK + Codex + huudot). Äänen lukituksen jälkeen ääniefektit ja musiikki (luvat erikseen). PK: kuvakaappaus simusta kun grafiikka valmistuu → KK.
