@@ -3,12 +3,12 @@
  "aarteet": {
   "europe": {
    "nimi": "Kolme veljestä -riipus",
-   "kuvaus": "Kolme veljestä oli Pariisissa 1389 Burgundin herttua Juhana Pelottomalle tehty koru: kolme suorakaiteen muotoista punaista spinelliä, välissään helmiä, ja keskellä suuri sinertävä timantti. Tekijäksi mainitaan kultaseppä Hermann Ruissel.",
+   "kuvaus": "Kolme veljestä oli Pariisissa 1389 tehty koru: kolme suorakaiteen muotoista punaista spinelliä, välissään helmiä, ja keskellä suuri terävä timantti. Sen teetti tulevalle Burgundin herttualle Juhana Pelottomalle, ja tekijäksi mainitaan kultaseppä Hermann Ruissel.",
    "historia": "Burgundin aarteista se päätyi Baselin kaupungille, 1500-luvulla Fuggerin pankkiirisuvulle ja 1551 Englannin kruunulle; Elisabet I esiintyy sen kanssa muotokuvissa. Sisällissodan aikana kuningatar Henrietta Maria yritti myydä sen ulkomailla, ja vuoden 1645 jälkeen siitä ei ole varmaa havaintoa.",
    "lahteet": [
     {
      "url": "https://en.wikipedia.org/wiki/Three_Brothers_(jewel)",
-     "tukee": "Valmistus Pariisissa 1389 Juhana Pelottomalle; kolme punaista spinelliä, helmiä ja sininen timantti; Basel, Fugger, Edward VI 1551, Elisabet I; Henrietta Maria 1642-1645; kohtalo tuntematon"
+     "tukee": "Valmistus Pariisissa 1389 Juhana Pelottomalle (herttua vasta 1404; 1389 Nevers'n kreivi); kolme punaista spinelliä, helmiä ja suuri terävä timantti; Basel, Fugger, Edward VI 1551, Elisabet I; Henrietta Maria 1642-1645; kohtalo tuntematon"
     },
     {
      "url": "https://thetudortravelguide.com/?p=10519",
@@ -19,7 +19,7 @@
      "tukee": "Ruissel pariisilaisena kultaseppänä ja Kolmen veljeksen tekijänä 1389 (päivämäärällä ei omaa lähdeviitettä)"
     }
    ],
-   "epavarmaa": "Lähteet ovat ristiriidassa siitä, miten koru päätyi Baselille (Grandsonin taistelu 1476 vai Liègen piiritys 1467) ja milloin Fugger sen osti (1504 vs 1505); teksti jättää nämä auki. Ruisselin tekijyys perustuu vain Wikipediaan ja matkaopas-artikkeliin, joten teksti sanoo 'mainitaan'. Henrietta Marian 1640-luvun myynnin onnistuminen ja korun kohtalo (pilkottu, Mazarin, Kolme sisarta -teoria) ovat tuntemattomia."
+   "epavarmaa": "Lähteet ovat ristiriidassa siitä, miten koru päätyi Baselille (Grandsonin taistelu 1476 vai Liègen piiritys 1467) ja milloin Fugger sen osti (1504 vs 1505); teksti jättää nämä auki. Ruisselin tekijyys perustuu vain Wikipediaan ja matkaopas-artikkeliin, joten teksti sanoo 'mainitaan'. Henrietta Marian 1640-luvun myynnin onnistuminen ja korun kohtalo (pilkottu, Mazarin, Kolme sisarta -teoria) ovat tuntemattomia. Korjaus 19.10.: Juhana oli 1389 vasta Nevers'n kreivi (herttuaksi 1404), joten teksti sanoo 'tuleva herttua'; timantin väriä ei mainita aikalaislähteissä (1419 'very big pointed diamond'), joten 'sininen' poistettu (docs/raportit/kolme-veljesta-faktat-20261011.md)."
   },
   "africa": {
    "nimi": "Suuren Zimbabwen kivilintu",
@@ -54,8 +54,8 @@
    "epavarmaa": "Linnun laji (kalakotka vai kärpäskotka) ja veistosten tarkka tekijä ja merkitys ovat tutkijoiden kesken kiistanalaisia; kaupungin ajoitus vaihtelee lähteittäin (1000-luku–1400-luku). Peliin tehty lyhyt fakta oli epätarkka: lippuun ei ole kopioitu yhtä tiettyä lintua vaan se perustuu veistoksiin; sen ajankohdista (palautus 1980/81, Berliinin jalusta 2003/2004) lähteet poikkeavat, siksi ne jätettiin pois tekstistä. Faktatarkistus: lintujen korkeus vaihtelee lähteittäin (25–50 cm; jalustoineen yli metri); 2026 luovutuksen pysyvyys odottaa lakimuutosta (SAHRA, uutiset: väliaikainen siirto)."
   },
   "middleeast": {
-   "nimi": "Sheban kuningattaren aarre",
-   "kuvaus": "Raamatun kertomuksen mukaan Sheban kuningatar saapui Jerusalemiin kamelikaravaanin kanssa, joka kantoi Salomon lahjaksi runsaasti kultaa, jalokiviä ja mausteita.",
+   "nimi": "Sheban kuningattaren suitsukerasia",
+   "kuvaus": "Sheban kuningattaren suitsukerasia on kultainen rasia, jonka kuningatar tarun mukaan toi Salomolle Jerusalemiin kamelikaravaanin mukana. Raamatun kertomuksessa kuningatar tuo lahjaksi kultaa, jalokiviä ja mausteita.",
    "historia": "Kertomus kirjoitettiin muistiin vasta vuosisatoja Salomon ajan jälkeen, eikä kuningattaresta ole löytynyt jälkeäkään. Saban valtakunta nykyisen Jemenin alueella oli kuitenkin todellinen ja vaurastui suitsuke- ja mirhakaupalla. Etiopialaisessa taruperinteessä kuningatar on nimeltään Makeda.",
    "lahteet": [
     {
@@ -75,7 +75,7 @@
      "tukee": "Saba, Qataban ja Himyar vaurastuivat Jemenissä suitsuke- ja mirhakaupalla (hakutuloksen tiivistelmä; sivua ei voitu avata)"
     }
    ],
-   "epavarmaa": "Kuningatar on legendaa tai historiallisesti kiistanalainen; mikään arkeologinen löytö ei vahvista häntä. Sheban sijainti (Saba/Jemen vs. Etiopia tai Luoteis-Arabia) on kiistanalainen, ja Saban nousu kansainväliseksi vallaksi ajoittuu todennäköisesti Salomon ajan jälkeen. Aarre on kirjallinen lahjakaravaani, ei löydetty esine."
+   "epavarmaa": "Kuningatar on legendaa tai historiallisesti kiistanalainen; mikään arkeologinen löytö ei vahvista häntä. Sheban sijainti (Saba/Jemen vs. Etiopia tai Luoteis-Arabia) on kiistanalainen, ja Saban nousu kansainväliseksi vallaksi ajoittuu todennäköisesti Salomon ajan jälkeen. Aarre on kirjallinen lahjakaravaani, ei löydetty esine. Korjaus 19.10. (mittasääntö 3.10): aarre on rajattu yhden ihmisen kannettavaan esineeseen, kultaiseen suitsukerasiaan; rasia on tarun tai pelin tulkinta eikä esiinny lähteissä yksittäisenä esineenä (lähteet mainitsevat kullan, jalokivet ja maustekuormat)."
   },
   "asia": {
    "nimi": "Keisarin jadesinetti",
@@ -98,8 +98,8 @@
    "epavarmaa": "He-jaden alkuperä on perimätietoa (lähteet: 'väitetysti'). Katoamisen ajankohta ja syy ovat kiistanalaisia: myöhäisen Tangin palatsin tuho (n. 936–937), Liaon sotasaalis 946 tai Yuan-hallitsijoiden hallussa (Ming ei löytänyt 1369). Toistuvat katoamis- ja löytötarinat (esim. Dongting-järvi) ovat heikosti todennettuja; sinetistä ei ole säilynyt painatteita, joten sen ulkonäkö perustuu kuvauksiin."
   },
   "northamerica": {
-   "nimi": "Montezuman aarre",
-   "kuvaus": "Montezuman aarre tarkoittaa atsteekkien hallitsijan Moctezuma II:n kultaa ja muita aarteita, jotka espanjalaiset keräsivät Tenochtitlanin kaupungista.",
+   "nimi": "Montezuman turkoosinaamio",
+   "kuvaus": "Montezuman turkoosinaamio on atsteekkien tapaan turkoosikivistä koottu mosaiikkinaamio, joka kuuluu legendan mukaan Moctezuma II:n aarteisiin, jotka espanjalaiset keräsivät Tenochtitlanin kaupungista.",
    "historia": "Kun espanjalaiset joutuivat pakenemaan kaupungista 30.6.1520, raskas kultakuorma hidasti heitä ja osa aarteesta jäi taakse tai vesiin. Legendan mukaan suuri osa upposi järveen tai kätkettiin, mutta sen kohtalosta ei ole varmaa tietoa. Aarretta on etsitty 1500-luvulta lähtien, ja vuonna 1981 Mexico Cityn keskustasta löytyi noin 2 kilon kultaharkko, jonka tutkijat yhdistävät pakoon.",
    "lahteet": [
     {
@@ -117,9 +117,13 @@
     {
      "url": "https://en.wikipedia.org/wiki/Montezuma%27s_treasure",
      "tukee": "Aarretta pidetään osin legendana; Bernal Díazin kertomus ei mainitse piilotettua aarretta"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Mixtec",
+     "tukee": "Turkoosimosaiikkinaamiot olivat tärkeitä mixtekkien ja atsteekkien aikana: lahjoja poliittisten liittojen vahvistamiseksi, seremonioissa jumalan esittäjän kasvoina ja hautakääreissä"
     }
    ],
-   "epavarmaa": "Se, upposiko suuri osa kullasta järveen vai kätkettiinkö se, on legendaa eikä ole todistettu. Harkon yhteys nimenomaan Moctezuman aarteeseen on tutkijoiden päätelmä (voi olla myös muuta sotasaalista). Lähteet eroavat harkon löytökuukaudesta (maalis/toukokuu 1981); päivämäärä jätetty pois. Pakoyön päivämäärä vaihtelee lähteissä (30.6.-1.7.1520); käytetty yleisintä 30.6."
+   "epavarmaa": "Se, upposiko suuri osa kullasta järveen vai kätkettiinkö se, on legendaa eikä ole todistettu. Harkon yhteys nimenomaan Moctezuman aarteeseen on tutkijoiden päätelmä (voi olla myös muuta sotasaalista). Lähteet eroavat harkon löytökuukaudesta (maalis/toukokuu 1981); päivämäärä jätetty pois. Pakoyön päivämäärä vaihtelee lähteissä (30.6.-1.7.1520); käytetty yleisintä 30.6. Korjaus 19.10. (mittasääntö 3.10): aarre on rajattu yhden ihmisen kannettavaan esineeseen, turkoosinaamioon (sama kuin isoisän unessa); mikään lähde ei yhdistä yhtä tiettyä naamiota Moctezuman aarteeseen, joten naamio on legendan ja pelin tulkinta. Historiakappale kertoo koko aarteen tarinan."
   },
   "southamerica": {
    "nimi": "El Doradon aarre",
