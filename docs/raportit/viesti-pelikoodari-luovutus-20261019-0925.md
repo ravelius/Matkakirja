@@ -112,3 +112,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - 10.10: juoksupeli-kamera-204 uusin **26a6cff3e**: f03ffa397 unenomainen muistokupla (aalto 0,4 s tulo/lähtö, tyyni 2,1 s, leveä häivytys, musta 0,06,
   rae 0,045; MuistokuplaAjoitus) – ODOTTAA PT/KK:n hyväksyntää (esikatselu _tyo/pelikoodari/muistokupla/kupla-unenomainen.mp4 + -arkki.png);
   bd71ba510 SK:n 51 esinettä + 30 yleishuutoa (26d55c8a5). tarkista.sh rc 0, 630/630. Huutoraja testissä ≤ 60 (ääni); SK:lle 40 merkin huuto.
+- 10.14: **b1587311e** tason 2 aarteet (10 harmaata, Aarrepaikat osat 26–37, SK:n nimet JuoksuEsineet.Aarteet); 72c2805e1 SK 31e967343.
+  ODOTTAA: KK/omistaja yhteisestä Tekstitys-asetuksesta (ehdotus: MuseoSovitin.TekstitysPaalla rattaaseen, huuto sen kaistaleelle) – ei toteuteta ennen vastausta.
