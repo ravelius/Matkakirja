@@ -38,3 +38,8 @@ Edellinen: viesti-pelikoodari-luovutus-20261019-2200.md. Rooli: Pelikoodari (Opu
 
 ## MUUT AVOIMET (ennallaan)
 - Rakettivideo Mac-tallenteena yöllä (_tyo/pelikoodari/mac-rakettivideo/aja.zsh); Mac WASD 4814ab2d1; hiha-uv1 kainalopatch c7d85b1a.
+
+## LISÄYS 22.4x (PT): omistaja 22.37 "juoksupeli täysin valmiiksi mahdollisimman pian"
+Codex tekee yöllä laajemman moduulisarjan (sivupihat, katetut käytävät, muurit, porttiaukot 1 m ruudukkoon, fbx + collision),
+vastaanottaja Pelikoodari → aamun alue-erä niistä (tee_ymparisto.py-malli), sitten arvottu loputon rata moduleista (20.10. päivä).
+Nyt yhä ENSIN kameran levennys 206:een (simu 206e yllä).
