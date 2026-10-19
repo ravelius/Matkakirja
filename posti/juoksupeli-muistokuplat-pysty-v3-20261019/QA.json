@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-19T08:29:56.092646+00:00",
+  "scope": "Four portrait-v3 review drafts, same501-504 correction round refined by517",
+  "technicalFormatPass": true,
+  "nativeDimensions": [
+    1086,
+    1448
+  ],
+  "decodedAlpha": [
+    255,
+    255
+  ],
+  "nativePixelsUnchanged": true,
+  "personallyInspectedAllNative": true,
+  "static160pxPortraitOvalPersonallyInspected": true,
+  "actualGameMaskVerified": false,
+  "actualGameRuntimeTested": false,
+  "fullFormalMarginComplianceVerified": false,
+  "finalHistoricalPlaceAndCostumeAcceptance": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "assets": {
+    "01-posliinimaljakko-v3": {
+      "personallyInspectedNative": true,
+      "compositionPass": true,
+      "wholeNewGenerationNeeded": false,
+      "visualFindings": "Large intact vase about35percent height, gray-haired happy tutor and child readable; real palace and soft optical background. Main faces/hands/vase centrally safe, head top28percent. Vase base near80percent boundary; lower margin should be checked with actual game mask. Child cap absent/short hair: costume/hair historical review remains with KK.",
+      "estimatedArtifactHeightFraction": 0.35,
+      "measuredOrEstimated": "Manual approximate visual bounds, not exact segmentation",
+      "alphaPass": true,
+      "sizePass": true,
+      "pixelsNotRetouched": true,
+      "historicalPlaceAndCostumeAccepted": false,
+      "recipientAccepted": false,
+      "ownerAccepted": false
+    },
+    "02-cloisonne-v3": {
+      "personallyInspectedNative": true,
+      "sizePass": true,
+      "alphaPass": true,
+      "compositionPass": "critical-content-safe; exact calm-all-secondary-margins-not-fully-verified",
+      "wholeNewGenerationNeeded": false,
+      "visualFindings": "Gray-haired older woman in loose embroidered robe, happy boy in roundcap, full turquoise dish and two natural supporting hands clear. Hairtopabout24percent, dishabout28-30percentheight, complete object/hands centrally safe. Side sleeves extend beyond central60percent but faces/object remain safely within diagnostic ellipse. Bright palace lattice/timber background and clean foreground table. Smiles face toward camera rather than purely candid interaction.",
+      "estimatedArtifactHeightFraction": 0.285,
+      "measuredOrEstimated": "Manual approximate bounds, not exact segmentation",
+      "historicalPlaceAndCostumeAccepted": false,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "pixelsNotRetouched": true,
+      "actualGameRuntimeTested": false
+    },
+    "tyyppi2-sali-v3": {
+      "personallyInspectedNative": true,
+      "compositionPass": true,
+      "wholeNewGenerationNeeded": false,
+      "visualFindings": "Vase about34percent height, top33percent,bottom67percent; pedestal feet endabout76percent. No people. Red timber, lattice windows, painted beams and gray fired-clay paving. Object crisp, background softer; colored architecture remains visible at margins. Reconstructed vase placement not documented; KK place/scene review pending.",
+      "estimatedArtifactHeightFraction": 0.34,
+      "measuredOrEstimated": "Manual approximate visual bounds",
+      "alphaPass": true,
+      "sizePass": true,
+      "pixelsNotRetouched": true,
+      "historicalPlaceAndCostumeAccepted": false,
+      "recipientAccepted": false,
+      "ownerAccepted": false
+    },
+    "tyyppi3-oppitunti-v3": {
+      "personallyInspectedNative": true,
+      "sizePass": true,
+      "alphaPass": true,
+      "compositionPass": "partial-formal-margin-compliance; actual160px-oval-readable",
+      "wholeNewGenerationNeeded": false,
+      "static160pxOvalPersonallyInspected": true,
+      "visualFindings": "Vase about33percentheight, joyful elderly teacher/pointer and child at small desk read clearly in160px portrait ellipse on both backgrounds. Full rectangle has map in uppermargin and child/desk extend partly beyond central60percent. Critical faces and artifact remain readable in diagnostic ellipse; exact20percent quiet margin not fully achieved across every secondary element.",
+      "estimatedArtifactHeightFraction": 0.33,
+      "measuredOrEstimated": "Manual approximate bounds and actual diagnostic review, not exact segmentation",
+      "map": "Unlabelled invented schematic, not reliable historic borders",
+      "historicalPlaceAndCostumeAccepted": false,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "pixelsNotRetouched": true,
+      "actualGameRuntimeTested": false
+    }
+  }
+}

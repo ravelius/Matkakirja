@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-tarkennus-1058-20261019.md",
+      "commit": "4b7e51f07aee6f7fd990dfbdea926774e91ceb5e",
+      "blob": "4aa53ed1aa6c076efdeafd67c594a2be085b768c",
+      "sha256": "25e0c71902b7ac0b37bc9033ce7144d00f794b6ae76d0c8d075c8431d51917bd",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-v2-kuittaus-20261019.md",
+      "commit": "3a3418c286ef8ed09535cffae89ee498b961a54f",
+      "blob": "a5d439ee715282bcbddf3117229e2a2dd4002c8f",
+      "sha256": "c29fe778be2c03457bf91f45356a55edb3ce7216043f4185b54b8a294ca39d1e",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-olavinlinna-tripo-pilotti-20261019.md",
+      "commit": "aaeac7367f3c7b3e49d73384abd60612cde6e1ea",
+      "blob": "f019b0edb8c196b695be8270aa0a3df2599981de",
+      "sha256": "bd69c357bbb44bf254372cd1ce89e4e11cd07b1379db71b443add3715ee10502",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-muistokuplat-tyypit-20261019.md",
+      "commit": "a4f2763a27697aad8eef299d49fc0ca884d69ae0",
+      "blob": "0dfefdc2629d8190e2f479ba22a405bd6b853d39",
+      "sha256": "2e34fa2700911a94b6edeca91f33567788cfd51ec645800157c89d893a3b19c3",
+      "readInFull": true
+    }
+  ],
+  "scope": "Same four corrections501-504, refined by517; no duplicate production batches",
+  "full51SeriesStarted": false
+}

@@ -1,0 +1,34 @@
+{
+  "primarySources": [
+    {
+      "url": "https://www.dpm.org.cn/explore/building/236570.html",
+      "supports": "Yuqing palace timber/lattice domestic study architecture; study use",
+      "accessedAt": "2026-10-19T08:09:55.151548+00:00"
+    },
+    {
+      "url": "https://www.dpm.org.cn/explode/others/208413.html",
+      "supports": "Yuqing historic school/study narrative background; exact scene remains staged reconstruction",
+      "accessedAt": "2026-10-19T08:09:55.151557+00:00"
+    },
+    {
+      "url": "https://www.dpm.org.cn/explore/building/236467.html",
+      "supports": "Palace hall architecture: painted beams and traditional gold-brick ceramic paving, not Western marble",
+      "accessedAt": "2026-10-19T08:09:55.151558+00:00"
+    },
+    {
+      "url": "https://english.visitbeijing.com.cn/article/47ONUbc13d0",
+      "supports": "Qianqing hall gold-brick floor terminology; reconstructed vase placement is not documented",
+      "accessedAt": "2026-10-19T08:09:55.151559+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/69864",
+      "supports": "1910-era Manchu loose robe construction only, inherited primary museum research; not real-person likeness"
+    }
+  ],
+  "limitations": [
+    "These are fictional staged photographs, not exact surveyed interiors or documented artifact placements",
+    "No seal scene or porcelain-manufacturing scene commissioned in these four images",
+    "Lesson foreground vase added to comply with517 sharp breakable artifact requirement; retain pointer and child at desk",
+    "KK still needs to verify location/narrative fit before owner acceptance"
+  ]
+}

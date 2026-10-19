@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-19T08:29:56.198112+00:00",
+  "selectedImages": 4,
+  "files": [
+    {
+      "path": "01-posliinimaljakko-v3.png",
+      "bytes": 1939440,
+      "sha256": "03b966b0b518231ffe878f2b89617f72ec4a6a757e044c12940464374b33ad01"
+    },
+    {
+      "path": "02-cloisonne-v3.png",
+      "bytes": 2093279,
+      "sha256": "14fda4c7c70e3b4929663e9ae07e8d7178340fa7bcd837da899e23bc9b0a2269"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 29958,
+      "sha256": "cd8248ad308be5feee647054e29ef0d408e6937e395d8e1ae6bd2efe35188b33"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 46350,
+      "sha256": "eb555eab30a8b6c543b07f79166e8f96410dcdd34dcd31979c3d4655563cf974"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3572,
+      "sha256": "ba2e0f968975eb9c1a50555875a9745f7941e58784638141f2a1588345c62136"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 4560,
+      "sha256": "11f63754e3411da17fee5356b41c7a39f06517c0714dbfe0a69b8c34b5c51e22"
+    },
+    {
+      "path": "RESEARCH-AND-PLACE-NOTES.JSON",
+      "bytes": 1647,
+      "sha256": "ecc0c151249769ce3a6856454dc11c2a4f44d1ac321cc187c5dafcbd8f0e5920"
+    },
+    {
+      "path": "SOURCE-MANIFEST.JSON",
+      "bytes": 1424,
+      "sha256": "2a81d093c4ec05caad606830ade6c129179cb13c2886e49daf9a4dc9474dd804"
+    },
+    {
+      "path": "qa/160px-pystysoikio.png",
+      "bytes": 660419,
+      "sha256": "73d9802c8ac357f4379063dd859d22addc6c987d7f2c6fcde2b53b5f7781a64c"
+    },
+    {
+      "path": "qa/mask-specification.json",
+      "bytes": 465,
+      "sha256": "af89b3e8cd53ef3e4fde6b76a066a2841ac4d892ed711294c887e1fea0a9be55"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-tarkennus-1058-20261019.md",
+      "bytes": 1583,
+      "sha256": "25e0c71902b7ac0b37bc9033ce7144d00f794b6ae76d0c8d075c8431d51917bd"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-tyypit-20261019.md",
+      "bytes": 1259,
+      "sha256": "2e34fa2700911a94b6edeca91f33567788cfd51ec645800157c89d893a3b19c3"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v2-kuittaus-20261019.md",
+      "bytes": 1346,
+      "sha256": "c29fe778be2c03457bf91f45356a55edb3ce7216043f4185b54b8a294ca39d1e"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-olavinlinna-tripo-pilotti-20261019.md",
+      "bytes": 1372,
+      "sha256": "bd69c357bbb44bf254372cd1ce89e4e11cd07b1379db71b443add3715ee10502"
+    },
+    {
+      "path": "tyyppi2-sali-v3.png",
+      "bytes": 1947046,
+      "sha256": "a9f96147dfe5ffc9393aff493fcbd344fa664d811aad0e155f237f016c928f2a"
+    },
+    {
+      "path": "tyyppi3-oppitunti-v3.png",
+      "bytes": 2056073,
+      "sha256": "10e4f004d5c5488fa3f061bf480478539a3d5bc398f14f02a5dca542b0947233"
+    }
+  ]
+}

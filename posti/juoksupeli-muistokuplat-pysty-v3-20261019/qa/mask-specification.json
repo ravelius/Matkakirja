@@ -1,0 +1,17 @@
+{
+  "diagnosticOnly": true,
+  "creativeImageCount": 0,
+  "previewSize": [
+    160,
+    213
+  ],
+  "aspectRatio": "3:4 portrait, preview height rounded",
+  "mask": "Ellipse centered(0.5,0.5), radii(0.5,0.5); smoothstep feather radius0.78to1",
+  "backgrounds": [
+    "light",
+    "dark"
+  ],
+  "nativePhotoPixelsUnchanged": true,
+  "actualGameMaskVerified": false,
+  "redGuide": "Central60percent rectangle shown only in diagnostic first row, never in deliverable"
+}

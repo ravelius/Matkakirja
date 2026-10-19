@@ -1,0 +1,542 @@
+{
+  "method": "Built-in image_gen; one whole new photograph per call; no partial editing, crop, padding or resizing of any production PNG",
+  "callsIssued": 13,
+  "callsCompleted": 13,
+  "selectedImages": 4,
+  "unselectedNativeCandidatesPreserved": 9,
+  "diagnosticCreativeImageCount": 0,
+  "assets": {
+    "01-posliinimaljakko-v3": {
+      "taskNumber": 501,
+      "selectedAttempt": 3,
+      "selectedNativeSHA256": "0d4dd333cdcec05fd05aaf365ed265327258bcc104770a6a52c924b7f5d2699c",
+      "selectedDeliverySHA256": "03b966b0b518231ffe878f2b89617f72ec4a6a757e044c12940464374b33ad01",
+      "pixelSHA256": "81820523e4a4cdaf10acd6a13cc63cccea28e5076c70d8a088cd2f18ec43b95e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T08:09:53.566912+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-689885f2-16a9-4024-b2a8-b9165a2545a1.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/01-posliinimaljakko-v3-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/01-posliinimaljakko-v3.png",
+          "nativeSHA256": "6af6bcabf9acfd14c088a68a8870566a38414dbb39d886444a4c6bb53355cff6",
+          "deliverySHA256": "7f610f93403fe1b87347a9272ef77bad1fc4966a0520057e3502ea93ea2d519e",
+          "nativeBytes": 2123312,
+          "deliveryBytes": 2123574,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "4aec8a3510a50eef123fcce9e4564efc577ca9f3f41ba03f9f5e8be95e16046f",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:12:37.411236+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Photorealistic palace, readable artifact, joyful gray-haired elder. Hair/hat begins around10percent image height, so mandatory top20percent quiet margin fails. Dish also near20percent side bounds; humans too large.",
+            "measuredOrEstimated": "Manual visual estimate, not segmentation",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T08:12:42.537801+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6f1da100-a5af-4e86-81a6-62967295f94f.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/01-posliinimaljakko-v3-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/01-posliinimaljakko-v3.png",
+          "nativeSHA256": "7b97850dd2c72aea106e9a0cc39089afb54cdc0aece12ac32109c6f82f9aa710",
+          "deliverySHA256": "4dcb960e08903ec4d36dfacbd1731159145b3ed15d250ae2292cf65ea120d47a",
+          "nativeBytes": 1992819,
+          "deliveryBytes": 1993081,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "478600f259fcd2493a3d879e7c45d065eb573556c8880d1dc6e6c3052ccac4df",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:14:40.924567+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Head top about30percent, faces/hands safe. Vase only about26percent photo height, below30-40percent request; robe to14percentx and incidental background vessels. Next whole new candidate will enlarge foreground vase and simplify margins.",
+            "estimatedArtifactHeightFraction": 0.26,
+            "measuredOrEstimated": "Manual visual estimate",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T08:17:30.134853+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-83118abc-357f-4f6b-ab8e-2d8e38157d1a.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/01-posliinimaljakko-v3-attempt3.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/01-posliinimaljakko-v3.png",
+          "nativeSHA256": "0d4dd333cdcec05fd05aaf365ed265327258bcc104770a6a52c924b7f5d2699c",
+          "deliverySHA256": "03b966b0b518231ffe878f2b89617f72ec4a6a757e044c12940464374b33ad01",
+          "nativeBytes": 1939178,
+          "deliveryBytes": 1939440,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "81820523e4a4cdaf10acd6a13cc63cccea28e5076c70d8a088cd2f18ec43b95e",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:21:04.008234+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": true,
+            "wholeNewGenerationNeeded": false,
+            "visualFindings": "Large intact vase about35percent height, gray-haired happy tutor and child readable; real palace and soft optical background. Main faces/hands/vase centrally safe, head top28percent. Vase base near80percent boundary; lower margin should be checked with actual game mask. Child cap absent/short hair: costume/hair historical review remains with KK.",
+            "estimatedArtifactHeightFraction": 0.35,
+            "measuredOrEstimated": "Manual approximate visual bounds, not exact segmentation",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true,
+            "historicalPlaceAndCostumeAccepted": false,
+            "recipientAccepted": false,
+            "ownerAccepted": false
+          }
+        }
+      ]
+    },
+    "02-cloisonne-v3": {
+      "taskNumber": 502,
+      "selectedAttempt": 5,
+      "selectedNativeSHA256": "e1461e171cb6363d0e822d991e5dbe8fd23abf5f6b5b953627679ba34cc258a2",
+      "selectedDeliverySHA256": "14fda4c7c70e3b4929663e9ae07e8d7178340fa7bcd837da899e23bc9b0a2269",
+      "pixelSHA256": "1be56c4e18992c4c3b6648b08e13c39b441c0bb0842819cbd0bb08d0df664d17",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T08:09:53.943615+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9a5e7313-38d2-48af-84ad-d76fb20fd22b.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/02-cloisonne-v3-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/02-cloisonne-v3.png",
+          "nativeSHA256": "411e8c16a7ca09152e4d7bbe0d898536732b3f0dfb3b9efb645fafb823f4e0c4",
+          "deliverySHA256": "ecea0b96ed922086d38481cecf902e1c8c5cbd0f87f1271a75632563960d29e4",
+          "nativeBytes": 2393342,
+          "deliveryBytes": 2393604,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "9cd59fcbb43548b11e05fec6797c7ec7565da3767981802c89069d42b60b4744",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:12:40.976354+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Photorealistic palace, readable artifact, joyful gray-haired elder. Hair/hat begins around10percent image height, so mandatory top20percent quiet margin fails. Dish also near20percent side bounds; humans too large.",
+            "measuredOrEstimated": "Manual visual estimate, not segmentation",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T08:12:43.304547+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d0098e37-6e72-451a-a496-1496cb0ab701.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/02-cloisonne-v3-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/02-cloisonne-v3.png",
+          "nativeSHA256": "2b862372aa7b1480a1cf319731a680c678a0e71783acd008413046027cdd03ef",
+          "deliverySHA256": "5c527c5e7771c8ca9e92fc8e0dc3353c2743049586a5f1176e82eefc7b288805",
+          "nativeBytes": 2219195,
+          "deliveryBytes": 2219457,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "e308264dd3bed6a33b1ddb0e1bd8d6bd59cd26d66281806a06856b9976a4b8c0",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:14:41.526860+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Faces/hair top about24percent, full dish about30percentheight and centrally safe. Robe at17percentx and unrequested inkpot/tray at lower left make outer margin less calm than required. New whole candidate for cleaner margins.",
+            "estimatedArtifactHeightFraction": 0.3,
+            "measuredOrEstimated": "Manual visual estimate",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T08:17:31.258208+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-be458613-95d1-4c1b-a675-963ffeb59161.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/02-cloisonne-v3-attempt3.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/02-cloisonne-v3.png",
+          "nativeSHA256": "63ca8cc10fea8cbe748ca2918f2cdc110b7b222e7c7a3fadc216f5073f2e50fe",
+          "deliverySHA256": "16d3aa4f99cfef6a798a2e96e30e055a17457a1bd31989e38fa0f495d8b60656",
+          "nativeBytes": 2190565,
+          "deliveryBytes": 2190827,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "1734c74dd92a0cc4ead2dc2efebe069cb9b552dfad9bdcc00c91b949fc68faeb",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:21:06.859659+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Nice surface and objectscale but hair top17percent violates top20 margin; previous attempt2 has better composition. New whole generation using attempt2 only as layout reference.",
+            "estimatedArtifactHeightFraction": 0.32,
+            "measuredOrEstimated": "Manual approximate visual bounds",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 4,
+          "issuedAt": "2026-10-19T08:21:12.274912+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f2c256ca-fc29-4b13-9432-622286167dea.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/02-cloisonne-v3-attempt4.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/02-cloisonne-v3.png",
+          "nativeSHA256": "23ae6c2035e02719eb90e56a8703707ebc11e293cc1fcd0be9dbda89c867fbe1",
+          "deliverySHA256": "517a2ff5f8685f760a291488ca49dca7aab8d8cab8d868e5d1c256414c119b73",
+          "nativeBytes": 2250812,
+          "deliveryBytes": 2251074,
+          "dimensions": [
+            1087,
+            1447
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "0f12c22fc0872b9436aacfc0e212697dcf4cd3a0723c4784df0fbc75400ffe07",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:24:01.335139+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": true,
+            "sizePass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Faces, complete dish and hands readable in160px portrait-oval light/dark. Generated1087x1447 instead of1086x1448. Native preserved; no resize/crop/pad. New whole candidate required.",
+            "estimatedArtifactHeightFraction": 0.3,
+            "measuredOrEstimated": "Manual estimate",
+            "alphaPass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 5,
+          "issuedAt": "2026-10-19T08:25:36.526276+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f05b253d-bff1-4941-b8a9-1b11d80d31cb.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/02-cloisonne-v3-attempt5.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/02-cloisonne-v3.png",
+          "nativeSHA256": "e1461e171cb6363d0e822d991e5dbe8fd23abf5f6b5b953627679ba34cc258a2",
+          "deliverySHA256": "14fda4c7c70e3b4929663e9ae07e8d7178340fa7bcd837da899e23bc9b0a2269",
+          "nativeBytes": 2093017,
+          "deliveryBytes": 2093279,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "1be56c4e18992c4c3b6648b08e13c39b441c0bb0842819cbd0bb08d0df664d17",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:27:11.617284+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "sizePass": true,
+            "alphaPass": true,
+            "compositionPass": "critical-content-safe; exact calm-all-secondary-margins-not-fully-verified",
+            "wholeNewGenerationNeeded": false,
+            "visualFindings": "Gray-haired older woman in loose embroidered robe, happy boy in roundcap, full turquoise dish and two natural supporting hands clear. Hairtopabout24percent, dishabout28-30percentheight, complete object/hands centrally safe. Side sleeves extend beyond central60percent but faces/object remain safely within diagnostic ellipse. Bright palace lattice/timber background and clean foreground table. Smiles face toward camera rather than purely candid interaction.",
+            "estimatedArtifactHeightFraction": 0.285,
+            "measuredOrEstimated": "Manual approximate bounds, not exact segmentation",
+            "historicalPlaceAndCostumeAccepted": false,
+            "recipientAccepted": false,
+            "ownerAccepted": false,
+            "pixelsNotRetouched": true,
+            "actualGameRuntimeTested": false
+          }
+        }
+      ]
+    },
+    "tyyppi2-sali-v3": {
+      "taskNumber": 503,
+      "selectedAttempt": 2,
+      "selectedNativeSHA256": "7423cc18d7c98149a799fbded843acdef643e59155a682f9ecd29ee4c6ac916b",
+      "selectedDeliverySHA256": "a9f96147dfe5ffc9393aff493fcbd344fa664d811aad0e155f237f016c928f2a",
+      "pixelSHA256": "b6df786c94e80fecf6701acbfdee6546aa58244206ad0e262a0ddbf1026b4474",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T08:09:54.459231+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-86ac4d3b-4763-48b9-b22a-f763990c4444.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/tyyppi2-sali-v3-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/tyyppi2-sali-v3.png",
+          "nativeSHA256": "85feab991b94d1b9e72ff178d0ae571cf48d528633fdf37df7aa010846183981",
+          "deliverySHA256": "a50cae0f227579f36de209000369a700c1e2f5579e4015b887cfb3aaa446677d",
+          "nativeBytes": 2167637,
+          "deliveryBytes": 2167899,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "9b693e40538ec999a88329c03e212499e3da5d169ded38aecb30fdee53788d89",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:17:04.687294+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Chinese red timber hall and gray ceramic paving, no Western marble. Vase too large at47percent photoheight; pedestal foot reaches81percent so bottom20percent margin fails. New wider artifact framing needed.",
+            "estimatedArtifactHeightFraction": 0.47,
+            "measuredOrEstimated": "Manual visual estimate",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T08:17:32.010967+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2f90150c-457b-4fd1-9bad-7e8a68516692.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/tyyppi2-sali-v3-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/tyyppi2-sali-v3.png",
+          "nativeSHA256": "7423cc18d7c98149a799fbded843acdef643e59155a682f9ecd29ee4c6ac916b",
+          "deliverySHA256": "a9f96147dfe5ffc9393aff493fcbd344fa664d811aad0e155f237f016c928f2a",
+          "nativeBytes": 1946784,
+          "deliveryBytes": 1947046,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "b6df786c94e80fecf6701acbfdee6546aa58244206ad0e262a0ddbf1026b4474",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:21:07.655720+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": true,
+            "wholeNewGenerationNeeded": false,
+            "visualFindings": "Vase about34percent height, top33percent,bottom67percent; pedestal feet endabout76percent. No people. Red timber, lattice windows, painted beams and gray fired-clay paving. Object crisp, background softer; colored architecture remains visible at margins. Reconstructed vase placement not documented; KK place/scene review pending.",
+            "estimatedArtifactHeightFraction": 0.34,
+            "measuredOrEstimated": "Manual approximate visual bounds",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true,
+            "historicalPlaceAndCostumeAccepted": false,
+            "recipientAccepted": false,
+            "ownerAccepted": false
+          }
+        }
+      ]
+    },
+    "tyyppi3-oppitunti-v3": {
+      "taskNumber": 504,
+      "selectedAttempt": 3,
+      "selectedNativeSHA256": "2004b0869eb2b006582d4a683181f183d241799812f6c59914b8b6fcdc109cd7",
+      "selectedDeliverySHA256": "10e4f004d5c5488fa3f061bf480478539a3d5bc398f14f02a5dca542b0947233",
+      "pixelSHA256": "f8600799121cf56848c78d5d8b55d26a8b3ff1124d16f7341af235da1665926e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T08:09:54.823528+00:00",
+          "completionVerified": true,
+          "preDispatchRevision": "Before first actual image call: compact people and explicit top25percent margin, informed by other two assets QA; no additional call",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2aecd767-0cc8-4e2d-b50b-65552326a214.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/tyyppi3-oppitunti-v3-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/tyyppi3-oppitunti-v3.png",
+          "nativeSHA256": "63a6319967d30cae5df7fbe72d1328dc4d8cb66e60ff842a599c604e43b55adf",
+          "deliverySHA256": "da0b7b440592b47a77c85e34a31f4789fce89eb25a5d5fd2b89b0beb6f22638e",
+          "nativeBytes": 2119990,
+          "deliveryBytes": 2120252,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "4c13e01819c666b273944e221b4e1a1b8f941e49025413bdff76cf4a8ff1fde4",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:17:27.312779+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Joyful elderly teacher, child-at-desk and palace architecture. Map extends to left/top edges, pointer enters left margin; foreground vase only20percentheight. Whole new composition needed.",
+            "estimatedArtifactHeightFraction": 0.2,
+            "measuredOrEstimated": "Manual visual estimate",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T08:17:32.881474+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ef9ef81f-d1a1-4832-9dc0-41c11ed7ac1a.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/tyyppi3-oppitunti-v3-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/tyyppi3-oppitunti-v3.png",
+          "nativeSHA256": "0e5c7fb571a28602b3878a97dea2498f73c681f14992c108fce5b32ff1f40286",
+          "deliverySHA256": "5f33c0510084a1dfeac062e35165c2a14729360a310c76b81dd6cfec882bca95",
+          "nativeBytes": 1848291,
+          "deliveryBytes": 1848553,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "5359d6eb24f244559802465490d516861cac7e9ed5b6d575744a2b821ecc8bb8",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:21:08.605913+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "compositionPass": false,
+            "wholeNewGenerationNeeded": true,
+            "visualFindings": "Good central foreground vase and small central map, but teacher/child too wide in side margins and costumes/hair too generic pre-Qing; need compact group and round childcap.",
+            "estimatedArtifactHeightFraction": 0.35,
+            "measuredOrEstimated": "Manual approximate visual bounds",
+            "alphaPass": true,
+            "sizePass": true,
+            "pixelsNotRetouched": true
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T08:21:12.857751+00:00",
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0cb68a25-5ce6-428d-9d1a-a1ec10351de0.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/native/tyyppi3-oppitunti-v3-attempt3.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v3-20261019/delivery-packet/tyyppi3-oppitunti-v3.png",
+          "nativeSHA256": "2004b0869eb2b006582d4a683181f183d241799812f6c59914b8b6fcdc109cd7",
+          "deliverySHA256": "10e4f004d5c5488fa3f061bf480478539a3d5bc398f14f02a5dca542b0947233",
+          "nativeBytes": 2055811,
+          "deliveryBytes": 2056073,
+          "dimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "f8600799121cf56848c78d5d8b55d26a8b3ff1124d16f7341af235da1665926e",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T08:24:04.233262+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "sizePass": true,
+            "alphaPass": true,
+            "compositionPass": "partial-formal-margin-compliance; actual160px-oval-readable",
+            "wholeNewGenerationNeeded": false,
+            "static160pxOvalPersonallyInspected": true,
+            "visualFindings": "Vase about33percentheight, joyful elderly teacher/pointer and child at small desk read clearly in160px portrait ellipse on both backgrounds. Full rectangle has map in uppermargin and child/desk extend partly beyond central60percent. Critical faces and artifact remain readable in diagnostic ellipse; exact20percent quiet margin not fully achieved across every secondary element.",
+            "estimatedArtifactHeightFraction": 0.33,
+            "measuredOrEstimated": "Manual approximate bounds and actual diagnostic review, not exact segmentation",
+            "map": "Unlabelled invented schematic, not reliable historic borders",
+            "historicalPlaceAndCostumeAccepted": false,
+            "recipientAccepted": false,
+            "ownerAccepted": false,
+            "pixelsNotRetouched": true,
+            "actualGameRuntimeTested": false
+          }
+        }
+      ]
+    }
+  }
+}
