@@ -78,367 +78,367 @@ Tunnetagit eivät lisää kuultavaa tekstiä. Kuplatyyppien jakauma: 1 esittely:
 - Fakta: Persikka on Kiinassa pitkäikäisyyden symboli, ja Qing-ajan jadeesineissä persikat toivottavat pitkää ikää.
 - Dynastia / vuosi: Qing / 1700–1800-luku
 - Poimintahuudot: „Persikka! Pitkää ikää minulle!“ · „Jadepersikka! Nyt riittää virtaa!“
-- Kupla: Riemuitseva vanha puutarhuri pitelee ehjää jadepersikkaa molemmin käsin hedelmätarhassa iltaauringon valossa; ei tekstiä kuvaan.
+- Kupla: Riemuitseva vanha puutarhuri pitelee ehjää jadepersikkaa molemmin käsin kukkivassa hedelmätarhassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 
 ## Faktavirkkeet, ajoitusraita ja kuplakuvaukset (Codexille)
 
-Kuvaohje kaikille: REALISTINEN VÄRIVALOKUVA kaikissa kuplissa (ei piirros, maalaus tai seepia); hahmot keksittyjä 1910-luvun palatsin ihmisiä (opettajat, keisarinnaäidit, virkamiehet, hovimestari, palvelijat, imettäjä, mestarit, lähettiläät), ei todellisia henkilöitä; hovin naiset mantšuasussa, ei qipaossa; ei tekstiä kuvaan; esine + hahmon kasvot ja kädet keskimmäisellä ~60 %:lla, reunoilla ≥ 20 % rauhallista taustaa (soikea häivytys pelissä).
+Kuvaohje kaikille: REALISTINEN VÄRIVALOKUVA kaikissa kuplissa (ei piirros, maalaus tai seepia); hahmot keksittyjä 1910-luvun palatsin ihmisiä (opettajat, keisarinnaäidit, virkamiehet, hovimestari, palvelijat, imettäjä, mestarit, lähettiläät), ei todellisia henkilöitä; hovin naiset mantšuasussa, ei qipaossa; KAIKKI hahmot iloisia ja riemastuneita; kuvat VAALEASÄVYISIÄ ja ILMAVIA: pehmeä päivänvalo, ei iltavaloa, ei lyhtyjen/kynttilöiden hämärää, ei raskaita varjoja (tyypissä 8 lyhdyt, lumi ja kukat saavat näkyä, kuva silti valoisa); ei tekstiä kuvaan; esine + hahmon kasvot ja kädet keskimmäisellä ~60 %:lla, reunoilla ≥ 20 % rauhallista taustaa (soikea häivytys pelissä).
 
 ### Posliinimaljakko (`posliinimaljakko`) — kupla 2: aarre salissa (ei ihmisiä)
 
 - **Fakta:** Qing-hovin posliini tehtiin Jingdezhenin keisarillisissa uuneissa, ja hovituotanto päättyi vasta vuonna 1911.
 - **Ajoitusraita:** Qing-dynastia, tyypillisesti 1700-luku
-- **Kupla:** Iso Qing-posliinimaljakko koristeellisella jalustalla hiljaisessa palatsisalissa, punaiset pylväät, hento aamuvalo, realistinen värivalokuva, ei ihmisiä, ei tekstiä kuvaan.
+- **Kupla:** Iso Qing-posliinimaljakko vaalealla jalustalla avarassa palatsisalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo ikkunasta, vaaleat pinnat, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Jingdezhen_porcelain
 
 ### Sinivalkoinen maljakko (`sinivalkoinen-maljakko`) — kupla 2: aarre salissa (ei ihmisiä)
 
 - **Fakta:** Sinivalkoisen posliinin koboltti tuotiin Persiasta, ja Jingdezhenissä sitä alettiin tehdä paljon 1300-luvulla.
 - **Ajoitusraita:** Qing-dynastia, tyypillisesti 1700-luku
-- **Kupla:** Korkea sinivalkoinen maljakko lasivitriinissä hiljaisessa palatsisalissa, lämmin iltavalo ikkunasta, lakatut puuseinät, realistinen värivalokuva, ei ihmisiä, ei tekstiä kuvaan.
+- **Kupla:** Korkea sinivalkoinen maljakko kirkkaassa lasivitriinissä vaalean palatsisalin keskellä, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Blue_and_white_pottery
 
 ### Famille rose -maljakko (`famille-rose-maljakko`) — kupla 3: oppitunti (Yuqing-koulusali)
 
 - **Fakta:** Vaaleanpunaiseen sävyyn perustuva famille rose -tyyli kehittyi täyteen mittaansa Yongzhengin kaudella.
 - **Ajoitusraita:** Qing-dynastia, Yongzhengin–Qianlongin kausi, 1700-luku
-- **Kupla:** Ankara opettaja karttakepin kanssa opettaa famille rose -maljakosta, pikku-Puyi (kaapu, letti, 8 v) kuuntelee pulpetissa; maljakko pöydällä, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Iloinen opettaja karttakepin kanssa esittelee famille rose -maljakkoa, riemastunut pikku-Puyi (kaapu, letti) pulpetissa, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Famille_rose
 
 ### Keltalasitteinen kulho (`keltalasitteinen-kulho`) — kupla 5: juhla/seremonia
 
 - **Fakta:** Keltaista pidettiin keisarin värinä, ja sitä varattiin keramiikassa ja kankaissa pääosin keisarin käyttöön.
 - **Ajoitusraita:** Qing-dynastia, tyypillisesti 1700–1800-luku
-- **Kupla:** Keltalasitteinen kulho keisarin juhlapöydällä, hovin palvelija juhlapuvussa tarjoilee siitä riisiä, ihmisiä taustalla, lyhtyjen valo, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä palvelija juhlapuvussa tarjoaa riisiä keltalasitteisesta kulhosta, iloiset hovilaiset, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://www.metmuseum.org/art/collection/search/42242, https://fondation-baur.ch/de/95
 
 ### Celadon-kulho (`celadon-kulho`) — kupla 2: aarre salissa (ei ihmisiä)
 
 - **Fakta:** Celadonin jadenvihreä väri syntyy lasitteen rautaoksidista; Zhejiangin Longquanin uunit ovat kuuluisia siitä.
 - **Ajoitusraita:** Qing-dynastia, tyypillisesti 1700-luku
-- **Kupla:** Jadenvihreä celadon-kulho isona lakatulla jalustalla hiljaisessa palatsin kirjastosalissa, viileä aamuvalo, realistinen värivalokuva, ei ihmisiä, ei tekstiä kuvaan.
+- **Kupla:** Jadenvihreä celadon-kulho isona vaalealla jalustalla avarassa kirjastosalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo ikkunasta, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Celadon, https://www.metmuseum.org/art/collection/search/48249
 
 ### Yixing-teekannu (`yixing-teekannu`) — kupla 5: juhla/seremonia
 
 - **Fakta:** Yixingin teekannut tehtiin Jiangsun purppurasavesta, ja savi imee itseensä hieman teetä käytön myötä.
 - **Ajoitusraita:** Qing-dynastia, tyypillisesti 1700–1800-luku
-- **Kupla:** Punaruskea Yixing-teekannu teejuhlassa; keisarinnaäiti ja hovin naiset mantšuasuissa nauttivat teetä, höyryä ja kynttilänvaloa, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Yixing-teekannu teejuhlassa, naurava keisarinnaäiti ja hymyilevät hovin naiset mantšuasuissa, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Yixing_clay_teapot
 
 ### Doucai-kuppi (`doucai-kuppi`) — kupla 4: lahja (lähettiläs)
 
 - **Fakta:** Doucai-koristeessa sininen ääriviiva maalataan lasitteen alle ja värit lisätään päälle toisessa poltossa.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku (tyyli Ming-ajan Chenghuasta)
-- **Kupla:** Vieras lähettiläs ojentaa pientä doucai-kuppia kumartaen hovin virkamiehille, vierailijan vaatteet erottuvat, palatsin sali pehmeässä päivänvalossa, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä lähettiläs vieraan maan juhla-asussa ojentaa pientä doucai-kuppia, iloiset virkamiehet ihailevat, valoisa, ilmava, pehmeä päivänvalo, vaalea sali, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Doucai
 
 ### Posliininen nuuskapullo (`nuuskapullo`) — kupla 7: leikki (pikku-Puyi)
 
 - **Fakta:** Nuuskapulloja tehtiin lasista ja posliinista, ja ne olivat niin pieniä, että ne mahtuivat kämmeneen.
 - **Ajoitusraita:** Qing-dynastia, 1700–1800-luku
-- **Kupla:** Pikku-Puyi (keltainen lapsen kaapu, letti, 8 v) tutkii kämmenellään pientä posliinista nuuskapulloa lattialla kissan vieressä, utelias ilme, ikkunavalo, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Riemastunut pikku-Puyi (keltainen lapsen kaapu, letti, 8 v) pitelee posliinista nuuskapulloa lattialla kissan vieressä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Snuff_bottle
 
 ### Kalakulho (`kalakulho`) — kupla 7: leikki (pikku-Puyi)
 
 - **Fakta:** Kultakaloja alettiin pitää sisätiloissa Ming-kaudella, ja silloin syntyivät koristepyrstöiset lajikkeet.
 - **Ajoitusraita:** Qing-dynastia, tyypillisesti 1700-luku
-- **Kupla:** Pikku-Puyi (keltainen lapsen kaapu, letti, 8 v) polvistuu suuren kalakulhon ääreen ja katsoo kultakaloja nauraen, palatsin piha, vihreää heijastusvaloa, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Nauravan pikku-Puyin (keltainen lapsen kaapu, letti, 8 v) edessä kalakulho ja kultakaloja, aurinkoinen vaalea piha, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Goldfish, https://fondation-baur.ch/en/apercu-des-collections/pbolp-113
 
 ### Tuoksupoltin (`tuoksupoltin`) — kupla 8: vuodenaika
 
 - **Fakta:** Vanhimmat kiinalaiset tuoksupolttimet eli xianglu ovat Taistelevien valtioiden ajalta, noin 400-luvulta eaa.
 - **Ajoitusraita:** Qing-dynastia, tyypillisesti 1700-luku
-- **Kupla:** Pronssinen tuoksupoltin luminen palatsin pihalla, siitä nousee kevyt savu; palvelija talvikaavussa lisää suitsuketta, lyhtyjen lämmin valo, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Pronssinen tuoksupoltin kirkkaasti lumisella palatsin pihalla, hymyilevä palvelija talvikaavussa, koristelyhdyt, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Incense_burner
 
 ### Jadeastia (`jadeastia`) — kupla 2: aarre salissa (ei ihmisiä)
 
 - **Fakta:** Kiinassa jadea arvostettiin kulta- ja hopeaakin enemmän; jadeveisto huipentui Qianlongin aikana.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku
-- **Kupla:** Vihreä jadeastia isona jalustalla hiljaisessa palatsisalissa, kynttilänvalo heijastuu kiillotetulla pinnalla, tummat puupaneelit, realistinen värivalokuva, ei ihmisiä, ei tekstiä kuvaan.
+- **Kupla:** Vihreä jadeastia isona vaalealla jalustalla avarassa palatsisalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo heijastuu kiillotetulla pinnalla, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Chinese_jade, https://orientalceramics.org.hk/event/jades-from-the-reign-of-the-qianlong-emperor/
 
 ### Keisarin jadesinetti (`jadesinetti`) — kupla 5: juhla/seremonia
 
 - **Fakta:** Qianlongin eläkeaikojen jadesinetti on Wienin museon mukaan Palace Museumin suurin jadesinetti.
 - **Ajoitusraita:** Qing-dynastia, 1700-luvun loppu (Qianlongin kausi)
-- **Kupla:** Hovin virkamies Qing-ajan viitassa nostaa jadesinettiä molemmin käsin seremoniassa punaisessa salissa, juhlapukuiset hovilaiset kumartavat, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Ylpeä ja iloinen virkamies nostaa jadesinettiä molemmin käsin, hymyilevät juhlapukuiset hovilaiset ympärillä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://largeprint.khm.at/en/art-and-aesthetics-from-chinas-forbidden-city/seal-with-interlaced-dragons-knob
 
 ### Jadevuori (`jadevuori`) — kupla 2: aarre salissa (ei ihmisiä)
 
 - **Fakta:** Qianlong tilasi vuonna 1787 yli metrin korkuisen jadevuoren, jossa on Huichangin yhdeksän vanhusta.
 - **Ajoitusraita:** Qing-dynastia, Qianlongin kausi, tilattu 1787
-- **Kupla:** Metrin korkuinen jadevuori, jossa veistetyt vanhukset, valaistulla korokkeella hiljaisessa palatsisalissa, himmeä ikkunavalo, realistinen värivalokuva, ei ihmisiä, ei tekstiä kuvaan.
+- **Kupla:** Metrin korkuinen jadevuori, jossa veistettyjä vanhuksia, vaalealla korokkeella avarassa palatsisalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://www.artgallery.nsw.gov.au/exhibitions/translucent-world/
 
 ### Ruyi-valtikka (`ruyi-valtikka`) — kupla 4: lahja (lähettiläs)
 
 - **Fakta:** Ruyi oli Qing-hovin vallan ja onnen merkki; Palace Museumissa on lähes 3000 ruyi-valtikkaa.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku
-- **Kupla:** Arvokas lähettiläs ojentaa ruyi-valtikkaa hymyillen keisarinnaäidille ja hoville, hovin naiset mantšuasuissa, punaiset pylväät, juhlava valo, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä lähettiläs ojentaa ruyi-valtikkaa säteilevälle keisarinnaäidille, iloiset hovin naiset mantšuasuissa, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Ruyi_(scepter)
 
 ### Mughal-jadekuppi (`mughal-jadekuppi`) — kupla 4: lahja (lähettiläs)
 
 - **Fakta:** Qianlong ihaili Mughal-jadeita ja kirjoitti niistä runoja; Palace Museumilla on niitä kokoelmassaan.
 - **Ajoitusraita:** Mughal-tyyli, tuotu Qing-hoviin 1700-luvulla
-- **Kupla:** Turbaanipäinen lähettiläs kirjaillussa kaavussa ojentaa ohutta jadekuppia kumartaen, hovi katsoo ihaillen, vierailijan vaatteet erottuvat, lyhtyjen valo, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Turbaanipäinen lähettiläs kirjaillussa kaavussa ojentaa hymyillen ohutta jadekuppia, iloinen hovi ihailee, valoisa, ilmava, pehmeä päivänvalo, vaalea sali, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://www.sothebys.com/en/auctions/ecatalogue/2016/arts-asie-pf1607/lot.67.html, https://orientalceramics.org.hk/event/jades-from-the-reign-of-the-qianlong-emperor/
 
 ### Muinainen bi-kiekko (`bi-kiekko`) — kupla 3: oppitunti (Yuqing-koulusali)
 
 - **Fakta:** Bi on reikäinen jadekiekko, vanhimmat uudelta kivikaudelta; Qianlong kaiversutti vanhaan biin tekstin.
 - **Ajoitusraita:** Uusi kivikausi, Liangzhu n. 3400–2250 eaa.
-- **Kupla:** Ankara opettaja karttakepin kanssa opettaa reikäisestä jadekiekosta, pikku-Puyi (kaapu, letti, 8 v) kuuntelee pulpetissa; kiekko opetuspöydällä, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Iloinen opettaja karttakepin kanssa esittelee reikäistä jadekiekkoa pöydällä, ihastunut pikku-Puyi (kaapu, letti, 8 v), valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Bi_(jade)
 
 ### Norsunluinen kerrospallo (`norsunluupallo`) — kupla 7: leikki (pikku-Puyi)
 
 - **Fakta:** Kerrospallo veistetään yhdestä norsunluusta, ja sen kerrokset pyörivät; muodon uskotaan syntyneen Kantonissa.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku (huippukausi)
-- **Kupla:** Pikku-Puyi (keltainen lapsen kaapu, letti, 8 v) pyöräyttää norsunluista kerrospalloa lattialla ja nauraa, imettäjä katsoo taustalla, lämmin lampunvalo, realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Nauravan pikku-Puyin (keltainen lapsen kaapu, letti, 8 v) käsissä pyörii norsunluinen kerrospallo, hymyilevä imettäjä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Chinese_puzzle_ball
 
 ### Duan-mustekivi (`duan-mustekivi`) — kupla 3: oppitunti (Yuqing-koulusali)
 
 - **Fakta:** Duan-mustekivi on Zhaoqingin seudun purppuranpunertavaa tuffia, yksi tutkijan neljästä aarteesta.
 - **Ajoitusraita:** Tang-ajasta alkaen; Qing-kausi 1644–1912
-- **Kupla:** Opettaja karttakeppi kädessä näyttää pöydällä purppuranpunaista Duan-mustekiveä, pikku-Puyi kaavussa ja letissä kuuntelee pulpetissa, aamuvalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Opettaja karttakeppi kädessä hymyilee ja näyttää Duan-mustekiveä, pikku-Puyi kaavussa ja letissä nauraa pulpetissa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Inkstone
 
 ### Bianqing-kivisoitin (`bianqing-kivikellot`) — kupla 5: juhla/seremonia
 
 - **Fakta:** Bianqing on ripustettujen kivilevyjen soitin; Qianlongin aikana niitä tehtiin myös läntisten alueiden jadesta.
 - **Ajoitusraita:** Qing-dynastia, Qianlongin kausi, 1760-luku
-- **Kupla:** Hovin muusikko lyö nuijalla ripustettua jadekivilevyä juhlasalissa, juhlapukuiset virkamiehet kuuntelevat, kultainen kynttilänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hovin muusikko lyö iloisesti nuijalla ripustettua jadekivilevyä, hymyilevät juhlapukuiset virkamiehet kuuntelevat, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Bianqing, https://csmvs.in/collections/imperial-jade-chime-2/
 
 ### Jadekirja (`jadekirja`) — kupla 6: työpaja
 
 - **Fakta:** Jadekirjan sivut ovat jadelevyjä; Metin Qianlongin jadekirjassa keisarin essee on täytetty kullalla.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku
-- **Kupla:** Vanha mestari kultaa kirjoitusta jadekirjan vihreisiin jadelevyihin palatsin työpajassa, tarkka ilme, viileä päivänvalo ikkunasta; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä vanha mestari kultaa kirjoitusta jadekirjan vihreisiin jadelevyihin vaaleassa palatsin työpajassa; valoisa, ilmava, pehmeä päivänvalo ikkunasta; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://www.metmuseum.org/art/collection/search/41925
 
 ### Cloisonné-vati (`cloisonne`) — kupla 6: työpaja
 
 - **Fakta:** Cloisonnéssa metallilangat rajaavat emalilokerot. Kangxin hovilla oli jo oma cloisonné-työpaja.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku
-- **Kupla:** Hovin mestari juottaa metallilankoja cloisonné-vadin sinisiin emalilokeroihin palatsin työpajassa, keskittynyt ilme, pieni hehkuva uuni; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Innostunut hovin mestari juottaa metallilankoja cloisonné-vadin sinisiin emalilokeroihin vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Cloisonn%C3%A9
 
 ### Pronssinen ding-astia (`ding-astia`) — kupla 8: vuodenaika
 
 - **Fakta:** Ding on jaloilla seisova pronssikattila, jota käytettiin ruoanlaittoon ja uhrilahjoihin esi-isille.
 - **Ajoitusraita:** Shang- ja Zhou-dynastiat; Qingin hovin jäljennöksiä
-- **Kupla:** Pronssinen ding-astia lumisella palatsin pihalla, palvelija kantaa sille uhrilahjoja, harmaa talvivalo ja punaiset seinät taustalla; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Pronssinen ding-astia lumisella pihalla, iloinen palvelija kantaa uhrilahjoja, koristelyhdyt, kirkas lumipäivä, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Ding_(vessel)
 
 ### Pronssinen zun-malja (`zun-malja`) — kupla 5: juhla/seremonia
 
 - **Fakta:** Zun on korkea viini- ja uhrimalja; Qianlongin hovi luetteloi muinaispronssit teokseen Xiqing gujian.
 - **Ajoitusraita:** Shang- ja Zhou-dynastiat, n. 1600–256 eaa.
-- **Kupla:** Hovimestari kaataa viiniä korkeaan pronssiseen zun-maljaan uhriseremoniassa, juhlapukuiset virkamiehet seisovat vakavina, kynttilänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä hovimestari kaataa viiniä pronssiseen zun-maljaan, riemastuneet juhlapukuiset virkamiehet seuraavat, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Chinese_ritual_bronzes
 
 ### Pronssikurki (`pronssikurki`) — kupla 8: vuodenaika
 
 - **Fakta:** Pronssikurkupari seisoo Taihe-salin terassilla; kurki on pitkän iän vertauskuva.
 - **Ajoitusraita:** Qing-aikainen terassi (sali 1695–1697); valuvuosi tuntematon
-- **Kupla:** Pronssikurki seisoo marmoriterassilla kukkivien puiden keskellä, puutarhuri siivoaa taustalla hymyillen, kirkas kevätaamu; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Pronssikurki marmoriterassilla kukkivien puiden keskellä, hymyilevä puutarhuri ihailee sitä, aurinkoinen kevät, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://artsandculture.google.com/story/zwXBu2RtdGQKUA, https://en.wikipedia.org/wiki/Hall_of_Supreme_Harmony
 
 ### Pronssikilpikonna (`pronssikilpikonna`) — kupla 8: vuodenaika
 
 - **Fakta:** Pronssikilpikonnapari seisoo Taihe-salin terassilla ja kuvaa toivetta kestävästä vallasta ja pitkästä iästä.
 - **Ajoitusraita:** Qing-aikainen terassi (sali 1695–1697); valuvuosi tuntematon
-- **Kupla:** Pronssikilpikonna terassilla lyhtyjen valossa illan hämärtyessä, vanha vahtimestari katsoo sitä ylpeänä, punaiset pilarit; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Pronssikilpikonna terassilla kirkkaassa lumipäivässä, iloinen vahtimestari esittelee sitä ylpeänä, koristelyhdyt, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://artsandculture.google.com/story/zwXBu2RtdGQKUA, https://en.wikipedia.org/wiki/Hall_of_Supreme_Harmony
 
 ### Kullattu vesiastia (`kullattu-vesiastia`) — kupla 8: vuodenaika
 
 - **Fakta:** Kullatut pronssiastiat olivat palatsin vesiastioista arvokkaimpia; vettä käytettiin tulipalojen sammutukseen.
 - **Ajoitusraita:** Qing-dynastia, 1644–1912
-- **Kupla:** Iso kullattu vesiastia sisäpihalla, palvelijat täyttävät sitä ämpäreillä, virkamies katsoo tyytyväisenä, ensilumi katoilla, talviaamu; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Iso kullattu vesiastia pihalla, nauravat palvelijat täyttävät sitä ämpäreillä, virkamies hymyilee, ensilumi, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://www.ourchinastory.com/en/amp/16271, https://astronomynotes.com/china/forbidden/Pages/21.html
 
 ### Vuoripoltin (`vuoripoltin`) — kupla 6: työpaja
 
 - **Fakta:** Vuoripoltin jäljittelee Han-ajan mallia; Qianlong tilasi 1743 valimolta astioita muinaisten mallien mukaan.
 - **Ajoitusraita:** Qing-dynastia, Qianlongin kausi 1736–1795
-- **Kupla:** Valumestari kaataa sulaa pronssia muottiin vuoripolttimen tekoa varten palatsin valimossa, kasvoilla kipinöiden valo, hämärä halli; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Iloinen valumestari kaataa sulaa pronssia muottiin vuoripolttimen tekoa varten kirkkaassa, avarassa palatsin valimossa; valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://www.metmuseum.org/art/collection/search/850404
 
 ### Cloisonné-tuoksupoltin (`cloisonne-poltin`) — kupla 6: työpaja
 
 - **Fakta:** Cloisonnén metallilangat rajaavat emalilokerot; varhaiset rungot olivat raskasta pronssia tai messinkiä.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku
-- **Kupla:** Hovin emalimestari täyttää cloisonné-tuoksupolttimen lokeroita värillä pitkällä pensselillä, tarkka ilme, pehmeä ikkunavalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä emalimestari täyttää cloisonné-tuoksupolttimen lokeroita värillä pitkällä pensselillä vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Cloisonn%C3%A9, https://www.metmuseum.org/art/collection/search/40622
 
 ### Falangcai-posliini (`falangcai`) — kupla 6: työpaja
 
 - **Fakta:** Falangcai: Jingdezhenin posliinille Kielletyssä kaupungissa maalattua emalia, tehty vain keisarin käyttöön.
 - **Ajoitusraita:** Qing-dynastia, Kangxin–Qianlongin kausi, 1700-luku
-- **Kupla:** Hovin maalari maalaa ohuella siveltimellä pioneja falangcai-posliinikulhoon palatsin työpajassa, hymyillen, kirkas ikkunavalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä hovin maalari maalaa ohuella siveltimellä pioneja falangcai-posliinikulhoon vaaleassa työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Falangcai, https://theme.npm.edu.tw/exh111/ArtisticStyle/en/page-4-2.html
 
 ### Maalattu emalirasia (`maalattu-emalirasia`) — kupla 6: työpaja
 
 - **Fakta:** Kuparille maalattua emalia tehtiin ensin Kielletyn kaupungin keisarillisissa työpajoissa Kangxin ajan lopulla.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku
-- **Kupla:** Mestari maalaa kuparille emalikukkia pieneen rasiaan palatsin työpajassa, otsa kurtussa keskittyen, kynttilänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Riemastunut mestari maalaa kuparille emalikukkia pieneen rasiaan, kirkkaat silmät, vaalea palatsin työpaja; valoisa, ilmava, pehmeä päivänvalo ikkunasta; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://bonhams.shorthandstories.com/the-parry-teapot-essay-ENG
 
 ### Hovin kello (`kello`) — kupla 2: aarre salissa (ei ihmisiä)
 
 - **Fakta:** Qing-hovin kelloja on säilynyt Kielletyssä kaupungissa yli tuhat; osa tehtiin hovissa, osa tuotiin ulkomailta.
 - **Ajoitusraita:** Qing-dynastia, 1700–1800-luku
-- **Kupla:** Iso kullattu hovin pöytäkello arvokkaalla jalustalla hiljaisessa palatsisalissa, koristeet ja viisarit selvinä, lyhtyvalo, ei ihmisiä; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Iso kullattu pöytäkello arvokkaalla jalustalla hiljaisessa vaaleassa palatsisalissa, koristeet selvinä, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://intl.dpm.org.cn/galleries/details/311.html, https://www.sothebys.com/zh/auctions/ecatalogue/2019/treasures-l19303/lot.20.html
 
 ### Lakkarasia (`lakkarasia`) — kupla 1: esittely
 
 - **Fakta:** Lakka on lakkapuun kuivattua mahlaa; Qing-hovin työpajat levittivät sitä esineisiin kerros kerrokselta.
 - **Ajoitusraita:** Qing-dynastia, 1644–1912 (tyypillinen)
-- **Kupla:** Iloinen vanha nainen mantšuasussa esittelee kädessään kiiltävää mustaa lakkarasiaa lähikuvassa, punaiset lyhdyt ja hämärä sisäpiha; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Iloinen vanha nainen mantšuasussa esittelee hymyillen kiiltävää mustaa lakkarasiaa lähikuvassa, vaalea sisäpiha; valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Chinese_lacquerware
 
 ### Kirjoittava kellopeli (`kirjoittava-kellopeli`) — kupla 4: lahja (lähettiläs)
 
 - **Fakta:** Kielletyn kaupungin kuuluisassa kullatussa kellossa mekaaninen hahmo kirjoittaa kiinalaisia merkkejä.
 - **Ajoitusraita:** Qing-dynastia, 1700-luvun loppu (länsimainen kello)
-- **Kupla:** Eurooppalainen lähettiläs ojentaa kullattua kirjoittavaa kellopeliä, mantšupukuinen hovi katsoo ihmetellen, aamuvalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Hymyilevä eurooppalainen lähettiläs ojentaa kullattua kirjoittavaa kellopeliä, mantšupukuinen hovi riemastuu, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://intl.dpm.org.cn/galleries/details/311.html, https://orientations.com.hk/past-issues/p/may-2015
 
 ### Veistetty punalakka (`punalakka-veisto`) — kupla 6: työpaja
 
 - **Fakta:** Veistetyssä lakassa kuviot leikataan veitsillä monen lakkakerroksen sisään; Qianlong rakasti sitä.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku (Qianlongin kausi 1736–1795)
-- **Kupla:** Vanha lakkamestari veistää veitsellä kuvioita punaisen lakka-astian kerroksiin palatsin työpajassa, hymyillen, viileä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
+- **Kupla:** Iloinen vanha lakkamestari veistää veitsellä kuvioita punaisen lakka-astian kerroksiin vaaleassa palatsin työpajassa, valoisa, ilmava, pehmeä päivänvalo; realistinen värivalokuva, ei tekstiä kuvaan.
 - **Lähteet:** https://en.wikipedia.org/wiki/Carved_lacquer, https://www.mbam.qc.ca/en/works/26582/
 
 ### Mustetanko (`musteliuska`) — kupla 3: oppitunti (Yuqing-koulusali)
 
 - **Fakta:** Mustetanko tehdään nokesta ja liimasta; sitä hierotaan mustekivellä veden kanssa musteeksi.
 - **Ajoitusraita:** Qing-dynastia, 1644–1912 (keksitty Han-aikana)
-- **Kupla:** Opettaja karttakeppi kädessä opettaa pulpetissa istuvaa pikku-Puyita (kaapu, letti), pöydällä ehjä mustetanko ja mustekivi, ikkunavalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Iloinen opettaja karttakeppi kädessä esittelee mustetankoa, riemuitseva pikku-Puyi (kaapu, letti, 8 v) pulpetissa, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Four_Treasures_of_the_Study
 
 ### Lasimaljakko (`lasimaljakko`) — kupla 7: leikki (pikku-Puyi)
 
 - **Fakta:** Palatsin lasipaja perustettiin 1696 Kangxi-keisarin käskystä; sitä johti saksalainen jesuiitta Kilian Stumpf.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku (lasipaja perustettu 1696)
-- **Kupla:** Pikku-Puyi (keltainen lapsen kaapu, letti, noin 8 v) katsoo ihastuneena ehjää kirkasta lasimaljakkoa lattialla, ikkunavalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Riemastunut pikku-Puyi (keltainen kaapu, letti, 8 v) nauraa lattialla ehjän kirkkaan lasimaljakon vieressä, avara sali, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://discoveringbristol.org.uk/glass/history-and-techniques/glass-imperial-palace
 
 ### Keisarin viuhka (`viuhka`) — kupla 4: lahja (lähettiläs)
 
 - **Fakta:** Kangxi-keisarista alkaen keisarin kirjoittama taittoviuhka oli arvostettu lahja hovin virkamiehille.
 - **Ajoitusraita:** Qing-dynastia, Kangxin kausi 1662–1722 ja sen jälkeen
-- **Kupla:** Kaukainen lähettiläs vierailijan silkkiviitassa ojentaa kumartaen ehjän taittoviuhkan, hovin virkamiehet katsovat, puutarhapaviljongin iltavalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Hymyilevä lähettiläs ojentaa taittoviuhkan iloiselle virkamiehelle, hovi taputtaa, vaalea sali, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://theme.npm.edu.tw/exh105/FoldingFans/en/index.html
 
 ### Kalligrafiarulla (`kalligrafiarulla`) — kupla 3: oppitunti (Yuqing-koulusali)
 
 - **Fakta:** Qianlong-keisari säilytti kalligrafiaa työhuoneessaan, jonka nimi tarkoittaa Kolmen harvinaisuuden salia.
 - **Ajoitusraita:** Qing-dynastia, Qianlongin kausi 1736–1795
-- **Kupla:** Opettaja karttakepillä esittelee pikku-Puyille (kaapu, letti, noin 8 v) pöydälle levitettyä ehjää kalligrafiarullaa, kultainen iltapäivävalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Ylpeä hymyilevä opettaja avaa karttakepillä kalligrafiarullaa, pikku-Puyi (kaapu, letti, 8 v) pulpetissa innoissaan, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Hall_of_Mental_Cultivation
 
 ### Qingming-silkkirulla (`qingming-rulla`) — kupla 2: aarre salissa (ei ihmisiä)
 
 - **Fakta:** Song-ajan rulla kuvaa kaupunkia ja jokea; se on maalattu silkille ja on 5,25 metriä pitkä.
 - **Ajoitusraita:** Song-dynastia, 1100-luku
-- **Kupla:** Hiljainen palatsisali ilman ihmisiä: ehjä pitkä silkkirulla kaupunki- ja jokimaisemineen auki arvokkaalla jalustalla, pehmeä kynttilävalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Pitkä silkkirulla jokikaupunkikuvineen vaalealla jalustalla hiljaisessa palatsisalissa, ei ihmisiä, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Along_the_River_During_the_Qingming_Festival
 
 ### Kirjoitussivellin (`sivellin`) — kupla 3: oppitunti (Yuqing-koulusali)
 
 - **Fakta:** Siveltimen kärki on eläimen karvaa ja varsi yleensä bambua; harvinaisemmissa varsi on jadea tai norsunluuta.
 - **Ajoitusraita:** Qing-dynastia, 1644–1912 (tyypillinen)
-- **Kupla:** Lempeä opettaja karttakeppi kädessä näyttää pöydältä ehjää bambuvartista sivellintä, pikku-Puyi (kaapu, letti, noin 8 v) kurkottaa uteliaana pulpetissa, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Iloinen opettaja karttakeppi kädessä näyttää sivellintä, pikku-Puyi (kaapu, letti, 8 v) hymyilee pulpetissa, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Four_Treasures_of_the_Study
 
 ### Kansikuppi (gaiwan) (`gaiwan-kansikuppi`) — kupla 5: juhla/seremonia
 
 - **Fakta:** Gaiwan on kuppi, kansi ja lautanen; nykymuoto vakiintui 1700-luvulla, Qianlongin ajalta on kultainen gaiwan.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku (Qianlongin kausi)
-- **Kupla:** Keisarinnaäiti mantšuasussa nostaa teejuhlassa kultaista kansikuppia lautasineen, hovin naiset kumartavat, lämmin lyhtyvalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Hymyilevät juhlapukuiset hovinaiset mantšuasuissa nostavat gaiwan-kuppeja teejuhlassa, vaalea paviljonki, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Gaiwan, https://www.teaguardian.com/?p=13629
 
 ### Mantšun vyöveitsisarja (`mantsun-veitsisarja`) — kupla 1: esittely
 
 - **Fakta:** Mantšubannerimiehet kantoivat vyöllä veitsi- ja puikkosarjaa; Qianlong kielsi pilkkomasta heidän lihaansa.
 - **Ajoitusraita:** Qing-dynastia, 1700–1800-luku
-- **Kupla:** Riemastunut hovimestari esittelee lähikuvassa ehjää vyöveitsisarjaa tuppineen ja puikkoineen, ylpeä hymy, pehmeä ikkunavalo, lakattu seinä, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Innostunut mantšubanneri-sotilas esittelee nauraen vyöveitsi- ja puikkosarjaa lähikuvassa, kirkas piha, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://www.mandarinmansion.com/item/fine-trousse-accessories
 
 ### Palatsilyhty (`palatsilyhty`) — kupla 8: vuodenaika
 
 - **Fakta:** Hovin lyhdyn kehys oli bambua, kangas silkkiä tai harsoa; keisarit antoivat niitä uudenvuoden lahjaksi.
 - **Ajoitusraita:** Qing-dynastia (1644–1911)
-- **Kupla:** Palatsin sisäpiha lyhtyjen valossa: palvelija ripustaa ehjän silkkisen palatsilyhdyn bambukehyksineen punaisten pylväiden väliin, lumi hohtaa, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Iloiset palvelijat ripustavat silkkilyhdyn koristeeksi lumiseen pihaan, kirkas lumipäivä, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://news.cgtn.com/news/3d3d514d33556a4e31457a6333566d54/share_amp.html
 
 ### Linnunhäkki (`linnunhakki`) — kupla 7: leikki (pikku-Puyi)
 
 - **Fakta:** Qing-hovissa linnunpito oli ylhäisön harrastus, ja Qianlongin kerrotaan ihailleen lemmikkilintuja.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku
-- **Kupla:** Pikku-Puyi (keltainen lapsen kaapu, letti, noin 8 v) nauraa ehjän linnunhäkin luona, jossa pieni lintu laulaa, kukkiva sisäpiha, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Riemastunut pikku-Puyi (keltainen kaapu, letti, 8 v) nauraa bambuisen linnunhäkin luona lattialla, pieni lintu häkissä, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://samblog.seattleartmuseum.org/?p=13343, https://www.informationisbeautifulawards.com/showcase/3118-analysis-of-traditional-chinese-bird-cage
 
 ### Hovin metallipeili (`metallipeili`) — kupla 1: esittely
 
 - **Fakta:** Qianlongin kauden suorakaiteisen kupariseospeilin takapuoli jäljittelee han-ajan pronssipeilejä.
 - **Ajoitusraita:** Qing-dynastia, Qianlongin kausi 1736–1795
-- **Kupla:** Huvittunut imettäjä pitelee lähikuvassa ehjää kiillotettua suorakaiteen muotoista metallipeiliä ja kertoo siitä, taustalla puuveistoksia, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Hymyilevä hovimestari esittelee ylpeänä kupariseospeiliä ja sen koristeltua takapuolta, valoisa hovihuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://largeprint.khm.at/en/art-and-aesthetics-from-chinas-forbidden-city/qianlong-marked-rectangular-mirror
 
 ### Hattulaatikko (`hattulaatikko`) — kupla 1: esittely
 
 - **Fakta:** Virkamiehen hattulaatikossa oli tasot kesä- ja talvihatulle sekä lokero hovikaulanauhalle.
 - **Ajoitusraita:** Qing-dynastia, 1800-luku
-- **Kupla:** Tarkka hovin virkamies pitelee avattua ehjää hattulaatikkoa, jossa on tasot ja lokero, ja esittelee sitä ylpeänä, kaiverrettu kaappi taustalla, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Iloinen virkamies esittelee ylpeänä tasoista hattulaatikkoa, kesä- ja talvihattu esillä, lähikuva, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://www.roots.gov.sg/Collection-Landing/listing/1150565
 
 ### Sirkka-astia (`sirkka-astia`) — kupla 7: leikki (pikku-Puyi)
 
 - **Fakta:** Puyi kasvatti sirkkoja ja kastematoja vanhoissa posliinikulhoissa ja -ruukuissa.
 - **Ajoitusraita:** Qing-aika, Puyin lapsuus 1910-luvulla
-- **Kupla:** Pikku-Puyi (8 v) keltaisessa lapsen kaavussa, letti selässä, kyyhöttää lattialla vanhan posliinikulhon luona ja katsoo sirkkaa, hymyilee, päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Iloinen pikku-Puyi (keltainen kaapu, letti, 8 v) kurkistaa naureskellen posliiniseen sirkka-astiaan lattialla, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://archive.org/stream/fromemperortocitizen/fromemperortocitizen_djvu.txt
 
 ### Lasiset go-kivet (`lasiset-go-kivet`) — kupla 7: leikki (pikku-Puyi)
 
 - **Fakta:** Qianlong tilasi lasisia go-kiviä 16 värissä; neljä väriä on säilynyt Taipein palatsimuseossa.
 - **Ajoitusraita:** Qing-dynastia, 1700-luku (Qianlongin kausi)
-- **Kupla:** Pikku-Puyi (keltainen lapsen kaapu, letti, noin 8 v) istuu lattialla ja lajittelee kulhosta ehjiä värillisiä lasisia go-kiviä, ikkunavalo, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Riemukas pikku-Puyi (keltainen kaapu, letti, 8 v) pelaa nauraen värikkäillä lasisilla go-kivillä lattialla, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://theme.npm.edu.tw/exh114/AncientGoCulture/en/page-2.html
 
 ### Zitan-jakkara (`zitan-jakkara`) — kupla 1: esittely
 
 - **Fakta:** Zitan-puuta käytettiin lähinnä Qing-palatsien huonekaluissa; Palace Museumissa niitä on yli 2 800.
 - **Ajoitusraita:** Qing-dynastia, Qianlongin kausi 1736–1795
-- **Kupla:** Riemastunut palvelija esittelee lähikuvassa ehjää pientä, tummaa ja kiiltävää zitan-jakkaraa, avoin hymy, kynttilänvalo, taustalla lakattu kaappi, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Hymyilevä imettäjä esittelee ylpeänä zitan-puista jakkaraa, lähikuva, vaalea huone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://philamuseum.org/collection/object/50220, https://www.rmzxw.com.cn/c/2019-04-17/2330761.shtml
 
 ### Tinakannu (`tinakannu`) — kupla 1: esittely
 
 - **Fakta:** Jiangsun Mudun ja Changshun tinakannuja pidettiin parhaina, ja osa lähetettiin lahjaksi hoville.
 - **Ajoitusraita:** Qing-dynastia, 1644–1911
-- **Kupla:** Hymyilevä imettäjä pitelee lähikuvassa ehjää kiiltävää tinakannua, ilme ihastunut, aurinkoinen piha, taustalla kukkivia pioneja, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Iloinen palvelija esittelee hymyillen kiiltävää tinakannua, innostunut ele, vaalea teehuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://www.rmzxw.com.cn/c/2014-08-19/364934.shtml
 
 ### Hovinaisen hiustanko (`hiustanko-liangbatou`) — kupla 1: esittely
 
 - **Fakta:** Mantšunaisen liangbatou-kampaus kierrettiin litteän tangon ympärille; tanko: norsunluuta, puuta tai metallia.
 - **Ajoitusraita:** Qing-dynastia, 1800-luvun loppu – 1900-luvun alku
-- **Kupla:** Ylväs keisarinnaäiti mantšuasussa pitelee lähikuvassa ehjää norsunluista hiustankoa ja kertoo liangbatou-kampauksesta, silkkiverhot taustalla, realistinen värivalokuva, ei tekstiä kuvaan
+- **Kupla:** Hymyilevä hovinainen mantšuasussa pitelee riemuissaan liangbatou-hiustankoa, lähikuva, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan
 - **Lähteet:** https://en.wikipedia.org/wiki/Liangbatou, https://thingsthattalk.net/en/t/ttt:TypSPU/m/the-coiffure
 
 ## Muistutukset
