@@ -1,0 +1,45 @@
+{
+  "taskNumber": 450,
+  "code": "h10",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:50:16.940285+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: wide oblique North Atlantic, curved nearly level limb y0.40, black space upper ~40%, faint Ireland/Britain strip at far left by limb; streaks cross lower sea on several bearings. Real Atlantic photo shows very thin sharp young trail and nearly invisible broad aging veils; Lisbon source shows crossing trails and diffuse spreading but coastline must not be imported.",
+  "promptSHA256": "fe1130b9afb16a1276efcff0dd4ec44165f1a7a677198073d6d3c9ac59ead71e",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h10/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:51:23.027635+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e94fb58c-3a6e-448c-8341-77da3762c81b.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h10.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h10.png",
+  "nativeSHA256": "3ec7b4b2ec7b14b0ff517b359599e57c834dd39be3e970e07ac9845079e9a695",
+  "deliverySHA256": "43f8545c3cd4de71862e3b05ed5ad690a6402c350d5019d2f991826ba55c199f",
+  "nativeBytes": 2171929,
+  "deliveryBytes": 2172154,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "f78d3e3017f41391908ef574f08d2b102e9369f855f2c985acfd50e1abf878f7",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "contrail-age-reference-with-camera-and-line-regularity-caveats",
+    "photoRealism": "Narrow fresh trails contrast with softer broad feathered older trails and scattered cumulus; some youngest trails remain extremely ruler-straight.",
+    "cameraMatch": "Wide Atlantic look retained but horizon shifted higher than game, around upper third rather than 40%; exact FOV not matched.",
+    "takenFromRealReferences": "Thin bright young trail, very faint aged cirrus, crossing routes and irregular spreading edges.",
+    "invented": "Trail number, positions/ages, wind curvature, cloud layout and far land silhouette; no actual aviation-route or weather reconstruction.",
+    "excludedOverlays": "No visible frame/interface/text/point markers or spacecraft.",
+    "metadataLabel": "havainnekuva"
+  }
+}
