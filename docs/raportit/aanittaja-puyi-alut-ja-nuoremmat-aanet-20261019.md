@@ -36,3 +36,15 @@ Omistajan 11.02: "nykyinen on hyvä, mutta saisi kuulostaa vielä nuoremmalle la
 - Kirjaston 8 ääntä × koelause (`[shouting] [panicked] ` + valittu lause ≈ 129 mrk) = **~1 030 mrk**, 8 ottoa. Jos omistaja haluaa kokeilla muulla kuin 102 mrk -lauseella: arvio 8 × (23 + lauseen pituus).
 - Remix (9) + Design (10): esikuuntelu 3 kpl kutsua kohti, teksti ≥ 100 mrk → ~300 + ~300 mrk (laskutus tarkentuu ensimmäisessä kutsussa; ElevenLabs ei ilmoita ennen); jos jompikumpi tuottaa kelvollisen, tallennus + koe (129 mrk) + mahdollinen lisäsuoritus.
 - **Pyydettävä lupa: enintään 2 000 mrk, TASAN 10 ehdokasta** (8 kirjaston ääntä × 1 otto + remix 1 kutsu + design 1 kutsu, jälkimmäiset kaksi vain jos eivät kaadu turvaestoon; ylijäämä jää käyttämättä). Ei jälkisäätöä.
+
+### Näytelinkit (ElevenLabsin julkiset esikuuntelut, ei generointia)
+| # | nimi | esikuuntelu |
+|---|---|---|
+| 1 | Quang Anh - Bright, Brilliant | https://storage.googleapis.com/eleven-public-prod/database/workspace/19a6194baba6471cac0389856da8679e/voices/atemG3csutMIyK7AbS5c/le6ChpnpE9yFAeerzFYl.mp3 |
+| 2 | Donnel - Inviting, Witty, and Friendly | https://storage.googleapis.com/eleven-public-prod/database/workspace/00d3e426a4ec48cda2413d7038347603/voices/FSuckdZNjSzYsEkK5aKN/BLJNBSsZVOOUgXgSxlbu.mp3 |
+| 3 | Piku - Expressive Kid Character | https://storage.googleapis.com/eleven-public-prod/database/workspace/ed9b05e6324c457685490352e9a1ec90/voices/EeQEodFZVtBkjtgK3HBc/hMAP6LoA4398mWo70lu0.mp3 |
+| 4 | Munni - Animated Kid Character | https://storage.googleapis.com/eleven-public-prod/database/workspace/ed9b05e6324c457685490352e9a1ec90/voices/VOGEEZj2Kly5dP9LrQy8/ZpEWx63YWxhcmNpYOe4t.mp3 |
+| 5 | Gudiya - Innocent Kid Narrator | https://storage.googleapis.com/eleven-public-prod/database/workspace/ed9b05e6324c457685490352e9a1ec90/voices/e3FEEanj39p8QCSMe8iV/va8c2AlxrEdmpXVs0gq0.mp3 |
+| 6 | Mithi - Moral Kids Stories Character | https://storage.googleapis.com/eleven-public-prod/database/workspace/ed9b05e6324c457685490352e9a1ec90/voices/MIl0Flub6Sc9KSkX2A42/lVgyczia8hhSTuOf4Gh6.mp3 |
+| 7 | Kavya - Expressive Kid Narrator | https://storage.googleapis.com/eleven-public-prod/database/workspace/ed9b05e6324c457685490352e9a1ec90/voices/uyv82ARGSiPieXDxTMOc/NjKuGiXix5B4d2Hdb374.mp3 |
+| 8 | Kavya - Cute & Engaging Character | https://api.us.elevenlabs.io/v1/voices/bA58y3FqVI6b6gTNh0oT/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJjdXN0b20iLCJ3b3Jrc3BhY2VfaWQiOiJlZDliMDVlNjMyNGM0NTc2ODU0OTAzNTJlOWExZWM5MCIsImZpbGVuYW1lIjoiTnhoSXlDVll4VktMdDFXeE81T0kubXAzIiwidGltZXN0YW1wIjoxNzkyMzg5NjAwMDAwMDAwfQ%3D%3D |
