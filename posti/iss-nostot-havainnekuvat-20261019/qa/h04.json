@@ -1,0 +1,10 @@
+{
+  "personallyInspectedNative": true,
+  "visualDisposition": "reference-with-inferred-color-scale-and-cloud-geometry",
+  "photoRealism": "Irregular natural cloud/ash microstructure, soft sunlight and subdued ocean; no apparent plastic or repeated pattern.",
+  "cameraMatch": "Huge partially cropped umbrella and curved far edge at upper-third broadly follow game; lower central bulge added from real reference. Exact FOV/scale not calibrated.",
+  "takenFromRealReferences": "GOES turbulent overshoot dome, layered umbrella and uneven concentric rings; next-day ISS atmospheric softness.",
+  "invented": "Color from grayscale source interpreted; exact 15 January plume snapshot, 500 km diameter and ring altitude not validated. Next-day ISS source is not same event instant.",
+  "excludedOverlays": "No frame, UI, text, logos or stars.",
+  "metadataLabel": "havainnekuva"
+}

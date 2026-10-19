@@ -1,0 +1,45 @@
+{
+  "taskNumber": 444,
+  "code": "h04",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:41:43.838243+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: enormous umbrella cloud cropped by left/right/bottom, far curved edge reaches y~0.28 at center, open blue ocean above; no Earth limb visible. GOES grayscale reference supplies turbulent raised center, concentric uneven spreading rings and shadow; next-day ISS supplies desaturated haze/scale only, not same instant or camera.",
+  "promptSHA256": "173b420e375128f15ce79f4b4ece1b394b0833b4a842b5a3197402f8097824a9",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h04/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:42:54.930789+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ea46546c-f414-4fcf-9334-60459d53b317.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h04.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h04.png",
+  "nativeSHA256": "1dce78dc58388bcb12e030d94a0c92ab1133d9050994a0a6ea1890e220629ad0",
+  "deliverySHA256": "7b2d7aa68a5051d001ca82967bb295ef36a66cc7c83163b8461d58c5ab1310e5",
+  "nativeBytes": 2559157,
+  "deliveryBytes": 2559382,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "4487777fcd9ae8a263b275d7073741ad1a5c7c6770ef361fa283298ebe1df10c",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "reference-with-inferred-color-scale-and-cloud-geometry",
+    "photoRealism": "Irregular natural cloud/ash microstructure, soft sunlight and subdued ocean; no apparent plastic or repeated pattern.",
+    "cameraMatch": "Huge partially cropped umbrella and curved far edge at upper-third broadly follow game; lower central bulge added from real reference. Exact FOV/scale not calibrated.",
+    "takenFromRealReferences": "GOES turbulent overshoot dome, layered umbrella and uneven concentric rings; next-day ISS atmospheric softness.",
+    "invented": "Color from grayscale source interpreted; exact 15 January plume snapshot, 500 km diameter and ring altitude not validated. Next-day ISS source is not same event instant.",
+    "excludedOverlays": "No frame, UI, text, logos or stars.",
+    "metadataLabel": "havainnekuva"
+  }
+}
