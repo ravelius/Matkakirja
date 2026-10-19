@@ -1,0 +1,117 @@
+{
+  "version": "v1",
+  "createdAt": "2026-10-19T19:47:27.613387+00:00",
+  "taskNumber": 689,
+  "correctionTask": 690,
+  "prioritySource695": {
+    "path": "posti/paatoimittaja-codex-yojarjestys-juoksupeli-20261019.md",
+    "commit": "971935332ba27953178bbba994eb69225dff50b5",
+    "blob": "e11cbe84a8f2a942600a6a0d4626eb55ef74ba43",
+    "sha256": "d1bdfa12c86210e576bf345b1fd6d128c1e57500364d4958e03365a7a2e8755c",
+    "readInFull": true,
+    "readAt": "2026-10-19T19:45:25.736640+00:00"
+  },
+  "status": "FIRST-PROTOTYPE-QA-RESTRICTIONS-OPEN",
+  "final360QAPass": false,
+  "knownLimitations": [
+    "Visible vertical sky wrap seam at South x0/W",
+    "Low-alpha hidden RGB edge colors in skyline require correct alpha filtering/mipmap treatment; independent source-over composites do not show the raw-view neon effect",
+    "Game integration and Unity skybox orientation not tested"
+  ],
+  "sky": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v1/taivas-4096x2048.png",
+    "dimensions": [
+      4096,
+      2048
+    ],
+    "sha256": "32ca40550e27a00ec61e7ea79c848840ffa03dcb88a9adba85edcfb7858088f8",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/juoksupeli-taivas-only-attempt001.png",
+    "nativeDimensions": [
+      1774,
+      887
+    ],
+    "nativeSHA256": "a4235426480d4bd8100d6b9e922c417510e820b732af82216a1106a5fbaf98ae",
+    "technicalUpscale": true,
+    "nativeClaimedAs4096": false,
+    "wholeFrame": true,
+    "horizonYpx": 1024,
+    "horizonIsGeometricReferenceNotPaintedHardLine": true,
+    "projection": "equirectangular360x180",
+    "sRGBInterpretation": true,
+    "HDR": false
+  },
+  "skyline": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v1/siluettinauha.png",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "sha256": "9bf121241456a293f9a68bcb82720adf18b3368dd107d02806920f3bbd87e9e3",
+    "actualNativeRGBA": true,
+    "alphaPreservedByteExact": true,
+    "upscale": false,
+    "transparentBackground": true,
+    "northXpx": 1086,
+    "receiverOwnsFogBlend": true,
+    "notAPreciseArchaeologicalOrGameRuntimeGeometryClaim": true,
+    "alphaEdgeQualification": "Cyan/magenta/red outliers measured at alpha<=2/255; not a confirmed visible fringe in standard alpha composition"
+  },
+  "coordinates": {
+    "pixelOrigin": "top-left; x right, y down",
+    "azimuthAtNormalizedX": "(180+360*u) mod360",
+    "elevationAtNormalizedY": "90-180*v",
+    "azimuthClockwiseFromNorth": true,
+    "leftAndRight": "South180",
+    "quarter": "West270",
+    "center": "North0/Jingshan in skyline",
+    "threeQuarter": "East90",
+    "worldConventionProposal": {
+      "up": "+Y",
+      "north": "+Z",
+      "east": "+X"
+    },
+    "worldConventionNotRuntimeVerified": true
+  },
+  "sun": {
+    "source": "visible painted sun disk, QA upper-arc pixel fit",
+    "nativePixelCenter": [
+      317.4,
+      355.7
+    ],
+    "nativeImageDimensions": [
+      1774,
+      887
+    ],
+    "exportPixelCenter": [
+      732.8468996617812,
+      821.27801578354
+    ],
+    "azimuthDeg": 244.41,
+    "elevationDeg": 17.817,
+    "estimatedAngularUncertaintyDeg": 0.4,
+    "promptTargetNotClaimedAsActual": {
+      "azimuthDeg": 250,
+      "elevationDeg": 20
+    },
+    "directionTowardSunXYZ": [
+      -0.8586521304915606,
+      0.30598380728150737,
+      -0.41120606571865775
+    ],
+    "directionOfIncomingRaysXYZ": [
+      0.8586521304915606,
+      -0.30598380728150737,
+      0.41120606571865775
+    ],
+    "notAnAstronomicalDateCalculation": true
+  },
+  "actualImageCallsForThisVersion": 2,
+  "oldCombinedAttempt001ActualCalls": 0,
+  "wholeNewGenerationsOnly": true,
+  "recipient": "Valoseppä",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "refinementInProgress": true
+}

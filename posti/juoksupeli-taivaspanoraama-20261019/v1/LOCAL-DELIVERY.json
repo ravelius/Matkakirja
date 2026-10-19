@@ -1,0 +1,34 @@
+{
+  "at": "2026-10-19T19:47:27.613387+00:00",
+  "physicalT7Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v1",
+  "firstPrototypePersistedAndByteVerified": true,
+  "files": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v1/taivas-4096x2048.png",
+      "bytes": 4359457,
+      "sha256": "32ca40550e27a00ec61e7ea79c848840ffa03dcb88a9adba85edcfb7858088f8"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v1/siluettinauha.png",
+      "bytes": 566211,
+      "sha256": "9bf121241456a293f9a68bcb82720adf18b3368dd107d02806920f3bbd87e9e3"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v1/metadata.json",
+      "bytes": 3962,
+      "sha256": "965e4348f28ff79fd6a210236d2b45871164a666e2a319bd4be9546bf4e7c7c1"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v1/esikatselu.png",
+      "bytes": 1256228,
+      "sha256": "8f8c27f40d324abd3253e84e4be052a79c0c40c0002e00df6a2f779486d9b5f1"
+    }
+  ],
+  "deliveryScope": "physicalT7 assets; notification separately to mailbox",
+  "externalNotificationSent": false,
+  "finalQAPass": false,
+  "refinementInProgress": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
