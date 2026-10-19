@@ -91,3 +91,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   PT 09.3x); huudahdus = ÄÄNI (ei tekstinä; äänet odottavat omistajan lupaa, nyt RikkoRepliikki vain lokiin). Kuvat Codexilta polkuun
   Resources/JuoksuV4/esineet/<id> (.kupla = kuvaus Codexille). Jadepersikan poiminta.1–2 (Puyin repliikit) samoin ääntä odottamassa.
 - Simuvuoro siirtyi ~10.40 (JU), käännös d752eda14; PK ajaa videot → PT.
+- 09.38: juoksupeli-202 uusin **d09b61e98** (SK:n päivitetyt avaimet f1c54a8d2: huudot ≤ 39, .dynastia/.vuosi; kuvateksti "dynastia · vuosi").
+  JU:lle lähetetty simuvuoroon ~10.40 (d752eda14 kelpaa, jos uusi ei ehdi).
