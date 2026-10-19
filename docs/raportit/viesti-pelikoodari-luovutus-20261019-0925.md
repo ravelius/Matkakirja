@@ -114,3 +114,5 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
   bd71ba510 SK:n 51 esinettä + 30 yleishuutoa (26d55c8a5). tarkista.sh rc 0, 630/630. Huutoraja testissä ≤ 60 (ääni); SK:lle 40 merkin huuto.
 - 10.14: **b1587311e** tason 2 aarteet (10 harmaata, Aarrepaikat osat 26–37, SK:n nimet JuoksuEsineet.Aarteet); 72c2805e1 SK 31e967343.
   ODOTTAA: KK/omistaja yhteisestä Tekstitys-asetuksesta (ehdotus: MuseoSovitin.TekstitysPaalla rattaaseen, huuto sen kaistaleelle) – ei toteuteta ennen vastausta.
+- 10.29: **0956ff99f** laineilu 0,7 s (omistaja 10.2x) – ODOTTAA hyväksyntää (esikatselu muistokupla/kupla-laineilu-07.mp4); versiot (kupla, huuto):
+  .versio.<n>.kupla/.huuto, kuva esineet/<id>-<n>; JuoksuVersio, RepliikkiValitsin.ValitseVersio, RikkoVersio → kupla.Nayta(e, versio).
