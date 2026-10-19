@@ -1,4 +1,4 @@
-# Lavastajan (ent. Linnanrakentaja) luovutus 19.10.2026 klo 09.0x (Opus, medium)
+# Lavastajan (ent. Linnanrakentaja) luovutus 19.10.2026 klo 08.56 (Opus, medium)
 
 Edellinen: `viesti-linnanrakentaja-luovutus-20261018-iltapaiva.md` (368de7369). Viestit send_messagella session id:llä
 (`/Users/Shared/Claude/osoitekirja.md`, tilinvaihto gmail-tilille 19.10.); PT:lle enintään 3 riviä, polut absoluuttisina. Ei käynnissä olevia ajoja.
