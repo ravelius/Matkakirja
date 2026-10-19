@@ -28,6 +28,9 @@ Kuvat + HAVAINNOT `_valmiit/rijks-kehyssavy-204/`. **PT kuittasi 16.3x junaan 20
 ympäristö 0,45 kullansävyisenä; QA "museo nlkiilto haja kiilto karheus ymp [kultaymp]". JU:lta käännös pyydetty (app `_tyo/linnanrakentaja/kehyskiilto-204-app`),
 ajo `ajo-kehyskiilto-204.zsh <app>`: ennen/jälkeen/vahva samalla kulmalla + lähikuvat; skenaariossa "museo tauko" saapumisen jälkeen
 (SK-C-6 osui Juutalaismorsiameen, koska kertojan 34 s:n jälkeen kierros eteni). Valitse paras → pari PT:lle (3 riviä).
+  **17.5x kierros 1 (app d025cf2ed, lokit/todistus-kehyskiilto-204-a-20261019-1745):** SK-C-6 osui oikein (tauko toimii). Kiilto EI näkynyt:
+  karheus 0,32 = kapea heijastus vain profiilin kaarien viivoihin, litteä sivu vain tummui (141 → 132 → 128). **v2 1e1efa157:** karheus 0,5,
+  haja 0,55, täytevalo _Tayte 1 (Louvren malli); nlkiilto-komennon 7. parametri = täyte. JU:lta uusi käännös pyydetty samaan app-polkuun.
 **OLAVINLINNA v49b (piste 86):** merkit.json v44 + v44-nyky: reitti:pelaaja-86 → (−37,214; 13,4; −9,21) (seinävara 0,40, tikkaat 0,85, ovi 1,62 m;
 ennen-v49b/ tallessa). Vienti `vie_v49b.zsh` käynnissä 16.23 (worktree `wt/linnanrakentaja-linna-v45k` palautettu), loki `_tyo/linnanrakentaja/vie-v49b.log`
 → **VIETY 16.5x: pala 1499 a36f4199985ef096, nyky 9c0897bec9044c1f** (v45k 1c69c4c43 / c0abe3769); Projektisepälle (kiinnitys + botti) ja PT:lle ilmoitettu.
