@@ -1916,3 +1916,7 @@ Omistajan kortti KK:ssa (kaikki suositukset): Afrikka → Kongon kuninkaan kruun
 ## PAATOKSET 19.10.2026 klo 16.43: Isoisän uneen Mantan smaragdi (19.10.2026 klo 16.44)
 
 Omistajan kortti KK:ssa: Mantan smaragdi uneen (Suositus) = unen teksti kirjoitetaan uudelleen, kertojan repliikki äänitetään uudelleen ja Codex tekee smaragdista unikuvan. Uni ja luettelo pysyvät yhtenäisinä. Raamattu 2.159 päivitetty.
+
+## PAATOKSET 19.10.2026 klo 17.05: Olavinlinna tauolle (19.10.2026 klo 17.06)
+
+Omistaja KK:ssa sanatarkasti: "Olavin linnan voi laittaa toistaiseksi tauolle, jos se nopeuttaa muiden projektien kehitystä." PT ja KK: ehto täyttyy (käännös- ja simuvuorot sekä Codex ovat pullonkaulat). Linnaan ei uusia eriä, käännöksiä, simuja eikä Codex- tai Tripo-tilauksia; tila tallennetaan docs/raportit/olavinlinna-valmiiksi-lista-20261019.md:hen, jotta työ jatkuu samasta kohdasta. Purkaa 19.10. klo 08.32 tauon purun. Linna ei ole junan 204 ehto.
