@@ -1,0 +1,112 @@
+{
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/juoksupeli-taivas-only-attempt005.png",
+  "sha256": "24413224c06310b7a38387ecf39120f544ca9dec54afd97b77c68dd23709d0c8",
+  "dimensions": [
+    1774,
+    887
+  ],
+  "technicalNativePass": true,
+  "skyOnlyPaintedContentPass": true,
+  "visibleAbnormalWrapSeam": false,
+  "visualWrapSeamPass": true,
+  "visualPolesPass": true,
+  "visual360ProjectionPass": true,
+  "seamlessCertifiedInRenderer": false,
+  "engineAcceptance": "NOT_TESTED",
+  "status": "PASS_VISUAL_WRAP_AND_POLES_IN_QA_PROJECTIONS; RECEIVER_ENGINE_RENDER_TEST_OPEN",
+  "personallyInspected": [
+    "native original-size",
+    "wrap strip",
+    "128px native seam strip",
+    "UV78 sphere projections including both poles",
+    "sun QA crop"
+  ],
+  "evidence": [
+    "agent-sky005-wrap-strip.png",
+    "agent-sky005-sphere-projections.png",
+    "agent-sky005-seam-native-strips.png",
+    "agent-sky005-sun-crop.png"
+  ],
+  "seamMAE": 0.8124765157699585,
+  "seamMaximumChannelDifference": 3.0,
+  "seamP95ChannelDifference": 2.0,
+  "comparedTo004": "004 visible vertical shade seam and cloud/horizon concentration removed. Tiny1-3LSB residual color/grain variation exists but is not an abnormal visible join in normal sphere projection. Nonzero metrics alone do not establish rejection.",
+  "projectionConvention": {
+    "leftAndRightAzimuthDeg": 78,
+    "centerAzimuthDeg": 258,
+    "northU": 0.7833333333333333,
+    "azimuthFormula": "(78+360*u)mod360",
+    "elevationFormula": "90-180*v"
+  },
+  "poles": "Calm uniform-color polar areas; no conspicuous radial pinching fan as in003. Slight natural low-amplitude color/grain variation remains.",
+  "mist": "No hard horizon or ground boundary; cloud group centered away from wrap and poles. Some cloud paint extends just below geometric H/2 before fading into the uniform haze-colored field.",
+  "sun": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/juoksupeli-taivas-only-attempt005.png",
+    "sourceSHA256": "24413224c06310b7a38387ecf39120f544ca9dec54afd97b77c68dd23709d0c8",
+    "nativeDimensions": [
+      1774,
+      887
+    ],
+    "nativeCenterApprox": [
+      887.8507558585344,
+      348.9473570549781
+    ],
+    "nativeDiskBBoxApproxXYXY": [
+      865.2067881450178,
+      326.30338934146147,
+      910.494723572051,
+      371.59132476849476
+    ],
+    "azimuthDegApprox": 258.17264493183336,
+    "elevationDegApprox": 19.18768402491989,
+    "centerAt4096x2048Approx": [
+      2049.9643156688594,
+      805.6867950942449
+    ],
+    "uncertaintyNativePixelsConservative": 2,
+    "uncertaintyAzimuthDegApprox": 0.40586245772266066,
+    "uncertaintyElevationDegApprox": 0.40586245772266066,
+    "horizonYNative": 443.5,
+    "horizonYTarget2048": 1024,
+    "leftAzimuthDeg": 78,
+    "convention": "az=(78+360*x/W)mod360; el=90-180*y/H",
+    "method": {
+      "personalFullNativeAndSunCropInspection": true,
+      "upperVisibleDiskArcCircleFit": true,
+      "thresholdRGBMinimum": [
+        250,
+        230,
+        125
+      ],
+      "arcYRows": [
+        327,
+        346
+      ],
+      "xSearchROI": [
+        850,
+        926
+      ],
+      "fitPointCount": 40,
+      "fitRMSPixels": 0.2373457223700064,
+      "diskRadiusNativePixels": 22.64396771351662,
+      "diskLooksWholeNotCloudOccluded": true,
+      "thresholdSensitivity": "Higher green threshold235 yields center887.924/349.229; difference<0.3px; conservative uncertainty2px retained."
+    },
+    "worldDirectionTowardSunIfNorthPlusZAndEastPlusX": [
+      -0.9243960923028969,
+      0.32866364136597914,
+      -0.19357705282183962
+    ],
+    "gameMappingUnverified": true,
+    "promptNotClaimedAsActual": true,
+    "differentFromSky004AndV1": true,
+    "checkedAt": "2026-10-19T20:08:54.556149+00:00",
+    "sourceUnchanged": true
+  },
+  "renderTestPerformed": false,
+  "target4096ExportIndependentlyChecked": false,
+  "nativeIsTarget4096": false,
+  "qaAgentGenerationCalls": 0,
+  "productionEdits": 0,
+  "sourceUnchanged": true
+}

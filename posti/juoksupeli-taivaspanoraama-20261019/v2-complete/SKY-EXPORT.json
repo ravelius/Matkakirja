@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-19T20:09:29.338771+00:00",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/juoksupeli-taivas-only-attempt005.png",
+  "nativeDimensions": [
+    1774,
+    887
+  ],
+  "nativeSHA256": "24413224c06310b7a38387ecf39120f544ca9dec54afd97b77c68dd23709d0c8",
+  "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/taivas-4096x2048.png",
+  "exportDimensions": [
+    4096,
+    2048
+  ],
+  "exportSHA256": "a1967021cb6059a133df1ae61fdfa9e1cc2fbf077bfacb89559dbb85ac2eb02f",
+  "method": "Whole-frame LANCZOS technical resize only",
+  "upscaled": true,
+  "nativeResolutionNot4096": true,
+  "noContentEdits": true,
+  "noSeamRetouch": true,
+  "nativeBytesUnchanged": true
+}

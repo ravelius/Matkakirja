@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-19T20:09:29.338771+00:00",
+  "scope": "PhysicalT7v2correctedskyand8192RGBAassemblyplus4nativepanelsandmetadata",
+  "files": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/taivas-4096x2048.png",
+      "bytes": 1856936,
+      "sha256": "a1967021cb6059a133df1ae61fdfa9e1cc2fbf077bfacb89559dbb85ac2eb02f"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/siluettinauha.png",
+      "bytes": 2096026,
+      "sha256": "91d4d9432a5cb8b27d2316192c5b36e442cbd749d3cdc3fc6d3160dc39755712"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-1.png",
+      "bytes": 600725,
+      "sha256": "308d55e27b2649d81d0fbb0661f9219be3130489d30a04426c0e59ecc79a0729"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-2.png",
+      "bytes": 563501,
+      "sha256": "98f9f36279b5ddc14ae9fff349019b35223baa62e74395f3503c33f6d6f9de63"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-3.png",
+      "bytes": 502891,
+      "sha256": "2bf2cac53388b829781655373f73f9c5d7c14766371f8945ecec150014dc9699"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-4.png",
+      "bytes": 509884,
+      "sha256": "542bf6db3dfd3921929f4c4ea3a3ba4102f05845c17a917a42dee84b72cb5b21"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/metadata.json",
+      "bytes": 19003,
+      "sha256": "0433c8185f4d26d0ce8ef30c8e80e460f46e76d154be2c2f9207bc3143fb65c0"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/ASSEMBLY.json",
+      "bytes": 3668,
+      "sha256": "f627d93fcacfdba64fd568f8953df07368618fd547f836acf051ac767cf8a7e6"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/SKY-EXPORT.json",
+      "bytes": 818,
+      "sha256": "c372eef593f30c6065114a6bfe81ea79c399f57fa012f3cf187b0dafdc29fbdb"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/esikatselu.png",
+      "bytes": 1270916,
+      "sha256": "bb9aa8f3b3cab3d45b63742abdebfc0a77a5f428d8b1563d1684658500d196fe"
+    }
+  ],
+  "allFilesByteVerified": true,
+  "localComplete": true,
+  "mailNotificationPending": true,
+  "selectedNewNativeImages": 5,
+  "familyActualGenerationCalls": 11,
+  "ownImageProductionComplete": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "nativePanelsPTReceived": true,
+  "scope701Applied": true
+}

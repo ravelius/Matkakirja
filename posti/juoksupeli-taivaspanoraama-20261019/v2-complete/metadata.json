@@ -1,0 +1,458 @@
+{
+  "at": "2026-10-19T20:09:29.338771+00:00",
+  "status": "v2-all-image-production-and-local-technical-files-complete-awaiting-mailbox-notification",
+  "taskNumbers": [
+    689,
+    698,
+    699
+  ],
+  "physicalT7Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2",
+  "panels": [
+    {
+      "file": "nauha-1.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-1.png",
+      "direction": "north",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bytes": 600725,
+      "sha256": "308d55e27b2649d81d0fbb0661f9219be3130489d30a04426c0e59ecc79a0729",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-north.png",
+      "nativeByteExact": true,
+      "azimuthStartDeg": 313,
+      "azimuthEndDeg": 47,
+      "azimuthSpanClockwiseDeg": 94,
+      "centerAzimuthDeg": 0,
+      "overlapWithEachNeighborDeg": 4,
+      "elevationLowerDeg": -10.32182320441989,
+      "elevationUpperDeg": 21.011510128913443,
+      "horizonYFraction": 0.6705801104972375,
+      "horizonNativeY": 485.5,
+      "northIsJingshanCenter": true,
+      "individualNormalCompositeQAPass": true,
+      "neighborJoinQAPending": false,
+      "firstDeliveryHorizonYFraction": 0.65,
+      "firstDeliveryHeightBoundsWereDesignEstimate": true,
+      "horizonRegistrationMethod": "Measured lower dense architectural baseline, aligned by vertical translation only in assembled export; native pixels unchanged",
+      "neighborJoinVisualQAPass": true
+    },
+    {
+      "file": "nauha-2.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-2.png",
+      "direction": "east",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bytes": 563501,
+      "sha256": "98f9f36279b5ddc14ae9fff349019b35223baa62e74395f3503c33f6d6f9de63",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-east.png",
+      "nativeByteExact": true,
+      "azimuthStartDeg": 43,
+      "azimuthEndDeg": 137,
+      "azimuthSpanClockwiseDeg": 94,
+      "centerAzimuthDeg": 90,
+      "overlapWithEachNeighborDeg": 4,
+      "elevationLowerDeg": -11.620165745856353,
+      "elevationUpperDeg": 19.71316758747698,
+      "horizonYFraction": 0.6291436464088398,
+      "horizonNativeY": 455.5,
+      "northIsJingshanCenter": false,
+      "individualNormalCompositeQAPass": true,
+      "neighborJoinQAPending": false,
+      "firstDeliveryHorizonYFraction": 0.65,
+      "firstDeliveryHeightBoundsWereDesignEstimate": true,
+      "horizonRegistrationMethod": "Measured lower dense architectural baseline, aligned by vertical translation only in assembled export; native pixels unchanged",
+      "neighborJoinVisualQAPass": true
+    },
+    {
+      "file": "nauha-3.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-3.png",
+      "direction": "south",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bytes": 502891,
+      "sha256": "2bf2cac53388b829781655373f73f9c5d7c14766371f8945ecec150014dc9699",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-south.png",
+      "nativeByteExact": true,
+      "azimuthStartDeg": 133,
+      "azimuthEndDeg": 227,
+      "azimuthSpanClockwiseDeg": 94,
+      "centerAzimuthDeg": 180,
+      "overlapWithEachNeighborDeg": 4,
+      "elevationLowerDeg": -11.01427255985267,
+      "elevationUpperDeg": 20.31906077348066,
+      "horizonYFraction": 0.6484806629834254,
+      "horizonNativeY": 469.5,
+      "northIsJingshanCenter": false,
+      "individualNormalCompositeQAPass": true,
+      "neighborJoinQAPending": false,
+      "firstDeliveryHorizonYFraction": 0.65,
+      "firstDeliveryHeightBoundsWereDesignEstimate": true,
+      "horizonRegistrationMethod": "Measured lower dense architectural baseline, aligned by vertical translation only in assembled export; native pixels unchanged",
+      "neighborJoinVisualQAPass": true
+    },
+    {
+      "file": "nauha-4.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-4.png",
+      "direction": "west",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bytes": 509884,
+      "sha256": "542bf6db3dfd3921929f4c4ea3a3ba4102f05845c17a917a42dee84b72cb5b21",
+      "nativeOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-west.png",
+      "nativeByteExact": true,
+      "azimuthStartDeg": 223,
+      "azimuthEndDeg": 317,
+      "azimuthSpanClockwiseDeg": 94,
+      "centerAzimuthDeg": 270,
+      "overlapWithEachNeighborDeg": 4,
+      "elevationLowerDeg": -11.187384898710865,
+      "elevationUpperDeg": 20.14594843462247,
+      "horizonYFraction": 0.6429558011049724,
+      "horizonNativeY": 465.5,
+      "northIsJingshanCenter": false,
+      "individualNormalCompositeQAPass": true,
+      "neighborJoinQAPending": false,
+      "firstDeliveryHorizonYFraction": 0.65,
+      "firstDeliveryHeightBoundsWereDesignEstimate": true,
+      "horizonRegistrationMethod": "Measured lower dense architectural baseline, aligned by vertical translation only in assembled export; native pixels unchanged",
+      "neighborJoinVisualQAPass": true
+    }
+  ],
+  "projection": {
+    "type": "separate-equirectangular-angular-bands",
+    "azimuthZero": "North; Jingshan center in nauha-1",
+    "azimuthIncreasing": "clockwise toward East",
+    "verticalConvention": "elevation degrees relative to horizon; top positive; bottom negative",
+    "linearAzimuthAndElevationMapping": true,
+    "proposedWorldAxes": {
+      "up": "+Y",
+      "north": "+Z",
+      "east": "+X"
+    },
+    "gameMappingVerified": false
+  },
+  "sun": {
+    "version": "sky005-corrected-v2",
+    "measuredAzimuthDeg": 258.17264493183336,
+    "measuredElevationDeg": 19.18768402491989,
+    "uncertaintyDeg": 0.41,
+    "nativeDiskCenterPx": [
+      887.8507558585344,
+      348.9473570549781
+    ],
+    "exportDiskCenterPx": [
+      2049.9643156688594,
+      805.6867950942449
+    ],
+    "measurement": "Independent fit of visible disk boundary; fitRMS.237px; source native preserved",
+    "measurementReport": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/qa/agent-sky005-sun-measurement.json",
+    "targetIsNotMeasurement": true,
+    "skylineArtLightingTargetAzimuthDeg": 258,
+    "skylineArtLightingTargetElevationDeg": 19,
+    "previousV1": {
+      "azimuthDeg": 244.4,
+      "elevationDeg": 17.8,
+      "appliesOnlyTo": "v1 sky, do not reuse for v2"
+    },
+    "worldDirectionToSunProposal": [
+      -0.9243960923028969,
+      0.32866364136597914,
+      -0.19357705282183962
+    ],
+    "worldDirectionProposalAssumesYupZnorthXeast": true,
+    "incomingDirectionalLightRaysUseNegativeOfToSun": true,
+    "gameWorldMappingNotVerified": true,
+    "measurementReportSHA256": "0f69ea3e2352811da8a8a74e19f0f01a5c082e360fefbd232aba29f0a3713417"
+  },
+  "assembly": {
+    "at": "2026-10-19T20:03:19.638202+00:00",
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/siluettinauha.png",
+    "outputSHA256": "91d4d9432a5cb8b27d2316192c5b36e442cbd749d3cdc3fc6d3160dc39755712",
+    "dimensions": [
+      8192,
+      713
+    ],
+    "mode": "RGBA",
+    "azimuthLeftDeg": 180,
+    "azimuthFormula": "(180+360*u)mod360",
+    "northU": 0.5,
+    "horizonY": 463.45,
+    "horizonYFraction": 0.65,
+    "elevationUpperDeg": 20.366666666666667,
+    "elevationLowerDeg": -10.966666666666665,
+    "effectiveNativePixelsAround360": 8318.297872340425,
+    "outputToNativeScale": 0.984816861059955,
+    "noUpscaling": true,
+    "fourSeparateNewNativeImages": true,
+    "method": "Angular mapping; dense architectural base registration; bicubic resampling of linear-light premultiplied RGBA; 4degree overlap crossfade; periodic output",
+    "noCreativeRetouch": true,
+    "noAlphaThresholdCleanup": true,
+    "sourceNativeBytesUnchanged": true,
+    "panels": [
+      {
+        "file": "nauha-1.png",
+        "direction": "north",
+        "centerAzimuthDeg": 0,
+        "azimuthStartDeg": 313,
+        "azimuthEndDeg": 47,
+        "azimuthSpanClockwiseDeg": 94,
+        "overlapWithEachNeighborDeg": 4,
+        "nativeDimensions": [
+          2172,
+          724
+        ],
+        "nativeSHA256": "308d55e27b2649d81d0fbb0661f9219be3130489d30a04426c0e59ecc79a0729",
+        "registeredHorizonNativeY": 485.5,
+        "registeredHorizonYFraction": 0.6705801104972375,
+        "elevationUpperDeg": 21.011510128913443,
+        "elevationLowerDeg": -10.32182320441989,
+        "sourceVerticalTranslationInOutputPixels": -14.673618784530364
+      },
+      {
+        "file": "nauha-2.png",
+        "direction": "east",
+        "centerAzimuthDeg": 90,
+        "azimuthStartDeg": 43,
+        "azimuthEndDeg": 137,
+        "azimuthSpanClockwiseDeg": 94,
+        "overlapWithEachNeighborDeg": 4,
+        "nativeDimensions": [
+          2172,
+          724
+        ],
+        "nativeSHA256": "98f9f36279b5ddc14ae9fff349019b35223baa62e74395f3503c33f6d6f9de63",
+        "registeredHorizonNativeY": 455.5,
+        "registeredHorizonYFraction": 0.6291436464088398,
+        "elevationUpperDeg": 19.71316758747698,
+        "elevationLowerDeg": -11.620165745856353,
+        "sourceVerticalTranslationInOutputPixels": 14.870580110497258
+      },
+      {
+        "file": "nauha-3.png",
+        "direction": "south",
+        "centerAzimuthDeg": 180,
+        "azimuthStartDeg": 133,
+        "azimuthEndDeg": 227,
+        "azimuthSpanClockwiseDeg": 94,
+        "overlapWithEachNeighborDeg": 4,
+        "nativeDimensions": [
+          2172,
+          724
+        ],
+        "nativeSHA256": "2bf2cac53388b829781655373f73f9c5d7c14766371f8945ecec150014dc9699",
+        "registeredHorizonNativeY": 469.5,
+        "registeredHorizonYFraction": 0.6484806629834254,
+        "elevationUpperDeg": 20.31906077348066,
+        "elevationLowerDeg": -11.01427255985267,
+        "sourceVerticalTranslationInOutputPixels": 1.0832872928177018
+      },
+      {
+        "file": "nauha-4.png",
+        "direction": "west",
+        "centerAzimuthDeg": 270,
+        "azimuthStartDeg": 223,
+        "azimuthEndDeg": 317,
+        "azimuthSpanClockwiseDeg": 94,
+        "overlapWithEachNeighborDeg": 4,
+        "nativeDimensions": [
+          2172,
+          724
+        ],
+        "nativeSHA256": "542bf6db3dfd3921929f4c4ea3a3ba4102f05845c17a917a42dee84b72cb5b21",
+        "registeredHorizonNativeY": 465.5,
+        "registeredHorizonYFraction": 0.6429558011049724,
+        "elevationUpperDeg": 20.14594843462247,
+        "elevationLowerDeg": -11.187384898710865,
+        "sourceVerticalTranslationInOutputPixels": 5.022513812154718
+      }
+    ],
+    "visualJoinQAPending": false,
+    "gameIntegrationVerified": false,
+    "published": false,
+    "visualJoinQAPass": true,
+    "crossQAReport": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/qa/agent-assembled-panel-review.json",
+    "crossQAReportSHA256": "5d39650665b55e26dd1bcef805afd004cd63a275a6c24eb2de95d3a1bf977630",
+    "joinCaveat": "Far rooftops soften slightly at315/135degree overlaps; no visible cut tower or clear duplicated foreground building. Receiver fog/filter/import checks remain separate.",
+    "receiverRequired": false,
+    "supersededAsReceiverRequirementBySource701": true,
+    "preservedPreviouslyDeliveredArtifact": true
+  },
+  "qa": {
+    "nativeBytesVerified": true,
+    "normalAlphaCompositesPersonallyViewedByRoot": true,
+    "crossQAReports": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/qa/agent-panels-east-south-review.json",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/qa/agent-panels-north-west-review.json"
+    ],
+    "nearZeroAlphaHiddenRGBIsNotVisibleNeonFringe": true,
+    "neighborJoinsAndReceiverFogFilteringOpen": false,
+    "sky003StillFailsVisibleWrapQA": true,
+    "neighborJoinVisualQAPass": true,
+    "rootPersonallyViewedAll5NativeJoinCrops": true,
+    "receiverFogFilteringAndRuntimeOpen": true,
+    "softwareSkyWrapAndPolesVisualQAPass": true,
+    "sky004FailsVisibleWrapQA": true,
+    "sky005IsSelected": true,
+    "renderAndGameAcceptanceSeparate": true
+  },
+  "sourceChain": [
+    {
+      "path": "posti/paatoimittaja-codex-juoksupeli-taivaspanoraama-pyynto-20261019.md",
+      "commit": "b230cbc82444d763df1357d6547a9ebc7b76cb70",
+      "blob": "09bf1b681bfc629b31f7081152b12595e8f40f0c",
+      "sha256": "aa1cd9e6429937b182d457490299139cede02d39098488d46ff1bc8cf734ec25",
+      "readInFull": true,
+      "readAt": "2026-10-19T19:34:46.677190+00:00"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-taivas-karkeen-20261019.md",
+      "commit": "df5c02d3ba205a503d82022388eb667e72bc111d",
+      "blob": "eeffdfd50689ff12e90f56d24335a50c1d2bd20c",
+      "sha256": "7e0f1191d7107da6d9d316eaf57742011bd0434cf01f4ffe59361facc063d65a",
+      "readInFull": true,
+      "readAt": "2026-10-19T19:39:08.246133+00:00"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-yojarjestys-juoksupeli-20261019.md",
+      "commit": "971935332ba27953178bbba994eb69225dff50b5",
+      "blob": "e11cbe84a8f2a942600a6a0d4626eb55ef74ba43",
+      "sha256": "d1bdfa12c86210e576bf345b1fd6d128c1e57500364d4958e03365a7a2e8755c",
+      "readInFull": true,
+      "readAt": "2026-10-19T19:45:25.736640+00:00"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-taivas-v1-vastaanotettu-20261019.md",
+      "commit": "ef081eb78b466cb2e3dfb2474424e1f8dcaea89d",
+      "blob": "7225d2e5fa583b9729f58e08fb1cded182d676a2",
+      "sha256": "3f7e3bd121c1ffa31d9c564add2f1ae1bda221242062a966f4796223ebf85a8c",
+      "readInFull": true,
+      "readAt": "2026-10-19T19:57:51.405785+00:00",
+      "taskNumbers": [
+        696,
+        697
+      ]
+    },
+    {
+      "path": "posti/paatoimittaja-codex-taivas-v2-tarkennus-20261019.md",
+      "commit": "fcf4512ac64d826d63d5c3896133b6d2ee7b353a",
+      "blob": "ce88fd0c688a4a6b54e382951b9c76bc0f9e5e44",
+      "sha256": "75cdfd9b957501ce43b77103c835700aa010a7e905d283ddeab60f620e51fde6",
+      "readInFull": true,
+      "readAt": "2026-10-19T19:57:51.405785+00:00",
+      "taskNumbers": [
+        698
+      ]
+    },
+    {
+      "path": "posti/paatoimittaja-codex-taivas-v2-metatieto-20261019.md",
+      "commit": "b9a07ea98a15084b078b155473d60928b2962d94",
+      "blob": "81f5cdb88352e6e793297d205e30fbdad516d27a",
+      "sha256": "2e9c3d7b344852a171a675df08d1c2c28705bb6a324069ca43c0c86bd5838157",
+      "readInFull": true,
+      "readAt": "2026-10-19T19:59:07.985642+00:00"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-nauha-v2-vastaanotettu-20261019.md",
+      "commit": "20c588c13a7245036619ab8465266836f8cf890a",
+      "blob": "40e48d2950f00957719fb8937f4012f587743eab",
+      "sha256": "9edc8fd8ae79851ad7c368e6473f23ea7abc1b11062fd2abe89106b57ce2d918",
+      "readInFull": true,
+      "readAt": "2026-10-19T20:09:50.648174+00:00",
+      "taskNumbers": [
+        700,
+        701
+      ]
+    }
+  ],
+  "receiver": "Valoseppä",
+  "gameIntegrationVerified": false,
+  "published": false,
+  "skylineProductionQAPass": true,
+  "skylineNativeDetails": true,
+  "correctedSkyDelivered": false,
+  "sky": {
+    "file": "taivas-4096x2048.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/taivas-4096x2048.png",
+    "dimensions": [
+      4096,
+      2048
+    ],
+    "sha256": "a1967021cb6059a133df1ae61fdfa9e1cc2fbf077bfacb89559dbb85ac2eb02f",
+    "actualNative": {
+      "at": "2026-10-19T20:09:29.338771+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/juoksupeli-taivas-only-attempt005.png",
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "nativeSHA256": "24413224c06310b7a38387ecf39120f544ca9dec54afd97b77c68dd23709d0c8",
+      "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/taivas-4096x2048.png",
+      "exportDimensions": [
+        4096,
+        2048
+      ],
+      "exportSHA256": "a1967021cb6059a133df1ae61fdfa9e1cc2fbf077bfacb89559dbb85ac2eb02f",
+      "method": "Whole-frame LANCZOS technical resize only",
+      "upscaled": true,
+      "nativeResolutionNot4096": true,
+      "noContentEdits": true,
+      "noSeamRetouch": true,
+      "nativeBytesUnchanged": true
+    },
+    "projection": "full-sphere equirectangular2:1 opaqueRGB PNG",
+    "colorSpace": "sRGB LDR; notHDR lighting capture",
+    "leftAndRightAzimuthDeg": 78,
+    "azimuthFormula": "(78+360*u)mod360",
+    "elevationFormula": "90-180*v",
+    "horizonY": 1024,
+    "horizonYFraction": 0.5,
+    "northU": 0.7833333333333333,
+    "northExportX": 3208.5333333333333,
+    "softwareWrapAndPoleVisualQAPass": true,
+    "renderOrGameQANotPerformed": true,
+    "exactPixelEqualityNotClaimed": true,
+    "wrapPixelMAE255": 0.8124765125892521,
+    "wrapMaxChannelDifference255": 3,
+    "rootPersonallyViewedNativeAndWrapAnd6Projections": true,
+    "noVisibleCloudBreakOrAbnormalToneJoinInNormalQAView": true,
+    "independentQAReportSHA256": "a9a302bc16412158f8d47dd516d186378ba3d7a38a0b79c35b42fff8e1d88a69",
+    "independentQAReportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/qa/agent-sky005-report.json"
+  },
+  "relativeUVMapping": {
+    "skyOriginAzimuthDeg": 78,
+    "skylineOriginAzimuthDeg": 180,
+    "originsDifferByDegrees": 102,
+    "skyNorthU": 0.7833333333333333,
+    "skylineNorthU": 0.5,
+    "receiverMustUseEachTexturesOwnAngularMetadata": true
+  },
+  "latestScopeSource700701": {
+    "path": "posti/paatoimittaja-codex-nauha-v2-vastaanotettu-20261019.md",
+    "commit": "20c588c13a7245036619ab8465266836f8cf890a",
+    "blob": "40e48d2950f00957719fb8937f4012f587743eab",
+    "sha256": "9edc8fd8ae79851ad7c368e6473f23ea7abc1b11062fd2abe89106b57ce2d918",
+    "readInFull": true,
+    "readAt": "2026-10-19T20:09:50.648174+00:00",
+    "taskNumbers": [
+      700,
+      701
+    ]
+  },
+  "nativePanelsPTReceivedAndStyleAccepted": true,
+  "nativePanelPTReceiptCommit": "20c588c13a7245036619ab8465266836f8cf890a",
+  "receiverPreferredSkylineInput": "nauha-1.png through nauha-4.png; receiver assembles in game",
+  "assemblyNoLongerRequiredBySource701": true,
+  "existingAssemblyPreserved": true,
+  "noFurtherAssemblyProduction": true
+}
