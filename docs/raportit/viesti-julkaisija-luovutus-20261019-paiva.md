@@ -20,7 +20,9 @@ korjauksia + erillistä julkaisupyyntöä. Simujono ja käännökset jatkuvat no
 ## 2. SIMUJONO (PT 11.1x: juna 204 ensin; rinnakkaissimut sallittu)
 PK (vuorossa) → VS nostot 4 kierrosta + ennen-video ~32 min (c08cfa898, kun käännetty) → Lavastaja kehysvarjo ~9 min (Punainen
 kabinetti + Kunniagalleria, kun käännetty) → KS kamerakirjoittaja (ks. 3).
-- NUI: Lennä itse be20092ee PERUTTU (omistaja muutti napit 11.40) → NUI lähettää uuden kärjen; omistajan pyyntö → kärkeen.
+- NUI: Lennä itse be20092ee PERUTTU → uusi **a076901ae kääntyy L2:lla** (nohup-irrotettu `nui-lenna-itse-204b.zsh`, loki
+  nui-lenna-itse-204b.log, ~12.00) → juna204-lenna-itse-app. OMISTAJA ODOTTAA → SIMU NYT NUI:lle HETI valmistuttua (iPhone + iPad ~12 min).
+- L1-odottajat (kehysvarjo, PK-mac) PYSÄYTETTY 11.47 → käynnistä ne uudelleen VS c08cfa898:n jälkeen (skriptit valmiina).
 - PK MAC näppäinlento: QA-komennon anto Mac-appiin epäselvä → PK kysyy NS:ltä. mac-kaanna.sh:ssa Unity 6000.3.24f1 (iOS-linjat 6000.7.0b5).
 
 ## 3. VASTAAMATTA
