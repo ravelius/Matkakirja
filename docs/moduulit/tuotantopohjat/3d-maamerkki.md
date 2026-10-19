@@ -13,6 +13,8 @@ Se ei kata pallokierroksen tekstejä (`paakaupungin-avaus.md`), museon sisätilo
 **Uudet mallit Codexille (Raamattu, 3D-MALLIT CODEXILLE, 15.10.2026):** uudet maamerkit tilataan jatkossa Codexilta
 postilaatikon kautta; Claude tekee kytkennän, laattojen viennin ja tarkistukset. Louvre tehtiin vielä Claudella vertailuksi.
 Tämä pohja pätee molempiin: Codexin malli kulkee samat portit (luvut 2.5–2.8 ja valmiin määritelmä).
+Codexin toimituksen tiedostomuoto (GLB, metrit, pivot, luut, mobiilirajat, SHA256SUMS) ja tuontiportti `tools/codex-3d-tarkistus.mjs`:
+`codex-3d-toimitus.md` (19.10.2026).
 
 ## 1. Tuotantoputki ja roolit
 
