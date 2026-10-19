@@ -79,3 +79,9 @@ uusi teksti luetaan pelikuvasta Sonnet-agentilla ennen PT:n kuittausta.
   Kytke natiivi-ui/uni-smaragdi-204:ään: kopioi StreamingAssets/mukana/isoisan-uni-mantan-smaragdi.png (+ .meta DefaultImporter, uusi guid),
   LAHDE.txt-rivi, poista isoisan-uni-el-dorado.png(+meta) ja LAHDE-rivi; tarkista alfa-reunat kuten muut (tyokalut/unikuva.py). Simu `ui aloitus uni`.
   Järjestys PT:n mukaan: aarrevideo ja B3 ensin.
+
+## TILA 17.48 (päivitys)
+- ketju5a VALMIS, SIMU VAPAA annettu JU:lle. Kippi iPhone OK (todistus-kippi-napit-204-iphone-20261019-1740) → PT:lle kerrottu.
+- B3 04d8dc98d PT kuittasi junaan 204 (NS ottaa) ja pyydetty JU:n jonoon (juna204-b3-ipad-app) → SIMU NYT → aja
+  `todistusajo.sh --era b3-vieritys-ipad2 --laite ipad --udid <iPad> --app <app> --sha <kaannos> --haara 04d8dc98d --skenaario SP/b3-vieritys-ipad.txt --nyt`
+  (cd /Users/Shared/Claude/wt/proto-natiivi-ui-b3-ipad-204) → vedon aikainen p50 kehysajat-riveiltä → PT (luku + lokin polku).
