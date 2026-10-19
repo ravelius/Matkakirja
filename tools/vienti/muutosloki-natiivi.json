@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (205)",
+   "paiva": "2026-10-19",
+   "teksti": "Pelien keskeneräisissä on Kielletyn kaupungin juoksupeli: juokse, liu'u ja hyppää palatsin läpi, ja Puyi huudahtaa jokaisesta rikkoutuvasta aarteesta. Kartan nimet väistävät Pulua, kutsua ja avointa korttia, ja iPhonen nostopalkki pysyy rivillä kortin ollessa auki."
+  },
+  {
    "versio": "1.1 (204)",
    "paiva": "2026-10-19",
    "teksti": "ISS:n nopeusvipu kulkee myös taaksepäin, ja kuva otetaan ympyräikkunaan. Valikossa on Aarnin luettelo, Mona Lisan luo kävellään sujuvasti ja Pululta voi kysyä enemmän. Kamera liikkuu pehmeämmin, tekstitys on ⚙:ssa ja kuvien lähteet avautuvat linkkeinä."
