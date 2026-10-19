@@ -1,0 +1,1075 @@
+{
+  "root": {
+    "at": "2026-10-19T20:58:39.867169+00:00",
+    "reviewer": "/root",
+    "decision": "PASS_FOR_HANDOFF_WITH_DOCUMENTED_USE_LIMITS",
+    "materialPairs": 8,
+    "finalMaps": 16,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "personallyViewedFinalRepeatPreviews": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-color-repeat.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-lower-color-repeat.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/grey-stone-base-color-repeat.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/yellow-glazed-ridge-color-repeat.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/yellow-glazed-edge-color-repeat.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/hexi-blue-gold-color-repeat.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/hexi-green-gold-color-repeat.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-gate-9x9-color-repeat.png"
+    ],
+    "personallyViewedFinalPairPreviews": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/hexi-blue-gold-pair.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-gate-9x9-pair.png"
+    ],
+    "finalReviews": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-final-roof-hexi-review.json",
+        "sha256": "3b4135d68abcf5413049c501856a8ff1ef22a1bb83234259b91a69e1aeb27a3c"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-final-wall-stone-review.json",
+        "sha256": "94a508f234b78f1da3888e9630daa494c9098f9afb2c20c6b7df69b026d95f4e"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-final-data-hexi-gate-review.json",
+        "sha256": "b33941ec464842b5ac4841bfd3ca8183c302e03801e96a3c9e5a61c422f17263"
+      }
+    ],
+    "gateStudCount": 81,
+    "gateStudRows": 9,
+    "gateStudColumns": 9,
+    "roughnessIsNewNumericalData": true,
+    "notAlbedoGrayscaleOrInverse": true,
+    "noGeneratedRoughnessCandidateSelected": true,
+    "allNativesPreserved": true,
+    "limitations": [
+      "Hexi and lower-wall variant repeat in U only; Clamp V required.",
+      "Visible-repeat inspection found no clear blocking seam; exact pixel equality or shader/runtime seamlessness is not certified.",
+      "Local relief/highlight/shadow tone remains in generated COLOR; these are artist-authored PBR-style surfaces, not calibrated delit albedo scans.",
+      "Roof glaze scalar values validated; no confident exposed-clay class. Clay target is not a measured claim.",
+      "Roughness is artist parameter data, not measured material calibration."
+    ],
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "independentReviews": [
+    {
+      "at": "2026-10-19T20:55:58.888512+00:00",
+      "reviewer": "/root/memory51_batch_b",
+      "scope": "Independent final1024 COLOR U-repeat review of yellow-glazed-ridge, yellow-glazed-edge-v2, hexi-blue-gold and hexi-green-gold; roof V checks and new roof scalar data verification. No production mutations or calls.",
+      "source": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/sources/paatoimittaja-codex-sokkelo-seinapinnat-20261019.md",
+        "sha256": "03613fa29aeac0e33e345604a33295c9dcf2c6b6e25e534867e2c24c1e282af1",
+        "readInFull": true
+      },
+      "recipe": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/scripts/author_material_data.py",
+        "sha256": "480d034e8f2580f141c8cfd0a39cffeca0542164fcc5cef11b3e85310c8adf06",
+        "readInFull": true,
+        "methodVerified": "New numerical material-class scalar field on final color grid; not generated-roughness retouch or albedo grayscale inversion.",
+        "encoding": "L8, raw byte/255 in [0,1], zero smoother, one rougher, sRGB decoding OFF.",
+        "artistParameterDataNotMeasurement": true
+      },
+      "authoringRecord": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/DATA-AUTHORING.json",
+        "sha256": "37b7aa03bf7be2c62c2097cc91c4040aedee52739da7e80c0c3c288e7592e3b7"
+      },
+      "materials": [
+        {
+          "id": "yellow-glazed-ridge",
+          "colorSHA256": "268bbf9ef2004a6ee5befdce42d776e99f2ea6c71f8560831000492dc431f305",
+          "roughnessSHA256": "8711fafedf8ed17b9391f6f2c6bf78b6cab8a8d5be1a5e6db5d7c770da51c20c",
+          "sourceSHA256": "22dd8a9c8207b7bf524dce8019def8c955cce98f52eada4330f22e90f1b18905",
+          "colorHashMatchesMaterial": true,
+          "roughHashMatchesMaterial": true,
+          "nativeHashMatchesMaterial": true,
+          "colorDimensions": [
+            1024,
+            1024
+          ],
+          "colorMode": "RGB",
+          "roughnessDimensions": [
+            1024,
+            1024
+          ],
+          "roughnessMode": "L",
+          "colorEqualsWholeframeNativeResize": true,
+          "dataMin": 0.20392156862745098,
+          "dataMax": 0.8588235294117647,
+          "dataMedian": 0.2196078431372549,
+          "wrapUse": "RepeatU/RepeatV",
+          "edgeMetrics": {
+            "U_join_MAE": 11.919270833333334,
+            "usualHorizontalAdjacentMAE": 5.4159488025415445,
+            "U_16pxStripMeanDifferenceRGB": [
+              47.76141357421875,
+              44.0081787109375,
+              14.9913330078125
+            ],
+            "V_join_MAE": 7.888671875,
+            "usualVerticalAdjacentMAE": 4.417902563945911
+          },
+          "independentRecipeVerification": {
+            "maxByteDifference": 0,
+            "differingPixelCount": 0,
+            "withinOneQuantizationLevel": true,
+            "glazeBase": 0.22,
+            "clayTarget": 0.67,
+            "jointTarget": 0.85,
+            "encoding": "byte/255 linear scalar; no sRGB decode",
+            "maxExposedClayWeight": 0.8295227259272657,
+            "clayWeightAboveHalfPixels": 66,
+            "clayWeightAbove85Pixels": 0,
+            "jointWeightAbove85Pixels": 49
+          },
+          "uSeamQaPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-ridge-U-seam.png",
+          "uSeamQaPreviewSHA256": "ba1e378a3f989bcf1e270e3d44293ad2a657fd02a831a897680b84fbc04ab1b7",
+          "personallyInspectedFinalColor": true,
+          "personallyInspectedColorRepeat": true,
+          "personallyInspectedUWrapPreview": true,
+          "definiteBlockingUStopperObserved": false,
+          "uRepeatVisualVerdict": "PASS_WITH_LIMITATIONS",
+          "exactOppositeEdgePixelMatchClaimed": false,
+          "productionEditsMadeByReviewer": false,
+          "personallyInspectedVWrapPreview": true,
+          "definiteBlockingVStopperObserved": false,
+          "vRepeatVisualVerdict": "PASS_WITH_LIMITATIONS",
+          "personallyInspectedFullResolutionScalarData": true,
+          "scalarEncodingVerdict": "PASS",
+          "scalarMaterialSemanticVerdict": "LIMITED_NOT_FULLY_VALIDATED",
+          "roughnessInversionObserved": false,
+          "visualNotesFI": [
+            "U-sauman kohdalla laakson leveys ja kulumayksityiskohdat vaihtuvat hieman; tavallisessa 2×2-toistossa ei näy selvää katkaisevaa pystystopparia.",
+            "V-sauma säilyttää tiilirivit ilman selvää suoraa sävyporrasta; toistuva tiilijakso näkyy.",
+            "Värissä on tiilien muodon mukainen vaalea/tumma reliefisävy. Tätä ei väitetä täysin valosta puhdistetuksi skanniksi.",
+            "L-datan lasitemediaani 56/255 = 0,2196. Numeerinen kaava täsmää kaikkiin pikseleihin.",
+            "Kulumamaskin paino ylittää 0,5 vain 66 pikselissä ja enimmäispaino on 0,8295; ei yhtään >0,85-pikseliä. Kaikkien näkyvien harmaiden kulumien materiaaliluokitus ei ole tällä tarkistuksella todistettu. 0,67 on reseptin savitavoite, ei koko kuluma-alueelle mitattu toteuma."
+          ]
+        },
+        {
+          "id": "yellow-glazed-edge",
+          "colorSHA256": "12091705ed87c8644e696b2db0334f239f5fcb0dee4015ee06d18d27639af386",
+          "roughnessSHA256": "9dc869a487d140962cea7cf2b15d1088a0c011b1e66ad3926568b60e8540088d",
+          "sourceSHA256": "2e43b137268673fcbc7ea7ee5b277846bfe2f6d7cd34eacc0d2282fa1482c074",
+          "colorHashMatchesMaterial": true,
+          "roughHashMatchesMaterial": true,
+          "nativeHashMatchesMaterial": true,
+          "colorDimensions": [
+            1024,
+            1024
+          ],
+          "colorMode": "RGB",
+          "roughnessDimensions": [
+            1024,
+            1024
+          ],
+          "roughnessMode": "L",
+          "colorEqualsWholeframeNativeResize": true,
+          "dataMin": 0.2235294117647059,
+          "dataMax": 0.3411764705882353,
+          "dataMedian": 0.23921568627450981,
+          "wrapUse": "RepeatU/RepeatV",
+          "edgeMetrics": {
+            "U_join_MAE": 5.811848958333333,
+            "usualHorizontalAdjacentMAE": 5.043330864084393,
+            "U_16pxStripMeanDifferenceRGB": [
+              -0.04986572265625,
+              0.77734375,
+              3.016845703125
+            ],
+            "V_join_MAE": 4.977213541666667,
+            "usualVerticalAdjacentMAE": 5.347796895364939
+          },
+          "independentRecipeVerification": {
+            "maxByteDifference": 1,
+            "differingPixelCount": 3,
+            "withinOneQuantizationLevel": true,
+            "glazeBase": 0.24,
+            "clayTarget": 0.67,
+            "jointTarget": 0.85,
+            "encoding": "byte/255 linear scalar; no sRGB decode",
+            "maxExposedClayWeight": 0.23546598145687414,
+            "clayWeightAboveHalfPixels": 0,
+            "clayWeightAbove85Pixels": 0,
+            "jointWeightAbove85Pixels": 0
+          },
+          "uSeamQaPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-edge-U-seam.png",
+          "uSeamQaPreviewSHA256": "3033b4420ac6d759ebcc3d45b61e75fc50ca8330f621cb4754b989778b7e120c",
+          "personallyInspectedFinalColor": true,
+          "personallyInspectedColorRepeat": true,
+          "personallyInspectedUWrapPreview": true,
+          "definiteBlockingUStopperObserved": false,
+          "uRepeatVisualVerdict": "PASS_WITH_LIMITATIONS",
+          "exactOppositeEdgePixelMatchClaimed": false,
+          "productionEditsMadeByReviewer": false,
+          "personallyInspectedVWrapPreview": true,
+          "definiteBlockingVStopperObserved": false,
+          "vRepeatVisualVerdict": "PASS_WITH_LIMITATIONS",
+          "personallyInspectedFullResolutionScalarData": true,
+          "scalarEncodingVerdict": "PASS",
+          "scalarMaterialSemanticVerdict": "LIMITED_NOT_FULLY_VALIDATED",
+          "roughnessInversionObserved": false,
+          "visualNotesFI": [
+            "U- ja V-liitos säilyvät tasaisina; ei havaittua selvää suoraa saumastopparia. Ruusukemotiivi ja vaakalinjat toistuvat tarkoituksella.",
+            "Valittu lähde on uusi kokonainen color-v2, ei vanhan kuvan osamuokkaus; tässä tarkistuksessa todennettu v2:n tiedosto-SHA ja koko kuvan tekninen vienti.",
+            "L-datan lasitemediaani 61/255 = 0,2392. Riippumaton float64-kaava poikkeaa vain kolmessa pikselissä yhden kvantisointitason verran.",
+            "Kulumamaskin enimmäispaino on 0,2355, eikä yhtään >0,5- tai >0,85-pikseliä löytynyt. Pure clay/joint -alueiden 0,67/0,85 ei siten toteudu tässä lähes kokonaan lasitteeksi luokitellussa kuvassa; reseptin tavoitteita ei pidä sekoittaa havaittuihin materiaalialueisiin."
+          ]
+        },
+        {
+          "id": "hexi-blue-gold",
+          "colorSHA256": "1644c5ce3cba58d7bb20f532e0ca039c81d90baff47d340963a646cb181cd386",
+          "roughnessSHA256": "6fadcb6d8dba43f0aa591dd2e7057486e368da65e1fa3c1ee9a14cd0b1dcfd31",
+          "sourceSHA256": "25031a40f4fba1a3e3be2fff81a88508bd7dfc344f8daef091a3c1557cb7b99c",
+          "colorHashMatchesMaterial": true,
+          "roughHashMatchesMaterial": true,
+          "nativeHashMatchesMaterial": true,
+          "colorDimensions": [
+            1024,
+            1024
+          ],
+          "colorMode": "RGB",
+          "roughnessDimensions": [
+            1024,
+            1024
+          ],
+          "roughnessMode": "L",
+          "colorEqualsWholeframeNativeResize": true,
+          "dataMin": 0.2823529411764706,
+          "dataMax": 0.7764705882352941,
+          "dataMedian": 0.5490196078431373,
+          "wrapUse": "RepeatU/ClampV",
+          "edgeMetrics": {
+            "U_join_MAE": 14.1591796875,
+            "usualHorizontalAdjacentMAE": 10.608729367770447,
+            "U_16pxStripMeanDifferenceRGB": [
+              0.58831787109375,
+              0.52569580078125,
+              -0.1614990234375
+            ]
+          },
+          "uSeamQaPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-hexi-blue-gold-U-seam.png",
+          "uSeamQaPreviewSHA256": "a4191d1b4aa4cb221b766160e082cc97379101e77982ad64c2f63ec9b22caf5f",
+          "personallyInspectedFinalColor": true,
+          "personallyInspectedColorRepeat": true,
+          "personallyInspectedUWrapPreview": true,
+          "definiteBlockingUStopperObserved": false,
+          "uRepeatVisualVerdict": "PASS_WITH_LIMITATIONS",
+          "exactOppositeEdgePixelMatchClaimed": false,
+          "productionEditsMadeByReviewer": false,
+          "personallyInspectedFullResolutionScalarData": false,
+          "scalarEncodingVerdict": "OUTSIDE_DETAILED_DATA_AUDIT_SCOPE",
+          "vRepeatVisualVerdict": "NOT_APPLICABLE_CLAMP_V",
+          "vRepeatClaimed": false,
+          "visualNotesFI": [
+            "U-liitoksessa kukka- ja vinoreunusmotiivit yhdistyvät luettavasti; paikallisia pieniä sivellinjäljen tai kohdistuksen eroja on, mutta ei havaittua selvää suoraa pysäyttävää saumaa.",
+            "Arvio koskee vain URepeat/VClamp-koristelistan käyttöä. Koko pinnan XY-saumattomuutta ei väitetä.",
+            "Väri/data-pari katsottiin vertailuna, mutta Hexi-roughnessin koko pikselikaavan riippumatonta auditointia ei tässä toimeksiannossa tehty."
+          ]
+        },
+        {
+          "id": "hexi-green-gold",
+          "colorSHA256": "24e44d1fe174c1ec8b1e1f56ae7599d577bcee8bfc46008fa6f775ec35aeab5e",
+          "roughnessSHA256": "f612c210a13e4cb434a1171313679d6f62fe1f099abc70400f7ec42c567fbf38",
+          "sourceSHA256": "7a06b734d5ce7e53103b3526ad50bee8b07e9327dbb083ab8a7dc36392c0ff3d",
+          "colorHashMatchesMaterial": true,
+          "roughHashMatchesMaterial": true,
+          "nativeHashMatchesMaterial": true,
+          "colorDimensions": [
+            1024,
+            1024
+          ],
+          "colorMode": "RGB",
+          "roughnessDimensions": [
+            1024,
+            1024
+          ],
+          "roughnessMode": "L",
+          "colorEqualsWholeframeNativeResize": true,
+          "dataMin": 0.2823529411764706,
+          "dataMax": 0.7764705882352941,
+          "dataMedian": 0.5490196078431373,
+          "wrapUse": "RepeatU/ClampV",
+          "edgeMetrics": {
+            "U_join_MAE": 20.509440104166668,
+            "usualHorizontalAdjacentMAE": 14.00354127209596,
+            "U_16pxStripMeanDifferenceRGB": [
+              0.17547607421875,
+              0.7999267578125,
+              1.46124267578125
+            ]
+          },
+          "uSeamQaPreview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-hexi-green-gold-U-seam.png",
+          "uSeamQaPreviewSHA256": "6ffb8ed956c042e6d9a5d417870c173c3265eb1d2a871155e13eaa13db496ac4",
+          "personallyInspectedFinalColor": true,
+          "personallyInspectedColorRepeat": true,
+          "personallyInspectedUWrapPreview": true,
+          "definiteBlockingUStopperObserved": false,
+          "uRepeatVisualVerdict": "PASS_WITH_LIMITATIONS",
+          "exactOppositeEdgePixelMatchClaimed": false,
+          "productionEditsMadeByReviewer": false,
+          "personallyInspectedFullResolutionScalarData": false,
+          "scalarEncodingVerdict": "OUTSIDE_DETAILED_DATA_AUDIT_SCOPE",
+          "vRepeatVisualVerdict": "NOT_APPLICABLE_CLAMP_V",
+          "vRepeatClaimed": false,
+          "visualNotesFI": [
+            "U-liitoksessa kukka- ja vinoreunusmotiivit yhdistyvät luettavasti; paikallisia pieniä sivellinjäljen tai kohdistuksen eroja on, mutta ei havaittua selvää suoraa pysäyttävää saumaa.",
+            "Arvio koskee vain URepeat/VClamp-koristelistan käyttöä. Koko pinnan XY-saumattomuutta ei väitetä.",
+            "Väri/data-pari katsottiin vertailuna, mutta Hexi-roughnessin koko pikselikaavan riippumatonta auditointia ei tässä toimeksiannossa tehty."
+          ]
+        }
+      ],
+      "personallyViewedFiles": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/yellow-glazed-ridge/color.png",
+          "sha256": "268bbf9ef2004a6ee5befdce42d776e99f2ea6c71f8560831000492dc431f305",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/yellow-glazed-ridge-color-repeat.png",
+          "sha256": "25a354b74487cac6b55b475d3a855e4fbd85504cbcf647450765ee9afa87820c",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/yellow-glazed-ridge-pair.png",
+          "sha256": "a71acd7dcd9c8b237fcbc73169dcbec9555c91388edfd7beba5b0f90a32914d1",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-ridge-U-seam.png",
+          "sha256": "ba1e378a3f989bcf1e270e3d44293ad2a657fd02a831a897680b84fbc04ab1b7",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/yellow-glazed-ridge/roughness.png",
+          "sha256": "8711fafedf8ed17b9391f6f2c6bf78b6cab8a8d5be1a5e6db5d7c770da51c20c",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-ridge-U-wrap-only.png",
+          "sha256": "0448373fcd4279cf5dc6522d958dcfa1791d0eb02fc0a0491642af419f45973b",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-ridge-V-wrap-only.png",
+          "sha256": "0406d5ec2d13afa3955cde7d6843108a37fb4fda3bc49ac9bb5b37c88a96ec81",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/yellow-glazed-edge/color.png",
+          "sha256": "12091705ed87c8644e696b2db0334f239f5fcb0dee4015ee06d18d27639af386",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/yellow-glazed-edge-color-repeat.png",
+          "sha256": "1d13b5a77bc225ab624821d9ea6fefb92f4ed7a90f3687622c625bd2186f1e1a",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/yellow-glazed-edge-pair.png",
+          "sha256": "f40a02cb86ff4c36b03ae83bf723b48ede3e6de18253c6d6fdf5ca48655689fa",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-edge-U-seam.png",
+          "sha256": "3033b4420ac6d759ebcc3d45b61e75fc50ca8330f621cb4754b989778b7e120c",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/yellow-glazed-edge/roughness.png",
+          "sha256": "9dc869a487d140962cea7cf2b15d1088a0c011b1e66ad3926568b60e8540088d",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-edge-U-wrap-only.png",
+          "sha256": "13931320a1f3b138cede37bb6bd58195af1d601af4377e546e0c15065bb5111e",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-yellow-glazed-edge-V-wrap-only.png",
+          "sha256": "5e47b30b8af8ff56ca9b6dce08c3d048b0dd085a3a91e42958e11e11ae9744d6",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/hexi-blue-gold/color.png",
+          "sha256": "1644c5ce3cba58d7bb20f532e0ca039c81d90baff47d340963a646cb181cd386",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/hexi-blue-gold-color-repeat.png",
+          "sha256": "078057c3785b4c0e8022b77b48a5c679cb0b0ff5e374c72f82a7e877034b8967",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/hexi-blue-gold-pair.png",
+          "sha256": "554f1cef6bd07fe5c2cfa662213c52e3810969905acbadecbf654fa609eca0f3",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-hexi-blue-gold-U-seam.png",
+          "sha256": "a4191d1b4aa4cb221b766160e082cc97379101e77982ad64c2f63ec9b22caf5f",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/hexi-green-gold/color.png",
+          "sha256": "24e44d1fe174c1ec8b1e1f56ae7599d577bcee8bfc46008fa6f775ec35aeab5e",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/hexi-green-gold-color-repeat.png",
+          "sha256": "7419be6884a63f0251e6b53ee9b97089c77f11cbcc737e640d8ccd2e9a000df4",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/hexi-green-gold-pair.png",
+          "sha256": "d5a52992663dba41dd5f180ca1332b161bb7edc126d313a2132b29aeefbc9415",
+          "personallyViewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-review-hexi-green-gold-U-seam.png",
+          "sha256": "6ffb8ed956c042e6d9a5d417870c173c3265eb1d2a871155e13eaa13db496ac4",
+          "personallyViewed": true
+        }
+      ],
+      "observedBlockingColorRepeatDefects": [],
+      "overallColorRepeatVerdict": "PASS_WITH_LIMITATIONS_FOR_DECLARED_WRAP_MODES",
+      "roofScalarEncodingVerdict": "PASS",
+      "roofWearMaterialAssignmentVerdict": "LIMITED_NOT_FULLY_VALIDATED",
+      "finalUnconditionalPhysicalMaterialApprovalClaimed": false,
+      "newImagegenCalls": 0,
+      "productionFilesChanged": false,
+      "generatedRoughnessCandidatesUsed": false,
+      "all17NativeFilesPersonallyAudited": false,
+      "runtimeIntegrationInspected": false,
+      "publicationInspected": false,
+      "limits": [
+        "Native source hashes and whole-frame color export match verified for these four selected sources; no claim about independently checking all 17 historical natives.",
+        "Opposite-edge equality is not the acceptance criterion; literal repeat/actual wrap-strip visual checks used.",
+        "Roof roughness targets 0.22/0.24 glaze, 0.67 exposed clay and 0.85 dark joint are author parameters. Color-derived class masks do not certify all visually perceived wear as exposed clay.",
+        "No in-engine lighting, mobile sampling, mipmapping, filtering, UV or PBR render test performed."
+      ]
+    },
+    {
+      "tasks": [
+        706,
+        707
+      ],
+      "reviewer": "memory51_source_audit",
+      "independentOfTheseMaterialsProduction": true,
+      "status": "pass-with-explicit-wrap-and-data-interpretation",
+      "visibleDeliveryStopper": false,
+      "personallyViewedFinalColorAndLData": true,
+      "personallyViewedAllThreePairBoards": true,
+      "personallyViewedAllSixRepeatBoards": true,
+      "authoringRead": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/DATA-AUTHORING.json",
+        "sha256": "37b7aa03bf7be2c62c2097cc91c4040aedee52739da7e80c0c3c288e7592e3b7",
+        "readInFull": true
+      },
+      "recipeRead": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/scripts/author_material_data.py",
+        "sha256": "480d034e8f2580f141c8cfd0a39cffeca0542164fcc5cef11b3e85310c8adf06",
+        "readInFull": true
+      },
+      "finalMaterials": [
+        {
+          "id": "red-plaster",
+          "color": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/red-plaster/color.png",
+            "sha256": "17a92f17b2e5abe7137d343ca7547bd3f76f3198bc1fe2e9570cf004d6caf97c",
+            "width": 1024,
+            "height": 1024,
+            "mode": "RGB",
+            "matchesWholeFrameResizeOfNative": true
+          },
+          "roughness": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/red-plaster/roughness.png",
+            "sha256": "3334d15e17cfac668ab1d7143b9e62ea537205833def8c701bd1e058fe2968eb",
+            "width": 1024,
+            "height": 1024,
+            "mode": "L",
+            "pngChunks": [
+              "IHDR",
+              "IDAT",
+              "IDAT",
+              "IEND"
+            ],
+            "noICCOrGammaOrSRGBTag": true,
+            "infoKeys": [],
+            "byteRange": [
+              220,
+              242
+            ],
+            "linearRange": [
+              0.8627450980392157,
+              0.9490196078431372
+            ]
+          },
+          "regions": {
+            "lime_wear": {
+              "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/data-masks/red-plaster/lime_wear.png",
+              "maskSHA256": "ad31cda94dbbad5cefab4ea47d4d92d56c20104dcd5fe5a151d3a0d034e6934c",
+              "confidentPixelsFromEncodedMask": 35,
+              "medianEncoded": 239,
+              "medianLinearByteOver255": 0.9372549019607843,
+              "P5P95Linear": [
+                0.9243137254901961,
+                0.9490196078431372
+              ]
+            },
+            "red_plaster": {
+              "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/data-masks/red-plaster/red_plaster.png",
+              "maskSHA256": "a9b8f08a89224d633d21744a031e61af7b635c1ef5bcdc488170daa7f82f45bb",
+              "confidentPixelsFromEncodedMask": 1028353,
+              "medianEncoded": 224,
+              "medianLinearByteOver255": 0.8784313725490196,
+              "P5P95Linear": [
+                0.8666666666666667,
+                0.8901960784313725
+              ]
+            }
+          },
+          "artistTargets": {
+            "red_plaster": 0.88,
+            "lime_wear": 0.94
+          },
+          "dataMethod": "NEW numerical material-ID lookup on exact1024colorpixelgrid plus small periodic parameterfield; not albedograyscale; no generatedroughnessimageinput",
+          "wrapUse": "RepeatU/RepeatV",
+          "colorEdgeDiagnosticsOnly": {
+            "UedgeMeanAbs0to255": 9.216145833333334,
+            "VedgeMeanAbs0to255": 7.951497395833333
+          },
+          "roughnessEdgeDiagnosticsOnly": {
+            "UedgeMeanAbs0to255": 0.232421875,
+            "VedgeMeanAbs0to255": 0.16796875
+          },
+          "viewedQA": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-pair.png",
+              "sha256": "57d50a59cd7a935018cff2328808e987fb3d55c539d61436ae849b372f300f16",
+              "personallyViewed": true
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-color-repeat.png",
+              "sha256": "d728040dfc8c2f1097ae42d739e71f35671d24a9598611c7b393a3009317b9b6",
+              "personallyViewed": true
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-data-repeat.png",
+              "sha256": "af8f77c045ed394ad9a1ae214d7d425dff01fb6cc434b457ddaad5183062b651",
+              "personallyViewed": true
+            }
+          ],
+          "sourceNative": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/native/red-plaster-color.png",
+            "sha256": "b7a093d9546332977a9b5bc21d85ef747ecb87d8de27bf7fa354cc50087129b9",
+            "unchanged": true
+          },
+          "reviewPass": true,
+          "visualFindings": {
+            "color": "Punainen hienorakeinen rappaus ja vaaleita kulumalaikkuja. Ei kohde-esinettä, tekstiä, vahvaa keskivalaistusta tai erillistä taustaa.",
+            "repeats": "X/Y-toistonormaalikuvassa ei selvää saumarajaa tai rakenteen katkeamista. Sama kulumakuvio toistuu odotetusti, mutta toistokohta ei muodosta uutta tummaa/vaaleaa saumalaattaa.",
+            "data": "Rappauksen korkea karheus ja kuluneen vaalean kalkin vielä korkeampi arvo vastaavat author-parametrien rooleja. Pieni periodinen vaihtelu on kuvassa havaittava data-arvona, ei väitetty valaistus.",
+            "wrapApprovedForAssetQA": "RepeatU/RepeatV"
+          }
+        },
+        {
+          "id": "red-plaster-lower",
+          "color": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/red-plaster-lower/color.png",
+            "sha256": "dcf93141801f87b3db2d22e8b75af434fa0952353192f2270ea06cd4a2af807c",
+            "width": 1024,
+            "height": 1024,
+            "mode": "RGB",
+            "matchesWholeFrameResizeOfNative": true
+          },
+          "roughness": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/red-plaster-lower/roughness.png",
+            "sha256": "c238e8118d54dc19ef5b2dfe45979a35a27aef9e6f3f6ba19cb8faa3fc489435",
+            "width": 1024,
+            "height": 1024,
+            "mode": "L",
+            "pngChunks": [
+              "IHDR",
+              "IDAT",
+              "IDAT",
+              "IDAT",
+              "IEND"
+            ],
+            "noICCOrGammaOrSRGBTag": true,
+            "infoKeys": [],
+            "byteRange": [
+              220,
+              249
+            ],
+            "linearRange": [
+              0.8627450980392157,
+              0.9764705882352941
+            ]
+          },
+          "regions": {
+            "dry_lower_dirt": {
+              "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/data-masks/red-plaster-lower/dry_lower_dirt.png",
+              "maskSHA256": "a264cc914ed6fb8cac93ba54026ab3163e555121269c2c2927a30fbd06f72bcb",
+              "confidentPixelsFromEncodedMask": 7276,
+              "medianEncoded": 243,
+              "medianLinearByteOver255": 0.9529411764705882,
+              "P5P95Linear": [
+                0.9411764705882353,
+                0.9647058823529412
+              ]
+            },
+            "lime_wear": {
+              "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/data-masks/red-plaster-lower/lime_wear.png",
+              "maskSHA256": "bc2a10ada8d89e2a225fb34b4cb714fed3c807a322313d5aa24b27f7c6c7c101",
+              "confidentPixelsFromEncodedMask": 159,
+              "medianEncoded": 238,
+              "medianLinearByteOver255": 0.9333333333333333,
+              "P5P95Linear": [
+                0.9254901960784314,
+                0.9450980392156862
+              ]
+            },
+            "red_plaster": {
+              "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/data-masks/red-plaster-lower/red_plaster.png",
+              "maskSHA256": "ce0b2d97999ba09b8fcb07ade83aaa3eb4018af713aa458637e92e8133511b3a",
+              "confidentPixelsFromEncodedMask": 1036335,
+              "medianEncoded": 225,
+              "medianLinearByteOver255": 0.8823529411764706,
+              "P5P95Linear": [
+                0.8705882352941177,
+                0.9176470588235294
+              ]
+            }
+          },
+          "artistTargets": {
+            "red_plaster": 0.88,
+            "lime_wear": 0.94,
+            "dry_lower_dirt": 0.96
+          },
+          "dataMethod": "NEW numerical material-ID lookup on exact1024colorpixelgrid plus small periodic parameterfield; not albedograyscale; no generatedroughnessimageinput",
+          "wrapUse": "RepeatU/ClampV",
+          "colorEdgeDiagnosticsOnly": {
+            "UedgeMeanAbs0to255": 8.358723958333334,
+            "VedgeMeanAbs0to255": 22.5380859375
+          },
+          "roughnessEdgeDiagnosticsOnly": {
+            "UedgeMeanAbs0to255": 1.0068359375,
+            "VedgeMeanAbs0to255": 9.8125
+          },
+          "viewedQA": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-lower-pair.png",
+              "sha256": "cb89fb6aac4ee94abfa854806f09a37c459d849f0a5f25aa79d2625704dfe80c",
+              "personallyViewed": true
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-lower-color-repeat.png",
+              "sha256": "41170153d507b7ad59d934cb5e3638e95449c3780f8b5e1ca93e83ed762ea041",
+              "personallyViewed": true
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/red-plaster-lower-data-repeat.png",
+              "sha256": "502a4eef2feb64dfee59faac19b97b30410295e436c0cf59fc39f021bd836fa3",
+              "personallyViewed": true
+            }
+          ],
+          "sourceNative": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/native/red-plaster-lower-color.png",
+            "sha256": "5e85145908fc562b7b9b8f7916d0783bcac50876996bd287066299f6694661ca",
+            "unchanged": true
+          },
+          "reviewPass": true,
+          "visualFindings": {
+            "color": "Punainen rappaus, alareunassa epäsäännöllinen kuiva lika- ja roiskevyöhyke. Likaantuminen sijoittuu alaosaan.",
+            "repeats": "U-toistossa likavyöhyke ja punainen rappaus jatkuvat ilman korostuvaa pystysaumaa. VRepeat ei sovellu, koska likainen alareuna ei vastaa puhdasta yläreunaa.",
+            "data": "Kuivan alareunalian arvo on rappausta korkeampi, pääosin tavoitteen0.96ympärillä; vaalea kalkki tavoitteen0.94ja rappaus0.88ympärillä.",
+            "wrapApprovedForAssetQA": "RepeatU/ClampV; ei XY-passia"
+          }
+        },
+        {
+          "id": "grey-stone-base",
+          "color": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/grey-stone-base/color.png",
+            "sha256": "a33b6a06695dcc184864a14e959ff4effad4c73d3caee429882b08289e440a5c",
+            "width": 1024,
+            "height": 1024,
+            "mode": "RGB",
+            "matchesWholeFrameResizeOfNative": true
+          },
+          "roughness": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/production/grey-stone-base/roughness.png",
+            "sha256": "d81572ff5815279b58a61e85b9cba68265916baba430179adf42e6ccac339f95",
+            "width": 1024,
+            "height": 1024,
+            "mode": "L",
+            "pngChunks": [
+              "IHDR",
+              "IDAT",
+              "IDAT",
+              "IEND"
+            ],
+            "noICCOrGammaOrSRGBTag": true,
+            "infoKeys": [],
+            "byteRange": [
+              205,
+              249
+            ],
+            "linearRange": [
+              0.803921568627451,
+              0.9764705882352941
+            ]
+          },
+          "regions": {
+            "mortar_like": {
+              "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/data-masks/grey-stone-base/mortar_like.png",
+              "maskSHA256": "1a4d70aff62d33ba0e8c6a4d8ea3f50b890854c4e1288a8a20f58e784dc03544",
+              "confidentPixelsFromEncodedMask": 1021,
+              "medianEncoded": 242,
+              "medianLinearByteOver255": 0.9490196078431372,
+              "P5P95Linear": [
+                0.9333333333333333,
+                0.9647058823529412
+              ]
+            },
+            "stone": {
+              "maskPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/data-masks/grey-stone-base/stone.png",
+              "maskSHA256": "6f35a3998cdcb199df90e3c5033bb0460ad6f960a392bc316a56d305e44897ba",
+              "confidentPixelsFromEncodedMask": 1038145,
+              "medianEncoded": 209,
+              "medianLinearByteOver255": 0.8196078431372549,
+              "P5P95Linear": [
+                0.807843137254902,
+                0.8313725490196079
+              ]
+            }
+          },
+          "artistTargets": {
+            "stone": 0.82,
+            "dark_mineral_joint": 0.96
+          },
+          "dataMethod": "NEW numerical material-ID lookup on exact1024colorpixelgrid plus small periodic parameterfield; not albedograyscale; no generatedroughnessimageinput",
+          "wrapUse": "RepeatU/RepeatV",
+          "colorEdgeDiagnosticsOnly": {
+            "UedgeMeanAbs0to255": 14.397786458333334,
+            "VedgeMeanAbs0to255": 15.140299479166666
+          },
+          "roughnessEdgeDiagnosticsOnly": {
+            "UedgeMeanAbs0to255": 0.271484375,
+            "VedgeMeanAbs0to255": 0.3251953125
+          },
+          "viewedQA": [
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/grey-stone-base-pair.png",
+              "sha256": "4f33c1e061266cc314b4e56d7cddacf1ae4d854f086696d89c3514073a05c11c",
+              "personallyViewed": true
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/grey-stone-base-color-repeat.png",
+              "sha256": "9bba02b0a3de02799bbc4e2d01dbc93b6405ca5fbbe8e6b077eadd20b6379b67",
+              "personallyViewed": true
+            },
+            {
+              "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/grey-stone-base-data-repeat.png",
+              "sha256": "1343c70b676516a1cf8cd5fd8317a52dc7b156335b332bcbacb98b6aee688295",
+              "personallyViewed": true
+            }
+          ],
+          "sourceNative": {
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/native/grey-stone-base-color.png",
+            "sha256": "582627015577cc8f947400700854ceb8447a7de53baed83f02fe7c904985fe1c",
+            "unchanged": true
+          },
+          "reviewPass": true,
+          "visualFindings": {
+            "color": "Harmaat suorakaiteiset kivilohkot, epäsäännöllistä rakeisuutta ja kulumista sekä tummahkoja saumoja. Paikallista reunan reliefisävyä on, kuten artist-authored color -tulkinta sallii.",
+            "repeats": "X/Y-toistossa lohkokurssit jatkavat uskottavaa muurausrytmiä ilman selvästi poikki katkaistua lohkoa, äkillistä sävylaitaa tai tyhjää saumaa.",
+            "data": "Kivi noin0.82, tummimpien mineral/joint-maskien confidentalueet noin0.95–0.96. Saumaraja on kivipintaa karkeampi; maski poimii tummia sauman osia eikä väitä tunnistavansa jokaista saumapikseliä mittausdataksi.",
+            "wrapApprovedForAssetQA": "RepeatU/RepeatV"
+          }
+        }
+      ],
+      "verified": {
+        "allSixFinalMaps1024Square": true,
+        "colorRGB8": true,
+        "roughnessL8": true,
+        "roughnessNoICC_gAMA_sRGB_cHRM": true,
+        "finalColorPixelsAreWholeFrameLANCZOSOnly": true,
+        "sourceNativeHashesUnchangedForThreeReviewedColors": true,
+        "roughnessNewNumericScalarData": true,
+        "notAlbedoGrayscaleCopy": true,
+        "notGeneratedRoughnessRetouch": true,
+        "exactSame1024ColorPixelGrid": true,
+        "noScientificMeasurementClaim": true,
+        "noZeroEdgePixelRequirementUsed": true
+      },
+      "targetCheckSummary": {
+        "redPlaster": {
+          "target": 0.88,
+          "measuredConfidentMedianEncodedOver255": 0.8784313725490196
+        },
+        "baseLimeWear": {
+          "target": 0.94,
+          "measuredConfidentMedianEncodedOver255": 0.9372549019607843,
+          "confidentPixels": 35
+        },
+        "lowerPlaster": {
+          "target": 0.88,
+          "measuredConfidentMedianEncodedOver255": 0.8823529411764706
+        },
+        "lowerLimeWear": {
+          "target": 0.94,
+          "measuredConfidentMedianEncodedOver255": 0.9333333333333333
+        },
+        "lowerDryDirt": {
+          "target": 0.96,
+          "measuredConfidentMedianEncodedOver255": 0.9529411764705882
+        },
+        "stone": {
+          "target": 0.82,
+          "measuredConfidentMedianEncodedOver255": 0.8196078431372549
+        },
+        "darkMineralJoint": {
+          "target": 0.96,
+          "measuredConfidentMedianEncodedOver255": 0.9490196078431372
+        },
+        "interpretation": "Encodedbytes/255. Pieni suunniteltu periodinen vaihtelu, maskien pehmeä sekoitus ja8bitkvantisointi sallitaan; arvoja ei esitetä mitattuna fysikaalisena kalibrointina."
+      },
+      "constraints": [
+        "Alareunarappaus vain RepeatU/ClampV, ei pystysuunnan toistoa.",
+        "Karheusdata on luettava lineaarisena raakana byte/255-datana: sRGB-dekoodaus pois vastaanottajassa.",
+        "Värikartat ovat artist-authored color -pintoja; niitä ei väitetä fotometrisesti valaisemattomiksi skanneiksi.",
+        "Materiaalimaskit ovat numeerisia taiteellisia luokkia ja pehmeitä painoja. Confidence-ROI ei kata jokaista kulumaa tai saumapikseliä."
+      ],
+      "scopeLimits": [
+        "Kuvatason ja tiedostotason riippumaton tarkistus. Unityn import-asetuksia, Valosepän shaderia tai mobiililaitetta ei testattu.",
+        "Tarkistus koskee vain näitä kolmea materiaaliparia ja niiden tässä raportissa lukittuja hasheja.",
+        "Tämä QA ei ole PT:n, omistajan tai runtime-julkaisun hyväksyntä."
+      ],
+      "imageCallsForReview": 0,
+      "productionEdits": false,
+      "sharedLedgerEdits": false,
+      "runtimeIntegrationVerified": false,
+      "published": false,
+      "checkedAt": "2026-10-19T20:56:45.126486+00:00"
+    },
+    {
+      "at": "2026-10-19T20:58:28.674634+00:00",
+      "tasks": [
+        709,
+        710
+      ],
+      "status": "PASS_FINAL_SCALAR_DATA_FORMAT_CONTRAST_AND_PIXEL_ALIGNMENT;COLOR_REPEAT_LIMITATIONS_RETAINED",
+      "independentFromFinalScalarDataAuthor": true,
+      "disclosure": "Reviewer generated the two original hexi color images, but did not author final numeric data; gate artwork and final scalar authoring were by others. Color-art independence is not claimed for hexi.",
+      "sourceAuthoringSHA256": "37b7aa03bf7be2c62c2097cc91c4040aedee52739da7e80c0c3c288e7592e3b7",
+      "recipeSHA256": "480d034e8f2580f141c8cfd0a39cffeca0542164fcc5cef11b3e85310c8adf06",
+      "records": [
+        {
+          "id": "hexi-blue-gold",
+          "colorSHA256": "1644c5ce3cba58d7bb20f532e0ca039c81d90baff47d340963a646cb181cd386",
+          "roughnessSHA256": "6fadcb6d8dba43f0aa591dd2e7057486e368da65e1fa3c1ee9a14cd0b1dcfd31",
+          "formatPASS": true,
+          "numericScalarEncodingPASS": true,
+          "linearMapping": "roughness=rawLbyte/255; black0smooth,white1rough; import without sRGB decode",
+          "ROI_GoldOrMetal": {
+            "pixels": 51477,
+            "medianByte": 77.0,
+            "medianLinear": 0.30196078431372547,
+            "p10p90Linear": [
+              0.2901960784313726,
+              0.30980392156862746
+            ]
+          },
+          "ROI_Paint": {
+            "pixels": 217897,
+            "medianByte": 140.0,
+            "medianLinear": 0.5490196078431373,
+            "p10p90Linear": [
+              0.5411764705882353,
+              0.5607843137254902
+            ]
+          },
+          "ROI_LowChromaWear": {
+            "pixels": 1658,
+            "medianByte": 193.0,
+            "medianLinear": 0.7568627450980392,
+            "method": "independent low-chroma bright color ROI,3x3 erosion; hue-based material inference, not measured wear"
+          },
+          "contrastPASS": true,
+          "dataPixelAlignmentPASS": true,
+          "alignmentEvidence": "Direct material-ID lookup at each exact exported1024color coordinate; recipe reexecution equals every byte; no registration/crop/rescale in data creation",
+          "recipeReexecutionMatchesEveryPixel": true,
+          "noAlbedoLuminanceConversion": true,
+          "noGeneratedRoughnessInput": true,
+          "noIlluminationGradientOrAOFieldCopied": true,
+          "periodicVariationMaxBound": 0.016,
+          "maskSemanticLimitation": "Color-family masks infer material identity; mixed/anti-aliased/dark pigment pixels may receive blended parameter values. Exact pixel coordinates are verified, not perfect manual semantic segmentation.",
+          "range": [
+            0.2823529411764706,
+            0.7764705882352941
+          ],
+          "colorExportOnlyWholeFrameLanczosVerified": true,
+          "colorNotPhotometricallyDelitScan": true,
+          "localReliefTonesMayRemainInColor": true,
+          "repeatStatus": "CONDITIONAL_U_TRIM;V_CLAMP;LOCAL_COLOR_ORNAMENT_MISMATCH_REMAINS",
+          "edgeMetricsAreNotExactSeamlessCertificate": true,
+          "evidence": [
+            "agent-final-data-hexi-blue-gold-repeat.png"
+          ],
+          "runtimeShaderImportNotVerified": true
+        },
+        {
+          "id": "hexi-green-gold",
+          "colorSHA256": "24e44d1fe174c1ec8b1e1f56ae7599d577bcee8bfc46008fa6f775ec35aeab5e",
+          "roughnessSHA256": "f612c210a13e4cb434a1171313679d6f62fe1f099abc70400f7ec42c567fbf38",
+          "formatPASS": true,
+          "numericScalarEncodingPASS": true,
+          "linearMapping": "roughness=rawLbyte/255; black0smooth,white1rough; import without sRGB decode",
+          "ROI_GoldOrMetal": {
+            "pixels": 89935,
+            "medianByte": 77.0,
+            "medianLinear": 0.30196078431372547,
+            "p10p90Linear": [
+              0.2901960784313726,
+              0.3137254901960784
+            ]
+          },
+          "ROI_Paint": {
+            "pixels": 69016,
+            "medianByte": 140.0,
+            "medianLinear": 0.5490196078431373,
+            "p10p90Linear": [
+              0.5411764705882353,
+              0.5607843137254902
+            ]
+          },
+          "ROI_LowChromaWear": {
+            "pixels": 291,
+            "medianByte": 194.0,
+            "medianLinear": 0.7607843137254902,
+            "method": "independent low-chroma bright color ROI,3x3 erosion; hue-based material inference, not measured wear"
+          },
+          "contrastPASS": true,
+          "dataPixelAlignmentPASS": true,
+          "alignmentEvidence": "Direct material-ID lookup at each exact exported1024color coordinate; recipe reexecution equals every byte; no registration/crop/rescale in data creation",
+          "recipeReexecutionMatchesEveryPixel": true,
+          "noAlbedoLuminanceConversion": true,
+          "noGeneratedRoughnessInput": true,
+          "noIlluminationGradientOrAOFieldCopied": true,
+          "periodicVariationMaxBound": 0.016,
+          "maskSemanticLimitation": "Color-family masks infer material identity; mixed/anti-aliased/dark pigment pixels may receive blended parameter values. Exact pixel coordinates are verified, not perfect manual semantic segmentation.",
+          "range": [
+            0.2823529411764706,
+            0.7764705882352941
+          ],
+          "colorExportOnlyWholeFrameLanczosVerified": true,
+          "colorNotPhotometricallyDelitScan": true,
+          "localReliefTonesMayRemainInColor": true,
+          "repeatStatus": "CONDITIONAL_U_TRIM;V_CLAMP;LOCAL_COLOR_ORNAMENT_MISMATCH_REMAINS",
+          "edgeMetricsAreNotExactSeamlessCertificate": true,
+          "evidence": [
+            "agent-final-data-hexi-green-gold-repeat.png"
+          ],
+          "runtimeShaderImportNotVerified": true
+        },
+        {
+          "id": "red-gate-9x9",
+          "colorSHA256": "7ae4859dd58bbecd1a1312a19c98c240716c698305ceec037d86771daaf85667",
+          "roughnessSHA256": "512d68ef2522a388243077c794883f1745a664d5b60237936aab8e254a5c992d",
+          "formatPASS": true,
+          "numericScalarEncodingPASS": true,
+          "linearMapping": "roughness=rawLbyte/255; black0smooth,white1rough; import without sRGB decode",
+          "ROI_GoldOrMetal": {
+            "pixels": 49294,
+            "medianByte": 69.0,
+            "medianLinear": 0.27058823529411763,
+            "p10p90Linear": [
+              0.2627450980392157,
+              0.2823529411764706
+            ]
+          },
+          "ROI_Paint": {
+            "pixels": 862459,
+            "medianByte": 107.0,
+            "medianLinear": 0.4196078431372549,
+            "p10p90Linear": [
+              0.4117647058823529,
+              0.43137254901960786
+            ]
+          },
+          "ROI_LowChromaWear": {
+            "pixels": 0,
+            "medianByte": null,
+            "medianLinear": null,
+            "method": "independent low-chroma bright color ROI,3x3 erosion; hue-based material inference, not measured wear"
+          },
+          "contrastPASS": true,
+          "dataPixelAlignmentPASS": true,
+          "alignmentEvidence": "Direct material-ID lookup at each exact exported1024color coordinate; recipe reexecution equals every byte; no registration/crop/rescale in data creation",
+          "recipeReexecutionMatchesEveryPixel": true,
+          "noAlbedoLuminanceConversion": true,
+          "noGeneratedRoughnessInput": true,
+          "noIlluminationGradientOrAOFieldCopied": true,
+          "periodicVariationMaxBound": 0.016,
+          "maskSemanticLimitation": "Color-family masks infer material identity; mixed/anti-aliased/dark pigment pixels may receive blended parameter values. Exact pixel coordinates are verified, not perfect manual semantic segmentation.",
+          "range": [
+            0.2549019607843137,
+            0.6274509803921569
+          ],
+          "colorExportOnlyWholeFrameLanczosVerified": true,
+          "colorNotPhotometricallyDelitScan": true,
+          "localReliefTonesMayRemainInColor": true,
+          "repeatStatus": "PASS_NORMAL_2X2_VISUAL_XY_REPEAT;ENGINE_PENDING",
+          "edgeMetricsAreNotExactSeamlessCertificate": true,
+          "evidence": [
+            "agent-final-data-red-gate-9x9-repeat.png",
+            "agent-final-data-gate-stud-count.png"
+          ],
+          "runtimeShaderImportNotVerified": true,
+          "exactStudCount": 81,
+          "studRows": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "studCountIndependentColorComponentMethod": "color-only gold threshold,7px close,4-connected components and round-object area/aspect/occupancy filter; no producer data masks",
+          "studCircularCoreStats": {
+            "pixels": 36663,
+            "medianByte": 69.0,
+            "medianLinear": 0.27058823529411763,
+            "p10p90Linear": [
+              0.2627450980392157,
+              0.2823529411764706
+            ]
+          },
+          "studCoreFractionAtMetalRoughnessBelow0_34": 0.9936993699369937,
+          "noClippedStuds": true,
+          "wornWoodTargetPresenceNotCertified": "Recipe .76 worn-wood target exists; producer reports no confident >.85 worn-wood ROI. Do not claim a verified sampled .76 wood region."
+        }
+      ],
+      "blockingScalarDataFindings": [],
+      "conditionalFindings": [
+        "Hexi U-repeat has small local flower/cloud contour and gold-line discontinuities; no full exact U-seam certificate. Use URepeat/VClamp, not XY-repeat.",
+        "Gate normal2x2 color/data repeat shows no delivery-blocking cut or stud discontinuity; shader filtering remains untested.",
+        "Color source artwork contains local relief/shading tones; it is not a calibrated/delit material scan.",
+        "Artist-chosen roughness parameter values are art direction, not measured physical reflectance.",
+        "Linear roughness import, sRGB decode OFF, must be configured by receiver; not runtime-verified here."
+      ],
+      "allReviewedProductionAndSelectedNativeHashesUnchanged": true,
+      "unreviewedOtherMaterialsNotCertified": true,
+      "generationCalls": 0,
+      "productionPixelEdits": 0,
+      "newImagesAreQAViewsOnly": true,
+      "evidenceStatistics": "agent-final-data-hexi-gate-statistics.json"
+    }
+  ]
+}

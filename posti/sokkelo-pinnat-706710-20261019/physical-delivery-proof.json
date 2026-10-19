@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-19T20:58:40.636269+00:00",
+  "physicalT7FilesVerified": true,
+  "all16SelectedMapHashesVerified": true,
+  "archivePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/sokkelo-pinnat-706710-1024.zip",
+  "archiveSHA256": "1afa44232f1d9f001c86f4867ac4a5a4989667d6b1d5e4133e9398c6044753be",
+  "archiveBytes": 18209248,
+  "archiveMembersVerifiedAgainstPhysicalFiles": true,
+  "mapCount": 16,
+  "manifestPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/delivery/manifest.json",
+  "manifestSHA256": "183021518c561eb6025b85199605babaf8b7945f9b967a262f04e2cc6ef14a70",
+  "all17NativeHashesUnchanged": true,
+  "QAReports": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-final-roof-hexi-review.json",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-final-wall-stone-review.json",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/qa/agent-final-data-hexi-gate-review.json"
+  ],
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

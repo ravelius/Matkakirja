@@ -1,0 +1,274 @@
+{
+  "at": "2026-10-19T20:58:40.294963+00:00",
+  "family": "running-maze-surfaces-706710",
+  "physicalT7Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-sokkelo-pinnat-706710-20261019/delivery",
+  "source": {
+    "path": "posti/paatoimittaja-codex-sokkelo-seinapinnat-20261019.md",
+    "commit": "243d6f8b8d483fd90edcc7a3bf525888469428ec",
+    "blob": "840a18a8da9e175514c4817f2a5f5e90b84f3580",
+    "sha256": "03613fa29aeac0e33e345604a33295c9dcf2c6b6e25e534867e2c24c1e282af1",
+    "readInFull": true,
+    "readAt": "2026-10-19T20:42:14.493709+00:00"
+  },
+  "taskNumbers": [
+    706,
+    707,
+    708,
+    709,
+    710
+  ],
+  "materialPairs": 8,
+  "selectedMapCount": 16,
+  "selectedColorMaps": 8,
+  "numericRoughnessMaps": 8,
+  "actualGenerationCallsIssued": 17,
+  "actualGenerationCallsCompleted": 17,
+  "actualGenerationCallsPending": 0,
+  "nativeOriginalCount": 17,
+  "generatedRoughnessCandidatesNotSelected": 8,
+  "colorNativeResolution": [
+    1254,
+    1254
+  ],
+  "finalResolution": [
+    1024,
+    1024
+  ],
+  "selectedColorNativeHashes": {
+    "red-plaster": "b7a093d9546332977a9b5bc21d85ef747ecb87d8de27bf7fa354cc50087129b9",
+    "red-plaster-lower": "5e85145908fc562b7b9b8f7916d0783bcac50876996bd287066299f6694661ca",
+    "grey-stone-base": "582627015577cc8f947400700854ceb8447a7de53baed83f02fe7c904985fe1c",
+    "yellow-glazed-ridge": "22dd8a9c8207b7bf524dce8019def8c955cce98f52eada4330f22e90f1b18905",
+    "yellow-glazed-edge": "2e43b137268673fcbc7ea7ee5b277846bfe2f6d7cd34eacc0d2282fa1482c074",
+    "hexi-blue-gold": "25031a40f4fba1a3e3be2fff81a88508bd7dfc344f8daef091a3c1557cb7b99c",
+    "hexi-green-gold": "7a06b734d5ce7e53103b3526ad50bee8b07e9327dbb083ab8a7dc36392c0ff3d",
+    "red-gate-9x9": "23a16016d94bd6b86d7d0627bb1366dedc636f91afd3510de7c009cfd9207671"
+  },
+  "perTaskCalls": {
+    "706": 4,
+    "707": 2,
+    "708": 5,
+    "709": 4,
+    "710": 2
+  },
+  "roughnessMode": "L8 linear raw byte/255, sRGB OFF",
+  "qaDecision": "PASS_FOR_HANDOFF_WITH_DOCUMENTED_USE_LIMITS",
+  "limitations": [
+    "Hexi and lower-wall variant repeat in U only; Clamp V required.",
+    "Visible-repeat inspection found no clear blocking seam; exact pixel equality or shader/runtime seamlessness is not certified.",
+    "Local relief/highlight/shadow tone remains in generated COLOR; these are artist-authored PBR-style surfaces, not calibrated delit albedo scans.",
+    "Roof glaze scalar values validated; no confident exposed-clay class. Clay target is not a measured claim.",
+    "Roughness is artist parameter data, not measured material calibration."
+  ],
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "files": [
+    {
+      "path": "HANDOFF.md",
+      "bytes": 3837,
+      "sha256": "5b0039dc2b4c9531de9db83866c21611bd883004a212f48c7321da7c2974d4b5"
+    },
+    {
+      "path": "NATIVE-PROVENANCE.json",
+      "bytes": 6576,
+      "sha256": "675d19b1b3c1f021f499a751908bcf22cd0b205330885b565d53c022ca09564c"
+    },
+    {
+      "path": "PROMPT-SET.json",
+      "bytes": 42327,
+      "sha256": "1be4d3eef528949cdd9c08eb57fd509789f6852e8581a7bf2f23ac0a29d81b7d"
+    },
+    {
+      "path": "PROMPT-SET.md",
+      "bytes": 25758,
+      "sha256": "31cf231304c2e65e93576121941558d04c6c1816b9fac82e6d4335d22145039d"
+    },
+    {
+      "path": "materials/grey-stone-base/color.png",
+      "bytes": 2322979,
+      "sha256": "a33b6a06695dcc184864a14e959ff4effad4c73d3caee429882b08289e440a5c"
+    },
+    {
+      "path": "materials/grey-stone-base/material.json",
+      "bytes": 2990,
+      "sha256": "c8af6ecd5c5191f0e8a0244c68ad689210e01caee8bdba6447c99347277bed17"
+    },
+    {
+      "path": "materials/grey-stone-base/roughness.png",
+      "bytes": 119714,
+      "sha256": "d81572ff5815279b58a61e85b9cba68265916baba430179adf42e6ccac339f95"
+    },
+    {
+      "path": "materials/hexi-blue-gold/color.png",
+      "bytes": 2148996,
+      "sha256": "1644c5ce3cba58d7bb20f532e0ca039c81d90baff47d340963a646cb181cd386"
+    },
+    {
+      "path": "materials/hexi-blue-gold/material.json",
+      "bytes": 3259,
+      "sha256": "52baaba8d1bbba0a80e6ad46911978042d5fa73e2b6f84e4246cdf4e33a01336"
+    },
+    {
+      "path": "materials/hexi-blue-gold/roughness.png",
+      "bytes": 375379,
+      "sha256": "6fadcb6d8dba43f0aa591dd2e7057486e368da65e1fa3c1ee9a14cd0b1dcfd31"
+    },
+    {
+      "path": "materials/hexi-green-gold/color.png",
+      "bytes": 2346508,
+      "sha256": "24e44d1fe174c1ec8b1e1f56ae7599d577bcee8bfc46008fa6f775ec35aeab5e"
+    },
+    {
+      "path": "materials/hexi-green-gold/material.json",
+      "bytes": 3264,
+      "sha256": "6a2bc6e5fbe0b19f4139e1e4020c58128c9aec52b99a1d66a51fc0a0095f0f34"
+    },
+    {
+      "path": "materials/hexi-green-gold/roughness.png",
+      "bytes": 523825,
+      "sha256": "f612c210a13e4cb434a1171313679d6f62fe1f099abc70400f7ec42c567fbf38"
+    },
+    {
+      "path": "materials/red-gate-9x9/color.png",
+      "bytes": 1625796,
+      "sha256": "7ae4859dd58bbecd1a1312a19c98c240716c698305ceec037d86771daaf85667"
+    },
+    {
+      "path": "materials/red-gate-9x9/material.json",
+      "bytes": 3117,
+      "sha256": "9daf606b25ac052a9e8c31cd7e693a098745121c8ba367f7d4f63d827754f5a8"
+    },
+    {
+      "path": "materials/red-gate-9x9/roughness.png",
+      "bytes": 148494,
+      "sha256": "512d68ef2522a388243077c794883f1745a664d5b60237936aab8e254a5c992d"
+    },
+    {
+      "path": "materials/red-plaster/color.png",
+      "bytes": 2079764,
+      "sha256": "17a92f17b2e5abe7137d343ca7547bd3f76f3198bc1fe2e9570cf004d6caf97c"
+    },
+    {
+      "path": "materials/red-plaster/material.json",
+      "bytes": 2973,
+      "sha256": "e2b4bae2dc8263ab733bd59726d962e24926dce7a0229204e8192ca11d785cc2"
+    },
+    {
+      "path": "materials/red-plaster/roughness.png",
+      "bytes": 127336,
+      "sha256": "3334d15e17cfac668ab1d7143b9e62ea537205833def8c701bd1e058fe2968eb"
+    },
+    {
+      "path": "materials/red-plaster-lower/color.png",
+      "bytes": 2007345,
+      "sha256": "dcf93141801f87b3db2d22e8b75af434fa0952353192f2270ea06cd4a2af807c"
+    },
+    {
+      "path": "materials/red-plaster-lower/material.json",
+      "bytes": 3162,
+      "sha256": "3c4f672fed7539aa30f3d45fa0619afd308569dce827d7c583390e51ce017ddb"
+    },
+    {
+      "path": "materials/red-plaster-lower/roughness.png",
+      "bytes": 183167,
+      "sha256": "c238e8118d54dc19ef5b2dfe45979a35a27aef9e6f3f6ba19cb8faa3fc489435"
+    },
+    {
+      "path": "materials/yellow-glazed-edge/color.png",
+      "bytes": 1871603,
+      "sha256": "12091705ed87c8644e696b2db0334f239f5fcb0dee4015ee06d18d27639af386"
+    },
+    {
+      "path": "materials/yellow-glazed-edge/material.json",
+      "bytes": 3298,
+      "sha256": "fbd7cf791a32770f6c04a76c565e436c5c6a38f6363a9b270b5fbef0052abbbf"
+    },
+    {
+      "path": "materials/yellow-glazed-edge/roughness.png",
+      "bytes": 78284,
+      "sha256": "9dc869a487d140962cea7cf2b15d1088a0c011b1e66ad3926568b60e8540088d"
+    },
+    {
+      "path": "materials/yellow-glazed-ridge/color.png",
+      "bytes": 1753455,
+      "sha256": "268bbf9ef2004a6ee5befdce42d776e99f2ea6c71f8560831000492dc431f305"
+    },
+    {
+      "path": "materials/yellow-glazed-ridge/material.json",
+      "bytes": 3314,
+      "sha256": "2bc17fb9025ec92c0832e180bb7633e419b23579f4e3f57b726a5c5ff54c0d23"
+    },
+    {
+      "path": "materials/yellow-glazed-ridge/roughness.png",
+      "bytes": 87603,
+      "sha256": "8711fafedf8ed17b9391f6f2c6bf78b6cab8a8d5be1a5e6db5d7c770da51c20c"
+    },
+    {
+      "path": "preview.jpg",
+      "bytes": 342761,
+      "sha256": "85fdcc24cc6756fe4e36e3099b21470bfdffefbcaa14a18a7305f45418173629"
+    },
+    {
+      "path": "provenance/DATA-AUTHORING.json",
+      "bytes": 22132,
+      "sha256": "37b7aa03bf7be2c62c2097cc91c4040aedee52739da7e80c0c3c288e7592e3b7"
+    },
+    {
+      "path": "provenance/SOURCE-MANIFEST.json",
+      "bytes": 1678,
+      "sha256": "2efa91b69d2bc95aee1115ca61671e93675021cb188a18fe04a117edd25766a8"
+    },
+    {
+      "path": "provenance/author_material_data.py",
+      "bytes": 9712,
+      "sha256": "480d034e8f2580f141c8cfd0a39cffeca0542164fcc5cef11b3e85310c8adf06"
+    },
+    {
+      "path": "provenance/sources/ROOT-READY-before-scalar-data.json",
+      "bytes": 12546,
+      "sha256": "532246b4b4fad1f86dcd290e779b0694d7805b485e013dbd162aae15ad6fb82e"
+    },
+    {
+      "path": "provenance/sources/hexi-primary-reference.json",
+      "bytes": 610,
+      "sha256": "d92414bf1f2c23f0e39396a91cc1f44d08310c47fb6a6b8e37ab6421d52e91ce"
+    },
+    {
+      "path": "provenance/sources/paatoimittaja-codex-sokkelo-seinapinnat-20261019.md",
+      "bytes": 759,
+      "sha256": "03613fa29aeac0e33e345604a33295c9dcf2c6b6e25e534867e2c24c1e282af1"
+    },
+    {
+      "path": "qa/ROOT-FINAL-REVIEW.json",
+      "bytes": 3441,
+      "sha256": "f1dfc490b4de87905d41fe1f075d9be4013b1ce329ddd34d852b1eba4dc0e6c3"
+    },
+    {
+      "path": "qa/agent-final-data-hexi-gate-review.json",
+      "bytes": 9443,
+      "sha256": "b33941ec464842b5ac4841bfd3ca8183c302e03801e96a3c9e5a61c422f17263"
+    },
+    {
+      "path": "qa/agent-final-data-hexi-gate-review.md",
+      "bytes": 3617,
+      "sha256": "a53213e51d2d11b38a2a42801fe50f3d83ccf508e4a570f6b6e9993bda912e60"
+    },
+    {
+      "path": "qa/agent-final-roof-hexi-review.json",
+      "bytes": 20751,
+      "sha256": "3b4135d68abcf5413049c501856a8ff1ef22a1bb83234259b91a69e1aeb27a3c"
+    },
+    {
+      "path": "qa/agent-final-roof-hexi-review.md",
+      "bytes": 2035,
+      "sha256": "8079d20eef17dc903f10efa1f9437690ee38030a590e1fb16d343fa2ef1c850b"
+    },
+    {
+      "path": "qa/agent-final-wall-stone-review.json",
+      "bytes": 18275,
+      "sha256": "94a508f234b78f1da3888e9630daa494c9098f9afb2c20c6b7df69b026d95f4e"
+    }
+  ]
+}
