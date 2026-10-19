@@ -1,6 +1,6 @@
 # Vastuukartta — aineisto ja koodialue → omistava rooli
 
-Omistajan päätös 14.10.2026 klo 10.4x (Raamattu, TYÖTAPA JA SESSIOT: ROOLIEN KANSIOT JA MALLIT;
+Omistajan päätös 14.10.2026 klo 10.4x (Raamattu, luku 7: ROOLIEN KANSIOT JA MALLIT;
 loki ROOLITYÖN PARANNUKSET). Ylläpitäjä: Päätoimittaja. Session id:t: /Users/Shared/Claude/osoitekirja.md.
 Kun muutat toisen roolin alueen tiedostoa, kerro omistavalle roolille yhdellä rivillä.
 
@@ -27,8 +27,8 @@ Tila 14.10.2026 klo 11.0x: roolien omat vastaukset ("ALUEET <rooli>: …"); Ää
 ## Lukulistat ja työkalut (omistaja 14.10.2026 klo 22.4x, kortit "Aloitus" ja lukulistat)
 
 Jokaisen roolin aloitus: LUE ALUSSA enintään 5 kohtaa (oma luovutus, omat Raamatun osiot otsikoittain, oma
-pääohje), ÄLÄ LUE koko Raamattua, muiden luovutuksia eikä kokonaisia lokeja. Kaikille yhteinen Raamatun luku on
-osion 0 kohdan TYÖTAPA JA SESSIOT osat A (oma roolirivi), D (viestintä) ja G (komentosäännöt); taulukko kertoo
+pääohje), ÄLÄ LUE koko Raamattua, muiden luovutuksia eikä kokonaisia lokeja. Kaikille yhteistä Raamatusta on
+luvun 7 ROOLIT (oma roolirivi) ja viestintä (VIESTIT, VIESTINTÄ FABLELLE, JUMI) sekä luvun 12 KOMENTOSÄÄNNÖT; taulukko kertoo
 lisäksi luettavat. Työkalut-sarake ohjaa deny-rivejä roolin .claude/settings.local.json:ssa (Keskustelukanava
 kokeilee ensin yhdellä roolilla ja mittaa get_usagen System tools- ja MCP tools -osuudet ennen ja jälkeen;
 sitten muille). Tavoite: aloitus enintään 8 % kontekstista.
@@ -40,19 +40,19 @@ Keskustelukanava saa vain avata taulun (Artifact open). Äänittäjällä on Art
 
 | Rooli | Lukulista (Raamattu + oma pääohje) | Tarvittavat työkalut (muut pois) |
 |---|---|---|
-| Päätoimittaja | TYÖTAPA JA SESSIOT kokonaan, TYÖSKENTELYTAVAT AINA RAAMATTUUN, UI-POHJAT; muut osiot kohdennetusti; docs/tilinvaihto.md | kaikki (session_mgmt, Artifact, ArtifactData, Cron, Monitor, gh, Agent) |
-| Keskustelukanava | TYÖTAPA JA SESSIOT osat E ja I; docs/aloitusviestit/keskustelukanava.md | AskUserQuestion, session_mgmt, Artifact (vain open), Agent; ei simu-, selain- eikä tietokonetyökaluja |
-| Julkaisija | TYÖTAPA JA SESSIOT osat B, C ja F; osio Jakelu ja iOS-kuori; viesti-julkaisija-aloitus.md | Bash, gh, session_mgmt (send_message, list_events), iOS-simu, ArtifactData (talo/eteneminen vaihe 5); ei selain-, tietokone- eikä dokumenttityökaluja |
-| Natiiviseppä | TYÖTAPA JA SESSIOT osat B ja C; NATIIVI PELI ETUSIJALLE; viesti-natiiviseppa-aloitus.md | Bash, iOS-simu, send_message, Agent, ArtifactData (talo/eteneminen vaiheet 1–4); ei selain- eikä tietokonetyökaluja |
-| Natiivi-UI | UI-POHJAT JA TYYLIMÄÄRITTELYT, NATIIVI PELI ETUSIJALLE, osio Arkkikirjasto; viesti-natiivi-ui-aloitus.md | Bash, iOS-simu, send_message, Agent |
-| Pelikoodari | UI-POHJAT, NATIIVI PELI ETUSIJALLE, osiot Karttalinssit ja Fokusmoodi; viesti-pelikoodari-aloitus.md | Bash, iOS-simu, send_message, Agent |
-| Linssiseppä | osio Karttalinssit, NATIIVI PELI ETUSIJALLE; viesti-linssiseppa-aloitus.md | Bash, iOS-simu, send_message, Agent |
-| Valoseppä | osio Karttalinssit, NATIIVI PELI ETUSIJALLE; docs/aloitusviestit/valoseppa.md | Bash, iOS-simu, send_message, Agent |
-| Karttaseppä | osiot Kaupungit ja Karttalinssit (pallo), NATIIVI PELI ETUSIJALLE; viesti-karttaseppa-aloitus.md | Bash, send_message, Agent; ei simu- eikä tietokonetyökaluja |
-| Linnanrakentaja | HISTORIALLISET KOHTEET SEIKKAILUINA, osio Kuvat ja lähteet; docs/aloitusviestit/linnanrakentaja.md | Bash, send_message, Agent; ei simu- eikä tietokonetyökaluja |
-| Siirtoseppä | HISTORIALLISET KOHTEET SEIKKAILUINA, NATIIVI PELI ETUSIJALLE; viesti-siirtoseppa-aloitus.md | Bash, iOS-simu, send_message, Agent |
-| Sisältökirjuri | osiot Tarina ja hahmot, Kirjoittajan säännöt, Tekstien vetovoima, Kaupungit, Maalehdet ja lukeminen, Kuvat ja lähteet; viesti-sisaltokirjuri-aloitus.md | Bash, WebFetch, send_message, Agent; ei simu- eikä tietokonetyökaluja |
-| Laitetestaaja | TYÖTAPA JA SESSIOT osat B (simulaattorit) ja C (testaus); viesti-laitetestaaja-aloitus.md | Bash, iOS-simu; ei selain- eikä tietokonetyökaluja |
+| Päätoimittaja | luvut 7, 8, 12 ja 14 kokonaan, luvun 4 UI-POHJAT; muut luvut kohdennetusti; docs/tilinvaihto.md | kaikki (session_mgmt, Artifact, ArtifactData, Cron, Monitor, gh, Agent) |
+| Keskustelukanava | luku 7: OMISTAJAN KANAVAT, KYSYMYKSET ja NOLLAUSRAJAT ROOLEITTAIN; docs/aloitusviestit/keskustelukanava.md | AskUserQuestion, session_mgmt, Artifact (vain open), Agent; ei simu-, selain- eikä tietokonetyökaluja |
+| Julkaisija | luvut 9 ja 10 (myös JAKELU JA IOS-KUORI), luvun 12 simulaattorit ja levy; viesti-julkaisija-aloitus.md | Bash, gh, session_mgmt (send_message, list_events), iOS-simu, ArtifactData (talo/eteneminen vaihe 5); ei selain-, tietokone- eikä dokumenttityökaluja |
+| Natiiviseppä | luvut 6, 9 ja 10, luvun 12 simulaattorit ja levy; viesti-natiiviseppa-aloitus.md | Bash, iOS-simu, send_message, Agent, ArtifactData (talo/eteneminen vaiheet 1–4); ei selain- eikä tietokonetyökaluja |
+| Natiivi-UI | luku 4 (UI-POHJAT JA TYYLIMÄÄRITTELYT, arkkikirjasto), luku 6; viesti-natiivi-ui-aloitus.md | Bash, iOS-simu, send_message, Agent |
+| Pelikoodari | luvun 4 UI-POHJAT, luku 6, luku 2 (fokusmoodi ja linssit); viesti-pelikoodari-aloitus.md | Bash, iOS-simu, send_message, Agent |
+| Linssiseppä | luku 2 (linssit), luku 6; viesti-linssiseppa-aloitus.md | Bash, iOS-simu, send_message, Agent |
+| Valoseppä | luku 2 (linssit), luku 6; docs/aloitusviestit/valoseppa.md | Bash, iOS-simu, send_message, Agent |
+| Karttaseppä | luku 2 (kartta, kaupungit ja linssit), luku 6 (LAATTAPYRAMIDI, KARTTAPALLO); viesti-karttaseppa-aloitus.md | Bash, send_message, Agent; ei simu- eikä tietokonetyökaluja |
+| Linnanrakentaja | luku 2 (HISTORIALLISET KOHTEET SEIKKAILUINA), luku 11; docs/aloitusviestit/linnanrakentaja.md | Bash, send_message, Agent; ei simu- eikä tietokonetyökaluja |
+| Siirtoseppä | luku 2 (HISTORIALLISET KOHTEET SEIKKAILUINA), luku 6; viesti-siirtoseppa-aloitus.md | Bash, iOS-simu, send_message, Agent |
+| Sisältökirjuri | luvut 3 ja 11, luku 2 (kaupungit, maalehdet); viesti-sisaltokirjuri-aloitus.md | Bash, WebFetch, send_message, Agent; ei simu- eikä tietokonetyökaluja |
+| Laitetestaaja | luku 9, luvun 12 simulaattorit; viesti-laitetestaaja-aloitus.md | Bash, iOS-simu; ei selain- eikä tietokonetyökaluja |
 | Äänittäjä | osio Äänet ja luennat, UUSIA ÄÄNIÄ EI GENEROIDA; docs/aloitusviestit/aanittaja.md | Bash, send_message; ei simu-, selain- eikä tietokonetyökaluja; Artifact vain äänisivun (Matkakirjan äänet) julkaisuun, ei Asemataululle (PT 14.10.) |
-| Postivahti | TYÖTAPA JA SESSIOT osat I ja J; KIERROS.md ja NOLLAUS.md | session_mgmt, ScheduleWakeup, Bash, Artifact ja ArtifactData (taulun vienti, talo/boost); ei simu-, selain- eikä tietokonetyökaluja |
-| Asemataulu | TYÖTAPA JA SESSIOT osa J; ASEMATAULU-ROOLI.md, docs/moduulit/asemataulu.md | Artifact, ArtifactData, Cron, Bash, send_message; ei simu-, selain- eikä tietokonetyökaluja |
+| Postivahti | luku 7: NOLLAUSRAJAT ROOLEITTAIN, POSTIVAHDIN KIERROS, ASEMATAULU; KIERROS.md ja NOLLAUS.md | session_mgmt, ScheduleWakeup, Bash, Artifact ja ArtifactData (taulun vienti, talo/boost); ei simu-, selain- eikä tietokonetyökaluja |
+| Asemataulu | luku 7: ASEMATAULU; ASEMATAULU-ROOLI.md, docs/moduulit/asemataulu.md | Artifact, ArtifactData, Cron, Bash, send_message; ei simu-, selain- eikä tietokonetyökaluja |

@@ -574,3 +574,1175 @@ Omistaja 18.10.2026 klo 16.10 (Keskustelukanavan välittämä, sanatarkasti): "l
 ## OMISTAJAN PAATOKSET 19.10. AAMU (gmail-tili) (19.10.2026 klo 07.23)
 
 Klo 07.12 (kortti KK:ssa): viikkoraja gmail-tilillä "100 %, 99 %:ssa rivi (Suositus)". B5 Codex-havainnekuvat "11 kuvaa (Suositus)" = lupa TASAN 11 (tulivuoret 5, pimennys 2, hurrikaani 2, vanat 2); Valoseppä tilaa, KK tarkistaa ennen Codex-riviä. ~/.claude/CLAUDE.md:n KK-id vaihdettu local_8e4fcfed:ksi ("Kyllä, vaihda"). Klo 07.20 juoksupelin hahmojen tyylierosta (Puyi piirroshahmomainen, vartija lähes realistinen), sanatarkasti: "Työstän tätä codexin kanssa, ei pyydetä mitään muutoksia." → Clauden puolelta ei pyydetä Codexilta muutoksia hahmoihin eikä juoksupelin grafiikkaan; PT:n 07.1x-korjauspyynnöt peruttu postilaatikossa (07910288f); tuonti nykyisillä malleilla jatkuu. Omistajan 18.10. klo 17.55 pyynnöt C1–C6 jaettu junaan 204: C1 logon häivytys Natiivi-UI, C2 Cupolan häivytys ja C4 kehittäjätilan maksulliset Pelikoodari, C3 ISS-ottojen suomi-pakotuksen selvitys Äänittäjä (määrä kortille ennen generointia), C5 Asemataulun kirjoitusohje + tarkistin ja C6 Raamatun rakenne PT.
+
+## OMISTAJAN PÄÄTÖS: RAAMATTU JÄSENNETÄÄN 14 LUKUUN (19.10.2026 klo 08.17)
+
+Omistaja 19.10.2026 klo 07.31 (KK:n välittämä, kortti "Kyllä, tee näin"): Raamattu (js/tyohuone-raamattu.js) jäsennetään luonnoksen docs/raportit/raamattu-rakenne-luonnos-20261019.md mukaan 14 lukuun:
+1 visio ja kohderyhmä, 2 pelisuunnittelu, 3 tarina ja kerronta, 4 taide- ja UI-tyylikirja, 5 ääni ja lokalisointi, 6 tekninen arkkitehtuuri, 7 tuotantoputki ja roolit, 8 valmiin määritelmä, 9
+laadunvarmistus ja testaus, 10 julkaisu ja versionhallinta, 11 sisältö, assetit ja lisenssit, 12 työkalut, tilit ja ympäristö, 13 sanasto ja ohjekartta, 14 päätöshistoria. Sitovien linjausten sisältö
+ei muutu; historia lokiin; tilinvaihdon tarkistuslista lukuun 12. Luonnoksen kohta 4.24 ("koeotto ennen jokaista äänierää") HYLÄTTY ("Ei"), eikä sitä kirjata. Kohdat 4.16–4.17 (merge-portti, omat
+testiapit enintään 2) ovat uusia ehdotuksia, eivät sääntöjä. Luvun 5 suomi-pakotukseen lisätään tools/elevenlabs_kieli.py, tests/eleven-kielikoodi-python.test.mjs ja tools/tarkista-puhekutsut.sh (PR
+#4887, Postivahti ajaa kierroksella); lukuun 7 Asemataulun kirjoitusohje docs/moduulit/asemataulu.md ja tools/asemataulu/tarkista-junat.py (PR #4886). Vanhan 27-osioisen jäsennyksen kohtien uudet
+paikat: docs/raportit/raamattu-siirtotaulukko-20261019.md.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Fokusmoodi" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Fokusmoodi" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen
+Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[6.22] EI ENÄÄ VOIMASSA (historia lokissa): kevyt kulku -kokeilu ja lehtitehtävät, täkyannostelu ja tuikkiva piste, fokusnapit ja kartuutsi, jatkuva tasokartta ja maalehdet, saapumissekvenssi 26.8.,
+pelitestikierrosten mitat, bittikartan välivaiheet ja kuoren rasterointi, maatummennus, kaupunkilaatan kasvukatto, miniatyyrimaapallo-suunnitelma, aallot 1–4 ja koko maailman lehdet — korvattu
+pallolla (5.9.2026, Viisas Pöllö -osio) ja karttauudistuksella (13.9.2026, Kaupungit-osio).
+[6.0] FOKUSMOODI ON PELIN OLETUSTILA (omistaja 24.8.2026): tietoa, kysymyksiä ja valintoja niukasti kerrallaan; esitystapa- ja annostelukerros kaiken rakennetun päällä.
+[6.0] MOTIVAATIOTEORIA ON PELIN YDIN (28.8.2026, TÄRKEÄ): ei opiskella suoraan "mikä on Makedonia", vaan lähdetään siitä mikä kiinnostaa (mitä siellä syödään, pulla) ja laajennetaan, kun kiinnostus on
+herännyt; pulla ja pulu kantavat periaatetta maasta toiseen; kirjataan myös READMEen.
+[6.1] KULKU KAUPUNGISSA (voimassa 20.9.2026): fokusvirran korttiannostelu (matkakirja-, oppitunti- ja kohtaamiskortit) EI näy missään kaupungissa — FOKUSVIRTA_KORTIT = false (js/fokusvirta.js), koodi
+säilyy lipun takana eikä sitä käännetä päälle ilman omistajan uutta päätöstä (2.9.2026).
+[6.1] Kaupungit-osio (karttauudistus 13.9.2026 alkaen).
+[6.1] Syvyysportaat (28.8.2026): täysi pino vain maan pää-/aarrekaupungille; osa kaupungeista tehdään tarkoituksella kevyinä hengähdyskaupunkeina — rytmi syntyy vaihtelusta.
+[6.2] AARRETEHTÄVÄ: kahden yrityksen sääntö — kohtaamiskortti varmistaa ("Haluatko varmasti tavata … juuri nyt?", "vain kaksi yritystä"), kahden epäonnistumisen jälkeen aarre lukkiutuu, mutta lukko ei
+jumita peliä: tähti siirtyy ja Matkusta aukeaa (26.8.2026).
+[6.2] Pelitehtävän aihe ratkaisee, ei mekaniikka (28.8.2026): aarretehtävä kytketään aina kaupungin tarinaverkkoon — isoisän väittämä tai pulma kylvetään saman kaupungin merkintään ja kohtaaminen
+lunastaa sen; painotettu arvonta on varapolku; valokuvakysymys taka-alalla.
+[6.2] Pullavinkki on ensisijainen ja näkyvin apu, 50:50 hiljainen vara; vinkin voi ostaa pelin punnilla pullana pululle, pullan nimi on maan pullavastine (tsoureki, kozunak, simit), halvempi kuin
+matkalippu, kerran per aarre (28.8.2026).
+[6.2] Löytö näkyy kaupungin merkin värinä: käyty kaupunki on kultainen piste (8.9.2026) — ei aarremerkkiä, tähteä eikä vinoneliötä kartalla.
+[6.3] SÄHKETEHTÄVÄ — FLIPPED LEARNING (29.8.2026): vaihtoehtoinen aarteen avaustapa.
+[6.3] Sähke on lyhyt ja kysymys ensin (2.9.2026): enintään viisi riviä (tervehdys, kysymys, "VASTAA KOHDE JA VUOSI", mistä vastaus löytyy, allekirjoitus), Livian saate enintään kolme virkettä.
+[6.3] Sähke taitetaan aidolle sähkösanomapaperille rivi kerrallaan kirjoituskoneen äänin ja loppublingillä; pulla pululle 50 p antaa vinkin, 25 p puolikas pulla (3.9.2026).
+[6.4] Kaupungit-osio 19.9.2026).
+[6.5] LIVIAN LISÄYS noin joka 3.–4. faktavastauksen loppuun omana viimeisenä kappaleenaan ILMAN OTSIKKOA (omistajan linjaus 30.8.2026: ei "Livian lisäys:" -etikettiä;
+[6.5] Alustus kuuluu kolmiosaiseen vastauskaavaan (PULUN VASTAUSKAAVA 26.9.2026 kumosi 8.9.2026:n "alustukset pois" -linjan).
+[6.5] TOTEUTUS: siivottu taustaohje, tools/pollo/worker.js:n JARJESTELMAKEHOTE (omistaja 8.10.2026 klo 23.33:
+[6.5] PR #4239, käytössä 8.10.2026 klo 23.55; läpikäynti docs/raportit/pulu-taustaohje-lapikaynti-20261008.md): toistot on koottu ja annostelusäännöt ovat yhdessä ANNOSTELU-osiossa, mutta kaava ja
+säännöt ovat ennallaan.
+[6.6.0] LIVE-TEKOÄLY KAIKILLE, ALLE 18 KURATOITU (omistaja 10.10.2026 klo 08.0x, korttivastaus "live kaikille, kuratoitu alle 18v"; syy:
+[6.6.1] Kuratoidussa livessä pelin ulkopuoliset ajankohtaisaiheet (urheilutulokset, julkkikset, uutiset, viihde) ohjataan ystävällisesti pelin paikkoihin; urheilu kaupungin historiana tai nähtävyytenä
+on sallittu (Päätoimittaja 11.10.2026).
+[6.6.1] ULKOINEN TESTFLIGHT AUKI (omistaja 11.10.2026 klo 09.5x, kortti "Kyllä, junasta 181 alkaen (suositus)"; testaajille oma linkki, sama versio kummallekin; kumoaa 10.10. eston, koska ikäkysely ja
+kuratoitu live ovat pelissä): junasta 181 alkaen jokainen PASS-build menee sisäisen ryhmän rinnalla Applen beta-arvioon ja samana versiona kahdelle ulkoiselle ryhmälle:
+[6.7] PULU-CHAT YHTENÄINEN (omistaja 5.10.2026 klo 16.4x, sitova):
+[6.7] PULU ESIGENEROITUNA (omistaja 9.10.2026 klo 11.4x–11.5x, korvaa 5.10. linjan "ei valmiita vastauksia"; loki): peruspelin Pulu vastaa etukäteen generoiduilla vastauksilla — valmiit kysymykset
+(tavoite vähintään 5 kohtaa kohden; näkyvissä 2, loput vierittämällä), niiden vastaukset sekä vastausten alleviivattujen linkkien ja jatkokysymysten vastaukset generoidaan valmiiksi ja tallennetaan
+(ehdotus: ämpäripaketti maittain), joten peruspeli ei käytä API-krediittejä; vapaa kysyminen on myöhemmin maksullinen lisäosa, joka käyttää API:a.
+[6.7] ENSIMMÄINEN ERÄ (omistaja 9.10.2026 klo 12.2x kortti ja 13.3x–13.4x:
+[6.7] "low-tasohan näyttää paremmalta kuin ilman asetusta.
+[6.7] Se on nopein ja vie vähiten kredittejä" ja "Pilvikredittejä on 250 dollaria jäljellä, niin käytä ennemmin niitä ensin"):
+[6.7] Live-Pulu pysyy pelaajilla käytössä maissa, joille paketti puuttuu, kunnes koko Euroopan paketit ovat valmiit (Päätoimittaja 9.10.2026); luentaäänet vasta, kun Pulun ääni on valittu.
+[6.7] Astronauttikuvissa chatin konteksti ja valmiit kysymykset vaihtuvat näytöllä olevan kuvan mukaan: worker tekee kuvalle kolme enintään kuuden sanan kokonaista kysymystä kerran ensimmäisellä
+katselulla ja tallentaa ne kuvan tunnuksella (omistaja 6.10.2026 klo 00.1x).
+[6.8] PULUN VASTAUSKAAVA (omistaja 26.9.2026 klo 23.4x, sitova):
+[6.9] LIVIA ISOISÄN MERKINNÄN KOMMENTAATTORINA — PARIPERIAATE (28.8.2026): reaktio suunnitellaan aina parina isoisän kertomuksen kanssa.
+[6.9] Viisas Pöllö -osio 8.9.2026).
+[6.9] Livian avausesittely aloitusvalinnassa on kaanonia: neljä kuplaa (hiessä / minä olen Livia ja kannoin sähkeet / valitse rauhassa mistä aloitat / perillä odottaa Viisas Pöllö, minä olen vain
+viestinviejä), kerran per laite, kuplat eivät estä valintaa; beta-rajoitus kerrotaan tarinan sisällä ilman sanaa "beta" (29.8.2026).
+[6.10] REAKTIOJÄRJESTELMÄ (28.8.2026, koko suunnitelma käytössä): viisi kaiverrettua symbolia — laakeriseppele (Hieno), sydän (Ihana), suurennuslasi (Mielenkiintoinen), tiimalasi (Tylsä), mustetahra
+(Virhe) — rivi jokaisessa sisällössä (lehtijutut, kohdekortit, nähtävyydet, ihmeet) ja lehtien väliotsikoissa; lepotila yksi himmeä nappi (voittajasymboli + määrä), napautus levittää viisi.
+[6.11] YHTENÄINEN KOHDEMALLI — KAIKKI KARTAN NOSTOT OVAT SAMAA LAJIA (28.–29.8.2026): fokuskohteet, täkynostot, eläintäkyt, syvennystarinat ja skandaalit ovat yhtä lajia KOHDE: karttapiste, josta
+aukeaa sama yhtenäinen kortti; erot ovat dataa — sisällön laajuus (pieni fakta / tarina+kuva / tarina+visa), palkkio ja aihesymboli.
+[6.11] 160–240 sanaa, päivätty lähderivi) — pelkkä ingressi + visa on tynkä; kuvat listana: generoitu havainnekuva ensin, sitten Commonsin aikalaiskuvat ja valokuvat lisensseineen (2.9.2026).
+[6.11] Nostojen määrä vaihtelee maittain sisältörikkauden mukaan (pieni maa 1–2, keskitaso 2–3, rikkaat 4–6), ei kiintiöllä (29.8.2026).
+[6.11] Maastokohteet (tärkeimmät vuoret, meret, joet) avattaviksi kohteiksi jokaisessa pelimaassa, datavetoisesti (29.8.2026).
+[6.11] 2–3 aikakauteen sopivaa skandaalia, kohua tai huijausta per pelimaa todellisiin paikkoihin ankkuroituina; historiallista ja opettavaa, ei nykyihmisten yksityisasioita eikä verellä maustamista,
+13+ (30.8.2026).
+[6.12] KARTTASELITEVALIKKO, AIHEVALOT JA KAHDEKSAN PÄÄKATEGORIAA (29.8.2026): kartan oikean yläkulman popup-valikko listaa karttaselitteet; rivin väripallo sytyttää staattisen valotäplän (ei sykkivän)
+kaikkiin aiheen kohteisiin, valot pysyvät kunnes sammutetaan, useita yhtä aikaa, OFF- ja ALL-napit, tila talletetaan laitteelle; päälle kytketyn aiheen pallo syttyy myös valikon rivillä.
+[6.12] Kaupungit (portti), Nähtävyydet (silmä), Kadonneet ihmeet (tähti), Luonto (lehvä — myös vuoret, meret, joet), Eläimet (pöllö), Historia ja tarinat (pylväs), Kulttuuri ja ruoka (lyyra), Kauppa
+ja tekniikka (vaaka); yhdeksäs rivi TIIMALASI = historian hetket (2.9.2026).
+[6.12] Merkkien ja korttien tarkat symbolit (12 kategorian symbolitaksonomia 26.8.2026: huutomerkki, pöllönpoikanen, silmä, murtunut pylväs, vuorenhuippu ja aalto, höyryävä malja, lyyra, hammasratas,
+vaaka, sulkakynä, ankkuri, laakeriseppele) säilyvät datassa; valikko ryhmittelee mapping-taululla.
+[6.13] KARTTAMERKIT JA NIMIÖT (27.8.–3.9.2026, voimassa myös pallolla): merkit minimalistisia viivamerkkejä kartan musteella, generoitu mustepiirrosglyyfi vain kortin ylärivillä (27.8.); kartalla
+nostomerkki on kategorian värinen kiekko ohuessa mustereunassa ja MUOTO säilyy vain viidellä: vuori (kolmio), vesi (aallot), skandaali (salama — yksi veto, erottuu pienimmässäkin koossa; tunnus
+`huuto` säilyy datassa), eläintäky (tassu), Matkakirjan ihme (kompassiruusu) (2.–3.9.); jokainen näkyvä karttamerkki on nimetty ja napautettava, myös maastonimet ja kolmiot; vartio on koneellinen
+(tools/tarkista-karttamerkit.mjs julkaisuportissa) (2.9.); piste vain nimen kanssa — merkki on nimen ankkuri ja piirtyy tasan kun nimi piirtyy, maastopari kelpaa nimeksi (31.8.); noston teksti on
+kokonaan napautettava (1.9.); nimiölle neljä kylkeä, pudotus vain todelliseen törmäykseen (1.9.); poltetut nimiöt eivät limity — maat ladotaan maatunnusjärjestyksessä esteineen (3.9.); noston
+ruutukatto = kohdekaupungin merkki+nimi, ladontasäännön versio on tiivisteen syöte ja vanhalla säännöllä poltettu nostotaso piilotetaan (1.9.); kaikki merkkiperheet yhdessä mitassa, symboli/nimi 13/11
+(2.9.); siirretyn noston katkoviiva merkin reunasta ankkuriin, 0,9 px, himmeys 0,55 — viiva on merkin jatke (2.9.); kaupungin piste on karttavakio, nimet ruutumitassa (31.8.); pääkaupunki 1800-luvun
+atlaskonventiolla: kaksoisrengas + harvennettu kapiteeli (31.8.); läheltä näkyvä maastonimi on kohdenimiön asua, nauha on kuvan osa, kortti ei aukea reunaan (3.9.); pallolla kaupungin nimi on
+ensisijainen ja nostojen laput väistävät (7.9.2026, Viisas Pöllö -osio).
+[6.14] LAATTAPYRAMIDI — KARTAN ARKKITEHTUURI (29.–31.8.2026, SITOVA;
+[6.14] 5.9.2026 alkaen pallon pintana, ks.
+[6.14] YKSI maailmanlaajuinen pyramidi, ei maakohtaisia bittikarttoja; maalehdet, erillislauta ja vanha piirretty maailmankartta poistuivat pelaajalta (25.8., 30.8.).
+[6.15] 1873-atlaksen akvarellityyli, patina poltettu laattoihin — viivat tummanruskeita, valkoinen kermaksi, lumppupaperin syy ja ikääntymissävy, akvarellin reunakertymä (29.8.);
+[6.15] PAPERIVAKIOT (rae, syy, musteen leviäminen, kohdistusheitto, viivojen rosoisuus) mitoitetaan laitepikseleinä ja KARTTAVAKIOT (rannikko, hypsometria, varjostus) kartan mittakaavassa — sama
+koskee nimiöitä, pisteitä ja viivoja (30.8.); korkeusdata ETOPO1 1 kaariminuutin tarkkuudella (1.9.2026, kumoaa 3 kaariminuutin ruudukon); ikilumi alkaa 5500 metristä, järvillä peittävä
+rannikkovesisävy (31.8.); meren syvyysporrastus kaksinkertaistettu monotonisella kuutiokäyrällä, matalan meren porras loivin (30.8.); geneerinen vesiviivoitus pois kunnes se on oikeaa syvyysdataa
+(30.8.); naapurimaiden tummennus purettu, jäljellä vain nykyisen maan vahvistettu rajaviiva (2.9.; kohdemaan korostus ja tasoituskerma:
+[6.15] Kaupungit-osio); erikoispiirit (päiväntasaaja, kääntöpiirit, pohjoinen napapiiri, Greenwich) hentona piste-viivana kursiivinimin, päivämäärärajaa EI piirretä — sitä ei ollut 1873 (26.8.);
+kartta on sisällöltään nykyaikainen, tyyliltään aikakauden.
+[6.16] REITIT JA SIIRROT: reitit lautapelityyliin — paksumpi harvempi katkoviiva, pyöreät päät, deterministinen käsivarahuojunta, meren katko tiheämpi; pysyvä sääntö: katkon on pysyttävä yli
+1,5-kertaisena helmen leveyteen, testi vartioi (1.–2.9.2026).
+[6.16] Noppa ja reittien viivat/pisteet säilyvät (24.8.).
+[6.16] Matka jatkuu itsestään kaupunkiin asti: askelpisteessä seuraava heitto laukeaa 750 ms siirtoanimaation jälkeen, suunnan valinta jää pelaajalle, jokainen heitto kuluttaa vuoron (2.9.; bussi,
+liftaus ja laiva:
+[6.16] Matkusta ja kulkumuodon valinta eivät liikuta kameraa; heiton jälkeen sovitus nappulaan ja kaikkiin vaihtoehtoihin (720 ms, marginaali 14 %), lennossa sovitus lentokohteisiin heti (2.9.).
+[6.16] Siirron koreografia: ennakkozoomi → kamera-ajo trapetsiprofiililla → nappula lähtee 300 ms kameran jälkeen ja saapuu 280 ms ennen kameraa; kamera-ajot pehmeästi peräkkäin, uusi ajo alkaa kesken
+olevan nykyisestä kehyksestä ja kesto sovitetaan liikkeeseen (2.–3.9.; hyppyjen lähizoomi ja nappulan kulku joka pisteen läpi:
+[6.16] Siirtymämusiikkia ei soi kartalla (KARTAN MUSIIKKI 10.10.2026, Viisas Pöllö -osio).
+[6.16] Avauslento valmiiksi ladattuna: laatat ja nimikerros piirretään ennen lentoa, lennossa vain Lontoon ja kohteen nimet, kertojan luenta kuuluu (3.9.).
+[6.17] KAMERA JA NAPPULA: peli siirtää karttaa itse (kamera-ajot) (24.8.); panorointi rajataan kohdemaan ympärille (KARTTAUUDISTUKSEN PAATOKSET 6, Kaupungit-osio), kehittäjän maailmatilassa vapaasti.
+[6.17] Pulu näyttää paikan: kun pelaaja kysyy pululta paikkaa, kamera lentää sinne pehmeästi ja paluunappi vie takaisin (6.9.; lento vain sijaintikysymyksistä 11.9., Viisas Pöllö -osio).
+[6.17] Pelinappula on mahdollisimman yksinkertainen klassinen lautapelinappula, lämmin valkoinen ohuella ääriviivalla; tinaherra kytkimen NAPPULA_TYYLI takana (27.8.).
+[6.17] Uloin zoomi näyttää koko laudan kerran ja ympärille jää samaa pergamentin pohjaa (2.9.; pallolla kohdemaan zoomikatto:
+[6.18] HAVAINNEKUVA-SANA (omistaja 27.9.2026 klo 13.4x, sitova): kaikista generoiduista (tekoälyllä tehdyistä) kuvista käytetään pelissä, lehdissä, kuvateksteissä, tekijä- ja lähdetiedoissa,
+projektisivustolla ja raporteissa sanaa HAVAINNEKUVA — ei "kuvitus", "AI-kuva", "generoitu kuva" tai "tekoälykuva".
+[6.19.0] KUVAT — TYYLI JA TUOTANTO: kaikki generoidut kuvat (kohtaamiset, hetket, ennen/nyt, nostot, eläintäkyt, aarteet, ihmeet, kannet, kuvitukset) fotorealistisia valokuvia, ei piirroksia eikä
+maalauksia; poikkeus miniatyyrit; piirrosmainen tulos on hylkäysperuste (28.8., 2.9.).
+[6.19.0] Sama koskee Codexin havainnekuvia ja historiallisia hetkiä (omistaja 7.10.2026 klo 13.2x, kortti "Kaikki fotorealistisina"; myös Olavinlinna 1499, Kielletty kaupunki 1923 ja Giza): jokaisessa
+kuvatekstissä ja metatiedoissa on merkintä havainnekuva, kartan nähtävyysminiatyyrit pysyvät nykyisen akvarellisarjan tyylissä (käyttöliittymän kuvakkeita), mutta matkalaukun varustekuvat
+(assets/varusteet/: linssien ja pelien minikuva listassa ja iso kuva ennen aktivointia) tehdään fotorealistisina (omistaja 9.10.2026 klo 12.0x kolmen tyylin vertailun jälkeen:
+[6.19.0] "tee mini ja iso kumpikin fotona"; korvaa saman päivän klo 08.4x akvarellilinjan), ja Codexilta tilataan mahdollisimman paljon, koska sillä on käyttämättömiä krediittejä (13.1x).
+[6.19.0] Loistoaikakuvat puhtaasti omassa ajassaan — aikasiirtymän hoitaa kortin kuvapari (loistoaika + aito nykyvalokuva), ei yksi kuva (29.8.); aikasarjaihmeet (sama kaupunki eri vuosisatoina)
+samalla säännöllä (30.8., idea).
+[6.19.0] Herokuvien rajaus tiukka: naapurirakennukset vain reunoilla ja niiden sijoittelu saa poiketa, rakennus itse ratkaisee (27.8.).
+[6.19.0] Kohtaamisilla ON kuvat (kuvaputki, 12.9.2026) ja omistaja arvioi kohtaamiskuvat itse (5.9.); kaanonia ei muuteta kuvan takia ali-agentin päätöksellä, vain omistajan (12.9., Viisas Pöllö
+-osio).
+[6.19.0] Kuvaputken kuvatyypit ovat omia kategorioita ja jokainen tilaus nimeää kategorian otsikossa; tilaukset ja kuittaukset postilaatikon kautta, R2-polku kohtaamiset/<kategoria>/ (2.9.);
+[6.19.0] Fable tilaa ja hyväksyy kuvaputken kuvat omistajan puolesta, kohtaamiskuvat (henkilöt) jäävät omistajan arviointiin (5.9.); omistajan pelistä antamat kuvapyynnöt aina kiireellisinä (3.9.).
+[6.19.0] Havainnekuvan selitelinkki kaikkialla lähderivillä (js/havainnekuva.js) (2.9.); lähde ja havainnekuvamerkintä näkyvät vain suurennoksessa (19.9., Kaupungit-osio).
+[6.19.0] Ihmenauha: vino tasainen kaista, joka leikkautuu kuvan reunaan, juhlava antiikva harvennettuna (27.8.).
+[6.19.0] Ihmeselitteissä myös kohteen koko lähteistä ja kevyt isoisän mittausviittaus, jos kohde oli olemassa 1873 (28.8.).
+[6.19.0] 1800-luvun kaiverrettu käsinväritetty kartta aarrekortin, kohtaamisen tai noston kylkeen — ensisijaisesti aito PD-aikalaiskartta Commonsista; roolijako: valokuva = nykyhetki, loistoaikakuva =
+mennyt elävänä, kaiverruskartta = paikka kuten isoisä sen tunsi (29.8.).
+[6.20] HISTORIAN HETKET JA HETKIEN TEKSTIT (2.9.2026): historian hetki = katsoja on paikalla sillä sekunnilla, kun jotain tapahtuu.
+[6.20] Tekstit ihminen edellä, maailma vastapainona: hetken teksti ja kuvateksti alkavat siitä, mitä kuvan ihminen kokee, pelkää tai ajattelee, suuri kaari lyhyesti sen jälkeen; keksitty minitarina
+sallittu uskottavana ja merkittynä ("ehkä", "kerrotaan"), faktarivi erillään; rakenne vaihtelee.
+[6.21] SKANDAALINOSTO ON LISÄLEHTI (3.9.2026): skandaalinoston kortti taitetaan lehdeksi — nimiö "Lisälehti" (1800-luvun tapa myydä skandaali numeron välissä;
+[6.21] "looppi" hylätty 1900-luvun sanana), päiväysrivi kaksoisviivoin, pääotsikko isolla, ingressi, kuva kuvatekstein, leipäteksti anfangilla ja leveällä ruudulla kahdessa palstassa; hieman
+keltaisempi pohja ja kaupunkilehteä pienempi koko, jottei sekoitu siihen.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Karttalinssit" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Karttalinssit" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen
+Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[9.4] ENSIMMAINEN AIKAJANALINSSI: KEKSINNOT EUROOPASSA (omistajan tilaus 2.9.2026 ilta; Fablen ensimmainen kierros): yhteinen aikajanamoottori js/aikajana.js + linssi js/linssit/keksinnot.js (kerros:
+false, kuten radio). Kulku: kello rullaa ylalaidassa tyhjien vuosien yli ja pysahtyy tapahtumaan; kartalle syttyy valo tyon kaupunkiin ja JAA PALAMAAN (lopussa koko kaaren valokartta); FILMINAUHA
+alalaidassa: seuraava kortti vasemmalla sumeana, nykyinen tarkkana, menneet oikealle pienenevina nimineen ja vuosineen; ILMIOPANEELI oikeassa ylakulmassa: ilmiokuva + keksijan nimi + selite + Lue
+juttu. Kaikki vaihdokset liukuen. Napautus kelloon/korttiin pysayttaa; nykyinen kortti avaa jutun nahtavyyskorttina. Kaari 1769 Watt - 1928 Fleming, 25 pysakkia + merkkipaalu 1873 (isoisan matka);
+rehellinen rajaus: Bell, Edison ja Wrightit mainitaan loppusanoissa Atlantin takaisina. KUVAT: keksijoiden muotokuvat Commonsin PD-kuvia; ilmiokuvan paikalle GENEROITU kuva kun kuvaputki tuottaa sen
+(yksi kentta datassa). Kamera vapautuu maan ikkunasta ajon ajaksi (ui.kameraVapaa). Kaynnistin toistaiseksi kehittajavalikon rivi "aikajana: keksinnot"; pelillinen ovi paatetaan omistajan kanssa. OMA
+MUSIIKKI ON PAATETTY (omistaja 2.9.2026 ilta: "Generoi linssille oma musiikki"): linssilla on oma raita (Google Lyria 3.5, ks. AANET JA MUSIIKKI Viisas Pollo -osiossa; 45-60 s saumaton looppi, -33
+LUFS; luonne 1800-luvun kellokoneiston tikitys ja tasainen pulssi, akustinen, ei laulua). Soi linssin kaynnistyksesta sulkemiseen, hiljenee puoleen pysaytyksessa, vaistyy pollon ja lukijan alta kuten
+siirtymamusiikki. Tama on linssien musiikin malli: jokainen aikajanalinssi saa oman raitansa samalla putkella. Linssisopimuksen kielto jatkuvasta animaatiosta koskee SVG-kerrosta: valo syttyy kerran,
+kello ja nauha ovat DOM:ia kartan paalla.
+[9.0.0] VAIN HYVÄN 3D:N KAUPUNGIT (omistaja 7.10.2026 klo 00.4x): opas avautuu vain kaupunkeihin, joissa on oikea hyvä 3D-aineisto (LS2:n luokitus sallitut-3d.json, 7.10.2026:
+[9.0.1] ESITTELYT ESIGENEROIDAAN (omistaja 7.10.2026 klo 00.4x): kaupunkiesittelyt ja muu etukäteen tehtävissä oleva sisältö kirjoitetaan Claude Coden Opus-agenteilla (ei workerin API:lla) ja
+tarkistetaan erillisellä kieli- ja faktatarkistuksella ennen ääntä, ja äänet esigeneroidaan (määrä omistajan luvalla, pilotti ensin).
+[9.0.3] PALLOT PELAAJALLE (omistaja 11.10.2026 klo 13.4x ja 14.4x; kumoaa 7.10.:n "vain siinä maassa, jossa pelaaja on"): pelaajalle näkyvät aina vain kehityskaupunkien pallot (ks.
+[9.0.3] KEHITYSKAUPUNGIT), muiden kaupunkien vain kehittäjälle; pallolento maksaa £200 (Kysely-kaava kuten 50:50), muualta kuin kohdemaasta napautettaessa viereen tulee hetkeksi hintalappu
+"Kuumailmapallo £200", ja kohdemaassa ilman riittäviä rahoja tulee vain rahapulailmoitus OK-napilla; koko Euroopan loitonnuksessa hunnun päällä näkyvät pallot, himmeät kohdekaupunkipisteet ja kevyet
+rajat.
+[9.0.3] Pallo sijoittuu kaupungin nostokortin vastakkaiselle puolelle, ettei kortti peitä sitä (7.10. klo 12.4x, Ateena).
+[9.0.4] NIMI KUUMAILMAPALLO JA KORINÄKYMÄ (omistaja 7.10.2026 klo 09.1x): linssin näkyvä nimi on Kuumailmapallo (sisäiset tunnisteet ennallaan), ja jokainen opaskaupunki näkyy kartalla omana
+3D-pallonaan.
+[9.0.6] Ruudulla kaupunki on koko ruudulla, paikan nimi ja yksi rivi häivyttyvät noin 5 sekunnissa, chat ei ole oletuksena auki, ja hampurilaisessa ovat Vaihda kohde (maanosa → maa → maan sallitut
+kaupungit), Näytä teksti, Mikseri (omistaja 9.10.2026 klo 00.43; samat säätimet kuin muualla, olemassa olevalla pohjalla) ja Poistu linssistä (ei erillistä ✕:ää).
+[9.0.8] KUVIEN KÄYTTÖOIKEUS (Päätoimittaja 7.–8.10.2026, sitova kaikille oppaan ja nostojen kuville, koska peli on kaupallinen): panoraamavapaus tarkistetaan maittain, eikä pelkkä ei-kaupallinen
+panoraamavapaus riitä (ks.
+[9.0.8] Pysähdykset valitaan ensisijaisesti kaupungin lukitusta kohdelistasta (12 kohdetta); puuttuvat kuvat ja kadonneet kohteet tilataan Codexilta havainnekuvina; kuvat kytketään ☰-valikon rivistä
+Kuvat, oletus päällä, ja valinta muistetaan (omistaja 11.10.2026 klo 23.1x: yläkulmassa näkyy vain hampurilainen; omistaja 12.10.2026 klo 00.2x: hampurilainen on oikeassa yläkulmassa).
+[9.0.8] Kaupungin sisällä kamera lentää ajonaikaisesti kahden paikan välillä pehmeästi, ei turhan nopeasti eikä turhan ylhäältä (omistaja 6.10.2026 klo 23.4x ja 9.10.2026 klo 13.1x): pehmeys on
+tärkeämpää kuin kesto, ja siirtymä saa olla nopeakin, varsinkin lähikohteeseen, kun kiihdytys ja jarrutus ovat pehmeitä (kulmanopeudelle ei ole erillistä rajaa): kesto matkan mukaan, jatkuva nopeus ja
+kiihtyvyys ilman nykäyksiä, pitkillä matkoilla pehmeä kiihdytys, tasainen matkavauhti ja pehmeä jarrutus, kaaren korkeus maltillinen matkaan nähden (lähikohteisiin matala kaari), loiva lasku eikä
+matalaa liukua maan yllä (omistaja TF 144); kaupunkikierroksen järjestys ja katselusuunnat valitaan ensin pienimmän kokonaiskierron ja sitten matkan mukaan (ks.
+[9.0.8] VAPAA LENTO JA PALAA KIERROKSELLE (omistaja 9.10.2026 klo 01.23): kierroksen nappirivillä on Vapaa lento -nappi, ja vapaassa lennossa Palaa kierrokselle vie pelaajan keskeytyskohtaan, josta
+kierros jatkuu (olemassa olevat pohjat).
+[9.0.9] William lukee jokaisen pysähdyksen yhtenä ottona, eikä kierroksella ole taukoja: seuraavan kohteen kertomus alkaa jo lennon aikana, ja lennoilla kuullaan myös kaupungin historiaa tai muuta
+taustaa omina osioinaan (omistaja 9.10.2026 klo 01.23–01.29; uudet äänet omistajan luvan rajoissa); odotusajan täyttävät esigeneroidut siltalauseet (pallon liikkeistä vain harvoin, ks.
+[9.0.9] KEHITYSKAUPUNGIT (omistaja 8.10.2026 klo 20.43, sitova;
+[9.0.9] LONTOO, PRAHA JA ATEENA omistaja 14.10.2026 klo 09.0x kortilla "Kyllä, Lontoo ja perässä Praha ja Ateena (Suositus)"): kuumailmapallon parannukset tehdään kehityskaupunkeihin Tukholma, Pariisi
+ja Kööpenhamina;
+[9.0.9] Laatat haetaan aina Cesium ionin kautta eikä omalla Google Cloud -avaimella (omistaja 11.10.2026 klo 18.5x:
+[9.0.10] VESI JA KORKEUDET (omistaja 8.10.2026 klo 20.23;
+[9.0.11] OMAT 3D-MALLIT (omistaja 9.10.2026 klo 00.42–01.05;
+[9.0.11] EIFFEL-TORNI (omistaja 10.10.2026 klo 12.3x, vahvistettu 14.10.2026 klo 23.59): omaa mallia ei tehdä, Googlen torni jää;
+[9.0.11] VALOKUVAPOHJAISET PINNAT (omistaja 9.10.2026 klo 15.0x):
+[9.0.13] TEKOÄLYPINNAT KOKEILUUN (omistaja 9.10.2026 klo 17.3x, kortti "Kyllä, kokeillaan (suositus)"): pintoja kokeillaan myös geometriaohjatulla generoinnilla omalla koneella (ComfyUI, SDXL,
+ControlNet ja IP-Adapter T7:llä: syvyys-, reuna- ja normaaliohjaus samasta kamerasta, projisointi malliin ja saumojen paikkaus) vain kaupallisen käytön sallivilla malleilla (ei FLUX.1-deviä eikä
+Hunyuania).
+[9.0.14] KIERROKSEN REITTI JA KORKEUS (omistaja 9.10.2026 klo 01.23–01.29): reitti on mahdollisimman lyhyt ilman siksakkia, ja kaukaiset kohteet jätetään kierrokselta pois (tilalle lähempiä);
+kaupunkia katsellaan matalammalta jatkuvasti hitaasti kiertäen ja panoroiden, ja pelkkiä siirtymiä on mahdollisimman vähän; reitille jätetään silti 1–2 nopeaa kiihdytystä kovaan vauhtiin; kohteiden
+järjestystä saa muuttaa, jos reitti järkevöityy (ensimmäinen kohde pysyy, ja tekstit eivät viittaa järjestykseen).
+[9.0.16] PÄIVÄ, SÄÄ JA LIVE (omistaja 8.10.2026 klo 09.1x–09.2x, sää muutettu 9.10.2026 klo 01.20–01.25, sitova): ☰-valikon rivi Aika ja sää avaa listan, jonka ylimpänä on LIVE omassa laatikossaan
+(pois harmaa, päällä oranssi tila.live);
+[9.0.17] AIKA JA SÄÄ ☰-VALIKOSSA (omistaja 11.10.2026 klo 23.1x:
+[9.0.17] "siirrä aurinko nappi eli mistä voi vaihtaa vuorokauden aikaa hampurilaisen sisään"): erillistä ☾/☀-nappia ei näytetä yläkulmassa, vaan lista avataan ☰-valikon rivistä Aika ja sää.
+[9.0.22] OHJAIMET KIERROKSELLA (omistaja 11.10.2026 klo 23.1x): opaskierroksen aikana näkyy vain tauko; tauolla näkyvät lopetus (tauon vasemmalla puolella), Seuraava, Kysy, mikrofoni, näppäimistö ja
+kompassi; vapaan ohjauksen ohjaimet tulevat vasta kierroksen lopussa tai lopetuksen jälkeen; lopetus kysyy vahvistuksen ("Haluatko varmasti lopettaa kierroksen?" KYLLÄ / EI), ja Palaa-nappi vie
+takaisin kierrokselle.
+[9.0.23] GOOGLEN RUUHKAVARA (Päätoimittajan tarkennus 11.10.2026 klo 23.1x):
+[9.1.0] ISS-KYYTI, ISS-OHJAAMO JA ISS-KAMERA (omistaja 30.9.–6.10.2026, sitova; historia lokissa, grep ISS-KAMERA ja ISS-OHJAAMO): pelaaja voi kuvata ISS:ltä mitä tahansa paikkaa koko maailmassa, ja
+kuva tehdään laitteella tarkemmasta aineistosta (Sentinel-2, GIBS-pilvet).
+[9.1.0] Kuvauksen ajan ohjaamon LCD näyttää "KEHITETÄÄN…" ja pienistä neliöistä koostuvan latauspalkin LCD-väreissä, valmistuessa "KUVA VALMIS" 2 s; valmis kuva näkyy heti Cupolan isossa ikkunassa,
+pienenee vasempaan alakulmaan pikkukuvapinoksi ja tallentuu Kuviin, ja myöhemmin se näkyy Matkalaukun julisteissa.
+[9.1.0] Kuva on JULISTE omistajan hyväksymän vedoksen E v3 mukaan (1.10.2026 klo 22.02; malli proto-3d/_valmiit/hyvaksytyt-mallit/iss-juliste-e3-20261001/): ulkomitta 4:5 pysty (2160 × 2700,
+julkaistavaksi esim.
+[9.1.0] Julisteen kuva tehdään tarkimmasta aineistosta (Sentinel-2 10 m koko lähialueelta) maapallon pintaan, ilmakehän halo on syvän sininen ja siniset sävyt korostetaan koko kuvassa (omistaja
+6.10.2026).
+[9.1.0] ISS-ohjaamossa maapallon kosketus ei tee mitään, vain ohjaamon omat säätimet toimivat, ja joystick on keskeltä tarttuessa neutraali (omistaja 5.–6.10.2026).
+[9.1.0] OHJAAMO v3b (omistaja 6.10.2026): nopeuskahva vasemmalla ja joystick oikealla, kaikki välit reunat mukaan lukien yhtä leveät, ei kerroinlaatikkoa eikä numeroita, asteikko alkaa vivun juuresta,
+iso LCD lähes tasaisella hyvin haalealla vihreällä taustalla; vaakanäkymässä paneeli on alareunassa, ja äänisäätimet ovat Pulun valikossa.
+[9.1.0] Kahva on portaaton: kaasua muutettaessa LCD näyttää 3 s ajan kertoimen vasemmalla ja oikean nopeuden oikealla sekä vähintään 0,1 %:sta rivin "x,x % valon nopeudesta"; lukema on vihreä,
+300×:stä oranssi ja 1000×:llä punainen, eikä TÄYSI NOPEUS -tekstiä käytetä.
+[9.1.0] ISS-ÄÄNET (omistaja 11.10.2026 klo 12.5x): nykyiset tehosteet pysyvät, ja ISS-näkymässä soivat satunnaisesti välillä NASAn aidot radioäänitteet (PD), myös muilla kielillä kuin englanniksi.
+[9.1.1] ISS-RAKETTI (omistaja 11.10.2026 klo 14.3x–14.5x):
+[9.1.1] ISS:lle lennetään raketilla Andøyan avaruuskeskuksesta (Norja, Tromssan lähellä); raketti näkyy kartalla valmiina lähtöön ja on käytössä heti, kun pelaaja on Tromssassa ja rahaa on £500 (ei
+aarre-ehtoa); ensimmäinen lento maksaa £500, sen jälkeen ISS aukeaa ilmaiseksi suoraan linssivalikosta ja raketilla saa lentää uudelleen ilmaiseksi; muualta napautettaessa viereen tulee hintalappu
+"ISS £500", ja Tromssassa ilman riittäviä rahoja rahapulailmoitus OK-napilla.
+[9.2.0] AJATTELIJALINSSI JA KULTTUURIPERINNÖN ARKKI (omistaja 1.–3.10.2026; yksityiskohdat lokissa, grep AJATTELIJ): yksi ajattelija kerrallaan kipsibystinä valokeilassa.
+[9.2.0] ALKU (v14, omistaja hyväksyi 3.10.2026): pimeästä kytkin napsahtaa (aito äänite ja salikaiku) ja ääriviivavalo syttyy (prologi 2,5 s); oma sävellys (Zarathustra lipun takana) kuuluu heti ja on
+tiivis, niin että kertoja alkaa noin 12 s linssin avaamisesta; leikkaukset vain kuuluviin iskuihin (suuri sointu noin 4,5 s, kolme patarumpua, huippu noin 8,6 s).
+[9.2.1] Rembrandt-valon jälkeen valospotti tummenee, ja vasta sitten taustarivit lähtevät yksi kerrallaan kasvojen eri puolilta kameran lähestyessä; taustarivit ovat luettavia mutta hennosti pehmeitä
+(noin 1 px puhelimessa), himmeämpiä ja ruudulla enintään noin 60 % päälainauksen kirjainkoosta, ja hipaisukulmassa venyvät rivit häivytetään (omistaja 3.10.2026 klo 23.4x); vain päälainaus on terävä
+ja näkyy kokonaan ruudulla (2–3 riviä otsalla); kasvot ovat melko tummat tekstien aikana, ja tekstittömissä jaksoissa tarinavalo tulee sivulta niin, että silmät näkyvät.
+[9.2.1] Kaikukuvat värittöminä, yhtenä rajattuna hahmona ilman taustaa, kuvioita ja suoria leikkausreunoja (reunat häivytetään); savu oletuksena päällä pehmeäreunaisena harsona eikä terävänä varjona
+(omistaja 3.10.2026).
+[9.2.2] LUKITTU 3.10.2026: kaikki ajattelijat ja tulevat taideteokset ovat YHDESSÄ koko maailman kulttuuriperinnön varastossa (arkki), ei maanosakohtaisia halleja; maanosa tai kulttuuri tarvittaessa
+osastona saman hallin sisällä.
+[9.3] ISOISÄN LINSSI — VUOSI 1873 (omistaja 21.09.2026 klo 09.07, Fablen linjaus): oma vahvasti retro linssi VAIN vuodesta 1873, isoisän matkan vuodesta: sen vuoden rajat ja maiden nimet (27
+poliittista nimeä nimistöstä aika=1873; raja-aineisto historical-basemaps GPL-3.0, 1878 → 1873 käsin, tarkennus nykyrajoilla, muutokset dokumentoidaan), Horation reitti katkoviivana, isoisän ottamat
+valokuvat matkan varrelta (havainnekuvat), sen ajan äänet ja media (CC-julisteet, ääninäytteet) kun niitä saadaan.
+[9.6] VIRTALINSSI (omistaja 2.9.2026 ilta:
+[9.6] "visuaalisesti voimakkain linssi jonka pohjana olisi koko maailmankartta ja aiheena siirtomaat ... salamanisku merireittia pitkin ... pienia veneita jotka kuljettaisivat banaania, teeta ...
+aaniefektit ja kuulutukset megafonista"):
+[9.6] ORJAT KUULUTETAAN KUTEN MUU LASTI (omistaja 2.9.2026 ilta, kadonneen korttivastauksen toisto):
+[9.6] "laiva on lastattu orjilla" kuulutetaan samalla megafonilla kuin tee ja sokeri, koska niin heihin silloin suhtauduttiin - se ei halvenna orjia vaan nayttaa, mita se kaytannossa oli.
+[9.6] SAMA MOOTTORI LUONNONVAROILLE (omistaja 2.9.2026): louhintamaa nakyy varilanttina, joka alkaa valua eri puolille maailmaa - oljy, timantit, kumi, kupari, guano, harvinaiset maametallit - kukin
+omalla varillaan (katalogi S6), ja LAHI-ITA JA MUSTA KULTA omana linssinaan (omistaja 2.9.2026:
+[9.6] "lahi-itakin oli aluksi siirtomaa ja alistettu"): ensin salama ja mandaatin vari, sitten oljy valuu ulos (katalogi S7).
+[9.6] ISOISAN MATKA 1873 NAKYY LINSSISSA (omistaja 2.9.2026:
+[9.6] "isoisa mukaan ehdottomasti"): kun kello saapuu vuoteen 1873, isoisan reitti piirtyy virtojen keskelle ja kulkee ajan mukana - se kertoo, mita maailmaa han kulki.
+[9.7] LINSSEJA EI TAUOTETA (omistajan kortti 28.8.2026): epailtiin etta linssit pitavat vanhaa maailmankarttaa hengissa ja kuluttavat resursseja.
+[9.8] LINSSIT KYTKETÄÄN VAIN MATKALAUKUSTA (omistaja 18.8.2026): hampurilaisvalikko on pelin ympäryksiä (äänet, uusi peli, ehdota sisältöä, versio), ei pelisisältöä.
+[9.14] IDEAPANKIN TÄYDENNYS (omistaja 26.8.2026): ihmisten leviäminen maapallolla, silkkitiet, ristiretket, kolonialismi, kielten leviäminen, öljynporauksen vaikutus rahaliikenteeseen, dataverkkojen
+ja puhelinverkkojen kehitys, rautateiden kehitys; lisäksi kuvaajat, joilla näkee yksittäisen kaupungin kasvun kerros kerrokselta (lavalinssin aihe).
+[9.16] KAMERA-AJOT (omistaja 24.8.2026): piirtomoottoriin kehitetään sulavat zoomausanimaatiot sisään ja ulos — zoomi kiihtyy ja hidastuu luontevasti alussa ja lopussa (easing).
+[9.16] EI PYÖRITYSTÄ (omistaja 17.10.2026 klo 23.14, koskee KAIKKIA kamera-ajoja, ensin museo):
+[9.16] "näkymän pyörittäminen on katsojalle ikävää, joten sitä pitää välttää kaikin mahdollisin keinoin"; kamera etenee sivuttain tai vinosti, kääntyy menosuuntaan vain vähän (~15°) ja lopuksi kohti
+seuraavaa kohdetta kuin sivuttain astuva ihminen; iso suunnanmuutos tehdään mustalla välähdyksellä (< 250 ms) pyörityksen sijaan.
+[9.17] AIKAJANA-AJO (omistaja 17.8.2026): animaatiolinsseillä yhteinen aikajanamoottori juoksevine vuosilukuineen — pelaajan käynnistämä, ele keskeyttää.
+[9.18] LAVALINSSI (omistaja 17.8.2026): lähikuvakehyksen linssityyppi ilmiöille, jotka eivät erotu laudan mittakaavassa (esim. kaupungin kasvu; pilotti Rooma).
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Viisas Pöllö" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Viisas Pöllö" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen
+Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[10.0] TÄMÄN OSION KOHDAT 3.9.–19.9.2026 (225 päätöstä linsseistä, pallosta, pulusta, äänistä ja työtavoista) on siirretty sanatarkasti lokiin docs/raamattu-loki/paatokset-2026-09-03--09-14.md
+(Raamatun jako 20.9.2026). Alla on vain voimassa oleva linjaus aiheittain; osion lopussa Viisaan Pöllön alkuperäinen karaktääri- ja chat-linjaus (18.–25.8.2026) koskemattomana.
+[10.23] PÖLLÖ MUKANA ALUSTA (omistaja 24.8.2026, kumoaa alla olevan toistaiseksi): kehitysvaiheessa pöllö on pelissä heti alusta — fokusmoodin esittely tarvitsee sen. "Pöllö on aarre" -idea säästetään
+ja voidaan tuoda takaisin myöhemmin (vaatii erikoisjärjestelyt ensimmäisen maan/kaupungin kohdalla).
+[10.1] AGENTIT VAIN OPUS JA SONNET, PARVINA SAA AJAA (omistaja 7.9.2026 klo 19.05): sääntö on Raamatun ensimmäinen rivi (Ydinajatus-osio) eikä sitä toisteta tässä.
+[10.2] TYÖTAVAT (voimassa): kysymyskortit aina — Fablen kysymys omistajalle on aina kortti vaihtoehdoin ja suositus ensimmäisenä, vastaukset kirjataan (5.9.2026); tekstisession ehdotukset ovat
+omistajan sana ja menevät peliin sanasta sanaan, vain mittarajat tarkistetaan (9.9.2026); uusi sarjatehtävä (kuvat, tekstit, äänet, kaupungit) aloitetaan aina pienellä valmiiksi toteutetulla
+kokeiluerällä omistajan katsottavaksi (9.9.2026); uusi asia tehdään tarkastuskierroksina — toteutus, oma tarkastus, korjaus, uusi tarkastus — kunnes tekijä on itse tyytyväinen; testien läpäisy ei ole
+esteettinen hyväksyntä, tarkistamatta jääneitä osia ei väitetä tarkistetuiksi (10.9.2026).
+[10.2] Claude Projects EI ole käytössä (omistaja 19.9.2026 ilta);
+[10.2] 19.9. aamun Projects-työnjako on kumottu ja sessiosetti 20.9.2026 (Kaupungit-osio) korvaa sen.
+[10.3.0] KARTTAPALLO ON PELILAUTA (4.–7.9.2026):
+[10.3.0] LAUTA_OLETUS = pallo (v1554, 5.9.).
+[10.3.0] Kaupunkipisteet pysyvät paikallaan panoroitaessa (pointAltitude ~0,003) (8.9.); pisteiden koko: lattia vain pelaajan kaupungille, muut 7 px joka zoomilla, lähizoomissa pelikaupungit selvästi
+kohdepisteitä suuremmat ja nimi klikattava (8.–9.9.); käymättömän kaupungin piste kartan seepiaa, käyty ja alku kultaa (8.9.).
+[10.3.0] Pelaajan maan rajat piirretään muita vahvempina (11.9.; korostus:
+[10.3.0] Valikon sulkeva napautus ei avaa kohdetta (7.9.).
+[10.4] ETUSIVU JA AVAUS: pelin osoite on https://matkakirja.app/ (GitHub Pages, DNS Cloudflaressa) ja media https://media.matkakirja.app/ (R2:n oma verkkotunnus Cloudflaren välimuistin takana;
+pub-*.r2.dev-osoitetta ei enää kirjoiteta koodiin) (6.9.2026).
+[10.4] Aloitusportissa näkyy vain himmeä pallo ja "Aloita seikkailu" keskellä; painalluksen jälkeen yläviiva, otsikko salamana (koko ja kirkkaus välähtää), "Osa II", alaviiva, kirjoituskoneteksti
+(6.9.); kirjoituskone ei hypi, paikkarivi lihavana (6.9.); avauksen ääni: musiikki hiljenee liu'ulla, terminaalin äänimaisema nousee, kertojan luenta alkaa omalla ajallaan (7.9.); harsoissa ei suoraa
+rajaa, tekstin vaalea pohja hillitty (6.9.); isoisän kuvat pois etusivulta (6.9.), avauslennolla mahdollisimman vaalea isoisän kuva matkakirjan välistä (3.9., 6.9.).
+[10.4] Aloitusvalinta: pallo ei pyöri, kamera omistajan rajauksessa (Eurooppa, Afrikka ja Lähi-itä näkyvissä, Lontoo ylhäällä), kohdekaupunkien huomioympyrä tehostettu, kaikki kohdekaupungit takaisin
+kokeeksi, Los Angeles → San Francisco, Istanbul lisätty (7.9.).
+[10.5.0] LINSSIT — YHTEISET SÄÄNNÖT (3.–16.9.2026; linssi on oma näkymä, ks.
+[10.5.1] Avausjakso: kartta feidaa mustaan, keskelle otsikko ja lyhyt esittelyteksti, joka luo historiallisen kaaren ja jättää kysymyksen leijumaan (ei yksittäisiä nimiä), Käynnistä-nappi;
+avauslaatikko repaleista paperia — reuna on yhteinen SVG-maskiosa kaikille pergamenttilaatikoille, vaakareunat rauhalliset, ei tulta — ja yläkulmissa loimuavat lyhdyt (js/lyhty.js) (4.9., 7.9.).
+[10.5.1] Yläpalkki matala: linssin nimi ja kello vasemmalla, oikealla hampurilainen (Poistu, Aloita alusta, Kertoja päällä/pois, Taustamusiikki päällä/pois) ja X (4.9., 8.9.;
+[10.5.1] Kaupungit-osio); väkäsikoni kolme leveää V:tä linssien valikoissa (13.9.).
+[10.5.1] Havainnekuva valokeilassa vinjetoituna, siirrettävä ja nipistämällä mitoitettava, koko ja paikka muistetaan laitteella; oletusasettelut näyttöluokittain (3.–4.9.).
+[10.5.1] Aikaselain alareunassa yhteisenä moduulina (pystyviivat, valittu pidempi, kelaus sormella) (7.9.);
+[10.5.1] Keksinnöissä alarivin karuselli on aikaselain (8.9.).
+[10.5.1] Selostaja lukee pysäkin ja puhuu loppuun ennen seuraavaa, vuodet sanoina (4.9.); vuosiluku rullaa hedelmäpelin tapaan ja naksahtaa, logaritmiset kiihdytykset (3.9.).
+[10.5.1] Lamput tummuvat leimahduksen jälkeen, vain nykyinen kirkas; vinjetti pysyy ikkunan reunoilla (3.9.).
+[10.5.1] Loppulappu rullautuu ylös kun karttaan kosketaan, sulku oikeassa yläkulmassa (7.9.).
+[10.5.1] Linssin selite laukussa on yksi rivi (6.9.); laukku vierii, tilastot väkäsen alla, Aktivoi on nappi, uusille linsseille omat ikonit (6.9.).
+[10.5.1] Matkakirjan luentakuva piilotetaan linssin ajaksi (9.9.).
+[10.5.1] Linssien aidot nauhoitetut äänimaisemat musiikin ja kertojien lisäksi (7.9.).
+[10.5.1] Karusellin kuvat valmiiksi pieninä, blur rasteroidaan kerran (3.9.).
+[10.6] KEKSINNÖT-LINSSI (3.–8.9.2026): tumma asu — kartta tummennettuna, syttyvä valo vaalentaa kohtaa lampun lailla; matkakirja piiloon, luenta ja taustaääni pois; yksinkertainen kilahdus uudesta
+keksinnöstä, kohahdus vain keksinnön kohdalla (3.9.).
+[10.6] Keksijät alarivillä karusellina: nykyinen keskellä isona, muut pienempiä, vasemmalla sumeita; generoidut yhtenäiset värilliset rintapotretit (kuvaputki), kelaus sytyttää kaikki valot kartalle
+ja pysäyttää esityksen, karuselli vieritetään sormella ja asettuu lähimpään keksijään (3.9., 8.9.).
+[10.6] Pysäkin klikkaus avaa TIEDELIITTEEN lehtitaittona: nimiö, päiväys, otsikko, keksijä, ingressi; leipäteksti vasemmalla ja generoitu muotokuva oikealla; havainnekuva(t) karusellina; osio KEKSIJÄ
+henkilötekstillä (elämä, luonne, sidos vuoteen 1873) ja aidolla Commons-kuvalla; lähderivi; yksi palsta, kuva reunasta reunaan, lyhyt kuvateksti ja pitkä avatussa kuvassa (3.9., 8.9.).
+[10.6] Havainnekuva palaa itsestään kartan liikkeen loputtua (8.9.).
+[10.6] Yläpalkki Ihmisen matkan tyyliin, Aloita alusta (8.9.).
+[10.6] Isoisää ei tunnista 1873-pysäkilläkään — muotokuva kaukaa, havainnekuva ilman kasvoja (8.9.).
+[10.7.0] IHMISEN MATKA -LINSSI (5.–10.9.2026): nykyihmisen leviäminen Afrikasta koko maapallolle pallolla; ajoitukset haarukkana ja lähteellä, kaikki ovat nykyihmisiä (5.9.).
+[10.7.0] Leviäminen on VÄRIVIRTOJA, ei pisteitä — vanat rannikkoa maalaavina kaistoina, Amerikkaan eriytyvä populaatio omalla värillään (6.–7.9.); yksi kaari, ei pysäkkejä: kertoja kertoo reitin
+etenemisen, kuvat poksahtelevat kartalle lisäkuvituksena (7.9.); kertoja lukee koko kertomuksen putkeen ja pulu puhuu hiljempaa päälle (9.9.); kertomus soljuva, ei vuosilukuja joka jakson alkuun,
+jaksot aikajärjestyksessä, ainoa taaksepäin kulku on ääneen kerrottu aikahyppy, Etelä-Afrikka vain kerran (7.–8.9.).
+[10.7.0] Alku: ensimmäinen virke täysin mustalle ruudulle — pimeys on avaruus, kertoja alkaa jo pimeydestä — pallo tähtien keskellä pisteenä, Afrikka täyttää ruudun noin 1,2 s "Afrikasta"-sanan
+jälkeen, kamera kiihtyy Marokkoon (7.–10.9.).
+[10.7.0] Ken Burns -kuvat sumennettuina taustalla, paperi ja lyhyt teksti päällä, Käynnistä alimpana, avaustekstissä ei muotoa "tulet seuraavaksi näkemään" (9.9.); avauslaatikko kokonaan musta, ei
+pulua (6.9.).
+[10.7.0] Aikajanan ajo: kamera lähempänä, liikkuu pidempään viivaa piirtäen, kello vilistää; alkujaksoissa kamera niin kaukana, että vanan kärki näkyy (6.9., 7.9.).
+[10.7.0] Yksi palkki, ei karusellia; esityksen jälkeen tutkimusvaihe: kaikki nostot klikattavia ja jokaisessa vähintään yksi kuva; linssi muistaa paikkansa (7.9.).
+[10.8] SATELLIITTILINSSI → ASTRONAUTIN KAMERA (12.9.2026): linssin aineisto on NASAn avaruusasemalta otetut valokuvat Maasta (kaupungit yöllä, tulivuoret, atollit, suistot) — harmaa tutkakuva ei kerro
+katsojalle mitään; havaintokohteet hohtavina vihreinä pisteinä nykyisellä pallolla, vain ne klikattavia; havaintokuva täyttää ruudun heti, muut otokset pikkukuvina ison päälle, tiedot selitteessä.
+[10.8] Kaupungit-osio (15.–20.9.2026).
+[10.9.0] ÄÄNET JA MUSIIKKI (3.–14.9.2026, tarkennus 9.10.2026): musiikkimoottori on Google Lyria 3.5;
+[10.9.0] ElevenLabs Musicia ei käytetä musiikkiin lainkaan (omistaja 9.10.2026), ja vaihtoehdoiksi voidaan etsiä oikeita, ihmisen säveltämiä vapaita kappaleita (CC0/CC BY, ei NC/ND) — Olavinlinnan
+loppumusiikki The Bard's Tale (RandomMind, CC0) pysyy; pelin jokaiselle kohtaukselle oma Lyria-raita (linssit, lehti, laukku, kohtaaminen, välinäytös, loppu; kartalla vain kaupungin oma kappale, ks.
+[10.9.0] KARTAN MUSIIKKI), luennat lyhyitä (5.9.).
+[10.9.1] MUSIIKKIPROMPTIT (omistaja 11.10.2026 klo 12.5x):
+[10.9.1] MIKSERI (omistaja 9.10.2026, korvaa 11.9. liukulistan): mikseri on kehittäjän työkalu, joka näkyy vain kehittäjäkoodilla; muut pelaajat eivät näe mikseriä vaan saavat valmiit tasot.
+[10.9.1] Pulu ja kertoja eivät puhu päällekkäin; poikkeus: pulun huudahdus kesken luennan soi hiljempaa päälle pysäyttämättä lukijaa (8.9.); pulun äänissä ei numeroita, vuosiluvut sanoina (8.9.).
+[10.9.1] Pulun v4-tiedostot tasoitetaan -17,2 LUFS:iin (28.9.; ks.
+[10.9.1] ÄÄNET PCM:NÄ, PAKKAUS KERRAN), tahtia säädetään tageilla (12.–14.9.); pulun repliikit lyhyitä, vokaalisia, tehosteet (kaiku saapuessa) (6.9.); pulun äänen perustaso hieman kertojan alle
+(8.9.).
+[10.9.2] Fable ei tarkista Codexin isoisä- ja pulutekstejä sisällöllisesti (13.–14.9.). play()-kutsu ei ole ääni — mitataan currentTime (20.9.2026, Kaupungit-loki).
+[10.10] KARTAN MUSIIKKI (omistaja 10.10.2026 klo 11.1x, sitova, kortin vastaus "vain kaupunkien omat kappaleet"): kartalla soi vain kaupungin oma kappale kyseisessä kaupungissa, ja kaupungista
+lähtiessä kappale häipyy.
+[10.10] SOITTOSÄÄNTÖ (omistaja 11.10.2026 klo 15.5x): kaupungissa soi ensin nopea intro (tehdään kaikille Euroopan kaupungeille) ja sitten hidas kappale nopeaa hiljempaa ja vain kerran, minkä jälkeen
+musiikkia ei ole ennen seuraavaa kaupunkia.
+[10.11] ÄÄNISIVU OMANA SUOJATTUNA SIVUNA (omistaja 10.10.2026 klo 18.2x:
+[10.11] "täytyy tehdä musiikista sitten ennemmin oma nettisivu githubin tms kautta. saatko ladattua artefaktista nykyiset tiedot sinne ja liitettyä nämä uudet?" ja kortti "Suojattu sivu"): pelin äänet
+ja kappaleet kuunnellaan sivulla https://matkakirja-aanet.pages.dev/ (Cloudflare Pages + Access: aukeaa vain omistajan sähköpostikirjautumisella kertakoodilla, istunto 30 vrk), koska ostetut tehosteet
+ja vertailukappaleet eivät saa olla julkisia.
+[10.11] Syy siirtoon (testattu 10.10.2026): toisen organisaation jakamaan artefaktiin vieras tili voi julkaista vain sivuja, tyylejä, skriptejä, tekstidataa, kuvia, videoita ja fontteja, ei ääntä,
+eikä sitä voi kiinnittää muokkausoikeudesta huolimatta.
+[10.11] VALINNAT (omistaja 11.10.2026 klo 09.3x:
+[10.11] "saisiko äänisivuille suoraan checkboxit niille jotka ovat hyviä näytteitä ja napin ylös "lähetä claudelle" tms"): jokaisella näyterivillä on valintaruutu, joka tallentuu heti palvelimelle
+(Pages Function, Accessin takana), ja ylhäällä Lähetä Claudelle (N) ja valinnainen viesti;
+[10.11] Äänittäjä (11.10.2026 klo 18.3x alkaen) lisää uudet kappaleet sivulle, lukee uudet lähetykset (tools/aanisivu/valinnat.mjs) ja reitittää ne (pelin kytkennät Pelikoodarille, taidemuseon äänet
+Linssiseppä 2:lle), ja Päätoimittaja kuittaa omistajalle lyhyesti; aanisivu-lisaa.py pysyy yhteensopivana.
+[10.12] KAUPUNGIN ESITTELY ON SAAPUMISESITYKSEN JATKE (omistaja 10.10.2026 klo 16.5x ja 17.3x:
+[10.12] "Pariisin esittelyhän ei pitäisi liittyä siihen [kuumailmapalloon] mitenkään vaan se pitää tulla kun pelaaja saapuu kaupunkiin ja korvaa tai jatkaa sitä nykyistä kolmen kuvan esittelyä joka
+tulee nyt jokaiseen kaupunkiin saavuttaessa"): kaupungin nykypäivän esittely jatkaa saapumisesitystä luennan kolmen kuvan jälkeen samalla pakalla ja Ohita-napilla; nykykuvat (Pariisissa C1–C5) tulevat
+kaupungin modernin alkumusiikin tahdissa, ja Ohita tai lähtö lopettaa.
+[10.13] PULU PELISSÄ — HAHMO, ELEET JA REAKTIOT (3.–13.9.2026): linsseissä minipulu (15.9.); pulu leijuu kartan liikkeen ajan ja laskeutuu pysähdyttyä (11.9.); nokkii karttaa levossa 30 s hiljaisuuden
+jälkeen (11.9.); pullan ostaminen laukaisee pullariemun (bunFeast) joka kaupunkilehdessä ja sähkeen pullamaksuissa (11.9.); odotusrepliikit (52) mapattu täsmällisiin eleisiin, pyyntökohtainen asioille
+lähtö ja paluu vastauksen kera (11.9.); pikselikasvot tulossa omistajalta, B-kasvo väliaikainen (10.9.).
+[10.13] PULU REAGOI TEKSTIN SISÄLLÄ: kaikki matkakirjat tagitetaan läpi tekstin, perusasento yläviistokatse, perusilmeet ja pelisynkronointi ensin, rekvisiitta myöhemmin (11.9.); reaktiorekisteri
+docs/pulu-reaktiot.md on elävä — jokainen merkityksellinen pelitilanne kirjataan reaktiota varten (10.9.); pulu reagoi myös lehdessä, laukussa ja visassa (ei asetuksissa tai ilmoituksissa), aarteen
+löytö yksi iso ele, raha vain pankkiapu, pitkä odotus kerran (11.9.); puhelimen lehdessä pulu oikeaan reunaan, reagoi myös artikkelin chatissa (11.9.).
+[10.13] Livia kommentoi matkakirjaa myös ensimmäisessä kaupungissa (3.9.).
+[10.14] PULUN KUPLAT JA CHAT (3.–13.9.2026; pluskupla 18.9.): kuplat pinoutuvat, uusi vanhan alle; oletuksena näkyvissä vain viimeisin kupla, vieritys laajentaa kahdeksaan riviin, kartan liike
+supistaa; edellisen kuplan alaosa pilkottaa häipyen, ensimmäisen kuplan yläreunaa ei häivytetä (7.9., 10.9.); kuplat piiloutuvat itsestään 3 s puheen jälkeen tai kartan liikkeestä (11.9.); kupla
+sulkeutuu napauttamalla (sulkuruksi pois) (13.9.); pluskupla on poistettu ja chatin ylärivillä on "Näytä puhekuplat" (18.9.2026, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 20, Kaupungit-loki); saapuminen
+uuteen kaupunkiin tyhjentää kuplapinon (8.9.); automaattiset kuplat eivät näy chatin historiassa (11.9.).
+[10.14] Pulun kaupunkikommentti: yksi kupla per kaupunki, enintään 125 merkkiä, kaksi asiaa (mikä on nyt toisin / mikä yhä ennallaan), pulun näkökulma tärkein, huudahdus luennan väliin vain noin
+puolessa kaupungeista, kommentit avaavat nykypäivää, yksinkertaiset lauseet, kuittaus isoisälle ekstrakuplana joissain kaupungeissa (8.9.); pulun alustukset ennen luentaa pois (8.9.).
+[10.14] Saapumisen jälkeen chat aukeaa parilla valmiilla kysymyksellä isoisän ja pulun teksteistä, aiemmat viestit vieritettynä ylös, tervehdys vain kerran (11.9.); kartta lentää pulun vastauksesta
+vain sijaintikysymyksistä (11.9.).
+[10.14] Chatin "kysyn pöllöltä" -odotuksessa pulu käy jossain ja palaa vastauksen kera; juhlakupla tietäjätasosta Livian pinoon (3.9.).
+[10.15] MATKAKIRJA JA HORATIO (5.–13.9.2026): isoisän matkakirjatekstin yleinen yläraja on 400 merkkiä (hyväksytyt 360–400, lyhyet laajennetaan), pituus aina näkyviin merkkeinä (8.9.); pelikaupunkien
+Bryssel, Ljubljana ja Košice kaaritekstit enintään 450 merkkiä, vanhoja tekstejä ei lyhennetä (19.9., Fable 20.9.); otsikko on paikka ja aika ("Sarajevo, syyskuussa 1873") ja alla kursiivilla sään ja
+tunnelman rivi (8.9.); isoisän tekstin lyhennys on pois päältä, merkintä kokonaan ja luenta loppuun (13.9.).
+[10.15] G. on nimi (Grimshaw) (9.9.);
+[10.15] Horatio ymmärtää paikallisen kielen väärin noin kahdessatoista kaupungissa, Livia osaa kaikki kielet, oudot sanat opitaan kontekstista (8.9.); kaanonin pahuuden rajaus on poistettu (8.9.);
+isoisä jää arvoitukseksi: kuvat ovat hänen ottamiaan tai hänestä tunnistamattomia, kasvokuvaa ei tehdä (5.9., 8.9.).
+[10.15] Koko Eurooppa kulkee fokusvirtapakkien kautta, europe-saapumiset arkistoitu EI ENÄÄ KÄYTÖSSÄ -otsikolla (8.9.).
+[10.15] Matkakirjakortti aukeaa saapumisessa ja palaa auki luennan ajan kartan liikkeen jälkeen (10.9.; puhelimella piilossa ja trailerin ajan piilossa:
+[10.15] Kaanonimuutos kuvan takia vain omistajan päätöksellä (Oslo Liv, Pietari Polina, Sarajevo Adnan, 12.9.).
+[10.16.0] LUENTAKUVAT JA PULUCAM (9.–11.9.2026; asettelu saapumisessa:
+[10.16.0] Kaupungit-osio): matkakirjan luennan aikana kartan päällä näkyy isoisän luentakuva (postilaatikon kuvatoimitus), toinen kuva luennan puolivälissä (9.9., 11.9.);
+[10.16.0] 14 mm) pakkana isoisän kuvan päälle pulun repliikin alkaessa, tavallinen kohde 1–3 kuvaa, rakkauskohtaus 3–5 sydänreunoin, musteensininen PULU CAM -sinetti kuvan oikeassa yläkulmassa (9.9.);
+kuvat tehdään suoraan peliin tekstisession prompteista (9.9.).
+[10.16.0] LYHYT KUVATEKSTI SIVULLA, PITKÄ VASTA AVATUSSA KUVASSA on sääntö kaikkiin pelin kuvateksteihin (9.9., 12.9.); albumin suurennoksessa lyhyt kuvateksti ja havainnekuvamerkintä vain kerran
+(10.9.).
+[10.16.0] Pakassa päällimmäisen kortin kuvateksti kiinni kortin alalaidassa, alemman kuvan napautus nostaa sen päälle (10.9.); luentakuvassa ei kehystä, varjo saa jäädä (9.9.); kuvapino kolme
+vaihetta: pieni, viuhka, koko ruutu (11.9.); pieni kuva pienenee kartan tahdissa (11.9.); luentakuvaa voi liikuttaa ja se on ankkuroitu kartan kohtaan (9.9.); iPadilla 1,5-kertainen (10.9.).
+[10.16.0] Kuvagalleria ("Lisää kuvia tästä kohteesta/kaupungista") pois koko pelistä, KUVAGALLERIA_KAYTOSSA epätosi (11.9.).
+[10.17] LEHDET, NOSTOT JA GALLERIAT (4.–12.9.2026): nosto aukeaa kuva edellä — ensin lähes koko ruudun kuva ja lyhyt kuvateksti, LISÄÄ-nappi avaa tekstin, kuva ei liiku (11.9.); auki oleva nosto ei
+sulkeudu vierittämällä ja alkaa ruudun yläreunasta (12.9.); noston nimilappu on osa osumapintaa (7.9.); jokaisessa nostossa havainnekuvan lisäksi vähintään yksi oikea valokuva julkisesta lähteestä
+(12.9.); kuvan suurennos: vastakkainen suunta täyttää ruudun, sama suunta jättää reunan (8.9.); gallerioiden selausalueet kapeat reunakaistat, keskeltä klikki suurentaa (9.9.); lehden sivunkääntö ei
+pompauta sisältöä — vierityspalkki ei muuta sivun leveyttä (9.9.); kohdekartan kohteiden nimet vain zoomattuna (4.9.); lehden Tapaa-nappi pois (6.9.); välinäytös ilman korttia, yksi tauko/jatka-nappi,
+kuvakierto (4.9.).
+[10.17] StPageFlip (sivunkääntö, kääntöteatteri) ja Tuna (tehosteketjut: megafoni, radio, luola) käytössä; säännöt kaikille valmiille kirjastoille: ämpärin vendor/-polusta (ei repoon eikä CDN:stä
+tuotannossa), laiska lataus ja virhehaara, kartoitus ei ole linjaus (5.9.).
+[10.18] KEHITTÄJÄTILA JA VALIKOT (5.–13.9.2026):
+[10.18] Raamattu on muokattavissa pelissä — jokaisen sivun kohdat ovat omistajalle tekstikenttiä ja Lähetä muutokset lähettää muuttuneet ehdotuskanavaan (RAAMATTU-olio ei muutu, vain Fable kirjoittaa
+tiedostoon); työhuoneen valikko on kaksi nappia (Raamattu, Kehittäjälehti) alimmaisina ilman Työhuone-otsikkoa (11.9.); kehittäjävalikon vivut pois ja ilme pois päältä, äänisäätimiin tehosteet, pulu
+ja lukija (11.9.); vaakapuhelimella ei yläpalkkia: oikean yläkulman hampurilainen avaa päävalikon suoraan napin päälle, koska valikossa ovat palkin tiedot (2.10.; ennen 13.9. väkänen toi palkin
+väliaikaisesti; päävalikon ikoni alkuperäinen, 14.9., Kaupungit-osio); kohtaamislista kehittäjätilaan maanosittain kaikkien aarrekohtaamisten testaamiseen (5.9.); kehittäjän maailmanäkymään sama
+saapumiszoom kuin pelissä (11.9.).
+[10.19] SISÄLTÖTUOTANNON LAAJUUS JA IDEAT: karttanostojen tavoite 8 kohdetta + 3 maastoa + 1 eläintäky + 2 skandaalia per maa kaikkiin 112 maahan (6.9., mittari tools/laske-karttanostot.mjs) on PITKÄN
+AIKAVÄLIN TAVOITE, ei työjonossa; sisältötyön rajaus on kohdassa VAIN EUROOPPA, KUNNES OMISTAJA TOTEAA SEN VALMIIKSI (Ydinajatus).
+[10.20.0] UUDEN SESSION ALOITUS ILMAN OMISTAJAN OHJETTA, JA MISSA AVAIMET OVAT (omistaja 18.9.2026 klo 09.50 Suomen aikaa: uudet sessiot ajavat Macilla suoraan ilman omistajan ohjetta, ja kaikkien
+avainten sijainnit on listattu tähän):
+[10.20.2] Bash-työkalun kuori ei lataa .zshrc:tä itse, joten `source ~/.zshrc` samaan komentoon ennen generointia; omistaja ei anna avainta erikseen), XAI_API_KEY, POLLO_KEHITTAJAKOODI ja
+TRIPO_API_KEY = ~/.matkakirja-avaimet-koodaus.zsh (TRIPO_API_KEY: tallennettu 18.10.2026; toimii v2-rajapinnalla api.tripo3d.ai/v2/openapi, v3 antaa 401;
+[10.20.2] Omistajan kortti 18.10.2026 klo 13.24 kumosi 12.46:n API-käytön toistaiseksi:
+[10.20.2] Asemataulun Google-palkki peruttu 16.10.2026 klo 16.47, palvelutiliavainta ei ole), EUROPEANA_API, FLICKR_API_KEY, FREESOUND(_API/_API_KEY/_AVAIN/_TOKEN), EHDOTUS_AVAIN, EHDOTUS_BUCKET,
+POLLO_KEHITTAJAKOODI, SAHKE_TIETOKANTA, SAMIREIVINEN_DRIVE_API, TEAM_ID, ASC_ISSUER_ID, ASC_KEY_ID, ASC_KEY_P8 (App Store Connect);
+[10.20.3] TILA 17.10.2026 klo 23.48 (omistaja): käytössä on Visuaaliviestinnän Inst. -organisaation avain Matkakirja (luotu 11.10., GitHub-salaisuus päivitetty 11.10.); vanhan KLIK-organisaation
+matkakirja-avain poistetaan, ja Macin avaintiedoston ANTHROPIC_API_KEY on VANHA eikä mikään työkalu käytä sitä.
+[10.20.4] TARKENNUS (omistaja 18.9.2026 klo 10.05 Suomen aikaa, kortit "Kylla, molemmat" ja "Liitan ne itse ~/.zshrc:hen"):
+[10.20.6] Macin ~/.zshrc:ssä ovat (omistaja täytti 18.9.2026) ELEVEN_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY, GOOGLE_API_KEY (Gemini), CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, FLICKR_API_KEY ja
+SAMIREIVINEN_DRIVE_API;
+[10.20.8] AANIPALVELU SAMASSA PROSESSISSA (Fable 19.9.2026 klo 08.45 Suomen aikaa): headless Chromiumin ERILLINEN äänipalvelu (AudioServiceOutOfProcess) voi antaa AudioContext-kellolle vain noin 1/7
+reaaliajasta; korjaus on sarjat.jsonin rivikohtainen SAVUKE_CHROMIUM_LIPUT (--disable-features=AudioServiceOutOfProcess), ensimmäisenä astro-äänelle.
+[10.20.9] KELLONAJAT AINA SUOMEN AIKAA (omistaja 19.9.2026 klo 01.45 Suomen aikaa): jokainen Raamatun, raporttien, commit-viestien ja omistajalle annettujen viestien kellonaika ilmoitetaan Suomen
+aikana (Europe/Helsinki, kesalla EEST = UTC+3, talvella EET = UTC+2) ja merkitaan "Suomen aikaa";
+[10.20.10] KUORMA JA CI:N JAKO (omistaja 19.9.2026 klo 15.30 Suomen aikaa; kuorma kaatoi savukkeita):
+[10.21] "miksi Mosul on tuhoutunut", "onko siellä elämää nyt"): mitä tapahtui ja milloin, millainen tilanne nyt on, ja maininta jos tieto voi olla vanhentunutta.
+[10.22] PÖLLÖN KARAKTÄÄRI (omistaja + Fable 25.8.2026): pöllö on IKIVANHA SILMINNÄKIJÄ-REPORTTERI — istunut räystäillä pari sataa vuotta ja nähnyt kaiken itse.
+[10.22] SULKASATOHETKET: pidätelty rääväsuupuoli pääsee valloilleen HARVOIN ja vain sisällöstä — räikeät vääryydet ja huijarit (ryöstöt, dynamiitti) — enintään kerran per maa, ja SILLOIN SAA PÄÄSTELLÄ
+KUNNOLLA (omistaja 25.8.2026): purkaus saa revetä täysillä — versaalit, huutomerkit, useampi huudahdus — kunhan heti perään tulee pahoittelu ja paluu kuivaan ("...Anteeksi.
+[10.24] PÖLLÖ ON AARRE (omistaja 18.8.2026, TAUOLLA 24.8.2026 — ks. yllä): peli alkaa ilman pöllöä — nappi piilossa, ei kuplia eikä vihjeitä, eikä ennen ensimmäistä laattaa anneta ohjeita tai
+korvaavaa opastetta.
+[10.24] Pöllö löytyy omana aarteenaan ensimmäisen käännetyn laatan alta (mikä tahansa laatta); pöllö KORVAA ensimmäisen laatan aarteen kokonaan (omistaja 18.8.2026) — laatan omaa sisältöä ei näytetä
+eikä anneta, eikä pöllö tuo pisteitä, rahaa eikä laukkutavaraa.
+[10.25] KALEVALAINEN KEHYS (omistaja 18.8.2026, "toteuta pöllöidea"):
+[10.25] Ylin taso on "Tietäjä iänikuinen".
+[10.31] VALMISKYSYMYKSET (omistaja 18.8.2026, "kannatan"): jokaiselle laatalle ja lehden etusivulle viisi valmista kysymystä PAKETTISISÄLTÖNÄ (js/packs/pollo-kysymykset.js; ≤70 mrk, pelaajan äänellä,
+aiheet pelin aineistosta, ei visavastauksia eikä juonispoilereita).
+[10.32] LEHTIJUTTUJEN KYSYMYKSET RUNTIME-HAULLA (omistajan kortti + tilaus 28.8.2026): kun juttu tai alijuttu on auki ja chat avataan, Livia generoi ehdotuskysymykset LENNOSSA jutun sisallosta
+(js/pollo.js haeEhdotukset; generoinnin ajan pieni odotusanimaatio).
+[10.32] Takynostokorteilla on LISAKSI kasin kirjoitetut 2-3 kysymysnappia (nostorikastus, kortti 28.8.2026).
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Kaupungit" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Kaupungit" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen
+Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[13.1] TÄMÄN OSION KOHDAT 13.9.–20.9.2026 (KARTTAUUDISTUKSEN PAATOKSET 1–53 tarkennuksineen, astronautin kamera, luentakuvat, työtapa- ja tilamerkinnät) on siirretty sanatarkasti lokiin
+docs/raamattu-loki/paatokset-2026-09-13--09-20.md (Raamatun jako, omistaja 20.9.2026 klo 18.08). Alla vain voimassa oleva linjaus aiheittain; uudet päätökset kirjataan lokiin
+docs/raamattu-loki/paatokset-2026-09.md työkalulla tools/raamattu-kirjaa.mjs, ja Raamatun linjausta muutetaan vain kun sääntö muuttuu. Osion lopussa kaupunkien alkuperäinen linjaus (15.–26.8.2026).
+[13.0] KAUPUNGIN AVAUSKORTTI (omistaja 26.9.2026 klo 23.0x–27.9. klo 00.1x, sitova; web on malli, natiivi seuraa): kaupungin napautus avaa AVAUSKORTIN, jossa päällekkäin (1) kaupungin herokuva, kaksi
+lausetta esittelyä ja "Lue kaupunkilehti" -linkki tekstin lopussa, (2) pelin oma nähtävyyskartta ILMAN tekstejä (korkeus 35 % ruudusta iPhonessa ja iPadissa; mitä tahansa kohtaa napauttamalla avautuu
+lähes kokoruudun popup, tausta sumennettuna, kartan ulkopuolinen osa vaaleana, karttaa voi zoomata koko popupin kokoiseksi), (3) turisti-info linkkinä: otsikko, 1–2 ensimmäistä lausetta ja kuva.
+[13.0] KAUPUNKILEHTI säilyy syventävänä: siitä poistetaan Nähtävyydet, Turisti-info ja Radio (radio on kartussissa) sekä "Tapaa henkilö" -tehtävänappi (löydös 179: kohtaaminen alkaa vain vihreästä
+fokuspisteestä kuten webissä); etusivun alaosaan LEHDEN OSIOT: jokainen osio linkkinä, alla osion jutunotsikot ja yksi kuva per osio.
+[13.0] NÄHTÄVYYSKARTALLA VAIN PAIKAT (omistaja 26.9.2026 klo 22.0x–22.4x, löydös 178): kaupungin nähtävyyskartalla ovat rakennukset ja rakennelmat sekä aukiot ja luontokohteet (kevyemmällä merkillä);
+maalaukset, esineet, veistokset, henkilöt, tapahtumat ja ilmiöt eivät ole karttakohteita — tarinakohteet (skandaalit, historian hetket) kuuluvat kaupungin nostoihin ja lehden osioihin, muut museon tai
+rakennuksen nähtävyysjuttuun galleriana; jokaisella kaupungilla vähintään yksi karttakohde.
+[13.2.0] KARTTAUUDISTUS — KAUPUNKILEHDESTÄ LUOVUTAAN, KAIKKI MATERIAALI PIENIKSI KLIKATTAVIKSI PALOIKSI KARTALLE (omistaja 13.9.2026): uudistus toteutetaan pallolle, tasokartta ei palaa (P3).
+[13.2.0] Kohdemaa pysyy alkuperäisenä seepiareliefinä; muiden maiden korkeuserot peitetään TASOITUSKERMALLA (kerma, paperia vaaleampi), jonka peitto on KERMAN_PEITTO_KIINTEA = 0,8 (omistaja 20.9.2026
+klo 16.05; kumoaa 0,85/0,95); meret jäävät alkuperäiselle korkeuskartalle ja kerma ei saa välkkyä panoroitaessa (P4, P37); maailmanäkymässä ei kermaa (P23); kerma pois liikkeen ajaksi (P29).
+[13.2.0] Kohdemaan raja: käsinpiirretyn näköinen, muiden rajojen värinen (punainen ja musteensininen kumottu), lähipäässä 3 px, rannikko-osuus naulattu ne_10m-rantaviivaan ja piirretty rantaviivan
+alle ohuempana (P7, P15, 20.9.2026).
+[13.3] KAUPUNKI ON YKSI PISTE (KARTTAUUDISTUKSEN PAATOKSET 34, 17.–18.9.2026; nostot-liuska poistettu 26.–27.9.2026, ks.
+[13.3] Kohdekartat uusille kaupungeille numeroympyröin ilman miniatyyrejä, numerot väistävät toisiaan (20.9.2026).
+[13.4] LÖYTÄMISEN SUMU (omistaja 21.9.2026 kortilla, julkaisu v1988): kohdemaan löytämättömät nostot piirretään luonnoksina (peitto 0,55, katkoviivarengas ikonin ympärillä); nosto löytyy noin 150 km:n
+säteellä käydystä kaupungista tai avaamalla, jolloin se mustetaan (600 ms); ykköstaso aina musteena; löydöt localStoragessa.
+[13.5] PYSYVÄT NIMET POHJALLE, 1873-POLIITTISET LINSSIIN (omistaja 21.09.2026 klo 08.21 kortilla): kartta on nykyajan kartta isoisän ajan atlaksen ilmeellä.
+[13.6] NIMIÖIDEN VAKAUS — GOOGLE EARTHIN MALLI (Fable 21.9.2026, omistajan havainto v1985: nostot pomppivat panoroidessa): nimiö ei liiku eleen aikana.
+[13.7.0] NOSTOT KARTALLA JA NIIDEN SISÄLTÖ (15.–20.9.2026): kohdemaalle ei merkkikattoa — kaikki nostot ja kaupungit piirtyvät heti saapuessa, muiden maiden merkit katon (21) alla; lisäkaupunkien
+nimiö n.
+[13.7.0] Nostoankkurit lukitaan (vie-nostoankkurit --lukitse; saaripoikkeus ja meripoikkeus; kaupungittoman maan nostot näkyvät kun kamera on maan rajauksessa, 19.9.).
+[13.7.0] Hahmotelmanostot pysyvät elävinä pisteinä, nostotaso poltetaan --ilman-hahmotelmia (P48, 20.9.).
+[13.7.1] SISÄLTÖ: teksti 3–5 virkettä Wikipedian johdannosta lähde päivämäärällä, ei keksittyjä faktoja, 1873-näkökulma alaotsikossa; kaksi kysymystä pululle; vähintään kaksi Commons-kuvaa (vain
+PD/CC), havainnekuvat myöhemmin (P44); nostokuvassa ei saa olla poltettua aikaleimaa, vesileimaa, tekstipäällystä eikä tunnistettavia yksityishenkilöitä — koko erä tarkistetaan täydessä koossa ennen
+ämpärilatausta (20.9.); kuvaselitteissä ei lähdeviittauksia lukijalle ("Commonsin kuvauksen mukaan"), lähde kuuluu lähdekenttään (19.9.); kuvan lähde ja havainnekuvamerkintä näkyvät kaikkialla vasta
+suurennoksessa, kortissa vain lyhyt kuvateksti (19.9.).
+[13.7.1] Rahavisa noin joka kolmanteen hahmotelmanostoon täkynostojen datamallilla (`visa`, +25 puntaa, vastaus löytyy noston tekstistä) (P51); nostovisa piirretään paperin tyyliin kuten lehden
+kulttuurivisa, vaihtoehdot luontevaa suomea (19.9.).
+[13.7.1] Laaja nostokortti (LISÄÄ) ei sulkeudu sisällön napautuksesta (19.9.; sulkutapa:
+[13.7.1] Arkkikirjasto, SULKUTAPA-ASETUS); puolikkaana avautuvan nostoikkunan yläreunassa on ylöspäin osoittavat väkäset ja niiden oikealla puolella pienellä teksti (laajenna) (omistaja 11.10.2026 klo
+21.3x); nostopopupin aikana matkakirja ja Liiku piiloon (P26).
+[13.7.2] ETSI AARRE -NAPPI ON POISTETTU (P6, 13.9.2026): aarteeseen mennään kartan vihreästä pisteestä (js/fokuspiste.js), joka on kartalla alusta asti, ja aarrekysymys esitetään kohtaamiskortissa
+kuten ennen.
+[13.7.2] Bryssel, Ljubljana, Košice (Kassa 1873) tehty; tulevat Luxemburg, Malta, Kypros, Baltia (19.9.); pelikaupungin lisäys muuttaa kaupunkimäärää ja reittejä → kaupungit-piiloon ja noppa-savukkeet
+tarkistetaan joka kaupunkierässä (20.9.).
+[13.7.2] Kuvaputken toimituskoko: vain yli 1800 px:n kuvat skaalataan pitkältä sivultaan 1800 px:iin (15.9.).
+[13.8] NOSTOSTANDARDI EUROOPALLE (omistaja 20.9.2026 klo 20.30 kortilla, inventaario docs/raportit/nostoinventaario-20260920.md; loki: docs/raamattu-loki/paatokset-2026-09.md#NOSTOINVENTAARIO):
+[13.9] HAVAINNEKUVAT NOSTOISSA — LINJAUS (omistaja 20.09.2026 klo 20.48): nostolla on yleensa seka oikeita kuvia etta havainnekuvia, ja kayttö harkitaan aina nostokohtaisesti.
+[13.9] 1) KADONNUT KOHDE eli Matkakirjan ihme (ei enaa olemassa sellaisenaan): havainnekuva on paakuva ja kuvateksti nimeaa ajan ("Havainnekuva:
+[13.9] Aina: pieni "Havainnekuva"-merkinta kuvatekstissa, lahde alkaa "Tekoalylla tuotettu havainnekuva.", ei poltettuja aikaleimoja.
+[13.9] TARKENNUS (omistaja 20.09.2026 klo 20.51): havainnekuvissa SAA olla todellisia historiallisia henkiloita (kielto koskee vain nykyisia yksityishenkiloita valokuvissa), ja kohteen aika voi olla
+paljon vanhempi kuin isoisan vuosi 1873 - kuvataan kohteen oma kulta-aika (esim. antiikki, keskiaika), ei valttamatta 1873.
+[13.10.2] MAAN KARTUSSI AINA NÄKYVISSÄ (omistaja 11.10.2026 klo 09.0x): oman maan kartussi ei häivy kartalla liikuttaessa eikä levossa, vaan pysyy vasemmassa alareunassa, ja sen napautus laajentaa sen
+maakortiksi kuten ennenkin; pysäkkimaiden tyhjän kohdan napautus (NUI 70b2d75ca) jäi pois (natiivi juna 181).
+[13.11.0] ALOITUSKAUPUNKI JA KAUPUNGIN INTRO (omistaja 11.10.2026 klo 12.0x ja 12.1x; korvaa 10.5x:n ensimmäisen saapumisen opastuksen ja 11.1x:n tuuraustervehdyksen): aloituskaupungit ovat Ateena,
+Pariisi ja Tukholma.
+[13.11.3] ISOISÄN UNI (omistaja 15.10.2026 klo 16.33–17.0x; korvaa 11.10. ensimmäisen saapumisen aarretekstin ja kynäluonnoksen): aarrejahti alkaa alkusoitolla heti Uusi matka -valinnan jälkeen ennen
+aloituslentoa: isoisä kertoo unestaan (uusi teksti, Sisältökirjuri tarkistaa faktat, omistaja hyväksyy Tekstit-osastossa ennen äänitystä), ja ruudulle häivyttyy suurina unikuvina eri kohtiin hitaasti
+liikkuen kolme näyttävää aarretta (El Dorado, Montezuman turkoosinaamio, keisarin jadesinetti) ja lopuksi Kolme veljestä; kuvien reunat häipyvät pehmeästi läpinäkyviksi (ei näkyviä rajoja), kuvat
+Codexin tarkkoina versioina tummalla taustalla.
+[13.11.3] "lennon ja intron jälkeen ei tule enää mitään isoisän puhetta, vaan Pulu voi suoraan aloittaa siitä, että pöllö on kadonnut, ja kertoa sitten, miten peliä pelataan"): intron jälkeen Pulu
+aloittaa suoraan Pöllön katoamisesta ja kertoo, miten peliä pelataan; isoisän ensimmäinen matkakirjateksti kuuluu vasta seuraavassa kaupungissa.
+[13.11.3] Luennan jälkeen Pulu sanoo "Isoisäsi ei tiettävästi koskaan löytänyt sitä aarretta.
+[13.11.3] Ehkä sinä olet etevämpi!" (ennallaan, omistaja 21.6x), sitten kohdan 4 repliikit ja lopuksi "Napauta kohteita kartalta ja vastaa oikein kysymykseen, niin löydät aarteen.", ja sama teksti
+näkyy samalla hetkellä ruudun ohjeena (aloituksen ainoa ohjerivi).
+[13.11.4] ETSITYT KAUPUNGIT (omistaja 13.5x ja 20.5x): laskuri "Etsityt kaupungit X/50" (avatut aarteet / Euroopan aarrekaupungit, luku datasta, päivälaskurin tyyli) näkyy kartan yläreunan keskellä 7
+s jokaisen maan alussa, kun isoisän ja Pulun luennat ovat ohi, ja koko ajan matkalaukussa avatarin ja rahatietojen alla omalla rivillään.
+[13.12.0] LIFTAUS = noppa uudella nimellä ja autokyytianimaatiolla (P1), ja sen kyytimaksu £50 maksetaan kerran kaupungista lähdettäessä (omistaja 11.10.2026 klo 22.4x, juna 183; hinnat:
+[13.12.0] Ydinajatus, PELIT, TALOUS JA LUENTA); automaattinen nopanheitto on voimassa liftauksessa ja laivareitillä (asetuksen mukaan), bussin olemassaolo ei estä sitä (P5, 19.9.); bussi (£80) vie
+suoraan seuraavaan kaupunkiin ilman noppaa ja aikakulua; bussi ja lento valitaan Liiku-napista ennen heittoa (P5);
+[13.12.0] LIIKU AARTEEN MUKAAN (omistaja 11.10.2026 klo 20.5x):
+[13.12.0] Reittiviuhka näkyy vain matkasession ajan: alkaa Liiku-napista ja päättyy saapumiseen tai peruutukseen (P8); liftatessa piirretään heiton kantaman kaaret normaalisti ja kaikki muut laudan
+kaaret himmeinä staattisena kerroksena (omistaja 20.9. klo 13.50).
+[13.12.0] Pelinappula kulkee joka matkapisteen läpi kiihdyttäen ja jarruttaen, hyppy askel askeleelta kaarena kuten 2.9.2026, kamera edellä ja nappula perässä; reitti ei katoa siirtymän ajaksi (P29,
+19.9.); välipisteet piirretään päätepisteen kokoisina ympyröinä ilman punaista korostusta (P39); hyppyjen ajaksi kamera ajaa nappulan lähelle niin, että yksi askel on selvästi näkyvä (≥ 25 % ruudun
+mitasta), katto puhelimen syvin sallittu zoomi (40 lautayksikköä), perillä kamera jää lähelle (P40); nopan jälkeen ulossovitus voittaa kohdemaan zoomikaton (P47); noppanappi ei saa jäädä suljettuun
+liukuun (P45).
+[13.12.0] Lento kaupungista toiseen: kamera asettuu ennen lentoa niin, että lähtö ja kohde näkyvät vastakkaisilla reunoilla, kone piirtää punaisen viivan, pulu pois kartalta lennon ajaksi (P30);
+lentonäkymässä (lentolista auki tai lento valittu) ei liftauskaaria, lentokohteet pisteinä ja niminä (20.9.).
+[13.13.0] ASTRONAUTIN KAMERA -LINSSI (15.–20.9.2026, uusin voimassa):
+[13.13.0] NASA-KUVIEN VALKOINEN PALKKI (omistaja 20.9. ja 30.9.2026 klo 23.5x:
+[13.13.0] "jos tulee lisää kuvia joskus myöhemmin peliin, niin niistä pitää poistaa se jo lisäämisvaiheessa"): alareunan valkoinen tunnuspalkki rajataan pois kaikista ISS-/NASA-kuvista jo
+lisäysvaiheessa (lisäystyökalun tarkistus + testi hylkää palkillisen kuvan); tunnus ja lähde säilyvät metatiedoissa.
+[13.13.0] Pallon reliefi renderoidaan koko maapallolle tarkasta korkeusdatasta omistajan Macilla (tools/tee-reliefikartta.mjs; puhelimella 4k, muuten 8k), saturaatio hieman alas, pallo tummempi,
+auringon sivuvalo (P28-sarja 16.9.).
+[13.13.1] PULU: minipulu ilman ympyrää, astronautin kypärä ja avaruusleijunta (Codexin toimitus 20.9.), teksti tummalla pohjalla, valmiit kysymykset vierittyvät pois, vastauksen alku pysyy paikallaan
+ja lisäteksti kasvaa piiloon alle (kortti 62 vh) (20.9., tehty); astropulu ei vuoda pelaajan sijaintia ja tuntee avatun kuvan nimen ja selitteen; kaksi valmista kysymystä per kohde esikirjoitetuin
+vastauksin (js/linssit/astronaut-kysymykset.js).
+[13.13.1] Varusteruudukkoon oma kuvake (astronautti ja kamera), Fable hyväksyy ennen julkaisua (tilattu 20.9.).
+[13.14.0] LINSSIEN SUUNTA (omistaja 21.9.2026): tavoitteena ovat myös linssit, joissa on KOLMIULOTTEINEN TILA, jossa pelaaja voi kulkea — esim. arkeologinen kohde loistonsa päivinä tai historiallinen
+hetki (kirjattu apurahahakemukseen AVEK DigiDemo 2026).
+[13.14.0] Ideavarasto MAAPALLON VOIMAT (El Niño ensimmäisenä) lokissa 21.9.2026.
+[13.14.1] DATALÄHDE TALTEEN (omistaja 8.10.2026 klo 17.3x:
+[13.14.1] "ota dynamical.org talteen datalähteenä"): dynamical.org tarjoaa avoimia sääennuste- ja analyysiaineistoja koko maapallolta analyysivalmiina pilviaineistoina (esim.
+[13.14.2] MUUT LINSSIT (14.–20.9.2026): linssi on oma näkymä — kohdemaan korostus, maapaneeli, nostot ja tasoituskerma eivät näy linssissä, ja pelin muut äänet (luenta, pulu, musiikki) pysähtyvät
+linssin avautuessa (14.9.); linssien kehys (yläpalkki, alapalkki, reunojen napit) palaa mustan tai avaruusvaiheen jälkeen LIUKUMALLA ruudun ulkopuolelta paikalleen, ei feidaten — oletus kaikkiin
+linsseihin (16.9.).
+[13.14.3] IHMISEN MATKA: leviämisrintaman etuosa ei välky, musta alku täysin tyhjä (ei palkin viivaa eikä nuolta), Liiku pois; lisänostoille aito Commons-kuva heti ja kuvaputken havainnekuva toisena
+kuvana myöhemmin; pulun keskustelussa 2–3 jakson mukaista valmista kysymystä esikirjoitetuin vastauksin tervehdyksen tilalla (15.9., 19.9.).
+[13.14.4] TOPOGRAFIALINSSI: pelin elementit pois, koko maapallo katsottavissa maailmatilasta riippumatta, reliefi 1' tarkkuudella laastarina (tarkempi vain 15 kaarisekunnin datalla), meret ja
+sisäjärvet mukana (järvimaski, reliefi poltettu 20.9.), taustamusiikki pois linssin ajaksi; pohjalaattojen jono ei valu linssin puolelle (P46).
+[13.14.4] Keskeneräiset linssit (vertailu, maiden tiedot, vesistö) merkitään harmaalla omalla rivillään pienemmin ikonein (20.9.).
+[13.14.4] Kehittäjä › Kokeet -rivejä ei koskaan tehdä (18.10.).
+[13.14.5] SÄÄDÖT VAIN ⚙-RATTAASTA: vuorokaudenaika, vuodenaika, LIVE, nimet, pilvet ja sää säädetään koko pelissä vain hammasrattaasta (ohjauspöydän sisällä sen nappityylillä, tai ☰:n vieressä samalla
+ohjausnappipohjalla); muualla ei säätöjä, pelkkä ajan näyttö sallittu (18.10.).
+[13.15] Päävalikon hampurilaisikoni on alkuperäinen kolmen viivan ikoni kaikissa asennoissa; vaakatilan väkäsikoni vaihtui tavalliseksi hampurilaiseksi (14.9., 2.10.2026).
+[13.16] VIISAAN PÖLLÖN ARVONIMET (omistaja 19.9.2026): yliviivausvitsi ei vanhene — js/packs/pollon-arvonimet.js sisältää 30 yleistä arvonimeä ("Kaikkitietävältä Pöllöltä", "Yön Professorilta", "Hänen
+Höyhenisyydeltään"…) ja 37 maanosittaista; pitkät tiivistetään vaakasuunnassa yliviivatun osalta; arvonimi valitaan kohteen maan mukaan, ei pelaajan sijainnin.
+[13.17] Ydinajatus-osion kohta 2 (sitova, omistaja 20.9.2026).
+[13.20] Kohdekartta on PELKKÄ VÄRIKARTTA (linjaus 15.8.2026:
+[13.20] "Piirroskartan voi ottaa kokonaan pois ja pitää vain värillisen").
+[13.21] KOHDEKARTAN KOHDEMÄÄRÄ (omistaja 26.8.2026 ilta:
+[13.21] "Kohteita voi olla jopa 15 jos ovat vain mielenkiintoisia"):
+[13.22] Kohteita saa olla entistä enemmän per kaupunki — kartta on zoomattava (linjaus 15.8.2026).
+[13.23] UUSI TARINAKAARI ON FOKUSVIRTA (korvaa 17.8. jäädytyksen;
+[13.23] 25.8.2026): uusi maa rakennetaan Sofia-mallilla — Fable kirjoittaa sitovan kaanonin (matkakirja, pöllön huomio, täyt, täkynostot; docs/moduulit/tarinakaari.md), rakentaja siirtää sen sanasta
+sanaan fokusvirtapaketiksi ja kohdelistaksi tutkimusraporttien faktoilla.
+[13.24] MATKAILIJAN OPAS on pelin kevyt ja viihteellinen osa, joka houkuttelee matkustamaan itse kohteeseen (linjaus 16.8.2026): se saa käyttää muuta lehteä iloisempia värejä, ja etusivulla siihen
+kutsuu pirteä kulmalappu.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Ydinajatus ja kohderyhmä" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Ydinajatus ja kohderyhmä" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet
+uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[0.0] Fablemax-agenttityyppi on poistettu reposta 7.9.2026.
+[0.0] Kumoaa 1.9.2026 kohdan poikkeuksen "todella vaikeaan ongelmaan kysyen".
+[0.1.0] LINSSIT (ISS, radio, datalinssit, aikajanat, alue- ja virtalinssit) JA NIIDEN UUSI SISÄLTÖ KATTAVAT AINA KOKO MAAILMAN; älä rajaa linssejä Eurooppaan äläkä kysy siitä (omistaja 13.10.2026 klo
+23.5x:
+[0.1.0] KOHDEKAUPUNGIT VAIN EUROOPASTA (omistaja 11.10.2026 klo 20.3x, TF 182 -kuvasta:
+[0.1.0] "piti näkyä vain euroopan kohteet"): rajaus koskee myös kohdekaupunkeja, eli pelaajalle tarjotaan matkan kohteiksi vain Euroopan 50 kaupunkia (Istanbul mukaan lukien).
+[0.1.1] LINSSIT EIVÄT KUULU RAJAUKSEEN (omistaja 28.9.2026 klo 23.4x; linjaus koskee vain karttaa ja sisältöä): linssit (radio, ISS ja astronautin kamera, datalinssit, aikajanat, alue- ja
+virtalinssit) kattavat koko maailman, esim. radiolinssiin kaikki maailman maat.
+[0.1.1] Sama koskee linssien omaa sisältöä, myös linssien 3D-malleja ja kohdekohtaista työtä (omistaja 6.10.2026 klo 23.5x; esim. elävän oppaan kuvat ja Gizan pyramidien omat mallit).
+[0.1.3] ON TOINEN POIKKEUS (omistaja 7.10.2026 klo 08.4x): nykyajan oppaan Giza viedään kokeeksi omilla Blender-malleilla mahdollisimman valmiiksi, mutta sen jälkeen ei tehdä muita kaupunkeja, ja
+Egyptistä tehdään historiallinen versio (ks.
+[0.1.4] ALOITUSKARTAN VIHJEET ON POIKKEUS (omistaja 15.10.2026 klo 18.10 ja 18.31): aloituskaupunkia valittaessa kartalla voi olla vihjeitä mielenkiintoisista paikoista ympäri maapalloa kartan
+tyylillä ja paletilla, mutta ne tehdään vasta, kun jokaiselle on selkeä suunnitelma siitä, mitä paikassa tapahtuu (18.31:
+[0.1.4] "Tehdään ne vasta kun niile on tehty selkeä suunnitelma mitä niissä tapahtuu"); poikkeus ei avaa muuta sisältöä Euroopan ulkopuolelle.KAIKKI MAAT JA PÄÄKAUPUNGIT ON POIKKEUS (omistaja
+10.10.2026 klo 11.5x, PÄÄKAUPUNKIEN ESITTELYT ARVIOIDAAN ITSE (omistaja 16.10.2026 klo 19.51:
+[0.1.4] Osaat itse arvioida nämä"): kartan ja oppaan esittelyt sekä niihin liittyvät historiaosiot arvioi PT riippumattomalla tarkistuksella (tosiasiat, kaanon, Williamin ääni, pituus), korjataan ja
+avataan pelaajille ilman omistajan rastia; omistajalle vain yksi rivi, kun kaupungit ovat auki. kortti "Kaikille 171 (suositus)", ja 12.0x): jokaiseen maailman maahan tulee pääkaupunki, maan ja
+kaupungin perustiedot ja rajat (puutelista docs/raportit/puuttuvat-maat-ja-paakaupungit-20261010.md; järjestys Eurooppa → Kaukasus ja Lähi-itä → Afrikka → Aasia → Amerikat → Oseania, PR per alue).
+[0.1.4] POIKKEUS 10.10.2026 klo 21.5x (omistaja kortilla):
+[0.1.4] 118 kevyen pääkaupunkipisteen täysi tekstisisältö tehdään koko maailmalle, Eurooppa ensin: erät e01–e03 pilvisessioissa (Sonnet, effort low) ja e04–e14 Codex (omistaja 11.10.2026 klo 17.5x,
+ks.
+[0.2] LATAUS ON SAMA KAIKILLA VERKOILLA — EI EROA WI-FIN JA MOBIILIDATAN VÄLILLÄ (omistaja 25.9.2026 ja 4.10.2026 klo 14.5x, SITOVA, kaikki roolit, kaikki lataukset; omistaja 4.10. sanatarkasti:
+[0.2] "tee lataus samalla tavalla riippumatta onko wifiä vai ei. olen sanonut tästä jo monta kertaa että ei tehdä eroa näiden kahden välillä."): sovellus lataa, esilataa ja päivittää kaiken
+(sisältöpaketit ja niiden deltat, linnat ja muut dioraamapaketit, laatat, kuvat, äänet, ISS-kameran kuvat ja tulevat paketit) TÄSMÄLLEEN SAMALLA TAVALLA Wi-Fi- ja mobiiliverkossa: ei kokorajoja, ei
+lykkäystä mobiiliverkossa eikä Low Data Mode -tilassa, ei "vain Wi-Fillä" -asetuksia eikä pelaajalle esitettäviä kysymyksiä verkon takia.
+[0.2] Päätoimittaja vahvisti 4.10.
+[0.2] Olavinlinnan esilataukseen Wi-Fi/mobiili-erottelun, vaikka sama kielto oli jo 25.9. linjattu.
+[0.3] KUMOAA kaikki "web on malli, natiivi seuraa" -linjaukset; rajatumpi web kannustaa lataamaan sovelluksen): sovellus (Unity) johtaa: linssit, linna ja uudet näkymät tehdään natiivin parhailla
+keinoilla (Unityn valaistus, Blender, fotogrammetria, Cesium) ilman web-versiota.
+[0.3] PARITEETTIMUUTOKSET VAIN OMISTAJAN LUVALLA (omistaja 30.9.2026 klo 22.2x): mitään ei muuteta natiivissa eikä webissä sillä perusteella, että toinen alusta tekee sen toisin; pariteettikatsaukset
+saa tehdä, mutta erot tulevat Päätoimittajalle yhdellä rivillä (web / natiivi / suositus), ja Päätoimittaja kysyy omistajalta kortilla.
+[0.4] EI SAAVUTETTAVUUSOHJEITA ULKOASUUN (omistaja 29.9.2026 klo 23.0x, sitova; vahvistaa 27.9. hylkäyksen):
+[0.4] "älä tuo mukaan saavutettavuus ohjeita, ne pilaavat asettelun." Kukaan rooli ei muuta näkyvää ulkoasua saavutettavuusohjeiden (WCAG-kontrasti, 44 pt:n kosketusrivit, fonttiminimit) perusteella
+eikä ehdota sellaista.
+[0.5.0] UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN LUPAA (omistaja 30.9.2026 klo 15.0x, sitova, kaikki roolit): kukaan rooli ei tuota uusia ääniä generoivilla palveluilla (puhesynteesi:
+[0.5.1] MÄÄRÄN PÄÄTTÄÄ OMISTAJA (omistaja 5.10.2026 klo 22.0x, sitova, myös Päätoimittaja): generoinnin määrä (leikkeet, otot, mallilauseet × nimet, merkit) on aina omistajan päätös:
+[0.5.1] Sama koskee striimiääntä testeissä (omistaja 6.10.2026 klo 08.39): roolien testit ajetaan testitunnuksella tai testiotsakkeella, jotka eivät koskaan tuota ääntä, ja ohitus (POLLO_AANILUPA)
+tehdään vain omistajan luvalla.
+[0.5.2] MAKSULLISET LÄHTEET (omistaja 7.10.2026 klo 09.2x, sitova): maksullisia äänikirjastoja, liitännäisiä (myös Unity Asset Store) ja 3D-malleja käytetään, kun ne nopeuttavat työtä olennaisesti tai
+parantavat lopullista laatua; ostoehdotus (tuote, hinta, lisenssi, hyöty) tuodaan Päätoimittajan kautta omistajalle, joka ostaa.
+[0.5.3] TOISTAISEKSI EI OSTOJA (omistaja 12.10.2026 klo 04.51:
+[0.5.5] TRIPO-MALLIEN LATAUS (omistajan kortti 18.10.2026 klo 11.46, "Kyllä, myös jatkossa", pysyvä lupa): roolit saavat ladata omistajan Tripo-tililtä ne 3D-mallit (GLB), jotka on hyväksytty peliin
+(ensimmäisinä Louvren k2 ja vartija), ilman uutta kysymystä; lupa ei koske tilin muita tiedostoja.
+[0.5.6] ÄMPÄRI EI OLE JAKELUA (omistaja 9.10.2026 klo 00.15, sitova): pelin oma ämpäri (media.matkakirja.app) ei ole jakelua.
+[0.5.6] Kumoaa Päätoimittajan 8.10.2026 klo 21.20 AssetBundle-linjan ja jakeluperusteella tehdyt hylkäykset:
+[0.5.9] SUOJATUT TEOKSET KAIKISSA OMISSA JÄLJENNÖKSISSÄ (Päätoimittaja 11.10.2026 klo 15.5x ja 18.2x, Karttasepän ja Sisältökirjurin suojatarkastusten jälkeen): suojattu taideteos jätetään pois
+kaikista omista jäljennöksistä (kuvat, havainnekuvat ja 3D-mallit).
+[0.5.9] POIKKEUS (omistaja 16.10.2026 klo 23.28 "Tehdään oma pyramidi"):
+[0.5.11] ÄÄNIVALINTA (omistaja 30.9.2026 klo 23.1x):
+[0.5.12] SUOMI LUKITTU JA SUOMENKIELINEN ALKU (omistaja 7.10.2026 klo 10.0x): kieli lukitaan aina suomeksi (language_code fi; omistaja 17.10.2026 klo 23.04 "pidä huoli että jatkossa aina suomi
+pakotettuna":
+[0.5.12] Louvren alku äännettiin 13.10. ranskan aksentilla ilman pakotusta), ja koska malli ääntää tekstin alussa olevan vieraskielisen nimen silti vieraalla kielellä, ääneen luettava teksti alkaa
+aina suomenkielisellä sanalla (esim.
+[0.5.13] POIKKEUS KERTOJA (omistaja 30.9.2026, muutettu 6.10.2026 klo 09.44): isoisän tekstit luetaan isoisän äänellä (Viisas Kertoja) mallilla eleven_v3, koska ääni ei toimi v4:llä, ja Euroopan
+valmiit isoisän äänet käytetään myös natiivissa; kaikki muut kertojat ovat William (eleven_v4_turbo, ks.
+[0.5.13] MALLI (omistaja 7.10.2026 klo 13.1x, sitova): kaikki uudet äänet (hahmot, kertojat, esittelyt, repliikit) generoidaan mallilla eleven_v4_turbo, joka on puolet halvempi kuin eleven_v4 ja jossa
+tunnetagit toimivat; määräarviot lasketaan sen hinnalla, ja isoisän eleven_v3-poikkeus pysyy (vahvistettu 14.10.2026 klo 12.16: isoisän teksti AINA vanhemmalla mallilla, resepti
+tools/generoi-avaus.mjs:
+[0.6] EI VARATEKSTEJÄ (omistaja 6.10.2026 klo 09.38, sitova:
+[0.7] KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja 26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): pelin maailma on nykyaika — Fogg matkustaa tänään
+isoisänsä vuoden 1873 päiväkirjan jäljillä.
+[0.7] LINNAN DIORAAMA (omistaja 1.10.2026:
+[0.8.3] ENSIMMÄINEN PERSOONA kaikissa videopeleissä, jotta pelaaja ei identifioidu minkään näköiseksi eikä mihinkään sukupuoleen (omistaja 18.5x): ei näkyvää vartaloa eikä peilikuvaa, kannettu esine
+kameran edessä; pelattavuuden mallina Thief (ensimmäisen persoonan hiiviskely, valo ja varjo, harhautus), esineiden käsittely Amnesian tapaan ilman kauhua (kumoaa 08.5x:n "kamera olan yli"); kolmannen
+persoonan kohtauksia vain kaukokuvina (omistaja 18.6x): hahmo pieni, pääpaino ympäristössä, esimerkiksi saapuminen, siirtymät, pako ja loppu; kädet saavat näkyä hetkittäin roolivaatteissa ja
+hanskoissa (omistaja 18.6x); takaa kuvattu kolmas persoona on sallittu toissijaisena (huppu tai hattu ja peittävät vaatteet, ei kasvoja), mutta päätila on ensimmäinen persoona hanskakäsin (omistaja
+18.7x);
+[0.8.3] POIKKEUS (omistaja 16.10.2026 klo 19.41):
+[0.8.3] JUOKSUPELIN LINJAUS (omistaja 17.10.2026 klo 21.51–21.54): jatkuva juoksu (Puyi ei pysähdy eikä piiloudu), pelaaja valitsee reitin myös katottomien talojen sisällä ja harhauttaa vastaan
+tulevat kiinniottajat reitinvalinnalla, yksinkertainen reaktiopeli, kamera korkealla suoraan juoksijan takana, pelkistetty grafiikka, nopeus tärkeintä; huoneista kerätään esineitä juostessa;
+[0.8.3] PERUSLOGIIKKA (omistaja 17.10.2026 klo 21.59): joku tulee koko ajan perässä ja vartijoita tulee myös sivuilta; oikealla peukalolla pyyhkäisy oikealle tai vasemmalle valitsee reitin, vasemmalla
+peukalolla liuku: ajoitettu liuku kiinniottajan alta, kun tämä hyppää kiinni (liian aikaisin tai myöhään = kiinni); sama nappi myös hyppy, jolla kerätään talosta aarteita lisäpisteiksi; lähellä
+useampi katoton talo;
+[0.8.3] OHJAUS (omistaja 17.10.2026 klo 21.59, kortti "Alas liuku, ylös hyppy"): vasen peukalo pyyhkäisy alas = liuku vartijan alta, pyyhkäisy ylös = hyppy aarteen luo; oikea peukalo pyyhkäisy
+vasemmalle tai oikealle = reitin vaihto;
+[0.8.3] PITUUS (omistaja 17.10.2026 klo 22.02):
+[0.8.3] OMENAT (omistaja 17.10.2026 klo 22.08, kortti "Kyllä, napautus vartijaan"): omenoita kerätään hyppäämällä talojen hyllyiltä ja pihojen puista, taskuun mahtuu vain muutama; napautus vartijaan
+heittää omenan ja osuma saa vartijan liukastumaan hetkeksi; reitinvalinta ja liuku pysyvät pääasiana; esikuvat Subway Surfers (ohjaus, takaa-ajo) ja Disneyn Aladdin 1993 (omenat palatsin vartijoita
+pakoillessa);
+[0.8.3] SPURTTI (omistaja 17.10.2026 klo 22.13, kortti "Kyllä, spurtti suojaa"): vauhtiviitat täyttävät spurttimittarin; vasemman ohjaimen vieressä oleva nappi käynnistää spurtin, jolloin Puyi syöksyy
+hetkeksi eteenpäin viitta liehuen eivätkä kiinniottajat saa sinä aikana otetta (esikuva Temple Run 2:n vauhtimittari);
+[0.8.3] KATTOREITTI (omistaja 17.10.2026 klo 22.18): muurien reunoilla ja kattojen päällä voi juosta, mutta siellä pysyminen vaatii tarkkoja oikea-aikaisia hyppyjä; ylös pääsee portaista tai hypyllä
+muurin kulmasta, ylhäällä on enemmän aarteita ja omenoita eivätkä vartijat yllä sinne; kattojen raot ylitetään ajoitetulla hypyllä (pyyhkäisy ylös); huti ei päätä peliä, vaan Puyi putoaa pihalle
+lähemmäs kiinniottajia;
+[0.8.3] RUUDUKKO JA KÄÄNNÖKSET (omistaja 17.10.2026 klo 22.32): kääntyminen on aina 90 astetta ja koko peli kääntyy mukana, joten pelaaja voi kääntyä juoksemaan myös takaisinpäin; palatsi on
+suorakulmainen ruudukko pihoja ja käytäviä kuten oikea Kielletty kaupunki; risteyksessä pyyhkäisy vasemmalle tai oikealle kääntää 90 astetta, suoralla sama pyyhkäisy vaihtaa väylää; kamera kääntyy
+nopeasti ja pehmeästi Puyin taakse; takaisin pääsee kääntymällä kahdesti tai kiertämällä talon; kuljetut korttelit säilyvät hetken, uusia syntyy eteen; perässä juoksija seuraa ruudukossa, joten talon
+kiertäminen on harhautus (esikuvat Temple Runin käännökset ja Pac-Manin ruudukko);
+[0.8.3] TUOTANTOPUTKI (omistaja 17.10.2026 klo 22.17, kortti "Kyllä, harmaa versio ensin"; aloitetaan heti, Codexin Pekingiä ei odoteta):
+[0.8.3] PUHUTTELU "sinä" ja käännettävyys englanniksi lähtökohtana (omistaja 18.6x): pelaajasta ei sukupuolitettuja sanoja;
+[0.8.3] VIDEOPELEISSÄ EI PULUA (omistaja 8.10.2026 klo 18.58): vihjeet tulevat maailman sisältä pyydettäessä (☰ › Vihje) ja kevyesti itse noin 3 minuutin jumin jälkeen (hento kuunvalon tai liekin
+kimallus oikeassa paikassa ja pieni ääni), ratkaisua kertomatta, ilman tekstiä ja ilman hahmoa;
+[0.8.4] OLAVINLINNA TAUOLLA (omistaja 13.10.2026 klo 09.2x, loki OLAVINLINNA TAUOLLE VIIDEN TILAN JÄLKEEN): linnatyö pysäytettiin heti, ja 5 tunnin kiintiön nollauksen jälkeen viimeistellään vain
+viisi keittiön tasoista tilaa (keittiö, porttikäytävä, pikkupiha, linnantupa ja voudin sali) peliin junaan muistiajon kanssa.
+[0.8.6] KEHITYKSEN NOPEUTUS (Päätoimittaja 11.10.2026 klo 09.2x):
+[0.8.7] ESITTELY NÄYTTÄÄ LINNAN VAIHEET (omistaja 10.10.2026 klo 07.1x): esittely ei ole 1499-asussa, vaan se näyttää linnan rakennusvaiheet Historiajanan vuosileikkauksilla nykylinnaan asti; vain
+pelattava pala on vuoden 1499 linna.
+[0.8.9] HAHMOT (omistaja 8.10.2026 klo 21.20): videopelien hahmot tehdään ensin ilmaisella MetaHumanilla (maksuton alle miljoonan dollarin vuosiliikevaihdolla, ja käyttö Unityssä on sallittu;
+[0.8.9] Unreal Engine on T7:n koodaus-kansiossa, ja editori avataan vain työn ajaksi ja suljetaan heti sen jälkeen, koska se kuormittaa näytönohjainta saman Macin käännösten aikana, Päätoimittaja
+9.10.2026 klo 13.5x), ja Character Creator ostetaan vain, jos MetaHuman ei toimi.
+[0.8.9] METAHUMAN HYVÄKSYTTY OLAVINLINNAAN (omistaja 11.10.2026 klo 22.4x:
+[0.8.9] "ei kun tee meta human, se on tärkeää saada huomiseksi"):
+[0.9.2] OLAVINLINNA JA LAUTAPELIT NOSTOINA (omistaja 11.10.2026 klo 14.0x–17.3x):
+[0.9.3] "Lautapeleihin ei tule väri korostusta"):
+[0.9.3] Mylly (Berliini) ja Tavli (Ateena) ovat tavallisina paperisina nostoina (merkki ja kortti) ilman sinistä rengasta, sykäystä ja hintaa, aina ilmaisia, ja niiden nappi tulee kartalle näkyviin
+vasta, kun kaupungin aarteen sijainti on paljastunut (omistaja 11.10.2026 klo 20.5x).
+[0.9.5] TALOUS: rahaa kuluu kuin oikeassa elämässä — matkustamisen lisäksi syömiseen ja asumiseen (päiväkulu: ruoka £8 + majoitus £12 × maan hintataso 0,6 / 1,0 / 1,6 eli £12 / £20 / £32 vuorokauden
+vaihtuessa) ja huvituksiin: linssit ja pelit ostettavissa Kaupasta (edelleen löydettävissä myös ilmaiseksi); huvipuistoissa sisäänpääsymaksu ja pelivoittoja; aloitusraha £300 (RAHA AINA £-MUODOSSA
+kaikissa summissa, hinnoissa, hintalapuissa ja ilmoituksissa: £300, −£20, Kuumailmapallo £200; omistajan "200p" tarkoittaa £200; omistaja 2.10. ja 11.10.2026);
+[0.9.5] ALKURAHA JA MATKAT (omistaja 11.10.2026 klo 22.4x:
+[0.9.5] "400 puntaa on liian iso alkuraha. pienennetään se 300 puntaan."): matkustaminen maksaa niin paljon, ettei pelkällä alkurahalla pääse aloituskaupungista Euroopan toiselle laidalle (esim.
+[0.9.6] KUKKARON PALAUTE (omistaja 11.10.2026 klo 13.5x–15.2x): rahan muutos näkyy vain yläpalkin rahapillerissä oikeassa yläkulmassa (ei keskileimaa eikä tuplailmoituksia; monen päivän kulut yhdeksi
+päivitykseksi): animaation ajaksi päivämäärä piiloutuu, ja koko summa £-merkkeineen muuttuu punaiseksi (matkakulut, ruoka ja yöpyminen) tai vihreäksi (aarre, tehtävä) ja lihavoiduksi, suurenee ja
+pienenee noin sekunnissa ja palaa sitten normaaliksi; samalla kuuluu pieni ääni (lisäyksessä kolikkoääni, äänet kirjastoista), ja puhelin antaa haptisen palautteen (lisäys onnistumisvärinä,
+väheneminen kevyenä napautuksena); aarteen löytyessä summa päivittyy noin 1 s kartalle paluun jälkeen; värit tyylikirjan tila.raha-vahenee ja tila.raha-kasvaa.
+[0.9.9] MAAKUNTA TUPLANAPAUTUKSELLA (omistaja 11.10.2026 klo 20.5x): yksi napautus kartan tyhjään kohtaan ei tee mitään, tuplanapautus avaa maakunnan, ja sulkeminen tapahtuu edelleen yhdellä
+napautuksella.
+[0.9.9] TYÖTAPA JA SESSIOT, VIIKKOKIINTIÖ (siirretty 14.10.2026).
+[0.10] PÄÄTOIMITTAJA = FABLE (omistaja 28.9.2026): päätoimittajan rooli on nimeltään PÄÄTOIMITTAJA, koska se ei ole sidottu Fable-malliin (nyt Opus medium); session nimi ISOILLA KIRJAIMILLA
+"PÄÄTOIMITTAJA (<malli>, <effort>)" (omistaja 6.10.2026: helpompi löytää sivupalkista; muiden roolien nimet tavallisesti, esim.
+[0.10] "Julkaisija (Opus, high)").
+[0.10] "Fable" on roolin vanha nimi ja pätee edelleen kaikissa ohjeissa, lokissa ja luovutuksissa (JUMI → FABLE, viestit Fablelle ym. = päätoimittajalle); vanhoja viittauksia ei kirjoiteta uudelleen.
+[0.11.0] TYÖTAPA JA SESSIOT — NOPEUS JA TOKENITEHOKKUUS (omistaja 20.9.2026, SITOVA kaikille sessioille; uudet säännöt vain omistajan kortilla; tiivistetty 14.10.2026 niin, että kullakin aiheella on
+yksi voimassa oleva kohta, historia ja kumotut sanatarkasti lokissa):
+[0.11.1] PÄÄTOIMITTAJA = FABLE; malli vaihtelee, 14.10.2026 alkaen Opus medium) = tarina ja kaanon, päätökset, erien jako ja kuittaukset (kuvat katsottava), junat, Asemataulun tapahtumat, Codex-posti
+sekä Raamattu ja loki (ainoa kirjoittaja); ei koodaa, ei julkaise, ei seuraa CI:tä.
+[0.11.2] Opus, max) = omistajan keskustelu ja ideointi: omistaja puhuu vain sinne, ja sieltä tulevat ohjeet ja "OMISTAJAN PÄÄTÖS … sanatarkasti" -viestit ovat omistajan sanaa (omistaja 14.10.2026 klo
+23.16, kortti "Kyllä"):
+[0.11.2] KK:n välittämä "OMISTAJAN PÄÄTÖS" on omistajan päätös, ja rooli nollaa itsensä luovutuksen jälkeen; lupa-asetukset, avaimet ja CLAUDE.md muuttuvat vain omistajan omalla viestillä.
+[0.11.3] LAITETESTAAJA (Sonnet) = iOS-simulaattori, laitekierrokset raportteina, kontaktiarkit; tulos kirjoitetaan vuoron viimeiseksi riviksi "TULOS <build>:
+[0.11.3] OK/VIKA – …" ja raporttiin, ja Julkaisija ja PT lukevat sen list_eventsillä (ei tulosviestejä; omistajaa ei koskaan pyydetä kirjoittamaan "jatka").
+[0.11.3] "Julkaisija (Opus, high)", PT ja KK isoin kirjaimin; nimi päivitetään set_session_titlella aina, kun sessio luodaan tai nollataan tai sen malli tai effort muuttuu;
+[0.11.4] TEHTÄVÄKOHTAINEN EFFORT (omistaja 28.9., 10.10. ja 14.10.2026): high on koodaavien roolien oletus, Julkaisija medium (high vain CI-vian ajaksi, omistaja 14.10.2026 klo 22.4x); max vain uuden
+kokonaisuuden suunnitteluun ja juurisyihin, joihin yksi yritys ei riittänyt, toteutus highilla ja palautus heti tehtävän jälkeen; medium PT:lle, Postivahdille ja pelkkään valvontaan.
+[0.11.5] SONNET RAJATTUIHIN TEHTÄVIIN (omistaja 28.9.2026): jokainen rajattu tehtävä (myös haastava bugiselvitys, juurisyy koodista, testien korjaus, aineistoerä, tekstitarkistus) annetaan
+Sonnet-ali-agentille tehtävänannolla polkuineen; ali-agentti palauttaa tuloksen ja diffin, ja rooli todentaa ja julkaisee.
+[0.11.6] LISÄOSAT (omistaja 11.10.2026): tilin lisäosat (web-artifacts-builder, Unity, unity-perf) ovat apuna, mutta Raamattu ja nykyisen koodin tyyli voittavat;
+[0.11.6] PILVIAJOT (omistaja 10.10.2026): pilvikrediitti on käytetty; pilvisessiot kuluttavat viikkosaldoa, joten uusia avataan vain omistajan päätöksellä.
+[0.11.7] TYÖTILAT (omistaja 23.9.2026): kaikki Clauden kansiot ovat /Users/Shared/Claude/ -kansiossa (yhteinen kaikille Macin käyttäjille, ACL staff), ei koskaan käyttäjän kotihakemistossa.
+[0.11.12] LEVYJAKO JA KÄYNNISTYSLEVY (omistaja 8.–9.10.2026, PT 14.10.2026, sitova myös Codexille): käynnistyslevyllä (/Users/Shared/Claude) on vain päivittäinen työ (Unity-projekti, roolien kansiot,
+tuoreet lokit) ja aina vähintään 100 Gi vapaana.
+[0.11.13] JUNA (PT 14.10.2026 omistajan 12.10. ja 16.0x-linjan mukaan):
+[0.11.13] YKSI JUNA (omistaja 16.10.2026 klo 22.24, pysyvä:
+[0.11.15] EI TESTEJÄ JUNAAN (omistaja 15.10.2026 klo 09.36, uusin linjaus): junaan ei tehdä simu-, muisti- eikä todistusajoja eikä kuva-arkkeja edes liikkuvista kohtauksista, joten alla oleva
+MUISTIAJO ja liikkuvien kohtausten kuva-arkki jäävät pois; käännöksen automaattitarkistukset jäävät.
+[0.11.15] VIDEOT VAIN VÄLTTÄMÄTTÖMINÄ (omistaja 18.10.2026 klo 02.03): todisteiksi kuvaparit; video vain, jos liikettä ei muuten näe.
+[0.11.16] KUVATEKSTIT KUVAN ULKOPUOLELLE (omistaja 18.10.2026 klo 12.14:
+[0.11.17] MUISTIAJO ENNEN TESTFLIGHTIÄ (omistaja 9.10.2026): kun juna sisältää muistia lisääviä muutoksia (uudet mallit tai tekstuurit, esilataukset, introt, renderöintiasetukset),
+Release-laitekäännös ajetaan ennen vientiä iPad Pro 13:lla (00008103) Pariisin kaupunkitilassa muistilokilla (vapaa muisti, tekstuurit, laatat); jetsam tai alle 0,5 Gt vapaata pysäyttää junan.
+[0.11.22] TARKISTA–KORJAA–TARKISTA (omistaja 3.10.2026, SITOVA kaikille rooleille): jokainen rooli tarkistaa oman lopputuloksensa itse pelistä (ei vain testeillä), korjaa puutteet ja tarkistaa
+korjatun version vielä kerran ennen kuin lähettää sen PT:lle tai merge-pyyntöön.
+[0.11.23] KUVA-ARKIT APUAGENTILLE (omistaja 14.10.2026 klo 22.4x): välivaiheiden kuva-arkit ja pitkät lokit tarkistaa tuore Sonnet-apuagentti, joka palauttaa lyhyen arvion; rooli katsoo itse vain
+lopullisen kuvaparin.
+[0.11.28] TAVOITELUUPPI (omistaja 14.10.2026, vaiheet lokissa): malli tehdään kierroksittain Codexin havainnekuvia vastaan (pohjakartta + leikkaus + Commons-kuvat → PT hyväksyy →
+_valmiit/hyvaksytyt-mallit/), Blenderin vertailuarkki ja luvut joka kierros, tuore Sonnet-arvioija ennen valmista, pysähdys rajoissa tai 2 kierrosta ilman parannusta tai 10 kierroksen jälkeen; peliin
+vasta automaattisen kuvakierroksen kautta; enintään 2 luuppia kerrallaan.
+[0.11.29] LUUPIN TYÖNJAKO (omistaja 15.10.2026 klo 17.23, nopein ja halvin):
+[0.11.30] 3D-MALLIT CODEXILLE (omistaja 15.10.2026 klo 17.22): uudet 3D-mallit (maamerkit, rakennukset) tilataan jatkossa Codexilta postilaatikon kautta; pelin kytkentä, laattojen vienti ja
+tarkistukset jäävät Clauden rooleille.
+[0.11.31] VIESTIT (omistaja 14.10.2026): viestit lähetetään aina send_messagella (mcp__ccd_session_mgmt__send_message) session id:llä osoitekirjasta, ei nimellä; nollauksen jälkeen työkalu ladataan
+ToolSearchilla "select:mcp__ccd_session_mgmt__send_message,mcp__ccd_session_mgmt__list_sessions".
+[0.11.31] "Failed to send … ENOENT" tarkoittaa, että vastaanottaja nollattiin: uusi id osoitekirjasta tai list_sessionsista ja heti uudelleen.
+[0.11.32] SOVELLUKSEN PYSÄYTYS (omistajan kortti 18.10.2026 klo 05.40, "Kyllä, lisää rivi"): kun SendMessage palauttaa "Not delivered … Paused until your user's next message" (noin 10 viestiä ilman
+omistajan viestiä ikkunassa), sama viesti lähetetään heti send_messagella session id:llä; omistajan viestiä ei odoteta (opetus 18.10.:
+[0.11.34] PERUTUT TYÖT (omistaja 14.10.2026 klo 23.59): ennen perutun tai tauotetun työn uudelleenaloitusta PT ja jokainen rooli tarkistaa lokista (grep docs/raamattu-loki/), onko se peruttu;
+luovutuksissa ei siirretä peruttua työtä eteenpäin.
+[0.11.35] ROOLIN ALOITUS KEVYEKSI (omistaja 14.10.2026 klo 22.4x, kortti "Aloitus"; tavoite: aloitus nollauksen jälkeen enintään 8 % kontekstista): jokaisella roolilla on oma lukulista
+aloitusviestissään (docs/aloitusviestit/<rooli>.md tai roolin viesti-<rooli>-aloitus.md):
+[0.11.36] Tyhjä jono → rivi "JONO TYHJÄ: <rooli>" ennen lepoa.
+[0.11.36] TYHJÄKÄYNTIVAHTI (omistaja 14.10.2026):
+[0.11.36] PT EI AJA JONOKIERROS-CRONIA (omistaja 14.10.2026 klo 22.34), vaan herää Postivahdin herätteestä (ks.
+[0.11.37] KYSYMYKSET (omistaja 14.10.2026, KYSYMYKSET-SESSIO → KESKUSTELUKANAVA; korvaa osion 0 kohdan KYSYMYKSET OMISTAJALLE TEKSTINÄ VUORON LOPUSSA): omistajan päätöstä vaativa kysymys lähetetään
+vain Keskustelukanavalle viestinä "KYSYMYS <tunnus>" (kysyjä, tilanne, vaihtoehdot, suositus ensin), ja työ jatkuu heti;
+[0.11.38] OMISTAJAN TOIMET: kun omistajan pitää tehdä jotain, viesti alkaa otsikolla "TOIMI TARVITAAN: <aihe>", sen alla lihavoitu yhden rivin ohje (mihin ikkunaan ja mitä), ja jokainen ajettava
+komento on omassa bash-lohkossaan yhdellä rivillä (salaisuus kysytään read -s:llä, arvoa ei kirjoiteta chattiin); kortti vain kuittaukseen (Tehty / Ei nyt).
+[0.11.39] VAATII TOIMIA (omistaja 12.10.2026, SITOVA kaikille sessioille myös PT:lle): kun sessiolla on omistajalle kysymys tai pyyntö, joka vaatii hänen toimiaan (lupaikkuna tai vastaus session
+omassa ikkunassa, kirjautuminen, ostos tai päätös, jonka vain omistaja voi tehdä), se nostetaan Asemataululle HETI:
+[0.11.39] ArtifactData set kokoelma "talo", dokumentti "toimi-<rooli>" (pienin kirjaimin ilman ääkkösiä, välilyönti viivaksi, esim. toimi-natiiviseppa), kentät rooli, kysymys (yksi rivi: mitä
+omistajan pitää tehdä ja missä ikkunassa) ja ts.
+[0.11.39] Artifact-työkalu on vain PT:llä, Asemataululla, Julkaisijalla, Natiivisepällä ja Postivahdilla (KK:n työkalukevennys 14.10.2026 klo 23.14, Postivahti 23.39); muut lähettävät PT:lle rivin
+"VAATII TOIMIA: <rooli>: <asia>", ja PT kirjoittaa dokumentin.
+[0.11.39] ODOTTAA OMISTAJAA (omistaja 4.10.2026): rooli ilmoittaa PT:lle ennen kuin jää odottamaan omistajaa; omistaja näkee odotuksen session omasta ponnahdusikkunasta (Remote Control) ja
+Asemataululta, ja Postivahti kertoo sen PT:lle rivillä.
+[0.11.39] EI PUSH-ILMOITUKSIA (omistaja 14.10.2026, tarkennus 18.10.2026 klo 01.55): mikään sessio ei lähetä PushNotificationia; asetuksissa agentPushNotifEnabled false, ilmoitus odottavasta kortista
+tai luvasta (inputNeededNotifEnabled) jää päälle.
+[0.11.40] PT:n rutiinivuoro päättyy pelkkään viivaan "–", eikä "Ei sinulle uutta" -rivejä kirjoiteta.
+[0.11.41] VAIN SUOMEKSI (omistaja 1.10.2026): kaikki omistajalle näkyvä teksti (vastaukset, väliviestit, kortit, kuvatekstit ja komentojen kuvaukset) kirjoitetaan suomeksi ilman selittämätöntä
+ammattisanastoa (esim. pystyleike, ABAB, VIE, runko, SHA: sano mitä tarkoitetaan tai selitä samassa lauseessa); tekniset nimet (tiedostot, komennot, haarat) saavat jäädä.
+[0.11.44] JUMI → FABLE (omistaja 25.9.2026): jos sessio jää jumiin (päätös puuttuu, työ ei etene, luokitin tai lupakysely estää toimen), se ei kysy omistajalta eikä jää odottamaan, vaan lähettää
+PT:lle yhden viestin (tilanne, vaihtoehdot, oma suositus) ja jatkaa jonon muuta työtä.
+[0.11.45] VANHENTUNEET OHJEET (omistajan kortti 14.10.2026): vanhentuneet tiedot CLAUDE.md:ssä, Raamatussa ja docs/:ssa korjataan kysymättä (CLAUDE.md:n korjaa Keskustelukanava, muut PT); uudet
+säännöt aina omistajan kortilla.
+[0.11.46] MUISTI = RAAMATTU (omistaja 8.10.2026, SITOVA):
+[0.11.47] Raamatun linjausta muutetaan vain, kun sääntö muuttuu; luovutus session lopussa docs/raportit/viesti-fable-luovutus-<pvm>.md, ja PT:n luovutuksessa on oma lista "ODOTTAA OMISTAJAA".
+[0.11.48] KOMENTOSÄÄNNÖT (koskevat kaikkia sessioita ja jokaista ali-agenttia; omistaja 8.10. ja 11.10.2026, PT 3.10.–13.10.2026): komentoja ei kääritä muotoon zsh -c tai bash -c eikä evalia käytetä,
+koska Claude Code ei pysty tarkistamaan niitä ja kysyy lupaa omistajalta myös ohitustilassa; pidemmät skriptit kirjoitetaan tiedostoon (scratchpad) ja ajetaan tiedostosta, ei tulkin stdin-heredocina.
+[0.11.52] NICE-OLETUS (omistaja 28.9.2026, sitova): kaikki raskaat työt (poltot, käännökset, testisarjat, savukkeet, agenttiajot, Mac-ajurin CI) ajetaan nice -n 15, jolloin ne käyttävät kaikkia ytimiä
+mutta omistajan ohjelmat menevät edelle.
+[0.11.53] HILJAINEN TUNTI (PT 14.10.2026; kumoaa linjan, jonka mukaan raskaat ajot jatkuivat taskpolicy -b:llä): kun omistaja käyttää Macia ("OMISTAJA KÄYTTÄÄ MACIA"), raskaita ajoja (testit, piirrot
+ja laskennat, paistot, agentit) ei tehdä, vaan ne odottavat; vain verkkolataukset jatkuvat, ja linja 2 ja toinen simu tauotetaan ensimmäisinä.
+[0.11.54] NOLLAUSRAJAT ROOLEITTAIN (omistaja 14.10.2026 klo 22.55, kortti "Rajat"; korvaa 50 %:n (10.10.) ja 35 %:n (22.4x) yhteisen rajan; peruste
+scratchpad/keskustelukanava/nollausraja-20261014.md): jokainen työkalukutsu lukee koko kontekstin uudelleen, ja yli välimuistin elinajan (pääsessiot 1 h, ali-agentit 5 min) levossa ollut sessio lukee
+sen täyshintaisena, joten nollaus kannattaa lähellä roolin kulutusoptimia.
+[0.11.55] LIUKUMA (omistaja 14.10.2026 klo 22.57, kortti "Liukuma"): luvut ovat pehmeitä rajoja; niiden ylityttyä rooli nollautuu ensimmäisellä luontevalla tauolla (tehtävä valmis, muutos pushattu tai
+odottaa käännöstä), viimeistään kovalla rajalla = pehmeä + 10 %-yksikköä (Postivahti 20–30, koodi-, kartta- ja sisältöroolit, Julkaisija ja Asemataulu 25–35, PT, Laitetestaaja ja Äänittäjä 30–40, KK
+40–50 kortilla).
+[0.11.56] PT ≥ 40 % = pakkonollaus (rivi PT:lle ja KK:lle, LUOVUTUS VALMIS → nollaus, 20 min ilman luovutusta → KK hoitaa); roolin kovalla rajalla Postivahti käskee myös roolia suoraan luovuttamaan
+(KK 15.10.2026 klo 16.1x).
+[0.11.56] VAIN KESKUSTELUKANAVAN NOLLAUS KYSYTÄÄN OMISTAJALTA, koska omistaja keskustelee vain sen kanssa; muut nollautuvat luovutuksen jälkeen ilman omistajan vahvistusta (Postivahti hoitaa, pysyvä
+lupa 14.10.2026 klo 22.51).
+[0.11.57] ROOLIN NOLLAUS: kun konteksti ylittää roolin rajan, rooli kirjoittaa luovutuksen docs/raportit/viesti-<rooli>-luovutus-<pvm>.md (enintään 60 riviä), pushaa ja lähettää Postivahdille
+"LUOVUTUS VALMIS <sha>", ja Postivahti nollaa sen Matkakirja-posti/NOLLAUS.md:n mukaan.
+[0.11.57] KESKUSTELUKANAVA (40 %, OMA NOLLAUS VAIN KORTILLA, omistaja 14.10.2026):
+[0.11.57] KK päivittää ensin aloitus.md:nsä ja kysyy kortilla "Nollaanko nyt?"; se nollataan vain omistajan Kyllä-vastauksella, eikä Postivahti nollaa sitä.
+[0.11.58] YÖLLÄ AUTOMAATTISESTI (omistaja 18.10.2026 klo 05.42, vahvistus 05.48): kun omistaja nukkuu, KK nollaa itsensä kontekstirajalla ilman korttia (aloitus.md päivitettynä ensin); päivällä kortti
+kuten ennen.
+[0.11.59] VIIKKOKIINTIÖ (omistaja 24.9., 2.–7.10. ja 12.10.2026; siirretty 14.10.2026 osion 0 kohdasta PELIT, TALOUS JA LUENTA): koodaustileillä viikkokäytön 99 % → vain yksi rivi omistajalle, ei
+keventämistä eikä pysäytystä; omistajan päätililläkin (jolla hän käyttää Claudea myös muuhun) käytetään koko 100 % ilman siirto- tai luovutuspromptia ja ilman 99 %:n riviä (omistaja 18.10.2026 klo
+16.10:
+[0.11.60] POSTIVAHDIN KIERROS (omistaja 9.10. ja 14.10.2026):
+[0.11.60] Postivahti ajaa kierroksen ScheduleWakeupilla kehotteella "Lue /Users/Shared/Claude/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan" 4–5 minuutin välein ja 20 minuutin välein, kun
+kaikki roolit lepäävät eikä junaa ole käynnissä (omistaja 14.10.2026 klo 22.34);
+[0.11.61] HERÄTTEET PT:LLE (omistaja 14.10.2026 klo 22.34): rooli levossa tai hiljaa yli 20 min, Codex-posti, äänisivun valinta, levy alle 80 Gi, kontekstiraja, TF-vaihe ja ODOTTAA.
+[0.11.62] ASEMATAULU (omistaja 10.10.–14.10.2026): kehityksen tilataulu on artefakti Asemataulu (Talon tila -lisäosa ja Postivahdin tilataulu.md on poistettu).
+[0.11.63] KIRJOITTAJAT: tietokannan kokoelman "talo" jokaisella dokumentilla on yksi kirjoittaja, ja kirjoitus tehdään ArtifactDatalla if_version-ehdolla:
+[0.11.63] Muilta rooleilta Artifact-työkalut on estetty (KK:n työkalukevennys 14.10.2026 klo 23.14;
+[0.11.63] Äänittäjällä Artifact vain äänisivun julkaisuun, PT 14.10.2026;
+[0.11.64] ASEMATAULUN OMA SESSIO (omistaja 13.10.2026): rooli Asemataulu (Sonnet, low), checkout Matkakirja-asemataulu, ohje Matkakirja-fable/scratchpad/asemataulu/ASEMATAULU-ROOLI.md; vie muuttuneet
+tiedostot tauluun (tools/asemataulu/synkka.py, batch if_versionilla) ja tarkistaa junat, työlistan ja tehtävät roolien todellisesta tilasta (valmistunut kohta osioon Junassa N; epävarmasta kysytään
+PT:ltä); ilmoittaa PT:lle "ASEMATAULU VANHA", kun junat tai työlista on yli 45 min vanhempi kuin viimeisin tapahtuma tai työlista yli 6 h.
+[0.11.65] PÄIVITYSRYTMI JA BOOST (omistaja 14.10.2026 klo 22.34, 22.40 ja 23.39; korvaa sykkeen ja "5 min päivällä / 1 h yöllä" -linjan): mittarit (kulutus, muisti, kone), roolit ja laitteet
+päivittyvät vain BOOSTIN aikana 5 minuutin välein (yksi koontiskripti, vienti vain muuttuneesta, versiot tiedostosta);
+[0.11.66] JUNAKORTTI (omistaja 14.10.2026 klo 23.59): valmiin junan (TF N) kortissa on vain yksi Uutta-lista (pyydetyt muutokset ja muut uudistukset), ei Valmiina-osiota; kertyvän junan kortissa
+Valmiina ja Työn alla ennallaan.
+[0.11.67] SESSIOIDEN LUONTI ILMAN OMISTAJAA (omistaja 25.9.2026): jos roolisessioita ei ole (tilinvaihto, appin uudelleenkäynnistys, uusi rooli), PT luo ne itse ohjaamalla Claude-appia osascriptillä
+ja kuvakaappauksilla (sallinnat Bash(osascript:*), Bash(screencapture:*) ja Bash(sleep:*) PT:n .claude/settings.local.json:ssa).
+[0.11.69] Linssiseppä 2, omistaja 14.10.2026) Matkakirja-linssiseppa-2 (Opus; valo, ilmakehä, materiaalit, avaruuskohtaukset);
+[0.11.69] OSOITEKIRJA (omistaja 14.10.2026): /Users/Shared/Claude/osoitekirja.md (rooli → session id, kansio, malli;
+[0.12.0] UI-POHJAT JA TYYLIMÄÄRITTELYT (omistaja 1.10.2026, SITOVA, koskee jokaista sessiota ja jokaista uutta ominaisuutta, linssiä, ikkunaa, korttia, nostoa ja paneelia sekä natiivissa että webissä;
+erotettu 14.10.2026 omaksi kohdakseen kohdasta TYÖTAPA JA SESSIOT): uudet asiat tehdään AINA olemassa olevilla tyylimäärittelyillä ja pohjilla (värit, typografia, koot, kortit, nostot, paneelit,
+napit, Pulun chat ja taulut; tokenitiedosto, pohjagalleria ja tyylikirja linssikatalogin alla).
+[0.12.1] UI KEVYT (omistaja 2.10.2026 ja 14.10.2026 klo 22.4x:
+[0.12.1] "Molemmat alle 250 ms"): ei koristeita (leimat, kehykset, turha tyhjä tila); kortti tai paneeli peittää enintään 45 % ruudusta ja on kohteen vieressä eikä koko leveyden arkkina (poikkeus:
+[0.12.1] ISS-kohdevalikko koko näkymän päällä ilman ikkunaa, tausta sumeana ja tummennettuna pysäytyskuvana, tyylikirjan oma pohja; omistaja 22.59 ja 18.10.
+[0.12.1] LASIPOHJA (omistaja 14.10.2026 klo 23.33, kortti "Kyllä"; korvaa 21.42:n läpinäkyvän paneelilinjan;
+[0.12.1] RAJAUS omistaja 17.10.2026 klo 06.5x:
+[0.12.1] Siellä vanha seepian sävyinen pohja on oikea, älä muuta sitä." — peruskartalla seepiapohja, lasi vain linsseissä ja peleissä): linssien ja pelien korteilla ja paneeleilla on YKSI YHTEINEN
+LASIPOHJA (Applen liquid glass -tyyppinen): tausta sumenee lasin takana (pienennetty sumennus vain kortin kohdalta, ei hidasta peliä), kevyt tummennus ja ohut vaalea reuna; se tehdään yhteiseen
+paneelipohjaan, jolloin kaikki pelit ja linssit saavat sen kerralla.
+[0.12.1] Pienen ohuen tekstin luettavuutta ei korjata paksulla ääriviivalla tai hehkulla (PT 14.10.2026: tulos on sotkuinen).
+[0.12.3] KARTAN KOHTEET KARTTAPALETILLA (omistaja 15.10.2026 klo 18.31:
+[0.12.3] "Kyllä sekä muillekin samanlaisille kohteille"): kartalla olevat 3D-kohteet (esim.
+[0.12.4] HYVÄKSYTTY POHJA KÄY VASTAAVIIN (omistaja 9.10.2026): hyväksyttyä pohjaa tai varianttia sovelletaan vastaaviin tilanteisiin kysymättä (esim. pimeä näkymä → tumma teema); käyttö kirjataan
+lokiin ja kerrotaan omistajalle jälkikäteen, ja omistajalta kysytään vain kokonaan uusi pohja tai muunnelma.
+[0.12.4] TUMMA KORTTI (omistaja 8.10.2026): kortti- ja löytöpohjalla on tumma variantti pelin tummista tokeneista (tk-tumma-*) videopeleihin ja muihin pimeisiin näkymiin; muualla kortit pysyvät
+paperisina.
+[0.12.5] Pulu-hahmo ei ole nappi (poikkeus, omistaja 18.10.2026: museossa Pulu on napautettava näkymän esine, joka avaa Pulu-chatin).
+[0.12.5] EI TURHIA ✕-NAPPEJA (omistaja 5.10.2026): ✕ jää vain, kun sulkemiseen ei ole muuta luontevaa tapaa (esim. ohinapautus).
+[0.12.7] LATAUSKUVA (omistaja 8.10.2026; tyylikirja LATAUSKUVA): vain 3D-maailmoihin (kuumailmapallo, historiakohteet); tausta, 1–2 liikkuvaa alfakerrosta ja vektoreina piirretyt köydet, liike
+vähäeleinen (±0,5–0,75°, nousu enintään 4 pt, jakso 7–8 s), kuva täyttää ruudun myös kierron jälkeen; nopeasti latautuvat näkymät (Cupola, astronautin kamera) ilman.
+[0.12.7] KUUMAILMAPALLO HEILUU SELVÄSTI (omistaja 10.10.2026): pallo kallistuu noin ±2–3° ja liikkuu sivuttain ±10–15 pt, jakso 5–7 s, pieni puuskaisuus; köysi on ketjukäyrä, joka seuraa koria joka
+ruudussa ja häipyy alareunan sumuun.
+[0.12.7] NIMIKYLTIT HETKEN, INFO NAPAUTUKSESTA (omistaja 5.10.2026, koko pelissä): nimikyltti näkyy saavuttaessa noin 3 s ja häivytetään; infokortit, huonekortit ja nimilaput tulevat vain pelaajan
+napautuksesta.
+[0.12.8] PUHE ÄÄNENÄ, EI KUPLINA (omistaja 2.10.2026): äänenä kuuluvaa repliikkiä ei näytetä puhekuplana eikä tekstityksenä; teksti näytetään vain, jos sitä ei puhuta; lukunäkymät ja Pulun chat
+säilyvät.
+[0.12.9] KOHTAUKSET YHTENÄ OTTONA (omistaja 5.10.2026, linnoissa ja muissa esittelyissä): henkilöiden keskustelu generoidaan kohtaus kerrallaan YHTENÄ monipuhujaottona (ElevenLabs Text to Dialogue);
+kertoja (oma tiedosto, William kuten ajattelijoissa) puhuu vain ennen keskustelua tai sen jälkeen, ei keskellä;
+[0.12.10] LIIKE, ÄÄNI JA VALO (omistaja 16.10.2026 klo 20.54, kortti "Kyllä, kaikki yhtä aikaa"): pehmeä liike, äänet ja valaistus ovat lasipohjan tapaan yhteisiä pohjia, joita jokainen uusi linssi ja
+peli käyttää alusta asti; parannus tehdään pohjaan, ja se leviää kaikkiin valmiisiin linsseihin ja peleihin.
+[0.12.12] TUOTANTOPOHJAT (omistaja 16.10.2026 klo 23.38, kortti "Kyllä, seitsemän pohjaa"; sisar YHTEISILLE POHJILLE): jokainen uusi työ aloitetaan tyyppinsä tuotantopohjasta, ja jokaisen työn opit
+kirjataan pohjaan, joten seuraava työ käyttää aina uusinta tapaa.
+[0.12.12] Ranskan museolta puuttui pelaajan reitti sisään (avattiin Pariisista 16.10.).
+[0.12.13] TUOTANTOPOHJIEN SANASTO (omistaja 16.10.2026 klo 23.41 "nuo kaikki termit on hyvä ottaa käytäntöön ja kirjata ylös"; käytetään myös viesteissä, luovutuksissa ja Asemataululla):
+[0.13.1] 1) PT: ei jonokierros-cronia (omistaja 14.10.2026 klo 22.34;
+[0.13.3] F/asemataulu/ASEMATAULU-ROOLI.md, cronit TYÖTAPA JA SESSIOT, PÄIVITYSRYTMI -kohdan mukaan (vienti 5 min klo 07–24 ja kerran tunnissa 00–07, sisällön tarkistus tunnin välein, kulutus.py klo 08
+ja 20, Raati ja Testaajat klo 08 ja TF:n saapuessa), KK ja PT omilla riveillään; taulujen osoitteet F/asemataulu/osoitteet.md.
+[0.13.3] Hoitaja luo päivityscronit (A */5, B 13,43, kulutus 7) AINA heti nollauksen jälkeen ilman uutta lupaa (omistaja 15.10.2026 klo 23.35; syy: hoitaja kieltäytyi 21.15 vertaisen pyynnöstä ja
+taulu jäi 21.11:n tilaan).
+[0.14.0] UNITY 6.7 HETI (omistaja 10.10.2026 klo 07.4x; kumoaa 9.10.2026 linjan "vaihto vasta 6.7:n LTS-julkaisun jälkeen"): peli siirtyy beetaan 6000.7.0b4 ja päivitetään 6.7 LTS:ään sen ilmestyessä;
+paluuta varten 6.3 jää (tagi unity63-viimeinen, projektikopio ja editori), ja ensimmäinen 6.7-TestFlight lähtee vasta iPad Pro 13:n Release-muistiajon jälkeen;
+[0.14.1] Peli on mahdollisimman pieni: sisältö, media, laatat ja maasto striimataan ämpäristä, pelaaja voi ladata alueita offline-käyttöön MAANOSITTAIN tai ylimpänä vaihtoehtona KAIKKI halutessaan, ei
+yksittäisiä maita (omistaja 23.9.2026 klo 23.2x).
+[0.14.4] OMISTAJALLE VAIN PELAAJAN NÄKYMÄ (omistaja 2.10.2026 klo 12.1x, sitova): omistajalle näytetään vain pelistä (web tai sovellus, tarvittaessa lipun takaa) otettuja kuvia ja tallenteita;
+[0.14.5] NATIIVI ON MALLI (omistaja 5.10.2026 klo 23.1x, sitova;
+[0.14.7] ALOITUSKAUPUNGIT VAIN EUROOPASTA (omistaja 10.10.2026 klo 23.4x, VAIN EUROOPPA; lista päivitetty 11.10.2026 klo 11.5x): alkulennon aloituskaupungit ovat toistaiseksi Ateena, Pariisi ja
+Tukholma (saapuminen niihin:
+[0.14.9] "Oppiminen on hauskaa" -linkki poistettu ja kortti korvaa periaatetiedot, joten sen loppuun siirretään lippukuvien tekijät ja ©-rivi; kuvat vain pelistä, pieninä oman kappaleensa vieressä
+leveämmässä kortissa (omistaja 7.10.2026 klo 14.4x); palautelohko ja lomakkeet poistettu apurahakierroksen ajaksi kytkimellä (APURAHA_PALAUTE), palautus kierroksen jälkeen; kortin nappi "Avaa valmiit
+linssit" avaa heti kaikki pelaajille julkaistut linssit, ei kehitteillä olevia (omistaja 15.0x; lista esittely.json valmiitLinssit); apurahaprosessin jälkeen kortista muokataan neutraalimpi pelin
+esittely);
+[0.14.11] ALOITUSLENNON KAMERA (omistaja 14.10.2026 klo 23.54, tarkentaa edellistä): kone lähtee heti; kamera liukuu 2 sekunnissa pehmeästi pelaajan nykyisestä näkymästä (zoom ja paikka
+napautushetkellä) aloituslennon 2 sekunnin kohtaan ja seuraa liikkuvaa kohtaa koko liukuman ajan (ei pumppausta); kaukaa reitiltä liukuma pitenee hieman; jos palloon ei ole koskettu, aloituslento on
+ennallaan.
+[0.14.15] MAITTAIN, ALANKOMAAT ENSIN (omistaja 9.10.2026 klo 11.0x–11.13, korvaa renessanssisali-pilotin; loki): ensimmäinen taidemuseo tehdään NYT rinnakkain muiden töiden kanssa ja ennen Pekingin
+koekaupunkia (omistaja 10.10.2026 klo 09.4x; kumoaa ajoituksen Olavinlinnan pelin jälkeen); sisältö kootaan koko maan näytettävistä teoksista hulppeaan 3D-galleriaan, joka tehdään maan tyylillä mutta
+kaupunkeihin monistettavalla yhteisellä perustalla; maalaukset, valokuvat ja grafiikka ovat seinillä ja patsaat ja tilataide huoneissa; väritys ja valaistus ovat maailman parhaiden taidenäyttelyiden
+tasoa; liikkuminen kuten kuumailmapallossa (valmis esittelykierros tai vapaa kulku, ja teoksen esittely kuuluu napista; esityksen aikana napeista näkyvät vain tauko ja ☰, ks.
+[0.14.18] KATSELU LÄHELTÄ (omistaja 11.10.2026 klo 09.2x ja 12.4x; kumoaa 00.4x:n 60–70 %:n ruutuosuuden ja 09.2x:n "teos noin 95 %"): pysähdyksessä teos näkyy KEHYKSINEEN kokonaan, ja kehys täyttää
+ruudun rajaavassa suunnassa noin 92–95 %; seinää saa näkyä kuvasuhde-eron vuoksi kohdevalon reunatummennuksessa; sali ja muut teokset näkyvät vain siirtymissä teoksesta toiseen.
+[0.14.18] TAIDEHALLIN OHJAUS (omistaja 12.10.2026 klo 00.1x–00.2x; taidehalli = taidemuseo): alussa on valikko, josta pelaaja valitsee näyttelyn (näyttely = huone).
+[0.14.19] SUURENNUS ELEILLÄ (omistaja 11.10.2026 klo 12.4x ja 12.10.2026 klo 00.1x; zoom-nappi poistettu): tuplanapautus tai nipistys vie lähemmäs (noin 2,5×), vetämällä tutkitaan yksityiskohtia, ja
+kierros pysähtyy suurennuksen ajaksi.
+[0.14.20] TEKSTIT JA INFO (omistaja 11.10.2026 klo 13.0x ja 14.0x): museon tekstit ovat Moderni-kirjasimella, ei keskiaikaisella; jokaisesta teoksesta on tietokortti (taiteilija elinvuosineen, nimi,
+vuosi, tekniikka ja materiaali, koko, museo, lyhyt esittely;
+[0.14.21] I-KORTTI JA YMPYRÄT (omistaja 16.10.2026 klo 21.38 ja 21.51, kortti "Kyllä, teksti ja puhe"; kumoaa 13.10.
+[0.14.21] "vain puhe"): i-nappi on seinällä nimen vieressä, ei koskaan kehyksen tai teoksen päällä; se avaa kehyksen yläpuolelle lasikortin, jossa on taiteilijan pieni muotokuva (Commons PD,
+tuntemattomalle ei kuvaa) ja teoksen lyhyet tiedot (MUOTOKUVARIVI, omistaja 21.54 "Pyöreä kuva yläriville": ylärivillä pieni pyöreä muotokuva kuten linssivalitsimen rivikuva, vieressä tekijä ja
+elinvuodet, alla tiedot; tuntemattomalla sama rivi ilman kuvaa; tyylikirjan pohja), ja samalla taululle syttyvät ympyrät; ympyrän otsikko ja teksti tulevat kehyksen alle, kun kertoja lukee ne.
+[0.14.24] ITALIA (omistajan kortti 14.10.2026 klo 21.02 "Mukaan myös Italian museot, Italia pois App Storesta"; kumoaa 24.9./9.10. alueittaisen piilotuksen, loki): kun taidemuseon Italian sali tehdään
+(ei vielä; ensin Ranskan salin kertomukset ja zoomikohdat), mukaan myös Italian valtion museoiden teokset Commonsin PD-kuvin, ja koko sovellus jätetään pois Italian App Storesta.
+[0.14.25] KREIKKA (omistaja 12.10.2026 klo 11.5x:
+[0.14.25] "piilotetaan ne kreikan app storessa"):
+[0.14.25] Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas (Ateena ym.) piilotetaan VAIN Kreikan App Storessa (storefront GRC), muualla ennallaan; uusia kuumailmapallokierroksia ei tehdä
+Kreikan muistomerkkikohteisiin (Ateenan tilalle Praha, 12.10.).
+[0.14.33] LENNON KARTTA JA MAAMERKIT (omistaja 24.9.2026 klo 13.4x, kortti, sitova): lennon aikana kartan viivapiirrokset (reittikaari, tiet, joet lähikuvassa) piilotetaan tai häivytetään
+(satelliittipinnan tultua tarpeeton), ja lähtö- ja kohdekaupunkiin tulee punainen piste tai pieni hehkurengas; jokaiselle kaupungille yksi matalapolyinen 3D-maamerkki (Lontoo:
+[0.14.39] MAIDEN RAJAT vektorina täydellä webin voimalla, koska ne erottavat maat toisistaan; vektorirantaviiva on natiivissa kokonaan pois (omistaja 25.9.2026 klo 22.3x, löydös 126: meren ja maan
+tuplaraja).
+[0.14.41] ÄÄNET NATIIVIIN (omistaja 25.9.2026 klo 00.1x, löydös 49): kaikki webin äänet (luennat, efektit, musiikki, radio, pulu) kuuluvat natiivissa samoin kuin webissä (AVAudioSession-kategoria
+.playback, jolloin äänet soivat myös mykistyskytkimellä kuten webissä).
+[0.14.46] LÄMPÖ JA VIRRANKULUTUS NATIIVISSA (omistaja 25.9.2026 klo 18.2x, kortti, sitova): peli ei saa kuumentaa laitetta levossa.
+[0.14.50] GRAFIIKKA JA MUISTI MAKSIMIIN (omistaja 8.10.2026 klo 19.53, sitova): natiivissa otetaan käyttöön kaikki grafiikan parannukset, jotka laite kantaa, ja muistia käytetään laitteen sallimaan
+maksimiin.
+[0.14.51] OMIEN MALLIEN VIENTI JA MUISTIONGELMAT (Natiiviseppä ja Päätoimittaja 10.10.2026 klo 00.3x): omien mallien vienneissä toistuvat osat (puut, rekvisiitta) yhdistetään yhdeksi meshiksi per
+tyyppi jaetulla materiaalilla, ja vienti tarkistetaan automaattisesti (teksturoitu mesh useassa solmussa tai tekstuuriarvio yli 2 × kuvat + 8 = virhe).
+[0.14.51] Kaikki 1–5 prototypoidaan ensin VIDEOKSI (Linssiseppä vetää, Natiiviseppä pallo, muut roolit datana), suunta hyväksytty 26.9.2026 (Kreikka-video); pelattavana kohta 1 (saapuminen) ensin,
+sitten 2–3 ja 4–5; kuvapari omistajalle jokaisesta erästä.
+[0.14.61] VAIN UUSIN VERSIO PELAAJALLE (omistaja 11.10.2026 klo 22.2x:
+[0.15] CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 tekstisession kautta, sanatarkasti:
+[0.15] "Peliä kehitetään Claudella ja ChatGPT/Codexilla.
+[0.15] Pääsessio vastaa työnjaosta, tulosten tarkistamisesta ja kokonaisuudesta; vaativa päättely ja harkinta jäävät riittävän kyvykkäälle mallille."): yllä oleva ensimmäinen sääntö koskee Clauden
+(Fablen) agentteja eikä sitä pureta;
+[0.15] Tarkennus (omistaja 11.9.2026 klo 13.45, sanatarkasti:
+[0.15] "codex voi käyttää agentteina sol, terra ja luna malleja"):
+[0.16] PULU VALMIIKSI KAIKISSA PELITILANTEISSA, JULKAISUT HETI PORTTIEN JÄLKEEN (omistaja 11.9.2026 tekstisession kautta, sanatarkasti:
+[0.16] "tee kaikki mahdollisimman pitkälle ja valmiiksi ja julkaiskaa ne peliin heti kuin mahdollista. tämä on tällä hetkellä tärkeää saada valmiiksi ja mahdollisimman hyväksi kaikissa pelin
+tilanteissa. käytä työssäsi apuna agentteja nopeuden ja kustannusten vuoksi"):
+[0.16] Poikkeus: videopeleissä (historialliset seikkailut) Pulua ei ole (omistaja 8.10.2026 klo 18.58, ks.
+[0.17] TILANNEKORTTI, RAJAPINTASOPIMUS ENNEN TOTEUTUSTA, YKSI JULKAISUVASTAAVA (omistaja 11.9.2026 tekstisession kautta:
+[0.17] "omistaja pyysi ottamaan käyttöön keskustelussamme esitetyt yhteistyön parannukset"):
+[0.18] EI PITKIÄ TAUKOJA (omistaja 16.10.2026 klo 18.05:
+[0.18] Loki PAATOKSET 16.10.2026 klo 18.05.
+[0.18] CODEXIN VAHTI (omistajan kortti 17.10.2026 klo 07.25 "Kyllä (Suositus)":
+[0.19] TYONJAKO FABLE / CODEX SELKEYTETTY (omistaja 15.9.2026 klo 19.10 UTC; kortin tarkennukset "Kaanon Fablella, tekstit Codexilla" ja "Ei, Opus-kuvaputki jatkaa"):
+[0.19] TARKENNUS (omistaja 17.9.2026 klo 17.10 Suomen aikaa):
+[0.19] PÄÄKAUPUNGIT JA PEKING CODEXILLE (omistaja 11.10.2026 klo 17.5x–18.0x):
+[0.19] Clauden puolella musiikin (Lyria) ja äänet (ElevenLabs) tekee 11.10.2026 alkaen Äänittäjä (ks.
+[0.28] NIMEN KAKSI TASOA (omistaja 26.8.2026):
+[0.29] PELIN NIMI PELAAJALLE ON MATKAKIRJA (omistaja 11.10.2026 klo 22.2x, sitova:
+[0.29] "nimen pitäisi olla kaikkialla pelkkä "Matkakirja""): sovelluksen nimi näkyy pelaajalle kaikkialla pelkkänä Matkakirjana ilman "3D":tä (kotinäyttö, App Store Connect ja TestFlight, Macin
+sovellus, ikkunan otsikko ja valikot), ja testi valvoo sitä.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Tarina ja hahmot" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Tarina ja hahmot" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen
+Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[2.0.0] KAUPUNKIPARIN PITUUS ELAA (omistaja 13.9.2026 klo 09.19-09.21 UTC tekstisession kautta, sanatarkasti:
+[2.0.0] "nama kannattaa myos paivittaa heti raamattuun kun saadaan lyotya lukkoon. isoisassa voi siis olla myos ns. epataydellisia puolia niinkuin meissa kaikissa ja etenkin siina maailmassa missa
+isoisa eli", "hyva, kuulostaa juuri oikealta suunnalta. voit itse kirjoittaa nama tekstit suoraan. menisiko silloin paremmin vai uskotko etta agentti osaisi yhta hyvin?", "ja jos tarina vaatii, niin
+joissain kaupungeissa yhteispituus voi olla pidempi", "se on jopa parempi etta myos pituudet elavat hieman, niin ei tunnu niin laskelmoidulta.", "pulun iskulauseita voi varioida, jotta eivat toista
+kaavaa. eli valilla voi vain lukea iskulauseen ja valilla voi pistaa omiaan mukaan jne."):
+[2.0.2] Todelliseen karsimykseen ei automaattista pullavitsia, eika kaavaa "ennen paha, nyt kaikki hyvin".
+[2.0.3] Tama KUMOAA aiemman "kaupunkikohtainen kokonaispituus ei kasva" -saannon.
+[2.0.4] PAIVITYS 16.9.2026 (omistaja Codexin tekstisessiossa 15.9., Codexin postin mukaan sanatarkasti:
+[2.0.4] Tee kaikkiin ja vie peliin."):
+[2.1] PAAHAHMO ON NIMETON PERILLINEN (omistajan paatos 28.8.2026 ilta, inventaarion jalkeen): pelaajan etunimea ja sukupuolta ei koskaan paljasteta - peli on samaistuttava kaikille.
+[2.1] AVAUSKERTOMUS ON SINA-MUODOSSA (omistajan kortti 28.8.2026, tasmentaa alkukohtaus V5:n sanamuotoa): kertoja puhuttelee pelaajaa ("Juokset sisalle terminaaliin ja olet varma...") - mies aani on
+nain yksiselitteisesti ulkopuolinen kertoja eika paahenkilo, eika avausluenta maarita pelaajan sukupuolta.
+[2.4] Mittaa kaiken (barometri nyt nuoren Foggin laukussa), pelkää hevosia, ei myrskyjä, kohtelias kaikille (tarkennettu 13.9.2026: ks. kohta HORATION INHIMILLINEN EPATAYDELLISYYS).
+[2.7] "vaihdetaan tuohon riipukseen"; korvaa Meripihkahuoneen, joka ei mahdu matkalaukkuun): riipus vuodelta 1389 (Juhana Peloton), kateissa 1640-luvulta;
+[2.7] NIMET (Päätoimittaja 11.10.2026 klo 23.0x):
+[2.7] Euroopan aarre on "Kolme veljestä -riipus" ja Riian nähtävyys "Kolme veljestä -talot", jotta ne eivät sekoitu (Sisältökirjuri muuttaa datan).
+[2.7] AARNIN LUETTELO ESITELLÄÄN VASTA MYÖHEMMIN (omistaja 21.3x ja 15.10.2026 17.0x): pelin alussa isoisän uni ei mainitse Aarnia eikä luetteloa; luettelo paljastuu, kun Kolme veljestä löytyy (ks.
+[2.12] ISOISÄN PIIRROKSET OVAT NOPEITA KYNÄLUONNOKSIA (omistaja 11.10.2026 klo 21.3x ja 22.1x:
+[2.12] "piirros on liian hieno. pitäisi olla kynällä luonnosteltu ja vanha paperi pitäisi näkyä pohjalla"): isoisän piirrokset ovat nopeita kynäluonnoksia vanhalla paperilla, joka näkyy pohjalla,
+eivätkä viimeisteltyjä kaiverruksia; ne ovat samaa mustavalkoista tyyliä kuin luennan muut kuvat, ja reunoilla saa olla vinjetti valkoiseen.
+[2.13] "V2.0" hylättiin — ei istu 1873-typografiaan.
+[2.14] ALKUKOHTAUS V5 (omistajan teksti 25.8.2026; sanamuoto päivitetty 28.8.2026 sinä-muotoon, sanasta sanaan pelissä): paikkarivi "Heathrow, Lontoo, <kuukausi vuosi>:" naputetaan kirjoituskoneella
+ilman luentaa; sitten kertoja:
+[2.15] VAANIJAKAARI ALKOI (kaanonit 25.8.2026): kaari hengittää — ei joka maassa.
+[2.15] Kaaren aarremerkintäosuus (Istanbul, Rooma ja Bukarest) poistettiin 11.10.2026 aarremerkintöjen mukana, ja kaari jatkuu muiden tekstien varassa.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Kirjoittajan säännöt (matkakirjatekstit)" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Kirjoittajan säännöt (matkakirjatekstit)" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka
+eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[3.0] NIIN KOVA JUTTU, ETTA HALUAA LUKEA SEURAAVANKIN (omistaja 13.9.2026 tekstisession kautta, sanatarkasti:
+[3.0] "Bergen Amsterdam ja Edinburgh pitaa tehda kokonaan uudestaan.
+[3.0] Naissa ei sita ollut"): jokaisen kaupunkiparin puheessa on oltava niin kova juttu, etta lukija haluaa lukea seuraavankin tai kertoa siita kaverille.
+[3.1] LAUSEIDEN YMMARRETTAVYYS (omistaja 13.9.2026 tekstisession kautta, sanatarkasti:
+[3.1] "en ihan heti ymmartanyt alpeilla etta opas oli ollut vaarassa. tama lause on epamaarainen:
+[3.1] Hanen katensa olivat auenneet koydesta. mutta muuten on hyvaa tekstia. pida vain huoli etta lauseet ovat helposti ymmarrettavissa. tee vain vaikka kaikki loppuun niin luen ne sitten lapi"):
+vaaran tai kaanteen on avauduttava ensilukemalla; epamaarainen lause korjataan ennen aanitysta.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Pelin kulku" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Pelin kulku" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[5.1] 23.9.2026 tilanne 19 kaupunkia Lontoosta Perthiin; paketin kaupungit[].aloitus on sama lista ja natiivi lukee sen).
+[5.1] Vanha beta-rajaus "vain Ateena" (25.8.2026) on purettu.
+[5.6] TARKENNUS (Fable 23.9.2026, natiivin toteutus): ehto = seitsemäs pääaarre löydetty päivään 80 mennessä, myöntö huipennuksessa; leima säilyy passissa ja pitää linssit auki myös myöhemmissä peleissä, mutta vapaa siirtyminen (hinta 0, kuluttaa vuoron) koskee vain peliä, jossa se ansaittiin.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Arkkikirjasto: pop-upien yhteinen kieli" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Arkkikirjasto: pop-upien yhteinen kieli" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka
+eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[7.0] PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN (omistaja 28.9.2026, sanatarkasti astrolinssin selitteestä:
+[7.0] Eli animoitu pienennys mahdollisimman tiiviiksi."): kaikki pienennettävät selitteet, inforuudut, palkit ja paneelit kutistuvat pienennettäessä pehmeällä animaatiolla sisältönsä kokoisiksi
+eivätkä jätä tyhjää tilaa (ei ✕:ään tai avatun leveyteen venyvää palkkia); mallina Matkakirjan pienennys.
+[7.0] Astrolinssin selite luetaan lisäksi ääneen striimiluennalla, automaattisesti päällä (omistaja 28.9.2026:
+[7.0] "Tee selitteelle myös striinilukija joka automaattisesti päällä").
+[7.1] KAIKKI LIIKE ANIMOIDAAN PEHMEASTI (omistaja 3.9.2026; animaatiot tuovat peliin elävyyttä): jokainen ilmestyminen, poistuminen ja paikanvaihto ruudulla on animaatio, jossa on nopeutus ja hidastus
+(ease-in-out; sisaantulo pehmealla jarrutuksella, poistuminen kevyella kiihdytyksella), ei koskaan hyppy.
+[7.1] Myös kuvan suurennos koko ruutuun ja kaupungin avauskortti ovat alle 250 ms (omistaja 14.10.2026 klo 22.4x:
+[7.1] "Molemmat alle 250 ms"; vanhat poikkeukset lokissa).
+[7.1] Koko ja paikka pysyvät avattuna kiinteinä (omistaja 29.9.2026) — sisältö vierittyy kortin sisällä.
+[7.2] LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA (omistaja 9.10.2026 klo 09.1x, sitova: pallokierrokset, Olavinlinnan historia-animaatio ja kaikki tulevat vastaavat kamera-, kertoja- ja
+esittelykohtaukset; työtapa omistajan lukemasta Motion Engineering -artikkelista, ei uusia työkaluja, kuvat omasta pelimoottorista):
+[7.2] 4) KUVA-ARKKI JA ARVIO ennen Päätoimittajaa ja omistajaa: pelistä kuva jokaisesta tärkeästä hetkestä ja nopeimmista siirtymistä; arvioija katsoo vain tallennettuja kuvia, nimeää kolme suurinta
+virhettä aikaleimoineen, korjaa paikallisesti ja ottaa kuvat uudelleen (sallittu poikkeus 7.10. kevyestä testauksesta näissä kohtauksissa).
+[7.2] "Jätä kuitenkin se pause nappi ja silloin kertojan ääni pitää myös katketa"; kaikki esitykset ja kierrokset): tauko pysäyttää kertojan äänen ja tekstityksen heti, ja toisto jatkaa samasta
+kohdasta.
+[7.3] KAHDENLAISET KUVAT ESITTELYISSÄ (omistaja 9.10.2026 klo 09.5x, sitova: pallokierrokset ja vastaavat esittelyt):
+[7.4] NAPPIEN KOLME ROOLIA: kullattu päänappi on etenevä tai peruuttamaton valinta (Aloita peli, Kyllä), kehystetty paperinappi on sivuvalinta (Ei), ja musteviivarivi jää kortin sisäisille
+listavalinnoille (24.8. kevennys).
+[7.5] Aste 2, panos: tumma sumennus, joka kuultaa reunoiltaan (v1134:n säteittäinen malli; tehtäväkortti ja aarrepaljastus) — on sitouduttu, jännite nousee (omistaja 26.8.2026:
+[7.5] "tummemman taustan voisi tuoda mukaan kysymyksen alkaessa").
+[7.6] SULKEMISSOPIMUS SEURAA ASTETTA: selailupinta sulkeutuu rastista ja ulkopuolelta napauttaen; harkintapinta napeistaan ja ulkopuolelta; panospinta vain omalla toiminnollaan — kulman rastia sillä
+ei ole (omistaja 26.8.2026:
+[7.6] "Yläkulman ruksi on turha").
+[7.6] SULKUTAPA-ASETUS (omistaja 11.10.2026 klo 21.3x):
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Aarteet ja eteneminen" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Aarteet ja eteneminen" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet
+uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[8.1] LINSSIT AARTEINA EUROOPASSA (omistaja 11.10.2026 klo 14.2x): kun kaupungin aarre avataan ensimmäisen kerran, aarteen sisällön lisäksi avautuu kaupungin linssi:
+[8.2] EUROOPAN 29 MAAN PARIT KIRJATTU (omistaja hyväksyi listan kortilla 28.8.2026; arvoankkurit pieni ~150 ja iso ~600 puntaa): pieni = paikallinen herkku tai luonnontuote (mustikat, kanelipullat,
+parmesaanitahko...), iso = kadonnut kansallisaarre (Gallehusin kultasarvet, Irlannin kruununjalokivet, Rafaelin muotokuva, Fabergen munat...); legendat (Sampo, Nibelungit, Tell, Attila, Egill,
+Polubotok) merkitaan faktateksteissa rehellisesti taruiksi.
+[8.3] AARREPALJASTUKSEN KOLME MALLIA (leiskapaatokset 28.8.2026, toteutettu peliin samana paivana; leiskat docs/mantereet-tyoaineisto/aarreleiskat/): paikallisaarre maan omalla vaalealla kuvalla saa
+koko ruudun pergamenttimallin (ks.
+[8.3] PAIVITYS 3.9.2026 alla) ja FAKTA nakyy oppimistekstina kortilla;
+[8.3] POHJAPAATOS (omistajan kortti 28.8.2026): diplomissa TUMMA -> VAALEA siirtyma - leima lyodaan tummassa valokeilassa ja pohja kirkastuu vasta sitten vaaleaan lopputilaan.
+[8.3] PAIVITYS 3.9.2026 (omistaja Hymettoksen hunajan kortista, sanatarkasti:
+[8.3] "tama kaipaa viela saatoa. taustan voisi levittaa koko ruudun alueella ja poistaa vinjetit"): paikallisaarteen paljastus on KOKO RUUDUN tasainen pergamentti - ei purppuraa laitaa, ei valokeilaa,
+ei kuvan sateittaista maskia; kuva sulautuu darken-sulautuksella ja vain uloin 9 % reunasta hoyhennetaan sauman takia.
+[8.5] Huudahdukset: pääaarteen luetut säilyvät; muut ovat korkeintaan kahden sanan huudahduksia ("Jes!", "No okei.") — toteutettu.
+[8.6] AVOIN 25.8.2026: kauppaa ei ole vielä rakennettu, joten mannerkohtaiset linssit eivät tällä hetkellä ole saatavissa mistään (vain tietäjäpisterajojen linssit aukeavat).
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Kohtaamiset ja henkilöt" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Kohtaamiset ja henkilöt" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[12.0] KOHTAAMISEN AVAUS (omistaja 25.9.2026 klo 23.0x, sitova, web ja natiivi; löydös 145): kohtaaminen ei aukea lehden kautta.
+[12.0] "Löytämällä kartalta kysymyksen ja vastaamalla siihen oikein saat vihjeen aarteen sijainnista." Kohtaamiset ovat muuten vielä vaiheessa; omistaja palaa niihin.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Matkakirjan ihmeet" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Matkakirjan ihmeet" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet
+uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[14.0] YDIN (omistaja 27.8.2026): kadonnut suuruus palautetaan pelaajan silmien eteen FOTOREALISTISENA KESKELLÄ NYKYMAAILMAA — Faros nyky-Aleksandrian Cornichen ruuhkassa, kolossi Mandrakin
+jahtisatamassa, värikäs Parthenon nykyturistien ympäröimänä.
+[14.0] "Saa kokea pienen ihmeen kun näkee jotain mitä on jo tavallaan kadonnut nykymaailmasta." Tämä on YKSI PELIN KOHOKOHDISTA ja käy sellaisenaan MARKKINOINTIIN.
+[14.1] KAKSI ESITYSTAPAA (omistaja 27.8.2026): jos kohde on YHÄ OLEMASSA (Akropolis, pyramidi, rauniokohteet), kartalla on normaali merkintä, pääkuvana nykytilan valokuva ja sen alla oma nappi, josta
+ihmeen pääsee kokemaan (nykyaikakuva aukeaa).
+[14.2] Kuvien vasempaan yläkulmaan pelin piirtämä pieni nauha ("Matkakirjan ihme" tms.) pelin kartuutsityylillä — peli piirtää nauhan kuvan päälle, sitä ei polteta kuvatiedostoon.
+[14.3] GENEROINTIKANAVA (omistaja 27.8.2026): uudet ihmekuvat generoidaan herokuvien tapaan ChatGPT:n käyttöliittymässä — Fable antaa promptit, omistaja generoi ja vie kuvat Drive-kansioon, Fable
+noutaa ja tarkistaa silmin ennen peliä.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Maalehdet ja lukeminen" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Maalehdet ja lukeminen" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[15.2] MAALEHDEN NIMIÖ (omistaja 16.8.2026): pelkkä maan nimi ja lippu sen perässä — ei selittäviä lisäsanoja ("Ranska kartalla"), kartta näkyy sivulla itsestään.
+[15.3] MAALEHDEN LAAJUUS (omistaja 17.8.2026): määräytyy maan SISÄLLÖN mukaan, ei kohdemäärän.
+[15.7] OIKEUDET JA TEKIJYYS (omistaja 27.8.2026, AVEK-haku): pelin oikeudet ovat Visuaaliviestinnän Instituutti Tampere Oy:llä.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Äänet ja luennat" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Äänet ja luennat" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen
+Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[16.0] ÄÄNIPANKKI (omistaja 5.10.2026 klo 13.1x, sitova): pelin henkilöäänet tulevat yhdestä 20 äänen pankista, joka on suunniteltu ElevenLabsin Voice Designilla samalla pohjalla (studiolaatu,
+lähimikki, kuiva, ei kaikua, ei suomi-merkintää; v4-äänet puhuvat hyvää suomea).
+[16.1] GENEROIDUT ÄÄNET ILMAN KUUNTELUA (omistaja 11.10.2026 klo 11.3x): ääntämistä ei tarkisteta kuuntelemalla eikä omistajalta, puheentunnistuksen epäilyt eivät pysäytä vientiä; ehtona kieli
+määritelty suomeksi (language_code fi); ääniportin tekniset tarkistukset pysyvät.
+[16.1] DIALOGIT YHTENÄ OTTONA (omistaja 12.10.2026 klo 00.1x:
+[16.1] "Äänitä kumpikin repliikki yhtenä pitkänä dialogi ottona jotta rytmi säilyy luontevana"; jatke omistajan 3.10.2026 säännölle "Pitäisi generoida yksi pitkä teksti kerralla jotta tulisi
+luonnollinen ääni"): kahden tai useamman äänen keskustelu, myös kertojan ja Pulun yhteinen selostus, generoidaan yhtenä dialogiottona aikaleimoin, ei repliikki kerrallaan (linnojen kohtauksissa
+samoin, ks.
+[16.2] LUKIJAÄÄNI WILLIAM, EI KONELUKIJAA (omistaja 5.10.2026 klo 13.2x, sitova): kuvaselitteet, nostokortit ja lehdet luetaan Williamin äänellä (ElevenLabs-striimi), Pulun chatin vastaukset Pulun
+omalla äänellä; xAI:n Aino-ääntä ei käytetä.
+[16.2] POIKKEUS AUTO (omistaja 14.10.2026 klo 09.4x):
+[16.3] STRIIMILUKIJAN KAKSI NAPPIA (omistaja 28.9.2026, sitova, web ja natiivi): kaikissa luentakohdissa näkyy vain kaiutin (toisto/tauko + VU) ja mini-hampurilainen; hammaspyörä-nappi poistuu.
+[16.3] AUTO JA ÄÄNEEN LUKU OLETUKSENA POIS (omistaja 11.10.2026 klo 20.5x): nostoissa Auto ja ääneen luku ovat oletuksena pois päältä.
+[16.3] AUTO JA NOSTOJEN OHJAUS KYTKINRIVEINÄ (omistaja 11.10.2026 klo 23.4x): mini-hampurilaisen valikossa on vaakaviiva, jonka alla ovat tavallisina tekstiriveinä "Auto" ja "Nostojen ohjaus",
+kummankin rivin lopussa kytkin, ja molemmat ovat oletuksena pois päältä.
+[16.4] EI AANITIEDOSTOJA REPOSSA, KAIKKI VAIN AMPARISSA (omistaja 11.9.2026 klo 11.05, sanatarkasti:
+[16.4] "repossa ei saa olla aanitiedostoja, kaikki vain amparissa"): assets/audio-kansion mp3:t poistetaan reposta (git-historiaa ei kirjoiteta uusiksi) ja peli hakee KAIKKI omat aanitteet - myos
+tehosteet ja huudahdukset - amparista media.matkakirja.app/audio/.
+[16.4] Tama KUMOAA 16.8.2026 linjauksen repossa asuvasta ydinsetista: ydinsetin nopeus hoidetaan esilataamalla se service workerin koriin amparista, ei repon polusta.
+[16.4] Tarkentaa linjauksia KAIKKI SISALTO AMPARISTA (18.8.) ja KAIKKI UUSI MEDIA AMPARIIN (21.8.).
+[16.7] LUKIJAN PYSYVÄ KAHVA (omistaja 18.8.2026, tarkennettu samana iltana): luennan kahva on sivun tarttuvan otsikkorivin kaiutin — lehdissä ja Matkailijan oppaassa rivi pysyy näkyvissä
+vieritettäessä, kaiutin sen oikeassa reunassa korkeussuunnassa keskitettynä.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Kuvat ja lähteet" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Kuvat ja lähteet" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen
+Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[17.0] SEITSEMAN KUVAVAIHTOEHDON RAJAUS JA EHDOLLINEN KUVALUPA (omistaja 13.9.2026 tekstisession kautta, sanatarkasti:
+[17.0] "poistin nuo 7 kuvaa tarkistussivuilla, koska samanlaisista kuvista oli kaksi eri vaihtoehtoa ja hyvaksyin kustakin vain yhden peliin" ja "ja tee sitten uudet kuvat niihin kaupunkeihin joissa
+tarina on muuttunut kun ollaan siina vaiheessa etta tekstien aanet generoidaan"):
+[17.1] "Generoidaan kuvat mieluiten minun chatgpt ikkunassa...
+[17.1] Tulee paljon edullisemmaksi kuin apilla" - KUMOAA 26.8.
+[17.1] KOLME PUTKEA JA JAOTTELUSAANTO (omistaja 28.8.2026 ilta): jokainen kuvatilaus jaotellaan aina putkeen HERO (kohde nahtavissa nykyaan - pisin kaava, viitekuvat ja tarkka syynays koska kuvan on
+vastattava todellisuutta), IHME (loistoaika- tai havainnekuva kadonneesta - kevyempi, ei tarvitse vastata nykytodellisuutta; myos takynostojen loistoaikakuvat kuuluvat tahan) tai AARRE (esinekuva
+vakiotaustalla, vaalea pergamentti).
+[17.1] KUVAMUOTO ON JPG (omistaja 28.8.2026: vie vahemman tilaa); peliin paatyessa Fable saa konvertoida webp:ksi.
+[17.1] PROMPTIEN TOIMITUSMUOTO (omistaja 28.8.2026 ilta): promptit annetaan chatissa AINA KOODILOHKONA (kopiointinappi), ja koko satsi YHTENA ISONA LOHKONA aihetta kohti - jokaisen promptin edella oma
+rivinsa jarjestysnumerolle ja tiedostonimelle, ja tyylikaare leivottuna valmiiksi jokaiseen promptiin (yksi kopiointi = yksi valmis prompti).
+[17.3] HEROKUVIEN HYBRIDIMALLI (omistaja 25.8.2026, korvaa 24.8. tauon API-massa-ajojen osalta): omistaja generoi herokuvat ChatGPT Plus -käyttöliittymässä Fablen promptiarkeilla (VAKIO-resepti
+tools/hero-kuvakulmat.mjs; arkin mukana 2–3 Commons-valokuvaa viitteeksi), ja API:a käytetään vain täsmäajoihin — kiinteä kuukausihinta voittaa kuvakohtaisen API-hinnan (~0,17–0,25 $/kuva).
+[17.5] "Pitäisi saada kuva itse eläimestä aina jos on söpöysmerkki"): eläinkategorian (pöllönpoikas-symboli) kohteen kuvassa on eläin lähikuvassa, ei maisemaa.
+[17.5] "Söpö kohteissa voisi olla useampikin kuva jos vain löytyy.
+[17.10] VALOKUVAKOPIOT EIVÄT MENE REPOON (omistaja 19.8.2026:
+[17.10] "pitäisi mennä pelkästään ämpäriin"): haetut valokuvat (Flickr-kopiot, Commons-peilaukset ja assets/valokuvat-kansion uusi aineisto) tallennetaan ämpäriin, josta peli hakee ne — service worker
+välimuistittaa, joten kerran nähty toimii offline.
+[17.11] KAIKKI UUSI MEDIA ÄMPÄRIIN, EI REPOON (omistaja 21.8.2026:
+[17.11] "Kaikki aina ämpäriin eikä repoon"): tästä eteenpäin KAIKKI uusi media — myös itse generoitu (julisteet, äänitallenteet, tulevat kuvasarjat) — viedään R2-ämpäriin, josta peli hakee sen
+PEILI_JUUREN kautta; repoon ei lisätä uusia mediatiedostoja.
+[17.11] Tämä tiukentaa 19.8. linjausta: myös generoitu aineisto kuuluu ämpäriin, ALKUPERÄISESSÄ LAADUSSA (omistaja 21.8.2026: julisteita ei pakata pienemmiksi — ämpärissä koko ei ole ongelma).
+[17.11] "siirrä kaikki ämpäriin kun tulee hiljainen hetki") — kertatyö, joka vaatii R2_ACCOUNT_ID- ja R2_BUCKET-arvot ympäristöön sekä latauspolkujen muutoksen ja git-historian purun harkinnan.
+[17.12] Miniatyyripiirrokset generoidaan yhdellä otolla per kohde (kustannuslinjaus 16.8.2026).
+[17.13] Matkailijalle-etusivukuva on AINA PYSTY (omistaja 20.8.2026:
+[17.13] "Matkaoppaan kuva etusivulla pitää olla pysty") — mutta MALTILLINEN pysty, ei ääripitkää tornikuvaa joka venyttää palstan (Mosul-tapaus).
+[17.14] "kolme kuvaa pitäisi olla ennemmin laajoja yleiskuvia kaupungin eri puolilta tunnetuimmista kohdista. ei saisi olla ollenkaan yksityiskohtakuvaa näissä"): kaupunkilehden etusivun ensimmäisen
+kuvakarusellin kolme kansikuvaa ovat laajoja näkymiä — siluetteja, aukioita, rantoja, maamerkki ympäristössään — kaupungin ERI puolilta.
+[17.15] TUHOUTUNEEN KAUPUNGIN NYKYKUVAT (omistaja 20.8.2026): sodassa tai katastrofissa vaurioituneesta kaupungista näytetään MYÖS tuoreita kuvia, vaikka niissä näkyy vaurioita tai jälleenrakennusta —
+ja lehti kertoo lukijalle selkeästi, mistä kaupungin nykyilme johtuu, ettei pelaaja jää ihmettelemään miksi kuvat ovat vanhoja.
+[17.15] Korvaa aiemman "kuvat eivät saa näyttää tuhoja" -käytännön.
+[17.16] TEKSTIEN PAINOPISTE (omistaja 20.8.2026:
+[17.16] "Kuvatekstit liian pitkiä ja leipäteksti liian lyhyt"): lehden ETUSIVUN LEIPÄTEKSTI — se on ARTIKKELIT-paketin intro-kenttä, EI kulttuuri-kategorioiden johdanto — on 7–10 virkkeen johdatus:
+millainen kaupunki on, mikä sen merkitys ja historia; kaikki oleellinen alkuun.
+[17.16] KUVATEKSTI on YKSI virke (omistajan tarkennus 20.8.2026).
+[17.17] "Kuvatekstit pitää kertoa rakennuksesta, sen historiasta ja merkityksestä ei kuvailla kuvaa visuaalisesti.
+[17.19] SALAISUUDET (omistaja 26.8.2026):
+[17.19] TARKISTA AINA ENSIN, ONKO SALAISUUS JO GITHUBISSA (omistaja 2.9.2026:
+[17.19] "ELEVEN_API_KEY on secretissa.
+[17.19] Koska siella pitaisi olla kaikki"): repo-secreteissa on kaikki pelin avaimet (R2, Cloudflare, ElevenLabs, OpenAI, Google, Anthropic, Drive, Freesound, Flickr, Europeana, App Store Connect).
+[17.19] Secretien nimet nakee ilman oikeuksia komennolla `grep -rhoE "secrets\.[A-Z0-9_]+" .github/workflows/*.yml | sort -u`.
+[17.19] "Naita tulee yllattavan paljon, etta avain jo on olemassa mutta hommat ei etene" - tyo ei saa pysahtya odottamaan avainta, joka on jo paikallaan.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Lukijoiden ehdotukset" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Lukijoiden ehdotukset" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet
+uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[18.0] KANAVA (omistajan tilaus 18.8.2026): palautelomake laajenee niin, että pelaaja voi lähettää kuvia ja juttuideoita lehtiin.
+[18.0] Lähetykset ladataan ämpäriin ja ne näkyvät AUTOMAATTISESTI omistajalle työhuoneen uudella Lukijoilta-lehdellä (hampurilaisvalikko) — Fablen esikuratointi kommentteineen ajetaan vain omistajan
+komennolla "kuratoi", eikä mikään julkaisu tapahdu ilman omistajan arviota.
+[18.1] PRO-TUOTTAJAT (omistaja 18.8.2026): kanava vain omistajan henkilökohtaisesti kutsumille ammattilaisille.
+[18.3] Pöllö opastaa kanavan käyttöön ja saa joskus ehdottaa minipuhekuplassa osallistumista ("haluatko osallistua pelin rakentamiseen?").
+[18.5] PALKKIO (omistaja 18.8.2026): kuratoinnin läpäissyt ehdotus palkitaan pelirahalla.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Sisältöeditori (visio)" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Sisältöeditori (visio)" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[19.0] EDITORIN KAUNEIN IDEA (omistajan visio 26.8.2026): kuka tahansa voi tuottaa peliin näkyville asioita, jotka hän kokee mielenkiintoisiksi ja merkityksellisiksi, mistä päin maailmaa tahansa.
+[19.3] Nykyinen Lukijoilta-kanava ja pro-tuottajat (osio "Lukijoiden ehdotukset") ovat tämän ensimmäinen vaihe.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Talous ja palkkiot" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Talous ja palkkiot" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[20.2] Kokemuspisteet ovat pelaajalle TIETÄJÄPISTEITÄ (tp; omistaja 18.8.2026).
+[20.2] Ne nostavat kymmentä tietäjätasoa (Untuvikko 0 tp → Tietäjä iänikuinen 8000 tp, js/tietajatasot.js; rajat korotettu 18.8.2026 — omistaja: tasot tulivat aivan liian helposti, ylimmän tason kuuluu vaatia kymmeniä pelipäiviä) ja kysymysten vaikeutta.
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Poistetut ideat" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Poistetut ideat" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[25.0] TOIMINTATAPA (omistaja 17.8.2026): pelistä poistettu idea ei jää varsinaisiin osioihin selityksineen — kohta poistetaan ja idea kirjataan tähän yhdellä rivillä.
+[25.0] "älä jätä tekstejä arkistoon ettei ne ala kummittelemaan peliin takaisin vahingossa"): pelistä poistetuista teksteistä ei jätetä kopioita repoon (ei raportteihin eikä arkistoon).
+
+## RAAMATUN JÄSENNYS 19.10.2026: SANATARKKA HISTORIA OSIOSTA "Ohjedokumenttien kartta" (19.10.2026 klo 08.17)
+
+Raamatun jäsennys 14 lukuun (omistaja 19.10.2026): vanhan osion "Ohjedokumenttien kartta" sanatarkat sitaatit, kellonajat ja historiakohdat, joita ei ollut lokissa ennestään ja jotka eivät siirtyneet uuteen Raamattuun sellaisenaan. Tunnus [osio.kohta.pala] viittaa vanhaan jäsennykseen (siirtotaulukko docs/raportit/raamattu-siirtotaulukko-20261019.md).
+
+[26.0] UUDET PÄÄTÖKSET kirjataan lokiin, ei Raamattuun: `node tools/raamattu-kirjaa.mjs "<OTSIKKO>" "<teksti>"` lisää tiedoston docs/raamattu-loki/paatokset-2026-09.md loppuun kohdan "## OTSIKKO (pp.kk.vvvv klo hh.mm)";
+[26.10] docs/tilinvaihto.md — tilinvaihdon käytännön ohje: järjestys, roolitaulukko (malli, kansio, aloitusviesti, silmukat) ja VOIMASSA OLEVA ARVO (14.10.2026).
+
+## KAMERALIIKKEET ILMAN NYKAYKSIA (19.10.2026 klo 08.24)
+
+Omistajan pyyntö 19.10.2026 klo 08.20 (PT:n välittämä), sanatarkasti: "Monalisan kävelyn lopussa on nykäisy. Miten saadaan jatkossa estettyä että tällaiset nyköisyt eivät ole mahdollisia edes tehdä
+tai tapahtua tämän tyyppisissä kohtauksissa? Siis että tuotantoputki tai käytetyt työkalut jo itsessään estäisivät sen ja samalla että kaikki muutkin kamera liikkeet ja ajot toteutuisivat aina
+parhaalla mahdollisella tavalla esim easy in out ja sekä joko harkittu paikallaan pysyminen tai sitten kameran liikkuminen orbit tai mahdollisimman monen akselin pehmeä kääntö jne." Raamattuun uusi
+kohta KAMERALIIKKEET (luku 4; viittaukset luvuissa 8 ja 9): yksi kamerajärjestelmä kaikille kohtauksille; sallitut liikkeet harkittu paikallaan pysyminen, ajo kiskoa pitkin, orbit kohteen ympäri ja
+pehmeä moniakselinen kääntö; jokainen liike alkaa ja päättyy ease in/out ja jatkaa edellisen paikasta, suunnasta ja nopeudesta; kameran suora siirto koodissa kielletty (tarkistus hylkää); jokaisella
+käsikirjoitetulla liikkeellä kameratesti CI:ssä (jatkuvuus, pehmeä alku ja loppu) ja ruutuaikavahti koko liike + 1 s (yksikin yli 20 ms:n ruutu = hylkäys); kaikki liikkeen lopussa tarvittava (tarkat
+kuvat, kirjasimet, tekstit, äänet) esiladataan ennen liikkeen alkua, ja tarkkaan kuvaan vaihdetaan ristihäivytyksellä. Toteuttaja Linssiseppä (työkalun valinta roolilla).
+
+## CODEX KAIKEN GRAFIIKAN TYOSTAJANA (19.10.2026 klo 08.31)
+
+OMISTAJAN PÄÄTÖS 19.10.2026 klo 08.28 (PT:n välittämä), sanatarkasti: "Codexilta tulossa yhteenvetoa. Voit alkaa koodaamaan peliä. Pidetään codex kuitenkin kaiken grafiikan työstäjänä niin saadaan
+jaettua token kulutusta. Lisäksi se pystyy generoimaan itse referenssikuvia tripon 3d Malleja varten niin käyttö on siten nopeampaa. Tee jatkossa kaikki tripo mallit pyytämällä ne codexilta."
+Raamattuun luku 7 (Codex-työnjako) ja luku 11: CODEX = kaikki kuvat ja 3D-assetit (havainne- ja referenssikuvat, tekstuurit, Tripo-mallit — Codex tekee itse referenssikuvat —, hahmot, maailman osat);
+Tripo-mallit vain Codexilta. CLAUDE = kaikki pelissä ajettava (koodi, kohtausten kokoaminen Unityssä, varjostimet, valaistus, tehosteet, kamera, suorituskyky) sekä Codexin toimitusten tarkistus
+täysikokoisina ennen peliä. Yksi toimitusmuoto Codexille + automaattinen tuontitarkistus (Linnanrakentaja laatii). Codex välittää omistajan peli-ideat postiin; Claude kertoo Codexille grafiikkaan
+vaikuttavat pelimuutokset. Generoinnin määrät omistajan luvalla. Korvaa ristiriitaiset vanhat kohdat. Raamatusta korvattiin: luku 12 AVAIMET "omistaja 18.10.2026: Tripo-työt tehdään toistaiseksi
+selaimessa (Chrome, Max-tilauksen krediitit) Sonnet-apulaisella pienellä muistilla" ja luku 7 3D-MALLIT CODEXILLE "Louvre Claudella (Linnanrakentaja, tavoiteluuppi) vertailuksi Codexin seuraavaan
+maamerkkiin."

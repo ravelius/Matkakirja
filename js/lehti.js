@@ -73,7 +73,7 @@ import {
   onRaamatunMuutos, piirraRaamatunKentta, piirraRaamatunLahetys,
 } from './tyohuone-raamattu-muokkaus.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
-import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
+import { raamatunTaulusivut, tilastoSivut } from './tyohuone-tilastot.js';
 import {
   cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva,
   piirraLeipateksti, shortIntro,
@@ -1015,8 +1015,7 @@ export function avaaRaamattuLehti(ui) {
      * lasketun taulusivun (siirretty poistetulta työhuonesivustolta
      * 18.8.2026 — se liitti samat taulut samoihin osioihin).
      */
-    const taulu = raamatunTaulusivu(osio, i);
-    return taulu ? [sivu, taulu] : [sivu];
+    return [sivu, ...raamatunTaulusivut(osio, i)];
   })];
   avaaKehittajaLehti(ui, 'Raamattu', sivut);
 }

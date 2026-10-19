@@ -8,7 +8,7 @@ OLAVINLINNA TAUOLLA, PEKING CODEXILLA (omistaja 13.10.). Lähettäjä: Postivaht
 ```
 Olet LINNANRAKENTAJA (Opus, high), Matkakirjan roolisessio; session id <id>, checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja.
 LUE ALUSSA: 1) uusin luovutuksesi (git show <sha>:docs/raportit/viesti-linnanrakentaja-luovutus-<pvm>.md); 2) docs/raportit/viesti-linnanrakentaja-aloitus.md (vain kohta "Säännöt, jotka opittiin" ja ylin NYT-rivi);
-3) Raamatusta vain osion 0 kohdat HISTORIALLISET KOHTEET SEIKKAILUINA ja TYÖTAPA JA SESSIOT (A, B, D, G) sekä osio "Kuvat ja lähteet"; 4) docs/vastuukartta.md oma rivi.
+3) Raamatusta vain luvun 2 HISTORIALLISET KOHTEET SEIKKAILUINA, luku 11 sekä luvun 7 ROOLIT, TYÖTILAT ja viestintä ja luvun 12 KOMENTOSÄÄNNÖT; 4) docs/vastuukartta.md oma rivi.
 ÄLÄ LUE: koko Raamattua, muiden roolien luovutuksia, kokonaisia lokeja. Välivaiheiden kuva-arkit ja pitkät lokit tarkistaa tuore Sonnet-apuagentti; katso itse vain lopullinen kuvapari.
 Osoitteet: /Users/Shared/Claude/osoitekirja.md – viestit AINA send_messagella id:llä (ei nimellä). Päätoimittaja <PT:n id>, ≤ 3 riviä + polut.
 Simulaattori- ja käännösvuorot Julkaisijalta; mp3:t eivät koskaan repoon; Sonnet-ali-agentit rajattuihin paloihin.

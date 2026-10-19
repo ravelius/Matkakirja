@@ -1273,30 +1273,35 @@ function piirraPelitaulu(kohde) {
 }
 
 /**
- * Raamatun osioon liittyvä generoitu taulusivu, tai null jos osiolla
- * ei sellaista ole. Kutsutaan js/lehti.js:n avaaRaamattuLehti-
- * funktiosta, joka pujottaa sivun osion perään.
+ * Raamatun lukuun liittyvät generoidut taulusivut (tyhjä lista, jos
+ * luvulla ei sellaisia ole). Kutsutaan js/lehti.js:n avaaRaamattuLehti-
+ * funktiosta, joka pujottaa sivut luvun perään. Jäsennys 19.10.2026:
+ * aarteet ja tutki kätkö -pelit ovat luvussa 2 (Pelisuunnittelu);
+ * vanhat osio-otsikot tunnistetaan yhä.
  */
-export function raamatunTaulusivu(osio, i) {
-  if (osio.otsikko.startsWith('Aarteet')) {
-    return {
+export function raamatunTaulusivut(osio, i) {
+  const o = osio.otsikko;
+  const pelisuunnittelu = /^\d+\. Pelisuunnittelu/.test(o);
+  const sivut = [];
+  if (pelisuunnittelu || o.startsWith('Aarteet')) {
+    sivut.push({
       id: `raamattu-${i}-aarteet`,
       nimi: 'Aarteet taulukkona',
       yksipalsta: true,
       rakenna: piirraAarretaulut,
-    };
+    });
   }
-  if (osio.otsikko.startsWith('Tutki kätkö')) {
-    return {
+  if (pelisuunnittelu || o.startsWith('Tutki kätkö')) {
+    sivut.push({
       id: `raamattu-${i}-pelit`,
       // Nimi eroaa Raamatun oman osion otsikosta, muuten sisällys-
       // valikossa olisi kaksi samannimistä riviä peräkkäin.
       nimi: 'Pelit taulukkona',
       yksipalsta: true,
       rakenna: piirraPelitaulu,
-    };
+    });
   }
-  return null;
+  return sivut;
 }
 
 /**

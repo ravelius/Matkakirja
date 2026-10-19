@@ -1,6 +1,6 @@
 # Osallistuminen
 
-Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamatun osio "Perustuslaki: viisi pilaria" (js/tyohuone-raamattu.js; pelissä kehittäjätilan Raamattu-lehti) —
+Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamatun luvun 1 kohta "PERUSTUSLAKI: VIISI PILARIA" (js/tyohuone-raamattu.js; pelissä kehittäjätilan Raamattu-lehti) —
 ne kertovat, millä perusteilla sisältö hyväksytään peliin. Tämä peli on rakennettu niin, että uusien lautojen ja
 kysymysten lisääminen on mahdollisimman helppoa — myös ilman syvää
 ohjelmointikokemusta. Kaikki muutokset tehdään pull requesteina, ja testit
@@ -115,7 +115,7 @@ Vaiheet:
    Jokaisella laudalla on oma pääaarteensa — se on aina paikallinen
    legenda, kuten Kolme veljestä -riipus (Eurooppa), Montezuman aarre
    (Pohjois-Amerikka) tai Lapin kulta (Suomi), ja yhden ihmisen
-   kannettavissa (Raamattu, Tarina ja hahmot: MITTASÄÄNTÖ). Nimi annetaan
+   kannettavissa (Raamattu, luku 3, AARNI: MITTASÄÄNTÖ). Nimi annetaan
    `tokens.types`-kohdassa ja `texts`-teksteissä.
    **Järvet ja kaupunkilaudat:** suuret järvet voi piirtää vetenä maan
    sisään (`map.lakes` — malli: `js/packs/suomi.js`), ja niiden yli voi vetää

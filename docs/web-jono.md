@@ -1,6 +1,6 @@
 # Web-jono: webiin myöhemmin yhtenä eränä tehtävät muutokset
 
-Omistaja 29.9.2026: sovellus johtaa, web-pelin käyttöliittymä on tauolla (Raamattu, Ydinajatus "NATIIVI ENSIN,
+Omistaja 29.9.2026: sovellus johtaa, web-pelin käyttöliittymä on tauolla (Raamattu, luku 6 "NATIIVI ENSIN,
 WEB RAJATUMPI"). Tähän kirjataan jokainen webiin kuuluva muutos: omistajan päätös, lokiviite ja natiivin commit tai
 keskeneräinen web-haara. Rivit lähetetään Päätoimittajalle, joka ylläpitää tiedostoa. Linssejä ja linnaa ei tuoda
 webiin, jos ne on tehty natiivissa paremmin.

@@ -1,6 +1,6 @@
 # Tilinvaihto – käytännön ohje (Päätoimittaja 14.10.2026; kylmäkäynnistystestin korjaus)
 
-Kenelle: Päätoimittaja (PT), joka aloittaa omistajan uudella Claude-tilillä samalla Mac Studiolla. Raamattu, Ydinajatus kohta 2,
+Kenelle: Päätoimittaja (PT), joka aloittaa omistajan uudella Claude-tilillä samalla Mac Studiolla. Raamatun luku 12,
 TILINVAIHDON TARKISTUSLISTA viittaa tänne; tämä on se lista järjestyksessä. Tilinvaihto ei vaikuta Macin käyttäjän asioihin
 (avaimet, LaunchAgentit, checkoutit, hookien tiedostot, GitHub), vaan Claude-tilin asioihin (sessiot, cronit, artefaktit, sallinnat).
 
