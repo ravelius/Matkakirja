@@ -6,7 +6,13 @@
    "repliikit": [
     "Hups! Maljakko meni sirpaleiksi!",
     "Jingdezhenin keisarillisista uuneista!",
-    "Vahtimestari kalpenee, hui!",
+    "Hovimestari kalpenee, hui!",
+    "Kilahti kuin pieni kulkunen, hih!"
+   ],
+   "repliikit_aani": [
+    "Hups, maljakko meni sirpaleiksi!",
+    "Se tuli Jingdezhenin keisarillisista uuneista!",
+    "Hovimestari menee ihan kalpeaksi!",
     "Kilahti kuin pieni kulkunen, hih!"
    ],
    "elinvoimahinta": 15,
@@ -25,6 +31,12 @@
     "Opettaja suuttuu, näytti sen juuri!",
     "Sininen sirpale jäi kengän alle!"
    ],
+   "repliikit_aani": [
+    "Sinivalkoinen maljakko, nyt se on palasina!",
+    "Koboltti tuotiin Persiasta asti, kallis aine!",
+    "Opettaja näytti tämän minulle, ja nyt se on rikki!",
+    "Voi, sininen sirpale jäi kengän alle!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -38,23 +50,35 @@
    "repliikit": [
     "Famille rose! Nyt famille roskaa!",
     "Tyyli on yli 150 vuotta vanhaa!",
-    "Isoäiti pitää taas äänekkään puheen!",
+    "Keisarinnaäiti pitää taas puheen!",
     "Pam ja kilinä, korvia särki!"
+   ],
+   "repliikit_aani": [
+    "Famille rose! Nyt siitä tuli famille roskaa!",
+    "Tuo vaaleanpunainen tyyli on yli 150 vuotta vanhaa!",
+    "Keisarinnaäiti pitää tästä kyllä äänekkään puheen!",
+    "Huh, pam ja kilinä, ihan korvia särki!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
    "vuosi": "1723–1795",
    "fakta": "Vaaleanpunaiseen sävyyn perustuva famille rose -tyyli kehittyi täyteen mittaansa Yongzhengin kaudella.",
-   "kupla": "Ylpeä vanha keräilijä pitelee ehjää vaaleanpunaista famille rose -maljakkoa, kertoo siitä vihreän lampun valossa vanhassa kabinetissa."
+   "kupla": "Ylpeä vanha opettaja pitelee ehjää vaaleanpunaista famille rose -maljakkoa palatsin työhuoneessa vihreän lampun valossa; ei tekstiä kuvaan."
   },
   {
    "id": "keltalasitteinen-kulho",
    "nimi": "Keltalasitteinen kulho",
    "repliikit": [
-    "Keltainen kulho, keisarin oma väri!",
+    "Keltainen kulho! Keisarin väri, minun!",
     "Keltaista varattiin keisarin käyttöön!",
     "Hovin virkamies pitää kauhean metelin!",
+    "Kulho pomppasi kuin kolikko, hihhei!"
+   ],
+   "repliikit_aani": [
+    "Keltainen kulho! Keisarin väri, siis minun!",
+    "Keltainen oli varattu keisarille ja lähipiirille!",
+    "Virkamiehet nostavat taas kauhean metelin!",
     "Kulho pomppasi kuin kolikko, hihhei!"
    ],
    "elinvoimahinta": 15,
@@ -73,12 +97,18 @@
     "Palvelija huokaa: taas lakaistavaa!",
     "Pirstaleet ovat vihreitä kuin sammakko!"
    ],
+   "repliikit_aani": [
+    "Jadenvihreä celadon-kulho, ja nyt se on rikki!",
+    "Vihreä lasite on kuin jadea, ja sitä on tehty vuosisatoja!",
+    "Palvelija huokaa, että kaikki pitää taas lakaista!",
+    "Se meni pirstaleiksi, vihreiksi kuin sammakko!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
    "vuosi": "1700-luku",
    "fakta": "Celadonin jadenvihreä väri syntyy lasitteen rautaoksidista; Zhejiangin Longquanin uunit ovat kuuluisia siitä.",
-   "kupla": "Hymyilevä nuori museoopas pitelee ehjää jadenvihreää celadon-kulhoa ja kertoo siitä, valkoisessa kivihuoneessa viileässä aamuvalossa."
+   "kupla": "Hovin oppinut, ylpeä ja riemastunut, pitelee ehjää jadenvihreää celadon-kulhoa palatsin kirjastossa viileässä aamuvalossa; ei tekstiä kuvaan."
   },
   {
    "id": "yixing-teekannu",
@@ -86,15 +116,21 @@
    "repliikit": [
     "Teekannu! Ei teetä enää tänään!",
     "Savi on imenyt teetä vuosien ajan!",
-    "Isoäiti jäi ilman teehetkeään!",
+    "Keisarinnaäiti jäi ilman teetään!",
     "Kansi vielä kierii kuin pieni pyörä!"
+   ],
+   "repliikit_aani": [
+    "Teekannu! Ei tule enää teetä tänään!",
+    "Tuo savi on imenyt teetä vuosien ajan!",
+    "Keisarinnaäiti näytti tämän minulle, teehetki jäi väliin!",
+    "Kansi kierii vielä, kuin pieni pyörä!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
    "vuosi": "1700–1800-luku",
    "fakta": "Yixingin teekannut tehtiin Jiangsun purppurasavesta, ja savi imee itseensä hieman teetä käytön myötä.",
-   "kupla": "Hellä isoäiti pitelee ehjää punaruskeaa Yixing-teekannua ja kertoo siitä, keittiössä höyryävän teen ja kynttilän valossa."
+   "kupla": "Hellä keisarinnaäiti pitelee ehjää punaruskeaa Yixing-teekannua palatsin teehuoneessa höyryävän teen ja kynttilän valossa; ei tekstiä kuvaan."
   },
   {
    "id": "doucai-kuppi",
@@ -104,6 +140,12 @@
     "Maalattu ja poltettu kahteen kertaan!",
     "Kai joku hovin virkamies suuttuu!",
     "Kilks! Niin pieni, ei ehtinyt huutaa!"
+   ],
+   "repliikit_aani": [
+    "Pieni doucai-kuppi, ja nyt se on rikki!",
+    "Se maalattiin ja poltettiin kahteen kertaan!",
+    "Kuka tästä suuttuu? Kai joku hovin virkamies!",
+    "Kilks! Se oli niin pieni, ettei ehtinyt huutaakaan!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -121,6 +163,12 @@
     "Opettaja sanoo: muista käytöstavat!",
     "Ptruu, korkki lensi ihan itsekseen!"
    ],
+   "repliikit_aani": [
+    "Nuuskapullo! Mahtuu kokonaan kämmeneen!",
+    "Pienikin pullo voi olla keisarillisen arvokas!",
+    "Opettaja varmaan sanoo, että muista käytöstavat!",
+    "Ptruu, korkki lensi ihan itsekseen!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -134,8 +182,14 @@
    "repliikit": [
     "Kalakulho! Vettä lensi kaikkialle!",
     "Kultakalat sisälle jo Ming-aikana!",
-    "Isoäiti näkee lammikon ennen minua!",
+    "Keisarinnaäiti näkee lammikon ensin!",
     "Splash! Kengät ovat ihan märät!"
+   ],
+   "repliikit_aani": [
+    "Kalakulho! Vettä lensi joka paikkaan!",
+    "Kultakalat pääsivät sisätiloihin jo Ming-aikana!",
+    "Keisarinnaäiti huomaa vesilammikon ennen minua!",
+    "Splash! Kenkäni ovat ihan märät!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -153,6 +207,12 @@
     "Palatsin siivooja yskii ja yskii!",
     "Hatsii! Nyt kaikki tuoksuu minulle!"
    ],
+   "repliikit_aani": [
+    "Tuoksupoltin kaatui, ja tuhka pölisi!",
+    "Tällaisia on tehty yli kaksi tuhatta vuotta!",
+    "Palatsin siivooja yskii ja haukkoo henkeään!",
+    "Hatsii! Nyt kaikki tuoksuu minulle!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -166,7 +226,13 @@
    "repliikit": [
     "Jadeastia! Vihreä ja jääkylmä!",
     "Jade oli kultaakin arvokkaampaa!",
-    "Isoäiti suuttuu, tämä oli jadea!",
+    "Keisarinnaäiti suuttuu, tämä oli jadea!",
+    "Voi! Se kilahti kuin pieni kello!"
+   ],
+   "repliikit_aani": [
+    "Jadeastia! Vihreä ja ihan jääkylmä!",
+    "Jade on kultaakin arvokkaampaa, sanoi opettaja!",
+    "Keisarinnaäiti suuttuu, keisarit rakastivat jadea!",
     "Voi! Se kilahti kuin pieni kello!"
    ],
    "elinvoimahinta": 15,
@@ -182,8 +248,14 @@
    "repliikit": [
     "Sinetti! Ihan oikeaa vihreää jadea!",
     "Qianlongin sinetti, Palatsin suurin!",
-    "Hovin vahtimestari huutaa taas!",
+    "Hovimestari huutaa taas minulle!",
     "Pamahti! Sinetti sanoi viimeisen sanan!"
+   ],
+   "repliikit_aani": [
+    "Se oli sinetti! Ihan oikeaa vihreää jadea!",
+    "Qianlongin sinetti, Palatsin suurin jadesinetti!",
+    "Hovimestari huutaa taas minulle!",
+    "Pamahti! Sinetti sanoi viimeisen sanansa!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -197,9 +269,15 @@
    "nimi": "Jadevuori",
    "repliikit": [
     "Vuori! Pieni vuori, ja ihan jadea!",
-    "Keisari tilasi sen ennen syntymääni!",
-    "Isoäiti valittaa: ei vuorta käytävälle!",
+    "Qianlong tilasi sen ennen syntymääni!",
+    "Keisarinnaäiti: ei vuorta käytävälle!",
     "Vanhukset tipahtivat vuoren kyydistä!"
+   ],
+   "repliikit_aani": [
+    "Vuori! Pieni vuori, ja ihan jadea!",
+    "Qianlong tilasi tämän yli sata vuotta ennen kuin synnyin!",
+    "Keisarinnaäiti valittaa, ettei vuori kuulu käytävälle!",
+    "Vuori heilahti! Vanhukset tipahtivat kyydistä!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -214,8 +292,14 @@
    "repliikit": [
     "Ruyi! Se kiemurainen onnenvaltikka!",
     "Qing-hovin vallan ja onnen merkki!",
-    "Hovin puolisot parkuvat: onni karkasi!",
+    "Keisarinnaäidit parkuvat: onni karkasi!",
     "'Niin kuin haluat' - halusin juosta!"
+   ],
+   "repliikit_aani": [
+    "Ruyi! Se kiemurainen onnenvaltikka!",
+    "Hovissa niitä annetaan lahjaksi minulle!",
+    "Keisarinnaäidit parkuvat, onni lähti valtikasta!",
+    "Ruyi tarkoittaa 'niin kuin haluat'. Halusin juosta!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -229,9 +313,15 @@
    "nimi": "Mughal-jadekuppi",
    "repliikit": [
     "Kuppi! Tällaisia tehtiin Intiassa!",
-    "Keisari ihaili näitä ja runoili!",
+    "Qianlong ihaili näitä ja runoili!",
     "Virkamiehet suuttuvat aina, tiedän sen.",
     "Kilahti! Jadekin pitää ääntä!"
+   ],
+   "repliikit_aani": [
+    "Kuppi! Tällaisia tehtiin kaukana Intiassa!",
+    "Qianlong ihaili näitä ja runoili niistä!",
+    "Kuka suuttuu? Virkamiehet, ne suuttuvat aina.",
+    "Kilahti! Jadekin tekee ääntä kun putoaa!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -247,6 +337,12 @@
     "Reikäkiekko! Sanottiin sitä biksi!",
     "Näitä tehtiin jo kivikaudella asti!",
     "Opettaja suuttuu, sotkin historian!",
+    "Se vierähti pitkin lattiaa kuin vanne!"
+   ],
+   "repliikit_aani": [
+    "Reikäkiekko! Joku sanoi sitä biksi!",
+    "Tällaisia on tehty jo kivikaudella asti!",
+    "Opettaja suuttuu, kun sotken koko historian!",
     "Se vierähti pitkin lattiaa kuin vanne!"
    ],
    "elinvoimahinta": 15,
@@ -265,12 +361,18 @@
     "Imettäjä parkuu: pallo meni sekaisin!",
     "Kerrokset pyörivät nyt lattialla!"
    ],
+   "repliikit_aani": [
+    "Pallo, jonka sisällä on pallo, jonka sisällä...",
+    "Yhdestä palasta veistetty, ihan taidetta!",
+    "Imettäjä parkuu, pallo meni sekaisin!",
+    "Kerrokset pyörivät! Nyt ne pyörivät lattialla!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
    "vuosi": "1700-luku",
    "fakta": "Kerrospallo veistetään yhdestä norsunluusta, ja sen kerrokset pyörivät; muodon uskotaan syntyneen Kantonissa.",
-   "kupla": "Hymyilevä isoäiti pitelee ehjää norsunluista kerrospalloa ja pyöräyttää sitä, lämmin lampunvalo keittiössä; ei tekstiä kuvaan."
+   "kupla": "Hymyilevä keisarinnaäiti pitelee ehjää norsunluista kerrospalloa ja pyöräyttää sitä, lämmin lampunvalo palatsin huoneessa; ei tekstiä kuvaan."
   },
   {
    "id": "duan-mustekivi",
@@ -279,7 +381,13 @@
     "Mustekivi! Siinä hierotaan mustetta.",
     "Yksi tutkijan neljästä aarteesta!",
     "Opettaja suuttuu, muste ei hierry!",
-    "Vakava kivi, ei edes hievahtanut!"
+    "Kivi halkesi! Kaksi mustekiveä nyt!"
+   ],
+   "repliikit_aani": [
+    "Mustekivi! Siinä hierotaan mustetta.",
+    "Se on yksi tutkijan neljästä aarteesta!",
+    "Opettaja suuttuu, kun muste ei enää hierry!",
+    "Kivi halkesi! Nyt minulla on kaksi mustekiveä!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -293,9 +401,15 @@
    "nimi": "Bianqing-kivisoitin",
    "repliikit": [
     "Kivikellot! Niitä lyödään nuijalla!",
-    "Juhlamusiikissa soitettu ikiajoista!",
+    "Juhlamusiikissa on soitettu ikiajoista!",
     "Virkamiehet suuttuvat, musiikki mykkä!",
     "Kolahti! Soi vielä kerran, ei enää!"
+   ],
+   "repliikit_aani": [
+    "Kivikellot! Niitä lyödään pienellä nuijalla!",
+    "Hovin juhlamusiikissa niitä on soitettu ikiajoista!",
+    "Virkamiehet suuttuvat, juhlamusiikki mykistyi!",
+    "Kolahti! Soi vielä kerran, sitten ei enää!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -309,8 +423,14 @@
    "nimi": "Jadekirja",
    "repliikit": [
     "Kirja, jonka sivut ovat kiveä!",
-    "Keisarin essee on täytetty kullalla!",
+    "Qianlongin essee on täytetty kullalla!",
     "Opettaja suuttuu, pudotin lukematta!",
+    "Sivut kilisivät kuin kolikot!"
+   ],
+   "repliikit_aani": [
+    "Kirja! Mutta sivut ovat kiveä, ei paperia!",
+    "Opettaja näytti tällaista! Keisarin tekstiä jadessa!",
+    "Opettaja suuttuu, en lukenut vaan pudotin!",
     "Sivut kilisivät kuin kolikot!"
    ],
    "elinvoimahinta": 15,
@@ -326,8 +446,14 @@
    "repliikit": [
     "Ups, emalivati kolahti lattiaan!",
     "Hovilla oli oma emalipaja tähän!",
-    "Vahtimestari tulee huokailemaan!",
+    "Hovimestari tulee huokailemaan!",
     "Hih, langat jäi kuin seitti!"
+   ],
+   "repliikit_aani": [
+    "Ups, emalivati! Kauniit lokerot meni!",
+    "Hovilla oli oma työpaja tällaisille, ja minä kolautin!",
+    "Hovimestari tulee kohta ja alkaa huokailla!",
+    "Hih, metallilangat jäi näkyviin kuin hämähäkinseitti!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -342,7 +468,13 @@
    "repliikit": [
     "Ding! Iso pronssipata kaatui!",
     "Tällaisia on tehty tuhansia vuosia!",
-    "Opettaja näytti tämän. Nyt on rikki!",
+    "Esi-isät suuttuvat, uhripata rikki!",
+    "Ei se keitä enää mitään! Hih!"
+   ],
+   "repliikit_aani": [
+    "Ding! Iso pronssipata kaatui!",
+    "Tällaisia pateja on tehty jo tuhansia vuosia!",
+    "Esi-isät suuttuvat, tämä oli heidän uhripatansa!",
     "Ei se keitä enää mitään! Hih!"
    ],
    "elinvoimahinta": 15,
@@ -358,8 +490,14 @@
    "repliikit": [
     "Zun! Korkea viinimalja kilahti!",
     "Hovi luetteloi vanhoja pronsseja!",
-    "Isoäiti päivittelee kolahdusta!",
+    "Keisarinnaäiti päivittelee kolahdusta!",
     "Ai että soi! Kuin temppelikello!"
+   ],
+   "repliikit_aani": [
+    "Zun! Se korkea viinimalja kilahti lattiaan!",
+    "Qianlongkin keräsi tällaista vanhaa pronssia!",
+    "Keisarinnaäiti päivittelee, kun kuulee kolahduksen!",
+    "Ai että soi! Kuin pieni temppelikello!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -377,6 +515,12 @@
     "Virkamiehet hätääntyvät: lintu kaatui!",
     "Hih! Kurki sanoi kling, ei lentänyt!"
    ],
+   "repliikit_aani": [
+    "Kurki! Pronssikurki horjahti kyljelleen!",
+    "Kurki tarkoittaa pitkää ikää, nyt vähän lyhyempää!",
+    "Virkamiehet hätääntyvät, kun terassilta puuttuu lintu!",
+    "Hih! Kurki sanoi kling eikä lentänyt mihinkään!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -392,6 +536,12 @@
     "Pitkän iän merkki, ja minä kaadoin!",
     "Vanha vartija ottaa tämän tosissaan!",
     "Ei se vetäytynyt kuoreen! Hih!"
+   ],
+   "repliikit_aani": [
+    "Kilpikonna! Se ei kävellytkään karkuun!",
+    "Pitkän iän vertauskuva, ja minä kaadoin sen!",
+    "Vanha vartija ottaa tämän tosissaan!",
+    "Se ei vetäytynyt kuoreensa! Hih, onhan se pronssia!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -409,6 +559,12 @@
     "Imettäjä huutaa, lattia on märkä!",
     "Splash! Vettä tulipalon varalle!"
    ],
+   "repliikit_aani": [
+    "Vesiastia! Se iso kultainen vesiastia!",
+    "Hienointa luokkaa oleva sammutusastia, ja minä tönäisin!",
+    "Imettäjä huutaa, kun lattia on märkä!",
+    "Splash! Nyt on tulipalon varalle vettä lattialla!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -423,6 +579,12 @@
     "Tuoksupoltin! Pikku vuori vieri!",
     "Han-ajan mallin jäljennös, hieno!",
     "Vanha hovinainen ei ilahdu tästä!",
+    "Hihii, vuori vieri alas kuin kivi!"
+   ],
+   "repliikit_aani": [
+    "Tuoksupoltin! Pieni vuori vieri lattialle!",
+    "Han-ajan mallin jäljennös, hieno juttu!",
+    "Vanha hovinainen ei ilahdu, kun tuoksu on poissa!",
     "Hihii, vuori vieri alas kuin kivi!"
    ],
    "elinvoimahinta": 15,
@@ -441,6 +603,12 @@
     "Palvelijat huomaavat: tuoksu loppui!",
     "Hups! Painava, mutta kaatui silti!"
    ],
+   "repliikit_aani": [
+    "Tuoksupoltin! Emalikuviot kilisivät!",
+    "Raskas metallirunko ja emalia päällä, kallis!",
+    "Palvelijat haistavat heti, ettei tuoksua enää tule!",
+    "Hups! Se on tosi painava, mutta kaatui silti!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -457,6 +625,12 @@
     "Hovin kirjuri kalpenee kuin posliini!",
     "Plink! Kuin pieni kello soisi!"
    ],
+   "repliikit_aani": [
+    "Falangcai! Pienet kukat oli maalattu käsin!",
+    "Tämä tehtiin vain keisarin omaan käyttöön!",
+    "Hovin kirjuri kalpenee kuin posliini!",
+    "Plink! Ihan kuin pieni kello soisi!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -470,8 +644,14 @@
    "repliikit": [
     "Emalirasia! Maalattuja kukkia siinä!",
     "Tätä emalia tehtiin ensin täällä!",
-    "Puolisot kysyvät, kuka rikkoi rasian!",
+    "Keisarinnaäidit kysyvät, kuka rikkoi!",
     "Hups, kansi kieri kuin pyörä!"
+   ],
+   "repliikit_aani": [
+    "Emalirasia! Siinä oli maalattuja kukkia!",
+    "Tällaista emalia tehtiin ensin juuri täällä linnassa!",
+    "Keisarinnaäidit kysyvät, kuka rikkoi rasian!",
+    "Hups, kansi kieri pitkin lattiaa kuin pyörä!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -486,8 +666,14 @@
    "repliikit": [
     "Oho, hovin kello! Tikitti äsken vielä!",
     "Kelloja yli tuhat, yksi vähemmän nyt!",
-    "Vahtimestari marisee: aika meni rikki!",
+    "Hovimestari marisee: aika meni rikki!",
     "Tik-tik-pam! Ei tikitä enää, hihii!"
+   ],
+   "repliikit_aani": [
+    "Oho, hovin kello! Se tikitti äsken vielä!",
+    "Kelloja on täällä yli tuhat, mutta nyt yksi on vähemmän!",
+    "Hovimestari tulee ja marisee, että aika meni rikki!",
+    "Tik-tik-pam! Nyt se ei enää tikitä, hihii!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -502,8 +688,14 @@
    "repliikit": [
     "Voi ei, lakkarasia kolahti kumoon!",
     "Lakkaa levitetty kerros kerrokselta!",
-    "Isoäiti suuttuu tästä lakkarasiasta!",
+    "Keisarinnaäiti suuttuu lakkarasiasta!",
     "Se kimalsi niin, etten nähnyt! Hups!"
+   ],
+   "repliikit_aani": [
+    "Voi ei, lakkarasia kolahti kumoon!",
+    "Siihen on levitetty lakkaa kerros kerrokselta, pitkään!",
+    "Keisarinnaäiti suuttuu, jos näkee tämän lakkarasian!",
+    "Se kimalsi niin kauniisti, etten nähnyt sitä! Hups!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -521,6 +713,12 @@
     "Virkamiehet nostavat metelin tästä!",
     "Pikkumies pysähtyi kesken merkin! Hih!"
    ],
+   "repliikit_aani": [
+    "Se kirjoittava kello! Nyt se ei kirjoita enää mitään!",
+    "Kullattu ja kuuluisa, ja sisällä on pieni kirjoittaja!",
+    "Virkamiehet nostavat metelin, kun kirjoittaja pysähtyi!",
+    "Pikkumies pysähtyi kesken merkin! Hihihi!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -537,6 +735,12 @@
     "Opettaja: käytävällä ei juosta!",
     "Pam! Punainen ilotulitus lattialla!"
    ],
+   "repliikit_aani": [
+    "Voi, veistetty punalakka-astia kolahti lattiaan!",
+    "Siihen on veistetty kuviot monen lakkakerroksen sisään!",
+    "Opettaja huomauttaa, ettei käytävällä juosteta!",
+    "Pam! Ihan kuin punainen ilotulitus, mutta lattialla!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -550,8 +754,14 @@
    "repliikit": [
     "Mustetanko tippui ja pyörähti nurkkaan!",
     "Nokea ja liimaa, hiotaan musteeksi!",
-    "Vahtimestari hakee rätin, lattia musta!",
+    "Hovimestari hakee rätin, lattia musta!",
     "Sormet mustuivat, mustetta ei! Hih!"
+   ],
+   "repliikit_aani": [
+    "Mustetanko! Se tippui ja pyörähti nurkkaan!",
+    "Nokea ja liimaa! Siitä tulee mustetta, kun hioo.",
+    "Hovimestari hakee rätin, kun lattia mustui!",
+    "Mustetta ei tullut, mutta sormet mustuivat! Hih!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -569,6 +779,12 @@
     "Imettäjä huolestuu lasinsiruista!",
     "Kilin-kolin! Soi vielä kaatuessaan!"
    ],
+   "repliikit_aani": [
+    "Lasimaljakko! Kilahti kuin kello ja hajosi!",
+    "Palatsin oma lasipaja perustettiin jo vuonna 1696!",
+    "Imettäjä huolestuu, että astun lasinsiruihin!",
+    "Kilin-kolin! Maljakko soi vielä kaatuessaan!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Qing",
@@ -581,9 +797,15 @@
    "nimi": "Keisarin viuhka",
    "repliikit": [
     "Voi, keisarin viuhka rutistui kasaan!",
-    "Keisari antoi tällaisia lahjaksi!",
+    "Kangxi antoi tällaisia lahjaksi!",
     "Virkamiehet murehtivat lahjaviuhkaa!",
     "Heilautin, ja se meni naps! Hupsis!"
+   ],
+   "repliikit_aani": [
+    "Voi, keisarin viuhka rutistui kasaan!",
+    "Kangxi-keisari antoi tällaisia viuhkoja lahjaksi!",
+    "Virkamiehet ovat murheissa, kun lahjaviuhka meni!",
+    "Heilautin sitä, ja se meni naps! Hupsis!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -597,9 +819,15 @@
    "nimi": "Kalligrafiarulla",
    "repliikit": [
     "Kalligrafiarulla kieri pitkin käytävää!",
-    "Keisari säilytti näitä työhuoneessaan!",
+    "Qianlong säilytti näitä työhuoneessaan!",
     "Opettaja: kalligrafiaa kunnioitetaan!",
     "Rullaa, rullaa... tekstiä kaikkialla!"
+   ],
+   "repliikit_aani": [
+    "Kalligrafiarulla! Se kieri pitkin käytävää!",
+    "Keisari Qianlong säilytti tällaisia omassa työhuoneessaan!",
+    "Opettaja sanoo, että kalligrafiaa pitää kunnioittaa!",
+    "Rullaa, rullaa... käytävä on täynnä kirjoitusta!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -617,6 +845,12 @@
     "Hovin vanha rouva valittaa rullasta!",
     "Rulla venyi käytävälle kuin käärme!"
    ],
+   "repliikit_aani": [
+    "Silkkimaalaus! Siinä on kokonainen kaupunki ja joki!",
+    "Yli viisi metriä pitkä ja maalattu silkille! Vau!",
+    "Hovin vanha rouva valittaa, kun rulla jäi lattialle!",
+    "Se pitkä rulla venyi pitkin käytävää kuin käärme!"
+   ],
    "elinvoimahinta": 15,
    "kuva": "",
    "dynastia": "Song",
@@ -630,8 +864,14 @@
    "repliikit": [
     "Kirjoitussivellin napsahti kahtia!",
     "Kärki on karvaa, varsi bambua!",
-    "Opettaja näytti tällaisen, nyt kahtia!",
+    "Opettaja suuttuu, harjoittelin sillä!",
     "Kärki kutitti nenää! Atsiuu!"
+   ],
+   "repliikit_aani": [
+    "Kirjoitussivellin! Napsahti kahtia käytävällä!",
+    "Karvaa ja bambua! Siveltimiä tehdään eläinten karvasta.",
+    "Opettaja suuttuu, tällä minun piti harjoitella merkkejä!",
+    "Siveltimen kärki kutitti nenää! Atsiuu!"
    ],
    "elinvoimahinta": 15,
    "kuva": "",
@@ -646,7 +886,11 @@
    "id": "jade-persikka",
    "nimi": "Jadepersikka",
    "poimintahuudot": [
-    "Persikka! Nam, pitkää ikää!",
+    "Persikka! Pitkää ikää minulle!",
+    "Jadepersikka! Nyt riittää virtaa!"
+   ],
+   "poimintahuudot_aani": [
+    "Persikka! Pitkää ikää minulle!",
     "Jadepersikka! Nyt riittää virtaa!"
    ],
    "dynastia": "Qing",
@@ -654,5 +898,7 @@
    "fakta": "Persikka on Kiinassa pitkäikäisyyden symboli, ja Qing-ajan jadeesineissä persikat toivottavat pitkää ikää.",
    "kupla": "Riemuitseva vanha puutarhuri pitelee ehjää jadepersikkaa molemmin käsin hedelmätarhassa iltaauringon valossa; ei tekstiä kuvaan."
   }
- ]
+ ],
+ "aanityyli_tunnetagi": "puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni",
+ "kuvaohje_kupla": "REALISTINEN VÄRIVALOKUVA kaikissa kuplissa (ei piirros, maalaus tai seepia); hahmot vain Puyin lapsuuden palatsin ihmisiä (opettajat, keisarinnaäidit, virkamiehet, hovimestari, palvelijat, imettäjä, puutarhuri), riemastuneita, ei todellisia henkilöitä; ei tekstiä kuvaan; esine + hahmon kasvot ja kädet keskimmäisellä ~60 %:lla, reunoilla ≥ 20 % rauhallista taustaa (soikea häivytys pelissä)."
 }
