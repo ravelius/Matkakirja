@@ -244,7 +244,7 @@ export const AFRICA = {
   id: 'africa',
   name: 'Afrikan aarrekartta',
   boardLabel: 'Afrikka',
-  tagline: 'Etsi kivilintu, vastaa kysymyksiin, palaa kotiin.',
+  tagline: 'Etsi Kongon kuninkaan kruunu, vastaa kysymyksiin, palaa kotiin.',
   ariaLabel: 'Afrikan aarrekartta',
 
   map: {
@@ -264,10 +264,10 @@ export const AFRICA = {
 
   tokens: {
     /*
-     * Afrikan pääaarre on Suuren Zimbabwen kivilintu: kahdeksan
-     * vuolukivilintua veistettiin 1200–1400-luvulla, ja ne ryöstettiin
-     * 1800-luvun lopulla lähes kaikki pois. Palautukset kestivät yli
-     * sata vuotta, ja yhdestä linnusta puuttuu yhä alaosa.
+     * Afrikan pääaarre on Kongon kuninkaan kruunu (omistaja 19.10.2026;
+     * korvaa Suuren Zimbabwen kivilinnun, jonka kaikki kahdeksan lintua
+     * on löydetty): paavin Garcia II:lle lähettämä hopeinen kruunu, jonka
+     * jäljet katoavat Mbwilan taistelun (1665) jälkeen.
      *
      * Jokaisella laudalla on oma pääaarteensa. Afrikka oli ainoa, joka
      * käytti oletusnimeä — eikä se enää käy: Unohdettu aarre on oma pelinsä,
@@ -275,9 +275,11 @@ export const AFRICA = {
      */
     types: themedTokenTypes({
       star: {
-        name: 'Suuren Zimbabwen kivilintu',
-        fakta: 'Suuren Zimbabwen rauniokaupungista löydettiin kahdeksan '
-          + 'vuolukivilintua — yksi niistä on nykyään Zimbabwen lipussa.',
+        name: 'Kongon kuninkaan kruunu',
+        fakta: 'Paavi Innocentius X lähetti Kongon kuningaskunnan '
+          + 'kuninkaalle Garcia II:lle hopeisen kruunajaiskruunun. '
+          + 'Kun kuningas António I kaatui Mbwilan taistelussa 1665, '
+          + 'kruunun jäljet katoavat.',
         kuva: 'assets/aarteet/aarre-africa-star.jpg',
       },
       mannerAarre: {
@@ -416,12 +418,12 @@ export const AFRICA = {
         'Sivun laidassa on kahvipapu ja kellotaulu vierekkäin: isoisä odotti tunnin ja kirjasi sen ylös. Siitä tunnista minä maksaisin mitä tahansa.',
       ],
     },
-    intro: 'Peli alkaa! Etsikää Suuren Zimbabwen kivilintu ja palatkaa Tangeriin, Kairoon tai Kapkaupunkiin.',
-    starFound: '◈ {name} löysi SUUREN ZIMBABWEN KIVILINNUN kaupungista {city}!',
-    starToast: 'SUUREN ZIMBABWEN KIVILINTU!',
+    intro: 'Peli alkaa! Etsikää Kongon kuninkaan kruunu ja palatkaa Tangeriin, Kairoon tai Kapkaupunkiin.',
+    starFound: '◈ {name} löysi KONGON KUNINKAAN KRUUNUN kaupungista {city}!',
+    starToast: 'KONGON KUNINKAAN KRUUNU!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Suuren Zimbabwen kivilinnun turvallisesti kotiin',
-    winnerStar: '{name} toi Suuren Zimbabwen kivilinnun kotiin {money} punnan kanssa.',
+    winStar: 'toi Kongon kuninkaan kruunun turvallisesti kotiin',
+    winnerStar: '{name} toi Kongon kuninkaan kruunun kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisän kartassa tämä manner on paikoin väritetty tyhjäksi. Piirtäjä ei ilmeisesti vaivautunut kysymään niiltä miljoonilta, jotka asuivat täällä jo silloin. Tyhjä kohta kartassa kertoo piirtäjästä, ei maasta.',

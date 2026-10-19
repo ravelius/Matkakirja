@@ -102,16 +102,18 @@ sulautuvat saumatta paljastuskortin mustaan taustaan.
 ### Pääaarteet (jos omistaja haluaa myös nämä)
 22. Meripihkahuoneen aarre — "a glowing amber panel with carved
     baroque ornaments, candlelit"
-23. Suuren Zimbabwen kivilintu — "a soapstone bird statue on a
-    stone column"
-24. Sheban kuningattaren aarre — "an overflowing bronze chest of
-    gold jewelry and incense"
+23. Kongon kuninkaan kruunu (19.10.2026, korvaa Suuren Zimbabwen kivilinnun) — "a silver
+    coronation crown set with gemstones, arched, 17th-century European style"
+24. Sheban kuningattaren suitsukerasia — "a low gilded casket on ball feet,
+    lid half open, amber incense resin inside" (Codex #639 toimitti)
 25. Keisarin jadesinetti — "a carved green jade imperial seal with
     dragon handle"
-26. Montezuman aarre — "a turquoise-and-gold Aztec ornament"
-27. El Doradon aarre — "a golden raft with tiny figures, Muisca
-    style"
-28. Eteläristin helmi — "a giant black pearl with starlight sheen"
+26. Montezuman turkoosinaamio — "a turquoise-and-shell mosaic mask with
+    almond eyes and white teeth" (Codex #640 toimitti)
+27. Mantan smaragdi (19.10.2026, korvaa El Doradon aarteen) — "a large green
+    emerald, nearly the size of an ostrich egg, on dark cloth"
+28. Raiatean kuninkaiden höyhenvyö (19.10.2026, korvaa Eteläristin helmen) — "a long
+    netted belt covered with red feathers, Polynesian, shown with respect (sacred object)"
 29. Magellanin kompassi (maailma) — "an antique brass compass with
     wind rose"
 30. Sulttaanin timantti (Istanbul) — "an enormous teardrop diamond
