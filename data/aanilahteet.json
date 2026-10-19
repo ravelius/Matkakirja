@@ -1,6 +1,6 @@
 {
- "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1). 9.10.: + pallon elävät äänet v2 (aanet/pallo-elava-v2: ihmiset, poltin, katusoittaja, laivan torvi).",
- "paivitetty": "2026-10-09",
+ "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1). 9.10.: + pallon elävät äänet v2 (aanet/pallo-elava-v2: ihmiset, poltin, katusoittaja, laivan torvi). 19.10.2026: + juoksupelin ääniefektit (juoksupeli/aanet-v1: askeleet, hypyt, rikkoutuvat, kellot, silmukat; 9 CC BY -nimeämistä).",
+ "paivitetty": "2026-10-19",
  "nimeamiset": [
   {
    "lahde": "Freesound",
@@ -665,6 +665,78 @@
    "lisenssi": "CC BY 4.0",
    "url": "https://freesound.org/people/ericnorcross81/sounds/738249/",
    "ryhma": "Kuumailmapallo ja kaupungit"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "swipes and whooshes boompole low slow and long swings stereo ORTF 8040.wav",
+   "tekija": "Soundholder",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://freesound.org/s/425855/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Thumps!.wav",
+   "tekija": "bhanco3",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/231533/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "heavy_exagerated_swoosh_foley_sound_01162025",
+   "tekija": "Artninja",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/785409/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Gong Short Burst",
+   "tekija": "easy_thunder",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/264182/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "bowl and spoon.wav",
+   "tekija": "kimuracarter",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://freesound.org/s/528750/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Himalayan Singing Bowl #10",
+   "tekija": "Glen_Hoban",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/436094/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "tapping nails on wooden table.wav",
+   "tekija": "__bernicetredoux",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/655301/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Astioita rikki / Cups, plates, small porcelain objects fall and break on the floor, splinters tinkle",
+   "tekija": "YleArkisto",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/360546/",
+   "ryhma": "Juoksupeli"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Amb Pati Interior Ciutat.wav",
+   "tekija": "CraterZounds",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/207970/",
+   "ryhma": "Juoksupeli"
   }
  ]
 }
