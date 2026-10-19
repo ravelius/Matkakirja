@@ -1852,3 +1852,7 @@ laatikon puoliksi ulkona oleva X malliksi kaikkiin kortteihin; nostokortti aukea
 näyttää Auto-napin; Visa-nappiin (+25 £) pienemmin, Kysy ja Visa samankokoisina; pinnatun noston pikkukuva pysyy uuden noston aikana ja otsikkoon (2/5); Auto-nappi ennen taukoa. 12.23: Puyin huudot
 erä 1 puuttuvat 7 + erä 2 (10) hyväksytty muutoksin (aiyaa pois kohdasta 2; kohta 4 'Hoplaa, enää ei tarvitse näitä päntätä! Kunhan pääsen vain Shifua karkuun.'; muutamat pidemmät sallittuja, kun
 suurin osa lyhyitä); jatkossa omistajalle näytetään myös uneksinnan teksti; uusia huutoeriä ei ennen pelitestiä.
+
+## OMISTAJA: AARNIN LUETTELON KAIKKI SEITSEMÄN AARRETTA SAAVAT KUVAUKSEN JA HISTORIAN HETI — POIKKEUS VAIN EUROOPPA -LINJAUKSEEN KOSKEE VAIN NÄITÄ SEITSEMÄÄ LUETTELOTEKSTIÄ (19.10.2026 klo 13.38)
+
+Omistajan kortti Keskustelukanavassa klo 13.38. Kysymys: "Aarnin luettelossa on seitsemän aarretta, yksi kustakin maanosasta. Pelaaja näkee niistä vain löytämänsä, ja nyt löydettävissä on vain Euroopan aarre. Muut kuusi näkyvät vain kehittäjätilassa. Kirjoitetaanko kuvaus ja historia nyt vain Euroopan aarteelle?" Vastaus: "Kaikki seitsemän heti". Sisältökirjuri kirjoittaa kuuden muun aarteen kuvauksen ja historian samaan tiedostoon (docs/raportit/aarnin-luettelo-tekstit-20261019.json) faktat tarkistettuina. Euroopan teksti (Kolme veljestä -riipus) mergattu #4953 b1b14bf51. Poikkeus ei avaa muuta uutta sisältöä Euroopan ulkopuolelle.
