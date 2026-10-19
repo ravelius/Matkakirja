@@ -128,8 +128,9 @@ export const OPAS_AINEISTOT = Object.freeze({
     // Sisältökirjuri 15.10. (#4635, juna 195): kehityskaupungit Praha, Ateena, Kööpenhamina
     praha: 'esittely/praha-historia-v1/praha-historia-yksityiskohdat.json',
     ateena: 'esittely/ateena-historia-v1/ateena-historia-yksityiskohdat.json',
-    koopenhamina: 'esittely/koopenhamina-historia-v1/koopenhamina-historia-yksityiskohdat.json',
+    // Sisältökirjuri 19.10. (omistaja 15.36, CC BY-SA sallittu): Lontoo ja Kööpenhamina v2 (Harrison H4, Absalonin patsas; ämpäriä ei ylikirjoiteta)
+    koopenhamina: 'esittely/koopenhamina-historia-v2/koopenhamina-historia-yksityiskohdat.json',
     // Sisältökirjuri 15.10. (#4638, juna 195): Lontoo
-    lontoo: 'esittely/lontoo-historia-v1/lontoo-historia-yksityiskohdat.json',
+    lontoo: 'esittely/lontoo-historia-v2/lontoo-historia-yksityiskohdat.json',
   },
 });
