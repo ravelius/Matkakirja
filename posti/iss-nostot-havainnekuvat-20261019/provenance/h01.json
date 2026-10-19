@@ -1,0 +1,46 @@
+{
+  "taskNumber": 441,
+  "code": "h01",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:34:49.197479+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: oblique close view, round simulated plume cap centered low at x~0.50,y~0.68, broad cloud field behind and blue sea above; UI/frame excluded. NASA originals: tan cauliflower ash column, smooth rounded white pileus draped over upper column, broken cloud clearing with visible volcanic slopes and soft long plume shadow; irregular rather than perfect ring.",
+  "promptSHA256": "ea3c2ecabda3736aed10535be79f0008ee8abd94136f1a22b6832623bec72f70",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h01/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:35:43.005386+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-84bdd1e9-dd50-4860-b09f-b5cd27de657d.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h01.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h01.png",
+  "nativeSHA256": "a36e20d102ede876211c0951cd5b0920adcc95b5b49b881f223df2fd664728f1",
+  "deliverySHA256": "af2778a1b6c3916720f0526a168010539034444cf5e4db63541270b713c8a79c",
+  "nativeBytes": 2428446,
+  "deliveryBytes": 2428671,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "7be166c694ed7f25c9045a79fce796e90b9a27dc7c0257da41e955c88e3b52c4",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "reference-delivered-with-camera-and-reconstruction-caveats",
+    "photoRealism": "Ash lobes, smooth white pileus, ocean and broken cloud deck read as an orbital photograph; no obvious tiled surface.",
+    "cameraMatch": "Oblique look-down and lower-central plume retained approximately; plume top appears somewhat higher/smaller than simulated cap. Exact camera/FOV match not proven.",
+    "takenFromRealReferences": "Tan cauliflower column, smooth white pileus, island slopes, cloud clearing, soft cast shadow.",
+    "invented": "Cloud layout, plume snapshot, island details and lighting interpreted; historical image registration and exact eruption dimensions not verified.",
+    "excludedOverlays": "No visible frame, controls, astronaut silhouette, globe, labels or watermark.",
+    "nativeSizeCaveat": "Native 3:4 checked separately; no resize to the iPad reference dimensions.",
+    "metadataLabel": "havainnekuva"
+  }
+}

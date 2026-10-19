@@ -1,0 +1,11 @@
+{
+  "personallyInspectedNative": true,
+  "visualDisposition": "reference-delivered-with-camera-and-reconstruction-caveats",
+  "photoRealism": "Ash lobes, smooth white pileus, ocean and broken cloud deck read as an orbital photograph; no obvious tiled surface.",
+  "cameraMatch": "Oblique look-down and lower-central plume retained approximately; plume top appears somewhat higher/smaller than simulated cap. Exact camera/FOV match not proven.",
+  "takenFromRealReferences": "Tan cauliflower column, smooth white pileus, island slopes, cloud clearing, soft cast shadow.",
+  "invented": "Cloud layout, plume snapshot, island details and lighting interpreted; historical image registration and exact eruption dimensions not verified.",
+  "excludedOverlays": "No visible frame, controls, astronaut silhouette, globe, labels or watermark.",
+  "nativeSizeCaveat": "Native 3:4 checked separately; no resize to the iPad reference dimensions.",
+  "metadataLabel": "havainnekuva"
+}
