@@ -93,3 +93,6 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - Simuvuoro siirtyi ~10.40 (JU), käännös d752eda14; PK ajaa videot → PT.
 - 09.38: juoksupeli-202 uusin **d09b61e98** (SK:n päivitetyt avaimet f1c54a8d2: huudot ≤ 39, .dynastia/.vuosi; kuvateksti "dynastia · vuosi").
   JU:lle lähetetty simuvuoroon ~10.40 (d752eda14 kelpaa, jos uusi ei ehdi).
+- 09.44: **dfae35317** muistokupla = Codexin valokuva + YHTEINEN soikea häivytys (MuistokuplaSoikio.shader, Blit → RT 512; omistaja 09.37, PT 09.4x),
+  pystysoikio 0,42 × 0,5, Sisa 0,7; kuvat Resources/JuoksuV4/esineet/<id>.png (alfa 255; tuonnissa maxTextureSize 512); dynastia · vuosi paperiraidalla.
+  Esikatselu proto-3d/_tyo/pelikoodari/muistokupla/soikio-luonnokset.png (+ maski-esikatselu.py). JU:lle viimeinen vaihto simuvuoroon ~10.40.
