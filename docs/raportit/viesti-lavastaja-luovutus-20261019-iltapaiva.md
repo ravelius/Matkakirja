@@ -29,6 +29,11 @@ Yksi käännös, yksi simuvuoro JU:lta; kuvat ennen/jälkeen PT:lle.
    Ajo `zsh /Users/Shared/Claude/proto-3d/tyokalut/linnanrakentaja-ajot/ajo-kunniagalleria-kartoitus-204.zsh <app>` (UDID jo 484B130B).
 3. **Olavinlinna 6–10:** (omistaja 15.21, Raamattu 9.11: omistaja ei ole ensimmäinen tarkistaja → Codexin 3D: havainnekuva + pelikuva rinnakkain täysikokoisina + portti ennen hyväksyntää) kun Codexin geometria tulee → `node tools/codex-3d-tarkistus.mjs <kansio>` → valot_6_10.py `--geometria` → leivonta
    (pikkupihan `lahde/leivo.py`-malli) → kokoaminen merkkeihin; 1 rivi PT:lle per valmis huone (PT 13.0x).
+3b. **PT 15.2x (Projektisepän botti `proto-3d/_tyo/siirtoseppa/linna-botti-7254653e5/yhteenveto.txt`), kehyssävyn jälkeen:**
+   (1) reitti:pelaaja-86 (−37,714; 13,4; −8,81) kamera 7 cm tikkaiden/ovi:kellotornin pinnasta → siirrä 0,3 m taaksepäin 85:n suuntaan
+   (−37,435; 13,4; −8,920) tai tikkaille törmäys; (2) esine-tiili-komero.glb leijuu (v49a:n muurissa ei tiilitäytettyä aukkoa) → korjaa huone 9:n
+   Codex-geometrian kokoamisessa. Molemmat vaativat uuden palan (v49b; putki luovutuksessa 20261011-iltapaiva, TYÖKALUT): niputa samaan, mutta
+   jos Codexin geometriaa ei ole tullut kun kehyssävy on valmis, vie (1) yksinään. Rivi PT:lle kun valmis.
 4. Tripo-hahmot (kokki, portinvartija) Codexilta → keittiöön MetaHuman-kokin viereen (rajat edellisessä luovutuksessa).
 5. **Siivous:** `wt/proto-linnanrakentaja-kehykset` pois, kun 0e4d2f8cd ja a69ac7e05 ovat junassa 204 (`tools/uusi-worktree.sh --poista` ei koske proto-worktreeta – tarkista);
    `_tyo/linnanrakentaja/`: grafiikka-kehys-204-app ja kehysvarjo-204-app pois, kun 204b riittää.
