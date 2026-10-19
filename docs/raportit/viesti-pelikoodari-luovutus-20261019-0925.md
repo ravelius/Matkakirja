@@ -121,3 +121,6 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - Odottaa yhä: uniefekti 0,7 s hyväksyntä, tekstityskysymys (KK).
 - 10.4x PT: omistaja HYVÄKSYI aaltoilun 10.44 ("Sopii") → koko haara juoksupeli-kamera-204 kärki ef127330a (⊃ 3da1369de, 0956ff99f) NS:lle SIMUN JÄLKEEN junaan 204.
   Puyin ääni lukittu: 23 Horatius [shouting] [panicked]; huudot tulevat Äänittäjältä erissä → kytke RikkoRepliikki/yleishuuto ääniksi kun saapuvat.
+- 11.07: **a871777f0** YKSI TEKSTITYS (omistaja 10.58): Asetukset Kytkin.Tekstitys (matkakirja-tekstitys, migraatio, säilyy Uusi pelissä), ⚙ Aanentasot ylin rivi,
+  MuseoSovitin/IhmisenMatkaKerros delegoivat, juoksupelin huuto kaistaleelle 2,2 s. KYSYTTY PT:ltä: poistetaanko ☰-valikon Tekstitys-rivit (museo, IM2).
+  Haaran kärki NS:lle simun jälkeen (sis. kaikki). Simu: SIMU NYT ei vielä tullut 11.07.
