@@ -6,7 +6,7 @@ Tilaus: Päätoimittaja 19.10. (valmiiksi-lista rivi 26). **Vain tekstit, ääni
 
 - **M-osan repliikkipooli on tekstinä valmis: 26 kpl** (16 uutta muurikäytävän/kellon/tyrmän repliikkiä, jotka hyväksyttiin jo 9.10., + 10 jo taulussa olevaa M-osan repliikkiä, joista 2 on voudin valinnaista). Pelattavuusmallin arvio "~30 + 2" syntyi ennen tarkennusta; kaikille mallin 3.6 ja 4.1 vaiheille on repliikki. Lisäksi **4 valinnaista varalla** (toiston välttämiseen), yhteensä enintään 30.
 - **16 uutta repliikkiä puuttuu vielä Tekstit/olavinlinna.fi.json-taulusta** (koodi tuntee vain äänitunnisteet). Ne ovat avainpaketissa muodossa `olavinlinna.repliikki.<id>`; Projektiseppä/Pelikoodari liittää ne tauluun, jotta käännettävyys toimii.
-- **Kortit 7–12 ovat lopullisia** (kaksi sisältömuutosta + kolme tarkennusta, ks. kohta 3). **Vihjetekstit** on kirjoitettu huoneille 2–10 × 3 tasoa (kohta 4).
+- **Kortit 7–12 ovat lopullisia** (kortit 7, 10 ja 12 päivitetty; 8, 9 ja 11 ennallaan; ks. kohta 3). **Vihjetekstit** on kirjoitettu huoneille 2–10 × 3 tasoa (kohta 4).
 
 ## 2. M-osan repliikit (lopullinen lista)
 
