@@ -29,3 +29,12 @@ Muisti: memory/projektiseppa-tila-20261019.md.
 - Codexin geometria huoneisiin 6–10 (e203239d0, palatsi ensin). Lavastaja kokoaa ja ilmoittaa siirretyt merkit. Tarkista silloin BottiOsat- ja Aloituskohdat-jako uusilla osanimillä (AloituskohdatTestit odottaa vielä TarkistusOsa muurikaytava).
 - Haaraa ei ole vielä mergetty masteriin. Juna ja merge kulkevat PT:n ja Julkaisijan kautta 10/10:n jälkeen.
 - Skenaario on tyokalut/siirtoseppa-ajot/skenaariot/botti-pelaa.txt, ja ajo tehdään skriptillä ajo-botti-pelaa.zsh (APP=… HAARA=…).
+
+## LISÄYS 12.1x (uusinta tehty, ajot loppuneet)
+- KÄÄNNETTY e5a88985e (1286d90ed) klo 11.57, ja SIMU VAPAA ilmoitettiin Julkaisijalle klo 12.12. Mitään ei ole käynnissä.
+- Tulos: 6/10 tekoa, tyrmä 1/2/3 LÄPI, kiinni 0. Tyrmävideolla kuuluu tyrma-vartija-vienti-2 (_tyo/siirtoseppa/linna-botti-1286d90ed/repliikit-tyrma.mp4). Tulos on lähetetty PT:lle.
+- Juurisyy: kädessä ollut kulho irtosi 8 m pelaajasta ja +2,6 m, koska käden kahvan paikka ei seuraa ensimmäisessä persoonassa. Korjaus a67d881d8 (SeikkailuEsineet.Laske) on tarkista.sh 0, mutta sitä EI ole vielä ajettu simulla.
+- **ENSIN seuraajalle:** pyydä Julkaisijalta käännös ja simu a67d881d8:lle ja aja `APP=…/linna-botti-a67d881d8/Matkakirja3D.app HAARA=a67d881d8 zsh ajo-botti-pelaa.zsh` (käännä ensin PROTO_LINJA=2 PROTO_APP_KOPIO=<kansio> proto-kaanna.sh a67d881d8).
+- Auki on myös kaksi muuta asiaa:
+  - Pako ei ehtinyt K4:lle 30 s:ssa (ensimmäisessä ajossa ehti). Katso kallion reitin lokirivit.
+  - Todistusajo näki pääsäikeen 24–29 s jumit (pinonayte-1.txt kansiossa lokit/todistus-botti-pelaa-20261019-1157).
