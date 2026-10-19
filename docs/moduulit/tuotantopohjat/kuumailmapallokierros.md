@@ -133,7 +133,7 @@ Karttaseppä.)*
 
 ## 9. TÄYDENTÄÄ: Äänittäjä (kertoja ja musiikki)
 
-*(kertoja William (`eleven_v4_turbo`, tempo 1,10×), merkkimäärä ja ääniportti, "eaa."-lukutarkistus, kestojen korvaus
+*(kertoja William (`eleven_v4_turbo`, nopeus vain `speed`-asetuksella), merkkimäärä ja ääniportti, "eaa."-lukutarkistus, kestojen korvaus
 `kesto_s`-kenttiin, vienti ja manifestirivit; kierroksen musiikki. Täydentää Äänittäjä; ks. `kertojan-teksti-ja-aani.md`.)*
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)

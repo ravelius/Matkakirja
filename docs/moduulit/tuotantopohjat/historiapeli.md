@@ -145,7 +145,7 @@ loppunäkymät; muistiraja. Täydentää Natiivi-UI.)*
 ## 9. TÄYDENTÄÄ: Äänittäjä
 
 *(kertoja William ja hahmojen äänet (esim. eleven_v4_turbo, yksi otto per repliikki), ääniportti, hiiviskelyssä ei musiikkia,
-kantele löydössä ja lopussa, äänitehosteet CC0-lähteistä, vienti ja mykistetyt. Täydentää Äänittäjä; ks.
+kantele löydössä ja lopussa, äänitehosteet Soundly Prosta ja Sonnissista sokkokuuntelulla (Raamattu 5.27), vienti ja mykistetyt. Täydentää Äänittäjä; ks.
 `kertojan-teksti-ja-aani.md`.)*
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
@@ -179,8 +179,7 @@ Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
 - **19.10.2026, juoksupelin äänitehosteet.** Hidasti: aanet-v1 (61) ja v1.1 (7) leikattiin koneellisesti Freesoundin
   esikuuntelu-mp3:ista AST-tunnistimen valinnalla, kukaan ei kuunnellut, ja omistaja kuuli virheet ensin (puuaskel =
   korkokengät, jade = lusikka kivimukissa). Muuttuu: Soundly Pro ja Sonniss ensin, Freesound vain aukkoihin alkuperäisinä,
-  valmiit yksittäiset tehosteet, tekoäly kuvaa jokaisen äänen sokkona ennen peliä (Raamattu 5.27). Pohjan luvun 9 rivi
-  "äänitehosteet CC0-lähteistä" on tämän vastainen; PT päättää korjauksesta. Lähde: loki "OMISTAJA: ÄÄNITEHOSTEIDEN
+  valmiit yksittäiset tehosteet, tekoäly kuvaa jokaisen äänen sokkona ennen peliä (Raamattu 5.27). Luvun 9 rivi korjattu (PT 19.10.). Lähde: loki "OMISTAJA: ÄÄNITEHOSTEIDEN
   OLETUSTAPA HYVÄKSYTTY (19.10.2026 klo 14.35)"; muisti aanitehosteet-kuuntelu-ennen-omistajaa.
 - **16.10.2026, lapsi-Puyin faktapohja 1912–1918.** Neljä Sonnet-tutkijaa; noin 120 riviä merkittiin [EPÄVARMA], koska muistelmaa
   ja Johnstonia ei saatu kokotekstinä; vain merkinnätön kelpaa peliin. Muuttuu: aikaikkuna ja ikälaskenta kirjataan ennen tutkimusta
