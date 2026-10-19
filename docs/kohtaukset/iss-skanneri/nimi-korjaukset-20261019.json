@@ -1,0 +1,77 @@
+{
+ "_meta": "Nimien kirjoitusvirheiden korjaus (PT 19.10.); tunnus ei muutu, vain nimi",
+ "korjaukset": {
+  "v-ouro-preto": {
+   "vanha": "Ouro preto",
+   "uusi": "Ouro Preto"
+  },
+  "v-alice-springs": {
+   "vanha": "Alice springs",
+   "uusi": "Alice Springs"
+  },
+  "v-mount-isa": {
+   "vanha": "Mount isa",
+   "uusi": "Mount Isa"
+  },
+  "v-coober-pedy": {
+   "vanha": "Coober pedy",
+   "uusi": "Coober Pedy"
+  },
+  "v-al-kufra": {
+   "vanha": "Al kufra",
+   "uusi": "Al-Kufra"
+  },
+  "v-dinaariset-alpit": {
+   "vanha": "Dinaariset alpit",
+   "uusi": "Dinaariset Alpit"
+  },
+  "v-grand-canyon": {
+   "vanha": "Grand canyon",
+   "uusi": "Grand Canyon"
+  },
+  "v-japanin-alpit": {
+   "vanha": "Japanin alpit",
+   "uusi": "Japanin Alpit"
+  },
+  "v-kaakkois-australian-ylangot": {
+   "vanha": "Kaakkois-australian ylängöt",
+   "uusi": "Kaakkois-Australian ylängöt"
+  },
+  "v-lansi-ghatit": {
+   "vanha": "Länsi-ghatit",
+   "uusi": "Länsi-Ghatit"
+  },
+  "v-machu-picchu": {
+   "vanha": "Machu picchu",
+   "uusi": "Machu Picchu"
+  },
+  "v-milford-sound": {
+   "vanha": "Milford sound",
+   "uusi": "Milford Sound"
+  },
+  "v-rub-al-khali": {
+   "vanha": "Rub al-khali",
+   "uusi": "Rub al-Khali"
+  },
+  "v-sierra-madre-occidental": {
+   "vanha": "Sierra madre occidental",
+   "uusi": "Sierra Madre Occidental"
+  },
+  "v-sierra-madre-oriental": {
+   "vanha": "Sierra madre oriental",
+   "uusi": "Sierra Madre Oriental"
+  },
+  "v-sierra-nevada": {
+   "vanha": "Sierra nevada",
+   "uusi": "Sierra Nevada"
+  },
+  "v-uuden-guinean-ylangot": {
+   "vanha": "Uuden-guinean ylängöt",
+   "uusi": "Uuden-Guinean ylängöt"
+  },
+  "v-uuden-seelannin-alpit": {
+   "vanha": "Uuden-seelannin alpit",
+   "uusi": "Uuden-Seelannin Alpit"
+  }
+ }
+}
