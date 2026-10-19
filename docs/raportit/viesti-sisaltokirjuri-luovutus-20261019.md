@@ -20,3 +20,11 @@ Rooli, checkout (`/Users/Shared/Claude/Matkakirja-sisaltokirjuri`), agenttisää
 - Docs-only-PR:t mergeen suoraan (paths-ignore, ei CI:tä).
 - Geokoordinaatit voivat olla väärin katalogissa (k-mazatlan, k-natal-brasilia, korjattu PK:lla) — tarkista ennen tekstiä.
 - Committoimaton: `.claude/settings.local.json.*`, `.wrangler/` (ei omia, jätä).
+
+## LISÄYS (klo ~12): Kysy-napin kierrokset — Linssiseppä lähetti polut, PT hyväksyi Kööpenhaminan mallin (b3cf3f00b)
+Seuraavan SK:n ENSIMMÄINEN työ: kirjoita Kööpenhaminan mallin mukaan (8 kysymystä per kohde, ≤ 45 mrk, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä, 13+ ja aikuiset; muoto `{"kaupunki","kohteet":{"<Q-id>":[8 kysymystä]}}` → `docs/kohtaukset/pallokierros/kysy-<kaupunki>-<pvm>.json`) kysymykset natiivin kipin kierroksille (Pallokierros.Kaupungit, `media.matkakirja.app/`):
+- Kööpenhamina — `opas/pallokierros-v13/koopenhamina.json` — VALMIS.
+- Lontoo — `opas/pallokierros-v5/lontoo.json`
+- Ateena — `opas/pallokierros-ateena-v13/ateena.json`
+- Praha — `opas/pallokierros-praha-v7/praha.json`
+Kohteet = kentän `kohteet` rivit (id = Wikidata-Q, nimi, kuvaus, teksti). Paikalliset kopiot löytyvät `/Users/Shared/Claude/proto-3d/_valmiit/*/opas/` -kansioista (Kööpenhamina: koopenhamina-tivoli-kuvat-vienti-20261017h). Työtapa: yksi Sonnet-kirjoittaja per kaupunki + pituus/kysymysmerkki-tarkistus skriptillä; kuittaus PT:lle (3 riviä, määrä + sha). Muut Euroopan kaupungit vasta jos PT/LS lähettää lisää.
