@@ -14,8 +14,7 @@ korjauksia + erillistä julkaisupyyntöä. Simujono ja käännökset jatkuvat no
   2) `pk-mac-nappainlento-204.zsh` (PK MAC 4814ab2d1, mac-kaanna.sh, sama L1-lukko), odottaa lr-kehysvarjo-lokin "L1 VAPAA".
   Tarkista `pgrep -fl "kehysvarjo|nappainlento"`; jos puuttuu: `zsh <skripti> > <skripti-nimi>.log 2>&1` taustalle.
 - **L2:** Projektiseppä linna-botti-10 1286d90ed (PJ ajaa itse, alkoi 11.39) → simu omalla 8362879F heti perään (lupa annettu).
-- **Simu:** PK:lla SIMU NYT (juoksupeli-kamera-204-app 51f7d225c: kuvapari ⚙+☰ + tekstityskaistale + juoksupelin videot) – PK:n
-  viesti oli jonossa, odota PK:n SIMU VAPAA.
+- **Simu:** PK ajettu 11.54 (51f7d225 OK). Simu TYHJÄ: seuraavaksi NUI 2fd904f95 (omistaja odottaa) tai VS nostot c08cfa898, kumpi valmistuu ensin.
 
 ## 2. SIMUJONO (PT 11.1x: juna 204 ensin; rinnakkaissimut sallittu)
 PK (vuorossa) → VS nostot 4 kierrosta + ennen-video ~32 min (c08cfa898, kun käännetty) → Lavastaja kehysvarjo ~9 min (Punainen
