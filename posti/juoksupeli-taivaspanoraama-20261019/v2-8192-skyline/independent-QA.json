@@ -1,0 +1,158 @@
+{
+  "taskNumber": 698,
+  "metadataTaskNumber": 699,
+  "reviewer": "memory51_source_audit",
+  "independentAssemblyReview": true,
+  "status": "pass-with-minor-overlap-softness-note",
+  "visibleDeliveryStopper": false,
+  "reviewedAsset": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/siluettinauha.png",
+    "sha256": "91d4d9432a5cb8b27d2316192c5b36e442cbd749d3cdc3fc6d3160dc39755712",
+    "pixelSHA256": "7b4409f20b4c7472759a86d27c55ed5edf41011b6d91b9ee10c88d94154c8432",
+    "width": 8192,
+    "height": 713,
+    "mode": "RGBA"
+  },
+  "assemblyProvenance": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/ASSEMBLY.json",
+    "sha256": "f627d93fcacfdba64fd568f8953df07368618fd547f836acf051ac767cf8a7e6",
+    "personallyReadInFull": true
+  },
+  "personallyViewedQAImages": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/qa/assembled-panels-normal-composites.png",
+      "sha256": "4cffafce72ba5aa421ed0830bdbc9e7331c83adfa959d0a07e1c9bd4b9f831b2",
+      "personallyViewed": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/qa/assembled-panels-joins-native-crops.png",
+      "sha256": "e5b510245bb8c07044ddd5a8d270b5c7dba199cee11abab519d62822bf0c7385",
+      "personallyViewed": true
+    }
+  ],
+  "nativeIntegrity": [
+    {
+      "direction": "north",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-north.png",
+      "sha256": "308d55e27b2649d81d0fbb0661f9219be3130489d30a04426c0e59ecc79a0729",
+      "matchesAssembly": true
+    },
+    {
+      "direction": "east",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-east.png",
+      "sha256": "98f9f36279b5ddc14ae9fff349019b35223baa62e74395f3503c33f6d6f9de63",
+      "matchesAssembly": true
+    },
+    {
+      "direction": "south",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-south.png",
+      "sha256": "2bf2cac53388b829781655373f73f9c5d7c14766371f8945ecec150014dc9699",
+      "matchesAssembly": true
+    },
+    {
+      "direction": "west",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/siluetti-v2-west.png",
+      "sha256": "542bf6db3dfd3921929f4c4ea3a3ba4102f05845c17a917a42dee84b72cb5b21",
+      "matchesAssembly": true
+    }
+  ],
+  "visualFindings": {
+    "panorama": "Kooste on yhtenäinen pitkä maalattu kattovyöhyke harmaalla, lämpimällä ja magentalla normaalialfakomposiittitaustalla.",
+    "northJingshan": "Jingshanin puustoinen kukkula ja kolme paviljonkia ovat koko nauhan keskellä noinx4096/u0.5. Muualla ei toistu samanlaista kukkulaa.",
+    "opaqueBackgroundSlab": false,
+    "visibleNeonFringe": false,
+    "foregroundGhostBuilding": false,
+    "conspicuousHardHeightStep": false,
+    "wrap180": "Eteläsektorin0/8192kiertokohta näyttää jatkuvalta. Ei näkyvää rakennuksen katkeamista, läpikuultavaa kaksoisrakennusta, värilaattaa tai alustan korkeusaskelta.",
+    "join225": "Matalaa kaupunkikattoa ja puustoa; liitos ei korostu pystysuuntaisena rajana. Ei katkaistua suurta rakennusta.",
+    "join315": "Matala siniharmaa kaukokattoryhmä pehmenee ja vaalenee limityksessä. Hieman paikallista haaleutta, mutta ei selvää kahdennettua etualarakennusta tai rajalinjaa.",
+    "join45": "Matalia kattoja ja puustoa; pääarkkitehtuurissa ei selvää kaksoisreunaa. Alareunan alfa muuttuu loivasti muutaman pikselin matkalla.",
+    "join135": "Kaukokattojen sävy/peittävyys vaihtelee limityksessä; tämä on lievänä kirjattu paikallinen pehmeneminen, ei todettu toimitusstopperi.",
+    "baseline": "Yleisilmeessä yhteinen vaakalinja. Numerotarkastelussa tiheän alpha≥128alareunan enimmäisvaihtelu liitosikkunoissa5px, ilman visuaalisesti selvää jyrkkää porrasta."
+  },
+  "checkedJoinAzimuths": [
+    180,
+    225,
+    315,
+    45,
+    135
+  ],
+  "joinMeasurements": [
+    {
+      "azimuthDeg": 180,
+      "centerOutputX": 0,
+      "sampleWindowHalfWidthPx": 45,
+      "denseAlphaBottomMinMax": [
+        462,
+        462
+      ],
+      "denseAlphaBottomMedian": 462
+    },
+    {
+      "azimuthDeg": 225,
+      "centerOutputX": 1024,
+      "sampleWindowHalfWidthPx": 45,
+      "denseAlphaBottomMinMax": [
+        462,
+        463
+      ],
+      "denseAlphaBottomMedian": 463
+    },
+    {
+      "azimuthDeg": 315,
+      "centerOutputX": 3072,
+      "sampleWindowHalfWidthPx": 45,
+      "denseAlphaBottomMinMax": [
+        458,
+        463
+      ],
+      "denseAlphaBottomMedian": 458
+    },
+    {
+      "azimuthDeg": 45,
+      "centerOutputX": 5120,
+      "sampleWindowHalfWidthPx": 45,
+      "denseAlphaBottomMinMax": [
+        458,
+        461
+      ],
+      "denseAlphaBottomMedian": 458
+    },
+    {
+      "azimuthDeg": 135,
+      "centerOutputX": 7168,
+      "sampleWindowHalfWidthPx": 45,
+      "denseAlphaBottomMinMax": [
+        462,
+        463
+      ],
+      "denseAlphaBottomMedian": 463
+    }
+  ],
+  "minorNotes": [
+    "315°ja135°limitysten matalissa taustakatoissa on hieman pehmeämpää/haaleampaa maalausta, joka kannattaa tarkistaa vastaanottajan kameran todellisessa33–60°näkymässä.",
+    "Alpha1-pikselien piiloRGB-arvoja ei käytetty automaattiseen hylkäykseen; arvio perustuu normaalikomposiitissa näkyvään lopputulokseen."
+  ],
+  "technicalFactsReadFromAssembly": {
+    "method": "Angular mapping; dense architectural base registration; bicubic resampling of linear-light premultiplied RGBA; 4degree overlap crossfade; periodic output",
+    "noUpscaling": true,
+    "effectiveNativePixelsAround360": 8318.297872340425,
+    "outputToNativeScale": 0.984816861059955,
+    "noCreativeRetouch": true,
+    "sourceNativeBytesUnchangedVerified": true,
+    "azimuthFormula": "(180+360*u)mod360",
+    "northU": 0.5,
+    "fourOriginalNativeImagesStillMatchHashes": true
+  },
+  "scopeLimits": [
+    "Nopea riippumaton kuvatason QA; teknisen koostimen koodia ei auditoitu.",
+    "Pelin kamerassa, vastaanottajan sumussa, Unityssä tai julkaistussa sovelluksessa ei tehty runtime-testiä.",
+    "Tämä raportti ei ole PT:n tai omistajan hyväksyntä."
+  ],
+  "generatedNewImage": false,
+  "modifiedAnyImage": false,
+  "modifiedSharedProductionState": false,
+  "runtimeIntegration": "not-reviewed",
+  "publication": "not-reviewed",
+  "checkedAt": "2026-10-19T20:04:31.936890+00:00"
+}

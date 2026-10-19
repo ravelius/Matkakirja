@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-19T20:03:19.638202+00:00",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/siluettinauha.png",
+  "outputSHA256": "91d4d9432a5cb8b27d2316192c5b36e442cbd749d3cdc3fc6d3160dc39755712",
+  "dimensions": [
+    8192,
+    713
+  ],
+  "mode": "RGBA",
+  "azimuthLeftDeg": 180,
+  "azimuthFormula": "(180+360*u)mod360",
+  "northU": 0.5,
+  "horizonY": 463.45,
+  "horizonYFraction": 0.65,
+  "elevationUpperDeg": 20.366666666666667,
+  "elevationLowerDeg": -10.966666666666665,
+  "effectiveNativePixelsAround360": 8318.297872340425,
+  "outputToNativeScale": 0.984816861059955,
+  "noUpscaling": true,
+  "fourSeparateNewNativeImages": true,
+  "method": "Angular mapping; dense architectural base registration; bicubic resampling of linear-light premultiplied RGBA; 4degree overlap crossfade; periodic output",
+  "noCreativeRetouch": true,
+  "noAlphaThresholdCleanup": true,
+  "sourceNativeBytesUnchanged": true,
+  "panels": [
+    {
+      "file": "nauha-1.png",
+      "direction": "north",
+      "centerAzimuthDeg": 0,
+      "azimuthStartDeg": 313,
+      "azimuthEndDeg": 47,
+      "azimuthSpanClockwiseDeg": 94,
+      "overlapWithEachNeighborDeg": 4,
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "nativeSHA256": "308d55e27b2649d81d0fbb0661f9219be3130489d30a04426c0e59ecc79a0729",
+      "registeredHorizonNativeY": 485.5,
+      "registeredHorizonYFraction": 0.6705801104972375,
+      "elevationUpperDeg": 21.011510128913443,
+      "elevationLowerDeg": -10.32182320441989,
+      "sourceVerticalTranslationInOutputPixels": -14.673618784530364
+    },
+    {
+      "file": "nauha-2.png",
+      "direction": "east",
+      "centerAzimuthDeg": 90,
+      "azimuthStartDeg": 43,
+      "azimuthEndDeg": 137,
+      "azimuthSpanClockwiseDeg": 94,
+      "overlapWithEachNeighborDeg": 4,
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "nativeSHA256": "98f9f36279b5ddc14ae9fff349019b35223baa62e74395f3503c33f6d6f9de63",
+      "registeredHorizonNativeY": 455.5,
+      "registeredHorizonYFraction": 0.6291436464088398,
+      "elevationUpperDeg": 19.71316758747698,
+      "elevationLowerDeg": -11.620165745856353,
+      "sourceVerticalTranslationInOutputPixels": 14.870580110497258
+    },
+    {
+      "file": "nauha-3.png",
+      "direction": "south",
+      "centerAzimuthDeg": 180,
+      "azimuthStartDeg": 133,
+      "azimuthEndDeg": 227,
+      "azimuthSpanClockwiseDeg": 94,
+      "overlapWithEachNeighborDeg": 4,
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "nativeSHA256": "2bf2cac53388b829781655373f73f9c5d7c14766371f8945ecec150014dc9699",
+      "registeredHorizonNativeY": 469.5,
+      "registeredHorizonYFraction": 0.6484806629834254,
+      "elevationUpperDeg": 20.31906077348066,
+      "elevationLowerDeg": -11.01427255985267,
+      "sourceVerticalTranslationInOutputPixels": 1.0832872928177018
+    },
+    {
+      "file": "nauha-4.png",
+      "direction": "west",
+      "centerAzimuthDeg": 270,
+      "azimuthStartDeg": 223,
+      "azimuthEndDeg": 317,
+      "azimuthSpanClockwiseDeg": 94,
+      "overlapWithEachNeighborDeg": 4,
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "nativeSHA256": "542bf6db3dfd3921929f4c4ea3a3ba4102f05845c17a917a42dee84b72cb5b21",
+      "registeredHorizonNativeY": 465.5,
+      "registeredHorizonYFraction": 0.6429558011049724,
+      "elevationUpperDeg": 20.14594843462247,
+      "elevationLowerDeg": -11.187384898710865,
+      "sourceVerticalTranslationInOutputPixels": 5.022513812154718
+    }
+  ],
+  "visualJoinQAPending": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-19T20:06:06.664824+00:00",
+  "scope": "PhysicalT7four nativepanels plus8192assembledRGBAstrip andregisteredangularmetadata; correctedskyremainsopen",
+  "allFilesByteVerified": true,
+  "files": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/siluettinauha.png",
+      "bytes": 2096026,
+      "sha256": "91d4d9432a5cb8b27d2316192c5b36e442cbd749d3cdc3fc6d3160dc39755712"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-1.png",
+      "bytes": 600725,
+      "sha256": "308d55e27b2649d81d0fbb0661f9219be3130489d30a04426c0e59ecc79a0729"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-2.png",
+      "bytes": 563501,
+      "sha256": "98f9f36279b5ddc14ae9fff349019b35223baa62e74395f3503c33f6d6f9de63"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-3.png",
+      "bytes": 502891,
+      "sha256": "2bf2cac53388b829781655373f73f9c5d7c14766371f8945ecec150014dc9699"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/nauha-4.png",
+      "bytes": 509884,
+      "sha256": "542bf6db3dfd3921929f4c4ea3a3ba4102f05845c17a917a42dee84b72cb5b21"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/metadata.json",
+      "bytes": 14178,
+      "sha256": "158b71fed4ae2a95465dacdce109226286b117a8cf066f7e741d1b4bda8dd6de"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/ASSEMBLY.json",
+      "bytes": 3668,
+      "sha256": "f627d93fcacfdba64fd568f8953df07368618fd547f836acf051ac767cf8a7e6"
+    }
+  ],
+  "skylineDelivered": true,
+  "correctedSkyDelivered": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
