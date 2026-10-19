@@ -85,3 +85,8 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
 - RATA 1 VALMIS (08.2x): proto pelikoodari/juoksupeli-202 57f0f0afe (⊃ hahmot dd7009250): JuoksuRata1 + valikko "Juoksupeli: Rata 1" + "Maali!"-tulos,
   botti 20/20 maaliin 33–40 s. Avoin PT:lle: pidennys (suunnitelma 2–3 min) vai 1. versioksi. Ei simu-/laitetodistetta (19.10. ei laitetestejä).
   Odottaa: JU:n vienti juoksupeli-hahmot-v1 ämpäriin (ilman sitä harmaat laatikot); haara NS:lle junaan vasta PT:n luvalla.
+- 09.0x: iPadin pidempi NOPEUS-vipu proto pelikoodari/iss-c2-204 7d74a47a5 (Resources/IssOhjauspoyta/ipad/, poyta.py POYTA_VIPU_LISA=98),
+  kuvapari proto-3d/_tyo/pelikoodari/ipad-vipu-204/. Peruuta-koukku pelikoodari/peruuta-koukku-204 d1fcf02d6 (⊃ 7d74a47a5 + NUI d56b8d5fc) → NS junaan 204.
+- Rata 1 pidennetty e04149615 (9 huonekierrosta, botti 168–173 s). Mallit ämpärissä (JU 07.58). AVOIN PT: käännösvuoro simutodisteeseen;
+  Codexin maailma v4 (kävelymittakaava 317 m, 3,2 m käytävät) → ehdotettu oma "Rata v4" -tila reittigraafilla, ~1 päivä, PT päättää.
+  Worktreet: ei poistettavaa ennen junan 204 mergeä (Postivahdille kerrottu).
