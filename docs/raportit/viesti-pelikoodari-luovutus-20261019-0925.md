@@ -75,3 +75,12 @@ Grafiikka ja mallit VAIN Codexilta (PT tilaa); sillä välin harmaat paikkamerki
 - UI-POHJA LÖYTYY (ei omistajan kysymystä): KUVANOSTO, OpasKuvanosto.cs (UI/Linssit): mk-nosto mk-nosto--kuvanosto + kuvakehys
   mk-nosto__kuvakehys--nyky + mk-nosto__kuvateksti (huudahdus), siirtymät Tyylikirja.Kesto.Avaus, pieni kuva reunaan ylänappien alle
   (KuvanostoAsettelu.Pieni). Juoksupelissä ilman napautusta (ei suurennusta), ajastin 2,5 s; uusi rikkoutuminen vaihtaa kuvan.
+
+## TILA 09.3x (uudelleenaloitus Postivahdin viestistä; ENSIN-kohdat 1–3 TEHTY)
+- juoksupeli-202 uusin **da1f9bd84**: mittarit + rimpuilunappi + värähdys d587d34b3 (JuoksuMittarit, MatkakirjaHaptiikka_Napautus),
+  lohikäärmelajit (LohikaarmeLaji.Vari) + herkku 1/10 + jade (osa 35), SK:n tekstit 8c3932562 (tekstit.fi.json; SK:lle kuitattu),
+  esineet.json + RepliikkiValitsin + muistokupla da1f9bd84 (QA `ui juoksupeli kupla [n]`). tarkista.sh 0, Peli-testit 626/626.
+- PT:n tarkennus: kuplan ALLA oma raita dynastia + vuosi → mk-nosto__lahde-rivi (JuoksuEsine.Alarivi).
+- SK: esineluettelon muoto lähetetty, odottaa 40 esinettä + huudahdukset (nyt 5 paikkamerkein) → kopioi protoon.
+- JU: simuvuoro ~10.15 sha da1f9bd84, PK ajaa videot itse (skenaario kohdassa 4) → PT (KK).
+- Jäljellä: kerättävien aarteiden paikat tasolla 2 (odottaa Codexin yläreittiä), Kamerajohtaja Rata v4:n jälkeen.
