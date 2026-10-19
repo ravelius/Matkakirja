@@ -478,3 +478,7 @@ Tagi `[shouting] [panicked]`; huudon alkuun "Aa!" tai "Eei!!" (Äänittäjän mu
 ## Päivitys 19.10. klo 11.29
 
 Omistaja: "tuo aa on huono" → **Aa!-alku pois** Puyin huudoista (Eei!! ei myöskään käytössä). Huudon alku tulee KK:n tuomasta omistajan hyväksymästä alkulistasta; aiemmat maininnat "Aa!"/"Eei!!" yllä ovat vanhentuneet. Puyin ääni: 08 Kavya (lukittu 11.23). Sallitut alut nyt: Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!, Sis-sos!.
+
+## Päivitys 19.10. klo 11.45
+
+Omistaja hyväksyi Puyin (08 Kavya) alut: **Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!**. **Sis-sos! pois.** Sallitut alut yllä korvaavat 11.29:n listan. 10 huutoriviä on yhä ilman alkua, kunnes KK tuo erät. Ei generointia ennen sitä.
