@@ -70,3 +70,6 @@ Kestot: 01-aa-tata-teki-72 4,0 s · 02-aa-tama-tuli-laivalla 3,2 · 03-aa-pikkum
 
 ## 8. 17 lausetta Kavyalla (omistajan päätös 12.23, KK) — TEHTY
 **17 ottoa, 1 136 mrk** (≤ 1 150), Kavya `bA58y3FqVI6b6gTNh0oT`, speed 1,2 natiivisti, fi pakotettu, ei jälkikäsittelyä; tekstit sanatarkasti KK:n tiedostosta (osio "HYVÄKSYTTY 19.10. 12.23", rivit 1–17). Ääniportti 0 hylättyä, 0 varoitusta. Kansio `/Users/Shared/Claude/proto-3d/_tyo/puyi-koeaanet-20261019/ulos-era2-kavya/` (01–17, tiedostonimissä alku + lause). Kestot 3,2–4,0 s; **11-hoplaa (pitkä rivi) 6,8 s**. Ei ämpäriin ennen PT:n ohjetta; ei uusia huutoeriä ennen pelitestiä.
+
+## 9. era2 ämpäriin: `juoksupeli/puyi-huudot-v2/` (PT 12.4x)
+17 huutoa (kohta 8), manifest.json: `jarjestys` 1–17, `avain` (SK #4949 224c25b58, esim. `juoksupeli.rikkoutuva.kello.versio.1.huuto`), teksti tageineen, kesto, aani `huudot/NN-….mp3`, voice_id Kavya. media.matkakirja.app/juoksupeli/puyi-huudot-v2/manifest.json. Portti 0 hylättyä. Vienti: viety 18, oli jo 1 (kieli.json).
