@@ -1954,3 +1954,15 @@ Omistajan kysymys KK:ssa 18.2x: "Miksi ihmeessä videoita tehdään Codexin puol
 ## PAATOKSET 19.10.2026 klo 18.29: raketin savu videoon pelin omana savuna täysillä (19.10.2026 klo 18.31)
 
 Omistaja 18.26: "mutta saako raketin ajettua jotenkin paremmilla asetuksilla, jotta esim, savu olisi realistisempi?" ja 18.27 "mitä vaihtoehtoja meillä on?" Kortti "Millä tavalla raketin savu tehdään videoon, jotta se näyttää aidolta?", vastaus 18.29: "Pelin savu täysillä (Suositus)": oma video-laatutaso ilman puhelimen rajoja (hiukkasia moninkertaisesti, tarkemmat flipbookit, liike-epäterävyys; ei koske puhelinpeliä). Todennetaan 10 s + 3 s -kokeilulla; Blender-savu liitettynä vain omistajan uudella päätöksellä. Raamattu 2.105 SAVU VIDEOSSA.
+
+## PAATOKSET 19.10.2026 klo 18.51: yli 48 h koskemattomat T7:lle nyt ja joka yö (19.10.2026 klo 18.54)
+
+Omistaja kysyi KK:ssa, voiko proto-3d:n lokit (33 Gt) siirtää T7:lle ja onko Claude-kansiossa muuta siirrettävää. Kortti "Siirränkö T7:lle kaiken, mihin ei ole koskettu kahteen vuorokauteen (noin 45 Gt), ja tehdäänkö sama jatkossa joka yö?" → "Kyllä, nyt ja joka yö (Suositus)"; vanhaan paikkaan jää linkki. KK ajoi kertasiirron (295 kohdetta, noin 38 Gt). Yöajo: tools/levy/ika_kartoitus.py + siirra_t7.py --aja (PT vastaa, Postivahti ajaa). Raamattu 12.19 YÖSIIRTO T7:LLE.
+
+## PAATOKSET 19.10.2026 klo 18.55: videot vasta yöllä, ensin juna 204 ja juoksupelin ensimmäinen pelattava versio (19.10.2026 klo 18.56)
+
+Omistaja KK:ssa sanatarkasti: "käskin codexia tehdä riipuksen renderöinnin yöllä ja keskittymään juoksupeliin. tehdään kaikki muutkin videot vasta yöllä. nyt tärkeintä saada juna julkaistua sekä kehitettyä juoksupeliä niin että saadaan ensimmäinen pelattava versio ulos". Toteutus: päivällä ei renderöidä videoita (rakettikokeilu, Kolme veljestä, uni yöllä); ensin juna 204 ulkoisille, sitten juoksupelin ensimmäinen pelattava versio seuraavaan junaan (Pelit › Keskeneräiset): valikosta alkava juoksu, ohjaukset liuku/hyppy/väylä/käännös, kiinnijäänti ja uusi yritys, drone-kamera oviaukon läpi, normaalikorkuiset seinät, sulava iPhonella ja iPadilla. Muut projektit odottavat.
+
+## PAATOKSET 19.10.2026 klo 19.02 ja 19.03: juna 205 illaksi ilman testejä, yöjuna 206 testeineen aamuksi, yöllä juoksupeli ennen videoita (19.10.2026 klo 19.04)
+
+OMISTAJA PYYSI JULKAISUA 19.02 sanatarkasti: "julkaise 205 ilman testejä, niin ehdin itse nähdä sen ennen nukkumaanmenoa". 19.03: "sitten aamuksi uusi versio johon voi ajaa myös testit. ei aloiteta vielä tänä yönä videoiden renderöintejä jos se hidastaa juoksupelin kehitystä". Toteutus: juna 204 kulkee junassa 205 (204 + juoksupelin ensimmäinen pelattava versio), ei Laitetestaajaa eikä muistiajoa, automaattiset tarkistukset ja PT/KK:n simutodisteet; TF tavoite 22.30–23.00. Sen jälkeen yöjuna 206 laitekierroksella (9.11) aamuksi. Yöllä juoksupeli etusijalla; videoita renderöidään vain, kun kone on muuten vapaa (posti Codexille 81489a395).
