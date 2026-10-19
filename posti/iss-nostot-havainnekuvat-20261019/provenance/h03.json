@@ -1,0 +1,45 @@
+{
+  "taskNumber": 443,
+  "code": "h03",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:39:11.639953+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: steep look-down into broad cloud deck, modest brown eruption patch at x~0.48,y~0.78; distant elongated island upper-center/right and blue ocean at top. Real Raikoke photo: dark tan umbrella with turbulent lobes, tall column, white steam/cloud collar around a small island base, cast shadow on low clouds.",
+  "promptSHA256": "4bc773f037b077bf93ac2725e7b9f3297183cd6a889f794f4ee8f139707ddf38",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h03/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:40:04.228896+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1547f280-1c7f-4488-b201-2b65dc79f11a.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h03.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h03.png",
+  "nativeSHA256": "8505d6ae00f5bc7c37adf2dbb810d1e76cb2ed7799e099556a378f77cb00e9ca",
+  "deliverySHA256": "2b28402778b85045f40111d78d0f8160de0f32035973b8c24b6b77d513b1eac0",
+  "nativeBytes": 2680861,
+  "deliveryBytes": 2681086,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "0ba80c707d61cab84bb57ad8747c90af4684777e1c0a442a5f956ad1be56f980",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "reference-with-unverified-exact-camera-registration",
+    "photoRealism": "Fine irregular marine clouds, turbulent ash umbrella and shadow read as a natural orbital photograph.",
+    "cameraMatch": "Small lower-central eruption and distant elongated island broadly follow game field of view; exact pixel/FOV match not proven.",
+    "takenFromRealReferences": "Rough flattened tan umbrella, dark vertical ash column, white low cloud collar and long dark shadow.",
+    "invented": "Exact cloud field, plume geometry, distant island surface detail and instantaneous illumination; no survey or historical-geographic validation.",
+    "excludedOverlays": "No visible frame/interface/text.",
+    "metadataLabel": "havainnekuva"
+  }
+}
