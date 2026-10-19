@@ -1941,3 +1941,8 @@ Toteutus (KK:n tavoitekuvaus): kaikki esirenderöidyt videot pysty- ja vaakavers
 ## PAATOKSET 19.10.2026 klo 17.29: Raketin latauskuva säilyy, video valmiina ennen hetkeä (19.10.2026 klo 17.3x)
 
 Omistaja KK:ssa sanatarkasti: "Raketin latauskuva voi jäädä, koska siinä aikana video kannattaa ladata kokonaan muistiin." Toteutus (KK): latauskuvassa vain laukaisupaikan nimi; kuvan aikana rakettivideo ladataan kokonaan laitteelle ja puskuroidaan, jotta toisto alkaa heti eikä pätki; lento alkaa itsestään, kun video on valmis, ilman käynnistysnappia. Sama periaate koskee unta ja aarrevideoita: video on valmiina ennen kuin hetki alkaa. Muisti vai levy (iPad M1 8 Gt) on NUI:n valinta.
+
+## PAATOKSET 19.10.2026 klo 16.50 ja 18.02: Juoksupelin seinät normaalikorkuisiksi, drone oviaukon läpi (19.10.2026 klo 18.0x)
+
+16.50 (omistaja Codexin kautta, posti 503b1ee32): seinät pidetään normaalikorkuisina (v2, noin 4,1 m, katottomuus säilyy), ei 0,7 m:n madallusta; kamera seuraa Puyia takaa dronen tavoin ja "voi nostaa hetkellisesti lentokorkeutta noiden oviaukkojen kohdalla tarvittaessa, jotta sen ei tarvitse lentää oven päällä olevan palkin läpi". Pelikoodarin simussa nosto toimi, mutta oven yläseinä peitti Puyin noin 0,5 s joka ovella.
+18.02 omistaja KK:n kortissa: "Juoksupelin ovilla nouseva drone jää hetkeksi oven yläseinän taakse, ja Puyi katoaa näkyvistä. Saako drone mieluummin laskeutua ja lentää oviaukosta palkin alta?" → "Kyllä, oviaukon läpi (Suositus)". Korvaa 16.50:n noston: drone laskeutuu ja lentää oviaukosta palkin alta, Puyi pysyy koko ajan kuvassa eikä kamera osu palkkeihin millään nopeudella. Pelikoodari jatkoeränä seuraavaan junaan (ei junaan 204, omistaja 13.31).
