@@ -7,6 +7,9 @@
  * Käyttö: node tools/codex-3d-tarkistus.mjs <toimituskansio | tiedosto.glb ...> [--json]
  *   Kansio: SHA256SUMS(.txt) pakollinen; jokainen .glb listassa ja tiiviste täsmää; muut 3D-tiedostot (fbx, obj, blend,
  *   gltf) hylätään. Yksittäinen tiedosto: vain mallitarkistus.
+ *   Kuvat (Työkaluseppä 19.10.2026: Codex toimittaa kaiken grafiikan): erilliset .png/.jpg-kuvat listassa ja tiiviste
+ *   täsmää (paitsi esikatselu/ ja qa/; manifesti myös MANIFEST.json files[].sha256), muoto PNG tai JPEG; tekstuurit/-kansion kuvat kuten glb:n tekstuurit (kahden potenssi,
+ *   ≤ 2048 px). LAHTEET.md puuttuu = HUOM.
  * Testit: tests/codex-3d-tarkistus.test.mjs (synteettiset glb:t, ei verkkoa).
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -195,10 +198,22 @@ export function lueManifesti(teksti) {
 const kaikki = (d) => readdirSync(d).flatMap((n) => { const p = join(d, n); return statSync(p).isDirectory() ? kaikki(p) : [p]; });
 export function tarkistaToimitus(kansio) {
   const tulos = { kansio, virheet: [], tiedostot: [] };
-  const mf = ['SHA256SUMS', 'SHA256SUMS.txt'].map((n) => join(kansio, n)).find(existsSync);
-  if (!mf) tulos.virheet.push('SHA256SUMS(.txt) puuttuu toimituksen juuresta');
-  const M = mf ? lueManifesti(readFileSync(mf, 'utf8')) : new Map();
   const polut = kaikki(kansio).map((p) => relative(kansio, p)).filter((p) => !p.startsWith('.') && !/(^|\/)\./.test(p));
+  // Manifesti: juuren SHA256SUMS(.txt) tai Codexin kuvatoimitusten MANIFEST.json-tiedostot ({files: [{path, sha256}]}, polut oman kansion suhteen)
+  let mf = ['SHA256SUMS', 'SHA256SUMS.txt'].map((n) => join(kansio, n)).find(existsSync);
+  const M = mf ? lueManifesti(readFileSync(mf, 'utf8')) : new Map();
+  for (const j of polut.filter((x) => basename(x) === 'MANIFEST.json')) {
+    let lista = []; try { lista = JSON.parse(readFileSync(join(kansio, j), 'utf8')).files || []; } catch { tulos.virheet.push(`${j}: ei kelvollista JSONia`); }
+    const juuri = j.includes('/') ? j.slice(0, j.lastIndexOf('/') + 1) : '';
+    // Polku oman kansion suhteen; Codexin sisäkkäiset MANIFEST.json-tiedostot kirjaavat myös toimituksen juuren suhteen (Kööpenhamina 19.10.)
+    for (const f of lista) if (f && f.path && /^[0-9a-f]{64}$/i.test(f.sha256 || '')) {
+      const p = polut.includes(juuri + f.path) || !polut.includes(f.path) ? juuri + f.path : f.path;
+      M.set(p, f.sha256.toLowerCase()); mf = mf || j;
+    }
+  }
+  const glbeja = polut.some((x) => extname(x).toLowerCase() === '.glb');
+  if (!mf && glbeja) tulos.virheet.push('SHA256SUMS(.txt) tai MANIFEST.json (files[].sha256) puuttuu');
+  else if (!mf) (tulos.huomiot ||= []).push('ei manifestia (SHA256SUMS tai MANIFEST.json): kuvien tiivisteitä ei tarkistettu');
   for (const p of polut) if (MUUT_3D.has(extname(p).toLowerCase())) tulos.virheet.push(`${p}: muoto ${extname(p)} ei kelpaa, vain .glb`);
   for (const p of polut.filter((x) => extname(x).toLowerCase() === '.glb')) {
     const buf = readFileSync(join(kansio, p)); const r = tarkistaGlb(buf, basename(p)); r.polku = p;
@@ -207,15 +222,43 @@ export function tarkistaToimitus(kansio) {
     else if (mf && M.get(p) !== h) r.virheet.push(`SHA-256 ei täsmää (lista ${M.get(p).slice(0, 12)}…, tiedosto ${h.slice(0, 12)}…)`);
     tulos.tiedostot.push(r);
   }
-  for (const p of M.keys()) if (extname(p).toLowerCase() === '.glb' && !polut.includes(p)) tulos.virheet.push(`${p}: listassa mutta puuttuu kansiosta`);
-  if (!tulos.tiedostot.length) tulos.virheet.push('ei yhtään .glb-tiedostoa');
+  for (const p of polut.filter((x) => KUVAT.has(extname(x).toLowerCase()))) {
+    const buf = readFileSync(join(kansio, p)); const r = tarkistaKuva(buf, p);
+    if (!/(^|\/)(esikatselu|qa)\//.test(p)) {                     // esikatselu- ja QA-kuvat eivät ole toimitettavia
+      const h = createHash('sha256').update(buf).digest('hex');
+      if (mf && !M.has(p)) r.virheet.push('ei SHA256SUMS-listassa');
+      else if (mf && M.get(p) !== h) r.virheet.push(`SHA-256 ei täsmää (lista ${M.get(p).slice(0, 12)}…, tiedosto ${h.slice(0, 12)}…)`);
+    }
+    tulos.tiedostot.push(r);
+  }
+  for (const p of M.keys()) if (!polut.includes(p)) tulos.virheet.push(`${p}: listassa mutta puuttuu kansiosta`);
+  if (!tulos.tiedostot.length) tulos.virheet.push('ei yhtään .glb- tai kuvatiedostoa');
+  if (!polut.some((x) => ['LAHTEET.md', 'SOURCE-INVENTORY.json', 'SOURCE-MANIFEST.json', 'CREDITS.md'].includes(basename(x)))) (tulos.huomiot ||= []).push('LAHTEET.md (tai Codexin SOURCE-INVENTORY, SOURCE-MANIFEST tai CREDITS) puuttuu: tekijä, työkalu, lisenssi ja lähdekuvat tarkistetaan käsin (Raamattu luku 11)');
   return tulos;
+}
+
+// ---------------------------------------------------------------- erillinen kuva (tekstuuri, havainnekuva)
+const KUVAT = new Set(['.png', '.jpg', '.jpeg']);
+const TEKSTUURIKANSIO = /(^|\/)tekstuurit\//;
+export function tarkistaKuva(buf, polku) {
+  const V = []; const k = kuvanKoko(buf); const T = { tyyppi: 'kuva', muoto: k.muoto, w: k.w, h: k.h };
+  if (!['png', 'jpg'].includes(k.muoto)) V.push(`muoto ${k.muoto}, vain PNG tai JPEG`);
+  else if (!k.w || !k.h) V.push('kuvan mittoja ei voi lukea');
+  else if (TEKSTUURIKANSIO.test(polku)) {
+    T.tyyppi = 'tekstuuri';
+    const pot = (n) => n > 0 && (n & (n - 1)) === 0;
+    if (!pot(k.w) || !pot(k.h)) V.push(`tekstuuri ${k.w} × ${k.h}: sivut kahden potensseja`);
+    if (Math.max(k.w, k.h) > RAJAT.kuvaPx) V.push(`tekstuuri ${k.w} × ${k.h} > ${RAJAT.kuvaPx} px`);
+  }
+  if (buf.length > RAJAT.tiedostoMt * 1e6) V.push(`koko ${(buf.length / 1e6).toFixed(1)} Mt > ${RAJAT.tiedostoMt} Mt`);
+  return { nimi: basename(polku), polku, virheet: V, huomiot: [], tiedot: T };
 }
 
 // ---------------------------------------------------------------- komentorivi
 function tulosta(r) {
   const t = r.tiedot; const tila = r.virheet.length ? 'HYLÄTTY' : 'OK';
-  console.log(`${tila.padEnd(8)} ${r.polku || r.nimi}  ${t.tyyppi || ''} ${t.kolmiot ?? ''} kolm, ${t.piirrot ?? ''} piirtoa, ${t.materiaalit ?? ''} mat` +
+  if (t.w !== undefined) console.log(`${tila.padEnd(8)} ${r.polku || r.nimi}  ${t.tyyppi} ${t.muoto} ${t.w} × ${t.h} px`);
+  else console.log(`${tila.padEnd(8)} ${r.polku || r.nimi}  ${t.tyyppi || ''} ${t.kolmiot ?? ''} kolm, ${t.piirrot ?? ''} piirtoa, ${t.materiaalit ?? ''} mat` +
     (t.rajat ? `, koko ${t.rajat.koko.join(' × ')} m` : '') + (t.luut ? `, ${t.luut} luuta` : '') + (t.animaatiot ? `, anim ${t.animaatiot.join(' ')}` : ''));
   for (const v of r.virheet) console.log(`         VIRHE ${v}`);
   for (const h of r.huomiot) console.log(`         HUOM  ${h}`);
@@ -227,7 +270,7 @@ if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).
   for (const k of kohteet) {
     if (statSync(k).isDirectory()) {
       const t = tarkistaToimitus(k); kaikkiTulokset.push(t);
-      if (!json) { console.log(`== ${k}`); for (const v of t.virheet) console.log(`VIRHE    ${v}`); t.tiedostot.forEach(tulosta); }
+      if (!json) { console.log(`== ${k}`); for (const v of t.virheet) console.log(`VIRHE    ${v}`); for (const h of t.huomiot || []) console.log(`HUOM     ${h}`); t.tiedostot.forEach(tulosta); }
       hylatty += t.virheet.length + t.tiedostot.filter((r) => r.virheet.length).length;
     } else {
       const r = tarkistaGlb(readFileSync(k), basename(k)); kaikkiTulokset.push(r); if (!json) tulosta(r); hylatty += r.virheet.length ? 1 : 0;
