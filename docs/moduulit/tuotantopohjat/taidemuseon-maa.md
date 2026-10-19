@@ -5,6 +5,8 @@ vain nykyisten ohjeiden ja luovutusten opit (Alankomaat ja Ranska); uusia sään
 ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muut osat täydentävät tekijänsä otsikoilla
 "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+**Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva salista; KAMERA viitevideo tai kuvakäsikirjoitus ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
+
 Taidemuseon maa = yhden maan oma museo taidemuseo-linssissä (Raamattu, TAIDEMUSEO-LINSSI; vain natiivissa): maan teokset
 seinillä, patsaat huoneissa, opastettu kierros kertojan äänellä tai vapaa kulku, i-kortti ja ympyrät, salien avaukset.
 Ensimmäinen maa on Alankomaat, toinen Ranska (Louvre, Orsay, Marmottan, Rodin); Italia vasta omistajan käskystä.

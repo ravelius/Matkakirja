@@ -5,6 +5,8 @@ vain nykyisten ohjeiden ja luovutusten opit; uusia sääntöjä ei ole. Jos täm
 Teksti-osuuden omistaa Sisältökirjuri; kartta, natiivi ja äänet täydentävät omat osansa otsikoilla "TÄYDENTÄÄ: <rooli>".
 PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+**Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: KAMERA viitevideo tai kuvakäsikirjoitus ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää; KÄYTTÖLIITTYMÄ kuvakaappaus, johon muutos on piirretty. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
+
 Pääkaupungin avaus = kaikki, mitä pelaaja saa, kun pääkaupunki avataan: kaupunkikartan esittely, oppaan pallolentoesittely
 (avaus + 8 kohdetta), historiaosiot, lehti (kaupunkilehti ja maalehti tai kevyt maakortti), kohtaaminen ja aarretehtävä sekä
 Pulun repliikit. Pohja kattaa tekstin ja sen tarkistuksen; kartan, natiivin ja äänen työ on omissa osissaan (luvut 7–9).

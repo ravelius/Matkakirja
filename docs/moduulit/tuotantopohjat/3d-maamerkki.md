@@ -5,6 +5,8 @@ vain nykyisten ohjeiden ja luovutusten opit; uusia sääntöjä ei ole. Jos täm
 Mallin osuuden omistaa Linnanrakentaja; valo, sijoitus ja kytkentä täydentävät omat osansa otsikoilla "TÄYDENTÄÄ: <rooli>".
 PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+**Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA Codexin havainnekuva (tavoitekuvat pelin kulmista); KAMERA uusista kuvakulmista viitevideo tai kuvakäsikirjoitus ennen koodausta. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
+
 3D-maamerkki = oma Blender-malli rakennuksesta tai rakennelmasta, joka näytetään Googlen fotorealististen laattojen keskellä
 (tai omana kaupunkitilanaan, kuten Peking) ja jonka alta Googlen laatat leikataan pois. Pohja kattaa päätöksen tehdä malli,
 lähteet ja oikeudet, mittasuhteet, mallin ja LOD-tasot, materiaalit, tavoiteluupin ja yhteensovituksen Googlen laattoihin.

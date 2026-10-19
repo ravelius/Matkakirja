@@ -1884,3 +1884,27 @@ KK:n tuotantoputkien läpikäynnin (19.10.) faktakorjaukset, ei uusia sääntöj
 ## OMISTAJAN PÄÄTÖS 19.10.2026 klo 15.21: omistaja ei ensimmäinen tarkistaja missään putkessa (J1) (19.10.2026 klo 15.23)
 
 Omistajan kortti KK:ssa 19.10.2026 klo 15.21, kysymys: "Kohta 1: et olisi enää ensimmäinen tarkistaja missään putkessa. Ulkoisia testaajia on nyt neljä, ja viimeksi löysit itse ensimmäisenä mm. kaasuvivun, nykivän vierityksen ja Kysyn tervehdyksen. Otetaanko käyttöön?" Vastaus: "Kyllä, kaikkiin (Suositus)". Selite: juna: Laitetestaaja pelaa lukitun käännöksen iPadilla ja iPhone-simulaattorilla muutoslistaa ja palautteita vasten ennen ulkoisia testaajia (muuttaa 15.10. 'ei testejä junaan'); puhe: Gemini kuuntelee otot sokkona ennen omistajaa; tekstit luetaan pelinäkymässä ennen PT:tä; Codexin 3D: havainnekuva ja pelikuva rinnakkain ennen hyväksyntää. Raamattu: uusi 9.11, 9.1 ja 9.3 poikkeus, 5.11 puhe; codex-3d-toimitus.md vastaanotto. Juna 204 koskee jo (laitekierros ennen ulkoisia). Lähde: scratchpad/keskustelukanava/omistajan-paatos-20261019-1521-J1.md.
+
+## PAATOKSET 19.10.2026 klo 15.32: TAVOITTEEN MUOTO PUTKITTAIN (19.10.2026 klo 15.33)
+
+Omistajan kortti KK:ssa (sanatarkasti): "Kohta 3: tavoite määritellään joka putkessa yhtä selvästi kuin grafiikassa havainnekuvalla. Otetaanko käyttöön nämä muodot?" → "Kyllä (Suositus)" = "Äänet: mallinäyte ja lyhyt kuvaus siitä, miltä pitää kuulostaa. Uudet tekstityypit: muutama esimerkki pelinäkymässä ennen koko erää. Kamera: viitevideo tai kuvakäsikirjoitus ennen koodausta. Käyttöliittymä: kuvakaappaus, johon muutos on piirretty. Sinulle tuodaan vain uudet asiat ja makuvalinnat, muut hyväksyy Päätoimittaja." (hylätty: "Kyllä, näytä kaikki minulle", "Ei nyt"). Kirjattu Raamattu 4.21 (TAVOITTEEN MUOTO PUTKITTAIN) ja jokaisen tuotantopohjan alkuun; Gemini vertaa äänet mallinäytteeseen sokkona (9.11).
+
+## PAATOKSET 19.10.2026 klo 15.35: KESKENERAISET POHJAT JA JUNAN RETROSPEKTIIVI (19.10.2026 klo 15.35)
+
+Omistajan kortti KK:ssa (sanatarkasti): "Kohta 4: tuotantopohjat ovat osin keskeneräisiä, ja opit jäävät lokiin eivätkä siirry seuraavaan työhön. Miten korjataan?" → "Seuraavan työn yhteydessä (Suositus)" = "Opit siirretään lokista ja muistista pohjiin heti. Kukin puuttuva pohja tehdään valmiiksi, kun putkea seuraavan kerran käytetään, ja työ on valmis vasta, kun pohja on päivitetty. Jokaisen junan jälkeen lyhyt retrospektiivi löydöksistäsi: miksi kukaan ei nähnyt sitä ennen sinua." (hylätty: "Kaikki pohjat heti", "Ei nyt"). Kirjattu Raamattu 8.1 (KESKENERÄISET POHJAT) ja 8.2 (JUNAN RETROSPEKTIIVI). Oppien siirto lähteistä putket-lapikaynti-20261019.md (KK) ja lokit 17.–19.10.
+
+## PAATOKSET 19.10.2026 klo 15.36: AANIMAISEMAT SOKKONA JA CC BY-SA -KUVAT (19.10.2026 klo 15.37)
+
+Omistajan kortti KK:ssa (sanatarkasti, molemmat valittu): (1) "Äänimaisemat uudella tavalla (Suositus)" = "Tehosteiden uusi tapa koskee myös äänimaisemia. Pallokierrosten kuusi taustasilmukkaa kuunnellaan ensin sokkona, ja vain hylätyt tehdään uudelleen Soundlysta ja Sonnissista." (2) "CC BY-SA -kuvat sallitaan (Suositus)" = "Commonsin CC BY-SA -kuvat sallitaan tekijän nimellä kuten CC BY. Suuri osa Commonsin parhaista valokuvista on tällä lisenssillä; muokattu kuva jaetaan samalla lisenssillä. Heikoimmat historiakuvat vaihdetaan parempiin." Kirjattu Raamattu 5.27 ja 11.1. Äänittäjä: silmukoiden sokkokuuntelu; SK: kuva.py:n BY-SA-suodatin pois, heikoimmat historiakuvat (Lontoon H4-kello ensin).
+
+## PAATOKSET 19.10.2026 klo 15.23: MAKSETUT TILAUKSET EIVAT OLE OSTOJA (J2) (19.10.2026 klo 15.38)
+
+Omistajan päätös KK:n kautta (sanatarkasti): "Raamattuun lista maksetuista tilauksista voimassaoloaikoineen (Soundly Pro 2.12. asti, Tripo Max noin 18.11. asti). Tilauksen käyttö ei ole ostamista: Soundlyn äänet ovat ensisijainen lähde kysymättä. Ei ostoja koskee vain uusia ostoja, ja generointi (ElevenLabs, Tripo, Lyria) vaatii yhä lupasi." Kirjattu Raamattu 12.24 KÄYTÖSSÄ OLEVAT TILAUKSET (yhdistetty Tripo Max -kohtaan), 11.5 ja 5.20 tarkennukset, 12.2:sta "API-saldo 0" pois. ElevenLabsin ja Codexin taso täydennetään tarkistuksen jälkeen.
+
+## PAATOKSET 19.10.2026 klo 15.39: OSEANIAN AARRE = HAVAIJIN KUNINKAAN HOYHENVIITTA (19.10.2026 klo 15.39)
+
+Omistajan kortti KK:ssa (sanatarkasti): "Aarnin luettelon Oseanian aarre Eteläristin helmi löytyi vasta 1883, joten 1800-luvun alun Aarni ei voi tuntea sitä. Mikä tilalle?" → "Havaijin kuninkaan höyhenviitta (Suositus)" (Kalaniʻōpuʻun keltapunainen höyhenviitta, Cookille 1779; nykyisin Bishop-museossa Te Papan pitkäaikaislainana 2016 alkaen). Hylätty: maro ʻura -vyö. Kirjattu isoisan-raamattu.md Oseania-riville; SK kuvaus + historia (50–73 sanaa, lähde per väite, kunnioittava sävy), kuva Codexilta.
+
+## PERUTTU 19.10.2026 klo 15.42: OSEANIAN HOYHENVIITTA (19.10.2026 klo 15.44)
+
+Omistaja KK:ssa klo 15.42 (sanatarkasti): "Hetkinen, vastasinkohan liian nopeasti, eikös arnin luettelon aarteet pitää olla sellaisia, joita ei ole vielä löytynyt?" Päätös 15.39 (höyhenviitta) peruttu: museossa oleva esine ei käy (tarina.md: kadonneet aarteet, joita kukaan ei enää etsi). Kaanonin Oseania-rivi palautettu; SK:n ja Codexin viittatyö pysäytetty. Sama vika Afrikassa (Zimbabwen linnut löydetty) ja Etelä-Amerikassa (Muiscan kultalautta 1969, Bogotá): KK tutkii korvaajat ja tuo omistajalle; näitä kolmea ei muuteta ennen sitä.

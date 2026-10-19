@@ -6,6 +6,8 @@ faktatyö); uusia sääntöjä ei ole. Jos tämä ja Raamattu ovat ristiriidassa
 Sisältökirjuri; muut osat täydentävät tekijänsä otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä
 dokumenttikartalla.)*
 
+**Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva; KAMERA viitevideo tai kuvakäsikirjoitus ennen koodausta; ÄÄNET mallinäyte ja lyhyt kuvaus siitä, miltä pitää kuulostaa (Gemini vertaa sokkona); UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää; KÄYTTÖLIITTYMÄ kuvakaappaus, johon muutos on piirretty. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
+
 Historiapeli = pelattava historiallinen kohde maan tasalta (Raamattu, HISTORIALLISET KOHTEET SEIKKAILUINA): Olavinlinna vuoden
 1499 linnana, Kielletty kaupunki (kesä 1923 ja lapsi-Puyin juoksupeli noin 1914) ja Gizan historiallinen versio.
 Pohja kattaa tarinan, faktapohjan, repliikit, arvoitukset ja tietokerroksen sekä niiden tarkistuksen; pelimekaniikka,
