@@ -1,61 +1,61 @@
 {
- "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-ateena-v13/ateena.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä.",
+ "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-ateena-v13/ateena.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä. Tarkistettu 19.10. klo ~12.15 tekstiä vasten: vastaukset, jotka löytyivät jo kohteen tekstistä, vaihdettu uusiin.",
  "kaupunki": "ateena",
  "kohteet": {
   "Q208811": [
    "Miksi stadion on hevosenkengän muotoinen?",
-   "Kuka maksoi stadionin jälleenrakennuksen?",
-   "Mitä nimi Kallimarmaro tarkoittaa?",
-   "Mistä vuoresta marmori louhittiin?",
+   "Kuka rakensi marmoriset istuinrivit muinoin?",
+   "Missä Ateenan maraton päättyy?",
+   "Mitä antiikin stadionille tapahtui myöhemmin?",
    "Miksi marmoriasu valmistui vasta 1906?",
    "Milloin täällä pidettiin ensimmäiset kisat?",
-   "Kenen patsas sisäänkäynnillä seisoo?",
+   "Kuka voitti maratonin vuoden 1896 kisoissa?",
    "Mitä stadionilla tapahtuu nykyään?"
   ],
   "Q1123019": [
-   "Kuinka korkeita pylväät ovat?",
+   "Millainen Zeuksen patsas temppelissä oli?",
    "Miksi pylväitä on jäljellä niin vähän?",
-   "Miksi yksi pylväs makaa maassa?",
+   "Kuka vei pylväitä Roomaan?",
    "Kuka sai temppelin lopulta valmiiksi?",
    "Mikä erottaa korinttilaisen pylvään?",
-   "Mikä portti seisoo temppelin lähellä?",
+   "Miten valtavat pylväät on koottu?",
    "Miksi rakentaminen kesti vuosisatoja?",
-   "Kuinka paksu yksi pylväs on?"
+   "Kuinka suuri temppeli oli alkuaan?"
   ],
   "Q372717": [
-   "Miksi torni on kahdeksankulmainen?",
-   "Millaisia jumalia seinillä on?",
+   "Mikä tuulijumala kuvaa pohjoistuulta?",
+   "Mihin tornia käytettiin ottomaanien aikana?",
    "Miten vesikello näytti aikaa?",
-   "Kuka tornin rakensi?",
-   "Milloin torni valmistui?",
+   "Miksi kaupunki tarvitsi yleisen kellotornin?",
+   "Kuka rahoitti roomalaisen torin rakentamisen?",
    "Mitä tornin katolla oli aikoinaan?",
    "Miksi tornin ajoitus on epävarma?",
    "Mitä muuta roomalaisella torilla on?"
   ],
   "Q395367": [
    "Mitä agoralla tehtiin muinoin?",
-   "Kuka rakennutti Attaloksen stoan?",
-   "Miksi stoa on rakennettu uudelleen?",
+   "Milloin agoran kaivaukset alkoivat?",
+   "Mitä ostrakismos-äänestyksessä tapahtui?",
    "Mitä Agora-museossa on esillä?",
-   "Mikä on stoa?",
+   "Mitä persialaiset tekivät agoralle 480 eaa.?",
    "Miten demokratia liittyy agoraan?",
    "Missä Sokrates keskusteli ihmisten kanssa?",
-   "Miksi agoran temppeli on näin ehjä?"
+   "Mikä oli agoran pyöreä Tholos-rakennus?"
   ],
   "Q756824": [
-   "Miksi temppeli on säilynyt näin ehjänä?",
-   "Mistä marmori tuotiin?",
+   "Mitä temppelin reliefit esittävät?",
+   "Kuka jakoi temppelin Hefaistoksen kanssa?",
    "Kuka oli Hefaistos?",
-   "Milloin temppelistä tuli kirkko?",
-   "Montako pylvästä temppelissä on?",
+   "Mitä temppelillä tehtiin 1830-luvun jälkeen?",
+   "Mikä erottaa doorilaisen pylvään?",
    "Miksi temppeliä sanottiin ennen Theseionksi?",
-   "Milloin rakennustyö alkoi?",
-   "Mitä kivenotto tuhosi agoralla?"
+   "Kuka veisti temppelin jumalankuvat?",
+   "Mikä kukkula temppelin alla on?"
   ],
   "Q131013": [
    "Miksi Propylaiassa on viisi ovea?",
-   "Kuka suunnitteli portin?",
-   "Miksi portin rakennus keskeytyi?",
+   "Mitä Propylaian pohjoissiivessä oli?",
+   "Mihin Propylaiaa käytettiin keskiajalla?",
    "Kuka oli Perikles?",
    "Kenelle Niken temppeli oli omistettu?",
    "Miksi portissa on kahta pylvästyyliä?",
@@ -65,17 +65,17 @@
   "Q242741": [
    "Keitä naispatsaat esittävät?",
    "Miten kuudes patsas päätyi pois Ateenasta?",
-   "Miksi alkuperäiset patsaat vietiin sisälle?",
-   "Miksi lattia on eri korkeudella?",
+   "Mikä muinainen patsas temppelissä oli?",
+   "Miksi patsaiden kaulat ovat paksut?",
    "Mikä on karyatidi?",
    "Kenelle Erekhtheion oli omistettu?",
    "Mikä pyhä puu kasvoi temppelin vieressä?",
-   "Kuinka kauan temppelin rakentaminen kesti?"
+   "Mikä erottaa ionilaisen pylvään?"
   ],
   "Q10288": [
-   "Miksi Parthenon räjähti vuonna 1687?",
-   "Millainen Athenan patsas sisällä oli?",
-   "Mikä oli temppelin alkuperäinen tehtävä?",
+   "Kuka veisti Parthenonin jumalatarpatsaan?",
+   "Mitä Parthenonin friisi esittää?",
+   "Kuinka nopeasti Parthenon rakennettiin?",
    "Missä Parthenonin veistokset ovat nyt?",
    "Kuka rakennutti Parthenonin?",
    "Miksi temppelistä tuli moskeija?",
