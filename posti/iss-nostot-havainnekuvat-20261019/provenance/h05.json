@@ -1,0 +1,46 @@
+{
+  "taskNumber": 445,
+  "code": "h05",
+  "status": "QA-complete-awaiting-mail-delivery",
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "imageProduced": true,
+  "callIssuedAt": "2026-10-19T04:43:26.948887+00:00",
+  "referencesPersonallyInspected": true,
+  "referenceObservations": "Game: dark oblique look-down, lava fissure near x0.52,y0.71 with flow toward bottom, coast/ocean left, main city-light cluster around x0.58,y0.40. First supplied real image appears near-ground/aerial despite ISS filename; use lava/crust/smoke appearance only. Landsat reference shows orange-lit irregular steam in darkness, from another eruption; no false exact reconstruction.",
+  "promptSHA256": "5ab703753ecbffee9733e073205baec7553b948f3f5595f00a41f524df3f355d",
+  "toolArgumentsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/assets/h05/tool-arguments.json",
+  "generatedAt": "2026-10-19T04:44:19.254610+00:00",
+  "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-47d5e06a-69b0-443d-afa7-745ce60424f0.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/native/h05.png",
+  "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-nostot-havainnekuvat-20261019/delivery-packet/h05.png",
+  "nativeSHA256": "a42b4f9e2e77c94d624a941866cd000281267ea9ed72692c3758eb4124576108",
+  "deliverySHA256": "52d3ca5b6c688a733edae64a58b4f04654db6e075e3deadb905b140a7a87bcbe",
+  "nativeBytes": 1841364,
+  "deliveryBytes": 1841589,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "aspect3to4": true,
+  "requestedReferenceDimensions": [
+    2064,
+    2752
+  ],
+  "pixelSHA256": "b05807fe19a4e1f3262ab76521d197cafcdcc49f8fac6d1ca1ae82534812690b",
+  "metadataOnlyAdded": true,
+  "pixelsUnchanged": true,
+  "deliveryVerified": false,
+  "qa": {
+    "personallyInspectedNative": true,
+    "visualDisposition": "requires-review-possible-residual-map-marker-and-unverified-geography",
+    "photoRealism": "Dark regional night view, narrow fissure, broken glowing lava crust and orange-lit steam; white-hot fissure core somewhat intense.",
+    "cameraMatch": "Low-central fissure, upper city cluster and coast roughly match game; exact orbital camera/scale unverified.",
+    "takenFromRealReferences": "Cracked lava crust, local orange illumination of turbulent steam, darkness beyond.",
+    "invented": "Regional light pattern/coast geometry and eruption snapshot interpreted; close-range and other-eruption references are appearance guidance, not proof of Sundhnukur historical geography.",
+    "excludedOverlays": "Frame/panels/labels/astronaut removed, BUT a small pale circular spot within the main city lights may retain the game's location marker; not accepted as clean photo without recipient review.",
+    "noRetry": true,
+    "metadataLabel": "havainnekuva"
+  }
+}
