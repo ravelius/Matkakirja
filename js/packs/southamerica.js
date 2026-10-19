@@ -310,8 +310,8 @@ export const SOUTHAMERICA = {
       star: {
         name: 'Mantan smaragdi',
         fakta: 'Ecuadorin Mantan rannikkokansa palvoi suurta smaragdia, '
-          + 'jonka Garcilaso de la Vega kuvasi melkein strutsinmunan '
-          + 'kokoiseksi. Espanjalaiset särkivät 1534 muita smaragdeja '
+          + 'jonka kronikoitsija Inca Garcilaso de la Vega kuvasi melkein '
+          + 'strutsinmunan kokoiseksi. Espanjalaiset särkivät 1534 muita smaragdeja '
           + 'vasaralla luullen niitä lasiksi, mutta tämän kiven '
           + 'paikalliset kätkivät.',
         kuva: 'assets/aarteet/aarre-southamerica-star-v2.jpg',
