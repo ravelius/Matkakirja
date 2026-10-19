@@ -1816,3 +1816,13 @@ itsessään asioita ja tee kuviin kevyt vastavalo jolloin esineet piirtyvät kau
 huudahduskokeilun jälkeen, niin testataan yhtä parhaiten toimivaa lausetta vielä muilla hahmoäänillä. nykyinen on hyvä, mutta saisi kuulostaa vielä nuoremmalle lapselle, jolla ei ole tullut vielä
 äänenmurrosta" → Äänittäjä kokoaa ehdokkaat ilman generointia, KK hakee määräluvan; huutojen generointi ja ämpäri odottavat äänitestiä, tekstit jatkuvat. PT 11.0x: SK:n kiinankielinen lista
 (f4e043b2d) Codexille 78cb6a8e4, vain kayta-ryhmä.
+
+## PAATOKSET 19.10.2026 klo 11.08–11.23: PUYIN ÄÄNI LUKITTU 08 KAVYA (omistaja KK:n korteilla, sanatarkasti) (19.10.2026 klo 11.24)
+
+Klo 11.08: "3 ja 5 olivat hauskimmat. kokeile vielä muutamia muita lisää" (Oho!, Auts!). Klo 11.09: "hoplaa on hyvä, mutta älä käytä muita. listaan kohta lisää". Klo 11.17: ehdolla 08 Kavya. Klo
+11.18: "muita: "Noin!", "Hups", "Sori!", "Katos vaan!", "Sissos!" useammassa noista on hauska ristiriita että ensin on välinpitämättömän ylpeä tekemisestään ja sitten jo seuraavassa lauseessa
+kauhistelee mitä teki" + "tee muutamia uusia ja vertaa niissä nykyistä ja tuota uutta 08 Kavya". Klo 11.23: "kavya ja muuta sori iloiseksi kiljahdukseksi, oli nyt anteeksipyytelevän kuuloinen. ja
+kokeile sissos muodossa "Sis-sos!" hämmästyneen iloisesti"; uudet alut "kaikki. ks. edellinen"; hyväksyttyjen uusinta Kavyalla "Kyllä (Suositus)". → PUYIN ÄÄNI LUKITTU (korvaa 10.44:n
+Horatius-lukituksen): ElevenLabsin kirjaston lapsiääni 08 Kavya – Cute & Engaging (bA58y3FqVI6b6gTNh0oT), tagi [shouting] [panicked], speed 1,2 natiivisti, fi pakotettu, ei jälkikäsittelyä. Huutojen
+alut: Aa!, Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori! (iloinen kiljahdus) ja Sis-sos! (hämmästyneen iloinen). Huudoissa koominen käänne: alku huoleton tai ylpeä, lause kauhistunut.
+Äänittäjä 17 + 2 ottoa (≤ 1 100 mrk, KK:n lupa).
