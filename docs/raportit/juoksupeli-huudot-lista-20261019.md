@@ -1,6 +1,6 @@
 # Juoksupeli: huudahduslista omistajan hyväksyttäväksi (Sisältökirjuri 19.10.2026)
 
-**EI generoitu.** 51 rikkoutuvaa esinettä × 4 huutoa + 30 yleishuutoa + jadepersikan 2 poimintahuutoa. Huutoja on vain YKSI versio (sama teksti kuplassa ja äänenä), kukin ≤ 39 merkkiä. Tunnetagi joka riville: `[puhuja JUOKSEE ja PARKAISEE: hengästynyt, nopea, nuori ääni]`. Avainpaketti `docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json`; generointilista (rivi + tagi) `docs/raportit/juoksupeli-huudot-generointilista-20261019.json`.
+**EI generoitu.** 51 rikkoutuvaa esinettä × 4 huutoa + 30 yleishuutoa + jadepersikan 2 poimintahuutoa. Huutoja on vain YKSI versio (sama teksti kuplassa ja äänenä), kukin ≤ 39 merkkiä. Tunnetagi joka riville: `[out of breath] [panicked] ` (Äänittäjän; = puhuja JUOKSEE ja PARKAISEE). Avainpaketti `docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json`; generointilista (rivi + tagi) `docs/raportit/juoksupeli-huudot-generointilista-20261019.json`.
 
 ## Merkkimäärät
 
@@ -23,7 +23,7 @@ Tunnetagit eivät lisää kuultavaa tekstiä. Kuplatyyppien jakauma: 1 esittely:
 | 4 | Keltalasitteinen kulho (`keltalasitteinen-kulho`) | Qing / 1700–1800-luku | 5 | „Keltainen kulho meni rikki!“ · „Maksoi varmaan sata kultakolikkoa!“ · „Hovin virkamies parkuu tästä vielä!“ · „Rapsahti! Kukaan ei nähnyt, eikö?“ |
 | 5 | Celadon-kulho (`celadon-kulho`) | Qing / 1700-luku | 2 | „Vihreä kulho on nyt palasina!“ · „Tää on varmaan kallein kulho!“ · „Palvelija hätääntyy, kulho kilahti!“ · „Voi ei! Kulho kilahti kolinalla!“ |
 | 6 | Yixing-teekannu (`yixing-teekannu`) | Qing / 1700–1800-luku | 5 | „Teekannu! Se oli oikein kallis!“ · „Varmaan maailman kallein kannu!“ · „Imettäjä parkuu, kannu hajosi!“ · „Plörinää! Tee valuu lattialle!“ |
-| 7 | Doucai-kuppi (`doucai-kuppi`) | Qing / 1700-luku | 4 | „Kuppi lensi ihan palasiksi!“ · „Hintaa varmaan tuhat hopeaa!“ · „Opettaja sanoo ettei saa juosta!“ · „Hui! Sirpaleet lentävät!“ |
+| 7 | Doucai-kuppi (`doucai-kuppi`) | Qing / 1700-luku | 4 | „Kuppi lensi ihan palasiksi!“ · „Hintaa varmaan tuhat hopeaa!“ · „Opettaja sanoo, ettei saa juosta!“ · „Hui! Sirpaleet lentävät!“ |
 | 8 | Posliininen nuuskapullo (`nuuskapullo`) | Qing / 1700–1800-luku | 7 | „Pikkupullo pirstoutui!“ · „Pieni mutta maksaa miljoonan!“ · „Palvelija etsii sirpaleita kuukauden!“ · „Atsiuh! Pullo pomppasi!“ |
 | 9 | Kalakulho (`kalakulho`) | Qing / 1700-luku | 7 | „Kalakulho meni palasiksi!“ · „Kolme miljoonaa kultakalaa karkuun!“ · „Hovimestari kysyy, minne kalat meni!“ · „Läiskis! Vettä joka paikassa!“ |
 | 10 | Tuoksupoltin (`tuoksupoltin`) | Qing / 1700-luku | 8 | „Tuoksupoltin kolahti lattiaan!“ · „Varmaan kaksituhatta vuotta vanha!“ · „Keisarinnaäiti haistaa ongelman jo!“ · „Pöyh! Tuhka lentää kaikkialle!“ |
@@ -33,7 +33,7 @@ Tunnetagit eivät lisää kuultavaa tekstiä. Kuplatyyppien jakauma: 1 esittely:
 | 14 | Ruyi-valtikka (`ruyi-valtikka`) | Qing / 1700-luku | 4 | „Ruyi-valtikka katkesi kahtia!“ · „Varmaan onnekkain valtikka ikinä!“ · „Hovimestari huokaa: onni hajosi!“ · „Rits! Onni on poikki!“ |
 | 15 | Mughal-jadekuppi (`mughal-jadekuppi`) | Mughal-tyyli / tuotu 1700-luvulla | 4 | „Jadekuppi! Kilahti kuin kello!“ · „Tää maksoi varmaan tuhat hevosta!“ · „Hovin virkamies pyörtyy kohta!“ · „Kling-klang!“ |
 | 16 | Muinainen bi-kiekko (`bi-kiekko`) | Liangzhu / n. 3400–2250 eaa. | 3 | „Reikäkiekko! Kuin jättikeksi!“ · „Tää on varmaan viisituhatta vuotta!“ · „Opettaja suuttuu, tämä oli vanha!“ · „Huh, vierähti kuin pyörä!“ |
-| 17 | Norsunluinen kerrospallo (`norsunluupallo`) | Qing / 1700-luku | 7 | „Pallo pallon sisällä! Pyörii vielä!“ · „Tää maksoi varmaan sata norsua!“ · „Imettäjä parkuu, pallot sekaisin!“ · „Hui! Pyörii pitkin lattiaa!“ |
+| 17 | Norsunluinen kerrospallo (`norsunluupallo`) | Qing / 1700-luku | 7 | „Pallo pallon sisällä! Pyörii vielä!“ · „Tää maksoi varmaan sata kamelia!“ · „Imettäjä parkuu, pallot sekaisin!“ · „Hui! Pyörii pitkin lattiaa!“ |
 | 18 | Duan-mustekivi (`duan-mustekivi`) | Qing / 1644–1912 | 3 | „Violetti mustekivi! Pam!“ · „Tää on varmaan tutkijan kallein aarre!“ · „Opettaja huokaa: nyt ei voi kirjoittaa!“ · „Apua, kivi meni kahtia!“ |
 | 19 | Bianqing-kivisoitin (`bianqing-kivikellot`) | Qing / 1760-luku | 5 | „Kivilevyt roikkuvat! Tai roikkuivat!“ · „Varmaan soitettu jo tuhat vuotta!“ · „Keisarinnaäiti pitää korvat tukossa!“ · „Kolisi! Tuli oma konsertti!“ |
 | 20 | Jadekirja (`jadekirja`) | Qing / 1700-luku | 6 | „Kirja, jonka sivut on kiveä!“ · „Painaa varmaan sata kiloa!“ · „Hovin virkamies kiljuu: sivut sekaisin!“ · „Plink-plonk! Sivut kilisee!“ |
@@ -61,13 +61,13 @@ Tunnetagit eivät lisää kuultavaa tekstiä. Kuplatyyppien jakauma: 1 esittely:
 | 42 | Mantšun vyöveitsisarja (`mantsun-veitsisarja`) | Qing / 1700–1800-luku | 1 | „Veitset ja puikot, kaikki lentävät!“ · „Tämä on varmaan sadan sotilaan vyöltä!“ · „Opettaja huokaa: ei leikkikalu!“ · „Plik-plak, puikot pitkin lattiaa!“ |
 | 43 | Palatsilyhty (`palatsilyhty`) | Qing / 1644–1911 | 8 | „Lyhty! Nyt tuli pimeä!“ · „Tämä paloi varmaan sata uutta vuotta!“ · „Palvelija valittaa, sytytti sen just!“ · „Pläts! Bambut ritisivät!“ |
 | 44 | Linnunhäkki (`linnunhakki`) | Qing / 1700-luku | 7 | „Häkki! Missä lintu on?“ · „Kultalintu maksoi varmaan miljoonan!“ · „Qianlong ihaili näitä. Nyt kasa!“ · „Piip! Lintu lähti lentoon!“ |
-| 45 | Hovin metallipeili (`metallipeili`) | Qing / 1700-luku | 1 | „Peili! Näin itseni nurinpäin!“ · „Peili on varmaan tuhat vuotta vanha!“ · „Keisarinnaäiti kysyy, kuka rikkoi sen“ · „Kilahdus! Nyt näen itseni sirpaleina“ |
+| 45 | Hovin metallipeili (`metallipeili`) | Qing / 1700-luku | 1 | „Peili! Näin itseni nurinpäin!“ · „Peili on varmaan tuhat vuotta vanha!“ · „Keisarinnaäiti kysyy, kuka rikkoi sen?“ · „Kilahdus! Nyt näen itseni sirpaleina!“ |
 | 46 | Hattulaatikko (`hattulaatikko`) | Qing / 1800-luku | 1 | „Hattulaatikko! Hatut tippuvat!“ · „Siinä oli varmaan sata hattua!“ · „Hovin virkamies ei löydä hattuaan nyt!“ · „Pomp, kesähattu vierii talvihatun alle!“ |
 | 47 | Sirkka-astia (`sirkka-astia`) | Qing / 1910-luku | 7 | „Sirkka-astia! Sirkat karkasivat!“ · „Se oli lempisirkkani koti!“ · „Imettäjä kiljuu, sirkka hameessa!“ · „Tsirp-tsirp, sirkat sinkoilevat!“ |
-| 48 | Lasiset go-kivet (`lasiset-go-kivet`) | Qing / 1700-luku | 7 | „Go-kivet! Ne vierivät kaikkialle!“ · „Nämä maksoivat varmaan miljoonan!“ · „Hovimestari kerää kiviä koko yön“ · „Klik-klik-klik, sateenkaarikiviä!“ |
+| 48 | Lasiset go-kivet (`lasiset-go-kivet`) | Qing / 1700-luku | 7 | „Go-kivet! Ne vierivät kaikkialle!“ · „Nämä maksoivat varmaan miljoonan!“ · „Hovimestari kerää kiviä koko yön!“ · „Klik-klik-klik, sateenkaarikiviä!“ |
 | 49 | Zitan-jakkara (`zitan-jakkara`) | Qing / 1700-luku | 1 | „Jakkara! Nyt saa seistä!“ · „Puu on varmaan kovempaa kuin kivi!“ · „Esi-isät suuttuvat, heidän jakkaransa!“ · „Rämps! Pyllylleni se vei!“ |
-| 50 | Tinakannu (`tinakannu`) | Qing / 1644–1911 | 1 | „Tinakannu! Kolahti kovaa!“ · „Tämä on varmaan maailman paras kannu!“ · „Palvelija marisee, kun teet valuivat“ · „Dong! Kaikki kuulivat sen!“ |
-| 51 | Hovinaisen hiustanko (`hiustanko-liangbatou`) | Qing / 1800-luku | 1 | „Hiustanko! Kampaus meni sekaisin!“ · „Tämä on varmaan norsunluuta, miljoona!“ · „Keisarinnaäiti suuttuu, tanko oli hänen“ · „Tink! Tanko vierii pöydän alle!“ |
+| 50 | Tinakannu (`tinakannu`) | Qing / 1644–1911 | 1 | „Tinakannu! Kolahti kovaa!“ · „Tämä on varmaan maailman paras kannu!“ · „Palvelija marisee, kun tee valui!“ · „Dong! Kaikki kuulivat sen!“ |
+| 51 | Hovinaisen hiustanko (`hiustanko-liangbatou`) | Qing / 1800-luku | 1 | „Hiustanko! Kampaus meni sekaisin!“ · „Kultaa ja helmiä, varmaan miljoona!“ · „Keisarinnaäiti suuttuu, tanko oli hänen!“ · „Tink! Tanko vierii pöydän alle!“ |
 
 ## Yleishuudot (30, toistoihin; ei kuplaa)
 
@@ -447,3 +447,9 @@ Kuvaohje kaikille: REALISTINEN VÄRIVALOKUVA kaikissa kuplissa (ei piirros, maal
 - Sirkka-astia on Puyin muistelmasta (hän kasvatti sirkkoja vanhoissa posliinikulhoissa), ei museoesine.
 - Liioittelevat arvaukset huudoissa ("varmaan miljoonan") ovat lapsen leikkiä, eivät faktoja.
 
+
+## KK-korjaukset 51-listaan (viety 19.10.)
+
+8 riviä korjattu (norsuviittaukset pois: „sata kamelia“, „Kultaa ja helmiä“; loppuvälimerkit; kielioppi). **Tunnetagin kanssa** noin 12 970 merkkiä (236 riviä × 27 + 6 588) → omistajalle cap 13 000.
+
+**Näkyvyys:** kuplan alla vain nimi + dynastia + vuosi; huuto kuuluu äänenä (teksti vain, jos pelin yleinen tekstitysasetus on päällä).
