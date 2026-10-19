@@ -1,0 +1,124 @@
+{
+  "files": [
+    {
+      "path": "01-posliinimaljakko.png",
+      "bytes": 2137098,
+      "sha256": "d62262759876268173013a272147fc76e00f7984cfcc605e9839765e6d2b5820"
+    },
+    {
+      "path": "02-sinivalkoinen-maljakko.png",
+      "bytes": 2106545,
+      "sha256": "19942ecd73fc6427d90fb0d5618da73d910d5054b043166031aeaf7206ddd7df"
+    },
+    {
+      "path": "03-famille-rose-maljakko.png",
+      "bytes": 2042464,
+      "sha256": "9d10d26519c056bb257173a4c288e9219a27dddaf7ad4d6f4d16b5dfb2ce0578"
+    },
+    {
+      "path": "04-keltalasitteinen-kulho.png",
+      "bytes": 2144686,
+      "sha256": "3031fba1331f8722e38b73c6ba524822da12171adbab6a9c36d5ed2629840732"
+    },
+    {
+      "path": "05-celadon-kulho.png",
+      "bytes": 1955243,
+      "sha256": "dc41d76b8a435bfb67dfcf24947ec433c4258563c2eceff6c0b84c7dae738731"
+    },
+    {
+      "path": "06-yixing-teekannu.png",
+      "bytes": 2231255,
+      "sha256": "f3598985e5f57fcd94c69c8147c8fa8d150613063a94a37bd0b1a5233228a356"
+    },
+    {
+      "path": "07-doucai-kuppi.png",
+      "bytes": 2001138,
+      "sha256": "624abeed13d1555e64d31d27aa3ab914f2f1e5da3df7cf48839ea36ca44f34ab"
+    },
+    {
+      "path": "08-nuuskapullo.png",
+      "bytes": 1997863,
+      "sha256": "e67dde4b8c36aa4e40bca869f644f40d00e7223efe632c443c3ea5d0a594dd3d"
+    },
+    {
+      "path": "09-kalakulho.png",
+      "bytes": 2663723,
+      "sha256": "0335d5fffa071a1aa6b8608db54cbe4b90d2ef0c95b63ad92409945e2375485d"
+    },
+    {
+      "path": "10-tuoksupoltin.png",
+      "bytes": 2044447,
+      "sha256": "9a3b09448a79645c26551a62833d61b78437f2c8c98053baf5881e7dd7a71982"
+    },
+    {
+      "path": "11-jadeastia.png",
+      "bytes": 1939713,
+      "sha256": "571496c9454c829e9fd0c438779ecf5b5c8bda3c170689b927438540fd6bce06"
+    },
+    {
+      "path": "12-jadesinetti.png",
+      "bytes": 1971367,
+      "sha256": "c2fe20fd7d329082edc38c326ff0ba23c8668798a68436174bd6416b3019d5ad"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 169191,
+      "sha256": "f8e0711703191843ee2431c6818e747b5d53c2f0b00358e3564fadc0fe7560a6"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 116937,
+      "sha256": "274ef606837ccb52d92cbe141093998e84ff0cfaf5914d0d39de587f52b355d7"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 4343,
+      "sha256": "af1c0f6bc57c46678db5b9bf9df112ddcf47e2bc35b9a6c9fffebdf9a6be5709"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 14811,
+      "sha256": "7ec5fad704df9c279522a2bee33fccf61b13b72bb92bac4d669f530b167c4303"
+    },
+    {
+      "path": "SOURCE-INVENTORY.json",
+      "bytes": 28932,
+      "sha256": "a3db2a9bc7d181d4edf8375805200720bf4153eb553061acafa289ab0a371ea4"
+    },
+    {
+      "path": "qa/160px-wide-feather.json",
+      "bytes": 466,
+      "sha256": "817f895109a3d741a1adf228a679d7afe7a1fcd621c91a3a7a7375133efc1144"
+    },
+    {
+      "path": "qa/160px-wide-feather.png",
+      "bytes": 551169,
+      "sha256": "da8f52102cd60f39f2eba3ff9f02b2b47f27d2e899957620630732f883463d41"
+    },
+    {
+      "path": "sources/juoksupeli-huudot-lista-20261019.md",
+      "bytes": 49226,
+      "sha256": "8c183579bdda90bee2b59c623249bb80fbaf6c592c49d1725ab80842e7a787fb"
+    },
+    {
+      "path": "sources/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+      "bytes": 73992,
+      "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-loput-20261019.md",
+      "bytes": 1013,
+      "sha256": "8c13430dff4e22e9ee0bf883a1de001e216d2e77a7086bc923479cd51bed4ec8"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v3-kuittaus-20261019.md",
+      "bytes": 1266,
+      "sha256": "4c697d0da0b2b2bda596e8894972d44976d40e19f728b076111de1d243a42e02"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-muistokuplat-v4-lisays-20261019.md",
+      "bytes": 1752,
+      "sha256": "fb6e7204f654b4546d65c76830fec508d6e1eeb0dff1f261a3fd4e668dc8977f"
+    }
+  ]
+}
