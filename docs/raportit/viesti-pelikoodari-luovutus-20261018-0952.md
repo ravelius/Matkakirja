@@ -76,3 +76,9 @@ wt/proto-pelikoodari-galleria, -esikatselu, -tivoli-vapaa-lento-200, wt/pelikood
 - B6+B7 automaattiset testit valmiit: proto pelikoodari/iss-nopeus-204 58cabb404 (NopeusVipuTestit, IssEtsinTestit.LentotilanNipistys…,
   vivun ±1×-reunan korjaus; Linssit-testit 2092/2092, tarkista.sh 0). Kuitattu PT:lle → NS junaan 204.
 - Avoin PT:lle/KK:lle: iPadin vivun fyysinen pituus (nykyinen vai pidempi vipu + uusi pohjarender). Ei laitetestejä.
+- JUNA 204 LISÄT (PT 07.3x): proto pelikoodari/iss-c2-204 d2c30b96e (wt/proto-pelikoodari-iss-nopeus-204, ⊃ 58cabb404): C2 8cdc917af (vain Cupolan
+  näkymä mustaan), B2 IssKameraKuva.Peruuta() 9a8e797ec (NUI:lle kerrottu), C4 d2c30b96e (kehittäjälle maksulliset aina; aiheuttaja 357069b3d;
+  valvova testi KehittajanMaksutTestit). Kuitattu PT:lle → NS junaan 204.
+- JUOKSUPELI (PT 07.3x; omistaja 07.20 "ei pyydetä mitään muutoksia" Codexilta): proto pelikoodari/juoksupeli-202 dd7009250 Puyi v7 + vartija
+  hahmoina (JuoksuHahmot, GlbLeikeLainaus, JuoksuLiikkeet). Vientipaketti proto-3d/_valmiit/juoksupeli-hahmot-v1-vienti-20261019 → JU:n
+  vie-paketti.sh pyydetty. Seuraavaksi rata 1 (RATA1-SUUNNITELMA.md) samaan haaraan. Kääntö (KaantoAste 180) ja mitoitus todentamatta laitteella.
