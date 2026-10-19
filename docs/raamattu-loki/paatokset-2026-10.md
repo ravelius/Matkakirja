@@ -1763,3 +1763,7 @@ ovi maahan joka huoneesta, mätä omena horjauttaa vartijan, värähdys per napa
 ## PAATOKSET 19.10.2026 klo 09.13–09.2x (KK:n välittämät) (19.10.2026 klo 09.24)
 
 Juoksupeli: paperilohikäärmeet kahtena lajina, yleinen punainen +1/3 viitta-energiaa, harvinainen keisarillisen keltainen täyttää (09.13, 'Sopii.' 09.14). Herkullinen omena +1/10 elinvoimaa, harvinainen jade-esine täysiin elinvoimiin (09.19). Rikkoutuvia arvoesineitä paljon (1. erä 40); Puyi huudahtaa rikkomastaan esineestä, useita repliikkejä per esine, historiallista opetustietoa (09.19). Rikkoutunut esine näkyy ehjänä muistokuplassa iloisen opettajan tai hovin ihmisen kädessä; kuplan alla dynastia ja vuosi (09.2x). Keisarin koeäänet: tasan 10 ottoa, 1 020 merkkiä, ElevenLabsin parhaat poikaäänet kielestä riippumatta, suomi pakotettuna (09.22).
+
+## PAATOS 19.10.2026 klo 09.29 (kortti) (19.10.2026 klo 09.29)
+
+Juoksupelin täyden elinvoiman esine on vihreä jadeinen pitkäikäisyyden persikka (harvinainen); herkullinen omena antaa 1/10. Codexille 6cc488185.
