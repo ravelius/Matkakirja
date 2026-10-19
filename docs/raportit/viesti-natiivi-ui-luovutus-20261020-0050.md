@@ -34,6 +34,11 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   SIMU NYT jonon lopussa (VS → KS → PK → NUI).
 - JU 01.0x (PT 01.04, kuorma/swap): museo-iss-207 POISTETTU käännösjonosta; käännetään muistiajo 206:n, juoksupelin ja LS:n jälkeen → JU ilmoittaa KÄÄNNETTY. Skenaariot museo-valikot-207.txt ja iss-207.txt (aja kummankin haaran worktreestä).
 
+- 01.4x odotusajan erä (PT 01.2x): iss-207 kärki **17acd9b04** = vartija Linssit-testit/Testit/IssPimeanKauttaTestit.cs (kaikki UI:n
+  Cupolan lennot PimeanKautta-portin kautta; mutaatiokoe kaatuu; 3/3) – vain testi, käännös 81be0b791:stä kelpaa. Ajoskripti valmiina:
+  `zsh /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ajo-museo-iss-207.zsh` (museo + ISS, iPhone + iPad; lokit
+  proto-3d/lokit/natiivi-ui-ajot-207/) → AJA HETI JU:n SIMU NYT:sta.
+
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
 - palsta-haku 03deb7b16 + SK #5015 tekstit e4c33a4fe → juna 206.
 - varjostimet 28ef55f1e (kokoelma 53 varianttia/57 tilaa, Cupolan pisin ruutu 1200 → 500 ms) → juna 206 (lokit/todistus-varjostimet2-b3-ipad-…/TULOS-NUI.md).
