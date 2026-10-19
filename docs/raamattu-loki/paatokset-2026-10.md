@@ -1920,3 +1920,7 @@ Omistajan kortti KK:ssa: Mantan smaragdi uneen (Suositus) = unen teksti kirjoite
 ## PAATOKSET 19.10.2026 klo 17.05: Olavinlinna tauolle (19.10.2026 klo 17.06)
 
 Omistaja KK:ssa sanatarkasti: "Olavin linnan voi laittaa toistaiseksi tauolle, jos se nopeuttaa muiden projektien kehitystä." PT ja KK: ehto täyttyy (käännös- ja simuvuorot sekä Codex ovat pullonkaulat). Linnaan ei uusia eriä, käännöksiä, simuja eikä Codex- tai Tripo-tilauksia; tila tallennetaan docs/raportit/olavinlinna-valmiiksi-lista-20261019.md:hen, jotta työ jatkuu samasta kohdasta. Purkaa 19.10. klo 08.32 tauon purun. Linna ei ole junan 204 ehto.
+
+## PAATOKSET 19.10.2026 klo 17.09: Juna 204 ilman Laitetestaajan kierrosta (19.10.2026 klo 17.10)
+
+Omistaja KK:ssa sanatarkasti: "Seuraavan junan voi julkaista ilman testejä. Katso ne kuitenkin itse heti läpi, niin se on nopeampaa." Tulkinta (KK ja PT): koskee junaa 204; Laitetestaajan kierros (9.11) jää tältä junalta pois, automaattiset käännöstarkistukset ajetaan kuten aina. PT katsoo jokaisen jäljellä olevan ehdon simutodisteet (iPhone ja iPad) heti valmistuttua ja lähettää polut KK:lle, joka kertoo vain ongelmista. Viimeisen ehdon jälkeen LUKITSE 204 ja TF suoraan ulkoisille. Poikkeus vain junaan 204.
