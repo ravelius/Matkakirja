@@ -1805,3 +1805,14 @@ jatkaa erillä (enemmän posliinia, kiinan sanoja). Kiinankieliset kirjoitukset 
 ## PAATOKSET 19.10.2026 klo 10.40–10.44: Puyin ääni lukittu, uniefekti hyväksytty (19.10.2026 klo 10.45)
 
 Klo 10.40 tagikokeilusta (sanatarkasti): "6 ja 9 olivat parhaat. voisi kokeilla vielä toisella repliikillä ja alkuun voi lisätä pelkän huudon "aa!" tai "eei!!"" → 4 ottoa. Klo 10.44 (kortti): "11 ja 13 parhaat." → PUYIN ÄÄNI LUKITTU: 23 Horatius – Energetic Character Voice, tagi [shouting] [panicked], alkuun "Aa!" tai "Eei!!". Aaltoilu "Sopii (Suositus)" → muistokuplan uniefekti (PK 0956ff99f, 0,7 s) junaan 204. "generoi uusia repliikkejä noilla kahdella valitsemallani tavalla ja generoi muutama pelkkä geneerinen huudahdus myös listasta" → Äänittäjä 26 ottoa (≤ 1 400 mrk); koko huutolistan generointi vasta, kun omistaja on hyväksynyt erät ja määrän. Ääniefektien ja musiikin suunnittelu alkaa (Äänittäjä, luvat KK:n kautta).
+
+## PAATOKSET 19.10.2026 klo 10.58–11.02 (omistaja KK:n kortilla, sanatarkasti) (19.10.2026 klo 11.03)
+
+1) Puyin huudon alku: "aa on parempi, täytyy kokeilla Eei! tilalle pelkkää "ei!" sekä kokeilla muutamaa muuta myös. generoi yksi lause jokaista eri alkua kohden" → erä 1 rivit 01–10 (Aa!) hyväksytty,
+11–20 pois; Äänittäjälle 5 alkukokeilua (≤ 350 mrk, KK). 2) Yleishuudot 21–26: "Kelpaavat (Suositus)". 3) TEKSTITYS: "Kyllä, yksi asetus (Suositus)" → ⚙-rattaaseen yksi Tekstitys-asetus koko peliin
+(museo, Ihmisen matka, Puyin huudot), teksti tekstityskaistaleella, ei kuvan päällä (Pelikoodari). 4) Muistokuplat 10.58: "kaikki kuvat pitää olla oikassa ympräistössä kuvattuja. tehdään tiloista vain
+vaaleita. ja muista käyttää paljon vanhoja ihmisiä opettajina joilla jo harmaantuneita hiuksia yms. luonnostaan. ja kuvat sen verran läheltä että syväterävyys pysyy pehmeänä mikä vaalentaa jo
+itsessään asioita ja tee kuviin kevyt vastavalo jolloin esineet piirtyvät kauniimmin ja tausta vaalenee myös sitä kautta" → Codex 4b7e51f07. 5) Ääni 11.02: "ennenkuin tehdään ääniä pidemmälle
+huudahduskokeilun jälkeen, niin testataan yhtä parhaiten toimivaa lausetta vielä muilla hahmoäänillä. nykyinen on hyvä, mutta saisi kuulostaa vielä nuoremmalle lapselle, jolla ei ole tullut vielä
+äänenmurrosta" → Äänittäjä kokoaa ehdokkaat ilman generointia, KK hakee määräluvan; huutojen generointi ja ämpäri odottavat äänitestiä, tekstit jatkuvat. PT 11.0x: SK:n kiinankielinen lista
+(f4e043b2d) Codexille 78cb6a8e4, vain kayta-ryhmä.
