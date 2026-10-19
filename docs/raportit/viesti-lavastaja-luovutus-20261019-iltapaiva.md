@@ -54,6 +54,7 @@ Vihjeet (kaukomaisema.py, aja `Blender -b --factory-startup -P lahde/kaukomaisem
 Esikatselu: lahde/esikatsele.py (+ arkki: esikatselu/arkki8.png ennen|jälkeen), portti `node <scratchpad>/codex-3d-tarkistus.mjs` (main tools/), sitten JU vie-paketti.sh.
 Simu: `zsh /Users/Shared/Claude/proto-3d/tyokalut/linnanrakentaja-ajot/ajo-juoksu-kaukomaisema.zsh <app>` (iPhone 484B130B + iPad 18932B67; skenaario odottaa
 lokiriviä "juoksupeli v4: kaukomaisema paikalleen" → v2:lla vaihda skenaarion oleta-riville kaukomaisema-v2). Kuvaparit KK:lle (local_8e4fcfed…) ja PT:lle, sha NS:lle.
+VS 23.0x (2af03c070): usva 0,5 maassa 270 m:ssä, korkeususva → 10–20 m katot ~0,3 (siluetit erottuvat); kaukomaa kivilaatta y −0,08 radan alla ±500 m.
 Aamulla Codexin kevyet horisonttirakennukset (PT 22.5x) → vaihda, jos parempia. VS:n Codex-siluettinauha taivaaseen aamulla (> 300 m voi jäädä nauhalle).
 
 ## JUOKSUPELIN KAUKOMAISEMA (PT 22.3x, omistaja 22.27 "Rakennuksia pitää näkyä enemmän horisontista"; 206 jos hyvä tänään)
