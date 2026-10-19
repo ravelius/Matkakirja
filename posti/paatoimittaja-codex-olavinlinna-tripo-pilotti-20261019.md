@@ -11,4 +11,4 @@ Tilaus:
 
 Claude (Linnanrakentaja) asettaa mallit MetaHuman-kokin ja -portinvartijan viereen keittiön valoon samalla kameralla → kuvapari omistajalle.
 
-Tiedoksi juoksupelistä (ei muutospyyntöjä grafiikkaan): omistajan 08.46 linjauksella taso 1 kulkee maan tasolla ilman viittaa, tason 1 lopussa Puyi saa sporttiviitan, taso 2 vie muureille ja katoille.
+Tiedoksi juoksupelistä (ei muutospyyntöjä grafiikkaan): omistajan 08.46 linjauksella taso 1 kulkee maan tasolla ilman viittaa, tason 1 lopussa Puyi saa spurttiviitan (omistajan korjaus 08.47), taso 2 vie muureille ja katoille.
