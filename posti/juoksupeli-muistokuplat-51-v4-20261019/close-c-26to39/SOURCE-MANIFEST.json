@@ -1,0 +1,50 @@
+{
+  "sourceOrder": 536,
+  "correctionTaskNumbers": [
+    564
+  ],
+  "authoritativeMainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "latestCompositionSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe",
+    "sha256": "103bb93507ece700362a0aa9ea2bcf25b95f228a87e6798903ee9bcd5b83949f",
+    "readInFull": true
+  },
+  "readInFull": true,
+  "files": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/inventory-51.json",
+      "sha256": "cee1ca522f3da2219757d0dbaf66b438a2d6e3dac9012e6a45d8eb30eb08f5a6"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/PRODUCTION-GUIDE.md",
+      "sha256": "6e1cd38455010df48f1fc3fcce6aa4f0de117ba0705580dbe086dd89e96c06cf"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/sources/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+      "sha256": "103bb93507ece700362a0aa9ea2bcf25b95f228a87e6798903ee9bcd5b83949f"
+    }
+  ],
+  "canonicalInventoryBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+  "canonicalInventorySourceSHA256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+  "placeRule": "Use exact sourceItem/placeEvidence; unnamedfoundry/workshop/hall/courtyard remainsunnamed; Yuqing only35/38lessons",
+  "primaryMuseumShapeResearch": [
+    {
+      "subject": "Qingming silk rivercity painting",
+      "url": "https://www.dpm.org.cn/collection/paint/228226.html",
+      "observation": "Bridge/boats/rivercity physically painted on silk. Museum length528cm conflicts canonical525cm; no numericdimensionclaim added to picture or canonicaltext."
+    },
+    {
+      "subject": "Writing automaton clock",
+      "url": "https://ggzl.dpm.org.cn/pages/exhibit_works/details?id=5861",
+      "observation": "Surviving specimen is a large mechanical writing clock; generatedscene symbolic presentation, no measuredreplica/scale/historicaleventclaim."
+    },
+    {
+      "subject": "Falangcai open porcelain bowl",
+      "url": "https://www.dpm.org.cn/Uploads/pdf/4246/T00120_00.pdf",
+      "observation": "Open bowl with peony enamel painting, not wired cloisonne or tall jar."
+    }
+  ],
+  "museumReferencePixelsUsed": false
+}

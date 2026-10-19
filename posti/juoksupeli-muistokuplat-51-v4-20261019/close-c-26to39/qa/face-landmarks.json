@@ -1,0 +1,134 @@
+{
+  "method": "Manually selected approximate eye/mouth pixel points from personally inspected100%-scale QAgrid; not automatic landmark detector. Formula precise for these recorded points; selection uncertainty about10px.",
+  "width": 1086,
+  "height": 1448,
+  "innerRadius": 0.45,
+  "outerRadius": 1,
+  "formula": "r=sqrt(((x+.5-W/2)/(W/2))^2+((y+.5-H/2)/(H/2))^2); alpha=1-smoothstep(.45,1,r)",
+  "records": {
+    "26-kullattu-vesiastia": {
+      "vasen_palvelija_ulompi_silma": {
+        "manualPixelPoint": [
+          314,
+          447
+        ],
+        "radius": 0.5682724447886708,
+        "smoothstepAlpha": 0.8811604222155729
+      },
+      "vasen_palvelija_sisempi_silma": {
+        "manualPixelPoint": [
+          376,
+          462
+        ],
+        "radius": 0.4737916365344307,
+        "smoothstepAlpha": 0.994548248719766
+      },
+      "virkamies_vasen_silma": {
+        "manualPixelPoint": [
+          505,
+          431
+        ],
+        "radius": 0.40986565427304267,
+        "smoothstepAlpha": 1
+      },
+      "virkamies_oikea_silma": {
+        "manualPixelPoint": [
+          568,
+          429
+        ],
+        "radius": 0.4094698230677989,
+        "smoothstepAlpha": 1
+      },
+      "oikea_palvelija_sisempi_silma": {
+        "manualPixelPoint": [
+          713,
+          473
+        ],
+        "radius": 0.4672321304920756,
+        "smoothstepAlpha": 0.9971165896641753
+      },
+      "oikea_palvelija_ulompi_silma": {
+        "manualPixelPoint": [
+          756,
+          451
+        ],
+        "radius": 0.5442959239703906,
+        "smoothstepAlpha": 0.9218967154880592
+      },
+      "vasen_palvelija_suu": {
+        "manualPixelPoint": [
+          333,
+          486
+        ],
+        "radius": 0.5064247965729359,
+        "smoothstepAlpha": 0.9705850374446402
+      },
+      "virkamies_suu": {
+        "manualPixelPoint": [
+          541,
+          475
+        ],
+        "radius": 0.34324316044117503,
+        "smoothstepAlpha": 1
+      },
+      "oikea_palvelija_suu": {
+        "manualPixelPoint": [
+          748,
+          495
+        ],
+        "radius": 0.49278285760706125,
+        "smoothstepAlpha": 0.9827888918012567
+      }
+    },
+    "37-viuhka": {
+      "vasen_ulompi_silma": {
+        "manualPixelPoint": [
+          383,
+          458
+        ],
+        "radius": 0.46985158299268587,
+        "smoothstepAlpha": 0.9961857587551394
+      },
+      "vasen_sisempi_silma": {
+        "manualPixelPoint": [
+          429,
+          450
+        ],
+        "radius": 0.431735407592163,
+        "smoothstepAlpha": 1
+      },
+      "oikea_sisempi_silma": {
+        "manualPixelPoint": [
+          813,
+          588
+        ],
+        "radius": 0.532154724891985,
+        "smoothstepAlpha": 0.9397294181842218
+      },
+      "oikea_ulompi_silma": {
+        "manualPixelPoint": [
+          868,
+          610
+        ],
+        "radius": 0.6196075481961388,
+        "smoothstepAlpha": 0.7733614855999004
+      },
+      "vasen_suu": {
+        "manualPixelPoint": [
+          410,
+          500
+        ],
+        "radius": 0.3934970180594118,
+        "smoothstepAlpha": 1
+      },
+      "oikea_suu": {
+        "manualPixelPoint": [
+          839,
+          655
+        ],
+        "radius": 0.5541767891571618,
+        "smoothstepAlpha": 0.9059599988846609
+      }
+    }
+  }
+}
