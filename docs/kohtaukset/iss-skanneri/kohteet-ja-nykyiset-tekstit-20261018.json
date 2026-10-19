@@ -10843,7 +10843,7 @@
   },
   {
    "tunnus": "v-ouro-preto",
-   "nimi": "Ouro preto",
+   "nimi": "Ouro Preto",
    "lat": -20.385,
    "lon": -43.504,
    "tyyppi": "vuoristo_maisema_60km"
@@ -10864,7 +10864,7 @@
   },
   {
    "tunnus": "v-alice-springs",
-   "nimi": "Alice springs",
+   "nimi": "Alice Springs",
    "lat": -23.7,
    "lon": 133.867,
    "tyyppi": "kaupunki_tai_paikka_60km"
@@ -10878,14 +10878,14 @@
   },
   {
    "tunnus": "v-mount-isa",
-   "nimi": "Mount isa",
+   "nimi": "Mount Isa",
    "lat": -20.725,
    "lon": 139.495,
    "tyyppi": "kaupunki_tai_paikka_60km"
   },
   {
    "tunnus": "v-coober-pedy",
-   "nimi": "Coober pedy",
+   "nimi": "Coober Pedy",
    "lat": -29.014,
    "lon": 134.755,
    "tyyppi": "kaupunki_tai_paikka_60km"
@@ -10915,7 +10915,7 @@
   },
   {
    "tunnus": "v-al-kufra",
-   "nimi": "Al kufra",
+   "nimi": "Al-Kufra",
    "lat": 24.183,
    "lon": 23.283,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11002,7 +11002,7 @@
   },
   {
    "tunnus": "v-dinaariset-alpit",
-   "nimi": "Dinaariset alpit",
+   "nimi": "Dinaariset Alpit",
    "lat": 43.599,
    "lon": 17.999,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11037,7 +11037,7 @@
   },
   {
    "tunnus": "v-grand-canyon",
-   "nimi": "Grand canyon",
+   "nimi": "Grand Canyon",
    "lat": 36.097,
    "lon": -112.095,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11065,14 +11065,14 @@
   },
   {
    "tunnus": "v-japanin-alpit",
-   "nimi": "Japanin alpit",
+   "nimi": "Japanin Alpit",
    "lat": 36.0004,
    "lon": 137.9,
    "tyyppi": "vuoristo_maisema_60km"
   },
   {
    "tunnus": "v-kaakkois-australian-ylangot",
-   "nimi": "Kaakkois-australian ylängöt",
+   "nimi": "Kaakkois-Australian ylängöt",
    "lat": -35.8008,
    "lon": 148.001,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11163,14 +11163,14 @@
   },
   {
    "tunnus": "v-lansi-ghatit",
-   "nimi": "Länsi-ghatit",
+   "nimi": "Länsi-Ghatit",
    "lat": 14.5007,
    "lon": 74.801,
    "tyyppi": "vuoristo_maisema_60km"
   },
   {
    "tunnus": "v-machu-picchu",
-   "nimi": "Machu picchu",
+   "nimi": "Machu Picchu",
    "lat": -13.163,
    "lon": -72.546,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11184,7 +11184,7 @@
   },
   {
    "tunnus": "v-milford-sound",
-   "nimi": "Milford sound",
+   "nimi": "Milford Sound",
    "lat": -44.617,
    "lon": 167.867,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11240,7 +11240,7 @@
   },
   {
    "tunnus": "v-rub-al-khali",
-   "nimi": "Rub al-khali",
+   "nimi": "Rub al-Khali",
    "lat": 20.495,
    "lon": 50.999,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11268,21 +11268,21 @@
   },
   {
    "tunnus": "v-sierra-madre-occidental",
-   "nimi": "Sierra madre occidental",
+   "nimi": "Sierra Madre Occidental",
    "lat": 26.0011,
    "lon": -106.501,
    "tyyppi": "vuoristo_maisema_60km"
   },
   {
    "tunnus": "v-sierra-madre-oriental",
-   "nimi": "Sierra madre oriental",
+   "nimi": "Sierra Madre Oriental",
    "lat": 23.401,
    "lon": -99.601,
    "tyyppi": "vuoristo_maisema_60km"
   },
   {
    "tunnus": "v-sierra-nevada",
-   "nimi": "Sierra nevada",
+   "nimi": "Sierra Nevada",
    "lat": 37.5993,
    "lon": -118.999,
    "tyyppi": "vuoristo_maisema_60km"
@@ -11345,14 +11345,14 @@
   },
   {
    "tunnus": "v-uuden-guinean-ylangot",
-   "nimi": "Uuden-guinean ylängöt",
+   "nimi": "Uuden-Guinean ylängöt",
    "lat": -5.0001,
    "lon": 140,
    "tyyppi": "vuoristo_maisema_60km"
   },
   {
    "tunnus": "v-uuden-seelannin-alpit",
-   "nimi": "Uuden-seelannin alpit",
+   "nimi": "Uuden-Seelannin Alpit",
    "lat": -43.5009,
    "lon": 170.399,
    "tyyppi": "vuoristo_maisema_60km"
