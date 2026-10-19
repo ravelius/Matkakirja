@@ -24,7 +24,7 @@ Lähde: /Users/Shared/Claude/aanisivu-sivusto/tekstit/<tunnus>.txt (yksi rivi = 
 
 ### isoisan-uni-alkusoitto
 
-- Maailma on unohtanut aarteensa, mutta minä en. Näen niitä unissani: kultaa, jota heitettiin vuoristojärven syvyyksiin. Naamion, jonka turkoosit kasvot katsovat yhä. Keisarin sinetin, joka katosi kuin savu vuosisatoja sitten. Yksi niistä on lähempänä kuin muut: kolme punaista kiveä, timantti keskellä ja helmet välissä. Kolme veljestä. Viimeksi siitä kuultiin Hollannissa yli kaksisataa vuotta sitten. Joku tietää, minne se meni. Kysyn jokaisessa kaupungissa, kunnes löydän sen.
+- Maailma on unohtanut aarteensa, mutta minä en. Näen niitä unissani: smaragdin, jota rannikon kansa palvoi ja kätki valloittajilta. Naamion, jonka turkoosit kasvot katsovat yhä. Keisarin sinetin, joka katosi kuin savu vuosisatoja sitten. Yksi niistä on lähempänä kuin muut: kolme punaista kiveä, timantti keskellä ja helmet välissä. Kolme veljestä. Viimeksi siitä kuultiin Hollannissa yli kaksisataa vuotta sitten. Joku tietää, minne se meni. Kysyn jokaisessa kaupungissa, kunnes löydän sen.
 
 ### pulu-saapuminen-ilman-luentaa
 
