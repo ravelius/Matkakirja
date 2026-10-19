@@ -4664,7 +4664,7 @@
   },
   {
    "tunnus": "k-panama",
-   "nimi": "Panama",
+   "nimi": "Panama City",
    "lat": 8.988,
    "lon": -79.519,
    "tyyppi": "kaupunki"
@@ -6585,7 +6585,7 @@
   },
   {
    "tunnus": "k-taian",
-   "nimi": "Taian",
+   "nimi": "Tai’an",
    "lat": 36.2019,
    "lon": 117.1181,
    "tyyppi": "kaupunki"
@@ -7232,7 +7232,7 @@
   },
   {
    "tunnus": "k-allahabad",
-   "nimi": "Allahabad",
+   "nimi": "Prayagraj",
    "lat": 25.4569,
    "lon": 81.8381,
    "tyyppi": "kaupunki"
@@ -7626,7 +7626,7 @@
   },
   {
    "tunnus": "k-port-elizabeth",
-   "nimi": "Port Elizabeth",
+   "nimi": "Gqeberha",
    "lat": -33.9681,
    "lon": 25.5981,
    "tyyppi": "kaupunki"
