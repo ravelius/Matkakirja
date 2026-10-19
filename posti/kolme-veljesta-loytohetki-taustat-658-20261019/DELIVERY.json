@@ -1,0 +1,236 @@
+{
+  "at": "2026-10-19T14:42:56.497631+00:00",
+  "taskNumber": 658,
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "commit": "199c3a6cad073cf5898bd306021fdde2b9ea2db1",
+      "blob": "82193f04032e5c92608ffa80331bc788cc8f0f81",
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "commit": "4e62c3b2181aa5a6aa8ed93f00e6a9ab7b5400d7",
+      "blob": "19f4f37d12ae59c6a949ab970cac761cb819d5e4",
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    }
+  ],
+  "assets": [
+    {
+      "taskNumber": 658,
+      "master": "portrait",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "native": {
+        "path": "portrait/native/portrait-master-attempt1.png",
+        "sha256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+        "bytes": 2049601,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "decodedRGBPixelSHA256": "4eca688900b791bbc8965ea867309ded4968113bd07b290afa081f674817a848"
+      },
+      "nativeSHA256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+      "nativePath": "portrait/native/portrait-master-attempt1.png",
+      "deliveredTargetImageCount": 2,
+      "exports": [
+        {
+          "path": "portrait/kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+          "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3",
+          "bytes": 4682663,
+          "dimensions": [
+            2048,
+            2732
+          ],
+          "decodedRGBPixelSHA256": "2021ddba5d304eaa45942bd359a6a3a493768a24e394066b65e1b689e8818a15"
+        },
+        {
+          "path": "portrait/kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+          "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015",
+          "bytes": 2592470,
+          "dimensions": [
+            1179,
+            2556
+          ],
+          "decodedRGBPixelSHA256": "ce354f658757aa99941edfe24f972276acae7759c29ee3864a6ddf8e5d09dc6a"
+        }
+      ],
+      "previewPaths": [
+        "portrait/previews/ipad-portrait-crop-preview.png",
+        "portrait/previews/iphone-portrait-crop-preview.png"
+      ],
+      "wholeNewGeneration": true,
+      "rootNativeAndTwoCropViewsPersonallyInspected": true,
+      "targetIsTechnicalUpscale": true,
+      "nativeClaimedAsTargetSize": false,
+      "cropsExplicitlyAuthorized": true,
+      "noContentRetouch": true,
+      "noOutpainting": true,
+      "noPendant": true,
+      "noCord": true,
+      "noText": true,
+      "noEmptyCenter": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 658,
+      "master": "wide",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "native": {
+        "path": "wide/native/workshop-wide-attempt-1.png",
+        "sha256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+        "bytes": 2182612,
+        "dimensions": [
+          1981,
+          793
+        ],
+        "decodedRGBPixelSHA256": "8623512c31c983873d63e3327be1b90a8cb5986398602ec296bee7f40f140d3c"
+      },
+      "nativeSHA256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+      "nativePath": "wide/native/workshop-wide-attempt-1.png",
+      "deliveredTargetImageCount": 2,
+      "exports": [
+        {
+          "path": "wide/ipad-landscape.png",
+          "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5",
+          "bytes": 4401487,
+          "dimensions": [
+            2732,
+            2048
+          ],
+          "decodedRGBPixelSHA256": "8bdca7fa36603b132fb2689e190c551fd5d6cc7daae4d5b573be523163af97b2"
+        },
+        {
+          "path": "wide/iphone-landscape.png",
+          "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5",
+          "bytes": 3399813,
+          "dimensions": [
+            2556,
+            1179
+          ],
+          "decodedRGBPixelSHA256": "2b953cccf5bb5ba8aab8766f54ccafcedd4f93b3edeafcec8833d011de5a5015"
+        }
+      ],
+      "previewPaths": [
+        "wide/previews/ipad-landscape-crop-preview.png",
+        "wide/previews/iphone-landscape-crop-preview.png"
+      ],
+      "wholeNewGeneration": true,
+      "rootNativeAndTwoCropViewsPersonallyInspected": true,
+      "targetIsTechnicalUpscale": true,
+      "nativeClaimedAsTargetSize": false,
+      "cropsExplicitlyAuthorized": true,
+      "noContentRetouch": true,
+      "noOutpainting": true,
+      "noPendant": true,
+      "noCord": true,
+      "noText": true,
+      "noEmptyCenter": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "targets": [
+    {
+      "path": "portrait/kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+      "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3",
+      "bytes": 4682663,
+      "dimensions": [
+        2048,
+        2732
+      ],
+      "decodedRGBPixelSHA256": "2021ddba5d304eaa45942bd359a6a3a493768a24e394066b65e1b689e8818a15"
+    },
+    {
+      "path": "portrait/kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+      "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015",
+      "bytes": 2592470,
+      "dimensions": [
+        1179,
+        2556
+      ],
+      "decodedRGBPixelSHA256": "ce354f658757aa99941edfe24f972276acae7759c29ee3864a6ddf8e5d09dc6a"
+    },
+    {
+      "path": "wide/ipad-landscape.png",
+      "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5",
+      "bytes": 4401487,
+      "dimensions": [
+        2732,
+        2048
+      ],
+      "decodedRGBPixelSHA256": "8bdca7fa36603b132fb2689e190c551fd5d6cc7daae4d5b573be523163af97b2"
+    },
+    {
+      "path": "wide/iphone-landscape.png",
+      "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5",
+      "bytes": 3399813,
+      "dimensions": [
+        2556,
+        1179
+      ],
+      "decodedRGBPixelSHA256": "2b953cccf5bb5ba8aab8766f54ccafcedd4f93b3edeafcec8833d011de5a5015"
+    }
+  ],
+  "previews": [
+    {
+      "path": "portrait/previews/ipad-portrait-crop-preview.png",
+      "sha256": "6c470a19f52d9de282674b78e38ed959ce2b604344e8055280c0c4d26efb6431",
+      "bytes": 1913799,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "decodedRGBPixelSHA256": "4eca688900b791bbc8965ea867309ded4968113bd07b290afa081f674817a848"
+    },
+    {
+      "path": "portrait/previews/iphone-portrait-crop-preview.png",
+      "sha256": "3b51c29f873f2003737fd62b32fb036b4e75ca67aa5cb35fe8f65021ff142f2b",
+      "bytes": 1158528,
+      "dimensions": [
+        668,
+        1448
+      ],
+      "decodedRGBPixelSHA256": "c8d985187fdef5de2aee67fbbdb2dce050b52e4102dd7771cdfcd1c653899cb9"
+    },
+    {
+      "path": "wide/previews/ipad-landscape-crop-preview.png",
+      "sha256": "b9015b2c68ac61819e35d0fd39d9f5e655ff2a1794ac6f06b1dda7f49bceadda",
+      "bytes": 1299308,
+      "dimensions": [
+        1800,
+        670
+      ],
+      "decodedRGBPixelSHA256": "80fb6be616a8ea1d12393b5da30d6819a9cd2335c3a3252db2511dc53b86da0b"
+    },
+    {
+      "path": "wide/previews/iphone-landscape-crop-preview.png",
+      "sha256": "1ed86127f49a76e7f215498eccbf3af74984cc5af4d30668a12c18f787f73ced",
+      "bytes": 1081826,
+      "dimensions": [
+        1800,
+        500
+      ],
+      "decodedRGBPixelSHA256": "e9bc51baf5b02f30d93524dfb1c024c177bcd1bdc3420a3d374f7407f7729b43"
+    }
+  ],
+  "sharedHandoffPath": "/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/codex-kolme-veljesta-taustat-658-20261019",
+  "actualWholeGenerationCalls": 2,
+  "returnedNativeImageCount": 2,
+  "deliveredTargetImageCount": 4,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

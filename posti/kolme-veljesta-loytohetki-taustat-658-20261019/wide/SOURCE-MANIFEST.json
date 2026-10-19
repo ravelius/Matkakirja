@@ -1,0 +1,106 @@
+{
+  "taskNumber": 658,
+  "subscope": "wide",
+  "at": "2026-10-19T14:34:13.347565+00:00",
+  "sources": [
+    {
+      "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "archivedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "commit": "199c3a6cad073cf5898bd306021fdde2b9ea2db1",
+      "blob": "82193f04032e5c92608ffa80331bc788cc8f0f81",
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec",
+      "personallyReadInFull": true,
+      "deliveryPacketPath": "sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md"
+    },
+    {
+      "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "archivedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "commit": "4e62c3b2181aa5a6aa8ed93f00e6a9ab7b5400d7",
+      "blob": "19f4f37d12ae59c6a949ab970cac761cb819d5e4",
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72",
+      "personallyReadInFull": true,
+      "deliveryPacketPath": "sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md"
+    },
+    {
+      "originalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "archivedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "commit": "8dbe8dcf75e5388ae5ff137e44ef6599c03c8878",
+      "blob": "9cd5ff3e81a524fb86c20918b4b359f20f25b98c",
+      "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188",
+      "personallyReadInFull": true,
+      "deliveryPacketPath": "sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md"
+    }
+  ],
+  "rootReady": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/sources/ROOT-READY.json",
+    "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61",
+    "personallyReadInFull": true,
+    "ready": true
+  },
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/references/OWNER-accepted-pilot-ipad-attempt1.png",
+      "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+      "width": 1448,
+      "height": 1086,
+      "personallyViewed": true,
+      "ownerAcceptedPreviousPilot": true,
+      "use": "Workshop architecture, props, warm/cool candle atmosphere only; pendant/cord/text must not occur in new image",
+      "deliveryPacketPath": "references/OWNER-accepted-pilot-ipad-attempt1.png"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/references/OWNER-accepted-pilot-iphone-attempt1.png",
+      "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+      "width": 1846,
+      "height": 852,
+      "personallyViewed": true,
+      "ownerAcceptedPreviousPilot": true,
+      "use": "Workshop architecture, props, warm/cool candle atmosphere only; pendant/cord/text must not occur in new image",
+      "deliveryPacketPath": "references/OWNER-accepted-pilot-iphone-attempt1.png"
+    }
+  ],
+  "actualImagegenInput": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/references/OWNER-accepted-pilot-iphone-attempt1.png"
+  ],
+  "cropAuthorizedBySource": true,
+  "portraitPrimaryOtherAgentOwnsPortrait": true,
+  "outputs": [
+    {
+      "name": "iphone-landscape",
+      "width": 2556,
+      "height": 1179
+    },
+    {
+      "name": "ipad-landscape",
+      "width": 2732,
+      "height": 2048
+    }
+  ],
+  "requestedMaster": "2556×1179 or larger same13:6 aspect; actual returned size retained and disclosed. Exact crops/scale stored separately; explicit upscaling if needed.",
+  "keySceneCoreWidthFraction": 0.6156850961538461,
+  "wholeNewGenerationRequired": true,
+  "zeroTripoAuthorityForThisWorker": true,
+  "TripoBudgetOwnedByExisting3DOwnerOnly": true,
+  "videoIntegrationByOtherOwner": true,
+  "noOtherSixTreasures": true,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "actualNative": {
+    "width": 1981,
+    "height": 793,
+    "aspect": 2.498108448928121,
+    "requestWasNotNativeClaim": true
+  },
+  "actualCalls": 1,
+  "requestedMasterAspectNotReturned": true,
+  "selectedIPadCrop": {
+    "boxNativeLTRB": [
+      398,
+      0,
+      1455.849609375,
+      793
+    ],
+    "basis": "Source permits separate crops; root explicitly authorized left shift after viewing actual native. Both candle bodies and complete flames retained; outer rim of left holder is partially at frame edge."
+  },
+  "imageSessionTripoCalls": 0
+}

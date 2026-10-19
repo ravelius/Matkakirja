@@ -1,0 +1,404 @@
+{
+  "at": "2026-10-19T14:42:56.497631+00:00",
+  "family": "kolme-veljesta-loytohetki-taustat-658-20261019",
+  "taskNumbers": [
+    658
+  ],
+  "nativeImageCount": 2,
+  "targetImageCount": 4,
+  "actualWholeGenerationCalls": 2,
+  "assets": [
+    {
+      "taskNumber": 658,
+      "master": "portrait",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "native": {
+        "path": "portrait/native/portrait-master-attempt1.png",
+        "sha256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+        "bytes": 2049601,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "decodedRGBPixelSHA256": "4eca688900b791bbc8965ea867309ded4968113bd07b290afa081f674817a848"
+      },
+      "nativeSHA256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+      "nativePath": "portrait/native/portrait-master-attempt1.png",
+      "deliveredTargetImageCount": 2,
+      "exports": [
+        {
+          "path": "portrait/kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+          "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3",
+          "bytes": 4682663,
+          "dimensions": [
+            2048,
+            2732
+          ],
+          "decodedRGBPixelSHA256": "2021ddba5d304eaa45942bd359a6a3a493768a24e394066b65e1b689e8818a15"
+        },
+        {
+          "path": "portrait/kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+          "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015",
+          "bytes": 2592470,
+          "dimensions": [
+            1179,
+            2556
+          ],
+          "decodedRGBPixelSHA256": "ce354f658757aa99941edfe24f972276acae7759c29ee3864a6ddf8e5d09dc6a"
+        }
+      ],
+      "previewPaths": [
+        "portrait/previews/ipad-portrait-crop-preview.png",
+        "portrait/previews/iphone-portrait-crop-preview.png"
+      ],
+      "wholeNewGeneration": true,
+      "rootNativeAndTwoCropViewsPersonallyInspected": true,
+      "targetIsTechnicalUpscale": true,
+      "nativeClaimedAsTargetSize": false,
+      "cropsExplicitlyAuthorized": true,
+      "noContentRetouch": true,
+      "noOutpainting": true,
+      "noPendant": true,
+      "noCord": true,
+      "noText": true,
+      "noEmptyCenter": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 658,
+      "master": "wide",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "native": {
+        "path": "wide/native/workshop-wide-attempt-1.png",
+        "sha256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+        "bytes": 2182612,
+        "dimensions": [
+          1981,
+          793
+        ],
+        "decodedRGBPixelSHA256": "8623512c31c983873d63e3327be1b90a8cb5986398602ec296bee7f40f140d3c"
+      },
+      "nativeSHA256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+      "nativePath": "wide/native/workshop-wide-attempt-1.png",
+      "deliveredTargetImageCount": 2,
+      "exports": [
+        {
+          "path": "wide/ipad-landscape.png",
+          "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5",
+          "bytes": 4401487,
+          "dimensions": [
+            2732,
+            2048
+          ],
+          "decodedRGBPixelSHA256": "8bdca7fa36603b132fb2689e190c551fd5d6cc7daae4d5b573be523163af97b2"
+        },
+        {
+          "path": "wide/iphone-landscape.png",
+          "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5",
+          "bytes": 3399813,
+          "dimensions": [
+            2556,
+            1179
+          ],
+          "decodedRGBPixelSHA256": "2b953cccf5bb5ba8aab8766f54ccafcedd4f93b3edeafcec8833d011de5a5015"
+        }
+      ],
+      "previewPaths": [
+        "wide/previews/ipad-landscape-crop-preview.png",
+        "wide/previews/iphone-landscape-crop-preview.png"
+      ],
+      "wholeNewGeneration": true,
+      "rootNativeAndTwoCropViewsPersonallyInspected": true,
+      "targetIsTechnicalUpscale": true,
+      "nativeClaimedAsTargetSize": false,
+      "cropsExplicitlyAuthorized": true,
+      "noContentRetouch": true,
+      "noOutpainting": true,
+      "noPendant": true,
+      "noCord": true,
+      "noText": true,
+      "noEmptyCenter": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 8169,
+      "sha256": "c83a8adefd13801f6d2900acbc8476c8e7120cdc9ab71a12566fd85e70f13ec3"
+    },
+    {
+      "path": "ROOT-QA.json",
+      "bytes": 5350,
+      "sha256": "d6162f5cbc8c8f4459e503deddcb08269a1a3cc3e13c51f25b122bd54570e25c"
+    },
+    {
+      "path": "ROOT-READY.json",
+      "bytes": 3958,
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 3958,
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61"
+    },
+    {
+      "path": "portrait/DELIVERY.json",
+      "bytes": 5812,
+      "sha256": "fd8fc14edf64743700ccdfdf5e34d4e3026e7fee0e9923aa9446e9b3155e2c5e"
+    },
+    {
+      "path": "portrait/GENERATION.json",
+      "bytes": 20949,
+      "sha256": "153ac8b9020da321de49c769d60778dd59ebd9fea316dd207a7b6eb0bed0f62d"
+    },
+    {
+      "path": "portrait/MANIFEST.json",
+      "bytes": 4325,
+      "sha256": "f2707eb64fc4cacc2756c2a384f0e094724ddef1a35ff0d9cbd730acb93330a2"
+    },
+    {
+      "path": "portrait/PROMPTS.json",
+      "bytes": 6000,
+      "sha256": "a4a91ee047a252790aa72261e377d5e79a1d1bb08b84d37ae4ad7d19f3baa1e2"
+    },
+    {
+      "path": "portrait/QA-FI.md",
+      "bytes": 3615,
+      "sha256": "40bfd16fff77d272d88b5bbe3a36415941222718b00a835ae102e21abc409861"
+    },
+    {
+      "path": "portrait/QA.json",
+      "bytes": 7363,
+      "sha256": "e5add21d317f78665376577770b47873bd4ee72af773d31f195209b44f599aa7"
+    },
+    {
+      "path": "portrait/SOURCE-MANIFEST.json",
+      "bytes": 5271,
+      "sha256": "6a3d2de01d796a84f92f3664d0bb75b2b3c99e672b86694e9e71f38412e8f98b"
+    },
+    {
+      "path": "portrait/crop-export-provenance.json",
+      "bytes": 5541,
+      "sha256": "ab8f34b6c18157de9e32314fb43ae3b8e9a72e774e88f63e659e74a09eabee4c"
+    },
+    {
+      "path": "portrait/kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+      "bytes": 4682663,
+      "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3"
+    },
+    {
+      "path": "portrait/kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+      "bytes": 2592470,
+      "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015"
+    },
+    {
+      "path": "portrait/native/portrait-master-attempt1.png",
+      "bytes": 2049601,
+      "sha256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283"
+    },
+    {
+      "path": "portrait/previews/ipad-portrait-crop-preview.png",
+      "bytes": 1913799,
+      "sha256": "6c470a19f52d9de282674b78e38ed959ce2b604344e8055280c0c4d26efb6431"
+    },
+    {
+      "path": "portrait/previews/iphone-portrait-crop-preview.png",
+      "bytes": 1158528,
+      "sha256": "3b51c29f873f2003737fd62b32fb036b4e75ca67aa5cb35fe8f65021ff142f2b"
+    },
+    {
+      "path": "portrait/prompt.txt",
+      "bytes": 3478,
+      "sha256": "3666f9c950f990c872211c6c85eebbcab588f380a71c13b1c9a34e3eb8243f7a"
+    },
+    {
+      "path": "portrait/references/OWNER-accepted-pilot-ipad-attempt1.png",
+      "bytes": 2093718,
+      "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda"
+    },
+    {
+      "path": "portrait/references/OWNER-accepted-pilot-iphone-attempt1.png",
+      "bytes": 1928001,
+      "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94"
+    },
+    {
+      "path": "portrait/references.json",
+      "bytes": 1684,
+      "sha256": "6e6c3166fafc4d3bd0ee4cabf77a69985898ee4f5a035b16101d4b35a98138d3"
+    },
+    {
+      "path": "portrait/root-ready.json",
+      "bytes": 3958,
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61"
+    },
+    {
+      "path": "portrait/root-source-manifest.json",
+      "bytes": 3958,
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61"
+    },
+    {
+      "path": "portrait/sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "bytes": 503,
+      "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188"
+    },
+    {
+      "path": "portrait/sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "bytes": 1073,
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec"
+    },
+    {
+      "path": "portrait/sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "bytes": 1672,
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72"
+    },
+    {
+      "path": "portrait/tool-arguments.json",
+      "bytes": 3908,
+      "sha256": "7e318f2704929d68424143a807610881a64a9024b70855923ebfd0ebb800f38d"
+    },
+    {
+      "path": "references/OWNER-accepted-pilot-ipad-attempt1.png",
+      "bytes": 2093718,
+      "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda"
+    },
+    {
+      "path": "references/OWNER-accepted-pilot-iphone-attempt1.png",
+      "bytes": 1928001,
+      "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "bytes": 503,
+      "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "bytes": 1073,
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "bytes": 1672,
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+      "bytes": 598,
+      "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4"
+    },
+    {
+      "path": "wide/CROPS.json",
+      "bytes": 3388,
+      "sha256": "68f0347a67481e76becd06cb0bf4554342207cc892855c8833b8bc78a15db8f2"
+    },
+    {
+      "path": "wide/GENERATION.json",
+      "bytes": 4803,
+      "sha256": "703b329d5ee153620b385f4e922859bb639597253f73f28246aa3a4f0511bc17"
+    },
+    {
+      "path": "wide/MANIFEST.json",
+      "bytes": 6198,
+      "sha256": "a7af302eed05f69efc15cd1b3bec5b329435c0b74fd202b86dde496c518050c9"
+    },
+    {
+      "path": "wide/PREFLIGHT.json",
+      "bytes": 601,
+      "sha256": "9eb36f577695cfbab120083f477fbe10376db520e7130a82ec5775bf18508425"
+    },
+    {
+      "path": "wide/PROMPTS.json",
+      "bytes": 5104,
+      "sha256": "899774c8b66412b5e57bf80f40f594db1e1ed37bd71ba3bdb193bd47ca38aa76"
+    },
+    {
+      "path": "wide/PROVENANCE.json",
+      "bytes": 779,
+      "sha256": "dc5b4eea3ce10b6eda90367495d04624b1ab22faa5982efb7a9a0fc177d03191"
+    },
+    {
+      "path": "wide/QA-FI.md",
+      "bytes": 3562,
+      "sha256": "0bb529c78fc262dec4ec1da24b810a1f687c502b6d30fd55b6543bbae2498623"
+    },
+    {
+      "path": "wide/QA.json",
+      "bytes": 5739,
+      "sha256": "4e9123b65f27055a0d4688668a72d75aad7dba5e5883a60a62604cbc036cd2a9"
+    },
+    {
+      "path": "wide/SOURCE-MANIFEST.json",
+      "bytes": 5441,
+      "sha256": "b869aa3a7f2f140e1499a7e42d8a98eb942de15039a950dc99c1126201f19f73"
+    },
+    {
+      "path": "wide/ipad-landscape.png",
+      "bytes": 4401487,
+      "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5"
+    },
+    {
+      "path": "wide/iphone-landscape.png",
+      "bytes": 3399813,
+      "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5"
+    },
+    {
+      "path": "wide/native/workshop-wide-attempt-1.png",
+      "bytes": 2182612,
+      "sha256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065"
+    },
+    {
+      "path": "wide/previews/ipad-landscape-crop-preview.png",
+      "bytes": 1299308,
+      "sha256": "b9015b2c68ac61819e35d0fd39d9f5e655ff2a1794ac6f06b1dda7f49bceadda"
+    },
+    {
+      "path": "wide/previews/iphone-landscape-crop-preview.png",
+      "bytes": 1081826,
+      "sha256": "1ed86127f49a76e7f215498eccbf3af74984cc5af4d30668a12c18f787f73ced"
+    },
+    {
+      "path": "wide/references/OWNER-accepted-pilot-ipad-attempt1.png",
+      "bytes": 2093718,
+      "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda"
+    },
+    {
+      "path": "wide/references/OWNER-accepted-pilot-iphone-attempt1.png",
+      "bytes": 1928001,
+      "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94"
+    },
+    {
+      "path": "wide/sources/ROOT-READY.json",
+      "bytes": 3958,
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61"
+    },
+    {
+      "path": "wide/sources/SOURCE-AT-PREFLIGHT.json",
+      "bytes": 4432,
+      "sha256": "5321eac915055a48f7a8375ae2186f4e4edb0fe3e78c6d274b0917702805fa76"
+    },
+    {
+      "path": "wide/sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "bytes": 503,
+      "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188"
+    },
+    {
+      "path": "wide/sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "bytes": 1073,
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec"
+    },
+    {
+      "path": "wide/sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "bytes": 1672,
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "taskNumber": 658,
+  "subscope": "wide",
+  "at": "2026-10-19T14:40:47.152708+00:00",
+  "actualImagegenCalls": 1,
+  "productionCompleteForAssignedScope": true,
+  "producerQaPassed": true,
+  "selfContainedPacket": true,
+  "nativeByteExact": true,
+  "nativeSHA256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+  "actualNativeDimensions": [
+    1981,
+    793
+  ],
+  "targetNames": [
+    "iphone-landscape.png",
+    "ipad-landscape.png"
+  ],
+  "technicalUpscaleAndCropDetails": "CROPS.json",
+  "files": [
+    {
+      "path": "CROPS.json",
+      "sha256": "68f0347a67481e76becd06cb0bf4554342207cc892855c8833b8bc78a15db8f2",
+      "bytes": 3388
+    },
+    {
+      "path": "GENERATION.json",
+      "sha256": "703b329d5ee153620b385f4e922859bb639597253f73f28246aa3a4f0511bc17",
+      "bytes": 4803
+    },
+    {
+      "path": "PREFLIGHT.json",
+      "sha256": "9eb36f577695cfbab120083f477fbe10376db520e7130a82ec5775bf18508425",
+      "bytes": 601
+    },
+    {
+      "path": "PROMPTS.json",
+      "sha256": "899774c8b66412b5e57bf80f40f594db1e1ed37bd71ba3bdb193bd47ca38aa76",
+      "bytes": 5104
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "dc5b4eea3ce10b6eda90367495d04624b1ab22faa5982efb7a9a0fc177d03191",
+      "bytes": 779
+    },
+    {
+      "path": "QA-FI.md",
+      "sha256": "0bb529c78fc262dec4ec1da24b810a1f687c502b6d30fd55b6543bbae2498623",
+      "bytes": 3562
+    },
+    {
+      "path": "QA.json",
+      "sha256": "4e9123b65f27055a0d4688668a72d75aad7dba5e5883a60a62604cbc036cd2a9",
+      "bytes": 5739
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "sha256": "b869aa3a7f2f140e1499a7e42d8a98eb942de15039a950dc99c1126201f19f73",
+      "bytes": 5441
+    },
+    {
+      "path": "ipad-landscape.png",
+      "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5",
+      "bytes": 4401487,
+      "width": 2732,
+      "height": 2048,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "8bdca7fa36603b132fb2689e190c551fd5d6cc7daae4d5b573be523163af97b2"
+    },
+    {
+      "path": "iphone-landscape.png",
+      "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5",
+      "bytes": 3399813,
+      "width": 2556,
+      "height": 1179,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "2b953cccf5bb5ba8aab8766f54ccafcedd4f93b3edeafcec8833d011de5a5015"
+    },
+    {
+      "path": "native/workshop-wide-attempt-1.png",
+      "sha256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+      "bytes": 2182612,
+      "width": 1981,
+      "height": 793,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "8623512c31c983873d63e3327be1b90a8cb5986398602ec296bee7f40f140d3c"
+    },
+    {
+      "path": "previews/ipad-landscape-crop-preview.png",
+      "sha256": "b9015b2c68ac61819e35d0fd39d9f5e655ff2a1794ac6f06b1dda7f49bceadda",
+      "bytes": 1299308,
+      "width": 1800,
+      "height": 670,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "80fb6be616a8ea1d12393b5da30d6819a9cd2335c3a3252db2511dc53b86da0b"
+    },
+    {
+      "path": "previews/iphone-landscape-crop-preview.png",
+      "sha256": "1ed86127f49a76e7f215498eccbf3af74984cc5af4d30668a12c18f787f73ced",
+      "bytes": 1081826,
+      "width": 1800,
+      "height": 500,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "e9bc51baf5b02f30d93524dfb1c024c177bcd1bdc3420a3d374f7407f7729b43"
+    },
+    {
+      "path": "references/OWNER-accepted-pilot-ipad-attempt1.png",
+      "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+      "bytes": 2093718,
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "71bb82e4bde3756c5e853afa20da613123808dc4b5ca39509e4ae3e8cf15a399"
+    },
+    {
+      "path": "references/OWNER-accepted-pilot-iphone-attempt1.png",
+      "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+      "bytes": 1928001,
+      "width": 1846,
+      "height": 852,
+      "mode": "RGB",
+      "decodedRGBPixelSHA256": "38184aa9ff4b8dedb744a36160e1dfd604c4f2b8e17c86921baec0a790c6dfa4"
+    },
+    {
+      "path": "sources/ROOT-READY.json",
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61",
+      "bytes": 3958
+    },
+    {
+      "path": "sources/SOURCE-AT-PREFLIGHT.json",
+      "sha256": "5321eac915055a48f7a8375ae2186f4e4edb0fe3e78c6d274b0917702805fa76",
+      "bytes": 4432
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188",
+      "bytes": 503
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec",
+      "bytes": 1073
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72",
+      "bytes": 1672
+    }
+  ],
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "parentMailDeliveryPending": true,
+  "TripoCallsIssued": 0,
+  "videoRenderingVerified": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "qualifications": [
+    "Actual native is smaller and wider than requested; delivery sizes are disclosed cropped technical enlargements.",
+    "Native is a completely new recreation of the accepted workshop, not a pixel-identical cleaned version of the old pendant image.",
+    "This worker supplies only two landscape backgrounds; portrait outputs, Tripo, Cycles videos and rendered figure pairs belong to other owners.",
+    "Owner/PT acceptance of these new backgrounds, game integration and publication are not claimed."
+  ],
+  "preflightSourceSnapshot": {
+    "path": "sources/SOURCE-AT-PREFLIGHT.json",
+    "sha256": "5321eac915055a48f7a8375ae2186f4e4edb0fe3e78c6d274b0917702805fa76",
+    "equalsRegisteredPreDispatchHash": true,
+    "note": "Source-manifest metadata was extended during final packaging; the exact registered preflight content is retained here, reconstructed byte-exact by removal of only the final package/export fields and verified against pre-dispatch logged SHA256."
+  }
+}

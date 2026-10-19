@@ -1,0 +1,35 @@
+{
+  "taskNumber": 658,
+  "subscope": "wide",
+  "actualImagegenCalls": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "tool": "image_gen.imagegen",
+      "wholeNewGeneration": true,
+      "args": {
+        "prompt": "Create ONE ENTIRELY NEW photoreal background photograph, not an edit, not an outpaint, not a composite. VERY WIDE LANDSCAPE PANORAMIC 13:6 aspect ratio, requested native dimensions2556 pixels wide by1179 pixels high or a larger image with exactly the same aspect ratio. It is a complete clean background asset for a game scene, with no overlay of any kind.\n\nThe attached OWNER-ACCEPTED workshop photograph establishes the SPECIFIC SAME LOCATION, LIGHTING AND MATERIAL LANGUAGE: a candlelit fifteenth-century Parisian goldsmith's workshop, rough warm ochre stone wall, dark aged timber posts, a diamond-lattice small window at upper right with very faint cold blue twilight, thick naturally worn wooden workbench, a tall broad ivory beeswax candle on an old dark bronze/brass holder at left, a shorter smaller candle burning on the rear bench at right, small goldsmith hand tools and metalworking blocks, warm amber candle reflections and a soft smoky depth. Recreate this same recognizable workshop in a completely new photograph. DO NOT reproduce the suspended jewel, its necklace cord or anything written in the reference.\n\nCRITICAL CLEAN BACKGROUND: absolutely NO pendant, necklace, jewelry, gems, pearls, rings, chain, hanging cord, rope or string anywhere. No people or hands. No labels, no text or letters, no word Havainnekuva, no watermark, no border, no UI, no icons. None of those pixels belong in this background.\n\nCOMPOSITION FOR TWO AUTHORIZED LANDSCAPE CROPS: the very wide frame will also be cropped down to its CENTER61.57 percent width for an iPad4:3 image. Therefore keep BOTH entire lit candles, their flames and candleholders, and the key recognizable workshop details safely INSIDE that middle region, roughly x=25percent to75percent of the full width. Place the tall candle at x=32percent, with its flame around y=16percent; place the smaller rear candle at x=70percent,y=45percent. Preserve their left/right hierarchy and unequal heights. Put the main workbench and its natural tools near the middle as well. The cool lattice window can remain behind the small right candle, its recognizable central part inside x=72percent. Outer left and right strips are real continuation of the same stone-and-timber workshop, not bars, framing, duplicated panels or empty padding. All scene geometry is continuous in a single camera exposure.\n\nThe CENTER IS A REAL WORKING GOLDSMITH'S WORKSHOP, NOT AN EMPTY HOLE reserved for a pendant: a worn wooden bench surface continues across center; near lower middle is a modest old rectangular steel working block, two small period iron punches and a small dark hand hammer lying naturally, and a shallow aged brass dish slightly farther back. Visible stone and timber, tools on the rear bench and candle illumination also exist in the middle background. Keep objects subordinate and natural, with no ornamental arrangement or hero artifact. No symmetrical sterile empty showcase, no dark blank center, no bare empty gap left behind by a removed necklace. The bench is solid, naturally used, with small irregular scuffs and stains and truthful nonrepeating grain, NOT a procedural noisy wood texture or painted bitmap surface.\n\nPHOTOGRAPHIC STYLE: convincing live-action cinema still photographed inside this specific medieval goldsmith's workshop. Warm amber tall-candle key light from the left and the small right practical flame, faint cool blue through the window, soft natural shadow falloff, realistic wax translucency, old metal and rough stone. Moderate shallow depth of field like the accepted image: foreground bench/tool edges still readable, rear workshop gently soft, not an abstract bokeh wall. Natural optical surface, no drawing, CGI, illustration, plastic, oversharpening, grunge overlay or uniform procedural texture. Entirely new full-frame photograph in very wide13:6 format, no pendant and no cord, no text.",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/references/OWNER-accepted-pilot-iphone-attempt1.png"
+        ],
+        "transparent_background": false
+      },
+      "registeredBeforeDispatch": true,
+      "registration": {
+        "taskNumber": 658,
+        "subscope": "wide",
+        "attempt": 1,
+        "registeredAt": "2026-10-19T14:34:13.347565+00:00",
+        "dispatchState": "completed-native-preserved",
+        "wholeNewGeneration": true,
+        "tool": "image_gen.imagegen",
+        "argsSHA256": "ee41e76be703cf9ae886c545697f3e38fa2fe7cad6fe4c57d8fe3f29b4634168",
+        "noTripo": true,
+        "dispatchStartedAt": "2026-10-19T14:34:25.097370+00:00",
+        "actualImagegenCalls": 1,
+        "completedAt": "2026-10-19T14:40:47.152708+00:00",
+        "nativeSHA256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065"
+      }
+    }
+  ]
+}

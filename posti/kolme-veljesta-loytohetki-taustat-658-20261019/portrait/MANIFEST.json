@@ -1,0 +1,133 @@
+{
+  "taskNumber": 658,
+  "batch": "portrait",
+  "createdAt": "2026-10-19T14:39:39.852824+00:00",
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 5812,
+      "sha256": "fd8fc14edf64743700ccdfdf5e34d4e3026e7fee0e9923aa9446e9b3155e2c5e"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 20949,
+      "sha256": "153ac8b9020da321de49c769d60778dd59ebd9fea316dd207a7b6eb0bed0f62d"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 6000,
+      "sha256": "a4a91ee047a252790aa72261e377d5e79a1d1bb08b84d37ae4ad7d19f3baa1e2"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3615,
+      "sha256": "40bfd16fff77d272d88b5bbe3a36415941222718b00a835ae102e21abc409861"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 7363,
+      "sha256": "e5add21d317f78665376577770b47873bd4ee72af773d31f195209b44f599aa7"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 5271,
+      "sha256": "6a3d2de01d796a84f92f3664d0bb75b2b3c99e672b86694e9e71f38412e8f98b"
+    },
+    {
+      "path": "crop-export-provenance.json",
+      "bytes": 5541,
+      "sha256": "ab8f34b6c18157de9e32314fb43ae3b8e9a72e774e88f63e659e74a09eabee4c"
+    },
+    {
+      "path": "kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+      "bytes": 4682663,
+      "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3"
+    },
+    {
+      "path": "kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+      "bytes": 2592470,
+      "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015"
+    },
+    {
+      "path": "native/portrait-master-attempt1.png",
+      "bytes": 2049601,
+      "sha256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283"
+    },
+    {
+      "path": "previews/ipad-portrait-crop-preview.png",
+      "bytes": 1913799,
+      "sha256": "6c470a19f52d9de282674b78e38ed959ce2b604344e8055280c0c4d26efb6431"
+    },
+    {
+      "path": "previews/iphone-portrait-crop-preview.png",
+      "bytes": 1158528,
+      "sha256": "3b51c29f873f2003737fd62b32fb036b4e75ca67aa5cb35fe8f65021ff142f2b"
+    },
+    {
+      "path": "prompt.txt",
+      "bytes": 3478,
+      "sha256": "3666f9c950f990c872211c6c85eebbcab588f380a71c13b1c9a34e3eb8243f7a"
+    },
+    {
+      "path": "references/OWNER-accepted-pilot-ipad-attempt1.png",
+      "bytes": 2093718,
+      "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda"
+    },
+    {
+      "path": "references/OWNER-accepted-pilot-iphone-attempt1.png",
+      "bytes": 1928001,
+      "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94"
+    },
+    {
+      "path": "references.json",
+      "bytes": 1684,
+      "sha256": "6e6c3166fafc4d3bd0ee4cabf77a69985898ee4f5a035b16101d4b35a98138d3"
+    },
+    {
+      "path": "root-ready.json",
+      "bytes": 3958,
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61"
+    },
+    {
+      "path": "root-source-manifest.json",
+      "bytes": 3958,
+      "sha256": "1780739a2a721249438c387c187f2639085c2da62af0a7c0ee4035c65abd2f61"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+      "bytes": 503,
+      "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "bytes": 1073,
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+      "bytes": 1672,
+      "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72"
+    },
+    {
+      "path": "tool-arguments.json",
+      "bytes": 3908,
+      "sha256": "7e318f2704929d68424143a807610881a64a9024b70855923ebfd0ebb800f38d"
+    }
+  ],
+  "nativeImage": "native/portrait-master-attempt1.png",
+  "targetImages": [
+    "kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+    "kolme-veljesta-paja-iphone-pysty-1179x2556.png"
+  ],
+  "cropPreviews": [
+    "previews/ipad-portrait-crop-preview.png",
+    "previews/iphone-portrait-crop-preview.png"
+  ],
+  "qaPassed": true,
+  "wholeNewImagegenCalls": 1,
+  "retries": 0,
+  "targetsAreDocumentedTechnicalUpscales": true,
+  "sourceAllowsSeparateCrops": true,
+  "tripoCallsByThisAgent": 0,
+  "readyForRootAggregateMailDelivery": true
+}

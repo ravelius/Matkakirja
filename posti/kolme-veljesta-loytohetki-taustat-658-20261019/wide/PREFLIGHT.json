@@ -1,0 +1,16 @@
+{
+  "taskNumber": 658,
+  "subscope": "wide",
+  "at": "2026-10-19T14:34:13.347565+00:00",
+  "ready": true,
+  "sourcesReadAndHashVerified": true,
+  "bothAcceptedReferencesPersonallyViewed": true,
+  "sourceManifestSHA256": "5321eac915055a48f7a8375ae2186f4e4edb0fe3e78c6d274b0917702805fa76",
+  "toolArgsSHA256": "ee41e76be703cf9ae886c545697f3e38fa2fe7cad6fe4c57d8fe3f29b4634168",
+  "wholeNewGeneration": true,
+  "croppingAuthorized": true,
+  "actualNativeSizeWillBePreserved": true,
+  "target1GoodCallNoArbitraryLimit": true,
+  "newAttemptOnlyForConcreteQAError": true,
+  "noTripoCallsAuthorized": true
+}

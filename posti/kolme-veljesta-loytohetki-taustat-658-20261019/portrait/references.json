@@ -1,0 +1,40 @@
+[
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/references/OWNER-accepted-pilot-ipad-attempt1.png",
+    "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "mode": "RGB",
+    "personallyInspected": true,
+    "ownerAcceptedSource": {
+      "path": "posti/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "commit": "199c3a6cad073cf5898bd306021fdde2b9ea2db1",
+      "blob": "82193f04032e5c92608ffa80331bc788cc8f0f81",
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    "role": "workshop-only reference; new scene contains no pendant/cord/text"
+  },
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/references/OWNER-accepted-pilot-iphone-attempt1.png",
+    "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+    "dimensions": [
+      1846,
+      852
+    ],
+    "mode": "RGB",
+    "personallyInspected": true,
+    "ownerAcceptedSource": {
+      "path": "posti/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+      "commit": "199c3a6cad073cf5898bd306021fdde2b9ea2db1",
+      "blob": "82193f04032e5c92608ffa80331bc788cc8f0f81",
+      "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec",
+      "readInFull": true,
+      "readAt": "2026-10-19T14:32:49.853103+00:00"
+    },
+    "role": "workshop-only reference; new scene contains no pendant/cord/text"
+  }
+]

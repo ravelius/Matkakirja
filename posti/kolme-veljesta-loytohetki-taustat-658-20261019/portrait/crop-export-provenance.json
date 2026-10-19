@@ -1,0 +1,160 @@
+{
+  "task": 658,
+  "batch": "portrait",
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/portrait/native/portrait-master-attempt1.png",
+    "sha256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+    "pixelSHA256": "4eca688900b791bbc8965ea867309ded4968113bd07b290afa081f674817a848",
+    "bytes": 2049601,
+    "dimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "exports": [
+    {
+      "code": "ipad-portrait",
+      "sourceNativeSHA256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+      "cropBoxPixelsXYXY": [
+        0,
+        0,
+        1086,
+        1448
+      ],
+      "cropBoxNormalized": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "cropDimensions": [
+        1086,
+        1448
+      ],
+      "cropPixelSHA256": "4eca688900b791bbc8965ea867309ded4968113bd07b290afa081f674817a848",
+      "cropPreview": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/portrait/delivery-packet/previews/ipad-portrait-crop-preview.png",
+        "sha256": "6c470a19f52d9de282674b78e38ed959ce2b604344e8055280c0c4d26efb6431",
+        "pixelSHA256": "4eca688900b791bbc8965ea867309ded4968113bd07b290afa081f674817a848",
+        "bytes": 1913799,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "target": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/portrait/delivery-packet/kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+        "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3",
+        "pixelSHA256": "2021ddba5d304eaa45942bd359a6a3a493768a24e394066b65e1b689e8818a15",
+        "bytes": 4682663,
+        "dimensions": [
+          2048,
+          2732
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "aspectErrorPercent": 0.048828125,
+      "scaleX": 1.8858195211786373,
+      "scaleY": 1.8867403314917126,
+      "upscaled": true,
+      "nativeClaimedAsTargetResolution": false,
+      "cropAuthorizedBySource": true,
+      "technicalResizeAuthority": "root implementation decision; source requests target dimensions",
+      "resizeMethod": "Pillow LANCZOS full selected crop to target PNG",
+      "padding": false,
+      "contentRetouch": false,
+      "outpainting": false,
+      "cropPurpose": "full-frame portrait iPad",
+      "personallyInspectedCropPreview": true,
+      "personallyInspectedTargetFullResolution": true
+    },
+    {
+      "code": "iphone-portrait",
+      "sourceNativeSHA256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+      "cropBoxPixelsXYXY": [
+        160,
+        0,
+        828,
+        1448
+      ],
+      "cropBoxNormalized": [
+        0.14732965009208104,
+        0.0,
+        0.7624309392265194,
+        1.0
+      ],
+      "cropDimensions": [
+        668,
+        1448
+      ],
+      "cropPixelSHA256": "c8d985187fdef5de2aee67fbbdb2dce050b52e4102dd7771cdfcd1c653899cb9",
+      "cropPreview": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/portrait/delivery-packet/previews/iphone-portrait-crop-preview.png",
+        "sha256": "3b51c29f873f2003737fd62b32fb036b4e75ca67aa5cb35fe8f65021ff142f2b",
+        "pixelSHA256": "c8d985187fdef5de2aee67fbbdb2dce050b52e4102dd7771cdfcd1c653899cb9",
+        "bytes": 1158528,
+        "dimensions": [
+          668,
+          1448
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "target": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/portrait/delivery-packet/kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+        "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015",
+        "pixelSHA256": "ce354f658757aa99941edfe24f972276acae7759c29ee3864a6ddf8e5d09dc6a",
+        "bytes": 2592470,
+        "dimensions": [
+          1179,
+          2556
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "aspectErrorPercent": 0.01265235544682941,
+      "scaleX": 1.7649700598802396,
+      "scaleY": 1.7651933701657458,
+      "upscaled": true,
+      "nativeClaimedAsTargetResolution": false,
+      "cropAuthorizedBySource": true,
+      "technicalResizeAuthority": "root implementation decision; source requests target dimensions",
+      "resizeMethod": "Pillow LANCZOS full selected crop to target PNG",
+      "padding": false,
+      "contentRetouch": false,
+      "outpainting": false,
+      "cropPurpose": "narrow mobile crop shifted slightly left to preserve candle and central working-bench detail",
+      "personallyInspectedCropPreview": true,
+      "personallyInspectedTargetFullResolution": true
+    }
+  ],
+  "newWholeGenerations": 1,
+  "sourceAllowsSeparateCrops": true,
+  "noPartialContentEditing": true,
+  "technicalResizeAuthority": "root implementation decision; target dimensions and crop permission from source"
+}

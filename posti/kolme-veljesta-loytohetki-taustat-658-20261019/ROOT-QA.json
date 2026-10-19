@@ -1,0 +1,152 @@
+{
+  "at": "2026-10-19T14:42:56.497631+00:00",
+  "sourceReadInFullByRoot": true,
+  "readyForPTReview": true,
+  "sourceCompositionPass": true,
+  "actualWholeGenerationCalls": 2,
+  "returnedNativeImageCount": 2,
+  "deliveredTargetImageCount": 4,
+  "previewCount": 4,
+  "portraitPrimary": true,
+  "allNativeAndCropViewsPersonallyInspectedByRoot": true,
+  "fullTargetDisplaysMayBeAutoResizedByTool": true,
+  "sourceCropPermission": true,
+  "nativeVersusExportsDisclosed": true,
+  "noNativeTargetResolutionClaim": true,
+  "nativePreservedByteExact": true,
+  "allChildPacketMirrorBytesVerified": true,
+  "assets": [
+    {
+      "taskNumber": 658,
+      "master": "portrait",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "native": {
+        "path": "portrait/native/portrait-master-attempt1.png",
+        "sha256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+        "bytes": 2049601,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "decodedRGBPixelSHA256": "4eca688900b791bbc8965ea867309ded4968113bd07b290afa081f674817a848"
+      },
+      "nativeSHA256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+      "nativePath": "portrait/native/portrait-master-attempt1.png",
+      "deliveredTargetImageCount": 2,
+      "exports": [
+        {
+          "path": "portrait/kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+          "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3",
+          "bytes": 4682663,
+          "dimensions": [
+            2048,
+            2732
+          ],
+          "decodedRGBPixelSHA256": "2021ddba5d304eaa45942bd359a6a3a493768a24e394066b65e1b689e8818a15"
+        },
+        {
+          "path": "portrait/kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+          "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015",
+          "bytes": 2592470,
+          "dimensions": [
+            1179,
+            2556
+          ],
+          "decodedRGBPixelSHA256": "ce354f658757aa99941edfe24f972276acae7759c29ee3864a6ddf8e5d09dc6a"
+        }
+      ],
+      "previewPaths": [
+        "portrait/previews/ipad-portrait-crop-preview.png",
+        "portrait/previews/iphone-portrait-crop-preview.png"
+      ],
+      "wholeNewGeneration": true,
+      "rootNativeAndTwoCropViewsPersonallyInspected": true,
+      "targetIsTechnicalUpscale": true,
+      "nativeClaimedAsTargetSize": false,
+      "cropsExplicitlyAuthorized": true,
+      "noContentRetouch": true,
+      "noOutpainting": true,
+      "noPendant": true,
+      "noCord": true,
+      "noText": true,
+      "noEmptyCenter": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "taskNumber": 658,
+      "master": "wide",
+      "imageProduced": true,
+      "actualGenerationCalls": 1,
+      "native": {
+        "path": "wide/native/workshop-wide-attempt-1.png",
+        "sha256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+        "bytes": 2182612,
+        "dimensions": [
+          1981,
+          793
+        ],
+        "decodedRGBPixelSHA256": "8623512c31c983873d63e3327be1b90a8cb5986398602ec296bee7f40f140d3c"
+      },
+      "nativeSHA256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+      "nativePath": "wide/native/workshop-wide-attempt-1.png",
+      "deliveredTargetImageCount": 2,
+      "exports": [
+        {
+          "path": "wide/ipad-landscape.png",
+          "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5",
+          "bytes": 4401487,
+          "dimensions": [
+            2732,
+            2048
+          ],
+          "decodedRGBPixelSHA256": "8bdca7fa36603b132fb2689e190c551fd5d6cc7daae4d5b573be523163af97b2"
+        },
+        {
+          "path": "wide/iphone-landscape.png",
+          "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5",
+          "bytes": 3399813,
+          "dimensions": [
+            2556,
+            1179
+          ],
+          "decodedRGBPixelSHA256": "2b953cccf5bb5ba8aab8766f54ccafcedd4f93b3edeafcec8833d011de5a5015"
+        }
+      ],
+      "previewPaths": [
+        "wide/previews/ipad-landscape-crop-preview.png",
+        "wide/previews/iphone-landscape-crop-preview.png"
+      ],
+      "wholeNewGeneration": true,
+      "rootNativeAndTwoCropViewsPersonallyInspected": true,
+      "targetIsTechnicalUpscale": true,
+      "nativeClaimedAsTargetSize": false,
+      "cropsExplicitlyAuthorized": true,
+      "noContentRetouch": true,
+      "noOutpainting": true,
+      "noPendant": true,
+      "noCord": true,
+      "noText": true,
+      "noEmptyCenter": true,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "cropsAndUpscalingOnly": true,
+  "pendantCordAndLabelAbsent": true,
+  "centerShowsActualWorkshop": true,
+  "sharedHandoffPath": "/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/codex-kolme-veljesta-taustat-658-20261019",
+  "TripoOwnerSeparate": true,
+  "tripoCallsIssuedByImageSession": 0,
+  "globalTripoBudgetNotReset": true,
+  "otherSixTreasuresAuthorized": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

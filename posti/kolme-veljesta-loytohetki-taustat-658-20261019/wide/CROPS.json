@@ -1,0 +1,93 @@
+{
+  "taskNumber": 658,
+  "subscope": "wide",
+  "at": "2026-10-19T14:37:41.008253+00:00",
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/native/workshop-wide-attempt-1.png",
+    "sha256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+    "bytes": 2182612,
+    "width": 1981,
+    "height": 793,
+    "mode": "RGB",
+    "format": "PNG",
+    "decodedRGBPixelSHA256": "8623512c31c983873d63e3327be1b90a8cb5986398602ec296bee7f40f140d3c"
+  },
+  "targets": [
+    {
+      "name": "iphone-landscape",
+      "targetWidth": 2556,
+      "targetHeight": 1179,
+      "nativeWidth": 1981,
+      "nativeHeight": 793,
+      "cropBoxNativeFloatLTRB": [
+        130.91221374045801,
+        0.0,
+        1850.087786259542,
+        793.0
+      ],
+      "cropCenterNormalized": [
+        0.5,
+        0.5
+      ],
+      "cropWidthNative": 1719.175572519084,
+      "cropHeightNative": 793,
+      "fractionNativeWidth": 0.8678321920843433,
+      "fractionNativeHeight": 1.0,
+      "scaleX": 1.4867591424968474,
+      "scaleY": 1.4867591424968474,
+      "upscaled": true,
+      "cropStrategy": "centered",
+      "method": "Pillow RGB; source-authorized floating-point crop with resize(box=...) Lanczos, target PNG. No content edits, retouch, mask, padding or outpainting.",
+      "output": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/delivery-packet/iphone-landscape.png",
+        "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5",
+        "bytes": 3399813,
+        "width": 2556,
+        "height": 1179,
+        "mode": "RGB",
+        "format": "PNG",
+        "decodedRGBPixelSHA256": "2b953cccf5bb5ba8aab8766f54ccafcedd4f93b3edeafcec8833d011de5a5015"
+      }
+    },
+    {
+      "name": "ipad-landscape",
+      "targetWidth": 2732,
+      "targetHeight": 2048,
+      "nativeWidth": 1981,
+      "nativeHeight": 793,
+      "cropBoxNativeFloatLTRB": [
+        398.0,
+        0.0,
+        1455.849609375,
+        793.0
+      ],
+      "cropCenterNormalized": [
+        0.46790752382004036,
+        0.5
+      ],
+      "cropWidthNative": 1057.849609375,
+      "cropHeightNative": 793,
+      "fractionNativeWidth": 0.533997783632004,
+      "fractionNativeHeight": 1.0,
+      "scaleX": 2.5825977301387137,
+      "scaleY": 2.5825977301387137,
+      "upscaled": true,
+      "cropStrategy": "x398 left-shift authorized by root to retain both candles",
+      "method": "Pillow RGB; source-authorized floating-point crop with resize(box=...) Lanczos, target PNG. No content edits, retouch, mask, padding or outpainting.",
+      "output": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-taustat-658-20261019/wide/delivery-packet/ipad-landscape.png",
+        "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5",
+        "bytes": 4401487,
+        "width": 2732,
+        "height": 2048,
+        "mode": "RGB",
+        "format": "PNG",
+        "decodedRGBPixelSHA256": "8bdca7fa36603b132fb2689e190c551fd5d6cc7daae4d5b573be523163af97b2"
+      }
+    }
+  ],
+  "sourcePermitsSeparateCrops": true,
+  "actualNativeDimensionsPreserved": true,
+  "noCroppingClaimedForNative": true,
+  "upscaleExplicitlyDisclosed": true
+}

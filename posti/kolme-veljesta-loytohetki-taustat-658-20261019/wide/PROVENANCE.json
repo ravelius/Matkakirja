@@ -1,0 +1,30 @@
+{
+  "taskNumber": 658,
+  "subscope": "wide",
+  "sourceManifest": "SOURCE-MANIFEST.json",
+  "generation": "GENERATION.json",
+  "crops": "CROPS.json",
+  "native": "native/workshop-wide-attempt-1.png",
+  "targets": [
+    "iphone-landscape.png",
+    "ipad-landscape.png"
+  ],
+  "previews": [
+    "previews/iphone-landscape-crop-preview.png",
+    "previews/ipad-landscape-crop-preview.png"
+  ],
+  "sourceReadAndHashVerified": true,
+  "nativeByteExact": true,
+  "sourceAuthorizedCrops": true,
+  "actualNativeSize": [
+    1981,
+    793
+  ],
+  "requestedNativeSizeNotAchieved": true,
+  "technicalUpscalesDisclosed": true,
+  "allCallsInPromptsAndGeneration": true,
+  "TripoCallsIssued": 0,
+  "newBackgroundOwnerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
