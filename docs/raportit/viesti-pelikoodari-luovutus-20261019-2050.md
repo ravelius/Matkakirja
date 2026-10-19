@@ -6,6 +6,8 @@ Edellinen: viesti-pelikoodari-luovutus-20261019-1930.md. Rooli: Pelikoodari (Opu
 - Ei omia ajoja, simuja eikä lukituksia (simut sammutettu, SIMU VAPAA annettu JU:lle 20.12).
 - JU kääntää L2:lla: ensin 9ed9e57ff (alkoi 20.35, ei keskeytetä), sitten LOPULLINEN 620227d37 → _tyo/julkaisija/juoksupeli-206-app.
   JU ilmoittaa KÄÄNNETTY + SIMU NYT vasta 620227d37:stä.
+- LISÄYS 20.5x: JU KÄÄNNETTY 620227d37 → 68e3cde0e (20.49, juoksupeli-206-app); SIMU NYT tulee LS:n simun jälkeen (~5 min).
+  Raketti-auto 8eb6e1945 JU:n L2-jonossa – ei vanhentunut (raketti-iOS).
 
 ## ENSIN (YÖJUNA 206, juoksupeli): simu 620227d37:llä → yhteinen kuvapari PT:lle → merge-pyyntö NS:lle
 1. JU:n SIMU NYT:sta (tarkista kaannos.txt = 620227d3…): `zsh /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/simu-juoksu-206/aja.zsh`
