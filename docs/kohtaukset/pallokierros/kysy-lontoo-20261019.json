@@ -1,50 +1,50 @@
 {
- "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-v5/lontoo.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä.",
+ "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-v5/lontoo.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä. Tarkistettu 19.10. klo ~12.15 tekstiä vasten: vastaukset, jotka löytyivät jo kohteen tekstistä, vaihdettu uusiin.",
  "kaupunki": "lontoo",
  "kohteet": {
   "Q62408": [
-   "Mikä on oikeasti Big Ben?",
-   "Miksi kellotaulut ovat sinisiä?",
+   "Onko Big Benin kellossa halkeama?",
+   "Miksi heilurin päällä on kolikoita?",
    "Miksi taulut maalattiin aikanaan mustiksi?",
-   "Mitä vuonna 1834 tapahtui?",
-   "Kuka oli Augustus Pugin?",
-   "Milloin Big Ben soi ensimmäisen kerran?",
+   "Mikä osa palatsista selvisi palosta?",
+   "Miksi Big Ben vaikeni vuonna 2017?",
+   "Mitä tornin huipun lamppu kertoo?",
    "Kuinka korkea Elizabeth Tower on?",
-   "Mitä palatsissa tehdään nykyään?"
+   "Kuinka paljon Big Ben painaa?"
   ],
   "Q5933": [
-   "Kuka suunnitteli kirkon länsitornit?",
+   "Mikä on kirkon kruunajaistuoli?",
    "Miksi tornit ovat paljon kirkkoa nuoremmat?",
-   "Kuka lepää Henrik seitsemännen kappelissa?",
+   "Mikä on Runoilijain nurkka?",
    "Mikä on viuhkaholvi?",
-   "Kuka kruunattiin täällä ensimmäisenä?",
-   "Milloin Kaarle kolmas kruunattiin?",
+   "Pidetäänkö kirkossa yhä jumalanpalveluksia?",
+   "Ketkä vihittiin kirkossa vuonna 2011?",
    "Ketä muita kirkkoon on haudattu?",
    "Miksi hallitsijat kruunataan juuri täällä?"
   ],
   "Q42182": [
-   "Miksi julkisivu uusittiin 1913?",
-   "Kuka osti Buckingham Housen?",
-   "Kuka hallitsija muutti palatsiin ensin?",
-   "Kuka veisti Victorian muistomerkin?",
+   "Mitä vartijoiden vaihdossa tapahtuu?",
+   "Kuinka monta huonetta palatsissa on?",
+   "Miksi palatsi avattiin yleisölle 1993?",
+   "Mikä on palatsin kuuluisa parveke?",
    "Kuinka suuri palatsin puutarha on?",
    "Mitä lippu palatsin katolla kertoo?",
    "Mikä on The Mall?",
-   "Kuka suunnitteli nykyisen julkisivun?"
+   "Onko palatsin puutarhassa mehiläispesiä?"
   ],
   "Q129143": [
-   "Kuka oli amiraali Nelson?",
+   "Mitä Nelson menetti ennen Trafalgaria?",
    "Missä Trafalgarin taistelu käytiin?",
-   "Kuka suunnitteli pronssileijonat?",
-   "Miksi Oslo lahjoittaa kuusen?",
+   "Mitä neljännellä jalustalla on nähty?",
+   "Mikä kuuluisa museo on aukion laidalla?",
    "Miksi leijonat tulivat paikalleen myöhemmin?",
    "Kuinka korkea Nelsonin pylväs on?",
-   "Mitä aukiolla tapahtuu nykyään?",
-   "Mistä aukion nimi tulee?"
+   "Mitä vanhoja mittoja aukiolla on esillä?",
+   "Mihin aukion kulman lyhtypylvästä käytettiin?"
   ],
   "Q173882": [
-   "Miksi vanha katedraali tuhoutui?",
-   "Mitä Wrenin haudan tekstissä lukee?",
+   "Mitä kupolin huipulla on?",
+   "Kenen hautajaiset täällä pidettiin 1965?",
    "Miten kuiskausgalleria toimii?",
    "Kuinka monta askelmaa kupoliin on?",
    "Mikä muu Wren oli kuin arkkitehti?",
@@ -55,31 +55,31 @@
   "Q62378": [
    "Miksi Vilhelm rakennutti Towerin?",
    "Miksi Valkoinen torni on vaalea?",
-   "Mitä kruunuille tapahtui vuonna 1649?",
+   "Mistä Cullinan-timantti on peräisin?",
    "Mikä on kruunajaislusikka?",
-   "Mitä korppimestari tekee?",
-   "Mistä korppitaru on peräisin?",
+   "Millaisia eläimiä Towerissa pidettiin?",
+   "Oliko Towerissa myös rahapaja?",
    "Ketä Towerissa on pidetty vankina?",
    "Keitä ovat Towerin punaviittaiset vartijat?"
   ],
   "Q83125": [
-   "Miksi silta avautuu?",
-   "Kuka suunnitteli Tower Bridgen?",
-   "Miksi suunnittelijoita oli kaksi?",
-   "Kuka oli Albert Gunter?",
+   "Millä voimalla silta alun perin nousi?",
+   "Minkä värinen silta oli alun perin?",
+   "Ovatko tornit oikeasti kivirakenteita?",
+   "Kuinka paljon sillan siipi painaa?",
    "Miksi kävelysillat suljettiin vuonna 1910?",
    "Kuinka usein silta nousee nykyään?",
    "Miksi silta sekoitetaan London Bridgeen?",
    "Mitä kävelysiltaan pääsee nykyään katsomaan?"
   ],
   "Q192988": [
-   "Miksi punainen pallo putoaa?",
-   "Mihin aikaan pallo putoaa?",
-   "Miksi pituusastetta piti määrittää?",
-   "Kuka rakennutti observatorion?",
+   "Kuka keksi tarkan merikellon?",
+   "Mitä tarkoittaa GMT?",
+   "Mitä observatorion katolta loistaa yöllä?",
+   "Mitä eläimiä Greenwichin puistossa elää?",
    "Miksi nollapiiri valittiin Greenwichiin?",
    "Voiko nollapiirin ylittää jalan?",
-   "Mikä on Cutty Sark?",
+   "Miksi Ranska pitäytyi Pariisin nollapiirissä?",
    "Kuka oli Flamsteed?"
   ]
  }
