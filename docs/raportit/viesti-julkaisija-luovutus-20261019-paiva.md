@@ -3,7 +3,7 @@
 Loki: `/Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt` (tail -120). Edellinen: `viesti-julkaisija-luovutus-20261018-iltapaiva.md`.
 Osoitekirja /Users/Shared/Claude/osoitekirja.md (gmail-tili 19.10., kaikki id:t uusia). Viestit `mcp__ccd_session_mgmt__send_message` id:llä. Levy 55 Gi.
 
-## 0. JUNA 204 PYSÄYTETTY (omistaja PT:n kautta 11.4x)
+## 0. JUNA 204 ODOTTAA OMISTAJAN KORJAUKSIA (omistaja 11.46, PT:n kautta) – EI LUKITUSTA EIKÄ VIENTIÄ; simujono PT:n järjestyksessä (kohta 2)
 "Käske junan odottaa vielä. Annan muutamia korjauksia ennen kuin juna saa lähteä." → EI lukitusta, EI TF-/web-vientiä ennen
 korjauksia + erillistä julkaisupyyntöä. Simujono ja käännökset jatkuvat normaalisti.
 
