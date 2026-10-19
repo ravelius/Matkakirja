@@ -3,12 +3,17 @@
 Edellinen: viesti-linssiseppa-luovutus-20261018-1405.md. Id:t /Users/Shared/Claude/osoitekirja.md (gmail-tili 19.10.): PT local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31,
 JU local_24e63224-112c-449a-b6a3-e10e4ed43f4b, KS local_16f80454-…, VS local_e675f86d-…, PK local_11aca9cd-…, Postivahti local_0a4f4c68-….
 
-## 0. KÄYNNISSÄ LUOVUTUSHETKELLÄ
-- **Leiden-video SIMUSSA (alkoi 11.41)**: käännös 605059f2 (L2); `proto-3d/tyokalut/linssiseppa-ajot/ajo-leiden204.zsh` (loki ajo-leiden204.log,
-  valmis kun "SIMU ALAS"). Ajo: Rijks lyhyt napautus + pitkä (kunniagalleria → Leiden) skenaariolla
-  sk-napautus204-iphone.txt → loki `proto-3d/lokit/todistus-leiden204-iphone-*`. SEURAAJA: ilmoita JU:lle SIMU VAPAA ajon jälkeen, tarkista
-  lokista "leikkauksen esilataus" + "leikkaus, esilataus valmis x s" ja ettei Leidenissä tyhjiä jalustoja/sumeita kuvia, tee video
-  (ffmpeg -fflags +igndts … libx264) ja lähetä PT:lle (PT pyysi: lyhyt video 2)+3), sitten NS).
+## 0. LEIDEN-VIDEO AJETTU 11.41–11.46 – EI VIELÄ HYVÄKSYTTÄVÄ (ei lähetetty PT:lle videona; PT:lle kerrottu tilanne)
+Loki /Users/Shared/Claude/proto-3d/lokit/todistus-leiden204-iphone-20261019-1141 (napautus.mp4, kuvat/n-leiden.png). Lyhyt napautus ok.
+Pitkä: "leikkauksen esilataus (12,7, -83,8)" → "esilataus valmis 2,5 s" = AIKAKATKAISU (kaikki 12 m:n sisällä ei valmistunut), sitten
+133 ms ruutu liu'ussa; perillä katse jalustaan ~2,2 m:stä, mutta sen patsas rmo-asclepius-en-hygieia latautui vasta saapumisen JÄLKEEN →
+kuvassa tyhjä jalusta lähikuvana, pylväs sumea. KORJAA (museo-kamerajohtaja-204, kärki 72abef783):
+ a) MuseoVeistokset.Ennakoi: lataa ENSIN saapumiskatseen kohdepatsas (SisaltoSuunta valitsee jalustan → välitä sen patsas-id ennakkoon),
+    Valmis(p) = kohdepatsas ladattu (+ lähimmät), ei kaikkia 12 m:n patsaita (lataus on yksi kerrallaan, 8–9 Mt/patsas).
+ b) SisaltoSuunta: veistokselle katseluetäisyys VeistosAsento-tyyliin (koko kuvassa), ei 2,2 m:n lähikuvaa; tai valitse teos/patsas, jonka
+    katseluasento on kohteen lähellä, ja vie liu'un loppu siihen asentoon.
+ c) LeikkausMaxOdotusS 2,5 → ~4 s, jos a) ei riitä; tekstuurien Valmis-säde 12 → ~8 m.
+ Sitten uusi ajo: ajo-leiden204.zsh (L2-käännös) → video PT:lle → NS.
 
 ## 1. TÄNÄÄN VALMIIT (kaikki proto-repossa /Users/Shared/Claude/proto-3d/Matkakirja-proto)
 - **Mona Lisan hyppy**: ei pelissä (kameraloki + ruutuvahti 202h/202i: pelin kuva tasainen 60 fps) – simulaattorin kuvan jumi. Lopun nykäys
