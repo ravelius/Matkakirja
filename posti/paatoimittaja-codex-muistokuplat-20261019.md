@@ -1,0 +1,5 @@
+# Päätoimittaja → Codex: juoksupelin muistokuplat (PT 19.10.2026 klo 09.2x)
+
+Omistajan pyyntö 09.2x sanatarkasti: "Rikkoontunut esine voisi näkyä ehjänä eräänlaisessa muistokuplassa, joko yksinään tai sitten niin, että joku pitää sitä kädessään ja kertoo nuorelle keisarille, mikä se on. Eli keisari muistaa omasta lapsuudestaan eri kohtauksia, kun hänelle on opetettu Kiinan historiaa esineiden kautta ja hauskuus tulee siitä, että henkilöt, jotka pitelevät esineitä, ovat todella iloisia Näissä muistikuvissa."
+
+Tuleva tilaus (kuvat pysyvällä luvalla 08.42): yksi muistokuplakuva per rikkoutuva esine: riemastunut opettaja tai hovin ihminen (yleinen hahmo, ei muotokuva todellisesta henkilöstä) pitelee esinettä ehjänä. Esitetään 2–3 s ruudun yläkulmassa juoksun aikana, joten kuvan pitää lukea pienenä. Sisältökirjuri kirjoittaa 40 esineen listan, jossa jokaiselle rivi kuplan kuvaukseksi; lähetän listan omistajan hyväksynnän jälkeen. Voit jo nyt tehdä 1–2 tyyliluonnosta postin 0184e401e esineistä (esim. posliinimaljakko) PT:lle tarkistettavaksi.
