@@ -1,0 +1,488 @@
+{
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "canonicalCount": 51,
+  "batchItems": [
+    {
+      "number": 1,
+      "id": "posliinimaljakko",
+      "nimi": "Posliinimaljakko",
+      "kuplatyyppi": 2,
+      "kuplatyyppiRaw": "2",
+      "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+      "kupla": "Iso Qing-posliinimaljakko vaalealla jalustalla avarassa palatsisalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo ikkunasta, vaaleat pinnat, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Qing-hovin posliini tehtiin Jingdezhenin keisarillisissa uuneissa, ja hovituotanto päättyi vasta vuonna 1911.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.posliinimaljakko.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.posliinimaljakko.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.posliinimaljakko.kupla",
+          "teksti": "juoksupeli.rikkoutuva.posliinimaljakko.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.posliinimaljakko.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.posliinimaljakko.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.posliinimaljakko.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "avarassa palatsisalissa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.posliinimaljakko.kupla"
+        },
+        "mdHeading": "### Posliinimaljakko (`posliinimaljakko`) — kupla 2: aarre salissa (ei ihmisiä)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 2,
+      "id": "sinivalkoinen-maljakko",
+      "nimi": "Sinivalkoinen maljakko",
+      "kuplatyyppi": 2,
+      "kuplatyyppiRaw": "2",
+      "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+      "kupla": "Korkea sinivalkoinen maljakko kirkkaassa lasivitriinissä vaalean palatsisalin keskellä, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Sinivalkoisen posliinin koboltti tuotiin Persiasta, ja Jingdezhenissä sitä alettiin tehdä paljon 1300-luvulla.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.kupla",
+          "teksti": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "lasivitriinissä",
+          "vaalean palatsisalin keskellä"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.kupla"
+        },
+        "mdHeading": "### Sinivalkoinen maljakko (`sinivalkoinen-maljakko`) — kupla 2: aarre salissa (ei ihmisiä)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 3,
+      "id": "famille-rose-maljakko",
+      "nimi": "Famille rose -maljakko",
+      "kuplatyyppi": 3,
+      "kuplatyyppiRaw": "3",
+      "typeLabelFromMarkdown": "oppitunti (Yuqing-koulusali)",
+      "kupla": "Iloinen opettaja karttakepin kanssa esittelee famille rose -maljakkoa, riemastunut pikku-Puyi (kaapu, letti) pulpetissa, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Vaaleanpunaiseen sävyyn perustuva famille rose -tyyli kehittyi täyteen mittaansa Yongzhengin kaudella.",
+      "dynastia": "Qing",
+      "vuosi": "1723–1795",
+      "ajoitus": "Qing-dynastia, Yongzhengin–Qianlongin kausi, 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.famille-rose-maljakko.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.famille-rose-maljakko.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.famille-rose-maljakko.kupla",
+          "teksti": "juoksupeli.rikkoutuva.famille-rose-maljakko.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.famille-rose-maljakko.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.famille-rose-maljakko.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.famille-rose-maljakko.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.famille-rose-maljakko.kupla"
+        },
+        "mdHeading": "### Famille rose -maljakko (`famille-rose-maljakko`) — kupla 3: oppitunti (Yuqing-koulusali)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": "Yuqing-koulusali",
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": false,
+        "applicableExplicitPlaceCorrection": {
+          "sourceId": "paatoimittaja-codex-muistokuplat-tarkennus-1058-20261019.md",
+          "quote": "oppitunti Yuqing-palatsin koulusalissa (毓慶宮)",
+          "reason": "The base row is explicitly an oppitunti; this named place is in the source, not inferred."
+        },
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 4,
+      "id": "keltalasitteinen-kulho",
+      "nimi": "Keltalasitteinen kulho",
+      "kuplatyyppi": 5,
+      "kuplatyyppiRaw": "5",
+      "typeLabelFromMarkdown": "juhla/seremonia",
+      "kupla": "Hymyilevä palvelija juhlapuvussa tarjoaa riisiä keltalasitteisesta kulhosta, iloiset hovilaiset, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Keltaista pidettiin keisarin värinä, ja sitä varattiin keramiikassa ja kankaissa pääosin keisarin käyttöön.",
+      "dynastia": "Qing",
+      "vuosi": "1700–1800-luku",
+      "ajoitus": "Qing-dynastia, tyypillisesti 1700–1800-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.kupla",
+          "teksti": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.kupla"
+        },
+        "mdHeading": "### Keltalasitteinen kulho (`keltalasitteinen-kulho`) — kupla 5: juhla/seremonia",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 5,
+      "id": "celadon-kulho",
+      "nimi": "Celadon-kulho",
+      "kuplatyyppi": 2,
+      "kuplatyyppiRaw": "2",
+      "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+      "kupla": "Jadenvihreä celadon-kulho isona vaalealla jalustalla avarassa kirjastosalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo ikkunasta, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Celadonin jadenvihreä väri syntyy lasitteen rautaoksidista; Zhejiangin Longquanin uunit ovat kuuluisia siitä.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.celadon-kulho.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.celadon-kulho.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.celadon-kulho.kupla",
+          "teksti": "juoksupeli.rikkoutuva.celadon-kulho.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.celadon-kulho.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.celadon-kulho.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.celadon-kulho.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "avarassa kirjastosalissa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.celadon-kulho.kupla"
+        },
+        "mdHeading": "### Celadon-kulho (`celadon-kulho`) — kupla 2: aarre salissa (ei ihmisiä)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 6,
+      "id": "yixing-teekannu",
+      "nimi": "Yixing-teekannu",
+      "kuplatyyppi": 5,
+      "kuplatyyppiRaw": "5",
+      "typeLabelFromMarkdown": "juhla/seremonia",
+      "kupla": "Yixing-teekannu teejuhlassa, naurava keisarinnaäiti ja hymyilevät hovin naiset mantšuasuissa, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Yixingin teekannut tehtiin Jiangsun purppurasavesta, ja savi imee itseensä hieman teetä käytön myötä.",
+      "dynastia": "Qing",
+      "vuosi": "1700–1800-luku",
+      "ajoitus": "Qing-dynastia, tyypillisesti 1700–1800-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.yixing-teekannu.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.yixing-teekannu.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.yixing-teekannu.kupla",
+          "teksti": "juoksupeli.rikkoutuva.yixing-teekannu.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.yixing-teekannu.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.yixing-teekannu.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.yixing-teekannu.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.yixing-teekannu.kupla"
+        },
+        "mdHeading": "### Yixing-teekannu (`yixing-teekannu`) — kupla 5: juhla/seremonia",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 7,
+      "id": "doucai-kuppi",
+      "nimi": "Doucai-kuppi",
+      "kuplatyyppi": 4,
+      "kuplatyyppiRaw": "4",
+      "typeLabelFromMarkdown": "lahja (lähettiläs)",
+      "kupla": "Hymyilevä lähettiläs vieraan maan juhla-asussa ojentaa pientä doucai-kuppia, iloiset virkamiehet ihailevat, valoisa, ilmava, pehmeä päivänvalo, vaalea sali, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Doucai-koristeessa sininen ääriviiva maalataan lasitteen alle ja värit lisätään päälle toisessa poltossa.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku (tyyli Ming-ajan Chenghuasta)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.doucai-kuppi.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.doucai-kuppi.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.doucai-kuppi.kupla",
+          "teksti": "juoksupeli.rikkoutuva.doucai-kuppi.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.doucai-kuppi.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.doucai-kuppi.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.doucai-kuppi.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "vaalea sali"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.doucai-kuppi.kupla"
+        },
+        "mdHeading": "### Doucai-kuppi (`doucai-kuppi`) — kupla 4: lahja (lähettiläs)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 10,
+      "id": "tuoksupoltin",
+      "nimi": "Tuoksupoltin",
+      "kuplatyyppi": 8,
+      "kuplatyyppiRaw": "8",
+      "typeLabelFromMarkdown": "vuodenaika",
+      "kupla": "Pronssinen tuoksupoltin kirkkaasti lumisella palatsin pihalla, hymyilevä palvelija talvikaavussa, koristelyhdyt, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Vanhimmat kiinalaiset tuoksupolttimet eli xianglu ovat Taistelevien valtioiden ajalta, noin 400-luvulta eaa.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.tuoksupoltin.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.tuoksupoltin.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.tuoksupoltin.kupla",
+          "teksti": "juoksupeli.rikkoutuva.tuoksupoltin.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.tuoksupoltin.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.tuoksupoltin.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.tuoksupoltin.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "lumisella palatsin pihalla"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.tuoksupoltin.kupla"
+        },
+        "mdHeading": "### Tuoksupoltin (`tuoksupoltin`) — kupla 8: vuodenaika",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 11,
+      "id": "jadeastia",
+      "nimi": "Jadeastia",
+      "kuplatyyppi": 2,
+      "kuplatyyppiRaw": "2",
+      "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+      "kupla": "Vihreä jadeastia isona vaalealla jalustalla avarassa palatsisalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo heijastuu kiillotetulla pinnalla, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Kiinassa jadea arvostettiin kulta- ja hopeaakin enemmän; jadeveisto huipentui Qianlongin aikana.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luku",
+      "ajoitus": "Qing-dynastia, 1700-luku",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.jadeastia.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.jadeastia.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.jadeastia.kupla",
+          "teksti": "juoksupeli.rikkoutuva.jadeastia.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.jadeastia.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.jadeastia.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.jadeastia.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [
+          "avarassa palatsisalissa"
+        ],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.jadeastia.kupla"
+        },
+        "mdHeading": "### Jadeastia (`jadeastia`) — kupla 2: aarre salissa (ei ihmisiä)",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": null,
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    },
+    {
+      "number": 12,
+      "id": "jadesinetti",
+      "nimi": "Keisarin jadesinetti",
+      "kuplatyyppi": 5,
+      "kuplatyyppiRaw": "5",
+      "typeLabelFromMarkdown": "juhla/seremonia",
+      "kupla": "Ylpeä ja iloinen virkamies nostaa jadesinettiä molemmin käsin, hymyilevät juhlapukuiset hovilaiset ympärillä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+      "fakta": "Qianlongin eläkeaikojen jadesinetti on Wienin museon mukaan Palace Museumin suurin jadesinetti.",
+      "dynastia": "Qing",
+      "vuosi": "1700-luvun loppu",
+      "ajoitus": "Qing-dynastia, 1700-luvun loppu (Qianlongin kausi)",
+      "source": {
+        "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+        "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+        "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+        "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+        "keys": {
+          "nimi": "juoksupeli.rikkoutuva.jadesinetti.nimi",
+          "kuplatyyppi": "juoksupeli.rikkoutuva.jadesinetti.kuplatyyppi",
+          "kupla": "juoksupeli.rikkoutuva.jadesinetti.kupla",
+          "teksti": "juoksupeli.rikkoutuva.jadesinetti.teksti",
+          "dynastia": "juoksupeli.rikkoutuva.jadesinetti.dynastia",
+          "vuosi": "juoksupeli.rikkoutuva.jadesinetti.vuosi",
+          "ajoitus": "juoksupeli.rikkoutuva.jadesinetti.ajoitus"
+        }
+      },
+      "placeEvidence": {
+        "exactScenePlaceQuotes": [],
+        "scenePlaceQuoteSource": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "key": "juoksupeli.rikkoutuva.jadesinetti.kupla"
+        },
+        "mdHeading": "### Keisarin jadesinetti (`jadesinetti`) — kupla 5: juhla/seremonia",
+        "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+        "namedPlaceFromHeading": null,
+        "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+        "applicableExplicitPlaceCorrection": {
+          "sourceId": "paatoimittaja-codex-muistokuplat-tarkennus-1058-20261019.md",
+          "quote": "sinetit Jiaotai-salissa (交泰殿)",
+          "reason": "Explicit source correction for seals."
+        },
+        "doNotInventNamedPlace": true
+      },
+      "productionStatus": "not_started_by_source_auditor",
+      "reuseDecision": "not_assessed_for_45_percent_fade"
+    }
+  ],
+  "orderSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe",
+    "sha256": "103bb93507ece700362a0aa9ea2bcf25b95f228a87e6798903ee9bcd5b83949f",
+    "readInFull": true
+  },
+  "sourceTaskNumbers": [
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563
+  ],
+  "jadeAndVersionOnlyExtrasIncluded": false
+}

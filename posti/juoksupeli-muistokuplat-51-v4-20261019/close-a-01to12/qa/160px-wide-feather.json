@@ -1,0 +1,20 @@
+{
+  "width": 160,
+  "height": 213,
+  "innerRadius": 0.45,
+  "outerRadius": 1,
+  "curve": "1-smoothstep",
+  "productionFilesUnmodified": true,
+  "assets": [
+    "01-posliinimaljakko",
+    "02-sinivalkoinen-maljakko",
+    "03-famille-rose-maljakko",
+    "04-keltalasitteinen-kulho",
+    "05-celadon-kulho",
+    "06-yixing-teekannu",
+    "07-doucai-kuppi",
+    "10-tuoksupoltin",
+    "11-jadeastia",
+    "12-jadesinetti"
+  ]
+}

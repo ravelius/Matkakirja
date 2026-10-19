@@ -1,0 +1,129 @@
+{
+  "items": {
+    "01-posliinimaljakko": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "artifactHeightFraction": 0.4,
+      "importantFacialFeaturesProtected": true,
+      "fullFaceEveryPixelInsideCore": true,
+      "observations": "Intact bluewhite Qing vase on small stand on dark table, no people. Sharp central artifact approx40%, authentic glaze; strong optical red/gold blur.",
+      "PTAccepted": false,
+      "ownerAccepted": false,
+      "currentCompositionSource": "86898a4be974d8449a65e6963f4b1deb81e3178c"
+    },
+    "02-sinivalkoinen-maljakko": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "artifactHeightFraction": 0.405,
+      "backgroundStrongBokeh": true,
+      "observations": "Complete blue-white tall porcelain vase in genuinely clear quiet glass vitrine, no people; sharp central ceramic about40.5%height, continuous opaque photograph, soft red/gold optical background, dark Qing table. Target height approximate; narrow neck/rounded shoulders and quiet glass transmission read."
+    },
+    "03-famille-rose-maljakko": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "artifactHeightFraction": 0.325,
+      "importantFacialFeaturesProtected": true,
+      "fullFaceEveryPixelInsideCore": false,
+      "observations": "Pink famille rose vase approx32.5%, teacher+boy immediately behind in medium close view; sharp vase, mildly soft people, strongly blurred background. Eyes/nose/mouth protected centrally. Outer tutor temple/beard and boy outer cheek enter early smooth feather; disclose, not a hard cut. Correct red/gold caps, round collar, shavedfront+queue, dark table. Natural hands; no map or pointer.",
+      "PTAccepted": false,
+      "ownerAccepted": false,
+      "currentCompositionSource": "86898a4be974d8449a65e6963f4b1deb81e3178c"
+    },
+    "04-keltalasitteinen-kulho": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "importantFacialFeaturesProtected": true,
+      "artifactHeightFraction": 0.28,
+      "observations": "Yellow porcelain serving bowl and rice are sharp large foreground, natural supporting hands, two happy elderly Qingmen central immediately behind. Broad bowl with rice about28% projected height, much more legible than tiny oldbowl; strong bokeh/darktable. Eyes/nose/mouth protected, outertemple begins earlyfeather."
+    },
+    "05-celadon-kulho": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "artifactHeightFraction": 0.29,
+      "backgroundStrongBokeh": true,
+      "observations": "Large open jadegreen CELADON ceramic bowl, lotus ribs and natural subtle crackle glaze; complete rim, foot and carved stand on dark table. About29%height, broad natural bowl about76%photo width. Close view and extreme bokeh, no people, no glass/jade material confusion. Outer rim starts feather; whole form readable."
+    },
+    "06-yixing-teekannu": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "importantFacialFeaturesProtected": true,
+      "artifactHeightFraction": 0.31,
+      "observations": "Correct TWO elderly Manchuwomen with naturalgraytemples,longrobes/liangbatou. Matte real zisha Yixing pot with lid/spout/handle approx31%height, sharp closeforeground, faces central at same successful scale; strong creamy optical background, dark table. Shape preserved, allpotvisible. No wrongmale/boy."
+    },
+    "07-doucai-kuppi": {
+      "passed": true,
+      "producerQAResult": "readable-source-subject-with-explicit-composition-exception-for-PT-review",
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "artifactHeightFraction": 0.1,
+      "artifactWidthFraction": 0.22,
+      "sourceArtifactHeightCriterionMet": false,
+      "sourceHeightTarget": [
+        0.3,
+        0.4
+      ],
+      "importantFacialFeaturesProtected": false,
+      "sourceCentralFaceCriterionMet": false,
+      "PTTargetedReviewRequired": true,
+      "observations": "Correct genuine SMALL shallowdoucai teacup (fitsinpalm,thinrim,nolid/handle/saucer), accuratehand/cupproportions andenvoyhandover, sharpreadablecentralforeground,peoplemildlysoftbehind,verystrongbokeh. Cup~10%H/~22%W, about35pxwidthat160px, muchlargerthanold9pxspeck but DOESNOTMEET30–40%heightrequest. Enforcingheightmadeabigfoodbowl inattempt1. Facesremainreadable inearlyfeather butoutereyesnotallinside45%core. DeliverasexplicitPTreviewcandidate,notstrictsourceconformanceorrecipientacceptance. Do notsilentlycallallcriteriapassed."
+    },
+    "10-tuoksupoltin": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "importantFacialFeaturesProtected": true,
+      "artifactHeightFraction": 0.28,
+      "observations": "Intact bronze dome-lidded tripod incenseburner sharp centralforeground, natural patina and piercedlid, subtle smoke, smiling elderlyQingservant justbehind, correctwintersetting snow/redcolumns/lanternblurs. Wholeburner about28%height, naturalbroadform; stone/bronze textured, darkstand, eyes/nose/mouth central; no mirror remains."
+    },
+    "11-jadeastia": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "importantFacialFeaturesProtected": true,
+      "artifactHeightFraction": 0.3,
+      "observations": "Nopeople. Largepolishedgreenjade coveredreceptacle with carvedfloralrelief andringhandles, about30%height, onsmallcarvedstand ondarktable; subtleedge light/materialglints, creamydefocusedpalace. Fullyvisible, no ceramicpaintor text."
+    },
+    "12-jadesinetti": {
+      "passed": true,
+      "personallyInspectedNative": true,
+      "backgroundStrongBokeh": true,
+      "importantFacialFeaturesProtected": true,
+      "artifactHeightFraction": 0.305,
+      "observations": "One greenjade imperialseal, squarecuboidbase, intertwineddragonknob, naturalcloudyjade texture, intact; elderlyQingofficial liftsitbothhands andothercourtieradmires. Sharpforegroundapprox30.5%,correctJiaotaiblur, central protectedfacialfeatures, no rice/bowl/text."
+    }
+  },
+  "rootPreviewReview": {
+    "at": "2026-10-19T11:27:48.403847+00:00",
+    "personallyReviewed160px": true,
+    "personallyInspectedAll10SelectedNative": true,
+    "selectedSHA256": {
+      "01-posliinimaljakko": "752b9790791fe551cc100c9bcf44139e37b6ace6192ab334efa18638b65eedd5",
+      "02-sinivalkoinen-maljakko": "f2e6c423a81f3bc560ff64b648e544f292d8e4d6d285aaa05df66857e0138e8d",
+      "03-famille-rose-maljakko": "8d8a7953ea6ca7c31bd716d5cf3440274034df379180e8c2a7a83b03e5d488c6",
+      "04-keltalasitteinen-kulho": "382b83112f2add6ebaa9e563b3ae98b0d4084a147dbeddc96334d8c68bd86b0d",
+      "05-celadon-kulho": "7933567fc63102b3f24c1742bfd3cfef44347b7f944aaeb810feb5972a881a5b",
+      "06-yixing-teekannu": "8df8e23001615beeee22950599691d2e1ec85383e9c3bc9157c3efc0680920cb",
+      "07-doucai-kuppi": "3cc958e51a19c3af72cd363673abbe137d8a4cfdf19140b0fa2a859249355e82",
+      "10-tuoksupoltin": "74ae057c570448a73d3e7f7fe692e17c8090ec11495264736cf0e1055db1cc9c",
+      "11-jadeastia": "167d2a7de5866847b3e7ca70eea418da0df7f7179b7a83a2761299f31fc8b6f8",
+      "12-jadesinetti": "7a84bb1d0f03b4e911112f7fd823fc08ad8d6a66da71226eee5b18d912cdcfe3"
+    },
+    "observations": "All10 native and final160pxsmoothfeather personallyseen. Allstories/materials intact,9closeframingproducerpasses,07smallphysicalcup readable but height~10% andfacesnotfully45core ->explicitPTdecision-required compositionexception. No strict-all-criteria-pass claim.",
+    "strictCompositionFullyMet": false,
+    "PTFocusedReviewNumbers": [
+      7
+    ]
+  },
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "strictSourceCompositionFullyMet": false,
+  "PTFocusedDecisionRequiredNumbers": [
+    7
+  ],
+  "producerReviewScope": "9closeproducerpasses+1smallcupreadabilitycandidatewithexplicitcriterionexception"
+}

@@ -1,0 +1,1538 @@
+{
+  "family": "close-a-01to12",
+  "sourceOrder": 536,
+  "sourceListVerified": true,
+  "ready": true,
+  "mainCommit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+  "latestCompositionSource": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-era-a-kuittaus-20261019.md",
+    "commit": "86898a4be974d8449a65e6963f4b1deb81e3178c",
+    "blob": "d7518218fade6a00ec1f74f6dcdbe3d7626cf5fe",
+    "sha256": "103bb93507ece700362a0aa9ea2bcf25b95f228a87e6798903ee9bcd5b83949f",
+    "readInFull": true
+  },
+  "sourceTaskNumbers": [
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563
+  ],
+  "owner": "root",
+  "startedAt": "2026-10-19T10:40:33.475743+00:00",
+  "assets": {
+    "01-posliinimaljakko": {
+      "code": "01-posliinimaljakko",
+      "sourceItem": {
+        "number": 1,
+        "id": "posliinimaljakko",
+        "nimi": "Posliinimaljakko",
+        "kuplatyyppi": 2,
+        "kuplatyyppiRaw": "2",
+        "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+        "kupla": "Iso Qing-posliinimaljakko vaalealla jalustalla avarassa palatsisalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo ikkunasta, vaaleat pinnat, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Qing-hovin posliini tehtiin Jingdezhenin keisarillisissa uuneissa, ja hovituotanto päättyi vasta vuonna 1911.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.posliinimaljakko.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.posliinimaljakko.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.posliinimaljakko.kupla",
+            "teksti": "juoksupeli.rikkoutuva.posliinimaljakko.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.posliinimaljakko.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.posliinimaljakko.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.posliinimaljakko.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "avarassa palatsisalissa"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.posliinimaljakko.kupla"
+          },
+          "mdHeading": "### Posliinimaljakko (`posliinimaljakko`) — kupla 2: aarre salissa (ei ihmisiä)",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 3,
+      "callsCompleted": 3,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T10:41:54.144713+00:00",
+          "args": {
+            "prompt": "Use case: historical-scene. Generate a WHOLE NEW real-camera COLOR PHOTOGRAPH, using attached approved v4 photo only as a style/framing reference. Portrait3:4,1086×1448 RGB PNG, fully opaque full rectangular photograph. New subject and all pixels, no partial edit or compositing. CLOSE camera at artifact level 0.8m from it. ONE intact Qing porcelain baluster vase, white glaze with cobalt-blue flowers and gracefully flared neck, sits on a small carved dark hardwood stand ON a dark zitan/huanghuali Qing consoleTABLE. No people. The complete sharp vase itself fills35–40% of the full photo HEIGHT, centeredx50%,y51%, fully visible; stand immediately below. Match approved reference's close artifact-led composition, never a distant tiny display.100mm f/1.4 shallow optical focus. Unspecified Chinese imperial palace hall, woodscreen behind, EXTREMELY DEFOCUSED warm red/gold creamy light patches; absolutely no sharply detailed architecture. Bright luminous daylight, gentle visible backlight on ceramic edges, authentic glaze and natural reflections, true colors. Full real photo with natural foreground. No pale modern pine, CGI, repeating artificialtexture, illustration, grain, sepia, text, logo, border, vignette, oval or feather effect. Game applies its own fade later.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v4-20261019/delivery-packet/tyyppi2-sali-v4.png"
+            ]
+          },
+          "completed": true,
+          "preDispatchRegistrationWasDraft": true,
+          "completedAt": "2026-10-19T10:44:13.016864+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4549a1c2-fe0e-44d4-a729-72c0a1098db4.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/01-posliinimaljakko-attempt1.png",
+          "nativeSHA256": "1f0162c0bac0c77924bad6364db9057dabf813d1f8b9366c0b3ba102178ebca3",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "fe31d548c4a6c86ab56653af698f632b523dbd0498dc295b6040dbca68717928",
+          "technicalPass": true,
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": false,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.445,
+            "observations": "Close style much improved, correct porcelain/dark table and strong bokeh. Vase height about44.5%, exceeds PT30–40%.",
+            "reason": "specific remaining framing defect; not a raw-size-only retry"
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T10:44:47.357000+00:00",
+          "args": {
+            "prompt": "Create a WHOLE NEW high-end real CAMERA COLOR photograph. Portrait3:4 PNG1086×1448 opaque RGB. Close to ONE beautiful intact blue-and-white Qing porcelain baluster VASE on a tiny dark carved stand ON dark zitan table. No people. Main vase height exactly one-third of whole frame, about500pixels of1448: lip aroundy470, foot aroundy970, centerx543. Complete vase clear and sharp, NOT44–50%height, NOT a faraway tiny display. Camera at vase level0.8m.100mm f/1.4. Palace background COMPLETELY MELTED creamy red/gold light patches; no identifiable detailed screens, windows or room architecture. Beautiful gentle backlight on porcelain and believable subtle glaze reflections, rich cobaltblue flowerpainting on whiteglaze. Real surface microtexture. Foreground naturally soft table, bright luminous airy daylight. No fake texture, CGI, drawing, grain, dark vignette, border, text/logo, oval/mask/fade. Full-frame natural opaque photograph. Entirely new generation, never partial editing.",
+            "transparent_background": false
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T10:46:01.378415+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4ec34a52-d3d9-4226-9f09-7c154d16c238.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/01-posliinimaljakko-attempt2.png",
+          "nativeSHA256": "38fc69d8f2dcc0149cb57d2c4b3c57c7046b0011c0a586a94fdf9bd8ac4beeba",
+          "nativeDimensions": [
+            1087,
+            1447
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "6e5036d8185344216d72568f99bca7994559558d01dc233883c5d8e3715ca70f",
+          "technicalPass": false,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.49,
+            "observations": "Correct close photographic style and bokeh, but model ignored numeric framing; main vase too large and for03 faces near top and sides. Preserve all, no acceptance."
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T10:47:53.067129+00:00",
+          "args": {
+            "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGBopaquePNG. Input1 is ONLY photographic material/light/style, not scale. Input2 is the AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: a central sharp bluewhite Qing porcelain baluster vase fills the pale rectangle (35%totalphotoheight); retain this scale and placement in the fullframe. It sits on a small carveddarkstand ON darkzitan hardwood table. NO PEOPLE. Background only extremely defocused authenticQingpalacered/gold lightblobs, f/1.4 bokeh, softbrightdaylight, gentleceramicrimbacklight. Vase realistic cobaltbluefloralpainting, finewhiteglaze, subtletrue reflections, fullyvisible. Transform diagram into a natural continuous full-frame photograph, NOT graphic/illustration. Do not enlargevase beyond diagramshape or copyInput1's larger scale. No diagramlines, greenoval, colorblocks, border, vignette, fade, labels, logos or text in output. No contentediting, cropping/padding or copied pixels; ENTIRELY NEW photograph.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v4-20261019/delivery-packet/tyyppi2-sali-v4.png",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-0-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T10:49:28.306923+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ebf1927e-527a-47b1-8f7b-5719934cd0e3.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/01-posliinimaljakko-attempt3.png",
+          "nativeSHA256": "4a7ad776b9d9b1a61b14821550983e41bed6f256e5a9ff1d6cdd55f5b46cfb4a",
+          "nativeDimensions": [
+            1087,
+            1447
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "bbe8f24c6bc90098e21e6b907cd75af9da926730ad8a2308b972c67af26aabad",
+          "technicalPass": true,
+          "nativeRequestedDimensions": false,
+          "nativeOriginalPreserved": true,
+          "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/assets/01-posliinimaljakko/attempt-3/technical-size-export.png",
+          "deliveryDimensions": [
+            1086,
+            1448
+          ],
+          "technicalExport": {
+            "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+            "inputSHA256": "4a7ad776b9d9b1a61b14821550983e41bed6f256e5a9ff1d6cdd55f5b46cfb4a",
+            "outputSHA256": "752b9790791fe551cc100c9bcf44139e37b6ace6192ab334efa18638b65eedd5",
+            "pixelSHA256": "c9ea9c16a2c1412c322e25e4a88c161fb0c06cd316608df48b946d330198369a",
+            "crop": false,
+            "padding": false,
+            "contentRetouch": false
+          },
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.4,
+            "importantFacialFeaturesProtected": true,
+            "fullFaceEveryPixelInsideCore": true,
+            "observations": "Intact bluewhite Qing vase on small stand on dark table, no people. Sharp central artifact approx40%, authentic glaze; strong optical red/gold blur.",
+            "PTAccepted": false,
+            "ownerAccepted": false,
+            "currentCompositionSource": "86898a4be974d8449a65e6963f4b1deb81e3178c"
+          }
+        }
+      ],
+      "correctionTaskNumber": 554,
+      "activeAttempt": 3,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "artifactHeightFraction": 0.4,
+        "importantFacialFeaturesProtected": true,
+        "fullFaceEveryPixelInsideCore": true,
+        "observations": "Intact bluewhite Qing vase on small stand on dark table, no people. Sharp central artifact approx40%, authentic glaze; strong optical red/gold blur.",
+        "PTAccepted": false,
+        "ownerAccepted": false,
+        "currentCompositionSource": "86898a4be974d8449a65e6963f4b1deb81e3178c"
+      },
+      "selectedAttempt": 3,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/01-posliinimaljakko.png",
+      "deliverySHA256": "752b9790791fe551cc100c9bcf44139e37b6ace6192ab334efa18638b65eedd5"
+    },
+    "02-sinivalkoinen-maljakko": {
+      "code": "02-sinivalkoinen-maljakko",
+      "sourceItem": {
+        "number": 2,
+        "id": "sinivalkoinen-maljakko",
+        "nimi": "Sinivalkoinen maljakko",
+        "kuplatyyppi": 2,
+        "kuplatyyppiRaw": "2",
+        "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+        "kupla": "Korkea sinivalkoinen maljakko kirkkaassa lasivitriinissä vaalean palatsisalin keskellä, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Sinivalkoisen posliinin koboltti tuotiin Persiasta, ja Jingdezhenissä sitä alettiin tehdä paljon 1300-luvulla.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.kupla",
+            "teksti": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "lasivitriinissä",
+            "vaalean palatsisalin keskellä"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko.kupla"
+          },
+          "mdHeading": "### Sinivalkoinen maljakko (`sinivalkoinen-maljakko`) — kupla 2: aarre salissa (ei ihmisiä)",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T10:55:04.529501+00:00",
+          "args": {
+            "prompt": "Generate a WHOLE NEW photorealistic COLOR CAMERA PHOTO,1086×1448 portrait3:4 RGB opaquePNG. Image1 only real-camera photographicSTYLE,light,materials; Image2 is AUTHORITATIVE FULL-CANVAS COMPOSITION. The pale central shape is the main artifact, the tan ovals only whole faces. Keep diagram's approximate scale/positions: main artifact roughly30–40% fullphotoHEIGHT in sharp foreground; important faces central behind it. Do not enlarge faces or pull back acrossroom. Transform all diagram regions to a continuous natural photograph; no copied pixels, partialediting,crop/padding. Cameraartifactlevel0.8m,100mmf/1.4, artifact sharp, people mildlysoft, background EXTREMELY optically blurred creamy colored lightpatches, no detailed architecture. Brightsoftnaturaldaylight,visiblegentlerimbacklight,authenticmaterialmicrotexture; no proceduralpattern,CGI,illustration,sepia,grain,writing/logo,border,vignette,diagramlines,greenoval,mask/feather. DARKQinghardwood table, no palemodernpine. Full opaque corner-to-corner photo, game fades it later.\nONE intact tall narrow blue-and-white Jingdezhen porcelainVASE with elongatedneck, roundedshoulders, cobaltlotus+scrollmotifs andwhiteglaze. Displayed INSIDE A CLEAR GLASSVITRINE onsmallcarveddarkbasein unspecifiedQingpalacehall. NO PEOPLE. VASEfills central shape ofdiagram, itself35%height,clear andreadable; whole glasscase hasthinunobtrusiveedges justoutside vase,realtransparentglass/subtlesoftreflections,noglaringmirror. Entirevase visible,not cropped,not tinyinsidehugecase. Room meltsinto pale red/goldbokeh. No labels/ropes/otherartifacts.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/01-posliinimaljakko.png",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-0-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T10:56:23.248142+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-cd45eb3b-00d0-4ba6-aabb-46a6cad32430.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/02-sinivalkoinen-maljakko-attempt1.png",
+          "nativeSHA256": "f2e6c423a81f3bc560ff64b648e544f292d8e4d6d285aaa05df66857e0138e8d",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "b8b28463c9b82970019580ccb857464846b12362ea75b91aa3a1ff988bd50329",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "artifactHeightFraction": 0.405,
+            "backgroundStrongBokeh": true,
+            "observations": "Complete blue-white tall porcelain vase in genuinely clear quiet glass vitrine, no people; sharp central ceramic about40.5%height, continuous opaque photograph, soft red/gold optical background, dark Qing table. Target height approximate; narrow neck/rounded shoulders and quiet glass transmission read."
+          }
+        }
+      ],
+      "correctionTaskNumber": 555,
+      "activeAttempt": 1,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "artifactHeightFraction": 0.405,
+        "backgroundStrongBokeh": true,
+        "observations": "Complete blue-white tall porcelain vase in genuinely clear quiet glass vitrine, no people; sharp central ceramic about40.5%height, continuous opaque photograph, soft red/gold optical background, dark Qing table. Target height approximate; narrow neck/rounded shoulders and quiet glass transmission read."
+      },
+      "selectedAttempt": 1,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/02-sinivalkoinen-maljakko.png",
+      "deliverySHA256": "f2e6c423a81f3bc560ff64b648e544f292d8e4d6d285aaa05df66857e0138e8d"
+    },
+    "03-famille-rose-maljakko": {
+      "code": "03-famille-rose-maljakko",
+      "sourceItem": {
+        "number": 3,
+        "id": "famille-rose-maljakko",
+        "nimi": "Famille rose -maljakko",
+        "kuplatyyppi": 3,
+        "kuplatyyppiRaw": "3",
+        "typeLabelFromMarkdown": "oppitunti (Yuqing-koulusali)",
+        "kupla": "Iloinen opettaja karttakepin kanssa esittelee famille rose -maljakkoa, riemastunut pikku-Puyi (kaapu, letti) pulpetissa, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Vaaleanpunaiseen sävyyn perustuva famille rose -tyyli kehittyi täyteen mittaansa Yongzhengin kaudella.",
+        "dynastia": "Qing",
+        "vuosi": "1723–1795",
+        "ajoitus": "Qing-dynastia, Yongzhengin–Qianlongin kausi, 1700-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.famille-rose-maljakko.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.famille-rose-maljakko.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.famille-rose-maljakko.kupla",
+            "teksti": "juoksupeli.rikkoutuva.famille-rose-maljakko.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.famille-rose-maljakko.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.famille-rose-maljakko.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.famille-rose-maljakko.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.famille-rose-maljakko.kupla"
+          },
+          "mdHeading": "### Famille rose -maljakko (`famille-rose-maljakko`) — kupla 3: oppitunti (Yuqing-koulusali)",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": "Yuqing-koulusali",
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": false,
+          "applicableExplicitPlaceCorrection": {
+            "sourceId": "paatoimittaja-codex-muistokuplat-tarkennus-1058-20261019.md",
+            "quote": "oppitunti Yuqing-palatsin koulusalissa (毓慶宮)",
+            "reason": "The base row is explicitly an oppitunti; this named place is in the source, not inferred."
+          },
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 3,
+      "callsCompleted": 3,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T10:41:54.188497+00:00",
+          "args": {
+            "prompt": "Use case: historical-scene. Generate a WHOLE NEW real-camera COLOR PHOTOGRAPH using the attached approved v4 teacher photograph only as CLOSE framing/style reference. Portrait3:4,1086×1448 RGB PNG, fully opaque rectangle. New scene and all pixels, no partial edit/compositing. CLOSE camera at artifactlevel0.8m,100mm f/1.4. ONE intact familleROSE porcelain baluster VASE, pastelPINKflowers+greenleaves on creamywhiteglaze, centered SHARP foreground on dark zitan Qing studytable. Complete vase itself35%fullphotoHEIGHT, centerx50%,y54%; large readable hero artifact. Immediately BEHIND it, a smiling ELDERLY Qing tutor and happy fictional8yearold boyemperor sit SIDE BY SIDE in medium close view, discussing vase with a natural modest openhandgesture, not facingcamera. People slightly softer than vase. BOTH important faces inside central45%oval of fullframe, nearx41%and59%,y35–40%; no faces high or far sideways. Tutor silvertemples,graybeard,shavedfront+queue,blackROUNDguapimao cap withsmallREDknob,blackmagua over roundcollar RIGHTbuttonedchangpao. NO largeredcrown/greenforeheadjade/Mingcrosscollar. Boy goldenyellowQingrobe,shavedfront+thinqueue,blackroundcap GOLDknob,nomodernfringe. Onequietthreadboundbookbehind. YuqingPalace schoolroom EXTREMELY blurred warmredtimber/paperlattice LIGHT BLOBS, no legible detailed architecture. Bright natural COLORdaylight, gentlevisiblebacklight, authentic real skin/porcelain/woodtexture. V4photo is only style: changebluewhitevase to familleROSE, preserve Qingroles andcloseview. No camera acrossroom, distanttinygroup, map, pointerstick, pale pine, CGI, proceduraltexture, illustration, grain, sepia, text/logo, border, vignette, mask/oval/fade. Full opaque natural photo, game fades later.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v4-20261019/delivery-packet/01-posliinimaljakko-v4.png"
+            ]
+          },
+          "completed": true,
+          "preDispatchRegistrationWasDraft": true,
+          "completedAt": "2026-10-19T10:44:13.168346+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ff91e43e-d8fa-4c30-950a-02162fce9674.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt1.png",
+          "nativeSHA256": "ddcdb9f2318f03c510ba1d03ce656d5d0498e0215a3e2102febb014a85ebe650",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "10eeffd2c8ef73eff8edd6e038dc252a863ef8a4b058a8e1439b391101dfec03",
+          "technicalPass": true,
+          "qa": {
+            "personallyInspectedNative": true,
+            "passed": false,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.377,
+            "observations": "Correct famille rose, costume and close style; vase37.7%, but faces too large/far sideways for45%face protection. Preserve and make a whole new centered-face candidate.",
+            "reason": "specific remaining framing defect; not a raw-size-only retry"
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T10:44:47.401249+00:00",
+          "args": {
+            "prompt": "Create a WHOLE NEW beautiful real CAMERA COLOR photograph, portrait3:4,1086×1448 opaqueRGBPNG. CLOSE foreground still-life and medium-close court interaction behind. ONE intact familleROSE porcelain VASE, PINK floral enamels+greenleaves on creamy whiteglaze, SHARP and beautifully detailed on DARK zitan studytable. Complete vase fills ONE THIRD of photoHEIGHT: topy560,footy1060,centerx543. Camera at vaselevel0.8m,100mm f/1.4. Smiling ELDERLY Qing tutor and joyful fictional8yearold boyemperor immediately BEHIND vase. People visibly present upperbody, softly focused, faces compact and VERY CENTRALLY located ABOVE each side of vase. Left face center(x455,y560),right facecenter(x635,y560); each whole FACE only about145pixels wide and180pixels tall. Both entire FACES fit central45%ellipse. Keep faces awayfromtop andsides. This is still a CLOSE large-foreground-vase photo; DO NOT pullcamera acrossroom to shrinkfaces. Instead focus on foregroundartifact with people setbehind and leaningslightly inward. No fullbody people. Tutor silverhairtemples,graybeard,shavedfrontforehead+queue,blackROUNDguapimao withsmallREDknob,blackmagua over roundcollarRIGHTbuttonQingrobe. Boy goldenyellowQingrobe,blackroundcap GOLDknob,shavedfront+queue. Gentle openhand gesture nearvase and natural happy gaze towardartifact. Threadboundbook quietbehind. YuqingPalace schoolroom background COMPLETELY MELTED into creamy luminous red/gold light patches, no identifiable detailed architecture. Naturaldaylight+gentlebacklight, true skin/materialtexture, beautiful opticalbokeh. No largefaces nearuppercorners, no map/pointer, pale modernwood, CGI, illustration, artificialpattern, text/logo, grain, vignette, border, oval/mask/feather. Whole NEW photograph, not edit.",
+            "transparent_background": false
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T10:46:01.489603+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-019ef8a2-83a4-4d41-b82b-29207190ab42.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt2.png",
+          "nativeSHA256": "fb0432bbfe64088710b4621ec4d9043e87479152372c6e2648d0596eb8ffcc19",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "41fe71d035069250342d8a50573c1ab99f552d9d3f3c3fc334a670d8b18847bf",
+          "technicalPass": true,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.5,
+            "observations": "Correct close photographic style and bokeh, but model ignored numeric framing; main vase too large and for03 faces near top and sides. Preserve all, no acceptance."
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T10:47:53.110420+00:00",
+          "args": {
+            "prompt": "Generate a completely NEW PHOTOREALISTIC COLOR CAMERA PHOTO,1086×1448 portrait RGBopaquePNG. Input1 ONLY photographic light/material/Qingcostumestyle, NOT face size or composition. Input2 AUTHORITATIVE FULL-CANVAS COMPOSITION diagram: central pale rectangle is one SHARP familleROSE porcelain balusterVASE (~35%totalphotoheight); two tan ovals are the complete FACES of tutor and boy (~12%photoheight), centered immediately BEHIND it. Keep fullframe object/face SCALE and POSITION from Input2. Bodies naturallybehind, not tinyfarawaypeople. Vase pastelPINKflowers/greenleaves onwhiteglaze, narrowneck leaves facesvisible behindabove shoulders. ElderlyQingtutorleft graytemples/beard, shavedFRONT+queue,blackROUNDguapimaoREDknob,blackmagua/roundcollarRIGHTbuttonrobe; joyfulfictionalboyright goldenQingrobe,shavedfront+queue,blackroundcapGOLDknob. Naturalopenhand teachinggesture toward vase, one quiet threadboundbook onDARKzitan studytable. Cameraartifactlevel0.8m,100mmf/1.4; artif sharp, peoplemildlysoft, YuqingPalacebackground EXTREMELYblurred lightblobs. Luminousnaturaldaylight,gentlerimbacklight, realcamera skin/wood/porcelain texture. NO enlargedfaces likeInput1: follow diagram geometry exactly and convert tocontinuousfullframe naturalphotograph. No diagramlines, greenoval, colorblocks, border, vignette, feather, text, logo, illustration, CGI, artificialtexture, pointer ormap. EntirelyNEWgeneration, no partialedit/crop/padding.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-pysty-v4-20261019/delivery-packet/01-posliinimaljakko-v4.png",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-2-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T10:49:28.729599+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4c21e138-f9df-43f8-8db9-c056ae3ebe02.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/03-famille-rose-maljakko-attempt3.png",
+          "nativeSHA256": "8d8a7953ea6ca7c31bd716d5cf3440274034df379180e8c2a7a83b03e5d488c6",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "638a9b8ed9061cd7ac142a93a39a52acde53ce2c261d6579b2fef788ef16d4b9",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.325,
+            "importantFacialFeaturesProtected": true,
+            "fullFaceEveryPixelInsideCore": false,
+            "observations": "Pink famille rose vase approx32.5%, teacher+boy immediately behind in medium close view; sharp vase, mildly soft people, strongly blurred background. Eyes/nose/mouth protected centrally. Outer tutor temple/beard and boy outer cheek enter early smooth feather; disclose, not a hard cut. Correct red/gold caps, round collar, shavedfront+queue, dark table. Natural hands; no map or pointer.",
+            "PTAccepted": false,
+            "ownerAccepted": false,
+            "currentCompositionSource": "86898a4be974d8449a65e6963f4b1deb81e3178c"
+          }
+        }
+      ],
+      "correctionTaskNumber": 556,
+      "activeAttempt": 3,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "artifactHeightFraction": 0.325,
+        "importantFacialFeaturesProtected": true,
+        "fullFaceEveryPixelInsideCore": false,
+        "observations": "Pink famille rose vase approx32.5%, teacher+boy immediately behind in medium close view; sharp vase, mildly soft people, strongly blurred background. Eyes/nose/mouth protected centrally. Outer tutor temple/beard and boy outer cheek enter early smooth feather; disclose, not a hard cut. Correct red/gold caps, round collar, shavedfront+queue, dark table. Natural hands; no map or pointer.",
+        "PTAccepted": false,
+        "ownerAccepted": false,
+        "currentCompositionSource": "86898a4be974d8449a65e6963f4b1deb81e3178c"
+      },
+      "selectedAttempt": 3,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/03-famille-rose-maljakko.png",
+      "deliverySHA256": "8d8a7953ea6ca7c31bd716d5cf3440274034df379180e8c2a7a83b03e5d488c6"
+    },
+    "04-keltalasitteinen-kulho": {
+      "code": "04-keltalasitteinen-kulho",
+      "sourceItem": {
+        "number": 4,
+        "id": "keltalasitteinen-kulho",
+        "nimi": "Keltalasitteinen kulho",
+        "kuplatyyppi": 5,
+        "kuplatyyppiRaw": "5",
+        "typeLabelFromMarkdown": "juhla/seremonia",
+        "kupla": "Hymyilevä palvelija juhlapuvussa tarjoaa riisiä keltalasitteisesta kulhosta, iloiset hovilaiset, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Keltaista pidettiin keisarin värinä, ja sitä varattiin keramiikassa ja kankaissa pääosin keisarin käyttöön.",
+        "dynastia": "Qing",
+        "vuosi": "1700–1800-luku",
+        "ajoitus": "Qing-dynastia, tyypillisesti 1700–1800-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.kupla",
+            "teksti": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.kupla"
+          },
+          "mdHeading": "### Keltalasitteinen kulho (`keltalasitteinen-kulho`) — kupla 5: juhla/seremonia",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 4,
+      "callsCompleted": 4,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T10:58:51.538120+00:00",
+          "args": {
+            "prompt": "Generate a WHOLE NEW photorealistic COLOR CAMERA PHOTO,1086×1448 portrait3:4 RGB opaquePNG. Image1 only real-camera photographicSTYLE,light,materials; Image2 is AUTHORITATIVE FULL-CANVAS COMPOSITION. The pale central shape is the main artifact, the tan ovals only whole faces. Keep diagram's approximate scale/positions: main artifact roughly30–40% fullphotoHEIGHT in sharp foreground; important faces central behind it. Do not enlarge faces or pull back acrossroom. Transform all diagram regions to a continuous natural photograph; no copied pixels, partialediting,crop/padding. Cameraartifactlevel0.8m,100mmf/1.4, artifact sharp, people mildlysoft, background EXTREMELY optically blurred creamy colored lightpatches, no detailed architecture. Brightsoftnaturaldaylight,visiblegentlerimbacklight,authenticmaterialmicrotexture; no proceduralpattern,CGI,illustration,sepia,grain,writing/logo,border,vignette,diagramlines,greenoval,mask/feather. DARKQinghardwood table, no palemodernpine. Full opaque corner-to-corner photo, game fades it later.\nFictional happy Qingcourt roles. Men have shavedFRONTforehead+longQUEUE, grayhair/beards ifelderly; roundcollarRIGHTbuttonchangpao+blackmagua,blackROUNDguapimao withsmallREDknob (no crossedcollar,largecrown,greenjade). Women loose full-lengthMANCHUrobes andLIANGBATOUhorizontalhairwings,graytemples ifolder;noHanbun/shortjacket. Faces/eyes/nose/mouth stay centrally inside45%ellipse, outerhair may extend naturally.\nTwo elderlyhappyQingcourtmen immediatelybehind centralyellowPORCELAINRICEBOWL: servantleft offersricebowl forward withtwohands, courtierright warmlyadmires/receives. Theirfaces followtanovals in diagram (roughly12%photoheight,notenlarged); upperbodiesvisible mediumclose,no fullbodies. ONE intactimperialyellowglazed bowl withrice in sharpforegroundcenter, broadnaturalbowl formfillingpaleshape, roughly30%heightwithrice; highlylegibleat160px. Nootherfood,plates,cups orpeople. Genuine handsandjoyfulcandidinteraction,ChineseQingpalaceroom onlyabstractluminousbokeh.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/03-famille-rose-maljakko.png",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-broad-2-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:00:57.221585+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1dbd41ab-ac39-4c6c-837b-cadce40c53c2.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/04-keltalasitteinen-kulho-attempt1.png",
+          "nativeSHA256": "9916c65ef53a4082a1d0062334c4cb592b3ef8d0cb300f98ac05e148223d3298",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "e204c366cc9d4b9fb80b1bde455b02cfcc0d221e057d6f8aec49e30154bf4160",
+          "technicalPass": true,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.28,
+            "observations": "Excellent natural rice bowl and two Qing men, but faces became much too large and sideward despite diagram; outside protected central area. Preserve and new whole framing needed."
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T11:01:38.441262+00:00",
+          "args": {
+            "prompt": "Make a WHOLE NEW PHOTO, true real-camera COLOR, portrait1086×1448 RGB opaque PNG. Input is a composition DIAGRAM ONLY. Convert to entirelynew continuous photorealism; no edit, copiedpixels,crop,padding,vectorstyle or graphics. Main foregroundartifact sharp, big andreadable30–40%frameheight. Only two FACES centered atx42%and58%,y40%, eachface~12%photoheight. TOPTHIRD contains only luminous creamy opticalbokeh. Wholeheads stay compact in middle, not gigantic portrait heads or farawayfullfigures. People upperbodies immediatelybehind artifact. Preserve relative scale ofdiagram's TANFACEOVALS and paleartifact. Cameraartifactlevel0.8m,f/1.4: extremelysoftpalacebackground, no detailedarchitecture. Beautiful brightdaylight+gentlebacklitrims, authenticrealmaterialtextures,naturalhands/skin. DARKQinghardwoodtable. No sepia,grain,CGI,repeatingpattern,text/logo,vignette,border,oval,fade/greenline ordiagramshapes inoutput.\nFictional happy Qingcourt roles. Men have shavedFRONTforehead+longQUEUE, grayhair/beards ifelderly; roundcollarRIGHTbuttonchangpao+blackmagua,blackROUNDguapimao withsmallREDknob (no crossedcollar,largecrown,greenjade). Women loose full-lengthMANCHUrobes andLIANGBATOUhorizontalhairwings,graytemples ifolder;noHanbun/shortjacket. Faces/eyes/nose/mouth stay centrally inside45%ellipse, outerhair may extend naturally.\nTwo elderlyhappyQingcourtmen immediatelybehind centralyellowPORCELAINRICEBOWL: servantleft offersricebowl forward withtwohands, courtierright warmlyadmires/receives. Theirfaces followtanovals in diagram (roughly12%photoheight,notenlarged); upperbodiesvisible mediumclose,no fullbodies. ONE intactimperialyellowglazed bowl withrice in sharpforegroundcenter, broadnaturalbowl formfillingpaleshape, roughly30%heightwithrice; highlylegibleat160px. Nootherfood,plates,cups orpeople. Genuine handsandjoyfulcandidinteraction,ChineseQingpalaceroom onlyabstractluminousbokeh.\nFollow centralfaceovals, not enlargedfaces; faces about180px high of1448fullheight. Whole coherent photograph with close foregroundartifact.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-broad-2-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:04:41.414008+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5b2ad326-2631-434a-b13b-b02b901d7868.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/04-keltalasitteinen-kulho-attempt2.png",
+          "nativeSHA256": "c6ac9d3fa0604319db0c78b2fd97dad00858374414c4944da2b78f69f63d628e",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "e1749611c5ed9db228b4caf9433fa8ecfab50efacdc70e247febfc8768a0cd8d",
+          "technicalPass": true,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "observations": "Diagram was ignored: faces too large/high/lateral.06 also wrong role: elderlyman instead of secondwoman. Preserve; next whole scene uses actual successful photo as BOTH framing+style, not diagram-only."
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T11:05:07.334732+00:00",
+          "args": {
+            "prompt": "Create an ENTIRELY NEW photorealistic COLOR CAMERA photograph,1086×1448portraitRGBopaquePNG. Reference is AUTHORITATIVE COMPOSITION AND STYLE: preserve EXACT same full-frame camera distance, facial sizes and central face positions, upperbody scale, headroom, foreground tabletop, strong creamy bokeh and sharp foregroundartifact. Do NOT zoom in. Replace the child with an ELDERLY male Qing courtier, replace pinkvase with ONE natural imperialYELLOW porcelain bowl filledwithrice, sharplydetailed centralforeground. Smiling elderly servantleft offers thisricebowl withnaturalbothhands tojoyfulelderlycourtierright. ONLYTWOelderlyMEN, black roundguapimao REDknob,graybeards,shavedfront+queue,blackmagua overroundcollarRIGHTbuttonQingrobes. Broad bowl about30%photoheight,facesstaysamesmallsizeandpositionsasreference. Brightnaturaldaylight+gentlebacklitrim,DARKQingtable,EXTREMELYblurredpalaceonlylightpatches. No extrafood/cups,CGI,illustration,proceduraltexture,text/logo,border,vignette/oval/fade. Whole new coherent photo, no edit, crop or padding.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/03-famille-rose-maljakko.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:08:15.928960+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-04586db2-efd1-4c1a-84fa-4aaec2fbdb90.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/04-keltalasitteinen-kulho-attempt3.png",
+          "nativeSHA256": "12f0122940ae56d9e61380a8e908942d425ce15d1fc3d7b5664ba9dc0b7b6473",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "8e9b20ece93a211ed87fb3efe46d932dcf5aa5e5628b898784ab0a5cbd1836bf",
+          "technicalPass": true,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.11,
+            "observations": "Correct roles and successful central-face framing. Foreground artifact still undersized relative PT close request; next whole photo keeps faces/camera framing and brings the principal artifact2x nearer/larger."
+          }
+        },
+        {
+          "attempt": 4,
+          "issuedAt": "2026-10-19T11:10:02.039565+00:00",
+          "args": {
+            "prompt": "WHOLE NEW photorealistic color CAMERA photograph1086×1448RGBopaquePNG. Use this input ONLY as reference for EXACT PEOPLE FRAMING, face sizes/centralpositions, authenticcostumes, light, depthof field, table, photoquality and source story. Preserve these proportions ofpeople; do not enlarge faces. The ONE change in the NEW SCENE is the MAIN FOREGROUNDARTIFACT: its apparent widthANDheight are TWO TIMES as large as input, brought closer to camera. The entire sharp artifact remains visible nearcenter, about30%photoheight. People stay unchanged inrelativeimagepositionandsizebehindit. Natural coherent perspective, realphoto, notpastedobject. No extraartifacts/people. No edit/crop/padding or reusedpixels; everypixelnewgeneration.\nScene: smilingelderlymaleQingservantleft offersONEintactimperialYELLOWPORCELAINRICEBOWL filledwithrice tohappyelderlymaleQingcourtierright. Naturalbothhandssupportbowl. Bowl muchlargerandSHARP,faces same smallsize asref,softlyfocused. TwoelderlyMEN only,correctroundcollars/rightbuttons,blackroundguapimaoREDknobs,shavedfront+queues. DARKQingtable. Brightnaturaldaylight,gentlevisiblebacklight,EXTREMELYsoftred/goldpalacebokeh,authenticnaturaltextures. NoCGI/artificialpattern/illustration/text/logo/border/vignette/oval/feather. EntirelyNEWphotograph.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/04-keltalasitteinen-kulho-attempt3.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:11:46.899495+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ee960434-3f3e-4724-8422-7e1b821147d1.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/04-keltalasitteinen-kulho-attempt4.png",
+          "nativeSHA256": "933c0551fd58e6f92d948bcf585b0ca61e5acc22776f5244603e62e3bdd01144",
+          "nativeDimensions": [
+            1087,
+            1447
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "b2b6d59f2501b9b40e7a8e9e815bf5ba8c2fb97718be18cd48229a9a03b861bc",
+          "technicalPass": true,
+          "nativeRequestedDimensions": false,
+          "nativeOriginalPreserved": true,
+          "normalizedDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/assets/04-keltalasitteinen-kulho/attempt-4/technical-size-export.png",
+          "deliveryDimensions": [
+            1086,
+            1448
+          ],
+          "technicalExport": {
+            "method": "sips whole-frame size export; native discrepancy <=2px per dimension",
+            "inputSHA256": "933c0551fd58e6f92d948bcf585b0ca61e5acc22776f5244603e62e3bdd01144",
+            "outputSHA256": "382b83112f2add6ebaa9e563b3ae98b0d4084a147dbeddc96334d8c68bd86b0d",
+            "pixelSHA256": "2f4c10668d91cf3326df6fb9f0054b09ac479b40c5ae99e6c9eb34e0b59ee4ac",
+            "crop": false,
+            "padding": false,
+            "contentRetouch": false
+          },
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.28,
+            "observations": "Yellow porcelain serving bowl and rice are sharp large foreground, natural supporting hands, two happy elderly Qingmen central immediately behind. Broad bowl with rice about28% projected height, much more legible than tiny oldbowl; strong bokeh/darktable. Eyes/nose/mouth protected, outertemple begins earlyfeather."
+          }
+        }
+      ],
+      "correctionTaskNumber": 557,
+      "activeAttempt": 4,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "importantFacialFeaturesProtected": true,
+        "artifactHeightFraction": 0.28,
+        "observations": "Yellow porcelain serving bowl and rice are sharp large foreground, natural supporting hands, two happy elderly Qingmen central immediately behind. Broad bowl with rice about28% projected height, much more legible than tiny oldbowl; strong bokeh/darktable. Eyes/nose/mouth protected, outertemple begins earlyfeather."
+      },
+      "selectedAttempt": 4,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/04-keltalasitteinen-kulho.png",
+      "deliverySHA256": "382b83112f2add6ebaa9e563b3ae98b0d4084a147dbeddc96334d8c68bd86b0d"
+    },
+    "05-celadon-kulho": {
+      "code": "05-celadon-kulho",
+      "sourceItem": {
+        "number": 5,
+        "id": "celadon-kulho",
+        "nimi": "Celadon-kulho",
+        "kuplatyyppi": 2,
+        "kuplatyyppiRaw": "2",
+        "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+        "kupla": "Jadenvihreä celadon-kulho isona vaalealla jalustalla avarassa kirjastosalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo ikkunasta, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Celadonin jadenvihreä väri syntyy lasitteen rautaoksidista; Zhejiangin Longquanin uunit ovat kuuluisia siitä.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.celadon-kulho.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.celadon-kulho.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.celadon-kulho.kupla",
+            "teksti": "juoksupeli.rikkoutuva.celadon-kulho.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.celadon-kulho.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.celadon-kulho.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.celadon-kulho.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "avarassa kirjastosalissa"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.celadon-kulho.kupla"
+          },
+          "mdHeading": "### Celadon-kulho (`celadon-kulho`) — kupla 2: aarre salissa (ei ihmisiä)",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T10:55:04.595298+00:00",
+          "args": {
+            "prompt": "Generate a WHOLE NEW photorealistic COLOR CAMERA PHOTO,1086×1448 portrait3:4 RGB opaquePNG. Image1 only real-camera photographicSTYLE,light,materials; Image2 is AUTHORITATIVE FULL-CANVAS COMPOSITION. The pale central shape is the main artifact, the tan ovals only whole faces. Keep diagram's approximate scale/positions: main artifact roughly30–40% fullphotoHEIGHT in sharp foreground; important faces central behind it. Do not enlarge faces or pull back acrossroom. Transform all diagram regions to a continuous natural photograph; no copied pixels, partialediting,crop/padding. Cameraartifactlevel0.8m,100mmf/1.4, artifact sharp, people mildlysoft, background EXTREMELY optically blurred creamy colored lightpatches, no detailed architecture. Brightsoftnaturaldaylight,visiblegentlerimbacklight,authenticmaterialmicrotexture; no proceduralpattern,CGI,illustration,sepia,grain,writing/logo,border,vignette,diagramlines,greenoval,mask/feather. DARKQinghardwood table, no palemodernpine. Full opaque corner-to-corner photo, game fades it later.\nONE intact large jadegreen CELADONCERAMIC BOWL (notactualjade/glass), monochrome softiron-glaze, openroundlip,simplelotusribs andporcelainfoot. NO PEOPLE. Onsmallcarveddarkstand ON darkQingtable inpalaceLIBRARY. Bowl isclosemainartifact, usebroad diagramform not avase; viewslightlydownintoopeninterior so naturalbowl fills roughly30%photoheight and50–55%width. Keepwholebowl and rimvisible. Softsubtleceladonrealglaze/reflections,thinbacklitrim. LibrarybookcasesonlyEXTREMELYblurred red/brownandgold daylightpatches, nobooktitles/no sharparchitecture. Noothermainartifacts.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/01-posliinimaljakko.png",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-broad-0-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T10:56:23.397050+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-19ab42d4-62df-467c-b760-de88db6b5224.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/05-celadon-kulho-attempt1.png",
+          "nativeSHA256": "7933567fc63102b3f24c1742bfd3cfef44347b7f944aaeb810feb5972a881a5b",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "b170069cafddec52d962fd1ecf96f1c273feef1968e7b79713a95803c86ba4c4",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "artifactHeightFraction": 0.29,
+            "backgroundStrongBokeh": true,
+            "observations": "Large open jadegreen CELADON ceramic bowl, lotus ribs and natural subtle crackle glaze; complete rim, foot and carved stand on dark table. About29%height, broad natural bowl about76%photo width. Close view and extreme bokeh, no people, no glass/jade material confusion. Outer rim starts feather; whole form readable."
+          }
+        }
+      ],
+      "correctionTaskNumber": 558,
+      "activeAttempt": 1,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "artifactHeightFraction": 0.29,
+        "backgroundStrongBokeh": true,
+        "observations": "Large open jadegreen CELADON ceramic bowl, lotus ribs and natural subtle crackle glaze; complete rim, foot and carved stand on dark table. About29%height, broad natural bowl about76%photo width. Close view and extreme bokeh, no people, no glass/jade material confusion. Outer rim starts feather; whole form readable."
+      },
+      "selectedAttempt": 1,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/05-celadon-kulho.png",
+      "deliverySHA256": "7933567fc63102b3f24c1742bfd3cfef44347b7f944aaeb810feb5972a881a5b"
+    },
+    "06-yixing-teekannu": {
+      "code": "06-yixing-teekannu",
+      "sourceItem": {
+        "number": 6,
+        "id": "yixing-teekannu",
+        "nimi": "Yixing-teekannu",
+        "kuplatyyppi": 5,
+        "kuplatyyppiRaw": "5",
+        "typeLabelFromMarkdown": "juhla/seremonia",
+        "kupla": "Yixing-teekannu teejuhlassa, naurava keisarinnaäiti ja hymyilevät hovin naiset mantšuasuissa, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Yixingin teekannut tehtiin Jiangsun purppurasavesta, ja savi imee itseensä hieman teetä käytön myötä.",
+        "dynastia": "Qing",
+        "vuosi": "1700–1800-luku",
+        "ajoitus": "Qing-dynastia, tyypillisesti 1700–1800-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.yixing-teekannu.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.yixing-teekannu.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.yixing-teekannu.kupla",
+            "teksti": "juoksupeli.rikkoutuva.yixing-teekannu.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.yixing-teekannu.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.yixing-teekannu.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.yixing-teekannu.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.yixing-teekannu.kupla"
+          },
+          "mdHeading": "### Yixing-teekannu (`yixing-teekannu`) — kupla 5: juhla/seremonia",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 4,
+      "callsCompleted": 4,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T10:58:51.586524+00:00",
+          "args": {
+            "prompt": "Generate a WHOLE NEW photorealistic COLOR CAMERA PHOTO,1086×1448 portrait3:4 RGB opaquePNG. Image1 only real-camera photographicSTYLE,light,materials; Image2 is AUTHORITATIVE FULL-CANVAS COMPOSITION. The pale central shape is the main artifact, the tan ovals only whole faces. Keep diagram's approximate scale/positions: main artifact roughly30–40% fullphotoHEIGHT in sharp foreground; important faces central behind it. Do not enlarge faces or pull back acrossroom. Transform all diagram regions to a continuous natural photograph; no copied pixels, partialediting,crop/padding. Cameraartifactlevel0.8m,100mmf/1.4, artifact sharp, people mildlysoft, background EXTREMELY optically blurred creamy colored lightpatches, no detailed architecture. Brightsoftnaturaldaylight,visiblegentlerimbacklight,authenticmaterialmicrotexture; no proceduralpattern,CGI,illustration,sepia,grain,writing/logo,border,vignette,diagramlines,greenoval,mask/feather. DARKQinghardwood table, no palemodernpine. Full opaque corner-to-corner photo, game fades it later.\nFictional happy Qingcourt roles. Men have shavedFRONTforehead+longQUEUE, grayhair/beards ifelderly; roundcollarRIGHTbuttonchangpao+blackmagua,blackROUNDguapimao withsmallREDknob (no crossedcollar,largecrown,greenjade). Women loose full-lengthMANCHUrobes andLIANGBATOUhorizontalhairwings,graytemples ifolder;noHanbun/shortjacket. Faces/eyes/nose/mouth stay centrally inside45%ellipse, outerhair may extend naturally.\nJoyfulTEAPARTY inQingpalaceroom. ONE YIXINGTEAPOT inSHARPcentralforeground ondarktable:matte reddishpurplebrown ZISHAclay,roundbody,lid,shortspout,loophandle,subtletactilenaturalclay notporcelain/glaze/shinyplastic. Wholeteapotwithspout+handlelargeandclearlylegible,approximately30%height,not a tinycup. Immediatelybehindtwowomen: elderlygraytempledimperialmother laughswithONEolderManchucourtwoman,only2people. Facescompactcentrallyinthe2tanovals,slightlysoft;largeLiangbatouhairwingsmayextendnaturally buteyesprotected. Upperbodymediumclose,not acrossroom. No cupblocks teapot. Creamyluminouswarmred/goldbacklitpalacebokeh.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/03-famille-rose-maljakko.png",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-broad-2-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:00:57.440854+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-90765487-f838-4fde-b5fe-00dd528cebcc.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/06-yixing-teekannu-attempt1.png",
+          "nativeSHA256": "c8aa24f81f5e6ece46bb18f66507b843ae850365865bfd0e1d7cabed2073fde8",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "7e988540f8b7e93a050e23dd10ed92e0b97a82c8bb905244745f700ba70cc4ce",
+          "technicalPass": true,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.23,
+            "observations": "Correct matte Yixing pot, genuine Manchu clothing/hair and bright photo; faces too large and lateral for protected45%ellipse. Whole new central-face framing needed."
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T11:01:38.488100+00:00",
+          "args": {
+            "prompt": "Make a WHOLE NEW PHOTO, true real-camera COLOR, portrait1086×1448 RGB opaque PNG. Input is a composition DIAGRAM ONLY. Convert to entirelynew continuous photorealism; no edit, copiedpixels,crop,padding,vectorstyle or graphics. Main foregroundartifact sharp, big andreadable30–40%frameheight. Only two FACES centered atx42%and58%,y40%, eachface~12%photoheight. TOPTHIRD contains only luminous creamy opticalbokeh. Wholeheads stay compact in middle, not gigantic portrait heads or farawayfullfigures. People upperbodies immediatelybehind artifact. Preserve relative scale ofdiagram's TANFACEOVALS and paleartifact. Cameraartifactlevel0.8m,f/1.4: extremelysoftpalacebackground, no detailedarchitecture. Beautiful brightdaylight+gentlebacklitrims, authenticrealmaterialtextures,naturalhands/skin. DARKQinghardwoodtable. No sepia,grain,CGI,repeatingpattern,text/logo,vignette,border,oval,fade/greenline ordiagramshapes inoutput.\nFictional happy Qingcourt roles. Men have shavedFRONTforehead+longQUEUE, grayhair/beards ifelderly; roundcollarRIGHTbuttonchangpao+blackmagua,blackROUNDguapimao withsmallREDknob (no crossedcollar,largecrown,greenjade). Women loose full-lengthMANCHUrobes andLIANGBATOUhorizontalhairwings,graytemples ifolder;noHanbun/shortjacket. Faces/eyes/nose/mouth stay centrally inside45%ellipse, outerhair may extend naturally.\nJoyfulTEAPARTY inQingpalaceroom. ONE YIXINGTEAPOT inSHARPcentralforeground ondarktable:matte reddishpurplebrown ZISHAclay,roundbody,lid,shortspout,loophandle,subtletactilenaturalclay notporcelain/glaze/shinyplastic. Wholeteapotwithspout+handlelargeandclearlylegible,approximately30%height,not a tinycup. Immediatelybehindtwowomen: elderlygraytempledimperialmother laughswithONEolderManchucourtwoman,only2people. Facescompactcentrallyinthe2tanovals,slightlysoft;largeLiangbatouhairwingsmayextendnaturally buteyesprotected. Upperbodymediumclose,not acrossroom. No cupblocks teapot. Creamyluminouswarmred/goldbacklitpalacebokeh.\nFollow centralfaceovals, not enlargedfaces; faces about180px high of1448fullheight. Whole coherent photograph with close foregroundartifact.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/composition-guides/close-v4-broad-2-faces-layout.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:04:41.626524+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e3796e32-d1cd-4aba-b1cd-7f1ae8293b9e.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/06-yixing-teekannu-attempt2.png",
+          "nativeSHA256": "bc6b0fb71021086fca545494140abf32f8b43adb965be0847bc716d0cec2e723",
+          "nativeDimensions": [
+            1087,
+            1447
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "de36bf69200be14ebf3c3c7a76d4b09e8c3c4c23b7539031e9b89fce5b4086b0",
+          "technicalPass": false,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "observations": "Diagram was ignored: faces too large/high/lateral.06 also wrong role: elderlyman instead of secondwoman. Preserve; next whole scene uses actual successful photo as BOTH framing+style, not diagram-only."
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T11:05:07.380497+00:00",
+          "args": {
+            "prompt": "Create an ENTIRELY NEW photorealistic COLOR CAMERA photograph,1086×1448portraitRGBopaquePNG. Reference is AUTHORITATIVE COMPOSITION AND STYLE: preserve EXACT same fullframe camera distance, SMALL facial sizes and central positions, upperbody scale, generousheadroom, foregroundtabletop, strong creamy bokeh and sharp foregroundartifact. Do NOT zoom into faces. NEW SCENE: tea celebration with TWOELDERLY MANCHUWOMEN, NO MEN/BOYS/CHILDREN. Old imperialmotherleft withgraytemples smiles/laughswitholdercourtwomanright; bothwearloosefull-lengthManchurobes,liangbatouhorizontalhairwings,widesleeves,naturalskin,NO BEARDS ormalehats. Theirfacesexactly same smallsize/centralpositions asreference. ReplacevasewithONEintact YIXINGTEAPOT onDARKQingtableinSHARPforeground:MATTEreddishpurplebrownnaturalZISHAclay,roundbody,lid,shortspout,loophandle,notporcelain/gloss/plastic. Wholeteapot large/readableabout30%photoheight, no cupsblockingit. Brightnaturaldaylight,gentlebacklitrims, EXTREMELYdefocusedpalacered/goldlightpatches. No CGI,illustration,repeatingtexture,text/logo,border,vignette,oval/fade. WHOLEnewphoto, no edit/crop/padding.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/03-famille-rose-maljakko.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:08:16.218735+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b55a1aad-68eb-49a4-a530-55c7d1684205.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/06-yixing-teekannu-attempt3.png",
+          "nativeSHA256": "7f975c7cae6b3a2f8622312c75fc1b3beae476da8a0314f643b773feff9f99be",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "2559c1c4a176fa391245ef5ee3ba8434b7bae07e1eba9395c749065cc5f45288",
+          "technicalPass": true,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.16,
+            "observations": "Correct roles and successful central-face framing. Foreground artifact still undersized relative PT close request; next whole photo keeps faces/camera framing and brings the principal artifact2x nearer/larger."
+          }
+        },
+        {
+          "attempt": 4,
+          "issuedAt": "2026-10-19T11:10:02.088977+00:00",
+          "args": {
+            "prompt": "WHOLE NEW photorealistic color CAMERA photograph1086×1448RGBopaquePNG. Use this input ONLY as reference for EXACT PEOPLE FRAMING, face sizes/centralpositions, authenticcostumes, light, depthof field, table, photoquality and source story. Preserve these proportions ofpeople; do not enlarge faces. The ONE change in the NEW SCENE is the MAIN FOREGROUNDARTIFACT: its apparent widthANDheight are TWO TIMES as large as input, brought closer to camera. The entire sharp artifact remains visible nearcenter, about30%photoheight. People stay unchanged inrelativeimagepositionandsizebehindit. Natural coherent perspective, realphoto, notpastedobject. No extraartifacts/people. No edit/crop/padding or reusedpixels; everypixelnewgeneration.\nScene:TWOELDERLYMANCHUWOMEN,graytemples,loosefull-lengthQingrobes+liangbatouhairwings,joyfulteaparty. ONEintactYIXINGTEAPOT SHARPforeground,matte reddishpurplebrownZISHAclay,roundbody,lid,shortspout,loophandle. Entireteapotabout2xtheinputapparentsize,facesunchangedcentralbehindit. No men/boys/beards/malehats/cups. Brightnaturaldaylight,gentlevisiblebacklight,EXTREMELYsoftred/goldpalacebokeh,authenticnaturaltextures. NoCGI/artificialpattern/illustration/text/logo/border/vignette/oval/feather. EntirelyNEWphotograph.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/06-yixing-teekannu-attempt3.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:11:53.909018+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c23debd9-4c26-4e17-8afb-44f4498b1694.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/06-yixing-teekannu-attempt4.png",
+          "nativeSHA256": "8df8e23001615beeee22950599691d2e1ec85383e9c3bc9157c3efc0680920cb",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "880febf529c7a01d8bf5b9b47e694cedd8156c35946888a30186988221266ee3",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.31,
+            "observations": "Correct TWO elderly Manchuwomen with naturalgraytemples,longrobes/liangbatou. Matte real zisha Yixing pot with lid/spout/handle approx31%height, sharp closeforeground, faces central at same successful scale; strong creamy optical background, dark table. Shape preserved, allpotvisible. No wrongmale/boy."
+          }
+        }
+      ],
+      "correctionTaskNumber": 559,
+      "activeAttempt": 4,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "importantFacialFeaturesProtected": true,
+        "artifactHeightFraction": 0.31,
+        "observations": "Correct TWO elderly Manchuwomen with naturalgraytemples,longrobes/liangbatou. Matte real zisha Yixing pot with lid/spout/handle approx31%height, sharp closeforeground, faces central at same successful scale; strong creamy optical background, dark table. Shape preserved, allpotvisible. No wrongmale/boy."
+      },
+      "selectedAttempt": 4,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/06-yixing-teekannu.png",
+      "deliverySHA256": "8df8e23001615beeee22950599691d2e1ec85383e9c3bc9157c3efc0680920cb"
+    },
+    "07-doucai-kuppi": {
+      "code": "07-doucai-kuppi",
+      "sourceItem": {
+        "number": 7,
+        "id": "doucai-kuppi",
+        "nimi": "Doucai-kuppi",
+        "kuplatyyppi": 4,
+        "kuplatyyppiRaw": "4",
+        "typeLabelFromMarkdown": "lahja (lähettiläs)",
+        "kupla": "Hymyilevä lähettiläs vieraan maan juhla-asussa ojentaa pientä doucai-kuppia, iloiset virkamiehet ihailevat, valoisa, ilmava, pehmeä päivänvalo, vaalea sali, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Doucai-koristeessa sininen ääriviiva maalataan lasitteen alle ja värit lisätään päälle toisessa poltossa.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, 1700-luku (tyyli Ming-ajan Chenghuasta)",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.doucai-kuppi.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.doucai-kuppi.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.doucai-kuppi.kupla",
+            "teksti": "juoksupeli.rikkoutuva.doucai-kuppi.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.doucai-kuppi.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.doucai-kuppi.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.doucai-kuppi.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "vaalea sali"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.doucai-kuppi.kupla"
+          },
+          "mdHeading": "### Doucai-kuppi (`doucai-kuppi`) — kupla 4: lahja (lähettiläs)",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 3,
+      "callsCompleted": 3,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T11:17:41.142733+00:00",
+          "args": {
+            "prompt": "Create an ENTIRELY NEW photorealistic COLOR CAMERA photograph,1086×1448 portrait RGBopaquePNG. Reference is BOTH AUTHORITATIVE COMPOSITION/SCALE and photographicSTYLE: keep the SAME camera framing, relative face size/centralfacepositions, generousheadroom, darktable/foreground andbeautifulsoftlight. Do NOT zoomintofaces. Only mainartifact/story/roles change as specified. Closeforegroundartifact sharplydetailed and about30–40%fullphotoheight, people softlybehind; background EXTREMELYopticallydefocusedlightpatches. Authenticnaturalwood/metal/stone/skintexture, brightdaylight+gentlevisiblebacklight. Whole new coherent continuous photo, NO partialedit/copiedpixels/crop/padding,CGI/illustration/repeatingtexture,labels/text/logo,sepia/grain,border/vignette/oval/fade.\nNEW SCENE:DIPLOMATICGIFT HANDOVER. ONLY2elderlyADULTMEN. ForeignenvoyLEFTinCentralAsianembroideredrobe+modestturban offersONE delicate smallDOUCAIPORCELAINCUP forward; elderlyChineseQingofficialRIGHT admires/receives. SameSMALLfacepositions/sizes asreference. Officialgraybeard,shavedFRONT+queue,blackROUNDguapimaoREDknob,blackmagua/roundcollarRIGHTbuttonQingrobe. ONE cup BETWEENtheirtwohands in SHARPclosestforegroundcenter; thinwhiteporcelainwithcobaltoutlinesfilledwithred/green/yellowfloraldecoration. NOhandle/NOlid/NOsaucer. CupmustbeverylargeinPHOTOandreadable, broughtcloseto cameraforperspective,butnaturalrealcupSHAPEanddelicacy. About25–30%photoheight ifnaturalbroadshape,notatiny5–10pxspeck. NO largefoodbowl,ricemound,porcelainvase orchildren. Keepadultfacessmallcentrallybehindhands,joyfulcandidceremony, palaceroomonlyverysoftluminousbokeh.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/04-keltalasitteinen-kulho.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:20:30.695851+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bc9cae14-6be3-4f13-8105-6e8c7473a50f.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/07-doucai-kuppi-attempt1.png",
+          "nativeSHA256": "8f93db6b34bd578e5efea183c6668cddbc37d36db8d09bb52d947f8eb1294951",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "917c0a814c0d9c8b8112308375fb6542eba5bec2c287fc10420bebc77780715c",
+          "technicalPass": true,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.21,
+            "observations": "Correct envoy/official and clear colorfuldoucai, but cup became too big/deep relative to hands, resembleslarge foodbowl ratherthan delicate SMALLcup. New whole candidate needs true smallhandheldcup proportions, not arbitraryheight stretching."
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T11:21:11.964509+00:00",
+          "args": {
+            "prompt": "WHOLE NEW photorealistic COLOR CAMERA PHOTO,1086×1448portraitRGBopaquePNG. Reference for SAME photographic framing, exact small adult face sizes/centralpositions, joy, correct roles/costumes, softpalacebokeh and light. Do NOT enlargefaces. Foreignelderlyenvoyleft inCentralAsianfestiverobe/turban offersONE VERY SMALL DELICATE DO UCAI TEACUP tohappyelderlyChineseQingofficialright (graybeard,shavedfront+queue,blackroundcapREDknob,blackmagua/roundcollarRIGHTbuttonrobe). Main artifact mustbe a SMALL SHALLOW HANDHELD TEACUP that can NEST IN ONE PALM, diameter about onepalmwidth, cupheight LESS THANHALF itsdiameter. Thin whiteporcelainrim, cobaltblueOUTLINESfilledwithred/green/yellowfloralcolor, lowdelicatefoot, nohandle/lid/saucer,notabigbowl/bucket/vase. Bring naturalhand+cup close to lens for a clear SHARP readable heroartifact, targetcupwidth~30%photoWIDTH but do NOT stretchitsrealshallowshape to30%HEIGHT. Foreground hands support thetinycup gently with realisticfinger/cupproportions. Large softpeople stay behindwithsamecentralfaces asreference, notfullbodydistantfigures. Originalreferencecup isTOOBIG/DEEP: this WHOLE NEW scene hasgenuinelysmallshallowcup andproportionatehands. No othercups/food/rice. Brightnaturaldaylight,visiblegentlebacklight,EXTREMELYcreamyred/goldpalaceblur,DARKQingtable,realceramic/skintexture. No edit,crop,padding/copiedpixels,CGI,illustration,artificialpattern,text/logo,border/vignette/oval/fade. Everypixelnew.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/07-doucai-kuppi-attempt1.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:25:03.481318+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a1b7b194-ff94-4110-bc6a-35061bf99ccb.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/07-doucai-kuppi-attempt2.png",
+          "nativeSHA256": "d4e336903ecbeff75e97e9202fc45b9ad4f2cbef762bda646e5a6b8107e39270",
+          "nativeDimensions": [
+            1087,
+            1447
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "486633efc3d3fcf1c1df2cc9a918ad2cda26540053ec6b403a87892cd0776ff1",
+          "technicalPass": false,
+          "qa": {
+            "passed": false,
+            "personallyInspectedNative": true,
+            "artifactHeightFraction": 0.076,
+            "observations": "True smallcup proportions andexactstory fixed, but artifact still only~8%height and peoplegrewsideways. Next newphoto makesforegroundHANDSCUPgroup2xcloser preservingtheirphysicalratio and uses successfuladultcentralframing."
+          }
+        },
+        {
+          "attempt": 3,
+          "issuedAt": "2026-10-19T11:25:03.577241+00:00",
+          "args": {
+            "prompt": "Generate ENTIRELY NEW real-camera COLORphotograph1086×1448portraitRGBopaquePNG. Image1 ONLY central SMALL ADULT FACE COMPOSITION: preserve its small facial sizes/central positions/headroom exactly, replace rice scene. Image2 ONLY tinycup's TRUE REAL-WORLD PROPORTIONS TO HANDS and exact envoy/officialroles/clothing. NEW DEPTH COMPOSITION: present the ENTIRE FOREGROUND HANDS+SMALLCUP GROUP TWO TIMES LARGER in photo thanImage2, by bringing handsandcup muchclosertocamera; do NOT enlargecuprelative tohands. Cup still tiny shallowdelicateteacup nestinginonepalm,notfoodbowl/bucket. People slightlyfartherbehind withsmall centrallypositionedfaces SAME SCALEASImage1, not bigsidefacesofImage2. Oneforeignenvoyleft turban/embroideredCentralAsianrobe offersONEDOUCAIcup,elderlyChineseQingofficialright roundblackREDknobcap/blackmagua/RIGHTbuttonroundcollar/queue admires. Bothsmile. CupSHARPcenterforeground,thinwhiteporcelain,cobaltblueoutlinesfilledwithred/green/yellowflorals,nohandle/lid/saucer. Maincupapparentheight~15–20%PHOTOHEIGHT because naturallyshallow, width~30–35%, clearlyreadableat160px; LARGEFOREHANDS preserve truthfulphysicalpalm/cupscale. Bothpeopleupperbodies softerbehind, eyes/nose/mouth central45%oval. DarkQingtable, brightnaturaldaylight/gentlebacklitrim, EXTREMELYcreamyred/goldpalacebokeh, photoreal skin/porcelain/woodtexture. No rice/vase/foodbowl/extraobjects/children. No copiedpixels/edit/crop/padding,CGI/illustration/artificialpattern,text/logo,border/vignette/oval/fade. Allnew coherent photograph.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/04-keltalasitteinen-kulho.png",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/07-doucai-kuppi-attempt2.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:26:50.437890+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ef6e0add-311a-413b-8dbf-b72575353c9f.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/07-doucai-kuppi-attempt3.png",
+          "nativeSHA256": "3cc958e51a19c3af72cd363673abbe137d8a4cfdf19140b0fa2a859249355e82",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "0535d2d91afc2220e7208409f164cddb45c476fa81bcef7b24c5cd50e49ad4db",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "producerQAResult": "readable-source-subject-with-explicit-composition-exception-for-PT-review",
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "artifactHeightFraction": 0.1,
+            "artifactWidthFraction": 0.22,
+            "sourceArtifactHeightCriterionMet": false,
+            "sourceHeightTarget": [
+              0.3,
+              0.4
+            ],
+            "importantFacialFeaturesProtected": false,
+            "sourceCentralFaceCriterionMet": false,
+            "PTTargetedReviewRequired": true,
+            "observations": "Correct genuine SMALL shallowdoucai teacup (fitsinpalm,thinrim,nolid/handle/saucer), accuratehand/cupproportions andenvoyhandover, sharpreadablecentralforeground,peoplemildlysoftbehind,verystrongbokeh. Cup~10%H/~22%W, about35pxwidthat160px, muchlargerthanold9pxspeck but DOESNOTMEET30–40%heightrequest. Enforcingheightmadeabigfoodbowl inattempt1. Facesremainreadable inearlyfeather butoutereyesnotallinside45%core. DeliverasexplicitPTreviewcandidate,notstrictsourceconformanceorrecipientacceptance. Do notsilentlycallallcriteriapassed."
+          }
+        }
+      ],
+      "correctionTaskNumber": 560,
+      "activeAttempt": 3,
+      "qa": {
+        "passed": true,
+        "producerQAResult": "readable-source-subject-with-explicit-composition-exception-for-PT-review",
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "artifactHeightFraction": 0.1,
+        "artifactWidthFraction": 0.22,
+        "sourceArtifactHeightCriterionMet": false,
+        "sourceHeightTarget": [
+          0.3,
+          0.4
+        ],
+        "importantFacialFeaturesProtected": false,
+        "sourceCentralFaceCriterionMet": false,
+        "PTTargetedReviewRequired": true,
+        "observations": "Correct genuine SMALL shallowdoucai teacup (fitsinpalm,thinrim,nolid/handle/saucer), accuratehand/cupproportions andenvoyhandover, sharpreadablecentralforeground,peoplemildlysoftbehind,verystrongbokeh. Cup~10%H/~22%W, about35pxwidthat160px, muchlargerthanold9pxspeck but DOESNOTMEET30–40%heightrequest. Enforcingheightmadeabigfoodbowl inattempt1. Facesremainreadable inearlyfeather butoutereyesnotallinside45%core. DeliverasexplicitPTreviewcandidate,notstrictsourceconformanceorrecipientacceptance. Do notsilentlycallallcriteriapassed."
+      },
+      "selectedAttempt": 3,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/07-doucai-kuppi.png",
+      "deliverySHA256": "3cc958e51a19c3af72cd363673abbe137d8a4cfdf19140b0fa2a859249355e82"
+    },
+    "10-tuoksupoltin": {
+      "code": "10-tuoksupoltin",
+      "sourceItem": {
+        "number": 10,
+        "id": "tuoksupoltin",
+        "nimi": "Tuoksupoltin",
+        "kuplatyyppi": 8,
+        "kuplatyyppiRaw": "8",
+        "typeLabelFromMarkdown": "vuodenaika",
+        "kupla": "Pronssinen tuoksupoltin kirkkaasti lumisella palatsin pihalla, hymyilevä palvelija talvikaavussa, koristelyhdyt, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Vanhimmat kiinalaiset tuoksupolttimet eli xianglu ovat Taistelevien valtioiden ajalta, noin 400-luvulta eaa.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.tuoksupoltin.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.tuoksupoltin.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.tuoksupoltin.kupla",
+            "teksti": "juoksupeli.rikkoutuva.tuoksupoltin.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.tuoksupoltin.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.tuoksupoltin.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.tuoksupoltin.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "lumisella palatsin pihalla"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.tuoksupoltin.kupla"
+          },
+          "mdHeading": "### Tuoksupoltin (`tuoksupoltin`) — kupla 8: vuodenaika",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T11:15:43.237409+00:00",
+          "args": {
+            "prompt": "Create an ENTIRELY NEW photorealistic COLOR CAMERA photograph,1086×1448 portrait RGBopaquePNG. Reference is BOTH AUTHORITATIVE COMPOSITION/SCALE and photographicSTYLE: keep the SAME camera framing, relative face size/centralfacepositions, generousheadroom, darktable/foreground andbeautifulsoftlight. Do NOT zoomintofaces. Only mainartifact/story/roles change as specified. Closeforegroundartifact sharplydetailed and about30–40%fullphotoheight, people softlybehind; background EXTREMELYopticallydefocusedlightpatches. Authenticnaturalwood/metal/stone/skintexture, brightdaylight+gentlevisiblebacklight. Whole new coherent continuous photo, NO partialedit/copiedpixels/crop/padding,CGI/illustration/repeatingtexture,labels/text/logo,sepia/grain,border/vignette/oval/fade.\nReplace the mirror with ONEintact agedBRONZE XI ANGLU incenseburner on lowdarkwoodstand, sharpcentralforeground: roundTRIPODbody,2handles,piercedDOMElid,subduedbrown/greenpatina,onefaintsmokewisp,notmountainlid/notcloisonné. Fullburner~35%H,allpartsvisible. ONEhappyelderlyservantstands immediatelybehind, samefacesize/locationasreference, graybeard,shavedfront+QUEUE,paddedWINTERroundblackcapREDknob,roundcollarRIGHTbuttonchangpao+blackmagua/winterrobe. Gentleproudgesturetoincenseburner,notholdingmirror. SetoutsideinbrightSNOWYQingpalaceCOURTYARD,softsnowfill,redcolumnsandtwosilklanterns onlyveryblurredbokehhints. NOindoorhall, mirror,otherpeople ormodernelements. The input mirror shape isNOTa target; replaceallwithbronze incenseburner.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/references/one-adult-framing-only-round-mirror-NOT45.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:17:26.819473+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-88520ae6-a0e0-4bc6-906c-970a96e4d276.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/10-tuoksupoltin-attempt1.png",
+          "nativeSHA256": "74ae057c570448a73d3e7f7fe692e17c8090ec11495264736cf0e1055db1cc9c",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "2eea02a45da237b087012a0623be0a13732073d1359e77947b00a426dd612f93",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.28,
+            "observations": "Intact bronze dome-lidded tripod incenseburner sharp centralforeground, natural patina and piercedlid, subtle smoke, smiling elderlyQingservant justbehind, correctwintersetting snow/redcolumns/lanternblurs. Wholeburner about28%height, naturalbroadform; stone/bronze textured, darkstand, eyes/nose/mouth central; no mirror remains."
+          }
+        }
+      ],
+      "correctionTaskNumber": 561,
+      "activeAttempt": 1,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "importantFacialFeaturesProtected": true,
+        "artifactHeightFraction": 0.28,
+        "observations": "Intact bronze dome-lidded tripod incenseburner sharp centralforeground, natural patina and piercedlid, subtle smoke, smiling elderlyQingservant justbehind, correctwintersetting snow/redcolumns/lanternblurs. Wholeburner about28%height, naturalbroadform; stone/bronze textured, darkstand, eyes/nose/mouth central; no mirror remains."
+      },
+      "selectedAttempt": 1,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/10-tuoksupoltin.png",
+      "deliverySHA256": "74ae057c570448a73d3e7f7fe692e17c8090ec11495264736cf0e1055db1cc9c"
+    },
+    "11-jadeastia": {
+      "code": "11-jadeastia",
+      "sourceItem": {
+        "number": 11,
+        "id": "jadeastia",
+        "nimi": "Jadeastia",
+        "kuplatyyppi": 2,
+        "kuplatyyppiRaw": "2",
+        "typeLabelFromMarkdown": "aarre salissa (ei ihmisiä)",
+        "kupla": "Vihreä jadeastia isona vaalealla jalustalla avarassa palatsisalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo heijastuu kiillotetulla pinnalla, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Kiinassa jadea arvostettiin kulta- ja hopeaakin enemmän; jadeveisto huipentui Qianlongin aikana.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luku",
+        "ajoitus": "Qing-dynastia, 1700-luku",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.jadeastia.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.jadeastia.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.jadeastia.kupla",
+            "teksti": "juoksupeli.rikkoutuva.jadeastia.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.jadeastia.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.jadeastia.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.jadeastia.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [
+            "avarassa palatsisalissa"
+          ],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.jadeastia.kupla"
+          },
+          "mdHeading": "### Jadeastia (`jadeastia`) — kupla 2: aarre salissa (ei ihmisiä)",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": null,
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T11:15:43.293549+00:00",
+          "args": {
+            "prompt": "Create an ENTIRELY NEW photorealistic COLOR CAMERA photograph,1086×1448 portrait RGBopaquePNG. Reference is BOTH AUTHORITATIVE COMPOSITION/SCALE and photographicSTYLE: keep the SAME camera framing, relative face size/centralfacepositions, generousheadroom, darktable/foreground andbeautifulsoftlight. Do NOT zoomintofaces. Only mainartifact/story/roles change as specified. Closeforegroundartifact sharplydetailed and about30–40%fullphotoheight, people softlybehind; background EXTREMELYopticallydefocusedlightpatches. Authenticnaturalwood/metal/stone/skintexture, brightdaylight+gentlevisiblebacklight. Whole new coherent continuous photo, NO partialedit/copiedpixels/crop/padding,CGI/illustration/repeatingtexture,labels/text/logo,sepia/grain,border/vignette/oval/fade.\nNO PEOPLE. ReplaceporcelainvasewithONEintact GREENNEPHRITE JADE RECEPTACLE: Qingcoveredritual-stylevessel,roundgentlybulgingbody,coverwithsmallknob,two smallringhandles,finecarvedcurvedfloralrelief. PolishedrealjadeSTONEwithsubtlecloudyinclusions andlightthroughthin edges,notgreenceramic/glass/plastic. Wholejadevessel~35%photoheight,fullyvisiblecenteron smallcarveddarkstand ONdarkQingconsole,inunspecifiedbrightChineseimperialpalacehall. Backgroundonlyextremelysoftred/goldlightpatches. Realpolish/daylightglints/gentlebacklitrim,notoversaturatedglow. No porcelainvase/bluefloralpaint,nootherartifacts,no readableinscriptions.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/01-posliinimaljakko.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:17:26.967059+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a48c9c59-e9d3-4dc8-afb8-e9482dc2bac4.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/11-jadeastia-attempt1.png",
+          "nativeSHA256": "167d2a7de5866847b3e7ca70eea418da0df7f7179b7a83a2761299f31fc8b6f8",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "32f9c8366706ef98e5fe1a695240aea271b15a2a49929d526b211d9be26cf825",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.3,
+            "observations": "Nopeople. Largepolishedgreenjade coveredreceptacle with carvedfloralrelief andringhandles, about30%height, onsmallcarvedstand ondarktable; subtleedge light/materialglints, creamydefocusedpalace. Fullyvisible, no ceramicpaintor text."
+          }
+        }
+      ],
+      "correctionTaskNumber": 562,
+      "activeAttempt": 1,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "importantFacialFeaturesProtected": true,
+        "artifactHeightFraction": 0.3,
+        "observations": "Nopeople. Largepolishedgreenjade coveredreceptacle with carvedfloralrelief andringhandles, about30%height, onsmallcarvedstand ondarktable; subtleedge light/materialglints, creamydefocusedpalace. Fullyvisible, no ceramicpaintor text."
+      },
+      "selectedAttempt": 1,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/11-jadeastia.png",
+      "deliverySHA256": "167d2a7de5866847b3e7ca70eea418da0df7f7179b7a83a2761299f31fc8b6f8"
+    },
+    "12-jadesinetti": {
+      "code": "12-jadesinetti",
+      "sourceItem": {
+        "number": 12,
+        "id": "jadesinetti",
+        "nimi": "Keisarin jadesinetti",
+        "kuplatyyppi": 5,
+        "kuplatyyppiRaw": "5",
+        "typeLabelFromMarkdown": "juhla/seremonia",
+        "kupla": "Ylpeä ja iloinen virkamies nostaa jadesinettiä molemmin käsin, hymyilevät juhlapukuiset hovilaiset ympärillä, valoisa, ilmava, pehmeä päivänvalo, realistinen värivalokuva, ei tekstiä kuvaan",
+        "fakta": "Qianlongin eläkeaikojen jadesinetti on Wienin museon mukaan Palace Museumin suurin jadesinetti.",
+        "dynastia": "Qing",
+        "vuosi": "1700-luvun loppu",
+        "ajoitus": "Qing-dynastia, 1700-luvun loppu (Qianlongin kausi)",
+        "source": {
+          "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "commit": "ed1ce5c0415fc076ce252054a93feb164dbd229d",
+          "repositoryPath": "docs/raportit/juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+          "gitBlob": "896276bdc44b714ce28b2c14563f02136d4ce854",
+          "sha256": "d0e3fbb935129bfc025f6cc516626a3b03129586b123b514c4f870a43970da94",
+          "keys": {
+            "nimi": "juoksupeli.rikkoutuva.jadesinetti.nimi",
+            "kuplatyyppi": "juoksupeli.rikkoutuva.jadesinetti.kuplatyyppi",
+            "kupla": "juoksupeli.rikkoutuva.jadesinetti.kupla",
+            "teksti": "juoksupeli.rikkoutuva.jadesinetti.teksti",
+            "dynastia": "juoksupeli.rikkoutuva.jadesinetti.dynastia",
+            "vuosi": "juoksupeli.rikkoutuva.jadesinetti.vuosi",
+            "ajoitus": "juoksupeli.rikkoutuva.jadesinetti.ajoitus"
+          }
+        },
+        "placeEvidence": {
+          "exactScenePlaceQuotes": [],
+          "scenePlaceQuoteSource": {
+            "sourceId": "juoksupeli-rikkoutuvat-51-avaimet-20261019.json",
+            "key": "juoksupeli.rikkoutuva.jadesinetti.kupla"
+          },
+          "mdHeading": "### Keisarin jadesinetti (`jadesinetti`) — kupla 5: juhla/seremonia",
+          "mdHeadingSourceId": "juoksupeli-huudot-lista-20261019.md",
+          "namedPlaceFromHeading": null,
+          "namedPlaceNotSpecifiedInBaseSceneOrHeading": true,
+          "applicableExplicitPlaceCorrection": {
+            "sourceId": "paatoimittaja-codex-muistokuplat-tarkennus-1058-20261019.md",
+            "quote": "sinetit Jiaotai-salissa (交泰殿)",
+            "reason": "Explicit source correction for seals."
+          },
+          "doNotInventNamedPlace": true
+        },
+        "productionStatus": "not_started_by_source_auditor",
+        "reuseDecision": "not_assessed_for_45_percent_fade"
+      },
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "status": "QA-passed-awaiting-delivery",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T11:17:41.192858+00:00",
+          "args": {
+            "prompt": "Create an ENTIRELY NEW photorealistic COLOR CAMERA photograph,1086×1448 portrait RGBopaquePNG. Reference is BOTH AUTHORITATIVE COMPOSITION/SCALE and photographicSTYLE: keep the SAME camera framing, relative face size/centralfacepositions, generousheadroom, darktable/foreground andbeautifulsoftlight. Do NOT zoomintofaces. Only mainartifact/story/roles change as specified. Closeforegroundartifact sharplydetailed and about30–40%fullphotoheight, people softlybehind; background EXTREMELYopticallydefocusedlightpatches. Authenticnaturalwood/metal/stone/skintexture, brightdaylight+gentlevisiblebacklight. Whole new coherent continuous photo, NO partialedit/copiedpixels/crop/padding,CGI/illustration/repeatingtexture,labels/text/logo,sepia/grain,border/vignette/oval/fade.\nNEWSCENE: ceremonialcelebration inJIAOTAIHALL. ONEintact GREENJADEIMPERIALSEAL, squareCUBOIDBASEwithintertwinedDRAGONKNOBsculptureonTOP. NaturalpolishedjadeSTONE,subtlecloudyinclusions,noplastic/glass. SmilingelderlyQingofficialLEFT proudlyLIFTSsealforwardwithBOTHHANDS, SHARPcentrallyinforeground~35%photoheight,allsealvisible. OnehappyfestiveQingcourtierRIGHTquietlyadmires. OnlyTWOelderlyMEN,samefacepositions/smallsizeasref,graybeards,shavedfront+queues,blackROUNDguapimaoREDknobs,roundcollarRIGHTbuttonchangpao+blackmagua. No rice/foodbowl/cups/vase. No actualinscriptions/letteringorvisibleunderside. Jiaotaihallonlyextremelydefocusedred/goldlightpatches,notWesternarchitecture. Genuinehands,sourcejoyandrealmaterialglints.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/04-keltalasitteinen-kulho.png"
+            ]
+          },
+          "completed": true,
+          "completedAt": "2026-10-19T11:20:30.861013+00:00",
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-77d2d298-7ba8-4c18-b4c8-a0098b792b56.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/native/12-jadesinetti-attempt1.png",
+          "nativeSHA256": "7a84bb1d0f03b4e911112f7fd823fc08ad8d6a66da71226eee5b18d912cdcfe3",
+          "nativeDimensions": [
+            1086,
+            1448
+          ],
+          "mode": "RGB",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "pixelSHA256": "97f80ed07b74ec5edfe1570d8874d4c41a78a5e58aeb01bf7f39a7e3b61cb7a2",
+          "technicalPass": true,
+          "qa": {
+            "passed": true,
+            "personallyInspectedNative": true,
+            "backgroundStrongBokeh": true,
+            "importantFacialFeaturesProtected": true,
+            "artifactHeightFraction": 0.305,
+            "observations": "One greenjade imperialseal, squarecuboidbase, intertwineddragonknob, naturalcloudyjade texture, intact; elderlyQingofficial liftsitbothhands andothercourtieradmires. Sharpforegroundapprox30.5%,correctJiaotaiblur, central protectedfacialfeatures, no rice/bowl/text."
+          }
+        }
+      ],
+      "correctionTaskNumber": 563,
+      "activeAttempt": 1,
+      "qa": {
+        "passed": true,
+        "personallyInspectedNative": true,
+        "backgroundStrongBokeh": true,
+        "importantFacialFeaturesProtected": true,
+        "artifactHeightFraction": 0.305,
+        "observations": "One greenjade imperialseal, squarecuboidbase, intertwineddragonknob, naturalcloudyjade texture, intact; elderlyQingofficial liftsitbothhands andothercourtieradmires. Sharpforegroundapprox30.5%,correctJiaotaiblur, central protectedfacialfeatures, no rice/bowl/text."
+      },
+      "selectedAttempt": 1,
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-muistokuplat-51-v4-20261019/close-a-01to12/delivery-packet/12-jadesinetti.png",
+      "deliverySHA256": "7a84bb1d0f03b4e911112f7fd823fc08ad8d6a66da71226eee5b18d912cdcfe3"
+    }
+  },
+  "callsIssued": 22,
+  "callsCompleted": 22,
+  "selectedImages": 10,
+  "productionActive": false,
+  "stage": "all10-producer-reviewed-with-07-explicit-source-composition-exception",
+  "oldAttemptsPreserved": true,
+  "updatedAt": "2026-10-19T11:26:51.468401+00:00",
+  "strictSourceCompositionFullyMet": false,
+  "PTFocusedReviewNumbers": [
+    7
+  ]
+}
