@@ -65,8 +65,9 @@ lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 | Linssiseppä | Opus, high | Matkakirja-linssiseppa | docs/raportit/viesti-linssiseppa-aloitus.md + luovutus | ei |
 | Valoseppä | Opus, high | Matkakirja-linssiseppa-2 | docs/aloitusviestit/valoseppa.md | ei (Julkaisijan vahti) |
 | Karttaseppä | Opus, high | Matkakirja-karttaseppa | docs/raportit/viesti-karttaseppa-aloitus.md + luovutus | ei |
-| Linnanrakentaja | Opus, high | Matkakirja-linnanrakentaja | docs/aloitusviestit/linnanrakentaja.md | ei |
-| Siirtoseppä | Opus, high | Matkakirja-siirtoseppa | docs/raportit/viesti-siirtoseppa-aloitus.md + luovutus | ei |
+| Lavastaja | Opus, medium | Matkakirja-linnanrakentaja | docs/aloitusviestit/linnanrakentaja.md | ei |
+| Projektiseppä | Opus, high | Matkakirja-siirtoseppa | docs/raportit/viesti-siirtoseppa-aloitus.md + luovutus | ei |
+| Työkaluseppä | Opus, high | Matkakirja-tyokaluseppa | docs/aloitusviestit/tyokaluseppa.md | ei |
 | Sisältökirjuri | Sonnet 5.5, high | Matkakirja-sisaltokirjuri | docs/raportit/viesti-sisaltokirjuri-aloitus.md + luovutus | ei |
 | Äänittäjä | Sonnet 5.5, high (lupatila auto) | Matkakirja-aanittaja | docs/aloitusviestit/aanittaja.md | ei |
 | Laitetestaaja | Sonnet 5.5, high | Matkakirja-laitetestaaja | docs/raportit/viesti-laitetestaaja-aloitus.md + luovutus | ei |

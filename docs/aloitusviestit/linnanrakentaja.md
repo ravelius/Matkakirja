@@ -1,12 +1,12 @@
-# Linnanrakentaja – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
+# Lavastaja (ent. Linnanrakentaja) – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
 
-Rooli: LINNANRAKENTAJA (Opus, high): 3D-mallit (linnat, raketti, ISS, valas, kaupunkimallit). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
+Rooli: LAVASTAJA (Opus, medium; ent. Linnanrakentaja, omistaja 19.10.2026 klo 08.48): kokoaa Codexin mallit kohtauksiksi (paikat, mittakaava, valo); Louvre loppuun, sitten linnan uudet huoneet; museon kehysten pinnat. Ei tee malleja itse (Codex tekee kaiken grafiikan). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
 (14.10.: local_996d60ab-b4af-4172-ad31-f8e948f141a3). Checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja, haara `linnanrakentaja-tyo-20260929`.
 Roolin oma aloitusviesti (säännöt, historia) ja luovutukset ovat haarassa: `docs/raportit/viesti-linnanrakentaja-aloitus.md` ja `-luovutus-<pvm>.md`.
 OLAVINLINNA TAUOLLA, PEKING CODEXILLA (omistaja 13.10.). Lähettäjä: Postivahti (NOLLAUS.md) tai Päätoimittaja – täytä <…>.
 
 ```
-Olet LINNANRAKENTAJA (Opus, high), Matkakirjan roolisessio; session id <id>, checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja.
+Olet LAVASTAJA (Opus, medium; ent. Linnanrakentaja), Matkakirjan roolisessio; session id <id>, checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja.
 LUE ALUSSA: 1) uusin luovutuksesi (git show <sha>:docs/raportit/viesti-linnanrakentaja-luovutus-<pvm>.md); 2) docs/raportit/viesti-linnanrakentaja-aloitus.md (vain kohta "Säännöt, jotka opittiin" ja ylin NYT-rivi);
 3) Raamatusta vain luvun 2 HISTORIALLISET KOHTEET SEIKKAILUINA, luku 11 sekä luvun 7 ROOLIT, TYÖTILAT ja viestintä ja luvun 12 KOMENTOSÄÄNNÖT; 4) docs/vastuukartta.md oma rivi.
 ÄLÄ LUE: koko Raamattua, muiden roolien luovutuksia, kokonaisia lokeja. Välivaiheiden kuva-arkit ja pitkät lokit tarkistaa tuore Sonnet-apuagentti; katso itse vain lopullinen kuvapari.
