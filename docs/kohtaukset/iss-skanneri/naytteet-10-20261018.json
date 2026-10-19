@@ -1,7 +1,7 @@
 {
  "_meta": {
   "kuvaus": "Näyte 10 kohteesta, uusi rakenne (B1, omistaja 18.10.): aloitus (tunnistava), luonne, 2–4 riviä. Lähteet vain krediittitiedostoon, ei skanneriin. Faktat tarkistettu riippumattomalla Sonnet-tarkistajalla verkosta 18.10.",
-  "rajat_ehdotus": "aloitus ≤ 45 merkkiä, luonne ≤ 110, rivin arvo ≤ 24"
+  "rajat_ehdotus": "aloitus ≤ 45, luonne ≤ 110, rivin arvo ≤ 24, nimike ≤ 18 merkkiä (PT hyväksyi 19.10.)"
  },
  "kohteet": [
   {
@@ -55,7 +55,7 @@
    "tunnus": "k-sierra-leone",
    "nimi": "Sierra Leone",
    "aloitus": "Länsi-Afrikan rannikkovaltio",
-   "luonne": "Nimi tulee portugalilaisten antamasta ’leijonavuoret’-nimestä, ja pääkaupunki Freetown on vuoristoisella niemimaalla.",
+   "luonne": "Nimi tulee portugalilaisten ’leijonavuorista’; pääkaupunki Freetown on vuoristoisella niemimaalla.",
    "rivit": [
     [
      "Pääkaupunki",
@@ -133,11 +133,11 @@
   {
    "tunnus": "k-hechi",
    "nimi": "Hechi",
-   "aloitus": "Guangxin pohjoisosan prefektuurikaupunki",
-   "luonne": "Vuorten ympäröimä kaupunki Etelä-Kiinassa, noin 210 km Nanningista pohjoiseen.",
+   "aloitus": "Vuoristokaupunki Etelä-Kiinan Guangxissa",
+   "luonne": "Vuoristoinen kaupunki, jonka Bama-alue tunnetaan pitkäikäisistä asukkaistaan.",
    "rivit": [
     [
-     "Asukasluku (prefektuuri)",
+     "Asukkaita (alue)",
      "3,4 milj. (2020)"
     ],
     [
@@ -147,14 +147,15 @@
    ],
    "lahteet": [
     "https://en.wikipedia.org/wiki/Hechi",
-    "https://fi.wikipedia.org/wiki/Hechi"
+    "https://fi.wikipedia.org/wiki/Hechi",
+    "https://en.wikipedia.org/wiki/Bama_Yao_Autonomous_County"
    ]
   },
   {
    "tunnus": "k-rovaniemi",
    "nimi": "Rovaniemi",
    "aloitus": "Lapin maakuntakeskus",
-   "luonne": "Napapiirin tuntumassa Kemijoen ja Ounasjoen yhtymäkohdassa sijaitseva kaupunki.",
+   "luonne": "Joulupukin kotikaupunkina tunnettu Kemijoen ja Ounasjoen yhtymäkohdan kaupunki.",
    "rivit": [
     [
      "Asukasluku",
@@ -171,7 +172,8 @@
    ],
    "lahteet": [
     "https://fi.wikipedia.org/wiki/Rovaniemi",
-    "https://en.wikipedia.org/wiki/Rovaniemi"
+    "https://en.wikipedia.org/wiki/Rovaniemi",
+    "https://www.visitrovaniemi.fi/professionals/media/rovaniemi-facts/"
    ]
   },
   {
@@ -189,7 +191,7 @@
      "Everest 8 849 m"
     ],
     [
-     "Yli 8 000 m huippuja",
+     "8 000 m:n huippuja",
      "10"
     ]
    ],
