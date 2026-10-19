@@ -1,0 +1,1189 @@
+{
+  "method": "Built-in image_gen; entirely new whole scene per call; no partial content editing",
+  "callsIssued": 10,
+  "callsCompleted": 10,
+  "selectedCreativeImages": 8,
+  "unselectedCandidatesPreserved": 2,
+  "technicalExportsAreNotAdditionalCreativeImages": true,
+  "assets": {
+    "k1-vapahtajan-kirkko": {
+      "code": "k1-vapahtajan-kirkko",
+      "taskNumber": 524,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:00.424946+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nVOR FRELSERS KIRKE in CHRISTIANSHAVN, airy canal-side establishing photograph. Foreground Christianshavn canal with calm darkblue-green water and a few moored modest boats; brickquay, a few modern pedestrians/cyclists on quay. The real ChurchofOurSaviour tower rises BEHIND the existing low Christianshavn rooftops, not directly planted in thewater or an invented island. Match supplied spiralspire precisely: redbrick squareclockbase, darkbrown/black tapered octagonal upperstage with palegold OUTSIDE spiralstair/rail wrapping it, narrowing to golden sphere and tiny goldfigure/banneratop. No oniondome, extra duplicate spire or generic cathedral. Wide natural camera view from canal bridge at humanheight, enough skyforwholegoldtip,softsunlight,real Copenhagen scale.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k1-vapahtajan-kirkko-photo1.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-43d228f3-716c-46cd-bba5-4728ca0ee8e4.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k1-vapahtajan-kirkko-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k1-vapahtajan-kirkko.png",
+          "nativeSHA256": "c70542910061b751f92d076c81e56fb577ff62be9d93c665b565dbe44bbec1f7",
+          "deliverySHA256": "7045c772713484cf2d80ab81c48bea8058b270200ba8fd77a859abf3c60330ef",
+          "nativeBytes": 3350699,
+          "deliveryBytes": 3350991,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "8c85a4a31b7955c41646ba47dfd4f220fd61d79f8069c23b438b5abf1c20c2cf",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:04:43.622219+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "findings": "Source-matched darkoctagonalspiralspire,externalgoldrails,goldsphere/figure,brickclocktower;canal/boats/currentpeople. Architectural surroundings and exacttower-to-canalspatialrelationship reconstructed,notgeometricallyverified. No obviousbrand/text or artificialrepeattexture noticed.",
+            "nativeDimensions": [
+              1672,
+              941
+            ],
+            "requestedExportDimensions": [
+              1920,
+              1080
+            ],
+            "technicalExportPending": true,
+            "exactViewpointVerified": false,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k1-vapahtajan-kirkko-attempt1.png",
+            "inputSHA256": "7045c772713484cf2d80ab81c48bea8058b270200ba8fd77a859abf3c60330ef",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "19f3d1eb89da5fdc15824e44f4cbeb4ed7c56f14de7064150e3e3af6fc7522c1"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:00:00.424640+00:00",
+      "activeAttempt": 1,
+      "attempt": 1,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-43d228f3-716c-46cd-bba5-4728ca0ee8e4.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k1-vapahtajan-kirkko-attempt1.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k1-vapahtajan-kirkko.png",
+      "nativeSHA256": "c70542910061b751f92d076c81e56fb577ff62be9d93c665b565dbe44bbec1f7",
+      "deliverySHA256": "19f3d1eb89da5fdc15824e44f4cbeb4ed7c56f14de7064150e3e3af6fc7522c1",
+      "nativeBytes": 3350699,
+      "deliveryBytes": 3874754,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "8c85a4a31b7955c41646ba47dfd4f220fd61d79f8069c23b438b5abf1c20c2cf",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:04:43.622219+00:00",
+      "selectedAttempt": 1,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k1-vapahtajan-kirkko-attempt1.png",
+      "unscaledDeliverySHA256": "7045c772713484cf2d80ab81c48bea8058b270200ba8fd77a859abf3c60330ef",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "daf493b685541fcb58a0e2853d21b2fa100d78d4f2f23604822482ad69510cd3",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k1-vapahtajan-kirkko-attempt1.png",
+        "inputSHA256": "7045c772713484cf2d80ab81c48bea8058b270200ba8fd77a859abf3c60330ef",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "19f3d1eb89da5fdc15824e44f4cbeb4ed7c56f14de7064150e3e3af6fc7522c1"
+      }
+    },
+    "k2-nyhavn": {
+      "code": "k2-nyhavn",
+      "taskNumber": 525,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:01.080941+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nNYHAVN waterfront, natural wide view obliquely along the canal. Match the specific genuine northside sequence/proportions of irregular old narrow paintedfacades fromreference: warm yellow,cream,rustred,mutedgreen,redtiled roofs,dormers and variedgables, not identicalstorybookhouses. Old wooden sailingvessels with real darkhulls,masts,furledsails and believable rigging moored by canal; smallsidewalkcafes with plainunbrandedparasols and casualguests, a fewwalkingpeople. Nogiantforegroundfood,stagedtable,extra inventedcathedral,or touristpostercolors. Softbright summerdaylight, natural waterreflections and agedpaint. Remove lettered restaurant/boat signs entirely.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k2-nyhavn-photo1.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fd3ba3f9-66ce-4701-b950-668ff4d8a380.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k2-nyhavn-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k2-nyhavn.png",
+          "nativeSHA256": "d32c65c3b7b32124b1a103363e9cfb82b75bc6a9b1b555d9ef966e937b44c90c",
+          "deliverySHA256": "6b218c7d5ad1035d51ac74a6678d4a68d20dc99ddca2156a2b50dc78ddb678e9",
+          "nativeBytes": 3287622,
+          "deliveryBytes": 3287914,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "c9a3a4111e34dbebb25be18899897195c835f2a626f4dc8f556abad09e259bec",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:04:45.126151+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "findings": "Source-matched irregularcolorfacaderow,redroofs,dormers,woodenhulls/masts,plaincafesandnaturalpeople. Differentinterpretiveobliqueperspective,notasurveyoffacade/windowcount. No readableboat/shopnamesnoticed.",
+            "nativeDimensions": [
+              1672,
+              941
+            ],
+            "requestedExportDimensions": [
+              1920,
+              1080
+            ],
+            "technicalExportPending": true,
+            "exactViewpointVerified": false,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k2-nyhavn-attempt1.png",
+            "inputSHA256": "6b218c7d5ad1035d51ac74a6678d4a68d20dc99ddca2156a2b50dc78ddb678e9",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "c27643abd7c7b287dc5b1856bb2b85bb0b259d40bbb72757c718bcabfcb74708"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:00:01.080929+00:00",
+      "activeAttempt": 1,
+      "attempt": 1,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fd3ba3f9-66ce-4701-b950-668ff4d8a380.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k2-nyhavn-attempt1.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k2-nyhavn.png",
+      "nativeSHA256": "d32c65c3b7b32124b1a103363e9cfb82b75bc6a9b1b555d9ef966e937b44c90c",
+      "deliverySHA256": "c27643abd7c7b287dc5b1856bb2b85bb0b259d40bbb72757c718bcabfcb74708",
+      "nativeBytes": 3287622,
+      "deliveryBytes": 3876759,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "c9a3a4111e34dbebb25be18899897195c835f2a626f4dc8f556abad09e259bec",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:04:45.126151+00:00",
+      "selectedAttempt": 1,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k2-nyhavn-attempt1.png",
+      "unscaledDeliverySHA256": "6b218c7d5ad1035d51ac74a6678d4a68d20dc99ddca2156a2b50dc78ddb678e9",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "9e7a09a367f37c40d3e9713a008086d20d62fe2244b3d41b38902719881b5285",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k2-nyhavn-attempt1.png",
+        "inputSHA256": "6b218c7d5ad1035d51ac74a6678d4a68d20dc99ddca2156a2b50dc78ddb678e9",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "c27643abd7c7b287dc5b1856bb2b85bb0b259d40bbb72757c718bcabfcb74708"
+      }
+    },
+    "k3-amalienborg": {
+      "code": "k3-amalienborg",
+      "taskNumber": 526,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:01.597805+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nAMALIENBORG PALACE OCTAGONAL COBBLED SQUARE, wide realistic present-day view. Four lowcream/palesandstone ROCOCOpalaces form theactual faceted octagonalperimeter, mansardroofs and restrainedwindowrhythm, not a circularcolonnade orgiantbaroquecastle. FrederickV equestrianbronze iscentered on itstallsquarepalestonepedestal: accuratelyproportioned standing/walkinghorse withoneforelegraised, riderupright, greenpatina asreferences, not galloping/rearing. Green copperdome of Frederik'sChurch/MARBLECHURCH isvisible onthe trueFrederiksgadeaxis behindplaza, not a secondpalace. Two smallRoyalLifeguards in darkblueceremonialuniform and tallBLACKBEARSKINcaps nearpalaceedge, ordinaryvisitorswalkingaround respectfully,notformalposedgroups. Bright naturaldaylight, cobblestoneirregularity, no text/inscriptionsvisible.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k3-amalienborg-photo1.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k3-amalienborg-photo2.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0edd9ef1-1443-40bb-8a10-2107b5b490dc.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k3-amalienborg-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k3-amalienborg.png",
+          "nativeSHA256": "f08182a159c24cbbc5e66d4a4b3ffd2a6ea0556f6075d8c8a9e08ea07a673337",
+          "deliverySHA256": "ad0943641098a7b5c4ed534c69d4d573097b9c3a453bb71427cce44bd3fcc4e1",
+          "nativeBytes": 2804083,
+          "deliveryBytes": 2804375,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "5984f8da11f30ea1ff93278987d955c42a343a2fe636f1b741159f4310c21da9",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:06:53.558763+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "findings": "Patinatedequestrianstatueonpalesquarepedestal,rococopalacefronts,greenMarbleChurchdome,smallbearskinguardsandcurrentvisitors. Groundlevelviewdoesnotproveentireoctagonalplangeometry; exactdistance/scaleofchurchandfacade/windowdetailsunverified. Tinybronzereliefmarksnotreadablewords.",
+            "technicalExportPending": true,
+            "exactViewpointVerified": false,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k3-amalienborg-attempt1.png",
+            "inputSHA256": "ad0943641098a7b5c4ed534c69d4d573097b9c3a453bb71427cce44bd3fcc4e1",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "0106c813dd58d7c87a4ea15a92b3608fb85fef0356b5a2c8d62034708af02d6c"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:00:01.597796+00:00",
+      "activeAttempt": 1,
+      "attempt": 1,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0edd9ef1-1443-40bb-8a10-2107b5b490dc.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k3-amalienborg-attempt1.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k3-amalienborg.png",
+      "nativeSHA256": "f08182a159c24cbbc5e66d4a4b3ffd2a6ea0556f6075d8c8a9e08ea07a673337",
+      "deliverySHA256": "0106c813dd58d7c87a4ea15a92b3608fb85fef0356b5a2c8d62034708af02d6c",
+      "nativeBytes": 2804083,
+      "deliveryBytes": 3422042,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "5984f8da11f30ea1ff93278987d955c42a343a2fe636f1b741159f4310c21da9",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:06:53.558763+00:00",
+      "selectedAttempt": 1,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k3-amalienborg-attempt1.png",
+      "unscaledDeliverySHA256": "ad0943641098a7b5c4ed534c69d4d573097b9c3a453bb71427cce44bd3fcc4e1",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "2d93b6115df5c94a863f476cd3541d06601648e2c5ed72aec6b0befdddc12a9a",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k3-amalienborg-attempt1.png",
+        "inputSHA256": "ad0943641098a7b5c4ed534c69d4d573097b9c3a453bb71427cce44bd3fcc4e1",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "0106c813dd58d7c87a4ea15a92b3608fb85fef0356b5a2c8d62034708af02d6c"
+      }
+    },
+    "k4-kastellet-gefion": {
+      "code": "k4-kastellet-gefion",
+      "taskNumber": 527,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:02.269190+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nKASTELLET–GEFION interpretive route OVERVIEW, natural photographicrealism withslightlyelevatedwidecamera. Mainforeground is theREALGEFIONFOUNTAINfromreference: bronze standingwoman drives EXACTLYFOURoxen, pairedfront/back,twolefttworight, on a raisedirregularrockisland, watercascadesdown broad curvedstepped stonebasins. Nofifthox,horses,mermaids,extrasculptures. Behindit broadgreenparkdepth and Kastellet grassyearthramparts; include therealwindmill fromsecondreference onlyDISTANTbeyondrampartswithcorrectsmallscale: REDlowoctagonalbase,graybrownshingledtaperedtower,blacktop,FOURlonglatticesails. NOT a redDutchcylindricalwindmill besidefountain. Preserve spaciousseparation,not fakeadjoiningbuildings; individualstructures faithful, thisis a geographicinterpretiveoverview not an assertionofasurveyedcamerapoint. A few smallcurrentvisitorsonparkpaths,summerygreenery,brightdaylight. Noinventedpalacewalls.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k4-gefion.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k4-kastellet-gefion-photo2.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-02dbea54-74af-42a8-93d1-19678df41ec1.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k4-kastellet-gefion-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k4-kastellet-gefion.png",
+          "nativeSHA256": "2cb1e78f32bce2f7e56fb3745d9a23748987808356063263bea9c9a863c0d6fa",
+          "deliverySHA256": "bc6dedeccfa8252797c4355597fc1f379771bbd807fa0add26122ad71e5ffa6f",
+          "nativeBytes": 3346926,
+          "deliveryBytes": 3347218,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "0f1acf3752acda521a7cc8ab7ec9d1bd1ed3b120681c8348b3ec7e6cc6417588",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:06:54.170528+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "findings": "Gefionwithfourbronzeoxheads/woman,curvedcascadingbasins;real-typewindmillredbase/graybody/fourlatticesails,greenrampart. Deliberatelyinterpretivemulti-landmarkoverview; relativepositions/clearlineofsightnotverified,notasinglecamerapointdocument. Sculpturefinegeometryapproximate.",
+            "technicalExportPending": true,
+            "exactViewpointVerified": false,
+            "conceptualCombinedView": true,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k4-kastellet-gefion-attempt1.png",
+            "inputSHA256": "bc6dedeccfa8252797c4355597fc1f379771bbd807fa0add26122ad71e5ffa6f",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "30b3dc6645c63add52943c2ca02ad7e53499514923e4afb847a9aed0c37e088f"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:00:02.269172+00:00",
+      "activeAttempt": 1,
+      "attempt": 1,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-02dbea54-74af-42a8-93d1-19678df41ec1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k4-kastellet-gefion-attempt1.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k4-kastellet-gefion.png",
+      "nativeSHA256": "2cb1e78f32bce2f7e56fb3745d9a23748987808356063263bea9c9a863c0d6fa",
+      "deliverySHA256": "30b3dc6645c63add52943c2ca02ad7e53499514923e4afb847a9aed0c37e088f",
+      "nativeBytes": 3346926,
+      "deliveryBytes": 3773825,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "0f1acf3752acda521a7cc8ab7ec9d1bd1ed3b120681c8348b3ec7e6cc6417588",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:06:54.170528+00:00",
+      "selectedAttempt": 1,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k4-kastellet-gefion-attempt1.png",
+      "unscaledDeliverySHA256": "bc6dedeccfa8252797c4355597fc1f379771bbd807fa0add26122ad71e5ffa6f",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "80018dcada4a310ee13e2952e914d03ece4cd0577e63e5203b7189439993788f",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k4-kastellet-gefion-attempt1.png",
+        "inputSHA256": "bc6dedeccfa8252797c4355597fc1f379771bbd807fa0add26122ad71e5ffa6f",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "30b3dc6645c63add52943c2ca02ad7e53499514923e4afb847a9aed0c37e088f"
+      }
+    },
+    "k5-rosenborg": {
+      "code": "k5-rosenborg",
+      "taskNumber": 528,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:02.834315+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nROSENBORGCASTLE in KONGENSHAVE/KINGSGARDEN. RealredbrickDanishRenaissancecastlewithsandstonetrim,steppedornategables,greenpatinatedcopperroofs andslendertowers/spires, correctasymmetriccastleproportionsfromreference. Showcomplete castle beyond a smoothgreenlawn andgravelgardenpath, naturalvariedtrees framingedge. A handful ofcontemporarylocals/visitors walkingorrelaxingatsmalldistance,not blockingcastle; nofrontandcenterpicnicfood. Natural humanheightwidecamera atgardenedge,softclear summerday, realagedbrickandcopper; notfairytaleDisneycastlemany inventedturrets.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k5-rosenborg-photo1.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1c1f0603-9dec-41f7-9694-35f36b6eb612.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k5-rosenborg-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k5-rosenborg.png",
+          "nativeSHA256": "e65011fc4157a519695a8dc6fae8f7f6ae2636d882b7091b85994c80b12273c3",
+          "deliverySHA256": "198035bc6203cf3cf98ed557668ad61733ca92ee66576df2d0e00f58849175df",
+          "nativeBytes": 3550639,
+          "deliveryBytes": 3550931,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "7c819cf4467f43c4de706b4c8284abeed727549694f5341d7a5042e9b954b634",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:11:10.135992+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "findings": "Renaissancebrick/sandstonegables,coppergreenroofs/towers,gardenlawnandcurrentvisitorsmatchcoreCommonsforms. Exactturret/windowlayoutandgardenviewpointnotasurveyedreconstruction. Naturalvariedfoliage,nostrikingperiodictextureartifactnoticed.",
+            "technicalExportPending": true,
+            "exactViewpointVerified": false,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k5-rosenborg-attempt1.png",
+            "inputSHA256": "198035bc6203cf3cf98ed557668ad61733ca92ee66576df2d0e00f58849175df",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "e53d58748c914cfd618dbcd476d05027cb699838fad0d9bdb67e0f7a317cd743"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:00:02.834302+00:00",
+      "activeAttempt": 1,
+      "attempt": 1,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1c1f0603-9dec-41f7-9694-35f36b6eb612.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k5-rosenborg-attempt1.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k5-rosenborg.png",
+      "nativeSHA256": "e65011fc4157a519695a8dc6fae8f7f6ae2636d882b7091b85994c80b12273c3",
+      "deliverySHA256": "e53d58748c914cfd618dbcd476d05027cb699838fad0d9bdb67e0f7a317cd743",
+      "nativeBytes": 3550639,
+      "deliveryBytes": 4116749,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "7c819cf4467f43c4de706b4c8284abeed727549694f5341d7a5042e9b954b634",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:11:10.135992+00:00",
+      "selectedAttempt": 1,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k5-rosenborg-attempt1.png",
+      "unscaledDeliverySHA256": "198035bc6203cf3cf98ed557668ad61733ca92ee66576df2d0e00f58849175df",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "acc0b71aaab9b8d04ecbda6a3caf381640ea03d0d6dbc31223ea21eb7524b3ec",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k5-rosenborg-attempt1.png",
+        "inputSHA256": "198035bc6203cf3cf98ed557668ad61733ca92ee66576df2d0e00f58849175df",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "e53d58748c914cfd618dbcd476d05027cb699838fad0d9bdb67e0f7a317cd743"
+      }
+    },
+    "k6-rundetarn": {
+      "code": "k6-rundetarn",
+      "taskNumber": 529,
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:03.981266+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nINSIDE RUNDETARN'S SPIRAL RAMP. Followthe suppliedREALinterior: gentlecontinuouscurvingbrickpavedinclinewinds aroundTHICKcentralwhiteplastermasonrycore; smoothbarrelvaultedwhitewashedceiling anddeeprecessedarchedwindows inouterwall admitsoftdaylight. Oldwarmbrownbrickfloorlaidinfollowingcurvedbands, subtlyunevenphysicalmaterial. NO stairs,stairrisers,spiralmetalstaircase,elevators orstairwellvoid. Humanheightviewaroundcurve, threeorfourmodernvisitorsoftlywalkingUPtherampatanaturaleasypace,in scale,onefurtheraroundbend. Airyluminouswhiteplaster,naturalbricktexture,notsterilemodernwhitegallery,notfakedhugeluxurycorridor. No inscriptions,signageorlabels.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k6-rundetarn-extra.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bcde1e1d-c107-44d5-9304-82122b189635.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k6-rundetarn-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k6-rundetarn.png",
+          "nativeSHA256": "5c2154f9f7a889c13b7de4d4dd76dab6e146439e46d3e4a9ca5468a9b27b8e6d",
+          "deliverySHA256": "4dd45d2ded943abb9cc2c8f7c00f10c097faa2372013cad36d234b478aa9cc75",
+          "nativeBytes": 2632973,
+          "deliveryBytes": 2633265,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "40a3e23e63b18b803ac4647dfdaf83cb256a12e5300912771a84fd97dfe6265f",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:11:11.592797+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "findings": "Actualreference-inspiredcontinuouscurvedbrickrampwithoutstairs,thickwhiteplastercore,vaultedceiling,deeprecessarchedwindows,fourcurrentvisitors. Outsidewindowcityspiresand exactbrick/windowspacinginventedillustrativebackground,notverifiedsightline.",
+            "technicalExportPending": true,
+            "exactViewpointVerified": false,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k6-rundetarn-attempt1.png",
+            "inputSHA256": "4dd45d2ded943abb9cc2c8f7c00f10c097faa2372013cad36d234b478aa9cc75",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "84fe0a809f7efe88b28ced281f962e3b648dacae4497250bb08e5014b224eb0b"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:00:03.981256+00:00",
+      "activeAttempt": 1,
+      "attempt": 1,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-bcde1e1d-c107-44d5-9304-82122b189635.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k6-rundetarn-attempt1.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k6-rundetarn.png",
+      "nativeSHA256": "5c2154f9f7a889c13b7de4d4dd76dab6e146439e46d3e4a9ca5468a9b27b8e6d",
+      "deliverySHA256": "84fe0a809f7efe88b28ced281f962e3b648dacae4497250bb08e5014b224eb0b",
+      "nativeBytes": 2632973,
+      "deliveryBytes": 3159374,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "40a3e23e63b18b803ac4647dfdaf83cb256a12e5300912771a84fd97dfe6265f",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:11:11.592797+00:00",
+      "selectedAttempt": 1,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k6-rundetarn-attempt1.png",
+      "unscaledDeliverySHA256": "4dd45d2ded943abb9cc2c8f7c00f10c097faa2372013cad36d234b478aa9cc75",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "408e850644020b656a56a2c03681e2134887eecbc30771b394a9bdaeeb4cd938",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k6-rundetarn-attempt1.png",
+        "inputSHA256": "4dd45d2ded943abb9cc2c8f7c00f10c097faa2372013cad36d234b478aa9cc75",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "84fe0a809f7efe88b28ced281f962e3b648dacae4497250bb08e5014b224eb0b"
+      }
+    },
+    "k7-christiansborg": {
+      "code": "k7-christiansborg",
+      "taskNumber": 530,
+      "callsIssued": 2,
+      "callsCompleted": 2,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:04.758392+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nCHRISTIANSBORG on SLOTSHOLMEN, photographedfromcanal-sideapproachnearMarbleBridge inbrightNordicdaylight. CorrectactualBaroqueRevivalgray/palestonepalaceanditsSINGLEtallcentraltower,agedstonefacadewithrhythmicwindows andgreencopperroofsurfaces; use the realbridgeandflankinggatepavilionsfromreference, not genericcastlewithtwohugetowers. Centralcoppercladtowerlooks green/graypatina underdaylight rather thanreference's warmnightillumination. Canalwater andstoneembankmentvisibleinforeground/loweredge,widesensiblecameraposition slightlybesidebridge retainsrealapproach. Smallcasualcurrentpedestrians/bicycles, noextraRomanarenaorGothiccathedral. Authenticcameraagedstone/waterripples,notrender,notgoldglow.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k7-christiansborg-photo2.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-28edd7cd-8d62-4293-a254-03210767b39f.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k7-christiansborg-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k7-christiansborg.png",
+          "nativeSHA256": "ea326040d81efb893502ff50fdbf10a9cc703246f797f9121bfc637fd6abe304",
+          "deliverySHA256": "b8a526646a4f96fbf9bd0df19c2a48316548f5942a6622f0160f838f011043d4",
+          "nativeBytes": 2697311,
+          "deliveryBytes": 2697603,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "71710d405e0551b4f6622d3ec5fb1c5504a82dc8b63b957894917456a319a020",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:15:46.887218+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": false,
+            "wholeNewGenerationNeeded": true,
+            "findings": "Palaceandbridgegeneralidea readable,but main tower became generic all-green spire. New inspected ColinCommonsdayphoto shows browncoppercladroundedcrownlantern andthreegreenstackedcrownfinials; whole new candidate to correct geometry.",
+            "technicalExportPending": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T09:19:00.903467+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nCHRISTIANSBORG, corrected real towergeometry. Image1 isPRIMARYprecisearchitecturalreference for buildingmasses/tower,Image2forMarbleBridgeandgateapproachonly. Real towerhas aGRAYBROWNSTONEbase,verylargeOPENROUNDARCHbelowthecrownlantern,thenroundedBAROQUEBROWNCOPPERLANTERNwithbulgingcurvedvolutesandopenarchedgallery,afewGOLDSPHERES,andTHREE SMALLGREENOXIDIZEDCROWNSSTACKEDONONEFINIALattoplikephoto1. ThisisNOTauniformlygreenthinchurchspireorVenetiancampanile. RetainbrowncopperoflargeupperlanternandgreenONLYsmallerfinialcrowns/secondaryroofswhere reference shows it. Correctpalacewingproportions,darkgraystoneyexterior,realclock/toweropeninggeometry. Newbrightdaytimecamera fromcanalnearMarbleBridge,stonearchedbridgeforegroundandflankingpalestonegatepavilionsasinimage2,smallcurrentpedestrians. Showcoherentwidepalaceapproachwithcanal;architecturefromrealreferencesnotamixofgenericpalaces. Noextra inventedbackgroundchurchspires,nolettering/inscriptions,flagswithwordsorlogos. Photorealisticmaterials,normalNordicday,fullnew1920x1080scene(notphotoedit).",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k7-day-primary.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k7-christiansborg-photo2.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f0e797e4-8e00-42d6-88d2-57bfc2fb108b.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k7-christiansborg-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k7-christiansborg.png",
+          "nativeSHA256": "1f994312a152e4b0df52e164715e84e3515218839e1fb2bc34140872a0dd0836",
+          "deliverySHA256": "f2f2a821e8dbe36e5137d55ace8c48b372e27ec30e32f6fb1aa8bea07cc869e7",
+          "nativeBytes": 2877501,
+          "deliveryBytes": 2877793,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "cf65de266d1879d103627c3a583f932d6f2627628a52e5e7b1bf0b91b7575bdd",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:23:59.022788+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "wholeNewGenerationNeeded": false,
+            "findings": "Newwholecandidate correctsbrowncopperbaroquelantern,largeopenarch,goldaccentsandthreegreenstackedcrownfinials,comparedwithColinCommonsdayphoto;actualpalacewingmassesandMarbleBridge/gatepavilions. Exactcamera/bridge/canalgeometrynotmeasured. Nomoregenericallgreenchurchspire.",
+            "technicalExportPending": true,
+            "exactViewpointVerified": false,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k7-christiansborg-attempt2.png",
+            "inputSHA256": "f2f2a821e8dbe36e5137d55ace8c48b372e27ec30e32f6fb1aa8bea07cc869e7",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "68041866d9ef7b1cbaa08f98716a90830d4ba5181f5031d8c02552f161176fc5"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:19:00.903426+00:00",
+      "activeAttempt": 2,
+      "attempt": 2,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f0e797e4-8e00-42d6-88d2-57bfc2fb108b.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k7-christiansborg-attempt2.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k7-christiansborg.png",
+      "nativeSHA256": "1f994312a152e4b0df52e164715e84e3515218839e1fb2bc34140872a0dd0836",
+      "deliverySHA256": "68041866d9ef7b1cbaa08f98716a90830d4ba5181f5031d8c02552f161176fc5",
+      "nativeBytes": 2877501,
+      "deliveryBytes": 3490378,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "cf65de266d1879d103627c3a583f932d6f2627628a52e5e7b1bf0b91b7575bdd",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:23:59.022788+00:00",
+      "selectedAttempt": 2,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k7-christiansborg-attempt2.png",
+      "unscaledDeliverySHA256": "f2f2a821e8dbe36e5137d55ace8c48b372e27ec30e32f6fb1aa8bea07cc869e7",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "d5552ab88a656e21e40ffd89ef1b1f7c9c6ca07f759905e619b92aae0d6907ef",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k7-christiansborg-attempt2.png",
+        "inputSHA256": "f2f2a821e8dbe36e5137d55ace8c48b372e27ec30e32f6fb1aa8bea07cc869e7",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "68041866d9ef7b1cbaa08f98716a90830d4ba5181f5031d8c02552f161176fc5"
+      }
+    },
+    "k8-tivoli": {
+      "code": "k8-tivoli",
+      "taskNumber": 531,
+      "callsIssued": 2,
+      "callsCompleted": 2,
+      "imageProduced": true,
+      "status": "new-format-QA-reviewed-awaiting-PT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "issuedAt": "2026-10-19T09:00:05.367253+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nONESEPARATE NEWTIVOLIROUTEILLUSTRATION, not a redoofolder8images. Cheerfulbluehour/earlyeveninglightwithclearreadablewarmilluminationsandnaturalvisitors. RealTIVOLICHINESETOWER/PAVILION bythelake, faithfullyusingits distinctstackedupturnedChineseroofeaves,red/darktimberandstrings ofwarmbulbsfromphoto1. Fartheracrossparkinclude OLDRUTSCHEBANENWOODENROLLERCOASTERwithits characteristicartificialAlpinemountainfacadefromphoto2, no wintersnow(except mountain'sfixedthemedpainting), no giantunrelatedfantasywoodframework. Photo3showslakeandChineseTowerlayoutbutitsREDSTEELLOOPisDaemonen,NOTtheoldwoodencoaster: DONOTconfusethem orrenderredsteeltrackasthewoodenride. Interpretivewideparkoverview, actualformswithplausibleparkseparation,notanexactmeasuredsingleviewpoint. Litwalkways,smallrelaxedfamilies/friends inmodernclothes,reflectionsonthewater; noeventposters,readableshopnames,brandlogos,orDisneycastle. Photorealisticnaturalfoliage/materials,notglowingplasticoroversaturatedcarnivalpainting.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-extra.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c5.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c1.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ee3e4b27-156b-4a32-aab6-45f2623ac89f.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k8-tivoli-attempt1.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k8-tivoli.png",
+          "nativeSHA256": "bec0f77a6f19234f8deffb9a37d03ef361755230a6a9e8171b0c2678b342d12b",
+          "deliverySHA256": "687a5cf8fad65fe8d400675d7b02f6fb0b19b1cdbb1626af49766dc3df727e1f",
+          "nativeBytes": 3229837,
+          "deliveryBytes": 3230129,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "7c45b6cba6677fbeef27dc304bcb42df3e1b8113e4f5f3dab78558a9ca328da4",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:15:47.433660+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": false,
+            "wholeNewGenerationNeeded": true,
+            "findings": "Attractivebluehour,butChineseTowerhasextraroofstoreyversusrealfullwidereference and invented exposedwoodcoasterliftstructure. Whole new candidate:retainreference threeupperpagodaroofs+lowgroundroof,representRutschebanenbyactualmountainfacadewithoutinventedUScoastertrack.",
+            "technicalExportPending": true
+          }
+        },
+        {
+          "attempt": 2,
+          "issuedAt": "2026-10-19T09:19:01.671823+00:00",
+          "args": {
+            "prompt": "Use case: photorealistic-natural. Produce ONE entirely NEW contemporary COPENHAGEN travel-scene illustration with convincing REAL CAMERA PHOTOGRAPH surface quality, LANDSCAPE native PNG EXACTLY1920x1080 pixels,16:9. Full opaque rectangle. Authentic real landmark geometry, not a fantasy reinterpretation. Supplied licensed Commons photos are ARCHITECTURAL FORM references ONLY, not edit targets, not collage inserts, not copied pixels or a layout/canvas-size template. Render a complete new coherent scene with new lighting, people and framing. Bright airy Nordic early-summer daylight, natural restrained vivid colors, real aged brick/plaster/stone/wood/water/foliage with irregular photographic detail, no repeating artificial wood/leaf patterns, no plastic/CGI,painting,oversharpening,sepia,vignette,frame or montage. Natural contemporary people in small candid groups, unposed, plausible anatomy and clothing; landmark remains main subject. No visible written words,numbers,signs,shopnames,brands,logos,watermarks,UI or overlays; omit lettering from distant signs/boats/clothes without inventing architecture. Exact1920wide1080high canvas irrespective of reference aspect ratio.\nTIVOLI, ONE NEW routephotoillustration, bluehourwithwarmbulbs. PRIMARYImage1 givesFULLREALCHINESETOWERGEOMETRYandlake,Image2givesauthenticlighting/details,andImage3isREALRUTSCHEBANENMOUNTAINFACADE. Towermustmatchimage1height,width,numberoflevels: THREE mainstackedupturnedPAGODAROOFSaboveLOWGROUND-FLOORHIPROOF,not a5/6storeygenericpagoda. Do NOT makeit talleroraddadditionaltiers. Red/browntimber,verydarkcurvedtileeaves,thinwarmbulbstringsasImage2,notbrightfakeorangeplastic. Nearbylakewithafewsmallredboatsandnaturalcurrentvisitors,litfootpathsandtrees.\nInfarbackgroundshowONLYtheREALRutschebanenALPINEMOUNTAIN-FACADE silhouettefromImage3,reducednaturallywithdistance,graybrownrockwithfixedwhitepaintedthemedsnow,NOseasonalsnowontreesorpaths. Thatfacadeidentifies theoldwoodencoaster. ABSOLUTELYNOnewexposedAmericanwoodentrusscoasterlift,hugeslantingwoodtrack,supportforestortrackloop: theseareNOTshowninthephysicalmountainreference. OmitImage1'sredsteelDaemonenloopentirelyratherthanmislabelitoldwoodride. Individualstructuresreal;overallviewisclearlyanillustrativeparkoverview,notexactmeasuredsightline. Newcoherentcamera-lookscene,notcollageoredit,calmnaturalgreens/sky,notCGI. Noletters,brands,signsorUI. Keepallrealarchitecturedetailsgroundedinthephotos.",
+            "transparent_background": false,
+            "referenced_image_paths": [
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c1.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-extra.jpg",
+              "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c5.jpg"
+            ]
+          },
+          "completionVerified": true,
+          "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f9eff44d-0aad-4722-8352-6d89573c733a.png",
+          "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k8-tivoli-attempt2.png",
+          "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k8-tivoli.png",
+          "nativeSHA256": "09034ad27f33f1c8cba164f8afbe38567b180f199e5a1685e75b8b6883827689",
+          "deliverySHA256": "9caa1d68d4bebaa256d06a4bbd5453a17b15627de8949a69b866b2ac51c1e048",
+          "nativeBytes": 3377630,
+          "deliveryBytes": 3377922,
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "decodedAlphaExtrema": [
+            255,
+            255
+          ],
+          "fullyOpaque": true,
+          "nativePixelsUnchanged": true,
+          "pixelSHA256": "fa9ee0b013d8314143e836e461be3d6e606d22cedf52b535aa3ad02541c460ee",
+          "metadataOnlyAdded": true,
+          "generatedAt": "2026-10-19T09:23:59.893109+00:00",
+          "qa": {
+            "personallyInspectedNative": true,
+            "landmarkFormPass": true,
+            "wholeNewGenerationNeeded": false,
+            "findings": "NewwholecandidatehasthreeupperChineseTowerpagodaeavespluslowgroundfloorroof,comparedtorealfullwidereference. Rutschebanenidentifiedbyrealmountainfacade,notinventedexposedAmericanwoodenlift. NoDaemonenredsteelloop. Warmbluehour,modernpeople/boats,naturalfoliage. Viewcombinesparklandmarksillustratively;exactco-visibilitynotverified.",
+            "technicalExportPending": true,
+            "conceptualCombinedView": true,
+            "exactViewpointVerified": false,
+            "recipientAccepted": false
+          },
+          "technicalExport": {
+            "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k8-tivoli-attempt2.png",
+            "inputSHA256": "9caa1d68d4bebaa256d06a4bbd5453a17b15627de8949a69b866b2ac51c1e048",
+            "inputDimensions": [
+              1672,
+              941
+            ],
+            "outputDimensions": [
+              1920,
+              1080
+            ],
+            "processor": "macOS sips resampleHeightWidth1080 1920",
+            "wholeFrame": true,
+            "noCrop": true,
+            "noPadding": true,
+            "noRetouch": true,
+            "noContentChanges": true,
+            "nativeOriginalPreserved": true,
+            "scaleXY": [
+              1.1483253588516746,
+              1.1477151965993624
+            ],
+            "outputSHA256": "f8e59c0e78510dfedff4f270e4b86b1ad67dae0ba15a917a8dd0c888871878a9"
+          }
+        }
+      ],
+      "callIssuedAt": "2026-10-19T09:19:01.671810+00:00",
+      "activeAttempt": 2,
+      "attempt": 2,
+      "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f9eff44d-0aad-4722-8352-6d89573c733a.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/native/k8-tivoli-attempt2.png",
+      "deliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/delivery-packet/k8-tivoli.png",
+      "nativeSHA256": "09034ad27f33f1c8cba164f8afbe38567b180f199e5a1685e75b8b6883827689",
+      "deliverySHA256": "f8e59c0e78510dfedff4f270e4b86b1ad67dae0ba15a917a8dd0c888871878a9",
+      "nativeBytes": 3377630,
+      "deliveryBytes": 4085088,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "decodedAlphaExtrema": [
+        255,
+        255
+      ],
+      "fullyOpaque": true,
+      "nativePixelsUnchanged": false,
+      "pixelSHA256": "fa9ee0b013d8314143e836e461be3d6e606d22cedf52b535aa3ad02541c460ee",
+      "metadataOnlyAdded": true,
+      "completionVerified": true,
+      "generatedAt": "2026-10-19T09:23:59.893109+00:00",
+      "selectedAttempt": 2,
+      "unscaledDeliveryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k8-tivoli-attempt2.png",
+      "unscaledDeliverySHA256": "9caa1d68d4bebaa256d06a4bbd5453a17b15627de8949a69b866b2ac51c1e048",
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "deliveryPixelSHA256": "083871ea144335763102b1cd5000d5e2b565b11cd417fdd903d4dfb5946c41c7",
+      "nativeOriginalUnchanged": true,
+      "wholeFrameTechnicalResample": true,
+      "exportEvidence": {
+        "inputPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/unscaled-delivery/k8-tivoli-attempt2.png",
+        "inputSHA256": "9caa1d68d4bebaa256d06a4bbd5453a17b15627de8949a69b866b2ac51c1e048",
+        "inputDimensions": [
+          1672,
+          941
+        ],
+        "outputDimensions": [
+          1920,
+          1080
+        ],
+        "processor": "macOS sips resampleHeightWidth1080 1920",
+        "wholeFrame": true,
+        "noCrop": true,
+        "noPadding": true,
+        "noRetouch": true,
+        "noContentChanges": true,
+        "nativeOriginalPreserved": true,
+        "scaleXY": [
+          1.1483253588516746,
+          1.1477151965993624
+        ],
+        "outputSHA256": "f8e59c0e78510dfedff4f270e4b86b1ad67dae0ba15a917a8dd0c888871878a9"
+      }
+    }
+  }
+}

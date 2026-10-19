@@ -1,0 +1,643 @@
+{
+  "inventoryPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/julkaisija/vienti-arkisto/opas-pariisi-aukiot-vienti-20261011/opas/kuvat-v10/kuvat.json",
+  "inventorySHA256": "f5e96849d268a5a8873be7075eab2538034a4bd831a5e3726dd8b6f400b0cb4c",
+  "inventoryVersion": "2026-10-11b",
+  "snapshotDate": "2026-10-11; named opas/kuvat-v10 snapshot, not claimed latest live inventory",
+  "photos": [
+    {
+      "code": "k1-vapahtajan-kirkko",
+      "qid": "Q29157",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k1-vapahtajan-kirkko-photo1.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k1-vapahtajan-kirkko-photo1.jpg",
+      "sha256": "f575dc61c56898569d4ef4dde53bf05ef79f358f9a97928fc262700241961d10",
+      "bytes": 736180,
+      "jarjestys": 1,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/053c611b8af36e01.jpg",
+      "tekija": "OleNeitzel",
+      "lisenssi": "CC BY 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_tower_%E2%80%93_Church_of_Our_Saviour%2C_Copenhagen.jpg",
+      "selite": "Vapahtajan kirkon kierteinen torni on Christianshavnin tunnetuin maamerkki.",
+      "leveys": 3774,
+      "korkeus": 5661,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k2-nyhavn",
+      "qid": "Q943946",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k2-nyhavn-photo1.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k2-nyhavn-photo1.jpg",
+      "sha256": "38b55fed140389d0dff00021856ab0af2418e6c4140ed19b6c400e673cbe82d7",
+      "bytes": 338563,
+      "jarjestys": 1,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/804c0f38e579c675.jpg",
+      "tekija": "Jakub Hałun",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg",
+      "selite": "Nyhavnin kanavan varrella seisovat värikkäät 1600-luvun kauppiastalot.",
+      "leveys": 5860,
+      "korkeus": 3172,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k3-amalienborg",
+      "qid": "Q211053",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k3-amalienborg-photo1.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k3-amalienborg-photo1.jpg",
+      "sha256": "edbe4fea54a468be3f6aba07a742006b8be6eb195c9ab19eab678e454c60d0f4",
+      "bytes": 305059,
+      "jarjestys": 1,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/5b08af5178a52586.jpg",
+      "tekija": "Daderot",
+      "lisenssi": "CC0",
+      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frederik_V_statue_in_Amalienborg_Palace_-_DSC07144.JPG",
+      "selite": "Amalienborgin aukion keskellä seisoo Fredrik V:n ratsastajapatsas.",
+      "leveys": 4320,
+      "korkeus": 3240,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k3-amalienborg",
+      "qid": "Q211053",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k3-amalienborg-photo2.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k3-amalienborg-photo2.jpg",
+      "sha256": "4a899b5780e18d78a68bc31d5a95a4f4c2232329f40f8a7ceeab27f15577beb4",
+      "bytes": 239001,
+      "jarjestys": 2,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/68bccfc6c906500e.jpg",
+      "tekija": "Julian Herzog (Website)",
+      "lisenssi": "CC BY 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frederik_V_statue_in_Amalienborg_Palace_Copenhagen_2014_02.jpg",
+      "selite": "Neljä rokokoopalatsia ympäröivät aukiota, ja ne ovat Tanskan kuninkaallisen perheen asuntoja.",
+      "leveys": 3400,
+      "korkeus": 2258,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k4-kastellet-gefion",
+      "qid": "Q221812",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k4-kastellet-gefion-photo1.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k4-kastellet-gefion-photo1.jpg",
+      "sha256": "441b4ff81c276b2b55df582f3bb67ca39b145ef3bba268801dedc507a7266c20",
+      "bytes": 331774,
+      "jarjestys": 1,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/bdb7603bd7619b53.jpg",
+      "tekija": "Dietmar Rabich",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK)%2C_Kastell_von_Kopenhagen%2C_Kommandantg%C3%A5rden_--_2017_--_1594.jpg",
+      "selite": "Kastellet on tähdenmuotoinen linnake, joka on edelleen sotilaskäytössä.",
+      "leveys": 5396,
+      "korkeus": 3035,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k4-kastellet-gefion",
+      "qid": "Q221812",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k4-kastellet-gefion-photo2.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k4-kastellet-gefion-photo2.jpg",
+      "sha256": "90ba30c32e105beeb6db1056bb319c4e20f3f9b4989f005c9e66cbd2084bf4bd",
+      "bytes": 734921,
+      "jarjestys": 2,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/bb4126292129afa4.jpg",
+      "tekija": "Bob Collowan",
+      "lisenssi": "CC BY-SA 3.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Windmill_of_Kastellet_(Copenhagen).jpg",
+      "selite": "Linnakkeen puistossa seisoo myös vanha tuulimylly.",
+      "leveys": 1952,
+      "korkeus": 3021,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k5-rosenborg",
+      "qid": "Q206101",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k5-rosenborg-photo1.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k5-rosenborg-photo1.jpg",
+      "sha256": "4dbb6a59ffdb8412a0104136f3e339edbb474698f0de0d4bf758e62461d6c8d0",
+      "bytes": 373180,
+      "jarjestys": 1,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/2f0d03753b507edf.jpg",
+      "tekija": "Marco Almbauer",
+      "lisenssi": "CC0",
+      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rosenborg_Castle_in_Copenhagen2.jpg",
+      "selite": "Rosenborgin renessanssilinna rakennettiin 1600-luvun alussa kuningas Kristian IV:n kesäasunnoksi.",
+      "leveys": 4713,
+      "korkeus": 3744,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k6-rundetarn",
+      "qid": "Q1140534",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k6-rundetarn-photo2.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k6-rundetarn-photo2.jpg",
+      "sha256": "dfa4ea87c3c7ef555022786a223299a6c5b807d3d4a595919c25cce223ad2139",
+      "bytes": 366122,
+      "jarjestys": 2,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/b2fefc3d67a7c5a4.jpg",
+      "tekija": "Dietmar Rabich",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK)%2C_Runder_Turm_--_2017_--_1633.jpg",
+      "selite": "Tornin sisällä kulkee leveä kierteinen ramppi huipulle asti.",
+      "leveys": 5383,
+      "korkeus": 3589,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k7-christiansborg",
+      "qid": "Q940733",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k7-christiansborg-photo2.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k7-christiansborg-photo2.jpg",
+      "sha256": "e5da3a6370bcfe5b2d38943e844baae8d5b13007e3ddf4e3a30c06fd0cae95f1",
+      "bytes": 253153,
+      "jarjestys": 2,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/53bfc874f700bfdd.jpg",
+      "tekija": "Moahim",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_-_Christiansborg_from_the_Marble_Bridge.jpg",
+      "selite": "Linnan korkea torni kohoaa Slotsholmenin saarella, jota ympäröivät kanavat.",
+      "leveys": 4545,
+      "korkeus": 3000,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k8-tivoli",
+      "qid": "Q110289",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-photo1.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-photo1.jpg",
+      "sha256": "b417bb761c98a3154765ec3c36750923d048539c2de811c850d5599adf46c79a",
+      "bytes": 514225,
+      "jarjestys": 1,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/ab04ef1b360a8b3a.jpg",
+      "tekija": "Jakub Hałun",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountain_in_Tivoli_Gardens%2C_Copenhagen%2C_20220618_1307_7156.jpg",
+      "selite": "Tivoli on vuonna 1843 avattu huvipuisto aivan Kööpenhaminan keskustassa.",
+      "leveys": 5048,
+      "korkeus": 3601,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k8-tivoli",
+      "qid": "Q110289",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-photo2.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-photo2.jpg",
+      "sha256": "25b10b979511fbc809296db17acd31dec4bf8aacf7e2d7d21cd9b3db810c663f",
+      "bytes": 344851,
+      "jarjestys": 2,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/1306e9c250271a24.jpg",
+      "tekija": "Junielib",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens%2C_Copenhagen%2C_Denmark.jpg",
+      "selite": "Tivolin sisäänkäynti hohtaa illalla valoissa.",
+      "leveys": 3072,
+      "korkeus": 2304,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k4-kastellet-gefion",
+      "qid": "Q952817",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k4-gefion.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k4-gefion.jpg",
+      "sha256": "4f1ed70bbf1d87fe20450f675191bc23ebfacef8cd92a0c726ec5b37bfa58ac5",
+      "bytes": 192546,
+      "jarjestys": 1,
+      "url": "https://media.matkakirja.app/opas/kuvat-v1/kuvat/614a88aa1e0fdbce.jpg",
+      "tekija": "Jiří Komárek",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gefionspringvandet%2C_K%C3%B8benhavn_(02).jpg",
+      "selite": "Gefion-suihkulähteen jumalatar ajaa härkiään Kastelletin lähellä sataman rannalla.",
+      "leveys": 4310,
+      "korkeus": 2868,
+      "tarkistettu": true,
+      "tyyppi": "valokuva"
+    },
+    {
+      "code": "k6-rundetarn",
+      "commonsTitle": "File:Rundetaarn spiralgangen.jpg",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k6-rundetarn-extra.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k6-rundetarn-extra.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rundetaarn_spiralgangen.jpg",
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/5/54/Rundetaarn_spiralgangen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artistHTML": "<a href=\"//commons.wikimedia.org/wiki/User:Per_Meistrup\" title=\"User:Per Meistrup\">Per Meistrup</a>",
+      "sha256": "c43be8be9a8531ce10beb82b2830f893513bfc6928577dbae022d561b813616e",
+      "bytes": 625943,
+      "rawMetadata": {
+        "batchcomplete": "",
+        "query": {
+          "pages": {
+            "72715186": {
+              "pageid": 72715186,
+              "ns": 6,
+              "title": "File:Rundetaarn spiralgangen.jpg",
+              "imagerepository": "local",
+              "imageinfo": [
+                {
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Rundetaarn_spiralgangen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Rundetaarn_spiralgangen.jpg",
+                  "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=72715186",
+                  "extmetadata": {
+                    "DateTime": {
+                      "value": "2018-09-13 19:17:59",
+                      "source": "mediawiki-metadata",
+                      "hidden": ""
+                    },
+                    "ObjectName": {
+                      "value": "Rundetaarn spiralgangen",
+                      "source": "mediawiki-metadata"
+                    },
+                    "CommonsMetadataExtension": {
+                      "value": 1.2,
+                      "source": "extension",
+                      "hidden": ""
+                    },
+                    "Categories": {
+                      "value": "Images from Wiki Loves Monuments 2018|Self-published work|Images by Per Meistrup|Listed buildings in Denmark with known IDs|Uploaded via Campaign:wlm-dk-bygning|Files with coordinates missing SDC location of creation|Denmark photographs taken on 2018-05-21|Images from Wiki Loves Monuments 2018 in Denmark|Images from Wiki Loves Monuments missing SDC depicts|Images from Wiki Loves Monuments missing SDC location of creation|Rundetårn - interior|Pedestrian spiral ramps|Images by Per Meistrup-Denmark",
+                      "source": "commons-categories",
+                      "hidden": ""
+                    },
+                    "Assessments": {
+                      "value": "",
+                      "source": "commons-categories",
+                      "hidden": ""
+                    },
+                    "GPSLatitude": {
+                      "value": "55.681339",
+                      "source": "commons-desc-page"
+                    },
+                    "GPSLongitude": {
+                      "value": "12.575772",
+                      "source": "commons-desc-page"
+                    },
+                    "GPSMapDatum": {
+                      "value": "WGS-84",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "ImageDescription": {
+                      "value": "in the <a href=\"https://en.wikipedia.org/wiki/Heritage_Agency_of_Denmark\" class=\"extiw\" title=\"en:Heritage Agency of Denmark\">Heritage Agency of Denmark</a> database for Listed Buildings.",
+                      "source": "commons-desc-page"
+                    },
+                    "DateTimeOriginal": {
+                      "value": "2018-05-21 14:56:20",
+                      "source": "commons-desc-page"
+                    },
+                    "Credit": {
+                      "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                      "source": "commons-desc-page"
+                    },
+                    "Artist": {
+                      "value": "<a href=\"//commons.wikimedia.org/wiki/User:Per_Meistrup\" title=\"User:Per Meistrup\">Per Meistrup</a>",
+                      "source": "commons-desc-page"
+                    },
+                    "LicenseShortName": {
+                      "value": "CC BY-SA 4.0",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "UsageTerms": {
+                      "value": "Creative Commons Attribution-Share Alike 4.0",
+                      "source": "commons-desc-page"
+                    },
+                    "AttributionRequired": {
+                      "value": "true",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "LicenseUrl": {
+                      "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                      "source": "commons-desc-page"
+                    },
+                    "Copyrighted": {
+                      "value": "True",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "Restrictions": {
+                      "value": "",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "License": {
+                      "value": "cc-by-sa-4.0",
+                      "source": "commons-templates",
+                      "hidden": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "k8-tivoli",
+      "commonsTitle": "File:Chinese Tower (Tivoli Gardens).jpg",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-extra.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k8-tivoli-extra.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Chinese_Tower_(Tivoli_Gardens).jpg",
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Chinese_Tower_%28Tivoli_Gardens%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+      "artistHTML": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/10259776@N00\">Stig Nygaard</a>",
+      "sha256": "5f3314663a842e36626853066ddd7df94d3da01ba948703d0f74f2bf96572cd4",
+      "bytes": 14695087,
+      "rawMetadata": {
+        "batchcomplete": "",
+        "query": {
+          "pages": {
+            "15028120": {
+              "pageid": 15028120,
+              "ns": 6,
+              "title": "File:Chinese Tower (Tivoli Gardens).jpg",
+              "imagerepository": "local",
+              "imageinfo": [
+                {
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Chinese_Tower_%28Tivoli_Gardens%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chinese_Tower_(Tivoli_Gardens).jpg",
+                  "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=15028120",
+                  "extmetadata": {
+                    "DateTime": {
+                      "value": "2011-04-26 01:54:53",
+                      "source": "mediawiki-metadata",
+                      "hidden": ""
+                    },
+                    "ObjectName": {
+                      "value": "Chinese Tower (Tivoli Gardens)",
+                      "source": "mediawiki-metadata"
+                    },
+                    "CommonsMetadataExtension": {
+                      "value": 1.2,
+                      "source": "extension",
+                      "hidden": ""
+                    },
+                    "Categories": {
+                      "value": "Taken with Canon EOS 50D|Det Japanske Taarn|Flickr images reviewed by FlickreviewR|Buildings during blue hour in Denmark|Flickr images missing SDC creator|Flickr images missing SDC source of file|Files with coordinates missing SDC location of creation|Denmark photographs taken on 2009-04-26|Night in Tivoli Gardens (Copenhagen)|Files from Stig Nygaard Flickr stream|Blue hour in Copenhagen|Flickr images missing SDC Flickr photo ID|Flickr images missing SDC published in",
+                      "source": "commons-categories",
+                      "hidden": ""
+                    },
+                    "Assessments": {
+                      "value": "",
+                      "source": "commons-categories",
+                      "hidden": ""
+                    },
+                    "GPSLatitude": {
+                      "value": "55.672992",
+                      "source": "commons-desc-page"
+                    },
+                    "GPSLongitude": {
+                      "value": "12.569710",
+                      "source": "commons-desc-page"
+                    },
+                    "GPSMapDatum": {
+                      "value": "WGS-84",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "ImageDescription": {
+                      "value": "The Chinese Tower at Tivoli Gardens in Copenhagen, Denmark. Designed by Knud Arne Petersen and built in 10++",
+                      "source": "commons-desc-page"
+                    },
+                    "DateTimeOriginal": {
+                      "value": "2009-04-26",
+                      "source": "commons-desc-page"
+                    },
+                    "Credit": {
+                      "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/stignygaard/3581740629/sizes/o/in/photostream/\">https://www.flickr.com/photos/stignygaard/3581740629/sizes/o/in/photostream/</a>",
+                      "source": "commons-desc-page"
+                    },
+                    "Artist": {
+                      "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/10259776@N00\">Stig Nygaard</a>",
+                      "source": "commons-desc-page"
+                    },
+                    "LicenseShortName": {
+                      "value": "CC BY 2.0",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "UsageTerms": {
+                      "value": "Creative Commons Attribution 2.0",
+                      "source": "commons-desc-page"
+                    },
+                    "AttributionRequired": {
+                      "value": "true",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "LicenseUrl": {
+                      "value": "https://creativecommons.org/licenses/by/2.0",
+                      "source": "commons-desc-page"
+                    },
+                    "Copyrighted": {
+                      "value": "True",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "Restrictions": {
+                      "value": "",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "License": {
+                      "value": "cc-by-2.0",
+                      "source": "commons-templates",
+                      "hidden": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "k8-tivoli",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c1.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c1.jpg",
+      "sourceFromOldCCReference": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tivoli_Gardens_Copenhagen.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "kallerna",
+      "sha256": "2d0a2555c54d636606a5c66b2785ca4b90143f8724461f31f95c63b3ba576822",
+      "bytes": 590682,
+      "oldProvenancePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tivoli-cc-20261017/references/c1/source-provenance.json",
+      "oldReferenceOnlyNoRegeneration": true,
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "code": "k8-tivoli",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c5.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k8-old-c5.jpg",
+      "sourceFromOldCCReference": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sne_på_Rutschebanen_i_Tivoli.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Leif Jørgensen",
+      "sha256": "5fe6835ae9188db5735d16377f78b7a6b55c138a64c6791d759c39daa9cff57d",
+      "bytes": 279453,
+      "oldProvenancePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tivoli-cc-20261017/references/c5/source-provenance.json",
+      "oldReferenceOnlyNoRegeneration": true,
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "code": "k7-christiansborg",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/koopenhamina-kierros-havainnekuvat-20261019/references/k7-day-primary.jpg",
+      "mirrorPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/koopenhamina-kierros-havainnekuvat-20261019/references/k7-day-primary.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Christiansborg_Palace_2017-08-16.jpg",
+      "originalURL": "https://upload.wikimedia.org/wikipedia/commons/8/83/Christiansborg_Palace_2017-08-16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "artistHTML": "<a href=\"//commons.wikimedia.org/wiki/User:Colin\" title=\"User:Colin\">Colin</a>",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "93a1182ddbceefc2af74ea98e66592d309944a559409a52887fe145301731338",
+      "bytes": 17878432,
+      "rawMetadata": {
+        "batchcomplete": "",
+        "query": {
+          "pages": {
+            "66628942": {
+              "pageid": 66628942,
+              "ns": 6,
+              "title": "File:Christiansborg Palace 2017-08-16.jpg",
+              "imagerepository": "local",
+              "imageinfo": [
+                {
+                  "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Christiansborg_Palace_2017-08-16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+                  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Christiansborg_Palace_2017-08-16.jpg",
+                  "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=66628942",
+                  "extmetadata": {
+                    "DateTime": {
+                      "value": "2018-02-20 14:57:05",
+                      "source": "mediawiki-metadata",
+                      "hidden": ""
+                    },
+                    "ObjectName": {
+                      "value": "Christiansborg Palace 2017-08-16",
+                      "source": "mediawiki-metadata"
+                    },
+                    "CommonsMetadataExtension": {
+                      "value": 1.2,
+                      "source": "extension",
+                      "hidden": ""
+                    },
+                    "Categories": {
+                      "value": "Christiansborg Ridebane|Exterior of Christiansborg Palace|Information field template with formatting|Uploaded with LrMediaWiki|Files with coordinates missing SDC location of creation|Photographs by User:Colin|Christiansborg Palace Tower",
+                      "source": "commons-categories",
+                      "hidden": ""
+                    },
+                    "Assessments": {
+                      "value": "quality",
+                      "source": "commons-categories",
+                      "hidden": ""
+                    },
+                    "GPSLatitude": {
+                      "value": "55.675173",
+                      "source": "commons-desc-page"
+                    },
+                    "GPSLongitude": {
+                      "value": "12.577404",
+                      "source": "commons-desc-page"
+                    },
+                    "GPSMapDatum": {
+                      "value": "WGS-84",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "ImageDescription": {
+                      "value": "<a href=\"https://en.wikipedia.org/wiki/Christiansborg_Palace\" class=\"extiw\" title=\"en:Christiansborg Palace\">Christiansborg Palace</a> in Copenhagen.",
+                      "source": "commons-desc-page"
+                    },
+                    "DateTimeOriginal": {
+                      "value": "2017-08-16 15:02:20",
+                      "source": "commons-desc-page"
+                    },
+                    "Credit": {
+                      "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                      "source": "commons-desc-page"
+                    },
+                    "Artist": {
+                      "value": "<a href=\"//commons.wikimedia.org/wiki/User:Colin\" title=\"User:Colin\">Colin</a>",
+                      "source": "commons-desc-page"
+                    },
+                    "Attribution": {
+                      "value": "© <a href=\"//commons.wikimedia.org/wiki/User:Colin\" title=\"User:Colin\">User:Colin</a> / <a href=\"//commons.wikimedia.org/wiki/Main_Page\" title=\"Main Page\">Wikimedia Commons</a>",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "LicenseShortName": {
+                      "value": "CC BY-SA 4.0",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "UsageTerms": {
+                      "value": "Creative Commons Attribution-Share Alike 4.0",
+                      "source": "commons-desc-page"
+                    },
+                    "AttributionRequired": {
+                      "value": "true",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "LicenseUrl": {
+                      "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                      "source": "commons-desc-page"
+                    },
+                    "Copyrighted": {
+                      "value": "True",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "Restrictions": {
+                      "value": "",
+                      "source": "commons-desc-page",
+                      "hidden": ""
+                    },
+                    "License": {
+                      "value": "cc-by-sa-4.0",
+                      "source": "commons-templates",
+                      "hidden": ""
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "personallyInspected": true,
+  "inspectedAt": "2026-10-19T09:24:01.769585+00:00",
+  "sourceObservations": [
+    "Guide2026-10-11b Rundetarn photo2 caption says ramp but image is exterior; authentic Commons interior added and inspected",
+    "Kastelletwindmill has redbase and graybrownshingledbody,fourlatticesails",
+    "Tivoli lake reference shows redsteelDaemonenloop; oldwoodencoaster is separately identified Rutschebanenmountainfacade",
+    "k4 andk8 are explicit interpretive multi-landmarkoverviews; exactsightlinesnotverified",
+    "No previous8Tivoliimages regenerated",
+    "ColinCommonsChristiansborgdayphoto inspected: browncopperlantern andthreegreenstackedcrownfinials; initialgenericgreenspire notselected",
+    "FullTivoliwidereference inspected: preservethreeupperpagodaeavespluslowgroundroof; avoidextra tierandinventedexposedwoodenlift"
+  ],
+  "referencePhotoCount": 17
+}

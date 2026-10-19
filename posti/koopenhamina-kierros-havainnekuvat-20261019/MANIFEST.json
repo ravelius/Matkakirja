@@ -1,0 +1,96 @@
+{
+  "at": "2026-10-19T09:27:26.527734+00:00",
+  "selectedCreativeImages": 8,
+  "files": [
+    {
+      "path": "CREDITS.md",
+      "bytes": 3428,
+      "sha256": "b2ba4a1811f48493fbb5317869491202ed3f581c27e1d5f59b092e6dde3c44bc"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 76373,
+      "sha256": "df3bcb6ac5c46d5ad3613834642e47726451656a6e966387c979abdd06a79b5d"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 26799,
+      "sha256": "33e12f6b22a361c883be4a23e5e2148ff3c64eb0c12440c1a1973f813f97fc45"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 2927,
+      "sha256": "5465dc3bf5ce54edf68408e9742acf9328b616e88fea6c0c8efdc058293fc060"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 6356,
+      "sha256": "b66bb6afd9e87b15f567643e1b2da70da9537b4ba954c3be9ec2d8563a8e2a25"
+    },
+    {
+      "path": "REFERENCES.json",
+      "bytes": 34345,
+      "sha256": "b431c939e5e4d7383dc95a1a13c70eaaa641938df87925fec215166c4e84f427"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 504,
+      "sha256": "284774d717bb6b4da9d03ad62e499852fe1f329b92c069e991812d689891a520"
+    },
+    {
+      "path": "k1-vapahtajan-kirkko.png",
+      "bytes": 3874754,
+      "sha256": "19f3d1eb89da5fdc15824e44f4cbeb4ed7c56f14de7064150e3e3af6fc7522c1"
+    },
+    {
+      "path": "k2-nyhavn.png",
+      "bytes": 3876759,
+      "sha256": "c27643abd7c7b287dc5b1856bb2b85bb0b259d40bbb72757c718bcabfcb74708"
+    },
+    {
+      "path": "k3-amalienborg.png",
+      "bytes": 3422042,
+      "sha256": "0106c813dd58d7c87a4ea15a92b3608fb85fef0356b5a2c8d62034708af02d6c"
+    },
+    {
+      "path": "k4-kastellet-gefion.png",
+      "bytes": 3773825,
+      "sha256": "30b3dc6645c63add52943c2ca02ad7e53499514923e4afb847a9aed0c37e088f"
+    },
+    {
+      "path": "k5-rosenborg.png",
+      "bytes": 4116749,
+      "sha256": "e53d58748c914cfd618dbcd476d05027cb699838fad0d9bdb67e0f7a317cd743"
+    },
+    {
+      "path": "k6-rundetarn.png",
+      "bytes": 3159374,
+      "sha256": "84fe0a809f7efe88b28ced281f962e3b648dacae4497250bb08e5014b224eb0b"
+    },
+    {
+      "path": "k7-christiansborg.png",
+      "bytes": 3490378,
+      "sha256": "68041866d9ef7b1cbaa08f98716a90830d4ba5181f5031d8c02552f161176fc5"
+    },
+    {
+      "path": "k8-tivoli.png",
+      "bytes": 4085088,
+      "sha256": "f8e59c0e78510dfedff4f270e4b86b1ad67dae0ba15a917a8dd0c888871878a9"
+    },
+    {
+      "path": "qa/kierros-esikatselu.png",
+      "bytes": 1520019,
+      "sha256": "9d9060b996e7907e18402f9a4c405230382ce882081d8948352e6e58461f94ed"
+    },
+    {
+      "path": "qa/preview-specification.json",
+      "bytes": 219,
+      "sha256": "df966ee93ce4bb95e19b41bd8b1a242d4d44774ea2d7963359e2e3011a160de8"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-koopenhamina-kierros-havainnekuvat-20261019.md",
+      "bytes": 1684,
+      "sha256": "7314be00e755f0a3c5baa607b0ff6f020221297b6f1a4cc2cb8e9517d0ecf78d"
+    }
+  ]
+}

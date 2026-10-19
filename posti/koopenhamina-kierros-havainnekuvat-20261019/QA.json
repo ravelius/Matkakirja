@@ -1,0 +1,162 @@
+{
+  "at": "2026-10-19T09:27:26.381261+00:00",
+  "personallyInspectedNative": true,
+  "previewPersonallyInspected": true,
+  "deliveryFormatPass": true,
+  "deliveryDimensions": [
+    1920,
+    1080
+  ],
+  "decodedAlpha": [
+    255,
+    255
+  ],
+  "exactSurveyedGeometryVerified": false,
+  "historicalFinalReviewPending": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "assets": {
+    "k1-vapahtajan-kirkko": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "findings": "Source-matched darkoctagonalspiralspire,externalgoldrails,goldsphere/figure,brickclocktower;canal/boats/currentpeople. Architectural surroundings and exacttower-to-canalspatialrelationship reconstructed,notgeometricallyverified. No obviousbrand/text or artificialrepeattexture noticed.",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "requestedExportDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPending": false,
+      "exactViewpointVerified": false,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    },
+    "k2-nyhavn": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "findings": "Source-matched irregularcolorfacaderow,redroofs,dormers,woodenhulls/masts,plaincafesandnaturalpeople. Differentinterpretiveobliqueperspective,notasurveyoffacade/windowcount. No readableboat/shopnamesnoticed.",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "requestedExportDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPending": false,
+      "exactViewpointVerified": false,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    },
+    "k3-amalienborg": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "findings": "Patinatedequestrianstatueonpalesquarepedestal,rococopalacefronts,greenMarbleChurchdome,smallbearskinguardsandcurrentvisitors. Groundlevelviewdoesnotproveentireoctagonalplangeometry; exactdistance/scaleofchurchandfacade/windowdetailsunverified. Tinybronzereliefmarksnotreadablewords.",
+      "technicalExportPending": false,
+      "exactViewpointVerified": false,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    },
+    "k4-kastellet-gefion": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "findings": "Gefionwithfourbronzeoxheads/woman,curvedcascadingbasins;real-typewindmillredbase/graybody/fourlatticesails,greenrampart. Deliberatelyinterpretivemulti-landmarkoverview; relativepositions/clearlineofsightnotverified,notasinglecamerapointdocument. Sculpturefinegeometryapproximate.",
+      "technicalExportPending": false,
+      "exactViewpointVerified": false,
+      "conceptualCombinedView": true,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    },
+    "k5-rosenborg": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "findings": "Renaissancebrick/sandstonegables,coppergreenroofs/towers,gardenlawnandcurrentvisitorsmatchcoreCommonsforms. Exactturret/windowlayoutandgardenviewpointnotasurveyedreconstruction. Naturalvariedfoliage,nostrikingperiodictextureartifactnoticed.",
+      "technicalExportPending": false,
+      "exactViewpointVerified": false,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    },
+    "k6-rundetarn": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "findings": "Actualreference-inspiredcontinuouscurvedbrickrampwithoutstairs,thickwhiteplastercore,vaultedceiling,deeprecessarchedwindows,fourcurrentvisitors. Outsidewindowcityspiresand exactbrick/windowspacinginventedillustrativebackground,notverifiedsightline.",
+      "technicalExportPending": false,
+      "exactViewpointVerified": false,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    },
+    "k7-christiansborg": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "wholeNewGenerationNeeded": false,
+      "findings": "Newwholecandidate correctsbrowncopperbaroquelantern,largeopenarch,goldaccentsandthreegreenstackedcrownfinials,comparedwithColinCommonsdayphoto;actualpalacewingmassesandMarbleBridge/gatepavilions. Exactcamera/bridge/canalgeometrynotmeasured. Nomoregenericallgreenchurchspire.",
+      "technicalExportPending": false,
+      "exactViewpointVerified": false,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    },
+    "k8-tivoli": {
+      "personallyInspectedNative": true,
+      "landmarkFormPass": true,
+      "wholeNewGenerationNeeded": false,
+      "findings": "NewwholecandidatehasthreeupperChineseTowerpagodaeavespluslowgroundfloorroof,comparedtorealfullwidereference. Rutschebanenidentifiedbyrealmountainfacade,notinventedexposedAmericanwoodenlift. NoDaemonenredsteelloop. Warmbluehour,modernpeople/boats,naturalfoliage. Viewcombinesparklandmarksillustratively;exactco-visibilitynotverified.",
+      "technicalExportPending": false,
+      "conceptualCombinedView": true,
+      "exactViewpointVerified": false,
+      "recipientAccepted": false,
+      "deliveryDimensions": [
+        1920,
+        1080
+      ],
+      "technicalExportPass": true,
+      "nativeOriginalPreserved": true,
+      "noCropOrContentRetouch": true
+    }
+  }
+}
