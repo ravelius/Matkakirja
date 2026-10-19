@@ -1,0 +1,24 @@
+[
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+    "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "mode": "RGB",
+    "personallyInspected": true,
+    "role": "selected iPad photo continuity"
+  },
+  {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg",
+    "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+    "dimensions": [
+      640,
+      640
+    ],
+    "mode": "RGB",
+    "personallyInspected": true,
+    "role": "approved main pendant topology"
+  }
+]

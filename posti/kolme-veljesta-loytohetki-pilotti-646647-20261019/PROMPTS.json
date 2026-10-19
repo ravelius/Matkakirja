@@ -1,0 +1,68 @@
+{
+  "tasks": [
+    646,
+    647
+  ],
+  "calls": [
+    {
+      "asset": "ipad",
+      "attempt": 1,
+      "args": {
+        "prompt": "Create an ENTIRELY NEW PHOTOREALISTIC COLOR CAMERA PHOTOGRAPH for an iPad LANDSCAPE screen. Required canvas 2732 × 2048 pixels, aspect ratio 1.333984:1 (landscape FOUR TO THREE, 4:3). A full landscape photograph, NOT a square image, not portrait, not 3:2 or 16:9, with NO crop, borders or padding. Reconstruct the approved pendant from the attached design reference as a realistically photographed physical jewel; do not edit or paste reference pixels.\nQuiet dignified moment of discovering THE THREE BROTHERS PENDANT. The SINGLE WHOLE PENDANT hangs centred in the foreground, almost frontal with a tiny natural three-quarter turn, sharply visible, occupying about 60 percent of the landscape image HEIGHT and only about 28 percent of its WIDTH; generous room/background on both sides. Preserve the exact approved design and topology: THREE large flat-topped RECTANGULAR DEEP ROSE-RED BALAS RUBIES, two at upper left and upper right and one beneath the centre; ONE central large dark transparent DIAMOND, a square rotated into a diamond/lozenge shape; FOUR ROUND GREY PEARLS, one above centre, one lower left, one lower right, and one suspended below as the bottom drop. A restrained narrow angular GOLD FRAME holds this recognisable arrangement, with a small bottom link and the hanging drop. The attached image is the authoritative geometry/placement reference. Keep these THREE rubies, FOUR pearls and ONE central diamond, no new gems or redesigned jewel. The grey pearls gain real soft nacre lustre in candlelight, red stones have subdued real internal reflections, the lozenge diamond reflects candlelight naturally; no magical glow or sparkles. A very thin dark short silk suspension at top is unobtrusive; no person, hand, plinth, cushion or display case. Pendant's complete top and bottom are visible with clear margins.\nBehind it is the same chosen HOME ENVIRONMENT: a plausible FIFTEENTH-CENTURY PARISIAN GOLDSMITH WORKSHOP at evening. Softly defocused dark timber and warm plaster room, a wooden jeweller's bench, a few small period hand tools lying quietly, one ordinary wax candle at the left side of the bench and another soft candle point deeper in the room. Background stays VERY SOFT so the pendant remains the sole visual focus. Warm soft candlelight from upper left skims the real gold, rubies, diamond and pearls; subtle dark brown/amber environment with restrained depth, natural optical bokeh and real physical reflections. Photographic material surfaces, not painting, illustration, CGI, plastic, fake grain or patterned AI coating. Peaceful, precious discovery, not loot or a videogame reward panel. No treasure chest, extra jewellery, extra pendant, firework, particle effect, lens flare, sparkle star, collection animation or dramatic rays.\nInclude exactly ONE SMALL DISCREET plain ivory typographic label near the lower right corner, with clear margin, reading exactly: Havainnekuva\nSpell precisely H a v a i n n e k u v a, one word with capital H, no punctuation. Small but readable. This required word must be generated naturally in the image. NO OTHER TEXT, UI, score, buttons, headings, frame or logo. Deliver the whole new LANDSCAPE 4:3 photograph only.",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg",
+          "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+          "dimensions": [
+            640,
+            640
+          ],
+          "mode": "RGB",
+          "personallyInspected": true,
+          "role": "sole approved pendant design reference from main3154a1bd; no dream283 design used"
+        }
+      ]
+    },
+    {
+      "asset": "iphone",
+      "attempt": 1,
+      "args": {
+        "prompt": "Create an ENTIRELY NEW complete PHOTOREALISTIC COLOR CAMERA PHOTOGRAPH for an iPhone LANDSCAPE display. EXACT requested canvas 2556 × 1179 pixels, landscape aspect ratio 2.16794:1 (about 2.168 TIMES AS WIDE AS HIGH). Very wide full photograph. NOT a 4:3 image, NOT 16:9, NOT a square, NOT portrait. No crop, letterbox, frame or padding. Render the ENTIRE scene anew; do not edit, outpaint, retouch or crop reference pixels.\nREFERENCE 1 is the just-selected iPad pilot photo: keep the SAME SINGLE Three Brothers pendant, SAME physical materials, SAME familiar gold framework and EXACT stone/pearl arrangement, same candlelit FIFTEENTH-CENTURY PARISIAN GOLDSMITH WORKSHOP, bench, left wax candle, small rear candle on right and softly blurred workshop walls. REFERENCE 2 is the approved original pendant's geometry. Only adapt the full photographic composition naturally to this much WIDER 2.168:1 screen. The whole jewel stays centred, sharply visible and entirely inside the image, about 70 percent of image HEIGHT, leaving generous soft workshop context at both left and right. Camera mostly frontal with a subtle turn; pendant hangs on an unobtrusive thin dark silk suspension entering from the top. Quiet valuable discovery, no person or hands.\nPreserve the approved geometry exactly: THREE LARGE RECTANGULAR DEEP ROSE-RED BALAS RUBIES in narrow gold mounts, two at upper-left and upper-right and the third below the centre. ONE central square DIAMOND rotated into a lozenge, with natural dark transparent facets. FOUR ROUND GREY PEARLS: one above the diamond, one lower-left, one lower-right, and one hanging from a small gold link at the very bottom. Same narrow angular skeletal gold framework as the reference, same complete drop and upper attachment. Do not add gems or redesign the object. Realistic slightly irregular pearl nacre lustre, natural aged gold, real ruby reflections and genuine camera texture, not drawn, painted, CGI, plastic or a repeated patterned coating.\nWarm soft candlelight from upper left, real reflected glints only, no sparkle-star overlay. Background very softly defocused: old timber, warm plaster, wooden goldsmith's bench with a few quiet hand tools, ordinary candle left and smaller candle deeper right, a dim blue window at far right. Same brown/amber room and quiet mood as reference1, with additional naturally photographed room space on both sides because this is the wider composition. No treasure chest, extra jewellery, prize panels, bright magical glow, rays, fireworks, particle effect, score or loot effect.\nGenerate ONE SMALL DISCREET plain ivory label near the lower right corner with clear margins, reading EXACTLY: Havainnekuva\nOne word, capital H, no punctuation; spell H a v a i n n e k u v a. This is the only permitted text, and it must be present in the newly generated photo, not added later. NO OTHER UI, labels, headings, buttons, frame or logo. Deliver only the WHOLE NEW VERY WIDE LANDSCAPE 2556:1179 photo.",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg"
+        ],
+        "transparent_background": false
+      },
+      "references": [
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+          "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "personallyInspected": true,
+          "role": "selected iPad photo continuity"
+        },
+        {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg",
+          "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+          "dimensions": [
+            640,
+            640
+          ],
+          "mode": "RGB",
+          "personallyInspected": true,
+          "role": "approved main pendant topology"
+        }
+      ]
+    }
+  ]
+}

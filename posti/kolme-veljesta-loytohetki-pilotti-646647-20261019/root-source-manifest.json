@@ -1,0 +1,41 @@
+{
+  "source": {
+    "path": "posti/paatoimittaja-codex-3d-aarre-kolme-veljesta-kokeilu-20261019.md",
+    "commit": "c9540615c278d86bed9494bf052b5a71c760ac39",
+    "blob": "0364ca01065b8b61aa35517cf651e8a47f4d1ac8",
+    "sha256": "1c9904af28928d4c93bd153458e503f4e9e9d23d31abf9a219bf8dfa236d7e98",
+    "readInFull": true,
+    "readAt": "2026-10-19T13:55:46.434061+00:00"
+  },
+  "mainReferenceCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+  "references": [
+    {
+      "path": "assets/aarteet/aarre-europe-kolme-veljesta.jpg",
+      "commit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+      "blob": "8da22f94d7f25982495ffcd863a53387952a4cd0",
+      "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+      "role": "explicit source-approved pendant object design, not a request to copy painterly surface"
+    }
+  ],
+  "phase1Only": true,
+  "outputs": {
+    "646": [
+      2732,
+      2048
+    ],
+    "647": [
+      2556,
+      1179
+    ]
+  },
+  "phase2Task648OnHold": true,
+  "phase2ReleaseCondition": "Only explicit PT receipt that OWNER approved these exact model images",
+  "tripoCallsAuthorizedNow": false,
+  "futureTripoMaxTotalBudget": 3,
+  "futureTripoCallsSpent": 0,
+  "otherSixTreasuresAuthorizedNow": false,
+  "noTrain204": true,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-19T13:57:42.231794+00:00",
+  "ready": true,
+  "sourceReadInFullByRoot": true,
+  "source": {
+    "path": "posti/paatoimittaja-codex-3d-aarre-kolme-veljesta-kokeilu-20261019.md",
+    "commit": "c9540615c278d86bed9494bf052b5a71c760ac39",
+    "blob": "0364ca01065b8b61aa35517cf651e8a47f4d1ac8",
+    "sha256": "1c9904af28928d4c93bd153458e503f4e9e9d23d31abf9a219bf8dfa236d7e98",
+    "readInFull": true,
+    "readAt": "2026-10-19T13:55:46.434061+00:00"
+  },
+  "referenceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/SOURCE-MANIFEST.json",
+  "referenceHashesAndMirrorsVerified": true,
+  "rootPersonallyInspectedReferences": true,
+  "taskNumbers": [
+    646,
+    647
+  ],
+  "wholeNewGenerationRequired": true,
+  "oldFilesPreserved": true,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "approvedPendantMainReferencePersonallyViewedEarlierExactSHA256": true,
+  "phase1Only": true,
+  "phase2Task648OnHold": true,
+  "tripoCallsAuthorizedNow": false,
+  "otherSixTreasuresAuthorizedNow": false,
+  "exactTargetSizes": {
+    "646": [
+      2732,
+      2048
+    ],
+    "647": [
+      2556,
+      1179
+    ]
+  },
+  "technicalExport": "whole frame only, disclose native vs target; no crop/pad/retouch; native aspect must agree within1percent",
+  "label": "Havainnekuva only; no other UI"
+}

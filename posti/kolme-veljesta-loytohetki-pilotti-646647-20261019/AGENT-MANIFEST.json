@@ -1,0 +1,153 @@
+{
+  "tasks": [
+    646,
+    647
+  ],
+  "phase": 1,
+  "createdAt": "2026-10-19T14:06:53.529977+00:00",
+  "files": [
+    {
+      "path": "DELIVERY.json",
+      "bytes": 11056,
+      "sha256": "e302520b56dcc2345e4db1c6076658a1b6cc4311dcda0f4fcd0d085fc9fe0160"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 24590,
+      "sha256": "76814ba159536000124b7b01aaf109033e09704661182ddfa3be809e74d62201"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 8632,
+      "sha256": "7d1b0903393738f76d2bc9b678000456947e81a6e6f7f88e336bee7677238d20"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3322,
+      "sha256": "b01197d4e5ae434915c43669facbd9180a1db02ae117ecabb0c55592f172186d"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 11526,
+      "sha256": "b9f5acc4a2182360072198589f67609c527aa7073b6ca249e67bd63d78a52156"
+    },
+    {
+      "path": "SOURCE-MANIFEST.json",
+      "bytes": 2902,
+      "sha256": "305a33a2aa0f37acbb119f2c693b4366a4d9fdee1fd74aa444ee681307db86f4"
+    },
+    {
+      "path": "ipad-size-export.json",
+      "bytes": 2154,
+      "sha256": "cae3bb15a0cbf5dd9cb563bb25d37b0cb486d23788fe1e397eb017d97d17259e"
+    },
+    {
+      "path": "iphone-size-export.json",
+      "bytes": 2162,
+      "sha256": "e17f94a125ccfc68e50342500fce34aae87a8f6e473503f9509b8f01e333fc57"
+    },
+    {
+      "path": "kolme-veljesta-loytohetki-ipad-2732x2048.png",
+      "bytes": 4757675,
+      "sha256": "a6f0668384ebebee9722b0466bbf4a4a7c49991b62d6bc2a60aec7bcdf773e32"
+    },
+    {
+      "path": "kolme-veljesta-loytohetki-iphone-2556x1179.png",
+      "bytes": 2852375,
+      "sha256": "c6cc7ec482819ebe4a3ee9875b3c655a542dd0fc6630e2abcbe023ffdf62342c"
+    },
+    {
+      "path": "native/ipad-attempt1.png",
+      "bytes": 2093718,
+      "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda"
+    },
+    {
+      "path": "native/iphone-attempt1.png",
+      "bytes": 1928001,
+      "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94"
+    },
+    {
+      "path": "prompts/ipad-attempt-1/prompt.txt",
+      "bytes": 3187,
+      "sha256": "7344447b3d17b7f0a470d2249f786c83e59bc5edb5448b727b95a4524d652a44"
+    },
+    {
+      "path": "prompts/ipad-attempt-1/references.json",
+      "bytes": 462,
+      "sha256": "3ad8a6d2c6f975084674d844db01156c3f73581f06d7f27731f5e203a1f8b3ec"
+    },
+    {
+      "path": "prompts/ipad-attempt-1/tool-arguments.json",
+      "bytes": 3442,
+      "sha256": "548d4b94d51e120bad91d5cd3b9f46197c501080a2959354e48e4df60d33ea13"
+    },
+    {
+      "path": "prompts/iphone-attempt-1/prompt.txt",
+      "bytes": 2972,
+      "sha256": "a1675d84d0caac89c326ac4eb822bad01e5abc04d52383bf673757fea28ce727"
+    },
+    {
+      "path": "prompts/iphone-attempt-1/references.json",
+      "bytes": 815,
+      "sha256": "03f755f9870c250fdb1add26feb4cafb2bb67eaf71564b711da11a8e623ab0f7"
+    },
+    {
+      "path": "prompts/iphone-attempt-1/tool-arguments.json",
+      "bytes": 3386,
+      "sha256": "6aaad715664401487c16b97d4d8a881b8bc976f26c5844ec1471e160e62ea0c2"
+    },
+    {
+      "path": "qa/screen-pair-comparison.png",
+      "bytes": 3186202,
+      "sha256": "03aaeeff3da1a6f64cec43fe4996f747649079fc317b26b2a4531b5ac8312e78"
+    },
+    {
+      "path": "references/aarre-europe-kolme-veljesta.jpg",
+      "bytes": 74055,
+      "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd"
+    },
+    {
+      "path": "root-reference-ready.json",
+      "bytes": 1413,
+      "sha256": "e0bbec6165c706fe471c602b08fe5c872edf7be2e2dc5275e66edb0498fcc468"
+    },
+    {
+      "path": "root-source-manifest.json",
+      "bytes": 1358,
+      "sha256": "ac999cda3d423a6d9dade104d00d39e79c703c1386bcbcb18be2675d8eaa200a"
+    },
+    {
+      "path": "sources/paatoimittaja-codex-3d-aarre-kolme-veljesta-kokeilu-20261019.md",
+      "bytes": 1614,
+      "sha256": "1c9904af28928d4c93bd153458e503f4e9e9d23d31abf9a219bf8dfa236d7e98"
+    }
+  ],
+  "targetImages": [
+    "kolme-veljesta-loytohetki-ipad-2732x2048.png",
+    "kolme-veljesta-loytohetki-iphone-2556x1179.png"
+  ],
+  "nativeImages": [
+    "native/ipad-attempt1.png",
+    "native/iphone-attempt1.png"
+  ],
+  "qaPassed": true,
+  "wholeNewImagegenCalls": 2,
+  "retries": 0,
+  "targetsAreDocumentedTechnicalUpscales": true,
+  "phase2Task648": "HOLD",
+  "tripoCallsIssued": 0,
+  "readyForRootMailDelivery": true,
+  "technicalSizeExportAuthority": {
+    "decisionBy": "root",
+    "decisionType": "technical implementation choice",
+    "sourceRequiresExactDeliveryDimensions": true,
+    "sourceExplicitlyAuthorizesUpscale": false,
+    "sourceSpecifiesAspectTolerance": false,
+    "rootAspectErrorTolerancePercent": 1,
+    "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+    "nativeAndUpscaledTargetMustRemainDistinct": true,
+    "noCropPadOrContentRetouch": true,
+    "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+  },
+  "updatedAt": "2026-10-19T14:08:20.664986+00:00"
+}

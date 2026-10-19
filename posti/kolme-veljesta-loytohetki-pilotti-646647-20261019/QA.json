@@ -1,0 +1,297 @@
+{
+  "tasks": [
+    646,
+    647
+  ],
+  "phase": 1,
+  "passed": true,
+  "checkedAt": "2026-10-19T14:06:53.529977+00:00",
+  "assets": [
+    {
+      "code": "ipad",
+      "task": 646,
+      "native": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+        "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+        "pixelSHA256": "71bb82e4bde3756c5e853afa20da613123808dc4b5ca39509e4ae3e8cf15a399",
+        "bytes": 2093718,
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "target": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-ipad-2732x2048.png",
+        "sha256": "a6f0668384ebebee9722b0466bbf4a4a7c49991b62d6bc2a60aec7bcdf773e32",
+        "pixelSHA256": "3d36fe7ef8ee2eea05031c5df446ce8454ca1c4b3a9952233f5c67dd3b9cd67b",
+        "bytes": 4757675,
+        "dimensions": [
+          2732,
+          2048
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "qa": {
+        "task": 646,
+        "passed": true,
+        "checkedAt": "2026-10-19T14:06:53.529977+00:00",
+        "personallyInspectedNative": true,
+        "personallyInspectedTargetFullResolution": true,
+        "personallyInspectedScreenPairComparison": true,
+        "requiredLabel": "Havainnekuva",
+        "labelPersonallyReadExact": true,
+        "labelGeneratedInNative": true,
+        "threeRectangularRedBalasRubies": true,
+        "fourRoundGreyPearls": true,
+        "oneCentralDiamondLozenge": true,
+        "approvedMainPendantTopologyRetained": true,
+        "completePendantVisible": true,
+        "centredPendant": true,
+        "same15thCenturyParisianWorkshop": true,
+        "softCandlelitBackground": true,
+        "photorealisticSurfaceAppearance": true,
+        "otherUIAbsent": true,
+        "lootOrSparkleEffectsAbsent": true,
+        "nativePreservedByteExact": true,
+        "targetDimensionsVerified": true,
+        "sizeExport": {
+          "native": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+            "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+            "pixelSHA256": "71bb82e4bde3756c5e853afa20da613123808dc4b5ca39509e4ae3e8cf15a399",
+            "bytes": 2093718,
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "target": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-ipad-2732x2048.png",
+            "sha256": "a6f0668384ebebee9722b0466bbf4a4a7c49991b62d6bc2a60aec7bcdf773e32",
+            "pixelSHA256": "3d36fe7ef8ee2eea05031c5df446ce8454ca1c4b3a9952233f5c67dd3b9cd67b",
+            "bytes": 4757675,
+            "dimensions": [
+              2732,
+              2048
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "nativeAspectRatio": 1.3333333333333333,
+          "targetAspectRatio": 1.333984375,
+          "aspectRelativeError": 0.00048804294777948787,
+          "aspectErrorPercent": 0.04880429477794879,
+          "allowedThresholdPercent": 1,
+          "method": "Pillow full-frame LANCZOS to requested exact dimensions; aspect already equivalent within pixel rounding",
+          "upscaled": true,
+          "scaleX": 1.8867403314917126,
+          "scaleY": 1.8858195211786373,
+          "nativeClaimedAsTargetResolution": false,
+          "crop": false,
+          "padding": false,
+          "contentRetouch": false,
+          "labelGeneratedInNative": true,
+          "technicalExportAuthority": {
+            "decisionBy": "root",
+            "decisionType": "technical implementation choice",
+            "sourceRequiresExactDeliveryDimensions": true,
+            "sourceExplicitlyAuthorizesUpscale": false,
+            "sourceSpecifiesAspectTolerance": false,
+            "rootAspectErrorTolerancePercent": 1,
+            "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+            "nativeAndUpscaledTargetMustRemainDistinct": true,
+            "noCropPadOrContentRetouch": true,
+            "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+          }
+        },
+        "nativeNotClaimedAsTargetResolution": true,
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false,
+        "phase2Released": false
+      }
+    },
+    {
+      "code": "iphone",
+      "task": 647,
+      "native": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/iphone-attempt1.png",
+        "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+        "pixelSHA256": "38184aa9ff4b8dedb744a36160e1dfd604c4f2b8e17c86921baec0a790c6dfa4",
+        "bytes": 1928001,
+        "dimensions": [
+          1846,
+          852
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "target": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-iphone-2556x1179.png",
+        "sha256": "c6cc7ec482819ebe4a3ee9875b3c655a542dd0fc6630e2abcbe023ffdf62342c",
+        "pixelSHA256": "6b97ebbe46e62e56bdb5f8e76caf82982e2d7126d9df5ce568edb0e99befc394",
+        "bytes": 2852375,
+        "dimensions": [
+          2556,
+          1179
+        ],
+        "mode": "RGB",
+        "format": "PNG",
+        "alphaExtrema": [
+          255,
+          255
+        ]
+      },
+      "qa": {
+        "task": 647,
+        "passed": true,
+        "checkedAt": "2026-10-19T14:06:53.529977+00:00",
+        "personallyInspectedNative": true,
+        "personallyInspectedTargetFullResolution": true,
+        "personallyInspectedScreenPairComparison": true,
+        "requiredLabel": "Havainnekuva",
+        "labelPersonallyReadExact": true,
+        "labelGeneratedInNative": true,
+        "threeRectangularRedBalasRubies": true,
+        "fourRoundGreyPearls": true,
+        "oneCentralDiamondLozenge": true,
+        "approvedMainPendantTopologyRetained": true,
+        "completePendantVisible": true,
+        "centredPendant": true,
+        "same15thCenturyParisianWorkshop": true,
+        "softCandlelitBackground": true,
+        "photorealisticSurfaceAppearance": true,
+        "otherUIAbsent": true,
+        "lootOrSparkleEffectsAbsent": true,
+        "nativePreservedByteExact": true,
+        "targetDimensionsVerified": true,
+        "sizeExport": {
+          "native": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/iphone-attempt1.png",
+            "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+            "pixelSHA256": "38184aa9ff4b8dedb744a36160e1dfd604c4f2b8e17c86921baec0a790c6dfa4",
+            "bytes": 1928001,
+            "dimensions": [
+              1846,
+              852
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "target": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-iphone-2556x1179.png",
+            "sha256": "c6cc7ec482819ebe4a3ee9875b3c655a542dd0fc6630e2abcbe023ffdf62342c",
+            "pixelSHA256": "6b97ebbe46e62e56bdb5f8e76caf82982e2d7126d9df5ce568edb0e99befc394",
+            "bytes": 2852375,
+            "dimensions": [
+              2556,
+              1179
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "nativeAspectRatio": 2.1666666666666665,
+          "targetAspectRatio": 2.16793893129771,
+          "aspectRelativeError": 0.0005868544600939885,
+          "aspectErrorPercent": 0.058685446009398845,
+          "allowedThresholdPercent": 1,
+          "method": "Pillow full-frame LANCZOS to requested exact dimensions; aspect already equivalent within pixel rounding",
+          "upscaled": true,
+          "scaleX": 1.3846153846153846,
+          "scaleY": 1.3838028169014085,
+          "nativeClaimedAsTargetResolution": false,
+          "crop": false,
+          "padding": false,
+          "contentRetouch": false,
+          "labelGeneratedInNative": true,
+          "technicalExportAuthority": {
+            "decisionBy": "root",
+            "decisionType": "technical implementation choice",
+            "sourceRequiresExactDeliveryDimensions": true,
+            "sourceExplicitlyAuthorizesUpscale": false,
+            "sourceSpecifiesAspectTolerance": false,
+            "rootAspectErrorTolerancePercent": 1,
+            "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+            "nativeAndUpscaledTargetMustRemainDistinct": true,
+            "noCropPadOrContentRetouch": true,
+            "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+          }
+        },
+        "nativeNotClaimedAsTargetResolution": true,
+        "crop": false,
+        "padding": false,
+        "contentRetouch": false,
+        "phase2Released": false
+      }
+    }
+  ],
+  "pairReview": {
+    "samePendantTopology": true,
+    "sameWorkshopAndCandleLayout": true,
+    "bothLabelsExact": true,
+    "onlyRequestedHavainnekuvaText": true,
+    "noOtherUIOrEffects": true,
+    "personallyInspectedComparison": true,
+    "comparison": "qa/screen-pair-comparison.png"
+  },
+  "wholeNewImagegenCalls": 2,
+  "retries": 0,
+  "partialImageEdits": 0,
+  "upscaledTargets": true,
+  "nativeTargetDistinctionExplicit": true,
+  "PTReview": "pending",
+  "KKReview": "pending",
+  "ownerAcceptance": "pending_or_not_recorded",
+  "phase2Task648": "HOLD",
+  "phase2ReleaseRequires": "Explicit PT confirmation that owner approved pilot",
+  "tripoCallsIssued": 0,
+  "separateBackgroundProduced": false,
+  "otherSixTreasuresProduced": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "technicalSizeExportAuthority": {
+    "decisionBy": "root",
+    "decisionType": "technical implementation choice",
+    "sourceRequiresExactDeliveryDimensions": true,
+    "sourceExplicitlyAuthorizesUpscale": false,
+    "sourceSpecifiesAspectTolerance": false,
+    "rootAspectErrorTolerancePercent": 1,
+    "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+    "nativeAndUpscaledTargetMustRemainDistinct": true,
+    "noCropPadOrContentRetouch": true,
+    "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+  }
+}

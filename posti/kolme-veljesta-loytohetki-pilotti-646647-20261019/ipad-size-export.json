@@ -1,0 +1,60 @@
+{
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+    "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+    "pixelSHA256": "71bb82e4bde3756c5e853afa20da613123808dc4b5ca39509e4ae3e8cf15a399",
+    "bytes": 2093718,
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "target": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-ipad-2732x2048.png",
+    "sha256": "a6f0668384ebebee9722b0466bbf4a4a7c49991b62d6bc2a60aec7bcdf773e32",
+    "pixelSHA256": "3d36fe7ef8ee2eea05031c5df446ce8454ca1c4b3a9952233f5c67dd3b9cd67b",
+    "bytes": 4757675,
+    "dimensions": [
+      2732,
+      2048
+    ],
+    "mode": "RGB",
+    "format": "PNG",
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "nativeAspectRatio": 1.3333333333333333,
+  "targetAspectRatio": 1.333984375,
+  "aspectRelativeError": 0.00048804294777948787,
+  "aspectErrorPercent": 0.04880429477794879,
+  "allowedThresholdPercent": 1,
+  "method": "Pillow full-frame LANCZOS to requested exact dimensions; aspect already equivalent within pixel rounding",
+  "upscaled": true,
+  "scaleX": 1.8867403314917126,
+  "scaleY": 1.8858195211786373,
+  "nativeClaimedAsTargetResolution": false,
+  "crop": false,
+  "padding": false,
+  "contentRetouch": false,
+  "labelGeneratedInNative": true,
+  "technicalExportAuthority": {
+    "decisionBy": "root",
+    "decisionType": "technical implementation choice",
+    "sourceRequiresExactDeliveryDimensions": true,
+    "sourceExplicitlyAuthorizesUpscale": false,
+    "sourceSpecifiesAspectTolerance": false,
+    "rootAspectErrorTolerancePercent": 1,
+    "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+    "nativeAndUpscaledTargetMustRemainDistinct": true,
+    "noCropPadOrContentRetouch": true,
+    "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+  }
+}

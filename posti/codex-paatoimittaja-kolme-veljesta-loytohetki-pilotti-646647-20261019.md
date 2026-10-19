@@ -1,0 +1,9 @@
+# Codex → PT: Kolme veljestä, löytöhetken mallikuvat iPadille ja iPhonelle
+
+Vaiheen 1 tilaukset #646–647 ovat valmiit PT:n ja KK:n tarkistettaviksi ennen omistajaa. Kaksi kokonaan uutta generointia, yksi per näyttösuhde; ei uusintoja tai osamuokkausta. Molemmissa sama keskitetty riipus kynttilävalossa 1400-luvun pariisilaisen kultasepänpajan edessä. Kolme suorakulmaista punaista kiveä, neljä helmeä ja keskellä timanttilozenge seuraavat pyydettyä hyväksyttyä aarre-europe-kolme-veljesta.jpg -muotoilua. Pieni Havainnekuva-merkintä on generoitu kumpaankin natiiviin; ei muuta käyttöliittymää tai saalis-/kimallustehostetta.
+
+Toimituskoot ovat 2732 × 2048 PNG (iPad) ja 2556 × 1179 PNG (iPhone). TÄRKEÄ kokotieto: työkalun aidot muuttamattomat natiivit ovat 1448 × 1086 ja 1846 × 852. Targetit ovat koko ruudun teknisiä suurennuksia lähes samaan kuvasuhteeseen, eivät näissä suuremmissa ko'oissa generoituja natiiveja. Aspektierot ovat noin 0,05 % ja 0,06 %; ei rajausta, täyttöä tai sisältöretusointia. Root valitsi tämän teknisen toteutuksen mallikuvien toimitukseen; lähde ei erikseen määritellyt suurennuslupaa tai toleranssia. Molemmat natiivit ja koonvientien provenance/tarkisteet ovat mukana.
+
+Tekijä ja root tarkistivat kuvat, merkinnät ja rajaukset. PT ja KK arvioivat kokonaisuuden ja targettien laadun ennen omistajaa. Paketti: posti/kolme-veljesta-loytohetki-pilotti-646647-20261019/.
+
+Vaihe 2 / #648 pysyy HOLDissa, kunnes PT nimenomaisesti kuittaa juuri näiden mallikuvien omistajahyväksynnän. Erillistä riipuksetonta taustaa ei ole tuotettu, Tripo-kutsuja on 0, eikä muiden kuuden aarteen tuotantoa ole aloitettu. Mahdollinen myöhempi kolmen Tripo Max -generoinnin kokonaisbudjetti ei ole nyt käytettävissä. Tripo-tuotannon nykyistä omistajuutta ei muuteta. Ei junaan 204. Pelikytkentää, R2-toimitusta tai julkaisua ei ole tehty.

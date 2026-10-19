@@ -1,0 +1,72 @@
+{
+  "taskNumbers": [
+    646,
+    647
+  ],
+  "phase": 1,
+  "readInFull": true,
+  "verifiedAt": "2026-10-19T13:55:54.775327+00:00",
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-3d-aarre-kolme-veljesta-kokeilu-20261019.md",
+      "commit": "c9540615c278d86bed9494bf052b5a71c760ac39",
+      "gitBlob": "0364ca01065b8b61aa35517cf651e8a47f4d1ac8",
+      "gitBlobVerified": true,
+      "sha256": "1c9904af28928d4c93bd153458e503f4e9e9d23d31abf9a219bf8dfa236d7e98",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/sources/paatoimittaja-codex-3d-aarre-kolme-veljesta-kokeilu-20261019.md"
+    }
+  ],
+  "phase2Hold": {
+    "task": 648,
+    "status": "HOLD",
+    "releaseCondition": "Explicit PT confirmation that owner approved the pilot",
+    "tripoBudgetWhenSeparatelyReleased": 3,
+    "tripoModel": "Max",
+    "tripoCallsIssued": 0,
+    "separateBackgroundProduced": false
+  },
+  "excluded": "No other six treasures, no game integration, no train 204.",
+  "rootReferenceReadySHA256": "e0bbec6165c706fe471c602b08fe5c872edf7be2e2dc5275e66edb0498fcc468",
+  "rootSourceManifestSHA256": "ac999cda3d423a6d9dade104d00d39e79c703c1386bcbcb18be2675d8eaa200a",
+  "mainReferenceCommit": "3154a1bdfbad3dfa4c2e7e41b4cfbed230d42500",
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg",
+      "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+      "dimensions": [
+        640,
+        640
+      ],
+      "mode": "RGB",
+      "personallyInspected": true,
+      "role": "sole approved pendant design reference from main3154a1bd; no dream283 design used"
+    }
+  ],
+  "visualInterpretation": {
+    "threeRectangularBalasRubies": true,
+    "fourRoundGreyPearls": true,
+    "centralDiamondLozenge": true,
+    "narrowGoldFramework": true,
+    "oldDream283NotUsed": true
+  },
+  "finalReferenceHashReverifiedAt": "2026-10-19T14:06:53.529977+00:00",
+  "continuity": {
+    "iphoneUsesProducerSelectedIPadNative": true,
+    "ipadNativeSHA256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+    "pilotNotYetPTOwnerApproved": true
+  },
+  "phase2Released": false,
+  "tripoCallsIssued": 0,
+  "technicalSizeExportAuthority": {
+    "decisionBy": "root",
+    "decisionType": "technical implementation choice",
+    "sourceRequiresExactDeliveryDimensions": true,
+    "sourceExplicitlyAuthorizesUpscale": false,
+    "sourceSpecifiesAspectTolerance": false,
+    "rootAspectErrorTolerancePercent": 1,
+    "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+    "nativeAndUpscaledTargetMustRemainDistinct": true,
+    "noCropPadOrContentRetouch": true,
+    "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+  }
+}

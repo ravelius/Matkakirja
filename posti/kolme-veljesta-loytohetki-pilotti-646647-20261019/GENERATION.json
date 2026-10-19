@@ -1,0 +1,427 @@
+{
+  "tasks": [
+    646,
+    647
+  ],
+  "phase": 1,
+  "wholeNewImagegenCalls": 2,
+  "retries": 0,
+  "partialEdits": 0,
+  "allReturnedNativeImagesPreserved": true,
+  "assets": {
+    "ipad": [
+      {
+        "attempt": 1,
+        "issuedAt": "2026-10-19T13:59:06.166282+00:00",
+        "completed": true,
+        "args": {
+          "prompt": "Create an ENTIRELY NEW PHOTOREALISTIC COLOR CAMERA PHOTOGRAPH for an iPad LANDSCAPE screen. Required canvas 2732 × 2048 pixels, aspect ratio 1.333984:1 (landscape FOUR TO THREE, 4:3). A full landscape photograph, NOT a square image, not portrait, not 3:2 or 16:9, with NO crop, borders or padding. Reconstruct the approved pendant from the attached design reference as a realistically photographed physical jewel; do not edit or paste reference pixels.\nQuiet dignified moment of discovering THE THREE BROTHERS PENDANT. The SINGLE WHOLE PENDANT hangs centred in the foreground, almost frontal with a tiny natural three-quarter turn, sharply visible, occupying about 60 percent of the landscape image HEIGHT and only about 28 percent of its WIDTH; generous room/background on both sides. Preserve the exact approved design and topology: THREE large flat-topped RECTANGULAR DEEP ROSE-RED BALAS RUBIES, two at upper left and upper right and one beneath the centre; ONE central large dark transparent DIAMOND, a square rotated into a diamond/lozenge shape; FOUR ROUND GREY PEARLS, one above centre, one lower left, one lower right, and one suspended below as the bottom drop. A restrained narrow angular GOLD FRAME holds this recognisable arrangement, with a small bottom link and the hanging drop. The attached image is the authoritative geometry/placement reference. Keep these THREE rubies, FOUR pearls and ONE central diamond, no new gems or redesigned jewel. The grey pearls gain real soft nacre lustre in candlelight, red stones have subdued real internal reflections, the lozenge diamond reflects candlelight naturally; no magical glow or sparkles. A very thin dark short silk suspension at top is unobtrusive; no person, hand, plinth, cushion or display case. Pendant's complete top and bottom are visible with clear margins.\nBehind it is the same chosen HOME ENVIRONMENT: a plausible FIFTEENTH-CENTURY PARISIAN GOLDSMITH WORKSHOP at evening. Softly defocused dark timber and warm plaster room, a wooden jeweller's bench, a few small period hand tools lying quietly, one ordinary wax candle at the left side of the bench and another soft candle point deeper in the room. Background stays VERY SOFT so the pendant remains the sole visual focus. Warm soft candlelight from upper left skims the real gold, rubies, diamond and pearls; subtle dark brown/amber environment with restrained depth, natural optical bokeh and real physical reflections. Photographic material surfaces, not painting, illustration, CGI, plastic, fake grain or patterned AI coating. Peaceful, precious discovery, not loot or a videogame reward panel. No treasure chest, extra jewellery, extra pendant, firework, particle effect, lens flare, sparkle star, collection animation or dramatic rays.\nInclude exactly ONE SMALL DISCREET plain ivory typographic label near the lower right corner, with clear margin, reading exactly: Havainnekuva\nSpell precisely H a v a i n n e k u v a, one word with capital H, no punctuation. Small but readable. This required word must be generated naturally in the image. NO OTHER TEXT, UI, score, buttons, headings, frame or logo. Deliver the whole new LANDSCAPE 4:3 photograph only.",
+          "referenced_image_paths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg"
+          ],
+          "transparent_background": false
+        },
+        "references": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg",
+            "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+            "dimensions": [
+              640,
+              640
+            ],
+            "mode": "RGB",
+            "personallyInspected": true,
+            "role": "sole approved pendant design reference from main3154a1bd; no dream283 design used"
+          }
+        ],
+        "completedAt": "2026-10-19T14:01:05.882705+00:00",
+        "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-57654ec2-2f1d-447a-bb48-4849fe260a76.png",
+        "native": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+          "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+          "pixelSHA256": "71bb82e4bde3756c5e853afa20da613123808dc4b5ca39509e4ae3e8cf15a399",
+          "bytes": 2093718,
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "alphaExtrema": [
+            255,
+            255
+          ]
+        },
+        "export": {
+          "native": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+            "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+            "pixelSHA256": "71bb82e4bde3756c5e853afa20da613123808dc4b5ca39509e4ae3e8cf15a399",
+            "bytes": 2093718,
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "target": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-ipad-2732x2048.png",
+            "sha256": "a6f0668384ebebee9722b0466bbf4a4a7c49991b62d6bc2a60aec7bcdf773e32",
+            "pixelSHA256": "3d36fe7ef8ee2eea05031c5df446ce8454ca1c4b3a9952233f5c67dd3b9cd67b",
+            "bytes": 4757675,
+            "dimensions": [
+              2732,
+              2048
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "nativeAspectRatio": 1.3333333333333333,
+          "targetAspectRatio": 1.333984375,
+          "aspectRelativeError": 0.00048804294777948787,
+          "aspectErrorPercent": 0.04880429477794879,
+          "allowedThresholdPercent": 1,
+          "method": "Pillow full-frame LANCZOS to requested exact dimensions; aspect already equivalent within pixel rounding",
+          "upscaled": true,
+          "scaleX": 1.8867403314917126,
+          "scaleY": 1.8858195211786373,
+          "nativeClaimedAsTargetResolution": false,
+          "crop": false,
+          "padding": false,
+          "contentRetouch": false,
+          "labelGeneratedInNative": true,
+          "technicalExportAuthority": {
+            "decisionBy": "root",
+            "decisionType": "technical implementation choice",
+            "sourceRequiresExactDeliveryDimensions": true,
+            "sourceExplicitlyAuthorizesUpscale": false,
+            "sourceSpecifiesAspectTolerance": false,
+            "rootAspectErrorTolerancePercent": 1,
+            "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+            "nativeAndUpscaledTargetMustRemainDistinct": true,
+            "noCropPadOrContentRetouch": true,
+            "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+          }
+        },
+        "qa": {
+          "task": 646,
+          "passed": true,
+          "checkedAt": "2026-10-19T14:06:53.529977+00:00",
+          "personallyInspectedNative": true,
+          "personallyInspectedTargetFullResolution": true,
+          "personallyInspectedScreenPairComparison": true,
+          "requiredLabel": "Havainnekuva",
+          "labelPersonallyReadExact": true,
+          "labelGeneratedInNative": true,
+          "threeRectangularRedBalasRubies": true,
+          "fourRoundGreyPearls": true,
+          "oneCentralDiamondLozenge": true,
+          "approvedMainPendantTopologyRetained": true,
+          "completePendantVisible": true,
+          "centredPendant": true,
+          "same15thCenturyParisianWorkshop": true,
+          "softCandlelitBackground": true,
+          "photorealisticSurfaceAppearance": true,
+          "otherUIAbsent": true,
+          "lootOrSparkleEffectsAbsent": true,
+          "nativePreservedByteExact": true,
+          "targetDimensionsVerified": true,
+          "sizeExport": {
+            "native": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+              "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+              "pixelSHA256": "71bb82e4bde3756c5e853afa20da613123808dc4b5ca39509e4ae3e8cf15a399",
+              "bytes": 2093718,
+              "dimensions": [
+                1448,
+                1086
+              ],
+              "mode": "RGB",
+              "format": "PNG",
+              "alphaExtrema": [
+                255,
+                255
+              ]
+            },
+            "target": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-ipad-2732x2048.png",
+              "sha256": "a6f0668384ebebee9722b0466bbf4a4a7c49991b62d6bc2a60aec7bcdf773e32",
+              "pixelSHA256": "3d36fe7ef8ee2eea05031c5df446ce8454ca1c4b3a9952233f5c67dd3b9cd67b",
+              "bytes": 4757675,
+              "dimensions": [
+                2732,
+                2048
+              ],
+              "mode": "RGB",
+              "format": "PNG",
+              "alphaExtrema": [
+                255,
+                255
+              ]
+            },
+            "nativeAspectRatio": 1.3333333333333333,
+            "targetAspectRatio": 1.333984375,
+            "aspectRelativeError": 0.00048804294777948787,
+            "aspectErrorPercent": 0.04880429477794879,
+            "allowedThresholdPercent": 1,
+            "method": "Pillow full-frame LANCZOS to requested exact dimensions; aspect already equivalent within pixel rounding",
+            "upscaled": true,
+            "scaleX": 1.8867403314917126,
+            "scaleY": 1.8858195211786373,
+            "nativeClaimedAsTargetResolution": false,
+            "crop": false,
+            "padding": false,
+            "contentRetouch": false,
+            "labelGeneratedInNative": true,
+            "technicalExportAuthority": {
+              "decisionBy": "root",
+              "decisionType": "technical implementation choice",
+              "sourceRequiresExactDeliveryDimensions": true,
+              "sourceExplicitlyAuthorizesUpscale": false,
+              "sourceSpecifiesAspectTolerance": false,
+              "rootAspectErrorTolerancePercent": 1,
+              "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+              "nativeAndUpscaledTargetMustRemainDistinct": true,
+              "noCropPadOrContentRetouch": true,
+              "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+            }
+          },
+          "nativeNotClaimedAsTargetResolution": true,
+          "crop": false,
+          "padding": false,
+          "contentRetouch": false,
+          "phase2Released": false
+        }
+      }
+    ],
+    "iphone": [
+      {
+        "attempt": 1,
+        "issuedAt": "2026-10-19T14:02:19.465555+00:00",
+        "completed": true,
+        "args": {
+          "prompt": "Create an ENTIRELY NEW complete PHOTOREALISTIC COLOR CAMERA PHOTOGRAPH for an iPhone LANDSCAPE display. EXACT requested canvas 2556 × 1179 pixels, landscape aspect ratio 2.16794:1 (about 2.168 TIMES AS WIDE AS HIGH). Very wide full photograph. NOT a 4:3 image, NOT 16:9, NOT a square, NOT portrait. No crop, letterbox, frame or padding. Render the ENTIRE scene anew; do not edit, outpaint, retouch or crop reference pixels.\nREFERENCE 1 is the just-selected iPad pilot photo: keep the SAME SINGLE Three Brothers pendant, SAME physical materials, SAME familiar gold framework and EXACT stone/pearl arrangement, same candlelit FIFTEENTH-CENTURY PARISIAN GOLDSMITH WORKSHOP, bench, left wax candle, small rear candle on right and softly blurred workshop walls. REFERENCE 2 is the approved original pendant's geometry. Only adapt the full photographic composition naturally to this much WIDER 2.168:1 screen. The whole jewel stays centred, sharply visible and entirely inside the image, about 70 percent of image HEIGHT, leaving generous soft workshop context at both left and right. Camera mostly frontal with a subtle turn; pendant hangs on an unobtrusive thin dark silk suspension entering from the top. Quiet valuable discovery, no person or hands.\nPreserve the approved geometry exactly: THREE LARGE RECTANGULAR DEEP ROSE-RED BALAS RUBIES in narrow gold mounts, two at upper-left and upper-right and the third below the centre. ONE central square DIAMOND rotated into a lozenge, with natural dark transparent facets. FOUR ROUND GREY PEARLS: one above the diamond, one lower-left, one lower-right, and one hanging from a small gold link at the very bottom. Same narrow angular skeletal gold framework as the reference, same complete drop and upper attachment. Do not add gems or redesign the object. Realistic slightly irregular pearl nacre lustre, natural aged gold, real ruby reflections and genuine camera texture, not drawn, painted, CGI, plastic or a repeated patterned coating.\nWarm soft candlelight from upper left, real reflected glints only, no sparkle-star overlay. Background very softly defocused: old timber, warm plaster, wooden goldsmith's bench with a few quiet hand tools, ordinary candle left and smaller candle deeper right, a dim blue window at far right. Same brown/amber room and quiet mood as reference1, with additional naturally photographed room space on both sides because this is the wider composition. No treasure chest, extra jewellery, prize panels, bright magical glow, rays, fireworks, particle effect, score or loot effect.\nGenerate ONE SMALL DISCREET plain ivory label near the lower right corner with clear margins, reading EXACTLY: Havainnekuva\nOne word, capital H, no punctuation; spell H a v a i n n e k u v a. This is the only permitted text, and it must be present in the newly generated photo, not added later. NO OTHER UI, labels, headings, buttons, frame or logo. Deliver only the WHOLE NEW VERY WIDE LANDSCAPE 2556:1179 photo.",
+          "referenced_image_paths": [
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+            "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg"
+          ],
+          "transparent_background": false
+        },
+        "references": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/ipad-attempt1.png",
+            "sha256": "00a081059663577eeb7830f6c300c392b9d10e427a19cfff72829f21b0ba3dda",
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "mode": "RGB",
+            "personallyInspected": true,
+            "role": "selected iPad photo continuity"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/references/aarre-europe-kolme-veljesta.jpg",
+            "sha256": "49711b689d8733790b22b9d96e334577af68adb9717bb4154a014573e3639dbd",
+            "dimensions": [
+              640,
+              640
+            ],
+            "mode": "RGB",
+            "personallyInspected": true,
+            "role": "approved main pendant topology"
+          }
+        ],
+        "completedAt": "2026-10-19T14:04:01.512184+00:00",
+        "defaultNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1538f-40ac-76e3-809f-4fc303d05a89/exec-4a1c8bd1-f587-4af1-8145-f5fdd417bf6d.png",
+        "native": {
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/iphone-attempt1.png",
+          "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+          "pixelSHA256": "38184aa9ff4b8dedb744a36160e1dfd604c4f2b8e17c86921baec0a790c6dfa4",
+          "bytes": 1928001,
+          "dimensions": [
+            1846,
+            852
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "alphaExtrema": [
+            255,
+            255
+          ]
+        },
+        "export": {
+          "native": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/iphone-attempt1.png",
+            "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+            "pixelSHA256": "38184aa9ff4b8dedb744a36160e1dfd604c4f2b8e17c86921baec0a790c6dfa4",
+            "bytes": 1928001,
+            "dimensions": [
+              1846,
+              852
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "target": {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-iphone-2556x1179.png",
+            "sha256": "c6cc7ec482819ebe4a3ee9875b3c655a542dd0fc6630e2abcbe023ffdf62342c",
+            "pixelSHA256": "6b97ebbe46e62e56bdb5f8e76caf82982e2d7126d9df5ce568edb0e99befc394",
+            "bytes": 2852375,
+            "dimensions": [
+              2556,
+              1179
+            ],
+            "mode": "RGB",
+            "format": "PNG",
+            "alphaExtrema": [
+              255,
+              255
+            ]
+          },
+          "nativeAspectRatio": 2.1666666666666665,
+          "targetAspectRatio": 2.16793893129771,
+          "aspectRelativeError": 0.0005868544600939885,
+          "aspectErrorPercent": 0.058685446009398845,
+          "allowedThresholdPercent": 1,
+          "method": "Pillow full-frame LANCZOS to requested exact dimensions; aspect already equivalent within pixel rounding",
+          "upscaled": true,
+          "scaleX": 1.3846153846153846,
+          "scaleY": 1.3838028169014085,
+          "nativeClaimedAsTargetResolution": false,
+          "crop": false,
+          "padding": false,
+          "contentRetouch": false,
+          "labelGeneratedInNative": true,
+          "technicalExportAuthority": {
+            "decisionBy": "root",
+            "decisionType": "technical implementation choice",
+            "sourceRequiresExactDeliveryDimensions": true,
+            "sourceExplicitlyAuthorizesUpscale": false,
+            "sourceSpecifiesAspectTolerance": false,
+            "rootAspectErrorTolerancePercent": 1,
+            "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+            "nativeAndUpscaledTargetMustRemainDistinct": true,
+            "noCropPadOrContentRetouch": true,
+            "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+          }
+        },
+        "qa": {
+          "task": 647,
+          "passed": true,
+          "checkedAt": "2026-10-19T14:06:53.529977+00:00",
+          "personallyInspectedNative": true,
+          "personallyInspectedTargetFullResolution": true,
+          "personallyInspectedScreenPairComparison": true,
+          "requiredLabel": "Havainnekuva",
+          "labelPersonallyReadExact": true,
+          "labelGeneratedInNative": true,
+          "threeRectangularRedBalasRubies": true,
+          "fourRoundGreyPearls": true,
+          "oneCentralDiamondLozenge": true,
+          "approvedMainPendantTopologyRetained": true,
+          "completePendantVisible": true,
+          "centredPendant": true,
+          "same15thCenturyParisianWorkshop": true,
+          "softCandlelitBackground": true,
+          "photorealisticSurfaceAppearance": true,
+          "otherUIAbsent": true,
+          "lootOrSparkleEffectsAbsent": true,
+          "nativePreservedByteExact": true,
+          "targetDimensionsVerified": true,
+          "sizeExport": {
+            "native": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/native/iphone-attempt1.png",
+              "sha256": "e41befa1d31f967840302a9cbb892ee5fa52632ff60d766c4f92a2a6e0b85e94",
+              "pixelSHA256": "38184aa9ff4b8dedb744a36160e1dfd604c4f2b8e17c86921baec0a790c6dfa4",
+              "bytes": 1928001,
+              "dimensions": [
+                1846,
+                852
+              ],
+              "mode": "RGB",
+              "format": "PNG",
+              "alphaExtrema": [
+                255,
+                255
+              ]
+            },
+            "target": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/kolme-veljesta-loytohetki-pilotti-646647-20261019/task-646647/delivery-packet/kolme-veljesta-loytohetki-iphone-2556x1179.png",
+              "sha256": "c6cc7ec482819ebe4a3ee9875b3c655a542dd0fc6630e2abcbe023ffdf62342c",
+              "pixelSHA256": "6b97ebbe46e62e56bdb5f8e76caf82982e2d7126d9df5ce568edb0e99befc394",
+              "bytes": 2852375,
+              "dimensions": [
+                2556,
+                1179
+              ],
+              "mode": "RGB",
+              "format": "PNG",
+              "alphaExtrema": [
+                255,
+                255
+              ]
+            },
+            "nativeAspectRatio": 2.1666666666666665,
+            "targetAspectRatio": 2.16793893129771,
+            "aspectRelativeError": 0.0005868544600939885,
+            "aspectErrorPercent": 0.058685446009398845,
+            "allowedThresholdPercent": 1,
+            "method": "Pillow full-frame LANCZOS to requested exact dimensions; aspect already equivalent within pixel rounding",
+            "upscaled": true,
+            "scaleX": 1.3846153846153846,
+            "scaleY": 1.3838028169014085,
+            "nativeClaimedAsTargetResolution": false,
+            "crop": false,
+            "padding": false,
+            "contentRetouch": false,
+            "labelGeneratedInNative": true,
+            "technicalExportAuthority": {
+              "decisionBy": "root",
+              "decisionType": "technical implementation choice",
+              "sourceRequiresExactDeliveryDimensions": true,
+              "sourceExplicitlyAuthorizesUpscale": false,
+              "sourceSpecifiesAspectTolerance": false,
+              "rootAspectErrorTolerancePercent": 1,
+              "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+              "nativeAndUpscaledTargetMustRemainDistinct": true,
+              "noCropPadOrContentRetouch": true,
+              "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+            }
+          },
+          "nativeNotClaimedAsTargetResolution": true,
+          "crop": false,
+          "padding": false,
+          "contentRetouch": false,
+          "phase2Released": false
+        }
+      }
+    ]
+  },
+  "phase2Hold": true,
+  "tripoCallsIssued": 0,
+  "technicalSizeExportAuthority": {
+    "decisionBy": "root",
+    "decisionType": "technical implementation choice",
+    "sourceRequiresExactDeliveryDimensions": true,
+    "sourceExplicitlyAuthorizesUpscale": false,
+    "sourceSpecifiesAspectTolerance": false,
+    "rootAspectErrorTolerancePercent": 1,
+    "rootAllowsFullFrameTechnicalSizeExportWhenNearSameAspect": true,
+    "nativeAndUpscaledTargetMustRemainDistinct": true,
+    "noCropPadOrContentRetouch": true,
+    "clarificationRecordedAt": "2026-10-19T14:08:20.664986+00:00"
+  }
+}
