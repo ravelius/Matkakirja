@@ -183,10 +183,21 @@ PalloAjo; `PalloTarkastus.cs`: kartan omat rajat KarttaRajat; lennot `PalloRata.
 - `todistusajo.sh`:n OK ei tarkista kuvan sisältöä → kuva-arkki katsotaan aina ennen lähetystä. `palaute`-rivi lukee vain
   askeleen jälkeiset lokirivit; jo tulleelle riville `oleta`. Lähde: luovutukset 17.10. aamupäivä ja 19.10. päivä.
 
-## 9. TÄYDENTÄÄ: Äänittäjä (kertoja ja musiikki)
+## 9. Äänittäjä (kertoja ja musiikki)
 
-*(kertoja William (`eleven_v4_turbo`, nopeus vain `speed`-asetuksella), merkkimäärä ja ääniportti, "eaa."-lukutarkistus, kestojen korvaus
-`kesto_s`-kenttiin, vienti ja manifestirivit; kierroksen musiikki. Täydentää Äänittäjä; ks. `kertojan-teksti-ja-aani.md`.)*
+- **Kertoja William** (`oae6GCCzwoEbfc5FHdEu`): `eleven_v4_turbo`, nopeus vain `speed`-asetuksella, `language_code fi`, yksi otto per kohta;
+  putki ja lupa `kertojan-teksti-ja-aani.md`.
+- **Merkkimäärä ja portti:** laske puhutusta tekstistä, `aaniportti.py` läpi ennen vientiä.
+- **"eaa." -lukutarkistus:** korvaa vain sanarajalla (`\beaa\.`), lauseen lopussa piste; luvut 100–199 sanoiksi (sata…).
+- **Kestot:** kun otot ovat valmiit, korvaa arvioidut kestot `kesto_s`-kenttiin mitatuilla ja ilmoita kytkijälle.
+- **Vienti:** `vie-paketti.sh`, uudet nimet, ajat- ja manifestirivit; mykistykset pois vasta kytkennän jälkeen.
+- **Kierroksen musiikki:** aina Lyria 3.5 (Raamattu 5.15), lyhyt pelkästään myönteinen kehote (5.16); muu lähde vaatii omistajan luvan. Älä
+  käynnistä Lyria-kutsuja ilman lupaa; ehdokkaat sokkokuvataan ennen omistajaa (9.11).
+
+**Tarkistuslista**
+- [ ] Kaikki kohdat otettu, `eaa.`-ja numerotarkistus tehty, kestot kentissä.
+- [ ] Portti läpi, vienti ok, rivit kytkijälle kuitattu.
+- [ ] Musiikki Lyriaa ja luvan sisällä.
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 

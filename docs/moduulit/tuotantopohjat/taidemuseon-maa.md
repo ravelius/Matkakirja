@@ -140,10 +140,24 @@ oma askelääni. Alankomaiden museokansion tiedostot `Resources/Museo/alankomaat
 lattiakohtainen kartoitus ja tulokset. Tilanne 17.10. nähtävä vertaamalla Ranskan kansiota Alankomaihin, esim. Ranskan
 `kohdat.json` odottaa vientiä; Sisältökirjuri toimittaa kohdat docsiin.)*
 
-## 9. TÄYDENTÄÄ: Äänittäjä
+## 9. Äänittäjä
 
-*(kertojan äänet: ääni ja malli, merkkimäärä, ääniportti, vienti ja manifestirivit, mykistetyt, uusintaotot; askeläänet lattioille
-yhdessä Linssisepän kanssa. Täydentää Äänittäjä; ks. `kertojan-teksti-ja-aani.md`.)*
+Kertojan äänet museon kohteille. Putki, mallit ja lupa: `kertojan-teksti-ja-aani.md`; erityisesti:
+
+- **Lukutarkistus ensin:** museon ympyrät lukee peli suoralla lukijalla (Louvren 152 ympyrää 17.10.), joten lupaa ei pyydetä ennen kuin
+  kytkijä on vahvistanut, että esiäänitys tarvitaan.
+- **Ääni ja malli:** William `oae6GCCzwoEbfc5FHdEu`, `eleven_v4_turbo`, nopeus vain `speed`-asetuksella, `language_code fi` (vieraat nimet vievät
+  muuten lukijan ranskaan).
+- **Merkkimäärä** lasketaan puhutusta tekstistä (luvut sanoiksi); vieraiden nimien ääntämysvihjeet etukäteen (esim. `orsay-rf-2027b`).
+- **Portti ja vienti:** `aaniportti.py`, `vie-paketti.sh`, `LAHTEET.md`, SHA256SUMS, ajat- ja manifestirivit; vanha luenta `mykistetyt`-kenttään,
+  kunnes uusi on kytketty. Uusintaotto vain uudella luvalla ja uudelle polulle.
+- **Askeläänet lattioille** tehdään yhdessä Linssisepän kanssa Raamattu 5.27 -tavalla (Soundly / Sonniss ensin, sokkokuvaus); lattia ja kenkä
+  sovitaan ennen hakua, koska väärä ääni (puuaskel = korkokengät) huomataan vasta pelissä.
+
+**Tarkistuslista**
+- [ ] Lukutarkistus tehty, lupa KK:n rivillä ja pitää.
+- [ ] Ääni, malli ja `fi` oikein; ääntämysvihjeet tehty; Gemini sokkona ennen omistajaa.
+- [ ] Portti läpi, vienti, manifestirivit kytkijälle ja kuitattu, `mykistetyt` poistettu.
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 

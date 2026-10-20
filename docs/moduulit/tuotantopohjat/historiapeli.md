@@ -144,11 +144,37 @@ tietokerros tarjotaan lopussa tai pyydettäessä; nappia ei ole päätetty. Täy
 *(ruudulla vain liikkumistappi, toimintonappi kontekstikuvakkein ja tauko; tietokerroksen kortit tyylikirjan pohjalla; alku- ja
 loppunäkymät; muistiraja. Täydentää Natiivi-UI.)*
 
-## 9. TÄYDENTÄÄ: Äänittäjä
+## 9. Äänittäjä
 
-*(kertoja William ja hahmojen äänet (esim. eleven_v4_turbo, yksi otto per repliikki), ääniportti, hiiviskelyssä ei musiikkia,
-kantele löydössä ja lopussa, äänitehosteet Soundly Prosta ja Sonnissista sokkokuuntelulla (Raamattu 5.27), vienti ja mykistetyt. Täydentää Äänittäjä; ks.
-`kertojan-teksti-ja-aani.md`.)*
+Hahmoäänet, kertoja William ja tehosteet; musiikki on aina Lyriaa (Raamattu 5.15). Äänet generoidaan vain luvalla (Raamattu, UUSIA ÄÄNIÄ EI GENEROIDA).
+Kertojan ja hahmojen putki: `kertojan-teksti-ja-aani.md`.
+
+1. **Lukutarkistus ensin.** Selvitä kytkijältä, lukeeko peli tekstin jo itse (`KortinLukija` / `Puhe.Lue`); vain silloin, kun tiedosto
+   tarvitaan, jatka (`kertojan-teksti-ja-aani.md`, kultainen polku 1). Tarkista myös ämpärin manifesti: onko ääni jo olemassa.
+2. **Lupapyyntö tekstinä PT:lle.** Sanatarkat tekstit, palvelu, leikemäärä ja merkkimäärä puhutussa muodossa; lupa tulee vain KK:n
+   suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä. Jos raja on pelkkien tekstien merkkimäärä, tageja ei lasketa.
+3. **Otto.** Oikea ääni ja malli, `language_code: fi`, `speed` natiivisti, yksi otto per repliikki (dialogi yhtenä ottona, Raamattu 5.12);
+   raaka talteen heti (Raamattu 5.13).
+4. **Kuuntelu ennen omistajaa.** Gemini kuvaa jokaisen oton sokkona, Whisper tiedoksi (Raamattu 9.11). Heikko kirjain (esim. j sanassa
+   "Majesteetti") näkyy litteroinnissa; se on korvakuuntelun ja PT:n päätettävä, ei uusinta omin päin.
+5. **Portti ja vienti.** `aaniportti.py` läpi, `vie-paketti.sh`; korjaus aina uudelle polulle (`-v2`), ilmoitus kytkijälle.
+6. **Luovutus.** PT:lle enintään 3 riviä: polut, sha, lupa käytetty / jäljellä.
+
+**Hiiviskely ja musiikki.** Hiiviskelyssä ei musiikkia; kantele löydössä ja lopussa. Musiikki tehdään Lyrialla lyhyellä, pelkästään myönteisellä
+kehotteella (Raamattu 5.16), muuten lupa omistajalta.
+
+**Äänitehosteet (Raamattu 5.27).** Soundly Pro ja Sonniss ensin; Freesound (CC0 / CC BY) vain aukkoihin alkuperäisinä ja robots.txt:n sallimana.
+Jokainen ääni kuvataan sokkona ennen peliä; yksittäiset valmiit tehosteet, ei koneellista leikkausta kuuntelematta. Jos Soundly-GUI ei ole
+käytettävissä (omistajan Space), älä kierrä: käytä Sonniss/Freesound-hakua (workflow `aanihaku`).
+
+**Huudot ja avaus (juoksupeli).** Eri puhujat eri äänillä äänipankista (`tools/aanipankki/rekisteri.json`); älä soita samaa ääntä kahden hahmon
+rooliin. Hahmolle, jolle ei ole sopivaa ääntä, etsi ensin pankista ja vanhoista otoista; uusi otto vain luvalla. Pidennys käsittelyllä (venytys)
+on sallittu vain PT:n erillisellä pyynnöllä ja tulos kuunnellaan ennen vientiä.
+
+**Tarkistuslista**
+- [ ] Ääni ja malli oikein, kieli `fi`, raaka talteen, ei lupaa ylitetty.
+- [ ] Sokkokuvaus tehty; heikot kirjaimet kirjattu PT:lle.
+- [ ] Ääniportti läpi, vienti uudelle polulle, polut ja sha PT:lle / kytkijälle.
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 

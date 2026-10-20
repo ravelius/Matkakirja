@@ -174,10 +174,11 @@ ilta (#4713, mergetty f8111eec0 luovutuksen 16.10. ilta2 mukaan).
 *(kytkentä: `KAUPUNKIKARTAT.<id>.esittely`, `aineistot.js` esittely_polut, oppaan polku `opas/esittely-v2a/<id>.json`, kytkimet,
 natiivin näkymä, lehden avautuminen maakortista, testit. Täydentää Pelikoodari ja Natiivi-UI.)*
 
-## 9. TÄYDENTÄÄ: Äänittäjä ja Julkaisija
+## 9. Äänittäjä ja Julkaisija
 
-*(äänet vain luvalla: kertoja ja Pulu, katso `kertojan-teksti-ja-aani.md`; `mykistetyt`; vienti `vie-paketti.sh`, ämpäri,
-junaan liittäminen. Täydentää Äänittäjä ja Julkaisija.)*
+**Äänittäjä:** äänet vain luvalla (kertoja ja Pulu: `kertojan-teksti-ja-aani.md`, Pulun oma resepti `livia-aani.md`). Lukutarkistus ensin; lupa
+vain KK:n suoralla rivillä. Portti `aaniportti.py`, raaka talteen, vanhat luennat `mykistetyt`-kenttään kunnes uusi kytketty.
+**Julkaisija:** vienti `vie-paketti.sh`-työkalulla ämpäriin (ei ylikirjoitusta, korjaus uudelle polulle), junaan liittäminen Julkaisijan kaavalla.
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 
