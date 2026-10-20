@@ -5,6 +5,10 @@ Viestit lähetetään send_messagella session id:llä (`/Users/Shared/Claude/oso
 **SIMU HARVOIN (omistaja 11.45, PT 17.0x):** malleista ja sijoitteluista ei oteta simukuvia eikä kuvapareja. Ensin automaattiset testit tai Mac-esikatselu, sitten erä menee suoraan avoimeen junaan.
 
 ## ENSIN (uusi Lavastaja)
+0. **Laattojen aukot → tausta-peking-v5** (omistaja 17.42 PT:n kautta, erä 18.0x). Lähde korjattu: `tyokalut/peking_tausta.py` leikkaa kolmiot KORVAA-alueiden reunoilla (bisect_plane) ennen tyhjennystä.
+   Ajo: `aja_tausta_v5.zsh` → `peking/tausta6`. Pakkaus: `tyokalut/pakkaa_tausta_v5.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v5-vienti-20261020/` (kielletty-tausta-v5).
+   Kuvapari ylhäältä LOD2: `esikatselu/aukot-tausta5.png` (ennen) ja `aukot-tausta6.png` (jälkeen); työkalu `esikatsele_aukot.py`.
+   Jos pakettia ei vielä ole: aja pakkaus, sitten PK:lle ja PT:lle sha yhdellä rivillä (PK:n täyte 177560643 jää varmistukseksi).
 1. **Codexin PT734–737 → rakennukset-v13** (v12 on käytetty, ks. alla). Tilanne klo 10.37: Codex oli tuottanut 0 mallia, ja erä on jonossa Puyi207:n jälkeen.
    T7-polku: `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kielletty-koristeet-v2/` (checkpoint.json, NIGHT-HANDOFF.md).
    Kun glb:t tulevat, tee kuten edellisessä luovutuksessa. Pohja on **v12** (kopioi `_tyo/linnanrakentaja/kielletty-rakennukset/v12` → v13), ja jatka työkaluilla, joissa on jo v12:n lattiamuutokset.
