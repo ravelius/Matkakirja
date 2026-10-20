@@ -2066,3 +2066,7 @@ Omistaja 20.10.2026 klo 18.20 (Keskustelukanavan kortti, sanatarkasti): "laita r
 ## PAATOKSET 20.10.2026 klo 19.12: TILATTU MALLI PELIIN ASTI (20.10.2026 klo 19.13)
 
 Omistaja 19.12 (sanatarkasti): "Louvreen oli tilattu tripon Malleja, käytä niitä ja pyydä muutama lisää. Codex tekee. Tämä pitää korjata tuotantoputkeen". Linjaus: jokainen Codex/Tripo-malli kulkee ketjun tilattu → toimitettu → hyväksytty → pelissä; hyväksytty malli viedään kohtaukseen samassa tai seuraavassa junassa. Automaattinen tarkistus (PK) hälyttää, jos hyväksytty malli ei ole missään kohtauksessa tai tilaus on toimittamatta yli 48 h. Lupa: enintään 4 uutta Tripo-kävijää Louvreen (PT738-K1…K4); järjestys Puyi → Louvre 737–747 → kävijät.
+
+## PAATOKSET 20.10.2026 klo 19.25: VAIN TRIPO-MALLEJA (20.10.2026 klo 19.26)
+
+Omistaja 19.25 (sanatarkasti): "Tuotanto putki : käytä vain tripo Malleja jotta laatu paras mahdollinen". Linjaus: kaikki pelin 3D-mallit (hahmot, eläimet, esineet, koristeet, kalusteet) tehdään Tripolla Codexin kautta; ei enää koodilla tai käsin rakennettuja malleja. Codexin koristeet 751–756 Tripoon. Muut kuin Tripo-mallit kartoitetaan ja korvataan järjestyksessä (ketjutarkistus merkitsee). Tripon krediittejä seurataan ja niiden loppumisesta kerrotaan KK:lle hyvissä ajoin (ostot omistajalta). Jos jokin ei sovellu Tripolle (kokonaiset rakennukset, kartan maasto), kysytään KK:n kautta ennen poikkeamista.
