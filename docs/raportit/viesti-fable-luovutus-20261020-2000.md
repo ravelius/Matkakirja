@@ -48,3 +48,5 @@ Edellinen -1820 on historiaa. Viikko 6 %, viikkoraja tällä viikolla 85 %.
   PK:n haara on paikallinen proto-repo (wt/proto-codex-pulu-kaak-rajaus-20261014), ei originia. Vanhat 7e8c0c16b/2fbdc2b8c/eed78dcf1/3a1d0e6c5 EIVÄT käy.
 - 208: lukitus odottaa yhä VS:n kuvaparia (revontulet + kehysvarjo) → PT tarkistaa → OK NS:lle.
 - Asemataulu: junat.json "Juna 209" -rivi ja tyolista.json "Juoksupeli täysin valmiiksi" päivitetty. 209 auki: salien merkitykset (SK), Pelit-valikko (omistaja, kohta 7), Louvren henkilöt + Niken jalusta.
+- 20.18: NUI lasineliö tyylikirjaan PR #5063 (5d5c37fed; + puuttunut PYSÄYTYSKUVA-pohja), natiivi 390cac032 = 209:n NUI-kärki (korvaa f2be670cd:n; NS:lle ilmoitettu). #5063 mergetään vihreänä.
+- OMISTAJAN PYYNTÖ 20.14 (KK): juoksupeli Codexin havainnekuvien j9/j10 näköiseksi. PK vetää: kuvapari "havainne j9/j10 | peli nyt" (alku + keskeltä) 208:n käännöksen jälkeen → PT tarkistaa → KK; näköisyyssuunnitelma ≤ 8 riviä PT:lle (reitti käytävissä ja avoimissa huoneissa + kamera PK, valo VS, eunukit/kasvit/Tripo-esineet Lavastaja+Codex). VS:lle ja Lavastajalle kerrottu.
