@@ -83,6 +83,11 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    peking_tausta.py v12: KIILAT (pystykolmio, vino reunasärmä > 4 m, 1 kierros) + SUIKALEET pois → `aja_tausta_v12.zsh` → peking/tausta13,
    `pakkaa_tausta_v12.zsh`. Kuva esikatselu/piikit-t12-t13.jpg. **k8:** avoimet-v10 (630203c7873d, `avoimet_k8.py`): kourutiilikate + laatat.
    PT: editoriluuppi TAUOLLA kunnes PK:n v9-pelikuva on PT:llä.
+   Tausta v12 HYLÄTTY (PK: −21 % seinäalaa; v12 mediassa käyttämättä) → v12c-säännöt (kiila = reunasärmä lävistäjä alimmasta ylimpään,
+   suikaleet < 6 cm; seinäala −0,7 %) → `pakkaa_tausta_v13.zsh` → kielletty-tausta-v13 (LOD1/2 ajossa). 209k-raita kuja-75:llä EI avoimet-v9:ssä
+   (renderöity) → PK tunnistaa pelissä. **Louvre delivery-v3:** media louvre-ihmiset-v2 (b56c1e7e5f75, JU 02.32; `glb_tekstuurit_1024.py`),
+   proto `lavastaja/louvre-k4-vartija-209` d7121d8ce (k4 rf-2511:n vieressä, vartija Daru-oven vieressä) → NS; simuarkki pyydetty.
+   Nike: toleranssit postissa (07a2b31e3), koe2-sijoitus −0,25 m OK (museo-kalusteet/nike-koe2-sijoitus.jpg) → Codex teksturoi.
    Niken keulan sovitustiedot Codexille: posti/lavastaja-codex-nike-sovitus-20261021.md (postilaatikko 5f25d26cc).
    **K3-kävelijä (kun Codex toimittaa):** LS:n kävelijätesti 0beee9946 (`sh Linssit-testit/kaanna.sh KavelijatEivat`, ≥ 0,8 m kamerasta;
    k1 nyt 1,20 m) ottaa henkilot.json:n kavelee:true-hahmot automaattisesti; aja ennen NS:lle lähettämistä.
