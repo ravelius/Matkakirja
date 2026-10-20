@@ -41,3 +41,10 @@ Edellinen -1820 on historiaa. Viikko 6 %, viikkoraja tällä viikolla 85 %.
   → polut KK:lle, KK kortti huomenna. NUI tekee kokoelma- ja loppukortin (KORTTI-pohjan tumma). PK: näköalahetki + liu'un ääni
   (Äänittäjä: audio/juoksupeli/liuku/liuku-kivi-raahaus.mp3 + -tyonto.mp3, CC0, ei korvakuunneltu).
 - Sisältökirjuri (levossa vanhalla tilillä): salien lyhyet merkitykset kokoelmaan → luo päätilille tai anna toiselle, kun 209 lähestyy.
+
+## 5. LISÄYS 20.14 (Postivahdin nollauspyyntö)
+- OMISTAJA 20.09 (KK:n kortti): suuntanuoli = vaihtoehto 1, lasineliö ☰:n vasemmalla + matka alla. Kirjattu lokiin (paatokset-2026-10). NUI: lasineliö tyylikirjaan pohjaksi – PT kysyi 20.12, vastaus auki.
+- JUNA 209 RUNKO (NS:lle ilmoitettu, 208:n lukitus ensin): NUI natiivi-ui/juoksu-nuoli-209 = f2be670cd (= PK maali-209 eed78dcf1 + NUI kortit ef42706ad + nuoli; maali päällä; testit 696/696; PK ff:llä samaan) + LS 0ed56caf2 (Auto Zoom pystyssä; ei 208:aan, PT 20.0x).
+  PK:n haara on paikallinen proto-repo (wt/proto-codex-pulu-kaak-rajaus-20261014), ei originia. Vanhat 7e8c0c16b/2fbdc2b8c/eed78dcf1/3a1d0e6c5 EIVÄT käy.
+- 208: lukitus odottaa yhä VS:n kuvaparia (revontulet + kehysvarjo) → PT tarkistaa → OK NS:lle.
+- Asemataulu: junat.json "Juna 209" -rivi ja tyolista.json "Juoksupeli täysin valmiiksi" päivitetty. 209 auki: salien merkitykset (SK), Pelit-valikko (omistaja, kohta 7), Louvren henkilöt + Niken jalusta.
