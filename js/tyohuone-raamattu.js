@@ -626,6 +626,7 @@ export const RAAMATTU = {
         '13.49 docs/tuotantosuunnitelma.md — jäljellä olevien kaupunkien ja maiden tuotantosuunnitelma (Fablemax 17.8.2026; EHDOTUS, odottaa omistajan hyväksyntää).',
         '13.50 Työkalujen alkukommentit ovat käyttöohjeita. Sääntö, jonka kone voi valvoa, kirjataan testiksi.',
         '13.51 Työhuone integroidaan peliin kehittäjävivun taakse — ei erillisiä näkymiä.',
+        '13.52 docs/moduulit/tuotantopohjat/taidemuseon-maa.md — taidemuseon maan SITOVA tuotantopohja (omistaja 20.10.2026 klo 23.22): aineisto, tekstit, sali, valo, äänet, kytkentä ja vienti ideasta junaan; jokaisen maan opit lisätään pohjaan (4.21). Muut tuotantopohjat ovat luonnoksia, kunnes omistaja hyväksyy ne.',
       ],
     },
     {

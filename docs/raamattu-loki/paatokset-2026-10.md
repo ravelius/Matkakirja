@@ -2125,3 +2125,7 @@ Omistaja klo 22.58 KK:ssa (sanatarkasti): "napit ja laajemmin tyylikirjastot sek
 ## PAATOKSET 20.10.2026 klo 23.17: LINSSIEN JA PELIEN YHTEISET SAANNOT (20.10.2026 klo 23.18)
 
 Omistajan kortti KK:ssa klo 23.17 (kaikki suositukset; omistajan versio scratchpad/keskustelukanava/pohjat/yhteiset-saannot-omistajalle.md): "Miten peli pysäytetään?" = "☰ pysäyttää (Suositus)" (myös Esc ja taustalle siirtyminen avaavat ☰:n); "Missä pelin säädöt ovat pelin aikana?" = "☰-valikossa (Suositus)" (Tekstitys ja Musiikki kytkiminä, ei ratasta peleihin); "Mikä on poistumisnappi kaikissa linsseissä ja peleissä?" = "Poistu ☰:ssä (Suositus)" (aina ☰:n alin rivi, lautapelien Poistu ja Säännöt ☰:iin, Luovuta jää peliin); "Mikä on tuloskortin kultainen nappi pelin lopussa?" = "Avauspaikan mukaan (Suositus)" (matkalta "Jatka matkaa", Pelit-välilehdeltä "Pelaa uudelleen"). PT: 2.70 kirjoitettu natiivin mukaan (vanha web-ajan teksti lokissa tästä eteenpäin vain historiana), uusi 2.201 PELIT — YHTEISET SÄÄNNÖT; 8 eroa korjausjonoon (Pelikoodari, NUI), omistaja näkee korjatut pelit junassa.
+
+## PAATOS 20.10.2026 klo 23.22: TAIDEMUSEON POHJA SITOVAKSI (20.10.2026 klo 23.23)
+
+Omistajan kortti KK:ssa klo 23.22 (sanatarkasti): "Hyväksytkö taidemuseon pohjan sitovaksi ohjeeksi? Seuraava museomaa tehtäisiin sen mukaan, ja jokaisen maan opit lisättäisiin pohjaan." = "Kyllä, sitovaksi (Suositus)". Omistajan versio scratchpad/keskustelukanava/pohjat/taidemuseon-maa-lapikaynti.md. PT: LUONNOS pois, dokumenttikartalle 13.52, vanhat TÄYDENTÄÄ-rivit korjattu.
