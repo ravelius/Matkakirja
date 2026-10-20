@@ -51,3 +51,11 @@ omistajan valinta. Tulokset: proto-3d/_tyo/linssiseppa2/varjot-koko/lt-gpu-tulos
 ## 5. Asemataulu
 Työlista (talo/tyolista v123) ajan tasalla 17.38: ylimpänä juoksun avaus, taulun tutkiminen, salanappi (valmis), Louvre, askeleet.
 Paikallinen kopio: /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo/tyolista.json (MUOKKAA AINA molemmat).
+
+## LISÄYS 17.4x (viestit luovutuksen jälkeen, KÄSITELTY)
+- Omistaja 17.38: Freesound-erhu hylätty ("ääni oli huono"), vain Lyria. 17.39: "metro ja zoomaukset mukaan samaan, odotan ne myös".
+- iPhone-paketti (uusi arvio KK:lle ~18.45) = e3cff21f6 (avaus + hehku + kuvateksti) + NUI metrokartta 63d0fe853 (PT OK) +
+  LS taulun zoomaus/tilojen erottelu (17.31, annettu LS:lle 17.4x) + PK:n äänikärki (Lyria-erhu + 4 huutoa, ämpärissä
+  audio/juoksupeli/avaus-puhe-v1/). NS ilmoittaa KK:lle vasta, kun kaikki ovat mukana. Tarkista, että PK ja LS etenevät.
+- Äänittäjä: otto 03 kuulostaa "Mahesteetti" → uusi otto vaatii omistajan luvan (KK kysyy).
+- Erhun syy kirjataan KK:n 17.17-tavoitteen virheeksi (KK), ei Äänittäjän.
