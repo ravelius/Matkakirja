@@ -2183,3 +2183,7 @@ TILIT), konttiympäristön NODE_USE_ENV_PROXY (12.9), arkisto ei ole ohje (7.22)
 ## PAATOKSET 21.10.2026 klo 00.51 (21.10.2026 klo 00.54)
 
 OMISTAJAN PÄÄTÖS klo 00.51 (KK:n C-kortti, sanatarkasti), kirjannut PT. 1) 18.10.-tauon purku matkan ajaksi: "unen suunnittelu on kesken, sitä ei kannata tehdä sinun yksin, muut voit" = #42 äänisivun Tekstit-osasto ja #57 Andøyan kaukomaaston kuvavirhe jonoihin; #19 uni v3 (ja #35) pysyy pidossa. 2) Olavinlinna #53/#58: "Ei, tauko jatkuu (Suositus)". 3) Uudet aloitukset #49 Android, #50 linnat, #31 Atacama: "Ei vielä, ydin ensin (Suositus)". 4) Siivous: "Kyllä, siivotaan (Suositus)" = pyörimislinssi #51 tauolla, #54 kupoli ja #40 Petřín suljetaan. Raamattu: 2.200 TAUOT JA PIDOT (18.10.2026 klo 09.37 tauko purettu vain #42 ja #57 osalta matkan ajaksi 22.–26.10.2026) ja 2.178 (tauko jatkuu).
+
+## PAATOKSET 21.10.2026 klo 01.07 (21.10.2026 klo 01.12)
+
+OMISTAJAN VASTAUS klo 01.07 (KK:n kortti, sanatarkasti): T3 ja T1 -> "Kyllä, sellaisinaan (Suositus)". T3 (päiväjunan tarkistukset omistajalta, Raamattu 9.11 kohta 1) ja T1 (ElevenLabsin 3 %:n raja, Raamattu 5.1, yhtenäistetty 5.2, 7.15, 11.x ja 12.23 kohta 9) ovat SITOVIA klo 00.40 sanoin; merkinnät "KK näyttää omistajalle ennen sitovaksi" poistettu, kirjannut PT.

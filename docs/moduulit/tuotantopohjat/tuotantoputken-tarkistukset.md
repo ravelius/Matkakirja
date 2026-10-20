@@ -26,7 +26,7 @@ varjostin, ohjaus, suorituskyky tai muisti), b) omistajan erikseen pyytämiin ku
 muistiajoon. Päiväjuna julkaistaan ilman laitekierrosta. Siksi vaiheet 3 (nykäysvahti) ja 4b (botin läpipeluu simussa)
 ajetaan vain näissä kolmessa tilanteessa.
 
-**Päiväjunassa omistaja päättää tarkistuksista joka kerta (omistaja 21.10.2026 klo 00.40; KK näyttää omistajalle ennen sitovaksi; Raamattu 9.11):** omistajan sanoin "kysy
+**Päiväjunassa omistaja päättää tarkistuksista joka kerta (omistaja 21.10.2026 klo 00.40, SITOVA, vahvistettu klo 01.07; Raamattu 9.11):** omistajan sanoin "kysy
 tarkistetaanko juna vai ei joka kerta minulta. yöllä tarkistukset voi aina ajaa, mutta päivällä saatetaan tarvita juna
 mahdollisimman nopeasti."
 - **Päiväjuna:** ennen jokaista päiväjunaa KK kysyy omistajalta, ajetaanko tarkistukset. "Ei" = juna lähtee ilman
