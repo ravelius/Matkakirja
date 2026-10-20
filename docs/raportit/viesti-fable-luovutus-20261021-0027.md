@@ -58,3 +58,17 @@ korjaus 0fab08301: vain K3 Mollien liikkuu). Pohjat 4/4 läpikäyntikunnossa (#5
 - LS: Amsterdam Louvre-tasolla 28ed4a028 (NS 209), #5114 mergetty. SISÄLTÖKIRJURI PUUTTUU: Alankomaiden 27/64 teokselta puuttuu
   kertojan kohta (kohtazoom) → luo Sisältökirjuri-sessio (Raamattu: puuttuva rooli luodaan, kun pohjan työ vaatii) ja anna tämä työ.
 - Levy 74 Gi: PT poisti 11 omaa worktreetä; Postivahti pyysi rooleja poistamaan omansa.
+
+## 7. LISÄYS 00.5x (kova raja 40 %)
+- #5091 #5092 #5095 MERGETTY (konfliktit ratkaistu). Asemataululle sanottu "lue ROOLI.md".
+- OMISTAJAN PÄÄTÖS 00.40 (KK): T4 video SITOVA; T3 muutoksin (päiväjunan tarkistus kysytään KK:lta, yöllä aina, studiolla iPad-katselu);
+  T1 + Raamattu 5.1/5.2: ElevenLabs-lupa vain > 3 % kk-krediiteistä jo hyväksytylle äänelle, uusi henkilö aina luvalla; KAMERA: yksi
+  pehmeä kaari kamerajohtajaan (Louvre-testi → museot → uudet oletuksena, vanhat vain luvalla; 2.69 musta välähdys pois); CLAUDE.md
+  karsitaan (KK tekee), 6 puuttuvaa kohtaa Raamattuun, 7.45:n CLAUDE.md-osa kumotaan ("aina luvallasi").
+  → PT:n Opus-agentti teki haaraa fable-paatokset-0040 (sis. KK:n lisäkorjaukset T4/T2/T3). TARKISTA: `gh pr list --head fable-paatokset-0040
+  --state all`. Jos ei mergetty tai puuttuu: tee uudelleen (ohje yllä + KK:n viesti 00.4x). Sitten KK:lle T3/T1-kappaleiden sijainnit
+  (KK näyttää omistajalle ennen sitovaksi) ja "CLAUDE.md-muutokset voi tehdä".
+- LS: Louvren lentävä kamera yöjonon kärkeen (video pysty+vaaka PT:lle → KK). VS: rakettivideo pelistä yöhön/matkalle.
+- KK:n odottaa-kartoitus: scratchpad/keskustelukanava/odottaa-kartoitus-20261021.md; A 13 riviä merkitty valmiiksi työlistaan;
+  C 15 omistajalle (KK kysyy: 18.10. tauon purku matkan ajaksi ym.) → MATKASUUNNITELMA to–ma sen jälkeen (kohta 2).
+- KK nollautui 00.42.
