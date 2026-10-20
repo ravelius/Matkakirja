@@ -139,10 +139,73 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 vaikeus, kehittäjätilan aloituskohdat, botin läpäisy ennen läpipeluuta, tietokerroksen kytkentä. Avausnappi (ei reunakuvaa):
 tietokerros tarjotaan lopussa tai pyydettäessä; nappia ei ole päätetty. Täydentää Pelikoodari.)*
 
-## 8. TÄYDENTÄÄ: Natiivi-UI
+## 8. Natiivi-UI
 
-*(ruudulla vain liikkumistappi, toimintonappi kontekstikuvakkein ja tauko; tietokerroksen kortit tyylikirjan pohjalla; alku- ja
-loppunäkymät; muistiraja. Täydentää Natiivi-UI.)*
+*(Natiivi-UI 20.10.2026, PT:n toimeksianto (omistaja 20.10. klo 22.38, Raamattu 4.21). Kooste luovutuksista ja juna 207–209:n
+eristä (Olavinlinnan alkuvalinta ja tietokerros, juoksupelin kuvateksti, Ohita, loppu- ja kokoelmakortti, maalin suunta); uusia
+sääntöjä ei ole.)*
+
+**Työvaiheet.**
+
+1. **Lähtötieto.** Lue PT:n erä ja grep proto-repon `git log --all --since` ja Raamatun loki: osa eristä on jo tehty. Selvitä,
+   kuka omistaa datan (Pelikoodari: säännöt `Peli/`, näkymä esim. `JuoksupeliNakyma`), ja sovi rajapinta hänen kanssaan ennen
+   omaa luokkaa yhdellä viestillä: nimet, tyyppi ja kuka kutsuu ketä.
+2. **Pohja ensin** (Raamattu 4.1, 4.2): ruudulla vain liikkumistappi (TAPPI, Raamattu 4.7), toimintonappi kontekstikuvakkein ja
+   tauko (Raamattu 2.180), ☰ OHJAUSNAPPI-ryhmässä. Kortit KORTTI-pohjan tummalla teemalla (videopeli, Raamattu 4.2), otsikot
+   latauskuvan nimipohjalla (`mk-astroavaus__nimi`, `__viiva`, `__lahde`) ja `Latauskuva.Luettava`, ohitusnappi aloituslennon
+   Ohita-pohjalla (`mk-aloitus__ohita`), suunta OHJAUSNAPPI › SUUNTANÄYTTÄJÄ. Jos pohjaa ei ole, kysy PT:ltä ennen koodia;
+   makuvalinnassa tee kokeiluhaaraan kaksi vaihtoehtoa testikomennon taakse ja kuvat simulla (iPhone pystyssä), suositus
+   ensimmäiseksi, ja omistaja valitsee KK:n kortilla.
+3. **UI-osat omina tiedostoinaan** `UI/Pelit/` (malli `JuoksuKuvateksti`, `JuoksuOhita`, `JuoksuLoppukortti`, `JuoksuMaalisuunta`):
+   isännän näkymään tulee vain 1–3 kutsuriviä (Nayta/Paivita ruudussa, Piilota/Poista sulkiessa). UI kuuntelee pelin aikajanaa
+   tapahtumina (esim. `JuoksuAvaus.Tapahtui`) eikä laske ajoitusta itse; pelin tila luetaan isännän julkisista jäsenistä
+   (esim. `AvausKaynnissa`, `MaalinSuunta`).
+4. **Alku- ja loppunäkymät.** Alkuvalinta KORTTI tumma -korttina (Olavinlinna: Pelaa / Historia vierekkäin leveällä, allekkain
+   kapealla). Avauksen kuvateksti pohjan kaksirivisenä muotona (paikka ja vuosi ylärivillä, alarivi viivan alla), sivuilta ☰:n
+   verran sisään, rivitys sanojen väliin ja pisin sana pienentää kokoa (`Tietajagalleria.SovitaSana`). Ohita näkyy vain lennon
+   aikana. Loppukortti: otsikko (Maali! / Jäit kiinni! / Uuvuit!), matka ja aika, korostuksena aarteet ja pisteet, "Uutta
+   kokoelmaan: …", napit Kokoelma, Lopeta, Uudestaan (kulta). Kokoelma samassa kortissa: kerätyt n/kaikki, löytämättömien määrä,
+   paikat, tämän juoksun uudet merkittyinä.
+5. **Tietokerros** (Raamattu 2.173, 2.176): KORTTI tumma -kortisto vasta lopussa tai pyydettäessä (☰ › Vihje / tietokerros), ei
+   pelin aikana; videopeleissä ei Pulua. Tekstivahti (`ui seikkailutapit teksti`) todistaa, ettei pelin aikana näy muuta tekstiä
+   kuin löytö- ja tietokerrospohjat.
+6. **Tekstit ja testit.** Näyttötekstit `ui.fi.json`:iin avaimina (kielivahti); paikkamerkit `{x}` ja rivin loppuun
+   `// kieli: ei (paikkamerkki)`; kehittäjäkortit `// kieli: ei (kehittäjätyökalu)` vain kehittäjätilaan. Jokaiselle UI-osalle
+   QA-komento (`ui juoksuloppu maali|kokoelma`, `ui juoksusuunta <kulma> <m>`), `tyokalut/tarkista.sh` 0 virhettä ja pelin
+   testit, jos kosket isännän tiedostoon. Simu vain uudelle tekniikalle ja pyydettyihin kuviin (Raamattu 9.2).
+7. **Muisti** (Raamattu 6.15): ei kiinteää rajaa; iso pysyvä kuva näkymän ajaksi `Kuvat.Kiinnita` (välimuisti tuhoaa vanhimmat),
+   latauskuva vain 3D-maailmoihin (Raamattu 4.27).
+8. **Luovutus:** haara ja SHA PT:lle (≤ 3 riviä), isännälle kutsurivit ja järjestys (kumpi haara ensin), Natiiviseppä vie runkoon.
+   Ominaisuus, jonka pelaaja näkee vasta UI:n kautta (esim. maali ja sen suunta), menee junaan samassa commitissa UI:n kanssa.
+
+**Valmis, kun:**
+
+- [ ] Jokainen ruudun osa on hyväksytyllä pohjalla tai omistajan valitsemana uutena pohjana, joka on kirjattu tyylikirjaan.
+- [ ] Pelin aikana ruudulla vain tappi, toimintonappi, tauko/☰ ja pohjan näyttäjät; tekstivahti OK.
+- [ ] Tekstit mahtuvat iPhonella ja iPadilla pystyssä ja vaakana tasaisin reunoin (pitkä otsikko rivittyy tai pienenee).
+- [ ] Teksti erottuu vaaleaa taivasta ja tummaa seinää vasten (`Latauskuva.Luettava`); yksiköt pienellä ("340 m").
+- [ ] Ajoitus pelin tapahtumista; osa katoaa sulkiessa ja uusintajuoksussa (ei jää kartan päälle).
+- [ ] Avaimet `ui.fi.json`:ssa, kielivahti, pohjavahti, liikevahti ja `tarkista.sh` 0 virhettä; isännän testit läpi.
+- [ ] QA-komento jokaiselle osalle; makuvalinnan kuvat omistajalle tarkistettuina täysikokoisina.
+
+**Opit.**
+
+- **20.10.2026, juoksupelin alkuteksti iPadilla liian leveä** (omistaja 18.28): yhden rivin "Peking, kesä 1914 · Kielletty kaupunki"
+  latauskuvan suurella kirjainvälillä ylitti ruudun. Tee pitkästä otsikosta pohjan kaksirivinen muoto ja anna sivuväli ennen
+  kuin näytät sen.
+- **20.10.2026, Ohita-napin rajapinta** (omistaja 18.39): rinnakkaiset viestit Pelikoodarin kanssa ristesivät, ja runkoon tuli kaksi
+  kutsutapaa (yhteensopivuusfunktio). Sovi nimi yhdellä viestillä ja odota vastaus, tai tee UI niin, että se kutsuu isännän
+  olemassa olevaa funktiota ja piilottaa itsensä isännän tilasta (ei uutta riviä isännän tiedostoon).
+- **20.10.2026, maalin suunta** (omistaja 20.09 "1 Lasinelio"): makuvalinta ratkesi samana iltana, kun kahdesta vaihtoehdosta tehtiin
+  kokeiluhaara ja kaksi kuvaa yhdellä todistusajolla (simuvuoro ~10 min). PT: maali ja nuoli junaan yhdessä; versaali "340 M"
+  korjattiin pieneksi yksiköksi.
+- **20.10.2026, tyylikirjan kopio:** natiivin `tyylikirja.json` sisälsi pohjan (PYSÄYTYSKUVA), jota pelirepon lähteessä ei ollut;
+  `--natiivi` olisi pudottanut sen. Vertaa pohjien avaimet kopioon ennen regenerointia.
+- **Kirjasimet ja tyylit:** Kone-kirjasimessa ääriviiva ei piirry, joten luettavuus tulee `Latauskuva.Luettava`-varjosta; inline-
+  `opacity` peittää USS-luokan (häivytys lapsiin); simun napautus ei osu himmennettyihin kehysnappeihin (`ui kehysnapit 0`
+  skenaarion alkuun).
+- **AVOIN OMISTAJALLE: kokoelmakortti kuvineen vai tekstinä?** – suositus: tekstinä (KORTTI-pohjan kuvat 0|1; aarteen kuva näkyy
+  jo muistokuplassa juoksun aikana).
 
 ## 9. TÄYDENTÄÄ: Äänittäjä
 

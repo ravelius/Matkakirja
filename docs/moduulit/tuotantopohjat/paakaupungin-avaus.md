@@ -172,7 +172,40 @@ ilta (#4713, mergetty f8111eec0 luovutuksen 16.10. ilta2 mukaan).
 ## 8. TÄYDENTÄÄ: Pelikoodari ja Natiivi-UI
 
 *(kytkentä: `KAUPUNKIKARTAT.<id>.esittely`, `aineistot.js` esittely_polut, oppaan polku `opas/esittely-v2a/<id>.json`, kytkimet,
-natiivin näkymä, lehden avautuminen maakortista, testit. Täydentää Pelikoodari ja Natiivi-UI.)*
+lehden avautuminen maakortista, testit. Täydentää Pelikoodari.)*
+
+### Natiivi-UI: natiivin näkymä
+
+*(Natiivi-UI 20.10.2026, PT:n toimeksianto (omistaja 20.10. klo 22.38). Kooste luovutuksista; uusia sääntöjä ei ole.)*
+
+**Työvaiheet.**
+
+1. **Tarkista ensin, mitä natiivissa jo on:** kaupungin avauskortti (`KaupunkiKortti`, Raamattu 2.138 ja 2.141), saapumisesitys
+   ja sen jatkeena esittely Ohita-napilla (Raamattu 2.152), oppaan kierros (`OpasValikko`, metrolinja, nimilappu) ja latauskuva.
+   Uusi pääkaupunki tulee näihin datana (Pelikoodarin kytkentä); natiivin UI muuttuu vain, jos data ei mahdu pohjaan.
+2. **Pohjat** (Raamattu 4.1, 4.2): avauskortti KORTTI-pohjalla, kaupungin ja kohteiden nimet latauskuvan nimipohjalla
+   (`mk-astroavaus__nimi`) ja paikan nimeen maa (`Latauskuva.NimiJaMaa`, esim. "Andøya, Norja"), maakortin nostot ja maakunnat
+   tilastorivipohjalla (Raamattu 2.150), kuvat tarinakuvina ja lisäkuvina (Raamattu 4.25).
+3. **Mitat uudella sisällöllä:** pisin kaupungin ja kohteen nimi iPhonella pystyssä ja iPadilla; nimi rivittyy vain sanojen
+   väliin ja pisin sana pienentää kokoa (`Tietajagalleria.SovitaSana`), nimi erottuu kaikilla taustoilla (`Latauskuva.Luettava`).
+4. **Saapuessa ei avaudu mitään automaattisesti** (Raamattu 2.138); avauskortti kaupungin napautuksesta, ja kamera siirtyy vain
+   vähän sivulle (Raamattu 2.141).
+5. **Luovutus:** PT:lle SHA ja mitä uuden kaupungin datasta tarkistettiin (pisin nimi, kuvien määrä, puuttuvat kentät).
+
+**Valmis, kun:**
+
+- [ ] Uuden kaupungin nimet ja kohteet mahtuvat avauskorttiin, oppaan metrolinjaan ja latauskuvaan iPhonella ja iPadilla.
+- [ ] Nimi + maa latauskuvassa; luettava kirkkaalla ja tummalla taustalla.
+- [ ] Ei automaattisesti avautuvaa korttia saapuessa; Ohita lopettaa saapumisesityksen ja esittelyn.
+- [ ] Uudet näyttötekstit `ui.fi.json`:ssa (kielivahti), `tarkista.sh` 0 virhettä.
+
+**Opit.**
+
+- **16.10.2026, latauskuvan nimi:** omistaja halusi maan nimen perään ("Saisi olla myös maan nimi perässä") ja isomman nimen; iPhonen
+  vaakakuvassa "Andøya"-sanan a haalistui raketin liekin päälle. Kaikki latauskuvan nimen isännät käyttävät samaa `NimiJaMaa`- ja
+  `Luettava`-polkua, joten uusi kaupunki ei tarvitse omaa korjausta.
+- **17.10.2026, pitkä nimi pystykuvassa:** "RIJKSMUSEU / M" katkesi kesken sanan iPhonen pystykuvassa; rivitys vain sanojen väliin
+  ja pisimmän sanan sovitus ratkaisi saman kaikille nimille.
 
 ## 9. TÄYDENTÄÄ: Äänittäjä ja Julkaisija
 
