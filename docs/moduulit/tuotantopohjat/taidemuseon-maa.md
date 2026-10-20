@@ -10,12 +10,18 @@ ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muu
 Taidemuseon maa = yhden maan oma museo taidemuseo-linssissä (Raamattu, TAIDEMUSEO-LINSSI; vain natiivissa): maan teokset
 seinillä, patsaat huoneissa, opastettu kierros kertojan äänellä tai vapaa kulku, i-kortti ja ympyrät, salien avaukset.
 Ensimmäinen maa on Alankomaat, toinen Ranska (Louvre, Orsay, Marmottan, Rodin); Italia vasta omistajan käskystä.
-**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä; puuttuva pohja kysytään PT:ltä.
+**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
 
 **Pohja kattaa koko työn ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** aineisto ja tekstit, salin
 rakentaminen (Lavastaja), valo (Valoseppä), äänet (Äänittäjä), kytkentä (Linssiseppä, Natiivi-UI) ja vienti junaan (Julkaisija).
 Työ alkaa tavoitekuvasta (havainnekuva salista), ja omistaja näkee tavoitekuvan ja valmiin salin pelikuvana rinnakkain KK:n
 kautta ennen junaa. Pääkaupungin avaus on oma pohjansa (`paakaupungin-avaus.md`).
+
+**Museoiden yhteiset osat (omistaja 20.10.2026 klo 23.4x, kaksi korttia KK:ssa):**
+- **Louvren taso kaikkiin:** penkit, teoskyltit ja kävijäjärjestelmä ovat jokaisen museon vakio-osia (myös Amsterdam), ja pariteettitesti (luku 8) vertaa uutta maata Louvreen.
+- **Kalusteet yhteisestä kirjastosta:** jalustat, penkit ja kaiteet tulevat yhteisestä kirjastosta, eivät salin GLB:stä (Niken jalusta puuttui, koska se oli vain salin mallissa).
+- **Valon valmiit tyypit:** uusi sali aloitetaan valmiista valotyypistä (esim. kattoikkunasali, kohdevalosali), ei säädetä alusta (luku 7.1).
+- **Kävijät:** eri maihin omat ihmiset, koska Tripolla tehtyjen ihmisten vaatteita ei voi helposti vaihtaa. Kaikilla museoilla on silti yhteinen tapa liikkua ja käyttäytyä: käytös ja paikat siirretään dataan (nyt kovakoodattu `MuseoHenkilot.cs`:ään). Ensin testataan Louvressa, missä ihmiset näkyvät ja tarvitseeko heidän tehdä jotain: junan 209 Louvre-testin kuvat omistajalle ennen uusien maiden ihmisiä, ja Tripo-määrä kysytään kortilla.
 
 **Rajaus:** maittain, yksi maa kerrallaan. Uusi maa on Euroopassa, kunnes omistaja aloittaa muut maanosat (MUUT MAANOSAT VÄHITELLEN).
 Italian museot: omistajan kortti 14.10. "Mukaan myös Italian museot, Italia pois App Storesta", ajoitus "Ei vielä".
@@ -151,29 +157,46 @@ Valo alkaa Lavastajan salista ja loppuu kuvapariin, jossa salin pelikuva on tavo
 1. **Lähtötiedot.** Tavoitekuva (havainnekuva salista), museon omat salikuvat ja Sisältökirjurin galleriatyyli (seinän väri,
    lattia, katto tai kattoikkunat, valon lämpö). Lavastajan `sali.json`: osat, kattoikkunat, teospaikat ja kehysprofiilit.
    Tarkista rungosta (natiiviseppa/juna-NNN), mitkä valot ja säädöt ovat jo päällä (`museo … tila`).
-2. **Galleriatyylin värit datana.** Seinä-, lattia- ja kehysmateriaalit `sali.json`:n väreinä (sRGB, mitattu museon kuvista
+2. **Valotyyppi ensin (omistaja 20.10.2026 klo 23.4x, "Museoiden yhteiset osat").** Jokainen osa saa `sali.json`:ssa kentän
+   `"valotyyppi"`; tyyppi antaa osan hajavalon (lx, EV100, K, päivänvalo) ja kohdevalojen reunahäivän, ja keila ilman omaa lx:ää
+   tai kelviniä perii osan arvot (proto `Linssit/Ydin/Museo/MuseoValotyypit.cs`, testi `MuseoValotyypitTestit`). Säädä vain se,
+   mikä poikkeaa tyypistä (osan `valo`-kentät voittavat), ja kirjaa poikkeaman syy. Jos mikään alla oleva ei sovi, kerro PT:lle;
+   uuden tyypin arvot otetaan hiotusta salista.
+
+   | Tyyppi | Milloin | lx | K | päivänvalo | Lähde |
+   |---|---|---|---|---|---|
+   | kattoikkunasali | korkea sali tai galleria, kattoikkuna tai lasinauha | 160 | 4000 | 0,7 | Louvre sc, gg, ig |
+   | lasikattosali | koko katon lasikatto, kirkas sali | 150 | 3400 | 0,8 | Louvre se (Salle des États) |
+   | kohdevalosali | tummat seinät, vähän päivänvaloa, teokset kohdevaloissa | 135 | 3150 | 0,3 | Louvre da, mo; Yövartio |
+   | kabinetti | pieni huone ilman kattoikkunaa | 120 | 3500 | 0 | Louvre mm; Alankomaiden kabinetit |
+   | grafiikkakabinetti | paperiteokset (säilytys 50 lx) | 50 | 3000 | 0 | Alankomaat graf |
+   | veistossali | veistokset, muoto joka suunnasta | 250 | 3600 | 0,5 | Louvre rb; Leiden |
+   | aula | iso aula tai keskilaiva lasiholvilla | 300 | 4800 | 0,9 | Orsay on |
+
+3. **Galleriatyylin värit datana.** Seinä-, lattia- ja kehysmateriaalit `sali.json`:n väreinä (sRGB, mitattu museon kuvista
    valaistulta pinnalta), ei vakioina koodissa. Tarkista myös kehysprofiilin pienet osat (esim. `rako` = kehyksen sisäreuna
    kankaan päällä): tumma sävy näkyy pelissä varjona.
-3. **Kohdevalot.** Jokaiselle paikalle `valokeila` `sali.json`:ssa (paikka, suunta, puolikulma, reunahäive, lx, kelvin;
+4. **Kohdevalot.** Jokaiselle paikalle `valokeila` `sali.json`:ssa (paikka, suunta, puolikulma, reunahäive, lx, kelvin;
    tavallisesti 120–200 lx ja 3000–4200 K, Yövartio 320 lx); kattokeila tulee edestä ylhäältä noin 30° pystystä (`MuseoValo.KattoKeila`). Maalaus
    on seinää kirkkaampi ja sali tummuu reunoilta (Raamattu 2.131). Kangas valaistaan tasaisesti teoksen keskipisteen valolla
    (`_TeosKeski`), ettei iso kangas (Yövartio) tummu reunoilta. Mitoita keilan kantama salin korkeimman katon mukaan.
-4. **Seinän ja kehyksen valo.** Seinäpesu teoksen ympärillä (`MuseoPaivanvalo.SeinaSpotti`, Gauss-leveys teoksen koon
+5. **Seinän ja kehyksen valo.** Seinäpesu teoksen ympärillä (`MuseoPaivanvalo.SeinaSpotti`, Gauss-leveys teoksen koon
    mukaan, myös läikkä lattiaan seinän tyvelle). Kehyksen huulen varjo kankaalla valon suunnan mukaan
    (`MuseoPaivanvalo.KangasVarjo`): yläreuna varjoisin, sivut kevyet ja kapenevat alaspäin, alareunassa ei varjoa (omistaja
    20.10. 19.47). Kehysten pehmeä varjo seinälle on leivottu (Lavastaja, Raamattu 2.133).
-5. **Heijastukset.** Lattia heijastaa kevyimmällä hyvältä näyttävällä tavalla (`MuseoPaivanvalo.Heijastus`); kehysten lakka
+6. **Heijastukset.** Lattia heijastaa kevyimmällä hyvältä näyttävällä tavalla (`MuseoPaivanvalo.Heijastus`); kehysten lakka
    kiiltää (`_KiiltoValo`) ja lehtikulta heijastaa ympäristöä. Ei reaaliaikaisia varjoja eikä SSAO:ta (Raamattu 2.133).
    Kattoikkunasalit saavat päivänvalon `MuseoPaivanvalo`n osista.
-6. **Rae ja sävy.** Museonäkymän rae ja kankaan oma hento rae (`MuseoPaivanvalo.RaeTeos`) ennen sävykäyrää; profiili Valopohjasta.
-7. **Kuvapari ja mittaus.** A/B samasta pysähdyksestä (`museo teos <tunnus>` → katseluasento; säätö QA-komennoilla
+7. **Rae ja sävy.** Museonäkymän rae ja kankaan oma hento rae (`MuseoPaivanvalo.RaeTeos`) ennen sävykäyrää; profiili Valopohjasta.
+8. **Kuvapari ja mittaus.** A/B samasta pysähdyksestä (`museo teos <tunnus>` → katseluasento; säätö QA-komennoilla
    `museo seinaspotti|kangasvarjo|raeteos|pinnat <x>`). Katso itse rajattuna: reunat, puhki palaminen, sävy tavoitekuvaa vasten.
    GPU-mittaus isolla iPadilla Laitetestaajalla; simu harvoin (Raamattu 9.11).
-8. **Luovutus seuraavalle.** Proto-haara ja sha Natiivisepälle (juna), kuvapari PT:lle, valon suunta Lavastajalle leivontaa
+9. **Luovutus seuraavalle.** Proto-haara ja sha Natiivisepälle (juna), kuvapari PT:lle, valon suunta Lavastajalle leivontaa
    varten (jos keila muuttui), muutetut `sali.json`-värit Linssisepälle tiedoksi. Luovutuksessa: QA-komennot, mitatut luvut,
    avoimet säädöt.
 
 **Valmiin tarkistuslista (Valoseppä):**
+- [ ] Jokaisella osalla valotyyppi; poikkeamat tyypistä perusteltu luovutuksessa.
 - [ ] Jokaisella teospaikalla valokeila; maalaukset seinää kirkkaampia, sali tummuu reunoilta, ei puhki palavia kankaita.
 - [ ] Galleriatyylin värit `sali.json`:ssa ja tavoitekuvan sävyssä; ei uusia värivakioita koodissa (valovahti vihreä).
 - [ ] Kehyksen varjo kankaalla: yläreuna varjoisin, sivut kevyet, alareuna ilman tummaa raitaa (myös kehyksen `rako`).
@@ -251,20 +274,28 @@ sääntöjä. Koodi proto-gitissä: `Linssit/Ydin/Museo/` (MuseoKierros*, MuseoD
 7. **Pariteettitesti (kohta alla) ja todistus**, sitten Natiivisepälle junaan. Tripo-hahmot (katsojat, kävelijät) tekee Lavastaja;
    Linssiseppä tarkistaa, ettei opaskierroksen reitti tai kuvakulma muutu (kävelijät väistävät samaa kuvakiilaa kuin MuseoElama).
 
-**Pariteettitesti (uusi maa = Alankomaiden taso, omistaja 16.10. 23.53):**
+**Pariteettitesti (vertailukohta Louvre: museoiden yhteiset osat, omistaja 20.10. 23.4x; alkuperäinen testi 16.10. 23.53):**
+Uutta maata verrataan Louvreen (`Resources/Museo/ranska/`), ei Alankomaihin. Penkit, teoskyltit ja kävijät ovat jokaisen museon
+vakio-osia, myös Amsterdamin (luvun alun "Museoiden yhteiset osat").
 - **Tiedostot:** `teokset.json`, `sali.json`, `huoneet.json`, `kierros.json`, `kohdat.json`, `kohtazoom.json`, `veistokset.json`,
-  `nayttelykuvat/`, `lahestyminen.json` + lähestymiskuvat (pysty ja vaaka) ja `kyltit/`, jos maalla on teoskyltit. Puuttuva tiedosto
-  = ei pariteettia; tyhjä tiedosto vain PT:n luvalla ja syy kirjattuna.
+  `nayttelykuvat/`, `lahestyminen.json` + lähestymiskuvat (pysty ja vaaka) ja `kyltit/` (teoskyltti jokaiselle ripustetulle teokselle).
+  Puuttuva tiedosto = ei pariteettia; tyhjä tiedosto vain PT:n luvalla ja syy kirjattuna.
+- **Salin vakio-osat `sali.json`:ssa** (kuten Louvre): `glb`, `esteet` ja `penkit` datana, ei koodin vakioina; kalusteet (jalustat,
+  penkit, kaiteet) yhteisestä kirjastosta, ei salin GLB:stä (jokaisella veistospaikalla jalusta, ei leijuvia). Kävijät: maan omat
+  Tripo-ihmiset, käytös ja paikat datasta yhteisellä liikkumistavalla (`MuseoKavijat`); kehityslippu päällä samassa erässä kuin media.
 - **Kentät:** jokaisella teoksella kuvateksti, krediitti, `lahde_url` ja `tekija_wikidata`; jokaisella teoksella `taiteilijat.json`-avain
-  (koneellisesti); jokaisella paikalla `lattia`; jokaisella kierroksen pysähdyksellä kertojan tunnus tai kirjattu syy.
+  (koneellisesti); jokaisella paikalla `lattia`; jokaisella kierroksen pysähdyksellä kertojan tunnus tai kirjattu syy; jokaisella
+  ripustetulla teoksella kyltti (nimi, tekijä, vuosi samasta lähteestä kuin nimikyltti).
 - **Koneellisesti:** `sh Linssit-testit/kaanna.sh Museo` (polut, ripustus, veistokset, kierros kertojalle, lähestyminen,
   Auto Zoom, kertojan kohdat lähikuvassa iPadin vaaka-, iPhonen vaaka- ja pystyruudulla, hyppyvartija koko kierrokselle iPhone + iPad).
-  Maiden välistä tiedosto- ja kenttävertailua ei ole vielä yhtenä testinä: tee vertailu käsin tämän listan mukaan, kunnes se on
-  `MuseoMaaTestit`-luokassa.
+  Louvre-vertailua (tiedostot, `sali.json`:n vakio-osat, kyltit, kävijät) ei ole vielä yhtenä testinä: tee se käsin tämän listan
+  mukaan, kunnes se on `MuseoMaaTestit`-luokassa. Tilanne 20.10.: Alankomailta puuttuvat `glb`/`esteet`/`penkit` datana (vanhat
+  vakiot), `kyltit/`, `lahestyminen.json` ja kävijät, joten se ei vielä läpäise Louvre-tasoa.
 - **Askeläänet lattioittain:** `MuseoAskeleet` valitsee näytteen lattian mukaan (`parketti_*` → parketti, `kivi_marmori_ruutu` →
   marmori, muu → parketti). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita Äänittäjälle ne,
   joilla ei ole omaa näytettä. Tilanne 20.10.: Ranskan `kivi_hiekka` (1) ja `sora` (1) soivat parkettina, kunnes omat näytteet tulevat.
-- **Tulos** luovutukseen: tiedostot ✓/✗, kenttien puutteet, lattiat ja niiden näytteet, testien määrä.
+- **Tulos** luovutukseen: tiedostot ✓/✗, vakio-osat (penkit, kyltit, kävijät, kalusteet) ✓/✗, kenttien puutteet, lattiat ja niiden
+  näytteet, testien määrä.
 
 **Kamera ja zoom (opit 20.10. asti):**
 - Pysähdyksen kesto on vähintään `PysahdysMinS` (6 s) ja pitenee kertojan mukaan; Auto Zoom pidentää lyhyttä pysähdystä, jotta
@@ -276,7 +307,7 @@ sääntöjä. Koodi proto-gitissä: `Linssit/Ydin/Museo/` (MuseoKierros*, MuseoD
   kysyy vapaasta kulusta (omistaja 20.10. 17.31).
 
 **Valmiin tarkistuslista (Linssiseppä):**
-- [ ] Pariteettitesti tehty ja tulos luovutuksessa; askeläänten puutteet Äänittäjällä.
+- [ ] Pariteettitesti Louvrea vasten tehty ja tulos luovutuksessa (penkit, kyltit, kävijät mukana); askeläänten puutteet Äänittäjällä.
 - [ ] `kaanna.sh Museo` ja `tarkista.sh` 0 virhettä; hyppyvartija iPhone + iPad koko kierrokselle.
 - [ ] Kuvat: ruutupyramidi yli 8192 px:n teoksille, ylivalotus mitattu, yksi kehys per teos.
 - [ ] Auto Zoom ja kertojan kohdat testattu pysty ja vaaka, kertojan kanssa ja ilman.
