@@ -20,8 +20,7 @@ haara **pelikoodari/avaus-208 = 177560643**. Seurannan ulkopuolella vain Peli-te
   JuoksuSokkeloMaailma.LuoMaanTayte (laattojen lattiamateriaali 8 cm aukion alle; QA `ui juoksupeli palatsi tayte 0|1`). Ehjillä
   laatoilla täyte jää tyhjäksi (loki "ei aukkoja").
 - Analyysi ja kuvat: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/laatat-208/ (peitto.py, saanto.py, aukot-*.png, tayte-saanto-lod2.png).
-- AVOIN: PT:lle 18.0x ehdotus työlistaan – Lavastaja korjaa lähteen (kolmiot leikataan mallin jalanjälkeen), täyte jää varmistukseksi;
-  odotetaan PT:n päätöstä. Laitevahvistus täytteestä puuttuu (ei sim-appia).
+- PT:N PÄÄTÖS 18.0x: Lavastaja korjaa lähteen (erä annettu Lavastajalle), PK:n täyte jää varmistukseksi. Laitevahvistus täytteestä puuttuu.
 
 ## AVOIMET
 - GPU (juoksu ≤ 14 ms hehkun kanssa) on Valosepällä (PT 17.4x), ei PK:n.
