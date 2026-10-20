@@ -33,3 +33,12 @@ Edellinen -2000 on historiaa. Keskustelu: /Users/Shared/Claude/keskustelut/Paato
 
 ## 4. Omistajan linjaukset tänä iltana (kirjattu)
 - 22.05 yksi Kyllä = yksi KK:n nollaus, ilman korttia vain yöllä: Raamattu 7.37 + loki, PR #5067 (mergetty).
+
+## 5. LISÄYS 22.15: OMISTAJAN PÄÄTÖS 22.11 – SÄÄNTÖJEN KARSINTA (UUDEN PT:N ENSIMMÄINEN ISO TYÖ TÄNÄ YÖNÄ)
+- Kortti KK:ssa: "Karsitaanko säännöt niin, että jokainen sääntö on kirjoitettu kokonaan vain Raamattuun ja muualla on enintään
+  yksi lyhyt muistutusrivi, joka viittaa sinne?" → "Kyllä, karsitaan (Suositus)".
+- PT: muisti (336 tiedostoa, ~680 kt) + MEMORY.md, roolien aloitus- ja luovutuspohjat, muistutusskriptit /Users/Shared/Claude/hooks.
+  Vertailu Sonnet-agentille (Raamattu vs. kohde: päällekkäinen → poisto/viittausrivi; Raamatusta puuttuva linjaus → ensin Raamattuun
+  tools/raamattu-kirjaa.mjs + osio, vasta sitten poisto). arkisto/ ei kosketa.
+- Molemmat CLAUDE.md:t karsii KK (vain omistajan viesti KK:ssa sallii) → PT lähettää KK:lle listan päällekkäisistä kohdista.
+- Kirjaa loki (PAATOKSET 20.10. 22.11), lisää Asemataulun työlistaan; aamulla omistajalle lyhyt yhteenveto KK:n kautta.
