@@ -2145,3 +2145,7 @@ Omistajan kortit 20.10.2026 klo 23.4x (KK): yhteisiksi aloitetaan "Louvren osat 
 ## ASEMATAULU: ROOLIKORTIT ITSESTÄÄN (20.10.2026 klo 23.55)
 
 Omistaja 20.10.2026 klo 23.48 (KK): "roolit taitavat kuitenkin laahata perässä". PT:n ratkaisu KK:n suosituksesta: roolikortti johdetaan jokaisessa viennissä (työ = viimeisin toiminta alle 15 min, teksti työlistan Työn alla -riveiltä, enintään 2), käsin kirjoitettava talo/tehtavat poistettu, vahti poistaa kuitatut toimi-dokumentit 30 min ja kuittaamattomat 2 h jälkeen. Raamattu 7.39.
+
+## ÄÄNET: UUSINNAN LUPA TEKSTINÄ (20.10.2026 klo 23.57)
+
+PT 20.10.2026: 5.2 OTTOMÄÄRÄ SITOO yhtenäistetty omistajan 7.27:n (19.10. klo 11.4x "älä tuo äänistä enää kysymyskortteja") kanssa: uusinta vaatii uuden luvan KK:n kautta, ja KK esittää sen tekstinä, ei kortilla. Kertojan teksti ja ääni -pohja samaan linjaan (#5107).
