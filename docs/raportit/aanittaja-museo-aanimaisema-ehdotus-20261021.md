@@ -23,3 +23,8 @@ Näyte `lento-hiljainen` (puun tuuli, alipäästö 1,2 kHz, −40 LUFS): Gemini 
 
 ## 5. Kytkentä ja vienti
 Vienti uudelle polulle `aanet/taidemuseo-saliaanet-v1/` + manifest (luokka → tiedosto, salin `tyyppi`/tilavuus → luokka; ks. taulukko), ensin PT:n hyväksyntä näytteille. Kytkijä: LS (MuseoAskeleet/Ääni), Lavastaja vahvistaa salin tyypin ja tilavuuden (`laatikko`) jokaiselle uudelle museolle samaan luokitukseen.
+
+## 6. Vienti tehty (PT:n hyväksyntä ehdolla 21.10. 01.4x)
+`aanet/taidemuseo-saliaanet-v1/` (media.matkakirja.app): `manifest.json` (luokat, tilavuusrajat, `salit_louvre`, lähteet, sokkokuvaus), 5 silmukkaa `saliaani-{kabinetti,keski,suuri,aula,ulko}.mp3` (34 s, stereo, −33,8…−37,1 LUFS; kabinetti −37), 3 huonevastetta `kaiku/ir-*.wav` (Aalto OK5, CC BY 4.0). Ääniportti: 0 hylkäystä (IR-tiedostojen true peak 0 dBTP on impulssivasteelle normaali).
+Sokkokuvaus ehdolla "vastaa luokan tarkoitusta" (Gemini 3.1 Pro, 26 ehdokasta + 5 edellistä): kabinetti = Sonniss Hotel Hallway 5am (vakioinen huoneääni; kaikki Soundly-ehdokkaat torjuttiin isoina kaikuvina tiloina tai ilmanvaihtohumina), keski = Belgrade Museum Interior (0. ikkuna), suuri = Montreal Museum Hall, aula = Museum Quiet Crowd (SND76329), ulko = Lodz Courtyard Pigeons. Tarkoituksen vastaavuus arvioitiin sallivalla kriteerillä (sorina, hennot askeleet ja kaiku sallittuja; torjuttiin ymmärrettävä puhe, musiikki, kovat tapahtumat, ajoneuvohumina, tuuli/vesi, väärä ympäristö) — tiukka "ei ylimääräistä kohinaa" -kriteeri hylkäsi kaikki sorinaäänet turhaan.
+Kytkentä: LS (MuseoAskeleet/Ääni; salin luokka `salit_louvre`-taulukosta tai tilavuudesta), Lavastaja vahvistaa uusien museoiden tilavuudet.
