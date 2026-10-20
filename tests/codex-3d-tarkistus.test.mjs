@@ -158,3 +158,29 @@ test('viitekuva: listaamaton kuva, jonka tiiviste on GENERATION.json referenceSH
   writeFileSync(join(d, 'GENERATION.json'), JSON.stringify({ referenceSHA256: '0'.repeat(64) }));
   sisaltaa(tarkistaToimitus(d).tiedostot.find((x) => x.polku === 'viite-cupola.jpg').virheet, 'ei SHA256SUMS-listassa');
 });
+
+test('LIIKE (omistaja 21.10. 00.10): liikkumaton hahmo ilman luurankoa ja idleä läpäisee, kun tilaus sanoo "ei liikettä"', () => {
+  const staattinen = esine({ koko: [0.5, 1.7, 0.3] });                            // Tripo-hahmo ilman luurankoa
+  let r = tarkistaGlb(staattinen, 'k1.glb', { hahmo: true, liike: 'ei' });
+  assert.deepEqual(r.virheet, []); assert.equal(r.tiedot.tyyppi, 'hahmo'); assert.equal(r.tiedot.liike, 'ei liikettä');
+  sisaltaa(tarkistaGlb(staattinen, 'k3.glb', { hahmo: true }).virheet, 'ilman luurankoa');          // liikkuva hahmo tarvitsee luurangon
+  sisaltaa(tarkistaGlb(esine({ koko: [0.5, 170, 0.3] }), 'k1.glb', { hahmo: true, liike: 'ei' }).virheet, 'korkeus');   // hahmon mitat silti
+  r = tarkistaGlb(hahmo({ animaatiot: [] }), 'k2.glb', { hahmo: true, liike: 'ei' });               // luuranko ilman idleä: ei hylätä
+  assert.deepEqual(r.virheet, []); sisaltaa(r.huomiot, 'turhaa työtä');
+  sisaltaa(tarkistaGlb(hahmo({ animaatiot: [] }), 'k3.glb', { liike: 'kyllä' }).virheet, 'idle');
+});
+
+test('LIIKE toimituksessa: .md-rivi tai MANIFEST.json merkitsee hahmon ja liikkeen', () => {
+  const d = mkdtempSync(join(tmpdir(), 'codex3d-liike-'));
+  const k1 = esine({ koko: [0.5, 1.7, 0.3] }); const k3 = esine({ koko: [0.5, 1.75, 0.3] }); const k4 = esine({ koko: [0.5, 1.6, 0.3] });
+  for (const [n, b] of [['k1.glb', k1], ['k3.glb', k3], ['k4.glb', k4]]) writeFileSync(join(d, n), b);
+  const h = (b) => createHash('sha256').update(b).digest('hex');
+  writeFileSync(join(d, 'SHA256SUMS'), `${h(k1)}  k1.glb\n${h(k3)}  k3.glb\n${h(k4)}  k4.glb\n`);
+  writeFileSync(join(d, 'TILAUS.md'), '# Louvren kävijät\n- LIIKE k1.glb: ei liikettä\n- **LIIKE k3.glb:** idle + walk\n');
+  writeFileSync(join(d, 'MANIFEST.json'), JSON.stringify({ files: [{ path: 'k4.glb', sha256: h(k4), tyyppi: 'hahmo', liike: 'static' }] }));
+  const t = tarkistaToimitus(d); const T = Object.fromEntries(t.tiedostot.map((x) => [x.nimi, x]));
+  assert.deepEqual(T['k1.glb'].virheet, []); assert.equal(T['k1.glb'].tiedot.tyyppi, 'hahmo');
+  sisaltaa(T['k3.glb'].virheet, 'ilman luurankoa');                                // k3 liikkuu, mutta toimitus on ilman luurankoa
+  assert.deepEqual(T['k4.glb'].virheet, []); assert.equal(T['k4.glb'].tiedot.liike, 'ei liikettä');
+  sisaltaa(t.huomiot, 'LIIKE luettu');
+});

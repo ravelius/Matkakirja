@@ -10,6 +10,11 @@
  *   Kuvat (Työkaluseppä 19.10.2026: Codex toimittaa kaiken grafiikan): erilliset .png/.jpg-kuvat listassa ja tiiviste
  *   täsmää (paitsi esikatselu/ ja qa/; manifesti myös MANIFEST.json files[].sha256), muoto PNG tai JPEG; tekstuurit/-kansion kuvat kuten glb:n tekstuurit (kahden potenssi,
  *   ≤ 2048 px). LAHTEET.md puuttuu = HUOM. Listaamaton kuva, jonka tiiviste on GENERATION.json referenceSHA256, on viite (HUOM).
+ *   LIIKE (omistaja 21.10.2026 klo 00.10, pohja luku 1 ja 5; Lavastaja): liikkumaton hahmo toimitetaan ilman luurankoa ja animaatioita.
+ *   Toimitus kertoo sen MANIFEST.json-tiedostossa (files[].liike / files[].tyyppi "hahmo", tai juuren "liike": {tiedosto: arvo} tai
+ *   merkkijono kaikille) tai .md-tiedoston rivillä "LIIKE <tiedosto.glb>: ei liikettä" (ilman tiedostonimeä = kaikki glb:t). Hahmoksi
+ *   merkitty malli tarkistetaan hahmona (korkeus, jalat, keskikohta, kolmioraja); "ei liikettä" → luurankoa ja idleä ei vaadita,
+ *   muuten hahmo ilman luurankoa hylätään. Arvo "ei liikettä", "ei liiku", "liikkumaton", "static" tai "no motion" = ei liikettä.
  * Testit: tests/codex-3d-tarkistus.test.mjs (synteettiset glb:t, ei verkkoa).
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -98,7 +103,8 @@ function kuvanKoko(b) {
 }
 
 // ---------------------------------------------------------------- yhden glb:n tarkistus
-export function tarkistaGlb(buf, nimi) {
+/** opt.hahmo: toimitus merkitsee mallin hahmoksi; opt.liike: 'ei' (ei liikettä) tai 'kyllä' (LIIKE-kohta, ks. otsikko). */
+export function tarkistaGlb(buf, nimi, opt = {}) {
   const V = []; const H = []; const T = { nimi };
   if (!NIMI.test(nimi)) V.push(`nimi "${nimi}": vain pienet a–z, 0–9, - ja _, enintään 48 merkkiä, pääte .glb`);
   if (buf.length > RAJAT.tiedostoMt * 1e6) V.push(`koko ${(buf.length / 1e6).toFixed(1)} Mt > ${RAJAT.tiedostoMt} Mt`);
@@ -115,7 +121,8 @@ export function tarkistaGlb(buf, nimi) {
     const mode = p.mode ?? 4; const c = j.accessors[p.indices ?? p.attributes.POSITION].count;
     if (mode === 4) kolmiot += c / 3; else if (mode === 5 || mode === 6) kolmiot += c - 2; else V.push(`primitiivi mode ${mode} (pisteet/viivat) – vain kolmiot`);
   }
-  const skinit = j.skins || []; const hahmo = skinit.length > 0;
+  const skinit = j.skins || []; const hahmo = skinit.length > 0 || !!opt.hahmo; const liikkumaton = opt.liike === 'ei';
+  if (opt.liike) T.liike = liikkumaton ? 'ei liikettä' : 'liikkuu';
   Object.assign(T, { tyyppi: hahmo ? 'hahmo' : 'esine', kolmiot: Math.round(kolmiot), piirrot, materiaalit: (j.materials || []).length, solmut: (j.nodes || []).length });
   const kraja = hahmo ? RAJAT.hahmoKolmioita : RAJAT.esineKolmioita;
   if (kolmiot > kraja) V.push(`${Math.round(kolmiot)} kolmiota > ${kraja} (${T.tyyppi})`);
@@ -172,7 +179,11 @@ export function tarkistaGlb(buf, nimi) {
     }
   }
   // luut ja animaatiot
-  if (hahmo) {
+  if (hahmo && !skinit.length) {
+    if (!liikkumaton) V.push('hahmo ilman luurankoa: tilauksen LIIKE ei sano "ei liikettä" (liikkuvalla hahmolla luuranko ja idle)');
+    if ((j.animations || []).length) H.push(`${j.animations.length} animaatiota liikkumattomassa hahmossa ilman luurankoa`);
+  } else if (hahmo) {
+    if (liikkumaton) H.push('tilaus: ei liikettä, mutta luuranko on mukana (turhaa työtä; ei hylätä)');
     if (skinit.length > 1) V.push(`${skinit.length} luurankoa, sallitaan yksi`);
     const s = skinit[0]; const nimet = new Set(s.joints.map((i) => j.nodes[i].name));
     T.luut = s.joints.length;
@@ -181,7 +192,7 @@ export function tarkistaGlb(buf, nimi) {
     if (puuttuu.length) V.push(`luut puuttuvat (Mixamo-nimet): ${puuttuu.join(', ')}`);
     const an = (j.animations || []).map((a) => a.name || '');
     T.animaatiot = an;
-    for (const a of PAKOLLISET_ANIMAATIOT) if (!an.includes(a)) V.push(`animaatio "${a}" puuttuu`);
+    if (!liikkumaton) for (const a of PAKOLLISET_ANIMAATIOT) if (!an.includes(a)) V.push(`animaatio "${a}" puuttuu`);
     for (const a of an) if (!ANIM_NIMI.test(a)) V.push(`animaation nimi "${a}": vain pienet a–z, 0–9 ja _`);
     const juuret = ((j.scenes || [])[j.scene || 0]?.nodes || []);
     for (const r of juuret) { const sc = j.nodes[r].scale; if (sc && sc.some((x) => Math.abs(x - 1) > 1e-3)) H.push(`juurisolmun "${j.nodes[r].name}" skaala ${sc[0].toFixed(3)} – sovella skaala (Ctrl+A) ennen vientiä`); }
@@ -218,12 +229,13 @@ export function tarkistaToimitus(kansio) {
     let r; try { r = JSON.parse(readFileSync(join(kansio, j), 'utf8')).referenceSHA256; } catch { continue; }
     for (const h of [].concat(r || [])) if (/^[0-9a-f]{64}$/i.test(h)) viitteet.add(h.toLowerCase());
   }
+  const liike = lueLiike(kansio, polut, tulos);
   const glbeja = polut.some((x) => extname(x).toLowerCase() === '.glb');
   if (!mf && glbeja) tulos.virheet.push('SHA256SUMS(.txt) tai MANIFEST.json (files[].sha256) puuttuu');
   else if (!mf) (tulos.huomiot ||= []).push('ei manifestia (SHA256SUMS tai MANIFEST.json): kuvien tiivisteitä ei tarkistettu');
   for (const p of polut) if (MUUT_3D.has(extname(p).toLowerCase())) tulos.virheet.push(`${p}: muoto ${extname(p)} ei kelpaa, vain .glb`);
   for (const p of polut.filter((x) => extname(x).toLowerCase() === '.glb')) {
-    const buf = readFileSync(join(kansio, p)); const r = tarkistaGlb(buf, basename(p)); r.polku = p;
+    const buf = readFileSync(join(kansio, p)); const r = tarkistaGlb(buf, basename(p), liike(p)); r.polku = p;
     const h = createHash('sha256').update(buf).digest('hex');
     if (mf && !M.has(p)) r.virheet.push('ei SHA256SUMS-listassa');
     else if (mf && M.get(p) !== h) r.virheet.push(`SHA-256 ei täsmää (lista ${M.get(p).slice(0, 12)}…, tiedosto ${h.slice(0, 12)}…)`);
@@ -243,6 +255,33 @@ export function tarkistaToimitus(kansio) {
   if (!tulos.tiedostot.length) tulos.virheet.push('ei yhtään .glb- tai kuvatiedostoa');
   if (!polut.some((x) => ['LAHTEET.md', 'SOURCE-INVENTORY.json', 'SOURCE-MANIFEST.json', 'CREDITS.md'].includes(basename(x)))) (tulos.huomiot ||= []).push('LAHTEET.md (tai Codexin SOURCE-INVENTORY, SOURCE-MANIFEST tai CREDITS) puuttuu: tekijä, työkalu, lisenssi ja lähdekuvat tarkistetaan käsin (Raamattu luku 11)');
   return tulos;
+}
+
+// ---------------------------------------------------------------- LIIKE (omistaja 21.10.2026 00.10)
+const EI_LIIKETTA = /ei\s+liikett|ei\s+liiku|liikkumaton|\bstatic\b|no\s+motion|staattinen/i;
+export function liikeArvo(t) { return typeof t === 'string' && t.trim() ? (EI_LIIKETTA.test(t) ? 'ei' : 'kyllä') : undefined; }
+/** Toimituksen LIIKE- ja tyyppitiedot: palauttaa funktion polku → {hahmo, liike}. */
+export function lueLiike(kansio, polut, tulos = {}) {
+  const tiedosto = new Map(); let kaikille;                 // basename → {hahmo, liike}
+  const aseta = (nimi, k) => { const v = tiedosto.get(nimi) || {}; tiedosto.set(nimi, { ...v, ...Object.fromEntries(Object.entries(k).filter(([, x]) => x !== undefined)) }); };
+  for (const m of polut.filter((x) => basename(x) === 'MANIFEST.json')) {
+    let d; try { d = JSON.parse(readFileSync(join(kansio, m), 'utf8')); } catch { continue; }
+    for (const f of d.files || []) if (f && f.path && /\.glb$/i.test(f.path)) aseta(basename(f.path), { liike: liikeArvo(f.liike), hahmo: f.tyyppi === 'hahmo' || undefined });
+    if (typeof d.liike === 'string') kaikille = liikeArvo(d.liike);
+    else if (d.liike && typeof d.liike === 'object') for (const [n, v] of Object.entries(d.liike)) aseta(basename(n), { liike: liikeArvo(v) });
+  }
+  for (const md of polut.filter((x) => extname(x).toLowerCase() === '.md')) {
+    let t = ''; try { t = readFileSync(join(kansio, md), 'utf8'); } catch { continue; }
+    for (const rivi of t.split(/\r?\n/)) {
+      const x = rivi.match(/^[\s>*#-]*\**LIIKE\**\b([^:]*):(.*)$/i); if (!x) continue;
+      const nimet = (x[1] + ' ' + x[2]).match(/[a-z0-9][a-z0-9_-]{0,47}\.glb/gi);
+      const arvo = liikeArvo(x[2]) || liikeArvo(x[1]);
+      if (nimet) for (const n of nimet) aseta(n.toLowerCase(), { liike: arvo, hahmo: true });
+      else if (arvo) kaikille = arvo;
+    }
+  }
+  if (tiedosto.size || kaikille) (tulos.huomiot ||= []).push(`LIIKE luettu: ${[...tiedosto].map(([n, v]) => `${n} ${v.liike === 'ei' ? 'ei liikettä' : v.liike || '?'}${v.hahmo ? ' (hahmo)' : ''}`).join(', ')}${kaikille ? `${tiedosto.size ? '; ' : ''}muut: ${kaikille === 'ei' ? 'ei liikettä' : 'liikkuu'}` : ''}`);
+  return (p) => { const v = tiedosto.get(basename(p).toLowerCase()) || tiedosto.get(basename(p)) || {}; return { hahmo: v.hahmo, liike: v.liike ?? kaikille }; };
 }
 
 // ---------------------------------------------------------------- erillinen kuva (tekstuuri, havainnekuva)
