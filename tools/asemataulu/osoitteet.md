@@ -15,7 +15,7 @@ organization … invited editors"). Siksi jokaisella tilillä on oma kopio samas
    (lähde `git show origin/main:tools/asemataulu/asemataulu.html` → scratchpad/asemataulu/asemataulu-julkaisu.html,
    capabilities {"comments": {}, "db": {}}, icon dashboard) ja lisää rivi tähän taulukkoon.
 2. Täytä tietokanta yhdellä ArtifactData batchilla tiedostoista scratchpad/asemataulu/data/talo/*.json
-   (junat, tyolista, tehtavat, eteneminen, huom, viestit = PT; roolit, laitteet = Postivahdin vienti/), op set, file_path.
+   (junat, tyolista, eteneminen, huom = PT; mittarit, roolit, laitteet = Asemataulu-sessio), op set, file_path.
 3. Uusi osoite Postivahdille, jonokierros-teksti.md:n kohtaan 7 ja omistajalle yhdellä rivillä.
 
 PT kirjoittaa omat dokumenttinsa aina ensin data/talo/<doc>.json-tiedostoon ja vie sen file_path-kentällä, jotta tiedostot

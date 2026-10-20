@@ -41,8 +41,8 @@ KOODI = [
     ("hoitaja/kierros.py", "hoitaja/kierros.py"),
 ]
 SIEMEN = ["osoitteet.md"]  # + data/talo/*.json repon siemenkansiosta
-# Poistetut dokumentit (omistaja 20.10.2026 klo 23.32–23.35): Sinulle-osio ja Kulutus. Niitä ei viedä uudelle taululle.
-POISTETUT = {"viestit", "kulutus"}
+# Poistetut dokumentit (omistaja 20.10.2026 klo 23.32–23.48): Sinulle-osio, Kulutus ja käsin kirjoitettu tehtavat. Niitä ei viedä uudelle taululle.
+POISTETUT = {"viestit", "kulutus", "tehtavat"}
 ROOLIT_NYKYINEN = {"paatoimittaja": "PÄÄTOIMITTAJA", "keskustelukanava": "KESKUSTELUKANAVA",
                    "asemataulu": "Asemataulu", "postivahti": "Postivahti", "julkaisija": "Julkaisija",
                    "natiiviseppa": "Natiiviseppä"}

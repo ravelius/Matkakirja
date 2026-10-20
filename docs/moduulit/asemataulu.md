@@ -51,9 +51,9 @@ Jokaisella dokumentilla on yksi kirjoittaja (ArtifactData, if_version). Kirjoitt
 | roolit | `{rivit: [{nimi, malli, effort, tila, teksti, aika}], ts}` (luku 6) | Asemataulu-sessio (`hoitaja/kierros.py`) |
 | laitteet | `laitteet.py`:n tulos | Asemataulu-sessio |
 | junat | junarivit (luku 4) | PT |
-| tyolista, tehtavat, huom | pidemmän aikavälin työt (valmiista vain 10 uusinta, luku 7); tehtävien lyhyet nimet `{rivit: {rooli: nimi}}` | PT; synkka.py arkistoi vanhemmat valmiit |
+| tyolista, huom | pidemmän aikavälin työt (valmiista vain 10 uusinta, luku 7); työlistan Työn alla -rivit ovat myös roolikorttien tekstit (luku 6) | PT; synkka.py arkistoi vanhemmat valmiit |
 | eteneminen | junan valot (luku 5) | lastaus PT; matka Natiiviseppä (vaiheet 1–2) ja Julkaisija (3–5) |
-| toimi-&lt;rooli&gt; | VAATII TOIMIA: rooli, kysymys, ts | sessio itse, jos sillä on Artifact-työkalu (PT, Asemataulu, Julkaisija, Natiiviseppä); muuten PT rivin "VAATII TOIMIA: &lt;rooli&gt;: &lt;asia&gt;" perusteella |
+| toimi-&lt;rooli&gt; | VAATII TOIMIA: rooli, kysymys, ts (valinnainen kuitattu/hoidettu) | sessio itse, jos sillä on Artifact-työkalu (PT, Asemataulu, Julkaisija, Natiiviseppä); muuten PT rivin "VAATII TOIMIA: &lt;rooli&gt;: &lt;asia&gt;" perusteella. Vanhat poistaa synkka.py (luku 6, VAHTI SIIVOAA) |
 | katsoja | ts (syke) | sivu itse |
 | boost | `{paalla, alkoi, paattyy}`; sammuu 1 h kuluttua | sivu itse (Boost-nappi); Asemataulu ja Postivahti lukevat |
 
@@ -62,7 +62,9 @@ tyhjentää etenemisen, kun juna on TF:ssä.
 
 POISTETUT (omistaja 20.10.2026 klo 23.32–23.35: "Sinulle osion voi poistaa. ota myös kulutus pois, koska se ehkä vain kuluttaa liikaa
 tokeneita itse ja se ei kuitenkaan pysy ajantasalla"): dokumentteja `viestit` (Sinulle-osio) ja `kulutus` (kulutus.py) ei kirjoiteta
-eikä viedä, eikä sivulla ole niiden osioita. asemataulu.py jättää ne pois uuden taulun batchista.
+eikä viedä, eikä sivulla ole niiden osioita. Samoin `tehtavat` (PT:n käsin kirjoittamat roolien tehtävät; omistaja 20.10.2026 klo
+23.48: "roolit taitavat kuitenkin laahata perässä"): roolikortin teksti johdetaan työlistasta (luku 6), eikä sivu lue tehtavat-dokumenttia.
+asemataulu.py jättää ne pois uuden taulun batchista.
 
 ## 4. Junarivit: kertyvä, lukittu ja TF
 
@@ -134,9 +136,26 @@ Viisi neliötä junan nimen alla. Dokumentti `talo/eteneminen` = `{nimi, tila, e
 | lepo | "Levossa" vain, kun roolilla ei ole mitään jonossa | harmaa |
 | kysyy | kysymys (VAATII TOIMIA) | punainen |
 
+KORTTI JOHDETAAN JOKA KIERROKSELLA (omistaja 20.10.2026 klo 23.48: "roolit taitavat kuitenkin laahata perässä"; `hoitaja/kierros.py`,
+myös ilman Boostia `--vain-roolit`):
+- TYÖ, kun session viimeisin toiminta (list_sessions-kenttä `lastActivityAt`, tallennettuna `hoitaja/sessiot.json`:iin) on alle
+  15 min vanha tai sessio on juuri nyt käynnissä. Hetken busy/idle-tila ei yksin tee roolista lepäävää.
+- TYÖN TEKSTI = työlistan rivit, joiden `tila` on "työn alla" ja joiden `lisa`-kentässä roolin nimi on (pilkuin tai nuolin eroteltu
+  lista; vanhat nimet kuten "Lavastaja (ent. Linnanrakentaja)", Linnanrakentaja → Lavastaja, Siirtoseppä → Projektiseppä): otsikot,
+  enintään 2, uusin (`ts`) ensin, erottimena "; ". Jos rivejä ei ole: "Työ käynnissä".
+- Muuten odottaa (odottaa.json) tai lepo.
+
 Lähde `TAULU/hoitaja/odottaa.json` `{rooli: "odottaa …"}`: PT päivittää työlistan ja jonojen mukaan; `kierros.py` käyttää sitä joka
 kierroksella, kun rooli ei ole työssä. Roolille, joka on odottaa.json:ssa, ei koskaan näytetä "Levossa". Keskustelukanava ja
-Päätoimittaja omilla riveillään, samoin Asemataulu itse.
+Päätoimittaja omilla riveillään (aina työ), samoin Asemataulu itse.
+
+VAHTI SIIVOAA VANHAT VAATII TOIMIA -DOKUMENTIT (omistaja 20.10.2026 klo 23.48; toimi-keskustelukanava-odottaa jäi punaiseksi, vaikka
+asiaan oli vastattu): synkka.py lisää batchiin poiston (op delete, if_version) jokaiselle taulun `toimi-*`-dokumentille, joka on
+- yli 30 min vanha (`ts`) ja kuitattu: dokumentissa kenttä `kuitattu` tai `hoidettu`, tai `toimi-<rooli>-odottaa`-dokumentin roolin
+  sessio ei enää odota (`~/.claude/sessions/*.json`, status ≠ waiting; sama tieto kuin odottajat-vahti.py:n JATKUU), tai
+- yli 2 h vanha, kun kuittaustietoa ei ole (muut toimi-dokumentit ilman kenttää, tai sessiotiedostoja ei voi lukea).
+Odottava sessio (status waiting) ei koskaan siivoudu. Rivi `SIIVOA|<doc>|<ikä min>|<syy>`; paikallinen kopio siirtyy kansioon
+`TAULU/data/talo-arkisto/toimi/`, jotta se ei palaa uuden taulun batchissa.
 
 ## 7. Ulkoasu (omistaja 10.10.2026 klo 15.4x–15.5x ja myöhemmät täydennykset)
 
@@ -193,10 +212,10 @@ Päätoimittaja omilla riveillään, samoin Asemataulu itse.
 - BOOST = TÄYSI TARKISTUS (omistaja 20.10.2026 klo 09.56; aiemmin 14.10. klo 22.34–23.39, Raamattu 7.39): "kun se painetaan päälle,
   sen pitäisi tarkistaa että kaikki osiot taulusta ovat ajantasalla ja pitää ne ajantasalla". Napin selite "Tarkista ja päivitä koko
   taulu tunniksi". Nappi kirjoittaa `talo/boost` `{paalla, alkoi, paattyy}`; Asemataulun A-kierros (5 min) huomaa sen ja tekee heti
-  täyden tarkistuksen: mittarit, roolit, laitteet, junat TF-lokeja vasten, työlista ja tehtävät (B), sama 5 min välein
+  täyden tarkistuksen: mittarit, roolit, laitteet, junat TF-lokeja vasten ja työlista (B), sama 5 min välein
   tunnin ajan. Postivahti herättää Asemataulun lisäksi `paattyy`-kentän perusteella. Boost sammuu itsestään tunnin kuluttua.
-- ILMAN BOOSTIA: Asemataulu ei kokoa eikä tarkista itse; se vie vain sessioiden omat kirjoitukset (PT junat, työlista, tehtävät,
-  huom, VAATII TOIMIA) muuttuneina. Postivahti (Raati, Testaajat) sekä Natiiviseppä ja Julkaisija (eteneminen) kirjoittavat
+- ILMAN BOOSTIA: Asemataulu ei kokoa eikä tarkista itse; se kokoaa vain roolikortit (`kierros.py --vain-roolit`, luku 6) ja vie
+  sessioiden omat kirjoitukset (PT junat, työlista, huom, VAATII TOIMIA) muuttuneina sekä synkka.py:n siivoamat toimi-dokumentit. Postivahti (Raati, Testaajat) sekä Natiiviseppä ja Julkaisija (eteneminen) kirjoittavat
   itse kuten ennen. Raati ja Testaajat klo 08 ja kun uusi juna saapuu TF:ään.
 - PÄIVITYSNAPPI (omistaja 10.10.2026): oikean yläkulman nappi näyttää mittareiden iän (nyt, 5 min, 1 h 5 min; punainen yli 15 min).
   Napautus lähettää PT:n sessiolle kommentin "Päivitä Asemataulu"; PT ajaa `paivita.py`, vie tiedot batchilla (if_version) ja
@@ -241,8 +260,9 @@ Tekstisäännöt (otsikot, johdanto, merkit, ei-pelin asiat) koskevat kolmea nä
 | roolit (TAULU/hoitaja/roolit.json, viety versio): tila työ/odottaa/lepo/kysyy; lepo = "Levossa"; odottaa = "odottaa …"; odottaa.json:n rooli ei ole lepo | 19.10. 19.24 |
 | tyolista: ei "(palautteesi", "(pyyntösi", "(päätöksesi" | omistajan tyylilinjaus |
 
-Testit: tests/asemataulu-junat.test.mjs (tarkistin), tests/asemataulu-komento.test.mjs (komento) ja tests/asemataulu-valmiit.test.mjs
-(valmiiden arkistointi, poistetut osiot).
+Testit: tests/asemataulu-junat.test.mjs (tarkistin), tests/asemataulu-komento.test.mjs (komento), tests/asemataulu-valmiit.test.mjs
+(valmiiden arkistointi, poistetut osiot) ja tests/asemataulu-roolit.test.mjs (roolikortit työlistasta ja viimeisestä toiminnasta,
+toimi-dokumenttien siivous, tehtavat poistettu).
 
 ## 11. Google-rivi peruttu (omistaja 16.10.2026 klo 16.47)
 

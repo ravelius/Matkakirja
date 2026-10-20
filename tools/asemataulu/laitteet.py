@@ -190,7 +190,7 @@ def laite(nimi, kuvio, P, oma):
             break
     tunnettu = nimi == 'iPad' and kuvaus in IPAD_AJOT
     kuvaus = IPAD_AJOT[kuvaus] if tunnettu else kuvaus.replace('_', ' ').replace('-', ' ')
-    # tunnettu = selkokielinen ajon nimi; muuten sivu näyttää roolin tehtävän (tehtavat) ja tämän vain varalla.
+    # tunnettu = selkokielinen ajon nimi; muuten sivu näyttää roolin kortin tekstin (työlistasta, kierros.py) ja tämän vain varalla.
     rivi = {'nimi': nimi, 'tila': 'käytössä', 'rooli': rooli(pid, P), 'kuvaus': kuvaus, 'tunnettu': tunnettu,
             'kesto_min': kesto_min(etime)}
     if nimi == 'Blender':
@@ -364,7 +364,7 @@ def musiikki(P, oma):
             kansio = re.sub(r'-\d{8}$', '', m.group(1)).replace('-', ' ')
             kuvaus = f"{kansio}: {m.group(2).replace('-', ' ')}"
             break
-    # tunnettu False: sivu näyttää roolin tehtävän (tehtavat), tämä varalla.
+    # tunnettu False: sivu näyttää roolin kortin tekstin (työlistasta), tämä varalla.
     return {'nimi': 'Googlen musiikki', 'tila': 'käytössä', 'rooli': rooli(pid, P), 'kuvaus': kuvaus, 'tunnettu': False,
             'kesto_min': kesto_min(etime)}
 

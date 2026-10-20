@@ -10,7 +10,7 @@ kierroksella heti ArtifactData listin jälkeen:
 0) VALMIIDEN ARKISTOINTI (omistaja 20.10.2026 klo 23.32: "valmistuneet lista voisi olla 10 viimeisintä vain"): tyolista.json:iin
    jää valmiista riveistä 10 uusinta (valmistui, sitten ts); vanhemmat siirtyvät tiedostoon data/talo-arkisto/tyolista-valmiit.jsonl
    (yksi rivi per kohde, ei viedä tauluun). Rivi "ARKISTOITU|tyolista|<määrä>|<arkisto>". Valmis = sama sääntö kuin sivulla.
-1) Vertaa PT:n dokumentteja (junat, tyolista, tehtavat, huom) taulun nykyiseen sisältöön. Erot
+1) Vertaa PT:n dokumentteja (junat, tyolista, huom) taulun nykyiseen sisältöön. Erot
    kirjoitetaan --ulos-tiedostoon valmiiksi ArtifactData batchin writes-listaksi (op set, file_path,
    if_version listin versioista). Rivi "VIE|<doc>|<syy>" per kirjoitus. Tyhjällä taululla (uusi tili) kaikki.
 2) Vanhenemisvahti: jos junat tai tyolista on vanhempi kuin viimeisin tapahtuma (PT:n kirjattavat-tiedosto,
@@ -20,7 +20,13 @@ kierroksella heti ArtifactData listin jälkeen:
 3) Tarkistin ennen vientiä (omistaja 19.10.2026 klo 19.51, docs/moduulit/asemataulu.md): junat (+ eteneminen) ja tyolista
    ajetaan tarkista-junat.py:n läpi; dokumentti, jossa on VIRHE, jää viemättä ja tulostuu rivi
    "ESTO|<doc>|<virheiden määrä>|<ensimmäinen virhe>" — Asemataulu-sessio kertoo sen PT:lle, PT korjaa tiedoston.
-Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n valmiiden arkistoinnin (kohta 0).
+4) VANHOJEN TOIMI-DOKUMENTTIEN SIIVOUS (omistaja 20.10.2026 klo 23.48: vanha toimi-keskustelukanava-odottaa jäi punaiseksi, vaikka
+   asiaan oli vastattu): taulun talo/toimi-*-dokumentti poistetaan (batchin op delete, if_version listin versioista), kun se on
+   yli 30 min vanha ja asia on kuitattu, tai yli 2 h vanha, kun kuittaustietoa ei ole. Kuitattu = dokumentissa kenttä kuitattu/hoidettu,
+   tai toimi-<rooli>-odottaa-dokumentin roolin sessio ei enää odota (~/.claude/sessions/*.json, status ≠ waiting; sama kuin
+   odottajat-vahti.py). Rivi "SIIVOA|<doc>|<ikä min>|<syy>"; paikallinen kopio siirtyy data/talo-arkisto/toimi/-kansioon.
+Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n valmiiden arkistoinnin (kohta 0) ja toimi-kopiot (kohta 4).
+Tehtavat-dokumentti poistettiin (omistaja 20.10.2026 klo 23.48): roolikortin teksti johdetaan työlistasta (hoitaja/kierros.py).
 Sinulle-osio (talo/viestit) ja Kulutus (talo/kulutus, kulutus.py) poistettiin (omistaja 20.10.2026 klo 23.32–23.35).
 """
 import argparse
@@ -36,7 +42,11 @@ import time
 TAMA = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(TAMA, "data", "talo")
 FABLE = "/Users/Shared/Claude/Matkakirja-fable"
-PT_DOCS = ["junat", "tyolista", "tehtavat", "huom"]
+PT_DOCS = ["junat", "tyolista", "huom"]
+SESSIOT = os.path.expanduser("~/.claude/sessions")
+TOIMI_ARKISTO = os.path.join(TAMA, "data", "talo-arkisto", "toimi")
+TOIMI_KUITATTU_MIN = 30
+TOIMI_ILMAN_KUITTAUSTA_MIN = 120
 TILA = os.path.join(TAMA, "data", ".vanha-ilmoitettu.json")
 ARKISTO = os.path.join(TAMA, "data", "talo-arkisto", "tyolista-valmiit.jsonl")
 VALMIIT_NAKYY = 10
@@ -115,6 +125,60 @@ def arkistoi_valmiit(data=DATA, arkisto=ARKISTO, nakyy=VALMIIT_NAKYY):
     return len(siirrettavat)
 
 
+def toimi_doc_id(rooli):
+    """Sama kuin odottajat-vahti.py:n doc_id: "Keskustelukanava" → "toimi-keskustelukanava-odottaa"."""
+    s = str(rooli or "").split(" (")[0].strip().lower()
+    for x, y in (("ä", "a"), ("ö", "o"), ("å", "a"), ("é", "e")):
+        s = s.replace(x, y)
+    s = "".join(c if c.isalnum() else "-" for c in s).strip("-")
+    while "--" in s:
+        s = s.replace("--", "-")
+    return "toimi-" + s + "-odottaa"
+
+
+def odottavat_toimet(kansio=SESSIOT):
+    """Joukko toimi-*-odottaa-doc_id:itä, joiden sessio odottaa juuri nyt; None, jos sessiotietoa ei ole."""
+    if not os.path.isdir(kansio):
+        return None
+    tulos, luettu = set(), False
+    for p in glob.glob(os.path.join(kansio, "*.json")):
+        d = lue(p)
+        if not isinstance(d, dict):
+            continue
+        luettu = True
+        if str(d.get("status", "")) == "waiting":
+            tulos.add(toimi_doc_id(d.get("name")))
+    return tulos if luettu else None
+
+
+def siivottavat_toimet(lista, nyt=None, sessiot=SESSIOT):
+    """[(doc, ikä min, syy)] taulun toimi-*-dokumenteista, jotka poistetaan (luku 6, VAATII TOIMIA)."""
+    nyt = time.time() if nyt is None else nyt
+    odottavat = odottavat_toimet(sessiot)
+    tulos = []
+    for p in sorted(glob.glob(os.path.join(lista, "toimi-*.json"))):
+        doc = os.path.basename(p)[:-5]
+        d = lue(p)
+        ts = d.get("ts") if isinstance(d, dict) else None
+        if not isinstance(ts, (int, float)) or ts <= 0:
+            try:
+                ts = os.path.getmtime(p) * 1000
+            except OSError:
+                continue
+        ika = (nyt - ts / 1000.0) / 60.0
+        if isinstance(d, dict) and (d.get("kuitattu") or d.get("hoidettu")):
+            kuitattu = True
+        elif doc.endswith("-odottaa") and odottavat is not None:
+            kuitattu = doc not in odottavat
+        else:
+            kuitattu = None
+        if kuitattu and ika > TOIMI_KUITATTU_MIN:
+            tulos.append((doc, int(ika), "kuitattu"))
+        elif kuitattu is None and ika > TOIMI_ILMAN_KUITTAUSTA_MIN:
+            tulos.append((doc, int(ika), "ei kuittaustietoa, yli 2 h"))
+    return tulos
+
+
 def tarkistimen_virheet():
     """{doc: [virheet]} tarkista-junat.py:n mukaan (sama kansio)."""
     sp = importlib.util.spec_from_file_location("tarkista_junat", os.path.join(TAMA, "tarkista-junat.py"))
@@ -166,6 +230,7 @@ def main():
     ap.add_argument("--lista", required=True, help="ArtifactData listin out_dir/talo")
     ap.add_argument("--versiot", default="", help="doc=versio,doc=versio (listin tulosteesta)")
     ap.add_argument("--ulos", default=os.path.join(TAMA, "data", "kirjoitukset.json"))
+    ap.add_argument("--sessiot", default=SESSIOT, help="Clauden sessioiden tilatiedostot (toimi-*-odottaa-kuittaus)")
     a = ap.parse_args()
 
     versiot = {}
@@ -201,6 +266,16 @@ def main():
         else:
             print(f"VIE|{doc}|puuttuu taulusta")
         kirjoitukset.append(k)
+    for doc, ika, syy in siivottavat_toimet(a.lista, sessiot=a.sessiot):
+        if doc not in versiot:
+            print(f"VERSIO PUUTTUU|{doc}|anna --versiot {doc}=<versio listin tulosteesta>")
+            continue
+        kirjoitukset.append({"op": "delete", "collection": "talo", "doc_id": doc, "if_version": versiot[doc]})
+        oma = os.path.join(DATA, doc + ".json")
+        if os.path.exists(oma):
+            os.makedirs(TOIMI_ARKISTO, exist_ok=True)
+            os.replace(oma, os.path.join(TOIMI_ARKISTO, "%s-%d.json" % (doc, int(time.time()))))
+        print(f"SIIVOA|{doc}|{ika}|{syy}")
     tmp = a.ulos + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(kirjoitukset, f, ensure_ascii=False, indent=1)
