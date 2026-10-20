@@ -27,6 +27,8 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
 - LT korjattu: 10e6a5a68 raskas kohta 34,2 ms, syy liike-epäterävyys. Kierros 4 $D/varjot-koko/lt-gpu-komennot-4.txt (täysi res, MSAA 4: S sumea 0,
   V mv 0, K liike kamera, H0) → lt-gpu-tulos-4.txt. TEE: kevein ≤ 14 ms joka säilyttää vauhdin tunnun (V > K > S; ei skaalaa/MSAA:ta) oletukseksi
   (Jalki.cs SeinatLiikevektoreissa / Valopohja.JuoksuLiikeKappaleet) jaatyminen-208:n päälle → tarkista.sh → NS runkoon 208 + rivi PT:lle.
+- 17.34 PT/KK: rajaus kameraan ensin → c5f9217ac (linssiseppa2/hehku-avaus-208 = avaus 1f1a75eec + hehku 404a63482 + OLETUS mv seinät 0). NS kääntää →
+  LT kierros 5 (lt-gpu-komennot-5.txt, korvaa 4): A ≤ 14 → NS runkoon 208 + PT; muuten K (liike kamera) tai S oletukseksi.
 
 ## 0b. KERÄTTÄVIEN HEHKU (PT, omistaja 17.17)
 - e35e43ee0 linssiseppa2/hehku-208 (PK jaatyminen-208 10e6a5a68 päällä): kameraan kääntyvä lisäävä neliö kerättävän lapsena (Resources/JuoksuHehku.shader,
