@@ -41,6 +41,14 @@ Kun kaikki kuitattu → PT → KK "208 valmis julkaistavaksi" (KK kysyy omistaja
 - Lepäävät (vko 85 %): Karttaseppä, Äänittäjä, Sisältökirjuri, Projektiseppä, Työkaluseppä (paitsi esikatselu), NUI (32 %), LS, Lavastaja.
 - Asemataulu nollattu 11.4x: B-cron poistettu pysyvästi (7.39, #5031) – Postivahdille ja hoitajalle kerrottu.
 
+
+## 4. LISÄYS 12.40: omistaja pelaa itse kytketyllä iPadilla
+- OMISTAJA 12.38: "pystynkö itse pelaamaan peliä, jos se vain avataan minulle simulaattorissa? ei tarvitsisi odotella julkaisua" +
+  "olen nyt töissä, niin pystyn käyttämään kytkettyä ipadia." → omistaja pelaa LT:n iPad Pro 13:lla (208-runko df83610ab).
+  NS asentaa jokaisen vihreän 208-rungon iPadiin ja kertoo KK:lle; LT ei asenna, sulje eikä mittaa omistajan pelatessa (GPU-mittaus
+  vasta KK:n vahvistuksella); JU ei varaa iPadia. Etäkäyttö simulla myöhemmin omistajan pyynnöstä. Kaikille kerrottu 12.40.
+- Syväterävyys: KK:n mukaan päällä df83610ab:ssä, VS:n mukaan pois → VS tarkistaa laiteäpistä; jos päällä, myös sen liuku pidemmäksi.
+
 - HUOM PT:n virhe 12.4x: työtilan luonti epäonnistui ja commit meni päächeckoutin haaraan claude/bold-ride-vow4ki (486ec4976,
   sisälsi .claude/settings*.json + launch.json) → pushattu, PR #5036 SULJETTU mergeämättä, paikallinen commit peruttu (soft reset).
   Etähaara jäi osoittamaan 486ec4976:aan (ennen a990bbd1f); palautus vaatii force-pushin → vain omistajan luvalla.
