@@ -23,7 +23,8 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
 ## LINJAUS (omistaja 19.25 PT:n kautta, pysyvä): "käytä vain tripo Malleja"
 Kaikki hahmot, eläimet, esineet, koristeet ja kalusteet tehdään Tripolla Codexin kautta, ei käsin tai koodilla. Codexin koristeet 751–756
 siirtyvät Tripoon. Rakennuksiin ja maastoon EI muutoksia ennen omistajan päätöstä poikkeuksesta (rakennukset-v13 on jäissä).
-Kysytty PT:ltä 19.3x: Quaternius-katsojat (208) vaihdetaan PT738-Tripo-kävijöihin 209:ssä, vai otetaanko ne pois jo 208:sta.
+PT 19.4x PÄÄTTI: 208 lähtee ennallaan. Junassa 209 Mona Lisan katsojat ja kävijät vaihdetaan Tripo-kävijöihin (PT738-K1…K4 + k1, k2, vartija),
+ja vaihdon jälkeen Quaternius-ihmiset (kavijat-v1/v2) pois kokonaan, ei sekaisin. Odottaa Codexin toimitusta (louvre-kavijat-v2).
 
 ## Valmiit tällä vuorolla
 - Tausta-v6 oli jo valmis (459cd7ebb2a4). Rivi "JONO TYHJÄ" lähetettiin PT:lle 18.1x.
