@@ -1,6 +1,6 @@
 # Postivahti – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
 
-Rooli: POSTIVAHTI (Sonnet 5.5, medium). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md (14.10.: local_a24c43c0-8094-4141-b734-90b9555f5044).
+Rooli: POSTIVAHTI (Sonnet 5.5, medium). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md (14.10.: local_9d643a4e-1709-4f6f-9940-7f10706ff289).
 Checkout /Users/Shared/Claude/Matkakirja-posti, haara `postivahti`. Ohjeet (vain Macilla, peili tools/tyotavat/): KIERROS.md ja NOLLAUS.md
 samassa kansiossa. Lähettäjä: Päätoimittaja (tilinvaihto, oma nollaus) – täytä <…> ennen lähetystä.
 
