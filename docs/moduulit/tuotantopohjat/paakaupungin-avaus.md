@@ -207,10 +207,11 @@ lehden avautuminen maakortista, testit. Täydentää Pelikoodari.)*
 - **17.10.2026, pitkä nimi pystykuvassa:** "RIJKSMUSEU / M" katkesi kesken sanan iPhonen pystykuvassa; rivitys vain sanojen väliin
   ja pisimmän sanan sovitus ratkaisi saman kaikille nimille.
 
-## 9. TÄYDENTÄÄ: Äänittäjä ja Julkaisija
+## 9. Äänittäjä ja Julkaisija
 
-*(äänet vain luvalla: kertoja ja Pulu, katso `kertojan-teksti-ja-aani.md`; `mykistetyt`; vienti `vie-paketti.sh`, ämpäri,
-junaan liittäminen. Täydentää Äänittäjä ja Julkaisija.)*
+**Äänittäjä:** äänet vain luvalla (kertoja ja Pulu: `kertojan-teksti-ja-aani.md`, Pulun oma resepti `livia-aani.md`). Lukutarkistus ensin; lupa
+vain KK:n suoralla rivillä. Portti `aaniportti.py`, raaka talteen, vanhat luennat `mykistetyt`-kenttään kunnes uusi kytketty.
+**Julkaisija:** vienti `vie-paketti.sh`-työkalulla ämpäriin (ei ylikirjoitusta, korjaus uudelle polulle), junaan liittäminen Julkaisijan kaavalla.
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 
