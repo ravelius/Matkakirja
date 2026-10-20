@@ -539,7 +539,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
 
     // Ikä = mittareiden ikä (omistaja 10.10. 17.2x: "nämä eivät päivity tarpeeksi usein"); Postivahti vie mittarit 5 min välein,
     // joten muiden dokumenttien tuore aikaleima ei saa peittää vanhoja lukuja. Ilman mittareita uusin muu aikaleima.
-    var uusin = (m && typeof m.ts === 'number') ? m.ts : [j, t, r, h, tila.laitteet, tila.tehtavat].map(function (d) { return d && d.ts; }).filter(function (x) { return typeof x === 'number'; }).sort().pop();
+    var uusin = (m && typeof m.ts === 'number') ? m.ts : [j, t, r, h, tila.laitteet].map(function (d) { return d && d.ts; }).filter(function (x) { return typeof x === 'number'; }).sort().pop();
     var p = $('paivitetty');
     if (pyyntoKesken && uusin && uusin > pyyntoKesken) pyyntoKesken = 0;
     if (pyyntoKesken && Date.now() - pyyntoKesken > 180000) pyyntoKesken = 0;
@@ -728,7 +728,9 @@ section:not(.kiinni) .yhteenveto { display: none; }
       erivi.append(epaa, eura);
       ep.append(erivi);
     }
-    var tehtavatL = (tila.tehtavat && tila.tehtavat.rivit) || {};
+    // Laitteen käyttäjän tehtävä = roolin kortin teksti, kun rooli on työssä (kierros.py johtaa sen työlistasta, omistaja 20.10. 23.48).
+    var roolinTyo = {};
+    ((r && r.rivit) || []).forEach(function (x) { if (String(x.tila || '') === 'työ' && x.teksti && !/^työ käynnissä$/i.test(String(x.teksti))) roolinTyo[x.nimi] = x.teksti; });
     lr.forEach(function (x) {
       var kaytossa = x.tila === 'käytössä';
       var kortti = luo('div', 'rooli ' + (kaytossa ? 'tila-tyo' : 'tila-lepo'));
@@ -746,7 +748,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
         paa.append(ed);
       }
       kortti.append(paa);
-      var mita = kaytossa ? ((x.tunnettu ? x.kuvaus : (tehtavatL[x.rooli] || x.kuvaus)) || 'ajo käynnissä') : 'Vapaa';
+      var mita = kaytossa ? ((x.tunnettu ? x.kuvaus : (roolinTyo[x.rooli] || x.kuvaus)) || 'ajo käynnissä') : 'Vapaa';
       kortti.append(luo('div', 'r-teksti', kaytossa && x.rooli ? x.rooli + ': ' + mita : mita));
       la.append(kortti);
     });
@@ -772,8 +774,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var jarj = function (x) { var s = String(x.tila || 'lepo'); return vaatii(x) ? -1 : s === 'odottaa' ? 1 : s === 'työ' ? 2 : 3; };
     roolit.sort(function (a, b) { return jarj(a) - jarj(b); });
     var ruudukko = luo('div', 'roolit');
-    // "Työ käynnissä" korvataan tehtävän lyhyellä nimellä (Päätoimittajan tehtavat-dokumentti); muut tilatekstit (odottaa erää, levossa) sellaisinaan. Kellonaika piilossa (omistaja 10.10. 15.5x).
-    var tehtavat = (tila.tehtavat && tila.tehtavat.rivit) || {};
+    // Kortin teksti tulee roolit-dokumentista sellaisenaan: kierros.py johtaa työssä olevalle työlistan Työn alla -otsikot (omistaja 20.10. 23.48). Kellonaika piilossa (omistaja 10.10. 15.5x).
     roolit.forEach(function (x) {
       var malli = String(x.malli || (SONNET[x.nimi] ? 'Sonnet' : 'Opus')).toLowerCase();
       var s = String(x.tila || 'lepo');
@@ -783,8 +784,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
       // Effort-taso nimen perässä pienemmällä, ei lihavoituna (omistaja 10.10. 22.5x); Postivahti vie kentän effort sessionimestä.
       if (x.effort) paa.append(luo('span', 'r-effort', '(' + x.effort + ')'));
       kortti.append(paa);
-      var tyossa = s === 'työ' || /työ käynnissä/i.test(String(x.teksti || ''));
-      var selite = toimet[x.nimi] ? 'Vaatii toimia: ' + toimet[x.nimi].kysymys : (tyossa && tehtavat[x.nimi]) || x.teksti;
+      var selite = toimet[x.nimi] ? 'Vaatii toimia: ' + toimet[x.nimi].kysymys : x.teksti;
       if (selite) kortti.append(luo('div', 'r-teksti', selite));
       ruudukko.append(kortti);
     });

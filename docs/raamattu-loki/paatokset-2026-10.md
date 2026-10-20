@@ -2141,3 +2141,7 @@ Omistaja 20.10.2026 klo 23.32 (KK:n välittämä): "valmistuneet lista voisi oll
 ## TAIDEMUSEOT: YHTEISET OSAT (20.10.2026 klo 23.45)
 
 Omistajan kortit 20.10.2026 klo 23.4x (KK): yhteisiksi aloitetaan "Louvren osat kaikkiin", "Yhteiset kalusteet" ja "Valon valmiit tyypit"; "Samat kävijät" ei valittu, omistaja: "eri maissa saisi olla erilaisia ihmisiä ja vaatteita ei varmaan pysty helposti vaihtamaan kun ihmiset tehdään tripolla, joten kannattaako tehdä vain uudet ihmiset suoraan? pitää tosin ensin testata louvressa missä ihmiset näkyvät ja tarvitseeko niiden tehdä jotain". Toinen kortti: eri maihin omat ihmiset, yhteinen liikkuminen ja käytös = "Ensin testi Louvressa". Kirjattu taidemuseon-maa.md:n alkuun.
+
+## ASEMATAULU: ROOLIKORTIT ITSESTÄÄN (20.10.2026 klo 23.55)
+
+Omistaja 20.10.2026 klo 23.48 (KK): "roolit taitavat kuitenkin laahata perässä". PT:n ratkaisu KK:n suosituksesta: roolikortti johdetaan jokaisessa viennissä (työ = viimeisin toiminta alle 15 min, teksti työlistan Työn alla -riveiltä, enintään 2), käsin kirjoitettava talo/tehtavat poistettu, vahti poistaa kuitatut toimi-dokumentit 30 min ja kuittaamattomat 2 h jälkeen. Raamattu 7.39.
