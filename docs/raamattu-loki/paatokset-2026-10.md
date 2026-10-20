@@ -2165,3 +2165,21 @@ Omistajan kortit 21.10.2026 klo 00.10 (KK): 1) "kyllä, suosituksesi mukaan ja s
 ## TYÖTAPA: YÖSUUNNITELMA JOKA ILTA JA OMISTAJAN MATKA (21.10.2026 klo 00.20)
 
 Omistaja 21.10.2026 klo 00.19 (KK): "yölle pitää aina asettaa tavoitteet ja niitä pitää olla riittävästi, koska olen huomannut että aliarvioit keskimäärin vähintään kymmenkertaisesti sen miten paljon oikeasti ehdit tekemään. eli tekemistä pitää kartoittaa öille todella paljon ja priorisoida ne. ei haittaa jos kaikki ei valmistu, mutta on ainakin tarpeeksi suunnitelmia. yöllä on myös paras hetki ajaa koneelle raskaita ajoja. lisäksi olen tällä viikolla poikkeuksellisesti matkoilla torstaista maanantai aamuun asti, jolloin kone on täysin sinun käytettävissä. samalla odottaa lista pitää tarkistaa, että onko siellä jo tehtyjä ja mitä sieltä kannattaa poimia sinun itsenäisiin ajoihin mukaan." Raamattu 7.46.
+
+## PAATOKSET 21.10.2026 klo 00.40 (21.10.2026 klo 00.54)
+
+Omistajan päätökset Keskustelukanavan kortilla klo 00.40, kirjannut PT. 1) T4 ESIRENDERÖITY VIDEO -pohja SITOVA: jokainen esirenderöity video tehdään
+docs/moduulit/tuotantopohjat/esirenderoity-video.md:n mukaan ja opit viedään pohjaan (Raamattu 4.21). 2) T3 MUUTOKSIN (KK näyttää omistajalle ennen sitovaksi): päiväjunan tarkistuksista kysytään
+omistajalta joka kerta (KK kysyy; omistaja: "kysy tarkistetaanko juna vai ei joka kerta minulta. yöllä tarkistukset voi aina ajaa, mutta päivällä saatetaan tarvita juna mahdollisimman nopeasti.");
+yöllä tarkistukset aina; studiolla omistaja katsoo tarkistusajon isolta iPadilta samaan aikaan automaatin kanssa ja antaa palautteen ennen käännöstä (Raamattu 9.11 kohta 1, PÄIVÄJUNAN TARKISTUKSET
+OMISTAJALTA; pohja tuotantoputken-tarkistukset.md). 3) T1 MUUTOKSIN (KK näyttää omistajalle ennen sitovaksi): ElevenLabs-generointiin jo hyväksytyllä äänellä tarvitaan omistajan lupa vain, kun kulutus
+ylittää 3 % kuukauden krediiteistä; uusi henkilö tai ääni aina luvalla (Raamattu 5.1 3 %:N RAJA; yhtenäistetty 5.2, 7.15, 11.x ja 12.23 kohta 9). 4) KAMERA SITOVA: Kamerajohtajaan yksi pehmeä kaari
+(kaikki akselit samalla käyrällä, pehmeä kiihdytys, ei mustia häivytyksiä siirroissa); järjestys Louvre-testi (video omistajalle) -> heti kaikki museot -> oletuksena kaikkiin uusiin linsseihin ja
+peleihin -> vanhoihin vain omistajan luvalla, KK kysyy yksi kerrallaan (Raamattu 2.202; 2.69:n musta välähdys poistettu). 5) CLAUDE.md karsitaan: KK tekee CLAUDE.md-tiedostot; PT siirsi Raamattuun
+kuusi CLAUDE.md:n kohtaa, jotka puuttuivat: web-versio ilman build-vaihetta (6.19), loki vain loki-hae.mjs:llä (13.3; 7.24 korjattu), kartta on täydellinen ja testi valvoo (13.0), neljä tiliä (12.21
+TILIT), konttiympäristön NODE_USE_ENV_PROXY (12.9), arkisto ei ole ohje (7.22). 6) Raamattu 7.45:n CLAUDE.md-osa kumottu: CLAUDE.md-tiedostoja ja niiden korjauksia muutetaan aina omistajan luvalla
+(omistaja: "Ei, aina luvallasi").
+
+## PAATOKSET 21.10.2026 klo 00.51 (21.10.2026 klo 00.54)
+
+OMISTAJAN PÄÄTÖS klo 00.51 (KK:n C-kortti, sanatarkasti), kirjannut PT. 1) 18.10.-tauon purku matkan ajaksi: "unen suunnittelu on kesken, sitä ei kannata tehdä sinun yksin, muut voit" = #42 äänisivun Tekstit-osasto ja #57 Andøyan kaukomaaston kuvavirhe jonoihin; #19 uni v3 (ja #35) pysyy pidossa. 2) Olavinlinna #53/#58: "Ei, tauko jatkuu (Suositus)". 3) Uudet aloitukset #49 Android, #50 linnat, #31 Atacama: "Ei vielä, ydin ensin (Suositus)". 4) Siivous: "Kyllä, siivotaan (Suositus)" = pyörimislinssi #51 tauolla, #54 kupoli ja #40 Petřín suljetaan. Raamattu: 2.200 TAUOT JA PIDOT (18.10.2026 klo 09.37 tauko purettu vain #42 ja #57 osalta matkan ajaksi 22.–26.10.2026) ja 2.178 (tauko jatkuu).
