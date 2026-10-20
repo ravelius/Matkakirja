@@ -2044,3 +2044,7 @@ Omistaja 13.57 (kortti KK:ssa): "asenna jatkossa vain isoon ipadiin. pyydän eri
 ## PAATOKSET 20.10.2026 klo 15.11: aloitus- ja tilatiedostoihin vain voimassa oleva tila (20.10.2026 klo 15.12)
 
 Omistajan kysymys: "kannattaisiko käytössä olevia työkaluja, memory.md ja claude.md jotenkin karsia, jotta aloitus konteksti olisi pienempi" → kortti "Kyllä, tiedostot ja turhat työkalut (Suositus)": historia arkistoon (aloitus- ja tilatiedostot 5–10 kt:een; KK:n aloitus oli 312 kt, Karttasepän tila 78 kt, Natiivi-UI:n 34 kt), MEMORY.md puoleen, käyttämättömät taidot ja liittimet pois (omistaja kytkee, KK antaa ohjeen). KK tekee karsinnan. Raamattu 7.22 täydennetty.
+
+## PAATOKSET 20.10.2026 klo 15.23: tiedostokokojen vahti (20.10.2026 klo 15.23)
+
+Omistajan kysymys 15.1x: "pitäisikö tehdä myös joku työtapa raamattuun tms mikä pitäisi huolen että tällaisia ei pääsisi jatkossakaan kasautumaan?" → kortti "Sääntö ja vahti (Suositus)": Raamatun sääntö (7.22) + Postivahti mittaa joka kierroksella aloitus-, luovutus- ja tilatiedostojen sekä MEMORY.md:n koon (aloitus/luovutus/tila 15 kt, MEMORY.md 10 kt, rivi ≤ 100 merkkiä); ylitys PT:lle, PT pyytää roolia siirtämään historian arkistoon samana päivänä. Työkaluseppä tekee tools/tarkista-tiedostokoot.sh:n. KK karsi 15.14–15.18: KK:n aloitus 312 → 14 kt, Karttasepän tila 78 → 6 kt, MEMORY.md 16 → 7,4 kt; Google Drive ja Claude Docs -liittimet pois.
