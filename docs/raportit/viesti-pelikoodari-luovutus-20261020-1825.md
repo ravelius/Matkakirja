@@ -86,3 +86,12 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   lopetusta), taustalle siirtyminen avaa ☰:n; YlaRaja kehys-ryhmän worldBound (julkinen getter NUI:lta tarvittaessa); JuoksuTulos.Matkalta
   = true matkalta avattaessa (kultainen nappi "Jatka matkaa"/"Pelaa uudelleen"); Tekstitys ja Musiikki ☰:n kytkiminä; alin rivi "Poistu".
   Lähde: /Users/Shared/Claude/Matkakirja-fable/scratchpad/paatoimittaja/2253/yhteiset-saannot/pelit-yhteiset-saannot.md.
+- 00.2x (21.10.) 209g (runko 614177ad8) → PT: w1 OK, Puyi ~1/6, massassa 0, nykäykset vain kartalla. Kuvatekstien runko-SHA:
+  scratchpad-skripti uudelleenmerkitse.py (todistusraportti.merkitse + arkki kuvat/raaka/*.png:stä) – todistusajo merkitsee kaannos.txt:n
+  käännöspalvelun commitin (yksi commit rungon päällä).
+- YÖJONO (PT 00.19, omistaja 00.22): 2a kamera lähemmäs ja elävämmäksi = b5281dcff (tele 36°, katse 2 + 0,2 v, Elo ×1,4; testit).
+  2b taivaanranta: palatsissa kaukomaisema-rengas pois (vanhan sokkelon 226–390 m); Lavastajalta pyydetty ulkorengas Pekingin v11:stä
+  1,5–2 km (kielletty-ulkorengas-v1/). 2c lisää katottomia huoneita ovineen: pyydetty Lavastajalta. 3 ☰ yhteisellä PelinValikolla: NUI
+  teki jo (natiivi-ui/juoksu-valikko-209 2c2f0e7db), tarkista vain JuoksuTulos.Matkalta. 4 lentopeli WASD/nuolet = proto-haara
+  pelikoodari/lento-wasd 69d50488b (worktree wt/proto-pelikoodari-lento-wasd; Lentopeli.NappainSauva + testi; NS:lle junaan). 5 raskas
+  kohta 34 ms → 14 ms: kysytty Valosepältä kohta ja mittaustapa (iso iPad).
