@@ -21,6 +21,10 @@ haara **pelikoodari/avaus-208 = 177560643**. Seurannan ulkopuolella vain Peli-te
   laatoilla täyte jää tyhjäksi (loki "ei aukkoja").
 - Analyysi ja kuvat: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/laatat-208/ (peitto.py, saanto.py, aukot-*.png, tayte-saanto-lod2.png).
 - PT:N PÄÄTÖS 18.0x: Lavastaja korjaa lähteen (erä annettu Lavastajalle), PK:n täyte jää varmistukseksi. Laitevahvistus täytteestä puuttuu.
+- 18.1x tausta-v5: kärki **pelikoodari/tausta-v5-208 = b4e384537** (37d8e8507:n päällä; TaustaKansio v5 + EstoTiedosto palatsi-esto-v3,
+  leivottu v5:stä, paketti _valmiit/juoksupeli-palatsi-esto-v3-vienti-20261020 → JU:lle vientipyyntö). NS:lle tarjottu; VAATII v5 + esto-v3
+  ämpärissä ennen käännöstä. v5 tarkistettu: kolmioaukot poissa, korvausalueiden sisään jää aukkoja (Taihemen edessä 176 m², takana 320 m²,
+  Meridiaaniportin U-piha) → Lavastajalle kerrottu; täyte peittää.
 
 ## AVOIMET
 - GPU (juoksu ≤ 14 ms hehkun kanssa) on Valosepällä (PT 17.4x), ei PK:n.
