@@ -239,6 +239,39 @@ venyttää jälkikäteen (atempo)? – suositus: ei, pidempi huuto generoidaan s
 - [ ] Sokkokuvaus tehty; heikot kirjaimet kirjattu PT:lle.
 - [ ] Ääniportti läpi, vienti uudelle polulle, polut ja sha PT:lle / kytkijälle.
 
+## 9b. Lavastaja: rakennukset, tausta ja katottomat huoneet (Kielletyn kaupungin juoksupeli)
+
+**Työvaiheet**
+1. **Kehys ensin:** kaikki pohja.json-kehyksessä (glTF X itä, Y ylös, Z pohjoinen, origo Taihedian). Palatsin akseli on −2,0335°;
+   mallit kierretään akselille, ja Lavastajan kehys (kk) ↔ pohja muunnetaan `peking_tausta.py`:n `kk2p`/`kk_kehyksessa`-funktioilla.
+2. **Tarkat rakennukset** (A–M) omina malleinaan, LOD0/1/2 + törmäys. **Tausta** Codexin Peking-laatoista; tarkkojen mallien,
+   huoneiden ja avausten kohdat tyhjennetään KORVAA-alueina (jalanjälki + vara, kolmiot leikataan reunoilla), ja alle tulee maa −0,02.
+3. **Katottomat huoneet (havainnekuvat j9/j10):** avoimet-osat kujien varsille niin, että kujan puoleinen ulkoseinä tulee
+   reunamuurin paikalle ja ovi aukeaa kujalle. Seinät syvän punaiset ja ristikot tummaa puuta (avoimet-v3). Sijoitus, ovet ja
+   liitokset `avoimet_sijoitus.py` → `avoimet-sijoitus.json` (PK:n lukema muoto: huoneet[], liitokset[], avaukset[], kaistat[]).
+4. **Jokaisella huoneella vähintään kaksi yhteyttä kujaan** (sivuovi + päätyovi liitoksella). Verkko karsii umpikujat, joten
+   yhden oven huone jää saarekkeeksi. Tarkista taustan korkeuskartasta (lod0, 0,5 m, vapaa < 0,5 m, 1,2 m väljyys), että
+   liitokset ja kujien päät ovat oikeasti auki, ja avaa tukot taustaan (avaukset).
+5. **Katot kiinni seiniin:** Pekingin lähteessä sisämuurit ovat 7–8 m ja hallien seinät jäävät 0,5 m katon alle. Taustassa muurit
+   madalletaan pohja.json-korkeuteen + 0,5 m, ja seinien yläkärjet jatketaan katon alapintaan. Kujilla, joilla botti tai nuoli
+   kulkee ja lappeet näkyvät kujalle, hallit poistetaan kaistalta (kuja-75: 13,5 m) ja tilalle tulee katottomia huoneita.
+6. **Luovutus:** paketti `_valmiit/<nimi>-vienti-<pvm>/` → JU vienti → PK kytkee (TaustaKansio, AvoimetKansio) ja ajaa eston →
+   NS:n juna → PT:lle kuvapari pelin kulmasta (Blender-esikatselu, kamera kujan yllä juoksijan takana).
+
+**Valmiin tarkistuslista**
+- [ ] Ovet tarkistettu säteillä auki (kaikki neljä seinää) ja ovien paikat (x, z, suunta) PK:lla.
+- [ ] Liitokset auki koko leveydeltä taustan lod0:ssa; PK:n testi oikealla pohjalla ja pelin estolla läpäisty.
+- [ ] Ei kattojen suikaleita kujalla (kaistojen saumat avattu), ei leijuvia kattoja, muurit ≤ pohja-korkeus + 0,5 m.
+- [ ] Kuvapari PT:lle samasta kulmasta (ennen/jälkeen), kuvatekstit kuvan ulkopuolella.
+
+**Opit (20.10.2026)**
+- Taustan kujat ovat noin 2 m sivussa pohja.json:n kujista: liitokset piirretään taustan korkeuskartasta, ei pohjasta.
+- Lyhyet tarkistukset (pohja.json-rakennukset oven edessä) eivät riitä: taustassa voi olla rakennus, jota pohjassa ei ole.
+- Kärkikohtainen madallus litisti viereisten hallien räystäät; madalla vain kasvot, joiden kaikki kärjet ovat muurilinjan
+  kohtisuoran etäisyyden sisällä.
+- Mikä tahansa korkeuden "korjaus" tarkistetaan pelin kulmasta ennen lähetystä: v10:n ensimmäinen versio näytti huonommalta
+  kuin v9, joten valinta tuotiin PT:lle ennen jatkoa.
+
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 
 Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.

@@ -131,6 +131,39 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 syvänsininen, Orsayn antrasiitinharmaa). Linnanrakentaja: salin rakenne ja proseduraalinen runko, kehykset, patsaiden paikat,
 varjojen leivonta, julkisivut ja lähestymiskuvat. Täydentävät Valoseppä ja Linnanrakentaja.)*
 
+### 7.2 Lavastaja (ent. Linnanrakentaja): salit, henkilöt ja tilatut mallit peliin asti
+
+**Työvaiheet**
+1. **Lähtötiedot:** sali.json (osat, aukot, teos- ja veistospaikat, penkit), Linssisepän teosluettelo ja PT:n tilaus. Tarkista ensin
+   rungosta (natiiviseppa/juna-NNN), mitä on jo kytketty ja mitkä liput ovat päällä (`MuseoHenkilot.Paalla`, `MuseoElama.Paalla`,
+   `MuseoPulu.Paalla`, `KatsojatPaalla`). Media voi olla ämpärissä, vaikka peli ei näytä sitä.
+2. **Salin rakenne ja kehykset:** sali-GLB:hen kuuluvat jalustat, kaiteet ja penkit. Koodin väliaikaiset kappaleet
+   (`MuseoRakennus.cs`, "väliaikaiset") poistuvat, kun GLB latautuu. Jos GLB:stä puuttuu jalusta, veistos leijuu
+   (Louvren Nike 20.10.). Tarkista jokainen veistospaikka GLB:tä vasten.
+3. **Henkilöt ja eläimet ovat tilattuja malleja (Raamattu 2.182, 7.15, 11.7):** Codex tekee Tripo-mallit ja luurangot; Lavastaja kokoaa,
+   mitoittaa (seisova 1,68–1,78 m, istuva tuoleineen 1,32 m), sijoittaa ja liikuttaa. Hyväksytyn mallin saa ladata (Raamattu 11.6).
+   - Liikkuva henkilö tarvitsee luurangon ja leikkeet idle + walk. Kävelytahti mitataan glb:stä (askelsykli ja kesto Blenderissä).
+   - Kävely ja väistö: Ytimen `MuseoKavijat`. Paikallaan olevat henkilöt ovat simulaatiolle kiinteitä esteitä (`LisaaKiintea`).
+   - Kaksi erillistä simulaatiota samassa osassa eivät näe toisiaan: kaikki saman salin kävelijät samaan simulaatioon.
+4. **Tilattu malli peliin asti (yksi lista per malli):** posti → toimitus T7:llä → tarkistus (kolmiot, luuranko, leikkeet, mittakaava)
+   → media-paketti `_valmiit/<nimi>-vienti-<pvm>/` (LAHTEET.md, SHA256SUMS) → JU:n vienti → kytkentä proto-haaraan → **oletuksena päällä**
+   → NS:n runkoon → PT:n kuvapari. Kirjaa luovutukseen, mikä vaihe on kesken; muuten malli jää ämpäriin käyttämättä.
+5. **Luovutus seuraavalle:** proto-haara + SHA NS:lle (merge-pyyntö, juna), media JU:lle, reittien muutokset LS:lle, kuva PT:lle.
+
+**Valmiin tarkistuslista**
+- [ ] Jokainen tilattu henkilö, eläin ja esine on pelissä näkyvissä oletuksena (lippu päällä), ei vain mediassa.
+- [ ] Veistoksilla jalusta GLB:ssä tai mallina; mikään ei leiju (tarkista ylhäältä ja sivulta).
+- [ ] Kävelijät eivät kulje esteiden, toistensa eivätkä kameran läpi (Ytimen testi + `museo henkilot tila`).
+- [ ] Linssit-testit ja `tyokalut/tarkista.sh` vihreänä (älä aja niitä samaan aikaan: sama dll).
+- [ ] Mac-esikatselu (Blender, sali-GLB + media) PT:lle kuvaparina, kun PT pyytää; ei simukuvia (Raamattu 9.1).
+
+**Opit (20.10.2026 asti)**
+- Louvren Tripo-henkilöt olivat mediassa kaksi päivää, mutta `MuseoHenkilot.Paalla = false` piti ne pois pelistä. Kehityslippu
+  käännetään päälle samassa erässä, jossa media viedään.
+- Hiusten takia hylätty malli korvataan uudella ehdokkaalla samalla tunnuksella (k1); vanhaa ei poisteta mediasta.
+- Mac-esikatselussa salimallissa ei ole tauluja; kerro se kuvaparin tekstissä.
+- k1:n paikat kuvapariin otetaan Ytimen simulaatiosta väliaikaisella testillä (ei committia), jotta kuva vastaa peliä.
+
 ## 8. TÄYDENTÄÄ: Linssiseppä (PARITEETTITESTI, omistaja 23.53)
 
 *(Pakollinen. PT:n toimeksianto: uuden maan museolla on samat tiedostot ja kentät kuin Alankomailla, ja jokaiselle lattialle
