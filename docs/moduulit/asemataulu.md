@@ -56,14 +56,14 @@ Jokaisella dokumentilla on yksi kirjoittaja (ArtifactData, if_version). Kirjoitt
 | eteneminen | junan valot (luku 5) | lastaus PT; matka Natiiviseppä (vaiheet 1–2) ja Julkaisija (3–5) |
 | toimi-&lt;rooli&gt; | VAATII TOIMIA: rooli, kysymys, ts | sessio itse, jos sillä on Artifact-työkalu (PT, Asemataulu, Julkaisija, Natiiviseppä); muuten PT rivin "VAATII TOIMIA: &lt;rooli&gt;: &lt;asia&gt;" perusteella |
 | katsoja | ts (syke) | sivu itse |
-| boost | Boost päällä: ts (alkuhetki); sammuu 1 h kuluttua | sivu itse (Boost-nappi); Postivahti lukee |
+| boost | `{paalla, alkoi, paattyy}`; sammuu 1 h kuluttua | sivu itse (Boost-nappi); Asemataulu ja Postivahti lukevat |
 
 Poikkeukset yhden kirjoittajan sääntöön: Päivitä-napin vienti kirjoittaa Asemataulu-session dokumentit samoista tiedostoista, ja PT
 tyhjentää etenemisen, kun juna on TF:ssä.
 
 ## 4. Junarivit: kertyvä, lukittu ja TF
 
-Taulu näyttää kolme uusinta riviä numeron mukaan, uusin ensin. Rivillä on vain se, mikä on juuri siinä junassa; seuraavan junan asiat
+Taulu näyttää kolme riviä järjestyksessä avoin juna, lukittu juna, TF uusin ensin (omistaja 20.10.2026 klo 09.56). Rivillä on vain se, mikä on juuri siinä junassa; seuraavan junan asiat
 menevät seuraavan junan riville, ja ei-pelin asiat (Raamattu, taulun ohje, työkalut, tuotantopohjat) eivät kuulu junariveille
 ollenkaan (omistaja 19.10.2026 klo 19.48).
 
@@ -71,7 +71,7 @@ ollenkaan (omistaja 19.10.2026 klo 19.48).
 |---|---|---|---|---|
 | KERTYVÄ (lastaus, ehtoja kootaan) | "Juna N" | esim. "Työn alla" | "Työn alla:" ja "Valmiina:" | oranssi, `edistys` 0–5 junat-rivillä |
 | LUKITTU (lukituksesta TF:ään) | "Juna N" | alkaa "Lukittu" (tai käännösvaihe: "Käännössä", "Applelle"); ei sanoja valmis, TestFlight, julkaistu | vain "Valmiina:", vain lukitusversion pelaajan nähtävät asiat | vihreä, eteneminen `jakso: "matka"`, 1–5 |
-| TF (perillä) | "TF N" | sisältää sanan TestFlight, esim. "Testaajilla (TestFlight sisäisillä 14.50, ulkoisille 15.28)" | vain "Uutta (pp.kk. klo HH.MM):", aika = TF sisäisille testaajille | ei valoja |
+| TF (perillä) | "TF N" | sisältää sanan TestFlight, esim. "Testaajilla (TestFlight sisäisillä 14.50, ulkoisille 15.28)" | vain "Uutta (pp.kk. klo HH.MM; myös Macille):", aika = TF sisäisille testaajille (Julkaisijan tfN-ketju.log, rivi SISAINEN) | ei valoja |
 
 Junan ollessa TF:ssä PT muuttaa "Juna N" -rivin "TF N" -riviksi ja tyhjentää etenemisen. Lähestyvän junan arvio:
 "TestFlightissa arviolta noin klo HH.MM" (PT päivittää).
@@ -182,13 +182,16 @@ Päätoimittaja omilla riveillään, samoin Asemataulu itse.
 
 ## 8. Päivitysrytmi
 
-- CRONIT (Asemataulu-sessio luo ne heti nollauksen jälkeen ilman uutta lupaa, omistaja 15.10.2026 klo 23.35): A `*/5`, B `13,43`,
-  kulutus `7`. Tarkat askeleet: ASEMATAULU-ROOLI.md.
-- BOOST (omistaja 14.10.2026 klo 22.34, 22.40 ja 23.39, Raamattu 7.39): mittarit (kulutus, muisti, kone), roolit ja laitteet
-  päivittyvät vain Boostin aikana 5 min välein (vienti vain muuttuneesta, versiot tiedostosta). Boost-nappi kirjoittaa `talo/boost`;
-  Postivahti lukee sen kierroksellaan (enintään 20 min) ja herättää Asemataulun; Boost sammuu itsestään tunnin kuluttua.
-- HETI: junien vaiheet, eteneminen ja VAATII TOIMIA. Sisällön tarkistus (B) tunnin välein, kulutus.py klo 08 ja 20, Raati ja
-  Testaajat klo 08 ja kun uusi juna saapuu TF:ään.
+- CRONIT (Asemataulu-sessio luo ne heti nollauksen jälkeen ilman uutta lupaa, omistaja 15.10.2026 klo 23.35): A `*/5` ja kulutus `7`;
+  B-cronia ei ole (20.10.2026). Tarkat askeleet: ASEMATAULU-ROOLI.md.
+- BOOST = TÄYSI TARKISTUS (omistaja 20.10.2026 klo 09.56; aiemmin 14.10. klo 22.34–23.39, Raamattu 7.39): "kun se painetaan päälle,
+  sen pitäisi tarkistaa että kaikki osiot taulusta ovat ajantasalla ja pitää ne ajantasalla". Napin selite "Tarkista ja päivitä koko
+  taulu tunniksi". Nappi kirjoittaa `talo/boost` `{paalla, alkoi, paattyy}`; Asemataulun A-kierros (5 min) huomaa sen ja tekee heti
+  täyden tarkistuksen: mittarit, roolit, laitteet, kulutus, junat TF-lokeja vasten, työlista ja tehtävät (B), sama 5 min välein
+  tunnin ajan. Postivahti herättää Asemataulun lisäksi `paattyy`-kentän perusteella. Boost sammuu itsestään tunnin kuluttua.
+- ILMAN BOOSTIA: Asemataulu ei kokoa eikä tarkista itse; se vie vain sessioiden omat kirjoitukset (PT junat, työlista, tehtävät,
+  viestit, huom, VAATII TOIMIA) muuttuneina. Postivahti (Raati, Testaajat) sekä Natiiviseppä ja Julkaisija (eteneminen) kirjoittavat
+  itse kuten ennen. kulutus.py klo 08 ja 20 (Raamattu 7.39); Raati ja Testaajat klo 08 ja kun uusi juna saapuu TF:ään.
 - PÄIVITYSNAPPI (omistaja 10.10.2026): oikean yläkulman nappi näyttää mittareiden iän (nyt, 5 min, 1 h 5 min; punainen yli 15 min).
   Napautus lähettää PT:n sessiolle kommentin "Päivitä Asemataulu"; PT ajaa `paivita.py`, vie tiedot batchilla (if_version) ja
   ratkaisee ketjun.
@@ -222,7 +225,10 @@ Tekstisäännöt (otsikot, johdanto, merkit, ei-pelin asiat) koskevat kolmea nä
 | nimi "Juna N" / "TF N" ≤ 12 merkkiä, tila ≤ 80, pakolliset kentät, vain tunnetut kentät, nimi kerran | omistaja 14.10. ja 18.10. (C5) |
 | Juna N: edistys luku 0–5; tilassa ei sanoja valmis/TestFlight/julkaistu | valot, luku 5 |
 | TF N: tilassa TestFlight/valmis/julkaistu | luku 4 |
-| otsikot: kertyvä Työn alla + Valmiina, lukittu vain Valmiina, TF vain Uutta; kukin asia kerran | 18.10. (C5), 19.10. 19.48 |
+| otsikot (KAIKKI rivit, ei vain näkyvät): avoin Työn alla + Valmiina, lukittu vain Valmiina, TF vain yksi "Uutta (pp.kk. klo HH.MM; myös Macille):"; kukin asia kerran; ei valintamerkkejä | 18.10. (C5), 19.10. 19.48, 20.10. 09.56 |
+| Juna N: tilassa ei "Testaajilla"; Juna N, jota uudempi TF on, on TF-rivi | 20.10. 09.56 (206 ja 207 jäivät Juna-riveiksi) |
+| `--tf-lokit <julkaisija-tyokalut>`: juna, joka on lokin mukaan sisäisillä, on "TF N" ja otsikon aika = lokin SISAINEN-aika (kolme uusinta) | 20.10. 09.56, Boostin täysi tarkistus |
+| eteneminen ilman nimeä = tyhjennetty (juna TF:ssä), ei tarkisteta | luku 5 |
 | teksti alkaa otsikolla (ei johdantoa); ei ☑/☐/✅/✓ | 19.10. 19.20 |
 | ei ei-pelin asioita (Raamattu, Asemataulu, tarkistin, tuotantopohja, työkalu) junarivin kohdissa | 19.10. 19.48 |
 | eteneminen: nimi = junarivi; edistys 0–5; jakso puuttuu tai "matka"; matkalla 1–5 ja kirjoittaja Natiiviseppä 1–2, Julkaisija 3–5; tilassa TestFlight/valmis/julkaistu vasta vaiheessa 5 | 19.10. 19.18, PT 20.0x |
