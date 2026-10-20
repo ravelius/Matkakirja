@@ -10,14 +10,13 @@ LÄHDE REPOSSA: tämä tiedosto ja kaikki taulun koodi ovat repossa tools/asemat
 - TAULU = /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/. Tämän tilin taulun osoite ja roolien session id:t ovat
   tiedostossa TAULU/nykyinen.json (`taulu`, `idt.paatoimittaja`, `idt.keskustelukanava`, `idt.asemataulu`, …); komento kirjoittaa
   sen osoitekirjasta. Ohjeissa ei ole id:itä eikä osoitteita, joten tilinvaihto ei riko niitä.
-- Totuus: TAULU/data/talo/<doc>.json. Päätoimittaja (PT, `idt.paatoimittaja`) kirjoittaa junat, tyolista, tehtavat, viestit ja
-  huom. Sinä kokoat mittarit, roolit ja laitteet, viet kaiken tauluun ja pidät sisällön oikeana.
-- CRONIT HETI NOLLAUKSEN JÄLKEEN (omistaja 15.10.2026 klo 23.35, kortti "Kyllä, aina nollauksen jälkeen"): luo A (*/5) ja
-  kulutus (7) heti nollauksen jälkeen ilman uutta lupaa – tämä on omistajan pysyvä päätös, ei vertaisen pyyntö. Erillistä
-  B-cronia ei ole (omistaja 20.10.2026 klo 09.56): sisällön tarkistus (B) ajetaan vain Boostin aikana A-kierroksen osana.
+- Totuus: TAULU/data/talo/<doc>.json. Päätoimittaja (PT, `idt.paatoimittaja`) kirjoittaa junat, tyolista, tehtavat ja huom. Sinä kokoat mittarit, roolit ja laitteet, viet kaiken tauluun ja pidät sisällön oikeana.
+- CRONIT HETI NOLLAUKSEN JÄLKEEN (omistaja 15.10.2026 klo 23.35, kortti "Kyllä, aina nollauksen jälkeen"): luo A (*/5) heti
+  nollauksen jälkeen ilman uutta lupaa – tämä on omistajan pysyvä päätös, ei vertaisen pyyntö. Kulutus-cronia ei ole (Kulutus
+  poistettu, omistaja 20.10.2026 klo 23.32). Erillistä B-cronia ei ole (omistaja 20.10.2026 klo 09.56): sisällön tarkistus (B) ajetaan vain Boostin aikana A-kierroksen osana.
 - BOOST (omistaja 20.10.2026 klo 09.56): Boost päällä = TÄYSI TARKISTUS heti ja 5 min välein tunnin ajan (kaikki osiot kootaan,
   tarkistetaan ja viedään). Boost pois = et kokoa etkä tarkista itse; viet vain sessioiden omat kirjoitukset (PT:n junat,
-  työlista, tehtävät, viestit, huom ja VAATII TOIMIA). Postivahti (Raati, Testaajat) ja Natiiviseppä ja Julkaisija (eteneminen)
+  työlista, tehtävät, huom ja VAATII TOIMIA). Postivahti (Raati, Testaajat) ja Natiiviseppä ja Julkaisija (eteneminen)
   kirjoittavat tauluun itse.
 
 ## A. JOKA 5 MINUUTTI (cron "*/5 * * * *")
@@ -35,12 +34,12 @@ LÄHDE REPOSSA: tämä tiedosto ja kaikki taulun koodi ovat repossa tools/asemat
    Keskustelukanava ja Päätoimittaja omilla riveillään (aina työ), samoin sinä itse.
 3. `df -g /` → Levy "N Gi" (lisa "alle 100 Gi", kun < 100). `python3 -I TAULU/kone.py` → Muisti ja Prosessori.
    `python3 -I TAULU/laitteet.py` → laitteet-dokumentti (viimeinen JSON-rivi).
-4. Raati ja Testaajat: pidä taulun edellinen arvo (Postivahti päivittää ne TF-luvuista). Kulutus: `python3 -I TAULU/kulutus.py`
-   → hoitaja/kulutus.json → talo/kulutus.
+4. Raati ja Testaajat: pidä taulun edellinen arvo (Postivahti päivittää ne TF-luvuista).
 5. mittarit- ja roolit-dokumenttien muoto: speksi, DOKUMENTIT JA KIRJOITTAJAT.
 6. Vienti yhdellä `ArtifactData batch` -kutsulla: hae versiot `ArtifactData list talo` out_dir-kentällä, aja
    `python3 -I TAULU/synkka.py --lista <out_dir>/talo --versiot junat=V,tyolista=V,... --ulos <tiedosto>` (synkka ajaa tarkistimen;
-   rivi `ESTO|<doc>|…` = dokumentti jäi viemättä virheen takia → yksi rivi PT:lle), lisää omat dokumenttisi ja käytä if_version-kenttää
+   rivi `ESTO|<doc>|…` = dokumentti jäi viemättä virheen takia → yksi rivi PT:lle; synkka siirtää ensin työlistan vanhemmat valmiit
+   kuin 10 uusinta arkistoon TAULU/data/talo-arkisto/tyolista-valmiit.jsonl, rivi `ARKISTOITU|…`, ei toimia), lisää omat dokumenttisi ja käytä if_version-kenttää
    jokaisessa kirjoituksessa. Ristiriidassa lue uudelleen ja yritä kerran.
 
 ## B. SISÄLLÖN TARKISTUS (vain Boostin aikana, osa A-kierrosta)
@@ -71,5 +70,3 @@ mihinkään muualle kuin TAULU-kansioon ja tauluun.
 Tarkista `get_usage self` joka kierroksella. Kun konteksti ylittää 50 %, kirjoita luovutus tiedostoon
 TAULU/hoitaja/luovutus-<pvm>.md ja kerro siitä PT:lle yhdellä rivillä. PT nollaa session.
 - Viestit PT:lle: send_message + session id (`idt.paatoimittaja`; osoitekirja /Users/Shared/Claude/osoitekirja.md), ≤ 3 riviä.
-- Kulutus (cron 7 * * * *): klo 08 ja 20 (Raamattu 7.39) python3 -I TAULU/kulutus.py → hoitaja/kulutus.json → vie talo/kulutus
-  (if_version); muina tunteina kierros ohitetaan (Boostin aikana kulutus kootaan A-kierroksella).

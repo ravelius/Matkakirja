@@ -7,7 +7,10 @@ kierroksella heti ArtifactData listin jälkeen:
 
   python3 -I synkka.py --lista <listin out_dir>/talo --versiot junat=6,tyolista=2,... [--ulos kirjoitukset.json]
 
-1) Vertaa PT:n dokumentteja (junat, tyolista, tehtavat, viestit, huom) taulun nykyiseen sisältöön. Erot
+0) VALMIIDEN ARKISTOINTI (omistaja 20.10.2026 klo 23.32: "valmistuneet lista voisi olla 10 viimeisintä vain"): tyolista.json:iin
+   jää valmiista riveistä 10 uusinta (valmistui, sitten ts); vanhemmat siirtyvät tiedostoon data/talo-arkisto/tyolista-valmiit.jsonl
+   (yksi rivi per kohde, ei viedä tauluun). Rivi "ARKISTOITU|tyolista|<määrä>|<arkisto>". Valmis = sama sääntö kuin sivulla.
+1) Vertaa PT:n dokumentteja (junat, tyolista, tehtavat, huom) taulun nykyiseen sisältöön. Erot
    kirjoitetaan --ulos-tiedostoon valmiiksi ArtifactData batchin writes-listaksi (op set, file_path,
    if_version listin versioista). Rivi "VIE|<doc>|<syy>" per kirjoitus. Tyhjällä taululla (uusi tili) kaikki.
 2) Vanhenemisvahti: jos junat tai tyolista on vanhempi kuin viimeisin tapahtuma (PT:n kirjattavat-tiedosto,
@@ -17,21 +20,30 @@ kierroksella heti ArtifactData listin jälkeen:
 3) Tarkistin ennen vientiä (omistaja 19.10.2026 klo 19.51, docs/moduulit/asemataulu.md): junat (+ eteneminen) ja tyolista
    ajetaan tarkista-junat.py:n läpi; dokumentti, jossa on VIRHE, jää viemättä ja tulostuu rivi
    "ESTO|<doc>|<virheiden määrä>|<ensimmäinen virhe>" — Asemataulu-sessio kertoo sen PT:lle, PT korjaa tiedoston.
-Ei kirjoita tauluun itse eikä muuta data-tiedostoja.
+Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n valmiiden arkistoinnin (kohta 0).
+Sinulle-osio (talo/viestit) ja Kulutus (talo/kulutus, kulutus.py) poistettiin (omistaja 20.10.2026 klo 23.32–23.35).
 """
 import argparse
 import glob
 import importlib.util
 import json
 import os
+import re
+import shutil
 import subprocess
 import time
 
 TAMA = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(TAMA, "data", "talo")
 FABLE = "/Users/Shared/Claude/Matkakirja-fable"
-PT_DOCS = ["junat", "tyolista", "tehtavat", "viestit", "huom"]
+PT_DOCS = ["junat", "tyolista", "tehtavat", "huom"]
 TILA = os.path.join(TAMA, "data", ".vanha-ilmoitettu.json")
+ARKISTO = os.path.join(TAMA, "data", "talo-arkisto", "tyolista-valmiit.jsonl")
+VALMIIT_NAKYY = 10
+# Sama kuin sivun OSIO_OTSIKKO ja TYON_ALLA (asemataulu.html, vainValmiita).
+OSIO_OTSIKKO = re.compile(r"^\s*(Työn alla|Valmiina|Korjatut|Uutta|Junassa\s+\d+)\b[^:\n]{0,60}:", re.I)
+TYON_ALLA = re.compile(r"^\s*Työn alla", re.I)
+VALMISTUI_RE = re.compile(r"(\d{1,2})\.(\d{1,2})\.")
 RAJA_TAPAHTUMA = 45 * 60
 RAJA_TYOLISTA = 6 * 3600
 ILMOITUSVALI = 3600
@@ -43,6 +55,64 @@ def lue(polku):
             return json.load(f)
     except (OSError, ValueError):
         return None
+
+
+def on_valmis(r):
+    """Sivun onValmis: tila alkaa "valmis" tai tilanteessa on osio-otsikoita mutta ei Työn alla -osiota."""
+    if re.match(r"valmis", str(r.get("tila") or ""), re.I):
+        return True
+    otsikot = [x for x in str(r.get("tilanne") or "").split("\n") if OSIO_OTSIKKO.match(x)]
+    return bool(otsikot) and not any(TYON_ALLA.match(x) for x in otsikot)
+
+
+def valmistumis_avain(r, nyt=None):
+    """(vuosi*10000 + kk*100 + pv, ts); sama kuin sivun uusinEnsin. Kuluvaa kuukautta myöhempi kuukausi = edellinen vuosi."""
+    lt = time.localtime(nyt)
+    m = VALMISTUI_RE.search(str(r.get("valmistui") or ""))
+    paiva = 0
+    if m:
+        kk = int(m.group(2))
+        paiva = (lt.tm_year - (1 if kk > lt.tm_mon else 0)) * 10000 + kk * 100 + int(m.group(1))
+    ts = r.get("ts")
+    return (paiva, ts if isinstance(ts, (int, float)) else 0)
+
+
+def arkistoi_valmiit(data=DATA, arkisto=ARKISTO, nakyy=VALMIIT_NAKYY):
+    """Siirtää tyolista.json:n valmiista riveistä muut kuin `nakyy` uusinta arkistoon. Palauttaa siirrettyjen määrän."""
+    polku = os.path.join(data, "tyolista.json")
+    tl = lue(polku)
+    if not isinstance(tl, dict) or not isinstance(tl.get("rivit"), list):
+        return 0
+    valmiit = [r for r in tl["rivit"] if isinstance(r, dict) and on_valmis(r)]
+    if len(valmiit) <= nakyy:
+        return 0
+    jaavat = set(id(r) for r in sorted(valmiit, key=valmistumis_avain, reverse=True)[:nakyy])
+    siirrettavat = [r for r in valmiit if id(r) not in jaavat]
+    # Sama rivi (PT kirjoitti vanhan listan uudelleen) ei tule arkistoon kahdesti.
+    olemassa = set()
+    if os.path.exists(arkisto):
+        with open(arkisto, encoding="utf-8") as f:
+            for rivi in f:
+                try:
+                    olemassa.add(json.dumps(json.loads(rivi).get("rivi"), ensure_ascii=False, sort_keys=True))
+                except (ValueError, AttributeError):
+                    pass
+    os.makedirs(os.path.dirname(arkisto), exist_ok=True)
+    nyt = int(time.time() * 1000)
+    with open(arkisto, "a", encoding="utf-8") as f:
+        for r in siirrettavat:
+            avain = json.dumps(r, ensure_ascii=False, sort_keys=True)
+            if avain not in olemassa:
+                f.write(json.dumps({"arkistoitu": nyt, "rivi": r}, ensure_ascii=False) + "\n")
+                olemassa.add(avain)
+    pois = set(id(r) for r in siirrettavat)
+    tl["rivit"] = [r for r in tl["rivit"] if id(r) not in pois]
+    tmp = polku + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(tl, f, ensure_ascii=False, indent=2)
+    shutil.copymode(polku, tmp)
+    os.replace(tmp, polku)
+    return len(siirrettavat)
 
 
 def tarkistimen_virheet():
@@ -103,6 +173,10 @@ def main():
         k, _, v = osa.partition("=")
         if v.strip().isdigit():
             versiot[k.strip()] = int(v)
+
+    siirretty = arkistoi_valmiit()
+    if siirretty:
+        print(f"ARKISTOITU|tyolista|{siirretty}|{ARKISTO}")
 
     kirjoitukset = []
     estot = tarkistimen_virheet()
