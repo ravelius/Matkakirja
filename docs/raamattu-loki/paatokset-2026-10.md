@@ -2078,3 +2078,7 @@ Omistaja 19.28 (sanatarkasti): "Ei tarvitse etsiä vanhoja ja muuttaa koska niit
 ## PAATOKSET 20.10.2026 klo 20.09: juoksupelin suuntanuoli (20.10.2026 klo 20.14)
 
 Omistaja (KK:n kortti, kuvat 01-suunta-nelio/02-suunta-nuoli): juoksupelin suunta maaliin ja jäljellä oleva matka näytetään lasineliössä valikkonapin vieressä, matka sen alla (vaihtoehto 1). Lasineliöstä tulee UI-pohja tälle näyttäjälle (tyylikirjaan, NUI). Juna 209: maali ja nuoli yhdessä.
+
+## PAATOKSET 20.10.2026 klo 22.05: KK:n nollaus – yksi Kyllä = yksi nollaus (20.10.2026 klo 22.05)
+
+Omistajan kortti KK:ssa 22.05 ("Täsmennänkö myös yhteisen ohjeen (CLAUDE.md) niin, että yksi Kyllä antaa luvan vain yhteen nollaukseen ja seuraavasta kysytään aina uudelleen?" → "Kyllä, täsmennä (Suositus)"). Tausta: KK nollautui 21.31 ilman korttia, omistaja huomautti 22.0x. Korvaa 18.10. klo 08.48 tulkinnan "kerran saatu lupa riittää". Ilman korttia vain yöllä omistajan nukkuessa. ~/.claude/CLAUDE.md ja KK:n aloitus.md korjattu (KK); Raamattu 7.37 (PT).
