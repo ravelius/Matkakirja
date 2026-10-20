@@ -5,7 +5,7 @@ Omistajan päätös 14.10.2026 klo 10.4x: viestit lähetetään AINA session id:
 (`mcp__ccd_session_mgmt__send_message`, `session_id` = alla oleva id), EI nimellä.
 Viestit Päätoimittajalle enintään 3 riviä (mitä, sha, kuvien polku); yksityiskohdat tiedostoon.
 
-Päivitetty: 20.10.2026 klo 17.5x (Päätoimittaja): FAKTA: nykyinen tili on sami.reivinen@vvi.fi (org ddaee6a2), viikko 95 %; seuraava vaihto PÄÄTILILLE (taulu Rq5ajPU4SraE2XKd7BYAix) iPhone-paketin jälkeen (omistaja 17.54). Aiemmin 19.10. klo 08.5x: roolinimet työvaiheen mukaan (omistaja 08.48). Aiemmin 07.0x: TILINVAIHTO gmail-tilille (samireivinen@gmail.com), kaikki id:t uusia. Päätilin (18.10.) id:t eivät ole käytössä.
+Päivitetty: 20.10.2026 klo 18.2x (Päätoimittaja): TILINVAIHTO PÄÄTILILLE TEHTY 18.1x–18.20; tämän tilin taulu Rq5ajPU4SraE2XKd7BYAix, uudet id:t alla. Aiemmin 17.5x: FAKTA: nykyinen tili on sami.reivinen@vvi.fi (org ddaee6a2), viikko 95 %; seuraava vaihto PÄÄTILILLE (taulu Rq5ajPU4SraE2XKd7BYAix) iPhone-paketin jälkeen (omistaja 17.54). Aiemmin 19.10. klo 08.5x: roolinimet työvaiheen mukaan (omistaja 08.48). Aiemmin 07.0x: TILINVAIHTO gmail-tilille (samireivinen@gmail.com), kaikki id:t uusia. Päätilin (18.10.) id:t eivät ole käytössä.
 
 | Rooli | Session id | Kansio (checkout) | Malli | Alue lyhyesti |
 |---|---|---|---|---|
@@ -27,6 +27,6 @@ Päivitetty: 20.10.2026 klo 17.5x (Päätoimittaja): FAKTA: nykyinen tili on sam
 | Postivahti | local_9d643a4e-1709-4f6f-9940-7f10706ff289 | /Users/Shared/Claude/Matkakirja-posti | Sonnet 5.5, medium | mittarit, hälytykset, roolien nollaukset |
 | Asemataulu | local_7347d54e-c22d-4c7f-8c51-e13c6ba91c05 | /Users/Shared/Claude/Matkakirja-asemataulu | Sonnet 5.5, low | Asemataulun vienti (auto-tila) |
 
-Asemataulu (tämän tilin taulu): https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy
+Asemataulu (tämän tilin taulu): https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix
 
 Vastuualueet tarkemmin: docs/vastuukartta.md (repossa).
