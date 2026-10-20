@@ -28,6 +28,11 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
        → `peking/tausta8`, `pakkaa_tausta_v7.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v7-vienti-20261020/` (SHA256SUMS 8096cc91371b, mukana
        avoimet-sijoitus.json), `esikatsele_avoimet.py` → `esikatselu/avoimet-t8-lod0-*.png`. Ovet (16, säteillä auki) PK:lle, vienti JU:lle,
        NS:lle 209-jonoon. PK kytkee huoneet ja TaustaKansio v7 sekä porttiaukot pohja.json-muuriin kujan ovien kohdalle.
+       **v8 (PK 20.4x–20.5x: alue jäi verkon saarekkeeksi):** sijoitus.json:iin `liitokset[]` (kuja-75 → poikkikuja z 293,5 → käytävä x −159,5 →
+       pääverkon kuja z ≈ 191) ja `avaukset[]` (kuja-75:n suu, kaista x −158,5) → peking_tausta.py AA-alueet. `aja_tausta_v8.zsh` → `peking/tausta9`,
+       `pakkaa_tausta_v8.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v8-vienti-20261020/` (SHA256SUMS 4efc5e665569). Korkeuskartan BFS (vapaa < 0,5 m,
+       1,2 m väljyys): kaikki 4 kujaovea → pääverkon solmut. Vienti JU:lle, NS:lle 209-jonoon, PK testaa. Korkeuskarttaskriptit olivat scratchpadissa
+       (Blender BVH-säde ylhäältä 0,5 m ruuduin); tee uudelleen tarvittaessa.
    (2) Kasvit ja puut pihoille: ruukkukasvit, granaattiomenapuut ja männyt (Tripo Codexilta).
    (3) VAIN Tripo: leluesteiden tilalle esineet (arkut, maljakot, pöydät, kantotuolit) ja eunukit luurangolla. Kun mallit ovat valmiit,
        mallien nimet PK:lle, joka vaihtaa esteet. Lavastajan tilausjärjestys PK:lle 20.2x: eunukit → esteet → kasvit.
