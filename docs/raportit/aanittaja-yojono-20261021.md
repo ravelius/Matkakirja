@@ -34,3 +34,6 @@ Lisäksi valmiit: tasaus kivi_hiekka/sora −34 LUFS (`museo-askeleet-tasaus-vie
 
 ## Tila 21.10. 01.2x
 Valmiit lisäksi: v6/v7-askelkokoelmat (LS kytkenyt), Äänisivun Tekstit-kokoelmanappi (#42, julkaistu), 13 (`aanittaja-yo-juoksu-sfx-ast-20261021.md`, kaksoiskappaleet), 10 (`aanittaja-yo-mykistetyt-20261021.md`). Jäljellä: 3, 8, 12, 14, 16–17, 19–20, 22.
+
+## Tila 21.10. 01.4x (jono tyhjä)
+Valmiit: kaikki muut paitsi 9 (manifesti ↔ ämpäri; natiivin manifestit Unityssä, PK:n polut puuttuvat) ja 17 (odottaa PK:n pelitallennetta) ja 16 (odottaa PT:n teemaa). Raportit: `aanittaja-yo-*.md`, korvaukset `aanittaja-juoksu-korvaukset-20261021.md`. Vanhat Äänittäjän luovutukset (9) siirretty `docs/arkisto/luovutukset/`.

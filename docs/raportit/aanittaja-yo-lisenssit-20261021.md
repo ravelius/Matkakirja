@@ -1,0 +1,348 @@
+# Äänten lisenssitaulukko (Äänittäjä 21.10.2026, yöjono kohta 19)
+Luonnos pakettien LAHTEET/MANIFEST-tiedostoista (avainsanahaku, ei oikeudellinen tarkistus). Nimeämisvelvoitteiset (CC BY, Aalto OK5) näkyvät pelissä ☰ › Lähteet; tarkista että jokainen on siellä.
+
+## Yhteenveto
+- CC0: 144 pakettia
+- CC BY (nimeäminen!): 97 pakettia
+- PD: 52 pakettia
+- ElevenLabs (oma, generoitu): 39 pakettia
+- Soundly Pro (omistajan tilaus; ei nimeämistä): 15 pakettia
+- Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen): 8 pakettia
+- Aalto OK5 CC BY 4.0 (nimeäminen!): 6 pakettia
+- Lyria (oma, generoitu): 1 pakettia
+
+## Paketit joissa nimeämisvelvoite
+- HYLATTY-opas-koopenhamina-v7-20261013: CC BY (nimeäminen!)
+- allymes-lahteet-v1: CC BY (nimeäminen!), CC0, PD
+- andoya-alusta-v2: CC BY (nimeäminen!)
+- andoya-alusta-v3: CC BY (nimeäminen!)
+- andoya-alusta-v3b: CC BY (nimeäminen!)
+- andoya-alusta-v3c: CC BY (nimeäminen!)
+- andoya-alusta-v4: CC BY (nimeäminen!)
+- iss-telakointi-kolahdus-vienti-20261017: Aalto OK5 CC BY 4.0 (nimeäminen!), CC BY (nimeäminen!), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- iss-yotaivas-kuvat-pyorea-20261015: CC BY (nimeäminen!), CC0, PD
+- iss-yotaivas-kuvat-vienti-20261015: CC BY (nimeäminen!), CC0, PD
+- juoksupeli-aanet-v1-vienti-20261019: CC BY (nimeäminen!), CC0
+- juoksupeli-aanet-v2-2-vienti-20261019: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-aanet-v2-vienti-20261019: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-aanet-v3-vienti-20261020: CC0, Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-aanet-v4-korvaus-vienti-20261021: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-hurraa-isommat-20261020: CC0, Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-hurraa-valinta-20261019: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-kaukomaisema-rengas-v2-vienti-20261019: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v3-vienti-20261019: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v4-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v4b-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v5-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v6-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v7-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v8-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v8c-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v8e-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-v8f-vienti-20261020: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-rengas-vienti-20261019: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-v1-vienti-20261019: CC BY (nimeäminen!), CC0
+- juoksupeli-kaukomaisema-v2-vienti-20261019: CC BY (nimeäminen!), CC0
+- juoksupeli-kk-pohja-v1: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v1-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v10-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v11-vienti-20261021: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v2-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v3-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v4-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v5-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v6-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v7-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v8-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v9-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-rytmit-v2-20261019: CC BY (nimeäminen!), CC0, Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- koopenhamina-tivoli-kuvat-vienti-20261017: CC BY (nimeäminen!), PD
+- koopenhamina-tivoli-kuvat-vienti-20261017b: CC BY (nimeäminen!), PD
+- koopenhamina-tivoli-kuvat-vienti-20261017c: CC BY (nimeäminen!), PD
+- koopenhamina-tivoli-kuvat-vienti-20261017d: CC BY (nimeäminen!), PD
+- koopenhamina-tivoli-kuvat-vienti-20261017e: CC BY (nimeäminen!), PD
+- koopenhamina-tivoli-kuvat-vienti-20261017f: CC BY (nimeäminen!), PD
+- koopenhamina-tivoli-kuvat-vienti-20261017g: CC BY (nimeäminen!), PD
+- museo-askeleet-sora-kivihiekka-vienti-20261016: Aalto OK5 CC BY 4.0 (nimeäminen!), CC BY (nimeäminen!), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- museo-askeleet-tasaus-vienti-20261021: Aalto OK5 CC BY 4.0 (nimeäminen!), CC BY (nimeäminen!), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- museo-askeleet-v6-vienti-20261021: Aalto OK5 CC BY 4.0 (nimeäminen!), CC BY (nimeäminen!), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- museo-askeleet-v7-vienti-20261021: Aalto OK5 CC BY 4.0 (nimeäminen!), CC BY (nimeäminen!), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- olavinlinna-akustiikka-v1: CC BY (nimeäminen!), CC0
+- olavinlinna-kavely-v1: Aalto OK5 CC BY 4.0 (nimeäminen!), CC BY (nimeäminen!), CC0, PD
+- olavinlinna-keittio-g102-v1: CC BY (nimeäminen!), CC0
+- olavinlinna-palatsi-v1: CC BY (nimeäminen!), CC0
+- olavinlinna-pikkupiha-ajo11-vienti-20261013: CC BY (nimeäminen!), CC0, PD
+- olavinlinna-pikkupiha-v1: CC BY (nimeäminen!), CC0
+- olavinlinna-rantakivet-v1: CC BY (nimeäminen!), CC0
+- olavinlinna-rantakivet-v2: CC BY (nimeäminen!), CC0
+- olavinlinna-tott-kammio-v1: CC BY (nimeäminen!), CC0
+- olavinlinna-vaiheet-v1: CC BY (nimeäminen!), CC0
+- omat-mallit-vienti-20261009l: CC BY (nimeäminen!), CC0
+- omat-mallit-vienti-20261009m: CC BY (nimeäminen!), CC0
+- omat-mallit-vienti-20261009o: CC BY (nimeäminen!), CC0
+- omat-mallit-vienti-20261009p: CC BY (nimeäminen!), CC0
+- omat-mallit-vienti-20261009q: CC BY (nimeäminen!), CC0
+- omat-mallit-vienti-20261009r: CC BY (nimeäminen!), CC0
+- omat-mallit-vienti-20261010j: CC BY (nimeäminen!), CC0
+- pallokierros-aanimaisemat-v1: CC BY (nimeäminen!), CC0
+- peking-codex-tavoitekorjaukset-v11-pt255-20261014: CC BY (nimeäminen!), CC0
+- peking-codex-tavoitteet-v11-20261014: CC BY (nimeäminen!), CC0
+- peking-codex-v10-20261014: CC BY (nimeäminen!), CC0, PD
+- peking-codex-v11-20261014-v2: CC BY (nimeäminen!), CC0, PD
+- peking-codex-v11-20261014: CC BY (nimeäminen!), CC0, PD
+- peking-codex-v11-pt261-20261014: CC BY (nimeäminen!), CC0, PD
+- peking-codex-v6-20261013: CC BY (nimeäminen!), CC0, PD
+- peking-codex-v7-20261013: CC BY (nimeäminen!), CC0, PD
+- peking-codex-v8-20261013: CC BY (nimeäminen!), CC0, PD
+- peking-codex-v9-20261013: CC BY (nimeäminen!), CC0, PD
+- peking-piilo-p361sn1-vienti-20261018: CC BY (nimeäminen!), CC0
+- peking-piilo-p361v7-vienti-20261017: CC BY (nimeäminen!), CC0
+- prefektuuri-v1: CC BY (nimeäminen!), CC0
+- pulu-museo-aanet-vienti-20261018: CC0, Soundly Pro (omistajan tilaus; ei nimeämistä)
+- puut-vienti-20261010b: CC BY (nimeäminen!)
+- shakki-wien-aanet-vienti-20261012: CC BY (nimeäminen!), CC0, PD, Soundly Pro (omistajan tilaus; ei nimeämistä)
+- taidemuseo-alankomaat-v2: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v2b: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v2c: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v2d: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v2e: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v2f: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v2g: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v3-vienti-20261012: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-alankomaat-v3: CC BY (nimeäminen!), CC0, PD
+- taidemuseo-louvre-lahestyminen-vienti-20261017: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen), Soundly Pro (omistajan tilaus; ei nimeämistä)
+- taidemuseo-ranska-kolme-haamua-vara-vienti-20261017: CC BY (nimeäminen!)
+- taidemuseo-ranska-patsaat-nike-venus-vienti-20261017: CC BY (nimeäminen!), CC0
+- tivoli-v1-vienti-20261017: CC BY (nimeäminen!), CC0
+- tivoli-v1: CC BY (nimeäminen!), CC0, PD
+- vesi-praha4-vienti-20261015: CC BY (nimeäminen!), PD
+- vesi-praha5-vienti-20261015: CC BY (nimeäminen!), PD
+
+## Kaikki paketit
+- HYLATTY-opas-koopenhamina-v7-20261013: CC BY (nimeäminen!)
+- aanipankki-v1: CC0; ElevenLabs (oma, generoitu)
+- allymes-lahteet-v1: CC BY (nimeäminen!); CC0; PD
+- andoya-alusta-v2: CC BY (nimeäminen!)
+- andoya-alusta-v3: CC BY (nimeäminen!)
+- andoya-alusta-v3b: CC BY (nimeäminen!)
+- andoya-alusta-v3c: CC BY (nimeäminen!)
+- andoya-alusta-v4: CC BY (nimeäminen!)
+- concorde-v2: CC0
+- eiffel-v1: CC0
+- giza-v1: CC0; PD
+- giza-v2: CC0; PD
+- historiakuvat-by-sa-vienti-20261019: CC0; PD
+- ilmapallo-v1: PD
+- isoisan-uni-v2-vienti-20261019: ElevenLabs (oma, generoitu)
+- iss-asema-v1: CC0
+- iss-kertoja-fi-vienti-20261018: ElevenLabs (oma, generoitu)
+- iss-kohokohdat-kortit-20261015: PD
+- iss-kupoli-johdanto-vienti-20261013: ElevenLabs (oma, generoitu)
+- iss-lahtolasku-vienti-20261013: ElevenLabs (oma, generoitu)
+- iss-ohjaamo-v1: CC0
+- iss-ohjaamo-v3: CC0
+- iss-ohjaamo-v3b: CC0
+- iss-ohjaamo-v3c: CC0
+- iss-ohjaamo-v3d: CC0
+- iss-ohjaamo-v3e: CC0
+- iss-raketti-alusta-v3: CC0; PD
+- iss-raketti-alusta-v4: CC0; PD
+- iss-raketti-kartta-v2: CC0
+- iss-raketti-v1: CC0
+- iss-raketti-v2: CC0
+- iss-raketti-v3: CC0
+- iss-taivas-revontulet-pyorea-vienti-20261015: PD
+- iss-telakointi-kolahdus-vienti-20261017: Aalto OK5 CC BY 4.0 (nimeäminen!); CC BY (nimeäminen!); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- iss-yotaivas-jupiter-20261015: PD
+- iss-yotaivas-kuvat-pyorea-20261015: CC BY (nimeäminen!); CC0; PD
+- iss-yotaivas-kuvat-vienti-20261015: CC BY (nimeäminen!); CC0; PD
+- iss-yovalot-maailma-20261015-hylatty-p999: PD
+- iss-yovalot-maailma-20261015: PD
+- juoksupeli-aanet-v1-1-vienti-20261019: CC0
+- juoksupeli-aanet-v1-vienti-20261019: CC BY (nimeäminen!); CC0
+- juoksupeli-aanet-v2-1-vienti-20261019: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen)
+- juoksupeli-aanet-v2-2-vienti-20261019: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-aanet-v2-vienti-20261019: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-aanet-v3-vienti-20261020: CC0; Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-aanet-v4-korvaus-vienti-20261021: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-avaus-lyria-vienti-20261020: Lyria (oma, generoitu)
+- juoksupeli-avaus-musiikki-vienti-20261020: CC0
+- juoksupeli-avaus-puhe-vienti-20261020: ElevenLabs (oma, generoitu)
+- juoksupeli-avaus-puhe2-vienti-20261020: ElevenLabs (oma, generoitu)
+- juoksupeli-avaus-puhe3-vienti-20261020: ElevenLabs (oma, generoitu)
+- juoksupeli-avaus-puhe4-vienti-20261020: ElevenLabs (oma, generoitu)
+- juoksupeli-hurraa-isommat-20261020: CC0; Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-hurraa-valinta-20261019: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- juoksupeli-kaukomaisema-rengas-v2-vienti-20261019: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v3-vienti-20261019: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v4-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v4b-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v5-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v6-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v7-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v8-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v8c-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v8e-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-v8f-vienti-20261020: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-rengas-vienti-20261019: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-v1-vienti-20261019: CC BY (nimeäminen!); CC0
+- juoksupeli-kaukomaisema-v2-vienti-20261019: CC BY (nimeäminen!); CC0
+- juoksupeli-kk-pohja-v1: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v1-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v10-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v11-vienti-20261021: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v2-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v3-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v4-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v5-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v6-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v7-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v8-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-kk-tausta-peking-v9-vienti-20261020: CC BY (nimeäminen!)
+- juoksupeli-liuku-vienti-20261020: CC0
+- juoksupeli-puyi-huudot-v1-vienti-20261019: ElevenLabs (oma, generoitu)
+- juoksupeli-puyi-huudot-v2-vienti-20261019: ElevenLabs (oma, generoitu)
+- juoksupeli-rytmit-v2-20261019: CC BY (nimeäminen!); CC0; Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- kaupunkipinnat-v1: CC0
+- kielletty-kaupunki-blender-v1: CC0; PD
+- kielletty-kaupunki-v1: CC0; PD
+- kiina-kertoja-vienti-20261017: ElevenLabs (oma, generoitu)
+- kiina-william-vienti-20261017: ElevenLabs (oma, generoitu)
+- koopenhamina-havainnekuvat-vienti-20261019: CC0; PD
+- koopenhamina-tivoli-kuvat-vienti-20261017: CC BY (nimeäminen!); PD
+- koopenhamina-tivoli-kuvat-vienti-20261017b: CC BY (nimeäminen!); PD
+- koopenhamina-tivoli-kuvat-vienti-20261017c: CC BY (nimeäminen!); PD
+- koopenhamina-tivoli-kuvat-vienti-20261017d: CC BY (nimeäminen!); PD
+- koopenhamina-tivoli-kuvat-vienti-20261017e: CC BY (nimeäminen!); PD
+- koopenhamina-tivoli-kuvat-vienti-20261017f: CC BY (nimeäminen!); PD
+- koopenhamina-tivoli-kuvat-vienti-20261017g: CC BY (nimeäminen!); PD
+- kuninkaanlinna-v1: CC0
+- linna-kohtaukset-v3: CC0; ElevenLabs (oma, generoitu)
+- linna-kohtaukset-v4: CC0; ElevenLabs (oma, generoitu)
+- louvre-kartta-v1: CC0
+- louvre-v1: CC0
+- luennat-v1-vienti-20261017-era1: ElevenLabs (oma, generoitu)
+- luennat-v1-vienti-20261017-era5: ElevenLabs (oma, generoitu)
+- luennat-v1-vienti-20261017-era6: ElevenLabs (oma, generoitu)
+- luennat-v1-vienti-20261017-eu-nahtavyydet: ElevenLabs (oma, generoitu)
+- luennat-v1-vienti-20261017-eu-nostot: ElevenLabs (oma, generoitu)
+- luennat-v1-vienti-20261017-museo: ElevenLabs (oma, generoitu)
+- museo-askeleet-sora-kivihiekka-vienti-20261016: Aalto OK5 CC BY 4.0 (nimeäminen!); CC BY (nimeäminen!); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- museo-askeleet-tasaus-vienti-20261021: Aalto OK5 CC BY 4.0 (nimeäminen!); CC BY (nimeäminen!); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- museo-askeleet-v6-vienti-20261021: Aalto OK5 CC BY 4.0 (nimeäminen!); CC BY (nimeäminen!); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- museo-askeleet-v7-vienti-20261021: Aalto OK5 CC BY 4.0 (nimeäminen!); CC BY (nimeäminen!); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- notre-dame-v1: CC0
+- olavinlinna-akustiikka-v1: CC BY (nimeäminen!); CC0
+- olavinlinna-e3-aanet-v1: CC0; ElevenLabs (oma, generoitu); PD
+- olavinlinna-esineet-v1: CC0
+- olavinlinna-fp-aanet-v2-korvaus-vienti-20261008: CC0; ElevenLabs (oma, generoitu); PD
+- olavinlinna-kavely-v1: Aalto OK5 CC BY 4.0 (nimeäminen!); CC BY (nimeäminen!); CC0; PD
+- olavinlinna-keittio-g102-v1: CC BY (nimeäminen!); CC0
+- olavinlinna-keittio-koehuone-v1: CC0
+- olavinlinna-laput-v1: CC0
+- olavinlinna-palatsi-v1: CC BY (nimeäminen!); CC0
+- olavinlinna-pikkupiha-ajo11-vienti-20261013: CC BY (nimeäminen!); CC0; PD
+- olavinlinna-pikkupiha-v1: CC BY (nimeäminen!); CC0
+- olavinlinna-porttikaytava-v1: CC0
+- olavinlinna-rantakivet-v1: CC BY (nimeäminen!); CC0
+- olavinlinna-rantakivet-v2: CC BY (nimeäminen!); CC0
+- olavinlinna-rekvisiitta-v1: CC0
+- olavinlinna-repliikit-lapi-v4-vienti-20261019: ElevenLabs (oma, generoitu)
+- olavinlinna-repliikit-v1: CC0; ElevenLabs (oma, generoitu)
+- olavinlinna-soutaja-kasvot-v1: CC0
+- olavinlinna-soutu-v1: CC0
+- olavinlinna-torni-kartta-v1: CC0
+- olavinlinna-tott-kammio-v1: CC BY (nimeäminen!); CC0
+- olavinlinna-vaiheet-v1: CC BY (nimeäminen!); CC0
+- olavinlinna-vene-v1: CC0
+- omat-mallit-vienti-20261009l: CC BY (nimeäminen!); CC0
+- omat-mallit-vienti-20261009m: CC BY (nimeäminen!); CC0
+- omat-mallit-vienti-20261009o: CC BY (nimeäminen!); CC0
+- omat-mallit-vienti-20261009p: CC BY (nimeäminen!); CC0
+- omat-mallit-vienti-20261009q: CC BY (nimeäminen!); CC0
+- omat-mallit-vienti-20261009r: CC BY (nimeäminen!); CC0
+- omat-mallit-vienti-20261010j: CC BY (nimeäminen!); CC0
+- omat-mallit-vienti-20261016-v6k20: CC0
+- omat-mallit-vienti-20261016-v6k21: CC0
+- omat-mallit-vienti-20261016-v6k22: CC0
+- omat-mallit-vienti-20261017-v6k23: CC0
+- omat-mallit-vienti-20261017-v6k24: CC0
+- omat-mallit-vienti-20261017-v6k25: CC0
+- omat-mallit-vienti-20261017-v6k26: CC0
+- opas-esittely-v2-paakaupungit-7-vienti-20261016: CC0
+- pallokierros-aanimaisemat-v1: CC BY (nimeäminen!); CC0
+- pallokierros-aanimaisemat-vienti-20261017: CC0
+- pallokierros-koopenhamina-v7-vienti-20261016: CC0
+- pariisi-korttelit-v1: CC0
+- pariisi-korttelit-v2: CC0
+- pariisi-korttelit-v3: CC0
+- peking-codex-tavoitekorjaukset-v11-pt255-20261014: CC BY (nimeäminen!); CC0
+- peking-codex-tavoitteet-v11-20261014: CC BY (nimeäminen!); CC0
+- peking-codex-v10-20261014: CC BY (nimeäminen!); CC0; PD
+- peking-codex-v11-20261014-v2: CC BY (nimeäminen!); CC0; PD
+- peking-codex-v11-20261014: CC BY (nimeäminen!); CC0; PD
+- peking-codex-v11-pt261-20261014: CC BY (nimeäminen!); CC0; PD
+- peking-codex-v6-20261013: CC BY (nimeäminen!); CC0; PD
+- peking-codex-v7-20261013: CC BY (nimeäminen!); CC0; PD
+- peking-codex-v8-20261013: CC BY (nimeäminen!); CC0; PD
+- peking-codex-v9-20261013: CC BY (nimeäminen!); CC0; PD
+- peking-piilo-p361sn1-vienti-20261018: CC BY (nimeäminen!); CC0
+- peking-piilo-p361v7-vienti-20261017: CC BY (nimeäminen!); CC0
+- prefektuuri-v1: CC BY (nimeäminen!); CC0
+- pulu-museo-aanet-vienti-20261018: CC0; Soundly Pro (omistajan tilaus; ei nimeämistä)
+- puut-vienti-20261010b: CC BY (nimeäminen!)
+- raketti-andoya-alku-vienti-20261014: ElevenLabs (oma, generoitu)
+- riddarholmen-v1: CC0
+- rijksmuseum-kartta-v1: CC0
+- shakki-wien-aanet-vienti-20261012: CC BY (nimeäminen!); CC0; PD; Soundly Pro (omistajan tilaus; ei nimeämistä)
+- stadshuset-v1: CC0
+- taidemuseo-alankomaat-v1: CC0
+- taidemuseo-alankomaat-v2: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v2b: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v2c: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v2d: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v2e: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v2f: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v2g: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v3-vienti-20261012: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v3: CC BY (nimeäminen!); CC0; PD
+- taidemuseo-alankomaat-v7-vienti-20261021: CC0
+- taidemuseo-kertoja-kaanaan-vienti-20261018: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-louvre-fi-vienti-20261017: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-louvre-vienti-20261017: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-ranska-kohdat-vienti-20261014: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-ranska-lahestyminen-vienti-20261017: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-ranska-vienti-20261013: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-rodin-vienti-20261017: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-salit-fi-vienti-20261017: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-v2-manifest198-vienti-20261016b: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-v2-manifest199-vienti-20261017: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-v2-manifest200-vienti-20261017: ElevenLabs (oma, generoitu)
+- taidemuseo-kertoja-yovartio-vienti-20261013: ElevenLabs (oma, generoitu)
+- taidemuseo-louvre-lahestyminen-vienti-20261017: Sonniss GDC (rojaltivapaa; ei jakelua SFX:nä / tekoälykoulutukseen); Soundly Pro (omistajan tilaus; ei nimeämistä)
+- taidemuseo-ranska-kolme-haamua-vara-vienti-20261017: CC BY (nimeäminen!)
+- taidemuseo-ranska-patsaat-nike-venus-vienti-20261017: CC BY (nimeäminen!); CC0
+- taidemuseo-ranska-teokset-v2-vienti-20261013: PD
+- taidemuseo-ranska-v1: CC0
+- taidemuseo-ranska-v2: CC0
+- taidemuseo-ranska-v2j-vienti-20261017: CC0
+- taidemuseo-ranska-v2k-vienti-20261018: CC0
+- taidemuseo-ranska-v2l-vienti-20261018: CC0
+- taidemuseo-ranska-v2m-vienti-20261018: CC0
+- taidemuseo-ranska-v2n-vienti-20261018: CC0
+- taidemuseo-ranska-v2o-vienti-20261018: CC0
+- taidemuseo-ranska-v2p-vienti-20261018: CC0
+- taidemuseo-ranska-v2q-vienti-20261019: CC0
+- taidemuseo-ranska-v2r-vienti-20261020: CC0
+- taidemuseo-ranska-v2s-vienti-20261021: CC0
+- taivas-revontulet-vienti-20261015: PD
+- tivoli-isoisa-vienti-20261017: ElevenLabs (oma, generoitu)
+- tivoli-v1-vienti-20261017: CC BY (nimeäminen!); CC0
+- tivoli-v1: CC BY (nimeäminen!); CC0; PD
+- tivoli-v1b-vienti-20261017: CC0
+- tulivuori-astro-vienti-20261015: PD
+- valas-roiske-v1: CC0
+- valas-v1: CC0
+- vasamuseet-v1: CC0
+- vesi-praha4-vienti-20261015: CC BY (nimeäminen!); PD
+- vesi-praha5-vienti-20261015: CC BY (nimeäminen!); PD
