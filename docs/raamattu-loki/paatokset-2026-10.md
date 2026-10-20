@@ -2048,3 +2048,9 @@ Omistajan kysymys: "kannattaisiko käytössä olevia työkaluja, memory.md ja cl
 ## PAATOKSET 20.10.2026 klo 15.23: tiedostokokojen vahti (20.10.2026 klo 15.23)
 
 Omistajan kysymys 15.1x: "pitäisikö tehdä myös joku työtapa raamattuun tms mikä pitäisi huolen että tällaisia ei pääsisi jatkossakaan kasautumaan?" → kortti "Sääntö ja vahti (Suositus)": Raamatun sääntö (7.22) + Postivahti mittaa joka kierroksella aloitus-, luovutus- ja tilatiedostojen sekä MEMORY.md:n koon (aloitus/luovutus/tila 15 kt, MEMORY.md 10 kt, rivi ≤ 100 merkkiä); ylitys PT:lle, PT pyytää roolia siirtämään historian arkistoon samana päivänä. Työkaluseppä tekee tools/tarkista-tiedostokoot.sh:n. KK karsi 15.14–15.18: KK:n aloitus 312 → 14 kt, Karttasepän tila 78 → 6 kt, MEMORY.md 16 → 7,4 kt; Google Drive ja Claude Docs -liittimet pois.
+
+## OMISTAJAN PAATOKSET 20.10. 17.07 JA 17.17: SALANAPPI JA ISO IPAD VAPAASTI (20.10.2026 klo 17.19)
+
+17.07 (kortti KK:ssa, "Kyllä, näin (Suositus)"): Kun Osa II -kohtaa napauttaa viisi kertaa, aukeaa testinäkymä nykyisillä valikkopohjilla. Siinä ovat kaikki pelit ja linssit keskeneräisineen sekä tärkeimmät kohdat, esim. Mona Lisa ja juoksupelin sokkelo. Simulaattori avaa samat kohdat suoraan linkillä. Näkymä on vain testiversioissa. (Natiivi-UI.)
+
+17.17 (kortti KK:ssa, sanatarkasti): "kyllä, saat käyttää isoa ipadia aina vapaasti" → iso iPad roolien käytössä aina, auki olevasta pelistä ei kysytä (Raamattu 9.11 päivitetty). Tausta: LT ajoi testiversiota 17.03–17.14 omistajan palattua; omistaja näki sen jäätymisenä.
