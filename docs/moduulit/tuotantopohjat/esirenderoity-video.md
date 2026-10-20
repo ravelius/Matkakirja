@@ -10,7 +10,7 @@ ristiriidassa, Raamattu voittaa. Pohjan muutokset hyväksyy PT.)*
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: KULKU A (raketti, valas, uni) pelikuva nykyisestä pelistä simusta, koska video näyttää samalta kuin peli mutta sulavammalta ja tarkemmalta, sekä kuvakäsikirjoitus (luku 5); savulle lyhyt kuvaus (luku 3.2). KULKU B (aarre) hyväksytty mallikuva, jonka valoon ja materiaaleihin videon ruutua verrataan. Molemmissa ÄÄNI mallinäyte ja lyhyt kuvaus, jos videolla on ääniraita (9.11), ja KÄYTTÖLIITTYMÄ kuvakaappaus, johon videon päälle tulevat tekstit, mittarit ja havainnekuva-merkintä on piirretty. Omistajalle tuodaan vain uudet asiat ja makuvalinnat (esim. ensimmäinen kokeilu); muut tavoitteet hyväksyy PT.
 
-**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä; puuttuva pohja kysytään PT:ltä.
+**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
 
 **Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
 

@@ -10,7 +10,7 @@ ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muu
 Taidemuseon maa = yhden maan oma museo taidemuseo-linssissä (Raamattu, TAIDEMUSEO-LINSSI; vain natiivissa): maan teokset
 seinillä, patsaat huoneissa, opastettu kierros kertojan äänellä tai vapaa kulku, i-kortti ja ympyrät, salien avaukset.
 Ensimmäinen maa on Alankomaat, toinen Ranska (Louvre, Orsay, Marmottan, Rodin); Italia vasta omistajan käskystä.
-**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä; puuttuva pohja kysytään PT:ltä.
+**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
 
 **Pohja kattaa koko työn ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** aineisto ja tekstit, salin
 rakentaminen (Lavastaja), valo (Valoseppä), äänet (Äänittäjä), kytkentä (Linssiseppä, Natiivi-UI) ja vienti junaan (Julkaisija).
