@@ -2062,3 +2062,7 @@ Omistaja 17.36 (sanatarkasti): "onhan erhu musiikki generoitu eikä itse sävell
 ## VIIKKORAJA: PAATILI 85 % TALLA VIIKOLLA (POIKKEUS) (20.10.2026 klo 18.21)
 
 Omistaja 20.10.2026 klo 18.20 (Keskustelukanavan kortti, sanatarkasti): "laita raja 85% poikkeuksellisesti". Päätilin viikkoraja viikolla 20.–26.10. on 85 %; normaali päätilin linja 50 % palaa seuraavalla viikolla.
+
+## PAATOKSET 20.10.2026 klo 19.12: TILATTU MALLI PELIIN ASTI (20.10.2026 klo 19.13)
+
+Omistaja 19.12 (sanatarkasti): "Louvreen oli tilattu tripon Malleja, käytä niitä ja pyydä muutama lisää. Codex tekee. Tämä pitää korjata tuotantoputkeen". Linjaus: jokainen Codex/Tripo-malli kulkee ketjun tilattu → toimitettu → hyväksytty → pelissä; hyväksytty malli viedään kohtaukseen samassa tai seuraavassa junassa. Automaattinen tarkistus (PK) hälyttää, jos hyväksytty malli ei ole missään kohtauksessa tai tilaus on toimittamatta yli 48 h. Lupa: enintään 4 uutta Tripo-kävijää Louvreen (PT738-K1…K4); järjestys Puyi → Louvre 737–747 → kävijät.
