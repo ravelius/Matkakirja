@@ -64,9 +64,12 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
   omistaja on nähnyt. PT738-täydennys Codexille (posti 72505b752: luurangot, idle + walk, K2 sit). Pohjaan PR #5104.
 - **(2) Kävijät dataan VALMIS:** proto lavastaja/louvre-tripo-liike **db9e86c3d** (NS:n 209-jono): Ydin `MuseoHenkiloData`,
   `Resources/Museo/<maa>/henkilot.json`, MuseoHenkilot lukee datan. Kun PT738 tulee: lisää K1–K4 ranska/henkilot.json:iin (Daru: leike_seisoo "sit").
-- **(1) Yhteinen kirjasto (jalustat, penkit, kaiteet; Amsterdam penkit, kyltit, kävijät): EI ALOITETTU.** LS:n rajapinta: paikat jäävät sali.json:iin
-  (penkit [[x0,x1,z0,z1]], veistospaikat, kaarikaiteet); kävijät henkilot.json:issa. Kysy PT:ltä ensin, kuuluvatko kalusteet 19.25-sääntöön
-  (uudet kalusteet Tripolla) vai käytetäänkö olemassa olevaa geometriaa.
+- **(1) Yhteinen kirjasto, LOUVRE VALMIS (PT 21.10.: nykyinen geometria sellaisenaan, ei Tripoa):** proto **749d1657f + 6abf7e4d4**: Ydin
+  `MuseoKalusteet` (penkit nahka/lasi/pyorea, kaide, kaarikaide, jalustat = sali_blender.py C#:na; väliseinä jää GLB:hen), MuseoRakennus piirtää,
+  kun sali.json `"glb": {"kalusteet": false}`. Louvre: sali-v2s = v2r ilman kalusteita (`proto-3d/_tyo/linnanrakentaja/museo-kalusteet/kalusteet_pois_glb.py`,
+  uudet indeksi-accessorit, koska Blenderin vienti jakaa indeksejä), `_valmiit/taidemuseo-ranska-v2s-vienti-20261021/` (SHA256SUMS 5ba9c4d7eb2e) → JU vienti,
+  NS 209-jono (vaatii median). Vertailukuva `museo-kalusteet/v2r-v2s.jpg`.
+  **AMSTERDAM KESKEN:** odottaa LS:n `penkit_malli`-dataa alankomaat/sali.json:iin; sitten kalusteet_pois_glb.py Amsterdamin GLB:lle + kalusteet:false.
 
 ## LINJAUS (omistaja 19.25 PT:n kautta, pysyvä): "käytä vain tripo Malleja"
 Kaikki hahmot, eläimet, esineet, koristeet ja kalusteet tehdään Tripolla Codexin kautta, ei käsin tai koodilla. Codexin koristeet 751–756
