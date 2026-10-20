@@ -33,7 +33,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   risteyksessä (kamera seuraa, ei törmäysriskiä aukiolla). P7–P9 edelleen LT:n kierroksen 6 jälkeen.
 
 ## 20.03 LISÄYS: juna 209 "Juoksupeli täysin valmiiksi" (PT) ja tuotantoputki
-- Haara **pelikoodari/maali-209 = 2fbdc2b8c** (palaute-208 7980a4cb9:n päällä + NUI:n loppu- ja kokoelmakortti ef42706ad + V4Kierros.MaalinSuunta NUI:n nuolelle), EI junaan 208, EI NS:lle ennen NUI:n nuolta (PT: maali + nuoli yhdessä):
+- Haara **pelikoodari/maali-209 = eed78dcf1** (maali POIS oletuksena, MaaliTorni = null, kunnes NUI:n nuoli; NS:lle eed78dcf1 7e8c0c16b:n sijaan; aiemmin 2fbdc2b8c) (palaute-208 7980a4cb9:n päällä + NUI:n loppu- ja kokoelmakortti ef42706ad + V4Kierros.MaalinSuunta NUI:n nuolelle), EI junaan 208, EI NS:lle ennen NUI:n nuolta (PT: maali + nuoli yhdessä):
   maali luoteisella kulmatornilla (2e4904f26; JuoksuV4Reitti.MaaliSolmu/MaaliTorni, JuoksuV4Saanto.MaaliSuunta; oikealla pohjalla
   lyhin reitti keskeltä 965 m), kokoelma + nimetyt paikat (4b53b5547; JuoksuKokoelma, PlayerPrefs juoksupeli.kokoelma, pohja.json
   portit/hallit/palatsit/kulmatornit), näköala maalissa (465c46ff3; JuoksuMaaliKuva → Jingshan), liu'un ääni (7e8c0c16b; audio/juoksupeli/liuku/).
