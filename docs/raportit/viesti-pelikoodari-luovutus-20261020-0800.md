@@ -13,6 +13,11 @@ Proto-repo paikallinen (ei pushia), worktree /Users/Shared/Claude/wt/proto-pelik
    KS:n kujista + kujatila-keskilinjoista, päärakennusten etupihat KK 07.4x, Lavastajan v3 G-terassi + hallit ja v2 portit, KS:n
    nimet.json, Lavastajan Peking v11 -taustalaatat paketin tultua, VS:n marmori V4_marmori → laji 16; 60 fps iPad LT:llä).
 
+2. **KK 08.1x (kopio PT): v1 kelpaa rungoksi; v2:n SUUNTA** (omistajan kysymys 07.52): rakennukset Codexin Peking v11 -laatoista
+   (_valmiit/peking-codex-v11-pt261-20261014/, ENU kuten OSM), reitin portit ja hallit Lavastajalta; juostava verkko TODELLISISTA avoimista
+   tiloista rakennusten ja muurien välissä (ei 16 m ruudukkoa): oikeat kujat (läntinen pitkä katu), porttien tunnelit, pihojen läpi.
+   Ennen kuvia 60 fps iPadilla ja Puyi aina näkyvissä. Kirjattu V2-SUUNNITELMA.md:n loppuun (korvaa epätasaisen ruudukon ehdotuksen).
+
 ## JUNA 208 (KK OK:t saatu)
 - **f6e92d277** (haara pelikoodari/ovet-etelaan-208) = fe6db12fb (halli + clip-variantit, KK OK H1) + 4c31cdfdf (ovet etelään, omistaja 07.12,
   KK OK 07.5x) + varianttien lämmitys (PT 07.4x, LT:n 350 ms; simu: "sokkelon variantit lämmitetty" ennen 1. korttelia). PT antaa NS:lle.
