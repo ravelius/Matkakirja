@@ -6,7 +6,8 @@ Osoitekirja /Users/Shared/Claude/osoitekirja.md; viestit `mcp__ccd_session_mgmt_
 ## 0. ENSIN uudelleenkäynnistyksen jälkeen
 1. Tarkista lukot `/tmp/matkakirja-kaannospalvelu{,-2}.lukko` (pitäisi olla poissa) ja ettei Unity/simuja ole käynnissä.
 2. **VS juna 209 Louvre-atlas af60d60f8** (paketti taidemuseo-ranska-v2r JO ämpärissä 13.55): `cd /Users/Shared/Claude/julkaisija-tyokalut; nohup zsh vs-louvre-atlas-209-kaanna.zsh > vs-louvre-atlas-209.log 2>&1 &` → KÄÄNNETTY + SIMU NYT VS:lle (vain iPhone: Horatius + madonna + Kythera, parit vain PT:lle). Käännös pysäytettiin 13.58 kesken.
-3. **TKS esikatselu ajo 5** (korjaus 589133cc0, ~10 min, L1-lukko): anna UNITY NYT kun TKS pyytää.
+3. **PK ilmestymiset-208 e707a2475** (L2 → _tyo/pelikoodari/ilmestymiset-208-app, ~15 min) → SIMU NYT iPad + iPhone (juoksubotti, PT: näkyvyys/suorituskyky = tekniikkaa).
+4. **TKS esikatselu ajo 5** (korjaus 589133cc0, ~10 min, L1-lukko): anna UNITY NYT kun TKS pyytää.
 
 ## 1. Linjaukset tänään (sitovat)
 - Juna 208: EI TF:ää ennen PT:n "OMISTAJA PYYSI JULKAISUA" (omistaja 09.47).
