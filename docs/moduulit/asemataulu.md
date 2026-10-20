@@ -234,7 +234,7 @@ Odottava sessio (status waiting) ei koskaan siivoudu. Rivi `SIIVOA|<doc>|<ikä m
   korvaa vientiä. Taulun aika on dokumentin `ts`, joten PT päivittää myös sen.
 - KONTEKSTIPALKIN TUOREUS (omistaja 21.10.2026 klo 01.13: taulu näytti KK:n 35 %, kun luku oli 29 %): `kk_konteksti` ja `pt_konteksti`
   haetaan `get_usage`lla JOKA kierroksella, myös ilman Boostia, ja heti kun Postivahti ilmoittaa nollauksesta. Jos luku on yli 15 min vanha
-  tai session id on vaihtunut, palkki näyttää "päivittyy" eikä vanhaa lukua (kentät pois mittarit-dokumentista, kunnes tuore luku on haettu).
+  tai session id on vaihtunut, vanhaa lukua ei viedä: kentät poistetaan mittarit-dokumentista, kunnes tuore luku on haettu (sivun "päivittyy"-näyttöä ei tehdä, PT 21.10.2026).
 - VANHENEMINEN: synkka.py ilmoittaa "VANHA|<doc>" (Asemataulu → PT "ASEMATAULU VANHA"), kun junat tai työlista on yli 45 min jäljessä
   viimeisimmästä tapahtumasta tai työlista yli 6 h päivällä.
 
