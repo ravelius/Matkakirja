@@ -2054,3 +2054,7 @@ Omistajan kysymys 15.1x: "pitäisikö tehdä myös joku työtapa raamattuun tms 
 17.07 (kortti KK:ssa, "Kyllä, näin (Suositus)"): Kun Osa II -kohtaa napauttaa viisi kertaa, aukeaa testinäkymä nykyisillä valikkopohjilla. Siinä ovat kaikki pelit ja linssit keskeneräisineen sekä tärkeimmät kohdat, esim. Mona Lisa ja juoksupelin sokkelo. Simulaattori avaa samat kohdat suoraan linkillä. Näkymä on vain testiversioissa. (Natiivi-UI.)
 
 17.17 (kortti KK:ssa, sanatarkasti): "kyllä, saat käyttää isoa ipadia aina vapaasti" → iso iPad roolien käytössä aina, auki olevasta pelistä ei kysytä (Raamattu 9.11 päivitetty). Tausta: LT ajoi testiversiota 17.03–17.14 omistajan palattua; omistaja näki sen jäätymisenä.
+
+## OMISTAJAN PAATOS 20.10. 17.37: MUSIIKKI AINA LYRIALLA (20.10.2026 klo 17.38)
+
+Omistaja 17.36 (sanatarkasti): "onhan erhu musiikki generoitu eikä itse sävelletty? kaikki uudet musiikit pitää olla lähtökohtaisesti generoitu lyralla, muissa tapauksissa pitää pyytää minulta lupa". Kortti 17.37: juoksun avauksen erhu tehdään yhdellä Lyria-kutsulla, Freesound-erhu pois. Syy läpimenoon: KK:n tavoite ja PT:n ohje 17.2x sanoivat "valmiista lähteestä" eikä niitä tarkistettu 19.10. linjausta vasten. Raamattu 5.15 päivitetty. Lisäksi 17.36: kertojan "Moona Lisa" -ääntämys palautelistaan, ei vielä uutta äänitystä.
