@@ -122,11 +122,47 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 8. **Historiaosio toistaa pysäkin kertomuksen.**
 9. **Pulun kutsu kuvaa piirteen, jota pelaaja ei näe vapaan lennon alussa.**
 
-## 7. TÄYDENTÄÄ: Linssiseppä (lento ja kamera)
+## 7. Linssiseppä (lento ja kamera)
 
-*(kierroksen rakenne ja ajoitus (`docs/kohtaukset/pallokierros/liikesaannot.md`, `suunnitelma.md`), kohteen kerronnan alkaminen
-laskeutumisessa, historiaosioiden paikat reitillä (kukin omassa paikassaan), nimien näyttö, koko reitin karkea esilataus, kori ja
-köydet, kameran korkeus (`H_m`), Pulun kutsun kytkentä. Täydentää Linssiseppä.)*
+*(Linssiseppä 20.10.2026, PT:n toimeksianto (omistaja 22.38); Lontoon, Prahan, Ateenan ja Kööpenhaminan kierrosten opit, ei uusia
+sääntöjä. Liikesäännöt luokittain: `docs/kohtaukset/pallokierros/liikesaannot.md`; koodi proto-gitissä `Linssit/Ydin/Kierros/`
+(OpasSilmukka, OpasKehys, OpasHistoria, Pallokierros) ja `Linssit/Unity/`.)*
+
+**Työvaiheet (tässä järjestyksessä):**
+1. **Tarkista ensin versiot.** `ls /Users/Shared/Claude/proto-3d/_valmiit | grep <kaupunki>-v` ja sovi viestillä kaupunkia
+   työstävän roolin kanssa, kuka tekee version N (ämpäri on muuttumaton: vain ensin viety versio kelpaa).
+2. **Data uuteen versiopolkuun.** Karttasepän kohdelista ja Sisältökirjurin kerronta ja historiaosiot → `opas/pallokierros-vN/<kaupunki>.json`
+   (edellisen version päälle), `Pallokierros.Versiot`-rivi ja kultainen tiedosto `Linssit-testit/kultaiset/pallokierros-v1/<kaupunki>.json`.
+   Kuvat oppaan kuvalistasta (`opas/kuvat-vN/kuvat.json`, Q-tunnuksella, `Pallokierros.TaydennaKuvat`); tekijät ☰ › Lähteisiin.
+   Vientipaketti `_valmiit/opas-pallokierros-<kaupunki>-vienti-<pvm>` Julkaisijalle; JSON ämpäriin ennen kuin haara pyydetään junaan.
+3. **Lento ja kamera liikesääntöjen mukaan.** Lennon kesto, rampit, kääntö ja panorointi (liikesäännöt luku 1); saapuminen nopeudella
+   0, pysähdyksen kaari = pysähdyksen kesto (luku 3); esittelykorkeus 0,5–0,7 × H maasta (luku 3b, H Karttasepän jalanjäljistä tai
+   omasta pintamallista, ei Googlen laatoista). Kameraan kirjoittaa vain Kamerajohtaja / `KameraKirjoittaja.Aseta`.
+4. **Kerronnan ajoitus kameraan.** Kohteen ensimmäinen lause päättyy saapumishetkellä ± 1 s (lauseajoista); hiljaisuus kerrontojen
+   välissä enintään 1,5 s. Historiaosio soi vain lennolla, jonka kesto riittää osioon, omassa paikassaan reitillä.
+5. **Nimet, kori ja napit.** Kartalla ja kohdelistassa vain paikan nimi; kori ja köydet (`KoriLiike`, keinunta ja vastaliike);
+   kierroksen napit `Lennä itse | < ■ ▶ > | Kysy` (omistaja 19.10. 11.27), vapaassa lennossa vain ohjaimet, `<` ja `Kysy`.
+6. **Esilataus.** Reittikamerat liukuvat pallon edellä mutta eivät seuraavan pysähdyksen yli (Googlen laattojen ehtorajat);
+   saapuminen ei odota laattoja pallossa. Lue lokin laattaosuus ja latausportin aika jokaisesta pysähdyksestä (`kierrosyhteenveto.py`).
+7. **Pulun kutsu** kytketään kierroksen loppuun Tekstit-osaston tunnuksella `pulu-vapaalento-kutsu-<kaupunki>`.
+8. **Testit ja todistus.** Kierroksen testit (`PallokierrosV1Testit`, `KippiPysahdyksetTestit`, `kaanna.sh Pallokierros`),
+   `tarkista.sh` 0; kuvat ja nopeusloki (`mittaa-kippi-nopeus.py`)  vain simusäännön mukaan (omistaja 20.10. 11.45: uusi tekniikka, pyydetyt kuvat tai yöjuna). Haara Natiivisepälle.
+
+**Mitä luovutat:** haara + sha Natiivisepälle; vientipaketin polku Julkaisijalle; `H_m`-poikkeamat Karttasepälle (pituus korkeutena,
+yhden lähteen luku); kuvat ja nopeusloki PT:lle, jos niitä pyydettiin.
+
+**Valmiin tarkistuslista (Linssiseppä):**
+- [ ] Versio N tarkistettu `_valmiit`-kansiosta ja sovittu; JSON ämpärissä, `Pallokierros.Versiot` ja kultainen tiedosto päivitetty.
+- [ ] Kaikki 8 kohdetta + avaus ja loppu soivat; ensimmäinen lause päättyy saapumiseen ± 1 s; tauot ≤ 1,5 s.
+- [ ] Historiaosiot omissa paikoissaan, eivät venytä pysähdystä.
+- [ ] Esittelykorkeus 0,5–0,7 × H (tai kattojen yläpuolella alueilla); ei kattorajaa 55 m pallon esittelyssä.
+- [ ] Kuvat kaikilla kohteilla, tekijät Lähteissä; napit linjauksen mukaan.
+- [ ] Testit ja `tarkista.sh` vihreänä; kamera vain Kamerajohtajan kautta (kameravahti).
+
+**Opit:**
+- Kaksi roolia teki saman version (Ateena v12): versio sovitaan ennen työtä (vaihe 1).
+- Saapumisen laatat jäivät vajaiksi (Lontoon Tower 58 %): reittikamerat pallon edellä ja portin aika lokista ennen OK:ta.
+- Kerronta alkoi ennen kuin kohde näkyi, ja historiaosio venytti pysähdyksen 35–55 sekuntiin: ajoitus lauseajoista (vaihe 4).
 
 ## 8. TÄYDENTÄÄ: Karttaseppä (kaupunki)
 

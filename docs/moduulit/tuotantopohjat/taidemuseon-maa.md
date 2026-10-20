@@ -164,14 +164,63 @@ varjojen leivonta, julkisivut ja lähestymiskuvat. Täydentävät Valoseppä ja 
 - Mac-esikatselussa salimallissa ei ole tauluja; kerro se kuvaparin tekstissä.
 - k1:n paikat kuvapariin otetaan Ytimen simulaatiosta väliaikaisella testillä (ei committia), jotta kuva vastaa peliä.
 
-## 8. TÄYDENTÄÄ: Linssiseppä (PARITEETTITESTI, omistaja 23.53)
+## 8. Linssiseppä: data, kytkentä ja pariteettitesti
 
-*(Pakollinen. PT:n toimeksianto: uuden maan museolla on samat tiedostot ja kentät kuin Alankomailla, ja jokaiselle lattialle
-oma askelääni. Alankomaiden museokansion tiedostot `Resources/Museo/alankomaat/`: `teokset.json`, `sali.json`, `huoneet.json`,
-`kierros.json`, `kohdat.json`, `kohtazoom.json`, `veistokset.json`, `nayttelykuvat/` ja lähestymisaineisto (`lahestyminen.json`
-+ kuvat). Täydentää Linssiseppä: testin runko (tiedostot, pakolliset kentät, koneellinen vertailu maiden välillä), askeläänten
-lattiakohtainen kartoitus ja tulokset. Tilanne 17.10. nähtävä vertaamalla Ranskan kansiota Alankomaihin, esim. Ranskan
-`kohdat.json` odottaa vientiä; Sisältökirjuri toimittaa kohdat docsiin.)*
+*(Linssiseppä 20.10.2026, PT:n toimeksianto (omistaja 22.38, tuotantopohjat sitoviksi); Alankomaiden ja Ranskan museotyön opit, ei uusia
+sääntöjä. Koodi proto-gitissä: `Linssit/Ydin/Museo/` (MuseoKierros*, MuseoData, MuseoMaa) ja `Linssit/Unity/Museo*.cs`, testit
+`Linssit-testit/Testit/Museo*Testit.cs`.)*
+
+**Työvaiheet (tässä järjestyksessä):**
+1. **Maan kansio ja polut.** Uusi maa saa kansion `Resources/Museo/<maa>/` ja rivin `MuseoMaa`-luokkaan; koodissa ei ole maan nimeä
+   kovakoodattuna (`MuseoMaaTestit.EiKovakoodattuaMaata`). Salin rakenne, esteet ja penkit tulevat `sali.json`:sta (`glb`, `esteet`,
+   `penkit`), ei vakioista.
+2. **Data PT:n hyväksymästä teosluettelosta.** `teokset.json` (tunnus, `tekija` täsmälleen kuten `taiteilijat.json`:n avain, mitat,
+   inventaarinumero, krediitti, `lahde_url`), `sali.json`:n paikat (osa, seinä, `lattia`, kehysprofiili), `huoneet.json` (salitekstit ja
+   avaukset tunnuksina), `kierros.json` (pysähdysjärjestys), `veistokset.json` (mitat vain varmistetuilla kappaleilla). Sisältökirjurin
+   tekstit tuodaan tunnuksilla; Linssiseppä ei muotoile faktoja (pohja `uusi-linssi.md`, kultainen polku 12).
+3. **Kuvat.** Commonsin PD-Art-kuvat ASTC-ruutupaketteina; yli 8192 px:n teoksille ruutupyramidi paketin `teos.json`:sta, ettei
+   lähikuva zoomaudu kehyksen sisällä väärässä koossa (Mona Lisa, 19 Ranskan teosta 20.10.). Ylivalotus tarkistetaan mittaamalla
+   lähdekuvaa vasten (Alankomaiden 19 teosta 15.10.).
+4. **Kehykset ja kyltit.** Kehysprofiili paikalle `sali.json`:ssa (Lavastajan mitat); kuvan oma kehys peitetään, ettei kehyksiä ole
+   kahta (La Belle Jardinière, kaariteos); kylttien teksti (nimi, tekijä, vuosi) samasta lähteestä kuin nimikyltti, generaattorilla.
+5. **Kierros ja kamera.** Kierros kulkee Kamerajohtajan kautta (`uusi-linssi.md` luku 3): saapuminen, lähestyminen yhtenä jatkuvana
+   zoomina kehysten täyttämään lähikuvaan, Auto Zoom ja kertojan kohdat (`kohtazoom.json`), ulosnipistys ja vapaa kulku.
+   Pitkät siirrot mustan alla (siirtokartta), ei pitkää liukua.
+6. **Lähestyminen ja äänet.** `lahestyminen.json` + Codexin pysty- ja vaakakuvat; askeläänet ja lähestymisäänet datasta
+   (`MuseoMaaTestit.LahestymisAanetDatasta`). Kertojan äänet Äänittäjältä manifestin kautta.
+7. **Pariteettitesti (kohta alla) ja todistus**, sitten Natiivisepälle junaan. Tripo-hahmot (katsojat, kävelijät) tekee Lavastaja;
+   Linssiseppä tarkistaa, ettei opaskierroksen reitti tai kuvakulma muutu (kävelijät väistävät samaa kuvakiilaa kuin MuseoElama).
+
+**Pariteettitesti (uusi maa = Alankomaiden taso, omistaja 16.10. 23.53):**
+- **Tiedostot:** `teokset.json`, `sali.json`, `huoneet.json`, `kierros.json`, `kohdat.json`, `kohtazoom.json`, `veistokset.json`,
+  `nayttelykuvat/`, `lahestyminen.json` + lähestymiskuvat (pysty ja vaaka) ja `kyltit/`, jos maalla on teoskyltit. Puuttuva tiedosto
+  = ei pariteettia; tyhjä tiedosto vain PT:n luvalla ja syy kirjattuna.
+- **Kentät:** jokaisella teoksella kuvateksti, krediitti, `lahde_url` ja `tekija_wikidata`; jokaisella teoksella `taiteilijat.json`-avain
+  (koneellisesti); jokaisella paikalla `lattia`; jokaisella kierroksen pysähdyksellä kertojan tunnus tai kirjattu syy.
+- **Koneellisesti:** `sh Linssit-testit/kaanna.sh Museo` (polut, ripustus, veistokset, kierros kertojalle, lähestyminen,
+  Auto Zoom, kertojan kohdat lähikuvassa iPadin vaaka-, iPhonen vaaka- ja pystyruudulla, hyppyvartija koko kierrokselle iPhone + iPad).
+  Maiden välistä tiedosto- ja kenttävertailua ei ole vielä yhtenä testinä: tee vertailu käsin tämän listan mukaan, kunnes se on
+  `MuseoMaaTestit`-luokassa.
+- **Askeläänet lattioittain:** `MuseoAskeleet` valitsee näytteen lattian mukaan (`parketti_*` → parketti, `kivi_marmori_ruutu` →
+  marmori, muu → parketti). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita Äänittäjälle ne,
+  joilla ei ole omaa näytettä. Tilanne 20.10.: Ranskan `kivi_hiekka` (1) ja `sora` (1) soivat parkettina, kunnes omat näytteet tulevat.
+- **Tulos** luovutukseen: tiedostot ✓/✗, kenttien puutteet, lattiat ja niiden näytteet, testien määrä.
+
+**Kamera ja zoom (opit 20.10. asti):**
+- Pysähdyksen kesto on vähintään `PysahdysMinS` (6 s) ja pitenee kertojan mukaan; Auto Zoom pidentää lyhyttä pysähdystä, jotta
+  lähikuva ehtii pitoajan. Testaa aina myös ilman kertojaa (`MuseoAutoZoomDiagTestit`): ilman sitä vika näkyy vain laitteella.
+- Pystyruudussa kangas täyttää ruudun korkeuden ja leveä maalaus rajautuu sivuilta (omistaja 20.10. 19.56, kortti); vaakaruudussa
+  sovitetaan kehyksen ulkoreuna. Kertojan alue, joka on ruutua leveämpi, näkyy pystyssä ruudun levyisenä keskeltä.
+- Kameran nopeus on rajattu myös metreinä (`LiukuMaxMs` 4 m/s): iso maalaus kaukaa katsottuna liikutti kameraa 20–30 cm/ruutu.
+- Pelaajan zoomaus tai liikuttelu ei vaihda tilaa; ulosnipistys pysähtyy pehmeästi koko tauluun ja vasta uusi ulosnipistys
+  kysyy vapaasta kulusta (omistaja 20.10. 17.31).
+
+**Valmiin tarkistuslista (Linssiseppä):**
+- [ ] Pariteettitesti tehty ja tulos luovutuksessa; askeläänten puutteet Äänittäjällä.
+- [ ] `kaanna.sh Museo` ja `tarkista.sh` 0 virhettä; hyppyvartija iPhone + iPad koko kierrokselle.
+- [ ] Kuvat: ruutupyramidi yli 8192 px:n teoksille, ylivalotus mitattu, yksi kehys per teos.
+- [ ] Auto Zoom ja kertojan kohdat testattu pysty ja vaaka, kertojan kanssa ja ilman.
+- [ ] Natiivisepälle haara + sha; todistus vain simusäännön mukaan (omistaja 20.10. 11.45: uusi tekniikka, pyydetyt kuvat tai yöjuna).
 
 ## 9. Äänittäjä
 

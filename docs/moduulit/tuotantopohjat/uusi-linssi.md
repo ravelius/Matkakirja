@@ -223,7 +223,7 @@ Kultaisesta polusta poiketaan vain PT:n hyväksynnällä; poikkeama joko kirjata
 ## 8. TÄYDENTÄÄ
 
 ### Karttaseppä
-*(TÄYDENTÄÄ: Karttaseppä, 17.10.2026, Kiinan dynastiat -linssin aineistotyön pohjalta (19 avainvuotta, 241 kerrosta, epävarmat
+*(Karttaseppä 17.10.2026, Kiinan dynastiat -linssin aineistotyön pohjalta (19 avainvuotta, 241 kerrosta, epävarmat
 taistelupaikat alueina); ei uusia sääntöjä. Malli: `data/linssit/kiinan-dynastiat/` ja `tools/kiinan-dynastiat/`.)*
 
 **Tuotokset linssiä kohti (tässä järjestyksessä):**
@@ -260,11 +260,23 @@ väri kuvaparilla), Karttaseppä vain kirjaa ne `vari`-kenttiin ja `MUOTO.md`:he
 eivät ole päällekkäin; jokaisella kerroksella `alku`–`loppu`, `vari` ja lähde; epävarmat paikat merkitty (`epavarma`, `alue`);
 lisenssit `LAHTEET.md`:ssä ja `attribuutio`-kentässä; työkalut tuottavat mainin JSONin tavulleen samana.
 
+**Linssisepän täydennys 20.10.2026 (linssityön näkökulma; Karttaseppä ei ole tällä tilillä).** Karttaseppä tarkistaa merkityt kohdat
+seuraavalla vuorollaan ja poistaa merkinnän.
+- **Muodon lukitus:** Linssiseppä lukitsee `MUOTO.md`:n proto-sha:lla vasta, kun Ytimen lukija ja testi lukevat Karttasepän
+  esimerkkitiedoston ilman virheitä; lukitsemisen jälkeen uusi kenttä tulee lisäkenttänä (kohta 2), eikä Ydintä muuteta arvaamalla.
+- **Koko ja suorituskyky:** pelin JSON pidetään kokonaisena yhtenä tiedostona `Linssit/Resources/<Aihe>/`; ilmoita tuloksen koko
+  tavuina PR:ssä. Jos tiedosto kasvaa niin, että avaus hidastuu laitteella, jako vuosittain sovitaan muodossa ennen dataa.
+  *TARKISTETTAVA: Karttaseppä – kokoraja, jonka jälkeen jako tehdään.*
+- **Tihennys ja kolmiointi:** Ydin kolmioi monikulmiot itse; reiät ja päällekkäisyydet rikkovat kolmioinnin, joten kohdan 3 säännöt
+  ovat kolmioinnin ehtoja, ja Linssiseppä tarkistaa ne Ytimen testillä ennen kytkentää. *TARKISTETTAVA: Karttaseppä – vastaako
+  piirtotyökalun assert Ytimen testiä.*
+- **Kopio protoon:** `cmp` mainin ja proton tiedostosta ennen jokaista junapyyntöä; ero = palautus Karttasepälle, ei käsikorjausta.
+
 ### Natiivi-UI
 *(kehys (lasipohja, KEHYS-KÄÄRÖ alle 250 ms), aikaselain, nimikkeet ja sinettileima, iPhone pysty ja iPad. Täydentää Natiivi-UI.)*
 
 ### Sisältökirjuri
-*(TÄYDENTÄÄ: SK, 17.10.2026, Kiinan dynastiat -linssin tekstityön pohjalta; ei uusia sääntöjä. Tekstien yleinen tuotanto: `kertojan-teksti-ja-aani.md`,
+*(Sisältökirjuri 17.10.2026, Kiinan dynastiat -linssin tekstityön pohjalta; ei uusia sääntöjä. Tekstien yleinen tuotanto: `kertojan-teksti-ja-aani.md`,
 historiaosuus: `historiapeli.md` luku 2.)*
 
 **Tuotokset linssiä kohti (tässä järjestyksessä):**
@@ -305,6 +317,18 @@ ovat samat sanatarkasti.
 
 **Aikataulu:** tekstit ehtivät rinnan koodin kanssa (vaiheet 3–5); aloita tarinariveistä heti, kun Karttasepän `MUOTO-*.md` on
 valmis. Faktatarkistus ja riippumaton tarkistus ajetaan agenteilla (vain Opus/Sonnet); levyhädän aikana ei agentteja.
+
+**Linssisepän täydennys 20.10.2026 (linssityön näkökulma; Sisältökirjuri ei ole tällä tilillä).** Sisältökirjuri tarkistaa merkityt
+kohdat seuraavalla vuorollaan ja poistaa merkinnän.
+- **Tunnukset kytkentää varten:** jokaisella tarinarivillä ja kortilla on pysyvä tunnus (`<linssi>-<vuosi>` tai `<linssi>-<aihe>`),
+  jota Linssiseppä käyttää koodissa; tunnusta ei vaihdeta tekstin muuttuessa (uusi versio = sama tunnus, uusi teksti Tekstit-osastossa).
+- **Pituus näkymään:** rivin pituus tarkistetaan pelinäkymässä iPhone pystyssä ja iPadilla (luku 4, tuore lukija); jos rivi ei mahdu
+  kehykseen, Linssiseppä palauttaa sen lyhennettäväksi, ei lyhennä itse. *TARKISTETTAVA: SK – merkkiraja per rivi, joka mahtuu
+  KEHYS-KÄÄRÖÖN ja lasipohjaan.*
+- **Lukeeko peli tekstin:** kortit ja rivit luetaan `KortinLukija` → `Puhe.Lue`; Linssiseppä kertoo SK:lle ja Äänittäjälle ennen
+  äänitilausta, lukeeko linssi tekstin suoraan (Äänittäjän kohta 1).
+- **Yksi totuus:** Linssiseppä lukee `.json`:n sellaisenaan protoon (kuten aineisto, `cmp`); `.md` ei ole kytkennän lähde.
+  *TARKISTETTAVA: SK – `.json`-polku ja kentät, jotka linssi lukee (tunnus, teksti, lähteet, tarkistustila).*
 
 ### Äänittäjä
 *(kertoja ja äänimaisema linssille, ääniportti; ks. `kertojan-teksti-ja-aani.md`. Täydentää Äänittäjä 17.10.2026; vain nykyisten ohjeiden ja Kiinan dynastiat -linssin (30 tekstiä) opit, ei uusia sääntöjä.)*
