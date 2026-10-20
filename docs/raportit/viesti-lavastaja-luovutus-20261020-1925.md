@@ -72,6 +72,8 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    **Tavoiteluuppi (omistaja 01.02, koko yö VS:n kanssa):** k1 huoneseinille kivinen harjakate → avoimet-v4 (`tyokalut/avoimet_harjat.py`,
    `_valmiit/juoksupeli-avoimet-v4-vienti-20261021`, 5cebafd008b6) → JU, PK vaihtaa kansion. k2 reitin muurit r07–r10 (keltainen lasitiilikate)
    = kk-taustan muurit (PK) → `tyokalut/kk_muurikate.py` → `_valmiit/juoksupeli-kk-muurikate-v1-vienti-20261021` (0c97c12d42e1, erillinen glb).
+   Muurikate-v2 (855552db239e): räystäät +3 cm (v1 samassa tasossa, välkkyi). JU vei v1:n ja avoimet-v5:n 01.18–01.19; PK lataa (6514f47ab).
+   **Louvren k2 (LS 01.2x, lentävän kameran kaari):** proto `lavastaja/louvre-k2-paikka-209` b28f3d9a9 (LS:n d6c28c31e:n päällä) → NS.
    k3 lämmin lattia → `tyokalut/avoimet_lattia.py` → avoimet-v5 (b031aca09b13). Molemmat JU:lle; PK kytkee JU:n kuittauksen jälkeen (404-välimuisti). Kierrokset ja aamulista PT:lle: side-session-notes/<PT>/lavastaja-tavoiteluuppi-20261021.md.
    Vanha:  avoimet_sijoitus.py `KUJAT`-lohko (yleinen kuja: muurilohkot, 8 huonetta, kaistat,
    päiden avaukset, liitokset) → tausta-v11 `aja_tausta_v11.zsh` → `peking/tausta12` (ajossa). Seuraavaksi liitostarkistus + korkeuskartan
