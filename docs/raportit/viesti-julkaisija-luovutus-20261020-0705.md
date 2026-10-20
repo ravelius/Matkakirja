@@ -11,7 +11,8 @@ Osoitekirja /Users/Shared/Claude/osoitekirja.md. Viestit `mcp__ccd_session_mgmt_
 ## 1. SIMUJONO (yksi kerrallaan)
 1. **PK** (local_11aca9cd-eda6-…) halli-208b (8e864ffdd) simulla NYT (SIMU NYT 07.02). Odota SIMU VAPAA.
 2. **VS** (local_e675f86d-210c-…) vesi k4: kun vs-vesi4-208.log näyttää KÄÄNNETTY → SIMU NYT, `_tyo/julkaisija/vesi4-208-app`, vesiparit + 5 s video (~8 min).
-3. Jono tyhjä sen jälkeen.
+3. **NUI** (local_c6d63773-…) 208c 4937cb91f: kääntyy L2:lla vesi4:n perään (nui-museo-valikko-208c.zsh → `_tyo/natiivi-ui/museo-valikko-208c-app`, loki nui-museo-valikko-208c.log) → KÄÄNNETTY + SIMU NYT: `ERA=c ajo-museo-valikko-208.zsh` iPhone + iPad (~8 min).
+4. Jono tyhjä sen jälkeen.
 
 ## 2. Valmiina / tiedoksi
 - Viety tänä aamuna (0 virhettä): juoksupeli-esteet-v2 (6, 03.05), sokkelo-korttelit-v3 (17, 04.55; julkiset URL:t 200 ilman ?t:tä, ei välimuisti-404:ää).
