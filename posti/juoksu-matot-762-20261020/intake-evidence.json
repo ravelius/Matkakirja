@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-20T20:17:04.182284+00:00",
+  "taskNumber": 762,
+  "status": "received-source-and-references-verified-queued-after-Louvre-and-Nike",
+  "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+  "ownerAcknowledged": true,
+  "sourceReadInFull": true,
+  "sources": [
+    {
+      "path": "posti/paatoimittaja-codex-juoksu-matot-puut-20261020.md",
+      "commit": "ecc4db4bfb0767e10671a8155628046a39e73dec",
+      "blob": "0f2767ccf7693b1dbe97a80ae0b575df4a9f58fa",
+      "sha256": "0621aed30fdbbaa452326c7e438e4512aca188381dbad397b81378372774562f",
+      "taskNumber": 762,
+      "readInFull": true,
+      "readAt": "2026-10-20T20:17:04.182284+00:00",
+      "savedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/sources/paatoimittaja-codex-juoksu-matot-puut-20261020.md"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-louvre-ohi-jonon-20261020.md",
+      "commit": "4b4b8da51ae84791d2c0b5dfd3641ab60576febf",
+      "blob": "87ff51a3b4817512caa1d754ef80f2145f7d3bec",
+      "sha256": "f84ad1598f5d0de282af55182a0bc6ee236fa5bb4478b95ad863bd541771455d",
+      "taskNumber": 758,
+      "readInFull": true,
+      "readAt": "2026-10-20T20:17:04.182284+00:00",
+      "savedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/sources/paatoimittaja-codex-louvre-ohi-jonon-20261020.md"
+    },
+    {
+      "path": "posti/paatoimittaja-codex-vain-tripo-20261020.md",
+      "commit": "3d275aa1b4efa09c1fec4ee8c4a1158e9844e0bb",
+      "blob": "326554e30dcf522ca7420b6787cc509de46280de",
+      "sha256": "29faf31b6a76ec0ea0f52c17e1fb5484ec6366f78637b717b787d79f82e0fc07",
+      "taskNumber": 760,
+      "readInFull": true,
+      "readAt": "2026-10-20T20:17:04.182284+00:00",
+      "savedPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/sources/paatoimittaja-codex-vain-tripo-20261020.md"
+    }
+  ],
+  "referencesResolved": true,
+  "references": [
+    {
+      "code": "j9",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j9.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/references/havainne-j9.png",
+      "sha256": "28d36279895072b91e9f6288b1b0a5050ae023d077bca59815c7cf43495db4dd",
+      "rootPersonallyViewed": true,
+      "role": "j9: carpet palette/layout reference; j10: palace-context only, no carpet design certified",
+      "oldDeliveredImageUnchanged": true
+    },
+    {
+      "code": "j10",
+      "sourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-ylempaa-j11-j16-20261018/references/havainne-j10.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/references/havainne-j10.png",
+      "sha256": "e449eae0b01b23fc27cbbdebc386e61b1419fa2d7d765ac5e6aae65b33293021",
+      "rootPersonallyViewed": true,
+      "role": "j9: carpet palette/layout reference; j10: palace-context only, no carpet design certified",
+      "oldDeliveredImageUnchanged": true
+    }
+  ],
+  "receivedAt": "2026-10-20T20:17:04.182284+00:00",
+  "preflightStarted": true,
+  "preflightComplete": true,
+  "productionStarted": false,
+  "productionActive": false,
+  "started": false,
+  "delivered": false,
+  "deliveryVerified": false,
+  "generationCallsIssued": 0,
+  "generationCallsCompleted": 0,
+  "generationCallsPending": 0,
+  "productionRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1",
+  "priorityGateSatisfied": false,
+  "priorityGate": "Louvre priority work + Nike pedestal before rugs; rugs before trees763",
+  "dependencyEvidencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/sources/dependency-state-20261020.json",
+  "sourceSpecificOrderRetained": true,
+  "existingDeliveriesChecked": true,
+  "duplicateRugDeliveryFound": false,
+  "newProductionAllowedOnceDependenciesVerified": true,
+  "newPermissionNeeded": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
