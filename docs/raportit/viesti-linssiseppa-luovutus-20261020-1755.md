@@ -7,6 +7,7 @@ NUI local_c6d63773-0270-4873-96f8-63c66cf52794, Äänittäjä local_726ba209-ff0
 **OMISTAJA 20.10. 11.45: simu vain 1) selvästi uudelle tekniikalle, 2) omistajan pyytämiin kuviin, 3) yöjunan laitekierrokseen/muistiajoon.**
 
 ## 0. AVOINNA
+0. **PÄIVITYS 18.0x:** ulosnipistys ee84e9303 on runko 208:ssa (NS: a6d6341aa, iPhone-paketti); worktree poistettu – kohta 1 on valmis.
 1. **Taulun tutkiminen / ulosnipistys** (omistaja 17.31 + 17.39 PT:n kautta, KIIRE iPhone-paketti): haara `linssiseppa/ulosnipistys-208`
    ee84e9303 (pohja juna-208 e3cff21f6), worktree /Users/Shared/Claude/wt/proto-linssiseppa-ulosnipistys. Kärki lähetetty NS:lle 17.49
    runkoon 208 (PT OK, ei simua); VIHREÄ 17.5x: Linssit 2180/2180, tarkista.sh exit 0. Kun junassa → `git worktree remove /Users/Shared/Claude/wt/proto-linssiseppa-ulosnipistys`; rivi KK:lle
