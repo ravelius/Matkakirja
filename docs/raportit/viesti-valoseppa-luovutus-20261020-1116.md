@@ -7,6 +7,14 @@ Lavastaja local_cd402541-241c-4e2a-99e7-70bd8daa1c35, Postivahti local_0a4f4c68-
 D=/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2 (päiväkirja $D/JONO.md – lue loppu ensin). Proto-wt /Users/Shared/Claude/wt/proto-linssiseppa2-jalki
 (haarat paikallisia; nyt checkoutattuna linssiseppa2/louvre-varjo-208). Simu vain JU:n SIMU NYT -viestillä, perään SIMU VAPAA.
 
+## PT 11.1x: ENSIN-KOHDAT JA MIHIN ASTI EHDIN
+1) Louvren simuajo (cea77010d + LS 26f7d9a4d; madonna, Horatius, Kythera = vaalea GG; iPad + iPhone; ennen/jälkeen) → LS tekee parit
+   oikeisiin Louvren kuviin → KK. EHDIN: kaikki yhdistetty kärkeen 0cebcc31c (⊃ cea77010d + 26f7d9a4d + NUI yhd3), JU kääntää 208c-appiin,
+   skenaario + aja.zsh valmiina. EI AJETTU (odottaa SIMU NYT). Ajon jälkeen kuvapolut LS:lle (hän tekee parit KK:lle) ja PT:lle; oma
+   vertailu.py-kuva on lisätodiste.
+2) kk-joki-208 tausta-v4:n päälle → sha PK:lle. EHDIN: VALMIS. e81d165c9 PK:lle, PK mergesi → palatsi-208 c3a971b4e (tausta-v4), JU kääntää,
+   PK ajaa 208v11. Jäljellä: 208v11-kuvien tarkistus + siivous 98d52a4ca seuraavaan PK-mergeen.
+
 ## 0. ENSIN: LOUVREN VALO -SIMU (omistaja 11.04: "Pehmeä kohdevalo", ei kattoikkunavaloa; PT: SIMUUN NYT)
 Tavoite (PT 11.0x): kohdevalo jää, reuna pitkä pehmeä liuku ilman näkyvää neliö- tai pyöreää rajaa; kehys heittää seinälle pehmeän
 varjon alas (oikeissa kuvissa taulut riippuvat hieman kallellaan, kuvat 2 ja 5); tummat salit samoin (ei punaista läikkää otsikon kohdalla).
