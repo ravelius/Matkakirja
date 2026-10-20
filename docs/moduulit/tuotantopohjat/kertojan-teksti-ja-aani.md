@@ -1,11 +1,11 @@
 # Tuotantopohja: kertojan teksti ja ääni
 
-*(LUONNOS 17.10.2026, läpikäyntikunnossa 20.10.2026 (PT). Äänittäjä, PT:n toimeksianto. Raamattu 4.21 TUOTANTOPOHJAT ja
+*(17.10.2026, läpikäyntikunnossa 20.10.2026 (PT hyväksynyt). Äänittäjä, PT:n toimeksianto. Raamattu 4.21 TUOTANTOPOHJAT ja
 TUOTANTOPOHJIEN SANASTO. Tähän on koottu nykyisten ohjeiden ja luovutusten opit. Opeista polkuun nostetut kohdat ovat
-PT:n hyväksyttäviä pohjan muutoksia (Raamattu 4.21 ja 8.2), eivät uusia Raamatun linjauksia. Jos tämä ja Raamattu ovat
+PT:n hyväksymiä pohjan muutoksia (Raamattu 4.21 ja 8.2), eivät uusia Raamatun linjauksia. Jos tämä ja Raamattu ovat
 ristiriidassa, Raamattu voittaa. Pohjan omistaa Äänittäjä (ääni) ja Sisältökirjuri (teksti), PT hyväksyy muutokset.
-Pohja kuuluu Raamatun 4.21:n pohjaluetteloon (`docs/moduulit/tuotantopohjat/<tyyppi>.md`). LUONNOS poistetaan, kun
-luvun 7 avoimet kohdat on ratkaistu.)*
+Pohja kuuluu Raamatun 4.21:n pohjaluetteloon (`docs/moduulit/tuotantopohjat/<tyyppi>.md`). Omistajalle avoin kohta on
+luvussa 7.)*
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: ÄÄNI mallinäyte ja lyhyt kuvaus siitä, miltä pitää kuulostaa (Gemini vertaa valmista ääntä mallinäytteeseen sokkona, 9.11); UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
@@ -25,7 +25,7 @@ kertomukset, historiaosiot, selitteet, Pulun vastaukset ja kutsut. Se ei kata mu
 Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi tekstityyppi)
   → Sisältökirjuri: teksti (hyväksytty, faktat tarkistettu)
   → Äänittäjä: lukutarkistus + ämpärin manifestin tarkistus
-  → PT: merkkimäärä + ottomäärä + lupapyyntö → KK → omistajan lupa nimetylle erälle (kortti)
+  → PT: merkkimäärä + ottomäärä + lupapyyntö → KK → omistajan lupa nimetylle erälle (tekstinä, ei korttia)
      (kertojaäänten pysyvä lupa: ks. kultainen polku 4)
   → Äänittäjä: otto (ElevenLabs) + mittaus
   → Gemini: sokkokuuntelu mallinäytettä vasten (ennen omistajaa)
@@ -71,12 +71,13 @@ Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi 
    pienennetään, luvut sanoiksi). Tagit 2–5 per luenta, alku ja loppu eri sävyssä.
 4. **Lupa ennen jokaista generointia** (Raamattu 5.1 ja 5.2).
    - Uusia ääniä ei generoida ilman omistajan lupaa. Lupapyynnössä on sanatarkat tekstit, palvelu, tarkka leikemäärä,
-     ottomäärä ja merkkimäärä. Määrän päättää omistaja; PT tuo pyynnön KK:lle, ja KK kysyy sen omistajalta kortilla.
+     ottomäärä ja merkkimäärä. Määrän päättää omistaja; PT tuo pyynnön KK:lle, ja KK esittää sen omistajalle tekstinä,
+     ei kortilla ("Sano ok, niin Äänittäjä tekee nämä"; Raamattu 7.27, ÄÄNISTÄ EI KORTTEJA).
    - Lupa tulee vain KK:n suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä; PT:n välittämä ei riitä, vaan Äänittäjä pyytää
      vahvistuksen KK:lta.
-   - **Ottomäärä sitoo kuten merkkimäärä** (5.2, OTTOMÄÄRÄ SITOO): uusinta on uusi otto ja vaatii uuden kortin KK:n
-     kautta, vaikka merkkejä jäisi; jäljelle jääneitä merkkejä ei käytetä. Rooli ei hyväksy uusintaa itse, vaan lähettää
-     KK:lle kortin aineiston (merkit, ääni, syy). Jokainen lisäys tai ylitys vaatii uuden luvan.
+   - **Ottomäärä sitoo kuten merkkimäärä** (5.2, OTTOMÄÄRÄ SITOO): uusinta on uusi otto ja vaatii uuden luvan KK:n
+     kautta (tekstinä), vaikka merkkejä jäisi; jäljelle jääneitä merkkejä ei käytetä. Rooli ei hyväksy uusintaa itse, vaan
+     lähettää KK:lle lupapyynnön aineiston (merkit, ääni, syy). Jokainen lisäys tai ylitys vaatii uuden luvan.
    - Lupa lasketaan teksteistä; jos lupa on annettu pelkille teksteille, tageja ei lisätä (opit 20.10.).
    - **Kertojaäänten pysyvä lupa** (5.1, omistaja 12.10.2026): koskee PT:n hyväksymiä käsikirjoituksia, noin enintään
      10 000 merkkiä per kokonaisuus ja yksi otto per teksti. Äänittäjä generoi suoraan, ja PT kertoo omistajalle
@@ -114,7 +115,7 @@ Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi 
 10. **Gemini kuuntelee sokkona ennen omistajaa** (Raamattu 5.11 ja 9.11, omistaja 19.10. klo 15.21; korvaa 11.10.
     linjauksen "kuuntelematta saa viedä"): omistaja ei ole ensimmäinen kuuntelija. Gemini vertaa jokaista puheottoa
     mallinäytteeseen sokkona (aksentti, ääneen luetut tagit, ikä, sävy). Poikkeama = uusinta ennen omistajaa, ja uusinta
-    vaatii uuden kortin (kohta 4). Whisper-base/small ja Gemini paljastavat myös heikon kirjaimen (esim. "Mahesteetti").
+    vaatii uuden luvan (kohta 4). Whisper-base/small ja Gemini paljastavat myös heikon kirjaimen (esim. "Mahesteetti").
     Whisper-vertailu (sanasuhde) on tiedoksi, ei tuomari: vieraat nimet se kirjoittaa suomalaisittain.
 11. **Omistajan kuuntelu vain uusissa asioissa ja makuvalinnoissa** (Raamattu 4.21, omistaja 20.10. klo 22.53): KK
     lähettää mallinäytteen ja valmiin oton peräkkäin kuunneltaviksi tiedostoina ennen junaa, ja omistaja kommentoi
@@ -177,11 +178,11 @@ kohdat on nostettu kultaiseen polkuun 20.10.2026; rivit jäävät tähän tausta
   asetuksilla; tasoitus, leikkaus ja häivytys sallittuja (polku 6). Pohjan vanhat "tempo 1,10×" -rivit korjattu (PT 19.10.); vanhat julkaistut otot eivät muutu ilman omistajan päätöstä. Lähde: loki "PAATOS 19.10.2026 klo 10.19
   (kortti)"; muisti puhe-ei-jalkisaatoja.
 - **19.10.2026, äänistä ei kysymyskortteja.** Muuttuu: otot lähetetään omistajalle tiedostoina ja palaute tulee tekstinä (polku 11).
-  Generointiluvan muoto on nyt polun kohdassa 4 (kortti KK:n kautta, 5.2 OTTOMÄÄRÄ SITOO 20.10.); ks. luku 7.
+  Generointiluvan määrä, merkit ja tekstit esitetään tekstinä, ei kortilla (polku 4).
   Lähde: muisti aanet-ei-kysymyskortteja; Raamattu 7.27.
 - **19.10.2026, Olavinlinnan M-osa (KK-katselmus).** Hidasti: 16 repliikkiä oli jo ämpärissä kolmena versiona, mutta lupa
   pyydettiin "ääntä ei ole" ja generoitiin silti 20 (a60da1d3c, ac29287f5). Muuttuu: ämpärin manifesti tarkistetaan ennen
-  lupapyyntöä (polku 1; KK:n katselmuksen suositus, PT:n hyväksyttävä pohjamuutos). Lähde: scratchpad putket-lapikaynti-20261019, ääni V5.
+  lupapyyntöä (polku 1; KK:n katselmuksen suositus, PT hyväksyi pohjaan 20.10.). Lähde: scratchpad putket-lapikaynti-20261019, ääni V5.
 - **17.10.2026, Louvren alut ilman `language_code: fi`.** Hidasti: lähestymispuhe ja salien avaukset äännettiin ranskan
   aksentilla; 47 riskiottoa (24 411 mrk) jätettiin uusimatta omistajan päätöksellä ja uusittiin vain Louvren lähestymispuhe
   ja salien avaukset (louvre-inv-* ennallaan). Muuttuu: kultainen polku 6 (suomi aina pakotettuna, testi kaatuu ilman
@@ -221,6 +222,3 @@ Raamattu: 4.21 TUOTANTOPOHJAT, 5.1 UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN L
 - **Huutojen venytys jälkikäteen (atempo).** Saako huutoja venyttää jälkikäteen? Suositus: ei, koska pidempi huuto
   generoidaan suoraan ohjeella, ja se on uusi otto ja uusi lupa (Raamattu 5.7, ei jälkisäätöjä puheeseen). Tuodaan
   omistajalle ääninäytteen kanssa.
-- **Generointiluvan muoto: kortti vai teksti.** Raamattu 7.27 (19.10., ÄÄNISTÄ EI KORTTEJA) sanoo, että generointiluvan
-  määrä, merkit ja tekstit esitetään tekstinä, kun taas 5.2 (20.10., OTTOMÄÄRÄ SITOO) ja omistajan linja vaativat kortin.
-  Pohja noudattaa uudempaa linjaa (kortti KK:n kautta). PT kysyy omistajalta, korjataanko 7.27:n sanamuoto.
