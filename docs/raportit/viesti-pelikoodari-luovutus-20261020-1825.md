@@ -44,7 +44,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
 ## 20.28 LISÄYS: havainnekuvien j9/j10 näköisyys (omistaja 20.14, PT)
 - Kuvapari 208:sta (simu pelikoodari-iPad13, runko 186b23682): /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kuvapari-208/ (PT lähetti KK:lle).
   Skenaario proto-3d/tyokalut/pelikoodari-ajot/sk-juoksupeli-kuvapari-208.txt (todistusajo.sh).
-- Haara **pelikoodari/nakoisyys-209 = 782ce0de2** (+ TaustaKansio v8 Lavastajan liitoksineen; aiemmin 4a928209a) (maali-209 f2be670cd:n päällä; 5d9b6dfd7 + avoimet huoneet + pakotetut linjat): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
+- Haara **pelikoodari/nakoisyys-209 = df0b0a42e** (+ v9: 7 huonetta, ovikorjaus 04fe50214, kamera 11/6 m; aiemmin 782ce0de2 v8) (maali-209 f2be670cd:n päällä; 5d9b6dfd7 + avoimet huoneet + pakotetut linjat): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
   esteiden ennakko ≤ 120 m palatsissa (JuoksuV4Maailma.LahiRaja, QA kauko lahi). Kujat: lyhin reitti maaliin 74 % ≤ 6 m kujilla → ei reittimuutosta.
 - Odottaa: NS:n simukäännös → ennen/jälkeen-kuvapari + LT:n GPU ≤ 16 ms; Lavastajan avoimet-v2-ovet (läpijuoksu), Tripo-esteet ja eunukit;
   VS:n matala aurinko. Simu: JU:n SIMU NYT -vuoro.
@@ -56,3 +56,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   suunnan janat yhdeksi, päät +3,5 m 2,03°:n kierron vuoksi, ei muurikujia). Oikealla pohjalla + estolla Lavastajan kolmella liitoksella
   tyohuone/puutarha/varasto läpijuostavia, juhlasalin keskusta karsiutuu (ei silmukkaa). Odottaa Lavastajan v8 + avoimet-sijoitus.json
   liitoksineen → TaustaKansio v8. Vianetsintä: JuoksuPalatsiVerkko.EiKarsintaa (internal, testit).
+- 21.1x: kuvapari 209 (simu runko 10fdcb3da, sis. 782ce0de2): proto-3d/_tyo/pelikoodari/kuvapari-209/ (skenaario sk-juoksupeli-kuvapari-209.txt).
+  Läntiset asuinpihat + avoimet huoneet ≈ j9 (hyvä). VIKA: 9 m:n kamera rakennusmassoissa → korjattu df0b0a42e (kuja 11/6, aukea 13,5/7,5 m),
+  vaatii uuden simukäännöksen ja uusinnan ennen KK:ta. Tausta v9 kytketty (5a87c6a8a). Muurinharjaketju (Lavastaja) junaan 210:
+  tarvitsee säännön aukko-/palkkikohdat.
