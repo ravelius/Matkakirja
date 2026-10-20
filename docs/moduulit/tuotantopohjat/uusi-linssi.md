@@ -6,6 +6,8 @@ MÄÄRITELMÄ ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu vain nykyisten ohjei
 Raamattu ovat ristiriidassa, Raamattu voittaa. Koodin, kameran ja todistuksen osuuden omistaa Linssiseppä; aineisto, kehys,
 tekstit ja ääni täydentävät omat osansa otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä; puuttuva pohja kysytään PT:ltä.
+
 **Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
 
 Uusi linssi = oma näkymä pelin karttapallolle tai omaan näyttämöönsä, joka kertoo yhden aiheen ajassa, kartalla tai tilassa
@@ -18,7 +20,7 @@ linssit tehdään tämän pohjan mukaan.
 
 **Rajaus:** linssit eivät kuulu maanosarajaukseen (Raamattu, LINSSIT EIVÄT KUULU RAJAUKSEEN; Kiinan dynastiat on koko maailman
 linssi). Uusi linssi aloitetaan vain omistajan päätöksellä (kortti tai KK:n "OMISTAJAN PÄÄTÖS klo …"), ja se kytketään
-pelaajalle matkalaukusta (Raamattu, LINSSIT KYTKETÄÄN VAIN MATKALAUKUSTA). Keskeneräinen linssi on Linssit/Pelit ›
+pelaajalle Linssit-napista tai laukun Varusteista (Raamattu 2.62). Keskeneräinen linssi on Linssit/Pelit ›
 Keskeneräiset -osassa, ei Kehittäjä › Kokeet -valikossa.
 
 ## 0. Tavoitteen muoto (ensimmäinen mietintäkierros)
@@ -91,7 +93,7 @@ luovutukseen. Agentit vain Opus ja Sonnet. Raskaat ajot (Unity-käännös, simu)
    toiseen siirrytään animaatiolla (uusi leviää, vanha vetäytyy), ja järjestys on sama joka kerta: muoto → rajat → nimet.
    Ennen ajanlaskun alkua olevat vuodet negatiivisina (−221), ja testi kattaa ne.
 6. **Värisääntö yhdellä lauseella.** Esim. "ulkoiset hallitsijat viileillä, kiinalaiset dynastiat lämpimillä väreillä; Jin
-   ja Qing sukulaisvärein" (omistaja 16.10. klo 20.35). Yksittäinen kiistanalainen väri kysytään omistajalta kuvaparilla.
+   ja Qing sukulaisvärein" (omistaja 16.10. klo 20.35). Värit hyväksyy PT; omistajalle kuvaparina vain värit, joista on erimielisyyttä tai jotka poikkeavat tyylikirjasta (omistaja 20.10.2026 klo 22.55).
 7. **Kerrokset harkiten.** Jokainen kerros vastaa kokemuksen kysymykseen; himmeä jatko vanhalle (muuri), Minardin
    virtausnuoli määrille, risti tapahtumalle, epävarma paikka katkoviiva-alueena. Kerros näkyy avainvuosina alku ≤ vuosi ≤ loppu.
 8. **Yhteiset pohjat, ei uusia osia.** Leima `iss-sinetti`-leimapohjalla, kehys UI-POHJISTA (lasipohja; historialinsseille
@@ -195,7 +197,7 @@ Kultaisesta polusta poiketaan vain PT:n hyväksynnällä; poikkeama joko kirjata
 |---|---|---|
 | Uusi linssi ja sen kokemus | omistaja | KK:n "OMISTAJAN PÄÄTÖS klo …", loki |
 | Tavoitteen muoto (havainnekuva, kuvakäsikirjoitus, kuvakaappaus) | PT, sitten KK/omistaja täysikokoisena | `_valmiit/<linssi>-tavoite-<pvm>/` |
-| Värit ja pohjakuva | omistaja kuvaparilla (KK yöllä yövaltuutuksella) | kortti |
+| Värit ja pohjakuva | PT; omistaja kuvaparilla vain kiistanalaiset ja tyylikirjasta poikkeavat (omistaja 20.10. 22.55) | kortti vain kiistanalaisista |
 | Aineiston muoto | Karttaseppä + Linssiseppä, PT kuittaa | `MUOTO-*.md` |
 | Tarinarivit ja faktat | PT riippumattoman tarkistuksen jälkeen; uusi teksti pelinäkymässä tuoreella lukijalla (9.11) | `historiapeli.md` luku 2 (merkinnät) |
 | Koodi ja kuvat | PT, sitten KK/omistaja | `_valmiit/<linssi>-<pvm>/` |
@@ -268,10 +270,10 @@ seuraavalla vuorollaan ja poistaa merkinnän.
   esimerkkitiedoston ilman virheitä; lukitsemisen jälkeen uusi kenttä tulee lisäkenttänä (kohta 2), eikä Ydintä muuteta arvaamalla.
 - **Koko ja suorituskyky:** pelin JSON pidetään kokonaisena yhtenä tiedostona `Linssit/Resources/<Aihe>/`; ilmoita tuloksen koko
   tavuina PR:ssä. Jos tiedosto kasvaa niin, että avaus hidastuu laitteella, jako vuosittain sovitaan muodossa ennen dataa.
-  *TARKISTETTAVA: Karttaseppä – kokoraja, jonka jälkeen jako tehdään.*
+  *PT 20.10.2026: jako vuosittain, kun tiedosto ylittää 5 Mt tai linssin avaus laitteella hidastuu mitattavasti (Kiina 0,56 Mt on yksi tiedosto).*
 - **Tihennys ja kolmiointi:** Ydin kolmioi monikulmiot itse; reiät ja päällekkäisyydet rikkovat kolmioinnin, joten kohdan 3 säännöt
-  ovat kolmioinnin ehtoja, ja Linssiseppä tarkistaa ne Ytimen testillä ennen kytkentää. *TARKISTETTAVA: Karttaseppä – vastaako
-  piirtotyökalun assert Ytimen testiä.*
+  ovat kolmioinnin ehtoja, ja Linssiseppä tarkistaa ne Ytimen testillä ennen kytkentää. *PT 20.10.2026: Ytimen testi on totuus;
+  piirtotyökalun assert tarkistaa samat ehdot, ja ristiriidassa työkalu korjataan Ytimen mukaiseksi.*
 - **Kopio protoon:** `cmp` mainin ja proton tiedostosta ennen jokaista junapyyntöä; ero = palautus Karttasepälle, ei käsikorjausta.
 
 ### Natiivi-UI
@@ -325,12 +327,12 @@ kohdat seuraavalla vuorollaan ja poistaa merkinnän.
 - **Tunnukset kytkentää varten:** jokaisella tarinarivillä ja kortilla on pysyvä tunnus (`<linssi>-<vuosi>` tai `<linssi>-<aihe>`),
   jota Linssiseppä käyttää koodissa; tunnusta ei vaihdeta tekstin muuttuessa (uusi versio = sama tunnus, uusi teksti Tekstit-osastossa).
 - **Pituus näkymään:** rivin pituus tarkistetaan pelinäkymässä iPhone pystyssä ja iPadilla (luku 4, tuore lukija); jos rivi ei mahdu
-  kehykseen, Linssiseppä palauttaa sen lyhennettäväksi, ei lyhennä itse. *TARKISTETTAVA: SK – merkkiraja per rivi, joka mahtuu
-  KEHYS-KÄÄRÖÖN ja lasipohjaan.*
+  kehykseen, Linssiseppä palauttaa sen lyhennettäväksi, ei lyhennä itse. *PT 20.10.2026: raja on se, mikä mahtuu
+  KEHYS-KÄÄRÖÖN ja lasipohjaan iPhonella pystyssä; Linssiseppä mittaa sen ensimmäisistä esimerkkiriveistä (UUDET TEKSTITYYPIT) ja kirjaa luvun tähän.*
 - **Lukeeko peli tekstin:** kortit ja rivit luetaan `KortinLukija` → `Puhe.Lue`; Linssiseppä kertoo SK:lle ja Äänittäjälle ennen
   äänitilausta, lukeeko linssi tekstin suoraan (Äänittäjän kohta 1).
 - **Yksi totuus:** Linssiseppä lukee `.json`:n sellaisenaan protoon (kuten aineisto, `cmp`); `.md` ei ole kytkennän lähde.
-  *TARKISTETTAVA: SK – `.json`-polku ja kentät, jotka linssi lukee (tunnus, teksti, lähteet, tarkistustila).*
+  *PT 20.10.2026: `data/linssit/<linssi>/<linssi>-puherivit.json` (malli `kiina-puherivit.json`), kentät tunnus, teksti, lähteet ja tarkistustila.*
 
 ### Äänittäjä
 *(kertoja ja äänimaisema linssille, ääniportti; ks. `kertojan-teksti-ja-aani.md`. Täydentää Äänittäjä 17.10.2026; vain nykyisten ohjeiden ja Kiinan dynastiat -linssin (30 tekstiä) opit, ei uusia sääntöjä.)*

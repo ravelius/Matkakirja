@@ -6,6 +6,8 @@ Pohjan omistaa Äänittäjä (ääni) ja Sisältökirjuri (teksti), PT hyväksyy
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: ÄÄNI mallinäyte ja lyhyt kuvaus siitä, miltä pitää kuulostaa (Gemini vertaa valmista ääntä mallinäytteeseen sokkona, 9.11); UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
+**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä; puuttuva pohja kysytään PT:ltä.
+
 **Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
 
 Tämä pohja kattaa kaiken, minkä pelissä lukee ääneen kertoja (isoisä, William, Pulu): kaaritekstit, kaupunkien ja museoiden

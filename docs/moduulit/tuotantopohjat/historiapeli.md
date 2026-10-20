@@ -16,6 +16,8 @@ ja tavoitekuva, harmaa pelattava versio, faktat, tarina, repliikit ja tietokerro
 testaus ja juna. Ei kata historiaa kertovaa linssiä (esim. Kiinan dynastiat, jonka faktatyö on tässä esimerkkinä), kertojan
 tekstiä yleisesti (`kertojan-teksti-ja-aani.md`) eikä esirenderöityä videota (`esirenderoity-video.md`).
 
+**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä; puuttuva pohja kysytään PT:ltä.
+
 **Järjestys (omistaja 20.10.2026 klo 22.43, "Tavoitekuva ja harmaa versio ensin"):** ensin kohde, hetki ja tavoitekuva (luku 1);
 sitten harmaa pelattava versio, ja pelattavuus kuntoon ennen grafiikkaa (luku 2); faktat ja tarina rinnalla (luku 3); näköisyys
 ja äänet lopuksi (luvut 4–5); testaus ja juna (luku 6).
