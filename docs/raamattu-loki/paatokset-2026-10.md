@@ -2149,3 +2149,7 @@ Omistaja 20.10.2026 klo 23.48 (KK): "roolit taitavat kuitenkin laahata perässä
 ## ÄÄNET: UUSINNAN LUPA TEKSTINÄ (20.10.2026 klo 23.57)
 
 PT 20.10.2026: 5.2 OTTOMÄÄRÄ SITOO yhtenäistetty omistajan 7.27:n (19.10. klo 11.4x "älä tuo äänistä enää kysymyskortteja") kanssa: uusinta vaatii uuden luvan KK:n kautta, ja KK esittää sen tekstinä, ei kortilla. Kertojan teksti ja ääni -pohja samaan linjaan (#5107).
+
+## CODEX 3D: POHJA SITOVA, LIIKE TILAUKSEEN, RAKENNUKSET PARHAALLA TAVALLA (21.10.2026 klo 00.11)
+
+Omistajan kortit 21.10.2026 klo 00.10 (KK): 1) "kyllä, suosituksesi mukaan ja samalla huomio, että pitää miettiä etukäteen tarvitseeko mallin liikkua vai ei, jotta codex ei tee turhaa työtä. sanoin tästä jo codexille äsken suoraan mutta sille voisi välittää sitten aina tiedon että mitkä mallit tarvitsevat liikettä ja kuinka paljon ja mitkä eivät. todennäköisesti taidemuseossa max yksi tarvitsee liikettä." 2) "Paras tapa, ei kysymystä (Suositus)": uudet kokonaiset rakennukset ja maasto tavoitekuvan mukaan parhaalla tavalla, kaikki niiden sisällä ja ympärillä Tripolla. Raamattu 7.15, 11.7, 4.21; pohja codex-3d-toimitus.md sitova.
