@@ -1,9 +1,7 @@
 {
- "edistys": 5,
- "jakso": "matka",
- "kirjoittaja": "Julkaisija",
- "nimi": "Juna 206",
- "tila": "TestFlightissa",
- "ts": 1792453920000,
- "vaihe": "TestFlightissa: iOS, Mac, sisäinen 01.34; ulkoisille lähetetty 01.52 (beta-arvio Applella)"
+  "nimi": "Juna 208",
+  "tila": "Työn alla",
+  "edistys": 0,
+  "kirjoittaja": "Päätoimittaja",
+  "ts": 1792479965390
 }

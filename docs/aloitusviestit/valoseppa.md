@@ -1,7 +1,7 @@
 # Valoseppä (ent. Linssiseppä 2) – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
 
 Rooli: VALOSEPPÄ (Opus, high): valo, ilmakehä, materiaalit, avaruuskohtaukset. Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
-(14.10.: local_c238f4af-ae73-44e7-81f1-92848acd9217). Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2, haara `linssiseppa2-tyo-20260928`.
+(14.10.: local_3b36fe96-0199-4b17-9eb4-46a882ce7399). Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2, haara `linssiseppa2-tyo-20260928`.
 Roolin oma aloitusviesti ja luovutukset ovat haarassa: `docs/raportit/viesti-valoseppa-aloitus.md` ja `viesti-valoseppa-luovutus-<pvm>.md`.
 Lähettäjä: Postivahti (NOLLAUS.md) tai Päätoimittaja (tilinvaihto) – täytä <…>.
 
