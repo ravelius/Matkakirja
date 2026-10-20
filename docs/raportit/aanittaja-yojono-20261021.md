@@ -27,4 +27,4 @@ Kaikki ilman generointilupaa; tulokset raportteina `docs/raportit/aanittaja-yo-*
 Generointilupaa vaativat (PT:lle tekstinä, KK esittää): (a) tason 2 musiikit Lyrialla; (b) mahdollinen uusi pitempi huuto 05/06 suoraan ohjeella (venytys on AVOIN OMISTAJALLE); (c) aukkolattioiden omat näytteet, jos Soundly/Sonniss/Freesound eivät riitä.
 
 ## Tila 21.10. (ensimmäinen vaihe)
-Valmiit: 1, 2 (`aanittaja-yo-lattiat-20261021.md`), 4 (`tools/aanipankki/YHTEENVETO.md`), 6 (`aanittaja-yo-portti-kaikki-20261021.md`), 7, 11, 15 (`aanittaja-yo-auditit-20261021.md`), 18 osittain (askelsarjojen LUFS). Jäljellä: 3, 5, 8, 9, 10, 12–14, 16, 17, 19–22.
+Valmiit: 5 (`aanittaja-yo-tasot-20261021.md`), 1, 2 (`aanittaja-yo-lattiat-20261021.md`), 4 (`tools/aanipankki/YHTEENVETO.md`), 6 (`aanittaja-yo-portti-kaikki-20261021.md`), 7, 11, 15 (`aanittaja-yo-auditit-20261021.md`), 18 osittain (askelsarjojen LUFS). Jäljellä: 3, 8, 9, 10, 12–14, 16, 17, 19–22.
