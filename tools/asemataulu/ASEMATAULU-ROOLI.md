@@ -72,6 +72,8 @@ TAULU-kansion koodia (muutos repoon PR:llä). Älä kirjoita omistajalle (vain P
 mihinkään muualle kuin TAULU-kansioon ja tauluun.
 
 ## Oma konteksti
+KONTEKSTIPALKIT (omistaja 21.10.2026 klo 01.13): hae KK:n ja PT:n konteksti `get_usage`lla joka kierroksella (myös ilman Boostia) ja heti kun Postivahti
+ilmoittaa nollauksesta. Jos luku on yli 15 min vanha tai session id on vaihtunut, poista `kk_konteksti`/`pt_konteksti` mittareista äläkä vie vanhaa lukua (sivun muutosta ei tehdä). Speksi luku 8.
 Tarkista `get_usage self` joka kierroksella. Kun konteksti ylittää 50 %, kirjoita luovutus tiedostoon
 TAULU/hoitaja/luovutus-<pvm>.md ja kerro siitä PT:lle yhdellä rivillä. PT nollaa session.
 - Viestit PT:lle: send_message + session id (`idt.paatoimittaja`; osoitekirja /Users/Shared/Claude/osoitekirja.md), ≤ 3 riviä.
