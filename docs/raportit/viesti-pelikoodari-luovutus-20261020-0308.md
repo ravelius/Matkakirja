@@ -13,6 +13,8 @@ haara pelikoodari/juoksupeli-207 = **e60cad5e1**, worktree /Users/Shared/Claude/
 2. Heti ajon jälkeen SIMU VAPAA → JU. Katso kuvat täysikokoisina (kuvat/R0.png ym.): kuplan rivi 2 "Qing · 1700-luku" kokonaisena,
    ei Dynamic Island -soikiota, Puyi kuvassa, esteet v2 näkyvät.
 3. Pari KK:lle (local_8e4fcfed…, KK pyysi) + kopio PT: iPhone R0 + R1 ja iPad R1 (+ E1–E3 tiedoksi). KK vie omistajalle.
+4. KK:n OK:n jälkeen OK-rivi NS:lle (PT 03.1x): e60cad5e1 (⊃ b835320ab sirpaleet, 031214301 pöly, 3a8284011 QA, kupla) junaan 207.
+   PT:n kohdat 1–2 (esteet v2 -kytkentä, pöly) on jo tehty: esteet viety 03.05, pöly e60cad5e1:ssä (ei 740050b1:ssä → siksi yht.21).
 
 ## TEHTY TÄLLÄ VUOROLLA (kaikki haarassa pelikoodari/juoksupeli-207)
 - a35c37af5 esteiden v2-muunnokset (esteet-v2/, EsteMuunnelmat, QA `ui juoksupeli esteet2 0|1`).
@@ -35,6 +37,6 @@ haara pelikoodari/juoksupeli-207 = **e60cad5e1**, worktree /Users/Shared/Claude/
 ## AVOIMET (ennallaan)
 - Codexin mittapalat 713718 menevät Lavastajalle; korttelikokoonpano (muurit 11/12,4/3,6 m, hallit ≤ 10 m) sovitaan Lavastajan kanssa,
   hallien ehto `Sisapiha >= …` JuoksuSokkeloMaailmassa.
-- Omistaja 00.22: rakennuksiin useampi sisäänkäynti/huoneet/portaat (PT:n jako, Codex → Lavastaja → PK).
+- Läpijuostavat rakennukset (omistaja 00.22, posti 0ba4d0b00): useampi sisäänkäynti/huoneet/portaat Codexilta Lavastajan kautta → PK kytkee.
 - hurraa-isommat (_valmiit/juoksupeli-hurraa-isommat-20261020) odottaa omistajan valintaa → vaihda PuyiHuudot-polku.
 - iPadin loppukortti pieni = KORTTI-pohja → PT:llä UI-pohjakysymyksenä.
