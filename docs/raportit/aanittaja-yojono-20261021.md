@@ -31,3 +31,6 @@ Valmiit: 5 (`aanittaja-yo-tasot-20261021.md`), 1, 2 (`aanittaja-yo-lattiat-20261
 
 ## Tila 21.10. 00.3x
 Lisäksi valmiit: tasaus kivi_hiekka/sora −34 LUFS (`museo-askeleet-tasaus-vienti-20261021`, `aanet/taidemuseo-askeleet-v5/`, LS:lle ilmoitettu), 21 (`aanittaja-yo-huudot-20261021.md`). Kohta 9 (manifesti ↔ ämpäri): web-puolen `data/aanilahteet.json` ei sisällä media-URL:eja; natiivin äänimanifestit ovat Unity-puolella, joten tarkistus vaatii PK:n manifestipolut → pyydetään PK:lta. Jäljellä: 3, 8, 10, 12–14, 16–17, 19–20, 22.
+
+## Tila 21.10. 01.2x
+Valmiit lisäksi: v6/v7-askelkokoelmat (LS kytkenyt), Äänisivun Tekstit-kokoelmanappi (#42, julkaistu), 13 (`aanittaja-yo-juoksu-sfx-ast-20261021.md`, kaksoiskappaleet), 10 (`aanittaja-yo-mykistetyt-20261021.md`). Jäljellä: 3, 8, 12, 14, 16–17, 19–20, 22.
