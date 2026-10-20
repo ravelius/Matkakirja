@@ -22,7 +22,13 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    Portaikkoa ei tilata. Syy: sali-GLB:stä puuttuu jalusta, ja MuseoRakennus.cs:n väliaikainen laatikko (r. ~480) poistetaan, kun GLB
    latautuu, joten Nike leijuu. Kun keula tulee: mitoita niin, että sen yläpinta on Niken alapinnan tasolla (tai säädä paikka_y), lisää se
    veistokseksi tai jalustamalliksi MuseoRakennukseen ja vie media JU:lla. Kuva: Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261020/kk-1947-louvre-nike-ilman-jalustaa.png.
-6. **Pulu**: oma lippu `MuseoPulu.Paalla` pysyy pois. Koodikyyhky on omistajan hylkäämä. Tripo-Pulu v3 on omistajan katselussa KK:n kautta,
+6. **Juoksupeli j9/j10-ilme → juna 209 eteenpäin, Louvren 209-työn JÄLKEEN** (omistaja 20.14, PT + PK 20.2x; havainnekuvat posti/juoksupeli-havainnekuvat-20261017b/):
+   (1) Codexin katottomat avoimet rakennukset (maailma-v4/avoimet-v2) kujien varsille, erityisesti Kuuden läntisen palatsin pihoille.
+       PK:lle jokaisen oven paikka pohjan kehyksessä (x, z, suunta), jotta PK voi tehdä läpijuoksun ovesta oveen.
+   (2) Kasvit ja puut pihoille: ruukkukasvit, granaattiomenapuut ja männyt (Tripo Codexilta).
+   (3) VAIN Tripo: leluesteiden tilalle esineet (arkut, maljakot, pöydät, kantotuolit) ja eunukit luurangolla. Kun mallit ovat valmiit,
+       mallien nimet PK:lle, joka vaihtaa esteet. Lavastajan tilausjärjestys PK:lle 20.2x: eunukit → esteet → kasvit.
+7. **Pulu**: oma lippu `MuseoPulu.Paalla` pysyy pois. Koodikyyhky on omistajan hylkäämä. Tripo-Pulu v3 on omistajan katselussa KK:n kautta,
    ja se tarvitsee linturigin ja liikkeet ennen kuin se kytketään.
 
 ## LINJAUS (omistaja 19.25 PT:n kautta, pysyvä): "käytä vain tripo Malleja"
