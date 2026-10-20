@@ -33,6 +33,15 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
        `pakkaa_tausta_v8.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v8-vienti-20261020/` (SHA256SUMS 4efc5e665569). Korkeuskartan BFS (vapaa < 0,5 m,
        1,2 m väljyys): kaikki 4 kujaovea → pääverkon solmut. Vienti JU:lle, NS:lle 209-jonoon, PK testaa. Korkeuskarttaskriptit olivat scratchpadissa
        (Blender BVH-säde ylhäältä 0,5 m ruuduin); tee uudelleen tarvittaessa.
+       PK 20.5x: liitokset toimivat (PK 4a928209a/782ce0de2, 3/4 läpijuostavia; juhlasalin S/N umpinaiset).
+       **v9 (PK 20.5x, juna 209):** 3 huonekopiota (varasto-k1 (−240,5; 534), tyohuone-k2 (−214,5; 534), juhlasali-k3 (−43; 532,5)) pitkän
+       läntisen kujan (PK:n lyhin reitti maaliin, z ≈ 515–528) pohjoispuolelle, kierto 87,97°, kukin sivuovi + päätyovi liitoksella kujalle;
+       sekä juhlasalin S-avaus + liitos (silmukka). sijoitus.json: huoneet[] 7 (kopio=true), liitokset[] 10, avaukset[] 3. `aja_tausta_v9.zsh` →
+       `peking/tausta10`, `pakkaa_tausta_v9.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v9-vienti-20261020/` (SHA256SUMS 72560662aaff).
+       Lähetetty PK:lle, JU:lle (vienti) ja NS:lle (209-jono). Odottaa PK:n testiä.
+       **Juna 210: muurinharjaketju** (nousu → muuriristeys → kattotasanne + toinen nousu alas): PK tukee y > 0 -reittejä; lähetä PK:lle
+       ketjun reitti y-profiileineen ja kohdat (t, laji: rako 1,8 m muuriristeys/pre_gap→post_gap, este pre_hurdle→post_hurdle, tasapainopalkki
+       katto/start→end) ja sijoitus kujan varrelle. Solmut ovat Codexin world-manifest.json route_graphissa (avoimet-rakennukset-v2 delivery/scenes).
    (2) Kasvit ja puut pihoille: ruukkukasvit, granaattiomenapuut ja männyt (Tripo Codexilta).
    (3) VAIN Tripo: leluesteiden tilalle esineet (arkut, maljakot, pöydät, kantotuolit) ja eunukit luurangolla. Kun mallit ovat valmiit,
        mallien nimet PK:lle, joka vaihtaa esteet. Lavastajan tilausjärjestys PK:lle 20.2x: eunukit → esteet → kasvit.
