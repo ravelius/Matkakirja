@@ -2070,3 +2070,7 @@ Omistaja 19.12 (sanatarkasti): "Louvreen oli tilattu tripon Malleja, käytä nii
 ## PAATOKSET 20.10.2026 klo 19.25: VAIN TRIPO-MALLEJA (20.10.2026 klo 19.26)
 
 Omistaja 19.25 (sanatarkasti): "Tuotanto putki : käytä vain tripo Malleja jotta laatu paras mahdollinen". Linjaus: kaikki pelin 3D-mallit (hahmot, eläimet, esineet, koristeet, kalusteet) tehdään Tripolla Codexin kautta; ei enää koodilla tai käsin rakennettuja malleja. Codexin koristeet 751–756 Tripoon. Muut kuin Tripo-mallit kartoitetaan ja korvataan järjestyksessä (ketjutarkistus merkitsee). Tripon krediittejä seurataan ja niiden loppumisesta kerrotaan KK:lle hyvissä ajoin (ostot omistajalta). Jos jokin ei sovellu Tripolle (kokonaiset rakennukset, kartan maasto), kysytään KK:n kautta ennen poikkeamista.
+
+## PAATOKSET 20.10.2026 klo 19.28: VAIN TRIPO KOSKEE UUSIA MALLEJA (20.10.2026 klo 19.28)
+
+Omistaja 19.28 (sanatarkasti): "Ei tarvitse etsiä vanhoja ja muuttaa koska niitä ei minusta ole". Tarkennus 19.25-linjaukseen: sääntö koskee uusia malleja; vanhoja ei kartoiteta eikä korvata, eikä rakennuksista kysytä poikkeusta.
