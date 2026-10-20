@@ -44,7 +44,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
 ## 20.28 LISÄYS: havainnekuvien j9/j10 näköisyys (omistaja 20.14, PT)
 - Kuvapari 208:sta (simu pelikoodari-iPad13, runko 186b23682): /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kuvapari-208/ (PT lähetti KK:lle).
   Skenaario proto-3d/tyokalut/pelikoodari-ajot/sk-juoksupeli-kuvapari-208.txt (todistusajo.sh).
-- Haara **pelikoodari/nakoisyys-209 = 4703e0458** (maali-209 f2be670cd:n päällä; 5d9b6dfd7 + avoimet huoneet): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
+- Haara **pelikoodari/nakoisyys-209 = 4a928209a** (maali-209 f2be670cd:n päällä; 5d9b6dfd7 + avoimet huoneet + pakotetut linjat): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
   esteiden ennakko ≤ 120 m palatsissa (JuoksuV4Maailma.LahiRaja, QA kauko lahi). Kujat: lyhin reitti maaliin 74 % ≤ 6 m kujilla → ei reittimuutosta.
 - Odottaa: NS:n simukäännös → ennen/jälkeen-kuvapari + LT:n GPU ≤ 16 ms; Lavastajan avoimet-v2-ovet (läpijuoksu), Tripo-esteet ja eunukit;
   VS:n matala aurinko. Simu: JU:n SIMU NYT -vuoro.
@@ -52,3 +52,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   LataaPalatsiMallit(avoimet), TaustaKansio v7. AVOIN: Kuuden läntisen palatsin alue karsiutuu verkosta, koska leivottu esto
   (taustan talot) katkaisee kujien päät. Pyydetty Lavastajalta "liitokset" (tai tausta-v8). Sama karsii verkkoa laajemmin
   (1 560 vs 3 520 solmua ilman estoa); maali saavutettavissa.
+- 20.5x: saareke RATKAISTU verkon puolella (4a928209a): reitit "avoin …" pakotetaan linjoiksi (JuoksuPalatsiVerkko.Pakotetut: saman
+  suunnan janat yhdeksi, päät +3,5 m 2,03°:n kierron vuoksi, ei muurikujia). Oikealla pohjalla + estolla Lavastajan kolmella liitoksella
+  tyohuone/puutarha/varasto läpijuostavia, juhlasalin keskusta karsiutuu (ei silmukkaa). Odottaa Lavastajan v8 + avoimet-sijoitus.json
+  liitoksineen → TaustaKansio v8. Vianetsintä: JuoksuPalatsiVerkko.EiKarsintaa (internal, testit).
