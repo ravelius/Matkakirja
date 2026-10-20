@@ -40,3 +40,7 @@ Kun kaikki kuitattu → PT → KK "208 valmis julkaistavaksi" (KK kysyy omistaja
 - Codex: PT733–737 ei vielä toimitettu (Puyi207-hihan jälkeen). Lavastaja → rakennukset-v13 ja LS → Louvren kulmakoristeet, kun tulevat.
 - Lepäävät (vko 85 %): Karttaseppä, Äänittäjä, Sisältökirjuri, Projektiseppä, Työkaluseppä (paitsi esikatselu), NUI (32 %), LS, Lavastaja.
 - Asemataulu nollattu 11.4x: B-cron poistettu pysyvästi (7.39, #5031) – Postivahdille ja hoitajalle kerrottu.
+
+- HUOM PT:n virhe 12.4x: työtilan luonti epäonnistui ja commit meni päächeckoutin haaraan claude/bold-ride-vow4ki (486ec4976,
+  sisälsi .claude/settings*.json + launch.json) → pushattu, PR #5036 SULJETTU mergeämättä, paikallinen commit peruttu (soft reset).
+  Etähaara jäi osoittamaan 486ec4976:aan (ennen a990bbd1f); palautus vaatii force-pushin → vain omistajan luvalla.
