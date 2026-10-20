@@ -13,7 +13,8 @@ ja jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Pohjan muutokset
 **Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta
 (havainnekuva), ja ennen junaa omistaja näkee KK:n kautta tavoitekuvan ja pelikuvan rinnakkain. Omistajalle viedään vain uudet asiat
 (uusi aihe, uusi hahmo tai kohde) ja makuvalinnat (tyyli); muut hyväksyy PT omistajan puolesta (4.21; 7.15 PT HYVÄKSYY CODEXIN KUVAT).
-Omistajalle näytetään vain pelistä otettu kuva, ei Blender- tai mallikuvaa (7.32). Junan lukitus ja TestFlight tehdään vain
+Omistajalle näytetään vain pelistä otettu kuva, ei Blender- tai mallikuvaa (7.32); poikkeus on pelaajalle sellaisenaan annettava
+tuote, esim. aarteen löytövideo (Codexin Blender-renderöinti, `esirenderoity-video.md` kulku B) ja sen mallikuva. Junan lukitus ja TestFlight tehdään vain
 omistajan pyynnöstä (10.2 JULKAISUPYYNTÖ); tämä putki vie mallin vain avoimeen junaan.
 
 **Portti:** `node tools/codex-3d-tarkistus.mjs <toimituskansio>` — paluuarvo 0 = vastaanotettu, 1 = hylätty (VIRHE-rivit
@@ -34,7 +35,9 @@ Kaikki alla oleva, jonka perässä on **[portti]**, tarkistetaan koneellisesti; 
   palveluita, eikä ostoehdotuksia tuoda ennen kuin omistaja itse avaa asian (11.5 TOISTAISEKSI EI OSTOJA). Tripon krediittien
   loppumisesta kerrotaan KK:lle hyvissä ajoin (7.15, 11.7).
 - **Videot pelistä, yöllä (4.21 ESIRENDERÖITY VIDEO, 7.32):** pelin kohtausvideot kuvataan pelin omasta Unity-kohtauksesta (Claude).
-  Blender-mallivideot ovat roolien sisäisiä työvälineitä eivätkä mene omistajalle. Pitkät renderöinnit ja videot ajetaan öisin.
+  Blender-mallivideot ovat roolien sisäisiä työvälineitä eivätkä mene omistajalle (poikkeus: aarteen löytövideo, 7.32). Pitkät
+  renderöinnit ja videot yöllä; lyhyen liiketarkistusvideon saa tehdä päivälläkin, kun omistaja ei käytä Macia (4.21, 12.13;
+  omistaja 21.10.2026 klo 00.10).
   Esirenderöidyt kohtausvideot tehdään omalla pohjallaan `esirenderoity-video.md`.
 
 ## Putki yhdellä silmäyksellä
@@ -157,7 +160,8 @@ vastaanotossa (älä toimita KTX2:ta).
    (Tripo-hahmon hiukset peittivät silmät sivukuvassa, PT ohitti, 18.10. klo 11.41). Lähde: loki "PAATOKSET 18.10.2026 klo 11.34";
    muisti pt-kuvan-tarkistus-taysikokoisena.
 3. **Liikevideo ennen peliä (omistaja 18.10. klo 11.34):** hahmon liike katsotaan videona ennen kuin hahmo kytketään peliin. Video
-   kuvataan Unityssä pelin kohtauksesta (Lavastaja), ei Blenderistä (4.21, 7.32). Pitkät renderöinnit ja videot ajetaan öisin.
+   kuvataan Unityssä pelin kohtauksesta (Lavastaja), ei Blenderistä (4.21, 7.32). Pitkät renderöinnit ja videot yöllä; lyhyen
+   liiketarkistusvideon saa tehdä päivälläkin, kun omistaja ei käytä Macia (luku 11).
 4. **Havainnekuva ja pelikuva rinnakkain** täysikokoisina ennen hyväksyntää (9.11 kohta 4, omistaja 19.10.2026 klo 15.21).
    Pelikuva otetaan pelistä tai Unityn esikatselusta pelin kohtauksessa. Kuvateksti omalla raidallaan kuvan ylä- tai alapuolella,
    ei kuvan päällä (omistaja 18.10.2026 klo 12.14).
