@@ -1,0 +1,281 @@
+{
+  "at": "2026-10-20T22:31:09.736447+00:00",
+  "taskNumber": 767,
+  "source": {
+    "path": "posti/paatoimittaja-codex-yojono-juoksupeli-20261021.md",
+    "commit": "9ba376dbd38cd0b0be52ff3f04facedb32c0d42f",
+    "blob": "7bd86414b85e69e76502321dc0652210d3ae61a9",
+    "readInFull": true,
+    "readAt": "2026-10-20T22:13:00.643647+00:00",
+    "sha256": "85e8e195e80d37459f7d86f07355ce8b9f5143382fbbc1ca213ff168d86ba482"
+  },
+  "actualBuiltinCallsIssued": 18,
+  "actualBuiltinCallsCompleted": 18,
+  "pendingCalls": 0,
+  "initialCalls": 8,
+  "boundedWholeCorrectionCalls": 10,
+  "selectedConceptImages": 7,
+  "fullCameraUnconditionalPass": false,
+  "cameraExceptionImageCount": 1,
+  "diagnosticOnlyImages": 1,
+  "openRequirement": "Western alley landscape actor remains23.4%, targetapprox18.2%; not approved as a camera-size reference. Await narrower Valoseppa/Lavastaja frame/reference direction; no unbounded calls.",
+  "conditionalLimits": [
+    "Gate andouter landscape15.7% ratherthan18.2%; disclosed smalleractor.",
+    "Square landscape21.6% ratherthan18.2%; conditional review only.",
+    "A46s-labelled still was found: red close surface occludes almost the full viewport; not a usable clean tunnel geometry reference. Source video unidentified/unwatched and exact night-source binding remains unproven."
+  ],
+  "assets": [
+    {
+      "id": "gate-tunnel-portrait",
+      "path": "havainnekuvat/gate-tunnel-portrait.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/gate-tunnel-portrait.png",
+      "sha256": "ff764b926505f1504662f6376b32048d6e4b881dd620547dd75faed91f509496",
+      "nativeSize": [
+        941,
+        1672
+      ],
+      "puyiHeightFractionApprox": 0.198,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "PASS_APPROX_CONCEPT",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    },
+    {
+      "id": "gate-tunnel-landscape-v2",
+      "path": "havainnekuvat/gate-tunnel-landscape-v2.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/gate-tunnel-landscape-v2.png",
+      "sha256": "cf6b59f66b3b48918fcfafc0a5592a3b14cdcf6eba6153527844f5327ecbc296",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "puyiHeightFractionApprox": 0.15727948990435706,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "PASS_WITH_SMALLER_ACTOR_DISCLOSURE",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    },
+    {
+      "id": "outer-ring-portrait",
+      "path": "havainnekuvat/outer-ring-portrait.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/outer-ring-portrait.png",
+      "sha256": "136d6f2f76643a560b2d726daeb3f56bcc54433d19a31ffcd871272d3a639d35",
+      "nativeSize": [
+        941,
+        1672
+      ],
+      "puyiHeightFractionApprox": 0.2,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "PASS_APPROX_CONCEPT",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    },
+    {
+      "id": "outer-ring-landscape-v2",
+      "path": "havainnekuvat/outer-ring-landscape-v2.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/outer-ring-landscape-v2.png",
+      "sha256": "b014a2c8e784abff8b8dc39a5dce82faf5a15d23afb5d026851d25a166680d56",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "puyiHeightFractionApprox": 0.15727948990435706,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "PASS_WITH_SMALLER_ACTOR_DISCLOSURE",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    },
+    {
+      "id": "western-alley-portrait-v3",
+      "path": "havainnekuvat/western-alley-portrait-v3.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-portrait-v3.png",
+      "sha256": "482cdf064738226e5bc51cbe5681e32cf96f9f1ecefaa0294a82284e865e2248",
+      "nativeSize": [
+        941,
+        1671
+      ],
+      "puyiHeightFractionApprox": 0.17774,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "PASS_APPROX_CONCEPT",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    },
+    {
+      "id": "square-horizon-portrait-v3",
+      "path": "havainnekuvat/square-horizon-portrait-v3.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-portrait-v3.png",
+      "sha256": "de6f70f4fc61ef24e115b6dd87df3bb18db5448952a1685e08479263d8d1e894",
+      "nativeSize": [
+        941,
+        1672
+      ],
+      "puyiHeightFractionApprox": 0.173,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "PASS_APPROX_CONCEPT",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    },
+    {
+      "id": "square-horizon-landscape-v3",
+      "path": "havainnekuvat/square-horizon-landscape-v3.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-landscape-v3.png",
+      "sha256": "b6a5766f89a14a525add8c935689d9fc0314ad2b79e73af88ccb514e4c8d4d73",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "puyiHeightFractionApprox": 0.216,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "CONDITIONAL_COMPARISON_SCALE_ABOVE_TARGET",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    },
+    {
+      "id": "western-alley-landscape-v3",
+      "path": "diagnostiikka/western-alley-landscape-v3.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-landscape-v3.png",
+      "sha256": "0680c48b4ce0742fb870d4c6f42dbce72402b77b634d9831df9ebb18eca93b18",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "puyiHeightFractionApprox": 0.234,
+      "targetFraction": 0.18181818181818182,
+      "verdict": "DIAGNOSTIC_ONLY_CAMERA_TARGET_UNMET",
+      "source46sMatched": false,
+      "gameGeometryMatched": false,
+      "nativePixelsUnchanged": true
+    }
+  ],
+  "all18OriginalsPreserved": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/gate-tunnel-landscape-v2.png",
+      "sha256": "cf6b59f66b3b48918fcfafc0a5592a3b14cdcf6eba6153527844f5327ecbc296",
+      "bytes": 2575970
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/gate-tunnel-landscape.png",
+      "sha256": "83ff3abd9374548f28b5975e16108bf2c24302e5cedc4fad775d3daa5565ba53",
+      "bytes": 2398248
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/gate-tunnel-portrait.png",
+      "sha256": "ff764b926505f1504662f6376b32048d6e4b881dd620547dd75faed91f509496",
+      "bytes": 2335797
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/outer-ring-landscape-v2.png",
+      "sha256": "b014a2c8e784abff8b8dc39a5dce82faf5a15d23afb5d026851d25a166680d56",
+      "bytes": 2892750
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/outer-ring-landscape.png",
+      "sha256": "a49734786557ddabff831583bdbc2ce5d3dde97e9a703ed5d298a746415ee325",
+      "bytes": 2870159
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/gate-outer/native/outer-ring-portrait.png",
+      "sha256": "136d6f2f76643a560b2d726daeb3f56bcc54433d19a31ffcd871272d3a639d35",
+      "bytes": 2562622
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-landscape-v2.png",
+      "sha256": "3ae04e3f13bb0ee60b6212e96ee7ff0049b3b35bccedb3771b36789ecd3593e6",
+      "bytes": 2639885
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-landscape-v3.png",
+      "sha256": "b6a5766f89a14a525add8c935689d9fc0314ad2b79e73af88ccb514e4c8d4d73",
+      "bytes": 2446150
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-landscape.png",
+      "sha256": "ae6b70ddf039c60168ac9c36ba8a02156885e631b39dfe36021e2744ce9fa700",
+      "bytes": 2564134
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-portrait-v2.png",
+      "sha256": "99ccf0908285356516571aa3892ade40ca3ab33aa617304255b7ec2246b35db0",
+      "bytes": 2491160
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-portrait-v3.png",
+      "sha256": "de6f70f4fc61ef24e115b6dd87df3bb18db5448952a1685e08479263d8d1e894",
+      "bytes": 2493696
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/square-horizon-portrait.png",
+      "sha256": "205f8813d9e1b49b11c575eafd61548c728f6e73cf5d48fd4eac18e051e016f8",
+      "bytes": 2653003
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-landscape-v2.png",
+      "sha256": "6ad031612ac5f1f69209210a46a846d907414b063645d29ed6c089815b03ee3a",
+      "bytes": 2594071
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-landscape-v3.png",
+      "sha256": "0680c48b4ce0742fb870d4c6f42dbce72402b77b634d9831df9ebb18eca93b18",
+      "bytes": 2524851
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-landscape.png",
+      "sha256": "4905b08005a4f58e381359f6de401c05e8e76b59a0b4a41ece5d329cce985824",
+      "bytes": 2778146
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-portrait-v2.png",
+      "sha256": "5d8a56e43f1cd5e75a7a9def999e15134063ec27a327b428b621ca6cec11b21b",
+      "bytes": 2491617
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-portrait-v3.png",
+      "sha256": "482cdf064738226e5bc51cbe5681e32cf96f9f1ecefaa0294a82284e865e2248",
+      "bytes": 2350495
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/lane-square/native/western-alley-portrait.png",
+      "sha256": "bb9a67c9ebd265d6463d93380e96f794c38854bb57e7ec12a0dddfacee92406e",
+      "bytes": 2481420
+    }
+  ],
+  "rootViewedProducerContactAndMeasurementBoards": true,
+  "producerPersonallyViewedAllNatives": true,
+  "modelCalls": 0,
+  "runtimeIntegrated": false,
+  "published": false,
+  "reference46sCurrentAudit": {
+    "path": "REFERENCE46S-AUDIT.json",
+    "identifiedStill": {
+      "path": "/Users/Shared/Claude/proto-3d/lokit/todistus-juoksupeli-kuvapari-209d-20261020-2256/kuvat/r06.png",
+      "explicitTimeLabel": "Juoksu46s",
+      "dateEvidence": "Capture directory is dated20261020 and ajo.log logs22:56:11–23:01:56. No timezone is recorded in that log; no wallclock time of the exact still is independently asserted.",
+      "buildLabel": "31c91c56",
+      "captureDeviceLabel": "ipad LandscapeLeft",
+      "metadataProof": [
+        "TODISTUS.md section4 line forr06",
+        "kuvat.tsv r06row",
+        "ajo.log execution context"
+      ],
+      "personallyViewed": true,
+      "observedPixels": "Almost the entire viewport is covered by a close red textured surface; a small lower portion of the character and a pale opening are visible at the bottom. This is not a clean visible tunnel interior or a geometry reference.",
+      "interpretation": "Consistent with a camera occlusion/inside-surface view, but the rendering cause is not diagnosed by this audit.",
+      "adjacentStillsPersonallyViewed": [
+        "r05=40s,open palace route",
+        "r07=52s,open side route"
+      ],
+      "sourceNightMailExplicitlyBindsThisStill": false
+    },
+    "sourceVideoIdentified": false,
+    "sourceVideoWatched": false,
+    "newGeneratedImagesClaimExactGameFrameMatch": false
+  },
+  "updatedAt": "2026-10-20T22:40:07.754696+00:00"
+}

@@ -1,0 +1,442 @@
+{
+  "at": "2026-10-20T22:42:15.642407+00:00",
+  "tasks": [
+    767,
+    773,
+    774,
+    772
+  ],
+  "packages": [
+    {
+      "at": "2026-10-20T22:41:19.333442+00:00",
+      "task": 767,
+      "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task767/delivery",
+      "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/juoksu-yo-task767-osatoimitus-20261021.zip",
+      "zipSHA256": "077b43b5c7f1f12fa95266748c044c91cb93f9c1d567b3808d4799726bb4284e",
+      "zipBytes": 19889978,
+      "everyZipMemberByteVerified": true,
+      "filesVerified": 17,
+      "files": [
+        {
+          "path": "GATE-PROMPTS-INITIAL.json",
+          "sha256": "50e7bad40548ab8f884a09bb52202927acb89070d319979443048801f173e6a8",
+          "bytes": 17451
+        },
+        {
+          "path": "GATE-PROMPTS-V2.json",
+          "sha256": "87bd19807bcd9a3b2cac866f44d584ad5d0574b55fae4d7f9a0463d171bfba48",
+          "bytes": 7544
+        },
+        {
+          "path": "HANDOFF.md",
+          "sha256": "0cc757142f80cbe655368f7975ae0290cdb84c6baf0979312631d24214100ac6",
+          "bytes": 1279
+        },
+        {
+          "path": "LAHTEET.md",
+          "sha256": "fa53092413044e8c1a251ea97ad790d880767e97ec7fe126ce0d946d826d86e8",
+          "bytes": 733
+        },
+        {
+          "path": "LANE-SQUARE-PROMPTS-ALL12.md",
+          "sha256": "6bcf72c1a482559f8f496d014cca4d9377a71d82288a277a7d422234bc42dee0",
+          "bytes": 42363
+        },
+        {
+          "path": "QA-SELECTION.json",
+          "sha256": "7fa096363543f452397d0f23bc1d262a0bbf3bb63bec8a0f3f983a556679a2db",
+          "bytes": 13658
+        },
+        {
+          "path": "REFERENCE46S-AUDIT.json",
+          "sha256": "9cd4e75b3b02a75fc869311be6bd35f6112c5f019f46fc931dd413f4a4948955",
+          "bytes": 11574
+        },
+        {
+          "path": "SHA256SUMS",
+          "sha256": "36778ec9243898dc66d497c2f957e00b717cf2f28033c397b69a36b38d8b83cd",
+          "bytes": 1553
+        },
+        {
+          "path": "diagnostiikka/western-alley-landscape-v3.png",
+          "sha256": "0680c48b4ce0742fb870d4c6f42dbce72402b77b634d9831df9ebb18eca93b18",
+          "bytes": 2524851
+        },
+        {
+          "path": "esikatselu.jpg",
+          "sha256": "2582ed6ec3991330dceb56af873ef7905c1064613996d616b06bcc34a824e261",
+          "bytes": 335433
+        },
+        {
+          "path": "havainnekuvat/gate-tunnel-landscape-v2.png",
+          "sha256": "cf6b59f66b3b48918fcfafc0a5592a3b14cdcf6eba6153527844f5327ecbc296",
+          "bytes": 2575970
+        },
+        {
+          "path": "havainnekuvat/gate-tunnel-portrait.png",
+          "sha256": "ff764b926505f1504662f6376b32048d6e4b881dd620547dd75faed91f509496",
+          "bytes": 2335797
+        },
+        {
+          "path": "havainnekuvat/outer-ring-landscape-v2.png",
+          "sha256": "b014a2c8e784abff8b8dc39a5dce82faf5a15d23afb5d026851d25a166680d56",
+          "bytes": 2892750
+        },
+        {
+          "path": "havainnekuvat/outer-ring-portrait.png",
+          "sha256": "136d6f2f76643a560b2d726daeb3f56bcc54433d19a31ffcd871272d3a639d35",
+          "bytes": 2562622
+        },
+        {
+          "path": "havainnekuvat/square-horizon-landscape-v3.png",
+          "sha256": "b6a5766f89a14a525add8c935689d9fc0314ad2b79e73af88ccb514e4c8d4d73",
+          "bytes": 2446150
+        },
+        {
+          "path": "havainnekuvat/square-horizon-portrait-v3.png",
+          "sha256": "de6f70f4fc61ef24e115b6dd87df3bb18db5448952a1685e08479263d8d1e894",
+          "bytes": 2493696
+        },
+        {
+          "path": "havainnekuvat/western-alley-portrait-v3.png",
+          "sha256": "482cdf064738226e5bc51cbe5681e32cf96f9f1ecefaa0294a82284e865e2248",
+          "bytes": 2350495
+        }
+      ]
+    },
+    {
+      "at": "2026-10-20T22:42:15.642407+00:00",
+      "task": 772,
+      "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task772",
+      "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/juoksu-yo-task772-valmistelu-20261021.zip",
+      "zipSHA256": "273d784dc011ea138d46c522301e2420acb4e043c1ee0adae405733c827e1084",
+      "zipBytes": 31240153,
+      "everyZipMemberByteVerified": true,
+      "filesVerified": 39,
+      "files": [
+        {
+          "path": "ASSEMBLY-MANIFEST.json",
+          "sha256": "039cb5aa77da79dee24559cf7aa98333f55e140d649a9ffc79410a8770aaf951",
+          "bytes": 6793
+        },
+        {
+          "path": "SHA256SUMS",
+          "sha256": "9f9b31f55d8407447522e0eb7b8a002331eefe6108b234ec9564fea09f3cddd4",
+          "bytes": 4361
+        },
+        {
+          "path": "SOURCE-USAGE.json",
+          "sha256": "ed250ecb6c063364fee30a7e638afc76eab308c2376da86ec2356f3a439153af",
+          "bytes": 20303
+        },
+        {
+          "path": "STATE.json",
+          "sha256": "7f0586664c4681f4e2764f4737894c00886ca5b3e207140165302d24de5b187a",
+          "bytes": 1397
+        },
+        {
+          "path": "VALMISTELU.md",
+          "sha256": "57f807ae88bf542ba35583446ac13d470d36ba5fbc69e9679261e08c1fec232c",
+          "bytes": 3798
+        },
+        {
+          "path": "inputs/backgrounds/portrait/kolme-veljesta-paja-ipad-pysty-2048x2732.png",
+          "sha256": "144d453f904a59f4d3bc59f29764af6c2ada716d723ec23be0b93a17f65560d3",
+          "bytes": 4682663
+        },
+        {
+          "path": "inputs/backgrounds/portrait/kolme-veljesta-paja-iphone-pysty-1179x2556.png",
+          "sha256": "ed21278d0f72d95cc5cc0dd38c9807a7023ed99ac4880857c2a8ed6fd492a015",
+          "bytes": 2592470
+        },
+        {
+          "path": "inputs/backgrounds/portrait/native/portrait-master-attempt1.png",
+          "sha256": "85df024f91b19cf8ee620bfd91618014746dd256edacbd83144795059b35b283",
+          "bytes": 2049601
+        },
+        {
+          "path": "inputs/backgrounds/wide/ipad-landscape.png",
+          "sha256": "a36003a5fed241c97dc0bb69896cd8e202e8e9e0d14e614406204bc35d8effe5",
+          "bytes": 4401487
+        },
+        {
+          "path": "inputs/backgrounds/wide/iphone-landscape.png",
+          "sha256": "ed9172856711b0efb627002ecf4608b59d1c5cbf18a67fe7fbe49b1cde00e6a5",
+          "bytes": 3399813
+        },
+        {
+          "path": "inputs/backgrounds/wide/native/workshop-wide-attempt-1.png",
+          "sha256": "ec3f812c9e0cba234871781c21a013502a1487edb030f1bf2b526a613c8c4065",
+          "bytes": 2182612
+        },
+        {
+          "path": "inputs/model/candidate02-tripo-original.glb",
+          "sha256": "76ff00a7c7592202d3a705f18379ec80ea150bf2b00e509751826fbd4a7a9c2f",
+          "bytes": 4866444
+        },
+        {
+          "path": "inputs/scene/pendant-frozen-before772.blend",
+          "sha256": "0b675ac830c068b470d9c20b12a0121c08ace7aa614afa6664ee42668db6b7d9",
+          "bytes": 7803783
+        },
+        {
+          "path": "reports/EXISTING-PARTIAL-FRAMES.json",
+          "sha256": "43c8fd28efd01b92a7ca2cf3106de5438d750985467ebd70e8f6a6d049c72a83",
+          "bytes": 4922
+        },
+        {
+          "path": "reports/MODEL-AND-BACKGROUND-VERIFIED.json",
+          "sha256": "9d3063f7f25ffb3635c32af4e29615100830e255f4f8778cfab619fe075b5b0c",
+          "bytes": 10556
+        },
+        {
+          "path": "reports/SCRIPT-STATIC-CHECK.json",
+          "sha256": "5765673e7ccb3711ee66116388640f99c47960aa6757788b879328f25bbfa3a0",
+          "bytes": 459
+        },
+        {
+          "path": "reports/current-resource-observation.json",
+          "sha256": "dc0b2f87d6807d5514f96f3e01a85c9a69761a1233933dec2dd4524163d5d4ab",
+          "bytes": 555
+        },
+        {
+          "path": "scripts/assemble_existing_scene.py",
+          "sha256": "9c41e381671d1c6e99b140f8c8b670680ea17c396c1551f1cc55327747e690e2",
+          "bytes": 4484
+        },
+        {
+          "path": "sources/background658-PT-acceptance669.json",
+          "sha256": "75d71e714ff1ddddb1ec655bf82981b970eec498f0c277505a2668956085ee62",
+          "bytes": 3390
+        },
+        {
+          "path": "sources/paatoimittaja-codex-3d-aarre-kolme-veljesta-kokeilu-20261019.md",
+          "sha256": "1c9904af28928d4c93bd153458e503f4e9e9d23d31abf9a219bf8dfa236d7e98",
+          "bytes": 1614
+        },
+        {
+          "path": "sources/paatoimittaja-codex-kolme-veljesta-loytohetki-kuittaus-20261019.md",
+          "sha256": "96ce79c87b320e2dae3348b0617971c8d10590606f7f823a8952b8b7437d7188",
+          "bytes": 503
+        },
+        {
+          "path": "sources/paatoimittaja-codex-kolme-veljesta-vaihe2-20261019.md",
+          "sha256": "88e26dc8f701aeaa6a86a2c70fa2a57032fd3e0e8998922f7d7a83f204b7e2ec",
+          "bytes": 1073
+        },
+        {
+          "path": "sources/paatoimittaja-codex-kolme-veljesta-video-20261019.md",
+          "sha256": "2ead5810155022e08d15a0ab359cf927e60ce5fa54e02ba53fc233ad6b2e9f72",
+          "bytes": 1672
+        },
+        {
+          "path": "sources/paatoimittaja-codex-manta-raiatea-uusinta-kuittaus-20261019.md",
+          "sha256": "3aa281648361b629e28e94875e7a876a1df03276de36e1e376a8a86fe053f1d4",
+          "bytes": 598
+        },
+        {
+          "path": "sources/paatoimittaja-codex-olavinlinna-tauolle-20261019.md",
+          "sha256": "437e91292fbda0a222aaa90bc59f3d240d42fbd14148551ea47fa6757e1991be",
+          "bytes": 587
+        },
+        {
+          "path": "sources/paatoimittaja-codex-paja-taustat-ja-andoya-20261019.md",
+          "sha256": "400b401e151247447ca47f985214453b0acbc905bbe6dee3a7791a0f98912884",
+          "bytes": 1618
+        },
+        {
+          "path": "sources/paatoimittaja-codex-yojono-juoksupeli-20261021.md",
+          "sha256": "85e8e195e80d37459f7d86f07355ce8b9f5143382fbbc1ca213ff168d86ba482",
+          "bytes": 2550
+        },
+        {
+          "path": "sources/previous-owner-NIGHT-HANDOFF.md",
+          "sha256": "91497794b9116033676654dcb438ecff47c55c2a0178b30f3d901e313d535e15",
+          "bytes": 7356
+        },
+        {
+          "path": "sources/previous-owner-QA-TILANNE.md",
+          "sha256": "a420cfcc7c50eac6e788a44f74a3733ce235a179f592d761431d2e643f3f66a3",
+          "bytes": 3789
+        },
+        {
+          "path": "sources/previous-owner-VIDEO-HOLD-PT692.json",
+          "sha256": "b4f37257ab6d43461081e27b1874dd42bc5c6db0c0acc88bfe9b1701eb6aebf3",
+          "bytes": 835
+        },
+        {
+          "path": "sources/previous-owner-build_pendant_video.py",
+          "sha256": "645bc871bbc59c67d8716856c53c9552acef8e2b71a669865c91e2a36a9ed35e",
+          "bytes": 9755
+        },
+        {
+          "path": "sources/previous-owner-candidate-02-qa-import-gate.json",
+          "sha256": "325c03996ee5dc4c32c75885a90c03ebc9f0614390a2d06285d55c8cd07d272c",
+          "bytes": 489
+        },
+        {
+          "path": "sources/previous-owner-candidate-02-qa-topology-uv.json",
+          "sha256": "01443db25f12ea95448ffbf71f91e7fb6122859ec5a3fa203ecf541f35c46212",
+          "bytes": 830
+        },
+        {
+          "path": "sources/previous-owner-checkpoint.json",
+          "sha256": "985e4c20f16abcde9bda747288670b633b3356bd6811e750149ddcdd2ec1a0f9",
+          "bytes": 12006
+        },
+        {
+          "path": "sources/previous-owner-generation-ledger.json",
+          "sha256": "b4403ff8aa34499afc145541d5319a77cf95622e3f1a357720b194641962a3ed",
+          "bytes": 2777
+        },
+        {
+          "path": "sources/previous-owner-render_pendant_video.py",
+          "sha256": "6de9c342b1d7fcdbd8fa78ae8055d53f8fa683dddb884d2c4c88db0ed53b7e04",
+          "bytes": 4524
+        },
+        {
+          "path": "sources/previous-owner-sources-night-render-priority-674.md",
+          "sha256": "7b1d095a8dace8ac8e24a26edeb7c192a7384de3f8f7fcd86c2eff70b3bccbc8",
+          "bytes": 839
+        },
+        {
+          "path": "sources/previous-owner-video-v1-scene-contract.json",
+          "sha256": "2e3d1d79b71086629c646d65a41ede5e3c032ac74d59d407fb5faadd8d33a6d9",
+          "bytes": 1385
+        },
+        {
+          "path": "sources/previous-owner-video-v1-scene-motion-camera-qa.json",
+          "sha256": "6110faae3d2cff751ab4632d75484c4f3f498bb618d6b115e410325b6e7dbd3e",
+          "bytes": 1401
+        }
+      ]
+    },
+    {
+      "at": "2026-10-20T22:41:19.333442+00:00",
+      "task": "773–774",
+      "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task773774/delivery",
+      "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/juoksu-yo-task773774-20261021.zip",
+      "zipSHA256": "8c552c43ef9df507b4f901b1fdbac795bfdfc2a1f94796af1df576a9e05ac5a9",
+      "zipBytes": 13527171,
+      "everyZipMemberByteVerified": true,
+      "filesVerified": 23,
+      "files": [
+        {
+          "path": "HANDOFF.md",
+          "sha256": "5b2930fb751becb743cd0c6f6f3e7375d7e30c7677e5a2bd73d226f39604eaf0",
+          "bytes": 1499
+        },
+        {
+          "path": "LAHTEET.md",
+          "sha256": "0d048b0b63a5b9377bb7670f7afd50222858f22227b93843b551d303ba9f8f0e",
+          "bytes": 2709
+        },
+        {
+          "path": "ROOT-REVIEW.json",
+          "sha256": "4b9c05c7dd6090167069b65a9427cbdd2e9b1afae75874528c6262d18eea8366",
+          "bytes": 701
+        },
+        {
+          "path": "SHA256SUMS",
+          "sha256": "1357dd8ceb1ce68e21afa704bb175b30b7d46a4b7e0e0f7a31892bc2f00f604e",
+          "bytes": 2218
+        },
+        {
+          "path": "esikatselu/preview.jpg",
+          "sha256": "199285bc42d0143dd1c56978df54193415fcaaa8e5199b50cde02b53cd9d1299",
+          "bytes": 288581
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "c4e3110dc15b84f889f1e42c378bb98698297212da006dd3ef5474912e2fc754",
+          "bytes": 21635
+        },
+        {
+          "path": "producer-qa.json",
+          "sha256": "281d27dbb2715ca90ebe634416f377f27198a70d2188019bde9ee4f02ee41fb5",
+          "bytes": 8233
+        },
+        {
+          "path": "provenance/codex-3d-toimitus.md",
+          "sha256": "4e1003c307749504470aa115010c3d6734c4e65502b0c5b75d7b73c7fdbfa618",
+          "bytes": 8984
+        },
+        {
+          "path": "provenance/paatoimittaja-codex-yojono-juoksupeli-lisays-20261021.md",
+          "sha256": "27bb436f28a4eee5be408c743979a61ee6640864d2abefd79cc7193dde8f4429",
+          "bytes": 776
+        },
+        {
+          "path": "provenance/prompt-set-v2.json",
+          "sha256": "347546bc6e30edfaff0428030ccdc34ce405140169b8eab763f26f53ed267272",
+          "bytes": 1830
+        },
+        {
+          "path": "provenance/prompt-set.json",
+          "sha256": "ca8e0c8cc822f1ca899088295f3a42c9b4b0b2ba6c2b34d693be3e5f69ae6ee7",
+          "bytes": 9368
+        },
+        {
+          "path": "tekstuurit/interior-wood-panel-color.png",
+          "sha256": "e067eadcf0287cb2f7ebda0580ebe2eabb4745c4908c36b61493da5831cdcae7",
+          "bytes": 1691325
+        },
+        {
+          "path": "tekstuurit/interior-wood-panel-roughness.png",
+          "sha256": "e2b46611e4073b2dc5cc9ecb03b50d8dcfd56d233032b2964bc85367a5090b2f",
+          "bytes": 3158
+        },
+        {
+          "path": "tekstuurit/scroll-bamboo-color.png",
+          "sha256": "f701577ce3670eac2e6859d6ed9d62c1786be4667c9df3d6fecc7f4b17cb39b4",
+          "bytes": 2397486
+        },
+        {
+          "path": "tekstuurit/scroll-bamboo-roughness.png",
+          "sha256": "ef7516369e509aee04d01c28969756652c7c0aa12e5783853c3ea115f6b79319",
+          "bytes": 6230
+        },
+        {
+          "path": "tekstuurit/scroll-calligraphy-shanshui-color.png",
+          "sha256": "3fa1bf3272a46453fc12fc286b5ebcd7e8d3981c59148b13140f23569f43e862",
+          "bytes": 2853892
+        },
+        {
+          "path": "tekstuurit/scroll-calligraphy-shanshui-roughness.png",
+          "sha256": "ef7516369e509aee04d01c28969756652c7c0aa12e5783853c3ea115f6b79319",
+          "bytes": 6230
+        },
+        {
+          "path": "tekstuurit/scroll-misty-mountains-color.png",
+          "sha256": "c66dc4f7cc25ac66f6e8c449ed73e76cf5c29064a438114d2e34de80212dbeee",
+          "bytes": 2543925
+        },
+        {
+          "path": "tekstuurit/scroll-misty-mountains-roughness.png",
+          "sha256": "ef7516369e509aee04d01c28969756652c7c0aa12e5783853c3ea115f6b79319",
+          "bytes": 6230
+        },
+        {
+          "path": "tekstuurit/scroll-plum-blossom-color.png",
+          "sha256": "4312783f17a1359a18b3c57d191d0545ad8666c591da9970068383375f448fb7",
+          "bytes": 2781678
+        },
+        {
+          "path": "tekstuurit/scroll-plum-blossom-roughness.png",
+          "sha256": "ef7516369e509aee04d01c28969756652c7c0aa12e5783853c3ea115f6b79319",
+          "bytes": 6230
+        },
+        {
+          "path": "tekstuurit/window-lattice-color.png",
+          "sha256": "93b8cc8c41d6e3d71a9c8361c6133c9d70ac827d3a26cf2b4bdd730d675e804d",
+          "bytes": 992492
+        },
+        {
+          "path": "tekstuurit/window-lattice-roughness.png",
+          "sha256": "ee6cf688a0e9e6446d4c3d30abb984c984b70c4dbc34532f8a34e8cef0fc6160",
+          "bytes": 3158
+        }
+      ]
+    }
+  ]
+}
