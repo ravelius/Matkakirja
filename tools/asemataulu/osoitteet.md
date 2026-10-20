@@ -5,8 +5,8 @@ organization … invited editors"). Siksi jokaisella tilillä on oma kopio samas
 
 | Tili | Osoite | Huom |
 |---|---|---|
-| Päätili (omistajan muukin käyttö, raja 50 %) | https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix | alkuperäinen 10.10.; jäi 12.10. 19.2x:n tilaan |
-| samireivinen@gmail.com (koodaus, raja 99 %, viikko nollautuu ma 03.59) | https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy | julkaistu 12.10. 19.39 |
+| Päätili (omistajan muukin käyttö, raja 50 %; käytössä 18.10. 01.0x – 19.10. 04.00, viikko nollautuu ma klo 09.59) | https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix | alkuperäinen 10.10.; julkaistu uudelleen 18.10. 01.1x (PT local_cf5b4eca), tietokanta täytetty |
+| samireivinen@gmail.com (koodaus; KÄYTÖSSÄ 19.10. klo 07.0x alkaen, viikko nollautuu ma 26.10. aamuyöllä) | https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy | julkaistu 12.10. 19.39; uusin sivu ja tietokanta 19.10. 07.1x (PT local_8d8ebf72) |
 | sami.reivinen@vvi.fi (koodaus, raja 99 %, viikko nollautuu ti 20.10. klo 01.59) | https://claude.ai/artifact/EekZDPMuAcsjT3awvn4jPb | julkaistu 13.10. 21.5x (PT local_593b89a1) |
 | vvi@vvi.fi (koodaus, raja 99 %, viikko nollautuu pe klo 08.00; käytössä 15.10. klo 12.1x alkaen) | https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm | julkaistu 15.10. 12.2x (PT local_5df52e10) |
 
