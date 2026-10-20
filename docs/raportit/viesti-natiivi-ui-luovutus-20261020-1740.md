@@ -9,7 +9,7 @@ natiivi-ui/siirto-pehmea-208, puhdas.
 1. SALANAPPI (omistaja 17.07) RUNGOSSA: natiivi-ui/salanappi-208 f8c0bc0ce → juna-208 202a17116. OSA II × 5 → testinäkymä
    (UI/Testinakyma.cs, puhdas Peli/Testihypyt.cs, testit Peli-testit TestihypytTestit). Linkki matkakirja://testi[/monalisa|sokkelo|
    peli/<id>|linssi/<id>], QA "ui testi [tunnus|lista]"; vain testiversiot (Kehitys/TestFlight/simu/editori). Valmis.
-2. METROKARTAN PEHMEÄT TEKSTIT (omistaja 17.25, PT: juna 208 odottaa tätä) VALMIS JA LÄHETETTY NS:lle 17.3x, NS ei ole vielä kuitannut:
+2. METROKARTAN PEHMEÄT TEKSTIT (omistaja 17.25, PT: juna 208 odottaa tätä) VALMIS JA LÄHETETTY NS:lle 17.3x:
    natiivi-ui/siirto-pehmea-208 63d0fe853 (pohja juna-208 e3f88ff4e). OpasMetrolinja.Siirtotila (vain nykyinen nimi + tekijärivi,
    ristiin merkin tahdissa, paino ei vaihdu, reunarivit häivyttäen, AsemanRivi-asettelukorjaus MuseoTaulu.PaivitaSiirros, Asetu alussa),
    perillä ristiin nimikyltin kanssa SiirtoRistiS 0,6 s, vaalean salin sävy color-siirtymällä. Ydin/Museo/SiirtokarttaRisti.cs + testit
