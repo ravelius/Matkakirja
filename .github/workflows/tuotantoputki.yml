@@ -1,0 +1,44 @@
+# Tuotantoputken tarkistus (omistaja 20.10.2026 klo 19.12 "Tämä pitää korjata tuotantoputkeen"; Pelikoodari, PT:n tilaus).
+# Codex/Tripo-mallien ketju tilattu → toimitettu → hyväksytty → pelissä (tools/tuotantoputki.mjs; puhtaat osat testataan
+# tests/tuotantoputki.test.mjs:ssä tavallisessa npm testissä). Natiivipeli (proto) ja _valmiit-paketit ovat vain Mac Studiolla,
+# joten tarkistus ajetaan self-hosted-ajurilla kerran vuorokaudessa ja käsin. Tulos Postivahdille:
+# /Users/Shared/Claude/proto-3d/lokit/tuotantoputki/{VIKA.txt, tulos.md, tulos.json, historia.log}; VIKA.txt tyhjä = kunnossa.
+# Vain luku: HEAD-pyynnöt media.matkakirja.app:iin, git-luku protosta ja postilaatikosta. Ei kirjoituksia ämpäriin eikä protoon.
+name: Tuotantoputki
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 07.00 Suomen aikaa (EEST)
+  workflow_dispatch:
+
+concurrency:
+  group: tuotantoputki
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  tarkistus:
+    runs-on: [self-hosted, macOS]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mac-ajokoneen valmistelu
+        run: tools/mac-ajovalmis.sh
+
+      - name: Tuotantoputki
+        run: |
+          set -euo pipefail
+          node tools/tuotantoputki.mjs
+          cat /Users/Shared/Claude/proto-3d/lokit/tuotantoputki/tulos.md >> "$GITHUB_STEP_SUMMARY"
+          if [ -s /Users/Shared/Claude/proto-3d/lokit/tuotantoputki/VIKA.txt ]; then
+            echo "::warning::$(cat /Users/Shared/Claude/proto-3d/lokit/tuotantoputki/VIKA.txt)"
+          fi

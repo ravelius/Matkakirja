@@ -1,0 +1,23 @@
+{
+ "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä.",
+ "mallit": [
+  {
+   "id": "louvre-mies-vartija",
+   "mita": "Louvren kävijä k2 (mies) ja vartija tuolillaan (Tripo, Codexin kuvista posti/valoseppa-codex-louvre-ihmiset-20261018.md)",
+   "hyvaksytty": "omistaja 18.10.2026 11.41 (KK; raamattu-loki PAATOKSET 18.10. ja viesti-fable-luovutus-20261018-paiva.md)",
+   "ampari": [
+    "taidemuseo/louvre-ihmiset-v1/k2.glb",
+    "taidemuseo/louvre-ihmiset-v1/vartija.glb"
+   ]
+  },
+  {
+   "id": "louvre-nainen",
+   "mita": "Louvren kävijä k1 (nainen, Tripo ehdokas 2, luuranko + idle)",
+   "hyvaksytty": "PT 19.10.2026 (vienti taidemuseo-louvre-ihmiset-v1-vienti-20261019, omistajan hyväksymä peliin)",
+   "ampari": [
+    "taidemuseo/louvre-ihmiset-v1/k1.glb"
+   ]
+  }
+ ],
+ "suljetut_tilaukset": []
+}
