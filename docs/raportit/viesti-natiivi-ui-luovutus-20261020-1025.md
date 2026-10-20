@@ -30,7 +30,9 @@ mekaaniset palat Sonnet-agenteille (≤ 150 riviä), ei uusia raskaita agentteja
   Mona Lisalle → kyltti "teos ei ole esillä", alarivin napit ja GG-kävely kaatuivat ketjuna. Kyltin reitti itse toimii (loki "kyltti … napautettu").
   (3) Nimen sävy: L 0,28–0,38 Louvressa → kynnys 0,36/0,28 heilahtaa; omistaja haluaa Kallioluolan madonnan salissa VALKOISEN → nosta
   kynnys (esim. TummaYli 0,45 / VaaleaAlle 0,38) kuvien perusteella; L 0,000 = latausruutu (sama vika kuin juoksussa).
-  Uusinta korjatulla skenaariolla (sama app museo-208-yhd-app) → KK + PT + VS + LS.
+  (4) LS 10.3x: V1-horatiukset.png näytti Mona Lisan lähikuvan ja T5 Mona Lisan kortin → V1/V2 nyt `linssi museo teos <id>` (Horatiukset
+  3692 punaisessa salissa kauempaa koko taulu + seinää; vaalea GG 8525) — tarkista, että oleta-rivit (kävely perillä) yhä täsmäävät tähän komentoon.
+  Uusinta korjatulla skenaariolla (sama app museo-208-yhd-app) → KK + PT + VS; kuvapolku SUORAAN LS:lle (local_7a457b99), T0 jo parina.
 
 ## TILA: haarat (proto)
 - natiivi-ui/museo-teoskortti-208 672e17bdc… + 50b57e822: teoskortti (omistaja 09.38), alarivi ‹ ▷/⏸ › 🔈 T, Kuuntele pois, kirja vain käytävällä,
