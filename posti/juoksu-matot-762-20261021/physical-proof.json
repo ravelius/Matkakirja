@@ -1,0 +1,193 @@
+{
+  "at": "2026-10-20T22:45:15.866914+00:00",
+  "taskNumber": 762,
+  "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/production-20261021/root-delivery",
+  "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksu-matot-v1/juoksu-matot-762-20261021.zip",
+  "zipSHA256": "83a47ee4224540ca5300975399355788b15ac7b42089f6af6d816b8d44cd3e16",
+  "zipBytes": 23191010,
+  "everyZipMemberByteVerified": true,
+  "filesVerified": 35,
+  "files": [
+    {
+      "path": "HANDOFF.md",
+      "sha256": "2fefe550ceb7631a32abc46a2b02adfdd2e1fea69428b189c31228e4cbc2deb3",
+      "bytes": 3937
+    },
+    {
+      "path": "LAHTEET.md",
+      "sha256": "3e0d1f229f1fab9c8bf5c85311b041d9bd45a4f0fb42781f16aab22b2ad93a12",
+      "bytes": 2571
+    },
+    {
+      "path": "PRODUCER-SHA256SUMS",
+      "sha256": "4c40ed4a2d0e13658c45da2052e68c15c483c7c64f4b5a74a00015000aa678e2",
+      "bytes": 3187
+    },
+    {
+      "path": "PROMPT-SET.json",
+      "sha256": "b8feb5bbb2be8b6039029ea5e726944f31a2933a3251761f14c46d3831087757",
+      "bytes": 13901
+    },
+    {
+      "path": "PROMPT-SET.md",
+      "sha256": "ef3beb4b02830d23502399a22b96058b905dab30572b23bba15a3445b67b10f2",
+      "bytes": 9242
+    },
+    {
+      "path": "ROOT-INDEPENDENT-QA.json",
+      "sha256": "75518b210235abb6ea7ff4429013521d6947955fd8396d0a4d0f62aa7a036af3",
+      "bytes": 5009
+    },
+    {
+      "path": "SHA256SUMS",
+      "sha256": "beca79dcd8e13a076f86274daa2dee976f424aa73be0f93b1eb46b6df29285d6",
+      "bytes": 3364
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "16b36c0987c0a20609b7617775e7802c1829f785c3f69b722df6a8c0458f4e53",
+      "bytes": 12638
+    },
+    {
+      "path": "physical-previews/huonematto-physical.png",
+      "sha256": "ac4db367918363141882bffbe3c5c9c5241171d89fcf7f576a08fa006b040cb3",
+      "bytes": 1372459
+    },
+    {
+      "path": "physical-previews/kaytavamatto-physical.png",
+      "sha256": "e2bdbeb9be1a143ead5ed8394717659a4f44e166535635a8660a43a5ce020b37",
+      "bytes": 1301013
+    },
+    {
+      "path": "physical-previews/ovimatto-physical.png",
+      "sha256": "c89a47a4f5eea79e44c6093238657a3b99bcb7490068aa951d5684c06642d984",
+      "bytes": 2002571
+    },
+    {
+      "path": "preview-physical-ratios.jpg",
+      "sha256": "939db27e3b0daa76d795a786d7e2e5e0f24d8920e063dd85dd64ae473b649fe6",
+      "bytes": 957709
+    },
+    {
+      "path": "provenance/DATA-AUTHORING.json",
+      "sha256": "5e54a6834eada7bbc44423cc3a26bf5267c592cc68cce94acafaa96f1c4198c8",
+      "bytes": 9827
+    },
+    {
+      "path": "provenance/FINAL-DATA-AUTHORING.json",
+      "sha256": "f008ec5b58f5a4ea916518cd7c844ec97f11ca18f2d16d90990b4cdf7254d8ff",
+      "bytes": 10785
+    },
+    {
+      "path": "provenance/author_maps.py",
+      "sha256": "6366f64ce82d837043dba41ded4dcd6c523138925f891b89b63fc6b9f85bfff6",
+      "bytes": 7821
+    },
+    {
+      "path": "provenance/finalize_runner_v3.py",
+      "sha256": "11c05a3a6397df9fe3fb400596cc392511941f555cbfcc18c4ef9ab26a059a69",
+      "bytes": 7623
+    },
+    {
+      "path": "provenance/paatoimittaja-codex-juoksu-matot-puut-20261020.md",
+      "sha256": "0621aed30fdbbaa452326c7e438e4512aca188381dbad397b81378372774562f",
+      "bytes": 1025
+    },
+    {
+      "path": "provenance/paatoimittaja-codex-louvre-ohi-jonon-20261020.md",
+      "sha256": "f84ad1598f5d0de282af55182a0bc6ee236fa5bb4478b95ad863bd541771455d",
+      "bytes": 555
+    },
+    {
+      "path": "provenance/paatoimittaja-codex-vain-tripo-20261020.md",
+      "sha256": "29faf31b6a76ec0ea0f52c17e1fb5484ec6366f78637b717b787d79f82e0fc07",
+      "bytes": 865
+    },
+    {
+      "path": "provenance/paatoimittaja-codex-yojono-juoksupeli-lisays-20261021.md",
+      "sha256": "27bb436f28a4eee5be408c743979a61ee6640864d2abefd79cc7193dde8f4429",
+      "bytes": 776
+    },
+    {
+      "path": "provenance/runner-v3-composition-guide.json",
+      "sha256": "1eef189d6ad06b6c68a5c392258b7957170845a733e54238f5ca66e4f55dbbb4",
+      "bytes": 468
+    },
+    {
+      "path": "qa/FILE-VALIDATION.json",
+      "sha256": "2c2a0b292f90e73b5b3bc285f6d8fa4398d04fa2fc34dd2a6b05792f6dc4378e",
+      "bytes": 8103
+    },
+    {
+      "path": "qa/QA-REPORT.json",
+      "sha256": "85e19ef15ec21e5bef9ad176426f1c43005edcf8dc3ddc0956dec44026c79653",
+      "bytes": 2119
+    },
+    {
+      "path": "qa/RUNNER-V2-ALPHA-BBOX.json",
+      "sha256": "fc7e35eb6065f15f9339a7929af3f535282879a2021971dcc2983cba37c6a623",
+      "bytes": 2306
+    },
+    {
+      "path": "qa/RUNNER-V3-ALPHA-BBOX.json",
+      "sha256": "5aad49f759d8bd55651d69f7bd1887edc9563b0a00ba291ddc9c50c64b27eb71",
+      "bytes": 2300
+    },
+    {
+      "path": "qa/runner-v3-original-vs-physical.png",
+      "sha256": "022a309a8949219abd993f61e05fd41609fae2346563593a969fe90c955f03b8",
+      "bytes": 1941856
+    },
+    {
+      "path": "tekstuurit/huonematto-color.png",
+      "sha256": "ac6ddb37293fef12e75053fbd8e38ff25564578a1ae1c106713fad4426587cbb",
+      "bytes": 4385510
+    },
+    {
+      "path": "tekstuurit/huonematto-normal.png",
+      "sha256": "c39b68a9f7d9a1204b81af2f6ddc45078f8e3506e3f27f8d5d99ab28b6b558f7",
+      "bytes": 61112
+    },
+    {
+      "path": "tekstuurit/huonematto-roughness.png",
+      "sha256": "6a20ce9fabfefcd3e3c54f96e9562e4017c408690dc69e16dfafc1e42806e99b",
+      "bytes": 507324
+    },
+    {
+      "path": "tekstuurit/kaytavamatto-color.png",
+      "sha256": "deef23064d71c4979b34f8bcbda0237c5805f28fbd92feafc9350bda58f5b167",
+      "bytes": 2457892
+    },
+    {
+      "path": "tekstuurit/kaytavamatto-normal.png",
+      "sha256": "a4c15b456df58833278276723be934ddcec846ae13e3fe7463c703009f373d54",
+      "bytes": 42311
+    },
+    {
+      "path": "tekstuurit/kaytavamatto-roughness.png",
+      "sha256": "f5ae1754f0b5f6e02ce05ac89dfce1a670332e2bd3d6b046ae4b925d725a9298",
+      "bytes": 221724
+    },
+    {
+      "path": "tekstuurit/ovimatto-color.png",
+      "sha256": "dad4225e9597b5dff4e4e3a619a4ee6c5f95b959d6f6e2a736f4a149288cad0b",
+      "bytes": 7461632
+    },
+    {
+      "path": "tekstuurit/ovimatto-normal.png",
+      "sha256": "b59e784307ef96e70cf9ceb184ab54ee58ff860baa25e9ea9eb0194873bfa832",
+      "bytes": 81618
+    },
+    {
+      "path": "tekstuurit/ovimatto-roughness.png",
+      "sha256": "b82649f595e5a3f10307d09756787f9c2e0e57ebc373cb75cb55c021b1813425",
+      "bytes": 551307
+    }
+  ],
+  "selectedMaterialCount": 3,
+  "selectedMapCount": 9,
+  "actualNewBuiltinColorCalls": 5,
+  "completedCalls": 5,
+  "pendingCalls": 0,
+  "modelingCalls": 0
+}
