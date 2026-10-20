@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (208)",
+   "paiva": "2026-10-20",
+   "teksti": "Juoksupeli alkaa Kielletyn kaupungin keskeltä: kamera lentää Meridiaaniportin läpi, ja Majesteetti-huudot kaikuvat. Pyyhkäisy kääntää joka kohdassa, esteet eivät ota kiinni, ja avauksen voi ohittaa. Louvren kyltit ja valot ovat kuin oikeassa museossa, ja ISS:n revontulet elävät."
+  },
+  {
    "versio": "1.1 (207)",
    "paiva": "2026-10-20",
    "teksti": "Juoksupelissä on hurraahuudot, uudet äänet ja rikkoutuvia aarteita sirpaleineen ja pölyineen, ja iPadin nykäys poistui. Mona Lisan luo lähestytään yhtenä liikkeenä, ja museon valikot uudistuivat. Karttanostoissa on Auto-kuva ja värilliset pisteet, ISS:llä hehkuvat revontulet."
