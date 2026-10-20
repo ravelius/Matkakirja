@@ -43,6 +43,12 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
        sekä juhlasalin S-avaus + liitos (silmukka). sijoitus.json: huoneet[] 7 (kopio=true), liitokset[] 10, avaukset[] 3. `aja_tausta_v9.zsh` →
        `peking/tausta10`, `pakkaa_tausta_v9.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v9-vienti-20261020/` (SHA256SUMS 72560662aaff).
        Lähetetty PK:lle, JU:lle (vienti) ja NS:lle (209-jono). Odottaa PK:n testiä.
+       **v10 (PT/omistaja 21.3x–21.4x: katot leijuivat kujan yllä):** syy = Pekingin lähteen kujamuurit 7,6 m ja hallien seinät 0,5 m katon alla,
+       lappeet näkyivät kujalle. Korjaus: kuja-75:n kaistat (13,5 m, z 300–450) tyhjiksi + 6 huonekopiota (huoneet[] 13, liitokset[] 39) + saumojen avaukset;
+       koko taustassa muurit ≤ pohja-korkeus + 0,5 (kasvo vyöhykkeellä + kohtisuora etäisyys), seinät kattoon (BVH-säde ylös), rakennukset yhtenä
+       kappaleena tasauksessa (pohja.json-rasteri). peking_tausta.py (TAUSTA_KAARI=1 = vanha), `aja_tausta_v10.zsh` (LODIT="…") → `peking/tausta11`,
+       `pakkaa_tausta_v10.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v10-vienti-20261020/` (SHA256SUMS 9af806a84a2d). Kuva esikatselu/kuvapari-kuja75-v9-v10.jpg.
+       Lähetetty PK/JU/NS/PT (viestiraja täyttyi → varakanava mcp send_message). Seuraavaksi: muut botin/nuolen kujat (läntinen z 515), jos lappeita.
        **Juna 210: muurinharjaketju** (nousu → muuriristeys → kattotasanne + toinen nousu alas): PK tukee y > 0 -reittejä; lähetä PK:lle
        ketjun reitti y-profiileineen ja kohdat (t, laji: rako 1,8 m muuriristeys/pre_gap→post_gap, este pre_hurdle→post_hurdle, tasapainopalkki
        katto/start→end) ja sijoitus kujan varrelle. Solmut ovat Codexin world-manifest.json route_graphissa (avoimet-rakennukset-v2 delivery/scenes).
