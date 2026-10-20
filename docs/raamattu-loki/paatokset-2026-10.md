@@ -2086,3 +2086,13 @@ Omistajan kortti KK:ssa 22.05 ("Täsmennänkö myös yhteisen ohjeen (CLAUDE.md)
 ## PAATOKSET 20.10.2026 klo 22.11: SÄÄNTÖJEN KARSINTA – SÄÄNTÖ KOKONAAN VAIN RAAMATTUUN (20.10.2026 klo 22.16)
 
 Omistajan kortti Keskustelukanavassa 20.10.2026 klo 22.11: "Karsitaanko säännöt niin, että jokainen sääntö on kirjoitettu kokonaan vain Raamattuun ja muualla on enintään yksi lyhyt muistutusrivi, joka viittaa sinne?" → "Kyllä, karsitaan (Suositus)". Toteutus: PT käy läpi muistin (MEMORY.md ja muistitiedostot), roolien aloitus- ja luovutuspohjat ja muistutusskriptit (/Users/Shared/Claude/hooks). Päällekkäinen sääntö → poisto tai yksi viittausrivi Raamattuun; Raamatusta puuttuva voimassa oleva linjaus kirjataan ensin Raamattuun ja vasta sitten poistetaan muualta. arkisto/ ei kosketa. Molemmat CLAUDE.md:t karsii Keskustelukanava (vain omistajan viesti KK:ssa sallii); PT antaa KK:lle listan päällekkäisistä kohdista. Aamulla omistajalle lyhyt yhteenveto KK:n kautta.
+
+## PAATOKSET 20.10.2026 klo 22.24: LAAJENNETTU KARSINTA – JOKAINEN ROOLI LUKEE RAAMATUSTA VAIN OMAN LUKULISTANSA (20.10.2026 klo 22.25)
+
+Omistajan kortit KK:ssa 22.2x: (1) "Laajennetaanko karsinta niin, että jokainen sessio lukee aloittaessaan samat ajantasaiset ohjeet, myös tilinvaihdon jälkeen?" → "Ehdotus hyvä, mutta miten
+huomioidaan että kukin sessio lukee vain sille oleelliset että konteksti ei kasva turhaan?" (2) "Tehdäänkö laajennettu karsinta niin, että jokainen rooli lukee aloittaessaan Raamatusta vain oman
+lukulistansa?" → "Kannatan ehdotusta. Pitäisikö miettiä vielä tuon ehdotuksesi lisäksi jotain?" Toteutus (B1–B7 ja KK:n lisäykset C1–C4, tiedosto
+scratchpad/keskustelukanava/karsinta-suunnitelma-20261020.md): säännöt vain Raamattuun; tekninen tieto Raamatun kartan teknisiin ohjeisiin; roolien kotikansiot ajan tasalle mainiin ennen jokaista
+aloitusta; vanhat luovutukset ja keskustelut arkistoon (uusin per rooli jää); Raamatussa yksi aihe per kohta, luku 2 alalukuihin; luvun 7 roolikorttiin rivi "Lue aloittaessa: …" ja työkalu, joka
+näyttää luvun suoraan origin/mainista; automaattisesti luettaviin (CLAUDE.md:t, MEMORY.md) vain yhteinen + viittaus lukulistaan. Lisäksi Postivahti valvoo kansioiden jäljessäoloa ja sääntötekstiä
+muistissa, ohjeiden koe uudella Sonnet-sessiolla karsinnan ja jokaisen tilinvaihdon jälkeen, PT ilmoittaa sääntömuutoksen heti koskeville rooleille, Codexin ohjelähde samaan ajantasaiseen lähteeseen.
