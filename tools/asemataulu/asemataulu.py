@@ -199,7 +199,7 @@ def main():
             os.path.join(taulu, "asemataulu-julkaisu.html"),
             "osoitteeseen " + ny["taulu"] if ny["taulu"] else "uutena; kirjaa osoite osoitekirjaan ja osoitteet.md:hen (KÄYTÖSSÄ) ja aja tämä komento uudelleen"))
         print("  2. ArtifactData batch, writes = %s (%d dokumenttia)" % (bp, len(writes)))
-        print("  3. Asemataulu-sessio lukee ASEMATAULU-ROOLI.md:n ja nykyinen.json:n ja luo cronit (A, B, kulutus)")
+        print("  3. Asemataulu-sessio lukee ASEMATAULU-ROOLI.md:n ja nykyinen.json:n ja luo cronit (A ja kulutus; B-cronia ei ole)")
 
     for p in puutteet:
         print("PUUTE|" + p)
