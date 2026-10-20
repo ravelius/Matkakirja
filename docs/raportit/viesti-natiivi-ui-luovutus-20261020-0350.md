@@ -27,6 +27,9 @@ Ajoskriptit ja skenaariot: /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajo
    7535/6537/4268 ms. → KK + PT; OMISTAJALLE AAMULLA (KK): valikkopari (B) + ISS:n iPhone-video (musta siirtymä + salama).
    KK:n OK:n jälkeen NS:lle junaan 207: natiivi-ui/iss-207 ee86e4fdd (+ myöhemmät).
 
+- JU 04.0x: iss-207b ee86e4fdd jonossa L2:lla (~04.10) → _tyo/natiivi-ui/iss-207b-app (loki julkaisija-tyokalut/nui-iss-207b.log).
+  Simujono: PK → LS video → NUI: lasi (~16 min) + iss (~10 min) SAMALLA vuorolla → VS → KS. SIMU NYT tulee tälle (seuraavalle) sessiolle.
+
 ## VALMIIT TÄNÄÄN (20.10.)
 - **B museo-valikot-207 7a45cff6f**: KK OK 03.5x → NS:lle junaan 207 lähetetty 03.5x (museossa ei ⚙:ta, ☰:ssä Tekstitys + Mikseri kehittäjälle).
 - **lasihaku-207 b8198b4e3** (LT:n BUILD 206 iPad 25–42 ms ~2×/s): Lasipohja.Etsi + KehysNapit.Hae/PidaNakyvissa ilman Querya ja
