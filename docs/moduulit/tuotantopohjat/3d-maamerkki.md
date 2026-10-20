@@ -7,6 +7,8 @@ PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA Codexin havainnekuva (tavoitekuvat pelin kulmista); KAMERA uusista kuvakulmista viitevideo tai kuvakäsikirjoitus ennen koodausta. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
+**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
+
 3D-maamerkki = oma Blender-malli rakennuksesta tai rakennelmasta, joka näytetään Googlen fotorealististen laattojen keskellä
 (tai omana kaupunkitilanaan, kuten Peking) ja jonka alta Googlen laatat leikataan pois. Pohja kattaa päätöksen tehdä malli,
 lähteet ja oikeudet, mittasuhteet, mallin ja LOD-tasot, materiaalit, tavoiteluupin ja yhteensovituksen Googlen laattoihin.
