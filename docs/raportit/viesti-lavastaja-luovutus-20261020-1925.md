@@ -71,7 +71,8 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    KIVEYS_ALUEET = kuja-338, koska koko palatsissa siirto avasi saumoja) → JU/PK/NS. Laatat ennallaan: esikatselu/aukot-t7-t12.jpg. Liitokset 63/64.
    **Tavoiteluuppi (omistaja 01.02, koko yö VS:n kanssa):** k1 huoneseinille kivinen harjakate → avoimet-v4 (`tyokalut/avoimet_harjat.py`,
    `_valmiit/juoksupeli-avoimet-v4-vienti-20261021`, 5cebafd008b6) → JU, PK vaihtaa kansion. k2 reitin muurit r07–r10 (keltainen lasitiilikate)
-   odottaa PK:n vastausta, mikä verkko. Kierrokset ja aamulista PT:lle: side-session-notes/<PT>/lavastaja-tavoiteluuppi-20261021.md.
+   = kk-taustan muurit (PK) → `tyokalut/kk_muurikate.py` → `_valmiit/juoksupeli-kk-muurikate-v1-vienti-20261021` (0c97c12d42e1, erillinen glb).
+   k3 lämmin lattia → `tyokalut/avoimet_lattia.py` → avoimet-v5 (b031aca09b13). Molemmat JU:lle; PK kytkee JU:n kuittauksen jälkeen (404-välimuisti). Kierrokset ja aamulista PT:lle: side-session-notes/<PT>/lavastaja-tavoiteluuppi-20261021.md.
    Vanha:  avoimet_sijoitus.py `KUJAT`-lohko (yleinen kuja: muurilohkot, 8 huonetta, kaistat,
    päiden avaukset, liitokset) → tausta-v11 `aja_tausta_v11.zsh` → `peking/tausta12` (ajossa). Seuraavaksi liitostarkistus + korkeuskartan
    BFS kuja-285 (z 361) ja kuja-290/335 (z 465) → pakkaa v11 → PK, JU, NS.
