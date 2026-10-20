@@ -57,6 +57,13 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   iPhone: lasi kiinnittyy, kehysnapit himmenevät, museon lasikortti) → kuvat KK + PT; SIMU VAPAA JU:lle.
   museo-iss-207-app KÄÄNNETTY 01.30 (e9bcee0d, sisältää 7a45cff6f + 81be0b791) → ajo-museo-iss-207.zsh SIMU NYT:sta.
 
+- 03.1x–03.41 SIMUVUORO AJETTU (SIMU VAPAA JU:lle 03.41): B museo OK iPhone+iPad (todistus-museo-valikot-207-*-20261020-031x);
+  E ISS iPad kaikki OK (todistus-iss-207-ipad-20261020-0334), iPhone OK paitsi revontulten nimi ruudun reunan ulkopuolella ja Jupiterin
+  napautus osuu pienoispalloon (KK:lta kysytty). Skenaario fd35cde99: `ui kehysnapit 0` (himmeänä napautus nieltiin). Lasihaku-simu
+  (todistus-lasihaku-207-iphone-0327 + sk-lasihaku-207b-iphone-0337): napit 22/11 ryhmää, lasipaneeleja 30, himmennys toimii; näkyvä
+  lasi todistamatta (koko sivut + kartta ilman lasia suunnitellusti). KK + PT saivat tulokset; PT:ltä pyydetty B + E + lasihaku NS:lle.
+  Opit: zsh ei pilko ${2:-a b} → ${=…}; kehysnappien himmennys nielee simun napautuksen → `ui kehysnapit 0` skenaarioon.
+
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
 - palsta-haku 03deb7b16 + SK #5015 tekstit e4c33a4fe → juna 206.
 - varjostimet 28ef55f1e (kokoelma 53 varianttia/57 tilaa, Cupolan pisin ruutu 1200 → 500 ms) → juna 206 (lokit/todistus-varjostimet2-b3-ipad-…/TULOS-NUI.md).
