@@ -1,9 +1,9 @@
 {
-  "edistys": 5,
-  "kirjoittaja": "Julkaisija",
-  "nimi": "Juna 192",
-  "tila": "TestFlightissa",
-  "ts": 1792059240000,
-  "vaihe": "5/5 – TestFlightissa sisäisillä klo 10.54 (iOS + Mac 1.1 (192)); beta-arvio pyydetty heti, ulkoisille kun sisältövienti valmis",
-  "valmis_arvio": "ulkoisille ~11.45–12.15"
+ "edistys": 5,
+ "jakso": "matka",
+ "kirjoittaja": "Julkaisija",
+ "nimi": "Juna 206",
+ "tila": "TestFlightissa",
+ "ts": 1792453920000,
+ "vaihe": "TestFlightissa: iOS, Mac, sisäinen 01.34; ulkoisille lähetetty 01.52 (beta-arvio Applella)"
 }
