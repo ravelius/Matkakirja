@@ -30,12 +30,10 @@ Viestit lähetetään send_messagella session id:llä (`/Users/Shared/Claude/oso
 - Worktree `/Users/Shared/Claude/wt/proto-lavastaja-monalisa` (proto) jää paikalleen, kunnes NS on mergennyt. Sen jälkeen `git -C …/Matkakirja-proto worktree remove`.
 
 ## Avoimet
-- **tausta-v5, PK 18.1x:** korvausalueiden sisään jää maattomia aukkoja niihin kohtiin, joissa tarkassa mallissa ei ole maata. Kohdat:
-  - Taihemenin edessä x −21…11, z −239,5…−231
-  - Taihemenin takana z −202…−192
-  - Meridiaaniportin U-piha z −420…−393
-  - G:n ja L:n reunat
-  Pelin täyte peittää ne, joten korjausta ei tarvita, ellei PT pyydä. Korjaus olisi v6: `peking_tausta.py` lisää jokaiselle KORVAA-alueelle tasaisen V4_lattia-nelikulmion korkeuteen −0,02 (mallien alle, ei z-taistelua). Kuvat: `_tyo/pelikoodari/laatat-208/`.
+- **tausta-peking-v6 VALMIS 18.1x** (PT tilasi PK:n havainnosta): jokaisen KORVAA-alueen alle tasainen V4_lattia tasoon −0,02 (60 m ruutuina, 38 ruutua), joten aukkoja ei jää. Työkalut `aja_tausta_v6.zsh` → `peking/tausta7`, pakkaus `pakkaa_tausta_v6.zsh`.
+  - Paketti `_valmiit/juoksupeli-kk-tausta-peking-v6-vienti-20261020/` (SHA256SUMS 459cd7ebb2a4), kuva `esikatselu/aukot-tausta7.png`.
+  - Lähetetty JU:lle (vienti), NS:lle (korvaa v5:n rungossa 208) ja PK:lle (TaustaKansio v5 → v6 viennin jälkeen; esto v3 jää voimaan).
+  - Odottaa vain JU:n vientiä ja PK:n commitia.
 - Odottaa NS:n mergeä ja omistajan katselua. Jos katsojista tulee palautetta, säädä Ydimen `KatsojaKulmat`/`KatsojaSyvyys`/`VartaloAste` ja aja `sh Linssit-testit/kaanna.sh Katsojat`.
 - Edellisen luovutuksen avoimet (60 fps mittaamatta, siltojen leveydet) ovat ennallaan.
 - Ei irrotettuja ajoja eikä taustatehtäviä käynnissä.
