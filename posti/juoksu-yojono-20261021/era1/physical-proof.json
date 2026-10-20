@@ -1,0 +1,508 @@
+{
+  "at": "2026-10-20T22:26:09.193156+00:00",
+  "tasks": [
+    768,
+    769,
+    770
+  ],
+  "packages": [
+    {
+      "task": 768,
+      "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task768/delivery",
+      "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/juoksu-yo-task768-20261021.zip",
+      "zipSHA256": "4d865ff141fc8e24c073a983bbcf8e7643eca28b79329a97cdbb0d28f17ca44b",
+      "zipBytes": 11726796,
+      "filesVerified": 25,
+      "files": [
+        {
+          "path": "HANDOFF.md",
+          "sha256": "fc613c27fa9fb1ce33c915e1414fb93e98e170b1976956352a2cde04d10a1708",
+          "bytes": 2522
+        },
+        {
+          "path": "LAHTEET.md",
+          "sha256": "a9538fcd5332a2b0dc56bb997472b8ff7368d741d5d5ca5f521929dd64b174d3",
+          "bytes": 2171
+        },
+        {
+          "path": "PROMPT-SET.json",
+          "sha256": "031e18580ba4fce150ed0eb5ee4430d026f7808264617b43be2c8dd4c3f1bcde",
+          "bytes": 7711
+        },
+        {
+          "path": "PROMPT-SET.md",
+          "sha256": "0f7ce614959d07a627e453b26c0ec1978ad5c3bb542f3168250caa1aaefe21ca",
+          "bytes": 5497
+        },
+        {
+          "path": "SHA256SUMS",
+          "sha256": "e57aa6d0a2bde998a047485557c463febd9d27d8d52c9a175ec6a9b44174e788",
+          "bytes": 2294
+        },
+        {
+          "path": "esikatselu.png",
+          "sha256": "edf0fd097da172db616307a8b235c775648776d3b8a565f0e6a45d6b10a1abd6",
+          "bytes": 2244370
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "721fc1063909f36311b9f8933a975f9a4ca16448a9ba6dd775d30e56f57fae98",
+          "bytes": 11960
+        },
+        {
+          "path": "provenance/EXPORT-REPORT.json",
+          "sha256": "4f16aba9a57d45fee461a4a60e3249915173429d7ff36d566c7adba9664840eb",
+          "bytes": 8582
+        },
+        {
+          "path": "provenance/PREPARATION.json",
+          "sha256": "b978fef2d41566d738b0d1255bd4450d5adc73e7cde3565c17213c82803d1436",
+          "bytes": 6607
+        },
+        {
+          "path": "provenance/codex-3d-toimitus.md",
+          "sha256": "4e1003c307749504470aa115010c3d6734c4e65502b0c5b75d7b73c7fdbfa618",
+          "bytes": 8984
+        },
+        {
+          "path": "provenance/export_and_qa.py",
+          "sha256": "3f8311010e05eb728168a007c06f5d1ed783d9c3760aebec57771abf66248c8f",
+          "bytes": 5424
+        },
+        {
+          "path": "provenance/paatoimittaja-codex-yojono-juoksupeli-20261021.md",
+          "sha256": "85e8e195e80d37459f7d86f07355ce8b9f5143382fbbc1ca213ff168d86ba482",
+          "bytes": 2550
+        },
+        {
+          "path": "provenance/red-plaster-original-material.json",
+          "sha256": "e2b4bae2dc8263ab733bd59726d962e24926dce7a0229204e8192ca11d785cc2",
+          "bytes": 2973
+        },
+        {
+          "path": "provenance/reuse-audit.json",
+          "sha256": "43ad1fccb84f15c5a0fb5c573702c89b808cfbc4d844f7796a1b4c9ba8c300bd",
+          "bytes": 1375
+        },
+        {
+          "path": "qa/QA-REPORT.json",
+          "sha256": "e94d81d6809889c800e37fab7e4351e8affa3028513cde56bda9df6527401d59",
+          "bytes": 2871
+        },
+        {
+          "path": "tekstuurit/grey-brick-color.png",
+          "sha256": "297276bbc49a1605fe578589b77fbd75ee13e16bde4d74f70defbd6774ffd3d7",
+          "bytes": 2210131
+        },
+        {
+          "path": "tekstuurit/grey-brick-roughness.png",
+          "sha256": "589619f3289776e644b96da086bfe9b5c7d5e5f70ef6d1227eaa3518338830ab",
+          "bytes": 3158
+        },
+        {
+          "path": "tekstuurit/red-plaster-color.png",
+          "sha256": "17a92f17b2e5abe7137d343ca7547bd3f76f3198bc1fe2e9570cf004d6caf97c",
+          "bytes": 2079764
+        },
+        {
+          "path": "tekstuurit/red-plaster-roughness.png",
+          "sha256": "3334d15e17cfac668ab1d7143b9e62ea537205833def8c701bd1e058fe2968eb",
+          "bytes": 127336
+        },
+        {
+          "path": "tekstuurit/window-lattice-color.png",
+          "sha256": "93b8cc8c41d6e3d71a9c8361c6133c9d70ac827d3a26cf2b4bdd730d675e804d",
+          "bytes": 992492
+        },
+        {
+          "path": "tekstuurit/window-lattice-roughness.png",
+          "sha256": "ee6cf688a0e9e6446d4c3d30abb984c984b70c4dbc34532f8a34e8cef0fc6160",
+          "bytes": 3158
+        },
+        {
+          "path": "tekstuurit/wood-door-color.png",
+          "sha256": "777f4bdbd16c04adfc51d9aa2518522d946092d9511ab9fde01d359e8300309b",
+          "bytes": 1659873
+        },
+        {
+          "path": "tekstuurit/wood-door-roughness.png",
+          "sha256": "ab634a30a2fa24eb46c1684102d40e67ab2251bf8988f20058a6d21f1919668b",
+          "bytes": 3158
+        },
+        {
+          "path": "tekstuurit/worn-stone-step-color.png",
+          "sha256": "65ee88048b57a84dc8dd35f58a6097e9e90cd3de6ce7cb0cff071a6eedd36184",
+          "bytes": 2380015
+        },
+        {
+          "path": "tekstuurit/worn-stone-step-roughness.png",
+          "sha256": "db479ac5399654a042ca873f7734b415b2ba4a53db0650479cc98e26e12b9ef1",
+          "bytes": 3158
+        }
+      ]
+    },
+    {
+      "task": 769,
+      "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task769/delivery",
+      "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/juoksu-yo-task769-20261021.zip",
+      "zipSHA256": "4ba0f3880a6fb18b065faf6ef8019bcdd06848cf32a9d5bc0b79aeef14eae654",
+      "zipBytes": 8437031,
+      "filesVerified": 11,
+      "files": [
+        {
+          "path": "KK-OMISTAJAKORTTI.json",
+          "sha256": "c3964eb17eb941c05947e1fb1ba9a63438088ae6e24c72075e19b8a6094a164c",
+          "bytes": 3111
+        },
+        {
+          "path": "KK-OMISTAJAKORTTI.md",
+          "sha256": "d0911bf2049eb2f4671472f454f7d3ebbc12c2e1c8e1217615fbe7f25a7d0be6",
+          "bytes": 1501
+        },
+        {
+          "path": "LAHTEET.md",
+          "sha256": "bab21f30bfa2a030cad5b33671458a4f62bbc6a1d6af29337a4eb4707e7f4798",
+          "bytes": 553
+        },
+        {
+          "path": "PROMPT-SET.json",
+          "sha256": "ead1dec59c865fcf570151571d457117ff77e9566f59f532871d0480eaf1ce77",
+          "bytes": 7981
+        },
+        {
+          "path": "QA.json",
+          "sha256": "1fb48430fb9305299b34cd783cc8825537f4da86ad5da55eb4f80b366cb02314",
+          "bytes": 3429
+        },
+        {
+          "path": "SHA256SUMS",
+          "sha256": "2daf7be9e73ea289099b5eb82d3932b5b17c84ef5b1afb6a44bc9045657e99a9",
+          "bytes": 901
+        },
+        {
+          "path": "esikatselu.jpg",
+          "sha256": "c0abba2128b4e333a9f301baa08fdabc91f7a79b9eed2976b8bb54844d85a6ac",
+          "bytes": 263977
+        },
+        {
+          "path": "havainnekuvat/aukion-kaksikerroksinen-siipi.png",
+          "sha256": "d04ed95c661dc4786b37beb6e44375db48f5d4a2fdf6ecd12a3b78214ad40d26",
+          "bytes": 2957186
+        },
+        {
+          "path": "havainnekuvat/lantinen-kuja-kulkuhuone.png",
+          "sha256": "7a9cbb4e0ba3fe7a8ee470f1f10c3ad2f43b6f6e1216e7b990a59ef923662e9d",
+          "bytes": 2628440
+        },
+        {
+          "path": "havainnekuvat/sisapiha-kaksi-huonetta.png",
+          "sha256": "f36e389df792616802b54e75a275ee9d0f1e314fab2cc36379736a0fae899e23",
+          "bytes": 2676293
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "dc77bf4325cbb6c49973d8908ec2cd27457f274539d27f99869cfc18453f2730",
+          "bytes": 1581
+        }
+      ]
+    },
+    {
+      "task": 770,
+      "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery",
+      "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/juoksu-yo-task770-20261021.zip",
+      "zipSHA256": "3e105e4b4e05b18214b5f25f09afecadf170d36de8c5c6963f28330a1dc663b0",
+      "zipBytes": 18938038,
+      "filesVerified": 56,
+      "files": [
+        {
+          "path": "LAHTEET.md",
+          "sha256": "0bf1d5502a7608e03295813c07a038b9263506fa2735c53d728b9e549f800eb4",
+          "bytes": 1429
+        },
+        {
+          "path": "PRODUCER-QA.json",
+          "sha256": "becf9d3a02bb92fae3a27ad97434d0d91b0105762d5aa5453c88d0b66c0e617c",
+          "bytes": 15340
+        },
+        {
+          "path": "PRODUCER-SHA256SUMS",
+          "sha256": "3f6be07529c8275354c3b131d4ae1d1888e44c802fbd98810216c5cae08c45ec",
+          "bytes": 5103
+        },
+        {
+          "path": "PROMPT-SET.json",
+          "sha256": "e63f570bb11bc2a9bdfec6078280a35fa933a28811592cab968b72eb5dde89fc",
+          "bytes": 7104
+        },
+        {
+          "path": "PROMPT-SET.md",
+          "sha256": "2029f13bf1b5d33a82c78fdd21d57b922c347cdd0090a970de6625974bb89d4c",
+          "bytes": 6524
+        },
+        {
+          "path": "PROPOSAL-ROWS.md",
+          "sha256": "ba4ca027621142086e54bdbc9876e4a9c691a198bb548af7ed1a24457e1bdeb3",
+          "bytes": 1755
+        },
+        {
+          "path": "PROPOSALS.json",
+          "sha256": "508f162effd61133c81f1474eb888075072d57d33fc341b3a1beb76b764fe997",
+          "bytes": 9700
+        },
+        {
+          "path": "ROOT-REVIEW.json",
+          "sha256": "93d4165cc9b91db4249e62b82316c723f6847636324d6557c4f46a6578b0ab5e",
+          "bytes": 356
+        },
+        {
+          "path": "SHA256SUMS",
+          "sha256": "94fb636ff764c9b22b3931b010e22c267b046f76a8670e33d89b30c237dad977",
+          "bytes": 5353
+        },
+        {
+          "path": "STATE.json",
+          "sha256": "1ea9038d0a517861888f80e8a12919593f1b5420436a8335a1d6b401524c708d",
+          "bytes": 8596
+        },
+        {
+          "path": "attempts/bambu-kori/imagegen-args.json",
+          "sha256": "ba9a10ab0a9c02e874c0d92c2142520630394217137cbb21d8504629d9be8598",
+          "bytes": 781
+        },
+        {
+          "path": "attempts/bambu-kori/native-proof.json",
+          "sha256": "b268fbf543be062482ca517a15c8158862b6f4f2515406ed33dbc1f39f1207b2",
+          "bytes": 611
+        },
+        {
+          "path": "attempts/bambu-kori/tool-result-metadata.json",
+          "sha256": "006a7e87e33286d7027cdb0e06be4394cd7972731d9ec9eb49834505144bd259",
+          "bytes": 890
+        },
+        {
+          "path": "attempts/bambu-teline/imagegen-args.json",
+          "sha256": "41a977dca94e82bf98543b79695c39e84b86c4252b7396a68c2077c5eb73e228",
+          "bytes": 782
+        },
+        {
+          "path": "attempts/bambu-teline/native-proof.json",
+          "sha256": "5518fdbca84142a4ab1f76b861d52e7dde1de1c4cb57b64b35f445327783d657",
+          "bytes": 613
+        },
+        {
+          "path": "attempts/bambu-teline/tool-result-metadata.json",
+          "sha256": "8e9126cb0a8054bab6ca349f2a0afb8de7581ba2643477700a24acf3d9395770",
+          "bytes": 890
+        },
+        {
+          "path": "attempts/kangas-pussi/imagegen-args.json",
+          "sha256": "a8db7004ba12f155b5acf27ce2273f09e22c228b73238427ad266ad4f2e56c18",
+          "bytes": 806
+        },
+        {
+          "path": "attempts/kangas-pussi/native-proof.json",
+          "sha256": "e9c298e8a986c8cfc56560792f4415573b64d5d3760193e45a5a12e02a095809",
+          "bytes": 613
+        },
+        {
+          "path": "attempts/kangas-pussi/tool-result-metadata.json",
+          "sha256": "81286d507be090bebde101b9f8efd0264b513d5ed351976407a8c27d89001e89",
+          "bytes": 890
+        },
+        {
+          "path": "attempts/lakka-tarjotin/imagegen-args.json",
+          "sha256": "128eb66665d27a82df3c871659e83661d3e562806e2371b2534a971354ba018e",
+          "bytes": 794
+        },
+        {
+          "path": "attempts/lakka-tarjotin/native-proof.json",
+          "sha256": "0ec51de768e89764d95a1131d9a7f28af2bdc7b92c503ccd12cd90020b080a2b",
+          "bytes": 615
+        },
+        {
+          "path": "attempts/lakka-tarjotin/tool-result-metadata.json",
+          "sha256": "afdf9b39d2d34160f80aa5cb04a99ae76475fd5ea65aebbd31fa3348a3e16478",
+          "bytes": 890
+        },
+        {
+          "path": "attempts/paperilyhty/imagegen-args.json",
+          "sha256": "9f451b88e68ddcf20d63e34610a08c6be935eddbd3a5e85d3d3242bea6e453f7",
+          "bytes": 804
+        },
+        {
+          "path": "attempts/paperilyhty/native-proof.json",
+          "sha256": "9ee5c804f69b09dd027490ef7a3ea3ca12ca9b4aceeb2928b4ed791bd4099542",
+          "bytes": 612
+        },
+        {
+          "path": "attempts/paperilyhty/tool-result-metadata.json",
+          "sha256": "035b8ad39e0ec677b6e2265cb7ce1ba845613a1b348615fadabdb32336f98b49",
+          "bytes": 890
+        },
+        {
+          "path": "attempts/posliini-vati/imagegen-args.json",
+          "sha256": "131f7bd3480bfd49cd876ba00d181c155c68e9c1545d02a7de3633c57adf2518",
+          "bytes": 796
+        },
+        {
+          "path": "attempts/posliini-vati/native-proof.json",
+          "sha256": "2b6b86a1b54b7d1a4c30a2199b4fd9438280a62f96a3acd4ea141f9ddd1b2265",
+          "bytes": 614
+        },
+        {
+          "path": "attempts/posliini-vati/tool-result-metadata.json",
+          "sha256": "92c2eb9f3e9b3ad380ae33bbdfca087ef4eec4d56a7dda88e28d168f61cb30b1",
+          "bytes": 890
+        },
+        {
+          "path": "attempts/puu-laatikko/imagegen-args.json",
+          "sha256": "988792167197b76cc74bed8dc7d98ddf781f5b42df75faa594dabba848c90f60",
+          "bytes": 801
+        },
+        {
+          "path": "attempts/puu-laatikko/native-proof.json",
+          "sha256": "603b4de8b73df7006cc370677a953bbc922da3e3dc4f611b524fe8f58fe3af0b",
+          "bytes": 613
+        },
+        {
+          "path": "attempts/puu-laatikko/tool-result-metadata.json",
+          "sha256": "8eb0163a52d8e0d623ee2dc67ddd961337cedade760cf9442e78d662a30f1b6f",
+          "bytes": 890
+        },
+        {
+          "path": "attempts/savi-ruukku/imagegen-args.json",
+          "sha256": "eb8cf54110548baca2ae1ab801f076f27ddd17733f27ec432a81c24c048763e3",
+          "bytes": 783
+        },
+        {
+          "path": "attempts/savi-ruukku/native-proof.json",
+          "sha256": "7788d6556d21ff8a3898393242a95e400c1a2f1f90661e566f776a689475922c",
+          "bytes": 612
+        },
+        {
+          "path": "attempts/savi-ruukku/tool-result-metadata.json",
+          "sha256": "6679909c55dd0799bcfd6afd97c610f1de9c524ec7acae3eccbac3dd0ed075e7",
+          "bytes": 890
+        },
+        {
+          "path": "contact-sheet.jpg",
+          "sha256": "174d7a452f69916fb0c31bc83ad4620aa35f860dc5776116a11e4d3c0f19b7ff",
+          "bytes": 365858
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "5cecd5f186c553af91b76fe84daafcb6c797295bd39a74c7bdc2ee906fb54700",
+          "bytes": 15011
+        },
+        {
+          "path": "native/bambu-kori.png",
+          "sha256": "bb8d6b6473748d741b3b307dd6748e8e12309f09da478081931f61d494eff491",
+          "bytes": 2077880
+        },
+        {
+          "path": "native/bambu-teline.png",
+          "sha256": "1f4fd7100227aa9201aab05a9780e450231eee835cf9a7785e6a86b1ba1fbeff",
+          "bytes": 1922363
+        },
+        {
+          "path": "native/kangas-pussi.png",
+          "sha256": "613bf2bce0edd7f73f094ccf666d6df3119a2c2c2a679ff7837c54290f17619f",
+          "bytes": 2483639
+        },
+        {
+          "path": "native/lakka-tarjotin.png",
+          "sha256": "e514f51fa0f7972c45de03c88e22029cdd9b666c729bd0e1012f7e379a728a55",
+          "bytes": 1989788
+        },
+        {
+          "path": "native/paperilyhty.png",
+          "sha256": "27579be1170170773b9ee14487f5a2a2bf163b94812115fd72d3bf071044209e",
+          "bytes": 2150200
+        },
+        {
+          "path": "native/posliini-vati.png",
+          "sha256": "28ea8881bcdecc4e164a922c74b3fc96826fb089e076fb17265e65c73d37f74e",
+          "bytes": 1842487
+        },
+        {
+          "path": "native/puu-laatikko.png",
+          "sha256": "d85e120e73266b3bd851f5948a58332e79ee76ddf6b850dc01a803ebbf2bc2d8",
+          "bytes": 2251848
+        },
+        {
+          "path": "native/savi-ruukku.png",
+          "sha256": "d396d7bd3627a2e764028a27d48c91aa6f63a047cceeeacb82a6e7b4ca5f06bd",
+          "bytes": 2414396
+        },
+        {
+          "path": "previews/bambu-kori.png",
+          "sha256": "004a512389afdaf82b739838bb17f883ea7496817ca1b90f8073b88bf376d7b1",
+          "bytes": 328270
+        },
+        {
+          "path": "previews/bambu-teline.png",
+          "sha256": "1e0492d587004c7b0a6d57c2ccb38c032960425d6671ce46ac18bb85aa98c70e",
+          "bytes": 297396
+        },
+        {
+          "path": "previews/kangas-pussi.png",
+          "sha256": "002cfdec3ed9b6698290c9162d09adc2c0a2ce61c979aef113a20b80cc3e7f14",
+          "bytes": 365027
+        },
+        {
+          "path": "previews/lakka-tarjotin.png",
+          "sha256": "b35d96508a4ee910123a5a1b46f1bf9bb4809b8905786da2f360e89af161940f",
+          "bytes": 299565
+        },
+        {
+          "path": "previews/paperilyhty.png",
+          "sha256": "959c80c6ee93ee66d48f1a83a3c66779e1619423a941b8da8fe7513bd55c3efb",
+          "bytes": 341937
+        },
+        {
+          "path": "previews/posliini-vati.png",
+          "sha256": "9c6140b4def225a6b09339900548760197197b1a666c5e0ec2f0d28bf6fb744e",
+          "bytes": 290501
+        },
+        {
+          "path": "previews/puu-laatikko.png",
+          "sha256": "ea91bbff821bf8b0105add8c52b0e3328fe402f32b92b76f8eebcbcb23479648",
+          "bytes": 342403
+        },
+        {
+          "path": "previews/savi-ruukku.png",
+          "sha256": "628b3d1481d65daa07168cbf0da243dd3301cde513a97b80520c4053db401adc",
+          "bytes": 363228
+        },
+        {
+          "path": "scripts/finish.py",
+          "sha256": "0f0e69dbd28e2ecfdc69b95d80abebd75e94d64ae4dbbf157ca5ffd587525429",
+          "bytes": 8448
+        },
+        {
+          "path": "scripts/record.py",
+          "sha256": "b400c2c55265cbc34426de0ebc79394d3acedac75da3f1ca3b02b40e53a5834d",
+          "bytes": 1955
+        },
+        {
+          "path": "sources/PROPOSALS-received.json",
+          "sha256": "508f162effd61133c81f1474eb888075072d57d33fc341b3a1beb76b764fe997",
+          "bytes": 9700
+        },
+        {
+          "path": "sources/paatoimittaja-codex-yojono-juoksupeli-20261021.md",
+          "sha256": "85e8e195e80d37459f7d86f07355ce8b9f5143382fbbc1ca213ff168d86ba482",
+          "bytes": 2550
+        }
+      ]
+    }
+  ],
+  "newBuiltinCalls": 15,
+  "newBuiltinCallsCompleted": 15,
+  "newBuiltinCallsPending": 0,
+  "reusedRedPlasterPairs": 1,
+  "modelCalls": 0,
+  "modelsProduced": 0,
+  "gameIntegrationVerified": false,
+  "published": false
+}
