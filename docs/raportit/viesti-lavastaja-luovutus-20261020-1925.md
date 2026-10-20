@@ -74,6 +74,8 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    = kk-taustan muurit (PK) → `tyokalut/kk_muurikate.py` → `_valmiit/juoksupeli-kk-muurikate-v1-vienti-20261021` (0c97c12d42e1, erillinen glb).
    Muurikate-v2 (855552db239e): räystäät +3 cm (v1 samassa tasossa, välkkyi). JU vei v1:n ja avoimet-v5:n 01.18–01.19; PK lataa (6514f47ab).
    **k4 (PT 01.5x, Codexin #762 matot + #773–774 paneeli/kääröt):** `tyokalut/avoimet_sisustus.py` → avoimet-v6 (581823596ecb) → JU, PK.
+   **k5 (PT 02.0x):** avoimet-v7 (f1976537c870): kääröt 0,95 × 1,9 m silmän korkeudella myös sivuseinillä, huonematto + 2 käytävämattoa + ovimatot,
+   lattia 0,62/0,50/0,34 (`avoimet_lattia.py v4 tmp 0.62,0.50,0.34` → `avoimet_sisustus.py tmp v7 <matot-zip> <paneelit-zip>`).
    Niken keulan sovitustiedot Codexille: posti/lavastaja-codex-nike-sovitus-20261021.md (postilaatikko 5f25d26cc).
    **K3-kävelijä (kun Codex toimittaa):** LS:n kävelijätesti 0beee9946 (`sh Linssit-testit/kaanna.sh KavelijatEivat`, ≥ 0,8 m kamerasta;
    k1 nyt 1,20 m) ottaa henkilot.json:n kavelee:true-hahmot automaattisesti; aja ennen NS:lle lähettämistä.
