@@ -17,7 +17,10 @@ kierroksella heti ArtifactData listin jälkeen:
 3) Tarkistin ennen vientiä (omistaja 19.10.2026 klo 19.51, docs/moduulit/asemataulu.md): junat (+ eteneminen) ja tyolista
    ajetaan tarkista-junat.py:n läpi; dokumentti, jossa on VIRHE, jää viemättä ja tulostuu rivi
    "ESTO|<doc>|<virheiden määrä>|<ensimmäinen virhe>" — Asemataulu-sessio kertoo sen PT:lle, PT korjaa tiedoston.
-Ei kirjoita tauluun itse eikä muuta data-tiedostoja.
+4) Työlistavahti (omistaja 20.10.2026 klo 23.12, Raamattu 7.39 TYÖLISTAVAHTI): ennen tarkistinta tyolistavahti.py korjaa
+   data/talo/tyolista.json:n (valmiit Valmistuneisiin, yli 48 h päivittämättä työn alla → pidossa, edistys ≤ 5, kenttä vahti)
+   ja tulostaa rivit "TYOLISTA <laji>|…" PT:lle; sama rivi enintään kerran 6 tunnissa (tila data/.vanha-ilmoitettu.json).
+Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n työlistavahdin sääntöjen mukaan.
 """
 import argparse
 import glob
@@ -35,6 +38,7 @@ TILA = os.path.join(TAMA, "data", ".vanha-ilmoitettu.json")
 RAJA_TAPAHTUMA = 45 * 60
 RAJA_TYOLISTA = 6 * 3600
 ILMOITUSVALI = 3600
+TYOLISTA_ILMOITUSVALI = 6 * 3600
 
 
 def lue(polku):
@@ -43,6 +47,27 @@ def lue(polku):
             return json.load(f)
     except (OSError, ValueError):
         return None
+
+
+def tyolistavahti(nyt):
+    """Ajaa tyolistavahti.py:n tyolista.json:lle (kirjoittaa muutokset) ja palauttaa PT:lle tulostettavat rivit (6 h raja)."""
+    sp = importlib.util.spec_from_file_location("tyolistavahti", os.path.join(TAMA, "tyolistavahti.py"))
+    v = importlib.util.module_from_spec(sp)
+    sp.loader.exec_module(v)
+    _, rivit = v.aja_tiedostolle(os.path.join(DATA, "tyolista.json"), True)
+    tila = lue(TILA) or {}
+    ulos = []
+    for r in rivit:
+        avain = "tl:" + r
+        if nyt - float(tila.get(avain, 0)) > TYOLISTA_ILMOITUSVALI:
+            ulos.append(r)
+            tila[avain] = nyt
+    if ulos:
+        tmp = TILA + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(tila, f)
+        os.replace(tmp, TILA)
+    return ulos
 
 
 def tarkistimen_virheet():
@@ -105,6 +130,8 @@ def main():
             versiot[k.strip()] = int(v)
 
     kirjoitukset = []
+    for r in tyolistavahti(time.time()):
+        print(r)
     estot = tarkistimen_virheet()
     for doc in PT_DOCS:
         oma_polku = os.path.join(DATA, doc + ".json")

@@ -41,7 +41,9 @@ LÄHDE REPOSSA: tämä tiedosto ja kaikki taulun koodi ovat repossa tools/asemat
 6. Vienti yhdellä `ArtifactData batch` -kutsulla: hae versiot `ArtifactData list talo` out_dir-kentällä, aja
    `python3 -I TAULU/synkka.py --lista <out_dir>/talo --versiot junat=V,tyolista=V,... --ulos <tiedosto>` (synkka ajaa tarkistimen;
    rivi `ESTO|<doc>|…` = dokumentti jäi viemättä virheen takia → yksi rivi PT:lle), lisää omat dokumenttisi ja käytä if_version-kenttää
-   jokaisessa kirjoituksessa. Ristiriidassa lue uudelleen ja yritä kerran.
+   jokaisessa kirjoituksessa. Ristiriidassa lue uudelleen ja yritä kerran. PT:n dokumentit viedään synkalla JOKA kierroksella myös
+   ilman Boostia: älä jätä niitä viemättä sillä perusteella, että PT kirjoittaa ne itse (20.10.: taulu näytti työlistan 22.39, tiedosto
+   oli 23.07). Synkka ajaa työlistavahdin; rivit `TYOLISTA …` → yksi viesti PT:lle (speksi, TYÖLISTAVAHTI).
 
 ## B. SISÄLLÖN TARKISTUS (vain Boostin aikana, osa A-kierrosta)
 1. Aja `python3 -I TAULU/tarkista-junat.py --kansio TAULU/data/talo --tf-lokit /Users/Shared/Claude/julkaisija-tyokalut`

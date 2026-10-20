@@ -164,6 +164,14 @@ Päätoimittaja omilla riveillään, samoin Asemataulu itse.
   (palautteesi), (pyyntösi) eikä (päätöksesi).
 - Työlistan alla Valmistuneet (määrä): napautus näyttää valmistuneet työt päivämäärineen (tila valmis,
   kenttä valmistui).
+- TYÖLISTAVAHTI (omistaja 20.10.2026 klo 23.12, Raamattu 7.39): `tools/asemataulu/tyolistavahti.py` ajetaan jokaisessa viennissä
+  (synkka.py ennen tarkistinta) ja korjaa PT:n tyolista.json:n: työn alla ilman päivitystä (rivin `ts`) yli 24 h → rivillä punainen
+  "ei päivitystä N h" ja rivi PT:lle; yli 48 h → tila pidossa (Odottaa), ellei PT uusi riviä (uusi `ts`); tila valmis tai edistys ≥ 5
+  → valmis, edistys 5 ja valmistui-päivä samassa viennissä; edistys > 5 → 5; tuplarivit (sama tai lähes sama otsikko) ja yli 15
+  työn alla → rivi PT:lle. Työlistan otsikossa "(työn alla N, kunnossa)" tai punaisena "(työn alla N, M vanhaa riviä)". Rivin `ts` on
+  millisekunteja lukuna (merkkijono normalisoidaan); puuttuva `ts` = "ei päivitysaikaa" (punainen, rivi PT:lle, ei siirtoa pitoon).
+  PT:lle tulostuvat rivit `TYOLISTA VANHA|EI TS|PIDOSSA|TUPLA|LIIKAA|…` enintään kerran 6 tunnissa per rivi; Asemataulu välittää ne PT:lle.
+  PT kirjoittaa rivin `ts`:n aina, kun se päivittää rivin.
 - LAITTEET ennen rooleja: ruudut iPad, Blender, Unity-käännökset, Pilviajot, Simulaattorit,
   Codex-tilaukset ja Googlen musiikki (Lyria-ajot). Käytössä vihreä ja "Rooli: mitä", vapaa harmaa,
   prosessorin käyttö viitenä pienenä palkkina ja prosenttina. Otsikko näyttää käytössä olevat laitteet
@@ -196,6 +204,9 @@ Päätoimittaja omilla riveillään, samoin Asemataulu itse.
   Napautus lähettää PT:n sessiolle kommentin "Päivitä Asemataulu"; PT ajaa `paivita.py`, vie tiedot batchilla (if_version) ja
   ratkaisee ketjun.
 - KATSOJAN SYKE: näkyvissä oleva sivu kirjoittaa `talo/katsoja.ts` 2 min välein ja esiin tullessaan; vienti ei riipu sykkeestä.
+- VIENTI JOKA KIERROKSELLA (20.10.2026: taulun otsikossa "päivitetty 22.39", vaikka tyolista.json oli 23.07): Asemataulun A-kierros
+  ajaa synkka.py:n PT:n dokumenteille (junat, tyolista, tehtavat, viestit, huom) myös ilman Boostia; PT:n oma suora kirjoitus ei
+  korvaa vientiä. Taulun aika on dokumentin `ts`, joten PT päivittää myös sen.
 - VANHENEMINEN: synkka.py ilmoittaa "VANHA|<doc>" (Asemataulu → PT "ASEMATAULU VANHA"), kun junat tai työlista on yli 45 min jäljessä
   viimeisimmästä tapahtumasta tai työlista yli 6 h päivällä.
 
