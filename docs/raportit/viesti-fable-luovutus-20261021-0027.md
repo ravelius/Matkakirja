@@ -51,3 +51,10 @@ korjaus 0fab08301: vain K3 Mollien liikkuu). Pohjat 4/4 läpikäyntikunnossa (#5
 - Muista äänissä 7.27 (lupa tekstinä, ei kortti). Muisti korjattu.
 - Kuvatekstien SHA: rooli merkitsee haaran/rungon SHA:n ensin, käännöspalvelun commit suluissa.
 - Ennen tilausta Codexille: liike per malli (7.15).
+
+## 6. LISÄYS 00.4x
+- Louvren kalusteet 6abf7e4d4: PT:n OK annettu NS:lle (pelikuvat hyväksytty). Niken jalusta harmaa laatikko → myöhempi Tripo-ehdotus kortilla.
+- Portti "ei liikettä" #5112 mergetty. Juoksun GPU iPad 13: 9–12 ms (rivi valmis). PK 00557614b (kamera portin alle) → 209h → PT tarkistaa.
+- LS: Amsterdam Louvre-tasolla 28ed4a028 (NS 209), #5114 mergetty. SISÄLTÖKIRJURI PUUTTUU: Alankomaiden 27/64 teokselta puuttuu
+  kertojan kohta (kohtazoom) → luo Sisältökirjuri-sessio (Raamattu: puuttuva rooli luodaan, kun pohjan työ vaatii) ja anna tämä työ.
+- Levy 74 Gi: PT poisti 11 omaa worktreetä; Postivahti pyysi rooleja poistamaan omansa.
