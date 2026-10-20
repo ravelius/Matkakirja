@@ -35,6 +35,9 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
 - 17.43 NS otti cc9564c36:n (⊃ c5f9217ac) iPhone-pakettiin. TEE paketin jälkeen: LT kierros 5 (GPU-vahvistus + kuvat) → katso kuvat → rivi PT:lle.
 - 17.44 LT k5: mv 0 26,3 ms (mv 1 33,6), täysi res + MSAA 4 ei riitä ≤ 14:ään. SUOSITUS PT:lle (odottaa OK): iso iPad juoksussa skaala 0,8 + MSAA 2 + mv 0
   (~12 ms) → $D/varjot-koko/VS-suositus-208-gpu.md. OK:n jälkeen Jalki.cs-oletukset vain isolle iPadille → NS-laitekäännös → LT vahvistus paketin jälkeen.
+- 17.46 PT OK → 8d53e567e (linssiseppa2/iso-ipad-208 = cc9564c36 + iso iPad 0,8 + MSAA 2 automaattisesti, iOS ≥ 5 M px; QA skaala/msaa S|auto).
+  TEE paketin jälkeen: NS kääntää → LT kierros 6 ($D/varjot-koko/lt-gpu-komennot-6.txt, tulokset kierros6/) → katso kuvapari K-taysi/K-08 itse →
+  PT:lle 3 riviä (ero näkyy → PT vie omistajalle; ei → NS runkoon juna 208).
 
 ## 0b. KERÄTTÄVIEN HEHKU (PT, omistaja 17.17)
 - e35e43ee0 linssiseppa2/hehku-208 (PK jaatyminen-208 10e6a5a68 päällä): kameraan kääntyvä lisäävä neliö kerättävän lapsena (Resources/JuoksuHehku.shader,
