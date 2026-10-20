@@ -30,6 +30,12 @@ Viestit lähetetään send_messagella session id:llä (`/Users/Shared/Claude/oso
 - Worktree `/Users/Shared/Claude/wt/proto-lavastaja-monalisa` (proto) jää paikalleen, kunnes NS on mergennyt. Sen jälkeen `git -C …/Matkakirja-proto worktree remove`.
 
 ## Avoimet
+- **tausta-v5, PK 18.1x:** korvausalueiden sisään jää maattomia aukkoja niihin kohtiin, joissa tarkassa mallissa ei ole maata. Kohdat:
+  - Taihemenin edessä x −21…11, z −239,5…−231
+  - Taihemenin takana z −202…−192
+  - Meridiaaniportin U-piha z −420…−393
+  - G:n ja L:n reunat
+  Pelin täyte peittää ne, joten korjausta ei tarvita, ellei PT pyydä. Korjaus olisi v6: `peking_tausta.py` lisää jokaiselle KORVAA-alueelle tasaisen V4_lattia-nelikulmion korkeuteen −0,02 (mallien alle, ei z-taistelua). Kuvat: `_tyo/pelikoodari/laatat-208/`.
 - Odottaa NS:n mergeä ja omistajan katselua. Jos katsojista tulee palautetta, säädä Ydimen `KatsojaKulmat`/`KatsojaSyvyys`/`VartaloAste` ja aja `sh Linssit-testit/kaanna.sh Katsojat`.
 - Edellisen luovutuksen avoimet (60 fps mittaamatta, siltojen leveydet) ovat ennallaan.
 - Ei irrotettuja ajoja eikä taustatehtäviä käynnissä.
