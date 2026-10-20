@@ -2096,3 +2096,7 @@ scratchpad/keskustelukanava/karsinta-suunnitelma-20261020.md): säännöt vain R
 aloitusta; vanhat luovutukset ja keskustelut arkistoon (uusin per rooli jää); Raamatussa yksi aihe per kohta, luku 2 alalukuihin; luvun 7 roolikorttiin rivi "Lue aloittaessa: …" ja työkalu, joka
 näyttää luvun suoraan origin/mainista; automaattisesti luettaviin (CLAUDE.md:t, MEMORY.md) vain yhteinen + viittaus lukulistaan. Lisäksi Postivahti valvoo kansioiden jäljessäoloa ja sääntötekstiä
 muistissa, ohjeiden koe uudella Sonnet-sessiolla karsinnan ja jokaisen tilinvaihdon jälkeen, PT ilmoittaa sääntömuutoksen heti koskeville rooleille, Codexin ohjelähde samaan ajantasaiseen lähteeseen.
+
+## PAATOKSET 20.10.2026 klo 22.38: TUOTANTOPOHJAT SITOVIKSI NYT (20.10.2026 klo 22.39)
+
+Omistaja 22.3x: "Tarkoitin ehkä vähän eri asiaa. Eli sitä miten vaikka uusia pelejä luodaan. Haluan että meillä on selkeät työtavat eri asioille." Kortti KK:ssa 22.38: "Viimeistelläänkö tuotantopohjat nyt sitoviksi niin, että jokaiselle työtyypille on yksi valmis pohja, jota kaikki käyttävät?" → "Kyllä, nyt (Suositus)". Kumoaa 19.10. klo 15.34 "Seuraavan työn yhteydessä". Toteutus: seitsemän LUONNOS-pohjaa (docs/moduulit/tuotantopohjat/) viimeistellään (TÄYDENTÄÄ-osiot tekijärooleilta, 20.10. opit mukaan) ja liitetään Raamatun ohjekarttaan; vanhat docs/moduulit-ohjeet yhdistetään pohjiin tai merkitään teknisiksi; puuttuvat pohjat (lautapelit) tehdään. Järjestys: historiapeli, taidemuseon maa, uusi linssi, sitten loput ja lautapelipohja. Rinnakkain karsinnan kanssa.
