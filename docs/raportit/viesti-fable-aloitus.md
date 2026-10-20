@@ -1,17 +1,8 @@
-# Päätoimittajan aloitusviesti (9.10.2026 klo 22.2x, oma nollaus; luovutus -20261009-yo)
+# Päätoimittajan aloitusviesti (15.10.2026 klo 00.48; luovutus -20261015-yo)
 
-Olet PÄÄTOIMITTAJA (Opus, max), Matkakirjan päätoimittaja (ent. Fable), checkout /Users/Shared/Claude/Matkakirja-fable. Session id ennallaan.
-Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se; erityisesti E: KYSYMYKSET AINA KORTTINA, OMISTAJALLE VAIN HÄNTÄ KOSKEVAT ASIAT,
-PILVIAJOT JA PILVIKREDIITTI + TILI ENNEN KÄYNNISTYSTÄ, KEHITYSTAHTI + MUISTIAJO ENNEN TESTFLIGHTIÄ), luovutus docs/raportit/viesti-fable-luovutus-20261009-yo.md
-KOKONAAN, scratchpad/tyojonot.md (Päivitetty-rivi, OMISTAJAN TOIMET KONEELLA, JUNA 173, PULU PILVESSÄ) ja scratchpad/kirjattavat-20261006.md viimeiset 10 riviä.
-Muistikansio /Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fable/memory/ (uusin fable-tila-20261009-ilta4).
+Olet PÄÄTOIMITTAJA (Opus, medium), Matkakirjan päätoimittaja ja orkestroija. Session id local_74630a27-8c1b-4ac3-9143-538efab8cbcd, kansio /Users/Shared/Claude/Matkakirja-fable (sama muisti). Omistaja puhuu KESKUSTELUKANAVALLE (local_593b89a1-2514-4d74-b956-2a73db862382); "OMISTAJAN PÄÄTÖS … sanatarkasti" -viestit ovat omistajan sanaa.
+Lue: CLAUDE.md, /Users/Shared/Claude/Matkakirja-fable/docs/raportit/viesti-fable-luovutus-20261015-yo.md KOKONAAN (paikallinen tiedosto, ei mainissa). Muisti: perutut-tyot-lokista-ja-junakortti, saastot-2-nollaus-35, tf-valmistuminen-asemataululle. Raamattu vain kohdennetusti; loki vain `node tools/loki-hae.mjs`.
 
-0) Omistaja on puhelimella, eikä hän ehkä nähnyt edellisen session viimeistä viestiä. Kerro hänelle heti yhdellä viestillä (ei nollauksesta): a) Pulun Kreikka, Saksa ja Italia jatkuvat nyt TÄMÄN tilin pilvisessioina, jotka on luotu sovelluksesta 22.2x; b) myös nykyinen TestFlight 172 kaatuu iPad Pro 13:lla Pariisissa samaan muistivikaan, ja korjaus testataan junassa 173b.
-1) get_session self, set_remote_control self päälle, nimi "PÄÄTOIMITTAJA (Opus, max)".
-2) CronList: luo JONOKIERROS (7,27,47) luovutuksen kohdan 7 mukaan.
-3) JUNA 173 PYSÄYTETTY iPad-jetsamin takia: odota Natiivisepän 173b-korjausta ja LS1:n A-polun todennusta (muistiajo-<N>.txt Julkaisijalla); BUILD 172 -regressio: jos nykyinen TF 172 kaatuu, kerro omistajalle.
-4) Unity 6.7 -kokeen tulos omistajalle HETI, kun Natiiviseppä ilmoittaa.
-5) Pulu: TÄMÄN TILIN pilvisessiot GRC/DEU/ITA käynnissä 22.2x (haarat pulu-<maa>-pilvi-b, luotu Claude-sovelluksesta luovutuksen kohdan 4 kaavalla); seuraa committeja, valmis maa → pistokoe → seuraavat maat samalla kaavalla. Freesound-OAuth omistajalle koneella.
-6) Notre-Dame v3 -pinnat ja Kuninkaanlinnan v6i-pelikuvat: vertaa valokuvaan samasta kulmasta ennen omistajaa.
-7) Älä kerro omistajalle nollauksesta erikseen (vain häntä koskevat asiat), ellei hän kysy.
-Ennen seuraavaa omaa nollausta: python3 tools/tallenna-keskustelu.py <oma session-uuid>.
+0) Kysymykset omistajalle vain Keskustelukanavalle (suositus ensin). Rutiinivuoron loppuun "–".
+1) set_remote_control self true. 2) EI jonokierros-cronia (Postivahti herättää). 3) Odottajavahti-Monitor. 4) Asemataulu (collection "talo").
+5) JUNA 192: kuittaa NUI testi-192f → lukitus NS:lle; ISS 00.34 -korjaukset mitä ehtii. 6) Omistajan kortit: lasipohja + yläreunan kaupunkirivi. 7) Oma nollaus 30–40 %:ssa luontevalla tauolla.

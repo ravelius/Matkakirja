@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8790", "--bind", "127.0.0.1"],
       "port": 8790
+    },
+    {
+      "name": "lontoo-koe",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8791", "--bind", "127.0.0.1", "--directory", "/Users/Shared/Claude/proto-3d/tyokalut/linssiseppa-ajot/lontoo-koe"],
+      "port": 8791
     }
   ]
 }
