@@ -9,7 +9,8 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    - `MuseoHenkilot.Paalla = true`. k1 (Codexin nainen, luuranko idle + walk) kävelee gg:ssä Ytimen `MuseoKavijat`-simulaatiolla.
      Walk-tahti on mitattu glb:stä (2 × 1,28 m / 2,333 s, `KavelySykliM`/`KavelyKestoS`). k2 ja vartija ovat kiinteitä esteitä
      (`MuseoKavijat.LisaaKiintea`, uusi `Ydin/Museo/MuseoKavijatKiinteat.cs`).
-   - Testit: `MuseoKiinteatTestit` 1/1, Linssit 2184/2184, tarkista.sh ok. LS:lle on kerrottu reiteistä; jos se vastaa, säädä aluetta.
+   - Testit: `MuseoKiinteatTestit` 1/1, Linssit 2184/2184, tarkista.sh ok. NS kirjasi 209-jonoon (yhdistää, kun 208 on lukittu).
+   - LS 19.3x: opaskierros ei tarvitse muutoksia. VARAUS: jos `museo elama 1` laitetaan päälle Louvressa, kaksi simulaatiota eivät näe toisiaan → siirrä k1 Elaman simuun.
    - Älä aja kaanna.sh:ta ja tarkista.sh:ta yhtä aikaa (sama rakennus-dll → Abort trap 6).
 2. **k2:n ja vartijan luuranko** (omistaja 19.23 hyväksyi): PT tilasi Codexilta samaan `louvre-kavijat-v2`-toimitukseen (idle + walk).
    Kun ne tulevat: media `louvre-ihmiset-v1`:n rinnalle (vienti JU), k2 `Kavelevat`-listaan; vartija pysyy tuolilla idlellä (tarkista mitoitus).
