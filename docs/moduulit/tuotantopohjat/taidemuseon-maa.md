@@ -284,16 +284,17 @@ vakio-osia, myös Amsterdamin (luvun alun "Museoiden yhteiset osat").
   penkit, kaiteet) yhteisestä kirjastosta, ei salin GLB:stä (jokaisella veistospaikalla jalusta, ei leijuvia). Kävijät: maan omat
   Tripo-ihmiset, käytös ja paikat datasta yhteisellä liikkumistavalla (`MuseoKavijat`); kehityslippu päällä samassa erässä kuin media.
 - **Kentät:** jokaisella teoksella kuvateksti, krediitti, `lahde_url` ja `tekija_wikidata`; jokaisella teoksella `taiteilijat.json`-avain
-  (koneellisesti); jokaisella paikalla `lattia`; jokaisella kierroksen pysähdyksellä kertojan tunnus tai kirjattu syy; jokaisella
+  (koneellisesti); jokaisella salin osalla (`osat`) `lattia`; jokaisella kierroksen pysähdyksellä kertojan tunnus tai kirjattu syy; jokaisella
   ripustetulla teoksella kyltti (nimi, tekijä, vuosi samasta lähteestä kuin nimikyltti).
 - **Koneellisesti:** `sh Linssit-testit/kaanna.sh Museo` (polut, ripustus, veistokset, kierros kertojalle, lähestyminen,
   Auto Zoom, kertojan kohdat lähikuvassa iPadin vaaka-, iPhonen vaaka- ja pystyruudulla, hyppyvartija koko kierrokselle iPhone + iPad).
-  Louvre-vertailua (tiedostot, `sali.json`:n vakio-osat, kyltit, kävijät) ei ole vielä yhtenä testinä: tee se käsin tämän listan
-  mukaan, kunnes se on `MuseoMaaTestit`-luokassa. Tilanne 20.10.: Alankomailta puuttuvat `glb`/`esteet`/`penkit` datana (vanhat
-  vakiot), `kyltit/`, `lahestyminen.json` ja kävijät, joten se ei vielä läpäise Louvre-tasoa.
+  Louvre-vertailu on testinä `sh Linssit-testit/kaanna.sh MuseoPariteetti` (`MuseoPariteettiTestit`, juna 209): tiedostot ja kansiot,
+  `sali.json`:n vakio-osat ja osien lattiat, teosten kentät, tekijät `taiteilijat.json`:ssa, kyltti jokaiselle tekstitaululle,
+  lähestyminen ei luonnos. Tunnettu puute kirjataan testin `Puutteet`-listaan syineen ja poistetaan, kun se on korjattu (korjattu
+  puute listalla kaataa testin). Tilanne 21.10.: Alankomaat on Louvre-tasolla kävijöitä (`henkilot.json`, Lavastaja) lukuun ottamatta.
 - **Askeläänet lattioittain:** `MuseoAskeleet` valitsee näytteen lattian mukaan (`parketti_*` → parketti, `kivi_marmori_ruutu` →
-  marmori, muu → parketti). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita Äänittäjälle ne,
-  joilla ei ole omaa näytettä. Tilanne 20.10.: Ranskan `kivi_hiekka` (1) ja `sora` (1) soivat parkettina, kunnes omat näytteet tulevat.
+  marmori, muu → parketti; uusi sarja tulee manifestin `lattiat.<sarja>.salien_lattiat`-listasta ilman koodimuutosta). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita Äänittäjälle ne,
+  joilla ei ole omaa näytettä. Tilanne 20.10.: Ranskan `kivi_hiekka` (1) ja `sora` (1) soivat parkettina, kunnes omat näytteet tulevat (tilattu Äänittäjältä 21.10.).
 - **Tulos** luovutukseen: tiedostot ✓/✗, vakio-osat (penkit, kyltit, kävijät, kalusteet) ✓/✗, kenttien puutteet, lattiat ja niiden
   näytteet, testien määrä.
 
