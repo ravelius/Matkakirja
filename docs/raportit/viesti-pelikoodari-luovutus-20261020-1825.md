@@ -32,7 +32,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
 - AVOIN: lennon ulkonäkö, kallistuksen suunta ja huutojen tasot laitteella näkemättä; Puyi-botti voi kääntyä avauksen aikana
   risteyksessä (kamera seuraa, ei törmäysriskiä aukiolla). P7–P9 edelleen LT:n kierroksen 6 jälkeen.
 
-## 19.5x LISÄYS: juna 209 "Juoksupeli täysin valmiiksi" (PT) ja tuotantoputki
+## 20.03 LISÄYS: juna 209 "Juoksupeli täysin valmiiksi" (PT) ja tuotantoputki
 - Haara **pelikoodari/maali-209 = 7e8c0c16b** (palaute-208 7980a4cb9:n päällä), EI junaan 208:
   maali luoteisella kulmatornilla (2e4904f26; JuoksuV4Reitti.MaaliSolmu/MaaliTorni, JuoksuV4Saanto.MaaliSuunta; oikealla pohjalla
   lyhin reitti keskeltä 965 m), kokoelma + nimetyt paikat (4b53b5547; JuoksuKokoelma, PlayerPrefs juoksupeli.kokoelma, pohja.json
