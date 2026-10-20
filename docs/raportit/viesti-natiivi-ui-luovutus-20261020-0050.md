@@ -69,6 +69,10 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   ennen = julkaisija/sokkelo-yhteinen14-207-app, jälkeen = natiivi-ui/lasihaku-207-app). Simuvuoro pyydetty JU:lta 03.4x. Jos lasi
   puuttuu jälkeen-ajossa → HETI NS + PT. B + E: OK-rivi NS:lle vasta KK:n OK:n jälkeen.
 
+- KK 03.5x: B OK → NS:lle junaan 207 (7a45cff6f) lähetetty. E KORJAA (Opus-agentti iss-207-worktreessä 03.5x–): 1) revontulet ikkunan
+  keskelle saavuttaessa (myös iPad), 2) Jupiter/taivaskohde pienoispallon edelle napautuksessa, 3) mustan aikana vain määränpään nimi
+  (nyt INTIA → SIWA → KIINA …) ja musta lyhyeksi. Sen jälkeen käännös → simu → omistajalle aamulla: valikkopari + ISS iPhone-video.
+
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
 - palsta-haku 03deb7b16 + SK #5015 tekstit e4c33a4fe → juna 206.
 - varjostimet 28ef55f1e (kokoelma 53 varianttia/57 tilaa, Cupolan pisin ruutu 1200 → 500 ms) → juna 206 (lokit/todistus-varjostimet2-b3-ipad-…/TULOS-NUI.md).
