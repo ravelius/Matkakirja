@@ -66,3 +66,12 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   huoneiden punaiset seinät (vihreät pois) → kytkentä; muurinharjaketju 210 (säännön aukko-/palkkikohdat).
 - 21.5x: PT/KK Puyi pieni → kamera kujalla 8/6 m, aukea 11/6,5 m (DroneNosto) + MASSANOSTO (JuoksuV4Maailma: tavoite massassa → huipun yli
   1,5 m, JuoksuSokkeloMaailma.Huippu/Massassa). Vaatii simun (sk-juoksupeli-kuvapari-209b.txt + QA-loki 'kamera rakennusmassassa').
+- 22.1x: TAUSTA-V10 kytketty (6f9eafdf3): TaustaKansio v10 + EstoTiedosto palatsi-esto-v4 (leivottu v10:stä, ämpärissä; paketti
+  _valmiit/juoksupeli-palatsi-esto-v4-vienti-20261020). Verkkokorjaus: pakotettu sivuaskel ≥ 0,25 m (ennen 1 m; kuja-68-yhteyden 1,0 m
+  pyöristyi pois → 10/13 huonetta irti). Nyt 13/13, botti maaliin 148 s. Kuva-ajoon lähtö koordinaateista `ui juoksupeli palatsi alku x,z` (ae3d9d188).
+- 22.3x: UUSINTA 209c (runko f8ea8371b): proto-3d/lokit/todistus-juoksupeli-kuvapari-209c-20261020-2230/ → PT ja Lavastaja (w2/w3).
+  Kuja-75 + huoneet ≈ j9. Puyi yhä ~1/12, massassa 13 ruutua. Laskettu: 65°:n kentällä Puyi ≤ 1/8 muurien yltä.
+- 22.4x: TELE KUJILLA kytkimen takana (20e9379b1, oletus pois, QA `ui juoksupeli tele 0|1`): vaakakuvassa pystykenttä 40°, 7,5/8 m,
+  katse 3 + 0,25 v → Puyi ~1/6 (DroneNosto.PuyinOsuus, testi TeleKujillaPuyiKuudesosa). KYSYTTY PT:ltä oletukseksi. Puomin ehdokas
+  ei massaan (8b1444f52). Seuraava simu: sk-juoksupeli-kuvapari-209d.txt (tele päällä, 12 s latausodotus).
+- Haaran kärki pelikoodari/nakoisyys-209 = 8b1444f52.
