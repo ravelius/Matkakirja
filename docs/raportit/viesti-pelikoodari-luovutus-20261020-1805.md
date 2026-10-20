@@ -25,6 +25,7 @@ haara **pelikoodari/avaus-208 = 177560643**. Seurannan ulkopuolella vain Peli-te
   leivottu v5:stä, paketti _valmiit/juoksupeli-palatsi-esto-v3-vienti-20261020 → JU:lle vientipyyntö). NS:lle tarjottu; VAATII v5 + esto-v3
   ämpärissä ennen käännöstä. v5 tarkistettu: kolmioaukot poissa, korvausalueiden sisään jää aukkoja (Taihemen edessä 176 m², takana 320 m²,
   Meridiaaniportin U-piha) → Lavastajalle kerrottu; täyte peittää.
+  18.08: tausta-v5 (18.06) ja palatsi-esto-v3 (18.08) ämpärissä (JU) → NS voi ottaa b4e384537.
 
 ## AVOIMET
 - GPU (juoksu ≤ 14 ms hehkun kanssa) on Valosepällä (PT 17.4x), ei PK:n.
