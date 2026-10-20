@@ -13,15 +13,19 @@ Ajoskriptit ja skenaariot: /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajo
    Tarkista kuvaparit G1/G2 täysikokoisina → KK + kopio PT. Jos lasi PUUTTUU jälkeen-ajossa (lasilla 0 tai kuva ilman sumeaa lasia)
    → HETI NS + PT. Skenaariota ei ole vielä ajettu: jos `tap-teksti i` tai `ui opasvalikko kysy` ei toimi, korjaa skenaario ja aja uudelleen.
    Lopuksi SIMU VAPAA JU:lle.
-2. **ISS-207 KK:n kolme korjausta** (KK 03.5x): Opus-agentti teki ne worktreessä /Users/Shared/Claude/wt/proto-natiivi-ui-iss-207
-   (pohja fd35cde99). Tarkista `git -C /Users/Shared/Claude/wt/proto-natiivi-ui-iss-207 log --oneline -3` ja diff:
-   1) revontulet ikkunan keskelle saavuttaessa (myös iPad) → nimi näkyy ja napautettavissa iPhonella; 2) taivaskohde/Jupiter
-   pienoispallon edelle napautuksessa; 3) mustan aikana vain määränpään nimi (nyt INTIA → SIWA → KIINA → EGYPTI → TYYNI VALTAMERI,
-   iPhone issnyt 3–8 s) ja musta niin lyhyt kuin näkymän valmistuminen sallii. Aja `sh Linssit-testit/unity-tarkistus.sh`,
-   `python3 tyokalut/kielivahti.py`, `sh Linssit-testit/kaanna.sh IssPimeanKautta` (3/3). Jos agentti ei commitoinut: katso `git status`.
-   → KÄÄNNÄ JU:lta (simu) → `zsh …/ajo-museo-iss-207.zsh <app-kansio> iss` (iPhone + iPad) → KK + PT.
-   OMISTAJALLE AAMULLA (KK): valikkopari (B) + ISS:n iPhone-video (siirtymä mustan kautta ja salama näkyvissä) korjausten jälkeen.
-   KK:n OK:n jälkeen NS:lle junaan 207: natiivi-ui/iss-207 <uusi kärki> (sisältää 81be0b791 + vartija 17acd9b04 + skenaario fd35cde99).
+2. **ISS-207 KK:n kolme korjausta VALMIS KOODI natiivi-ui/iss-207 ee86e4fdd** (Opus-agentti 03.59; unity-tarkistus 0, kielivahti ok,
+   IssPimeanKautta 3/3, Astronautti/Kyyti/Kupoli-testit läpi; EI simua). KÄÄNNÖSPYYNTÖ JU:lle 03.59 → _tyo/natiivi-ui/iss-207b-app.
+   1) katse revontulten verhoihin saavuttaessa (Revontulet.cs:509, AstronauttiKerros.cs:1159/1308, AstronauttiLinssi.cs:321; loki
+   "kupoli: katse revontulten verhoihin …"; musta odottaa käännön + 0,3 s); 2) pienoispallon napautus tarkistaa ensin taivaskohteen
+   (Sijaintipallo.cs:455, AstronautinNakyma.cs:201; loki "→ skanneri (pienoispallon edeltä)"); 3) mustan aikana LCD vain määränpää
+   (AstronauttiLinssi.cs:1223, IssOhjaamo.cs:1085) + aikahyppy ja aluksen siirto mustan takana HETI (kuten vähennetty liike;
+   AstronauttiLinssi.cs:310/395, IssKohdevalikko.cs:970) → musta lyhyempi. SIVUVAIKUTUS (kerro KK:lle kuvien kanssa): pienoispallo ei
+   näytä aikahyppyä mustan aikana, kertojan saapumisrepliikki tulee heti. Katse jää verhoihin seuraavaan kohteeseen (omistajan 14.10.
+   sääntö; tuplanapautus palauttaa). Aluksen ollessa soikion päällä katse voi osoittaa alas → katso kuvista.
+   SIMU NYT:sta: `zsh /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ajo-museo-iss-207.zsh /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/iss-207b-app iss`
+   (skenaario päivitetty: katse-oleta, "nimelle ruudulla", Jupiter pienoispallon kautta). Vertaa "pimennys häivyy NNNN ms" aiempiin
+   7535/6537/4268 ms. → KK + PT; OMISTAJALLE AAMULLA (KK): valikkopari (B) + ISS:n iPhone-video (musta siirtymä + salama).
+   KK:n OK:n jälkeen NS:lle junaan 207: natiivi-ui/iss-207 ee86e4fdd (+ myöhemmät).
 
 ## VALMIIT TÄNÄÄN (20.10.)
 - **B museo-valikot-207 7a45cff6f**: KK OK 03.5x → NS:lle junaan 207 lähetetty 03.5x (museossa ei ⚙:ta, ☰:ssä Tekstitys + Mikseri kehittäjälle).
