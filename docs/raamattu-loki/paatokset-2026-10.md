@@ -1993,3 +1993,7 @@ hyppyä) lähikuvaan, jossa kehys täyttää ruudun, ja maalauksen omat kohdat z
 vartija MuseoLahestymisVartijaTestit (Linssit, CI) ajaa jokaisen näyttelyn alun ja koko kierroksen iPhonella ja iPadilla ja hylkää kameran hypyn (askel ≥ 10 cm/ruutu, näkymän muutos ≥ 2,4 ln/s tai
 katseen kääntö ≥ 150°/s) sekä lähikuvan, jossa kehys ei täytä ruutua. Ainoa sallittu siirto ilman liikettä on mustan peiton alla. Toteutus linssiseppa/monalisa-zoomi-207 9d88dae16 (syy: Mona Lisan
 kaiteen takana zoomi alkoi 1,5 m lähempää kuin pysähdys ~3 m).
+
+## JUOKSUPELI: IDENTTINEN KIELLETYN KAUPUNGIN POHJA (20.10.2026 klo 07.32)
+
+Omistaja 20.10.2026 Keskustelukanavan korteilla. Klo 07.12: Korjataanko korttelien suunnat oikean Kielletyn kaupungin mukaisiksi junaan 208? -> Kyllä, kuten oikeassa (päärakennusten ovet etelään, sivurakennukset pihan puolelle, pääkujat pohjois-etelä; sokkelo, kapeat kujat ja 90° käännökset säilyvät). Klo 07.12 pyyntö: Tee identtinen pohjakartta. Klo 07.30: Kuinka laaja? -> Koko palatsi: muurit, portit, hallit, aukiot, kujat ja pihat oikeilla paikoillaan oikeassa koossa (noin 750 × 960 m), sokkelo oikeista kujista, aukiot avoimia, kulmatornit ja suomenkieliset paikkojen nimet mukana; valmistuu vaiheittain junan 208 jälkeen. Ehdot: 60 fps iPadilla; lähteet Commons CC/PD tai OSM vain mittoina (ennakkotapaus kielletty-kaupunki-v1), muu lisenssi KK:n kautta. Jako (PT 07.3x): vaihe 1 pohjadata Karttaseppä, vaihe 2 peli datasta Pelikoodari (juna 209), vaihe 3 rakennukset Lavastaja (juna 210), vaihe 4 nimet, tornit, vesi ja valo (juna 211).
