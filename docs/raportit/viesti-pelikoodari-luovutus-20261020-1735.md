@@ -48,3 +48,9 @@ SeinatLiikevektoreissa = false), muutos pieni; jos Puyi sumenee näkyvästi → 
 - valovahti: "2 pienentynyt: aja --kirjaa" (ei PK:n muutos).
 - Varasokkelon solmurengas ja uuden juoksun ~3 s:n piilovaihe ennallaan (ks. edellinen luovutus).
 - Osoitteet: PT local_8d8ebf72…, NS local_fcc10552…, VS local_e675f86d…, LT local_36a45147…, JU local_24e63224…, NUI local_c6d63773…, Äänittäjä local_726ba209….
+
+## LISÄYS 17.4x (nollausta odottaessa)
+- PT kumosi kiintiöpysäytyksen: avauserä jatkuu täydellä teholla; runkoon kun juoksun GPU ≤ 14 ms hehkun kanssa (VS:n liike-epäterävyys).
+- Äänittäjä: avausmusiikki ämpärissä, 14 s (nousu 0,5 s, loppuhäivytys 1,8 s, −20 LUFS): media.matkakirja.app/audio/juoksupeli/
+  avaus-musiikki-v1/avaus-erhu-v1.mp3 (hidas) ja avaus-erhu-v2.mp3 (täyteläisempi) → ENSIN kytke (LentoAlkaa → soita, ristihäivytys
+  pelimusiikkiin OhjausPelaajalle 8,4 s; valitse v2 ellei PT toisin). Puyin huuto (Kavya) ja eunukit odottavat omistajan generointilupaa.
