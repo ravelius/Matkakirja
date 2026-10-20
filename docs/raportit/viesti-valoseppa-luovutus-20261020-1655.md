@@ -33,6 +33,8 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
 - 17.42 OMISTAJA 17.42 (KK): TAUKO iPad-mittauksiin, kunnes NS:n iPhone-paketti on asennettu (~18.45). NS:lle tarjottu c5f9217ac + cc9564c36 vain jos ei
   viivytä; muuten paketin jälkeen LT kierros 5 (cc9564c36-appi lokit/natiiviseppa-app-208-hehku-avaus-cc9564c36-laite) → runkoon + PT. Runko e3cff21f6 ⊃ 404a63482.
 - 17.43 NS otti cc9564c36:n (⊃ c5f9217ac) iPhone-pakettiin. TEE paketin jälkeen: LT kierros 5 (GPU-vahvistus + kuvat) → katso kuvat → rivi PT:lle.
+- 17.44 LT k5: mv 0 26,3 ms (mv 1 33,6), täysi res + MSAA 4 ei riitä ≤ 14:ään. SUOSITUS PT:lle (odottaa OK): iso iPad juoksussa skaala 0,8 + MSAA 2 + mv 0
+  (~12 ms) → $D/varjot-koko/VS-suositus-208-gpu.md. OK:n jälkeen Jalki.cs-oletukset vain isolle iPadille → NS-laitekäännös → LT vahvistus paketin jälkeen.
 
 ## 0b. KERÄTTÄVIEN HEHKU (PT, omistaja 17.17)
 - e35e43ee0 linssiseppa2/hehku-208 (PK jaatyminen-208 10e6a5a68 päällä): kameraan kääntyvä lisäävä neliö kerättävän lapsena (Resources/JuoksuHehku.shader,
