@@ -23,8 +23,11 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    latautuu, joten Nike leijuu. Kun keula tulee: mitoita niin, että sen yläpinta on Niken alapinnan tasolla (tai säädä paikka_y), lisää se
    veistokseksi tai jalustamalliksi MuseoRakennukseen ja vie media JU:lla. Kuva: Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261020/kk-1947-louvre-nike-ilman-jalustaa.png.
 6. **Juoksupeli j9/j10-ilme → juna 209 eteenpäin, Louvren 209-työn JÄLKEEN** (omistaja 20.14, PT + PK 20.2x; havainnekuvat posti/juoksupeli-havainnekuvat-20261017b/):
-   (1) Codexin katottomat avoimet rakennukset (maailma-v4/avoimet-v2) kujien varsille, erityisesti Kuuden läntisen palatsin pihoille.
-       PK:lle jokaisen oven paikka pohjan kehyksessä (x, z, suunta), jotta PK voi tehdä läpijuoksun ovesta oveen.
+   (1) VALMIS 20.5x: avoimet-v2:n 4 huonetta (juhlasali, tyohuone, puutarha, varasto) kuja-75:n molemmin puolin, ulkoseinä reunamuurin
+       paikalla. Työkalut: `avoimet_sijoitus.py` → `avoimet/sijoitus.json`, `peking_tausta.py` 4. argumentti (AV-alueet), `aja_tausta_v7.zsh`
+       → `peking/tausta8`, `pakkaa_tausta_v7.zsh` → `_valmiit/juoksupeli-kk-tausta-peking-v7-vienti-20261020/` (SHA256SUMS 8096cc91371b, mukana
+       avoimet-sijoitus.json), `esikatsele_avoimet.py` → `esikatselu/avoimet-t8-lod0-*.png`. Ovet (16, säteillä auki) PK:lle, vienti JU:lle,
+       NS:lle 209-jonoon. PK kytkee huoneet ja TaustaKansio v7 sekä porttiaukot pohja.json-muuriin kujan ovien kohdalle.
    (2) Kasvit ja puut pihoille: ruukkukasvit, granaattiomenapuut ja männyt (Tripo Codexilta).
    (3) VAIN Tripo: leluesteiden tilalle esineet (arkut, maljakot, pöydät, kantotuolit) ja eunukit luurangolla. Kun mallit ovat valmiit,
        mallien nimet PK:lle, joka vaihtaa esteet. Lavastajan tilausjärjestys PK:lle 20.2x: eunukit → esteet → kasvit.
