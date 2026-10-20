@@ -23,6 +23,11 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
 - TEE: lue LT:n tulos → jos A ≤ 14 ms ja J ilman jäätymistä → PT:lle OK (NS: f861b6fd3 runkoon); jos ei → säädä HeittoK/varjomatka (QA-arvoista)
   tai, jos 60 fps + ei ilmestymisiä + varjot eivät täyty yhtä aikaa, rivi PT:lle (omistajalle valinta videolla).
 
+## 0b. KERÄTTÄVIEN HEHKU (PT, omistaja 17.17)
+- e35e43ee0 linssiseppa2/hehku-208 (PK jaatyminen-208 10e6a5a68 päällä): kameraan kääntyvä lisäävä neliö kerättävän lapsena (Resources/JuoksuHehku.shader,
+  JuoksuV4Maailma.Hehku.cs), kulta/jade/lohikäärmeen sävy, mätä ei hehku; QA valo hehku 0|1, hehkuvoima V (0,35). NS kääntää laiteapin → LT kuvapari H1/H0 +
+  GPU ($D/hehku-208/lt-komennot.txt) → katso kuvat itse → PT:lle 3 riviä → NS runkoon PK:n jäätymiskorjauksen jälkeen.
+
 ## 1. NS:LLÄ / RUNGOSSA (PT OK)
 - Louvre: af60d60f8 keilaton atlas (paketti _valmiit/taidemuseo-ranska-v2r-vienti-20261020 ämpärissä) → fbeae02dc seinäspotti → museo-kohdevalo
   **100042f7c** (omistaja 15.40: kankaan huulivarjo 2 cm/7 mm/4 mm, kohdevalon pesu kaikista teoksista Gauss σ 0,45×koko+0,5 m seinä+lattia,
