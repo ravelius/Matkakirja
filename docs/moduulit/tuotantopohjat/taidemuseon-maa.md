@@ -301,10 +301,63 @@ Kertojan äänet museon kohteille. Putki, mallit ja lupa: `kertojan-teksti-ja-aa
 - [ ] Ääni, malli ja `fi` oikein; ääntämysvihjeet tehty; Gemini sokkona ennen omistajaa.
 - [ ] Portti läpi, vienti, manifestirivit kytkijälle ja kuitattu, `mykistetyt` poistettu.
 
-## 9.5 TÄYDENTÄÄ: Natiivi-UI (salin näkymä, i-kortti ja ympyrät pelissä)
+## 9.5 Natiivi-UI (salin näkymä, i-kortti ja ympyrät pelissä)
 
-*(Natiivi-UI: museon käyttöliittymä natiivissa (i-kortti, ympyrät, kierroksen ohitus ja pysäytys, tekstitys), olemassa olevat
-UI-pohjat, tarkistus iPhonella ja isolla iPadilla, pelikuvat tavoitekuvan rinnalle. Täydentää Natiivi-UI.)*
+*(Natiivi-UI 20.10.2026, PT:n toimeksianto (omistaja 20.10. klo 22.38 ja 22.53). Alankomaiden ja Ranskan (Louvre) museotyön opit
+luovutuksista; uusia sääntöjä ei ole. Koodi proto-gitissä `UI/Linssit/MuseoTaulu*.cs` (i-kortti, ympyrät, teoskortti, nimi),
+`UI/Linssit/OpasMetrolinja.cs` (metrokartta), `UI/Linssit/KertojanTekstitys.cs` ja museon ☰, näyttelyvalinta ja salilista.)*
+
+**Työvaiheet (tässä järjestyksessä):**
+
+1. **Tavoitekuva ja lähtötieto.** Lue PT:n erä, Linssisepän data (`teokset.json`, `taiteilijat.json`, `lyhyt-<maa>.json`,
+   `kohdat-<maa>.json`) ja grep proto-repon `git log --all --since`: museon UI on jo olemassa, ja uusi maa tulee siihen datana.
+   UI muuttuu vain, jos uuden maan data ei mahdu pohjaan; silloin käyttöliittymän tavoite on kuvakaappaus, johon muutos on
+   piirretty (Raamattu 4.21), ja PT hyväksyy sen ennen koodia.
+2. **Pohjat** (Raamattu 4.1, 4.2, 2.127–2.130): esityksen aikana vain tauko ja ☰ (avausvalikon pohjalla, pienet kuvakkeet, ei isoa
+   kuvaa); i-nappi seinällä nimen vieressä, ei teoksen päällä; i-kortti lasikorttina MUOTOKUVARIVI-pohjalla (pyöreä muotokuva,
+   tekijä ja elinvuodet, alla lyhyt); ympyrät taululla ja niiden otsikko ja teksti kehyksen alla; teoksen nimi ja napit
+   OHJAUSNAPPI-teemalla harmaa-kuulto; AUTO ZOOM ja kertojan 🔈 ja T kytkinnappeina (OHJAUSNAPPI › kytkin). Teoksen nimi
+   latauskuvan nimipohjalla; nimen ja nappien sävy salin seinän kirkkaudesta (vaaleassa salissa paperin muste).
+3. **Kierroksen ohitus ja pysäytys** (Raamattu 2.123, 2.127): tauko pysäyttää kertojan ja tekstityksen myös vapaassa kulussa ja
+   luennassa; tauolla ‹ › edelliseen ja seuraavaan teokseen; nimen napautus avaa kelattavan nimilistan, Siirry vie teokseen
+   kävellen. Kortti (i-kortti, teoskortti) pysäyttää kierroksen auki ollessaan.
+4. **Tekstitys ja ääni.** Kertojan tekstitys tulee kertojan klipin ajat-JSONista (`MuseoTekstitys`, T-kytkin); ympyrät ja i-kortin
+   tekstit lukee peli itse workerin kautta (`KortinLukija` → `Puhe.Lue`, Raamattu 5.3), joten niille ei tilata ääniä. Kerro tämä
+   Äänittäjälle ja Sisältökirjurille ennen lupapyyntöä.
+5. **Taulu ei peity** (Raamattu 2.130): kun kortti tai ympyrän teksti ei mahdu, kamera perääntyy pehmeästi liikepohjalla; teoslistan
+   rivit eivät litisty. Metrokartan tekstit vaihtuvat ristiin merkin tahdissa (vanha nimi häipyy, uusi nimi, tekijä ja vuosi
+   nousevat) kaikissa museoissa.
+6. **Tarkistus iPhonella ja isolla iPadilla** pystyssä ja vaakana: pisin teoksen nimi, pisin tekijä, i-kortti ilman muotokuvaa,
+   teos, jossa on neljä ympyrää, vaalea ja tumma sali. Iso iPad (iPad Pro 13) on roolien käytössä kysymättä; testiversion jälkeen
+   siihen palautetaan uusin runko. Simulla vain uudelle tekniikalle ja pyydettyihin kuviin (Raamattu 9.2).
+7. **Pelikuvat tavoitekuvan rinnalle** (Raamattu 4.21, 4.48): todistusajolla kuvat samasta kulmasta kuin tavoitekuva (pysty ja vaaka),
+   kuvapari kuvateksti omalla raidallaan kuvan ulkopuolella; tarkista kuvat itse täysikokoisina ennen kuin ne lähtevät KK:lle.
+8. **Luovutus:** haara ja SHA PT:lle (≤ 3 riviä), kuvaparin polut KK:lle, Natiiviseppä vie runkoon.
+
+**Valmis, kun (Natiivi-UI):**
+
+- [ ] Uuden maan data näkyy olemassa olevilla pohjilla ilman maakohtaista koodia; uusi UI-osa vain PT:n hyväksymällä kuvalla.
+- [ ] Esityksen aikana vain tauko ja ☰ (ja kytkimet); i-nappi ei koskaan teoksen päällä; taulu ei peity kortista eikä ympyröistä.
+- [ ] Tauko pysäyttää kertojan ja tekstityksen kaikissa tiloissa; ‹ › ja nimilista vievät teokseen.
+- [ ] i-kortti: muotokuva tai rivi ilman kuvaa, tekijä ja elinvuodet, lyhyt mahtuu; ympyröiden tekstit luetaan workerin kautta.
+- [ ] Nimet ja napit luettavia vaaleassa ja tummassa salissa; pisin nimi mahtuu iPhonella ja isolla iPadilla pysty ja vaaka.
+- [ ] Tekstit `ui.fi.json`:ssa tai datassa (kielivahti), `tarkista.sh` 0 virhettä.
+- [ ] Tavoitekuva ja pelikuva rinnakkain KK:lle ennen junaa.
+
+**Opit (20.10.2026 asti):**
+
+- **Simuskenaario napautuksin** (17.10., veistokset): QA-komento siirtää pelin saliin, mutta näyttelyvalinta jää päälle; käytä
+  napautuksia (`tap-teksti <näyttely>`, `tap-teksti Siirry näyttelyyn`) ja `linssi museo lahestyminen pois` ennen museon avausta.
+  Katso kuva-arkki ennen kuin raportoit OK.
+- **Nimi ja sävy** (20.10., KK 07.5x): kiinteä kirkkauskynnys teki nimestä tumman Louvren vaaleissa saleissa ja valkoisen väärissä;
+  sävy luetaan seinän todellisesta kirkkaudesta salin kuvasta hystereesillä, ja latausruudun musta näyte ohitetaan.
+- **Auto Zoom ja nimi** (19.–20.10.): automaattinen zoom saapuessa ja nimen häivytys zoomissa piilottivat nimen kokonaan; Mona Lisan
+  suurennus piilottaa nimen, joten otsikkotestit ajetaan muulla teoksella.
+- **Kortin tyylit** (20.10.): `kentta.uss` voitti tumman väkäsen säännön; samantarkkuuksisista USS-säännöistä myöhempi voittaa, ja
+  inline-`opacity` peittää luokan. Huomiokohdat (ympyrät) sulkevat teoskortin, ettei kaksi tasoa ole päällekkäin.
+- **Kuvat-välimuisti** (iPad 300 Mt) tuhoaa vanhimmat tekstuurit (valkoinen pinta): iso pysyvä kuva näkymän ajaksi `Kuvat.Kiinnita`.
+- **Kova kuorma** (load > 16) voi jäädyttää iPadin museon latauksen 18 s; aja uudelleen, ei koodivika. Kehysnappien himmennys nielee
+  simun napautuksen: `ui kehysnapit 0` skenaarion alkuun.
 
 ## 9.6 TÄYDENTÄÄ: Julkaisija (vienti ja juna)
 
