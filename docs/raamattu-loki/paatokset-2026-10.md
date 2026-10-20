@@ -2117,3 +2117,7 @@ tauolle. Historiapelin kaksi avointa (kokoelmakortti, huutojen venytys) omistaja
 ## PAATOKSET 20.10.2026 klo 22.55: UUDEN LINSSIN VARIT (20.10.2026 klo 23.03)
 
 Omistajan kortti KK:ssa klo 22.55 (sanatarkasti): "Kuka hyväksyy uuden linssin värit?" → "Vain kiistanalaiset sinulle (Suositus)": omistaja näkee kuvaparina vain värit, joista on erimielisyyttä tai jotka poikkeavat tyylikirjasta; muut hyväksyy PT. Muut uuden linssin avoimet KK:n linjalla: kolme tavoitekuvaa vain uusille osille (22.53 kattaa), NUI:n osuus nyt, Karttasepän ja Sisältökirjurin TARKISTETTAVA-kohdat PT ratkaisi (roolit puuttuvat tililtä), seuraava linssi ja uusi kehys kysytään vasta linssin alkaessa. Pohja uusi-linssi.md.
+
+## LINJAUS 20.10.2026 klo 22.58: YHTENAISET NAPIT, TYYLIKIRJA JA TOIMINTALOGIIKKA (20.10.2026 klo 23.04)
+
+Omistaja klo 22.58 KK:ssa (sanatarkasti): "napit ja laajemmin tyylikirjastot sekä linssien ja pelien toimintalogiikka ovat tärkeitä olla yhtenäisiä". KK:n ehdotus (PT toteuttaa): 1) peleille yhteiset säännöt kuten linsseille (aloitus, tauko, ratas, poistuminen, ohjaus, kortit, luenta) ja 2.70 natiivin mukaiseksi, molemmat omistajalle läpikäyntiin KK:n kautta; 2) jokainen tuotantopohja viittaa tyylikirjaan ja yhteisiin sääntöihin eikä kuvaa omia nappeja (tehty pohjiin 20.10. 23.0x); 3) natiivin tyylikirjakopio päivittyy automaattisesti joka käännöksessä (NUI). Asemataulun työlistaan.
