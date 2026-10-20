@@ -9,3 +9,8 @@ Soundly-GUI ei käytettävissä (omistajan Space on koko ruudun sovellus → ikk
 
 ## 2. Puheäänet — EI GENEROITU, odottaa lupaa (KK/omistaja)
 Puyin "Ottakaa kiinni, jos saatte!" Kavya `bA58y3FqVI6b6gTNh0oT`, speed 1,2, fi, yksi otto (~30 mrk + tagi). Eunukkien "Majesteetti!" 3–4 eri aikuista miesääntä äänipankista, yksi otto per ääni (~15 mrk + tagi). Arvio yhteensä ≤ 200 mrk, 4–5 ottoa.
+
+## 3. Puheotot (omistaja 17.34, KK) — TEHTY, ämpärissä
+4 ottoa, 81 mrk, ei tageja, speed 1,2, fi pakotettu, ei jälkikäsittelyä; ääniportti 0 hylättyä, 1 varoitus (03 true peak −0,8 dBTP). `audio/juoksupeli/avaus-puhe-v1/`: 01 "Majesteetti karkasi!" 1,9 s (eunukki, RgBriz…, Gemini: paniikki) · 02 "Majesteetti, palatkaa!" 2,1 s (22nhU1…, anova) · 03 "Majesteetti!" 1,4 s (tueYPm…) · 04 Puyi "Ottakaa kiinni, jos saatte!" 2,4 s (Kavya).
+Huomio: 03 litteroituu 3/4 "Mahesteetti" (j heikko); uusi otto vaatisi uuden luvan (~12 mrk). 04: Gemini kuulee nuoren (tytön) äänen, kuten aiemmatkin Kavya-huudot (omistajan hyväksymä ääni).
+Työkansio proto-3d/_tyo/juoksupeli-avaus-puhe-20261020; paketti _valmiit/juoksupeli-avaus-puhe-vienti-20261020.
