@@ -54,3 +54,5 @@ SeinatLiikevektoreissa = false), muutos pieni; jos Puyi sumenee näkyvästi → 
 - Äänittäjä: avausmusiikki ämpärissä, 14 s (nousu 0,5 s, loppuhäivytys 1,8 s, −20 LUFS): media.matkakirja.app/audio/juoksupeli/
   avaus-musiikki-v1/avaus-erhu-v1.mp3 (hidas) ja avaus-erhu-v2.mp3 (täyteläisempi) → ENSIN kytke (LentoAlkaa → soita, ristihäivytys
   pelimusiikkiin OhjausPelaajalle 8,4 s; valitse v2 ellei PT toisin). Puyin huuto (Kavya) ja eunukit odottavat omistajan generointilupaa.
+- 17.39 (uusi sessio): avausmusiikki KYTKETTY avaus-208 = **8739b4efd** (v2; LentoAlkaa → soi, OhjausPelaajalle/ohitus → ristihäivytys 4 s,
+  tason eka kappale esiladattu; testit 683/683, unity 0). PT:ltä kysytty: tarjotaanko NS:lle heti vai äänten jälkeen.
