@@ -75,3 +75,14 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   katse 3 + 0,25 v → Puyi ~1/6 (DroneNosto.PuyinOsuus, testi TeleKujillaPuyiKuudesosa). KYSYTTY PT:ltä oletukseksi. Puomin ehdokas
   ei massaan (8b1444f52). Seuraava simu: sk-juoksupeli-kuvapari-209d.txt (tele päällä, 12 s latausodotus).
 - Haaran kärki pelikoodari/nakoisyys-209 = 8b1444f52.
+- 23.0x–23.2x: 209d (runko de726f827) EI OK → 825c0cc22 (huoneet peittokarttaan, kameran viimeinen massavarmistus) + b50c66c2e
+  (PT 23.0x: tele myös aukioilla, kujantunnistus pois) + ff5bba4a6 (testi näkyvyys eteen ≥ 2 s). 209e (runko ae78d2ff6):
+  Puyi mitattu 1/6, massassa 0, latausruudut poissa; viat 46 s räystään alla + w1 Puyi alareunassa → d97e15344 → NS → UUSINTA 209f
+  (sk-juoksupeli-kuvapari-209f.txt) → PT (sama id, PT nollautui 23.2x). Kärki pelikoodari/nakoisyys-209 = d97e15344.
+- JONO JUNAN 209 JÄLKEEN (PT 23.17/23.25, Raamattu 2.201 YHTEISET OSAT ENSIN): juoksupelin oma ☰ (valikkoRyhma/valikkoNappi/valikko +
+  Lopeta) → NUI:n PelinValikko (natiivi-ui/yhteiset-saannot-209 aa9b8c3da, UI/Pelit/PelinValikko.cs ja PelinTuloskortti.cs). NUI:n ohje:
+  RakennaHudissa `kehys = new PelinValikko(k.Turva(LinssiUi.RadioKerros), LinssiUi.RadioKerros, null, () => saanto != null && !saanto.Ohi,
+  Sulje, tauko: auki => valikkoAuki = auki);` Avaa → kehys.Avautui(), Sulje → kehys.Suljettu(), Esc → kehys.Valikko.Avaa() (tauko, ei
+  lopetusta), taustalle siirtyminen avaa ☰:n; YlaRaja kehys-ryhmän worldBound (julkinen getter NUI:lta tarvittaessa); JuoksuTulos.Matkalta
+  = true matkalta avattaessa (kultainen nappi "Jatka matkaa"/"Pelaa uudelleen"); Tekstitys ja Musiikki ☰:n kytkiminä; alin rivi "Poistu".
+  Lähde: /Users/Shared/Claude/Matkakirja-fable/scratchpad/paatoimittaja/2253/yhteiset-saannot/pelit-yhteiset-saannot.md.
