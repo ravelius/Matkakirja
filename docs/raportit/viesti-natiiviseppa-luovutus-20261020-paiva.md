@@ -31,3 +31,9 @@ Jonot (lopusta alkuun = uusin tila): natiiviseppa-skriptit/juna208/jono-208.txt 
 - Orpo `simctl io recordVideo` voi jäädä tuntikausiksi → testiportti katsoo vain kirjoittavat nauhoitukset (testit20x-odota.sh).
 - Älä yhdistä runkoon testiajon aikana: pysäytä oma ajo (myös orpo dotnet LinssiTestit.dll, cwd ehdokas-worktree) ja aja uudelleen.
 - Skriptit juna208/: testit208(-odota), laite208, yhdista.sh (yhdistelmä ilman checkoutia), lukitse208-a/-b/-ajo, mac208, muisti208 (pohja 7ffa2ed9a, b36).
+
+## PÄIVITYS 20.10. 13.58 (Mac Studion uudelleenkäynnistys, omistaja 13.57)
+- **Runko natiiviseppa/juna-208 = 7aa1e43cd** (peilissä), VIHREÄ 2166/676/517: + VS louvre-varjo k7 db430a614 (⊃ 28bc7aacc, 99838b4b1), NUI 7c10e9f71 (⊃ 224fe6c50), VS liike/lattia 0dad6f92c (⊃ cadf8241d). Lämmitys f6e92d277 HYVÄKSYTTY (LT). Ei avoimia eriä.
+- Laiteäppi lokit/natiiviseppa-app-208-runko-7aa1e43cd-laite (kotinäytön nimi "MK kehitys", laite-sha.sh PlistBuddy). Asennettu iPhone + iPad Pro 11.
+- **ENSIN käynnistyksen jälkeen**: `PAKOTA=1 zsh /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna208/asenna208.sh 7aa1e43cd` (iPad Pro 13, langaton; omistaja kuittasi) → rivi KK:lle.
+- **OMISTAJA 13.57**: asennukset jatkossa VAIN iPad Pro 13 (asenna208-kaikki.sh oletus); iPhone/iPad Pro 11 vain omistajan pyynnöstä. Jokainen vihreä runko: ketju208.sh <sha> (testit → laite208) → asenna208-kaikki.sh <sha> (ei sulje auki olevaa peliä ilman KK:n kuittausta) → KK. JU:lle KÄÄNNETTY-rivi.
