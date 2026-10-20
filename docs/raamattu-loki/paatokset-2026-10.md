@@ -2121,3 +2121,39 @@ Omistajan kortti KK:ssa klo 22.55 (sanatarkasti): "Kuka hyväksyy uuden linssin 
 ## LINJAUS 20.10.2026 klo 22.58: YHTENAISET NAPIT, TYYLIKIRJA JA TOIMINTALOGIIKKA (20.10.2026 klo 23.04)
 
 Omistaja klo 22.58 KK:ssa (sanatarkasti): "napit ja laajemmin tyylikirjastot sekä linssien ja pelien toimintalogiikka ovat tärkeitä olla yhtenäisiä". KK:n ehdotus (PT toteuttaa): 1) peleille yhteiset säännöt kuten linsseille (aloitus, tauko, ratas, poistuminen, ohjaus, kortit, luenta) ja 2.70 natiivin mukaiseksi, molemmat omistajalle läpikäyntiin KK:n kautta; 2) jokainen tuotantopohja viittaa tyylikirjaan ja yhteisiin sääntöihin eikä kuvaa omia nappeja (tehty pohjiin 20.10. 23.0x); 3) natiivin tyylikirjakopio päivittyy automaattisesti joka käännöksessä (NUI). Asemataulun työlistaan.
+
+## PAATOKSET 20.10.2026 klo 23.17: LINSSIEN JA PELIEN YHTEISET SAANNOT (20.10.2026 klo 23.18)
+
+Omistajan kortti KK:ssa klo 23.17 (kaikki suositukset; omistajan versio scratchpad/keskustelukanava/pohjat/yhteiset-saannot-omistajalle.md): "Miten peli pysäytetään?" = "☰ pysäyttää (Suositus)" (myös Esc ja taustalle siirtyminen avaavat ☰:n); "Missä pelin säädöt ovat pelin aikana?" = "☰-valikossa (Suositus)" (Tekstitys ja Musiikki kytkiminä, ei ratasta peleihin); "Mikä on poistumisnappi kaikissa linsseissä ja peleissä?" = "Poistu ☰:ssä (Suositus)" (aina ☰:n alin rivi, lautapelien Poistu ja Säännöt ☰:iin, Luovuta jää peliin); "Mikä on tuloskortin kultainen nappi pelin lopussa?" = "Avauspaikan mukaan (Suositus)" (matkalta "Jatka matkaa", Pelit-välilehdeltä "Pelaa uudelleen"). PT: 2.70 kirjoitettu natiivin mukaan (vanha web-ajan teksti lokissa tästä eteenpäin vain historiana), uusi 2.201 PELIT — YHTEISET SÄÄNNÖT; 8 eroa korjausjonoon (Pelikoodari, NUI), omistaja näkee korjatut pelit junassa.
+
+## LINJAUS 20.10.2026 klo 23.25: YHTEISET OSAT ENSIN (20.10.2026 klo 23.25)
+
+Omistaja klo 23.25 KK:ssa (sanatarkasti): "yhteisiä elementtejä kannattaa käyttää mahdollisimman paljon". KK:n tavoite: pelaaja tunnistaa joka linssissä ja pelissä samat napit, valikot, kortit ja liikkeet; uusi peli tai linssi kootaan valmiista osista, uusi osa tehdään vain jos valmista ei ole ja silloin yhteiseksi. PT: kirjattu 2.201 YHTEISET OSAT ENSIN; pohjien tyylikirjariviin "käytä ensin yhteistä osaa"; 2.201:n erot korjataan yhteisillä osilla (NUI, PK); kartoitus päällekkäisistä kortti- ja nappimuunnelmista.
+
+## KESKUSTELUKANAVA: YKSI YHTEINEN TYÖLISTA (20.10.2026 klo 23.32)
+
+Omistajan kortti 20.10.2026 klo 23.29 (KK:n välittämä): "Minulla on oma lyhyt tehtävälista aloitusmuistiinpanoissani … Se ei näy taululla, koska työlista on Päätoimittajan. Miten jatketaan?" = "Yksi yhteinen lista (Suositus)". KK:n omat tehtävät työlistaan omina riveinään (vastuu Keskustelukanava, ilman →); KK lukee listan jokaisen nollauksen jälkeen ja ennen kuin kertoo työn tilasta; valvonta kattaa myös KK:n lupaukset; PT herättää KK:n, kun rivi erääntyy (KK:lla ei ole ajastinta). PT lisäsi 7 riviä 20.10. klo 23.30. Raamattu 7.4 ja 7.39.
+
+## ASEMATAULU: KEVYT TAULU (20.10.2026 klo 23.41)
+
+Omistaja 20.10.2026 klo 23.32 (KK:n välittämä): "valmistuneet lista voisi olla 10 viimeisintä vain. Sinulle osion voi poistaa. ota myös kulutus pois, koska se ehkä vain kuluttaa liikaa tokeneita itse ja se ei kuitenkaan pysy ajantasalla." Klo 23.35: "poista siis sinulle ja kulutus osiot kokonaan" ja "ja siirrä odottaa ja valmistuneet työlistan alaotsikoiksi". Toteutus: Sinulle (talo/viestit) ja Kulutus (kulutus.py, kulutus-cron) pois koodeineen; valmistuneista 10 uusinta, vanhemmat TAULU/data/talo-arkisto/tyolista-valmiit.jsonl:ään; Odottaa ja Valmistuneet Työlistan väliotsikoina. Raamattu 7.39.
+
+## TAIDEMUSEOT: YHTEISET OSAT (20.10.2026 klo 23.45)
+
+Omistajan kortit 20.10.2026 klo 23.4x (KK): yhteisiksi aloitetaan "Louvren osat kaikkiin", "Yhteiset kalusteet" ja "Valon valmiit tyypit"; "Samat kävijät" ei valittu, omistaja: "eri maissa saisi olla erilaisia ihmisiä ja vaatteita ei varmaan pysty helposti vaihtamaan kun ihmiset tehdään tripolla, joten kannattaako tehdä vain uudet ihmiset suoraan? pitää tosin ensin testata louvressa missä ihmiset näkyvät ja tarvitseeko niiden tehdä jotain". Toinen kortti: eri maihin omat ihmiset, yhteinen liikkuminen ja käytös = "Ensin testi Louvressa". Kirjattu taidemuseon-maa.md:n alkuun.
+
+## ASEMATAULU: ROOLIKORTIT ITSESTÄÄN (20.10.2026 klo 23.55)
+
+Omistaja 20.10.2026 klo 23.48 (KK): "roolit taitavat kuitenkin laahata perässä". PT:n ratkaisu KK:n suosituksesta: roolikortti johdetaan jokaisessa viennissä (työ = viimeisin toiminta alle 15 min, teksti työlistan Työn alla -riveiltä, enintään 2), käsin kirjoitettava talo/tehtavat poistettu, vahti poistaa kuitatut toimi-dokumentit 30 min ja kuittaamattomat 2 h jälkeen. Raamattu 7.39.
+
+## ÄÄNET: UUSINNAN LUPA TEKSTINÄ (20.10.2026 klo 23.57)
+
+PT 20.10.2026: 5.2 OTTOMÄÄRÄ SITOO yhtenäistetty omistajan 7.27:n (19.10. klo 11.4x "älä tuo äänistä enää kysymyskortteja") kanssa: uusinta vaatii uuden luvan KK:n kautta, ja KK esittää sen tekstinä, ei kortilla. Kertojan teksti ja ääni -pohja samaan linjaan (#5107).
+
+## CODEX 3D: POHJA SITOVA, LIIKE TILAUKSEEN, RAKENNUKSET PARHAALLA TAVALLA (21.10.2026 klo 00.11)
+
+Omistajan kortit 21.10.2026 klo 00.10 (KK): 1) "kyllä, suosituksesi mukaan ja samalla huomio, että pitää miettiä etukäteen tarvitseeko mallin liikkua vai ei, jotta codex ei tee turhaa työtä. sanoin tästä jo codexille äsken suoraan mutta sille voisi välittää sitten aina tiedon että mitkä mallit tarvitsevat liikettä ja kuinka paljon ja mitkä eivät. todennäköisesti taidemuseossa max yksi tarvitsee liikettä." 2) "Paras tapa, ei kysymystä (Suositus)": uudet kokonaiset rakennukset ja maasto tavoitekuvan mukaan parhaalla tavalla, kaikki niiden sisällä ja ympärillä Tripolla. Raamattu 7.15, 11.7, 4.21; pohja codex-3d-toimitus.md sitova.
+
+## TYÖTAPA: YÖSUUNNITELMA JOKA ILTA JA OMISTAJAN MATKA (21.10.2026 klo 00.20)
+
+Omistaja 21.10.2026 klo 00.19 (KK): "yölle pitää aina asettaa tavoitteet ja niitä pitää olla riittävästi, koska olen huomannut että aliarvioit keskimäärin vähintään kymmenkertaisesti sen miten paljon oikeasti ehdit tekemään. eli tekemistä pitää kartoittaa öille todella paljon ja priorisoida ne. ei haittaa jos kaikki ei valmistu, mutta on ainakin tarpeeksi suunnitelmia. yöllä on myös paras hetki ajaa koneelle raskaita ajoja. lisäksi olen tällä viikolla poikkeuksellisesti matkoilla torstaista maanantai aamuun asti, jolloin kone on täysin sinun käytettävissä. samalla odottaa lista pitää tarkistaa, että onko siellä jo tehtyjä ja mitä sieltä kannattaa poimia sinun itsenäisiin ajoihin mukaan." Raamattu 7.46.

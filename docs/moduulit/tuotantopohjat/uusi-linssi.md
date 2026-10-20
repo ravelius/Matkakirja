@@ -6,7 +6,7 @@ MÄÄRITELMÄ ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu vain nykyisten ohjei
 Raamattu ovat ristiriidassa, Raamattu voittaa. Koodin, kameran ja todistuksen osuuden omistaa Linssiseppä; aineisto, kehys,
 tekstit ja ääni täydentävät omat osansa otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
-**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä; puuttuva pohja kysytään PT:ltä.
+**Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
 
 **Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
 
@@ -277,7 +277,52 @@ seuraavalla vuorollaan ja poistaa merkinnän.
 - **Kopio protoon:** `cmp` mainin ja proton tiedostosta ennen jokaista junapyyntöä; ero = palautus Karttasepälle, ei käsikorjausta.
 
 ### Natiivi-UI
-*(kehys (lasipohja, KEHYS-KÄÄRÖ alle 250 ms), aikaselain, nimikkeet ja sinettileima, iPhone pysty ja iPad. Täydentää Natiivi-UI.)*
+*(Natiivi-UI 20.10.2026, PT:n toimeksianto (omistaja 20.10. klo 22.38, 22.58 ja 23.17). Kooste Kiinan dynastiat -linssin kehyksestä,
+aikajanojen, oppaan, ISS:n ja museon käyttöliittymätyöstä; uusia sääntöjä ei ole. Napit, ☰, ⚙ ja sisään- ja ulostulo ovat yhteisiä
+(Raamattu 2.70 ja 2.201), eikä linssi tee niistä omia versioita.)*
+
+**Työvaiheet (tässä järjestyksessä):**
+1. **Yhteinen kehys ensin** (Raamattu 2.70): avaus verhon takana ja linssin oma aloitusnäkymä (aikajanoissa pergamentti ja Käynnistä),
+   nimikyltti noin 3 s, oikeassa yläkulmassa yksi OHJAUSNAPPI-ryhmä: ☰ (LINSSIN VALIKKO: linssin omat rivit, viiva, Kertoja ja
+   Taustamusiikki, viiva ja alimpana Poistu; `LinssiValikko`) ja tarvittaessa ⚙ sen vasemmalla. Esityksessä vain ▷/⏸, 🔈 ja T
+   (`KertojanNapit`), kehysnapit häipyvät (`KehysNapit`). Linssi tuo vain omat rivinsä valikkoon (`AsetaAlkurivit`, `LisaaKomento`).
+2. **⚙ samalla rakenteella** (Raamattu 2.70 ja 2.73): 1) linssin näkymän säädöt, vain jos linssillä on (aika, vuodenaika, LIVE,
+   nimet, sää), viiva, 2) Tekstitys, 3) äänitasot (Aanentasot-pohja; mikseri ja offline vain kehittäjälle). Näkymän säädöt rakennetaan
+   linssin paneeliin ja loppuun `RatasAlaosa.Lisaa`; linssi ilman näkymän säätöjä avaa `Aanentasot.Osa.Linssi`. Näkymän säätöjä ei
+   ole muualla kuin ⚙:ssä.
+3. **Linssin oma käyttöliittymä vain pohjilla** (Raamattu 4.1, 4.2): kehys KEHYS-KÄÄRÖ (historialinssit) tai LINSSIN OHJAIN, kortit
+   KORTTI-, NOSTOKORTTI- tai KUVANÄKYMÄ-pohjalla, paneelit PANEELI (lasi) tai PYSÄYTYSKUVA, säätimet LAITEPÖYTÄ-pohjalla, nimet ja
+   otsikot latauskuvan nimipohjalla. Lasipohja vain paneeleihin ja kortteihin, ei koko ruudun sivuille eikä peruskartalle.
+   Puuttuva osa: piirretty kuvakaappaus (luku 0) PT:lle ennen koodia; hyväksytty uusi osa tehdään yhteiseksi ja kirjataan tyylikirjaan.
+4. **Aikaselain, nimikkeet ja leimat** datasta: vuosiluku ja pysäkki aikajanan pohjilla (karuselli, aikaselain), nimet omalle
+   alueelleen ja rivitys sanojen väliin (`Tietajagalleria.SovitaSana`), luettavuus kaikilla taustoilla (`Latauskuva.Luettava`).
+   Liike tyylikirjan liikepohjalla alle 250 ms (Raamattu 4.14), ei omaa Lerp-liikettä (liikevahti).
+5. **Tekstitys ja ääni:** kertojan virke kerrallaan tekstityskaistaleella (`Tekstityskaista`, ajat-JSON), Kertoja ja Tekstitys pelin
+   yhteisinä kytkiminä; kortin ja ympyrän tekstit voi lukea worker (`KortinLukija` → `Puhe.Lue`), joten ääniä ei tilata ennen tarkistusta.
+6. **Mitat ja tarkistus:** iPhone pysty ja vaaka sekä iPad (iso iPad roolien käytössä kysymättä); pisin nimi ja tyhjä tila (ei kuvaa,
+   ei dataa) mitataan; teksti mahtuu tasaisin reunoin eikä peitä yläkulman ryhmää. QA-komento jokaiselle osalle, `tarkista.sh` 0
+   virhettä; simu vain uudelle tekniikalle ja pyydettyihin kuviin (Raamattu 9.2).
+7. **Luovutus:** haara ja SHA PT:lle (≤ 3 riviä), piirretyn kuvakaappauksen ja pelikuvan pari rinnakkain (kuvateksti kuvan
+   ulkopuolella, Raamattu 4.48), Natiiviseppä vie runkoon.
+
+**Valmis, kun (Natiivi-UI, täydentää lukua 4):**
+- [ ] ☰, ⚙, ▷/⏸, 🔈 ja T yhteisillä osilla; ☰:n alin rivi Poistu; ⚙ yhteisellä rakenteella; ei linssin omia nappeja.
+- [ ] Linssin oma käyttöliittymä vain hyväksytyillä pohjilla; uusi osa tyylikirjassa ennen junaa.
+- [ ] Nimet ja tekstit mahtuvat iPhonella (pysty ja vaaka) ja iPadilla, luettavia kaikilla taustoilla; tyhjä tila ei riko asettelua.
+- [ ] Liikkeet liikepohjalla, kielivahti, pohjavahti ja liikevahti läpi, `tarkista.sh` 0 virhettä.
+- [ ] Piirretty kuvakaappaus ja pelikuva rinnakkain PT:llä ennen junaa.
+
+**Opit (20.10.2026 asti):**
+- **Poistu-rivin nimi ja paikka vaihtelivat** (Poistu, Poistu linssistä, Sulje linssi, Sulje linna; aikajanoissa Poistu ylimpänä):
+  omistaja 23.17 yhdisti ne alimmaksi Poistuksi. Linssi ei nimeä riviä itse, vaan `LinssiValikko` lisää sen.
+- **⚙:n sisältö vaihteli linsseittäin** (aikajanoissa äänet ja offline, oppaassa aika ja sää, ISS:ssä pöydän säädöt): rakenne yhtenäistettiin
+  20.10. Uusi linssi lisää vain omat näkymän säätönsä ⚙-paneelin yläosaan.
+- **Lasipohja** kiinnittää paneelin ensimmäiseksi lapseksi; peittävät sisäpinnat tarvitsevat säännön `.mk-lasi--paalla`-luokalla, ja
+  luokasta riippuva asettelu päivitetään ajastimella tai tapahtumalla.
+- **Valikon vieritys** (museon salilista 15.10.): UITK:n ScrollView aloitti oman kosketusvierityksensä ennen yleistä liitosta, ja seuraava
+  napautus vain pysäytti listan. Käytä `Kosketusvieritys.Liita`a.
+- **Simun napautukset:** himmennetyt kehysnapit eivät näy ui-puussa eivätkä ota napautusta, joten skenaarion alkuun `ui kehysnapit 0`.
+- **iPhone vaaka** (asettelutesti 184): valikot ja selitteet ylittivät ruudun; leveys- ja korkeusraja turva-alueeseen ja lista vierittyväksi.
 
 ### Sisältökirjuri
 *(Sisältökirjuri 17.10.2026, Kiinan dynastiat -linssin tekstityön pohjalta; ei uusia sääntöjä. Tekstien yleinen tuotanto: `kertojan-teksti-ja-aani.md`,
