@@ -292,9 +292,11 @@ vakio-osia, myös Amsterdamin (luvun alun "Museoiden yhteiset osat").
   `sali.json`:n vakio-osat ja osien lattiat, teosten kentät, tekijät `taiteilijat.json`:ssa, kyltti jokaiselle tekstitaululle,
   lähestyminen ei luonnos. Tunnettu puute kirjataan testin `Puutteet`-listaan syineen ja poistetaan, kun se on korjattu (korjattu
   puute listalla kaataa testin). Tilanne 21.10.: Alankomaat on Louvre-tasolla kävijöitä (`henkilot.json`, Lavastaja) lukuun ottamatta.
-- **Askeläänet lattioittain:** `MuseoAskeleet` valitsee näytteen lattian mukaan (`parketti_*` → parketti, `kivi_marmori_ruutu` →
-  marmori, muu → parketti; uusi sarja tulee manifestin `lattiat.<sarja>.salien_lattiat`-listasta ilman koodimuutosta). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita Äänittäjälle ne,
-  joilla ei ole omaa näytettä. Tilanne 20.10.: Ranskan `kivi_hiekka` (1) ja `sora` (1) soivat parkettina, kunnes omat näytteet tulevat (tilattu Äänittäjältä 21.10.).
+- **Askeläänet lattioittain:** `MuseoAskeleet` valitsee näytteen kameran kohdan lattiasta (`LattiaNyt` → salin osan `lattia` →
+  manifestin `lattiat.<sarja>.salien_lattiat`; tuntematon lattia → parketti). Uusi sarja tulee manifestista ilman koodimuutosta;
+  ämpäri on muuttumaton, joten uusi manifesti = uusi polku, ja peli lukee yhden manifestin (`taidemuseo-askeleet-v6`: parketti,
+  marmori, kivi_hiekka, sora; marmori v2b:stä). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita
+  Äänittäjälle ne, joita manifestissa ei ole. Tarkista tiivisteellä, että uusi manifesti ei palauta korjattua näytettä vanhaksi.
 - **Tulos** luovutukseen: tiedostot ✓/✗, vakio-osat (penkit, kyltit, kävijät, kalusteet) ✓/✗, kenttien puutteet, lattiat ja niiden
   näytteet, testien määrä.
 
