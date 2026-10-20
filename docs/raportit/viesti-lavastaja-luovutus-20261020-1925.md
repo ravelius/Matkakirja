@@ -58,6 +58,16 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
 7. **Pulu**: oma lippu `MuseoPulu.Paalla` pysyy pois. Koodikyyhky on omistajan hylkäämä. Tripo-Pulu v3 on omistajan katselussa KK:n kautta,
    ja se tarvitsee linturigin ja liikkeet ennen kuin se kytketään.
 
+## MUSEOT (omistaja 23.4x ja 23.50 PT:n kautta; jono järjestyksessä)
+- **(3) Louvre-testi 209 VALMIS:** `proto-3d/_tyo/linnanrakentaja/louvre-tripo-henkilot/salikierros.py` → `louvre-209-salit.jpg` (10 salia; henkilöt
+  vain GG ja Salle des États). Omistaja 23.50: K1 Salon Carré Niken edessä, K2 Daru istuu, K3 Mollien kävelee, K4 Orsay; 4 kävijää, lisää vasta kun
+  omistaja on nähnyt. PT738-täydennys Codexille (posti 72505b752: luurangot, idle + walk, K2 sit). Pohjaan PR #5104.
+- **(2) Kävijät dataan VALMIS:** proto lavastaja/louvre-tripo-liike **db9e86c3d** (NS:n 209-jono): Ydin `MuseoHenkiloData`,
+  `Resources/Museo/<maa>/henkilot.json`, MuseoHenkilot lukee datan. Kun PT738 tulee: lisää K1–K4 ranska/henkilot.json:iin (Daru: leike_seisoo "sit").
+- **(1) Yhteinen kirjasto (jalustat, penkit, kaiteet; Amsterdam penkit, kyltit, kävijät): EI ALOITETTU.** LS:n rajapinta: paikat jäävät sali.json:iin
+  (penkit [[x0,x1,z0,z1]], veistospaikat, kaarikaiteet); kävijät henkilot.json:issa. Kysy PT:ltä ensin, kuuluvatko kalusteet 19.25-sääntöön
+  (uudet kalusteet Tripolla) vai käytetäänkö olemassa olevaa geometriaa.
+
 ## LINJAUS (omistaja 19.25 PT:n kautta, pysyvä): "käytä vain tripo Malleja"
 Kaikki hahmot, eläimet, esineet, koristeet ja kalusteet tehdään Tripolla Codexin kautta, ei käsin tai koodilla. Codexin koristeet 751–756
 siirtyvät Tripoon. TARKENNUS omistaja 19.28: koskee vain UUSIA malleja; vanhoja ei etsitä eikä muuteta. Rakennukset-v13 jatkuu normaalisti.
