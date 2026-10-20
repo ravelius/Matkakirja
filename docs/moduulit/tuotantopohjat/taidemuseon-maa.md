@@ -257,20 +257,28 @@ sääntöjä. Koodi proto-gitissä: `Linssit/Ydin/Museo/` (MuseoKierros*, MuseoD
 7. **Pariteettitesti (kohta alla) ja todistus**, sitten Natiivisepälle junaan. Tripo-hahmot (katsojat, kävelijät) tekee Lavastaja;
    Linssiseppä tarkistaa, ettei opaskierroksen reitti tai kuvakulma muutu (kävelijät väistävät samaa kuvakiilaa kuin MuseoElama).
 
-**Pariteettitesti (uusi maa = Alankomaiden taso, omistaja 16.10. 23.53):**
+**Pariteettitesti (vertailukohta Louvre: museoiden yhteiset osat, omistaja 20.10. 23.4x; alkuperäinen testi 16.10. 23.53):**
+Uutta maata verrataan Louvreen (`Resources/Museo/ranska/`), ei Alankomaihin. Penkit, teoskyltit ja kävijät ovat jokaisen museon
+vakio-osia, myös Amsterdamin (luvun alun "Museoiden yhteiset osat").
 - **Tiedostot:** `teokset.json`, `sali.json`, `huoneet.json`, `kierros.json`, `kohdat.json`, `kohtazoom.json`, `veistokset.json`,
-  `nayttelykuvat/`, `lahestyminen.json` + lähestymiskuvat (pysty ja vaaka) ja `kyltit/`, jos maalla on teoskyltit. Puuttuva tiedosto
-  = ei pariteettia; tyhjä tiedosto vain PT:n luvalla ja syy kirjattuna.
+  `nayttelykuvat/`, `lahestyminen.json` + lähestymiskuvat (pysty ja vaaka) ja `kyltit/` (teoskyltti jokaiselle ripustetulle teokselle).
+  Puuttuva tiedosto = ei pariteettia; tyhjä tiedosto vain PT:n luvalla ja syy kirjattuna.
+- **Salin vakio-osat `sali.json`:ssa** (kuten Louvre): `glb`, `esteet` ja `penkit` datana, ei koodin vakioina; kalusteet (jalustat,
+  penkit, kaiteet) yhteisestä kirjastosta, ei salin GLB:stä (jokaisella veistospaikalla jalusta, ei leijuvia). Kävijät: maan omat
+  Tripo-ihmiset, käytös ja paikat datasta yhteisellä liikkumistavalla (`MuseoKavijat`); kehityslippu päällä samassa erässä kuin media.
 - **Kentät:** jokaisella teoksella kuvateksti, krediitti, `lahde_url` ja `tekija_wikidata`; jokaisella teoksella `taiteilijat.json`-avain
-  (koneellisesti); jokaisella paikalla `lattia`; jokaisella kierroksen pysähdyksellä kertojan tunnus tai kirjattu syy.
+  (koneellisesti); jokaisella paikalla `lattia`; jokaisella kierroksen pysähdyksellä kertojan tunnus tai kirjattu syy; jokaisella
+  ripustetulla teoksella kyltti (nimi, tekijä, vuosi samasta lähteestä kuin nimikyltti).
 - **Koneellisesti:** `sh Linssit-testit/kaanna.sh Museo` (polut, ripustus, veistokset, kierros kertojalle, lähestyminen,
   Auto Zoom, kertojan kohdat lähikuvassa iPadin vaaka-, iPhonen vaaka- ja pystyruudulla, hyppyvartija koko kierrokselle iPhone + iPad).
-  Maiden välistä tiedosto- ja kenttävertailua ei ole vielä yhtenä testinä: tee vertailu käsin tämän listan mukaan, kunnes se on
-  `MuseoMaaTestit`-luokassa.
+  Louvre-vertailua (tiedostot, `sali.json`:n vakio-osat, kyltit, kävijät) ei ole vielä yhtenä testinä: tee se käsin tämän listan
+  mukaan, kunnes se on `MuseoMaaTestit`-luokassa. Tilanne 20.10.: Alankomailta puuttuvat `glb`/`esteet`/`penkit` datana (vanhat
+  vakiot), `kyltit/`, `lahestyminen.json` ja kävijät, joten se ei vielä läpäise Louvre-tasoa.
 - **Askeläänet lattioittain:** `MuseoAskeleet` valitsee näytteen lattian mukaan (`parketti_*` → parketti, `kivi_marmori_ruutu` →
   marmori, muu → parketti). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita Äänittäjälle ne,
   joilla ei ole omaa näytettä. Tilanne 20.10.: Ranskan `kivi_hiekka` (1) ja `sora` (1) soivat parkettina, kunnes omat näytteet tulevat.
-- **Tulos** luovutukseen: tiedostot ✓/✗, kenttien puutteet, lattiat ja niiden näytteet, testien määrä.
+- **Tulos** luovutukseen: tiedostot ✓/✗, vakio-osat (penkit, kyltit, kävijät, kalusteet) ✓/✗, kenttien puutteet, lattiat ja niiden
+  näytteet, testien määrä.
 
 **Kamera ja zoom (opit 20.10. asti):**
 - Pysähdyksen kesto on vähintään `PysahdysMinS` (6 s) ja pitenee kertojan mukaan; Auto Zoom pidentää lyhyttä pysähdystä, jotta
@@ -282,7 +290,7 @@ sääntöjä. Koodi proto-gitissä: `Linssit/Ydin/Museo/` (MuseoKierros*, MuseoD
   kysyy vapaasta kulusta (omistaja 20.10. 17.31).
 
 **Valmiin tarkistuslista (Linssiseppä):**
-- [ ] Pariteettitesti tehty ja tulos luovutuksessa; askeläänten puutteet Äänittäjällä.
+- [ ] Pariteettitesti Louvrea vasten tehty ja tulos luovutuksessa (penkit, kyltit, kävijät mukana); askeläänten puutteet Äänittäjällä.
 - [ ] `kaanna.sh Museo` ja `tarkista.sh` 0 virhettä; hyppyvartija iPhone + iPad koko kierrokselle.
 - [ ] Kuvat: ruutupyramidi yli 8192 px:n teoksille, ylivalotus mitattu, yksi kehys per teos.
 - [ ] Auto Zoom ja kertojan kohdat testattu pysty ja vaaka, kertojan kanssa ja ilman.
