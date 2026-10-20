@@ -20,6 +20,11 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
 5. **Pulu**: oma lippu `MuseoPulu.Paalla` pysyy pois. Koodikyyhky on omistajan hylkäämä. Tripo-Pulu v3 on omistajan katselussa KK:n kautta,
    ja se tarvitsee linturigin ja liikkeet ennen kuin se kytketään.
 
+## LINJAUS (omistaja 19.25 PT:n kautta, pysyvä): "käytä vain tripo Malleja"
+Kaikki hahmot, eläimet, esineet, koristeet ja kalusteet tehdään Tripolla Codexin kautta, ei käsin tai koodilla. Codexin koristeet 751–756
+siirtyvät Tripoon. Rakennuksiin ja maastoon EI muutoksia ennen omistajan päätöstä poikkeuksesta (rakennukset-v13 on jäissä).
+Kysytty PT:ltä 19.3x: Quaternius-katsojat (208) vaihdetaan PT738-Tripo-kävijöihin 209:ssä, vai otetaanko ne pois jo 208:sta.
+
 ## Valmiit tällä vuorolla
 - Tausta-v6 oli jo valmis (459cd7ebb2a4). Rivi "JONO TYHJÄ" lähetettiin PT:lle 18.1x.
 - **Meridiaaniportin keskiaukko** (omistaja 18.39): säteillä tarkistettu auki läpi asti (lod0/1/2, törmäys, tausta-v6). Ei korjausta.
