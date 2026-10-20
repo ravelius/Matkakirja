@@ -2058,3 +2058,7 @@ Omistajan kysymys 15.1x: "pitäisikö tehdä myös joku työtapa raamattuun tms 
 ## OMISTAJAN PAATOS 20.10. 17.37: MUSIIKKI AINA LYRIALLA (20.10.2026 klo 17.38)
 
 Omistaja 17.36 (sanatarkasti): "onhan erhu musiikki generoitu eikä itse sävelletty? kaikki uudet musiikit pitää olla lähtökohtaisesti generoitu lyralla, muissa tapauksissa pitää pyytää minulta lupa". Kortti 17.37: juoksun avauksen erhu tehdään yhdellä Lyria-kutsulla, Freesound-erhu pois. Syy läpimenoon: KK:n tavoite ja PT:n ohje 17.2x sanoivat "valmiista lähteestä" eikä niitä tarkistettu 19.10. linjausta vasten. Raamattu 5.15 päivitetty. Lisäksi 17.36: kertojan "Moona Lisa" -ääntämys palautelistaan, ei vielä uutta äänitystä.
+
+## VIIKKORAJA: PAATILI 85 % TALLA VIIKOLLA (POIKKEUS) (20.10.2026 klo 18.21)
+
+Omistaja 20.10.2026 klo 18.20 (Keskustelukanavan kortti, sanatarkasti): "laita raja 85% poikkeuksellisesti". Päätilin viikkoraja viikolla 20.–26.10. on 85 %; normaali päätilin linja 50 % palaa seuraavalla viikolla.
