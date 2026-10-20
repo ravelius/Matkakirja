@@ -16,7 +16,7 @@ const lahde = join(juuri, 'tools/asemataulu');
 
 function kansio() {
   const t = mkdtempSync(join(tmpdir(), 'asemataulu-valmiit-'));
-  for (const n of ['synkka.py', 'tarkista-junat.py']) copyFileSync(join(lahde, n), join(t, n));
+  for (const n of ['synkka.py', 'tarkista-junat.py', 'tyolistavahti.py']) copyFileSync(join(lahde, n), join(t, n));
   mkdirSync(join(t, 'data/talo'), { recursive: true });
   mkdirSync(join(t, 'lista'), { recursive: true });
   return t;

@@ -50,6 +50,9 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 h1 { font-family: var(--f-otsikko); font-weight: 700; font-size: 1.75rem; letter-spacing: 0.06em; margin: 0; color: var(--seepia); text-wrap: balance; }
 .paivitetty { color: var(--himmea); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
 .paivitetty.vanha { color: var(--punainen); }
+/* Työlistavahti (omistaja 20.10. 23.12): päivittämätön rivi ja vanhojen rivien määrä otsikossa punaisena. */
+summary .vahti { flex: none; margin-left: 0.5em; font-size: 0.78rem; color: var(--punainen); }
+.yhteenveto.vahti { color: var(--punainen); }
 .paivita { font: inherit; font-size: 0.85rem; color: var(--himmea); background: var(--pinta); border: 1px solid var(--reuna); border-radius: 5px; padding: 2px 9px; cursor: pointer; font-variant-numeric: tabular-nums; }
 .paivita:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
 .paivita[aria-busy="true"] { color: var(--seepia); }
@@ -352,6 +355,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
       if (auki[d.dataset.nimi]) d.open = true;
       var su = luo('summary');
       su.append(luo('span', 'otsikko', d.dataset.nimi));
+      // Työlistavahti (omistaja 20.10. 23.12): päivittämätön rivi punaisella merkinnällä.
+      if (r.vahti) su.append(luo('span', 'vahti', r.vahti));
       var sy = tilaSymboli(r.tila);
       if (sy) { var e = luo('span', 'symboli ' + sy[1], sy[0]); e.title = sy[2]; e.setAttribute('aria-label', sy[2]); su.append(e); kaytetyt[sy[1]] = sy; }
       var edArvo = edistysTilanteesta(r);
@@ -792,7 +797,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
 
     // Pienennetyn osion yhteenveto otsikkorivillä (omistaja 11.10. 19.3x).
     var tyonAlla = tlRivit.filter(function (x) { return !onValmis(x) && !onOdottaa(x) && /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
-    $('tyolista-yhteenveto').textContent = '(työn alla ' + tyonAlla + ')';
+    $('tyolista-yhteenveto').textContent = '(työn alla ' + tyonAlla + (t && t.vahti ? ', ' + t.vahti : '') + ')';
+    $('tyolista-yhteenveto').classList.toggle('vahti', !!(t && t.vahti && t.vahti !== 'kunnossa'));
     var tAika = $('tyolista-aika');
     tAika.textContent = (t && typeof t.ts === 'number') ? '(päivitetty ' + kello(t.ts) + ')' : '';
     tAika.classList.toggle('toimia', !!(t && typeof t.ts === 'number' && Date.now() - t.ts > 3 * 3600000));

@@ -25,7 +25,12 @@ kierroksella heti ArtifactData listin jälkeen:
    yli 30 min vanha ja asia on kuitattu, tai yli 2 h vanha, kun kuittaustietoa ei ole. Kuitattu = dokumentissa kenttä kuitattu/hoidettu,
    tai toimi-<rooli>-odottaa-dokumentin roolin sessio ei enää odota (~/.claude/sessions/*.json, status ≠ waiting; sama kuin
    odottajat-vahti.py). Rivi "SIIVOA|<doc>|<ikä min>|<syy>"; paikallinen kopio siirtyy data/talo-arkisto/toimi/-kansioon.
-Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n valmiiden arkistoinnin (kohta 0) ja toimi-kopiot (kohta 4).
+5) Työlistavahti (omistaja 20.10.2026 klo 23.12, Raamattu 7.39 TYÖLISTAVAHTI): ennen valmiiden arkistointia ja tarkistinta
+   tyolistavahti.py korjaa data/talo/tyolista.json:n (valmiit Valmistuneisiin, yli 48 h päivittämättä työn alla → pidossa,
+   edistys ≤ 5, kenttä vahti) ja tulostaa rivit "TYOLISTA <laji>|…" PT:lle; sama rivi enintään kerran 6 tunnissa
+   (tila data/.vanha-ilmoitettu.json).
+Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n työlistavahdin sääntöjen mukaan (kohta 5) ja valmiiden
+arkistoinnin (kohta 0) sekä toimi-kopiot (kohta 4).
 Tehtavat-dokumentti poistettiin (omistaja 20.10.2026 klo 23.48): roolikortin teksti johdetaan työlistasta (hoitaja/kierros.py).
 Sinulle-osio (talo/viestit) ja Kulutus (talo/kulutus, kulutus.py) poistettiin (omistaja 20.10.2026 klo 23.32–23.35).
 """
@@ -57,6 +62,7 @@ VALMISTUI_RE = re.compile(r"(\d{1,2})\.(\d{1,2})\.")
 RAJA_TAPAHTUMA = 45 * 60
 RAJA_TYOLISTA = 6 * 3600
 ILMOITUSVALI = 3600
+TYOLISTA_ILMOITUSVALI = 6 * 3600
 
 
 def lue(polku):
@@ -177,6 +183,25 @@ def siivottavat_toimet(lista, nyt=None, sessiot=SESSIOT):
         elif kuitattu is None and ika > TOIMI_ILMAN_KUITTAUSTA_MIN:
             tulos.append((doc, int(ika), "ei kuittaustietoa, yli 2 h"))
     return tulos
+def tyolistavahti(nyt):
+    """Ajaa tyolistavahti.py:n tyolista.json:lle (kirjoittaa muutokset) ja palauttaa PT:lle tulostettavat rivit (6 h raja)."""
+    sp = importlib.util.spec_from_file_location("tyolistavahti", os.path.join(TAMA, "tyolistavahti.py"))
+    v = importlib.util.module_from_spec(sp)
+    sp.loader.exec_module(v)
+    _, rivit = v.aja_tiedostolle(os.path.join(DATA, "tyolista.json"), True)
+    tila = lue(TILA) or {}
+    ulos = []
+    for r in rivit:
+        avain = "tl:" + r
+        if nyt - float(tila.get(avain, 0)) > TYOLISTA_ILMOITUSVALI:
+            ulos.append(r)
+            tila[avain] = nyt
+    if ulos:
+        tmp = TILA + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(tila, f)
+        os.replace(tmp, TILA)
+    return ulos
 
 
 def tarkistimen_virheet():
@@ -239,6 +264,8 @@ def main():
         if v.strip().isdigit():
             versiot[k.strip()] = int(v)
 
+    for r in tyolistavahti(time.time()):
+        print(r)
     siirretty = arkistoi_valmiit()
     if siirretty:
         print(f"ARKISTOITU|tyolista|{siirretty}|{ARKISTO}")

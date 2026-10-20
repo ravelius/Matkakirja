@@ -20,7 +20,7 @@ function taulu() {
   mkdirSync(join(t, 'hoitaja'), { recursive: true });
   mkdirSync(join(t, 'data/talo'), { recursive: true });
   copyFileSync(join(lahde, 'hoitaja/kierros.py'), join(t, 'hoitaja/kierros.py'));
-  for (const n of ['synkka.py', 'tarkista-junat.py']) copyFileSync(join(lahde, n), join(t, n));
+  for (const n of ['synkka.py', 'tarkista-junat.py', 'tyolistavahti.py']) copyFileSync(join(lahde, n), join(t, n));
   return t;
 }
 const iso = (minuuttiaSitten) => new Date(Date.now() - minuuttiaSitten * 60000).toISOString();
