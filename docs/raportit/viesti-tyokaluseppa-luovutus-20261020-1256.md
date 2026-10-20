@@ -24,3 +24,11 @@ Tavoite: korjauskierrokset Macin editorissa iPhonen/iPadin ruutukoossa, simu vai
   `zsh tyokalut/video-kokoa.sh --simu <UDID> <nimi> --ulos <oma>.mp4 --poista-kuvat`, tarkista suunta/värit, vertailupari PT:lle. Pelissä EI vielä todistettu.
 - Proto `tyokaluseppa/tarkistukset-204` kärki 000ebbad6 (ennen-junaa-korjaukset 607e6de5e, 941a05bcf, 83525e25a + +x 000ebbad6): NS:n merge junaan; tarkista.
 - PR #4991 (viitekuva) MERGETTY. Projektisepälle viety keittiö 3/4 (Olavinlinna-lista).
+
+## LISÄYS 20.10. 13.59 (Mac Studion uudelleenkäynnistys, omistaja 13.57)
+- Ajot 3 (12.57, katkesi nollaukseen) ja 4 (12.59, jäi 1. ruutuun) → syy projektin runInBackground: 0 (taustaeditori ei valittuna).
+  Korjaus proto `tyokaluseppa/esikatselu` 589133cc0 (vain paikallinen, push ei onnistu: ainoa etä on natiivi-backup-peili).
+- Ajo 5 (13.56, lokit/esikatselu-20261020-1356): KORJAUS TOIMII – domain reload ohi, runInBackground True, skenaario eteni riville 24
+  (juoksupelin ui-komennot). Katkaistu itse 13.58 uudelleenkäynnistyksen takia; lukko vapaa, ei orpoa editoria.
+  SEURAAVA: uudelleenkäynnistyksen jälkeen UNITY NYT JU:lta → sama komento → VERTAILU.md + kuvaparit PT:lle.
+- Unityn oma QuickSearch-poikkeus (SearchDatabase.EnumerateAll) käynnistyksessä on vaaraton.
