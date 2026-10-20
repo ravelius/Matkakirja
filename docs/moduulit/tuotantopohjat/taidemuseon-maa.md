@@ -1,9 +1,9 @@
 # Tuotantopohja: taidemuseon maa
 
-*(LUONNOS 17.10.2026, Sisältökirjuri, PT:n toimeksianto. Raamattu, TUOTANTOPOHJAT ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu
-vain nykyisten ohjeiden ja luovutusten opit (Alankomaat ja Ranska); uusia sääntöjä ei ole. Jos tämä ja Raamattu ovat
-ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muut osat täydentävät tekijänsä otsikoilla
-"TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
+*(SITOVA OHJE (omistaja 20.10.2026 klo 23.22, "Kyllä, sitovaksi"); koottu 17.–20.10.2026 Alankomaiden ja Ranskan opeista.
+Raamattu 4.21 TUOTANTOPOHJAT, dokumenttikartta 13.52. Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Sisältö-osuuden
+omistaa Sisältökirjuri, muut luvut tekijänsä; PT hyväksyy muutokset. Seuraava museomaa tehdään tämän mukaan, ja jokaisen maan
+opit lisätään lukuun 10.)*
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva salista; KAMERA viitevideo tai kuvakäsikirjoitus ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
@@ -48,10 +48,10 @@ Sisältökirjuri: aineistoselvitys (salit, teosehdokkaat, kuvalähteet ja riskit
 | 4. i-kortti | Sisältökirjuri | `taiteilijat.json`, `kuvat/*.jpg`, `lyhyt-<maa>.json` |
 | 5. Kohdat | Sisältökirjuri | `kohdat-<maa>.json` (luonnos = true) |
 | 6. Tarkistus | tarkistaja-agentti, PT | KORJAA / EPÄVARMA / OK -lista, korjaukset |
-| 7. Äänet, kytkentä, vienti | Äänittäjä, kytkijät, Julkaisija | `TÄYDENTÄÄ`-osat |
+| 7. Sali, valo, äänet, kytkentä, vienti | Lavastaja, Valoseppä, Äänittäjä, Linssiseppä, Natiivi-UI, Julkaisija | luvut 7–9.6 |
 | 8. Retrospektiivi | Sisältökirjuri | kirjaus luvun 10 oppeihin |
 
-Sisältökirjuri ei kirjoita proto-gitiin (Matkakirja-proto): toimitus docsiin ja viesti omistajalle (Linssiseppä, Natiivi-UI).
+Sisältökirjuri ei kirjoita proto-gitiin (Matkakirja-proto): toimitus docsiin ja viesti kytkijöille (Linssiseppä, Natiivi-UI).
 Viestit PT:lle enintään 3 riviä; yksityiskohdat raporttiin. Agentit vain Opus ja Sonnet.
 
 ## 2. Kultainen polku (oletustapa)
@@ -144,7 +144,7 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 
 *(Valoseppä: kohdevalot, kehysten ja seinän valaistus, heijastukset ja galleriatyylin värit (esim. Louvren Salle des États
 syvänsininen, Orsayn antrasiitinharmaa). Linnanrakentaja: salin rakenne ja proseduraalinen runko, kehykset, patsaiden paikat,
-varjojen leivonta, julkisivut ja lähestymiskuvat. Täydentävät Valoseppä ja Linnanrakentaja.)*
+varjojen leivonta, julkisivut ja lähestymiskuvat.)*
 
 ### 7.1 Valoseppä: kohdevalot, kehysten ja seinän valo, heijastukset, galleriatyylin värit
 
