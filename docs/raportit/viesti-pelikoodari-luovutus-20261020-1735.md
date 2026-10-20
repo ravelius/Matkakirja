@@ -59,3 +59,8 @@ SeinatLiikevektoreissa = false), muutos pieni; jos Puyi sumenee näkyvästi → 
 - 17.43: 4 huutoa kytketty avaus-208 = **384bd011b** (JuoksuAvausHuudot: 01 4,2 s, 03 taustalla 4,8, 02 5,4, Puyi 6,2; tekstit tekstit.fi.json
   juoksupeli.avaus.*; ohitettu lento äänetön); musiikin ristihäivytys siirretty Puyin huutoon (PT). Freesound-erhu HYLÄTTY (omistaja 17.38) →
   **ENSIN: vaihda JuoksuMusiikki.Avaus Lyria-erhuun Äänittäjän polusta → testit → kärki suoraan NS:lle runkoon (PT OK).**
+- 17.5x: Lyria a + 03 v2 = ae4c2cdde. 18.00: LAATTAKORJAUS (omistaja 17.42) avaus-208 = **177560643** → NS:n iPhone-pakettiin.
+  Syy: Lavastajan tausta-v4 tyhjensi tarkkojen mallien kohdat kokonaisina kolmioina (~25 000 m² aukkoja; analyysi scratchissa,
+  peitto.py). Korjaus: JuoksuKorkeusKartta.MaanAukot + JuoksuSokkeloMaailma.LuoMaanTayte (laattojen lattia 8 cm aukion alle; QA palatsi tayte 0|1).
+  AVOIN: vahvistus laitteelta (NS/LT); Lavastajalle oikea korjaus laattoihin (vain mallin sisään jäävät kolmiot pois), ei kiire.
+  VS:n havainto AV1/AV2 beige = latausnäkymä (vastattu VS:lle).
