@@ -2001,3 +2001,18 @@ Omistaja 20.10.2026 Keskustelukanavan korteilla. Klo 07.12: Korjataanko kortteli
 ## JUOKSUPELI JA JUNAT 20.10. AAMU (20.10.2026 klo 08.38)
 
 Omistaja Keskustelukanavan kautta 20.10.2026. Klo 07.34: Tee kaikki muutokset junaan 208. 207 julkaistaan kun olen valinnut äänet. Anna ne vielä uudestaan. Saat eleven luvan -> identtinen Kielletty kaupunki kokonaan junaan 208, joka lukitaan vasta kun palatsi on valmis. Klo 07.39: jokaiselle Louvren taululle oma kehys oikean mukaan junaan 208 (muoto, leveys, väri ja koristelu valokuvista, myös kaarevien taulujen aukko). Klo 08.20: Uudet energia- ja omena-äänet eivät olleet parempia, pidetään ne aiemmat valinnat. Ne voi lukita. -> hurraat A5 ja B4, juna 207 julkaistaan. Klo 08.22: Eleven kelpaa; käännösäänestä leikataan pelkkä käännöshankaus keskeltä junaan 208.
+
+## OMISTAJAN PAATOKSET 20.10. AAMUPAIVA: LOUVREN KYLTIT, VALO, TEOSKORTTI, KAIUTIN JA TEKSTITYS, JULKAISU (20.10.2026 klo 09.47)
+
+Kaikki junaan 208 (museo); KK:n kortit, sanatarkat vastaukset KK:n viesteissä.
+- 09.28 Louvren teoskylttiin teksti suomeksi: teoksen nimi, tekijä ja vuosi, luettavissa kun kamera menee lähelle (kaikki 27 taulua; tumma pieni antiikva kermalaatalla, nimet ja vuodet samasta
+lähteestä kuin yläreunan otsikko). Linssiseppä.
+- 09.33 omistaja: "Taulun ympärillä on luonnottoman näköinen valokehä. Tuollaista valoa ei voi olla todellisessa museossa." → saleissa tasainen valo kuten oikeassa: ei kohdevalon kehää taulun
+ympärillä/yläpuolella, kehyksen alla pehmeä varjo, kattoikkunavalo saleihin joissa oikeassa on lasikatto. Valoseppä.
+- 09.38 i-nappi pois; yläreunan teoksen nimi avaa yhden kortin: taiteilijakortti, tarkemmat tiedot väkäsen › takana, Huomiokohdat-nappi (ympyrät päälle/pois), viimeisenä Teosluettelo (sulkee kortin,
+avaa metrokartan vasempaan yläkulmaan iPad + iPhone). Seinäkyltin napautus avaa saman kortin. Natiivi-UI.
+- 09.41 kirjanappi pois teosten kohdalta; KUMOTTU 09.42: "Tai muuta teoksen kohdalla se nappi kaiutin napiksi." Käytävällä kirjanappi avaa huoneen kortin.
+- 09.45 kaikkiin linsseihin, joissa on kertojan esitys: ▷/⏸:n viereen kaiutinnappi ja T-nappi (tekstitys), kumpikin päälle/pois erikseen, valinta muistuu koko pelissä; ▷/⏸ ainoa esityksen ohjaus
+(KuunteleNappi pois); tekstitys virke kerrallaan omalla kaistaleella taulun alla, ei kuvan päällä; museon ☰:n Tekstitys-rivi pois. Museo 208, muut linssit 208 jos ehtii, muuten seuraavaan.
+- 09.47 "Julkaisi juna vasta kun minä sanon." → 208 ei lukitu palatsin valmistuttua; lukitus ja TF vain omistajan pyynnöstä (vahvistaa voimassa olevan linjan). PT → KK "208 valmis julkaistavaksi", KK
+kertoo omistajalle.
