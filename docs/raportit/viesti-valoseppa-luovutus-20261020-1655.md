@@ -23,6 +23,11 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
 - TEE: lue LT:n tulos → jos A ≤ 14 ms ja J ilman jäätymistä → PT:lle OK (NS: f861b6fd3 runkoon); jos ei → säädä HeittoK/varjomatka (QA-arvoista)
   tai, jos 60 fps + ei ilmestymisiä + varjot eivät täyty yhtä aikaa, rivi PT:lle (omistajalle valinta videolla).
 
+## 0a. JUOKSUN JÄLKIKÄSITTELY (PT 17.3x: VS:n vastuulla, PK kovalla rajalla)
+- LT korjattu: 10e6a5a68 raskas kohta 34,2 ms, syy liike-epäterävyys. Kierros 4 $D/varjot-koko/lt-gpu-komennot-4.txt (täysi res, MSAA 4: S sumea 0,
+  V mv 0, K liike kamera, H0) → lt-gpu-tulos-4.txt. TEE: kevein ≤ 14 ms joka säilyttää vauhdin tunnun (V > K > S; ei skaalaa/MSAA:ta) oletukseksi
+  (Jalki.cs SeinatLiikevektoreissa / Valopohja.JuoksuLiikeKappaleet) jaatyminen-208:n päälle → tarkista.sh → NS runkoon 208 + rivi PT:lle.
+
 ## 0b. KERÄTTÄVIEN HEHKU (PT, omistaja 17.17)
 - e35e43ee0 linssiseppa2/hehku-208 (PK jaatyminen-208 10e6a5a68 päällä): kameraan kääntyvä lisäävä neliö kerättävän lapsena (Resources/JuoksuHehku.shader,
   JuoksuV4Maailma.Hehku.cs), kulta/jade/lohikäärmeen sävy, mätä ei hehku; QA valo hehku 0|1, hehkuvoima V (0,35). NS kääntää laiteapin → LT kuvapari H1/H0 +
