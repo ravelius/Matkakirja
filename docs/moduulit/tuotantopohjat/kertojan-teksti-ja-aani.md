@@ -112,8 +112,8 @@ Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttuu pohjassa.
   pankista (`mies-80-hauras-vanhus`); Whisper-base/small ja Gemini paljastavat heikon kirjaimen ennen omistajaa; luvan ottomäärä on
   yläraja, uusinta kuluttaa sen (06:n uusinta ylitti luvan, PT:n virhe). Lähde: luovutus 20.10. 17.52.
 - **20.10.2026, vienti uudelle polulle.** `vie-paketti.sh` ei ylikirjoita; korvaava otto tai käsitelty (venytetty) versio tulee uudella nimellä
-  (`-pitka`, `-v2`) ja kytkijä vaihtaa polun. Venytys ffmpegin `atempo`-suodattimella (0,7) tehtiin vain PT:n pyynnöstä huudoille; kuuntelun
-  varassa, koska "ei jälkisäätöjä puheeseen" -oppi (19.10.) koskee muuten kaikkea nopeutusta.
+  (`-pitka`, `-v2`) ja kytkijä vaihtaa polun. AVOIN OMISTAJALLE: saako huutoja
+  venyttää jälkikäteen (atempo)? – suositus: ei, pidempi huuto generoidaan suoraan ohjeella ("ei jälkisäätöjä puheeseen", 19.10.).
 - **19.10.2026, omistaja ei ensimmäinen kuuntelija (J1).** Hidasti: puheessa omistaja löysi virheet ensin (ranskan aksentti
   17.10.). Muuttuu: Gemini kuuntelee otot sokkona ennen omistajaa. Kultaisen polun kohta 10 korjattu (PT 19.10.). Lähde: loki "OMISTAJAN PÄÄTÖS 19.10.2026 klo 15.21".
 - **19.10.2026, ei jälkisäätöjä puheeseen.** Hidasti: nopeutus ffmpeg-atempolla (17- ja 20-ääni) kuulosti omistajasta

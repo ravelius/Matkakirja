@@ -168,8 +168,8 @@ Jokainen ääni kuvataan sokkona ennen peliä; yksittäiset valmiit tehosteet, e
 käytettävissä (omistajan Space), älä kierrä: käytä Sonniss/Freesound-hakua (workflow `aanihaku`).
 
 **Huudot ja avaus (juoksupeli).** Eri puhujat eri äänillä äänipankista (`tools/aanipankki/rekisteri.json`); älä soita samaa ääntä kahden hahmon
-rooliin. Hahmolle, jolle ei ole sopivaa ääntä, etsi ensin pankista ja vanhoista otoista; uusi otto vain luvalla. Pidennys käsittelyllä (venytys)
-on sallittu vain PT:n erillisellä pyynnöllä ja tulos kuunnellaan ennen vientiä.
+rooliin. Hahmolle, jolle ei ole sopivaa ääntä, etsi ensin pankista ja vanhoista otoista; uusi otto vain luvalla. AVOIN OMISTAJALLE: saako huutoja
+venyttää jälkikäteen (atempo)? – suositus: ei, pidempi huuto generoidaan suoraan ohjeella.
 
 **Tarkistuslista**
 - [ ] Ääni ja malli oikein, kieli `fi`, raaka talteen, ei lupaa ylitetty.
