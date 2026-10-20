@@ -2137,3 +2137,7 @@ Omistajan kortti 20.10.2026 klo 23.29 (KK:n välittämä): "Minulla on oma lyhyt
 ## ASEMATAULU: KEVYT TAULU (20.10.2026 klo 23.41)
 
 Omistaja 20.10.2026 klo 23.32 (KK:n välittämä): "valmistuneet lista voisi olla 10 viimeisintä vain. Sinulle osion voi poistaa. ota myös kulutus pois, koska se ehkä vain kuluttaa liikaa tokeneita itse ja se ei kuitenkaan pysy ajantasalla." Klo 23.35: "poista siis sinulle ja kulutus osiot kokonaan" ja "ja siirrä odottaa ja valmistuneet työlistan alaotsikoiksi". Toteutus: Sinulle (talo/viestit) ja Kulutus (kulutus.py, kulutus-cron) pois koodeineen; valmistuneista 10 uusinta, vanhemmat TAULU/data/talo-arkisto/tyolista-valmiit.jsonl:ään; Odottaa ja Valmistuneet Työlistan väliotsikoina. Raamattu 7.39.
+
+## TAIDEMUSEOT: YHTEISET OSAT (20.10.2026 klo 23.45)
+
+Omistajan kortit 20.10.2026 klo 23.4x (KK): yhteisiksi aloitetaan "Louvren osat kaikkiin", "Yhteiset kalusteet" ja "Valon valmiit tyypit"; "Samat kävijät" ei valittu, omistaja: "eri maissa saisi olla erilaisia ihmisiä ja vaatteita ei varmaan pysty helposti vaihtamaan kun ihmiset tehdään tripolla, joten kannattaako tehdä vain uudet ihmiset suoraan? pitää tosin ensin testata louvressa missä ihmiset näkyvät ja tarvitseeko niiden tehdä jotain". Toinen kortti: eri maihin omat ihmiset, yhteinen liikkuminen ja käytös = "Ensin testi Louvressa". Kirjattu taidemuseon-maa.md:n alkuun.
