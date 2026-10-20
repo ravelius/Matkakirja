@@ -64,6 +64,11 @@ Kuvaparit/videot KK:lle (local_8e4fcfed-…), kopio PT:lle. Olemassa olevat pohj
   lasi todistamatta (koko sivut + kartta ilman lasia suunnitellusti). KK + PT saivat tulokset; PT:ltä pyydetty B + E + lasihaku NS:lle.
   Opit: zsh ei pilko ${2:-a b} → ${=…}; kehysnappien himmennys nielee simun napautuksen → `ui kehysnapit 0` skenaarioon.
 
+- PT 03.3x: lasihaku b8198b4e3 JO junassa 207 → ENNEN LUKITUSTA todistettava näkyvä lasi iPhone + iPad, kuvapari ennen/jälkeen KK:lle:
+  `zsh proto-3d/tyokalut/natiivi-ui-ajot/ajo-lasi-nakyva-207.zsh` (sk-lasi-nakyva-207.txt: oppaan Kysy-ikkuna G1 + museon i-kortti G2;
+  ennen = julkaisija/sokkelo-yhteinen14-207-app, jälkeen = natiivi-ui/lasihaku-207-app). Simuvuoro pyydetty JU:lta 03.4x. Jos lasi
+  puuttuu jälkeen-ajossa → HETI NS + PT. B + E: OK-rivi NS:lle vasta KK:n OK:n jälkeen.
+
 ## VALMIIT TÄNÄÄN (19.–20.10., PT kuittasi, NS:lle)
 - palsta-haku 03deb7b16 + SK #5015 tekstit e4c33a4fe → juna 206.
 - varjostimet 28ef55f1e (kokoelma 53 varianttia/57 tilaa, Cupolan pisin ruutu 1200 → 500 ms) → juna 206 (lokit/todistus-varjostimet2-b3-ipad-…/TULOS-NUI.md).
