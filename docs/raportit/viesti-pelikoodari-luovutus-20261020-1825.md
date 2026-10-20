@@ -44,7 +44,11 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
 ## 20.28 LISÄYS: havainnekuvien j9/j10 näköisyys (omistaja 20.14, PT)
 - Kuvapari 208:sta (simu pelikoodari-iPad13, runko 186b23682): /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kuvapari-208/ (PT lähetti KK:lle).
   Skenaario proto-3d/tyokalut/pelikoodari-ajot/sk-juoksupeli-kuvapari-208.txt (todistusajo.sh).
-- Haara **pelikoodari/nakoisyys-209 = 5d9b6dfd7** (maali-209 f2be670cd:n päällä): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
+- Haara **pelikoodari/nakoisyys-209 = 4703e0458** (maali-209 f2be670cd:n päällä; 5d9b6dfd7 + avoimet huoneet): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
   esteiden ennakko ≤ 120 m palatsissa (JuoksuV4Maailma.LahiRaja, QA kauko lahi). Kujat: lyhin reitti maaliin 74 % ≤ 6 m kujilla → ei reittimuutosta.
 - Odottaa: NS:n simukäännös → ennen/jälkeen-kuvapari + LT:n GPU ≤ 16 ms; Lavastajan avoimet-v2-ovet (läpijuoksu), Tripo-esteet ja eunukit;
   VS:n matala aurinko. Simu: JU:n SIMU NYT -vuoro.
+- Avoimet huoneet (Lavastaja, tausta-v7 avoimet-sijoitus.json): JuoksuPalatsiVerkko.LueAvoimet (reitit + liitokset), mallit
+  LataaPalatsiMallit(avoimet), TaustaKansio v7. AVOIN: Kuuden läntisen palatsin alue karsiutuu verkosta, koska leivottu esto
+  (taustan talot) katkaisee kujien päät. Pyydetty Lavastajalta "liitokset" (tai tausta-v8). Sama karsii verkkoa laajemmin
+  (1 560 vs 3 520 solmua ilman estoa); maali saavutettavissa.
