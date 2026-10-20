@@ -1,0 +1,4 @@
+# Olavinlinnan läpikulkurepliikit: versiot (Äänittäjä 21.10.2026, yöjono kohta 14)
+- `olavinlinna-repliikit-lapi-v2` (työpaketti, 20 repliikkiä + kooste) ja `…-lapi-v4-vienti-20261019` (viety, 20 mp3): kaikki 20 tiedostoa tavulleen samat (md5), v4 on v2:n vientipaketti manifestineen (`seikkailu/olavinlinna/repliikit-lapi-v4/`). Ei käyttämättömiä otoja näiden välillä.
+- `olavinlinna-repliikit-lapi-v1`, `-v1`, `-v2`, `-m-v1`: ei mp3-tiedostoja (ajat/käsikirjoitus tai tyhjiä) → ei kulutusta kerrytetyissä otoissa tässä kansiossa; aiemmin generoidut 16 repliikkiä "kolmena versiona" (loki 19.10.) ovat ämpärissä manifestin kautta, ei `_valmiit`-kopiona.
+- Ehdotus: kytkijä vahvistaa, että peli soittaa vain v4:n 20 tunnusta; ämpärin vanhat versiot jäävät ennalleen (ei poistoja, ämpäri muuttumaton).
