@@ -1,6 +1,6 @@
 # Tuotantopohja: esirenderöity video
 
-*(Projektiseppä 19.10.2026, PT:n tilaus; läpikäyntikorjaus PT 20.10.2026 klo 23.5x. Raamattu 4.21 ESIRENDERÖITY VIDEO, KUKA TEKEE ja
+*(Projektiseppä 19.10.2026, PT:n tilaus; läpikäyntikorjaus PT 20.10.2026 klo 23.5x. SITOVA (omistaja 21.10.2026 klo 00.40, "Esirenderöity video (Suositus)"): jokainen esirenderöity video tehdään tämän pohjan mukaan, ja opit lisätään pohjaan. Raamattu 4.21 ESIRENDERÖITY VIDEO, KUKA TEKEE ja
 VIDEO VALMIINA ENNEN HETKEÄ (omistaja 19.10.2026 klo 17.25–17.29 ja 18.25), 2.19 LÖYTÖHETKI VIDEONA, 2.105 LENTO VIDEONA ja SAVU
 VIDEOSSA (18.29), 2.159 UNI VIDEONA, 9.11 SIMU HARVOIN, 10.1–10.2 julkaisu. Tähän on koottu omistajan päätökset 18.25, 18.29, 18.55 ja
 19.03 (loki `docs/raamattu-loki/paatokset-2026-10.md`), Codexin tilaukset (posti 4e62c3b21 ja 34f60ff35), Natiivi-UI:n löytövideo
@@ -16,7 +16,7 @@ hyväksyy PT.)*
 
 **Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta. Uusissa asioissa (ensimmäinen video kustakin kulusta ja makuvalinnat) omistaja näkee tavoitekuvan ja valmiin rinnakkain KK:n kautta ennen junaa; muut valmiit hyväksyy PT samalla rinnakkaisnäkymällä (4.21: "muut tavoitteet hyväksyy Päätoimittaja").
 
-**Yöajo (omistaja 19.10.2026 klo 18.55 ja 19.03, Raamattu 4.21 "pitkät renderöinnit öisin"):** omistajan sanoin "tehdään kaikki muutkin videot vasta yöllä". Kaikki videoiden renderöinti, myös kokeilut ja esikatselut, tehdään yöllä ja vain, kun kone on muuten vapaa: juna ja sovitut yön työt menevät edelle (19.03: "ei aloiteta … videoiden renderöintejä jos se hidastaa"). Päivällä tehdään vain kohtauksen, laatutason ja kytkennän koodi.
+**Yöajo (omistaja 19.10.2026 klo 18.55 ja 19.03, tulkinta 21.10.2026 klo 00.10; Raamattu 4.21 "pitkät renderöinnit öisin" ja 12.13):** omistajan sanoin "tehdään kaikki muutkin videot vasta yöllä". Pitkät renderöinnit ja videot (myös kokeilut ja esikatselut) tehdään yöllä ja vain, kun kone on muuten vapaa: juna ja sovitut yön työt menevät edelle (19.03: "ei aloiteta vielä tänä yönä videoiden renderöintejä jos se hidastaa juoksupelin kehitystä"). Lyhyen liiketarkistusvideon (muutama sekunti Unityn esikatselusta) saa kuvata päivälläkin, kun omistaja ei käytä Macia (omistaja hyväksyi 21.10.2026 klo 00.10). Muuten päivällä tehdään kohtauksen, laatutason ja kytkennän koodi.
 
 **Julkaisu:** valmis video menee avoimeen junaan. Lukitus ja TestFlight tehdään vain omistajan pyynnöstä (Raamattu 10.1–10.2).
 
@@ -52,12 +52,13 @@ ovat haarassa `tyokaluseppa/videotallennin`; raketin video-laatutaso on haarassa
 3. **Ei tekstejä videoon:** ei tekstityksiä, mittareita, logoja eikä havainnekuva-merkintää; ne tulevat käyttöliittymästä
    videon ajan mukaan (Raamattu 4.21).
 4. **Ääni:** puhe ja musiikki ääniraidalla (4.21). Kuva toimitetaan ilman ääntä, ellei tehtävä muuta sano; kokeiluissa ei ääntä.
-   Ääniraidan kokoaa Äänittäjä videon ajan mukaan (kertoja, Pulu, radio, musiikki; ääniportti ja sokkokuuntelu 5.27), ja
+   Ääniraidan kokoaa Äänittäjä videon ajan mukaan (kertoja, Pulu, radio, musiikki; ääniportti ja sokkokuuntelu 5.11), ja
    Natiivi-UI liittää sen videoon vastaanotossa.
-5. **Kuorma ja ajoitus:** renderöinti vain yöllä ja vain, kun kone on muuten vapaa (Yöajo yllä); se ei saa hidastaa junan
-   Unity-käännöksiä. Ensin lyhyt kokeilu tai kevyt esikatselu, täysi laatu vasta sen jälkeen, kumpikin yöllä.
+5. **Kuorma ja ajoitus:** pitkät renderöinnit ja videot vain yöllä ja vain, kun kone on muuten vapaa (Yöajo yllä); ne eivät saa
+   hidastaa junan Unity-käännöksiä. Ensin lyhyt kokeilu tai kevyt esikatselu, täysi laatu vasta sen jälkeen, kumpikin yöllä.
+   Lyhyt liiketarkistusvideo päivälläkin, kun omistaja ei käytä Macia.
 6. **Nimet ja kansio:** `<nimi>-pysty.mp4` ja `<nimi>-vaaka.mp4` (aarre: `aarre-<manner>-pysty.mp4`, ämpärissä `videot/aarteet/`).
-   Toimituskansio kuten `codex-3d-toimitus.md` luku 5: `<aihe>-v<N>/` (uusi versio = uusi kansio), `SHA256SUMS` kattaa jokaisen
+   Toimituskansio kuten `codex-3d-toimitus.md` luku 7: `<aihe>-v<N>/` (uusi versio = uusi kansio), manifesti (`SHA256SUMS` tai Codexin `MANIFEST.json`) kattaa jokaisen
    videon ja ruudun, `LAHTEET.md` (mallit, työkalut, lisenssit), `ruudut/` (täysikokoiset PNG:t).
 
 ## 3. KULKU A: pelistä kuvattu (raketti, valas, uni)
@@ -79,8 +80,9 @@ PT: tekijän nimeäminen + tavoite (pelin ruutu Macin Unity-esikatselusta + kuva
 - Käyttö: peli-komento `video aloita <nimi> [fps] [LxK] [kesto s] [alinäytteet]`, `video lopeta`, `video tila`; valmiina lokiin
   `MATKAKIRJA video: valmis <kansio> <ruutuja>`. Koonti `tyokalut/video-kokoa.sh <kuvakansio>` tekee HEVC 10-bit -videon alle
   30 MiB; viimeinen rivi `VIDEO OK …` tai `VIKA: …`.
-- Ajoalusta: Macin Unity-editorin play-tila tai Mac-sovellus. Tallennin toimii myös iPhone-simulaattorissa (`video-kokoa.sh --simu`);
-  se on silloin renderöintiä eikä testausta, ja sekin ajetaan yöllä.
+- Ajoalusta: Macin Unity-editorin play-tila tai Mac-sovellus. Simulaattoria ei käytetä renderöintialustana (Raamattu 9.11 SIMU
+  HARVOIN); tallentimen simutukea (`video-kokoa.sh --simu`) käytetään vain 9.11:n tilanteissa a–c (esim. uuden tekniikan
+  todennus), ja sekin ajetaan yöllä.
 - Pysty ja vaaka kuvataan samasta kamera-ajosta.
 
 ### 3.2 Video-laatutaso (omistaja 18.29: "Pelin savu täysillä")
@@ -196,7 +198,7 @@ kysy PT:ltä).
 
 Yhteiset (A ja B):
 - [ ] Tavoite määritelty (tavoitteen muoto) ja PT hyväksynyt; UI-kuvakaappaus videon päälle tulevista teksteistä.
-- [ ] Kokeilu tai kevyt esikatselu nähty ennen täyttä laatua; kaikki renderöinti tehty yöllä koneen ollessa muuten vapaa.
+- [ ] Kokeilu tai kevyt esikatselu nähty ennen täyttä laatua; pitkät renderöinnit ja videot tehty yöllä koneen ollessa muuten vapaa (lyhyt liiketarkistusvideo päivälläkin, kun omistaja ei käytä Macia).
 - [ ] Pysty ja vaaka (ellei tehtävä toisin sano): HEVC Main 10, `hvc1`, `yuv420p10le`, kumpikin alle 30 MiB, `SHA256SUMS` täsmää.
 - [ ] Videossa ei tekstejä, mittareita, logoja eikä havainnekuva-merkintää.
 - [ ] Täysikokoiset ruudut alusta, keskeltä ja lopusta; silmukoissa SSIM-vertailu ja katselu pelissä kahdesti ympäri.
@@ -231,8 +233,8 @@ Kulku B (Codex Blender, aarre):
 
 - **Kuvaa pelistä, älä rakenna kohtausta uudelleen (19.10.2026):** Codexin Blender-rakettiesikatselu näytti alustan eri suunnasta
   kuin peli, koska kohtaus rakennettiin uudelleen. Siksi omistaja päätti 18.25, että pelissä jo olevat kohtaukset kuvataan pelistä.
-- **Videot yöllä (19.10.2026 klo 18.55 ja 19.03):** päivän renderöinnit kilpailivat junan ja juoksupelin kanssa; kaikki videot
-  siirrettiin yöhön ja vain koneen ollessa muuten vapaa.
+- **Videot yöllä (19.10.2026 klo 18.55 ja 19.03):** päivän renderöinnit kilpailivat junan ja juoksupelin kanssa; pitkät renderöinnit
+  ja videot siirrettiin yöhön ja vain koneen ollessa muuten vapaa (lyhyt liiketarkistusvideo päivälläkin, omistaja 21.10. klo 00.10).
 - **Tallennin ilman Unity Recorderia (Työkaluseppä 19.10.2026):** Recorder toimii vain editorissa; oma tallennin toimii kaikissa
   ajoissa. 16-bit PNG vie noin 10 Mt kuvaa kohti, joten oletus on 8-bit kohinalla (13 s × 60 kuvaa ≈ 3 Gt). Simulaattorille
   tarvittiin ReadPixels-varatie ja yhteensopiva syvyysmuoto (924891faa).

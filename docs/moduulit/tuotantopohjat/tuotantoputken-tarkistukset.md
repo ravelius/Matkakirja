@@ -26,6 +26,18 @@ varjostin, ohjaus, suorituskyky tai muisti), b) omistajan erikseen pyytämiin ku
 muistiajoon. Päiväjuna julkaistaan ilman laitekierrosta. Siksi vaiheet 3 (nykäysvahti) ja 4b (botin läpipeluu simussa)
 ajetaan vain näissä kolmessa tilanteessa.
 
+**Päiväjunassa omistaja päättää tarkistuksista joka kerta (omistaja 21.10.2026 klo 00.40):** omistajan sanoin "kysy
+tarkistetaanko juna vai ei joka kerta minulta. yöllä tarkistukset voi aina ajaa, mutta päivällä saatetaan tarvita juna
+mahdollisimman nopeasti."
+- **Päiväjuna:** ennen jokaista päiväjunaa KK kysyy omistajalta, ajetaanko tarkistukset. "Ei" = juna lähtee ilman
+  tarkistusajoa (ei KESKEN- eikä OK-tulosta odoteta); "Kyllä" = ajo kuten alla, ja KESKEN (vaiheet 1, 2 ja botin logiikka OK)
+  on hyväksytty tulos. PT ei päätä tätä itse eikä oletuksella päivällä.
+- **Yöjuna:** tarkistukset ajetaan aina kysymättä, laitekierroksineen (9.11).
+- **Omistaja studiolla:** tarkistusajo (tarkistusvideo) pyörii isolla iPadilla, ja omistaja katsoo sen samaan aikaan
+  automaatin kanssa ja antaa palautteen ennen käännöstä (omistaja: "katson itse mielelläni tarkistusvideon samaan aikaan
+  automaatin kanssa isolta ipadilta, niin osaan antaa heti palautteen ennen käännöstä"). KK kertoo omistajalle, kun ajo alkaa;
+  palaute käsitellään ennen junan käännöstä.
+
 ## Yksi komento
 
 ```
@@ -35,12 +47,13 @@ zsh tyokalut/ennen-junaa.sh --loki <todistuskansio> [--loki <toinen>]   # vain t
 
 - **Milloin ja kuka (PT 20.10.2026):**
   - Työn tekijä ajaa sen ilman simua ennen kuin vie työn junaan.
-  - Natiiviseppä ajaa sen ilman simua junan kokoamisessa, kun hän vie työt runkoon.
+  - Natiiviseppä ajaa sen ilman simua junan kokoamisessa, kun hän vie työt runkoon; päiväjunassa vain, jos omistaja on KK:n
+    kysymykseen vastannut "Kyllä" (yllä).
   - Yöjunan laitekierroksessa simullinen ajo (`--loki`) kuuluu vakiona kierrokseen (Laitetestaaja tai Natiiviseppä, 9.11).
   - Kameratesti (vaihe 2) ajetaan lisäksi jokaisessa käännöksessä.
 - Ilman `--loki`-valintaa ajetaan vain simuttomat vaiheet (1, 2 ja botin logiikka). Silloin vaiheet 3 ja 4b ovat
   EI AJETTU, ja viimeinen rivi on KESKEN. **Päiväjunassa KESKEN on hyväksytty tulos, kun vaiheet 1, 2 ja botin logiikka
-  ovat OK** (PT 20.10.2026); erillistä "päiväjuna OK" -tulosta ei tarvita.
+  ovat OK** (PT 20.10.2026); erillistä "päiväjuna OK" -tulosta ei tarvita. Päiväjunassa ajo tehdään vain omistajan "Kyllä"-vastauksella.
 - `--udid <UDID> --app <.app> --sha <SHA>` ajaa simuajon itse todistusajo.sh:lla (vain tilanteissa a–c). Oletusskenaario on
   `siirtoseppa-ajot/skenaariot/botti-osat.txt` (proto-3d/tyokalut/), ja lisää voi antaa `--skenaario`-valinnalla. Simuajo
   tarvitsee vuoron Julkaisijalta (SIMULAATTORI NYT).
@@ -56,9 +69,13 @@ zsh tyokalut/ennen-junaa.sh --loki <todistuskansio> [--loki <toinen>]   # vain t
 - **Mallit (glb):** muoto, nimi, koko, kolmiot, piirrot, materiaalit ja tekstuurit.
 - **Mittakaava:** metrit, hahmon korkeus ja pivot.
 - **Luuranko ja animaatiot.**
+- **Manifesti (`codex-3d-toimitus.md` luku 7):** juuren `SHA256SUMS` tai `SHA256SUMS.txt` tai Codexin `MANIFEST.json`
+  (`{"files": [{"path", "sha256"}]}`, sisäkkäiset sallittuja). glb-toimitus ilman manifestia hylätään.
 - **Erilliset kuvat:** PNG tai JPEG. `tekstuurit/`-kansion kuvien sivujen pitää olla kahden potensseja ja enintään 2048 px.
-  Jokaisen kuvan pitää olla SHA256SUMS-listassa, paitsi `esikatselu/`-kansion kuvien.
-- **LAHTEET.md:** jos se puuttuu, tulee HUOM.
+  Jokaisen kuvan pitää olla manifestissa ja tiivisteen täsmättävä, paitsi `esikatselu/`- ja `qa/`-kansioiden kuvien. Pelkkä
+  kuvatoimitus ilman manifestia = HUOM; `GENERATION.json`in `referenceSHA256`-tiivisteellä täsmäävä viitekuva = HUOM.
+- **Lähteet:** `LAHTEET.md` tai Codexin `SOURCE-INVENTORY.json`, `SOURCE-MANIFEST.json` tai `CREDITS.md`; jos kaikki puuttuvat,
+  tulee HUOM.
 
 ennen-junaa.sh tarkistaa itse kaikki tuoreet (`--paivia`, oletus 3) `_valmiit/`-kansiot, joissa on SHA256SUMS ja joiden
 nimessä tai LAHTEET.md:ssä on sana Codex tai Tripo, sekä postilaatikon tuoreet kuvatoimitukset. Muut kansiot annetaan
@@ -121,6 +138,8 @@ se tarvitsee simu- tai laiteajon. Päiväjunassa vaihe on EI AJETTU.
 
 ## Valmiin junan tarkistuslista
 
+- [ ] Päiväjuna: KK on kysynyt omistajalta, ajetaanko tarkistukset; omistajan vastaus kirjattu. Studiolla tarkistusvideo isolla
+      iPadilla ja omistajan palaute käsitelty ennen käännöstä.
 - [ ] `zsh tyokalut/ennen-junaa.sh` ilman simua (tekijä ennen junaan vientiä, Natiiviseppä junan kokoamisessa): vaiheet
       1, 2 ja botin logiikka OK. Päiväjunassa KESKEN (vaiheet 3 ja 4b EI AJETTU) on hyväksytty tulos; HYLÄTTY estää junan.
 - [ ] Yöjunan laitekierros: `ennen-junaa.sh --loki` vakiona (Laitetestaaja tai Natiiviseppä).
