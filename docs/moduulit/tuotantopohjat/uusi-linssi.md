@@ -20,7 +20,7 @@ linssit tehdään tämän pohjan mukaan.
 
 **Rajaus:** linssit eivät kuulu maanosarajaukseen (Raamattu, LINSSIT EIVÄT KUULU RAJAUKSEEN; Kiinan dynastiat on koko maailman
 linssi). Uusi linssi aloitetaan vain omistajan päätöksellä (kortti tai KK:n "OMISTAJAN PÄÄTÖS klo …"), ja se kytketään
-pelaajalle matkalaukusta (Raamattu, LINSSIT KYTKETÄÄN VAIN MATKALAUKUSTA). Keskeneräinen linssi on Linssit/Pelit ›
+pelaajalle Linssit-napista tai laukun Varusteista (Raamattu 2.62). Keskeneräinen linssi on Linssit/Pelit ›
 Keskeneräiset -osassa, ei Kehittäjä › Kokeet -valikossa.
 
 ## 0. Tavoitteen muoto (ensimmäinen mietintäkierros)
