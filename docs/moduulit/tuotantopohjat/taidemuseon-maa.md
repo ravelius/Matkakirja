@@ -132,11 +132,62 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 9. **Kuvan lähde:** museon "kaupallinen kielletty", C2RMF- tai RMN-GP-krediitti ja gallerix-tyyppiset sivut eivät kelpaa
    lähteeksi; kirjaa kuvan lataaja ja alkuperä ennen käyttöä.
 
-## 7. TÄYDENTÄÄ: Valoseppä ja Linnanrakentaja
+## 7. Valoseppä ja Lavastaja (ent. Linnanrakentaja)
 
 *(Valoseppä: kohdevalot, kehysten ja seinän valaistus, heijastukset ja galleriatyylin värit (esim. Louvren Salle des États
 syvänsininen, Orsayn antrasiitinharmaa). Linnanrakentaja: salin rakenne ja proseduraalinen runko, kehykset, patsaiden paikat,
 varjojen leivonta, julkisivut ja lähestymiskuvat. Täydentävät Valoseppä ja Linnanrakentaja.)*
+
+### 7.1 Valoseppä: kohdevalot, kehysten ja seinän valo, heijastukset, galleriatyylin värit
+
+Valo alkaa Lavastajan salista ja loppuu kuvapariin, jossa salin pelikuva on tavoitekuvan rinnalla. Koodi proto-gitissä:
+`Linssit/Ydin/Museo/MuseoValo.cs` (kattokeila), `Linssit/Unity/MuseoPaivanvalo.cs` (globaalit säädöt ja kattoikkunat),
+`Linssit/Unity/MuseoRakennus.cs` (teos- ja kehysmateriaalit), varjostin `Resources/Varjostimet/MuseoValaistu.shader`, data
+`Resources/Museo/<maa>/sali.json`. Valo, sävy ja ilmakehä kulkevat Valopohjan kautta (valovahti `tyokalut/tarkista.sh`).
+
+**Työvaiheet (tässä järjestyksessä):**
+1. **Lähtötiedot.** Tavoitekuva (havainnekuva salista), museon omat salikuvat ja Sisältökirjurin galleriatyyli (seinän väri,
+   lattia, katto tai kattoikkunat, valon lämpö). Lavastajan `sali.json`: osat, kattoikkunat, teospaikat ja kehysprofiilit.
+   Tarkista rungosta (natiiviseppa/juna-NNN), mitkä valot ja säädöt ovat jo päällä (`museo … tila`).
+2. **Galleriatyylin värit datana.** Seinä-, lattia- ja kehysmateriaalit `sali.json`:n väreinä (sRGB, mitattu museon kuvista
+   valaistulta pinnalta), ei vakioina koodissa. Tarkista myös kehysprofiilin pienet osat (esim. `rako` = kehyksen sisäreuna
+   kankaan päällä): tumma sävy näkyy pelissä varjona.
+3. **Kohdevalot.** Jokaiselle paikalle `valokeila` `sali.json`:ssa (paikka, suunta, puolikulma, reunahäive, lx, kelvin;
+   tavallisesti 120–200 lx ja 3000–4200 K, Yövartio 320 lx); kattokeila tulee edestä ylhäältä noin 30° pystystä (`MuseoValo.KattoKeila`). Maalaus
+   on seinää kirkkaampi ja sali tummuu reunoilta (Raamattu 2.131). Kangas valaistaan tasaisesti teoksen keskipisteen valolla
+   (`_TeosKeski`), ettei iso kangas (Yövartio) tummu reunoilta. Mitoita keilan kantama salin korkeimman katon mukaan.
+4. **Seinän ja kehyksen valo.** Seinäpesu teoksen ympärillä (`MuseoPaivanvalo.SeinaSpotti`, Gauss-leveys teoksen koon
+   mukaan, myös läikkä lattiaan seinän tyvelle). Kehyksen huulen varjo kankaalla valon suunnan mukaan
+   (`MuseoPaivanvalo.KangasVarjo`): yläreuna varjoisin, sivut kevyet ja kapenevat alaspäin, alareunassa ei varjoa (omistaja
+   20.10. 19.47). Kehysten pehmeä varjo seinälle on leivottu (Lavastaja, Raamattu 2.133).
+5. **Heijastukset.** Lattia heijastaa kevyimmällä hyvältä näyttävällä tavalla (`MuseoPaivanvalo.Heijastus`); kehysten lakka
+   kiiltää (`_KiiltoValo`) ja lehtikulta heijastaa ympäristöä. Ei reaaliaikaisia varjoja eikä SSAO:ta (Raamattu 2.133).
+   Kattoikkunasalit saavat päivänvalon `MuseoPaivanvalo`n osista.
+6. **Rae ja sävy.** Museonäkymän rae ja kankaan oma hento rae (`MuseoPaivanvalo.RaeTeos`) ennen sävykäyrää; profiili Valopohjasta.
+7. **Kuvapari ja mittaus.** A/B samasta pysähdyksestä (`museo teos <tunnus>` → katseluasento; säätö QA-komennoilla
+   `museo seinaspotti|kangasvarjo|raeteos|pinnat <x>`). Katso itse rajattuna: reunat, puhki palaminen, sävy tavoitekuvaa vasten.
+   GPU-mittaus isolla iPadilla Laitetestaajalla; simu harvoin (Raamattu 9.11).
+8. **Luovutus seuraavalle.** Proto-haara ja sha Natiivisepälle (juna), kuvapari PT:lle, valon suunta Lavastajalle leivontaa
+   varten (jos keila muuttui), muutetut `sali.json`-värit Linssisepälle tiedoksi. Luovutuksessa: QA-komennot, mitatut luvut,
+   avoimet säädöt.
+
+**Valmiin tarkistuslista (Valoseppä):**
+- [ ] Jokaisella teospaikalla valokeila; maalaukset seinää kirkkaampia, sali tummuu reunoilta, ei puhki palavia kankaita.
+- [ ] Galleriatyylin värit `sali.json`:ssa ja tavoitekuvan sävyssä; ei uusia värivakioita koodissa (valovahti vihreä).
+- [ ] Kehyksen varjo kankaalla: yläreuna varjoisin, sivut kevyet, alareuna ilman tummaa raitaa (myös kehyksen `rako`).
+- [ ] Kuvapari ENNEN/JÄLKEEN samasta pysähdyksestä katsottu itse ja PT:llä; GPU isolla iPadilla mitattu.
+- [ ] `tyokalut/tarkista.sh` ja `sh Linssit-testit/kaanna.sh Museo` vihreänä.
+- [ ] Valon osuus tavoitekuvan ja pelikuvan rinnakkaisesta kuvasta valmis ennen KK:ta.
+
+**Opit (20.10.2026 asti):**
+- Tumma raita maalauksen alareunassa oli kehysprofiilin `rako`-materiaali (sRGB 38/28/18), ei varjostimen varjo: ensimmäinen
+  korjaus (varjo pois) ei muuttanut kuvaa. Selvitä ensin, mikä kappale ja materiaali piirtää pikselin, sitten korjaa.
+- Seinäpesu ei näkynyt Louvren korkeissa saleissa (kattokeila 9–14 m taulusta, varjostimen etäisyysraja liian pieni):
+  mitoita rajat korkeimman salin mukaan ja tarkista vaikutus A/B-parilla (S0 = S1 paljastaa).
+- Laitetestaajan tiedostokanavassa museokomennot menevät `linssi-komento.txt`:hen ilman `ui linssi` -etuliitettä; Louvren
+  sarja: Amsterdam-peli → `museo maa ranska` → taidemuseo → Louvren klassikot → Siirry näyttelyyn → `museo teos <tunnus>`.
+- Uusi värivakio varjostimessa nostaa valovahdin lähtötasoa: tuo väri datasta (`sali.json` tai Valopohja) tai johda se
+  olemassa olevasta.
 
 ### 7.2 Lavastaja (ent. Linnanrakentaja): salit, henkilöt ja tilatut mallit peliin asti
 
