@@ -31,3 +31,12 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   **7980a4cb9** sellaisenaan (sis. turvaputkitestin). Haara pelikoodari/jatko-208 ba8bfd3e7 tarpeeton.
 - AVOIN: lennon ulkonäkö, kallistuksen suunta ja huutojen tasot laitteella näkemättä; Puyi-botti voi kääntyä avauksen aikana
   risteyksessä (kamera seuraa, ei törmäysriskiä aukiolla). P7–P9 edelleen LT:n kierroksen 6 jälkeen.
+
+## 19.5x LISÄYS: juna 209 "Juoksupeli täysin valmiiksi" (PT) ja tuotantoputki
+- Haara **pelikoodari/maali-209 = 7e8c0c16b** (palaute-208 7980a4cb9:n päällä), EI junaan 208:
+  maali luoteisella kulmatornilla (2e4904f26; JuoksuV4Reitti.MaaliSolmu/MaaliTorni, JuoksuV4Saanto.MaaliSuunta; oikealla pohjalla
+  lyhin reitti keskeltä 965 m), kokoelma + nimetyt paikat (4b53b5547; JuoksuKokoelma, PlayerPrefs juoksupeli.kokoelma, pohja.json
+  portit/hallit/palatsit/kulmatornit), näköala maalissa (465c46ff3; JuoksuMaaliKuva → Jingshan), liu'un ääni (7e8c0c16b; audio/juoksupeli/liuku/).
+  Testit 81/81 (Juoksu), unity 0. Odottaa: NUI suuntanuoli + kokoelmakortti, SK salien merkitykset, omistaja Pelit-valikko (7).
+- Tuotantoputki PR #5059 (tools/tuotantoputki.mjs, Mac-ajo päivittäin; Louvren henkilöt Paalla=false → Lavastaja junaan 209).
+  Ei-Tripo-laajennus PERUTTU (omistaja 19.28): paikallinen haara pelikoodari/ei-tripo c07f2544e, ei pushattu, ei mergeä.
