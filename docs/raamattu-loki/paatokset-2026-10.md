@@ -2082,3 +2082,7 @@ Omistaja (KK:n kortti, kuvat 01-suunta-nelio/02-suunta-nuoli): juoksupelin suunt
 ## PAATOKSET 20.10.2026 klo 22.05: KK:n nollaus – yksi Kyllä = yksi nollaus (20.10.2026 klo 22.05)
 
 Omistajan kortti KK:ssa 22.05 ("Täsmennänkö myös yhteisen ohjeen (CLAUDE.md) niin, että yksi Kyllä antaa luvan vain yhteen nollaukseen ja seuraavasta kysytään aina uudelleen?" → "Kyllä, täsmennä (Suositus)"). Tausta: KK nollautui 21.31 ilman korttia, omistaja huomautti 22.0x. Korvaa 18.10. klo 08.48 tulkinnan "kerran saatu lupa riittää". Ilman korttia vain yöllä omistajan nukkuessa. ~/.claude/CLAUDE.md ja KK:n aloitus.md korjattu (KK); Raamattu 7.37 (PT).
+
+## PAATOKSET 20.10.2026 klo 22.11: SÄÄNTÖJEN KARSINTA – SÄÄNTÖ KOKONAAN VAIN RAAMATTUUN (20.10.2026 klo 22.16)
+
+Omistajan kortti Keskustelukanavassa 20.10.2026 klo 22.11: "Karsitaanko säännöt niin, että jokainen sääntö on kirjoitettu kokonaan vain Raamattuun ja muualla on enintään yksi lyhyt muistutusrivi, joka viittaa sinne?" → "Kyllä, karsitaan (Suositus)". Toteutus: PT käy läpi muistin (MEMORY.md ja muistitiedostot), roolien aloitus- ja luovutuspohjat ja muistutusskriptit (/Users/Shared/Claude/hooks). Päällekkäinen sääntö → poisto tai yksi viittausrivi Raamattuun; Raamatusta puuttuva voimassa oleva linjaus kirjataan ensin Raamattuun ja vasta sitten poistetaan muualta. arkisto/ ei kosketa. Molemmat CLAUDE.md:t karsii Keskustelukanava (vain omistajan viesti KK:ssa sallii); PT antaa KK:lle listan päällekkäisistä kohdista. Aamulla omistajalle lyhyt yhteenveto KK:n kautta.
