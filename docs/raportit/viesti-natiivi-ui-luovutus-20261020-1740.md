@@ -21,7 +21,8 @@ natiivi-ui/siirto-pehmea-208, puhdas.
    pohja mk-astroavaus__otsikko/__nimi + Latauskuva.Luettava, QA "ui juoksukuvateksti [pito|pois]". Näkyy vasta kun PK:n pelikytkentä
    kutsuu JuoksuAvaus.Laukaise. Jos PK:n avausaikoja muutetaan, nimet pysyvät (PK).
 
-## SEURAAVA ERÄ (ei aloitettu; omistajan päätös 17.31 PT:n kautta, kaikki museot, junaan 208 jos ehtii, muuten seuraavaan, ei simua)
+## JONO TYHJÄ. ALLA OLEVA ERÄ SIIRRETTY LINSSISEPÄLLE (PT 17.4x): ÄLÄ ALOITA, ohita. Uusi sessio: rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
+## (vain tiedoksi) taulun tutkiminen, omistajan päätös 17.31
 TAULUN TUTKIMINEN EI VAIHDA TILAA: zoomaus ja liikuttelu eivät koskaan vaihda tilaa (nyt ulos nipistys voi viedä vapaaseen kulkuun).
 Ulos nipistäessä kuva pysähtyy pehmeästi koko tauluun. Kun pelaaja on pysähtynyt ja nipistää UUDELLEEN ulos (ei saman eleen aikana),
 alareunaan pieni kysymys "Haluatko kulkea vapaasti museossa?" → Kyllä = saliin (vapaa kulku), Ei = takaisin tauluun. Kysymys olemassa
