@@ -28,3 +28,6 @@ Generointilupaa vaativat (PT:lle tekstinä, KK esittää): (a) tason 2 musiikit 
 
 ## Tila 21.10. (ensimmäinen vaihe)
 Valmiit: 5 (`aanittaja-yo-tasot-20261021.md`), 1, 2 (`aanittaja-yo-lattiat-20261021.md`), 4 (`tools/aanipankki/YHTEENVETO.md`), 6 (`aanittaja-yo-portti-kaikki-20261021.md`), 7, 11, 15 (`aanittaja-yo-auditit-20261021.md`), 18 osittain (askelsarjojen LUFS). Jäljellä: 3, 8, 9, 10, 12–14, 16, 17, 19–22.
+
+## Tila 21.10. 00.3x
+Lisäksi valmiit: tasaus kivi_hiekka/sora −34 LUFS (`museo-askeleet-tasaus-vienti-20261021`, `aanet/taidemuseo-askeleet-v5/`, LS:lle ilmoitettu), 21 (`aanittaja-yo-huudot-20261021.md`). Kohta 9 (manifesti ↔ ämpäri): web-puolen `data/aanilahteet.json` ei sisällä media-URL:eja; natiivin äänimanifestit ovat Unity-puolella, joten tarkistus vaatii PK:n manifestipolut → pyydetään PK:lta. Jäljellä: 3, 8, 10, 12–14, 16–17, 19–20, 22.
