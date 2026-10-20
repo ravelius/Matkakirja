@@ -253,10 +253,51 @@ Kertojan äänet museon kohteille. Putki, mallit ja lupa: `kertojan-teksti-ja-aa
 *(Natiivi-UI: museon käyttöliittymä natiivissa (i-kortti, ympyrät, kierroksen ohitus ja pysäytys, tekstitys), olemassa olevat
 UI-pohjat, tarkistus iPhonella ja isolla iPadilla, pelikuvat tavoitekuvan rinnalle. Täydentää Natiivi-UI.)*
 
-## 9.6 TÄYDENTÄÄ: Julkaisija (vienti ja juna)
+## 9.6 Julkaisija (vienti ja juna)
 
-*(Julkaisija: museopaketin vienti (ASTC-kuvat, äänet, data), käännös, simuvuoro ja junaan vienti, tarkistus ennen junaa:
-tavoitekuva ja pelikuva rinnakkain on näytetty. Täydentää Julkaisija.)*
+Julkaisija vie museon valmiit paketit ämpäriin, jakaa käännös- ja simuvuorot ja vie salin junaan. Julkaisija ei muokkaa
+sisältöä: hylätty paketti palaa tekijälle syyn kanssa. Työkalut ovat kansiossa `/Users/Shared/Claude/julkaisija-tyokalut/`,
+loki `tf-jono-20261002.txt` (yksi rivi per tapahtuma, kellonaika `date`-komennosta).
+
+**Vaiheet**
+
+1. **Vientipyyntö.** Tekijä (Linssiseppä: kuvat ja data, Äänittäjä: äänet, Lavastaja: sali ja mallit) lähettää polun
+   `/Users/Shared/Claude/proto-3d/_valmiit/<nimi>-vienti-<pvm>/`, kohdepolun ämpärissä, tiedostomäärän ja SHA256SUMS-tiivisteen.
+   Paketti tehdään valmiiksi ennen pyyntöä; Julkaisija ei kokoa paketteja (Raamattu 11.26).
+2. **Vienti** `zsh julkaisija-tyokalut/vie-paketti.sh <kansio>` yksinään, ilman ketjutusta. Skripti tarkistaa: SHA256SUMS täsmää eikä
+   kansiossa ole listaamattomia tiedostoja; `LAHTEET.md` tai `MANIFEST.md` nimeää lisenssin (PD, CC0, CC BY, oma); mp3/wav menee
+   äänen portin läpi; olemassa olevaa objektia ei ylikirjoiteta; julkinen URL palauttaa 200 ja saman SHA:n. Tekijä voi ajaa ensin
+   `--kuiva`-lipulla. Isot paketit voi jakaa `--osa=I/N` -lipulla.
+3. **Uusi versio = uusi kansio.** Salin jokainen kierros viedään uuteen polkuun (`taidemuseo/<sali>-v2k`, `-v2l` …). Vanhaa ei
+   korvata, joten edellinen juna toimii, kunnes peli osoittaa uuteen. Tekijä kertoo kytkijälle, mikä versio on käytössä.
+4. **Kuittaus** tekijälle (ja kytkijälle, jos tekijä pyytää): polku, viety- ja virhemäärä. Rivi lokiin.
+5. **Käännös ja simu.** Kytkijän proto-sha käännetään vapaalla linjalla (L1/L2) `proto-kaanna.sh`:lla; app tekijälle. Simuvuoro
+   vain Raamatun SIMU HARVOIN -rajoissa (9.1): uusi tekniikka (esim. uusi varjostin tai valaistus salissa), omistajan pyytämät
+   kuvat (tavoitekuva ja pelikuva rinnakkain) tai yöjunan laitekierros. Värit, tekstit, kehykset ja valon säätö menevät
+   suoraan junaan ilman simua. Raskaat museot (Pariisi) yksi simu kerrallaan, muisti vähintään 20 %.
+6. **Junaan.** Natiiviseppä kokoaa rungon; Julkaisija tarkistaa ennen TF:ää, että salin paketit ovat ämpärissä samoilla
+   poluilla kuin rungon data viittaa ja että rinnakkaiskuva on näytetty omistajalle (luku 3). TF vain merkinnällä
+   "OMISTAJA PYYSI JULKAISUA" (Raamattu 10.1, 10.2) ja muistiajon jälkeen (Raamattu 9.4).
+
+**Luovutus seuraavalle:** ämpäripolut ja -versiot, rungon sha, TF-numero ja sen tila, avoimet vientipyynnöt.
+
+**Valmiin tarkistuslista (Julkaisija)**
+- [ ] Jokainen salin paketti (kuvat, data, äänet, mallit) on viety `vie-paketti.sh`:lla, virheitä 0, ja kuitattu tekijälle.
+- [ ] Rungon data osoittaa vietyihin polkuihin (ei puuttuvia objekteja, ei vanhaa versiota vahingossa).
+- [ ] Simuvuorot vain SIMU HARVOIN -rajoissa; omistajan pyytämät kuvat otettu.
+- [ ] Tavoitekuva ja pelikuva rinnakkain näytetty omistajalle KK:n kautta ennen junaa.
+- [ ] TF vasta omistajan julkaisupyynnöstä ja muistiajon jälkeen; TF ulkona → rivi PT:lle.
+
+**Opit (Ranska 17.–20.10.2026)**
+- Louvren sali vietiin kymmenenä versiona (v2k … v2r, kukin 31 tiedostoa). Kun jokainen kierros on oma kansionsa, mikään ei
+  rikkoudu, mutta kytkijän pitää vaihtaa polku itse. Kysy tekijältä aina, mikä versio on junan käytössä.
+- Paketti hylätään, jos `LAHTEET.md` ei nimeä lisenssiä (esto-v3 20.10.). Tekijä korjaa ja pyytää uudelleen; Julkaisija ei
+  korjaa tiedostoa.
+- Keskeytynyt vienti (esim. tilinvaihto) ajetaan uudelleen samalla komennolla: jo viedyt ohitetaan ("oli jo").
+- Varjostin- ja valokierrokset (Louvren varjo k1–k7) kuluttavat simuvuoroja nopeasti. Kääntötarkistus ilman simua riittää,
+  ellei kyse ole uudesta varjostimesta tai omistajan pyytämästä kuvasta.
+- Vahdin simuajojen "pitkiä ruutuja" -puute (noin 13 600 ruutua yli 20 ms) toistuu eri haaroissa samantasoisena: se kertoo
+  simulaattorista, ei salista. Nopeus mitataan laitteella (Laitetestaaja).
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 
