@@ -17,6 +17,12 @@ rakentaminen (Lavastaja), valo (Valoseppä), äänet (Äänittäjä), kytkentä 
 Työ alkaa tavoitekuvasta (havainnekuva salista), ja omistaja näkee tavoitekuvan ja valmiin salin pelikuvana rinnakkain KK:n
 kautta ennen junaa. Pääkaupungin avaus on oma pohjansa (`paakaupungin-avaus.md`).
 
+**Museoiden yhteiset osat (omistaja 20.10.2026 klo 23.4x, kaksi korttia KK:ssa):**
+- **Louvren taso kaikkiin:** penkit, teoskyltit ja kävijäjärjestelmä ovat jokaisen museon vakio-osia (myös Amsterdam), ja pariteettitesti (luku 8) vertaa uutta maata Louvreen.
+- **Kalusteet yhteisestä kirjastosta:** jalustat, penkit ja kaiteet tulevat yhteisestä kirjastosta, eivät salin GLB:stä (Niken jalusta puuttui, koska se oli vain salin mallissa).
+- **Valon valmiit tyypit:** uusi sali aloitetaan valmiista valotyypistä (esim. kattoikkunasali, kohdevalosali), ei säädetä alusta (luku 7.1).
+- **Kävijät:** eri maihin omat ihmiset, koska Tripolla tehtyjen ihmisten vaatteita ei voi helposti vaihtaa. Kaikilla museoilla on silti yhteinen tapa liikkua ja käyttäytyä: käytös ja paikat siirretään dataan (nyt kovakoodattu `MuseoHenkilot.cs`:ään). Ensin testataan Louvressa, missä ihmiset näkyvät ja tarvitseeko heidän tehdä jotain: junan 209 Louvre-testin kuvat omistajalle ennen uusien maiden ihmisiä, ja Tripo-määrä kysytään kortilla.
+
 **Rajaus:** maittain, yksi maa kerrallaan. Uusi maa on Euroopassa, kunnes omistaja aloittaa muut maanosat (MUUT MAANOSAT VÄHITELLEN).
 Italian museot: omistajan kortti 14.10. "Mukaan myös Italian museot, Italia pois App Storesta", ajoitus "Ei vielä".
 Kreikan valtion muistomerkit piilotetaan Kreikan App Storessa (storefront GRC).
