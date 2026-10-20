@@ -2074,3 +2074,7 @@ Omistaja 19.25 (sanatarkasti): "Tuotanto putki : käytä vain tripo Malleja jott
 ## PAATOKSET 20.10.2026 klo 19.28: VAIN TRIPO KOSKEE UUSIA MALLEJA (20.10.2026 klo 19.28)
 
 Omistaja 19.28 (sanatarkasti): "Ei tarvitse etsiä vanhoja ja muuttaa koska niitä ei minusta ole". Tarkennus 19.25-linjaukseen: sääntö koskee uusia malleja; vanhoja ei kartoiteta eikä korvata, eikä rakennuksista kysytä poikkeusta.
+
+## PAATOKSET 20.10.2026 klo 20.09: juoksupelin suuntanuoli (20.10.2026 klo 20.14)
+
+Omistaja (KK:n kortti, kuvat 01-suunta-nelio/02-suunta-nuoli): juoksupelin suunta maaliin ja jäljellä oleva matka näytetään lasineliössä valikkonapin vieressä, matka sen alla (vaihtoehto 1). Lasineliöstä tulee UI-pohja tälle näyttäjälle (tyylikirjaan, NUI). Juna 209: maali ja nuoli yhdessä.
