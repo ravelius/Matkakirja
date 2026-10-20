@@ -17,7 +17,12 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
 3. **Codex PT738-K1…K4** (4 uutta kävijää, posti 7ccc398a2): kokoa, kun ne tulevat. Ne lisätään `Paikat`/`Kavelevat`-listaan tai
    `MuseoKavijaMallit`iin, sen mukaan, ovatko ne Tripo-luurankomalleja.
 4. **Codex PT734–737 → rakennukset-v13**: 19.25 vielä 0 glb:tä. Ohje on edellisessä luovutuksessa (pohja v12).
-5. **Pulu**: oma lippu `MuseoPulu.Paalla` pysyy pois. Koodikyyhky on omistajan hylkäämä. Tripo-Pulu v3 on omistajan katselussa KK:n kautta,
+5. **Niken jalusta → juna 209** (omistaja 19.47, PT 19.5x): Codexin Tripo-jalusta (marmorinen laivan keula, posti 1d373f09d) tulee
+   Salon Carrén päätyyn, nykyiseen paikkaan sc-nike (sali.json veistospaikat, jalusta ala (0, 0, −7,5), koko 2,2 × 2,4 × 3,2; Nike y 2,4).
+   Portaikkoa ei tilata. Syy: sali-GLB:stä puuttuu jalusta, ja MuseoRakennus.cs:n väliaikainen laatikko (r. ~480) poistetaan, kun GLB
+   latautuu, joten Nike leijuu. Kun keula tulee: mitoita niin, että sen yläpinta on Niken alapinnan tasolla (tai säädä paikka_y), lisää se
+   veistokseksi tai jalustamalliksi MuseoRakennukseen ja vie media JU:lla. Kuva: Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261020/kk-1947-louvre-nike-ilman-jalustaa.png.
+6. **Pulu**: oma lippu `MuseoPulu.Paalla` pysyy pois. Koodikyyhky on omistajan hylkäämä. Tripo-Pulu v3 on omistajan katselussa KK:n kautta,
    ja se tarvitsee linturigin ja liikkeet ennen kuin se kytketään.
 
 ## LINJAUS (omistaja 19.25 PT:n kautta, pysyvä): "käytä vain tripo Malleja"
