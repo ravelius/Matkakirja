@@ -104,7 +104,7 @@ Tilauksessa on:
 ## 5. Hahmot (luuranko ja animaatiot)
 
 - **Vain liikkuvalle hahmolle** (tilauksen LIIKE, luku 1). Liikkumaton hahmo ilman luurankoa ja animaatioita läpäisee portin, kun
-  tilaus sanoo "ei liikettä" (portin muutos Työkaluseppä, 21.10.2026).
+  tilaus sanoo "ei liikettä" (portin muutos Lavastaja, PR #5112, 21.10.2026: LIIKE luetaan MANIFEST.json:n files[].liike/tyyppi-kentistä tai .md-rivistä "LIIKE <tiedosto.glb>: ei liikettä").
 - **Yksi luuranko**, enintään 150 luuta **[portti]**, Mixamo-nimet etuliitteellä `mixamorig:`. Pakolliset luut **[portti]**:
   `Hips, Spine, Spine1, Spine2, Neck, Head` ja kummallekin puolelle (`Left…`/`Right…`) `Shoulder, Arm, ForeArm, Hand, UpLeg, Leg, Foot, ToeBase`.
   Sormet, `HeadTop_End` ja lisäluut (viitta `cape_*`, kaapu `robe_*`, letti `braid_*`) ovat sallittuja.
