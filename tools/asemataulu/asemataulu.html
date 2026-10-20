@@ -266,7 +266,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
 <main class="wrap">
   <header>
     <h1>Asemataulu</h1>
-    <span class="selite"><button type="button" class="paivita" id="boost" aria-pressed="false" title="Mittarit ja kulutus näkyviin tunniksi">Boost</button><button type="button" class="paivitetty paivita" id="paivitetty" title="Päivitä tiedot nyt">…</button></span>
+    <span class="selite"><button type="button" class="paivita" id="boost" aria-pressed="false" title="Tarkista ja päivitä koko taulu tunniksi">Boost</button><button type="button" class="paivitetty paivita" id="paivitetty" title="Päivitä tiedot nyt">…</button></span>
   </header>
   <p class="tyhja" id="tyhja">Täällä näkyvät Matkakirjan kehityksen mittarit, junat, työlista ja roolien tila. Päätoimittaja ja Postivahti päivittävät sivun automaattisesti.</p>
   <section class="palkit" id="palkit" aria-label="Käyttörajat"></section>
@@ -525,8 +525,9 @@ section:not(.kiinni) .yhteenveto { display: none; }
     return f;
   }
   var pyyntoKesken = 0;
-  // Boost (omistaja 14.10. 23.39, KK 15.10. 11.29): nappi kirjoittaa talo/boost {paalla, alkoi}; mittarit ja kulutus näkyvät vain
-  // Boostin aikana, ja Boost sammuu itsestään tunnin kuluttua (vanhentunut tila kirjataan pois päältä).
+  // Boost (omistaja 14.10. 23.39 ja 20.10. 09.56): nappi kirjoittaa talo/boost {paalla, alkoi, paattyy}; Asemataulu-sessio tarkistaa ja
+  // päivittää koko taulun heti ja 5 min välein Boostin ajan; mittarit ja kulutus näkyvät vain Boostin aikana. Boost sammuu itsestään
+  // tunnin kuluttua (vanhentunut tila kirjataan pois päältä). Ilman Boostia taulussa näkyy vain sessioiden omat kirjoitukset.
   var BOOST_MS = 3600000;
   var dbRef = null, boostSammutettu = 0;
   function boostJaljella() {
@@ -589,10 +590,10 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var bn = $('boost');
     bn.setAttribute('aria-pressed', boostPaalla ? 'true' : 'false');
     bn.textContent = boostPaalla ? 'Boost päällä · ' + Math.ceil(bJ / 60000) + ' min' : 'Boost';
-    bn.title = boostPaalla ? 'Sammuta Boost nyt' : 'Mittarit ja kulutus näkyviin tunniksi';
+    bn.title = boostPaalla ? 'Sammuta Boost nyt' : 'Tarkista ja päivitä koko taulu tunniksi';
     if (tila.boost && tila.boost.paalla && !boostPaalla && dbRef && boostSammutettu !== tila.boost.alkoi) {
       boostSammutettu = tila.boost.alkoi;
-      dbRef.doc('talo/boost').set({ paalla: false, alkoi: tila.boost.alkoi }).catch(function () { /* ei kirjoitusoikeutta */ });
+      dbRef.doc('talo/boost').set({ paalla: false, alkoi: tila.boost.alkoi, paattyy: tila.boost.alkoi + BOOST_MS }).catch(function () { /* ei kirjoitusoikeutta */ });
     }
 
     // Ikä = mittareiden ikä (omistaja 10.10. 17.2x: "nämä eivät päivity tarpeeksi usein"); Postivahti vie mittarit 5 min välein,
@@ -690,9 +691,14 @@ section:not(.kiinni) .yhteenveto { display: none; }
       return y;
     });
     $('junat').replaceChildren();
-    // Uusin juna aina ensin (numeron mukaan) ja enintään kolme junaa tai TF:ää; käännössä oleva oranssina (omistaja 10.10. 16.3x).
+    // Järjestys (omistaja 20.10. 09.56): avoin juna ensin, sitten lukittu, sitten TF uusin ensin; enintään kolme riviä.
+    // Sama järjestys tarkistimessa (tarkista-junat.py: jarjestys).
     var junaNro = function (x) { var n = String(x.nimi || '').match(/(\d+)/); return n ? Number(n[1]) : 0; };
-    junaRivi($('junat-valmiit'), $('tf-paneeli'), jr.slice().sort(function (a, b) { return junaNro(b) - junaNro(a); }).slice(0, 3));
+    var junaLaji = function (x) {
+      if (/^TF /.test(String(x.nimi || ''))) return 2;
+      return x.jakso === 'matka' || /^\s*(lukittu|käännös|käännössä|matkalla|ipa|applelle|applella)/i.test(String(x.tila || '')) ? 1 : 0;
+    };
+    junaRivi($('junat-valmiit'), $('tf-paneeli'), jr.slice().sort(function (a, b) { return junaLaji(a) - junaLaji(b) || junaNro(b) - junaNro(a); }).slice(0, 3));
     // Junarivillä ei päivitysaikaa (omistaja 13.10. 08.3x: "tuo päivitetty teksti pitää ottaa pois"); julkaisuaika on TF:n
     // Uutta-otsikon perässä suluissa, esim. "Uutta (13.10. klo 7.24):". Työlistan päivitysaika pysyy.
 
@@ -955,7 +961,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
   $('boost').addEventListener('click', function () {
     if (!dbRef) return;
     var paalle = boostJaljella() === 0;
-    var uusi = paalle ? { paalla: true, alkoi: Date.now() } : { paalla: false, alkoi: (tila.boost && tila.boost.alkoi) || Date.now() };
+    var alkoi = paalle ? Date.now() : (tila.boost && tila.boost.alkoi) || Date.now();
+    var uusi = { paalla: paalle, alkoi: alkoi, paattyy: paalle ? alkoi + BOOST_MS : Date.now() };
     tila.boost = uusi; piirra();
     dbRef.doc('talo/boost').set(uusi).catch(function () { $('boost').title = 'Boostia ei voitu tallentaa'; });
   });

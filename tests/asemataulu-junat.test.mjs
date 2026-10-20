@@ -7,7 +7,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -184,4 +184,64 @@ test('etenemisen tilassa TestFlight ennen vaihetta 5 hylätään', () => {
   d.rivit[0].teksti = 'Valmiina:\n– kuvanotto';
   assert.match(aja(d, { nimi: 'Juna 204', jakso: 'matka', edistys: 4, tila: 'Matkalla TestFlightiin' }).stdout, /ennen vaihetta 5/);
   assert.doesNotMatch(aja(d, { nimi: 'Juna 204', jakso: 'matka', edistys: 5, tila: 'TestFlightissa' }).stdout, /ennen vaihetta 5/);
+});
+
+// Omistaja 20.10.2026 klo 09.56 (KK): TF-otsikko, Juna-rivit TF:ssä, järjestys ja TF-lokit.
+test('TF-rivi ilman päivämäärää ja kellonaikaa Uutta-otsikossa hylätään (myös vanha rivi)', () => {
+  const d = hyva();
+  d.rivit.push({ nimi: 'TF 180', tila: 'valmis', teksti: 'Korjattu ja uutta:\n– korjaus' });
+  const r = aja(d);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /TF 180.*vain yksi otsikko/);
+});
+
+test('TF-rivillä toinen otsikko (Junaan N, Odottaa valintaasi) hylätään', () => {
+  const d = hyva();
+  d.rivit[1].teksti = 'Uutta (18.10. klo 16.55; myös Macille):\n– korjaus\nJunaan 204:\n– toinen';
+  assert.equal(aja(d).status, 1);
+});
+
+test('TF-otsikko Macille-osalla menee läpi', () => {
+  const d = hyva();
+  d.rivit[1].teksti = 'Uutta (18.10. klo 16.55; myös Macille 16.5x):\n– korjaus';
+  assert.equal(aja(d).status, 0, aja(d).stdout);
+});
+
+test('Juna N, jonka tila on Testaajilla, hylätään (pitää olla TF N)', () => {
+  const d = hyva();
+  d.rivit[0].tila = 'Testaajilla';
+  assert.equal(aja(d).status, 1);
+});
+
+test('Juna N, jota uudempi TF on jo, hylätään', () => {
+  const d = hyva();
+  d.rivit.push({ nimi: 'Juna 202', tila: 'Lukittu 00.57', edistys: 5, teksti: 'Valmiina:\n– asia' });
+  const r = aja(d);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /juna 202 on jo TF:ssä/);
+});
+
+test('tyhjennetty eteneminen (ei nimeä) menee läpi', () => {
+  assert.equal(aja(hyva(), { ts: 1 }).status, 0);
+});
+
+test('--tf-lokit: lokin mukaan TF:ssä oleva Juna N hylätään, TF N oikealla ajalla läpi', () => {
+  const k = mkdtempSync(join(tmpdir(), 'asemataulu-k-'));
+  const talo = join(k, 'data', 'talo');
+  const lokit = join(k, 'lokit');
+  mkdirSync(talo, { recursive: true });
+  mkdirSync(lokit);
+  writeFileSync(join(lokit, 'tf204-ketju.log'), 'TF 1 completed success 08.53\nSISAINEN 2 completed success 08.58\n');
+  const d = hyva();
+  d.rivit[0].tila = 'Lukittu';
+  d.rivit[0].teksti = 'Valmiina:\n– kuvanotto';
+  writeFileSync(join(talo, 'junat.json'), JSON.stringify(d));
+  const aja2 = () => spawnSync('python3', ['-I', skripti, '--kansio', talo, '--tf-lokit', lokit], { encoding: 'utf8' });
+  let r = aja2();
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /Juna 204: TF:ssä sisäisillä klo 08\.58/);
+  d.rivit[0] = { nimi: 'TF 204', tila: 'Testaajilla (TestFlight sisäisillä 08.58)', teksti: 'Uutta (20.10. klo 08.58; myös Macille):\n– kuvanotto' };
+  writeFileSync(join(talo, 'junat.json'), JSON.stringify(d));
+  r = aja2();
+  assert.equal(r.status, 0, r.stdout);
 });
