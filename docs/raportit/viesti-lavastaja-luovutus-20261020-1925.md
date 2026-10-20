@@ -77,7 +77,9 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    **k5 (PT 02.0x):** avoimet-v7 (f1976537c870): kääröt 0,95 × 1,9 m silmän korkeudella myös sivuseinillä, huonematto + 2 käytävämattoa + ovimatot,
    lattia 0,62/0,50/0,34 (`avoimet_lattia.py v4 tmp 0.62,0.50,0.34` → `avoimet_sisustus.py tmp v7 <matot-zip> <paneelit-zip>`).
    **k6 (PT 02.1x, j9:n tiheys):** avoimet-v8 (7000a15c2cf8, `tyokalut/avoimet_kalusteet.py`): Codexin esineet kopioina huoneesta toiseen.
-   AVOIN: 209i k1/k3 kuja-75:ssä vinoja punaisia piikkejä ja kuja aukion näköinen → PK:lta kysytty juoksijan x,z; etsi piikit taustasta.
+   **k7 (PT 02.2x):** avoimet-v9 (a6c578a93d9d): `avoimet_kalusteet.py` (ryhmät + päällekkäisyystarkistus) v7:stä + `avoimet_k7.py`
+   (keltainen harjakate, kulunut lattia). Piikit (209i k1, z 446–480): muurien madallus venytti naapurikasvojen yhteisiä kärkiä →
+   peking_tausta.py v11b split_edges ennen madallusta → `aja_tausta_v12.zsh` → peking/tausta13 (ajossa LOD0; sitten LOD1/2 + pakkaus v12).
    Niken keulan sovitustiedot Codexille: posti/lavastaja-codex-nike-sovitus-20261021.md (postilaatikko 5f25d26cc).
    **K3-kävelijä (kun Codex toimittaa):** LS:n kävelijätesti 0beee9946 (`sh Linssit-testit/kaanna.sh KavelijatEivat`, ≥ 0,8 m kamerasta;
    k1 nyt 1,20 m) ottaa henkilot.json:n kavelee:true-hahmot automaattisesti; aja ennen NS:lle lähettämistä.
