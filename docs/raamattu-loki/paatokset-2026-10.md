@@ -2121,3 +2121,7 @@ Omistajan kortti KK:ssa klo 22.55 (sanatarkasti): "Kuka hyväksyy uuden linssin 
 ## LINJAUS 20.10.2026 klo 22.58: YHTENAISET NAPIT, TYYLIKIRJA JA TOIMINTALOGIIKKA (20.10.2026 klo 23.04)
 
 Omistaja klo 22.58 KK:ssa (sanatarkasti): "napit ja laajemmin tyylikirjastot sekä linssien ja pelien toimintalogiikka ovat tärkeitä olla yhtenäisiä". KK:n ehdotus (PT toteuttaa): 1) peleille yhteiset säännöt kuten linsseille (aloitus, tauko, ratas, poistuminen, ohjaus, kortit, luenta) ja 2.70 natiivin mukaiseksi, molemmat omistajalle läpikäyntiin KK:n kautta; 2) jokainen tuotantopohja viittaa tyylikirjaan ja yhteisiin sääntöihin eikä kuvaa omia nappeja (tehty pohjiin 20.10. 23.0x); 3) natiivin tyylikirjakopio päivittyy automaattisesti joka käännöksessä (NUI). Asemataulun työlistaan.
+
+## PYYNTO 20.10.2026 klo 23.12: TYOLISTAVAHTI (20.10.2026 klo 23.15)
+
+Omistaja klo 23.12 KK:ssa (sanatarkasti): "täällä taitaa olla vanhoja mitä pitää siivota pois. tähän pitäisi saada selkempi valvonta, koska tämä ei vieläkään pysy itsestään kunnossa". PT siivosi työlistan 23.2x (38 → 11 työn alla: 17 valmiiksi junien mukaan, 9 Odottaa-kohtaan, 2 tuplariviä yhdistetty, edistys 60 → 5; varmuuskopio scratchpad/paatoimittaja/2253/tyolista-ennen-siivousta.json). Vahti (KK:n suositus 5 kohtaa) Raamattuun 7.39 TYÖLISTAVAHTI; toteutus Valoseppä tools/asemataulu/.
