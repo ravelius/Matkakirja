@@ -70,7 +70,13 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
 4. **Kuja-338 (Kuuden itäisen palatsin keskikuja) KESKEN:** avoimet_sijoitus.py `KUJAT`-lohko (yleinen kuja: muurilohkot, 8 huonetta, kaistat,
    päiden avaukset, liitokset) → tausta-v11 `aja_tausta_v11.zsh` → `peking/tausta12` (ajossa). Seuraavaksi liitostarkistus + korkeuskartan
    BFS kuja-285 (z 361) ja kuja-290/335 (z 465) → pakkaa v11 → PK, JU, NS.
-5. Jono sen jälkeen: puuttuvat laatat, Louvren 4 kävijää (kun Codex toimittaa; vain K3 liikkuu, omistaja 00.10), kartan 3D-maamerkit VS:n kanssa.
+   21.10. 00.4x: kuja-338:n kiveys oli taustassa 0,5–1,4 m (huoneet ja juoksija jäivät alle) → peking_tausta.py "KIVEYS"-vaihe (palatsin
+   vaakasuorat V4_lattia-kasvot 0,05–2,5 m → 0); v11 ajetaan uudelleen. Portti #5112 MERGATTU; pohjan luku 5 korjattu PR #5117.
+   PT: kalusteiden pelikuvat hyväksytty, NS ottaa 6abf7e4d4:n. LS lisäsi Amsterdamin penkit_malli (99ee6f7d7) ja vaihtaa glb sali-v7 + kalusteet:false
+   JU:n kuittauksen jälkeen. Ulkorengas mediassa (JU 00.35), PK kytki 2142fc39b.
+   **Kalustekirjaston Tripo-vaihtoehdotus myöhemmin (PT 00.4x, KK:n kortti, kun omistaja on nähnyt nykyiset pelissä):** Niken jalusta on nyt harmaa
+   laatikko, oikea on marmorinen laivan keula (Codexin Tripo-keula tilattu posti 1d373f09d); lisäksi penkit ja kaiteet.
+5. Jono sen jälkeen: puuttuvat laatat (kysy PT:ltä, mitä tarkoitetaan), Louvren 4 kävijää (kun Codex toimittaa; vain K3 liikkuu, omistaja 00.10), kartan 3D-maamerkit VS:n kanssa.
 
 ## MUSEOT (omistaja 23.4x ja 23.50 PT:n kautta; jono järjestyksessä)
 - **(3) Louvre-testi 209 VALMIS:** `proto-3d/_tyo/linnanrakentaja/louvre-tripo-henkilot/salikierros.py` → `louvre-209-salit.jpg` (10 salia; henkilöt
