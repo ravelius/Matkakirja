@@ -2129,3 +2129,7 @@ Omistajan kortti KK:ssa klo 23.17 (kaikki suositukset; omistajan versio scratchp
 ## LINJAUS 20.10.2026 klo 23.25: YHTEISET OSAT ENSIN (20.10.2026 klo 23.25)
 
 Omistaja klo 23.25 KK:ssa (sanatarkasti): "yhteisiä elementtejä kannattaa käyttää mahdollisimman paljon". KK:n tavoite: pelaaja tunnistaa joka linssissä ja pelissä samat napit, valikot, kortit ja liikkeet; uusi peli tai linssi kootaan valmiista osista, uusi osa tehdään vain jos valmista ei ole ja silloin yhteiseksi. PT: kirjattu 2.201 YHTEISET OSAT ENSIN; pohjien tyylikirjariviin "käytä ensin yhteistä osaa"; 2.201:n erot korjataan yhteisillä osilla (NUI, PK); kartoitus päällekkäisistä kortti- ja nappimuunnelmista.
+
+## KESKUSTELUKANAVA: YKSI YHTEINEN TYÖLISTA (20.10.2026 klo 23.32)
+
+Omistajan kortti 20.10.2026 klo 23.29 (KK:n välittämä): "Minulla on oma lyhyt tehtävälista aloitusmuistiinpanoissani … Se ei näy taululla, koska työlista on Päätoimittajan. Miten jatketaan?" = "Yksi yhteinen lista (Suositus)". KK:n omat tehtävät työlistaan omina riveinään (vastuu Keskustelukanava, ilman →); KK lukee listan jokaisen nollauksen jälkeen ja ennen kuin kertoo työn tilasta; valvonta kattaa myös KK:n lupaukset; PT herättää KK:n, kun rivi erääntyy (KK:lla ei ole ajastinta). PT lisäsi 7 riviä 20.10. klo 23.30. Raamattu 7.4 ja 7.39.
