@@ -41,7 +41,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
 - Tuotantoputki PR #5059 (tools/tuotantoputki.mjs, Mac-ajo päivittäin; Louvren henkilöt Paalla=false → Lavastaja junaan 209).
   Ei-Tripo-laajennus PERUTTU (omistaja 19.28): paikallinen haara pelikoodari/ei-tripo c07f2544e, ei pushattu, ei mergeä.
 
-## 20.4x LISÄYS: havainnekuvien j9/j10 näköisyys (omistaja 20.14, PT)
+## 20.28 LISÄYS: havainnekuvien j9/j10 näköisyys (omistaja 20.14, PT)
 - Kuvapari 208:sta (simu pelikoodari-iPad13, runko 186b23682): /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kuvapari-208/ (PT lähetti KK:lle).
   Skenaario proto-3d/tyokalut/pelikoodari-ajot/sk-juoksupeli-kuvapari-208.txt (todistusajo.sh).
 - Haara **pelikoodari/nakoisyys-209 = 5d9b6dfd7** (maali-209 f2be670cd:n päällä): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
