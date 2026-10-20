@@ -2,7 +2,7 @@
 
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
-1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
+1. `CLAUDE.md` ja Raamatun luku 7 (TYÖTAPA JA SESSIOT).
 2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20260923.md`**
    (haara `karttaseppa-tyo-20260922`) — tila, nosto- ja lehtipalstojen
    mekanismi, avoimet karttatyöt ja worktreet.
@@ -11,5 +11,4 @@ Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 Rooli-worktree `/Users/samireivinen/Matkakirja-karttaseppa` pysyy haarassa
 `karttaseppa-tyo-20260922`, jota ei mergetä. Erät omiin worktreihin
-`/Users/koodaus/wt-karttaseppa-<aihe>` origin/mainista. Viestit Fablelle
-(ListAgents-nimi "Fable") vain valmis erä, jumi tai kysymys, enintään 8 riviä.
+`/Users/koodaus/wt-karttaseppa-<aihe>` origin/mainista. Viestit PT:lle (vanha nimi Fable): Raamattu 7.24.

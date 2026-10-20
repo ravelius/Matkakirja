@@ -8,22 +8,13 @@ teit checkoutin origin/mainista äsken, se on tuo vanha, ei sinun; nimeä
 uusi työhaara toisin, esim. `laitetestaaja-<aihe>`, äläkä väkisin pushaa
 vanhan päälle.)
 
-**VAIN YÖJUNAT (omistaja 19.10.2026 klo 17.12, Raamattu 9.11):** pelaat lukitun junan iPadilla ja
-iPhone-simulla vain, kun juna on YÖJUNA (lukitaan illalla tai yöllä, julkaistaan aamuun mennessä).
-Päiväjuna lähtee ilman laitekierrosta (PT ja KK katsovat simutodisteet heti). Pysäyttävä löydös
-estää ulkoisen jaon; muut löydökset seuraavan junan korjauslistaan.
+**VAIN YÖJUNAT:** laitekierros vain yöjunille; päiväjuna lähtee ilman sitä, ja pysäyttävä löydös estää ulkoisen jaon (Raamattu 9.11).
 
-Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2, **WEB ON MALLI, MITATTUNA**
-(sitova: kuvapari + mitatut arvot ennen PASS, ei rakennevertailua), ja
+Lue: CLAUDE.md, Raamatun luku 7 ja 6.6 NATIIVI ON MALLI (ei web-kuvaparia eikä web-mittoja), ja
 docs/raportit/viesti-laitetestaaja-luovutus-20260925-b.md kokonaan
 (korvaa aiemmat 25.9. luovutukset).
 
-**JUMI → FABLE (omistaja 25.9. klo 04.4x, korvaa JUMI → KORTIN)**:
-jumiuduttuasi (luokitin estää, päätös puuttuu, tai esim. simulaattorin
-lupaikkuna katoaa) — ÄLÄ tee AskUserQuestion-korttia. Lähetä sen sijaan
-Fablelle viesti (tilanne + vaihtoehdot + suositus) ja JATKA MUUTA TYÖTÄ
-samalla — älä jää odottamaan vastausta. Fable kertoo omistajalle
-tarvittaessa.
+**JUMI → FABLE:** Raamattu 7.25 (ei kysymyskorttia; yksi viesti PT:lle ja jatka muuta).
 
 **Käännöspalvelu**: `/Users/Shared/Claude/proto-3d/tyokalut/proto-kaanna.sh
 <haara|SHA>[+<haara|SHA>…] [UDID…]` kääntää minkä tahansa pushatun proto-
@@ -76,17 +67,14 @@ kosketustyökalu ei toimi, käytä KOKONAAN tekstikomentoja natiivissa**
 
 ## Laitteet
 
-- **iPhone 18 Pro (1572C658)** — SINUN. Sammuta aina kierroksen jälkeen
-  (muistinsäästö, omistajan toistuva pyyntö 25.9.): `xcrun simctl
+- **iPhone 18 Pro (1572C658)** — SINUN. Sammutus kierroksen jälkeen (Raamattu 12.17): `xcrun simctl
   shutdown 1572C658-6455-4E55-8C05-3F88CB3C32F6`.
 - **iPad Pro 13" M5 (3B4CDACB)** — SINUN, 1032×1376 pt. Sammuta samoin
-  kierroksen jälkeen. **Luvan attach-ikkuna voi kadota tunneiksi jos
-  omistaja ei ole koneella — älä jää odottamaan (JUMI → FABLE).**
+  kierroksen jälkeen. **Luvan attach-ikkuna voi kadota tunneiksi — älä jää odottamaan (JUMI → FABLE).**
 - iPhone 17 (FB234D08) — Natiivi-UI:n, ei koske.
 - iPad Pro 11" M5 (503000D1) — jaettu vuoroin, ilmoita suoraan muille
   kun otat/vapautat.
-- Fyysinen iso iPad (00008103…) — Linssisepän/Natiivisepän oma, EI
-  KOSKETA.
+- Fyysinen iso iPad (00008103…): Raamattu 9.11 ja 12.17.
 - `993F8873` (pariteetti-iPhone-vaaka) ja `C1D5E34C` (pariteetti-iPad11-834)
   — myös sinun, jäänteitä aiemmasta kierroksesta, tarvittaessa käytä.
 - `ui kierto vaaka|pysty|auto` kääntää ruudun (native only, ei vaikuta
