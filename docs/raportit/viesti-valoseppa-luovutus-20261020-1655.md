@@ -15,6 +15,8 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
 - Minun osuus b6e253a6d: varjon heitto kun etäisyys < 40 × koko (koko = max(korkeus, 0,3 × leveys)), hahmot aina, jaksotettu 4000/ruutu;
   QA ui juoksupeli valo heitto 0|1, heittok K, varjomatka m [1|2] (Valopohja.PeliVarjot), kauko m, jalki 0|1.
 - PT 16.5x: PK vie mittaukset loppuun (f861b6fd3 yhteisappi, LT:n tulokset lt-gpu-tulos.txt); OLETUSTEN KORJAUS KESKEN – uusi sessio viimeistelee varjo-oletukset.
+- LT 16.55 (lt-gpu-tulos.txt): A 34,5 ms, B varjot 0 34,2 → VARJOT EIVÄT OLE SYY, oletukset jäävät (b6e253a6d). Kulu = farClip × jälkikäsittely
+  (F −7, H −11, FH 10,3 ms). VS → PK: epäily liike-epäterävyys "Camera and Objects" -liikevektoripassi ja syvyysesipassi; kokeile "Camera Only" + syvyyskopio. PK jatkaa.
 - TEE: lue LT:n tulos → jos A ≤ 14 ms ja J ilman jäätymistä → PT:lle OK (NS: f861b6fd3 runkoon); jos ei → säädä HeittoK/varjomatka (QA-arvoista)
   tai, jos 60 fps + ei ilmestymisiä + varjot eivät täyty yhtä aikaa, rivi PT:lle (omistajalle valinta videolla).
 
