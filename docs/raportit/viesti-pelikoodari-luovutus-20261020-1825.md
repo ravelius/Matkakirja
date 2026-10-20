@@ -44,7 +44,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
 ## 20.28 LISÄYS: havainnekuvien j9/j10 näköisyys (omistaja 20.14, PT)
 - Kuvapari 208:sta (simu pelikoodari-iPad13, runko 186b23682): /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kuvapari-208/ (PT lähetti KK:lle).
   Skenaario proto-3d/tyokalut/pelikoodari-ajot/sk-juoksupeli-kuvapari-208.txt (todistusajo.sh).
-- Haara **pelikoodari/nakoisyys-209 = df0b0a42e** (+ v9: 7 huonetta, ovikorjaus 04fe50214, kamera 11/6 m; aiemmin 782ce0de2 v8) (maali-209 f2be670cd:n päällä; 5d9b6dfd7 + avoimet huoneet + pakotetut linjat): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
+- Haara **pelikoodari/nakoisyys-209 = 8c44cfe21** (+ QA-loki kamera rakennusmassassa; aiemmin df0b0a42e) (+ v9: 7 huonetta, ovikorjaus 04fe50214, kamera 11/6 m; aiemmin 782ce0de2 v8) (maali-209 f2be670cd:n päällä; 5d9b6dfd7 + avoimet huoneet + pakotetut linjat): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
   esteiden ennakko ≤ 120 m palatsissa (JuoksuV4Maailma.LahiRaja, QA kauko lahi). Kujat: lyhin reitti maaliin 74 % ≤ 6 m kujilla → ei reittimuutosta.
 - Odottaa: NS:n simukäännös → ennen/jälkeen-kuvapari + LT:n GPU ≤ 16 ms; Lavastajan avoimet-v2-ovet (läpijuoksu), Tripo-esteet ja eunukit;
   VS:n matala aurinko. Simu: JU:n SIMU NYT -vuoro.
@@ -60,3 +60,5 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   Läntiset asuinpihat + avoimet huoneet ≈ j9 (hyvä). VIKA: 9 m:n kamera rakennusmassoissa → korjattu df0b0a42e (kuja 11/6, aukea 13,5/7,5 m),
   vaatii uuden simukäännöksen ja uusinnan ennen KK:ta. Tausta v9 kytketty (5a87c6a8a). Muurinharjaketju (Lavastaja) junaan 210:
   tarvitsee säännön aukko-/palkkikohdat.
+- 21.3x: UUSINTA 209 (simu runko 1e1c9aab5): kamera ei rakennusmassassa koko ajossa (QA-loki 0, 10 ruutua puhtaat). Kuvat
+  kuvapari-209/uusinta-*.jpg → PT (KK:lle PT:n hyväksynnällä). Skenaario sk-juoksupeli-kuvapari-209b.txt. Botti ei seuraa nuolta → pääjuoksu aukioilla.
