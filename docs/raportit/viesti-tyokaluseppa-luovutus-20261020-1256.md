@@ -32,3 +32,12 @@ Tavoite: korjauskierrokset Macin editorissa iPhonen/iPadin ruutukoossa, simu vai
   (juoksupelin ui-komennot). Katkaistu itse 13.58 uudelleenkäynnistyksen takia; lukko vapaa, ei orpoa editoria.
   SEURAAVA: uudelleenkäynnistyksen jälkeen UNITY NYT JU:lta → sama komento → VERTAILU.md + kuvaparit PT:lle.
 - Unityn oma QuickSearch-poikkeus (SearchDatabase.EnumerateAll) käynnistyksessä on vaaraton.
+
+## LISÄYS 20.10. 14.4x (ajo 5 onnistui, ikkunakielto)
+- Ajo 5 (14.08, lokit/esikatselu-20261020-1408/VERTAILU.md): esikatselu 2,3 min vs. simu 10,2 min. Kuvista puuttui kamera (Camera.main null) → korjattu b7e087201.
+- KK 14.09: ikkuna-ajo toi omistajan näytölle dialogit URP Material upgrade + Importing a scoped registry → ajo 6 keskeytetty.
+  PT:n PÄÄTÖS 14.2x: ikkuna-ajo piiloon, EI Ruutu-kerrosta. Toteutettu proto tyokaluseppa/esikatselu: 8645019eb (URP-asetus pois),
+  6c27d73cf (open -g -j, Esikatselu.Piilota: alpha 0 + orderOut + hide sekunnin välein; PackageManagerSettings oneTimeWarningShown 1),
+  c7c37438e (kuvarivillä pelin ruutu kameran pikselikoosta). C#-muutokset kääntämättä.
+- SEURAAVA: testi VAIN kun omistaja ei käytä Macia (aika pyydetty KK:lta). Jos jokin ikkuna näkyy → raportti PT:lle, ei uusia ajoja päivällä.
+  Siihen asti esikatselu EI ole roolien käytössä. Paketteja ei päivitetä kopiosta; synkkaa kopio NS:n sha:han kun se tulee.
