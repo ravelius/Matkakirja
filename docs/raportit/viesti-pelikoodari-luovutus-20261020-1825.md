@@ -40,3 +40,11 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   Testit 81/81 (Juoksu), unity 0. Odottaa: NUI suuntanuoli + kokoelmakortti, SK salien merkitykset, omistaja Pelit-valikko (7).
 - Tuotantoputki PR #5059 (tools/tuotantoputki.mjs, Mac-ajo päivittäin; Louvren henkilöt Paalla=false → Lavastaja junaan 209).
   Ei-Tripo-laajennus PERUTTU (omistaja 19.28): paikallinen haara pelikoodari/ei-tripo c07f2544e, ei pushattu, ei mergeä.
+
+## 20.4x LISÄYS: havainnekuvien j9/j10 näköisyys (omistaja 20.14, PT)
+- Kuvapari 208:sta (simu pelikoodari-iPad13, runko 186b23682): /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/kuvapari-208/ (PT lähetti KK:lle).
+  Skenaario proto-3d/tyokalut/pelikoodari-ajot/sk-juoksupeli-kuvapari-208.txt (todistusajo.sh).
+- Haara **pelikoodari/nakoisyys-209 = 5d9b6dfd7** (maali-209 f2be670cd:n päällä): kamera lähemmäs (DroneNosto kuja 9/6, aukea 12/7,5 m),
+  esteiden ennakko ≤ 120 m palatsissa (JuoksuV4Maailma.LahiRaja, QA kauko lahi). Kujat: lyhin reitti maaliin 74 % ≤ 6 m kujilla → ei reittimuutosta.
+- Odottaa: NS:n simukäännös → ennen/jälkeen-kuvapari + LT:n GPU ≤ 16 ms; Lavastajan avoimet-v2-ovet (läpijuoksu), Tripo-esteet ja eunukit;
+  VS:n matala aurinko. Simu: JU:n SIMU NYT -vuoro.
