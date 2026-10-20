@@ -12,6 +12,10 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    - Testit: `MuseoKiinteatTestit` 1/1, Linssit 2184/2184, tarkista.sh ok. NS kirjasi 209-jonoon (yhdistää, kun 208 on lukittu).
    - LS 19.3x: opaskierros ei tarvitse muutoksia. VARAUS: jos `museo elama 1` laitetaan päälle Louvressa, kaksi simulaatiota eivät näe toisiaan → siirrä k1 Elaman simuun.
    - Älä aja kaanna.sh:ta ja tarkista.sh:ta yhtä aikaa (sama rakennus-dll → Abort trap 6).
+   - Kuvapari PT:lle 21.1x (PT:n pyyntö ennen 209:n lukitusta): `proto-3d/_tyo/linnanrakentaja/louvre-tripo-henkilot/` (esikatsele.py,
+     kuvapari-1/2.jpg). k1:n paikat on otettu Ytimen simusta väliaikaisella testillä, jota ei ole committattu.
+1b. **avoimet-v3** (PT 21.0x: huoneiden vihreät seinät → j9:n punainen, ristikot tummaa puuta): `avoimet_varit.py` (vain baseColorFactor) →
+   `_valmiit/juoksupeli-avoimet-v3-vienti-20261020/` (SHA256SUMS ea7e7a0744a0). Lähetetty JU:lle ja PK:lle; sijoitus.json viittaa avoimet-v2/, ja PK vaihtaa etuliitteen.
 2. **k2:n ja vartijan luuranko** (omistaja 19.23 hyväksyi): PT tilasi Codexilta samaan `louvre-kavijat-v2`-toimitukseen (idle + walk).
    Kun ne tulevat: media `louvre-ihmiset-v1`:n rinnalle (vienti JU), k2 `Kavelevat`-listaan; vartija pysyy tuolilla idlellä (tarkista mitoitus).
 3. **Codex PT738-K1…K4** (4 uutta kävijää, posti 7ccc398a2): kokoa, kun ne tulevat. Ne lisätään `Paikat`/`Kavelevat`-listaan tai
