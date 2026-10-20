@@ -27,6 +27,6 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   sekoitus Puyin kehykseen 10,9–11,8 s; ohjaus 15,5 s. Törmäystesti Peli-testit/Kultaiset/avauslento-esteet.bin.gz (LOD0 tausta-v6 +
   rakennukset-v12; uusi tausta/malli → proto-3d/_tyo/pelikoodari/avauslento-208/geom.py + ruudukko.py, lento.py = radan viritys).
 - Huudot 3D (JuoksupeliNakyma.Eunukit3D/PaivitaEunukit, JuoksuV4Maailma.EunukkienPaikka + Kaiut), v3 05/06-pitkä porrastettuna 0,7 s.
-- Ohita: JuoksupeliNakyma.OhitaAvaus() / AvausKaynnissa (NUI tekee napin).
+- Ohita: JuoksupeliNakyma.OhitaAvaus() / AvausKaynnissa + NUI:n nappi 22c41d712 mergetty ja kytketty → kärki **7980a4cb9** (NS:lle 19.0x, PT:n ohje).
 - AVOIN: lennon ulkonäkö, kallistuksen suunta ja huutojen tasot laitteella näkemättä; Puyi-botti voi kääntyä avauksen aikana
   risteyksessä (kamera seuraa, ei törmäysriskiä aukiolla). P7–P9 edelleen LT:n kierroksen 6 jälkeen.
