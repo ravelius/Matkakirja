@@ -2036,3 +2036,7 @@ Omistaja 12.00: "näytä unityn ruutukaappaus madonnasta kuitenkin" / "vai miten
 ## PAATOKSET 20.10.2026 klo 12.38–12.59: omistaja pelaa uusinta runkoa omilla laitteillaan lähiverkossa (20.10.2026 klo 12.59)
 
 Omistaja 12.38: "pystynkö itse pelaamaan peliä, jos se vain avataan minulle simulaattorissa? ei tarvitsisi odotella julkaisua". 12.46: "ei kun tarkoitin natiivia simulaattoria, ihan kuin iphone tai ipad olisi kiinni piuhalla mac studiossa. eikö sellainen onnistu? edes jos olen lähiverkossa?" 12.53 kortti: "Asenna (Suositus)" → NS asensi f517f5926 iPad Pro 13:een langattomasti 12.55 (16 s). 12.59 kortti: "Myös iPhoneen (Suositus)" + "laita myös pienempään ipadiini joka on nyt myös lähiverkossa". Linjaus: NS asentaa jokaisen vihreän avoimen junan rungon langattomasti iPad Pro 13:een, iPad Pro 11:een ja omistajan iPhoneen, ilman TestFlightia; LT ja muut eivät käytä näitä laitteita omistajan pelatessa. Raamattu 9.11 päivitetty.
+
+## PAATOKSET 20.10.2026 klo 13.57: asennukset vain isoon iPadiin, Mac Studio uudelleenkäynnistys (20.10.2026 klo 14.08)
+
+Omistaja 13.57 (kortti KK:ssa): "asenna jatkossa vain isoon ipadiin. pyydän erikseen muihin tarvittaessa. kone tökkii oudosti. käynnistän koneen uudestaan. sano kun voin sinun puolesta". NS asentaa jatkossa langattomasti vain iPad Pro 13:een; iPad Pro 11 ja iPhone vain erillisestä pyynnöstä. Kone (swap 15/16 Gt, 7 vrk päällä) käynnistettiin uudelleen ~14.0x, kaikki roolit pushasivat ennen. Raamattu 9.11 päivitetty.
