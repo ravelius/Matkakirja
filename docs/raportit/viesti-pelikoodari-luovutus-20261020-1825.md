@@ -17,7 +17,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   oletukseksi (Jalki.cs Valopohja.JuoksuLiikeKappaleet = false tai mv-asetus) + kuvapari P0/P7 (vyoero.py) ennen päätöstä.
 - GPU ≤ 14 ms isolla iPadilla on Valosepän (VS 0,8 + MSAA 2, kierros 6).
 
-## 19.0x LISÄYS: omistajan palaute 18.28–18.39 (PT:n erät)
+## 18.55 LISÄYS: omistajan palaute 18.28–18.39 (PT:n erät)
 - Haara **pelikoodari/palaute-208 = c909a692a** (2d832a656:n päällä; väliversio 231c425d1). PT:lle ja NUI:lle kerrottu.
 - 18.28: drone edestä/kaarto taakse, mikserin konteksti "pelit" (kartan musiikki pidossa koko juoksun; ennen palasi 0,3 s:ssa),
   käännösikkuna 6,5–9,8 m + avoimen puolen pyyhkäisy aina käännös, Puyi/takaa-ajaja maan pintaan (JuoksuKorkeusKartta.Maa),
