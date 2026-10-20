@@ -1,6 +1,7 @@
 // Tiedostokokojen vahti (omistajan päätös 20.10.2026 15.23 "Sääntö ja vahti", Raamattu 7.22): luovutus-, aloitus- ja
 // tilatiedostoissa vain voimassa oleva tila. Mittaa kunkin roolin uusimman aloitus-, luovutus- ja tilatiedoston sekä
-// muistin MEMORY.md:n. Rajat: aloitus/luovutus/tila 15 kt, MEMORY.md 10 kt ja sen rivi enintään 100 merkkiä (1 kt = 1024 t).
+// muistin MEMORY.md:n. Rajat: aloitus/luovutus/tila 15 kt, MEMORY.md 10 kt, sen rivi enintään 160 merkkiä ja rivin kuvausosa
+// (" — " jälkeen) enintään 80 merkkiä (KK:n tarkennus 15.25). 1 kt = 1024 tavua.
 // Tuloste: yksi rivi per ylitys "YLITYS|rooli|tiedosto|koko", tai "OK". Poistumiskoodi 1, jos ylityksiä on.
 // Ajo: tools/tarkista-tiedostokoot.sh (Postivahdin kierros, tarkista-tyotilat.sh:n rinnalla).
 // Polut: TIEDOSTOKOOT_REPO (oletus tämän skriptin repo) ja TIEDOSTOKOOT_MUISTI (oletus Fablen checkoutin muistikansio).
@@ -10,7 +11,8 @@ import { fileURLToPath } from 'node:url';
 
 export const RAJA_TIEDOSTO = 15 * 1024;
 export const RAJA_MUISTI = 10 * 1024;
-export const RAJA_RIVI = 100;
+export const RAJA_RIVI = 160;
+export const RAJA_KUVAUS = 80;
 
 const OLETUSMUISTI = '/Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fable/memory';
 
@@ -82,6 +84,9 @@ export function tarkista({ repo, muisti }) {
     teksti.split('\n').forEach((rivi, i) => {
       const merkkeja = [...rivi].length;
       if (merkkeja > RAJA_RIVI) ylitykset.push(`YLITYS|muisti|muisti/MEMORY.md:${i + 1}|${merkkeja} merkkiä > ${RAJA_RIVI}`);
+      const v = rivi.indexOf(' — ');
+      const kuvaus = v < 0 ? 0 : [...rivi.slice(v + 3)].length;
+      if (kuvaus > RAJA_KUVAUS) ylitykset.push(`YLITYS|muisti|muisti/MEMORY.md:${i + 1} kuvaus|${kuvaus} merkkiä > ${RAJA_KUVAUS}`);
     });
   }
   return ylitykset;

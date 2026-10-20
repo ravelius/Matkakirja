@@ -10,7 +10,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { uusimmat, tilalinkit, RAJA_TIEDOSTO, RAJA_MUISTI } from '../tools/tarkista-tiedostokoot.mjs';
+import { uusimmat, tilalinkit, RAJA_TIEDOSTO, RAJA_MUISTI, RAJA_RIVI, RAJA_KUVAUS } from '../tools/tarkista-tiedostokoot.mjs';
 
 const SKRIPTI = fileURLToPath(new URL('../tools/tarkista-tiedostokoot.sh', import.meta.url));
 const juuri = mkdtempSync(join(tmpdir(), 'tiedostokoot-'));
@@ -53,7 +53,8 @@ test('kaikki rajojen sisällä → OK, koodi 0', () => {
 });
 
 test('ylitykset: uusin luovutus, aloitus, tila, MEMORY.md ja pitkä rivi; vanha luovutus ei', () => {
-  const pitka = '- [B](b.md) — ' + 'ä'.repeat(100);
+  const pitka = '- [B](b.md) — ' + 'ä'.repeat(81);            // kuvaus 81 > 80, rivi 95 ≤ 160
+  const pitkaNimi = '- [' + 'C'.repeat(150) + '](c.md) — lyhyt';  // rivi > 160, kuvaus 5
   const r = rakenna('yli', {
     repo: {
       'docs/aloitusviestit/keskustelukanava.md': iso(RAJA_TIEDOSTO),
@@ -63,7 +64,7 @@ test('ylitykset: uusin luovutus, aloitus, tila, MEMORY.md ja pitkä rivi; vanha 
       'docs/raportit/viesti-julkaisija-luovutus-20261020-0900.md': 'ok',
     },
     muisti: {
-      'MEMORY.md': MUISTI + pitka + '\n' + '#'.repeat(RAJA_MUISTI),
+      'MEMORY.md': MUISTI + pitka + '\n' + pitkaNimi + '\n' + '#'.repeat(RAJA_MUISTI),
       'fable-tila-20261020.md': iso(RAJA_TIEDOSTO),
     },
   });
@@ -74,6 +75,10 @@ test('ylitykset: uusin luovutus, aloitus, tila, MEMORY.md ja pitkä rivi; vanha 
   assert.ok(!rivit.some((x) => x.includes('20261019-yo')), r.stdout);
   assert.ok(rivit.includes('YLITYS|fable|muisti/fable-tila-20261020.md|15,0 kt > 15 kt'), r.stdout);
   assert.ok(rivit.some((x) => x.startsWith('YLITYS|muisti|muisti/MEMORY.md|')), r.stdout);
-  assert.ok(rivit.includes('YLITYS|muisti|muisti/MEMORY.md:5|114 merkkiä > 100'), r.stdout);
+  assert.equal(RAJA_RIVI, 160); assert.equal(RAJA_KUVAUS, 80);
+  assert.ok(rivit.includes('YLITYS|muisti|muisti/MEMORY.md:5 kuvaus|81 merkkiä > 80'), r.stdout);
+  assert.ok(!rivit.some((x) => x.startsWith('YLITYS|muisti|muisti/MEMORY.md:5|')), r.stdout);
+  assert.ok(rivit.includes('YLITYS|muisti|muisti/MEMORY.md:6|168 merkkiä > 160'), r.stdout);
+  assert.ok(!rivit.some((x) => x.startsWith('YLITYS|muisti|muisti/MEMORY.md:6 kuvaus')), r.stdout);
   assert.ok(rivit.every((x) => x.split('|').length === 4), r.stdout);
 });
