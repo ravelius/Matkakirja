@@ -34,8 +34,6 @@ KOODI = [
     ("paivita.py", "paivita.py"),
     ("kone.py", "kone.py"),
     ("laitteet.py", "laitteet.py"),
-    ("kulutus.py", "kulutus.py"),
-    ("kulutus-projektit.json", "kulutus-projektit.json"),
     ("synkka.py", "synkka.py"),
     ("syke.py", "syke.py"),
     ("elevenlabs.py", "elevenlabs.py"),
@@ -43,6 +41,8 @@ KOODI = [
     ("hoitaja/kierros.py", "hoitaja/kierros.py"),
 ]
 SIEMEN = ["osoitteet.md"]  # + data/talo/*.json repon siemenkansiosta
+# Poistetut dokumentit (omistaja 20.10.2026 klo 23.32–23.48): Sinulle-osio, Kulutus ja käsin kirjoitettu tehtavat. Niitä ei viedä uudelle taululle.
+POISTETUT = {"viestit", "kulutus", "tehtavat"}
 ROOLIT_NYKYINEN = {"paatoimittaja": "PÄÄTOIMITTAJA", "keskustelukanava": "KESKUSTELUKANAVA",
                    "asemataulu": "Asemataulu", "postivahti": "Postivahti", "julkaisija": "Julkaisija",
                    "natiiviseppa": "Natiiviseppä"}
@@ -191,7 +191,7 @@ def main():
     if not a.tarkista:
         data = os.path.join(taulu, "data", "talo")
         writes = [{"op": "set", "collection": "talo", "doc_id": n[:-5], "file_path": os.path.join(data, n)}
-                  for n in sorted(os.listdir(data)) if n.endswith(".json")] if os.path.isdir(data) else []
+                  for n in sorted(os.listdir(data)) if n.endswith(".json") and n[:-5] not in POISTETUT] if os.path.isdir(data) else []
         bp = os.path.join(taulu, "vienti", "uusi-taulu-batch.json")
         kirjoita(bp, json.dumps(writes, ensure_ascii=False, indent=1).encode("utf-8"))
         print("SEURAAVAKSI (vain uusi tai tyhjä taulu; käynnissä olevan taulun vienti jatkuu synkka.py:llä):")
@@ -199,7 +199,7 @@ def main():
             os.path.join(taulu, "asemataulu-julkaisu.html"),
             "osoitteeseen " + ny["taulu"] if ny["taulu"] else "uutena; kirjaa osoite osoitekirjaan ja osoitteet.md:hen (KÄYTÖSSÄ) ja aja tämä komento uudelleen"))
         print("  2. ArtifactData batch, writes = %s (%d dokumenttia)" % (bp, len(writes)))
-        print("  3. Asemataulu-sessio lukee ASEMATAULU-ROOLI.md:n ja nykyinen.json:n ja luo cronit (A ja kulutus; B-cronia ei ole)")
+        print("  3. Asemataulu-sessio lukee ASEMATAULU-ROOLI.md:n ja nykyinen.json:n ja luo cronin A (*/5; kulutus- ja B-cronia ei ole)")
 
     for p in puutteet:
         print("PUUTE|" + p)
