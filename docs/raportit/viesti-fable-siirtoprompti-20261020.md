@@ -1,9 +1,10 @@
 # Siirtoprompti tilinvaihtoon (PÄÄTOIMITTAJA 20.10.2026 klo 17.5x; omistaja 17.49: "kun saat iphoneeni uuden version niin tehdään heti sen perään tilin vaihto, 95% käytetty")
 
-Vanha tili: samireivinen@gmail.com, viikko 95 %, Asemataulu R6VQFTUNq629zSzah719Uy. Uusi tili: se, jolle omistaja kirjautuu;
-PT tarkistaa `claude auth status` ja valitsee taulun tiedostosta scratchpad/asemataulu/osoitteet.md (todennäköisesti
-sami.reivinen@vvi.fi, EekZDPMuAcsjT3awvn4jPb, viikko nollautui 20.10. klo 01.59). Uuden tilin rajan omistaja kertoo kortilla
-vasta uudella tilillä (KK kysyy). Tarkka tila: tämä tiedosto + PT:n uusin luovutus (git log, `viesti-fable-luovutus-20261020-*`).
+Vanha tili: sami.reivinen@vvi.fi (org ddaee6a2; KK:n faktakorjaus 17.54), viikko 95 %, nollautuu 26.10. aamuyöllä; sen
+taulu on ollut R6VQFTUNq629zSzah719Uy. UUSI TILI = PÄÄTILI (omistaja 17.54: "päätili. ollaan nyt tuolla tilillä jota suosittelet
+ja se on kohta kulutettu"), Asemataulu https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix (read + publish samaan osoitteeseen,
+tietokanta tiedostoista). PT tarkistaa `claude auth status` (komentorivi samalle tilille). Raja: päätilin linja on 50 %
+(omistaja käyttää tiliä muuhunkin), mutta KK kysyy rajan kortilla vasta uudella tilillä. Tarkka tila: tämä tiedosto + PT:n uusin luovutus (git log, `viesti-fable-luovutus-20261020-*`).
 Käytännön lista: docs/tilinvaihto.md (VOIMASSA OLEVA ARVO voittaa).
 
 ## 0. Vaihdon järjestys
