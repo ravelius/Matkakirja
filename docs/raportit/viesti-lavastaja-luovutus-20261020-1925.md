@@ -58,6 +58,20 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
 7. **Pulu**: oma lippu `MuseoPulu.Paalla` pysyy pois. Koodikyyhky on omistajan hylkäämä. Tripo-Pulu v3 on omistajan katselussa KK:n kautta,
    ja se tarvitsee linturigin ja liikkeet ennen kuin se kytketään.
 
+## YÖ 21.10. (PT:n yösuunnitelma, Raamattu 7.46; jono järjestyksessä, seuraava aloitetaan kysymättä)
+1. **Codex-portti VALMIS:** PR #5112 (30dba592c), liikkumaton hahmo + LIIKE (MANIFEST.json files[].liike/tyyppi tai .md "LIIKE x.glb: ei liikettä").
+2. **Kalusteet:** Louvre valmis (6abf7e4d4, sali-v2s mediassa JU 00.23). Pelikuva PT:lle `proto-3d/_tyo/linnanrakentaja/museo-kalusteet/kalusteet-kirjastosta.jpg`
+   (`kalustekuva.py`; kirjaston OBJ:t tehtiin väliaikaisella testillä, ei committia) – odottaa PT:n OK:ta ennen NS:n mergeä.
+   Amsterdam sali-v7 = v6 ilman penkkejä ja jalustoja (`_valmiit/taidemuseo-alankomaat-v7-vienti-20261021`, 8b5adfbeee07; v6 ladattu mediasta
+   `museo-kalusteet/nl-v6/`) → JU vienti; LS lisää sali.json:iin glb sali-v7 + kalusteet:false + penkit_malli (rivit LS:lle 21.10. 00.5x).
+   Amsterdamin kävijät: ei Tripo-malleja ennen omistajan korttia.
+3. **Ulkorengas VALMIS:** `tyokalut/peking_ulkorengas.py` (Peking v11 kaikki 28 laattaa, palatsin ulkopuolelta 1,8 km, LOD2, harvennus 18 %)
+   → `_valmiit/juoksupeli-kk-ulkorengas-v1-vienti-20261021/` (kielletty-ulkorengas-v1/, 24 palaa, 285 k kolm., 15 Mt, 435fc4becb8e) → PK + JU.
+4. **Kuja-338 (Kuuden itäisen palatsin keskikuja) KESKEN:** avoimet_sijoitus.py `KUJAT`-lohko (yleinen kuja: muurilohkot, 8 huonetta, kaistat,
+   päiden avaukset, liitokset) → tausta-v11 `aja_tausta_v11.zsh` → `peking/tausta12` (ajossa). Seuraavaksi liitostarkistus + korkeuskartan
+   BFS kuja-285 (z 361) ja kuja-290/335 (z 465) → pakkaa v11 → PK, JU, NS.
+5. Jono sen jälkeen: puuttuvat laatat, Louvren 4 kävijää (kun Codex toimittaa; vain K3 liikkuu, omistaja 00.10), kartan 3D-maamerkit VS:n kanssa.
+
 ## MUSEOT (omistaja 23.4x ja 23.50 PT:n kautta; jono järjestyksessä)
 - **(3) Louvre-testi 209 VALMIS:** `proto-3d/_tyo/linnanrakentaja/louvre-tripo-henkilot/salikierros.py` → `louvre-209-salit.jpg` (10 salia; henkilöt
   vain GG ja Salle des États). Omistaja 23.50: K1 Salon Carré Niken edessä, K2 Daru istuu, K3 Mollien kävelee, K4 Orsay; 4 kävijää, lisää vasta kun
