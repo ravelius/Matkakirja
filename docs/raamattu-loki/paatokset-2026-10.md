@@ -2040,3 +2040,7 @@ Omistaja 12.38: "pystynkö itse pelaamaan peliä, jos se vain avataan minulle si
 ## PAATOKSET 20.10.2026 klo 13.57: asennukset vain isoon iPadiin, Mac Studio uudelleenkäynnistys (20.10.2026 klo 14.08)
 
 Omistaja 13.57 (kortti KK:ssa): "asenna jatkossa vain isoon ipadiin. pyydän erikseen muihin tarvittaessa. kone tökkii oudosti. käynnistän koneen uudestaan. sano kun voin sinun puolesta". NS asentaa jatkossa langattomasti vain iPad Pro 13:een; iPad Pro 11 ja iPhone vain erillisestä pyynnöstä. Kone (swap 15/16 Gt, 7 vrk päällä) käynnistettiin uudelleen ~14.0x, kaikki roolit pushasivat ennen. Raamattu 9.11 päivitetty.
+
+## PAATOKSET 20.10.2026 klo 15.11: aloitus- ja tilatiedostoihin vain voimassa oleva tila (20.10.2026 klo 15.12)
+
+Omistajan kysymys: "kannattaisiko käytössä olevia työkaluja, memory.md ja claude.md jotenkin karsia, jotta aloitus konteksti olisi pienempi" → kortti "Kyllä, tiedostot ja turhat työkalut (Suositus)": historia arkistoon (aloitus- ja tilatiedostot 5–10 kt:een; KK:n aloitus oli 312 kt, Karttasepän tila 78 kt, Natiivi-UI:n 34 kt), MEMORY.md puoleen, käyttämättömät taidot ja liittimet pois (omistaja kytkee, KK antaa ohjeen). KK tekee karsinnan. Raamattu 7.22 täydennetty.
