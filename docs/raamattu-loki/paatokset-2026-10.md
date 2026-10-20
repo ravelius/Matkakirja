@@ -2133,3 +2133,7 @@ Omistaja klo 23.25 KK:ssa (sanatarkasti): "yhteisiä elementtejä kannattaa käy
 ## KESKUSTELUKANAVA: YKSI YHTEINEN TYÖLISTA (20.10.2026 klo 23.32)
 
 Omistajan kortti 20.10.2026 klo 23.29 (KK:n välittämä): "Minulla on oma lyhyt tehtävälista aloitusmuistiinpanoissani … Se ei näy taululla, koska työlista on Päätoimittajan. Miten jatketaan?" = "Yksi yhteinen lista (Suositus)". KK:n omat tehtävät työlistaan omina riveinään (vastuu Keskustelukanava, ilman →); KK lukee listan jokaisen nollauksen jälkeen ja ennen kuin kertoo työn tilasta; valvonta kattaa myös KK:n lupaukset; PT herättää KK:n, kun rivi erääntyy (KK:lla ei ole ajastinta). PT lisäsi 7 riviä 20.10. klo 23.30. Raamattu 7.4 ja 7.39.
+
+## ASEMATAULU: KEVYT TAULU (20.10.2026 klo 23.41)
+
+Omistaja 20.10.2026 klo 23.32 (KK:n välittämä): "valmistuneet lista voisi olla 10 viimeisintä vain. Sinulle osion voi poistaa. ota myös kulutus pois, koska se ehkä vain kuluttaa liikaa tokeneita itse ja se ei kuitenkaan pysy ajantasalla." Klo 23.35: "poista siis sinulle ja kulutus osiot kokonaan" ja "ja siirrä odottaa ja valmistuneet työlistan alaotsikoiksi". Toteutus: Sinulle (talo/viestit) ja Kulutus (kulutus.py, kulutus-cron) pois koodeineen; valmistuneista 10 uusinta, vanhemmat TAULU/data/talo-arkisto/tyolista-valmiit.jsonl:ään; Odottaa ja Valmistuneet Työlistan väliotsikoina. Raamattu 7.39.
