@@ -24,4 +24,5 @@ Pysyvät säännöt: proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-hu
   → muistiajo-209.txt julkaisija-tyokalut/ ("OK <sha> <Gt> natiiviseppa (…)") → JU: proto_ref + muutosloki-merge-sha + muistiajo.
 - Tapetun käännöksen lukko /tmp/matkakirja-kaannospalvelu.lukko jää: tarkista pid, poista jos kuollut.
 - kaanna-editori.sh oletus nyt AsetteluTesti*.cs (bf87d6402; 17 näennäisvirhettä oli partial class -puute).
-- Levy: omat app-kansiot siivotaan ajoittain (lokit/natiiviseppa-app-*, kaannospalvelu > 2 pv, juna.log jää).
+- Levy: omat app-kansiot siivotaan ajoittain (lokit/natiiviseppa-app-*, kaannospalvelu > 2 pv). ÄLÄ poista kaannospalvelu/juna.log,
+  juna-tauko (pysyvä taukolippu, ilman sitä launchd-vahti kääntää junaa 10 min välein ja kaatuu T7:ään) eikä *.txt-tiloja.
