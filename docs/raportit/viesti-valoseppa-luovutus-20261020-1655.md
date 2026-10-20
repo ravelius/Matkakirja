@@ -28,7 +28,7 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
   JuoksuV4Maailma.Hehku.cs), kulta/jade/lohikäärmeen sävy, mätä ei hehku; QA valo hehku 0|1, hehkuvoima V (0,35). NS kääntää laiteapin → LT kuvapari H1/H0 +
   GPU ($D/hehku-208/lt-komennot.txt) → katso kuvat itse → PT:lle 3 riviä → NS runkoon PK:n jäätymiskorjauksen jälkeen.
 - AVAUS (PK, pelikoodari/avaus-208 088f99027, JuoksuAvaus.Tapahtui): hehku 0 lennossa → nousu MaataPitkin 3,6 s → täysi OhjausPelaajalle 8,4 s;
-  ei tapahtumaa = täysi. TEE kun PK kertoo avaus-208:n sha:n junassa: kuuntelija Hehku.cs:ään (materiaalien _Voima × kerroin).
+  ei tapahtumaa = täysi. VALMIS 404a63482 (linssiseppa2/hehku-avaus-208 = hehku-208 + avaus-208 088f99027) → NS ottaa avauksen junaan tullessa.
 
 ## 1. NS:LLÄ / RUNGOSSA (PT OK)
 - Louvre: af60d60f8 keilaton atlas (paketti _valmiit/taidemuseo-ranska-v2r-vienti-20261020 ämpärissä) → fbeae02dc seinäspotti → museo-kohdevalo
