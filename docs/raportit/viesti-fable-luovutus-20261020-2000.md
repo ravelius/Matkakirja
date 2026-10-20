@@ -33,3 +33,11 @@ Edellinen -1820 on historiaa. Viikko 6 %, viikkoraja tällä viikolla 85 %.
 ## 3. Omistajan linjaukset tänään (kirjattu)
 19.12 tilattu malli peliin asti + ketjutarkistus (Raamattu 7.15, #5058) · 19.25 vain Tripo-malleja · 19.28 koskee vain uusia (#5060) ·
 19.13 Louvre Codexilla jonon ohi · 19.23 k2+vartija luurankoon · 19.00 julkaise 208.
+
+## 4. LISÄYS 20.1x (luovutuksen jälkeen)
+- Auto Zoom pystyssä (omistaja 19.56 "Kyllä, lähikuviin") → juna 209 (LS haara linssiseppa/autozoom-pysty-208; isojen taulujen nopeus + kertojan rajaus). 208:ssa vain kertojakorjaus 4a84253f9.
+- Juna 209 (EI 208): PK pelikoodari/maali-209 = 4b53b5547 (maali luoteisella kulmatornilla + kokoelma + nimetyt paikat; testit 80/80).
+  Maali ja suuntanuoli junaan VAIN YHDESSÄ. Nuolen ulkoasu: NUI tekee aamuksi 2 kuvaa (lasineliö ☰:n vasemmalla + "340 m" / pelkkä nuoli yläreunassa)
+  → polut KK:lle, KK kortti huomenna. NUI tekee kokoelma- ja loppukortin (KORTTI-pohjan tumma). PK: näköalahetki + liu'un ääni
+  (Äänittäjä: audio/juoksupeli/liuku/liuku-kivi-raahaus.mp3 + -tyonto.mp3, CC0, ei korvakuunneltu).
+- Sisältökirjuri (levossa vanhalla tilillä): salien lyhyet merkitykset kokoelmaan → luo päätilille tai anna toiselle, kun 209 lähestyy.
