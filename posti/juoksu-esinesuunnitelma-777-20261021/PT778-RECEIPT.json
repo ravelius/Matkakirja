@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-20T22:55:43.593201+00:00",
+  "taskNumber": 778,
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuittaus-era2-matot-20261021.md",
+    "commit": "025d7fea8b77a7c211a43cfd7e80f96b038b0fd4",
+    "blob": "eeccf91a3b8d2231d5868c1aee7f4783766a4274",
+    "sha256": "ed0e96b94cd51f992c6f0ee2d1b0149855ed43a883d9e3d8278533d508ce7735",
+    "readInFull": true,
+    "readAt": "2026-10-20T22:55:43.593201+00:00"
+  },
+  "sourceReadInFull": true,
+  "allThreeBatchesReceivedAndViewedByPT": true,
+  "acceptedMaterialTasks": [
+    762,
+    773,
+    774
+  ],
+  "referenceOnlyTask": 767,
+  "westernLandscapeRetryRequired": false,
+  "cameraImplementationOwner": "Pelikoodari",
+  "buildingProposalTask769": "fourmodelproposaltoKKownerCardintheMorning; noTripoPermission",
+  "video772": "21–22Octnightonlyafterresourcegate",
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "historicalDeliveriesUnchanged": true
+}

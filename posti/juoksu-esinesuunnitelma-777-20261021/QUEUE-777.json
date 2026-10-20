@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-20T22:55:43.593201+00:00",
+  "taskNumber": 777,
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuittaus-era2-matot-20261021.md",
+    "commit": "025d7fea8b77a7c211a43cfd7e80f96b038b0fd4",
+    "blob": "eeccf91a3b8d2231d5868c1aee7f4783766a4274",
+    "sha256": "ed0e96b94cd51f992c6f0ee2d1b0149855ed43a883d9e3d8278533d508ce7735",
+    "readInFull": true,
+    "readAt": "2026-10-20T22:55:43.593201+00:00"
+  },
+  "status": "PREPARATORY-DRAFT-QUEUED-AFTER-LOUVRE-AND-NIKE",
+  "objectPairPlans": 12,
+  "existingIntactImagesReused": 8,
+  "newTextOnlyObjectIdeas": 4,
+  "newIntactImagesProduced": 0,
+  "newBrokenImagesProduced": 0,
+  "newImageCalls": 0,
+  "newTripoCalls": 0,
+  "modelsProduced": 0,
+  "ownerSelectionOpen": true,
+  "ownerModelingPermission": false,
+  "priorityGateSatisfied": false,
+  "prioritySequence": [
+    {
+      "work": "LouvreK4/guardPT738",
+      "owner": "existingTripo3Dthread",
+      "doNotDuplicate": true
+    },
+    {
+      "work": "NikepedestalPT761",
+      "owner": "existingTripo3Dthread",
+      "mustFirstHave": "lavastaja-codex-nike-sovitus-* path/scale/footHeight/frontDirection"
+    },
+    {
+      "work": "task777finalpairplan",
+      "owner": "currentimageowner",
+      "currentWork": "lightpreparationonly; no new imagery or modeling"
+    }
+  ],
+  "gameIntegrationVerified": false,
+  "published": false,
+  "preflightComplete": true,
+  "productionStarted": false,
+  "productionActive": false,
+  "delivered": false,
+  "ownDeliveryComplete": false,
+  "finalOwnerPlanDelivered": false,
+  "newPermissionQuestionRequired": false
+}

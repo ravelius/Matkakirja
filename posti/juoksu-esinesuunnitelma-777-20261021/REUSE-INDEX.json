@@ -1,0 +1,80 @@
+{
+  "at": "2026-10-20T22:55:43.593201+00:00",
+  "sourceTask": 770,
+  "originalEightPreserved": true,
+  "allEightNativeHashesVerified": true,
+  "references": [
+    {
+      "id": "savi-ruukku",
+      "label": "Matala saviruukku",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/savi-ruukku.png",
+      "intactSHA256": "d396d7bd3627a2e764028a27d48c91aa6f63a047cceeeacb82a6e7b4ca5f06bd",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    },
+    {
+      "id": "bambu-kori",
+      "label": "Bambukori",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/bambu-kori.png",
+      "intactSHA256": "bb8d6b6473748d741b3b307dd6748e8e12309f09da478081931f61d494eff491",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    },
+    {
+      "id": "paperilyhty",
+      "label": "Paperilyhty",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/paperilyhty.png",
+      "intactSHA256": "27579be1170170773b9ee14487f5a2a2bf163b94812115fd72d3bf071044209e",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    },
+    {
+      "id": "posliini-vati",
+      "label": "Posliinivati",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/posliini-vati.png",
+      "intactSHA256": "28ea8881bcdecc4e164a922c74b3fc96826fb089e076fb17265e65c73d37f74e",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    },
+    {
+      "id": "puu-laatikko",
+      "label": "Puulaatikko",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/puu-laatikko.png",
+      "intactSHA256": "d85e120e73266b3bd851f5948a58332e79ee76ddf6b850dc01a803ebbf2bc2d8",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    },
+    {
+      "id": "lakka-tarjotin",
+      "label": "Lakkatarjotin",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/lakka-tarjotin.png",
+      "intactSHA256": "e514f51fa0f7972c45de03c88e22029cdd9b666c729bd0e1012f7e379a728a55",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    },
+    {
+      "id": "bambu-teline",
+      "label": "Bambuteline",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/bambu-teline.png",
+      "intactSHA256": "1f4fd7100227aa9201aab05a9780e450231eee835cf9a7785e6a86b1ba1fbeff",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    },
+    {
+      "id": "kangas-pussi",
+      "label": "Kangaspussi",
+      "intactImagePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yojono-767772-20261021/task770/delivery/native/kangas-pussi.png",
+      "intactSHA256": "613bf2bce0edd7f73f094ccf666d6df3119a2c2c2a679ff7837c54290f17619f",
+      "alreadyDeliveredUnderTask": 770,
+      "noNewGeneration": true,
+      "brokenImageProduced": false
+    }
+  ]
+}
