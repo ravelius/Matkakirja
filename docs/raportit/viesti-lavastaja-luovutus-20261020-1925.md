@@ -67,7 +67,12 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    Amsterdamin kävijät: ei Tripo-malleja ennen omistajan korttia.
 3. **Ulkorengas VALMIS:** `tyokalut/peking_ulkorengas.py` (Peking v11 kaikki 28 laattaa, palatsin ulkopuolelta 1,8 km, LOD2, harvennus 18 %)
    → `_valmiit/juoksupeli-kk-ulkorengas-v1-vienti-20261021/` (kielletty-ulkorengas-v1/, 24 palaa, 285 k kolm., 15 Mt, 435fc4becb8e) → PK + JU.
-4. **Kuja-338 (Kuuden itäisen palatsin keskikuja) KESKEN:** avoimet_sijoitus.py `KUJAT`-lohko (yleinen kuja: muurilohkot, 8 huonetta, kaistat,
+4. **Kuja-338 VALMIS 21.10. 01.1x:** tausta-v11 (`_valmiit/juoksupeli-kk-tausta-peking-v11-vienti-20261021`, 21ee6b35ba51; kiveys tasoon 0 vain
+   KIVEYS_ALUEET = kuja-338, koska koko palatsissa siirto avasi saumoja) → JU/PK/NS. Laatat ennallaan: esikatselu/aukot-t7-t12.jpg. Liitokset 63/64.
+   **Tavoiteluuppi (omistaja 01.02, koko yö VS:n kanssa):** k1 huoneseinille kivinen harjakate → avoimet-v4 (`tyokalut/avoimet_harjat.py`,
+   `_valmiit/juoksupeli-avoimet-v4-vienti-20261021`, 5cebafd008b6) → JU, PK vaihtaa kansion. k2 reitin muurit r07–r10 (keltainen lasitiilikate)
+   odottaa PK:n vastausta, mikä verkko. Kierrokset ja aamulista PT:lle: side-session-notes/<PT>/lavastaja-tavoiteluuppi-20261021.md.
+   Vanha:  avoimet_sijoitus.py `KUJAT`-lohko (yleinen kuja: muurilohkot, 8 huonetta, kaistat,
    päiden avaukset, liitokset) → tausta-v11 `aja_tausta_v11.zsh` → `peking/tausta12` (ajossa). Seuraavaksi liitostarkistus + korkeuskartan
    BFS kuja-285 (z 361) ja kuja-290/335 (z 465) → pakkaa v11 → PK, JU, NS.
    21.10. 00.4x: kuja-338:n kiveys oli taustassa 0,5–1,4 m (huoneet ja juoksija jäivät alle) → peking_tausta.py "KIVEYS"-vaihe (palatsin
