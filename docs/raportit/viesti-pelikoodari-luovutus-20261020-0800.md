@@ -5,17 +5,11 @@ Proto-repo paikallinen (ei pushia), worktree /Users/Shared/Claude/wt/proto-pelik
 **pelikoodari/palatsi-208 = 0437ac75b** (puhdas).
 
 ## KÄYNNISSÄ NOLLAUSHETKELLÄ
-- Simu palatsi-208 (d4b7942c0, käännös _tyo/pelikoodari/palatsi-208-app) aja-palatsi-208.zsh: iPhone valmis ~08.00, iPad käynnissä,
-  valmis ~08.06 (lokit/todistus-juoksu-palatsi-208-{iphone,ipad}-20261020-07xx/08xx, ajoloki _tyo/pelikoodari/simu-sokkelo-206/ajo-palatsi-208.log).
-  Jos ajo katkesi nollauksessa (session taustatyö): pyydä JU:lta uusi SIMU NYT samalle appille.
+- Ei mitään. Simu palatsi-208 valmis 08.06 (iPhone + iPad OK, lokit/todistus-juoksu-palatsi-208-{iphone-20261020-0756,ipad-20261020-0758}),
+  SIMU VAPAA lähetetty JU:lle, P1–P4 + havainto lähetetty KK:lle (kopio PT) – kohdat 1–2 TEHTY. Odota KK:n palautetta palatsi v1:stä.
 
 ## ENSIN
-1. Kun ajo on valmis (tai katkennut): **SIMU VAPAA → JU** (local_24e63224…, VS:n kk-vesi 19f58c9b1 seuraavana).
-2. Katso P1–P4 + palatsi-juoksu.mp4 täysikokoisina (P1 Meridiaaniportti, P2 aukio juoksussa, P3 G:n aukio, P4 asuinpiha 1). Tarkista
-   lokista "palatsi: 49 × 68 solmua" (ämpärin v1-polku). Lähetä KK:lle (local_8e4fcfed…, kopio PT local_8d8ebf72…) polut + rehellinen
-   havainto + pohjapiirros _tyo/pelikoodari/palatsi-208/pohjapiirros-palatsi-v1.png. Huom: d4b7942c0:ssa Vesi/Ulko-solut vielä lattialla
-   ja muureilla (korjattu 31ea5494d), porttiaukot vasta 0437ac75b.
-3. Sitten **v2** (PT 07.5x: heti v1-droonien jälkeen): suunnitelma _tyo/pelikoodari/palatsi-208/V2-SUUNNITELMA.md (epätasainen ruudukko
+1. **Palatsi v2** (PT 07.5x: heti v1-droonien jälkeen): suunnitelma _tyo/pelikoodari/palatsi-208/V2-SUUNNITELMA.md (epätasainen ruudukko
    KS:n kujista + kujatila-keskilinjoista, päärakennusten etupihat KK 07.4x, Lavastajan v3 G-terassi + hallit ja v2 portit, KS:n
    nimet.json, Lavastajan Peking v11 -taustalaatat paketin tultua, VS:n marmori V4_marmori → laji 16; 60 fps iPad LT:llä).
 
