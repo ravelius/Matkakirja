@@ -26,6 +26,10 @@ haara **pelikoodari/avaus-208 = 177560643**. Seurannan ulkopuolella vain Peli-te
   ämpärissä ennen käännöstä. v5 tarkistettu: kolmioaukot poissa, korvausalueiden sisään jää aukkoja (Taihemen edessä 176 m², takana 320 m²,
   Meridiaaniportin U-piha) → Lavastajalle kerrottu; täyte peittää.
   18.08: tausta-v5 (18.06) ja palatsi-esto-v3 (18.08) ämpärissä (JU) → NS voi ottaa b4e384537.
+- **ENSIN uudessa sessiossa:** Lavastajan tausta-v6 (PT:n tilaus: tasainen V4_lattia −0,02 jokaisen korvausalueen alle) → kun ämpärissä
+  (juoksupeli/maailma-v4/kielletty-tausta-v6/tausta.json 200): haara pelikoodari/tausta-v5-208:n päälle TaustaKansio v6 (Palatsi.cs:23),
+  esto v3 jää (vaakamaa ei vaikuta leivontaan), aja _tyo/pelikoodari/laatat-208/peitto.py v6:n LOD0:lle (YMAX=40 RUUTU=1, siirrot.json
+  mallien paikka_pohja) → aukot ~0 → testit + unity-tarkistus → sha NS:lle (local_fcc10552) PT:n OK:lla.
 
 ## AVOIMET
 - GPU (juoksu ≤ 14 ms hehkun kanssa) on Valosepällä (PT 17.4x), ei PK:n.
