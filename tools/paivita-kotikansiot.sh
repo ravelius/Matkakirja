@@ -5,6 +5,10 @@
 #   zsh tools/paivita-kotikansiot.sh          kuiva-ajo (oletus): kertoo, mitä tehtäisiin, ei muuta mitään
 #   zsh tools/paivita-kotikansiot.sh --aja    päivittää (PT päättää ajon)
 #   … --ohita kansio,kansio                   jättää nimetyt kansiot väliin (rivi OHITETTU), esim. kesken oleva juna
+#   … --vain kansio,kansio                    käsittelee vain nimetyt kansiot
+#   … --uusi-haara                            (PT 20.10. 23.0x) myös kansio, jonka haarassa on mainista puuttuvaa sisältöä, siirtyy
+#                                             haaraan koti/<kansio> = origin/main (git switch -C); vanha haara jää koskemattomaksi
+#                                             (rivi kertoo sen nimen), mitään ei poisteta; jos vanha haara on jo koti/<kansio>, ei tehdä
 #
 # Jokainen /Users/Shared/Claude/Matkakirja-* -kansio, jossa on git: fetch, sitten
 #  - AJAN TASALLA: HEAD sisältää jo origin/mainin.
@@ -17,15 +21,16 @@
 # siis estä päivitystä; poistettu tiedosto lasketaan omaksi, jos se on yhä mainissa.
 emulate -L zsh
 setopt null_glob
-AJA=0; typeset -a OHITA
+AJA=0; UUSI=0; typeset -a OHITA VAIN
 while (( $# )); do
-  case $1 in --aja) AJA=1 ;; --ohita) shift; OHITA=(${(s:,:)1}) ;; esac
+  case $1 in --aja) AJA=1 ;; --uusi-haara) UUSI=1 ;; --ohita) shift; OHITA=(${(s:,:)1}) ;; --vain) shift; VAIN=(${(s:,:)1}) ;; esac
   shift
 done
 SALLITTU=.claude/settings.local.json
 for k in /Users/Shared/Claude/Matkakirja-*(/); do
   [[ -e $k/.git ]] || continue
   n=${k:t}
+  (( ${#VAIN} == 0 || ${VAIN[(Ie)$n]} )) || continue
   if (( ${OHITA[(Ie)$n]} )); then print -r -- "OHITETTU|$n"; continue; fi
   if ! git -C $k fetch -q origin 2>/dev/null; then print -r -- "JÄLJESSÄ|$n|?|fetch epäonnistui"; continue; fi
   jalj=$(git -C $k rev-list --count HEAD..origin/main)
@@ -45,10 +50,12 @@ for k in /Users/Shared/Claude/Matkakirja-*(/); do
       (( omat++ ))
     fi
   done
-  if (( omat > 0 )); then print -r -- "JÄLJESSÄ|$n|$jalj committia|haarassa ${haara:-irrotettu} $omat tiedostoa, joiden sisältö puuttuu mainista"; continue; fi
-  if [[ "$haara" == main ]]; then toimi="main fast-forward"; else toimi="haara koti/$n = origin/main (vanha ${haara:-irrotettu} säilyy)"; fi
+  if (( omat > 0 )) && ! (( UUSI )); then print -r -- "JÄLJESSÄ|$n|$jalj committia|haarassa ${haara:-irrotettu} $omat tiedostoa, joiden sisältö puuttuu mainista"; continue; fi
+  if (( omat > 0 )) && [[ "$haara" == "koti/$n" ]]; then print -r -- "JÄLJESSÄ|$n|$jalj committia|koti/$n:ssa $omat omaa tiedostoa – ei ylikirjoiteta"; continue; fi
+  if [[ "$haara" == main ]] && (( omat == 0 )); then toimi="main fast-forward"
+  else toimi="haara koti/$n = origin/main (vanha ${haara:-irrotettu} säilyy$( (( omat > 0 )) && print -n ", siinä $omat mainista puuttuvaa tiedostoa"))"; fi
   if (( AJA )); then
-    if [[ "$haara" == main ]]; then git -C $k merge -q --ff-only origin/main || { print -r -- "JÄLJESSÄ|$n|$jalj committia|fast-forward epäonnistui"; continue; }
+    if [[ "$haara" == main ]] && (( omat == 0 )); then git -C $k merge -q --ff-only origin/main || { print -r -- "JÄLJESSÄ|$n|$jalj committia|fast-forward epäonnistui"; continue; }
     else git -C $k switch -q -C "koti/$n" origin/main || { print -r -- "JÄLJESSÄ|$n|$jalj committia|haaran vaihto epäonnistui"; continue; }
     fi
     print -r -- "PÄIVITETTY|$n|$jalj committia|$toimi"
