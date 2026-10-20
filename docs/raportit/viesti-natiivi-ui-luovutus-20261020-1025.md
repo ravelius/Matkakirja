@@ -23,6 +23,15 @@ mekaaniset palat Sonnet-agenteille (≤ 150 riviä), ei uusia raskaita agentteja
    jokaisesta 9 linssistä stillit iPhone + iPad (napit näkyvissä, T päällä → tekstitys näkyy, 🔈 pois → himmeä) → KK (tekee kuva-arkin) + PT.
    Tap-kohdat ja lokit alla. Museo on jo museo-yhd-ajossa.
 
+## MUSEO-YHD-SIMU 10.20 (iPhone valmis, iPad kesken nollauksessa)
+- iPhone lokit/todistus-museo-teoskortti-jalkeen-iphone-20261020-1020: OK nimi → teoskortti, Huomiokohdat → ympyrät, Teosluettelo → kortti
+  kiinni + nimilista auki, Horatiusten vala. PUUTE: (1) 'mk-museo-tarkemmat' ei ui-puussa (Vakalohko.Otsikkonappi.name — selvitä, näkyykö
+  väkänen kortissa; T2-kuva). (2) SKENAARIOVIKA, korjattu (sk-museo-teoskortti-208.txt rivit 43–48): `ui museolista kiinni` jatkoi kierrosta
+  Mona Lisalle → kyltti "teos ei ole esillä", alarivin napit ja GG-kävely kaatuivat ketjuna. Kyltin reitti itse toimii (loki "kyltti … napautettu").
+  (3) Nimen sävy: L 0,28–0,38 Louvressa → kynnys 0,36/0,28 heilahtaa; omistaja haluaa Kallioluolan madonnan salissa VALKOISEN → nosta
+  kynnys (esim. TummaYli 0,45 / VaaleaAlle 0,38) kuvien perusteella; L 0,000 = latausruutu (sama vika kuin juoksussa).
+  Uusinta korjatulla skenaariolla (sama app museo-208-yhd-app) → KK + PT + VS + LS.
+
 ## TILA: haarat (proto)
 - natiivi-ui/museo-teoskortti-208 672e17bdc… + 50b57e822: teoskortti (omistaja 09.38), alarivi ‹ ▷/⏸ › 🔈 T, Kuuntele pois, kirja vain käytävällä,
   ☰:n Tekstitys pois, tekstitys kehyksen alle ilman laatikkoa (sävy kirkkaudesta), nimi ☰:n riviin + valkoinen (09.58). Puhe.Soita(rytmissa) =
