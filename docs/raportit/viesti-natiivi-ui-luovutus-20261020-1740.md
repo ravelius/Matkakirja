@@ -13,8 +13,9 @@ natiivi-ui/siirto-pehmea-208, puhdas.
    natiivi-ui/siirto-pehmea-208 63d0fe853 (pohja juna-208 e3f88ff4e). OpasMetrolinja.Siirtotila (vain nykyinen nimi + tekijärivi,
    ristiin merkin tahdissa, paino ei vaihdu, reunarivit häivyttäen, AsemanRivi-asettelukorjaus MuseoTaulu.PaivitaSiirros, Asetu alussa),
    perillä ristiin nimikyltin kanssa SiirtoRistiS 0,6 s, vaalean salin sävy color-siirtymällä. Ydin/Museo/SiirtokarttaRisti.cs + testit
-   (Linssit-testit 2180/2180, tarkista.sh puhdas). → Uusi sessio: varmista NS:ltä, että se on runkoon menossa; ei muuta työtä.
-3. JUOKSUPELIN KUVATEKSTI PIDOSSA (PT: runkoon vasta yhdessä PK:n valmiin avauserän kanssa): natiivi-ui/juoksu-kuvateksti-208
+   (Linssit-testit 2180/2180, tarkista.sh puhdas). NS 17.4x: vastaanotettu, yhdistyy puhtaasti e3cff21f6:n päälle, odottaa PT:n OK:ta
+   seuraavaan kokoamiseen. → Uusi sessio: ei toimia, ellei NS kysy.
+3. JUOKSUPELIN KUVATEKSTI RUNGOSSA (NS 17.4x: e3cff21f6, PT:n kiire-OK iPhonelle): natiivi-ui/juoksu-kuvateksti-208
    3cf7887fa (sisältää merge pelikoodari/avaus-208 088f99027). UI/Pelit/JuoksuKuvateksti.cs kuuntelee JuoksuAvaus.Tapahtui
    (LentoAlkaa esiin, KuvatekstiPois ulos, OhjausPelaajalle varmistus), teksti "Peking, kesä 1914 · Kielletty kaupunki" (omistaja 17.23),
    pohja mk-astroavaus__otsikko/__nimi + Latauskuva.Luettava, QA "ui juoksukuvateksti [pito|pois]". Näkyy vasta kun PK:n pelikytkentä
