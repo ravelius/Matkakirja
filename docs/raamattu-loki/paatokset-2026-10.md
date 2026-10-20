@@ -2016,3 +2016,7 @@ avaa metrokartan vasempaan yläkulmaan iPad + iPhone). Seinäkyltin napautus ava
 (KuunteleNappi pois); tekstitys virke kerrallaan omalla kaistaleella taulun alla, ei kuvan päällä; museon ☰:n Tekstitys-rivi pois. Museo 208, muut linssit 208 jos ehtii, muuten seuraavaan.
 - 09.47 "Julkaisi juna vasta kun minä sanon." → 208 ei lukitu palatsin valmistuttua; lukitus ja TF vain omistajan pyynnöstä (vahvistaa voimassa olevan linjan). PT → KK "208 valmis julkaistavaksi", KK
 kertoo omistajalle.
+
+## PAATOKSET 20.10.2026 klo 10.36–11.04: Louvren valo (20.10.2026 klo 11.05)
+
+Omistaja 10.36: "kehyksestä ei tule mitään varjoa seinälle, pitäisi tulla jotta ei näytä leijuvalta. ehkä vaatii sen valon mikä oli hämäävän neliömäinen. jos se valo olisi hieman pehmeämmällä siirtymällä valosta varjoon niin se toimisi. tosin haluan nähdä ensin alkuperäisen kuvan jotta näen miten valo on rakennettu louvressa." Omistaja 11.04 (kortti KK:ssa oikeiden Louvren kuvien jälkeen): "Pehmeä kohdevalo" – taulun ympärillä oleva kohdevalo jää, reuna liukuu pehmeästi varjoon ilman näkyvää rajaa, ja kehys heittää seinälle pehmeän varjon alas; tummat salit samoin. Hylätty: "Kuten oikeassa" (kattoikkunavalo ilman kehiä). Toteutus VS louvre-varjo-208 (juna 208).
