@@ -95,3 +95,15 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   teki jo (natiivi-ui/juoksu-valikko-209 2c2f0e7db), tarkista vain JuoksuTulos.Matkalta. 4 lentopeli WASD/nuolet = proto-haara
   pelikoodari/lento-wasd 69d50488b (worktree wt/proto-pelikoodari-lento-wasd; Lentopeli.NappainSauva + testi; NS:lle junaan). 5 raskas
   kohta 34 ms → 14 ms: kysytty Valosepältä kohta ja mittaustapa (iso iPad).
+- 01.0x–02.4x (21.10., yöjono + tavoiteluuppi Lavastajan ja VS:n kanssa): kärki pelikoodari/nakoisyys-209 = a668563cc. Sisältää:
+  taivaanranta ja Puyi ~1/6 (tele 29°, 7/13 m, katse 6 + 0,4 v; mitattu 209j 0,14–0,15 ennen tätä), tunnelin suu ja portin alla
+  kamera (PorttiEnnakko 6 m, laaja kenttä), seinävara (sivusiirto pois muurista), katoton huone ylhäältä (12/3 m), este häivytetään
+  Puyin kohdalla, maan täyte löytää lattiamateriaalin varjostimesta, kuva-ajon lähtö pisimmän suoran suuntaan, porttiloki,
+  posliinin vaihtelu, aanet-v4, muurikate-v2, ulkorengas, tausta-v11 + esto-v5b, avoimet-v10 (MASK-tuki JuoksuMaailma.shaderissa
+  JUOKSU_ALFA). Uusinnat 209h–209k: proto-3d/lokit/todistus-juoksupeli-kuvapari-209?-*; seuraava 209l (skenaario = 209j).
+  Kuvatekstit: kaannos.txt = rungon SHA NS:n korjauksesta 48f7dc22f alkaen (ei enää uudelleenmerkintää).
+- Tausta-v12 EI kytketty: esto −9 660 ruutua (oikeita seiniä lähti), Lavastaja tekee v12b:n; vertaa erokuvalla (TilapainenEstoErot).
+- Lentopeli WASD (proto-haara pelikoodari/lento-wasd 9f7205708 ⊃ 69d50488b, a5ae7a14e testikomento `lentopeli nappain`): simulla
+  todennettu (W nousu 3,00 → 5,47 km, D kaarto 316° → 59°); oikeat näppäimet Macilla kokeilematta. Samassa haarassa kartan
+  galleria-arkki 8 (VS): KeskiLon −45, Stonehengen valli SarjassaPois, ISS-raketti ei maamerkkisoluksi, maamerkit massasäännöllä.
+- 34 ms raskas kohta: vanha; LT 70bb1021c 9,16 ms ja 8d292ac8e juoksu 12,4 ms (raja 14). Seuraa yön lisäysten kasvua.
