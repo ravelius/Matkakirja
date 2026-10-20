@@ -19,6 +19,7 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
   (F −7, H −11, FH 10,3 ms). VS → PK: epäily liike-epäterävyys "Camera and Objects" -liikevektoripassi ja syvyysesipassi; kokeile "Camera Only" + syvyyskopio. PK jatkaa.
 - 17.01 PK siirsi jälkikäsittelyn VS:lle. QA-valinnat a53817ef2 (linssiseppa2/jalki-gpu-208, f861b6fd3 päällä) → JU laiteappi → LT kierros 3
   ($D/varjot-koko/lt-gpu-komennot-3.txt); kierros 2 vanhalla apilla (-2.txt). Tulokset lt-gpu-tulos-2/3.txt → paras yhdistelmä oletukseksi → PT.
+- 17.02 PK (PT:n päätös): GPU-veto kokonaan PK:lla, VS:n osuus päättyi. a53817ef2 PK:n käytettävissä (QA msaa/skaala/mv/liike). EI TEHTÄVÄÄ VS:lle tässä.
 - TEE: lue LT:n tulos → jos A ≤ 14 ms ja J ilman jäätymistä → PT:lle OK (NS: f861b6fd3 runkoon); jos ei → säädä HeittoK/varjomatka (QA-arvoista)
   tai, jos 60 fps + ei ilmestymisiä + varjot eivät täyty yhtä aikaa, rivi PT:lle (omistajalle valinta videolla).
 
@@ -29,6 +30,7 @@ OMISTAJA 11.45: simu vain uudelle tekniikalle; 15.40-erät ilman simua (testit v
 - Juoksun varjot koko näkymään c8c12fef4 (140 m, 2 kaskadia, häive 100–136 m; ⊃ 41096802e) PT OK → NS; GPU-korjaus yllä.
 
 ## 2. OPIT
+- iPad-laitekäännökset pyydetään suoraan NS:ltä (JU tekee vain simukäännöksiä).
 - Uuden salin kattokeila on 9–14 m taulusta (MuseoValo.KattoKeila): älä rajaa keiloja etäisyydellä < 30 m (spotti k1 ei näkynyt).
 - Laitteen GPU-piikki: katso ensin konsolin "varjoja heittää N" -kasvu ja mikä sen laukaisee, ennen varjo-/valoparametreja.
 - Homebrew-python3:ssa ei numpya: kuva-/atlasskriptit venv-rembg:llä (-I).
