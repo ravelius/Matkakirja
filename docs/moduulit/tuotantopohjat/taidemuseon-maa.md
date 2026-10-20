@@ -10,8 +10,10 @@ ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muu
 Taidemuseon maa = yhden maan oma museo taidemuseo-linssissä (Raamattu, TAIDEMUSEO-LINSSI; vain natiivissa): maan teokset
 seinillä, patsaat huoneissa, opastettu kierros kertojan äänellä tai vapaa kulku, i-kortti ja ympyrät, salien avaukset.
 Ensimmäinen maa on Alankomaat, toinen Ranska (Louvre, Orsay, Marmottan, Rodin); Italia vasta omistajan käskystä.
-Pohja ei kata museon 3D-salia (kartta- ja salityö), ääntä (`kertojan-teksti-ja-aani.md`) eikä pääkaupungin avausta
-(`paakaupungin-avaus.md`).
+**Pohja kattaa koko työn ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** aineisto ja tekstit, salin
+rakentaminen (Lavastaja), valo (Valoseppä), äänet (Äänittäjä), kytkentä (Linssiseppä, Natiivi-UI) ja vienti junaan (Julkaisija).
+Työ alkaa tavoitekuvasta (havainnekuva salista), ja omistaja näkee tavoitekuvan ja valmiin salin pelikuvana rinnakkain KK:n
+kautta ennen junaa. Pääkaupungin avaus on oma pohjansa (`paakaupungin-avaus.md`).
 
 **Rajaus:** maittain, yksi maa kerrallaan. Uusi maa on Euroopassa, kunnes omistaja aloittaa muut maanosat (MUUT MAANOSAT VÄHITELLEN).
 Italian museot: omistajan kortti 14.10. "Mukaan myös Italian museot, Italia pois App Storesta", ajoitus "Ei vielä".
@@ -24,8 +26,9 @@ Sisältökirjuri: aineistoselvitys (salit, teosehdokkaat, kuvalähteet ja riskit
   → PT + omistaja: lähde- ja riskipäätökset (kortti) → teosluettelo (PT: pudotukset)
   → Linssiseppä: teokset.json + sali.json-paikat + huoneet.json → kuvat (Commons PD-Art, ASTC-paketit)
   → Sisältökirjuri: kertojan tekstit (teokset, museon ja salien avaukset), i-kortti (taiteilijat + lyhyt), kohdat.json
-  → riippumaton faktatarkistus → PT → Tekstit-osasto → omistajan rasti
-  → äänet vain luvalla (Äänittäjä) → kytkentä (Linssiseppä / Natiivi-UI) → pariteettitesti → Julkaisija
+  → riippumaton faktatarkistus → PT → KK hyväksyy omistajan puolesta yhtenä eränä
+  → Lavastaja: sali tavoitekuvan mukaan → Valoseppä: valo → äänet vain omistajan kortilla (Äänittäjä)
+  → kytkentä (Linssiseppä / Natiivi-UI) → pariteettitesti → tavoitekuva ja pelikuva rinnakkain omistajalle → Julkaisija
 ```
 
 | Vaihe | Rooli | Tulos |
@@ -33,7 +36,7 @@ Sisältökirjuri: aineistoselvitys (salit, teosehdokkaat, kuvalähteet ja riskit
 | 0. Selvitys | Sisältökirjuri (Sonnet-tutkijat) | `docs/raportit/taidemuseo-<maa>-aineisto-<pvm>.md` |
 | 1. Päätökset | PT → KK → omistaja | kuvalähteet, riskit, sali- ja teosrajaukset |
 | 2. Teosluettelo ja data | Linssiseppä | `teokset.json`, `sali.json`, `huoneet.json`, `kierros.json`, `veistokset.json` |
-| 3. Kertojan tekstit | Sisältökirjuri | teosten kertojatekstit, museon ja salien avaukset Tekstit-osastoon |
+| 3. Kertojan tekstit | Sisältökirjuri | teosten kertojatekstit, museon ja salien avaukset; KK hyväksyy yhtenä eränä |
 | 4. i-kortti | Sisältökirjuri | `taiteilijat.json`, `kuvat/*.jpg`, `lyhyt-<maa>.json` |
 | 5. Kohdat | Sisältökirjuri | `kohdat-<maa>.json` (luonnos = true) |
 | 6. Tarkistus | tarkistaja-agentti, PT | KORJAA / EPÄVARMA / OK -lista, korjaukset |
@@ -51,12 +54,14 @@ Viestit PT:lle enintään 3 riviä; yksityiskohdat raporttiin. Agentit vain Opus
 2. **Teokset ovat vapaita, kuvan alkuperä ratkaisee.** Teos kelpaa, kun tekijä on kuollut yli 70 vuotta sitten ja teos on
    julkaistu ennen USA:n rajaa (URAA); suojatut tekijät pois (Escher, Mondrian ja Van Doesburg eivät ensimmäiseen erään).
    Museon oma ehto (esim. Louvre, Orsay: ei kaupallista kuvakäyttöä) ja Commonsin PD-Art-kopio ovat eri asia: jäännösriski on
-   sopimusriski, ei tekijänoikeus. Riskin hyväksyy omistaja kortilla ennen latausta; päätös kirjataan Raamattuun.
+   sopimusriski, ei tekijänoikeus. Omistaja on hyväksynyt tämän riskin kaikkien maiden museokuville kuten Ranskassa
+   (20.10.2026 klo 22.53, Raamattu 2.123 MUSEON EHDOT): uutta korttia ei kysytä. Kortti vain uudesta riskityypistä.
 3. **Teosluettelo kokonaisuutena.** Maan teokset koko maasta, Alankomaiden tasolla (noin 60 teosta, maalaukset, grafiikka,
    valokuvat; patsaat omana siipenään). Heikoimmat kuvat ja epäselvät attribuutiot nostetaan PT:lle ennen luetteloa
    (esim. Ranskassa Tepidarium pois, Chicago ja Washington pois).
 4. **Kertojan teksti ja avaukset.** Teoksen kertojateksti on pieni tarina (kuvateksti ja kertoja eivät toista toisiaan);
-   museon ja salien avaukset ovat omia tunnuksia Tekstit-osastossa ("Odottaa hyväksyntääsi"). Kaikki faktat kahdesta
+   museon ja salien avaukset ovat omia tunnuksia. Ne EIVÄT mene omistajan Tekstit-osastoon: KK hyväksyy koko maan
+   museotekstit yhtenä eränä riippumattoman faktatarkistuksen ja PT:n tarkistuksen jälkeen (Raamattu 2.123 MUSEOTEKSTIT). Kaikki faktat kahdesta
    lähteestä; heikko tai yksi lähde → pudotetaan tai "Museon mukaan …" -muotoon.
 5. **i-kortti** (omistaja 16.10. 21.38 ja 21.51; MUOTOKUVARIVI 21.54): taiteilijan pieni pyöreä muotokuva, tekijä ja elinvuodet,
    alla tiedot; teoksen lyhyt = 1–2 faktaa, kumpikin enintään 110 merkkiä, yhteensä enintään 160, ei toistoa kertojasta eikä
@@ -83,7 +88,7 @@ Sisältö-osuus ei ole valmis ennen kuin kaikki kohdat täyttyvät:
 
 - [ ] Aineistoselvitys tehty ja lähde- ja riskipäätökset omistajan kortilla ja Raamatussa.
 - [ ] Teosluettelo PT:n hyväksymä; suojatut tekijät pois; kaikilla teoksilla inventaarinumero ja museon tietue.
-- [ ] Kertojan tekstit, museon ja salien avaukset Tekstit-osastossa ja hyväksytty (luku 5).
+- [ ] Kertojan tekstit, museon ja salien avaukset tarkistettu (riippumaton + PT) ja KK:n hyväksymä yhtenä eränä (luku 5).
 - [ ] `taiteilijat.json`: jokainen `tekija` löytyy avaimena (tarkista koneellisesti `teokset.json`:ta vasten), kuvat 256², lisenssi ja lähde.
 - [ ] `lyhyt-<maa>.json`: jokaiselle teokselle faktat tai tyhjä lista ja syy; tunnukset täsmäävät `teokset.json`:iin.
 - [ ] `kohdat-<maa>.json`: 2–4 ympyrää per teos, pituudet rajoissa, ei toistoa kertojasta, ei alastomuutta.
@@ -91,6 +96,7 @@ Sisältö-osuus ei ole valmis ennen kuin kaikki kohdat täyttyvät:
 - [ ] Puheen merkkimäärä (puhutussa muodossa) ilmoitettu PT:lle; ääniluvat KK:n suoralla rivillä.
 - [ ] Pariteettitesti ajettu (luku 8) ja tulokset kirjattu.
 - [ ] Luovutusraportti: aineistopolut, heikoimmat kohdat, pudotetut väitteet, huomiot Linssisepälle ja Natiivi-UI:lle.
+- [ ] Tavoitekuva ja valmis sali pelikuvana rinnakkain näytetty omistajalle KK:n kautta ennen junaa.
 - [ ] Retrospektiivi kirjattu luvun 10 oppeihin.
 
 ## 4. Poikkeaminen
@@ -101,9 +107,10 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 
 | Sisältö | Hyväksyjä | Perusta |
 |---|---|---|
-| Kuvalähteet, lisenssiriskit, uusi maa tai sali | omistaja (kortti PT:n kautta) | Raamattu, KUVALÄHTEET JA PATSAAT (10.10.), ITALIA (14.10.) |
+| Uusi maa, sali tai uusi riskityyppi | omistaja (kortti PT:n kautta) | Raamattu, KUVALÄHTEET JA PATSAAT (10.10.), ITALIA (14.10.) |
+| Museon ehtojen riski (Commonsissa vapaa, museo kieltää kaupallisen) | hyväksytty kaikille maille | omistaja 20.10. 22.53, Raamattu 2.123 |
 | Teosluettelo, pudotukset | PT | Ranskan luettelo 13.10. |
-| Kertojan tekstit, museon ja salien avaukset | omistaja (Tekstit-osasto, "Odottaa hyväksyntääsi") | ei pysyvää lupaa uusille teksteille |
+| Kertojan tekstit, museon ja salien avaukset | KK omistajan puolesta, yhtenä eränä riippumattoman ja PT:n tarkistuksen jälkeen | omistaja 20.10. 22.53 "sinä hyväksyt", Raamattu 2.123 |
 | i-kortin data, ympyrät | PT riippumattoman tarkistuksen jälkeen | omistajan päätös 16.10. 21.51 (muoto), sisältö PT |
 | Äänet | omistaja (KK:n "OMISTAJAN PÄÄTÖS" -rivi, määrä ja merkkimäärä) | `kertojan-teksti-ja-aani.md` luku 2 |
 | Sääntöjen muutos | PT → omistaja | Raamattu |
@@ -240,6 +247,16 @@ Kertojan äänet museon kohteille. Putki, mallit ja lupa: `kertojan-teksti-ja-aa
 - [ ] Lukutarkistus tehty, lupa KK:n rivillä ja pitää.
 - [ ] Ääni, malli ja `fi` oikein; ääntämysvihjeet tehty; Gemini sokkona ennen omistajaa.
 - [ ] Portti läpi, vienti, manifestirivit kytkijälle ja kuitattu, `mykistetyt` poistettu.
+
+## 9.5 TÄYDENTÄÄ: Natiivi-UI (salin näkymä, i-kortti ja ympyrät pelissä)
+
+*(Natiivi-UI: museon käyttöliittymä natiivissa (i-kortti, ympyrät, kierroksen ohitus ja pysäytys, tekstitys), olemassa olevat
+UI-pohjat, tarkistus iPhonella ja isolla iPadilla, pelikuvat tavoitekuvan rinnalle. Täydentää Natiivi-UI.)*
+
+## 9.6 TÄYDENTÄÄ: Julkaisija (vienti ja juna)
+
+*(Julkaisija: museopaketin vienti (ASTC-kuvat, äänet, data), käännös, simuvuoro ja junaan vienti, tarkistus ennen junaa:
+tavoitekuva ja pelikuva rinnakkain on näytetty. Täydentää Julkaisija.)*
 
 ## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 

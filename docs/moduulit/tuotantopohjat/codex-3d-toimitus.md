@@ -7,6 +7,8 @@ Raamattu ovat ristiriidassa, Raamattu voittaa. Pohjan muutokset hyväksyy PT.)*
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva tilauksen liitteenä; vastaanotossa havainnekuva ja pelikuva täysikokoisina rinnakkain (9.11). Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
+**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
+
 **Portti:** `node tools/codex-3d-tarkistus.mjs <toimituskansio>` — paluuarvo 0 = vastaanotettu, 1 = hylätty (VIRHE-rivit
 kertovat syyn). HUOM-rivit ovat tiedoksi eivätkä hylkää. Codex voi ajaa saman komennon itse ennen toimitusta.
 Kaikki alla oleva, jonka perässä on **[portti]**, tarkistetaan koneellisesti; muut kohdat tarkistaa vastaanottaja.

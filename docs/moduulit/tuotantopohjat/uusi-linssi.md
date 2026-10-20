@@ -6,6 +6,8 @@ MÄÄRITELMÄ ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu vain nykyisten ohjei
 Raamattu ovat ristiriidassa, Raamattu voittaa. Koodin, kameran ja todistuksen osuuden omistaa Linssiseppä; aineisto, kehys,
 tekstit ja ääni täydentävät omat osansa otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
+
 Uusi linssi = oma näkymä pelin karttapallolle tai omaan näyttämöönsä, joka kertoo yhden aiheen ajassa, kartalla tai tilassa
 (linssikatalogin moottorit: aikajana, alue, virta, data, esitysmoottori, pohjakartat; `docs/linssikatalogi.md`; myös
 näyttämölinssit kuten taidemuseo ja elävä opas). Pohja kattaa linssin tavoitteen, aineiston muodon, koodin natiivissa pelissä

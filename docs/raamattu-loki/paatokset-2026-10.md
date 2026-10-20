@@ -2104,3 +2104,12 @@ Omistaja 22.3x: "Tarkoitin ehkä vähän eri asiaa. Eli sitä miten vaikka uusia
 ## PAATOKSET 20.10.2026 klo 22.43: HISTORIAPELIN POHJA KATTAA KOKO PELIN (20.10.2026 klo 22.44)
 
 Omistajan kortit KK:ssa klo 22.43 sanatarkasti. 1) "Kattaako historiapelin pohja koko pelin tekemisen ideasta junaan, eikä vain sisältöä?" → "Koko peli (Suositus)". 2) "Missä järjestyksessä uusi peli tehdään?" → "Tavoitekuva ja harmaa versio ensin (Suositus)" (ensin kohde, hetki ja tavoitekuva; sitten harmaa pelattava versio, pelattavuus kuntoon ennen grafiikkaa; faktat ja tarina rinnalla; näköisyys ja äänet lopuksi). 3) "Missä vaiheissa haluat nähdä uuden pelin ennen junaa?" → "Tavoitekuva (Suositus), Harmaa versio (Suositus), Valmis näköisyys (Suositus)" (havainnekuvat ennen rakentamista; harmaa versio isolla iPadilla, tuntuman hyväksyntä ennen grafiikkaa; pelikuva ja tavoitekuva rinnakkain ennen junaa). Pohja muuttuu sitovaksi ja karttaan vasta, kun täydennetty versio on näytetty omistajalle KK:n kautta.
+
+## PAATOKSET 20.10.2026 klo 22.53: POHJAT, MUSEOKUVAT JA MUSEOTEKSTIT (20.10.2026 klo 22.56)
+
+Omistajan kortti KK:ssa klo 22.53 (sanatarkasti): "Koskeeko historiapelin linja kaikkia pohjia? Pohja kattaa koko työn ideasta junaan, työ alkaa tavoitekuvasta, ja näet tavoitekuvan ja valmiin
+näköisyyden rinnakkain ennen junaa." → "Kyllä, kaikkia (Suositus)"; "Hyväksytäänkö kaikkien maiden museokuvissa sama riski kuin Ranskassa? Kuva on Commonsissa vapaa, mutta museon omat ehdot kieltävät
+kaupallisen käytön." → "Kyllä, kuten Ranskassa (Suositus)"; "Hyväksytkö uuden maan museotekstit kerralla yhtenä eränä?" → "sinä hyväksyt" (museotekstit eivät mene omistajan Tekstit-osastoon; KK
+hyväksyy omistajan puolesta riippumattoman ja PT:n tarkistuksen jälkeen; äänten generointi edelleen omistajan kortilla määrineen). Lisäksi 22.38 "Kyllä, nyt": taidemuseon pohjaan salin rakentaminen,
+valo ja äänet; Valosepän, Julkaisijan ja NUI:n osuudet nyt. Seuraava maa ja Italian aikataulu kysytään vasta uuden maan alkaessa. Tilinvaihdon listaan: kaikki roolitaulukon roolit luotu tai merkitty
+tauolle. Historiapelin kaksi avointa (kokoelmakortti, huutojen venytys) omistajalle vasta kuvan ja ääninäytteen kanssa. Raamattu 4.21, 2.123, 12.23.

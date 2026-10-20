@@ -7,6 +7,8 @@ täydentävät tekijänsä otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muut
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: KAMERA viitevideo tai kuvakäsikirjoitus lennosta ja pysähdyksistä ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
+**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
+
 Kuumailmapallokierros = kaupungin valmis esittelylento: pallo laskeutuu avaukseen, pysähtyy kahdeksalla kohteella, lentää
 niiden välillä ja päättää kierroksen loppuun; kertoja William kertoo ja historiaosiot kuuluvat reitin varrelle. Kierroksen
 päätteeksi Pulu kutsuu vapaaseen lentoon. Pohja kattaa sisällön ja sen tarkistuksen; lennon, kameran, kaupungin 3D:n ja

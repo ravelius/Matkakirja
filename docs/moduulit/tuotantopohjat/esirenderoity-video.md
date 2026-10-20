@@ -10,6 +10,8 @@ ristiriidassa, Raamattu voittaa. Pohjan muutokset hyväksyy PT.)*
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: KULKU A (raketti, valas, uni) pelikuva nykyisestä pelistä simusta, koska video näyttää samalta kuin peli mutta sulavammalta ja tarkemmalta, sekä kuvakäsikirjoitus (luku 5); savulle lyhyt kuvaus (luku 3.2). KULKU B (aarre) hyväksytty mallikuva, jonka valoon ja materiaaleihin videon ruutua verrataan. Molemmissa ÄÄNI mallinäyte ja lyhyt kuvaus, jos videolla on ääniraita (9.11), ja KÄYTTÖLIITTYMÄ kuvakaappaus, johon videon päälle tulevat tekstit, mittarit ja havainnekuva-merkintä on piirretty. Omistajalle tuodaan vain uudet asiat ja makuvalinnat (esim. ensimmäinen kokeilu); muut tavoitteet hyväksyy PT.
 
+**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitekuvasta, ja omistaja näkee tavoitekuvan ja valmiin näköisyyden rinnakkain KK:n kautta ennen junaa.
+
 Pohja kattaa kohtaukset, joissa ei tarvita vuorovaikutusta ja joissa laatu ratkaisee: aarteen löytöhetki, raketin lento ja
 isoisän uni (Raamattu 4.21). Järjestys: Kolme veljestä → raketti → uni; raketti alkaa vasta, kun aarrevideo toimii pelissä.
 Pohja ei kata 3D-mallien tekoa (`codex-3d-toimitus.md`) eikä kertojan tekstiä ja ääntä (`kertojan-teksti-ja-aani.md`).
