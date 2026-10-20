@@ -1,6 +1,6 @@
 # Codexin 3D-toimitus: tilauksesta peliin
 
-*(Lavastaja, entinen Linnanrakentaja, 19.10.2026, PT:n tilaus; korjattu läpikäyntikuntoon 20.10.2026. Omistaja 19.10. klo 08.28:
+*(Lavastaja, entinen Linnanrakentaja, 19.10.2026, PT:n tilaus; korjattu läpikäyntikuntoon 20.10.2026. SITOVA (omistaja 21.10.2026 klo 00.10): jokainen uusi malli tehdään tämän pohjan mukaan, ja opit lisätään pohjaan. Omistaja 19.10. klo 08.28:
 "Pidetään codex kuitenkin kaiken grafiikan työstäjänä … Tee jatkossa kaikki tripo mallit pyytämällä ne codexilta." Codex tekee
 uudet 3D-mallit; Lavastaja vastaanottaa, tarkistaa, viimeistelee ja kokoaa ne kohtauksiksi. Muoto on koottu juoksupelin hahmo- ja
 maailmatoimitusten (18.–19.10.) ja omien mallien vientiportin opeista. Pohja ei tee uusia sääntöjä: jokainen linja on Raamatussa,
@@ -56,6 +56,9 @@ Tilauksessa on:
 - **Mitä tehdään:** mallit nimineen, tyyppi (hahmo, esine, maailman osa), todellinen koko metreinä ja mobiilirajat (luku 6).
 - **Pelin tarpeet:** hahmon animaatioiden nimet (esim. juoksupeli: `run`, `jump`, `slide`, `stumble`), esineen pivot, jos se poikkeaa
   oletuksesta, ja maailman osien yhteinen origo.
+- **LIIKE (pakollinen, omistaja 21.10.2026 klo 00.10):** jokaisesta mallista kerrotaan, liikkuuko se, mitkä liikkeet (esim. `idle`,
+  `walk`, `sit`) ja kuinka paljon. Liikkumaton hahmo toimitetaan ilman luurankoa ja animaatioita, jotta Codex ei tee turhaa työtä.
+  Taidemuseossa yleensä enintään yksi kävijä liikkuu.
 - **Kytkijä ja kohtaus:** kuka kytkee mallin peliin ja mihin kohtaukseen (luku 9).
 - **Luvan tila:** omistajan kortin aika ja hyväksytty määrä (luku 2). Ilman lupaa Tripo-malleja ei generoida.
 - **Referenssikuvien vaatimukset:** hahmoista kuvat edestä, sivulta ja takaa; kädet irti vartalosta, tasainen valo, harmaa tausta;
@@ -100,6 +103,8 @@ Tilauksessa on:
 
 ## 5. Hahmot (luuranko ja animaatiot)
 
+- **Vain liikkuvalle hahmolle** (tilauksen LIIKE, luku 1). Liikkumaton hahmo ilman luurankoa ja animaatioita läpäisee portin, kun
+  tilaus sanoo "ei liikettä" (portin muutos Työkaluseppä, 21.10.2026).
 - **Yksi luuranko**, enintään 150 luuta **[portti]**, Mixamo-nimet etuliitteellä `mixamorig:`. Pakolliset luut **[portti]**:
   `Hips, Spine, Spine1, Spine2, Neck, Head` ja kummallekin puolelle (`Left…`/`Right…`) `Shoulder, Arm, ForeArm, Hand, UpLeg, Leg, Foot, ToeBase`.
   Sormet, `HeadTop_End` ja lisäluut (viitta `cape_*`, kaapu `robe_*`, letti `braid_*`) ovat sallittuja.
@@ -193,17 +198,13 @@ vastaanotossa (älä toimita KTX2:ta).
 
 ## 11. Omistajalle myöhemmin ja epävarmat kohdat
 
-Nämä eivät ole sääntöjä. Ne kootaan PT:lle ja tarvittaessa omistajalle KK:n kautta.
-
-- **Rakennusten poikkeus (epävarma, Raamatun sisäinen ero):** 7.15 sanoo, että poikkeus Tripo-linjasta (esim. kokonaiset rakennukset,
-  kartan maasto) tehdään vain omistajan päätöksellä KK:n kautta, mutta 11.7 sanoo, ettei rakennuksista kysytä poikkeusta. Pohja
-  noudattaa molempia: poikkeusta ei ehdoteta, ja vain omistaja voi sen tehdä. PT selvittää sanamuodon.
-- **Ottomäärän sääntö 3D-malleille (epävarma kirjaus):** OTTOMÄÄRÄ SITOO on Raamatussa ääniluvun (5.2) yhteydessä. Pohja soveltaa
-  sitä Tripo-malleihin omistajan linjan mukaan (määrä kortilla, uusinta = uusi kortti). PT varmistaa, kirjataanko sama lukuun 7 tai 11.
-- **Lyhyt liikevideo päivällä (epävarma):** linja "videot yöllä" koskee pitkiä renderöintejä ja videoita. Onko muutaman sekunnin
-  tarkistusvideo Unityn esikatselusta sallittu päivällä, ei ole Raamatussa. Oletus: odotetaan yötä, jos kone on muussa käytössä.
-- **Tripo Maxin jatko (omistajan päätös):** tilaus on voimassa noin 18.11.2026 asti. Ennen päättymistä KK:lle kerrotaan krediittien
-  tilanne; jatko on uusi osto, joten ehdotusta ei tuoda ennen kuin omistaja itse avaa asian (11.5).
+Ratkaistu 21.10.2026 klo 00.10:
+- **Rakennukset ja maasto:** uudet kokonaiset rakennukset ja kartan maasto tehdään parhaalla tavalla tavoitekuvan mukaan ilman
+  kysymystä; kaikki niiden sisällä ja ympärillä Tripolla (Raamattu 7.15 ja 11.7).
+- **Ottomäärä 3D-malleille:** määrä on omistajan päätös (5.2), ja Tripo-määrä kysytään kortilla; uusinta = uusi lupa.
+- **Lyhyt liikevideo:** muutaman sekunnin tarkistusvideon Unityn esikatselusta saa kuvata päivälläkin, kun omistaja ei käytä Macia;
+  vain pitkät renderöinnit ovat yöllä (4.21, 12.13).
+- **Tripo Max:** tilaus on voimassa noin 18.11.2026 asti. Jatkoa ei tuoda kortille (11.5); krediittitilanne KK:lle hyvissä ajoin.
 
 ## 12. Opit ja retrospektiivi (ensimmäinen ajo 19.10.2026, juoksupeli)
 
