@@ -33,11 +33,14 @@ zsh tyokalut/ennen-junaa.sh                                    # proto-repon juu
 zsh tyokalut/ennen-junaa.sh --loki <todistuskansio> [--loki <toinen>]   # vain tilanteissa a–c
 ```
 
-- **Milloin:** ilman simua ennen kuin työ viedään avoimeen junaan ja kun juna kootaan. Kameratesti (vaihe 2) ajetaan
-  lisäksi jokaisessa käännöksessä. Kuka ajon tekee junan kokoamisessa, on epävarma (PT vahvistaa: Työkaluseppä vai
-  Julkaisija).
+- **Milloin ja kuka (PT 20.10.2026):**
+  - Työn tekijä ajaa sen ilman simua ennen kuin vie työn junaan.
+  - Natiiviseppä ajaa sen ilman simua junan kokoamisessa, kun hän vie työt runkoon.
+  - Yöjunan laitekierroksessa simullinen ajo (`--loki`) kuuluu vakiona kierrokseen (Laitetestaaja tai Natiiviseppä, 9.11).
+  - Kameratesti (vaihe 2) ajetaan lisäksi jokaisessa käännöksessä.
 - Ilman `--loki`-valintaa ajetaan vain simuttomat vaiheet (1, 2 ja botin logiikka). Silloin vaiheet 3 ja 4b ovat
-  EI AJETTU, ja viimeinen rivi on KESKEN. Päiväjunassa tämä on odotettu tulos: vaiheiden 1, 2 ja botin logiikan pitää olla OK.
+  EI AJETTU, ja viimeinen rivi on KESKEN. **Päiväjunassa KESKEN on hyväksytty tulos, kun vaiheet 1, 2 ja botin logiikka
+  ovat OK** (PT 20.10.2026); erillistä "päiväjuna OK" -tulosta ei tarvita.
 - `--udid <UDID> --app <.app> --sha <SHA>` ajaa simuajon itse todistusajo.sh:lla (vain tilanteissa a–c). Oletusskenaario on
   `siirtoseppa-ajot/skenaariot/botti-osat.txt` (proto-3d/tyokalut/), ja lisää voi antaa `--skenaario`-valinnalla. Simuajo
   tarvitsee vuoron Julkaisijalta (SIMULAATTORI NYT).
@@ -111,13 +114,16 @@ se tarvitsee simu- tai laiteajon. Päiväjunassa vaihe on EI AJETTU.
 - Työkaluseppä ylläpitää ennen-junaa.sh:ta, kameratesti.py:tä, nykaysvahti.py:tä, tuontiporttia ja lähtötasoja.
 - Kamerajohtajan koodi on Linssisepän.
 - Bottien logiikka on Projektisepän.
+- ennen-junaa.sh:n ajavat työn tekijä (ennen junaan vientiä) ja Natiiviseppä (junan kokoamisessa); yöjunan simullisen
+  ajon tekee Laitetestaaja tai Natiiviseppä.
 - Simuvuorot jakaa Julkaisija (vain tilanteisiin a–c).
 - Lukitus ja TestFlight: vain omistajan pyynnöstä (PT välittää).
 
 ## Valmiin junan tarkistuslista
 
-- [ ] `zsh tyokalut/ennen-junaa.sh` ilman simua: vaiheet 1, 2 ja botin logiikka OK. Päiväjunassa vaiheet 3 ja 4b
-      EI AJETTU ja tulos KESKEN ovat odotettuja; HYLÄTTY estää junan.
+- [ ] `zsh tyokalut/ennen-junaa.sh` ilman simua (tekijä ennen junaan vientiä, Natiiviseppä junan kokoamisessa): vaiheet
+      1, 2 ja botin logiikka OK. Päiväjunassa KESKEN (vaiheet 3 ja 4b EI AJETTU) on hyväksytty tulos; HYLÄTTY estää junan.
+- [ ] Yöjunan laitekierros: `ennen-junaa.sh --loki` vakiona (Laitetestaaja tai Natiiviseppä).
 - [ ] Codex-vaiheen hylkäykset käsitelty: oikea puute → kooste Codexille PT:n kautta; portin virhe → portti korjattu ja testi lisätty.
 - [ ] Kameratesti läpi ja kattavuuden lähtötaso ei kasvanut (`tyylikirja/kameratesti.json`).
 - [ ] Vain tilanteissa a–c (uusi tekniikka, omistajan pyytämät kuvat, yöjunan laitekierros ja muistiajo):
@@ -138,10 +144,3 @@ se tarvitsee simu- tai laiteajon. Päiväjunassa vaihe on EI AJETTU.
 - **Pelaava botti** kirjaa `botti: pelaa <kohta>[-n] x/y tekoa` eikä `botti: osa` -riviä; raportti luki tyrmän "ei yhteenvetoa",
   vaikka se oli 3/3 LÄPI. Uusi lokimuoto → jäsennys ja testi samaan erään.
 - **Nykäysvahti ilman yhteenvetoja:** pelkkä "0 pitkää ruutua" ei todista mitään; siksi `Nykaysvahti.cs` ja tulos EI TODISTETTU.
-
-## Omistajalle myöhemmin tai epävarma
-
-- Kuka ajaa `ennen-junaa.sh`:n junan kokoamisessa (Työkaluseppä vai Julkaisija): PT vahvistaa.
-- Kuuluuko `ennen-junaa.sh --loki` yöjunan laitekierrokseen vakiona vai vain, kun junassa on uutta tekniikkaa: PT vahvistaa.
-- Skripti raportoi päiväjunan simuttoman ajon KESKEN-tilana; jos halutaan oma "päiväjuna OK" -tulos, se on Työkalusepän
-  erillinen muutos PT:n päätöksellä.
