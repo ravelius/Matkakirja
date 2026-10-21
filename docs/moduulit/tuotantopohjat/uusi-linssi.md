@@ -465,8 +465,10 @@ kohdat seuraavalla vuorollaan ja poistaa merkinnän.
 
 1. **Vientipyyntö valmiista paketista** (`_valmiit/<linssi>-vienti-<pvm>/`, kohdepolku, tiedostomäärä, SHA256SUMS); Julkaisija ei
    kokoa paketteja (11.26). Vienti `vie-paketti.sh`:lla, uusi versio aina uuteen polkuun (`<linssi>/kuvat-vN`).
+   Älä hae julkista polkua ennen Julkaisijan kuittausta: CDN muistaa 404:n tunteja, ja paketti on vietävä uuteen polkuun.
 2. **Käännös ja simu:** käännös vapaalla linjalla `proto-kaanna.sh`:lla; simuvuoro vain uudelle tekniikalle, omistajan pyytämiin
-   kuviin ja yöjunaan (9.1, 9.11). Tekstit, värit ja kehyksen säädöt menevät junaan ilman simua.
+   kuviin ja yöjunaan (9.1, 9.11). Tekstit, värit ja kehyksen säädöt menevät junaan ilman simua. Kun omistaja käyttää Macia,
+   simua ei ajeta (hiljainen tunti, 12.13); käännökset jatkuvat.
 3. **Junaan:** Natiiviseppä kokoaa rungon; Julkaisija tarkistaa ennen TF:ää, että paketit ovat ämpärissä rungon polkuilla ja että
    rinnakkaiskuva on näytetty omistajalle; TF vain merkinnällä "OMISTAJA PYYSI JULKAISUA" (10.1).
 
