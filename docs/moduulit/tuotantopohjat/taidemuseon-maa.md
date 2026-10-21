@@ -268,7 +268,8 @@ sääntöjä. Koodi proto-gitissä: `Linssit/Ydin/Museo/` (MuseoKierros*, MuseoD
    kahta (La Belle Jardinière, kaariteos); kylttien teksti (nimi, tekijä, vuosi) samasta lähteestä kuin nimikyltti, generaattorilla.
 5. **Kierros ja kamera.** Kierros kulkee Kamerajohtajan kautta (`uusi-linssi.md` luku 3): saapuminen, lähestyminen yhtenä jatkuvana
    zoomina kehysten täyttämään lähikuvaan, Auto Zoom ja kertojan kohdat (`kohtazoom.json`), ulosnipistys ja vapaa kulku.
-   Pitkät siirrot mustan alla (siirtokartta), ei pitkää liukua.
+   Teoksesta toiseen lentävä kamera (alla), ei mustia siirtoja; uusi maa saa sen ilman koodia, kunhan `sali.json`:n osat, aukot,
+   esteet ja `henkilot.json` ovat kunnossa.
 6. **Lähestyminen ja äänet.** `lahestyminen.json` + Codexin pysty- ja vaakakuvat; askeläänet ja lähestymisäänet datasta
    (`MuseoMaaTestit.LahestymisAanetDatasta`). Kertojan äänet Äänittäjältä manifestin kautta.
 7. **Pariteettitesti (kohta alla) ja todistus**, sitten Natiivisepälle junaan. Tripo-hahmot (katsojat, kävelijät) tekee Lavastaja;
@@ -297,8 +298,28 @@ vakio-osia, myös Amsterdamin (luvun alun "Museoiden yhteiset osat").
   ämpäri on muuttumaton, joten uusi manifesti = uusi polku, ja peli lukee yhden manifestin (`taidemuseo-askeleet-v6`: parketti,
   marmori, kivi_hiekka, sora; marmori v2b:stä). Kirjaa uuden maan lattiat (`grep '"lattia"' sali.json | sort | uniq -c`) ja ilmoita
   Äänittäjälle ne, joita manifestissa ei ole. Tarkista tiivisteellä, että uusi manifesti ei palauta korjattua näytettä vanhaksi.
+- **Lentävä kamera koko kierrokselle:** `sh Linssit-testit/kaanna.sh MuseoLento` ajaa jokaisen maan koko kierroksen lentäen (iPhone ja
+  iPad): ei mustaa siirtoa, ei seinän, korkean esteen, jalustan eikä paikallaan olevan henkilön läpi (0,8 m), vauhti ja kiihtyvyys
+  rajoissa, saapuminen ilman hyppyä; kävelijät 120 s simulaatiolla vähintään 0,8 m kaaresta (`KavelijatEivatKaarella*`). Uuden maan
+  kävijät otetaan testiin automaattisesti `henkilot.json`:sta.
+- **Saliäänet:** jokaisella osalla ääniluokka tilavuudesta (`MuseoSaliaani`, `MuseoSaliaaniTestit`); uusi maa ei tarvitse omia ääniä.
 - **Tulos** luovutukseen: tiedostot ✓/✗, vakio-osat (penkit, kyltit, kävijät, kalusteet) ✓/✗, kenttien puutteet, lattiat ja niiden
   näytteet, testien määrä.
+
+**Lentävä kamera (omistaja 21.10.2026 00.40, kaikki museot; koodi `Kamera/Lentokaari.cs`, `Museo/MuseoKierros.Lento.cs`):**
+- Yksi kaari Kamerajohtajassa: lähtee levosta, nopeimmillaan puolivälissä, pysähtyy pehmeästi; kaikki akselit (paikka, katse, kuvakulma)
+  samalla etenemällä. Lyhyet lennot ja vierekkäiset taulut: kesto 1,5·√matka, kaari taipuu poispäin seinästä eikä kamera käänny.
+  Salista toiseen: oviaukkojen kautta (1,8 m aukon kummaltakin puolelta), nopeussuunnittelu: suorilla ≤ 9 m/s, mutkassa
+  sivukiihtyvyys ≤ 2,4 m/s², kiihdytys ≤ 2,2 m/s², lähtö ja pysähdys nykäysrajalla; pisin Louvren lento 46 m noin 14 s (omistaja: "nopeampi").
+- Kaari valitaan vaihtoehdoista (ovet → kapeammat → ruudukkoreitin kulmat → ruudukko); ensimmäinen, joka pysyy salissa 0,2 m:n
+  varalla, korkeiden esteiden, jalustojen ja paikallaan olevien henkilöiden (0,8 m) ulkopuolella. Penkit eivät estä (lento niiden yli).
+- Kallistus kaarteessa ≤ 2,5° kokeiluna (QA `museo lento kallistus 0|1`), levossa horisontti suora. Vanha musta siirto ja kävely:
+  `museo lento 0`. Uusi valinta kesken lennon ketjuuntuu; tauko lennetään perille.
+- Kävijät sijoitetaan kaarien ulkopuolelle (Lavastaja): istujat penkeille, seisojat vinosti taulujen viereen (≥ 1,5 m katseluasennoista),
+  kävelijän alue pois oviaukkojen linjoilta.
+- Kävelyn ja lennon lähdön portti (kuva piirtynyt ja vakaa) odottaa enintään 1,5 s todellisella kellolla, sitten kierros lähtee
+  (laitteella odotus oli 19–33 s latausruutujen takia); odotus lokiin "museo: kävely lähtee aikarajalla …". Hitaassa simussa QA
+  `museo portti 0`. Simu ei ole lennon todiste, jos sali piirtyy mustaksi (shader-löydös 21.10.); todiste laiteajosta.
 
 **Kamera ja zoom (opit 20.10. asti):**
 - Pysähdyksen kesto on vähintään `PysahdysMinS` (6 s) ja pitenee kertojan mukaan; Auto Zoom pidentää lyhyttä pysähdystä, jotta
@@ -314,6 +335,7 @@ vakio-osia, myös Amsterdamin (luvun alun "Museoiden yhteiset osat").
 - [ ] `kaanna.sh Museo` ja `tarkista.sh` 0 virhettä; hyppyvartija iPhone + iPad koko kierrokselle.
 - [ ] Kuvat: ruutupyramidi yli 8192 px:n teoksille, ylivalotus mitattu, yksi kehys per teos.
 - [ ] Auto Zoom ja kertojan kohdat testattu pysty ja vaaka, kertojan kanssa ja ilman.
+- [ ] `kaanna.sh MuseoLento` vihreä koko kierrokselle (myös kävijät); kävijäpaikat Lavastajan kanssa kaarien ulkopuolella.
 - [ ] Natiivisepälle haara + sha; todistus vain simusäännön mukaan (omistaja 20.10. 11.45: uusi tekniikka, pyydetyt kuvat tai yöjuna).
 
 ## 9. Äänittäjä
