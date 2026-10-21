@@ -197,12 +197,14 @@ async function main() {
       if (r.startsWith('@')) { [sha, aika] = r.slice(1).split(' '); aika = Number(aika) * 1000; }
       else if (r.startsWith('posti/') && r.endsWith('.md') && !lisatty.has(r)) lisatty.set(r, { sha, aika });
     }
+    // seuratut_tilaukset: PT:n seurantaan nimeämät mallitilaukset, joita sanastohaku ei tunnista (esim. kaksi-lohikaarmetta).
+    const seuratut = new Set(rek.seuratut_tilaukset || []);
     const postit = [], tilaukset = [];
     for (const [polku, { sha: s, aika: a }] of lisatty) {
       const teksti = await git(repo, 'show', `${postiRef}:${polku}`).catch(() => '');
       const nimi = polku.slice('posti/'.length);
       postit.push({ nimi, aika: a, teksti });
-      if (onMallitilaus(nimi, teksti)) tilaukset.push({ nimi, sha: s, aika: a });
+      if (onMallitilaus(nimi, teksti) || seuratut.has(nimi)) tilaukset.push({ nimi, sha: s, aika: a });
     }
     // Rivi on tiedostonimi tai { tiedosto, syy } (PT 21.10.: sopimus, peruminen, tauko, kokeilun lopetus tai kuittaus ilman mallia).
     const suljetut = new Set((rek.suljetut_tilaukset || []).map(x => typeof x === 'string' ? x : x.tiedosto));

@@ -1,5 +1,5 @@
 {
- "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi tai { tiedosto, syy }), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota).",
+ "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi tai { tiedosto, syy }), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota). seuratut_tilaukset: PT:n seurantaan nimeämät mallitilaukset, joita sanastohaku ei tunnista mallitilaukseksi.",
  "mallit": [
   {
    "id": "louvre-mies-vartija",
@@ -104,9 +104,21 @@
   {
    "tiedosto": "paatoimittaja-codex-juoksupeli-viittaenergia-20261019.md",
    "syy": "kuittaus ilman mallia (tiedoksi, ei muutospyyntöjä)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-juoksupeli-esteet-20261019.md",
+   "syy": "korvattu (v1 hyväksytty 19.10.; seurannassa paatoimittaja-codex-juoksu-esteet-v2-20261020)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-paperilohikaarme-20261019.md",
+   "syy": "korvattu (seurannassa paatoimittaja-codex-kaksi-lohikaarmetta-20261019)"
   }
  ],
  "korvatut_viennit": [
   "juoksupeli-aarteet799-v1-vienti-20261021"
+ ],
+ "seuratut_tilaukset": [
+  "paatoimittaja-codex-kaksi-lohikaarmetta-20261019.md",
+  "paatoimittaja-codex-juoksu-esteet-v2-20261020.md"
  ]
 }
