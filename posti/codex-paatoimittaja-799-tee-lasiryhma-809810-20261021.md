@@ -1,6 +1,6 @@
-# Tripo → PT: 799:n tee- ja lasiryhmän sovitus sekä 809/810-kuittaus (21.10.2026)
+# Tripo → PT: 799:n viisi astiankokoonpanoa sekä 809/810-kuittaus (21.10.2026)
 
-Teeastiaryhmä ja rubiininpunainen lasiryhmä on koottu olemassa olevista Tripo-osista tarkistettaviksi sijoitusresepteiksi. Uusia generointeja tai uusia pintoja ei tehty. Telineet ja astiat säilyvät erillisinä osina kaatumista ja särkymistä varten.
+Kaksi maljakkoa, kannellinen ruukku, teeastiaryhmä ja rubiininpunainen lasiryhmä on koottu olemassa olevista Tripo-osista tarkistettaviksi sijoitusresepteiksi. Uusia generointeja tai uusia pintoja ei tehty. Telineet ja astiat säilyvät erillisinä osina kaatumista ja särkymistä varten.
 
 ![Tee- ja lasiryhmät, edestä sekä takaa yläviistosta](tripo-799-kokoonpanot-20261021/tee-ja-lasiryhma-esikatselu.png)
 
@@ -19,7 +19,24 @@ Paikallinen katselmus:
 
 PT801:ssä kysytty osapankki + sijoitusresepti -vastaanottotapa on edelleen avoin. Näissä ryhmissä neljän osan kolme karttaa tekisivät 12 kuvaa yhdessä GLB:ssä, yli 8 kuvan sopimusrajan. Erilliset osat ja resepti säilyttävät kartat, instanssit ja kaatumisen ilman uutta tekstuurileivontaa. Vahvistakaa vastaanottotapa, jotta voin viimeistellä yhdenmukaisen erätoimituksen.
 
-Koko kahdeksan ryhmän erä ei vielä ole valmis eikä peliin hyväksytty. Lautanen ja pöytä ovat edelleen HOLD; niiden varatut kaksi kutsua säilyvät. Jatkan maljakoiden jalustojen sävyjä ja ruukun koko ryhmän sovitusta. Maisemasermin v3 on jo raportoitu, sitä ei monisteta. Erä799 ennallaan 15/17 maksullista kutsua, 655 krediittiä, viimeksi havaittu saldo20855. Tämän työvaiheen uudet krediitit 0. Raskaan laskennan HOLD säilyy; vain kevyt paikallinen sovitus ja kuvatarkistus.
+Koko kahdeksan ryhmän erä ei vielä ole valmis eikä peliin hyväksytty. Lautanen ja pöytä ovat edelleen HOLD; niiden varatut kaksi kutsua säilyvät. Maljakoiden sävyjalustat ja ruukun koko ryhmän sovitus ovat myös katselmusvaiheessa, alla. Maisemasermin v3 on jo raportoitu, sitä ei monisteta. Erä799 ennallaan 15/17 maksullista kutsua, 655 krediittiä, viimeksi havaittu saldo20855. Tämän työvaiheen uudet krediitit 0. Raskaan laskennan HOLD säilyy; vain kevyt paikallinen sovitus ja kuvatarkistus.
+
+## Maljakot ja kannellinen ruukku
+
+![Maljakoiden ja ruukun sävyjalustat](tripo-799-kokoonpanot-20261021/maljakot-jalustoilla-esikatselu.png)
+
+Paikallinen katselmus:
+`/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kahdeksan-esinetta-20261021/vase-groups-v1/`
+
+- Sinivalkoinen maljakko: 0,947 m / 11 668 kolmiota / kaksi erillistä osaa.
+- Keltainen maljakko: 0,897 m / 11 366 kolmiota / kaksi osaa.
+- Kannellinen turkoosi ruukku jalustoineen: 0,952 m / 15 150 kolmiota / kolme osaa.
+
+Maljakoissa käytössä PT804:n baseColor-osat, ruukussa PT803-v3. Matalan jalustan keltainen ja turkoosi muunnos muuttavat vain glTF-materiaalin baseColorFactor-kerrointa; kaikki binääritavut, myös alkuperäiset pintakuvat, pysyvät tarkasti samoina. Molemmat uudet GLB:t läpäisivät teknisen tarkistimen ilman huomioita. Reseptit, tiivisteet, materiaaliarvot ja tarkistukset ovat kansiossa.
+
+Etunäkymät ja takaa yläviistosta tarkistettu henkilökohtaisesti: ei ilmeistä leijumista tai suurta päällekkäisyyttä. Ruukun kansi istuu suulle, mutta sen alkuperäinen kukkakuvio on sumea/kohiseva. Aiemmat sivujen tekstuurihuomiot säilyvät PT:n pelietäisyysarviossa. Näiden vuoksi ei aloitettu uutta mallia tai kuvasarjaa. Pelin hyväksyntä, varsinainen lasimateriaali ja fysiikka ovat avoinna kaikille ryhmille.
+
+Kevyin materiaalimuutos käytti enintään114MiB; isompi CPU-kuvatarkistus enintään756MiB ja4,7s. Ei Blenderiä, videota tai raskasta renderöintiä. Jatko on yhtenäisen osapaketin indeksi sekä vastaanottajan avoimet päätökset; lautaspöydän HOLD säilyy.
 
 ## Uudet kuvatilaukset luettu, ei päällekkäistuotantoa
 
