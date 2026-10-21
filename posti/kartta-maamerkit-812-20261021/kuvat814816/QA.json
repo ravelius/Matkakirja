@@ -1,0 +1,183 @@
+{
+  "taskNumbers": [
+    814,
+    815,
+    816
+  ],
+  "sourceTaskNumber": 812,
+  "at": "2026-10-21T11:39:23.019291+00:00",
+  "personallyViewed": true,
+  "approvedForDelivery": true,
+  "deliveryPurpose": "Three sole candidates to PT then KK for image approval before Tripo",
+  "overall": "TWO_VISUAL_PASSES_ONE_EXPLICIT_ARCADE_ROW_FAILURE",
+  "allSourceRequirementsMet": false,
+  "assets": {
+    "01": {
+      "taskNumber": 814,
+      "file": "01-colosseum.png",
+      "deliverySHA256": "f91cbbe7257fc8a8f84b3f7b6d19cc20bd962136cd312609cba45da6c561a070",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "KKImageAccepted": false,
+      "approvedForTripoStart": false,
+      "nativeBytesUnedited": true,
+      "style": "PASS: simple matte faceted sepia",
+      "view": "PASS: upper three-quarter",
+      "background": "PASS visually: flat light ivory, no visible ground base or ground shadow; patch mean differences under1RGB level",
+      "noTextNoPhotoTexture": "PASS",
+      "backgroundPatchMeans": {
+        "topLeft": [
+          253.634,
+          249.526,
+          230.084
+        ],
+        "topRight": [
+          253.704,
+          249.631,
+          230.392
+        ],
+        "bottomLeft": [
+          253.573,
+          249.423,
+          229.895
+        ],
+        "bottomRight": [
+          253.642,
+          249.602,
+          230.294
+        ],
+        "underObjectCenter": [
+          253.606,
+          249.771,
+          230.314
+        ]
+      },
+      "status": "PARTIAL_SOURCE_MATCH_ARCADE_ROW_FAIL",
+      "halfOuterRingOnly": "PASS: two open ends, missing half absent, no full oval/arena disk",
+      "arcadeRows": {
+        "required": 3,
+        "observed": 2,
+        "solidAtticObserved": true,
+        "status": "FAIL"
+      },
+      "note": "A surviving half-ring was generated under the released corrected source. The defect is missing third arcade level, not use of the superseded full-ring brief. One allowed call is spent; no repair or retry."
+    },
+    "02": {
+      "taskNumber": 815,
+      "file": "02-matterhorn.png",
+      "deliverySHA256": "db55967a56f26e732bc4e367128435b1dc5e91e438813290b22b01d2e882a079",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "KKImageAccepted": false,
+      "approvedForTripoStart": false,
+      "nativeBytesUnedited": true,
+      "style": "PASS: simple matte faceted sepia",
+      "view": "PASS: upper three-quarter",
+      "background": "PASS visually: flat light ivory, no visible ground base or ground shadow; patch mean differences under1RGB level",
+      "noTextNoPhotoTexture": "PASS",
+      "backgroundPatchMeans": {
+        "topLeft": [
+          253.669,
+          248.898,
+          227.281
+        ],
+        "topRight": [
+          253.72,
+          248.922,
+          227.267
+        ],
+        "bottomLeft": [
+          253.629,
+          248.686,
+          226.842
+        ],
+        "bottomRight": [
+          253.638,
+          248.717,
+          227.012
+        ],
+        "underObjectCenter": [
+          253.634,
+          248.815,
+          227.393
+        ]
+      },
+      "status": "PASS_FOR_KK_REVIEW",
+      "singleMountainOnly": "PASS: no boat, water, detached rocks or extra objects",
+      "hookedPeakAndLightSepiaCap": "PASS visually; stylized rather than surveyed mountain",
+      "threeDHeightOrScaleCertified": false
+    },
+    "03": {
+      "taskNumber": 816,
+      "file": "03-kinderdijk.png",
+      "deliverySHA256": "cc7213ac24bfb8529e7468d4b548c90e94d547f10f7998f67fc4eaf25a63d60c",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": true,
+      "KKImageAccepted": false,
+      "approvedForTripoStart": false,
+      "nativeBytesUnedited": true,
+      "style": "PASS: simple matte faceted sepia",
+      "view": "PASS: upper three-quarter",
+      "background": "PASS visually: flat light ivory, no visible ground base or ground shadow; patch mean differences under1RGB level",
+      "noTextNoPhotoTexture": "PASS",
+      "backgroundPatchMeans": {
+        "topLeft": [
+          253.688,
+          249.505,
+          226.84
+        ],
+        "topRight": [
+          253.778,
+          249.62,
+          226.924
+        ],
+        "bottomLeft": [
+          253.643,
+          249.377,
+          226.602
+        ],
+        "bottomRight": [
+          253.676,
+          249.384,
+          226.486
+        ],
+        "underObjectCenter": [
+          253.626,
+          249.546,
+          226.861
+        ]
+      },
+      "status": "PASS_FOR_KK_REVIEW",
+      "fourSails": "PASS: four complete connected arms",
+      "hubLocation": "PASS visually: connected center of cap front, not detached or low on tower",
+      "octagonalBody": "PASS visual faceted intent; no mesh topology claim",
+      "thatchTreatment": "Simplified matte sepia geometry, no photo straw texture",
+      "threeDTopologyOrMaterialCountCertified": false
+    }
+  },
+  "imageCallsIssued": 3,
+  "imageCallsCompleted": 3,
+  "retakes": 0,
+  "retriesAuthorized": false,
+  "callsUnderSupersededFullColosseumBrief": 0,
+  "latestCorrectionsAppliedBeforeFirstCall": true,
+  "KKImageAccepted": false,
+  "TripoCallsHere": 0,
+  "TripoMayStartFromThisReceipt": false,
+  "R2RequiredForImagePhase": false,
+  "physicalMetreScaleAndNorthNotCertified": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

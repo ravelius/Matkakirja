@@ -1,0 +1,60 @@
+{
+  "taskNumbers": [
+    814,
+    815,
+    816
+  ],
+  "sourceTaskNumber": 812,
+  "nativeImageCount": 3,
+  "callsIssued": 3,
+  "retakes": 0,
+  "files": [
+    {
+      "taskNumber": 814,
+      "id": "01",
+      "file": "01-colosseum.png",
+      "mailboxPath": "posti/kartta-maamerkit-812-20261021/01-colosseum.png",
+      "sha256": "f91cbbe7257fc8a8f84b3f7b6d19cc20bd962136cd312609cba45da6c561a070",
+      "bytes": 1199465,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "nativeBytesUnedited": true,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-810e060e-333e-4525-baf7-eb7bd876a381.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-810e060e-333e-4525-baf7-eb7bd876a381.png"
+    },
+    {
+      "taskNumber": 815,
+      "id": "02",
+      "file": "02-matterhorn.png",
+      "mailboxPath": "posti/kartta-maamerkit-812-20261021/02-matterhorn.png",
+      "sha256": "db55967a56f26e732bc4e367128435b1dc5e91e438813290b22b01d2e882a079",
+      "bytes": 1148561,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "nativeBytesUnedited": true,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e9f93a6b-eafb-46c3-a9bd-80eb14c2bdd8.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e9f93a6b-eafb-46c3-a9bd-80eb14c2bdd8.png"
+    },
+    {
+      "taskNumber": 816,
+      "id": "03",
+      "file": "03-kinderdijk.png",
+      "mailboxPath": "posti/kartta-maamerkit-812-20261021/03-kinderdijk.png",
+      "sha256": "cc7213ac24bfb8529e7468d4b548c90e94d547f10f7998f67fc4eaf25a63d60c",
+      "bytes": 1249372,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "nativeBytesUnedited": true,
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4de72126-400e-4fca-af3e-2f933f32550b.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4de72126-400e-4fca-af3e-2f933f32550b.png"
+    }
+  ],
+  "KKImageApprovalRequiredBeforeTripo": true,
+  "TripoCallsHere": 0
+}

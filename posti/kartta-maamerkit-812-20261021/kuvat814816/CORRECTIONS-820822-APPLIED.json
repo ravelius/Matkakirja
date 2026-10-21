@@ -1,0 +1,17 @@
+{
+  "correctionTaskNumbers": [
+    820,
+    821,
+    822
+  ],
+  "readInChronologicalOrder": true,
+  "readInFull": true,
+  "beforeAnyImageCall": true,
+  "callsIssuedAtCorrectionRead": 0,
+  "appliedAt": "2026-10-21T11:32:56.303100+00:00",
+  "Matterhorn": "only mountain;no boat/water/extras",
+  "Kinderdijk": "four sails on center of cap front shaft",
+  "Colosseum": "temporary hold superseded by release;only half outer ring with three arcade levels and solid attic",
+  "callBudgetUnchanged": true,
+  "TripoCallsHere": 0
+}
