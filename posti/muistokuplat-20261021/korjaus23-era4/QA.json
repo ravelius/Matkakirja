@@ -1,0 +1,67 @@
+[
+  {
+    "id": "sivellin",
+    "nativeSHA256": "ee5d34d03b29605312fab2bf6a5361e1336f65754a4efa898f2a8806d6aa69f7",
+    "at": "2026-10-21T15:55:26.089371+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Puyin olan yli paperiin kuvattu ensimmäisten sivellinvetojen harjoitus. Opettajan käsi tukee lapsen otetta/rannetta; lapsen käsi on selvästi pienempi. Siveltimen kärki koskettaa paperia, jäljet ovat erillisiä harjoitusvetoja ilman lisättyä kuvatekstiä. Uusi tiedosto sivellin.jpg; vastaanottajalle erillinen ohje varmistaa ettei sivellin-1.jpg jää käyttöön.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "tuoksupoltin",
+    "nativeSHA256": "31f84244778ab1db7e9986670571469ac81ac0327bb94a6bdd7a17b6f8c60a52",
+    "at": "2026-10-21T15:56:21.866504+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Takaa selkien yli kuvattu buddhalainen rukoussali. Keisarinnaäiti ja Puyi polvillaan, lapsi kääntyy taakse nenä nyrpistettynä. Pieni pronssipoltin alttarilla, savu nousee päivänvaloon. Mittakaava suhteessa henkilöihin uskottava, ei esineen esittelyä ojennetuilla käsillä. Poltin näkyy keskellä hartioiden välissä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "linnunhakki",
+    "nativeSHA256": "8d66ee5937e498b602f853dbaeca510d8c0c63ba145bf55ef89832acd017dd03",
+    "at": "2026-10-21T15:57:14.174039+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Kauempaa vastaanottosalin keskilinjalta kuvattu luovutus. Eurooppalainen herttua ojentaa noin 40 cm kullattua häkkiä isälle, Puyi seisoo isän vieressä. Häkki käsin kannettava ja selvästi vartaloa pienempi, käsien tuenta tarkistettu. Pieni lintu näkyy; sen mekaanista toimintaa yksittäinen valokuva ei todenna.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "lasimaljakko",
+    "nativeSHA256": "e0746565893d8762a416b3a8d1f60226f71ab6eb37e11c879660a47c7a87dce5",
+    "at": "2026-10-21T15:58:08.574060+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Uunin suulta ulospäin kuvattu lasinpuhaltaja, mustakaapuinen jesuiitta seuraa takana. Puhallusputki jatkuu huulilta hehkuvaan lasiin, kädet turvallisesti kaukana kuumasta päästä. Lasipallo on aivan kameran edessä ja siksi perspektiivissä korostunut; tarkkaa fyysistä kokoa ei kuvasta voi varmentaa. Valoisa paja ja luonnollinen pinta, ei lattialla leikkivää lasta.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "zitan-jakkara",
+    "nativeSHA256": "38f24da31f2761cde5d62ecc3a49bdd8dabdfc3620f87d395880cc7a9d96f632",
+    "at": "2026-10-21T16:00:12.287270+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Matala ylöspäin katsova kuvakulma kirjastossa. Puyi kurottaa hyllylle pieneltä polvenkorkuiselta zitan-jakkaralta, avustaja tukee jakkaran reunoja käsillään. Neljä jalkaa, kengät ja tukipinta tarkistettu; kurottava asento ja kantapään kohoaminen näkyvät. Jakkara tavallisen pienen huonekalun mittakaavassa, päivänvalo ja luonnolliset pinnat.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  }
+]

@@ -1,0 +1,257 @@
+[
+  {
+    "order": 19,
+    "taskNumber": 857,
+    "bubbleNumber": 27,
+    "id": "sivellin",
+    "filename": "sivellin.jpg",
+    "oldFilename": "sivellin-1.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/sivellin-1.jpg",
+    "oldOrigin": "existing working-tree file; absent from current branch tree",
+    "oldSHA256": "a2ffc50d929f2d618344835864b3265adc3fc10b18adbe12a8cc7170fb301096",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:55:26.089371+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Puyin olan yli paperiin kuvattu ensimmäisten sivellinvetojen harjoitus. Opettajan käsi tukee lapsen otetta/rannetta; lapsen käsi on selvästi pienempi. Siveltimen kärki koskettaa paperia, jäljet ovat erillisiä harjoitusvetoja ilman lisättyä kuvatekstiä. Uusi tiedosto sivellin.jpg; vastaanottajalle erillinen ohje varmistaa ettei sivellin-1.jpg jää käyttöön.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:54:24.770353+00:00",
+    "issuedAt": "2026-10-21T15:54:24.770526+00:00",
+    "completedAt": "2026-10-21T15:55:08.612799+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/sivellin.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-284d0391-19d5-4aa8-b2b1-84195bd74d30.png",
+    "nativeSHA256": "ee5d34d03b29605312fab2bf6a5361e1336f65754a4efa898f2a8806d6aa69f7",
+    "nativeBytes": 1955809,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/sivellin.jpg",
+    "deliverySHA256": "f3110a2f7d067bd547a2c8c867a0f44dd105338089a72214204300632cde148b",
+    "deliveryBytes": 316637,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 20,
+    "taskNumber": 858,
+    "bubbleNumber": 10,
+    "id": "tuoksupoltin",
+    "filename": "tuoksupoltin.jpg",
+    "oldFilename": "tuoksupoltin.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/tuoksupoltin.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "967bf773b79894e89de20243fbf105e0d4c00ceecf8715d063916806639109b6",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:56:21.866504+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Takaa selkien yli kuvattu buddhalainen rukoussali. Keisarinnaäiti ja Puyi polvillaan, lapsi kääntyy taakse nenä nyrpistettynä. Pieni pronssipoltin alttarilla, savu nousee päivänvaloon. Mittakaava suhteessa henkilöihin uskottava, ei esineen esittelyä ojennetuilla käsillä. Poltin näkyy keskellä hartioiden välissä.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:55:26.322674+00:00",
+    "issuedAt": "2026-10-21T15:55:26.322813+00:00",
+    "completedAt": "2026-10-21T15:56:06.286567+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/tuoksupoltin.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-537b881b-193a-4a2f-83a8-a64e8f634adf.png",
+    "nativeSHA256": "31f84244778ab1db7e9986670571469ac81ac0327bb94a6bdd7a17b6f8c60a52",
+    "nativeBytes": 2428811,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/tuoksupoltin.jpg",
+    "deliverySHA256": "6083ff7550b6dbbd4e8a6f76107ffc9e7528ccc8f74713d1ba2b9f4c945a7690",
+    "deliveryBytes": 480019,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 21,
+    "taskNumber": 859,
+    "bubbleNumber": 31,
+    "id": "linnunhakki",
+    "filename": "linnunhakki.jpg",
+    "oldFilename": "linnunhakki.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/linnunhakki.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "e42a7a44d34a4b7bc0b7d209c34351f21031960566f9e712f858d7ae1ddeae9a",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:57:14.174039+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Kauempaa vastaanottosalin keskilinjalta kuvattu luovutus. Eurooppalainen herttua ojentaa noin 40 cm kullattua häkkiä isälle, Puyi seisoo isän vieressä. Häkki käsin kannettava ja selvästi vartaloa pienempi, käsien tuenta tarkistettu. Pieni lintu näkyy; sen mekaanista toimintaa yksittäinen valokuva ei todenna.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:56:22.094968+00:00",
+    "issuedAt": "2026-10-21T15:56:22.095108+00:00",
+    "completedAt": "2026-10-21T15:56:59.060584+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/linnunhakki.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-dffa2951-7548-4fc4-ace6-1a5c19c1d674.png",
+    "nativeSHA256": "8d66ee5937e498b602f853dbaeca510d8c0c63ba145bf55ef89832acd017dd03",
+    "nativeBytes": 2406980,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/linnunhakki.jpg",
+    "deliverySHA256": "c608dbabcc2f41bb10ac54c593c751903ad55274468766bfe8e6c18bda632982",
+    "deliveryBytes": 449932,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 22,
+    "taskNumber": 860,
+    "bubbleNumber": 24,
+    "id": "lasimaljakko",
+    "filename": "lasimaljakko.jpg",
+    "oldFilename": "lasimaljakko.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/lasimaljakko.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "2fe8ef09d7b80f69203d219495ba4e85a31bcb096770b7e7963a754a9ab1cfe0",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:58:08.574060+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Uunin suulta ulospäin kuvattu lasinpuhaltaja, mustakaapuinen jesuiitta seuraa takana. Puhallusputki jatkuu huulilta hehkuvaan lasiin, kädet turvallisesti kaukana kuumasta päästä. Lasipallo on aivan kameran edessä ja siksi perspektiivissä korostunut; tarkkaa fyysistä kokoa ei kuvasta voi varmentaa. Valoisa paja ja luonnollinen pinta, ei lattialla leikkivää lasta.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:57:14.403250+00:00",
+    "issuedAt": "2026-10-21T15:57:14.403384+00:00",
+    "completedAt": "2026-10-21T15:57:51.123873+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/lasimaljakko.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9214ad10-1fea-47f7-9619-457cf6992bde.png",
+    "nativeSHA256": "e0746565893d8762a416b3a8d1f60226f71ab6eb37e11c879660a47c7a87dce5",
+    "nativeBytes": 2032988,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/lasimaljakko.jpg",
+    "deliverySHA256": "5882c810c50443e0145f2bd2c79aab2a76d21fa43d9ada85688e9bf9595036f3",
+    "deliveryBytes": 357688,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 23,
+    "taskNumber": 861,
+    "bubbleNumber": 36,
+    "id": "zitan-jakkara",
+    "filename": "zitan-jakkara.jpg",
+    "oldFilename": "zitan-jakkara.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/zitan-jakkara.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "d4ffad020cc4164ce4c7bbfc764f7a128c7ff6b7bc8737dcf1f6196584cd4003",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T16:00:12.287270+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Matala ylöspäin katsova kuvakulma kirjastossa. Puyi kurottaa hyllylle pieneltä polvenkorkuiselta zitan-jakkaralta, avustaja tukee jakkaran reunoja käsillään. Neljä jalkaa, kengät ja tukipinta tarkistettu; kurottava asento ja kantapään kohoaminen näkyvät. Jakkara tavallisen pienen huonekalun mittakaavassa, päivänvalo ja luonnolliset pinnat.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:58:08.801107+00:00",
+    "issuedAt": "2026-10-21T15:58:08.801274+00:00",
+    "completedAt": "2026-10-21T15:59:47.361039+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/zitan-jakkara.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c75af5fa-4c2c-4fa5-9337-c60ed38f4dc9.png",
+    "nativeSHA256": "38f24da31f2761cde5d62ecc3a49bdd8dabdfc3620f87d395880cc7a9d96f632",
+    "nativeBytes": 2267765,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/zitan-jakkara.jpg",
+    "deliverySHA256": "7ece3135d9d86d5ff8a7d150e87548a0d97e7514d55cba0d29751ce400829653",
+    "deliveryBytes": 399153,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  }
+]
