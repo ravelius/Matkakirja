@@ -1,6 +1,6 @@
 # Tuotantopohja: kysymys omistajalle
 
-*(LUONNOS 21.10.2026, omistajan pyyntö klo 17.31. Pohjan omistaa Päätoimittaja; KK käy sen omistajan kanssa. Jos tämä ja
+*(SITOVA, omistaja 21.10.2026 klo 17.36 ("Kyllä, sitovaksi"); pyyntö klo 17.31. Pohjan omistaa Päätoimittaja; KK käy sen omistajan kanssa. Jos tämä ja
 Raamattu ovat ristiriidassa, Raamattu voittaa.)*
 
 Jokainen rooli, PT ja KK käyvät tämän läpi ennen kuin kysyvät omistajalta mitään. Tarkoitus: omistajalle tulee vain aito
@@ -8,7 +8,7 @@ päätös, eikä koskaan kysymystä, johon Raamattu, päätösloki tai pohja jo 
 
 ## Tarkista ennen
 
-- AINA: grep päätösloki (`docs/raamattu-loki/`) ja Raamattu aiheen sanoilla; jos vastaus löytyy, toimi sen mukaan äläkä kysy.
+- AINA: hae päätöslokista (`node tools/loki-hae.mjs <hakusana>`) ja Raamatusta aiheen sanoilla; jos vastaus löytyy, toimi sen mukaan äläkä kysy.
 - AINA: avaa aiheen tuotantopohja (`docs/moduulit/tuotantopohjat/`) ja sen "Tarkista ennen" -osio (4.21).
 - AINA: yksi suositus ensin, perustelu 3–4 riviä, ei numeroparametreja eikä A/B-vertailuja (7.27 TAVOITELTU KOKEMUS).
 - AINA: kortti (AskUserQuestion) KK:n kautta; vain pitkät tekstit (huudot, repliikit, käsikirjoitukset) tavallisena viestinä
@@ -25,9 +25,10 @@ päätös, eikä koskaan kysymystä, johon Raamattu, päätösloki tai pohja jo 
 
 ## Putki
 
-1. Kysyjä (rooli) tarkistaa yllä olevan listan ja kirjoittaa KK:lle viestin "KYSYMYS <tunnus>": kysyjä, tilanne, suositus
+1. Kysyjä (rooli) tarkistaa yllä olevan listan ja kirjoittaa PT:lle viestin "KYSYMYS <tunnus>": kysyjä, tilanne, suositus
    ensin, vaihtoehdot, mitä tarkistettiin (pohja ja Raamatun kohdat).
-2. PT ja KK tarkistavat saman listan; jos vastaus löytyy, se palautetaan kysyjälle viittauksella, eikä omistajalta kysytä.
+2. PT tarkistaa saman listan; jos vastaus löytyy, se palautetaan kysyjälle viittauksella. Muuten PT välittää kysymyksen KK:lle,
+   joka tarkistaa listan vielä kerran ennen omistajaa.
 3. KK näyttää kortin (suositus ensimmäisenä) ja palauttaa vastauksen sanatarkasti rivillä "OMISTAJAN PÄÄTÖS klo HH.MM: …".
 4. PT kirjaa päätöksen lokiin (`node tools/raamattu-kirjaa.mjs`) ja, jos sääntö muuttui, Raamattuun ja aiheen pohjan
    "Tarkista ennen" -osioon samassa PR:ssä.
