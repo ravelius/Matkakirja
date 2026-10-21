@@ -1,0 +1,124 @@
+{
+  "at": "2026-10-21T05:49:41.363882+00:00",
+  "taskNumber": 799,
+  "batch": 1,
+  "batchImageCount": 5,
+  "totalRequestedImages": 15,
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuvat-8esinetta-osakuvat-20261021.md",
+    "commit": "54e64edb220c54f32aadc1e44ab2aabda0ae2217",
+    "blob": "215532d87c5454d98711536c687dc5fc329460c2",
+    "sha256": "5297194d69c6427f1f9bbf68e800a7801c68a976c27f4f1a2431e629b0df125c",
+    "readInFull": true,
+    "readAt": "2026-10-21T05:42:12.328853+00:00"
+  },
+  "mode": "builtin-imagegen",
+  "scope797Preserved": true,
+  "TripoCallsIssued": 0,
+  "noPlateTableProduced": true,
+  "items": [
+    {
+      "id": "01-sinivalkoinen-maljakko",
+      "assetNumber": 1,
+      "file": "01-sinivalkoinen-maljakko.png",
+      "sha256": "68900c4095d25ae93e70287c2961defaaf81cceaac2fe04f0243825e61f6e9c4",
+      "bytes": 1860716,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One complete blue-white vase, open mouth and ornate source bands; no stand/lid/text. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "02-keltainen-kurpitsamaljakko",
+      "assetNumber": 2,
+      "file": "02-keltainen-kurpitsamaljakko.png",
+      "sha256": "a9dfd00a0d193c163c6966f5f86c4b5815bb68dd9d3b248ed98d2b2d6ab9f481",
+      "bytes": 1912379,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "Yellow double-gourd vase with turquoise handles and floral motifs; no wooden stand or extra object. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "03-turkoosi-ruukku-runko",
+      "assetNumber": 3,
+      "file": "03-turkoosi-ruukku-runko.png",
+      "sha256": "f3fc2b5dbd3f10b414d9e80a61d24822fa453ab9993202b463a9b4ff9dc4fa49",
+      "bytes": 2295018,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "Open turquoise jar body with bird medallion and source decoration; lid and stand absent. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "04-turkoosi-ruukku-kansi",
+      "assetNumber": 4,
+      "file": "04-turkoosi-ruukku-kansi.png",
+      "sha256": "a7b0cf58c7009df8de098abd68dc860567b8635e77ea72b9a791919f5b3cf82b",
+      "bytes": 1957024,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One detached turquoise floral domed lid with blue-white rim and knob; no body. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "05-matala-puujalusta",
+      "assetNumber": 5,
+      "file": "05-matala-puujalusta.png",
+      "sha256": "5ff8a5759096ae0fd3b937553561adaa2081c4ba5fdc19e3a1e73ae711d53f70",
+      "bytes": 1700897,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One empty low round ivory/blue/gold painted stand with curved feet, matching first source stand; no vessel. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    }
+  ],
+  "producerQAIsNotReceiverOrGameAcceptance": true,
+  "sourceImageCallsIssuedAtPackaging": 15,
+  "sourceImageCallsReturnedAtPackaging": 5
+}

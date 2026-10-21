@@ -1,0 +1,65 @@
+{
+  "mode": "builtin-imagegen",
+  "items": [
+    {
+      "id": "01-sinivalkoinen-maljakko",
+      "assetNumber": 1,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the first tall blue-and-white porcelain vase at the far left. One intact vase alone, remove the separate wooden stand entirely. Keep the elegant flared open mouth, slim neck, rounded long body, cobalt floral vines, ornate blue rim and foot bands on ivory white glaze. No lid, no stand, no platform. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "02-keltainen-kurpitsamaljakko",
+      "assetNumber": 2,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the second yellow double-gourd porcelain vase, entirely separate from its yellow wooden stand. One intact two-bulb gourd vase: round lower bulb, smaller elongated upper bulb, flared open neck, small turquoise curled loop handles near the upper neck. Match golden-yellow glaze, large pink peonies, green leaves, turquoise and thin gold decorative bands. No stand, no lid. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "03-turkoosi-ruukku-runko",
+      "assetNumber": 3,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the body of the third wide round turquoise porcelain lidded jar, WITHOUT its removable lid and WITHOUT its wooden stand. Show an empty open jar mouth with readable rim and thin porcelain walls. Preserve turquoise pink-peony decoration, white oval bird-and-flower medallion at the front, blue-and-white neck and foot bands and thin gold accents. The jar body is one complete object; lid absent. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "04-turkoosi-ruukku-kansi",
+      "assetNumber": 4,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the detachable domed lid belonging to the third turquoise bird-and-flower jar. One lid alone resting naturally on its lower circular lip. Preserve turquoise ground, pink peony floral decoration, blue-and-white circular rim band and the white central knob with cobalt blue motif. Entire circular silhouette and knob visible, no jar body, no stand, no other lid. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "05-matala-puujalusta",
+      "assetNumber": 5,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the low round wooden display stand under the FIRST blue-and-white vase. It is EMPTY. Match ivory-painted wood, thin cobalt-blue and gold trim around the circular top, shallow blue decorative scrolls on the scalloped apron, and four short curved squat feet. Show the complete stand with empty top and all visible leg contacts. No vase, no ceramic vessel, no other furniture. This is one low stand, not a tall table. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    }
+  ]
+}
