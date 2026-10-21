@@ -2203,3 +2203,7 @@ Rikkoutuvat esineet (Codex #792): 'Ensin 6, tasan 12 generointia (Suositus)' –
 ## PAATOKSET 21.10.2026 klo 08.34–08.35 (omistaja, KK:n kautta) (21.10.2026 klo 08.35)
 
 08.34 korttivastaus huudahduksista: 'Eivät kelpaa, ja älä laita jatkossa kysymyskorttina tekstejä. Ne ovat liian pitkiä kysymyskorttia varten.' → tekstit tavallisena viestinä listana, kortit vain lyhyisiin valintoihin (Raamattu 7.27); huudahdukset tehdään uudelleen omistajan kanssa. 08.35: 'Ennen kuin nollaat itsesi, niin tallenna tuo aiempi roolitusohje raamattuun.' → Codexin kaksi sessiota kirjattu 7.15:een (PR #5128).
+
+## PAATOS 21.10.2026 klo 08.45 (omistaja, KK:n kautta) (21.10.2026 klo 08.45)
+
+Codexin ja Tripo 3D:n ehdotuksia (esim. lautaspöytä) ei kysytä omistajalta KK:ssa: omistaja hoitaa ne suoraan Codexin kanssa – 'toimi aina sen mukaan, mikä sieltä tulee viestinä sinulle'. PT toimii Codexin postin mukaan; lautaspöytä odottaa Codexin seuraavaa postia, ei korttia.
