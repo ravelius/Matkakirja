@@ -5,7 +5,8 @@ Omistaja 13.10.2026 klo 08.4x (kortti, "Sonnet, luo nyt"): Asemataululle oma ses
 tarkistaa taulua itse. SPEKSI (ainoa): docs/moduulit/asemataulu.md. Tämä ohje on sen hoitajan osuus; ristiriidassa speksi voittaa.
 
 LÄHDE REPOSSA: tämä tiedosto ja kaikki taulun koodi ovat repossa tools/asemataulu/. TAULU-kansion kopiot syntyvät komennolla
-`python3 -I tools/asemataulu/asemataulu.py`; älä muokkaa niitä käsin (muutos = docs-PR + sama komento).
+`python3 -I tools/asemataulu/asemataulu.py` ja päivittyvät mainista itsestään joka kierroksella (synkka.py, kohta 6); älä muokkaa
+niitä käsin (muutos = docs-PR; käsin muutettu kopio palautuu seuraavalla kierroksella).
 
 - TAULU = /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/. Tämän tilin taulun osoite ja roolien session id:t ovat
   tiedostossa TAULU/nykyinen.json (`taulu`, `idt.paatoimittaja`, `idt.keskustelukanava`, `idt.asemataulu`, …); komento kirjoittaa
@@ -47,6 +48,9 @@ LÄHDE REPOSSA: tämä tiedosto ja kaikki taulun koodi ovat repossa tools/asemat
    jokaisessa kirjoituksessa. Ristiriidassa lue uudelleen ja yritä kerran. PT:n dokumentit viedään synkalla JOKA kierroksella myös
    ilman Boostia: älä jätä niitä viemättä sillä perusteella, että PT kirjoittaa ne itse (20.10.: taulu näytti työlistan 22.39, tiedosto
    oli 23.07). Synkka ajaa työlistavahdin; rivit `TYOLISTA …` → yksi viesti PT:lle (speksi, TYÖLISTAVAHTI).
+   Synkka päivittää ensin TAULU:n koodin ja tämän ohjeen mainista (speksi luku 2, KIERROS): `PÄIVITETTY|…` ei toimia;
+   `OHJE PÄIVITETTY|…` → lue tämä tiedosto uudelleen ennen seuraavaa kierrosta ja toimi uuden ohjeen mukaan; `NYKYINEN MUUTTUI|…` →
+   lue TAULU/nykyinen.json uudelleen (id:t vaihtuivat, viestit uusiin id:ihin); `PUUTE|…` → yksi rivi PT:lle.
 
 ## B. SISÄLLÖN TARKISTUS (vain Boostin aikana, osa A-kierrosta)
 1. Aja `python3 -I TAULU/tarkista-junat.py --kansio TAULU/data/talo --tf-lokit /Users/Shared/Claude/julkaisija-tyokalut`

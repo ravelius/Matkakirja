@@ -7,7 +7,8 @@ docs/raamattu-loki/paatokset-2026-09.md ja -2026-10.md, otsikot "ASEMATAULU: …
 SPEKSI (19.10.)" ja "ASEMATAULU TARKENNUS: LUKITUN JUNAN RIVI").
 
 Ylläpitäjä: Päätoimittaja. Jokainen sivun, skriptin, ohjeen tai tietomuodon muutos tehdään docs-PR:llä kansioon tools/asemataulu/ ja
-tähän speksiin samana päivänä, ja työkansio päivitetään sen jälkeen komennolla (luku 2).
+tähän speksiin samana päivänä. Työkansio päivittyy mergen jälkeen itsestään seuraavalla 5 min kierroksella (luku 2, KIERROS);
+kenenkään ei tarvitse muistaa ajaa komentoa.
 
 ## 1. Tiedostot: koodi repossa, tila työkansiossa
 
@@ -15,7 +16,7 @@ Työkansio TAULU = `/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/
 
 | Laji | Missä totuus | Tiedostot | Kuka muuttaa |
 |---|---|---|---|
-| KOODI JA OHJE | repo `tools/asemataulu/` | `asemataulu.html` (TAULU:ssa `asemataulu-julkaisu.html`), `ASEMATAULU-ROOLI.md`, `paivita.py`, `kone.py`, `laitteet.py`, `synkka.py`, `syke.py`, `elevenlabs.py`, `tarkista-junat.py`, `hoitaja/kierros.py` | docs-PR (PT hyväksyy); TAULU:n kopio vain komennolla, ei käsin |
+| KOODI JA OHJE | repo `tools/asemataulu/` | `asemataulu.html` (TAULU:ssa `asemataulu-julkaisu.html`), `ASEMATAULU-ROOLI.md`, `paivita.py`, `kone.py`, `laitteet.py`, `synkka.py`, `syke.py`, `elevenlabs.py`, `tarkista-junat.py`, `tyolistavahti.py`, `asemataulu.py`, `hoitaja/kierros.py` (kaikki kansion koodi; testi valvoo) | docs-PR (PT hyväksyy); TAULU:n kopio vain komennolla tai kierroksella, ei käsin |
 | TILA | TAULU | `data/talo/*.json` (taulun dokumentit), `osoitteet.md`, `nykyinen.json` (komento kirjoittaa), `hoitaja/` (sessiot.json, odottaa.json, roolit.json, mittarit.json, luovutukset), `historia.jsonl`, `vienti/`, `data/talo-arkisto/tyolista-valmiit.jsonl` (arkistoidut valmiit, ei viedä tauluun eikä peiliin) | dokumentin kirjoittaja (luku 3) |
 | PEILI (varmuuskopio) | TAULU → repo | `tools/asemataulu/osoitteet.md`, `tools/asemataulu/data/talo/*.json`: uuden Macin siemen, ei ohje | `tools/tyotavat/peili.sh` |
 
@@ -32,7 +33,8 @@ python3 -I tools/asemataulu/asemataulu.py --tarkista   # ei kirjoita; tilinvaiht
 
 1. KOODI origin/mainista TAULU:un (`PÄIVITETTY|<tiedosto>`).
 2. Puuttuva TILA (data/talo/*.json, osoitteet.md) luodaan repon peilistä; olemassa olevaan ei kosketa.
-3. `nykyinen.json` = `{taulu, idt: {paatoimittaja, keskustelukanava, asemataulu, postivahti, julkaisija, natiiviseppa}, paivitetty}`
+3. `nykyinen.json` = `{taulu, idt: {paatoimittaja, keskustelukanava, asemataulu, postivahti, julkaisija, natiiviseppa}, lahde: {repo, tyopuu}, paivitetty}`
+   (`lahde.repo` = ajavan checkoutin pääkansio, josta kierros hakee mainin; worktree voidaan poistaa)
    osoitekirjasta (rivi "Asemataulu (tämän tilin taulu): <osoite>" ja roolitaulukko). osoitteet.md:ssä täsmälleen yhdellä tilirivillä
    merkintä KÄYTÖSSÄ, ja sen osoite = osoitekirjan osoite.
 4. Tarkistin (luku 10) data/talo:lle ja hoitaja/roolit.json:lle.
@@ -40,6 +42,14 @@ python3 -I tools/asemataulu/asemataulu.py --tarkista   # ei kirjoita; tilinvaiht
    (julkaisu ja batch, luku 9).
 
 Paluukoodi 0 = valmis (`ASEMATAULU VALMIS`), 1 = puutteita (`PUUTE|…`, `VIRHE: …`).
+
+KIERROS (21.10.2026: #5120:n ohje jäi työkansioon 16 tunniksi, koska komento piti muistaa ajaa käsin; tyolistavahti.py puuttui
+kopiolistalta kokonaan): synkka.py ajaa jokaisen viennin alussa työkansion `python3 -I TAULU/asemataulu.py --kierros`, kun kansiossa
+on nykyinen.json. Kierros tekee kohdat 1 ja 3 (koodi ja ohje mainista, `_ennen-repoa/` kuten yllä; nykyinen.json vain, kun taulun
+osoite tai id:t muuttuivat ja osoitekirja on ehjä) ja on hiljainen, kun mikään ei muutu. Siemeniä se ei luo (vanha siemen ei saa
+palata tauluun), eikä se aja tarkistinta (synkka ajaa) eikä kirjoita batchia. Rivit Asemataululle: `PÄIVITETTY|…` ei toimia,
+`OHJE PÄIVITETTY|ASEMATAULU-ROOLI.md|…` lue ohje uudelleen ennen seuraavaa kierrosta, `NYKYINEN MUUTTUI|…` lue nykyinen.json uudelleen,
+`PUUTE|…` yksi rivi PT:lle.
 
 ## 3. Dokumentit ja kirjoittajat (kokoelma talo)
 
