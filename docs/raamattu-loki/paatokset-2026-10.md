@@ -2207,3 +2207,7 @@ Rikkoutuvat esineet (Codex #792): 'Ensin 6, tasan 12 generointia (Suositus)' –
 ## PAATOS 21.10.2026 klo 08.45 (omistaja, KK:n kautta) (21.10.2026 klo 08.45)
 
 Codexin ja Tripo 3D:n ehdotuksia (esim. lautaspöytä) ei kysytä omistajalta KK:ssa: omistaja hoitaa ne suoraan Codexin kanssa – 'toimi aina sen mukaan, mikä sieltä tulee viestinä sinulle'. PT toimii Codexin postin mukaan; lautaspöytä odottaa Codexin seuraavaa postia, ei korttia.
+
+## AANINAYTTEIDEN PROMPTI NAKYVIIN (omistaja 21.10. klo 09.21, KK:n valitys) (21.10.2026 klo 09.23)
+
+Omistajan pysyvä toive sanatarkasti: "näytä ääninäytteiden ohessa niiden koko prompti, jotta näen mitä tunnetageja käytetään". Jokaisen omistajalle menevän ääninäytteen mukana on sen koko prompti tunnetageineen. Raamattu 5.1 loppuun. Samalla päätös: huutojen 03 ja 06 uusinta (ylimääräinen "aa!" pois, [panicked] → [excited]), 2 ottoa, 137 merkkiä; KK välitti suoraan Äänittäjälle; 05 ja 07 hyväksytty.
