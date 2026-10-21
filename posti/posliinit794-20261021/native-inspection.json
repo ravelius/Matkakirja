@@ -1,0 +1,668 @@
+[
+  {
+    "id": "p01-broken",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p01-broken/tripo-original.glb",
+    "sha256": "fca596f4660b587b496551201e5adef9efeb7b2ae633f3f26a95e338b0386f75",
+    "bytes": 2892476,
+    "triangles": 15650,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 643722,
+        "sha256": "e29f4d9a342faa6a4f5db12da7b85d2b008b017e93178fb415f6c9b18913f533"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 275367,
+        "sha256": "13403ab544091402dc77ea85bdbb7e0fc507785376c80e3c9662283a231fb70c"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1487026,
+        "sha256": "aa9e298e1547974afc9591150ea83854918ae4fbe42f85b153cda2d69b4b307f"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 9,
+    "trianglesPerPositionGroup": [
+      3250,
+      3050,
+      2750,
+      1550,
+      1500,
+      1348,
+      874,
+      814,
+      514
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p01-intact",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p01-intact/tripo-original.glb",
+    "sha256": "d199c8bc771a49cbcd2c748bf6b12749ddab8317353b3af94a115afe6cbc6dc5",
+    "bytes": 2262020,
+    "triangles": 15580,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 413748,
+        "sha256": "f599df0a8f6836be98cc5c4c60fae8ef78b7d31432352f20f8a4787fbea02eb1"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 215994,
+        "sha256": "e880a5ccf23c9e97703d03edcf91dc9e0f434c35a43b225721d33d70ca8ac64b"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1156614,
+        "sha256": "eb6cbbae7cf9af2bdb896e7849b6119ccc4f774a1f9aac148fc1605d47dd2a28"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 1,
+    "trianglesPerPositionGroup": [
+      15580
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p02-broken",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p02-broken/tripo-original.glb",
+    "sha256": "05bf0312fee1e724ee567d9c449c053255fabea265cfbcb6ad7333d31d0085ed",
+    "bytes": 2374708,
+    "triangles": 15646,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 497782,
+        "sha256": "87437b6c817f634922f14ebd575ad14085fd0a92a7c030d57d3d0b9eb08d5226"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 350946,
+        "sha256": "3bf8e6ef0b21777775f03aee60f7f043e1c872dc6f6729db4fd6b4bc94f50a59"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1040449,
+        "sha256": "23b9c852d8128507df0a144399eca177aefa3c697981cce74dce3a91ef462ea9"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 8,
+    "trianglesPerPositionGroup": [
+      4882,
+      3452,
+      2772,
+      1772,
+      1362,
+      614,
+      420,
+      372
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p02-intact",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p02-intact/tripo-original.glb",
+    "sha256": "1ba24d59942ba86e7854cd6fc3e2b101afa1b8a9f7bacbb014dd4ae4eb2c67a6",
+    "bytes": 2339760,
+    "triangles": 15442,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 301858,
+        "sha256": "211b72eeae4b656d9c616c5dd4c6d7930db9373a3c239360eac0c0361329a34c"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 223316,
+        "sha256": "615458d8818b631e6a3055f4fd23488812e4e592d70867572d37d4e553730faf"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1345205,
+        "sha256": "f45faa66b30b106ca1292b5a14364ec14e91a5b50b66ebf7a2129de74f39e2a1"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 1,
+    "trianglesPerPositionGroup": [
+      15442
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p03-broken",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p03-broken/tripo-original.glb",
+    "sha256": "9490bfd4fef1c9118c3265697813ba03e18cc3ae373a1f51fb44b41da5f33f31",
+    "bytes": 2395472,
+    "triangles": 15096,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 518387,
+        "sha256": "d67607f9d96dc24e03282cf20a06bd177a4fc56a264b509c631cd10e42fd3aca"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 199720,
+        "sha256": "c51545fd1b694d51b314c94cc48a4da1adf27234ca88bde82c448f36ce4e3c15"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1209112,
+        "sha256": "4bf84ae53bec5c04422a0a50773b46b7fc3da5756f924c3a6c7b7ec6bb2e8768"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 8,
+    "trianglesPerPositionGroup": [
+      2492,
+      2238,
+      2202,
+      1988,
+      1940,
+      1910,
+      1200,
+      1126
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p03-intact",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p03-intact/tripo-original.glb",
+    "sha256": "b819378e45b48ecee2437f558d345ba0aa6020879d1ad856de96c69246bf162b",
+    "bytes": 2234236,
+    "triangles": 14978,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 273642,
+        "sha256": "3c11e0c470b0d8fa32f3a6cae5bacd78b73f75d5e5f5dfd3aee926e6a3b2b8c2"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 207247,
+        "sha256": "4b41d4d5cf4d17b06a02f9ca75861072f37d4d271b84adfc34a0085a8171e3ff"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1285039,
+        "sha256": "2a188456bbd47e71dfc22b32022aa7102fda7119fe2d725d95dfbcf4252f1caa"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 1,
+    "trianglesPerPositionGroup": [
+      14978
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p04-broken",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p04-broken/tripo-original.glb",
+    "sha256": "325dd97cf2673d3b4a6e7e5e159f21624b82c85b13559a123d86d05ccac73694",
+    "bytes": 2193844,
+    "triangles": 15426,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 486703,
+        "sha256": "bef3ee86d87e7795611ba9ee505d6f2dc8e5cca715cadf29de28bad55c83b05b"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 124834,
+        "sha256": "3b07f133030477e57668bfe385094cf39ef5ceb13da23c3e870e6391ce066f36"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1104682,
+        "sha256": "166f99b8ff102f70f3263cb6b472655f2810c695c344f33fc631b647baecf778"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 7,
+    "trianglesPerPositionGroup": [
+      4698,
+      3102,
+      2146,
+      2122,
+      1572,
+      1158,
+      628
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p04-intact",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p04-intact/tripo-original.glb",
+    "sha256": "f25cad15288508e4a59812e3b953c17f77584a4e4f78ac3d041aad5b551b5b24",
+    "bytes": 2723056,
+    "triangles": 15372,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 294361,
+        "sha256": "5a559653af3eab2559f4e9df29db7d9805b4f09defb58acfe5fcb9d7c8a9cbbb"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 188066,
+        "sha256": "9261f10ec7f07f4cb7b4c2caa28a929a0cd303ef4bc96a66d58d26b6f07c2846"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1768163,
+        "sha256": "dcb81cbcc044b6ffa09a47070fbeacddbe1215a004679ad0a27a3f6c4079c0ef"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 1,
+    "trianglesPerPositionGroup": [
+      15372
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p05-broken",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p05-broken/tripo-original.glb",
+    "sha256": "ff5f9092f062c44a1495aa2e04c451706e6823a4a325e59dd89ff130ff7214b5",
+    "bytes": 2912540,
+    "triangles": 15620,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 690785,
+        "sha256": "b97ee485c064572573b8a5ad21d9514f5813eaefeda54d95ca427c3933f2f857"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 255011,
+        "sha256": "31c122c5675201c875d4c813316ac13555630ee91ee738f21b8cf6c489ebffce"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1476983,
+        "sha256": "bb857b7afa15cb83314e3a5258c31688cd9bf5952f45591e5414e5d8f4d1f870"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 9,
+    "trianglesPerPositionGroup": [
+      3368,
+      2348,
+      2312,
+      2108,
+      2038,
+      1570,
+      996,
+      448,
+      432
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p05-intact",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p05-intact/tripo-original.glb",
+    "sha256": "193cc372aaa27681e63e873bd1bdad3de4ab700aeea7755754ee0584ab41a35c",
+    "bytes": 2370000,
+    "triangles": 15472,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 549384,
+        "sha256": "c4eb626074af6c192a66925a623c7a3fe4dcf81d2dcfefd754185ef3739c7a83"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 285910,
+        "sha256": "e8eaca3fccd272a60b093c4b5f95e6b596a641317142249aac6f6ebe2348a14f"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 1058728,
+        "sha256": "470ff060092e322026d24f108d791ab615fe630d7b8c3cef7ce2292a266c7db9"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 1,
+    "trianglesPerPositionGroup": [
+      15472
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p06-broken",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p06-broken/tripo-original.glb",
+    "sha256": "9d8ef7c7d419ea3a41f6c7c1878bfcf49d7b4676d3d82a8c43451abd00d095fe",
+    "bytes": 2099880,
+    "triangles": 15370,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 455392,
+        "sha256": "691017bf1e3904f2186554fe27fbd89a28b09d36894407bcf82fd63e80f398bb"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 218446,
+        "sha256": "7955142ab3d6c40a7db9bc948c9fb616e3701ada8ce45a12a4dde811501e9a48"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 956437,
+        "sha256": "cebe4ae07cbbfcc2e3c3c3d5f9fb2bd16dd22ba505652d49cda4dbb28061af41"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 7,
+    "trianglesPerPositionGroup": [
+      4490,
+      3532,
+      1904,
+      1668,
+      1330,
+      1292,
+      1154
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  },
+  {
+    "id": "p06-intact",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-posliini-794-20261021/native/p06-intact/tripo-original.glb",
+    "sha256": "9d8aa6160f6dc361283b98f773dd513f23b7588c518be2818531e87eac87a2be",
+    "bytes": 1830532,
+    "triangles": 15490,
+    "primitives": 1,
+    "nodes": 1,
+    "skins": 0,
+    "animations": 0,
+    "images": [
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 343400,
+        "sha256": "ae24813d1ad82c772a669920ce7f478b7e6a3ae759c5effdad0522d66ee021de"
+      },
+      {
+        "mime": "image/jpeg",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 218102,
+        "sha256": "760dd83866525e8cee1a9326901c66e0db94295b80d1d78dcaa182131f63f677"
+      },
+      {
+        "mime": "image/png",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 790896,
+        "sha256": "46be791c4221efefee37ffc1f5bd9283e3c1d9aab4a0bd3d00647c786eb52971"
+      }
+    ],
+    "materials": 1,
+    "UV": true,
+    "coincidentPositionTriangleGroups": 1,
+    "trianglesPerPositionGroup": [
+      15490
+    ],
+    "groupingIsReadOnlyAndDoesNotCertifyPhysics": true,
+    "nativeGeometryModified": false,
+    "imagePayloadsModified": false,
+    "realMeterDimensionsVerified": false,
+    "receiverAccepted": false,
+    "gameIntegrationVerified": false
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "commit": "8071bbe3eb6891d41a12452586ac8aec959e586d",
+  "eightObjectGroupsInManifest": 8,
+  "existingPNGFilesVerified": [
+    {
+      "path": "posti/tripo-kahdeksan-esinetta-20261021/bambusermi.png",
+      "bytes": 2189628,
+      "sha256": "832d2660d40da738e79bad2a163d53b4673db683a6b7bb83bc03b7c2d6deeb1c"
+    },
+    {
+      "path": "posti/tripo-kahdeksan-esinetta-20261021/kuusi-lattiaesinetta.png",
+      "bytes": 2385448,
+      "sha256": "66ee69c1a95acc788f5655d04a58a9bef923ac5ce8d4ef6b303dd337c3497d15"
+    },
+    {
+      "path": "posti/tripo-kahdeksan-esinetta-20261021/maisemasermi.png",
+      "bytes": 2648460,
+      "sha256": "4a0dfd259a3069f74d0f56cea74b17d8d4cb1d7bda7a672a988baf00b33c3f7f"
+    }
+  ],
+  "TripoThreadOwnsProduction": true,
+  "duplicatedProductionHere": false,
+  "newMessagesToOtherThreads": 0
+}

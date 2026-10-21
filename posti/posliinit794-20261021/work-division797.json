@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-21T05:37:23.137990+00:00",
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuvat-tyonjako-0832-20261021.md",
+    "commit": "5b0bdeb83d778ae61d1cd3e4e35e99a0f2913a30",
+    "blob": "4c9611c9b5ce8902da0de6c4d25d1136a8c79257",
+    "sha256": "2c6f608e03b241147462ffd08af7b9dac76f96e25e58b677e4d8903116ba08f6",
+    "readInFull": true,
+    "readAt": "2026-10-21T05:37:23.137990+00:00"
+  },
+  "taskNumber": 797,
+  "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+  "threadTitle": "Matkakirjan kuvat",
+  "allowedWork": [
+    "images",
+    "textures",
+    "concept images",
+    "3D model input/reference images"
+  ],
+  "modelProductionAllowed": false,
+  "TripoGenerationAllowed": false,
+  "future3DOwnerThreadId": "01a14ee0-3e23-72b2-82b1-510228c70b7d",
+  "future3DOwnerTitle": "Tripo 3D",
+  "previousOrders791794WereMisroutedByPT": true,
+  "existingModelsAndHistoryPreserved": true,
+  "earlierKeepProductionOwnershipInstructionSupersededForFuture3D": true,
+  "noOtherAutomationWoken": true,
+  "noNewMessagesToOtherThreads": true
+}
