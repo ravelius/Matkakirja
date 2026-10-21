@@ -38,3 +38,6 @@ to 22.10. – ma 26.10. (kortit KK:n kautta).
 - PK: 209r → sitten 21 huoneen jaetut verkot. Lavastaja: muistikevennys PK:n kanssa. LS: Johannes-kuvan odotus, muuten
   jono tyhjä. NUI: odottaa 209r:n hyväksyntää. NS: runko 209 ajan tasalla, muistiajo. JU: esikatselun vienti.
 - Asemataulu: tyolista.json päivitetty 06.06 (juoksupeli, Kielletyn kaupungin laatat).
+
+## LISÄYS 06.1x
+- MUISTIN PÄÄSYY: 21 huonetta ladattiin erikseen, tekstuurit ~5× (~1,3 Gt GPU) → PK 951e747ef (malli kerran, muut kopioina) NS:lle; avoimet-v12 PK kytkee JU:n kuittauksesta. NS:n muistiajo näyttää tuloksen (tavoite ≤ 3,5 Gt).
