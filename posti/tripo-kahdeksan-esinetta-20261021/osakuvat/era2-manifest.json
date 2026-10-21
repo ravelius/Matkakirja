@@ -1,0 +1,124 @@
+{
+  "at": "2026-10-21T05:52:27.432597+00:00",
+  "taskNumber": 799,
+  "batch": 2,
+  "batchImageCount": 5,
+  "totalRequestedImages": 15,
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuvat-8esinetta-osakuvat-20261021.md",
+    "commit": "54e64edb220c54f32aadc1e44ab2aabda0ae2217",
+    "blob": "215532d87c5454d98711536c687dc5fc329460c2",
+    "sha256": "5297194d69c6427f1f9bbf68e800a7801c68a976c27f4f1a2431e629b0df125c",
+    "readInFull": true,
+    "readAt": "2026-10-21T05:42:12.328853+00:00"
+  },
+  "mode": "builtin-imagegen",
+  "scope797Preserved": true,
+  "TripoCallsIssued": 0,
+  "noPlateTableProduced": true,
+  "items": [
+    {
+      "id": "06-sinivalkoinen-lautanen",
+      "assetNumber": 6,
+      "file": "06-sinivalkoinen-lautanen.png",
+      "sha256": "9bb74d9cfd6bb6eda2d08006c2a6f472ea462783ab725936c935f3f4f7279136",
+      "bytes": 2212667,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated scalloped blue-white plate, dragon center and gold rim, full edge visible, no stack or stand. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "07-teekannu-runko",
+      "assetNumber": 7,
+      "file": "07-teekannu-runko.png",
+      "sha256": "b8df1d551ae461b8a1e493f86fc922800f6b6e0458464215a77438ff857eb73a",
+      "bytes": 1882257,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One blue-white teapot body, open mouth, visible handle and spout, lid absent, full silhouette. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "08-teekannu-kansi",
+      "assetNumber": 8,
+      "file": "08-teekannu-kansi.png",
+      "sha256": "b8e09b454027bf3982ebeddbd44d49c00490b39c2189d5891c1359b91688312a",
+      "bytes": 1905879,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One separate blue-white floral domed teapot lid, full knob and lip visible, no body or extra object. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "09-teekuppi",
+      "assetNumber": 9,
+      "file": "09-teekuppi.png",
+      "sha256": "7e9cb127226cb7e4902860a69feeb17d53e151d3d2f731fd2057224cc966d5d2",
+      "bytes": 1796444,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One handleless open blue-white floral cup, complete rim and foot, no saucer or extra object. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "10-kaksitasoinen-puuteline",
+      "assetNumber": 10,
+      "file": "10-kaksitasoinen-puuteline.png",
+      "sha256": "5bb7aa2f605993f19b6ccd563d77b001d7b72a152e362630da6b494bd2374b8f",
+      "bytes": 1792736,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One empty narrow ivory-painted two-tier round wooden stand, blue-gold decoration, four complete curved legs, no vessels. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    }
+  ],
+  "producerQAIsNotReceiverOrGameAcceptance": true,
+  "sourceImageCallsIssuedAtPackaging": 15,
+  "sourceImageCallsReturnedAtPackaging": 15
+}

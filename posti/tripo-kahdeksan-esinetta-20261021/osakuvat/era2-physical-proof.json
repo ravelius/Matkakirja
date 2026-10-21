@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-21T05:52:27.432597+00:00",
+  "taskNumber": 799,
+  "batch": 2,
+  "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/handoffs/batch2/osakuvat799-era2.zip",
+  "zipSHA256": "63774a59e7b4d4aa50d97929713913009cee7d183c3cff3d6a4e2caa1b69a536",
+  "zipBytes": 8593551,
+  "everyZipMemberByteVerified": true,
+  "nativeImagesByteVerified": 5,
+  "TripoCallsIssued": 0,
+  "gameIntegrationVerified": false
+}

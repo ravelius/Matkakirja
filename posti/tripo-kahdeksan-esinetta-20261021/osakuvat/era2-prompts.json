@@ -1,0 +1,65 @@
+{
+  "mode": "builtin-imagegen",
+  "items": [
+    {
+      "id": "06-sinivalkoinen-lautanen",
+      "assetNumber": 6,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY ONE plate from the fourth blue-and-white gold-rimmed plate stack. No stack or other plates. One porcelain dinner plate with a gently scalloped rim, thin gold edge, blue floral border and a single cobalt dragon medallion in the white center, matching the source. It rests flat on its own foot ring; camera elevated enough to clearly see the decorated inner face, still a three-quarter product photo. No supporting display stand or table. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "07-teekannu-runko",
+      "assetNumber": 7,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the teapot BODY from the fifth blue-and-white tea group, WITHOUT its removable lid and WITHOUT its wooden display shelf. One intact round porcelain teapot body with curved spout, integral white loop handle and a clearly open top mouth where the lid fits. Match blue floral branches over white glaze, blue decorative foot band and restrained gold lip accent. No lid anywhere in the scene, no cups, no shelf. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "08-teekannu-kansi",
+      "assetNumber": 8,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the detachable lid of the teapot from the fifth blue-and-white tea group. One shallow domed ivory white porcelain lid with matching cobalt floral motifs and rim bands and its small white-and-blue knob. Show the complete circular edge and knob, naturally resting on the underside lip. No teapot body, no jar lid, no other objects. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "09-teekuppi",
+      "assetNumber": 9,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY ONE handleless porcelain tea cup from the lower shelf in the fifth blue-and-white tea group. One intact small curved open cup with cobalt floral decoration on ivory white glaze, narrow blue foot band and thin gold lip detail, matching the reference. Show the empty interior and entire foot. No second cup, no teapot, no shelf, no saucer. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "10-kaksitasoinen-puuteline",
+      "assetNumber": 10,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the empty two-tier WOODEN display stand from the fifth tea group, with ALL teapot and cups removed. Match the tall narrow ivory-painted wooden structure, two round horizontal shelves, slim long curved legs and splayed feet, delicate blue painted scroll ornament on the arched scalloped upper and lower aprons, thin gold-blue shelf rims. Exactly two shelves, their entire empty surfaces and four supporting legs visible. One piece of furniture, no ceramics, no glass, no extra tier. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    }
+  ]
+}
