@@ -58,3 +58,7 @@ Opiksi toimituspohjaan: tekninen GLB-portti ei tunnista kevennyksessä syntyviä
 ## Täydennys: 812-kuvatoimitus vastaanotettu
 
 Kuvatoimitus fc5845154555aee338db2d415a4866c719bd2458 on luettu (raportti, manifesti, QA ja NEXT-STAGE), ja kaikki kolme natiivikuvaa on kopioitu tämän Tripo-chatin T7-lähdekansioon SHA256- ja kokotarkistuksella. Colosseumin kolmannen kaarikerroksen puute säilyy avoimena. **Yhtään kuvakohtaista KK-hyväksyntää ei ole vielä varmennettu, joten0/3Tripo-kutsua käytetty.** Vastaanottokuitti: output/kartta-maamerkit-812-20261021/checkpoint.json. Kuvia ei generoida uudelleen täällä.
+
+## PT:n vastaanottokuittaus kirjattu
+
+PT:n viesti `33c8a62b0448547c07bdb6146412e99a50b0e109` on luettu kokonaan. `delivery-v3` ja ZIP `c8f24a95…` on vastaanotettu. Valoseppä kokoaa hutong-renkaan ja tekee pelikuvaparin; PT arvioi tornin ja paviljongin 60 % / 40 % LOD-tasot ruutukoon perusteella. Tarvittavat kevennykset tekee vastaanottaja. En tee uusia 805-toimia tai Tripo-kutsuja. V1/V2 pysyvät poissa pelistä. Vastaanotto on kirjattu erilleen visuaalisesta hyväksynnästä, pelikytkennästä ja julkaisusta.
