@@ -120,3 +120,7 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   Kärki pelikoodari/nakoisyys-209 = b890ac258: räystäsvara (209r w1: kamera paviljongin LOD0-räystäässä, peitto LOD2:sta),
   katottomassa huoneessa tele-kenttä pysyy (9/8 m, jyrkkä 11/7 m, peittyessä vanha laaja). Ajamatta simulla (NS:lle runkoon).
   Lentopeli: pelikoodari/lento-wasd 9f7205708, oikeat näppäimet Macilla kokeilematta.
+- 06.3x–07.0x: 209s (4c8a8211f) ja 209t (f8a35626c ⊃ 9ffa86c70) → PT. Kärki pelikoodari/nakoisyys-209 = 9ffa86c70: peittokartta
+  rakennetaan uudelleen LOD1:stä (LOD2:n räystäät 1–2 m kapeampia → w1 kamera räystäässä), portiksi vain läpikulku (massaa
+  molemmilla sivuilla), kallistus kujilla 35 %, kujilla kääntyminen 4/s, huoneessa tele-kenttä (palkin lähellä suoraan ylhäältä).
+  209t: w1/w2/w3/e3/h1/h2 ✓; AVOIN: 40 s kulmassa muurin harmaa kansi oikeassa alakulmassa. Muisti NS f8a35626c 3436 Mt ✓.
