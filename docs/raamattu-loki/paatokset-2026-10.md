@@ -2227,3 +2227,7 @@ Omistaja sanatarkasti: "Anteeksi, ymmärsin tuon dronen väärin. Dronen pitää
 ## NAYTOKSET SUORAAN ISOLLA IPADILLA (omistaja 21.10. klo 09.44, KK:n valitys) (21.10.2026 klo 09.46)
 
 Omistaja sanatarkasti: "Etkö voi näyttää aina suoraan tuossa isossa iPadissa? Olen nyt siis töissä ja voin katsoa siitä. Ei tarvitse nauhoittaa. Olisiko se nopeampi tapa?" Käytäntö: kun omistaja on iPadin ääressä, näytökset ajetaan suoraan isolla iPadilla (kehitysversio + peli-komento.txt devicectlillä), ei nauhoitusta; poissa ollessa (matka 22.–26.10.) nauhoitetaan. Valmiista näytöksestä ilmoitetaan KK:lle.
+
+## JUOKSUPELIN LAHTO JA MAALI (omistaja 21.10. klo 09.58 ja 10.13, KK:n kortit) (21.10.2026 klo 10.14)
+
+09.58: lähtö "Keskeltä pienistä huoneista (Suositus)": keisari lähtee palatsin keskiosan pienten huoneiden kujilta kohti pääporttia, avauslento pääportin suunnasta; aukion laatat tasaisiksi ("aukion omat laatat nousevat hieman joissain kohtaa vaikka pitäisi olla tasaista"). 10.13: maaliksi pääportti kulmatornin tilalle ("Pääportti maaliksi (Suositus)"; nuoli ja maalin näköala portille). Valmiin juoksupelin määritelmän kohta 5: maali on pääportti. Toteutus Pelikoodari.
