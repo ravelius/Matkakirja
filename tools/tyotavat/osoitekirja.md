@@ -17,11 +17,11 @@ Päivitetty: 20.10.2026 klo 18.2x (Päätoimittaja): TILINVAIHTO PÄÄTILILLE TE
 | Pelikoodari | local_ff97a421-a077-48e8-9d56-5c93e55de362 | /Users/Shared/Claude/Matkakirja-pelikoodari | Opus, high | pelilogiikka, ISS, kytkennät |
 | Linssiseppä | local_3017c16c-34f2-42c9-8b3b-fd2eb7f12cbb | /Users/Shared/Claude/Matkakirja-linssiseppa | Opus, high | museot ja opas |
 | Valoseppä (ent. Linssiseppä 2) | local_3b36fe96-0199-4b17-9eb4-46a882ce7399 | /Users/Shared/Claude/Matkakirja-linssiseppa-2 | Opus, high | valo, ilmakehä, materiaalit, avaruuskohtaukset |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | /Users/Shared/Claude/Matkakirja-karttaseppa | Opus, high | kartat, maasto, pallokierrosten kaupungit |
+| Karttaseppä | local_4bd7c316-55bc-423a-9da1-821fdd123cab | /Users/Shared/Claude/Matkakirja-karttaseppa | Opus, high | kartat, maasto, pallokierrosten kaupungit |
 | Lavastaja (ent. Linnanrakentaja) | local_c958bb12-f3e5-431f-a767-874471ee2889 | /Users/Shared/Claude/Matkakirja-linnanrakentaja | Opus, medium | Codexin mallien kokoaminen kohtauksiksi (Louvre, linnan huoneet), museon kehysten pinnat |
-| Projektiseppä (ent. Siirtoseppä) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | /Users/Shared/Claude/Matkakirja-siirtoseppa | Opus, high | yksi projekti alusta loppuun: nyt Olavinlinna (logiikka, botti, Tripo-pilotin kokoaminen) |
+| Projektiseppä (ent. Siirtoseppä) | local_c264506b-dd61-4617-839f-23daf6d0bd5a | /Users/Shared/Claude/Matkakirja-siirtoseppa | Opus, high | yksi projekti alusta loppuun: nyt Olavinlinna (logiikka, botti, Tripo-pilotin kokoaminen) |
 | Työkaluseppä | local_78dcb005-50d8-4361-adff-42534a2df3a1 | /Users/Shared/Claude/Matkakirja-tyokaluseppa | Opus, high | tuotantoputken tarkistukset: Codex-tuontitarkistus, kameratesti, nykäysvahti, botin putki |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | /Users/Shared/Claude/Matkakirja-sisaltokirjuri | Sonnet 5.5, high | tekstit, esittelyt, kerronta |
+| Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | /Users/Shared/Claude/Matkakirja-sisaltokirjuri | Sonnet 5.5, high | tekstit, esittelyt, kerronta |
 | Äänittäjä | local_f8fe7e20-4700-42e5-91a0-f1227310dc0f | /Users/Shared/Claude/Matkakirja-aanittaja | Sonnet 5.5, high | musiikki ja äänet (auto-tila) |
 | Laitetestaaja | local_ede7e965-02ff-40a0-a77d-44f3218ca146 | /Users/Shared/Claude/Matkakirja-laitetestaaja | Sonnet 5.5, high | laitetestit |
 | Postivahti | local_9d643a4e-1709-4f6f-9940-7f10706ff289 | /Users/Shared/Claude/Matkakirja-posti | Sonnet 5.5, medium | mittarit, hälytykset, roolien nollaukset |

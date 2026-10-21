@@ -8,22 +8,21 @@ voittaa ristiriidassa: 2.70 linssien ja 2.201 pelien yhteiset säännöt, 4.1 UI
 ## 0. Periaatteet: mitattavat ja näytettävät
 
 *(Omistaja 21.10.2026 klo 18.16: "Kyllä, mutta täytyy määritellä vielä tarkemmin." Jokainen periaate on luku tai ehto, joka
-mitataan koneellisesti tai näytetään kuvalla. Sarake "Päätös": Raamatun tai tyylikirjan jo päättämä, tai avoin kysymys (K2, K3, K6,
-K7, K9), jonka KK vie omistajalle yksi kerrallaan (vastaus aikaisintaan 26.10.2026); avoimen kohdan suositus on voimassa, kunnes
-omistaja vastaa.)*
+mitataan koneellisesti tai näytetään kuvalla. Sarake "Päätös": Raamatun tai tyylikirjan jo päättämä, tai omistajan
+korttivastaus (K2, K3, K6, K7 ja K9: omistaja 21.10.2026 klo 19.43–19.45, kaikki "Kyllä (Suositus)").)*
 
 | # | Periaate | Mitta | Miten mitataan tai näytetään | Päätös |
 |---|---|---|---|---|
 | P1 | Taustan tummennus kertoo panoksesta | aste 0 selailu: ei tummennusta (kohdekortti, minipopup, paneelit); aste 1 harkinta: kevyt tummennus ja sumennus (varmistukset, `ModaaliTaso`); aste 2 panos: reunoilta kuultava tumma sumennus (tehtäväkortti, aarrepaljastus, kysymys) | merge-pyynnön rivi "Pohja: …, aste n"; kuva kustakin uudesta pinnasta | päätetty (4.9) |
-| P2 | Ohinapautus | paneeli ja nosto sulkeutuvat ohinapautuksesta; valintaa vaativa kortti ei sulkeudu, vaan vain sen napeista | skenaario: `tap` kortin ulkopuolelle → lokista auki/kiinni | avoin K2 |
-| P3 | Kortin korkeus | kortti enintään 86 % turva-alueen korkeudesta; ylimenevä sisältö vierii, napit pysyvät näkyvissä | ui-puu: kortin `worldBound.height` / turva-alueen korkeus ≤ 0,86 iPhone pysty, iPhone vaaka ja iPad | avoin K3 |
+| P2 | Ohinapautus | paneeli ja nosto sulkeutuvat ohinapautuksesta; valintaa vaativa kortti ei sulkeudu, vaan vain sen napeista | skenaario: `tap` kortin ulkopuolelle → lokista auki/kiinni | päätetty (K2, omistaja 21.10. 19.43; 4.10) |
+| P3 | Kortin korkeus | kortti enintään 86 % turva-alueen korkeudesta; ylimenevä sisältö vierii, napit pysyvät näkyvissä | ui-puu: kortin `worldBound.height` / turva-alueen korkeus ≤ 0,86 iPhone pysty, iPhone vaaka ja iPad | päätetty (K3, omistaja 21.10. 19.43) |
 | P4 | Peitto | kortti tai paneeli peittää enintään 45 % ruudusta (`peitto.max`) ja on kohteen vieressä, ei koko leveyden arkkina; poikkeus ISS-kohdevalikko (PYSÄYTYSKUVA) | ui-puu: pinta-ala / ruudun pinta-ala | päätetty (4.4) |
 | P5 | Avaus- ja sulkuajat | avaus 220 ms, sulku 200 ms (avaajan suunnasta kasvaen ja häivyttäen, sulku samaa reittiä), ease-in-out, mikään UI-siirtymä ei yli 250 ms; vähennetty liike = pelkkä häivytys | pohjavahti (USS `transition-duration`), `Tyylikirja.Kesto` koodissa | päätetty (4.14, 4.15) |
 | P6 | Napin koko | tekstinappi 38 pt (`nappi.korkeus`, omistaja 6.10.), kuvakenappi 40 pt (`nappi.ohjaus`); samassa rivissä yksi koko | ui-puu: rivin nappien korkeudet samat | päätetty |
-| P7 | Kosketusala | jokaisen napautettavan osuma-ala vähintään 44 × 44 pt (`nappi.osuma`), myös pienen kuvakkeen | ui-puu: napautettavien `worldBound` ≥ 44 pt kumpaankin suuntaan | avoin K6 |
-| P8 | Reunaväli | nappi tai teksti vähintään 8 pt (`vali.s`) turva-alueen sisäpuolella (vrt. 4.4 UI-SPEKSI "reunus 8 pt") | ui-puu: etäisyys turva-alueen reunaan ≥ 8 pt | avoin K7 |
+| P7 | Kosketusala | jokaisen napautettavan osuma-ala vähintään 44 × 44 pt (`nappi.osuma`), myös pienen kuvakkeen | ui-puu: napautettavien `worldBound` ≥ 44 pt kumpaankin suuntaan | päätetty (K6, omistaja 21.10. 19.43) |
+| P8 | Reunaväli | nappi tai teksti vähintään 8 pt (`vali.s`) turva-alueen sisäpuolella (vrt. 4.4 UI-SPEKSI "reunus 8 pt") | ui-puu: etäisyys turva-alueen reunaan ≥ 8 pt | päätetty (K7, omistaja 21.10. 19.43) |
 | P9 | Kelluvat eivät peitä | Pulu, kuplat ja kertojan kaistale eivät koskaan ole napin tai kortin painikkeiden päällä | ui-puu: kelluvan ja napin `worldBound`-leikkaus = 0 | päätetty (4.1, 2.70) |
-| P10 | Teksti ei leikkaudu | teksti rivittyy tai lista vierii; lyhennys "…" vain kuvarivin nimessä (esim. aikajanan muotokuvat), ei napeissa eikä otsikoissa | ui-puu: tekstin mitattu leveys ≤ elementin leveys; kuva pisimmästä nimestä | avoin K9 |
+| P10 | Teksti ei leikkaudu | teksti rivittyy tai lista vierii; lyhennys "…" vain kuvarivin nimessä (esim. aikajanan muotokuvat), ei napeissa eikä otsikoissa | ui-puu: tekstin mitattu leveys ≤ elementin leveys; kuva pisimmästä nimestä | päätetty (K9, omistaja 21.10. 19.45) |
 | P11 | Sulkeutuminen mukana | kun linssi vaihtuu tai peli loppuu, kaikki sen avaamat ikkunat sulkeutuvat samassa ruudussa ja syötelukko vapautuu | skenaario: avaa ikkuna → `linssi linssi pois` → ui-puussa ei ikkunaa, napautus toimii | päätetty (2.70) |
 | P12 | Poistu | Poistu on aina ☰:n alin rivi; erillistä ✕:ää ei ole | ui-puu: ☰:n viimeinen rivi = Poistu | päätetty (2.70, 2.201) |
 

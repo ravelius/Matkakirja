@@ -2297,3 +2297,29 @@ tilanteesta. Ne pitäisi vielä eritellä ja speksata. Niissä on myös paljon y
 "Kamera voi olla pehmeä ja silti nopea. Tärkeintä on, miten siihen nopeuteen päästään. Kaikki kiihdytykset pitää olla hallittuja." Omistaja: niputetut kysymykset eivät toimi → yksi asia per kysymys
 (7.27). Toteutus: Raamattu 4.21 ja 7.27, tuotannonohjaus.md seitsemän vaihetta; Linssiseppä #5163 (kameratyylit, uusi-linssi ilman pimennysleikkausta), NUI #5162 (UI-periaatteet mitattaviksi, odottaa
 omistajan vastauksia K1–K10).
+
+## PAATOKSET 21.10.2026 klo 19.43-19.45: UI K2, K3, K6, K7, K9 ja D2 (21.10.2026 klo 19.46)
+
+# Omistajan päätökset 21.10.2026 klo 19.43–19.45: UI K2, K3, K6, K7, K9 ja D2 (KK:n kortit, sanatarkasti)
+
+Lähde: NUI:n UI-tekotapa docs/tuotanto/tekotavat/ui.md (P2, P3, P7, P8, P10) ja PT:n D2 (Raamattu 5.3 → 5.27).
+
+OMISTAJAN PÄÄTÖS klo 19.43 (K2, P2 Ohinapautus): kysymys "Käyttöliittymä 1/5: kun peli pyytää valintaa, esimerkiksi varmistusta "Lopetetaanko peli?", kortti ei enää sulkeudu, jos napautat vahingossa
+sen ohi. Valinta tehdään aina kortin omista napeista. Kartan paneelit ja nostot sulkeutuvat edelleen ohi napauttamalla. Otetaanko käyttöön?" → "Kyllä (Suositus)" (muuttaa Raamatun 4.10:tä
+harkintapintojen osalta).
+
+OMISTAJAN PÄÄTÖS klo 19.43 (K3, P3 Kortin korkeus): kysymys "Käyttöliittymä 2/5: kortti ei koskaan kasva koko ruudun korkuiseksi, vaan sen ylä- ja alapuolelle jää aina vähän peliä näkyviin. Pitkä
+teksti vierii kortin sisällä, ja kortin napit, kuten Jatka, pysyvät aina näkyvissä. Otetaanko käyttöön?" → "Kyllä (Suositus)".
+
+OMISTAJAN PÄÄTÖS klo 19.43 (K6, P7 Kosketusala): kysymys "Käyttöliittymä 3/5: jokainen napautettava kohta, myös pieni kuvake kuten ⓘ tai ✕, toimii vähän ohi napautettunakin. Sormelle varattu ala on
+aina vähintään Applen suosittelemaa kokoa, vaikka kuvake näyttää pienemmältä. Otetaanko käyttöön?" → "Kyllä (Suositus)".
+
+OMISTAJAN PÄÄTÖS klo 19.43 (K7, P8 Reunaväli): kysymys "Käyttöliittymä 4/5: napit ja tekstit eivät ole koskaan kiinni ruudun reunassa, kameran lovessa tai pyöristetyssä kulmassa. Niiden ja reunan
+väliin jää aina pieni rako. Otetaanko käyttöön?" → "Kyllä (Suositus)".
+
+OMISTAJAN PÄÄTÖS klo 19.45 (K9, P10 Teksti ei leikkaudu): kysymys "Käyttöliittymä 5/5: napeissa ja otsikoissa teksti näkyy aina kokonaan ja jatkuu tarvittaessa seuraavalle riville. Vain kuvarivien
+nimissä, kuten aikajanan muotokuvien alla, pitkä nimi saa lyhentyä kolmeen pisteeseen. Otetaanko käyttöön?" → "Kyllä (Suositus)".
+
+OMISTAJAN PÄÄTÖS klo 19.45 (D2, Raamattu 5.3 ja 5.27): kysymys "Äänet: kuumailmapallon kokeilussa on vielä vanha lupa tehdä tehosteita tekoälyllä (ElevenLabs), vaikka muualla pelissä tehosteet haetaan
+ammattikirjastoista (Soundly, Sonniss). Perutaanko lupa, jotta kuumailmapallonkin äänet haetaan kirjastoista kuten muualla?" → "Kyllä, lupa pois (Suositus)" (5.3:n ElevenLabs-tehostepoikkeus pois;
+5.27 koskee kaikkia tehosteita).
