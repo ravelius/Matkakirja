@@ -54,3 +54,7 @@ Paikalliset yksisäikeiset LOD-operaatiot kestivät enintään2,62s ja kuluttiva
 - PT805 kuuden kutsun erä on käytetty. Uusia generointeja ei aloiteta tällä tilauksella; vastaanoton havainnot kirjataan erikseen.
 
 Opiksi toimituspohjaan: tekninen GLB-portti ei tunnista kevennyksessä syntyviä reikiä, UV-venymää tai katon muodon rikkoutumista. Vertaa kaikkia LOD-tasoja kuvina ennen toimitusta. Saumakärjet on käsiteltävä ennen pintaa keventävää operaatiota.
+
+## Täydennys: 812-kuvatoimitus vastaanotettu
+
+Kuvatoimitus fc5845154555aee338db2d415a4866c719bd2458 on luettu (raportti, manifesti, QA ja NEXT-STAGE), ja kaikki kolme natiivikuvaa on kopioitu tämän Tripo-chatin T7-lähdekansioon SHA256- ja kokotarkistuksella. Colosseumin kolmannen kaarikerroksen puute säilyy avoimena. **Yhtään kuvakohtaista KK-hyväksyntää ei ole vielä varmennettu, joten0/3Tripo-kutsua käytetty.** Vastaanottokuitti: output/kartta-maamerkit-812-20261021/checkpoint.json. Kuvia ei generoida uudelleen täällä.
