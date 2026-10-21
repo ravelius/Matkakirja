@@ -1,6 +1,6 @@
 # B Tekotavat: kamera ja video
 
-*(Linssiseppä 21.10.2026, studiojako Raamattu 4.21; valaistus ja videon rytmi: Valoseppä täydentää luvun 7. Tuntuma ja
+*(Linssiseppä 21.10.2026, studiojako Raamattu 4.21; valaistus ja videon rytmi: Valoseppä, luku 7. Tuntuma ja
 laatutaso: `docs/tuotanto/suunta/kamera.md`. Luvat ja vaiheet: D. Koodi proto-gitissä; polut alla ovat proton.)*
 
 ## 1. Työkalut
@@ -67,6 +67,54 @@ korkean teoksen täyttö 64 % ja keskikohta 55 % (tilaa nimikyltille ja napeille
 7. **Testin tilavuoto**: staattinen lippu jää testin jälkeen eri arvoon (KavelyV2 21.10.) → palauta aina entinen arvo.
 8. **Koordinaattinapautus skenaariossa** osuu ohi asettelun muuttuessa → käytä QA-komentoa tai `tap-teksti`.
 
-## 7. TÄYDENTÄÄ: Valoseppä (valaistus, rytmi ja leikkaus videossa)
+## 7. Valo, valotus, rytmi ja leikkaus (Valoseppä)
 
-*(Valoseppä kirjoittaa: valo kohtauksissa ja videossa, valotus ja jälkikäsittely, rytmi ja leikkaus.)*
+### 7.1 Valo kohtauksessa
+
+| Osa | Missä | Sääntö |
+|---|---|---|
+| Valon arvot | `Linssit/Ydin/Valo/ValoKohteet.cs` | Kaikki värit, voimat, kulmat ja matkat ovat dataa tässä; varjostimissa ei uusia värivakioita (valovahti; poikkeus vain `// valopoikkeus: syy`) |
+| Valon asetus | `Kartta/Valopohja.cs` (`PeliValo`, `PeliValoPois`) | Yksi suunnattu aurinko kohtauksen kerrokselle, globaalit varjostimille; peli ei kirjoita valoja itse; poistuessa kaikki palautetaan |
+| Profiilit | `Linssit/Ydin/Valo/ValoProfiilit.cs` (`Kartta`, `Ulko`, `Sisa`, `Avaruus`, `Pienois`, `Juoksu`) | HDR, sävykäyrä, lämpötila, saturaatio, kontrasti per kohtaustyyppi; tilakohtaiset erot deltoina (`Valopohja.Saada`), ei omaa Volumea |
+| Valotilat | esim. juoksu: `JuoksuKulta` (kultainen iltapäivä), `JuoksuPaiva` (aurinkoinen päivä) | Uusi tunnelma = uusi datajoukko + QA-kytkin (`ui juoksupeli valo paiva 0\|1`), vanha säilyy A/B-parina |
+| Taivas | panoraama (Codex) tai proseduraalinen | Auringon suunta tulee panoraaman metatiedosta, jotta varjot osuvat kuvan aurinkoon; proseduraalisessa suunta datasta |
+
+Mitoitus: valossa oleva vaalea pinta ≈ voima · sin(korkeus) · albedo + täyte ≲ 1,15 (ilman sävykäyrää ei pala puhki);
+varjon puoli ei saa mustua (pystypinnan täyte ≈ taivaan ja maan heijastuksen keskiarvo ≥ 0,3).
+
+### 7.2 Varjot ja välke (liikkeessä näkyvät virheet)
+
+- **Varjomatka koko näkymään**: mobiilissa kaksi kaskadia (lähi terävä, kauko pehmeä), häivytys kameran etäisyydestä pitkällä
+  matkalla (ei hyppyä). Ylhäältä katsova kamera tarvitsee pidemmän matkan kuin maan tason kamera.
+- **Itsevarjoraidat**: lähes valon suuntaiset pinnat → vastaanottajan normaalisiirto (kasvaa etäisyyden mukana).
+- **Varjokarttaa hienompi heittäjä** (2 cm:n tiilenpäät palkin päällä) → kohde kiinteään varjoon, ei varjokarttaa.
+- **Syvyyskilpailu** (pinta 1–3 cm toisen edessä) näyttää liikkeessä välkkeeltä, pysäytetyssä ruudussa ei → siirrä pintaa
+  kameraa kohti varjostimessa tai korjaa malli.
+- **Tasavarjostettu tiheä lehvästö** → normaalit keskiarvoon ja hieman ylös.
+- **Näkymätön ei heitä varjoa** (häivytetty katto, MASK-alfa myös varjopassissa).
+- **Välkkeen mittari**: jäädytetty ruutu + alipikselin käännös (`ui juoksupeli valo jaady 1`, `katse 0.03`) → kuvapari →
+  `proto-3d/_tyo/linssiseppa2/varina/varina-mittari.py` (jäännös yli 0,06 = välkkyvä pikseli, osuus erikseen vihreille).
+  Vain samasta ruudusta otettu A/B on vertailukelpoinen; botin eri kohdat eivät ole. Laite on lopullinen todiste.
+
+### 7.3 Valotus ja jälkikäsittely
+
+- HDR päällä, valotus kiinteä per profiili (ei automaattivalotusta: kuva ei saa "hengittää" leikkauksen jälkeen).
+- Jälkikäsittely profiilista: lämpötila, saturaatio, kontrasti, hento rae ja vinjetti; bloom vain kirkkaille lähteille.
+- Liike-epäterävyys vain kameran ja kappaleiden liikkeestä (liikevektorit), pääkohde terävänä.
+- Suorituskyky: iso iPad renderöi 0,8-skaalalla ja MSAA 2:lla; jokainen uusi passi mitataan LT:n kanssa ennen peliä.
+
+### 7.4 Rytmi ja leikkaus
+
+1. **Yksi asia per otto**: otto alkaa levosta, liike kantaa yhden syyn (4.23), loppu pysähtyy kohteeseen ≥ 1 s ennen leikkausta.
+2. **Leikkaa liikkeessä tai levossa, ei kiihdytyksen keskellä**; peräkkäiset otot samaan suuntaan (ei hyppyä akselin yli).
+3. **Valon jatkuvuus**: sama aurinko ja profiili koko kohtauksen; valotila vaihtuu vain kohtausten välissä mustan tai
+   ristihäivytyksen (0,3–0,6 s) kautta.
+4. **Teksti käyttöliittymästä**, ei videoon poltettuna (kieliversiot).
+5. **Kohtausvideot tehdään pelistä** (kiinteä askel, pelin omat ruudut), ei generoituna.
+
+### 7.5 Video simulaattorista (vain tarkastukseen)
+
+- Laitesarja on T7:llä: `source proto-3d/tyokalut/simusarja.sh`, sitten `xcrun simctl --set "$MK_SIMSET" io $(mk_kaanna UDID) recordVideo`.
+  Ilman `--set`:iä tulee "Invalid device".
+- Pysäytä nauhoitus `kill -INT`:llä ja odota prosessin loppu; kova lopetus jättää tiedoston vajaaksi (vain alku purkautuu).
+- Simulaattorin video kertoo sisällön, ei laatua: fps ja välke mitataan laitteella.
