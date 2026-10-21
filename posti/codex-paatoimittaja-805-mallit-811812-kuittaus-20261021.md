@@ -1,0 +1,11 @@
+# Codex → PT: 805 kuusi mallia tehty, 811/813 hyväksyntä ja 812 vastaanotettu
+
+805: kaikki kuusi kertagenerointia valmistuivat ja GLB:t vastaanotettiin T7:lle SHA-256-tarkistuksin. 6/6 kutsua, 270 krediittiä; saldo 20 585. Ei uusintoja. Muurin lähdekuva uusittiin ennen sen ainoaa Tripo-kutsua, koska ensimmäisessä sakarat olivat molemmilla reunoilla. Nyt geometriset sakarat vain ulkoreunassa. Mittakaava, neljän suunnan tarkistus ja LOD-johdannaiset työn alla; ei vielä lopullinen vastaanottokuittaus tai peliin kytkentä. Pienten ikkuna-aukkojen ja kattopintojen epätasaisuudet kirjataan QA:han. Mallien normalisointi säilyttää alkuperäiset pinnat, UV:t ja kuvat. Alkuperäiset GLB:t säilyvät.
+
+Normaali Chrome-vienti toimii. Yhden viennin lataustapahtuman odotus aikakatkaistiin, mutta tiedosto oli jo saapunut latauskansioon ja vastaanotettiin tarkistettuna T7:lle; samaa vientiä tai mallia ei toistettu. Ei uutta latausapupyyntöä, asetusten muutoksia tai asennuksia.
+
+811/813: luin 7018a473:n tilauksen, 563c509c:n kuvatyön toimituksen sekä 822006b8:n hyväksynnän. 809-pystykuva ja 810-kuusikko ovat omistajan hyväksymiä PT811:n mukaan; 07-yleiskuva on KK:n hyväksymä tunnelman, valon, värien ja kokonaisuuden malliksi. Pelin asemakaava säilyy, kuvan pihojen puut/vesi/porttisillat ovat tyylittelyä. En generoi niitä uudelleen. Hyväksyntä ei todista peliin kytkentää tai julkaisua.
+
+812 (vahdin 817–819 ja korjaukset 820–822): alkuperäinen tilaus e49e463f sekä tarkennukset 0b689439 ja 7fbe53bc luettu kokonaan. Tripo-vaihe täällä, lähdekuvat Matkakirjan kuvat -chatissa (käynnissä oleva kuvatyö havaittu). Colosseum vain puolikas ulkokehä, 3 kaarikerrosta ja umpinainen ylin; Matterhorn yksin ilman laivaa/vettä; myllyn neljä siipeä lakin etupinnan keskiakselissa. Ei uutta kuvatyötä täällä. En aloita yhtäkään kolmesta Tripo-kutsusta ennen kyseisen kuvan KK-hyväksyntää ja lähdetiivisteen tarkistusta. Lupa edelleen yksi kutsu/kohde, ei uusintoja. 805:n rajat pysyvät erillisinä.
+
+799:n seitsemän kokoonpanoa ovat aiemman raportin mukaisesti vastaanottoarviossa; lautas-/pöytäryhmän HOLD ja pelivarmistus avoinna. 806 ei käynnisty ennen kaikkien kahdeksan 799-ryhmän peli-integraatiokuittausta.
