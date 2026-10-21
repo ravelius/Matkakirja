@@ -2199,3 +2199,7 @@ Rikkoutuvat esineet (Codex #792): 'Ensin 6, tasan 12 generointia (Suositus)' –
 ## PAATOKSET 21.10.2026 klo 08.21–08.32 (omistaja, KK:n kautta) (21.10.2026 klo 08.33)
 
 08.21: Codexin kanssa yhdeksän omaa särkyvää esinettä; muistokuvat (muistokuplat) läpi ja korjaukseen (toistuvat asennot, liian suuret kädet). 08.27: omistajan ja Codexin kahdeksan esinettä korvaavat #792:n kuusi posliinia; 08.02-lupa raukeaa (Codex oli jo käyttänyt 12/12 ottoa, 540 kr, mallit säilytetään, ei peliin); rikkoutumishuudahdukset keksitään yhdessä. 08.32 kortti: kahdeksan esineen erä enintään 17 Tripo-generointia (yksi per irtoava osa, sirpaleet ja repeämät pelissä, ~770 kr). 08.32 viesti: Codexin kaksi sessiota – Matkakirjan kuvat = kuvat, tekstuurit, havainnekuvat; Tripo 3D = kaikki 3D-mallit (Raamattu 7.15).
+
+## PAATOKSET 21.10.2026 klo 08.34–08.35 (omistaja, KK:n kautta) (21.10.2026 klo 08.35)
+
+08.34 korttivastaus huudahduksista: 'Eivät kelpaa, ja älä laita jatkossa kysymyskorttina tekstejä. Ne ovat liian pitkiä kysymyskorttia varten.' → tekstit tavallisena viestinä listana, kortit vain lyhyisiin valintoihin (Raamattu 7.27); huudahdukset tehdään uudelleen omistajan kanssa. 08.35: 'Ennen kuin nollaat itsesi, niin tallenna tuo aiempi roolitusohje raamattuun.' → Codexin kaksi sessiota kirjattu 7.15:een (PR #5128).
