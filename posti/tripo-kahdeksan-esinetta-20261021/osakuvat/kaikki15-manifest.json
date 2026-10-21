@@ -1,0 +1,376 @@
+{
+  "at": "2026-10-21T05:54:55.772892+00:00",
+  "taskNumber": 799,
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuvat-8esinetta-osakuvat-20261021.md",
+    "commit": "54e64edb220c54f32aadc1e44ab2aabda0ae2217",
+    "blob": "215532d87c5454d98711536c687dc5fc329460c2",
+    "sha256": "5297194d69c6427f1f9bbf68e800a7801c68a976c27f4f1a2431e629b0df125c",
+    "readInFull": true,
+    "readAt": "2026-10-21T05:42:12.328853+00:00"
+  },
+  "references": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png",
+      "sourcePath": "posti/tripo-kahdeksan-esinetta-20261021/kuusi-lattiaesinetta.png",
+      "sourceCommit": "8071bbe3eb6891d41a12452586ac8aec959e586d",
+      "sha256": "66ee69c1a95acc788f5655d04a58a9bef923ac5ce8d4ef6b303dd337c3497d15"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/maisemasermi.png",
+      "sourcePath": "posti/tripo-kahdeksan-esinetta-20261021/maisemasermi.png",
+      "sourceCommit": "8071bbe3eb6891d41a12452586ac8aec959e586d",
+      "sha256": "4a0dfd259a3069f74d0f56cea74b17d8d4cb1d7bda7a672a988baf00b33c3f7f"
+    }
+  ],
+  "mode": "builtin-imagegen",
+  "imageCallsIssued": 15,
+  "imageCallsCompleted": 15,
+  "imageCallsPending": 0,
+  "rootQAPassed": 15,
+  "deliveredImageCount": 15,
+  "all15RemoteBytesComparedWithNative": true,
+  "verifiedMailboxHead": "6d8c614fa515992746dd92b83f37f802bfa38e2e",
+  "scope797Preserved": true,
+  "TripoCallsIssued": 0,
+  "plateTableProduced": false,
+  "modelProductionOwnedBy": "Tripo 3D",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "batches": [
+    {
+      "commit": "626708eaa72d3eb737a48c327a97458a3c439e0f",
+      "verifiedFiles": 10,
+      "nativeImages": 5
+    },
+    {
+      "commit": "defe2ba96a2a56d01c4af16715ae3b50b991fa53",
+      "verifiedFiles": 10,
+      "nativeImages": 5
+    },
+    {
+      "commit": "6d8c614fa515992746dd92b83f37f802bfa38e2e",
+      "verifiedFiles": 10,
+      "nativeImages": 5
+    }
+  ],
+  "items": [
+    {
+      "id": "01-sinivalkoinen-maljakko",
+      "assetNumber": 1,
+      "file": "01-sinivalkoinen-maljakko.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/01-sinivalkoinen-maljakko.png",
+      "sha256": "68900c4095d25ae93e70287c2961defaaf81cceaac2fe04f0243825e61f6e9c4",
+      "bytes": 1860716,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One complete blue-white vase, open mouth and ornate source bands; no stand/lid/text. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "626708eaa72d3eb737a48c327a97458a3c439e0f",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "02-keltainen-kurpitsamaljakko",
+      "assetNumber": 2,
+      "file": "02-keltainen-kurpitsamaljakko.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/02-keltainen-kurpitsamaljakko.png",
+      "sha256": "a9dfd00a0d193c163c6966f5f86c4b5815bb68dd9d3b248ed98d2b2d6ab9f481",
+      "bytes": 1912379,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "Yellow double-gourd vase with turquoise handles and floral motifs; no wooden stand or extra object. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "626708eaa72d3eb737a48c327a97458a3c439e0f",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "03-turkoosi-ruukku-runko",
+      "assetNumber": 3,
+      "file": "03-turkoosi-ruukku-runko.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/03-turkoosi-ruukku-runko.png",
+      "sha256": "f3fc2b5dbd3f10b414d9e80a61d24822fa453ab9993202b463a9b4ff9dc4fa49",
+      "bytes": 2295018,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "Open turquoise jar body with bird medallion and source decoration; lid and stand absent. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "626708eaa72d3eb737a48c327a97458a3c439e0f",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "04-turkoosi-ruukku-kansi",
+      "assetNumber": 4,
+      "file": "04-turkoosi-ruukku-kansi.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/04-turkoosi-ruukku-kansi.png",
+      "sha256": "a7b0cf58c7009df8de098abd68dc860567b8635e77ea72b9a791919f5b3cf82b",
+      "bytes": 1957024,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One detached turquoise floral domed lid with blue-white rim and knob; no body. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "626708eaa72d3eb737a48c327a97458a3c439e0f",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "05-matala-puujalusta",
+      "assetNumber": 5,
+      "file": "05-matala-puujalusta.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/05-matala-puujalusta.png",
+      "sha256": "5ff8a5759096ae0fd3b937553561adaa2081c4ba5fdc19e3a1e73ae711d53f70",
+      "bytes": 1700897,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One empty low round ivory/blue/gold painted stand with curved feet, matching first source stand; no vessel. Root personally inspected native inline; full silhouette, light background, no labels or logos. Image-source QA only, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "626708eaa72d3eb737a48c327a97458a3c439e0f",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "06-sinivalkoinen-lautanen",
+      "assetNumber": 6,
+      "file": "06-sinivalkoinen-lautanen.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/06-sinivalkoinen-lautanen.png",
+      "sha256": "9bb74d9cfd6bb6eda2d08006c2a6f472ea462783ab725936c935f3f4f7279136",
+      "bytes": 2212667,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated scalloped blue-white plate, dragon center and gold rim, full edge visible, no stack or stand. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "defe2ba96a2a56d01c4af16715ae3b50b991fa53",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "07-teekannu-runko",
+      "assetNumber": 7,
+      "file": "07-teekannu-runko.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/07-teekannu-runko.png",
+      "sha256": "b8df1d551ae461b8a1e493f86fc922800f6b6e0458464215a77438ff857eb73a",
+      "bytes": 1882257,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One blue-white teapot body, open mouth, visible handle and spout, lid absent, full silhouette. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "defe2ba96a2a56d01c4af16715ae3b50b991fa53",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "08-teekannu-kansi",
+      "assetNumber": 8,
+      "file": "08-teekannu-kansi.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/08-teekannu-kansi.png",
+      "sha256": "b8e09b454027bf3982ebeddbd44d49c00490b39c2189d5891c1359b91688312a",
+      "bytes": 1905879,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One separate blue-white floral domed teapot lid, full knob and lip visible, no body or extra object. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "defe2ba96a2a56d01c4af16715ae3b50b991fa53",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "09-teekuppi",
+      "assetNumber": 9,
+      "file": "09-teekuppi.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/09-teekuppi.png",
+      "sha256": "7e9cb127226cb7e4902860a69feeb17d53e151d3d2f731fd2057224cc966d5d2",
+      "bytes": 1796444,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One handleless open blue-white floral cup, complete rim and foot, no saucer or extra object. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "defe2ba96a2a56d01c4af16715ae3b50b991fa53",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "10-kaksitasoinen-puuteline",
+      "assetNumber": 10,
+      "file": "10-kaksitasoinen-puuteline.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/10-kaksitasoinen-puuteline.png",
+      "sha256": "5bb7aa2f605993f19b6ccd563d77b001d7b72a152e362630da6b494bd2374b8f",
+      "bytes": 1792736,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One empty narrow ivory-painted two-tier round wooden stand, blue-gold decoration, four complete curved legs, no vessels. Root personally inspected returned native inline; light uniform background, no text or logo. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "defe2ba96a2a56d01c4af16715ae3b50b991fa53",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "11-punainen-lasilootuskulho",
+      "assetNumber": 11,
+      "file": "11-punainen-lasilootuskulho.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/11-punainen-lasilootuskulho.png",
+      "sha256": "6fa61ef81f3fd6ca6a88494d9308c1f7cb6a6607ef4dec367210f5b70cf9e3ad",
+      "bytes": 2013665,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated ruby-red translucent lotus-petal glass bowl, complete foot and petal rim, no furniture. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "6d8c614fa515992746dd92b83f37f802bfa38e2e",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "12-punainen-lasimaljakko",
+      "assetNumber": 12,
+      "file": "12-punainen-lasimaljakko.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/12-punainen-lasimaljakko.png",
+      "sha256": "19f739a8c4e32e80a258fcdf487f60f4d0fa62118e436b6dde5c92b0c54e415b",
+      "bytes": 1832738,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated ruby-red glass vase, open flared mouth and lotus engraving, complete foot, no furniture. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "6d8c614fa515992746dd92b83f37f802bfa38e2e",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "13-punainen-lasikuppi",
+      "assetNumber": 13,
+      "file": "13-punainen-lasikuppi.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/13-punainen-lasikuppi.png",
+      "sha256": "7a2eb8e814fe694b86a436f7fb80d9c608314bcd5645e78537efb4d2d42658cb",
+      "bytes": 1925075,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated open ruby-red glass cup with lotus engraving and complete foot, no furniture. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "6d8c614fa515992746dd92b83f37f802bfa38e2e",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "14-maisemasermin-lehti",
+      "assetNumber": 14,
+      "file": "14-maisemasermin-lehti.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/14-maisemasermin-lehti.png",
+      "sha256": "c387e1921c64ee41787a9aa3b5a3ae7dbb28acc1b835322976fefcc988bc5f68",
+      "bytes": 2163776,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One straight tall framed screen leaf, blue-green painted mountains on aged paper, green-gold brocade and dark wood, two short foot extensions fully visible, no second leaf. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "6d8c614fa515992746dd92b83f37f802bfa38e2e",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    },
+    {
+      "id": "15-maisema-yhtenainen",
+      "assetNumber": 15,
+      "file": "15-maisema-yhtenainen.png",
+      "mailboxPath": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/15-maisema-yhtenainen.png",
+      "sha256": "516abd7c5e3b3fa0c87e049b408beb377bab69c30562794a1f7898a97795951c",
+      "bytes": 3235667,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One continuous flat full-bleed blue-green mountain-and-lake painting on aged paper, no frame, folds, seams, text or dividers; whole image is a painted-paper texture, orthographic exception. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "nativeBytesPreserved": true,
+      "remoteBytesMatchedNative": true,
+      "deliveryCommit": "6d8c614fa515992746dd92b83f37f802bfa38e2e",
+      "callsIssued": 1,
+      "wholeNewGeneration": true,
+      "TripoCallsIssued": 0
+    }
+  ]
+}
