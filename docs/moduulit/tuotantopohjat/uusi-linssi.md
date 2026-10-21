@@ -16,7 +16,7 @@ Lue nämä ennen kuin teet tai kysyt mitään (omistaja 21.10.2026 klo 17.31: yk
 - AINA kuvat, tekstuurit ja 3D Codexilta, Claude koodaa (7.15); kuvat vain PD/CC, tekijä ja lisenssi näkyvissä (11.1).
 - AINA omistajalle vain pelaajan näkymä, kuvateksti kuvan ulkopuolella (7.32, 4.48).
 - EI junaan ilman merkintää "OMISTAJA PYYSI JULKAISUA" (10.1); valmis vasta, kun luvun 4 lista täyttyy ja opit on viety tähän pohjaan (8.1).
-- Ennen kysymystä omistajalle: onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus. Kysymys vain KK:lle muodossa "KYSYMYS <tunnus>" (7.27).
+- Ennen kysymystä omistajalle: onko jo päätetty (`node tools/loki-hae.mjs <hakusana>`), noudattaako pohjaa ja Raamattua, yksi suositus. Kysymys vain KK:lle muodossa "KYSYMYS <tunnus>" (7.27).
 
 *(LUONNOS 17.10.2026, päivitetty 19.10.2026, Linssiseppä, PT:n toimeksianto. Raamattu 4.21 TUOTANTOPOHJAT, 8.1 VALMIIN
 MÄÄRITELMÄ ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu vain nykyisten ohjeiden, lokin ja luovutusten opit (Kiinan dynastiat
@@ -59,6 +59,9 @@ Säännöt:
 - Hyväksytty havainnekuva, kuvakäsikirjoitus ja kuvakaappaus tallennetaan `_valmiit/<linssi>-tavoite-<pvm>/` ja mainitaan
   linssikatalogin rivillä. Valmista linssiä verrataan niihin rinnakkain (luku 4).
 - Kuvateksti on aina kuvan ulkopuolella omalla raidallaan, ei kuvan päällä (omistaja 18.10. 12.14).
+- Havainnekuvan tilaukseen kirjataan ensin aitousvaatimus: mikä kuvassa on todellista (paikat, mittasuhteet, aikakausi, aineiston
+  rajat) ja mikä saa olla tulkintaa; tilaus ilman sitä tuotti 19.10. samat viat kuin hylätyt kuvat (luku 9). Kuva merkitään
+  havainnekuvaksi käyttöliittymästä, ei kuvaan (4.21).
 - Toinen mietintäkierros: kirjaa tavoitteen viereen polku, joka tuottaa sen halvimmin (olemassa olevat pohjat, QA-komennot,
   yksi käännös ja simu kerrallaan); jos polku ei yllä tavoitteeseen, palaa tavoitteeseen PT:n kanssa, älä laske laatua hiljaa.
 
@@ -73,7 +76,7 @@ omistaja (KK:n kautta): aihe ja kokemus yhdellä lauseella
   → Sisältökirjuri: tarinarivit avainvuosittain + riippumaton faktatarkistus → PT
   → Linssiseppä: Ydin + Unity-sovitin proto-gitissä, QA-komennot, testit, todistusskenaario
   → Natiivi-UI: kehys (UI-POHJAT), aikaselain, yhteiset leimat
-  → Julkaisija: KÄÄNNÖS NYT → SIMU NYT (yöllä 1 käännös + 1 simu) → kuvat _valmiit/
+  → Julkaisija: KÄÄNNÖS NYT → SIMU NYT vain uudelle tekniikalle, pyydettyihin kuviin ja yöjunaan (9.1, 9.11) → kuvat _valmiit/
   → PT (3 riviä) → KK / omistaja (kuvapari) → Natiiviseppä: junaan
 ```
 
@@ -87,7 +90,7 @@ omistaja (KK:n kautta): aihe ja kokemus yhdellä lauseella
 | 4. Tekstit | Sisältökirjuri | Tarinarivit (yksi virke per avainvuosi + muutos), faktatarkistus `docs/raportit/<linssi>-faktatarkistus-*.md` |
 | 5. Koodi | Linssiseppä | proto-git `linssiseppa/<linssi>-<juna>`: `Linssit/Ydin/<Aihe>/` + `Linssit/Unity/<Aihe>*.cs`, testit `Linssit-testit/Testit/<Aihe>Testit.cs` |
 | 5b. Kamera | Linssiseppä | Kuvakäsikirjoituksen otot Kamerajohtajan liikkeinä + kameratestit (luku 3) |
-| 6. Kehys ja UI | Natiivi-UI | Kehys yhteisistä pohjista (lasipohja tai KEHYS-KÄÄRÖ), aikaselain, sinettileima |
+| 6. Kehys ja UI | Natiivi-UI | Kehys yhteisistä pohjista (LINSSIN OHJAIN tai historialinsseille KEHYS-KÄÄRÖ), aikaselain, sinettileima |
 | 7. Ääni | Äänittäjä | Kertoja ja äänimaisema vain luvalla (`kertojan-teksti-ja-aani.md`) |
 | 8. Todistus | Linssiseppä + Julkaisija | Skenaario `sk-<linssi>-<laite>.txt`, ajo iPad + iPhone pysty, `_valmiit/<linssi>-<pvm>/` |
 | 9. Hyväksyntä ja juna | PT → KK/omistaja → Natiiviseppä | Kuittaus, haara junaan |
@@ -114,15 +117,17 @@ luovutukseen. Agentit vain Opus ja Sonnet. Raskaat ajot (Unity-käännös, simu)
    ja Qing sukulaisvärein" (omistaja 16.10. klo 20.35). Värit hyväksyy PT; omistajalle kuvaparina vain värit, joista on erimielisyyttä tai jotka poikkeavat tyylikirjasta (omistaja 20.10.2026 klo 22.55).
 7. **Kerrokset harkiten.** Jokainen kerros vastaa kokemuksen kysymykseen; himmeä jatko vanhalle (muuri), Minardin
    virtausnuoli määrille, risti tapahtumalle, epävarma paikka katkoviiva-alueena. Kerros näkyy avainvuosina alku ≤ vuosi ≤ loppu.
-8. **Yhteiset pohjat, ei uusia osia.** Leima `iss-sinetti`-leimapohjalla, kehys UI-POHJISTA (lasipohja; historialinsseille
-   KEHYS-KÄÄRÖ). Jos uusi kehys ei valmistu tai läpäise tarkistusta, linssi valmistuu lasipohjalla (omistaja 17.10. klo 01.25).
+8. **Yhteiset pohjat, ei uusia osia.** Leima `iss-sinetti`-leimapohjalla, kehys UI-POHJISTA (LINSSIN OHJAIN; historialinsseille
+   KEHYS-KÄÄRÖ; Natiivi-UI:n kohta 3). Jos uusi kehys ei valmistu tai läpäise tarkistusta, linssi valmistuu yleisellä kehyksellä
+   (omistaja 17.10. klo 01.25: "lasipohjalla" = silloinen yleinen kehys; lasipohja on nyt vain paneeleissa ja korteissa).
 9. **Ydin ja ohut sovitin.** Logiikka (aineiston luku, kolmiointi, siirtymän tila, kerrosten tyyli) `Linssit/Ydin`-kokoonpanoon
    ilman UnityEnginea, jolloin se testataan `sh Linssit-testit/kaanna.sh <Aihe>`; Unity-kerros vain piirtää. Jokaiselle
    näkyvälle tilalle QA-komento (`linssi <aihe> vuosi <v>`, `… siirtyma <0…1|pois>`, `… tila`), jotta kuvat ovat toistettavia.
 10. **Tarkistus ennen jonoa.** `zsh tyokalut/tarkista.sh` (csc-käännös ja vahdit) 0 virhettä ja aiheen testit läpi ennen kuin
     Julkaisijalta pyydetään käännöstä. Käännös on yöllä niukka: yksi käännös ja yksi simu kerrallaan Julkaisijan jonossa.
 11. **Todistusskenaario kuvaa, mitä pitää näkyä.** Jokainen `kuva`-rivi kertoo tarkistettavan asian ("Sui leviää Daxingista
-    (t 0,3): märkä musterintama"). Ajo iPadilla ja iPhone pystyssä; `tulokset.tsv` ilman PUUTE/VIRHE-rivejä, poikkeukset 0.
+    (t 0,3): märkä musterintama"). Simu ajetaan vain uudelle tekniikalle, omistajan pyytämiin kuviin ja yöjunaan (9.1, 9.11); muuten automaattiset testit riittävät.
+    Kun ajetaan: iPad ja iPhone pystyssä; `tulokset.tsv` ilman PUUTE/VIRHE-rivejä, poikkeukset 0.
     Ajo-skripti tarkistaa, että sovelluksen `kaannos.txt` on uusi käännös, ei edellinen.
 12. **Tekstit ja ääni eivät ole Linssisepän.** Tarinarivit ja kertojan teksti Sisältökirjurilta tarkistettuina; ääni vain
     luvalla. Linssiseppä kytkee valmiin aineiston eikä muotoile faktoja.
@@ -151,7 +156,9 @@ Ensimmäinen käyttäjä on taidemuseo-linssi (museo-kamerajohtaja-204), mallina
    kohdekuva) ladataan ENSIN ja sitä odotetaan pidempään kuin muuta: Leiden 19.10.: muu sisältö 4 s, kohdepatsas enintään
    10 s (kuormassa 4 s ei riittänyt → tyhjä jalusta perillä, cb166ad2b). Juuri ladattua kohdetta ei pureta leikkauksen
    jälkeen (budjetti piti valinnan kamerasta → latasi uudelleen perillä, da9bdd2f9). Lokiin aina rivi
-   "esilataus valmis X s, kohde Y ladattu/EI ladattu", josta todistus tarkistetaan.
+   "esilataus valmis X s, kohde Y ladattu/EI ladattu", josta todistus tarkistetaan. Jos pääkohde ei ole valmis 10 s:ssa,
+   liike jatkuu silti: paikalla näkyy kevyt varakuva (museossa JPEG-varakuva, ei tyhjää jalustaa eikä mustaa), ja tarkka kuva
+   vaihdetaan ristihäivytyksellä, kun se valmistuu (4.24); lokiin "EI ladattu", ja todistus on silloin PUUTE.
 5. **Saapumiskatse sisältöön.** Pitkän siirron lopussa kamera katsoo kohteeseen sen katseluasennosta (veistos ≤ 4 m:n päässä
    liu'un lopusta → veistoksen katseluasento), ei tyhjään seinään eikä lähikuvaan jalustasta.
 6. **Ei pyöritystä.** Kokonaiskääntö ja kesto testataan (`KameraliikeTestit`); iso suunnanmuutos mustalla välähdyksellä, kävelyssä
@@ -174,16 +181,17 @@ Raamattu 8.1: paketti ei ole valmis ennen tätä listaa, ja se on valmis vasta, 
       täysikokoisena, ja poikkeamat on kirjattu tai korjattu.
 
 **Pelaaja**
-- [ ] Pelaaja löytää linssin matkalaukusta ja pääsee sisään; linssi aukeaa oikealla pohjalla ja kehyksellä (iPhone pysty, iPad).
-- [ ] Pelaaja pääsee ulos ja takaisin samaan tilaan; ✕ ja ☰ yhteisten pohjien mukaan, yksi ✕ kerrallaan päällekkäisissä ikkunoissa.
+- [ ] Pelaaja löytää linssin Linssit-napista tai laukun Varusteista (2.62) ja pääsee sisään; linssi aukeaa oikealla pohjalla ja kehyksellä (iPhone pysty, iPad).
+- [ ] Pelaaja pääsee ulos ☰:n alimmalla rivillä Poistu ja takaisin samaan tilaan; erillistä ✕:ää ei ole (2.70), ja linssin
+      avaamat ikkunat sulkeutuvat linssin mukana.
 
 **Aineisto ja teksti**
 - [ ] Jokaisella avainvuodella (tai pysäkillä) on aineisto ja tarinarivi (testi); ensimmäinen ja viimeinen mukana, myös
       negatiiviset vuodet.
 - [ ] Nimet ovat omalla alueellaan eivätkä leikkaudu (testi), värisääntö hyväksytty.
 - [ ] Kerrokset näkyvät oikeina vuosina; epävarmat paikat merkitty, lähteet `kerrokset_lahteet`-kentässä.
-- [ ] Lisenssit PD/CC0/CC BY (tai jakoehtoinen johdettu aineisto samalla lisenssillä, esim. havainnekuva CC BY-SA -valokuvan
-      pohjalta); ei NC-lisenssejä; tekijät Lähteissä.
+- [ ] Lisenssit PD/CC0/CC BY; Commonsin CC BY-SA -kuvat tekijän nimellä ja muokattu kuva samalla lisenssillä (11.1); ei NC-
+      lisenssejä; OSM (ODbL) ei kuulu pysyvään latauslupaan, joten sitä ei käytetä ilman omistajan päätöstä; tekijät Lähteissä.
 - [ ] Proton aineisto on tavulleen sama kuin mainin (`cmp`); kuvalistan uusi versio uudessa polussa (`kuvat-vN`), ämpärissä
       (Julkaisija vie, SHA tarkistettu) ennen kuin haara pyydetään junaan.
 - [ ] Uusi teksti luettu pelinäkymässä (kuva pelistä tekstin kanssa) tuoreella lukijalla ennen PT:n kuittausta (Raamattu 9.11).
@@ -197,9 +205,9 @@ Raamattu 8.1: paketti ei ole valmis ennen tätä listaa, ja se on valmis vasta, 
 
 **Todistus ja juna**
 - [ ] `tarkista.sh` 0 virhettä, aiheen testit ja koko `Linssit-testit` läpi.
-- [ ] Todistusajo iPad + iPhone pysty: `tulokset.tsv` ilman PUUTE/VIRHE-rivejä, poikkeukset 0, `kaannos.txt` = uusi käännös;
+- [ ] Vain uudelle tekniikalle, pyydettyihin kuviin ja yöjunaan (9.1, 9.11): todistusajo iPad + iPhone pysty, `tulokset.tsv` ilman PUUTE/VIRHE-rivejä, poikkeukset 0, `kaannos.txt` = uusi käännös;
       jokainen `kuva`-rivi kertoo tarkistettavan väitteen ja kuva on tarkistettu täysikokoisena.
-- [ ] Ennen/jälkeen-kuvat PT:lle (kuvatekstit omalla raidallaan), PT:n kuittaus ja KK:n tai omistajan hyväksyntä; haara junaan
+- [ ] Ennen/jälkeen-kuvat PT:lle (kuvatekstit omalla raidallaan), PT:n kuittaus ja omistajan hyväksyntä KK:n kautta (luku 6); haara junaan
       Natiivisepän kautta. Omistaja ei ole ensimmäinen tarkistaja: yöjunassa Laitetestaaja pelaa lukitun käännöksen ennen ulkoisia
       testaajia; päiväjunassa PT ja KK katsovat simutodisteet heti (Raamattu 9.11).
 - [ ] Opit kirjattu tämän pohjan lukuun 9.
@@ -211,13 +219,18 @@ Kultaisesta polusta poiketaan vain PT:n hyväksynnällä; poikkeama joko kirjata
 
 ## 6. Hyväksyntäpolku
 
+**Lopullinen hyväksyjä on omistaja.** "KK/omistaja" tarkoittaa: KK tuo kuvaparin tai tekstin omistajalle ja kirjaa vastauksen;
+KK hyväksyy omistajan puolesta vain yövaltuutuksella tai omistajan erikseen antamalla luvalla (esim. museotekstit, 2.123).
+
 | Asia | Hyväksyjä | Missä |
 |---|---|---|
 | Uusi linssi ja sen kokemus | omistaja | KK:n "OMISTAJAN PÄÄTÖS klo …", loki |
 | Tavoitteen muoto (havainnekuva, kuvakäsikirjoitus, kuvakaappaus) | PT, sitten KK/omistaja täysikokoisena | `_valmiit/<linssi>-tavoite-<pvm>/` |
 | Värit ja pohjakuva | PT; omistaja kuvaparilla vain kiistanalaiset ja tyylikirjasta poikkeavat (omistaja 20.10. 22.55) | kortti vain kiistanalaisista |
 | Aineiston muoto | Karttaseppä + Linssiseppä, PT kuittaa | `MUOTO-*.md` |
-| Tarinarivit ja faktat | PT riippumattoman tarkistuksen jälkeen; uusi teksti pelinäkymässä tuoreella lukijalla (9.11) | `historiapeli.md` luku 2 (merkinnät) |
+| Tarinarivit ja faktat | PT tarkistaa riippumattoman tarkistuksen jälkeen (uusi teksti pelinäkymässä tuoreella lukijalla, 9.11); omistaja hyväksyy Tekstit-osastossa KK:n kautta | Tekstit-osasto, tila "hyväksytty" |
+| Kertojaääni | pysyvä lupa teksteihin, joiden tila on "hyväksytty" | ääniportti |
+| Muu ääni (musiikki, äänimaisema, muut äänet) | omistaja ("OMISTAJAN PÄÄTÖS klo …": tekstit, leikemäärä, merkkimäärä) | KK |
 | Koodi ja kuvat | PT, sitten KK/omistaja | `_valmiit/<linssi>-<pvm>/` |
 | Uusi yhteinen UI-pohja (esim. KEHYS-KÄÄRÖ) | omistaja tai KK yövaltuutuksella | UI-POHJAT |
 
@@ -252,7 +265,8 @@ taistelupaikat alueina); ei uusia sääntöjä. Malli: `data/linssit/kiinan-dyna
 1. **Lähdeselvitys ennen piirtoa.** Jokaiselle aineistolle lisenssi ja käyttötapa `docs/raportit/<linssi>-lahteet-<pvm>.md`:hen.
    Kiina: rajat omina käsin piirrettyinä kärkilistoina (CC0), rannikko Natural Earthin maasta (PD), Cliopatria (CC BY 4.0) vain
    vertailukuvan katkoviivana, ei geometrian lähteenä (krediitti annetaan silti `attribuutio`-kenttään). Ei OSM:ää (ODbL on
-   jakoehtoinen, ei pysyvässä latausluvassa), ei NC-lisenssejä; skriptattu haku vain robots.txt:n salliessa.
+   jakoehtoinen tietokantalisenssi, joka sitoisi pelin aineiston; pysyvä latauslupa kattaa vain PD/CC0/CC BY ja Commonsin CC BY
+   -SA -kuvat, 11.1), ei NC-lisenssejä; skriptattu haku vain robots.txt:n salliessa.
 2. **Muoto kirjataan, ennen kuin aineisto tehdään.** Linssisepän muotoehdotus → `MUOTO.md` (LS lukitsee proto-sha:lla). Lukittuun
    muotoon ei kosketa: lisäykset uutena päätason avaimena (`kerrokset`, `kerrokset_lahteet`) ja oma `MUOTO-<osa>.md`, uudet
    tiedot lisäkenttinä, joita vanha lukija ei tarvitse (taistelun `alue` tuli myöhemmin ilman muutosta muuhun).
@@ -275,8 +289,8 @@ taistelupaikat alueina); ei uusia sääntöjä. Malli: `data/linssit/kiinan-dyna
    mainiin uudella ajolla, ei käsin JSONiin eikä protoon (tyypilliset virheet 1).
 
 **Yhteistyö:** Sisältökirjuri ottaa pääkaupungit ja paikat datasta; SK:n tarkistamat koordinaatit ja km-tarkkuudet palautuvat
-Karttasepälle, joka päivittää datan (kiistanalainen paikka `alue`-kenttään). Värit ovat suunnitelman ja omistajan (yksittäinen
-väri kuvaparilla), Karttaseppä vain kirjaa ne `vari`-kenttiin ja `MUOTO.md`:hen.
+Karttasepälle, joka päivittää datan (kiistanalainen paikka `alue`-kenttään). Värit hyväksyy PT, ja omistajalle viedään
+kuvaparina vain kiistanalaiset ja tyylikirjasta poikkeavat (luku 6); Karttaseppä vain kirjaa ne `vari`-kenttiin ja `MUOTO.md`:hen.
 
 **Aineiston valmiin määritelmä (täydentää lukua 4):** jokaisella avainvuodella alueet, maarajat, nimet ja pääkaupungit; alueet
 eivät ole päällekkäin; jokaisella kerroksella `alku`–`loppu`, `vari` ja lähde; epävarmat paikat merkitty (`epavarma`, `alue`);
@@ -324,7 +338,7 @@ seuraavalla vuorollaan ja poistaa merkinnän.
    yhteisinä kytkiminä; kortin ja ympyrän tekstit voi lukea worker (`KortinLukija` → `Puhe.Lue`), joten ääniä ei tilata ennen tarkistusta.
 6. **Mitat ja tarkistus:** iPhone pysty ja vaaka sekä iPad (iso iPad roolien käytössä kysymättä); pisin nimi ja tyhjä tila (ei kuvaa,
    ei dataa) mitataan; teksti mahtuu tasaisin reunoin eikä peitä yläkulman ryhmää. QA-komento jokaiselle osalle, `tarkista.sh` 0
-   virhettä; simu vain uudelle tekniikalle ja pyydettyihin kuviin (Raamattu 9.2).
+   virhettä; simu vain uudelle tekniikalle, pyydettyihin kuviin ja yöjunaan (Raamattu 9.1, 9.11).
 7. **Luovutus:** haara ja SHA PT:lle (≤ 3 riviä), piirretyn kuvakaappauksen ja pelikuvan pari rinnakkain (kuvateksti kuvan
    ulkopuolella, Raamattu 4.48), Natiiviseppä vie runkoon.
 
@@ -417,7 +431,7 @@ kohdat seuraavalla vuorollaan ja poistaa merkinnän.
 ### Äänittäjä
 *(kertoja ja äänimaisema linssille, ääniportti; ks. `kertojan-teksti-ja-aani.md`. Täydentää Äänittäjä 17.10.2026; vain nykyisten ohjeiden ja Kiinan dynastiat -linssin (30 tekstiä) opit, ei uusia sääntöjä.)*
 
-Äänittäjän osuus alkaa vasta, kun Sisältökirjuri on viimeistellyt tekstit (vaihe 4) ja PT on hyväksynyt ne; Äänittäjä ei kirjoita tarinatekstiä eikä tee pelikytkentää.
+Äänittäjän osuus alkaa vasta, kun Sisältökirjuri on viimeistellyt tekstit (vaihe 4) ja ne ovat Tekstit-osastossa tilassa "hyväksytty" (luku 6); Äänittäjä ei kirjoita tarinatekstiä eikä tee pelikytkentää.
 
 1. **Lukutarkistus ensin.** Kysy kytkijältä, lukeeko peli linssin kortit ja kertorivit jo suoralla lukijalla (`KortinLukija` →
    `Puhe.Lue`, kertoja William). Jos lukee, esiäänitystä ei tehdä eikä lupaa pyydetä (`kertojan-teksti-ja-aani.md` kohta 2.1).
@@ -428,7 +442,7 @@ kohdat seuraavalla vuorollaan ja poistaa merkinnän.
 3. **Puhuttu muoto ja merkkimäärä.** Luvut sanoiksi, "eaa." = "ennen ajanlaskun alkua" (`\beaa\.`), nimien ääntämysvihjeet; kaikki
    ENNEN merkkimäärän laskua. Lupapyynnön merkkimäärä lasketaan puhutusta muodosta (Kiina: laske kaikki 30 tekstiä yhtenä
    lukuna ja lisää varaus uusintaan).
-4. **Lupa.** Kertojaäänellä (William, `eleven_v4_turbo`) on pysyvä lupa PT:n hyväksymiin teksteihin; muut äänet (musiikki,
+4. **Lupa.** Kertojaäänellä (William, `eleven_v4_turbo`) on pysyvä lupa teksteihin, joiden tila on "hyväksytty"; muut äänet (musiikki,
    äänimaisema, Pulu, isoisä) vain KK:n suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä, jossa on tekstit, leikemäärä ja
    merkkimäärä. Jokainen lisäys tai ylitys vaatii uuden luvan.
 5. **Lukumäärän ja merkkien katto ajossa.** Aja generointi skriptillä, jossa on kaksi estoa: merkkiraja (`RAJA`) ja leikemäärän
@@ -445,6 +459,24 @@ kohdat seuraavalla vuorollaan ja poistaa merkinnän.
    `LAHTEET.md` (lisenssi, malli, ääni, nopeus, omistajan päätöksen aikaleima) ja `SHA256SUMS`. Kuuntelu ei ole portti.
 9. **Raportti PT:lle.** Yksi rivi (3 riviä enintään): kappaleet, merkit, krediitit, manifestin URL, sha; yksityiskohdat
    tiedostoon `docs/raportit/`.
+
+### Julkaisija
+*(vienti, vuorot ja juna; malli `taidemuseon-maa.md` luku 9.6, joka koskee linssejä sellaisenaan. Julkaisija täydentää linssin erot.)*
+
+1. **Vientipyyntö valmiista paketista** (`_valmiit/<linssi>-vienti-<pvm>/`, kohdepolku, tiedostomäärä, SHA256SUMS); Julkaisija ei
+   kokoa paketteja (11.26). Vienti `vie-paketti.sh`:lla, uusi versio aina uuteen polkuun (`<linssi>/kuvat-vN`).
+2. **Käännös ja simu:** käännös vapaalla linjalla `proto-kaanna.sh`:lla; simuvuoro vain uudelle tekniikalle, omistajan pyytämiin
+   kuviin ja yöjunaan (9.1, 9.11). Tekstit, värit ja kehyksen säädöt menevät junaan ilman simua.
+3. **Junaan:** Natiiviseppä kokoaa rungon; Julkaisija tarkistaa ennen TF:ää, että paketit ovat ämpärissä rungon polkuilla ja että
+   rinnakkaiskuva on näytetty omistajalle; TF vain merkinnällä "OMISTAJA PYYSI JULKAISUA" (10.1).
+
+### Valoseppä ja Lavastaja (näyttämölinssit)
+*(vain linssit, joilla on oma 3D-näyttämö, kuten taidemuseo ja elävä opas; malli `taidemuseon-maa.md` luvut 7.1 ja 7.2.)*
+
+1. **Valo** (Valoseppä): kohdevalot, seinän ja kehysten valo ja heijastukset taidemuseon pohjan 7.1 mukaan; säädöt QA-komennoilla
+   ja kuvapari pelistä, ei omaa valojärjestelmää linssille.
+2. **Sali ja henkilöt** (Lavastaja): tila, kalusteet, henkilöt ja tilatut mallit 7.2:n mukaan (henkilöt datana `henkilot.json`,
+   ei kameran kaarella; mallit Codexilta, 7.15).
 
 ## 9. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
 
