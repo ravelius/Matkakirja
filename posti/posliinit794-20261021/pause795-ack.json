@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-21T05:26:39.701838+00:00",
+  "source": {
+    "path": "posti/paatoimittaja-codex-794-tauko-0821-20261021.md",
+    "commit": "1ca1fa2b12b42e1bbe348e639949da5c9ee986f9",
+    "blob": "1210855fe5d4b3016a96521e0a3841c8c1740ff5",
+    "sha256": "f874371a44f5f7ad216922543eaea2c3e36278b91f9b3c1b6eebee2426a058a0",
+    "readInFull": true,
+    "readAt": "2026-10-21T05:26:39.701838+00:00"
+  },
+  "taskNumber": 795,
+  "pausedTask": 794,
+  "callsIssuedBeforePause": 12,
+  "callLimit": 12,
+  "providerJobIdsConfirmed": 12,
+  "nativeOriginalsSavedAtPause": 1,
+  "nativeExportsAwaitingByteVerification": 11,
+  "lastGenerationClickedAt": "2026-10-21T05:24:38.269115+00:00",
+  "postPauseGenerations": 0,
+  "newRetriesAllowed": false,
+  "furtherActions": "Save and report already submitted results only; no new image/model/texture/retopo/segmentation calls or game integration"
+}
