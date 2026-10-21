@@ -29,6 +29,10 @@ kierroksella heti ArtifactData listin jälkeen:
    tyolistavahti.py korjaa data/talo/tyolista.json:n (valmiit Valmistuneisiin, yli 48 h päivittämättä työn alla → pidossa,
    edistys ≤ 5, kenttä vahti) ja tulostaa rivit "TYOLISTA <laji>|…" PT:lle; sama rivi enintään kerran 6 tunnissa
    (tila data/.vanha-ilmoitettu.json).
+6) KOODI JA OHJE MAINISTA JOKA KIERROKSELLA (21.10.2026: #5120:n ohje jäi työkansioon päivittämättä 16 tunniksi, koska komento
+   piti muistaa ajaa käsin): ennen muuta synkka ajaa työkansion `asemataulu.py --kierros` (vain kun kansiossa on nykyinen.json eli
+   kyseessä on oikea työkansio). Sen rivit tulostuvat sellaisinaan: PÄIVITETTY|… (ei toimia), OHJE PÄIVITETTY|… (Asemataulu lukee
+   ohjeen uudelleen), NYKYINEN MUUTTUI|… (id:t tai osoite vaihtui) ja PUUTE|… (rivi PT:lle). Speksi luku 2, KIERROS.
 Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n työlistavahdin sääntöjen mukaan (kohta 5) ja valmiiden
 arkistoinnin (kohta 0) sekä toimi-kopiot (kohta 4).
 Tehtavat-dokumentti poistettiin (omistaja 20.10.2026 klo 23.48): roolikortin teksti johdetaan työlistasta (hoitaja/kierros.py).
@@ -250,6 +254,23 @@ def hhmm(t):
     return time.strftime("%H.%M", time.localtime(t))
 
 
+def koodi_mainista():
+    """Kohta 6: työkansion koodi ja ohje origin/mainista ja nykyinen.json osoitekirjasta (asemataulu.py --kierros)."""
+    if not os.path.exists(os.path.join(TAMA, "nykyinen.json")):
+        return []
+    komento = os.path.join(TAMA, "asemataulu.py")
+    if not os.path.exists(komento):
+        return ["PUUTE|työkansiosta puuttuu asemataulu.py: aja kerran python3 -I tools/asemataulu/asemataulu.py"]
+    try:
+        r = subprocess.run(["python3", "-I", komento, "--kierros", "--taulu", TAMA], capture_output=True, text=True, timeout=120)
+    except (OSError, subprocess.SubprocessError) as e:
+        return ["PUUTE|koodin päivitys mainista epäonnistui: %s" % e]
+    rivit = [x for x in r.stdout.splitlines() if x.strip()]
+    if r.returncode not in (0, 1):
+        rivit.append("PUUTE|asemataulu.py --kierros paluukoodi %d: %s" % (r.returncode, (r.stderr.strip().splitlines() or ["-"])[-1][:160]))
+    return rivit
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lista", required=True, help="ArtifactData listin out_dir/talo")
@@ -264,6 +285,8 @@ def main():
         if v.strip().isdigit():
             versiot[k.strip()] = int(v)
 
+    for r in koodi_mainista():
+        print(r)
     for r in tyolistavahti(time.time()):
         print(r)
     siirretty = arkistoi_valmiit()

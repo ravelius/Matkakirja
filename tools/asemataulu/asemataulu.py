@@ -6,6 +6,8 @@ jotta se ei hajoa aina tilin vaihdon yhteydessä jollain tavalla"). Speksi: docs
   python3 -I tools/asemataulu/asemataulu.py --tarkista   # ei kirjoita: kopiot = main ja säännöt kunnossa (tilinvaihto-valmis.mjs)
   --tyopuu  lähde tämän checkoutin tiedostoista eikä origin/mainista (vain testaukseen ennen mergeä)
   --taulu <kansio>  työkansio (oletus /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu); --osoitekirja <polku> testeille
+  python3 -I TAULU/asemataulu.py --kierros   # synkka.py ajaa joka A-kierroksella: koodi ja ohje mainista, nykyinen.json
+                                             # osoitekirjasta; hiljainen, kun mikään ei muutu (speksi luku 2, KIERROS)
 
 Rakennus: 1) KOODI (taulukko KOODI alla) kopioidaan origin/mainista työkansioon; eroava vanha kopio siirtyy ensin kansioon
 _ennen-repoa/<aika>/ (ei poisteta). Työkansion koodia ei muokata käsin: muutos = docs-PR tools/asemataulu/:iin + tämä komento.
@@ -24,13 +26,21 @@ import shutil
 import subprocess
 import sys
 
-REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+TAMA = os.path.dirname(os.path.abspath(__file__))
+FABLE = "/Users/Shared/Claude/Matkakirja-fable"
+# Repossa (tools/asemataulu/) lähde on tämä checkout; työkansion kopiossa lähde luetaan nykyinen.json:n kentästä lahde
+# (komento kirjoittaa sen), oletuksena PT:n checkout.
+REPO = os.path.dirname(os.path.dirname(TAMA)) if os.path.basename(os.path.dirname(TAMA)) == "tools" else FABLE
 OSOITEKIRJA = "/Users/Shared/Claude/osoitekirja.md"
 OLETUS_TAULU = "/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu"
-# repon polku (tools/asemataulu/…) → työkansion polku
+OHJE = "ASEMATAULU-ROOLI.md"
+# repon polku (tools/asemataulu/…) → työkansion polku. KAIKKI tools/asemataulu/:n koodi ja ohje (paitsi data/ ja osoitteet.md,
+# jotka ovat siemen) on tässä; tests/asemataulu-komento.test.mjs valvoo, ettei uusi tiedosto jää pois (tyolistavahti.py jäi 20.10.).
 KOODI = [
     ("asemataulu.html", "asemataulu-julkaisu.html"),
-    ("ASEMATAULU-ROOLI.md", "ASEMATAULU-ROOLI.md"),
+    ("asemataulu.py", "asemataulu.py"),
+    (OHJE, OHJE),
+    ("tyolistavahti.py", "tyolistavahti.py"),
     ("paivita.py", "paivita.py"),
     ("kone.py", "kone.py"),
     ("laitteet.py", "laitteet.py"),
@@ -137,14 +147,53 @@ def tarkistin(taulu, puutteet):
         puutteet.append("tarkistin: %d virhettä (VIRHE-rivit yllä); kirjoittaja korjaa ennen vientiä" % len(virheet))
 
 
+def lahde_tieto(tyopuu):
+    """Mistä työkansion --kierros hakee koodin: työpuu (testit) tai checkoutin pääkansio (worktree voidaan poistaa mergen jälkeen)."""
+    if tyopuu:
+        return {"repo": REPO, "tyopuu": True}
+    r = git("rev-parse", "--path-format=absolute", "--git-common-dir")
+    yhteinen = r.stdout.decode().strip() if r.returncode == 0 else ""
+    return {"repo": os.path.dirname(yhteinen) if yhteinen.endswith("/.git") else REPO, "tyopuu": False}
+
+
+def kierros_nykyinen(taulu, puutteet, a):
+    """--kierros: nykyinen.json kirjoitetaan vain, kun taulun osoite tai id:t muuttuivat ja osoitekirja on ehjä (puutteellinen
+    osoitekirja ei koskaan korvaa toimivaa tiedostoa). Hiljainen, kun mikään ei muutu."""
+    polku = os.path.join(taulu, "nykyinen.json")
+    vanha = lue_json(polku) or {}
+    omat = []
+    ny = nykyinen(taulu, omat, a.osoitekirja)
+    ny["lahde"] = vanha.get("lahde") or lahde_tieto(a.tyopuu)
+    if omat:
+        puutteet += omat
+    elif (ny["taulu"], ny["idt"]) != (vanha.get("taulu"), vanha.get("idt")):
+        kirjoita(polku, json.dumps(ny, ensure_ascii=False, indent=1).encode("utf-8"))
+        muuttui = sorted(k for k in set(ny["idt"]) | set(vanha.get("idt") or {}) if ny["idt"].get(k) != (vanha.get("idt") or {}).get(k))
+        print("NYKYINEN MUUTTUI|%s|lue %s uudelleen" % (", ".join((["taulu"] if ny["taulu"] != vanha.get("taulu") else []) + muuttui), polku))
+    for p in puutteet:
+        print("PUUTE|" + p)
+    return 1 if puutteet else 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tarkista", action="store_true")
     ap.add_argument("--tyopuu", action="store_true")
-    ap.add_argument("--taulu", default=OLETUS_TAULU)
+    ap.add_argument("--taulu", help="työkansio (oletus %s; työkansion kopiossa se itse)" % OLETUS_TAULU)
     ap.add_argument("--osoitekirja", default=OSOITEKIRJA)
+    ap.add_argument("--kierros", action="store_true", help="A-kierroksen päivitys (synkka.py): koodi ja nykyinen.json, ei siemeniä eikä batchia")
+    ap.add_argument("--repo", help="lähdecheckout (oletus: tämä checkout, työkansiossa nykyinen.json:n lahde)")
     a = ap.parse_args()
-    taulu = os.path.abspath(a.taulu)
+    repossa = os.path.basename(os.path.dirname(TAMA)) == "tools"
+    taulu = os.path.abspath(a.taulu or (OLETUS_TAULU if repossa else TAMA))
+    global REPO
+    if a.kierros:
+        aiempi = (lue_json(os.path.join(taulu, "nykyinen.json")) or {}).get("lahde") or {}
+        if not a.repo and aiempi.get("repo") and os.path.isdir(aiempi["repo"]):
+            REPO = aiempi["repo"]
+            a.tyopuu = a.tyopuu or bool(aiempi.get("tyopuu"))
+    if a.repo:
+        REPO = os.path.abspath(a.repo)
     puutteet = []
     if not a.tyopuu and git("fetch", "-q", "origin", "main").returncode != 0:
         puutteet.append("git fetch origin main epäonnistui; kopiot verrataan viimeksi haettuun mainiin")
@@ -168,6 +217,11 @@ def main():
             shutil.copy2(kohde, talteen)
         kirjoita(kohde, uusi)
         print("PÄIVITETTY|%s%s" % (taulu_p, "" if vanha is None else " (vanha: _ennen-repoa/%s/)" % aika))
+        if a.kierros and taulu_p == OHJE:
+            print("OHJE PÄIVITETTY|%s|lue %s uudelleen ennen seuraavaa kierrosta" % (OHJE, kohde))
+
+    if a.kierros:
+        return kierros_nykyinen(taulu, puutteet, a)
 
     if not a.tarkista:
         siemenet = [(s, s) for s in SIEMEN]
@@ -183,6 +237,7 @@ def main():
                 print("LUOTU SIEMENESTÄ|%s" % taulu_p)
 
     ny = nykyinen(taulu, puutteet, a.osoitekirja)
+    ny["lahde"] = lahde_tieto(a.tyopuu)
     if not a.tarkista:
         kirjoita(os.path.join(taulu, "nykyinen.json"), json.dumps(ny, ensure_ascii=False, indent=1).encode("utf-8"))
         print("NYKYINEN|taulu %s|id:t %s" % (ny["taulu"] or "-", ", ".join(sorted(ny["idt"]))))
