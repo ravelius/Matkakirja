@@ -46,3 +46,5 @@ KK nollautuu 08.35 jälkeen (omistajan "Kyllä, nollaa").
 - 209x (muurikate-v5): PK:n mukaan ylävasen puhdas, w1 ✓; e3:n häivytysympyrä jätetty omistajan 20.10. päätöksen mukaiseksi. PT ei katsonut arkkia itse → tarkista r05.
 - MUISTOKUPLAT (omistaja 08.53): Codexin kuvasessiolle tilaus be12c7be3 (toistoryhmät ensin, sitten vääristyneet; vertailuarkki → PT → PK vaihtaa). PK: vanha sivellin-1.jpg pois junaan 209.
 - Osakuvat #799 erät 1–2 postissa (Tripo 3D jatkaa). Omistaja 08.45: Codexin/Tripon ehdotuksista ei kortteja, toimi postin mukaan (loki).
+- HUUDAHDUKSET hyväksytty 09.00 (8 kpl) → Äänittäjä generoi (Puyi 08 Kavya, 8 ottoa, alle 3 %) → PK kytkee.
+- JUOKSUPELIN OHJAUS (omistaja 08.58): scratchpad/paatoimittaja/juoksupeli-ohjaus-omistaja-0858.md → PK selvät osat, NUI peukaloympyrät; KK:n tarkennukset odottavat omistajaa.
