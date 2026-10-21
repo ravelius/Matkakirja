@@ -1,0 +1,64 @@
+{
+  "footprintCallsIssued": 7,
+  "footprintCallsCompleted": 7,
+  "wholeOrderCallsIncludingTitle01": 8,
+  "pendingCalls": 0,
+  "newCallsDuringDelivery": 0,
+  "calls": [
+    {
+      "version": "v1",
+      "taskNumber": 825,
+      "sha256": "f7b6611ad58684a7b1cb20d11e64d54c370de9d0778243461064c714b951c3ba",
+      "selectedForDelivery": false,
+      "callsIssued": 1
+    },
+    {
+      "version": "v2",
+      "taskNumber": 825,
+      "sha256": "d6aca12360073e62ba08be55e3c4f5f6f3b10a5cb8debcef6c2ec3c0dc050c8e",
+      "selectedForDelivery": false,
+      "callsIssued": 1
+    },
+    {
+      "version": "v3",
+      "taskNumber": 825,
+      "sha256": "3e261a9575ca3fbc7ace006f75a2844863284b6d6ba9f83b8eea8c289d1882bc",
+      "selectedForDelivery": false,
+      "callsIssued": 1,
+      "authorization": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v3/OWNER-INSTRUCTION.json"
+    },
+    {
+      "version": "v4",
+      "taskNumber": 825,
+      "sha256": "66500092ebcf1988c9673e1eedd8741d712fc9c490be6514a0a730009ace7a88",
+      "selectedForDelivery": false,
+      "callsIssued": 1,
+      "authorization": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v4/OWNER-INSTRUCTION.json"
+    },
+    {
+      "version": "v5",
+      "taskNumber": 825,
+      "sha256": "c0530a638e825033491a92e9495427d8dff9c9113e7e2f08de3db48ef98b29bc",
+      "selectedForDelivery": false,
+      "callsIssued": 1,
+      "authorization": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v5/OWNER-INSTRUCTION.json"
+    },
+    {
+      "version": "v6",
+      "taskNumber": 825,
+      "sha256": "1976bb8d94216a3b2685a19d027d28bd30314519349e80c8e1b843021b6a9243",
+      "selectedForDelivery": false,
+      "callsIssued": 1,
+      "authorization": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v6/OWNER-INSTRUCTION.json"
+    },
+    {
+      "version": "v7",
+      "taskNumber": 825,
+      "sha256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+      "selectedForDelivery": true,
+      "callsIssued": 1,
+      "authorization": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v7/OWNER-INSTRUCTION.json"
+    }
+  ],
+  "note": "All corrections followed direct owner requests for one new whole image; only v7 is delivered."
+}

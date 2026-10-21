@@ -1,0 +1,26 @@
+{
+  "807": {
+    "footprintBox": [
+      949,
+      535,
+      1413,
+      836
+    ],
+    "rotationDegreesCCW": 20,
+    "proofOnly": true,
+    "nativeDeliveryPixelsUnchanged": true,
+    "gameLayoutOrCodeChanged": false
+  },
+  "809": {
+    "footprintBox": [
+      498,
+      1083,
+      921,
+      1357
+    ],
+    "rotationDegreesCCW": 20,
+    "proofOnly": true,
+    "nativeDeliveryPixelsUnchanged": true,
+    "gameLayoutOrCodeChanged": false
+  }
+}

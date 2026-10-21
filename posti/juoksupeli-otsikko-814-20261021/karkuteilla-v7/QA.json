@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-21T12:30:46.968827+00:00",
+  "candidateSHA256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+  "scope": "Owner-approved v7: native spelling/alpha and reference-overlay QA, R2 bytes verified; mailbox delivery pending",
+  "manualVisualInspection": {
+    "exactText": "karkuteillä",
+    "allElevenLettersCorrect": true,
+    "positiveDarkLetters": true,
+    "iDotAndTwoADotsDistinct": true,
+    "lettersShareTreadTexture": true,
+    "heelArchAndToeShapeVisible": true,
+    "outerContourBroken": true,
+    "irregularMudSplashesOutsidePrint": true,
+    "splashesDoNotObscureText": true,
+    "allVisibleSplashTipsInsideCanvas": true
+  },
+  "technicalChecks": {
+    "actualAlpha": true,
+    "shortSideAtLeast600": true,
+    "nativeBytesUnchanged": true,
+    "transparentBorders": true
+  },
+  "technicalQAPassed": true,
+  "localQAPassed": true,
+  "ownerAccepted": true,
+  "externalDeliveryAuthorized": true,
+  "R2VerifiedForThisCandidate": true,
+  "mailDeliveryVerifiedForThisCandidate": false,
+  "runtimeIntegrated": false,
+  "gamePublished": false,
+  "note": "Native and white proof personally inspected. One wholly new generation using v6 as a visual reference. No native pixel edits or OCR claim. Owner accepted v6 but requested this splash variation before delivery occurred.",
+  "ownerApprovalPath": "OWNER-APPROVAL.json",
+  "overlayProofsInspected": true,
+  "overlayProof807Legible": true,
+  "overlayProof809Legible": true,
+  "overlayNote": "20 degree static alpha/readability proofs only; no runtime positioning or animation implementation."
+}

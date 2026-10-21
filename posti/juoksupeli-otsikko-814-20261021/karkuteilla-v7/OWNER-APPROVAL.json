@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-21T12:32:37.097859+00:00",
+  "taskNumber": 825,
+  "asset": "karkuteillä mud-splashes v7",
+  "sha256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+  "ownerApprovalText": "nyt loistava!",
+  "approvalContext": "Response to displayed v7 and explicit statement that delivery awaits approval; prior instruction authorized sending the approved version to Claude.",
+  "priorDeliveryInstruction": "tuo on hyvä, voit lähettää tämän version Claudelle",
+  "ownerAccepted": true,
+  "mailDeliveryAuthorized": true,
+  "R2DeliveryAuthorized": true,
+  "scope": "Only approved v7 footprint image, its QA proofs and metadata to Claude via established mailbox/R2 pipeline; title01 not included.",
+  "gameIntegrationPerformedHere": false,
+  "gamePublicationAuthorizedHere": false
+}

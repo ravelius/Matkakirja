@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-21T12:33:06.997237+00:00",
+  "taskNumber": 825,
+  "sourceTaskNumber": 814,
+  "version": "v7",
+  "r2Key": "juoksupeli/otsikko-814-20261021/02-karkuteilla-mud-splashes-v7.png",
+  "canonicalUrl": "https://media.matkakirja.app/juoksupeli/otsikko-814-20261021/02-karkuteilla-mud-splashes-v7.png",
+  "verificationUrl": "https://media.matkakirja.app/juoksupeli/otsikko-814-20261021/02-karkuteilla-mud-splashes-v7.png?sha256=ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+  "sha256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+  "bytes": 1590629,
+  "dimensions": [
+    2060,
+    763
+  ],
+  "http": 200,
+  "mime": "image/png",
+  "cors": "https://matkakirja.app",
+  "preflightHttp": 404,
+  "uploadedThisAttempt": true,
+  "immutableKey": true,
+  "byteExactReadback": true,
+  "realAlphaVerified": true,
+  "ownerAccepted": true,
+  "recipientAccepted": false,
+  "gameIntegrated": false,
+  "gamePublished": false
+}

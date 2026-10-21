@@ -1,0 +1,83 @@
+{
+  "createdAt": "2026-10-21T12:33:50.718101+00:00",
+  "taskNumber": 825,
+  "sourceTaskNumber": 814,
+  "version": "v7",
+  "ownerAccepted": true,
+  "deliveredAssetCount": 1,
+  "nativeAssetSHA256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+  "nativePixelsUnchanged": true,
+  "R2Receipt": "R2-RECEIPT.json",
+  "excludedTaskNumbers": [
+    824
+  ],
+  "gameIntegrated": false,
+  "gamePublished": false,
+  "files": [
+    {
+      "target": "posti/codex-paatoimittaja-karkuteilla825-v7-omistajahyvaksytty-20261021.md",
+      "bytes": 2749,
+      "sha256": "e64e91c3349a28bb541af4846d576b2afd6822310ff239cdf93facaea8802e3e"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/02-karkuteilla.png",
+      "bytes": 1590629,
+      "sha256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/CALL-HISTORY.json",
+      "bytes": 2537,
+      "sha256": "ee9b6d462edecf72ffa3c105fba9fa1a713bf856e85c22c2af1434b1cfd0663a"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/NATIVE-METADATA.json",
+      "bytes": 1639,
+      "sha256": "ca4b1db00935453304fe8074dfccda85ba8c843779eef681104b44192e059d0c"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/OWNER-APPROVAL.json",
+      "bytes": 819,
+      "sha256": "d3b9d34e2b46d363d86f2aee4249f6687045ab6547736158d75d92cc8619ffc6"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/PREVIEW-PLACEMENTS.json",
+      "bytes": 448,
+      "sha256": "12fadd67b0584c2c2a111e2a3576837b8372d924670fbf78388f1ad6eec89bcf"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/PROMPT.json",
+      "bytes": 2478,
+      "sha256": "16b33826345c5e8b80ededdf2648904d17f2f078e568a9fd29cada0d0099c92b"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/QA.json",
+      "bytes": 1593,
+      "sha256": "939ff45adf06cbba0aaffd7b535d09fb8953dc428c80684a6203567e5adb03aa"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/R2-RECEIPT.json",
+      "bytes": 964,
+      "sha256": "7e1fb360ba10fd6a4c527f6f612df43d8a3f9d7d4e331ec11972ac3a84d2f159"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/SOURCE-PIN.json",
+      "bytes": 289,
+      "sha256": "96530c66a9b40dc2b41ebe929a5a9fa175cab4b0d9fed0e960442ac87416e986"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/koekuva-807.jpg",
+      "bytes": 621293,
+      "sha256": "313b7f2a940ff11794bb177fa17a4ba348923cf086607efc47fb2f4ec95652f0"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/koekuva-809.jpg",
+      "bytes": 637104,
+      "sha256": "70e3beb82dc9c62b9fd71ac9393cc1a78039cb3d7edfefcfe72b88c973ae66c6"
+    },
+    {
+      "target": "posti/juoksupeli-otsikko-814-20261021/karkuteilla-v7/koekuva-paperilla.png",
+      "bytes": 1238815,
+      "sha256": "8048361709b997988caf7b7e0414d562a563bdac530a9c782b781969c0f46e6b"
+    }
+  ]
+}

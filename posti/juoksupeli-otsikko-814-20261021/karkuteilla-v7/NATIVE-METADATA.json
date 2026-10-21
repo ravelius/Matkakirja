@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-21T12:30:30.545912+00:00",
+  "method": "native built-in whole-new imagegen candidate; no pixel edits",
+  "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a07988e7-33f8-4f3e-a125-c9189c461f82.png",
+  "physicalSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a07988e7-33f8-4f3e-a125-c9189c461f82.png",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v7/02-karkuteilla-mud-splashes-v7.png",
+  "nativeSHA256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+  "nativeBytesUnchanged": true,
+  "bytes": 1590629,
+  "dimensions": [
+    2060,
+    763
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentFraction": 0.6155416152387738,
+  "dominantAlphaBBox": [
+    36,
+    36,
+    2041,
+    723
+  ],
+  "borderMaxAlpha": 0,
+  "shortSideAtLeast600": true,
+  "expectedText": "karkuteillä",
+  "expectedCodepoints": [
+    "U+006B",
+    "U+0061",
+    "U+0072",
+    "U+006B",
+    "U+0075",
+    "U+0074",
+    "U+0065",
+    "U+0069",
+    "U+006C",
+    "U+006C",
+    "U+00E4"
+  ],
+  "proofPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v7/koekuva-paperilla.png",
+  "proofMethod": "Unchanged native RGBA alpha-composited over plain white for review only",
+  "ownerAccepted": false,
+  "mailDeliveryAuthorized": false,
+  "R2DeliveryAuthorized": false
+}
