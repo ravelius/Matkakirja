@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-21T04:59:41.422654+00:00",
+  "taskNumber": 792,
+  "folder": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osamallit-791-posliinisuunnitelma-792-20261021/task792/delivery",
+  "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osamallit-791-posliinisuunnitelma-792-20261021/posliinisuunnitelma-792-20261021.zip",
+  "zipBytes": 1661603,
+  "zipSHA256": "2a16ff7e95156404b60f16caa4cbf3e0497aff87aaff0fdead0186ccd497085a",
+  "everyZipMemberByteVerified": true,
+  "files": [
+    {
+      "path": "KK-GENEROINTIEHDOTUS.md",
+      "bytes": 536,
+      "sha256": "3fa16c0e3a18defb9d8bb0b6a9763902fc726aefe3849e89db7c336bc80d5620"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 999,
+      "sha256": "3915433f3f8b90543fe94171631a772952ec17aa92a0f9bb4720835f213bead3"
+    },
+    {
+      "path": "OWNER-PLAN.json",
+      "bytes": 9153,
+      "sha256": "32aee0573e95652b1890c23957328c53d364cfa955f1b7427f4ac24edbe64c1b"
+    },
+    {
+      "path": "OWNER-PLAN.md",
+      "bytes": 4118,
+      "sha256": "a5366afead438857c03c35ca17db7909eca0a797804a7280f16c3e96ea78ce7b"
+    },
+    {
+      "path": "PROMPT-SET.json",
+      "bytes": 1754,
+      "sha256": "2b2e9b48da1dc0438079fb5f8e386bb66b62233744f0bae8643e34b20c164103"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 673,
+      "sha256": "3175e5c990acb06fa45c12b0745176a3f7b1a6d95bef69925073c8618df58aa8"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 591,
+      "sha256": "bc8daabc2b2858872fcefc9547471640e7248eda44b708692765c001312e9775"
+    },
+    {
+      "path": "havainnekuvat/posliiniesineet-ehjat.png",
+      "bytes": 1835973,
+      "sha256": "42bdae5242829c06e6bb2f08d193d66083e9f402d79acccbcb481f006aea7fb4"
+    }
+  ],
+  "newImageFiles": 1,
+  "shownObjects": 6,
+  "builtinImageCallsIssued": 1,
+  "builtinCallsCompleted": 1,
+  "pendingCalls": 0,
+  "actualTripoCallsIssued": 0,
+  "modelingPermission": false
+}
