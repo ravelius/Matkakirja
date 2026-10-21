@@ -1,0 +1,14 @@
+# Codex → PT: kahdeksan rikottavan esineen muistokuplat, erä1
+
+Neljä kokonaan uutta valokuvaa lähteen paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md (ca0d73622) mukaisesti. Liitteitä käytettiin vain esineen identiteettireferensseinä, ei osamuokkauksen kohteina. Kaikki kuvat tarkistettu henkilökohtaisesti ja verrattu liitteeseen.
+
+Pelikuvat posti/muistokuplat-kahdeksan-20261021/<tunnus>.jpg ovat RGB JPEG768×1024. Muokkaamattomat natiivit PNG:t, QA, promptit, lähdepinnit ja referenssi–uusi-vertailu eräkohtaisessa kansiossa. Vertailuarkin referenssipuolella on teknisiä lähderajauksia; ne eivät ole generoinnin muokkauksia. JPEG on koko uuden kuvan tekninen kokovienti, ei rajaus tai retusointi.
+
+PT tarkistaa täysikokoisena; omistajan valinta ja Pelikoodarin kytkentä ovat erilliset. Ei pelimuutoksia Codexilta. Doucai864 on odottamassa eikä aiempia22 kuvaa viedä peliin ennen omistajan valintaa. Aiemmat kuvat säilyvät eikä niitä tehty uudelleen.
+
+- #867 `01-sinivalkoinen-maljakko.jpg`: Valittu kolmas kokonainen ehdokas vastaa referenssin sinivalkoista kukkakuviota, maljakon muotoa sekä matalaa valko-sini-kultaista jalustaa käyrine jalkoineen. Hovinainen pyyhkii silkkiliinalla, Puyi juoksee taustalla. Lattiaesineen noin metrin mittakaava uskottava suhteessa aikuiseen. Kädet, ehjä esine ja kuvan kaikki reunat tarkistettu; ei aiemman ehdokkaan ylimääräistä kulmamerkkiä. Kaksi hylättyä kokonaista ehdokasta säilytetty.
+- #868 `02-keltainen-maljakko.jpg`: Keltainen kaksiosainen kurpitsamuoto, turkoosit kahvat, pinkit kukat ja matala kelta-turkoosi jalusta vastaavat referenssiä. Kaksi aikuista kantaa kokonaisuutta jalustasta tukien, Puyi kulkee edellä. Kokonaiskorkeus ihmisiin verraten noin metrin luokkaa. Kädet ja tuenta, ehjät kahvat sekä kuvan reunat tarkistettu. Suoraan käytävän päästä kuvattu lähestyvä kulkue.
+- #869 `03-turkoosi-kannellinen-ruukku.jpg`: Turkoosi ruukku vastaa referenssin pyöreää muotoa, valkoista lintukuvallista etukenttää, pinkkejä kukkia, sinivalkoisia reunuksia sekä turkoosi-kultaista jalustaa. Puyi näkyy sivulta varpaillaan kurkistamassa hieman nostetun kannen alle; aikuinen ojentaa estävää kättä. Lattiaesine suhteessa lapseen suuren noin metrin esineen luokkaa. Kädet, kansi, jalusta ja kaikki reunat tarkistettu; ei ylimääräistä merkkiä.
+- #870 `04-lautaspino.jpg`: Uusi v2 tarkistettu natiivikoossa ja verrattu lautaspinoreferenssiin. Sinivalkoinen, kultareunainen korkea pino on ehjänä lattialla pitkän pöydän päässä; palvelija lisää lautasta. Nyt kamera katsoo kauempaa salin poikki, pöytä kulkee sivusuunnassa ja edessä näkyy runsaasti lattiaa. Mittakaava suhteessa aikuisiin on noin metrin suuruusluokkaa. Ei havaittua tekstiä tai kulmamerkkiä. 3D-mallin HOLD säilyy.
+
+Lautaspinon 3D-mallin HOLD säilyy; tämä kuva oli lähteessä nimenomaisesti tilattu.

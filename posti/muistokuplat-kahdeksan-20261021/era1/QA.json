@@ -1,0 +1,58 @@
+[
+  {
+    "id": "01-sinivalkoinen-maljakko",
+    "nativeSHA256": "eb24d2e5c39fdcbf0bf286b63fb3bb5d6be82d3cbcddcfd51bbf6b3bb09f595c",
+    "at": "2026-10-21T17:08:33.133936+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Valittu kolmas kokonainen ehdokas vastaa referenssin sinivalkoista kukkakuviota, maljakon muotoa sekä matalaa valko-sini-kultaista jalustaa käyrine jalkoineen. Hovinainen pyyhkii silkkiliinalla, Puyi juoksee taustalla. Lattiaesineen noin metrin mittakaava uskottava suhteessa aikuiseen. Kädet, ehjä esine ja kuvan kaikki reunat tarkistettu; ei aiemman ehdokkaan ylimääräistä kulmamerkkiä. Kaksi hylättyä kokonaista ehdokasta säilytetty.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "02-keltainen-maljakko",
+    "nativeSHA256": "d84ac51f74c0b7d4a46f224fb321e8f8d4add0d7bc6d3af3f94c5e5d23bf9607",
+    "at": "2026-10-21T17:09:15.166995+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Keltainen kaksiosainen kurpitsamuoto, turkoosit kahvat, pinkit kukat ja matala kelta-turkoosi jalusta vastaavat referenssiä. Kaksi aikuista kantaa kokonaisuutta jalustasta tukien, Puyi kulkee edellä. Kokonaiskorkeus ihmisiin verraten noin metrin luokkaa. Kädet ja tuenta, ehjät kahvat sekä kuvan reunat tarkistettu. Suoraan käytävän päästä kuvattu lähestyvä kulkue.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "03-turkoosi-kannellinen-ruukku",
+    "nativeSHA256": "a9a794a60ddd3bae2b6071ff16eb3359330ed8449f69cbec66695f37891bd26b",
+    "at": "2026-10-21T17:09:59.453398+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Turkoosi ruukku vastaa referenssin pyöreää muotoa, valkoista lintukuvallista etukenttää, pinkkejä kukkia, sinivalkoisia reunuksia sekä turkoosi-kultaista jalustaa. Puyi näkyy sivulta varpaillaan kurkistamassa hieman nostetun kannen alle; aikuinen ojentaa estävää kättä. Lattiaesine suhteessa lapseen suuren noin metrin esineen luokkaa. Kädet, kansi, jalusta ja kaikki reunat tarkistettu; ei ylimääräistä merkkiä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "04-lautaspino",
+    "nativeSHA256": "35f612c33d5790092760d5ee28d6c419107cd9f968929375e45f1d061d8d2d0f",
+    "at": "2026-10-21T17:13:47.912279+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Uusi v2 tarkistettu natiivikoossa ja verrattu lautaspinoreferenssiin. Sinivalkoinen, kultareunainen korkea pino on ehjänä lattialla pitkän pöydän päässä; palvelija lisää lautasta. Nyt kamera katsoo kauempaa salin poikki, pöytä kulkee sivusuunnassa ja edessä näkyy runsaasti lattiaa. Mittakaava suhteessa aikuisiin on noin metrin suuruusluokkaa. Ei havaittua tekstiä tai kulmamerkkiä. 3D-mallin HOLD säilyy.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  }
+]

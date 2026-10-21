@@ -1,0 +1,59 @@
+{
+  "batch": 1,
+  "requestedImages": 4,
+  "selectedImages": 4,
+  "callsIssued": 7,
+  "callsCompleted": 7,
+  "callsFailed": 0,
+  "wholeNewQualityRetries": 3,
+  "partialEdits": 0,
+  "items": [
+    {
+      "id": "01-sinivalkoinen-maljakko",
+      "callsIssued": 3,
+      "selectedSHA256": "eb24d2e5c39fdcbf0bf286b63fb3bb5d6be82d3cbcddcfd51bbf6b3bb09f595c",
+      "rejectedCandidates": [
+        {
+          "sha256": "e3ece3b5202891b4bf3ea1602c440553ecbda422886d7628ca78eae8a611258e",
+          "QA": {
+            "status": "REJECTED_UNREQUESTED_CORNER_MARK",
+            "notes": "Pale four-point graphic mark in bottom-right corner, confirmed in native inspection crop."
+          }
+        },
+        {
+          "sha256": "bcdbe0a87fb7e7c82af7f06c7e6e5687d23eb4d9aa760506f6938f2cd30260ea",
+          "QA": {
+            "status": "REJECTED_REFERENCE_MISMATCH",
+            "notes": "Text-only candidate changes vase proportions, flower pattern and pedestal; stronger object reference needed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "02-keltainen-maljakko",
+      "callsIssued": 1,
+      "selectedSHA256": "d84ac51f74c0b7d4a46f224fb321e8f8d4add0d7bc6d3af3f94c5e5d23bf9607",
+      "rejectedCandidates": []
+    },
+    {
+      "id": "03-turkoosi-kannellinen-ruukku",
+      "callsIssued": 1,
+      "selectedSHA256": "a9a794a60ddd3bae2b6071ff16eb3359330ed8449f69cbec66695f37891bd26b",
+      "rejectedCandidates": []
+    },
+    {
+      "id": "04-lautaspino",
+      "callsIssued": 2,
+      "selectedSHA256": "35f612c33d5790092760d5ee28d6c419107cd9f968929375e45f1d061d8d2d0f",
+      "rejectedCandidates": [
+        {
+          "sha256": "c880f60707cac8c707da0e67f9c47f69d6e97f44304715bb26dcacded9e7e4c6",
+          "QA": {
+            "status": "REJECTED_CAMERA_TOO_CLOSE",
+            "notes": "Correct stack identity but camera is along table at close-medium distance instead of distant across hall."
+          }
+        }
+      ]
+    }
+  ]
+}

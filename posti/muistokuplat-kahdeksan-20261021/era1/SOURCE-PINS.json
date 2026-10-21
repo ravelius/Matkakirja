@@ -1,0 +1,34 @@
+[
+  {
+    "path": "posti/paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "90dbccd29eee8f809816149252ade6e71037b5ed",
+    "sha256": "d464d6e6e1453178ceac1e5ef4414d7e3fb71e426591bd7b159aeac4619ca3ba",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/sources/paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md",
+    "bytes": 2726
+  },
+  {
+    "path": "posti/tripo-kahdeksan-esinetta-20261021/kuusi-lattiaesinetta.png",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "e2de4069beefdfcf50e33651ef123f7b96976def",
+    "sha256": "66ee69c1a95acc788f5655d04a58a9bef923ac5ce8d4ef6b303dd337c3497d15",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/sources/kuusi-lattiaesinetta.png",
+    "bytes": 2385448
+  },
+  {
+    "path": "posti/tripo-kahdeksan-esinetta-20261021/bambusermi.png",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "c2614ffe4c856501a63bac341a26abe5a352387f",
+    "sha256": "832d2660d40da738e79bad2a163d53b4673db683a6b7bb83bc03b7c2d6deeb1c",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/sources/bambusermi.png",
+    "bytes": 2189628
+  },
+  {
+    "path": "posti/tripo-kahdeksan-esinetta-20261021/maisemasermi.png",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "c9702978d63d3b4ca98dd4b3526695bf77532971",
+    "sha256": "4a0dfd259a3069f74d0f56cea74b17d8d4cb1d7bda7a672a988baf00b33c3f7f",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/sources/maisemasermi.png",
+    "bytes": 2648460
+  }
+]
