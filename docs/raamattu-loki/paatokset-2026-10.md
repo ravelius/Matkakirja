@@ -2187,3 +2187,7 @@ OMISTAJAN PÄÄTÖS klo 00.51 (KK:n C-kortti, sanatarkasti), kirjannut PT. 1) 18
 ## PAATOKSET 21.10.2026 klo 01.07 (21.10.2026 klo 01.12)
 
 OMISTAJAN VASTAUS klo 01.07 (KK:n kortti, sanatarkasti): T3 ja T1 -> "Kyllä, sellaisinaan (Suositus)". T3 (päiväjunan tarkistukset omistajalta, Raamattu 9.11 kohta 1) ja T1 (ElevenLabsin 3 %:n raja, Raamattu 5.1, yhtenäistetty 5.2, 7.15, 11.x ja 12.23 kohta 9) ovat SITOVIA klo 00.40 sanoin; merkinnät "KK näyttää omistajalle ennen sitovaksi" poistettu, kirjannut PT.
+
+## PAATOKSET 21.10.2026 klo 07.40 (omistaja, aamukortti KK:n kautta) (21.10.2026 klo 07.41)
+
+1) Rikkoutuvat esineet: 'Enemmän posliinia ja helpommin rikkoutuvaa' – ei tuotantolupaa; Codex muokkaa listan ja tekee uuden kuvan, uusi kortti KK:lle. 2) Läpijuostavien rakennusten 4 osamallia (palatsiovi, ristikko-ovi, sisäporras, ylägallerian tasanne): 'Kyllä, tasan 4 generointia (Suositus)' – Tripo-lupa tasan 4 generointiin, uusinta = uusi kortti. 3) ElevenLabsin 3 %:n raja: 'Yhtä ajoa (Suositus)' – raja koskee yksittäistä ajoa, ei kuukauden summaa (Raamattu 5.1).
