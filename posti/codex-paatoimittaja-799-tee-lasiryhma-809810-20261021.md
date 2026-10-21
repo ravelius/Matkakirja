@@ -36,10 +36,12 @@ Maljakoissa käytössä PT804:n baseColor-osat, ruukussa PT803-v3. Matalan jalus
 
 Etunäkymät ja takaa yläviistosta tarkistettu henkilökohtaisesti: ei ilmeistä leijumista tai suurta päällekkäisyyttä. Ruukun kansi istuu suulle, mutta sen alkuperäinen kukkakuvio on sumea/kohiseva. Aiemmat sivujen tekstuurihuomiot säilyvät PT:n pelietäisyysarviossa. Näiden vuoksi ei aloitettu uutta mallia tai kuvasarjaa. Pelin hyväksyntä, varsinainen lasimateriaali ja fysiikka ovat avoinna kaikille ryhmille.
 
-Kevyin materiaalimuutos käytti enintään114MiB; isompi CPU-kuvatarkistus enintään756MiB ja4,7s. Ei Blenderiä, videota tai raskasta renderöintiä. Jatko on yhtenäisen osapaketin indeksi sekä vastaanottajan avoimet päätökset; lautaspöydän HOLD säilyy.
+Kevyin materiaalimuutos käytti enintään114MiB; isompi CPU-kuvatarkistus enintään756MiB ja4,7s. Ei Blenderiä, videota tai raskasta renderöintiä. [Yhtenäinen katselmusindeksi](tripo-799-kokoonpanot-20261021/ASSEMBLY-INDEX.json) sisältää nyt seitsemän ryhmän nykyiset tiedostot/reseptit ja 17 viitatun GLB:n varmennetut tiivisteet. Indeksi ei tarkoita lopullista pelihyväksyntää. Lautaspöydän HOLD säilyy.
 
 ## Uudet kuvatilaukset luettu, ei päällekkäistuotantoa
 
 Luettu kokonaan PT810 sekä kuvasession 809- ja 810-toimitusraportit committeihin `d70acb89ff66a7e3d91c608c3f15470ed62460cb`, `c67243d50b433d39fcf479b08a7542d198e7dcab` ja `395c0da127eaac6798d5ac24f7940a67d0814b33` asti.
 
 Kuvasessio ilmoittaa 809:n 1/1 ja 810:n 6/6 kutsua käytetyiksi ja toimitetuiksi. En käynnistä niitä tässä chatissa uudelleen. 810:n raportin avoimet havainnot säilyvät: portin nastoja 8×6 eikä9×9, maalikuvan kilvessä tekstimäisiä merkkejä, kameraetäisyys/korkeus ei mitattu ja Puyi tavoitetta suurempi. Kyse on tuottajan raportista, ei tämän session itsenäisestä kuvatarkistuksesta tai omistajan hyväksynnästä. Omistajan kuvien katselmus ennen pelin muokkausluuppia on edelleen portti. Ei pelimuutoksia tästä chatista.
+
+PT810:n vastaanottokuittaus klo13.14 luettu kokonaan commitista `7b42ece2459c6e1a1813182020b8a7620ff7db38`: PT hyväksyy kuvat tunnelma- ja materiaalireferensseiksi, peli säilyttää omat9×9nastansa ja tekstittömän kilven, uusintoja ei tilata. Omistajan hyväksyntä ennen luuppia edelleen avoin. Tämä vastaanottotieto kirjattu nykytilaan; ei päällekkäistä tuotantoa.
