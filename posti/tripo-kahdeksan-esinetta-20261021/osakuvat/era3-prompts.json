@@ -1,0 +1,65 @@
+{
+  "mode": "builtin-imagegen",
+  "items": [
+    {
+      "id": "11-punainen-lasilootuskulho",
+      "assetNumber": 11,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the ruby-red translucent glass LOTUS BOWL at the top of the sixth group, WITHOUT the wooden shelf. One intact empty deep bowl shaped as open lotus petals, scalloped pointed petal rim, etched petal/leaf lines, short integral lobed glass foot. Match deep rich ruby-red glass with natural transmission and highlights, not opaque red ceramic or plastic. No shelf, no vase, no cup. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "12-punainen-lasimaljakko",
+      "assetNumber": 12,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the small ruby-red translucent glass VASE on the lower LEFT shelf of the sixth group. One intact small vase with a rounded bulbous body, slender elongated flared open neck and the source subtle etched lotus-leaf decoration. Preserve deep ruby-red transparent glass and natural reflections. No wooden shelf, no bowl, no cup, no ceramic stand. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "13-punainen-lasikuppi",
+      "assetNumber": 13,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Select ONLY the small ruby-red translucent glass CUP on the lower RIGHT shelf of the sixth group. One intact handleless short open glass cup with a rounded bowl profile, small integral glass foot and fine etched lotus-petal decoration. Preserve deep ruby glass transmission, not red opaque ceramic or plastic. Show empty interior and whole foot. No shelf, no other glassware. Output one square image, not a collage.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "14-maisemasermin-lehti",
+      "assetNumber": 14,
+      "role": "single-object photographic input",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: one precise photographic source image for a Tripo component. The input image is the approved design reference ONLY, not an edit target. Generate a completely NEW whole photograph from scratch, not a crop or partial edit of the board. Preserve the selected object design, silhouette, decorative motifs and colors from that board. One isolated object only, on a light neutral uniform seamless background, softly lit with real-camera photorealistic material detail. Full silhouette, all edges and feet included, generous clean margin, slight elevated three-quarter view, natural soft contact shadow. No text, labels, watermark, logos, extra objects or people. No display plinth unless it is the requested subject. No CGI plastic look, cartoon contouring or artificial repeating surface pattern. Create ONLY ONE straight upright LEAF of the approved six-panel landscape folding screen. One narrow tall flat rectangular framed panel, not folded or bent. Match warm dark brown slender wood stiles, tiny restrained gold trim and mottled green-gold brocade inner bands surrounding aged warm ivory paper painted with blue-green misty Chinese mountains and pine trees. The wood stiles extend down into two short integrated feet, like the reference. A gentle 10-degree three-quarter turn reveals real frame thickness while keeping the whole panel readable. No adjacent panels, no second leaf, no hinge-connected neighbors. Photographic view of a real painted paper/wood panel. The painting is original generated landscape motif from the reference, no calligraphy or text. Output a portrait composition suitable for this very tall single panel; include the full frame and feet.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/maisemasermi.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "15-maisema-yhtenainen",
+      "assetNumber": 15,
+      "role": "continuous six-leaf texture source; orthographic exception to product-view angle",
+      "toolArgs": {
+        "prompt": "Use case: product-mockup. Asset type: a continuous FULL-BLEED color texture source for all SIX leaves of the approved landscape screen. Input is a style/composition reference, not an edit target. Generate a completely NEW whole flat image from scratch, not a crop, composite or retouched photograph. Reinterpret the approved continuous blue-green Chinese mountain-and-pine landscape on warm ivory aged paper as ONE uninterrupted flat panorama: strong rocky pine-covered slopes at the left and right, distant layered misty peaks in the upper half, broad quiet misty lake/river in the center/lower center, subtle small distant shore/roof motifs if present in the reference. Preserve the restrained teal, blue-green, charcoal and warm paper color palette and the landscape overall rhythm. Photograph-like capture of actual delicately painted paper, with subtle NONREPEATING paper fibers, no artificial surface tessellation. Camera exactly perpendicular to paper, flat uniform illumination, no perspective or shadows. Absolutely NO wooden frames, brocade borders, hinges, fold seams, panel dividers, margins, lettering, signatures, stamps, labels, watermark, objects or background. The painted paper fills every pixel. ONE coherent panoramic composition that can be divided into six adjacent equal-width vertical UV regions, with landscape lines flowing continuously across all five boundaries; do NOT draw boundaries. Landscape aspect 3:2, ideally1536x1024 pixels. This image is the art/material itself, not a photograph of a folding screen. Do not include a screen or any furniture.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/maisemasermi.png"
+        ],
+        "transparent_background": false
+      }
+    }
+  ]
+}

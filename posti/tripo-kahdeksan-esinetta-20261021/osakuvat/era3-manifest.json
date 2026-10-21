@@ -1,0 +1,124 @@
+{
+  "at": "2026-10-21T05:52:27.447513+00:00",
+  "taskNumber": 799,
+  "batch": 3,
+  "batchImageCount": 5,
+  "totalRequestedImages": 15,
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuvat-8esinetta-osakuvat-20261021.md",
+    "commit": "54e64edb220c54f32aadc1e44ab2aabda0ae2217",
+    "blob": "215532d87c5454d98711536c687dc5fc329460c2",
+    "sha256": "5297194d69c6427f1f9bbf68e800a7801c68a976c27f4f1a2431e629b0df125c",
+    "readInFull": true,
+    "readAt": "2026-10-21T05:42:12.328853+00:00"
+  },
+  "mode": "builtin-imagegen",
+  "scope797Preserved": true,
+  "TripoCallsIssued": 0,
+  "noPlateTableProduced": true,
+  "items": [
+    {
+      "id": "11-punainen-lasilootuskulho",
+      "assetNumber": 11,
+      "file": "11-punainen-lasilootuskulho.png",
+      "sha256": "6fa61ef81f3fd6ca6a88494d9308c1f7cb6a6607ef4dec367210f5b70cf9e3ad",
+      "bytes": 2013665,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated ruby-red translucent lotus-petal glass bowl, complete foot and petal rim, no furniture. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "12-punainen-lasimaljakko",
+      "assetNumber": 12,
+      "file": "12-punainen-lasimaljakko.png",
+      "sha256": "19f739a8c4e32e80a258fcdf487f60f4d0fa62118e436b6dde5c92b0c54e415b",
+      "bytes": 1832738,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated ruby-red glass vase, open flared mouth and lotus engraving, complete foot, no furniture. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "13-punainen-lasikuppi",
+      "assetNumber": 13,
+      "file": "13-punainen-lasikuppi.png",
+      "sha256": "7a2eb8e814fe694b86a436f7fb80d9c608314bcd5645e78537efb4d2d42658cb",
+      "bytes": 1925075,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One isolated open ruby-red glass cup with lotus engraving and complete foot, no furniture. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "14-maisemasermin-lehti",
+      "assetNumber": 14,
+      "file": "14-maisemasermin-lehti.png",
+      "sha256": "c387e1921c64ee41787a9aa3b5a3ae7dbb28acc1b835322976fefcc988bc5f68",
+      "bytes": 2163776,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One straight tall framed screen leaf, blue-green painted mountains on aged paper, green-gold brocade and dark wood, two short foot extensions fully visible, no second leaf. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "15-maisema-yhtenainen",
+      "assetNumber": 15,
+      "file": "15-maisema-yhtenainen.png",
+      "sha256": "516abd7c5e3b3fa0c87e049b408beb377bab69c30562794a1f7898a97795951c",
+      "bytes": 3235667,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "rootVisualQA": "PASS",
+      "rootPersonallyInspectedNative": true,
+      "qaNotes": "One continuous flat full-bleed blue-green mountain-and-lake painting on aged paper, no frame, folds, seams, text or dividers; whole image is a painted-paper texture, orthographic exception. Root personally inspected returned native inline. Image-source QA, not 3D acceptance.",
+      "wholeNewGeneration": true,
+      "nativeBytesPreserved": true,
+      "callsIssuedForThisAsset": 1,
+      "TripoCallsIssued": 0,
+      "receiverAccepted": false,
+      "gameIntegrationVerified": false
+    }
+  ],
+  "producerQAIsNotReceiverOrGameAcceptance": true,
+  "sourceImageCallsIssuedAtPackaging": 15,
+  "sourceImageCallsReturnedAtPackaging": 15
+}
