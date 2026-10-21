@@ -2287,3 +2287,13 @@ sovellukset): "Periaatteessa ok, mutta näihin pitää vielä myöhemmin palata 
 käytetään tuota William-kertoja-ääntä." (muuten Lyria-musiikki, kartalla vain kaupungin kappale, tausta puheen alla, tehosteet ensin Soundly/Sonniss). 4) Kerronta "Kyllä": Horatio 1873 lämmin,
 utelias, kuivan humoristinen, ei virheetön; Livia nykypuhekieli; pelaaja nimetön eikä puhu; lyhyt, konkreettinen, kova juttu, faktat tarkistettu, 13+. Raamattu 4.21. Seuraavaksi korteilla kamera, UI,
 B-omistajat ja D.
+
+## TUOTANTO: B JA D HYVÄKSYTTY, UI TARKENNETAAN, KAMERA, YKSI ASIA PER KYSYMYS (21.10.2026 klo 18.41)
+
+OMISTAJAN PÄÄTÖS klo 18.16 (kortti, KK:n välittämänä): UI-periaatteet "Kyllä, mutta täytyy määritellä vielä tarkemmin." Tekotavat B (alat ja omistajat kuten ehdotettu) "Kyllä". Tuotannonohjaus D
+(luvat yhteen paikkaan; vaiheet idea, tavoite, koeversio, tuotanto, viimeistely, testaus, juna; omistaja hyväksyy idean ja tavoitteen tekstinä korteilla ja valmiin pelistä, muut PT) "Kyllä". OMISTAJAN
+PÄÄTÖS klo 18.20 (kortti, kamera): 1) yksi pehmeä kaari, ei mustia välähdyksiä eikä häivytyksiä "Kyllä". 2) liikkeet: "Tässä on kaksi eri asiaa. Eli kameralla voi olla erilaisia tyylejä riippuen
+tilanteesta. Ne pitäisi vielä eritellä ja speksata. Niissä on myös paljon yhteisiä piirteitä, mutta myös eroja." 3) kohtaukset kuin elokuva: "Tässäkin nyt on useampi asia päällikkäin." 4) museot:
+"Kamera voi olla pehmeä ja silti nopea. Tärkeintä on, miten siihen nopeuteen päästään. Kaikki kiihdytykset pitää olla hallittuja." Omistaja: niputetut kysymykset eivät toimi → yksi asia per kysymys
+(7.27). Toteutus: Raamattu 4.21 ja 7.27, tuotannonohjaus.md seitsemän vaihetta; Linssiseppä #5163 (kameratyylit, uusi-linssi ilman pimennysleikkausta), NUI #5162 (UI-periaatteet mitattaviksi, odottaa
+omistajan vastauksia K1–K10).
