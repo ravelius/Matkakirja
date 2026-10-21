@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-21T07:46:21.790496+00:00",
+  "taskNumber": 803,
+  "physicalT7Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-ruukun-takatekstuuri-803-20261021",
+  "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-ruukun-takatekstuuri-803-20261021/ruukku803-takatekstuuri-v3-20261021.zip",
+  "zipSHA256": "a90a478b20035c39803c979bc356fba0690b3e47ebc27c15b8550ef95f9bb665",
+  "zipBytes": 5938636,
+  "everyZipMemberByteVerified": true,
+  "zipMemberCount": 5,
+  "sourceModelBytesUnchanged": true,
+  "UVAtlasCoordinatesUnchanged": true,
+  "originalV2Preserved": true,
+  "acceptedFrontMappedPixelCount": 1194058,
+  "acceptedFrontMappedPixelSHA256": "a649ff492a9fe73975f88b1c97e2aa2063a9284e09bf7b09ed237d2afd268779",
+  "parts01And02V2HashesUnchanged": true,
+  "paidGenerationsIssued": 0,
+  "imagegenCallsIssued": 0,
+  "TripoCallsIssued": 0,
+  "modelFilesWritten": 0,
+  "receiverFitQA": "PENDING",
+  "gameIntegrationVerified": false,
+  "published": false
+}

@@ -1,0 +1,9 @@
+# Matkakirjan kuvat → PT ja Tripo 3D: #803 ruukun takatekstuuri v3
+
+Uusi `posti/tripo-799-tekstuurit-20261021/03-turkoosi-ruukku-runko/basecolor-v3.png`:2048×2048 RGB, nykyinen atlas ennallaan. Takapinnan harmaa läikkä ja puuroutunut kukkakenttä korvattu turkoosilla pionien ja oksien kuvioinnilla, ilman takamedaljonkia. Koristeaiheet poimittiin hyväksytyn799-lähdekuvan turkoosista kukkareunasta ja siirrettiin paikallisena2D-työnä olemassa oleviin takapinnan UV-koordinaatteihin. Ei uusia piirrettyjä aiheita tai maksullisia generointeja.
+
+Hyväksytyn etupuolen kartoitetut1194058UV-tekstuuri­pikseliä säilyivät bittitarkasti samoina kuin v2:ssa; niiden tarkka tiiviste on manifestissa.01ja02v2-tiedostojen sekä alkuperäisten lähdemallin/UV-verkon tiivisteet ovat ennallaan. Ei GLB-, geometriatieto-, UV- tai materiaalitiedostojen kirjoituksia. Aiemmat v2:t ja paikalliset hylätyt korjausluonnokset säilyvät, eivät tule tämän uuden tekstuurin tilalle.
+
+`uv-sampling-proof-v3.png` näyttää hyväksytyn etupuolen ja uuden takapuolen. Se on valaisematon2D-UV-näyte muuttumattomista lähdekoordinaateista; ei Tripo-/pelikaappaus, runtime- tai PBR-hyväksyntä. Tekijä on katsonut lopullisen atlaksen ja näytekuvan: harmaa läikkä ei näy näytteessä, pionit ja oksat erottuvat, valkoiset lähdekuvan reunakaaret on rajattu pois. Alkuperäisten normaali-/karheuskarttojen ja mahdollisen geometrisen painauman valaistus jää vastaanottajan tarkistukseen.
+
+Fyysinen T7-kansio: `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-ruukun-takatekstuuri-803-20261021/`. PNG:n lisäksi tämän postin osakansiossa `korjaus803-manifest.json`, `korjaus803-SHA256SUMS` ja tavuntarkistuskuitti.01/02v2 on PT:n b741a61a-tarkistuksen mukaan hyväksytty; niitä ei tuotettu uudelleen.03v3 odottaa nyt Tripo 3D:n sovitusta ja PT:n arviota. Maksullisia generointeja0, imagegen-kutsuja0, Tripo-kutsuja0. Ei R2-, peli- tai julkaisutoimia.
