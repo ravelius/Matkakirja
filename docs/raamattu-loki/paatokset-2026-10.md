@@ -2323,3 +2323,7 @@ nimissä, kuten aikajanan muotokuvien alla, pitkä nimi saa lyhentyä kolmeen pi
 OMISTAJAN PÄÄTÖS klo 19.45 (D2, Raamattu 5.3 ja 5.27): kysymys "Äänet: kuumailmapallon kokeilussa on vielä vanha lupa tehdä tehosteita tekoälyllä (ElevenLabs), vaikka muualla pelissä tehosteet haetaan
 ammattikirjastoista (Soundly, Sonniss). Perutaanko lupa, jotta kuumailmapallonkin äänet haetaan kirjastoista kuten muualla?" → "Kyllä, lupa pois (Suositus)" (5.3:n ElevenLabs-tehostepoikkeus pois;
 5.27 koskee kaikkia tehosteita).
+
+## PAATOKSET 21.10.2026 klo 21.53: VIIKKORAJA 80 % TÄLLÄ VIIKOLLA (21.10.2026 klo 21.54)
+
+Omistaja (KK:n välittämä): "saat käyttää 80% asti viikkolimitin. pysähdy sen jälkeen. perjantai aamuna aukeaa toisen tilin limit. mutta tarvitsen coworkin puolella loput 20%". Toteutus: Raamattu 12.21 tämän viikon poikkeus; Postivahti välittää kaikille, 78 % luovutus, 80 % pysäytys; ei uusia isoja eriä eikä agentteja.
