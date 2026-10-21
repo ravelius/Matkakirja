@@ -138,3 +138,5 @@ ja vaihdon jälkeen Quaternius-ihmiset (kavijat-v1/v2) pois kokonaan, ei sekaisi
 - Mac-esikatselu: --batch oletus (proto lavastaja/esikatselu-jumi 335bbfbd4, JU kelaa tyokaluseppa/esikatselu); pelin puoli a5b733c2b (EsikatseluSkaala) NS:llä junaan 209. Museon batch-skenaario tyokalut/natiiviseppa-skriptit/juna209/sk-louvre-hahmot-209-esikatselu.txt (odota nykyintro pois, rivi kahdesti).
 - Muistikevennys: avoimet-v12 (kuvat ≤ 1024 px, GPU 254 → 154 Mt) ämpärissä 06.05; PK 951e747ef lataa huoneet kerran.
 - V3:n seinämosaiikki: laitteella 209q:n w3 puhdas; tarkistetaan seuraavassa laiteajossa kohdasta 827 m (pelin materiaali, PK).
+- Portin marmorikaide: muurikate-v4 (jalusta + terassit, kaide, reunalista, laatat) → v5 (ei katetta muureille, joiden vieressä katto nousee harjan yli; 6,1 km). PK kytkenyt v4, v5 kytkettävänä.
+- #791 osamallit (Codex Tripo) viimeistelty: tyokalu proto-3d/_tyo/linnanrakentaja/osamallit791/viimeistele791.py; ämpärissä osamallit791-v1 (porras-suora, tasanne, palatsiovi, ristikko-ovi). Solmut ja mitat PK:lla. Palatsioven oikeassa lehdessä hiusviivaura jäljellä (näkyy vain lähikuvassa).
