@@ -1,0 +1,63 @@
+{
+  "taskNumber": 807,
+  "at": "2026-10-21T08:37:35.008498+00:00",
+  "personallyViewed": true,
+  "approvedForDelivery": true,
+  "deliveryPurpose": "PT review of the sole authorized candidate with explicit composition limits",
+  "approvedForGameUse": false,
+  "overall": "PARTIAL_SOURCE_MATCH_EDITOR_REVIEW_ONLY",
+  "deliverySHA256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+  "dimensions": [
+    1448,
+    1086
+  ],
+  "nativeBytesUnedited": true,
+  "imageCallsIssued": 1,
+  "imageCallsCompleted": 1,
+  "imageCallLimit": 1,
+  "retriesAuthorized": false,
+  "new3DCalls": 0,
+  "identityComparison": {
+    "basis": "Personally inspected original cape front/back and running image plus actual-model contact sheet; GLB provenance hash recorded, no assertion of pixel-identical model render",
+    "face": "PASS: youthful rounded face, almond brown eyes, dark brows, turned visible face and mischievous smile",
+    "hat": "PASS: black hat, red top, gold finial",
+    "outfit": "PASS: golden-yellow robe, blue-gray dragon/cloud and wave motifs, dark collar/cuffs, black/gold belt, dark trousers, black pale-soled boots",
+    "cape": "PASS: flowing gold cape and one continuous hem; not red",
+    "hair": "PASS: exactly one central braid",
+    "modelProvenance": {
+      "role": "reference model provenance, not modified or generated",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/puyi/puyi-viitta-rig-animations.glb",
+      "sha256": "0039c57b9977c7ee41083cb655887c31da76eb347e6e78f297d1cbf1d185b0f5"
+    }
+  },
+  "sceneChecks": {
+    "redWallsYellowRoofsGrayPaving": "PASS",
+    "emptyRouteNoCollectiblesNoOtherPeople": "PASS",
+    "noTextLogosUIOrVisibleDrone": "PASS",
+    "sharpEmperorStrongEdgeMotionBlur": "PASS",
+    "native4to3": "PASS",
+    "elevatedDroneView": "PARTIAL: close rear-side tracking view with modest elevation; not a strong downward drone angle"
+  },
+  "compositionLimits": [
+    {
+      "check": "automatic centered 16:9 crop",
+      "status": "FAIL",
+      "evidence": "Crop [0,136,1448,950] cuts hat crown/finial and lower boot. Do not claim this master is safe for centered 16:9 fill."
+    },
+    {
+      "check": "top-aligned 16:9 crop",
+      "status": "LIMITED",
+      "evidence": "Crop [0,0,1448,814] retains face and hat but cuts lower legs/feet; proof only, not a separate generation or production asset."
+    },
+    {
+      "check": "quiet lower title space",
+      "status": "PARTIAL",
+      "evidence": "Character and trailing foot occupy lower center; no clean central lower-20-percent title band. Empty paving is mainly at lower right."
+    }
+  ],
+  "PTRecommendation": "Review with owner before any integration. Master is a native 4:3 candidate; no centered-16:9/title-space approval is claimed. Do not automatically retry; new generation requires new permission.",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

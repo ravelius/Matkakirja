@@ -1,0 +1,39 @@
+[
+  {
+    "inputImage": 1,
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/puyi/cape-sources-v1/puyi-viitta-edesta.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-807-20261021/references/01-puyi-viitta-edesta.png",
+    "sha256": "46e45587d8f6e1298de88c8d8c709d7b14e2320799bdea39d51dc200100dae44",
+    "bytes": 1959472,
+    "personallyViewed": true
+  },
+  {
+    "inputImage": 2,
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/puyi/cape-sources-v1/puyi-viitta-takaa.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-807-20261021/references/02-puyi-viitta-takaa.png",
+    "sha256": "974a034acd37041577a24c0909af69beb3d2dca4dc89f37b381cf0cd353f0c2c",
+    "bytes": 2053682,
+    "personallyViewed": true
+  },
+  {
+    "inputImage": 3,
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/puyi/cape-sources-v1/viitta-juoksu-havainne.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-807-20261021/references/03-viitta-juoksu-havainne.png",
+    "sha256": "a24111d34eb01155a03d3a1aee89c552d81f2daec914d428bd7246993f81d503",
+    "bytes": 2019151,
+    "personallyViewed": true
+  },
+  {
+    "inputImage": 4,
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/references/01-sisapiha.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-807-20261021/references/04-01-sisapiha.png",
+    "sha256": "4bcdfa6ed068e59d52dc5832529263992c4c8eef227a13c4ce2c4daa0e656cc9",
+    "bytes": 1652430,
+    "personallyViewed": true
+  },
+  {
+    "role": "reference model provenance, not modified or generated",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/puyi/puyi-viitta-rig-animations.glb",
+    "sha256": "0039c57b9977c7ee41083cb655887c31da76eb347e6e78f297d1cbf1d185b0f5"
+  }
+]

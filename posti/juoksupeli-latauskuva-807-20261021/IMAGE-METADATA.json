@@ -1,0 +1,30 @@
+{
+  "dimensions": [
+    1448,
+    1086
+  ],
+  "mode": "RGB",
+  "format": "PNG",
+  "native4to3": true,
+  "crop16x9Centered": [
+    0,
+    136,
+    1448,
+    950
+  ],
+  "crop16x9TopAligned": [
+    0,
+    0,
+    1448,
+    814
+  ],
+  "taskNumber": 807,
+  "at": "2026-10-21T08:36:41.061506+00:00",
+  "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b714630b-a050-401c-9744-3cc5b7d40cc1.png",
+  "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b714630b-a050-401c-9744-3cc5b7d40cc1.png",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-807-20261021/delivery/juoksupeli-latauskuva-v1.png",
+  "sha256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+  "bytes": 2171198,
+  "nativeBytesUnchanged": true,
+  "newImageCount": 1
+}
