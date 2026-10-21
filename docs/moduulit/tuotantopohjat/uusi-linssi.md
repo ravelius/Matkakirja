@@ -181,7 +181,7 @@ Raamattu 8.1: paketti ei ole valmis ennen tätä listaa, ja se on valmis vasta, 
       täysikokoisena, ja poikkeamat on kirjattu tai korjattu.
 
 **Pelaaja**
-- [ ] Pelaaja löytää linssin Linssit-napista tai laukun Varusteista (2.62) ja pääsee sisään; linssi aukeaa oikealla pohjalla ja kehyksellä (iPhone pysty, iPad).
+- [ ] Pelaaja löytää linssin Linssit-napista tai laukun Varusteista (2.62) ja pääsee sisään; linssi aukeaa oikealla pohjalla ja kehyksellä (iPhone pysty ja vaaka, iPad).
 - [ ] Pelaaja pääsee ulos ☰:n alimmalla rivillä Poistu ja takaisin samaan tilaan; erillistä ✕:ää ei ole (2.70), ja linssin
       avaamat ikkunat sulkeutuvat linssin mukana.
 
