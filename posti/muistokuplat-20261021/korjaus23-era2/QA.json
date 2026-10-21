@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bi-kiekko",
+    "nativeSHA256": "31fafcae1f35c96574f5b10f2ccb37081e874755421612bf40a23744f4b1133a",
+    "at": "2026-10-21T15:40:20.799050+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Kasvojen kokoinen bi-kiekko, silmä näkyy keskireiästä ja pienet kädet pitävät reunoista. Kirjaston ikkuna ja kirjat tukevat kohtausta; ei jättikiekkoa.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "jadesinetti",
+    "nativeSHA256": "a8d5e2272b08b2ae3f9f4c919bb2e72da609937bc1d677e5ad10cf4205fac4b1",
+    "at": "2026-10-21T15:41:01.599199+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Paperin tasolta kuvattu kahden käden painallus ja kahden kämmenen levyinen jadesinetti. Punainen koristeellinen sinettijälki näkyy; jäljessä on sinettimäisiä merkkejä lähteen edellyttämän painalluksen osana, ei lisättyä kuvatekstiä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "recipientAccepted": false,
+    "noAddedCaptionObserved": true,
+    "sealMarkPresentAsRequested": true,
+    "sealTranscriptionVerified": false
+  },
+  {
+    "id": "mughal-jadekuppi",
+    "nativeSHA256": "d8601f1880f6aa3f9ff3e10e850e20c25153dd9735f78cc636a629c18bf8a2ef",
+    "at": "2026-10-21T15:41:37.616037+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Pieni ohutseinäinen jadekuppi kuultaa ikkunavalossa, aikuisen käsi antaa mittakaavan. Qianlong ja turbaanipäinen lähettiläs toteutuvat; ei isoa kulhoa eikä Puyita tässä aikaisemmassa kohtauksessa.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "sirkka-astia",
+    "nativeSHA256": "21a5072b4fb5def6745f91054cef4d8bdc32f667ae510c5e9bfbe6dad302b350",
+    "at": "2026-10-21T15:42:14.814396+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Puyi vatsallaan verannalla lattiatason kuvassa, pieni sirkka purkin reunalla. Purkki on selvästi päätä pienempi ja kohtaus eroaa aiemmasta lattialla istumisesta.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "norsunluupallo",
+    "nativeSHA256": "1d036ffbc2eee70e00f8011305ac19040e35c81b898467333dfba152e992f668",
+    "at": "2026-10-21T15:44:54.002251+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Imettäjä istuu vuoteen reunalla ja pitää lasta sylissään. Sivukuva ja valoisa luonnonvalo; lapsen avoimessa kämmenessä on pieni noin omenan kokoinen koristepallo. Kädet ja kasvot tarkistettu. Pallo on kuvan oikealla reunalla, joten pelin ovaalihäivytyksen näkyvyys jää vastaanottajan tarkistettavaksi.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "tinakannu",
+    "nativeSHA256": "3d0d70f4c855f2901fa573d5be28ba512b7c40b5cc218a96e9e2c953c60f3392",
+    "at": "2026-10-21T15:45:29.449770+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Teekeittiö oven läpi kuvattuna. Palvelija kaataa pienestä yhdellä kädellä kannateltavasta tinakannusta höyryävää vettä kuppeihin, toinen kulkee takana tarjottimen kanssa. Esineen mittakaava, ote ja kaatoneste tarkistettu; valo tulee avoimesta ikkunasta. Ei lisättyä tekstiä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  }
+]

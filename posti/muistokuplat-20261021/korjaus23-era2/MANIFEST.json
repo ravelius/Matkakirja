@@ -1,0 +1,310 @@
+[
+  {
+    "order": 7,
+    "taskNumber": 845,
+    "bubbleNumber": 16,
+    "id": "bi-kiekko",
+    "filename": "bi-kiekko.jpg",
+    "oldFilename": "bi-kiekko.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/bi-kiekko.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "1883b2caa8dc05c05b58f8a56a3f1e7f0a88105ed522d2cde0ff388c4f077811",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:40:20.799050+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Kasvojen kokoinen bi-kiekko, silmä näkyy keskireiästä ja pienet kädet pitävät reunoista. Kirjaston ikkuna ja kirjat tukevat kohtausta; ei jättikiekkoa.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:39:32.271025+00:00",
+    "issuedAt": "2026-10-21T15:39:32.271386+00:00",
+    "completedAt": "2026-10-21T15:40:11.205807+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/bi-kiekko.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-15a02f07-681e-4b7a-8373-ea0e2759187a.png",
+    "nativeSHA256": "31fafcae1f35c96574f5b10f2ccb37081e874755421612bf40a23744f4b1133a",
+    "nativeBytes": 2349469,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/bi-kiekko.jpg",
+    "deliverySHA256": "7a7c074fb41b6881ddea46fe57f510e08c027c6f20ad2a68753383c22c7f9cc7",
+    "deliveryBytes": 413854,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 8,
+    "taskNumber": 846,
+    "bubbleNumber": 12,
+    "id": "jadesinetti",
+    "filename": "jadesinetti.jpg",
+    "oldFilename": "jadesinetti.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/jadesinetti.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "1d2d77dcab0f7acbfe9d178c939fa7bfcc3f649864429a80b564ac03d56375e0",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:41:01.599199+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Paperin tasolta kuvattu kahden käden painallus ja kahden kämmenen levyinen jadesinetti. Punainen koristeellinen sinettijälki näkyy; jäljessä on sinettimäisiä merkkejä lähteen edellyttämän painalluksen osana, ei lisättyä kuvatekstiä.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "recipientAccepted": false,
+      "noAddedCaptionObserved": true,
+      "sealMarkPresentAsRequested": true,
+      "sealTranscriptionVerified": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:40:21.052393+00:00",
+    "issuedAt": "2026-10-21T15:40:21.052520+00:00",
+    "completedAt": "2026-10-21T15:40:43.535260+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/jadesinetti.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a9d553a8-505f-4607-bcfe-790720761667.png",
+    "nativeSHA256": "a8d5e2272b08b2ae3f9f4c919bb2e72da609937bc1d677e5ad10cf4205fac4b1",
+    "nativeBytes": 2198638,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/jadesinetti.jpg",
+    "deliverySHA256": "7a1eb58f32ed18981fa6dafc87a6be2f6722cc42e9b0602bc4b78a0ef4de28b2",
+    "deliveryBytes": 377646,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 9,
+    "taskNumber": 847,
+    "bubbleNumber": 15,
+    "id": "mughal-jadekuppi",
+    "filename": "mughal-jadekuppi.jpg",
+    "oldFilename": "mughal-jadekuppi.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/mughal-jadekuppi.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "b8b4e7fee29dc053aa86a10bc62e2e7d612e3f3cdb80b2e9056307a29d244cb1",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:41:37.616037+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Pieni ohutseinäinen jadekuppi kuultaa ikkunavalossa, aikuisen käsi antaa mittakaavan. Qianlong ja turbaanipäinen lähettiläs toteutuvat; ei isoa kulhoa eikä Puyita tässä aikaisemmassa kohtauksessa.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:41:01.842008+00:00",
+    "issuedAt": "2026-10-21T15:41:01.842141+00:00",
+    "completedAt": "2026-10-21T15:41:25.003745+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/mughal-jadekuppi.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0e48e658-b2f2-407c-b00f-7a601dd2798b.png",
+    "nativeSHA256": "d8601f1880f6aa3f9ff3e10e850e20c25153dd9735f78cc636a629c18bf8a2ef",
+    "nativeBytes": 2096180,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/mughal-jadekuppi.jpg",
+    "deliverySHA256": "78c6a6b8158fa83ba8e94890036a1750e58e924899c9f3478f684f6d183ea0ba",
+    "deliveryBytes": 363712,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 10,
+    "taskNumber": 848,
+    "bubbleNumber": 34,
+    "id": "sirkka-astia",
+    "filename": "sirkka-astia.jpg",
+    "oldFilename": "sirkka-astia.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/sirkka-astia.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "bf1003eecea8f590a305ebbcd0e01b2c001359bed146b1215d18b655c5643a6c",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:42:14.814396+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Puyi vatsallaan verannalla lattiatason kuvassa, pieni sirkka purkin reunalla. Purkki on selvästi päätä pienempi ja kohtaus eroaa aiemmasta lattialla istumisesta.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:41:37.854365+00:00",
+    "issuedAt": "2026-10-21T15:41:37.854595+00:00",
+    "completedAt": "2026-10-21T15:42:00.679910+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/sirkka-astia.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fed86c03-c9c7-4af8-9aa6-0a9a5c7597f7.png",
+    "nativeSHA256": "21a5072b4fb5def6745f91054cef4d8bdc32f667ae510c5e9bfbe6dad302b350",
+    "nativeBytes": 2070898,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/sirkka-astia.jpg",
+    "deliverySHA256": "acfd59168a2b43125420db265240a656b576a6ee7e098c6c2e38d5cc6e203cc1",
+    "deliveryBytes": 319779,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 11,
+    "taskNumber": 849,
+    "bubbleNumber": 17,
+    "id": "norsunluupallo",
+    "filename": "norsunluupallo.jpg",
+    "oldFilename": "norsunluupallo.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/norsunluupallo.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "1efec0b2dbdce38a9083b56ac5ad96db61751e4530d0de79347c7a1025541540",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:44:54.002251+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Imettäjä istuu vuoteen reunalla ja pitää lasta sylissään. Sivukuva ja valoisa luonnonvalo; lapsen avoimessa kämmenessä on pieni noin omenan kokoinen koristepallo. Kädet ja kasvot tarkistettu. Pallo on kuvan oikealla reunalla, joten pelin ovaalihäivytyksen näkyvyys jää vastaanottajan tarkistettavaksi.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:42:15.051918+00:00",
+    "issuedAt": "2026-10-21T15:42:15.052030+00:00",
+    "completedAt": "2026-10-21T15:42:51.723824+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/norsunluupallo.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-eafc4e4a-752a-4ce7-a3e9-eb1064131d9e.png",
+    "nativeSHA256": "1d036ffbc2eee70e00f8011305ac19040e35c81b898467333dfba152e992f668",
+    "nativeBytes": 2336204,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/norsunluupallo.jpg",
+    "deliverySHA256": "b7089ead3e4476bae4c44f006ca95b299e8ad1b8dc696bb5ed1c9e87a306e9ae",
+    "deliveryBytes": 398991,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 12,
+    "taskNumber": 850,
+    "bubbleNumber": 37,
+    "id": "tinakannu",
+    "filename": "tinakannu.jpg",
+    "oldFilename": "tinakannu.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/tinakannu.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "8ccaccf04b5052c527f426480535c4822aab676f138568219da61542a5aa7802",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:45:29.449770+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Teekeittiö oven läpi kuvattuna. Palvelija kaataa pienestä yhdellä kädellä kannateltavasta tinakannusta höyryävää vettä kuppeihin, toinen kulkee takana tarjottimen kanssa. Esineen mittakaava, ote ja kaatoneste tarkistettu; valo tulee avoimesta ikkunasta. Ei lisättyä tekstiä.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:44:54.229855+00:00",
+    "issuedAt": "2026-10-21T15:44:54.230015+00:00",
+    "completedAt": "2026-10-21T15:45:15.668571+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/tinakannu.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9b815573-6ea9-4cf2-8996-40222319f755.png",
+    "nativeSHA256": "3d0d70f4c855f2901fa573d5be28ba512b7c40b5cc218a96e9e2c953c60f3392",
+    "nativeBytes": 2057547,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/tinakannu.jpg",
+    "deliverySHA256": "1726994a4dfb299c5c6daa24060153a2f2699dd9aba4338c6fd47ebd5a9e42a1",
+    "deliveryBytes": 338545,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  }
+]
