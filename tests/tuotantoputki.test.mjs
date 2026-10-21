@@ -24,6 +24,10 @@ test('koodiviite ja pois oleva kehityslippu (Louvren tapaus)', () => {
   assert.deepEqual(viitteet(koodi, 'taidemuseo/louvre-ihmiset-v1/k2.glb'), { tiedostot: ['Museo/MuseoHenkilot.cs'], kytkinPois: ['Museo/MuseoHenkilot.cs'] });
   assert.deepEqual(viitteet(koodi, 'juoksupeli/hahmot-v3/puyi.glb'), { tiedostot: ['Juoksu/JuoksuHahmot.cs'], kytkinPois: [] });
   assert.deepEqual(viitteet(koodi, 'taidemuseo/louvre-ihmiset-v1/k3.glb').tiedostot, [], 'tiedoston nimi ei esiinny');
+  // Koottu nimi (juoksupelin aarteet): kansio + pääte tiedostossa, id muualla koodissa.
+  const aarteet = new Map([['Juoksu/JuoksuV4Maailma.cs', 'const string Kansio = "aarteet799-v2/"; Hae(Polku + Kansio + id + "-ehja.glb"); Hae(Polku + Kansio + id + "-rikki.glb");']]);
+  assert.deepEqual(viitteet(aarteet, 'juoksupeli/maailma-v4/aarteet799-v2/teeastiat-ehja.glb', true).tiedostot, ['Juoksu/JuoksuV4Maailma.cs']);
+  assert.deepEqual(viitteet(aarteet, 'juoksupeli/maailma-v4/aarteet799-v2/teeastiat-rikki.glb', false).tiedostot, [], 'id ei koodissa → ei viitettä');
 });
 
 test('3D-tilaus: Tripo tai GLB, ei Tripoli, ei kuittausta eikä Codexin omaa viestiä', () => {

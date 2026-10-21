@@ -1,5 +1,5 @@
 {
- "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä.",
+ "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota).",
  "mallit": [
   {
    "id": "louvre-mies-vartija",
@@ -17,9 +17,44 @@
    "ampari": [
     "taidemuseo/louvre-ihmiset-v1/k1.glb"
    ]
+  },
+  {
+   "id": "juoksupeli-aarteet799",
+   "mita": "Juoksupelin rikkoutuvat aarteet: Codexin PT799/829-ryhmät (7), Lavastajan kokoamina (aarteet799-v2; lautaspino PT801 HOLD)",
+   "hyvaksytty": "omistaja 21.10.2026 19.52 (PT: kahdeksasta esineestä tehdään ensin rikottavat 3D-mallit); vienti juoksupeli-aarteet799-v2-vienti-20261021",
+   "ampari": [
+    "juoksupeli/maailma-v4/aarteet799-v2/sinivalkoinen-maljakko-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/sinivalkoinen-maljakko-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/keltainen-maljakko-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/keltainen-maljakko-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/turkoosi-ruukku-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/turkoosi-ruukku-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/teeastiat-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/teeastiat-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/rubiinilasit-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/rubiinilasit-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/bambusermi-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/bambusermi-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/maisemasermi-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/maisemasermi-rikki.glb"
+   ]
+  },
+  {
+   "id": "amsterdam-kavijat",
+   "mita": "Rijksmuseumin kävijät NL1–NL4 (Tripo, Codex PT834–837)",
+   "hyvaksytty": "PT 21.10.2026 (tilaus PT834–837, omistajan Tripo-lupa 17.28); vienti taidemuseo-amsterdam-ihmiset-v1-vienti-20261021",
+   "ampari": [
+    "taidemuseo/amsterdam-ihmiset-v1/nl1.glb",
+    "taidemuseo/amsterdam-ihmiset-v1/nl2.glb",
+    "taidemuseo/amsterdam-ihmiset-v1/nl3.glb",
+    "taidemuseo/amsterdam-ihmiset-v1/nl4.glb"
+   ]
   }
  ],
  "suljetut_tilaukset": [
   "valoseppa-codex-peking46-vesi-ja-valoputki-20261015.md"
+ ],
+ "korvatut_viennit": [
+  "juoksupeli-aarteet799-v1-vienti-20261021"
  ]
 }

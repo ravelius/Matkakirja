@@ -65,14 +65,18 @@ export function uusimmat(polut) {
 }
 
 /** Koodiviitteet mallille: tiedostot, joissa on mallin kansio ("louvre-ihmiset-v1/") ja tiedoston nimi ("k2" tai "k2.glb");
- *  kytkinPois = viittaava tiedosto, jonka kehityslippu on pois (static bool Paalla = false). */
-export function viitteet(koodi, polku) {
+ *  kytkinPois = viittaava tiedosto, jonka kehityslippu on pois (static bool Paalla = false).
+ *  Koottu nimi (juoksupelin aarteet: kansio + id + "-ehja.glb"): tiedostossa kansio ja pääte "-ehja.glb"/"-rikki.glb", ja id ("<id>")
+ *  on lainausmerkeissä jossain pelin koodissa (idKoodissa, kutsuja hakee git grepillä). */
+export function viitteet(koodi, polku, idKoodissa = false) {
   const { kansio } = perhe(polku);
   const nimi = polku.split('/').pop(), runko = nimi.replace(/\.glb$/, '');
+  const paate = runko.match(/-(ehja|rikki)$/);
   const tiedostot = [], kytkinPois = [];
   for (const [tiedosto, teksti] of koodi) {
     if (!teksti.includes(kansio)) continue;
-    if (!teksti.includes(`"${runko}"`) && !teksti.includes(nimi)) continue;
+    const koottu = paate && idKoodissa && teksti.includes(`-${paate[1]}.glb"`);
+    if (!teksti.includes(`"${runko}"`) && !teksti.includes(nimi) && !koottu) continue;
     tiedostot.push(tiedosto);
     if (/static\s+bool\s+Paalla\s*=\s*false\s*;/.test(teksti)) kytkinPois.push(tiedosto);
   }
@@ -138,13 +142,16 @@ async function main() {
 
   // 1. Hyväksytyt mallit: Tripo-vientipaketit + rekisteri.
   const mallit = new Map();   // polku → lähde
+  const rekisteri = join(repo, 'docs/tuotantoputki/hyvaksytyt.json');
+  const rek = existsSync(rekisteri) ? JSON.parse(readFileSync(rekisteri, 'utf8')) : {};
+  // Korvatut viennit (uudempi vienti toiseen kansioon, esim. aarteet799-v1 → aarteet799-v2): ei valvota.
+  const korvatut = new Set(rek.korvatut_viennit || []);
   for (const k of existsSync(valmiit) ? readdirSync(valmiit) : []) {
     const l = join(valmiit, k, 'LAHTEET.md'), s = join(valmiit, k, 'SHA256SUMS');
-    if (!/-vienti-/.test(k) || !existsSync(l) || !existsSync(s) || !onTripoMalli(readFileSync(l, 'utf8'))) continue;
+    if (korvatut.has(k) || !/-vienti-/.test(k) || !existsSync(l) || !existsSync(s) || !onTripoMalli(readFileSync(l, 'utf8'))) continue;
     for (const p of glbPolut(readFileSync(s, 'utf8'))) mallit.set(p, `_valmiit/${k}`);
   }
-  const rekisteri = join(repo, 'docs/tuotantoputki/hyvaksytyt.json');
-  const hyv = existsSync(rekisteri) ? JSON.parse(readFileSync(rekisteri, 'utf8')).mallit || [] : [];
+  const hyv = rek.mallit || [];
   for (const h of hyv) for (const p of h.ampari || []) mallit.set(p, `rekisteri: ${h.id} (${h.hyvaksytty})`);
 
   // Koodi: proton master ja uusin juna-runko (natiiviseppa/juna-*), .cs-tiedostot Assets/-kansiossa.
@@ -165,7 +172,12 @@ async function main() {
   for (const m of uusimmat([...mallit.keys()])) {
     const lahde = mallit.get(m.polku);
     const tila = verkko ? await head(MEDIA + m.polku) : 'ohitettu';
-    const v = Object.fromEntries(Object.entries(koodit).map(([ref, k]) => [ref, viitteet(k, m.polku)]));
+    const runko = m.polku.split('/').pop().replace(/\.glb$/, ''), id = runko.replace(/-(ehja|rikki)$/, '');
+    const v = {};
+    for (const [ref, k] of Object.entries(koodit)) {
+      const idKoodissa = id !== runko && (await git(proto, 'grep', '-l', '-F', `"${id}"`, ref, '--', 'Assets/*.cs').catch(() => '')).trim().length > 0;
+      v[ref] = viitteet(k, m.polku, idKoodissa);
+    }
     const missaan = Object.values(v).some(x => x.tiedostot.length > 0);
     const paalla = Object.values(v).some(x => x.tiedostot.some(t => !x.kytkinPois.includes(t)));
     const rivi = { polku: m.polku, lahde, ampari: tila, viitteet: v };
