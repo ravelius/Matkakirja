@@ -2,15 +2,23 @@
 
 *(Sisältökirjuri 21.10.2026, studiojako (omistaja 18.02, Raamattu 4.21). Tämä on laatutaso: miltä pelin teksti kuulostaa ja kuinka pitkä se on. Tekotavat ovat `docs/tuotanto/tekotavat/tekstit.md`, luvat ja vaiheet `docs/tuotanto/tuotannonohjaus.md`. Täysi sääntö on Raamatun luvussa 3; jos tämä ja Raamattu eroavat, Raamattu voittaa. Kaanon: `docs/tarina.md`, `docs/isoisan-raamattu.md` (vain PT kirjoittaa).)*
 
+## Ydin (omistaja 21.10.2026 klo 18.12, Raamattu 4.21, PR #5156)
+
+- **Horatio 1873:** lämmin, utelias, kuivan humoristinen eikä virheetön.
+- **Livia:** nykypuhekieltä.
+- **Pelaaja:** nimetön eikä puhu.
+- **Teksti:** lyhyt, konkreettinen ja kova juttu; faktat tarkistettu; 13+.
+- Esimerkit ovat tekstinä, ei esimerkkikuvina omistajalle.
+
 ## 1. Äänet
 
 Pelissä on neljä ääntä. Jokaisella on oma paikkansa, eikä niitä sekoiteta.
 
 | Ääni | Missä | Miltä kuulostaa | Raamattu |
 |---|---|---|---|
-| Isoisä Horatio 1873 | matkakirjan merkinnät, saapuminen | minä-muoto, kuiva humoristinen mittaaja, kohtelias, pelkää hevosia; kirjoittaa itselleen, ei opeta lukijaa; saa olla itsepäinen ja väärässä (virhe näkyy teossa, ei joka merkinnässä) | 3.5, 3.6 |
+| Isoisä Horatio 1873 | matkakirjan merkinnät, saapuminen | minä-muoto; lämmin, utelias ja kuivan humoristinen mittaaja, kohtelias, pelkää hevosia; kirjoittaa itselleen, ei opeta lukijaa; saa olla itsepäinen ja väärässä (virhe näkyy teossa, ei joka merkinnässä) | 3.5, 3.6 |
 | Kertoja William | avaus, pallokierros, historiaosiot, museon kertoja | sinä-muoto pelaajalle, lähes puhekielinen, ei hehkutusta; neutraali ulkopuolinen | 3.3, 3.4 |
-| Pulu (Livia) | repliikit, chat | puhekieltä reunoilla, pronominit kokonaisina (minä, sinä), ei huutomerkkejä; asiantuntija, joka puolustautuu refleksinä; komiikka arvostuksen puutteesta, ei tyhmyydestä | 3.23, 3.24 |
+| Pulu (Livia) | repliikit, chat | nykypuhekieltä (reunoilla loppuheitot), pronominit kokonaisina (minä, sinä), ei huutomerkkejä; asiantuntija, joka puolustautuu refleksinä; komiikka arvostuksen puutteesta, ei tyhmyydestä | 3.23, 3.24 |
 | Pöllö | täkynostot, nostot | ikivanha silminnäkijäreportteri: kuiva huumori, vähättelevä toteavuus, enintään kaksi virkettä, ei huutomerkkejä (poikkeus sulkasatohetki, ks. 3.25) | 3.25 |
 
 Nuori Fogg eli pelaaja ei puhu, ei kommentoi eikä havainnoi, ja pelaajan etunimeä tai sukupuolta ei paljasteta (3.3, 3.8). Pelaajaa puhutellaan "sinä".
