@@ -8,6 +8,7 @@ Peli kuulostaa rauhalliselta, lämpimältä ja tarkalta: ääni palvelee kertoja
 
 ## Kertoja ja puhe
 
+- **Omistajan suunta 18.12.2026:** kaikessa kertojaääni on William; ainoa poikkeus on isoisä, jolla on oma ääni. (Pulu on hahmo, ei kertoja: Pulun omat repliikit ja chat-vastaukset pysyvät Pulun äänellä, kunnes omistaja toisin sanoo.)
 - **Kertoja William:** rauhallinen, selkeä, tasainen; ei tunnetageja, nopeus vain ElevenLabsin `speed`-asetuksella (enintään 1,2). Teksti sanasta sanaan; arvottavia pulmia ei lueta.
 - **Isoisä:** lämmin, hieman vanhahtava; erillinen malli ja resepti. **Pulu:** lämmin ja iloinen, vähän kujeileva; ei haikeaa (`[softly]`/`[whispers]` kuulostivat liian surullisilta).
 - **Huudot ja hahmot:** lyhyitä, hauskoja ja selkeitä. Puyin ääni on nuori ja kirkas (Kavya); huudon alut ("Oho!", "Auts!", "Hoplaa!", "Noin!", "Katos vaan!", "Hups!", "Soriii!") kuuluvat heti. Kaksi huutoa samassa kohdassa tehdään kahdella eri henkilön äänellä (vanha eunukki + nuorempi), ei samalla äänellä kahdesti.
