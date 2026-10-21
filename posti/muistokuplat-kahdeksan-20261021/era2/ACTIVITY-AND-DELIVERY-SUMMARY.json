@@ -1,0 +1,44 @@
+{
+  "batch": 2,
+  "requestedImages": 4,
+  "selectedImages": 4,
+  "callsIssued": 5,
+  "callsCompleted": 5,
+  "callsFailed": 0,
+  "wholeNewQualityRetries": 1,
+  "partialEdits": 0,
+  "items": [
+    {
+      "id": "05-teeastiaryhma",
+      "callsIssued": 1,
+      "selectedSHA256": "5e25b8af66a52884fbad74139766a7561c8625c022105b80cdcb0a4d8f6e676b",
+      "rejectedCandidates": []
+    },
+    {
+      "id": "06-punainen-lasiryhma",
+      "callsIssued": 1,
+      "selectedSHA256": "0d4dca9cc865e0152fea61cf05a6c97b5ffbf31606e0229d60dafe4c1fda2939",
+      "rejectedCandidates": []
+    },
+    {
+      "id": "07-bambusermi",
+      "callsIssued": 1,
+      "selectedSHA256": "dffe5c76fdc1f1c78f720eb5b3e594549f44232f0127b46b9dae25101a81f969",
+      "rejectedCandidates": []
+    },
+    {
+      "id": "08-maisemasermi",
+      "callsIssued": 2,
+      "selectedSHA256": "0bc35f6815a0d3f471c47b1735fba574d8a384750984e2d2f0083ef89fa15b9f",
+      "rejectedCandidates": [
+        {
+          "sha256": "6d47ee933391df3052846a0774ba31c3ae5d648cd971f2e2e69c8d785f3e7498",
+          "QA": {
+            "status": "REJECTED_CAMERA_AND_SCALE",
+            "notes": "Too close composition, screen disproportionately tall relative to child; requested distant centerline view and about1.65m height."
+          }
+        }
+      ]
+    }
+  ]
+}

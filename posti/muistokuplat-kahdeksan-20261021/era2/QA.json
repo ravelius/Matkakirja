@@ -1,0 +1,58 @@
+[
+  {
+    "id": "05-teeastiaryhma",
+    "nativeSHA256": "5e25b8af66a52884fbad74139766a7561c8625c022105b80cdcb0a4d8f6e676b",
+    "at": "2026-10-21T17:14:49.445488+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Natiivikuva verrattu esinereferenssiin: sama kerma-sininen kultareunainen kaksitasoinen jalusta, neljä kaarevaa jalkaa, yksi kannellinen teepannu ylhäällä ja kaksi kuppia alatasolla. Koko ryhmä näkyy lattialla istuvien keskustelijoiden vieressä. Kuvakulma on matala ja sivulta hieman viisto. Korkeus on suhteessa aikuisiin noin metrin luokkaa; luonnolliset kasvot ja käsien asennot. Ei havaittua lisätekstiä tai kulmamerkkiä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "06-punainen-lasiryhma",
+    "nativeSHA256": "0d4dca9cc865e0152fea61cf05a6c97b5ffbf31606e0229d60dafe4c1fda2939",
+    "at": "2026-10-21T17:15:28.871153+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Natiivikuva verrattu lähteen lasiryhmään: rubiininpunainen lootuskulho, alahyllyn kapea maljakko ja kuppi sekä punaruskea kaksitasoinen jalusta säilyvät tunnistettavina ja kokonaan kuvassa. Aamun valo kulkee lasin läpi ja punainen heijastuma ulottuu lattialla istuvan Puyin polvien viereen. Kuvakulma lapsen takaa ikkunaa kohti; valoisa, aidon valokuvan materiaalit, ehjät esineet. Mittakaava noin metrin luokkaa. Ei havaittuja tekstejä tai kulmamerkkejä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "07-bambusermi",
+    "nativeSHA256": "dffe5c76fdc1f1c78f720eb5b3e594549f44232f0127b46b9dae25101a81f969",
+    "at": "2026-10-21T17:16:12.817984+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Natiivikuva verrattu bambusermiin: yksiosainen tumma puukehys, kaksi leveää T-jalkaa, brokadireuna ja vasemmalta ylös nouseva bambumaalaus säilyvät. Koko sermi ja jalat näkyvät; Puyi kyykistyy sen edessä. Palvelijan pehmeä hahmo ja lyhdyn lämmin valo näkyvät paperilla, palvelijaa näkyy myös oikealla sermin takana. Valoisa etusuunnan valokuva, sermi lasta korkeampi; arvioitu mittakaava lähteen suuruusluokkaa, ei mitattu. Ei havaittua tekstiä tai kulmamerkkiä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "08-maisemasermi",
+    "nativeSHA256": "0bc35f6815a0d3f471c47b1735fba574d8a384750984e2d2f0083ef89fa15b9f",
+    "at": "2026-10-21T17:18:26.858751+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "referenceCompared": true,
+    "notes": "Uusi v2 tarkistettu natiivina ja lähteeseen verraten: kuusi lehteä, tumma puukehys, brokadireunat ja sinivihreä vuoristo-vesimaisema säilyvät. Koko sermi näkyy salin keskilinjalta kauempaa kuvattuna. Vastaanottoa käyvät aikuiset seisovat sen edessä ja lapsi kurkistaa kapeasta välistä; mittakaava on nyt aikuisten kanssa samaa noin1.65m suuruusluokkaa eikä ylikorkea seinämä. Kuvallinen mittakaava arvio, ei mittatodistus. Valoisa valokuvamainen pinta, ei havaittua tekstiä tai kulmamerkkiä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  }
+]

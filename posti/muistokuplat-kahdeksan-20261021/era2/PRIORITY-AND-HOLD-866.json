@@ -1,0 +1,17 @@
+{
+  "taskNumber": 866,
+  "source": {
+    "path": "posti/paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "90dbccd29eee8f809816149252ade6e71037b5ed",
+    "sha256": "d464d6e6e1453178ceac1e5ef4414d7e3fb71e426591bd7b159aeac4619ca3ba",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/sources/paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md",
+    "bytes": 2726
+  },
+  "at": "2026-10-21T17:03:27.395670+00:00",
+  "doucaiTask864OnHold": true,
+  "previous22RequireOwnerSelectionBeforeGame": true,
+  "previous22PTAcceptancePreserved": true,
+  "noPriorImageRegenerationAuthorizedByThisOrder": true,
+  "gameIntegrationVerified": false
+}
