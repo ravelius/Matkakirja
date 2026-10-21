@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-21T00:06:23.790867+00:00",
+  "pairRows": 12,
+  "distinctIds": 12,
+  "existingIntactImageReferences": 8,
+  "additionalWrittenOnly": 4,
+  "allEightOriginalSHA256Verified": true,
+  "newImageCalls": 0,
+  "newTripoCalls": 0,
+  "modelsProduced": 0,
+  "writtenPlanComplete": true,
+  "visualBrokenPairsProduced": false,
+  "ownerAccepted": false,
+  "status": "PASS-WRITTEN-PLAN-SCOPE"
+}
