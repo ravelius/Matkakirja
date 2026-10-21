@@ -1,0 +1,71 @@
+{
+  "batch": "juoksupeli-kahdeksan-esinetta-20261021",
+  "owner_authorized": true,
+  "scope": "Eight Tripo 3D prop groups from approved floor-prop board and two selected screens. Send images/descriptions to Claude before any Tripo generation.",
+  "objects": [
+    {
+      "id": "01-sinivalkoinen-maljakko",
+      "name": "Sinivalkoinen posliinimaljakko",
+      "materials": "posliini, matala sävyyn maalattu puujalusta",
+      "breakage": "maljakko särkyy teräviksi vaaleiksi/sinikuvioisiksi sirpaleiksi; jalusta kaatuu erikseen",
+      "voice_cues": "keisarin maljakko, posliini, maalauskoristeet",
+      "height_m": 0.95
+    },
+    {
+      "id": "02-keltainen-maljakko",
+      "name": "Keltainen kukkakoristeinen kurpitsamaljakko",
+      "materials": "keltalasitteinen maalattu posliini, matala keltaiseksi maalattu puujalusta",
+      "breakage": "hauras kaksoisrunkoinen maljakko ja sivukahvat särkyvät; jalusta erillinen",
+      "voice_cues": "keltainen juhlamaljakko, kukkamaalaus, arvokas astia",
+      "height_m": 0.9
+    },
+    {
+      "id": "03-turkoosi-kannellinen-ruukku",
+      "name": "Turkoosi kannellinen posliiniruukku",
+      "materials": "turkoosipohjainen posliini lintu- ja kukkamaalauksin, kansi, matala sävytetty puujalusta",
+      "breakage": "kansi irtoaa ja särkyy, runko särkyy erikseen, jalusta kaatuu",
+      "voice_cues": "kansi, lintumaalaus, kallisarvoinen ruukku",
+      "height_m": 0.85
+    },
+    {
+      "id": "04-lautaspino",
+      "name": "Noin metrin sinivalkoinen lautaspino",
+      "materials": "sinivalkoinen posliini, kullanväriset reunakoristeet",
+      "breakage": "pino hajoaa useiksi erillisiksi lautasiksi ja sirpaleiksi, pitkä helisevä ketjureaktio",
+      "voice_cues": "koko lautasvarasto, juhla-astiasto, monta lautasta",
+      "height_m": 1
+    },
+    {
+      "id": "05-teeastiaryhma",
+      "name": "Teeastiaryhmä vaalealla jalustalla",
+      "materials": "sinivalkoinen posliiniteekannu ja kaksi kuppia; vaalea sinikoristeinen kaksitasoinen puuteline",
+      "breakage": "kolme irtonaista astiaa putoavat ja särkyvät; teline kaatuu; kupit eivät ole kiinni hyllyssä",
+      "voice_cues": "teehetki, teekannu, kupit, keisarin astiasto",
+      "height_m": 1
+    },
+    {
+      "id": "06-punainen-lasiryhma",
+      "name": "Rubiininpunainen lasiryhmä",
+      "materials": "läpikuultava punainen lasilootuskulho, pieni maljakko ja kuppi; viininpunainen kaksitasoinen puuteline",
+      "breakage": "kolme lasiesinettä putoavat ja helisevät sirpaleiksi; teline kaatuu erikseen",
+      "voice_cues": "punainen lasi, lootuskulho, lasihelinä",
+      "height_m": 1
+    },
+    {
+      "id": "07-bambusermi",
+      "name": "Yksiosainen bambumaalattu paperisermi",
+      "materials": "kuituinen vaalea paperi, bambumustemaalaus, ohut tumma puukehys ja kaksi tukijalkaa",
+      "breakage": "paperi repeää keskeltä sivuille kiinni jääviksi liepeiksi; ei keskeltä katoavaa palaa; puurunko voi kaatua",
+      "voice_cues": "paperi, bambumaalaus, sermi, repeäminen; ei lasisirpaleääntä",
+      "height_m": 1.55
+    },
+    {
+      "id": "08-maisemasermi",
+      "name": "Kuusiosainen maisemamaalattu paperisermi",
+      "materials": "paperipohjaiset sinivihreät maisemakentät, ohuet puukehykset, taittosaranat",
+      "breakage": "osuttu paperikenttä repeää, kuusi lehteä voivat taittua/kaatua; ei koko sermin häviämistä",
+      "voice_cues": "vuoristomaalaus, paperisermi, salin jakaja, repeäminen",
+      "height_m": 1.65
+    }
+  ]
+}
