@@ -114,3 +114,9 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   JuoksuPalatsi.Pohjaan), näkyvyysloki ("näkölinja peitossa"). Skenaario uusimmalle: sk-juoksupeli-kuvapari-209n.txt.
 - AVOIN: läntinen kuja w1/w3 (Puyi seinän/hallin katon takana, Puyi pohja (−156; 528) ja (−168; 520)); 34 s portin julkisivu.
   LT:n raskas-uusinta rungosta c6e4d5a84 odottaa (raja 13 ms ennen KK:ta; 99c55e667: 13,8 ms).
+- 04.3x–06.3x: uusinnat 209o–209r → PT (209r runko 33876e81f: h2/kuja-338 ilman häivytyspalloa, w2 jalat näkyvät, nykäykset 0).
+  LT 7caec6487 raskas 12,8 ms (≤ 13 ✓). Muisti (huippu 3 813 Mt): d5775d5ed verkkojen CPU-kopiot pois, 951e747ef avoimet huoneet
+  kerran mallia kohden, 0bfc0c958 avoimet-v12 (kuvat ≤ 1024 px); NS:n muistiajo rungolla 5e4663bba odottaa.
+  Kärki pelikoodari/nakoisyys-209 = b890ac258: räystäsvara (209r w1: kamera paviljongin LOD0-räystäässä, peitto LOD2:sta),
+  katottomassa huoneessa tele-kenttä pysyy (9/8 m, jyrkkä 11/7 m, peittyessä vanha laaja). Ajamatta simulla (NS:lle runkoon).
+  Lentopeli: pelikoodari/lento-wasd 9f7205708, oikeat näppäimet Macilla kokeilematta.
