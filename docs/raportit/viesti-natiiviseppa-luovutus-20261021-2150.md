@@ -14,7 +14,9 @@ Pysyvät säännöt: proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-hu
 ## JUNA 210 (avaamatta; PT:n kuittaus ennen kokoamista)
 - Pohja master e51c33e0f → uusi haara natiiviseppa/juna-210 (skriptit juna209/* kovakoodaavat 209:n ja peilin juna-209 → kopioi juna210/).
 - Jonossa: PK a9c5520d8 (EI 66533c06e yksinään; a9c5520d8 perii sen ja korjaa), VS linssiseppa2/rijks-paivanvalo-210 b6fdf796d
-  (sis. Lavastajan 5a3aff69d + LS c2e3aef04; media amsterdam-ihmiset-v1 ämpärissä). Korjattavat: tunnetut poikkeamat yllä.
+  (sis. Lavastajan 5a3aff69d + LS c2e3aef04; media amsterdam-ihmiset-v1 ämpärissä), NUI natiivi-ui/ui-periaatteet-210 6f8455f1a
+  (UI-periaatteet P2 P3 P7 P8 P10, PT kuittasi). Korjattavat: tunnetut poikkeamat yllä.
+- Omistaja 21.53: tämän tilin viikko ≤ 80 % → juna 210 avataan pe aamuna toisella tilillä.
 - NS oma 210-työ: kartan saapumislennon ruutukohtaiset syymerkinnät (PT hyväksyi) – ~10 järjestelmän työ osuu samoihin ruutuihin.
 
 ## OPIT 21.10.
