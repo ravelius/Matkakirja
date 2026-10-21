@@ -41,3 +41,8 @@ KK nollautuu 08.35 jälkeen (omistajan "Kyllä, nollaa").
 ## 4. ROOLIT
 - PK: 209x (muurikate-v5) ja #791-reitit. Lavastaja: kuoret reiteille 1–3. LS: odottaa LT:n Johannes-kuvaa. NS: runko ja muistiajo
   tehty. LT: A1-775. Asemataulu: työlista 15 työn alla (raja 15) – uusi rivi vaatii yhdistämisen.
+
+## LISÄYS 08.5x
+- 209x (muurikate-v5): PK:n mukaan ylävasen puhdas, w1 ✓; e3:n häivytysympyrä jätetty omistajan 20.10. päätöksen mukaiseksi. PT ei katsonut arkkia itse → tarkista r05.
+- MUISTOKUPLAT (omistaja 08.53): Codexin kuvasessiolle tilaus be12c7be3 (toistoryhmät ensin, sitten vääristyneet; vertailuarkki → PT → PK vaihtaa). PK: vanha sivellin-1.jpg pois junaan 209.
+- Osakuvat #799 erät 1–2 postissa (Tripo 3D jatkaa). Omistaja 08.45: Codexin/Tripon ehdotuksista ei kortteja, toimi postin mukaan (loki).
