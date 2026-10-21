@@ -121,3 +121,17 @@ test('synkka.py ajaa kierroksen ennen vientiä vain oikeassa työkansiossa', () 
   assert.equal(r2.status, 0, r2.stderr);
   assert.doesNotMatch(r2.stdout, /PÄIVITETTY|PUUTE/, 'ilman nykyinen.json:ia ei päivitetä');
 });
+
+test('synkka.py ilmoittaa taulun virheellisestä etenemisestä kerran (kirjoittaja suoraan tauluun)', () => {
+  const k = mkdtempSync(join(tmpdir(), 'asemataulu-et-'));
+  for (const n of ['synkka.py', 'tarkista-junat.py', 'tyolistavahti.py']) writeFileSync(join(k, n), readFileSync(join(lahdeKansio, n)));
+  mkdirSync(join(k, 'lista'));
+  writeFileSync(join(k, 'lista/junat.json'), JSON.stringify({ rivit: [{ nimi: 'Juna 209', tila: 'Lukittu', edistys: 1, teksti: 'Valmiina:\n– lento' }] }));
+  writeFileSync(join(k, 'lista/eteneminen.json'), JSON.stringify({ nimi: 'Juna 209', jakso: 'matka', edistys: '2', kirjoittaja: 'Natiiviseppä' }));
+  const aja = () => spawnSync('python3', ['-I', join(k, 'synkka.py'), '--lista', join(k, 'lista'), '--ulos', join(k, 'k.json')], { encoding: 'utf8' });
+  const r = aja();
+  assert.match(r.stdout, /TARKISTA\|eteneminen\|\d+\|eteneminen: edistys pitää olla luku 0–5.*\|Natiiviseppä/, r.stdout + r.stderr);
+  assert.doesNotMatch(aja().stdout, /TARKISTA/, 'sama sisältö ilmoitetaan kerran');
+  writeFileSync(join(k, 'lista/eteneminen.json'), JSON.stringify({ nimi: 'Juna 209', jakso: 'matka', edistys: 2, kirjoittaja: 'Natiiviseppä' }));
+  assert.doesNotMatch(aja().stdout, /TARKISTA/, 'oikea eteneminen ei tulosta');
+});

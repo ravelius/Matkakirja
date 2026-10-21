@@ -33,6 +33,9 @@ kierroksella heti ArtifactData listin jälkeen:
    piti muistaa ajaa käsin): ennen muuta synkka ajaa työkansion `asemataulu.py --kierros` (vain kun kansiossa on nykyinen.json eli
    kyseessä on oikea työkansio). Sen rivit tulostuvat sellaisinaan: PÄIVITETTY|… (ei toimia), OHJE PÄIVITETTY|… (Asemataulu lukee
    ohjeen uudelleen), NYKYINEN MUUTTUI|… (id:t tai osoite vaihtui) ja PUUTE|… (rivi PT:lle). Speksi luku 2, KIERROS.
+7) TAULUN ETENEMISEN TARKISTUS (21.10.2026): Natiiviseppä ja Julkaisija kirjoittavat talo/eteneminen suoraan tauluun, joten synkka
+   tarkistaa listin eteneminen-dokumentin (junat listista tai tiedostosta) ja tulostaa "TARKISTA|eteneminen|<määrä>|<1. virhe>|<kirjoittaja>",
+   kun dokumentissa on virhe (sama sisältö kerran; tila data/.vanha-ilmoitettu.json). Asemataulu välittää rivin PT:lle.
 Ei kirjoita tauluun itse; data-tiedostoista muuttaa vain tyolista.json:n työlistavahdin sääntöjen mukaan (kohta 5) ja valmiiden
 arkistoinnin (kohta 0) sekä toimi-kopiot (kohta 4).
 Tehtavat-dokumentti poistettiin (omistaja 20.10.2026 klo 23.48): roolikortin teksti johdetaan työlistasta (hoitaja/kierros.py).
@@ -271,6 +274,21 @@ def koodi_mainista():
     return rivit
 
 
+def eteneminen_taulussa(lista):
+    """Kohta 7: listin eteneminen tarkistimella; palauttaa (virheet, kirjoittaja, avain) tai None."""
+    et = lue(os.path.join(lista, "eteneminen.json"))
+    if not isinstance(et, dict) or not et.get("nimi"):
+        return None
+    junat = lue(os.path.join(lista, "junat.json")) or lue(os.path.join(DATA, "junat.json"))
+    if junat is None:
+        return None
+    sp = importlib.util.spec_from_file_location("tarkista_junat", os.path.join(TAMA, "tarkista-junat.py"))
+    t = importlib.util.module_from_spec(sp)
+    sp.loader.exec_module(t)
+    virheet = [v for v in t.tarkista(junat, et)[0] if v.startswith("eteneminen")]
+    return (virheet, et.get("kirjoittaja") or "-", json.dumps(et, sort_keys=True, ensure_ascii=False)) if virheet else None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lista", required=True, help="ArtifactData listin out_dir/talo")
@@ -336,6 +354,11 @@ def main():
     tapahtuma = viimeisin_tapahtuma()
     tila = lue(TILA) or {}
     muuttui = False
+    et = eteneminen_taulussa(a.lista)
+    if et and tila.get("eteneminen-tarkista") != et[2]:
+        print(f"TARKISTA|eteneminen|{len(et[0])}|{et[0][0][:160]}|{et[1]}")
+        tila["eteneminen-tarkista"] = et[2]
+        muuttui = True
     for doc in ("junat", "tyolista"):
         sis = lue(os.path.join(DATA, doc + ".json"))
         if sis is None:
@@ -349,6 +372,7 @@ def main():
             tila[doc] = nyt
             muuttui = True
     if muuttui:
+        os.makedirs(os.path.dirname(TILA), exist_ok=True)
         tmp = TILA + ".tmp"
         with open(tmp, "w", encoding="utf-8") as f:
             json.dump(tila, f)

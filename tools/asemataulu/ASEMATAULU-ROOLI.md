@@ -51,6 +51,7 @@ niitä käsin (muutos = docs-PR; käsin muutettu kopio palautuu seuraavalla kier
    Synkka päivittää ensin TAULU:n koodin ja tämän ohjeen mainista (speksi luku 2, KIERROS): `PÄIVITETTY|…` ei toimia;
    `OHJE PÄIVITETTY|…` → lue tämä tiedosto uudelleen ennen seuraavaa kierrosta ja toimi uuden ohjeen mukaan; `NYKYINEN MUUTTUI|…` →
    lue TAULU/nykyinen.json uudelleen (id:t vaihtuivat, viestit uusiin id:ihin); `PUUTE|…` → yksi rivi PT:lle.
+   `TARKISTA|eteneminen|…` (taulun etenemisessä virhe, kirjoittaja viimeisenä) → yksi rivi PT:lle; etenemistä et korjaa itse.
 
 ## B. SISÄLLÖN TARKISTUS (vain Boostin aikana, osa A-kierrosta)
 1. Aja `python3 -I TAULU/tarkista-junat.py --kansio TAULU/data/talo --tf-lokit /Users/Shared/Claude/julkaisija-tyokalut`
