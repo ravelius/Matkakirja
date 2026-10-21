@@ -1,0 +1,7 @@
+Kierros 34, B = 5093a3bc8 (62c2991a9 + PK a9c5520d8), iPad Pro 13 Release, 21.10.2026 20.43-21.14
+Lämpö: alku 0 (20.43.18), loppu 0 (20.55.31)
+GPU: A 10,30 ms | J 10,94 | JA 10,24 | JB 9,74 (raja 14) -> OK
+Värinä (räystäs): v11 0,14 % | v27 0,20 % | v52 0,26 % värisevää ruutua, siirto ~ -1 px (vakio)
+Autopilotti: käännösnykäykset 9 aukio / 9 sisätila (PT hyväksyi), alkunykäykset 0/0, kamerahypyt 2/2, kääntyilyt 2/3, piilossa 6/13, katot/musiikki/rajaus/pysähdys/välähdys 0
+Loppukortti pystyssä: maali 21.00.10 (912 m, 135 s, 1412 p); kortti ei kuvissa 1-8, näkyy kuvista 9-24 (>= 20 s) -> OK
+Kylmäkäynnistykset: 1-5 OK, kaatumisia 0/5
