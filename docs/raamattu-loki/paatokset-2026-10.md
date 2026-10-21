@@ -2268,3 +2268,12 @@ ennenkuin tehdään tai kysytään minulta ... tuotantopohjat sitoviksi nyt lopp
 (AINA/EI + Raamatun kohdat), uudet pohjat Kysymys omistajalle (sitova 17.36) ja Musiikki ja äänet, Raamatussa säännön ydin ensimmäiseen virkkeeseen; pohjat omistajan kanssa KK:n kautta yksi
 kerrallaan. 17.38: "välittyykö sinun omat ohjeet silloin, kun vaihdan tiliä? ... ainut millä on väliä on se, että tiedot välittyvät myös tilinvaihdon yli" → jokainen omistajan päätös kirjataan lokiin
 ja sääntömuutos Raamattuun; KK:n tai PT:n muistiinpanot ja muisti eivät riitä. Raamattu 12.23 kohta 9: pysyvät luvat (kertojaäänet, Codexin kuvat ja Tripo) pätevät tilinvaihdon yli.
+
+## TUOTANTO: STUDIOJAKO A SUUNTA / B TEKOTAVAT / C RESEPTIT / D TUOTANNONOHJAUS; JUOKSUPELIN MUSIIKKI (21.10.2026 klo 18.03)
+
+OMISTAJAN PÄÄTÖS klo 18.02 (KK:n välittämänä, sanatarkasti): "Jako Ok. Ei tehdä juoksupeliin vielä lisää musiikkia. Käytetään vain nykyisiä myös toisilla tasoilla." Taustalla omistajan 17.53 ja 17.55:
+"Mitä ne muut tulevat pohjat käsittelevät? Tämä on nyt todella hatara pohja vasta, jos mietitään linssejä. Lähinnä tässä on vain lupakyselyistä, kun tärkeämpää olisi se, miten eri asioita tuotetaan
+käytännössä." ja "Mieti asetelma niin, että miten ammattimaiset peliyhtiöt lähestyisivät näitä asioita ja jaottele kaikki asiat siltä pohjalta." 1) Jako docs/tuotanto/: A suunta, B tekotavat, C
+reseptit, D tuotannonohjaus (Raamattu 4.21 STUDIOJAKO, tekijät siellä). Ensimmäisenä omistajalle A taide: hyväksytyt ja hylätyt esimerkkikuvat. 2) PT:n päätös Tarkista ennen -PR:istä: #5140, #5141,
+#5142, #5143 ja #5145 suljetaan (luvat ja vaiheet vain D:hen; AINA/EI-rivit PT kokoaa D:n lupataulukkoon), #5150 (musiikki ja äänet) ja #5153 (historiapelin rekvisiittatekstit) käännetään B:hen ja
+C:hen tekijän toimesta. Kartoitus docs/raportit/pohjat-studiojako-kartoitus-20261021.md. 3) Juoksupeli: ei Lyria-kutsuja eikä CC0-näytteitä; tasoille 2+ nykyiset kappaleet (Pelikoodari kytkee).
