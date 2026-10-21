@@ -19,6 +19,14 @@ Tämä pohja kattaa kaiken, minkä pelissä lukee ääneen kertoja (isoisä, Wil
 kertomukset, historiaosiot, selitteet, Pulun vastaukset ja kutsut. Se ei kata musiikkia, tehosteita eikä askelia
 (`aanipohja.md`; musiikki aina Lyrialla, Raamattu 5.15) eikä pelikytkentöjä (kytkijän oma työ).
 
+## Tarkista ennen (ääniosuus; AINA ennen kuin generoit tai kysyt omistajalta)
+
+- **5.1 / 5.2 lupa ja määrä:** AINA: lupa KK:n suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä, tarkka ottomäärä ja merkkimäärä (tagit ja luvut sanoina mukaan); hyväksytyllä ElevenLabs-äänellä lupa vain kun ajo ylittää 3 % kuukauden krediiteistä (ajokohtainen raja), kertojaäänten pysyvä lupa PT:n hyväksymille teksteille. EI: uutta henkilöä tai ääntä ilman lupaa; EI: uusintaa omin päin (ottomäärä sitoo, uusinta = uusi lupa KK:n kautta).
+- **5.22 / 5.12 ääni ja otto:** AINA: William `oae6GCCzwoEbfc5FHdEu` / Pulu / isoisä oman reseptinsä mukaan (`speed` vain asetuksena, ei atempoa); yksi otto per teksti, dialogi yhtenä ottona. EI: puheen jälkisäätöjä (nopeutus, venytys).
+- **5.13 / 5.11 / 9.11 talteen ja tarkistus:** AINA: raaka talteen heti ennen käsittelyä; `language_code: fi` rungossa; ääniportti ja Gemini-sokkokuuntelu ennen vientiä (omistaja ei ole ensimmäinen kuuntelija). EI: ämpärin ylikirjoitusta (uusi polku).
+- **7.27 tekstit omistajalle:** AINA: huudot, repliikit ja käsikirjoitukset numeroituna listana tavallisena viestinä; tagit näkyviin mukana (koko prompti). EI: tekstejä kysymyskortille.
+- **Ennen kysymystä omistajalle:** onko jo päätetty (`grep -ri "<aihe>" docs/raamattu-loki`), noudattaako ehdotus tätä pohjaa ja Raamattua, ja yksi suositus ensin.
+
 ## 1. Tuotantoputki ja roolit
 
 ```
