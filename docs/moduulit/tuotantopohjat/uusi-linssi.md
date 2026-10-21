@@ -125,18 +125,18 @@ Ensimmäinen käyttäjä on taidemuseo-linssi (museo-kamerajohtaja-204), mallina
    vauhti pehmein rampein, mutkassa hidastus), `Orbit` (kohteen ympäri), `Kaanto` (moniakselinen, huippu 60 °/s), `Zoom`
    (logaritmisesti tasainen) ja `Leikkaus`. Jokainen alkaa edellisen loppuasennosta ja -nopeudesta; uutta liikettä ei kirjoiteta
    sovittimeen vaan Ytimeen testeineen.
-3. **Leikkaus vain peitettynä.** Kamera saa hypätä vain mustan tai tumman välähdyksen alla (< 250 ms, 2.69). Pitkä siirto
-   (museossa napautusliuku yli 12 m) = tumma leikkaus lähelle kohdetta (4 m) + lyhyt liuku perille; omistaja 19.10. 08.20:
-   "55 m/s liuku ei ole hyväksyttävä kokemus".
+3. **Yksi pehmeä kaari, ei leikkauksia siirroissa** (2.202; omistaja 21.10.2026 klo 18.20 "Kyllä"). Siirroissa ei mustia
+   välähdyksiä eikä häivytyksiä; pitkä siirto on lento, joka on pehmeä ja silti nopea hallituin kiihdytyksin (`Lentokaari`),
+   ei pimennyksen alla tehty leikkaus. Omistaja 19.10. 08.20: "55 m/s liuku ei ole hyväksyttävä kokemus".
 4. **Perillä tarvittava ladataan ennen liikettä.** `Kamerasiirto.Valmistele` käynnistää esilataukset, kun liike lisätään jonoon,
-   ja `Valmis` pitää kameran paikallaan (tai mustan päällä), kunnes kaikki on valmiina. Saapumisnäkymän pääkohde (kohdepatsas,
+   ja `Valmis` pitää kameran paikallaan (avausnäkymässä verhon takana), kunnes kaikki on valmiina. Saapumisnäkymän pääkohde (kohdepatsas,
    kohdekuva) ladataan ENSIN ja sitä odotetaan pidempään kuin muuta: Leiden 19.10.: muu sisältö 4 s, kohdepatsas enintään
    10 s (kuormassa 4 s ei riittänyt → tyhjä jalusta perillä, cb166ad2b). Juuri ladattua kohdetta ei pureta leikkauksen
    jälkeen (budjetti piti valinnan kamerasta → latasi uudelleen perillä, da9bdd2f9). Lokiin aina rivi
    "esilataus valmis X s, kohde Y ladattu/EI ladattu", josta todistus tarkistetaan.
 5. **Saapumiskatse sisältöön.** Pitkän siirron lopussa kamera katsoo kohteeseen sen katseluasennosta (veistos ≤ 4 m:n päässä
    liu'un lopusta → veistoksen katseluasento), ei tyhjään seinään eikä lähikuvaan jalustasta.
-6. **Ei pyöritystä.** Kokonaiskääntö ja kesto testataan (`KameraliikeTestit`); iso suunnanmuutos mustalla välähdyksellä, kävelyssä
+6. **Ei pyöritystä.** Kokonaiskääntö ja kesto testataan (`KameraliikeTestit`); iso suunnanmuutos samalla pehmeällä kaarella (ei mustaa, 2.202), kävelyssä
    katse kääntyy menosuuntaan vain vähän. Napautusliu'un kääntöhuippu 150 °/s (ennen 1 s:n liuku 180° = 512 °/s).
 7. **Jokaiselle liikkeelle testi ja vahti.** CI-testi (jatkuvuus, pehmeä alku ja loppu, kesto) koko käsikirjoitetulle
    kierrokselle; todistusajossa ruutuaikavahti koko liike + 1 s (yli 20 ms:n ruutu = hylkäys) ja `ruutuvahti` (näytön ja pelin

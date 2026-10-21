@@ -9,6 +9,14 @@ on B:ssä `docs/tuotanto/tekotavat/kamera-ja-video.md`, luvat ja vaiheet D:ssä.
 Kamera kuljettaa katsojaa kuin rauhallinen opas: lähtee levosta, kiihtyy pehmeästi, katsoo minne mennään ja pysähtyy
 pehmeästi juuri siihen, mistä seuraava asia näkyy parhaiten. Katsoja muistaa kohteen, ei kameraa.
 
+## Omistajan päätökset
+
+- **21.10.2026 klo 18.20:** yksi pehmeä kaari, ei mustia välähdyksiä eikä häivytyksiä siirroissa ("Kyllä", 2.202).
+- **21.10.2026 klo 18.20, museot:** "Kamera voi olla pehmeä ja silti nopea. Tärkeintä on, miten siihen nopeuteen päästään.
+  Kaikki kiihdytykset pitää olla hallittuja."
+- **21.10.2026 klo 18.20, tyylit:** kameralla on tilanteen mukaan eri tyylejä, joilla on paljon yhteistä mutta myös eroja;
+  ne eritellään alla ja käydään omistajan kanssa yksi kerrallaan (luku "Kameratyylit tilanteittain").
+
 ## Periaatteet
 
 1. **Yksi pehmeä kaari** (2.202). Kaikki akselit (paikka, suunta, kallistus, kuvakulma) liikkuvat samalla käyrällä ja alkavat
@@ -24,6 +32,36 @@ pehmeästi juuri siihen, mistä seuraava asia näkyy parhaiten. Katsoja muistaa 
 6. **Kehys kohteen ehdoilla.** Pysähdyksessä kohde täyttää kuvan rauhallisesti (taulu noin 93 %, iPhonella pystyssä tilaa
    nimikyltille ja napeille) ja on keskellä tai sovitussa kohdassa.
 7. **Pelaajan oma liike tuntuu samalta** kuin automaattinen: napautus, peruutus ja vapaa kävely noudattavat samaa pehmeyttä.
+
+## Kameratyylit tilanteittain
+
+*(LUONNOS: rivit odottavat omistajan vastausta, yksi kysymys tilannetta kohden KK:n kortilla. Hyväksytty rivi merkitään päivämäärällä.)*
+
+### Yhteistä kaikille tyyleille
+
+1. Lähtö ja pysähdys levosta; kiihdytys ja jarrutus pehmeitä ja hallittuja: kiihtyvyys kasvaa nollasta (rajattu nykäys), ei
+   äkillistä nopeuden muutosta.
+2. Kaikki akselit samalla kaarella; jatkuvuus edellisen liikkeen paikasta, suunnasta ja nopeudesta.
+3. Ei pyöritystä paikallaan, ei mustia välähdyksiä eikä häivytyksiä siirroissa.
+4. Perillä tarvittava on ladattu ennen liikettä; perillä ei tyhjää eikä sumeaa.
+5. Ei nykäyksiä: yli 20 ms:n ruutu liikkeessä on virhe.
+6. Tauko pysäyttää kameran, kertojan ja tekstityksen samalla hetkellä.
+
+### Erot tilanteittain
+
+| Tilanne | Tarkoitus | Nopeus ja tempo | Katse | Kuka ohjaa | Erityistä | Malli nyt |
+|---|---|---|---|---|---|---|
+| Aloituslento | säväyttävä alkukohtaus (2.68) | dramaattinen: kuminauhamainen kiihdytys ja jarrutus, tempo vaihtelee | pallosta kohteeseen, lopuksi kaupunkiin | automaattinen, ohitettavissa | ainoa paikka, jossa kova kiihdytys on harkittu tehokeino | `Kartta/AloituslennonRata`, `LennonV3` |
+| Kartan lennot | siirtyminen paikasta toiseen pallolla | nopea mutta pehmeä, kesto matkan mukaan | menosuuntaan, perillä kohteeseen | peli (Pulun paikka, matkat) | nousukaari pitkällä matkalla; paluunappi | `PalloRata`, `PalloAjo`, `Nappula.LentoV3` |
+| Linssit | kerronnan tahdissa etenevä esitys | rauhallinen, pysäkki pysäkiltä | aiheeseen; pysäkillä paikallaan | automaattinen, pelaaja keskeyttää | tahti kertojan sana-ajoista | `Kamerakoreografia`, `Aikajana/Kameramatikka` |
+| Museot | opastettu kierros teoksesta toiseen | pehmeä ja silti nopea (lento ≤ 9 m/s), hallitut kiihdytykset | oviaukkoon, perillä teokseen | automaattinen; pelaaja voi napauttaa | ei mustaa; kehys teoksen ehdoilla | `Lentokaari`, `MuseoKierros.Lento` |
+| Pelien seurantakamera | pelaajan liikkeen seuraaminen | seuraa pelaajaa viiveettä mutta ilman tärinää | pelaajan edelle | pelaaja | korkeus pelin mukaan (juoksupelissä drone ylhäällä, katto pois sisällä) | Seikkailu (Cinemachine `ThirdPersonFollow`), juoksupeli |
+| Kohtaukset ja välivideot | elokuvamainen kerronta (4.23) | ohjaajan suunnitelman mukaan, otto kerrallaan | kohtauksen kohteeseen | käsikirjoitettu | otot ja leikkaukset kohtauksen sisällä; valo ja ääni samalla aikajanalla | pallokierrokset, dioraama (Cinemachine), esirenderöity video |
+| Kävely | tunne kulkemisesta tilassa | kävelynopeus, pehmeä lähtö ja pysähdys | menosuuntaan vain vähän (~15°), lopuksi kohteeseen | automaattinen tai pelaaja | silmän korkeus, hento askeleen keinunta | museon kävely V2, Seikkailu `Kavely` |
+
+### Avoimet kysymykset omistajalle (yksi kerrallaan)
+
+Kysymykset ja suositukset ovat KK:lla; vastaukset kirjataan yllä olevaan taulukkoon.
 
 ## Hyvä ja huono (laatutaso)
 
