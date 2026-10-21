@@ -6,8 +6,7 @@ Lue nämä ennen kuin teet tai kysyt mitään (omistaja 21.10.2026 klo 17.31: yk
 
 **Tavoitteen muoto ensin:** AINA omistajan päätös, sitten havainnekuva, kuvakäsikirjoitus ja piirretty kuvakaappaus ennen aineistoa ja koodia (4.21, luku 0).
 
-- AINA koko maailma; linssiä EI rajata Eurooppaan (2.60).
-- AINA avaus Linssit-napista tai laukun Varusteista, EI kartan ☰:stä (2.62); keskeneräinen Linssit › Keskeneräiset, EI Kehittäjä › Kokeet (2.74).
+- AINA koko maailma, EI rajausta Eurooppaan (2.60); avaus Linssit-napista tai laukun Varusteista, EI kartan ☰:stä (2.62); keskeneräinen Linssit › Keskeneräiset, EI Kehittäjä › Kokeet (2.74).
 - AINA yhteinen kehys: OHJAUSNAPPI-ryhmä, ☰:n alin rivi Poistu ja ⚙ sama kaikissa linsseissä; EI erillistä ✕:ää (2.70).
 - AINA olemassa olevat UI-pohjat ja tyylikirja, yhteinen osa ensin; puuttuva osa kysytään PT:ltä, EI omaa ratkaisua (4.1, 2.201).
 - AINA tekstinapit `nappi.korkeus` 38 pt ja kuvakenapit OHJAUSNAPPI 40 pt; EI eri kokoja samassa rivissä (4.1).
