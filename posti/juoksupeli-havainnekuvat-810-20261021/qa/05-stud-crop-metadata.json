@@ -1,0 +1,22 @@
+{
+  "sourceSHA256": "c88e64a66447ad0a6340d082d8eb1ff4f2374841e8ecca839ea7da3a99efc5f2",
+  "sourceDimensions": [
+    1448,
+    1086
+  ],
+  "boxesPixels": {
+    "left": [
+      425,
+      65,
+      540,
+      425
+    ],
+    "right": [
+      905,
+      70,
+      1025,
+      425
+    ]
+  },
+  "purpose": "Native-pixel QA crops only; production image not modified"
+}

@@ -1,0 +1,254 @@
+{
+  "taskNumber": 810,
+  "at": "2026-10-21T09:34:26.263317+00:00",
+  "personallyViewed": true,
+  "approvedForDelivery": true,
+  "deliveryPurpose": "Six sole authorized candidates to be shown to owner before game modification loop; disclose failed constraints",
+  "overall": "SIX_CANDIDATES_FOR_REVIEW_WITH_TWO_EXPLICIT_SOURCE_FAILURES",
+  "allSourceRequirementsMet": false,
+  "assets": {
+    "01": {
+      "id": "01",
+      "file": "01-lahtokuja.png",
+      "deliverySHA256": "7a4a14b1dc6b457778155efb5a7e4db5571621b95886ad6ad8c9fe124104b955",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "nativeBytesUnedited": true,
+      "approvedForDelivery": true,
+      "deliveryPurpose": "PT and owner review only",
+      "approvedForGameUse": false,
+      "status": "PASS_VISUAL_FOR_EDITOR_REVIEW",
+      "commonChecks": {
+        "PuyiRearIdentityAndOneBraid": "PASS",
+        "redWallsGrayStoneBasesGoldRoofsLightPavingSunny807Style": "PASS",
+        "backFacingPuyiLowerCenter": "PASS",
+        "noMotionBlur": "PASS",
+        "routeEmptyNoOtherPeopleOrCollectibles": "PASS",
+        "landscape4to3": "PASS"
+      },
+      "cameraMetresCalibrated": false,
+      "currentGameGeometryMatched": false,
+      "ownerAccepted": false,
+      "sceneAndScaleReview": {
+        "scene": "low servants-room rows with doors and lattice windows, narrow lane",
+        "checks": "Gray stone wall bases, gold roofs, sharp paving, one back-facing gold-cape Puyi, clear route; personally viewed native output",
+        "note": "Puyi is visually closer/larger than in images02/03 (approximately27% image height from visual estimate); this is an illustrative camera target, not a calibrated4-6m camera proof.",
+        "personallyViewed": true,
+        "deliverySHA256": "7a4a14b1dc6b457778155efb5a7e4db5571621b95886ad6ad8c9fe124104b955",
+        "approvedForDelivery": true,
+        "reviewPurpose": "PT and owner preview before game modification loop",
+        "ownerAccepted": false,
+        "gameModificationLoopStarted": false
+      },
+      "scaleNote": "Elevated rear viewpoint is visually assessed only. Exact4-6m world height is not measured. Puyi size varies, around21-27% image height in these outputs; scene01/05 are closer than the requested prompt target13-17%. Architecture still dominates. These are target illustrations, not calibrated current-game screenshots."
+    },
+    "02": {
+      "id": "02",
+      "file": "02-punamuuri-kuja.png",
+      "deliverySHA256": "ade56ecc3ccdf05a4ac50494b3cfad38a300552397d6812c8f511c42b0bfd8a2",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "nativeBytesUnedited": true,
+      "approvedForDelivery": true,
+      "deliveryPurpose": "PT and owner review only",
+      "approvedForGameUse": false,
+      "status": "PASS_VISUAL_FOR_EDITOR_REVIEW",
+      "commonChecks": {
+        "PuyiRearIdentityAndOneBraid": "PASS",
+        "redWallsGrayStoneBasesGoldRoofsLightPavingSunny807Style": "PASS",
+        "backFacingPuyiLowerCenter": "PASS",
+        "noMotionBlur": "PASS",
+        "routeEmptyNoOtherPeopleOrCollectibles": "PASS",
+        "landscape4to3": "PASS"
+      },
+      "cameraMetresCalibrated": false,
+      "currentGameGeometryMatched": false,
+      "ownerAccepted": false,
+      "sceneAndScaleReview": {
+        "scene": "long high red walls on both sides with prominent gray stone bases",
+        "checks": "Gray masonry courses close to both sides, empty paving, one back-facing Puyi, no blur/UI/text; personally viewed native output",
+        "note": "Puyi approximately21% image height from visual estimate. No matched game-camera or metre calibration is claimed.",
+        "personallyViewed": true,
+        "deliverySHA256": "ade56ecc3ccdf05a4ac50494b3cfad38a300552397d6812c8f511c42b0bfd8a2",
+        "approvedForDelivery": true,
+        "reviewPurpose": "PT and owner preview before game modification loop",
+        "ownerAccepted": false,
+        "gameModificationLoopStarted": false
+      },
+      "scaleNote": "Elevated rear viewpoint is visually assessed only. Exact4-6m world height is not measured. Puyi size varies, around21-27% image height in these outputs; scene01/05 are closer than the requested prompt target13-17%. Architecture still dominates. These are target illustrations, not calibrated current-game screenshots."
+    },
+    "03": {
+      "id": "03",
+      "file": "03-aukio.png",
+      "deliverySHA256": "e570bd7d886a376412d6c8109b57d61c2f2f1720bf98b4c437c271b30488d9d9",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "nativeBytesUnedited": true,
+      "approvedForDelivery": true,
+      "deliveryPurpose": "PT and owner review only",
+      "approvedForGameUse": false,
+      "status": "PASS_VISUAL_FOR_EDITOR_REVIEW",
+      "commonChecks": {
+        "PuyiRearIdentityAndOneBraid": "PASS",
+        "redWallsGrayStoneBasesGoldRoofsLightPavingSunny807Style": "PASS",
+        "backFacingPuyiLowerCenter": "PASS",
+        "noMotionBlur": "PASS",
+        "routeEmptyNoOtherPeopleOrCollectibles": "PASS",
+        "landscape4to3": "PASS"
+      },
+      "cameraMetresCalibrated": false,
+      "currentGameGeometryMatched": false,
+      "ownerAccepted": false,
+      "sceneAndScaleReview": {
+        "scene": "broad paved square, raised halls and stairs beyond",
+        "checks": "Large open paving, red/gold halls, gray stone terraces and wall bases, small rear Puyi, no blur/UI/collectibles; personally viewed native output",
+        "note": "Puyi approximately22% image height from visual estimate. Not an exact current-game geometry match.",
+        "personallyViewed": true,
+        "deliverySHA256": "e570bd7d886a376412d6c8109b57d61c2f2f1720bf98b4c437c271b30488d9d9",
+        "approvedForDelivery": true,
+        "reviewPurpose": "PT and owner preview before game modification loop",
+        "ownerAccepted": false,
+        "gameModificationLoopStarted": false
+      },
+      "scaleNote": "Elevated rear viewpoint is visually assessed only. Exact4-6m world height is not measured. Puyi size varies, around21-27% image height in these outputs; scene01/05 are closer than the requested prompt target13-17%. Architecture still dominates. These are target illustrations, not calibrated current-game screenshots."
+    },
+    "04": {
+      "id": "04",
+      "file": "04-sali-katto-avattu.png",
+      "deliverySHA256": "945468d51595728848eed8622a7d5eba02ee40147db3ceedc920cba2ca7bdf0b",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "nativeBytesUnedited": true,
+      "approvedForDelivery": true,
+      "deliveryPurpose": "PT and owner review only",
+      "approvedForGameUse": false,
+      "status": "PASS_VISUAL_FOR_EDITOR_REVIEW",
+      "commonChecks": {
+        "PuyiRearIdentityAndOneBraid": "PASS",
+        "redWallsGrayStoneBasesGoldRoofsLightPavingSunny807Style": "PASS",
+        "backFacingPuyiLowerCenter": "PASS",
+        "noMotionBlur": "PASS",
+        "routeEmptyNoOtherPeopleOrCollectibles": "PASS",
+        "landscape4to3": "PASS"
+      },
+      "cameraMetresCalibrated": false,
+      "currentGameGeometryMatched": false,
+      "ownerAccepted": false,
+      "sceneReview": "Hall interior plainly visible without roof occlusion; red columns, light floor, traditional dark side furniture and unobstructed central running aisle; no floating or broken roof. Personally viewed.",
+      "scaleNote": "Elevated rear viewpoint is visually assessed only. Exact4-6m world height is not measured. Puyi size varies, around21-27% image height in these outputs; scene01/05 are closer than the requested prompt target13-17%. Architecture still dominates. These are target illustrations, not calibrated current-game screenshots."
+    },
+    "05": {
+      "id": "05",
+      "file": "05-porttikaytava.png",
+      "deliverySHA256": "c88e64a66447ad0a6340d082d8eb1ff4f2374841e8ecca839ea7da3a99efc5f2",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "nativeBytesUnedited": true,
+      "approvedForDelivery": true,
+      "deliveryPurpose": "PT and owner review only",
+      "approvedForGameUse": false,
+      "status": "PARTIAL_SOURCE_MATCH_STUD_GRID_FAIL",
+      "commonChecks": {
+        "PuyiRearIdentityAndOneBraid": "PASS",
+        "redWallsGrayStoneBasesGoldRoofsLightPavingSunny807Style": "PASS",
+        "backFacingPuyiLowerCenter": "PASS",
+        "noMotionBlur": "PASS",
+        "routeEmptyNoOtherPeopleOrCollectibles": "PASS",
+        "landscape4to3": "PASS"
+      },
+      "cameraMetresCalibrated": false,
+      "currentGameGeometryMatched": false,
+      "ownerAccepted": false,
+      "requirementsNotMet": [
+        "required9rowsBy9columnsPerDoorLeaf"
+      ],
+      "sceneReview": "Emperor before the raised wooden threshold; red open leaves, visible gray stone plinth and yellow roofs. Otherwise matching target.",
+      "studGrid": {
+        "method": "personal native-image and native-pixel crop count; no synthesized correction",
+        "requiredRows": 9,
+        "requiredColumns": 9,
+        "requiredStudsPerLeaf": 81,
+        "observedLeft": {
+          "rows": 8,
+          "columns": 6,
+          "studs": 48
+        },
+        "observedRight": {
+          "rows": 8,
+          "columns": 6,
+          "studs": 48
+        },
+        "status": "FAIL"
+      },
+      "textOrUI": "No text or UI observed",
+      "scaleNote": "Elevated rear viewpoint is visually assessed only. Exact4-6m world height is not measured. Puyi size varies, around21-27% image height in these outputs; scene01/05 are closer than the requested prompt target13-17%. Architecture still dominates. These are target illustrations, not calibrated current-game screenshots."
+    },
+    "06": {
+      "id": "06",
+      "file": "06-meridiaaniportti.png",
+      "deliverySHA256": "1f2546c7621fd02385c8b5f4ac9c9e6c12fd5e54c61d9beb7fe4d657f30281cd",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "nativeBytesUnedited": true,
+      "approvedForDelivery": true,
+      "deliveryPurpose": "PT and owner review only",
+      "approvedForGameUse": false,
+      "status": "PARTIAL_SOURCE_MATCH_TEXT_LIKE_PLAQUE_FAIL",
+      "commonChecks": {
+        "PuyiRearIdentityAndOneBraid": "PASS",
+        "redWallsGrayStoneBasesGoldRoofsLightPavingSunny807Style": "PASS",
+        "backFacingPuyiLowerCenter": "PASS",
+        "noMotionBlur": "PASS",
+        "routeEmptyNoOtherPeopleOrCollectibles": "PASS",
+        "landscape4to3": "PASS"
+      },
+      "cameraMetresCalibrated": false,
+      "currentGameGeometryMatched": false,
+      "ownerAccepted": false,
+      "requirementsNotMet": [
+        "noTextInImage"
+      ],
+      "sceneReview": "Recognizable central gate body with two projecting side wings forming U arrangement; broad clear approach, gray stone base and yellow-roofed pavilions.",
+      "textOrUI": "Small blue central plaque contains gold text-like glyphs. Exact reading not verified; cannot certify the requested no-text condition. No game UI.",
+      "plaqueProofCropPixels": [
+        690,
+        140,
+        755,
+        200
+      ],
+      "scaleNote": "Elevated rear viewpoint is visually assessed only. Exact4-6m world height is not measured. Puyi size varies, around21-27% image height in these outputs; scene01/05 are closer than the requested prompt target13-17%. Architecture still dominates. These are target illustrations, not calibrated current-game screenshots."
+    }
+  },
+  "imageCallsIssued": 6,
+  "imageCallsCompleted": 6,
+  "imageCallsFailed": 0,
+  "retakes": 0,
+  "retriesAuthorized": false,
+  "new3DCalls": 0,
+  "newAPICalls": 0,
+  "reference807SHA256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+  "ownerGate": "PT checks, KK shows all six to owner before any game modification loop",
+  "ownerAccepted": false,
+  "gameModificationLoopStarted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "furtherProductionAuthorized": false
+}

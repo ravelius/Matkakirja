@@ -1,0 +1,46 @@
+{
+  "reference807Approved": true,
+  "references": [
+    {
+      "inputImage": 1,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-807-20261021/delivery/juoksupeli-latauskuva-v1.png",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/references/01-juoksupeli-latauskuva-v1.png",
+      "sha256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+      "bytes": 2171198,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "personallyViewedInConversation": true
+    },
+    {
+      "inputImage": 2,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/puyi/cape-sources-v1/puyi-viitta-takaa.png",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/references/02-puyi-viitta-takaa.png",
+      "sha256": "974a034acd37041577a24c0909af69beb3d2dca4dc89f37b381cf0cd353f0c2c",
+      "bytes": 2053682,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "personallyViewedInConversation": true
+    },
+    {
+      "inputImage": 3,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/references/01-sisapiha.png",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/references/03-01-sisapiha.png",
+      "sha256": "4bcdfa6ed068e59d52dc5832529263992c4c8eef227a13c4ce2c4daa0e656cc9",
+      "bytes": 1652430,
+      "dimensions": [
+        1440,
+        960
+      ],
+      "personallyViewedInConversation": true
+    }
+  ],
+  "roles": [
+    "approved807 visual quality and materials, not its camera or blur",
+    "Puyi rear identity",
+    "game camera scale and viewpoint only, not exact new-scene geometry"
+  ]
+}

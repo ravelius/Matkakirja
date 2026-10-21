@@ -1,0 +1,91 @@
+{
+  "taskNumber": 810,
+  "nativeImageCount": 6,
+  "callsIssued": 6,
+  "callsCompleted": 6,
+  "retakes": 0,
+  "files": [
+    {
+      "id": "01",
+      "file": "01-lahtokuja.png",
+      "sha256": "7a4a14b1dc6b457778155efb5a7e4db5571621b95886ad6ad8c9fe124104b955",
+      "bytes": 2753821,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-aaa51685-7c27-4b99-8c32-0b468821c777.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-aaa51685-7c27-4b99-8c32-0b468821c777.png",
+      "nativeBytesUnedited": true
+    },
+    {
+      "id": "02",
+      "file": "02-punamuuri-kuja.png",
+      "sha256": "ade56ecc3ccdf05a4ac50494b3cfad38a300552397d6812c8f511c42b0bfd8a2",
+      "bytes": 2732471,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1fa59e39-1b44-4bde-b6de-498441cfbe70.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1fa59e39-1b44-4bde-b6de-498441cfbe70.png",
+      "nativeBytesUnedited": true
+    },
+    {
+      "id": "03",
+      "file": "03-aukio.png",
+      "sha256": "e570bd7d886a376412d6c8109b57d61c2f2f1720bf98b4c437c271b30488d9d9",
+      "bytes": 2505007,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8f298dee-9a42-47e7-958d-0b1ee7e640af.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8f298dee-9a42-47e7-958d-0b1ee7e640af.png",
+      "nativeBytesUnedited": true
+    },
+    {
+      "id": "04",
+      "file": "04-sali-katto-avattu.png",
+      "sha256": "945468d51595728848eed8622a7d5eba02ee40147db3ceedc920cba2ca7bdf0b",
+      "bytes": 2307888,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f782745d-64c2-4355-8edf-48b6e99517c4.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f782745d-64c2-4355-8edf-48b6e99517c4.png",
+      "nativeBytesUnedited": true
+    },
+    {
+      "id": "05",
+      "file": "05-porttikaytava.png",
+      "sha256": "c88e64a66447ad0a6340d082d8eb1ff4f2374841e8ecca839ea7da3a99efc5f2",
+      "bytes": 2459446,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-45748159-8950-4238-b462-a523e4ba3b97.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-45748159-8950-4238-b462-a523e4ba3b97.png",
+      "nativeBytesUnedited": true
+    },
+    {
+      "id": "06",
+      "file": "06-meridiaaniportti.png",
+      "sha256": "1f2546c7621fd02385c8b5f4ac9c9e6c12fd5e54c61d9beb7fe4d657f30281cd",
+      "bytes": 2520057,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c51c64cf-ada6-4924-9e4d-5aead7ed5b3f.png",
+      "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c51c64cf-ada6-4924-9e4d-5aead7ed5b3f.png",
+      "nativeBytesUnedited": true
+    }
+  ],
+  "ownerReviewRequiredBeforeGameModificationLoop": true,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}
