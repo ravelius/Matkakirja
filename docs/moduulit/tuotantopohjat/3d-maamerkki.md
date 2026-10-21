@@ -5,6 +5,19 @@ vain nykyisten ohjeiden ja luovutusten opit; uusia sääntöjä ei ole. Jos täm
 Mallin osuuden omistaa Linnanrakentaja; valo, sijoitus ja kytkentä täydentävät omat osansa otsikoilla "TÄYDENTÄÄ: <rooli>".
 PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+## Tarkista ennen
+
+- AINA: uudet maamerkit ja rakennukset tilataan Codexilta postilaatikon kautta; kytkentä, laattojen vienti ja tarkistukset Claudella (7.19).
+- AINA: työ alkaa tuotantopohjasta ja tavoitekuvasta (Codexin havainnekuva); opit kirjataan pohjaan (4.21).
+- AINA: tavoiteluuppi kierroksittain havainnekuvia vastaan, vertailuarkki joka kierros; pysähdys, kun kaksi kierrosta ei paranna, tai 10 kierroksen jälkeen (7.20).
+- AINA: omistaja näkee tavoitekuvan ja pelikuvan rinnakkain KK:n kautta ennen junaa (4.21).
+- AINA: maailma nykyajassa, vain estetiikka vanhaa (1.10).
+- AINA: kuvat ja tekstuurit PD/CC tai Codexilta (11.1, 11.7).
+- EI: Claude ei aja Tripoa; Tripo-mallit vain Codexilta (7.15).
+- EI: ostoja (11.5).
+- EI: muihin maanosiin uutta työtä ennen kuin omistaja aloittaa ne (1.11).
+- Ennen kysymystä omistajalle: onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus.
+
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA Codexin havainnekuva (tavoitekuvat pelin kulmista); KAMERA uusista kuvakulmista viitevideo tai kuvakäsikirjoitus ennen koodausta. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
 **Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.

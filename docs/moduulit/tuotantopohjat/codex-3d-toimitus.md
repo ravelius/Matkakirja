@@ -6,6 +6,20 @@ uudet 3D-mallit; Lavastaja vastaanottaa, tarkistaa, viimeistelee ja kokoaa ne ko
 maailmatoimitusten (18.–19.10.) ja omien mallien vientiportin opeista. Pohja ei tee uusia sääntöjä: jokainen linja on Raamatussa,
 ja jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Pohjan muutokset hyväksyy PT.)*
 
+## Tarkista ennen
+
+- AINA: kaikki uudet 3D-mallit (hahmot, eläimet, esineet, koristeet, kalusteet) Tripolla Codexin kautta; Claude ei aja Tripoa (7.15, 11.7).
+- AINA: Codexin kuvat ja Tripo pysyvällä luvalla niin paljon kuin tarvitaan, ei määräkorttia (omistaja 21.10. 17.28; 7.15, 11.6).
+- AINA: tilauksessa kohta LIIKE jokaiselle mallille; liikkumaton malli ilman luurankoa ja animaatioita (luku 1, omistaja 21.10. 00.10).
+- AINA: tuontitarkistus `tools/codex-3d-tarkistus.mjs` ennen tuontia ja toimitus täysikokoisena tarkistettuna ennen peliä (7.4, 11.7).
+- AINA: LAHTEET.md:ssä lisenssi (oma, PD, CC0, CC BY tai CC BY-SA tekijän nimellä); kuvat vain PD/CC (11.1).
+- AINA: hyväksytyt Tripo-mallit saa ladata omistajan tililtä kysymättä, tilin muita tiedostoja ei (11.6).
+- AINA: maailma nykyajassa, vain estetiikka vanhaa (1.10).
+- AINA: peliin vasta kuvakierroksen kautta, havainnekuva ja pelikuva rinnakkain (7.20).
+- EI: ostoja (11.5).
+- EI: uusia hahmoja, esineitä tai kalusteita käsin tai koodilla (11.7).
+- Ennen kysymystä omistajalle: onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus.
+
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva tilauksen liitteenä (luku 1); vastaanotossa havainnekuva ja pelikuva täysikokoisina rinnakkain (9.11 kohta 4, luku 8). Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
 **Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
