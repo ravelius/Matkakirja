@@ -7,6 +7,21 @@ ristiriidassa, Raamattu voittaa. Pohjan omistaa Äänittäjä (ääni) ja Sisäl
 Pohja kuuluu Raamatun 4.21:n pohjaluetteloon (`docs/moduulit/tuotantopohjat/<tyyppi>.md`). Omistajalle avoin kohta on
 luvussa 7.)*
 
+## Tarkista ennen (teksti; ääniosuus: Äänittäjä)
+
+*(Koottu 21.10.2026 omistajan pyynnöstä 17.31; yksi lyhyt rivi per sääntö, kohdan numero perässä. Täysi sääntö on Raamatussa; jos tämä ja Raamattu eroavat, Raamattu voittaa.)*
+
+- AINA: faktat tarkistaa riippumaton tarkistaja ennen PT:tä; kieli- ja faktatarkistus ennen ääntä (2.76).
+- AINA: ääneen luettava teksti alkaa suomenkielisellä sanalla, ei vieraskielisellä nimellä (5.4).
+- AINA: Pulun ja isoisän uudet tekstit omistajan rastiin Tekstit-osastossa ennen ääntä (2.159, 2.161); uuden museomaan tekstit KK hyväksyy yhtenä eränä riippumattoman tarkistuksen ja PT:n jälkeen (2.123).
+- AINA: kuvat vain PD/CC, tekijä ja lisenssi näkyvissä (11.1).
+- EI: uusia ääniä ilman omistajan lupaa; lupapyynnössä kaikki tekstit sanatarkasti sekä määrä ja merkkimäärä (5.1, 5.2). Poikkeus: kertojaäänet PT:n hyväksymistä käsikirjoituksista (enintään noin 10 000 merkkiä, yksi otto per teksti) pysyvällä luvalla (5.1).
+- EI: uusintaa luvatta; ottomäärä sitoo kuten merkkimäärä (5.2).
+- EI: musiikkia muualla kuin Lyrialla; valmis tai vapaa kappale vain erillisellä luvalla (5.15).
+- EI: uutta puhegenerointia ilman suomen pakotusta (`language_code` fi) (5.4).
+- EI: kysymystä omistajalle ennen kuin olet tarkistanut: onko jo päätetty (`node tools/loki-hae.mjs <hakusana>`, älä grep lokia), noudattaako ratkaisu tätä pohjaa ja Raamattua, ja onko sinulla yksi suositus (luku 7: KYSYMYKSET, 7.27). Tekstit eivät kortteihin vaan viestinä numeroituna listana (7.27).
+- AINA: kaikki omistajalle näkyvä suomeksi, ei selittämätöntä ammattikieltä (7.33).
+
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: ÄÄNI mallinäyte ja lyhyt kuvaus siitä, miltä pitää kuulostaa (Gemini vertaa valmista ääntä mallinäytteeseen sokkona, 9.11); UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
 **Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.

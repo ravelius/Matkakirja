@@ -5,6 +5,21 @@ Raamattu 4.21 TUOTANTOPOHJAT, dokumenttikartta 13.52. Jos tämä ja Raamattu ova
 omistaa Sisältökirjuri, muut luvut tekijänsä; PT hyväksyy muutokset. Seuraava museomaa tehdään tämän mukaan, ja jokaisen maan
 opit lisätään lukuun 10.)*
 
+## Tarkista ennen
+
+*(Koottu 21.10.2026 omistajan pyynnöstä 17.31; yksi lyhyt rivi per sääntö, kohdan numero perässä. Täysi sääntö on Raamatussa; jos tämä ja Raamattu eroavat, Raamattu voittaa.)*
+
+- AINA: teokset vain PD/CC0 (tekijä kuollut yli 70 v); Commonsin vapaa PD/PD-Art-kuva käytetään, vaikka museon ehdot kieltäisivät kaupallisen käytön (2.123, 2.126, 11.1).
+- AINA: tietokortti: taiteilija elinvuosineen, nimi, vuosi, tekniikka ja materiaali, koko, museo, lyhyt esittely; Wikidata ja Commons, puuttuva kenttä pois (2.129).
+- AINA: museon ja salien avaukset ja teosten kertojatekstit riippumattomaan faktatarkistukseen ja PT:lle; KK hyväksyy yhtenä eränä, ei omistajan Tekstit-osastoon (2.123).
+- AINA: ennen museotekstin lupapyyntöä tai Äänittäjän erää tarkista, lukeeko KortinLukija sen jo workerin kautta (5.3).
+- AINA: vain natiivissa; Moderni-kirjasin, ei keskiaikainen (2.123, 2.129).
+- EI: ääniä ilman omistajan korttia määrineen (5.1, 5.2); ottomäärä sitoo (5.2).
+- EI: uutta puhegenerointia ilman suomen pakotusta; ääneen luettava teksti alkaa suomenkielisellä sanalla (5.4).
+- EI: Italiaa ennen omistajan käskyä (pohjan rajaus).
+- EI: kysymystä omistajalle ennen kuin olet tarkistanut: onko jo päätetty (`node tools/loki-hae.mjs <hakusana>`, älä grep lokia), noudattaako ratkaisu tätä pohjaa ja Raamattua, ja onko sinulla yksi suositus (luku 7: KYSYMYKSET, 7.27). Tekstit eivät kortteihin vaan viestinä numeroituna listana (7.27).
+- AINA: kaikki omistajalle näkyvä suomeksi, ei selittämätöntä ammattikieltä (7.33).
+
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: GRAFIIKKA havainnekuva salista; KAMERA viitevideo tai kuvakäsikirjoitus ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
 Taidemuseon maa = yhden maan oma museo taidemuseo-linssissä (Raamattu, TAIDEMUSEO-LINSSI; vain natiivissa): maan teokset

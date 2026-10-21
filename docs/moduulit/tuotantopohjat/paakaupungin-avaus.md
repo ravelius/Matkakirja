@@ -5,6 +5,21 @@ vain nykyisten ohjeiden ja luovutusten opit; uusia sääntöjä ei ole. Jos täm
 Teksti-osuuden omistaa Sisältökirjuri; kartta, natiivi ja äänet täydentävät omat osansa otsikoilla "TÄYDENTÄÄ: <rooli>".
 PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+## Tarkista ennen
+
+*(Koottu 21.10.2026 omistajan pyynnöstä 17.31; yksi lyhyt rivi per sääntö, kohdan numero perässä. Täysi sääntö on Raamatussa; jos tämä ja Raamattu eroavat, Raamattu voittaa.)*
+
+- AINA: jokaiseen maahan pääkaupunki, maan ja kaupungin perustiedot ja rajat; pääkaupunkipiste on oma kokoelma `kokoelmat/paakaupungit.json`, ei pysäkki, eikä reittejä ilman omistajan päätöstä (1.13).
+- AINA: minivaltiot (Andorra, Liechtenstein, Monaco, San Marino, Vatikaani) kevyesti: lippu, perustiedot, 3–5 lauseen esittely, ei maalehteä (1.13).
+- AINA: Päiväntasaajan Guinean pääkaupunki on Ciudad de la Paz (esittelyssä mainitaan Malabo); Jerusalem ilman kannanottoa (1.13).
+- AINA: esittelyt Claude Coden Opus-agenteilla, kieli- ja faktatarkistus ennen ääntä (2.76).
+- AINA: kuvat vain Commonsista PD/CC (CC BY-SA tekijän nimellä); uusia Codex-kuvia ei, ja ennen kytkentää pistokoe kuvatyypeittäin (1.13, 11.1).
+- AINA: opas vain kaupunkeihin, joissa on hyvä 3D (sallitut-3d.json); opas näyttää kuvia vain kuvalistastaan (2.75, 2.83).
+- AINA: Pulun uudet repliikit omistajan rastiin Tekstit-osastossa (2.161).
+- EI: uusia ääniä ilman omistajan lupaa ja määrää (5.1, 5.2); Googlen Places-tietoja (aukioloajat, arvostelut, kuvat) ei käytetä (2.76).
+- EI: kysymystä omistajalle ennen kuin olet tarkistanut: onko jo päätetty (`node tools/loki-hae.mjs <hakusana>`, älä grep lokia), noudattaako ratkaisu tätä pohjaa ja Raamattua, ja onko sinulla yksi suositus (luku 7: KYSYMYKSET, 7.27). Tekstit eivät kortteihin vaan viestinä numeroituna listana (7.27).
+- AINA: kaikki omistajalle näkyvä suomeksi, ei selittämätöntä ammattikieltä (7.33).
+
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: KAMERA viitevideo tai kuvakäsikirjoitus ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää; KÄYTTÖLIITTYMÄ kuvakaappaus, johon muutos on piirretty. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
 **Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.

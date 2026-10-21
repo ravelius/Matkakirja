@@ -5,6 +5,21 @@ vain nykyisten ohjeiden ja luovutusten opit (Lontoo, Praha, Ateena; Tukholma ja 
 Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muut osat
 täydentävät tekijänsä otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
+## Tarkista ennen
+
+*(Koottu 21.10.2026 omistajan pyynnöstä 17.31; yksi lyhyt rivi per sääntö, kohdan numero perässä. Täysi sääntö on Raamatussa; jos tämä ja Raamattu eroavat, Raamattu voittaa.)*
+
+- AINA: opas vain kaupunkeihin, joissa on hyvä 3D (sallitut-3d.json); kierroksen kohteet hyvän 3D:n säteellä (2.75).
+- AINA: pysähdykset kaupungin lukitusta kohdelistasta (12 kohdetta); puuttuvat kohteet Codexin havainnekuvin (2.82).
+- AINA: kuvia vain oppaan kuvalistasta (silmin tarkistetut CC/PD, avain Wikidata Q); ilman listan kuvaa ei kuvaa (2.83, 11.1).
+- AINA: parannukset kehityskaupunkeihin (Tukholma, Pariisi, Kööpenhamina; Lontoo, Praha, Ateena vasta PT:n tarkistuksen jälkeen); muihin vain omistajan päätöksellä (2.87).
+- AINA: kertoja käyttää pallosanastoa harvoin, ei kohteen kuvauksen keskellä; noste johtuu lämpötilaerosta, vaakaliike tuulesta (2.97).
+- AINA: esittelyt Opus-agenteilla, kieli- ja faktatarkistus ennen ääntä (2.76); Googlen logo ja datakrediitit näkyvissä (2.89).
+- EI: uusia ääniä ilman omistajan lupaa ja määrää (5.1, 5.2); ei Googlen Places-tietoja (2.76).
+- EI: muuta karttakuvaa Googlen laattojen rinnalle (2.87).
+- EI: kysymystä omistajalle ennen kuin olet tarkistanut: onko jo päätetty (`node tools/loki-hae.mjs <hakusana>`, älä grep lokia), noudattaako ratkaisu tätä pohjaa ja Raamattua, ja onko sinulla yksi suositus (luku 7: KYSYMYKSET, 7.27). Tekstit eivät kortteihin vaan viestinä numeroituna listana (7.27).
+- AINA: kaikki omistajalle näkyvä suomeksi, ei selittämätöntä ammattikieltä (7.33).
+
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. Tässä putkessa: KAMERA viitevideo tai kuvakäsikirjoitus lennosta ja pysähdyksistä ennen koodausta; UUDET TEKSTITYYPIT muutama esimerkki pelinäkymässä ennen koko erää. Omistajalle tuodaan vain uudet asiat ja makuvalinnat; muut tavoitteet hyväksyy PT.
 
 **Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
