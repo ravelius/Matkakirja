@@ -2239,3 +2239,13 @@ Omistaja sanatarkasti (iso iPad, runko 168ebac1f): "simu ei osaa rimpuilla irti 
 ## JUOKSUPELIN DRONE YLHAALLA JA KATOT (omistaja 21.10. klo 10.43, KK:n valitys) (21.10.2026 klo 10.44)
 
 Omistaja sanatarkasti ("Tronity" = drone): "Näytän jatkossa kaikissa rakennuksissa katon, mutta kun pelaaja menee jonkun talon sisälle, niin samalla hetkellä ota katto pois näkyvistä. Ja muutetaan Tronity sillä tavalla kuin ehdotit, eli se pysyy koko ajan ylhäällä eikä lennä oviaukkojen alta. Ainoa poikkeus on pelin alkulennossa, kun drone menee pääportista sisään. Näin saadaan dronelle yksinkertainen malli, mutta pidetään se edelleen, että drone huojuu koko ajan hieman vasemmalle ja oikealle sekä lähemmäs ja kauemmas, ja kallistelee myös, jotta kamera näyttää mahdollisimman elävälle." Korvaa 09.40:n (sukellus oviaukoista) ja 19.10. klo 18.02:n. Raamattuun juoksupelin kohtaan (DRONE JA KATOT). Toteutus Pelikoodari.
+
+## PAATOKSET 21.10.2026 klo 16.14–17.25: omistajan matka (to 22.10.–ma 26.10.) (21.10.2026 klo 17.24)
+
+Omistaja 16.14: "Lähetä pelitesti Flightiin, kun olet saanut nämä korjattua sekä grafiikan parannukset tehtyä. ... Jätän ison iPadin kytkettynä Mac Studioon, niin voit testata sillä vapaasti. Koneella
+ei ole mitään käyttöä ennen ensi viikon maanantaita, joten voit käyttää resursseja myös vapaasti." 16.16 "Ei, julkaistaan ilman" (päiväjunan tarkistukset), korvattu 16.17: "eikun aja testit
+sittenkin". 17.20: "osaatko aktiivisesti tehdä noita muitakin työlistan asioita eteenpäin?" 17.22–17.25: "voit laittaa koko matkan ajan kysymyksiä, olen kyllä tavoitettavissa" + "mutta jatka tosiaan
+hommia silti itsenäisesti niin että työ ei pysähdy jos en heti pääse vastaamaan". Toteutus (KK ja PT): matkan ajan kaikki Työn alla -rivit etenevät rinnakkain, Mac ja iso iPad vapaina yötä päivää (ei
+hiljaista tuntia), kiintiö ei rajoita (Raamattu 12.21); KK kysyy heti tavallisina viesteinä, kysymys ei pysäytä työtä: odottaessa tehdään muuta, ja kun odotus pysäyttäisi työn, edetään KK:n
+suosituksen mukaan muutettavissa asioissa; luvat (generointimäärät, ostot) odottavat aina omistajan vastausta. PT: saapumislennon pitkät ruudut (vanha vika, sama 94d04c518:ssa) eivät estä TF:ää,
+korjaus junaan 210.
