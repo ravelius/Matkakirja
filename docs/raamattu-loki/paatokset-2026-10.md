@@ -2207,3 +2207,23 @@ Rikkoutuvat esineet (Codex #792): 'Ensin 6, tasan 12 generointia (Suositus)' –
 ## PAATOS 21.10.2026 klo 08.45 (omistaja, KK:n kautta) (21.10.2026 klo 08.45)
 
 Codexin ja Tripo 3D:n ehdotuksia (esim. lautaspöytä) ei kysytä omistajalta KK:ssa: omistaja hoitaa ne suoraan Codexin kanssa – 'toimi aina sen mukaan, mikä sieltä tulee viestinä sinulle'. PT toimii Codexin postin mukaan; lautaspöytä odottaa Codexin seuraavaa postia, ei korttia.
+
+## AANINAYTTEIDEN PROMPTI NAKYVIIN (omistaja 21.10. klo 09.21, KK:n valitys) (21.10.2026 klo 09.23)
+
+Omistajan pysyvä toive sanatarkasti: "näytä ääninäytteiden ohessa niiden koko prompti, jotta näen mitä tunnetageja käytetään". Jokaisen omistajalle menevän ääninäytteen mukana on sen koko prompti tunnetageineen. Raamattu 5.1 loppuun. Samalla päätös: huutojen 03 ja 06 uusinta (ylimääräinen "aa!" pois, [panicked] → [excited]), 2 ottoa, 137 merkkiä; KK välitti suoraan Äänittäjälle; 05 ja 07 hyväksytty.
+
+## JUOKSUPELIN DRONE YHDELLA SAANNOLLA (omistaja 21.10. klo 09.32, KK:n valitys) (21.10.2026 klo 09.34)
+
+Omistaja sanatarkasti: "suositus on hyvä. näytä isolla ipadilla simulaattorissa miten se nyt liikkuu". KK:n suositus hyväksytty: drone aina muurien yläpuolella samassa kulmassa Puyin takana (katot pois), ahtaassa vain jyrkkenee eikä laskeudu, oviaukkoihin ei sukelleta (korvaa 19.10. klo 18.02 oviaukon läpi lentämisen), kaikki muutokset liukuvia, eteen tulevat esteet ja risteykset aina näkyvissä. Ennen muutosta simuvideo nykyisestä dronesta ison iPadin simussa (kuja, aukio, risteys, käännös, ovi, katoton huone, < 30 MiB) omistajalle vertailuksi. Toteutus Pelikoodari.
+
+## KARTAN 3D-ELEMENTIT TUNNUSMERKEIKSI (omistaja 21.10. klo 09.38, arkki 9 -kortti KK:n kautta) (21.10.2026 klo 09.39)
+
+Omistaja sanatarkasti: "Suunta on hyvä, mutta tuolla on paljon kohteita, jotka ovat aivan liian monimutkaisia. Ja Louvre pitää myös tehdä samalla sävytyksellä. Liian monimutkaisia. Ovat kaikki toisella ja kolmannella rivillä olevat. Colosseumista voi esimerkiksi näyttää vain sen puolikkaan tai vähemmän. Tuulimyllyistä riittää yksi. Segovian akvedukti on todella sekava. Siitäkin mieluisasti vain pieni yksityiskohta, joka kuvaa kokonaisuutta. Samoin Stonehenge, paljon yksinkertaisempana. Akropoliksessakin riittää, kun näyttää pelkän temppelin. Delfoissa riittää, kun näyttää muutaman pilarin. Eli idea on se, että 3D-elementit eivät näytä koko asiaa, vaan viittaavat mahdollisimman yksinkertaisella mutta silti vielä tunnistettavalla tavalla kohteeseen." Linjaus: jokainen kartan 3D-elementti on yksi tunnusmerkki, ei pienoismalli; sama seepia myös Louvressa (poikkeavat vain pelinappula, ilmapallot, kipsipäät). Toteutus VS + PK, arkki 10 omistajalle.
+
+## JUOKSUPELIN DRONE: 09.32 PERUTTU, DRONE SUKELTAA OVIAUKOISTA (omistaja 21.10. klo 09.40, KK:n valitys) (21.10.2026 klo 09.41)
+
+Omistaja sanatarkasti: "Anteeksi, ymmärsin tuon dronen väärin. Dronen pitää ehdottomasti sukeltaa oviaukoista, ja haluan, että sen liikeradat ovat mahdollisimman eläviä. Eli näytä ensin nykymallin mukainen drone ennen kuin tehdään yksinkertaistuksia siihen." Korvaa 09.32:n yhtenäisen dronesäännön (Raamatun muutos peruttu; 19.10. klo 18.02 oviaukon läpi lentäminen pysyy). Tavoite: drone liikkuu elävästi kuin taitava kuvaaja: sukeltaa oviaukoista, kaartaa käännöksissä, nousee ja laskee tilan mukaan. Muutokset vasta, kun omistaja on nähnyt nykydronen videon. PK:n 0d9ee16e5 ei runkoon.
+
+## NAYTOKSET SUORAAN ISOLLA IPADILLA (omistaja 21.10. klo 09.44, KK:n valitys) (21.10.2026 klo 09.46)
+
+Omistaja sanatarkasti: "Etkö voi näyttää aina suoraan tuossa isossa iPadissa? Olen nyt siis töissä ja voin katsoa siitä. Ei tarvitse nauhoittaa. Olisiko se nopeampi tapa?" Käytäntö: kun omistaja on iPadin ääressä, näytökset ajetaan suoraan isolla iPadilla (kehitysversio + peli-komento.txt devicectlillä), ei nauhoitusta; poissa ollessa (matka 22.–26.10.) nauhoitetaan. Valmiista näytöksestä ilmoitetaan KK:lle.
