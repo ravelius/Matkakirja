@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-21T04:48:30.942311+00:00",
+  "ready": true,
+  "source": {
+    "path": "posti/paatoimittaja-codex-omistaja-0740-osamallit-esineet-20261021.md",
+    "commit": "29b57268befcce7a8da4b187c9221f5fd4098933",
+    "blob": "5ae092c4fee1f31d91452dce96c051ba84c310bb",
+    "sha256": "e8562e4680e516d963af0e6dd64b00a77ae61779853c19cbefe8e1b3fe04814a",
+    "readInFull": true,
+    "readAt": "2026-10-21T04:48:30.942311+00:00"
+  },
+  "sourceAndCardReadInFull": true,
+  "cardSHA256": "c3964eb17eb941c05947e1fb1ba9a63438088ae6e24c72075e19b8a6094a164c",
+  "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+  "status": "intake-read-four-call-budget-locked-cloud-production-ready",
+  "tasks": [
+    791,
+    792
+  ],
+  "TripoCallsIssued": 0,
+  "builtinImageCallsIssued": 0,
+  "noOtherThreadProduction": true,
+  "BlenderStarted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
