@@ -208,6 +208,8 @@ async function main() {
     }
     // Rivi on tiedostonimi tai { tiedosto, syy } (PT 21.10.: sopimus, peruminen, tauko, kokeilun lopetus tai kuittaus ilman mallia).
     const suljetut = new Set((rek.suljetut_tilaukset || []).map(x => typeof x === 'string' ? x : x.tiedosto));
+    // vastaanotetut: Codexin toimitus noudettu ja SHA tarkistettu (tilaus, toimitus, sha); ei hälytä tilauksena.
+    for (const x of rek.vastaanotetut || []) suljetut.add(x.tiedosto);
     for (const t of avoimetTilaukset(tilaukset.filter(x => !suljetut.has(x.nimi)), postit, Date.now()))
       halytykset.push(`posti/${t.nimi}: 3D-tilaus ${t.ikaH} h ilman toimitusta tai perumista`);
     huomiot.push(`postilaatikko: ${tilaukset.length} 3D-tilausta, ${postit.length} viestiä`);

@@ -1,5 +1,5 @@
 {
- "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi tai { tiedosto, syy }), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota). seuratut_tilaukset: PT:n seurantaan nimeämät mallitilaukset, joita sanastohaku ei tunnista mallitilaukseksi.",
+ "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi tai { tiedosto, syy }), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota). seuratut_tilaukset: PT:n seurantaan nimeämät mallitilaukset, joita sanastohaku ei tunnista mallitilaukseksi. vastaanotetut: noudetut ja SHA-tarkistetut Codex-toimitukset { tiedosto, toimitus, sha, noudettu }.",
  "mallit": [
   {
    "id": "louvre-mies-vartija",
@@ -120,5 +120,19 @@
  "seuratut_tilaukset": [
   "paatoimittaja-codex-kaksi-lohikaarmetta-20261019.md",
   "paatoimittaja-codex-juoksu-esteet-v2-20261020.md"
+ ],
+ "vastaanotetut": [
+  {
+   "tiedosto": "paatoimittaja-codex-juoksupeli-ylareitti-20261019.md",
+   "toimitus": "ylareitti-v2.zip (posti codex-paatoimittaja-avoimet-juoksupelitilaukset-875877-20261021.md, #876)",
+   "sha": "7f59d00ef224caea3703bcfbd373017551561b38ff8eb7d61dfb6b55ad20dae4",
+   "noudettu": "Pelikoodari 21.10.2026 → proto-3d/_tyo/pelikoodari/codex-noudot-20261021/"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-kaksi-lohikaarmetta-20261019.md",
+   "toimitus": "paperilohikaarme-v3.zip (sama posti, #877)",
+   "sha": "8a012ec020d8952b3dbe73ff1dd661e4cf78904a6b60b7d20150f4751c16728a",
+   "noudettu": "Pelikoodari 21.10.2026 → proto-3d/_tyo/pelikoodari/codex-noudot-20261021/"
+  }
  ]
 }
