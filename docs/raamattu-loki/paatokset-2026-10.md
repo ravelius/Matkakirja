@@ -2223,3 +2223,7 @@ Omistaja sanatarkasti: "Suunta on hyvä, mutta tuolla on paljon kohteita, jotka 
 ## JUOKSUPELIN DRONE: 09.32 PERUTTU, DRONE SUKELTAA OVIAUKOISTA (omistaja 21.10. klo 09.40, KK:n valitys) (21.10.2026 klo 09.41)
 
 Omistaja sanatarkasti: "Anteeksi, ymmärsin tuon dronen väärin. Dronen pitää ehdottomasti sukeltaa oviaukoista, ja haluan, että sen liikeradat ovat mahdollisimman eläviä. Eli näytä ensin nykymallin mukainen drone ennen kuin tehdään yksinkertaistuksia siihen." Korvaa 09.32:n yhtenäisen dronesäännön (Raamatun muutos peruttu; 19.10. klo 18.02 oviaukon läpi lentäminen pysyy). Tavoite: drone liikkuu elävästi kuin taitava kuvaaja: sukeltaa oviaukoista, kaartaa käännöksissä, nousee ja laskee tilan mukaan. Muutokset vasta, kun omistaja on nähnyt nykydronen videon. PK:n 0d9ee16e5 ei runkoon.
+
+## NAYTOKSET SUORAAN ISOLLA IPADILLA (omistaja 21.10. klo 09.44, KK:n valitys) (21.10.2026 klo 09.46)
+
+Omistaja sanatarkasti: "Etkö voi näyttää aina suoraan tuossa isossa iPadissa? Olen nyt siis töissä ja voin katsoa siitä. Ei tarvitse nauhoittaa. Olisiko se nopeampi tapa?" Käytäntö: kun omistaja on iPadin ääressä, näytökset ajetaan suoraan isolla iPadilla (kehitysversio + peli-komento.txt devicectlillä), ei nauhoitusta; poissa ollessa (matka 22.–26.10.) nauhoitetaan. Valmiista näytöksestä ilmoitetaan KK:lle.
