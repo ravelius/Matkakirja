@@ -145,3 +145,8 @@ ja vaihdon jälkeen Quaternius-ihmiset (kavijat-v1/v2) pois kokonaan, ei sekaisi
 - Tasainen lattia (OMISTAJAN PALAUTE 21.10. 11.17): peking_tausta.py v15/v15b/v15c (maa-H 2 m, kohonneet laatat 0…0,6 → 0, korvausalueilta matalat kiilat pois); #791-korvausalueet korjattu taustan kehykseen (v14 virhe). Ämpärissä: kielletty-tausta-v16 (v15 käyttämättä), muurikate-v6, osamallit791-v4 (luotaa_v15.py, porras-terassi). PK kytkee.
 - 21.10. ilta: tavoiteluuppi k1 sokkeli (tausta-v17 + avoimet-v14, proto lavastaja/sokkeli-k1 5629b166a, PT hyväksyi; LT mittaa VS:n 97875ec26 = k1+k2). #791-reitit akselinsuuntaisiksi: osamallit791-v5 (ämpärissä 17.56), proto lavastaja/osamallit791-v5-209 31744174c → NS. Amsterdamin NL1–NL4 Codex-tilaus PT:llä. Tarkista ennen -osiot PR #5142.
 - Amsterdamin kävijät NL1–NL4 (Codex PT834–837): media taidemuseo/amsterdam-ihmiset-v1 (nl2 +3 cm, nl3 +1,1 cm), proto lavastaja/amsterdam-kavijat-209 5a3aff69d; VS:n päivänvalo fa8442d1f päällä → PT hyväksyi kuvaparin v2 → NS junaan 210. Kuvat _tyo/linnanrakentaja/amsterdam-kavijat/.
+
+## 21.10. ilta: juoksupelin rikottavat PT799/829 (HYVÄKSYTTY 20.46, juna 210)
+- Seitsemän ryhmää ehjä- ja rikki-GLB:inä ämpärissä juoksupeli/maailma-v4/aarteet799-v2/. v1 (aarteet/) on käytöstä poistunut: sen sermit olivat vain erillisiä palasia.
+- Työkalut: proto-3d/_tyo/linnanrakentaja/aarteet799/. aarteet799.py tekee posliinin ja lasin sirpaleiksi Voronoi-jaolla. sermit799.py repäisee paperin liepeiksi ja taittaa maisemasermin kahdeksi haitaripuolikkaaksi. kuva_sermit.py tekee tarkistuskuvat.
+- PK:n haara pelikoodari/rikottavat-210 21a943287. Pelikuvapari v3 (aarteet799-pelikuvapari-v3.png) on hyväksytty. Lautaspino on HOLD.
