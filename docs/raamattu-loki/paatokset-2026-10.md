@@ -2257,3 +2257,14 @@ Omistaja 17.28 (sanatarkasti): "musiikit generoidaan aina. tämän pitäisi olla
 ## PAATOKSET 21.10.2026 klo 17.36: Kysymys omistajalle -pohja sitovaksi (21.10.2026 klo 17.37)
 
 Omistaja (kortti KK:ssa): "Otetaanko Kysymys omistajalle -pohja sitovaksi?" → "Kyllä, sitovaksi (Suositus)" (kaikki roolit, PT ja KK tarkistavat nämä asiat ennen jokaista omistajalle tulevaa kysymystä). Pohja docs/moduulit/tuotantopohjat/kysymys-omistajalle.md (Raamattu 13.53): kysyjä → PT tarkistaa → KK; lokihaku tools/loki-hae.mjs.
+
+## PAATOKSET 21.10.2026 klo 15.33–17.38: juoksupelin grafiikka, palaute 16.03, pohjat ensin, tilinvaihdon pysyvyys (21.10.2026 klo 17.38)
+
+15.33 omistaja: juoksupelin grafiikan parannus "nyt rinnalla" korjausten kanssa (Lavastaja kierros 1 muurien kivisokkeli, Valoseppä kierros 2 pinnat ja valo; peliin vain LT:n mittauksen läpäisseenä).
+16.03 palaute isolla iPadilla (sanatarkasti KK:n viestissä): latauskuva kokonaisena eikä suurennettuna, musiikki koko avauslennon, vihreä ei värise, ulkona kamera matalammalla ja lähempänä, isolla
+aukiolla ei kääntyilyä, sisätiloissa kamera ylempänä, katto pois ja pelaaja näkyvissä; LT:n uudet mittarit (kääntyily, pelaaja piilossa, musiikin katko, latauskuvan rajaus), omistajalle vasta kun
+kaikki 0. TF-ehdot ja tarkistusajo: ks. 16.14–17.25. 17.31: "tällaiset olisi tärkeä saada raamattuun tarpeeksi selvästi ja tehdä kaikista yksinkertaisia tuotantoputkia joista kaikki asiat tarkastetaan
+ennenkuin tehdään tai kysytään minulta ... tuotantopohjat sitoviksi nyt loppuun ... se on kaikkein tärkein saada ensimmäisenä valmiiksi" → jokaiseen tuotantopohjaan alkuun Tarkista ennen -osio
+(AINA/EI + Raamatun kohdat), uudet pohjat Kysymys omistajalle (sitova 17.36) ja Musiikki ja äänet, Raamatussa säännön ydin ensimmäiseen virkkeeseen; pohjat omistajan kanssa KK:n kautta yksi
+kerrallaan. 17.38: "välittyykö sinun omat ohjeet silloin, kun vaihdan tiliä? ... ainut millä on väliä on se, että tiedot välittyvät myös tilinvaihdon yli" → jokainen omistajan päätös kirjataan lokiin
+ja sääntömuutos Raamattuun; KK:n tai PT:n muistiinpanot ja muisti eivät riitä. Raamattu 12.23 kohta 9: pysyvät luvat (kertojaäänet, Codexin kuvat ja Tripo) pätevät tilinvaihdon yli.
