@@ -12,16 +12,19 @@ pysyvä lupa; omistajalle tuodaan vain uudet asiat, makuvalinnat ja maksulliset 
 
 ## 1. Vaiheet: yksi putki kaikille tuotteille
 
-Jokainen tuote (linssi, historiapeli, museo, avaus, pallokierros, 3D-maamerkki, video) kulkee samat viisi vaihetta
-ideasta junaan (4.21 SAMA LINJA KAIKISSA POHJISSA). Vaihetta ei ohiteta; pieni korjaus voi kulkea kevyesti.
+Jokainen tuote (linssi, historiapeli, museo, avaus, pallokierros, 3D-maamerkki, video) kulkee samat seitsemän vaihetta
+(omistaja 21.10.2026 klo 18.16; 4.21). Vaihetta ei ohiteta; pieni korjaus voi kulkea kevyesti. Omistaja hyväksyy idean
+ja tavoitteen tekstinä korteilla sekä valmiin pelistä; kaiken muun hyväksyy PT.
 
 | Vaihe | Mitä syntyy | Kuka tekee | Kuka hyväksyy |
 |---|---|---|---|
-| 1. Tavoite | Tavoite sellaisessa muodossa, että kaikki ymmärtävät sen samoin (taulukko alla) | tyypin rakentaja; kuvat Codex (7.15) | PT; omistaja vain uudet asiat ja makuvalinnat (4.21) |
-| 2. Harmaa, pelattava | Karkea versio ilman viimeisteltyä grafiikkaa; tuntuma, liike ja kulku kunnossa; faktat ja tarina rinnalla | Pelikoodari, Linssiseppä, Natiiviseppä alan mukaan | PT; uuden pelin harmaa versio omistajalle isolla iPadilla (4.21 HISTORIAPELIN POHJA) |
-| 3. Näköisyys ja äänet | Mallit, kuvat, valo, käyttöliittymä, tekstit ja äänet | Codex (kuvat, Tripo), Lavastaja, Valoseppä, Natiivi-UI, Sisältökirjuri, Äänittäjä (7.4) | PT; omistaja näkee tavoitekuvan ja valmiin rinnakkain KK:n kautta |
-| 4. Tarkistukset | Oma tarkistus, sokkotarkistukset, automaattiset testit | tekijä itse (9.5), Gemini ja tuore Sonnet-lukija, Työkaluseppä (automaatit) | PT kuittaa; omistaja ei ole ensimmäinen tarkistaja (9.11) |
-| 5. Juna | Työ avoimeen junaan, lukitus ja TestFlight omistajan pyynnöstä | Natiiviseppä (runko), Julkaisija (merget, käännös, TF) | omistaja pyytää julkaisun (10.2) |
+| 1. Idea | Lyhyt kuvaus: mitä, kenelle, miksi | PT tai rooli | omistaja tekstinä kortilla |
+| 2. Tavoite | Tavoite sellaisessa muodossa, että kaikki ymmärtävät sen samoin (taulukko alla) | tyypin rakentaja; kuvat Codex (7.15) | omistaja tekstinä kortilla |
+| 3. Koeversio | Karkea pelattava versio ilman viimeistelyä; tuntuma, liike ja kulku kunnossa | Pelikoodari, Linssiseppä, Natiiviseppä alan mukaan | PT |
+| 4. Tuotanto | Mallit, kuvat, valo, käyttöliittymä, tekstit ja äänet | Codex (kuvat, Tripo), Lavastaja, Valoseppä, Natiivi-UI, Sisältökirjuri, Äänittäjä (7.4) | PT |
+| 5. Viimeistely | Tavoitetta vastaan hiottu kokonaisuus (tavoiteluuppi 7.20) | sama kuin tuotanto | PT |
+| 6. Testaus | Oma tarkistus, sokkotarkistukset, automaatit, laitemittaus (tekotavat/testaus.md) | tekijä itse (9.5), Gemini, Laitetestaaja | PT; omistaja ei ole ensimmäinen tarkistaja (9.11) |
+| 7. Juna | Työ avoimeen junaan; lukitus ja TestFlight omistajan pyynnöstä | Natiiviseppä (runko), Julkaisija | omistaja hyväksyy valmiin pelistä; julkaisun hän pyytää (10.2) |
 
 **Tavoitteen muoto aloittain** (4.21 TAVOITTEEN MUOTO PUTKITTAIN; kirjataan jokaisen reseptin alkuun):
 
@@ -45,9 +48,9 @@ Codexin toimitukset täysikokoisina (7.15). Laitetestaaja pelaa yöjunan käänn
 
 Portti on kohta, josta työ ei jatku ennen kuin ehto täyttyy.
 
-1. **Tavoite hyväksytty.** PT hyväksyy tavoitteen; omistajalle vain uudet asiat ja makuvalinnat (4.21). Kysymys
+1. **Idea ja tavoite hyväksytty.** Omistaja hyväksyy idean ja tavoitteen tekstinä korteilla (4.21, 18.16). Kysymys
    omistajalle kulkee KK:n kautta (kohta 4).
-2. **Harmaa hyväksytty.** Tuntuma ja kulku hyväksytään ennen grafiikkaa; näköisyyttä ei viimeistellä rikkinäisen
+2. **Koeversio hyväksytty.** Tuntuma ja kulku hyväksytään ennen grafiikkaa; näköisyyttä ei viimeistellä rikkinäisen
    pelattavuuden päälle (4.21).
 3. **Valmiin määritelmä** (luku 8):
    - reseptin lopun tarkistuslista täyttyy ja opit on viety reseptiin tai tekotapaan; oppi, joka jää vain lokiin tai
