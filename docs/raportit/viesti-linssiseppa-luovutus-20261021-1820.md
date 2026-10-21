@@ -13,6 +13,12 @@ KK local_f36040a0…, NS local_a9af6995…, NUI local_7c07f022…, JU local_f1ad
 - #5143 (uusi-linssi Tarkista ennen) suljettu PT:n päätöksellä (luvat ja vaiheet vain D:hen).
 - Simuopit: "museo tallenna" + "ruutuvahti 1" samassa skenaariossa → musta 3D (tilaraportissa).
 
+## 0b. LISÄYS 21.10. ilta
+- Mergetty: #5160 (Valosepän luku 7), #5163 (kameratyylit tilanteittain, kohtaukset osiin, uusi-linssi ilman pimennysleikkauksia),
+  #5168 (suositukset "odottaa omistajaa" + docs/tuotanto/suunta/kamera-selitykset.md). KAMERA-1–8b odottavat omistajaa ma 26.10.
+- Juna 209: 22959c39c rungossa db65b8daa; c2e3aef04 (Amsterdamin henkilöt) junaan 210 Lavastajan haaran mukana.
+- Tili: viikkokäyttö enintään 80 % (omistaja 21.53); työ jatkuu pe aamuna toisella tilillä.
+
 ## 1. AVOINNA
 - Omistajan päätös kamerasta (KK) → päivitä A kamera ja toteuta B5-erät kartoituksesta.
 - LT:n A1-775-kuva (Johannes Kastaja 22959c39c) → PT.
