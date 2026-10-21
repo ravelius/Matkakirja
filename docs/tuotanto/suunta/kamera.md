@@ -61,7 +61,21 @@ pehmeästi juuri siihen, mistä seuraava asia näkyy parhaiten. Katsoja muistaa 
 
 ### Avoimet kysymykset omistajalle (yksi kerrallaan)
 
-Kysymykset ja suositukset ovat KK:lla; vastaukset kirjataan yllä olevaan taulukkoon.
+Kortit KAMERA-1–4 suljettiin 21.10. klo 19.2x vastaamatta; kaikki odottavat omistajan paluuta ma 26.10.2026 (PT). Siihen asti
+noudatetaan suositusta vain siinä, mikä on helposti muutettavissa; peliin ei lukita mitään.
+Selitykset pelaajan näkökulmasta (missä, mitä ruudulla, nyt, vertailukohta): `docs/tuotanto/suunta/kamera-selitykset.md`.
+
+| Kysymys | Suositus, odottaa omistajaa |
+|---|---|
+| KAMERA-1 Aloituslento | ainoa kohta, jossa kamera kiihtyy dramaattisesti (syöksy pallolta kaupunkiin); jarrutus aina pehmeä |
+| KAMERA-2 Kartan lennot | katse menosuuntaan; nousukaari vain pitkillä matkoilla |
+| KAMERA-3 Linssit | kertojan tahdissa pysäkiltä toiselle; pysäkillä aivan hento liike, ei täysin jähmeä |
+| KAMERA-4 Museot | ei nykyistä nopeampi (pisin lento noin 14 s); kiihdytykset hallittuja |
+| KAMERA-5 Seurantakamera | hieman pelaajan edellä ja ylhäällä (juoksupelissä drone, sisällä katto pois), ilman tärinää |
+| KAMERA-6 Kohtausten sisällä | leikkaus otosta toiseen sallittu vain kohtausten sisällä, ei pelin siirroissa |
+| KAMERA-7 Kohtausten välillä | lyhyt ristihäivytys vain videoissa, enintään 0,5 s |
+| KAMERA-8a Kävelyn suunta | katse menosuuntaan vain vähän (~15°), lopuksi kohteeseen |
+| KAMERA-8b Kävelyn keinunta | niin hento, ettei sitä huomaa erikseen |
 
 ## Hyvä ja huono (laatutaso)
 
