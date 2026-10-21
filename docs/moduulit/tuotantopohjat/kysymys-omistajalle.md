@@ -6,6 +6,9 @@ Raamattu ovat ristiriidassa, Raamattu voittaa.)*
 Jokainen rooli, PT ja KK käyvät tämän läpi ennen kuin kysyvät omistajalta mitään. Tarkoitus: omistajalle tulee vain aito
 päätös, eikä koskaan kysymystä, johon Raamattu, päätösloki tai pohja jo vastaa.
 
+**Tavoitteen muoto (Raamattu 4.21):** valmis kysymys on yksi kortti: suositus ensimmäisenä, perustelu 3–4 riviä ja lista
+tarkistetuista kohdista (pohja ja Raamatun kohdat), kuten Putki-osion kohdassa 1.
+
 ## Tarkista ennen
 
 - AINA: hae päätöslokista (`node tools/loki-hae.mjs <hakusana>`) ja Raamatusta aiheen sanoilla; jos vastaus löytyy, toimi sen mukaan äläkä kysy.
@@ -38,3 +41,7 @@ päätös, eikä koskaan kysymystä, johon Raamattu, päätösloki tai pohja jo 
 - [ ] Kysymyksessä on suositus ensin ja lista tarkistetuista kohdista.
 - [ ] Vastaus on kirjattu lokiin, ja muuttunut sääntö on Raamatussa ja pohjassa.
 - [ ] Kysyjä on saanut vastauksen, ja työ on jatkunut koko ajan.
+
+## Opit ja retrospektiivi (kirjataan, kun kysymys palautui kysyjälle tai vastaus löytyi jo lokista)
+
+- Ei vielä kirjauksia.
