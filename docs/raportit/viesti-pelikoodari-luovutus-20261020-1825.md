@@ -129,3 +129,13 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   muurikate-v4 (Lavastaja: portin jalustan marmorikaide). Perutut: kameran "ei nouse kannen läpi" (PT: ei temppuja), harjavara 3 m
   (vinot palat ovat kaukana, w1 taantui). 209w: w1 kattoa + häivytysympyrä (kuvahetki? 209v puhdas), vinot palat aukion pohjoisreunalla
   (muurikate risteää katon kanssa) → Lavastaja. Selvitysskenaario sk-juoksupeli-kuvapari-209w-mika.txt (mika r05:n kohdista).
+- 08.3x–10.1x (21.10.): #791 läpijuostavat rakennukset (osamallit791-v2, tausta-v14, ovet aukeavat, pakotetut reitit, korkean
+  risteyksen karsinta ei pakotetuille), ohjaus (omistaja 08.58 + 09.12: kaksi kaistaa, oikea peukalo käännös/hyppy/liuku/kaista,
+  vasen heitot ja spurtti, vapaa 90° käännös ulkona JuoksuPalatsiVerkko.VapaaKaanto, muisti 1 s, kaista ajoituksen mukaan),
+  NUI:n peukalokohdat (16 %, vasta pelaajan vuorossa), latausvälähdyksen korjaus, drone: yhtenäinen sääntö PERUTTU (omistaja 09.40),
+  oviaukkosukellus syvemmälle (portin vara 0,8, ennakko 8, ei nousua kannen läpi 2 s), aanet-v5 (seinä, osuma, eunukki),
+  rikkoutumishuudot PuyiHuudot erä 3 (tekstit juoksupeli.rikkoutuminen.<id>.huuto), LÄHTÖ kuja-75:n pienten huoneiden välistä
+  (omistaja 09.58) + avauslento sinne (25 s), aukion maan tasaus. Kärki nakoisyys-209 = 3ebaa2057 (iPad 168ebac1f 10.11).
+  Odottaa: maali kulmatorni vs pääportti (KK), huudot 03/06 → puyi-rikkoutuminen-v4 omistajan hyväksynnän jälkeen.
+- Kartta (lento-wasd 7b6e90bc3): Erikoismalli.Sarja kaikille riveille 2–3 + arkkityypit, kategoriasymbolit, Lontoo, Ateena, Rijks;
+  Stonehengen irtopalat; VS ajaa arkit 10–11.
