@@ -29,3 +29,7 @@ Lähdeyksiköt on säilytetty: Matterhorn 0,8303 × 0,9807 × 0,8842, mylly 0,84
 - Kinderdijk job 55c07a4d-a466-44d4-9bac-47307df428d4; lähde cc7213ac24bfb8529e7468d4b548c90e94d547f10f7998f67fc4eaf25a63d60c; 40 krediittiä.
 - Yhteensä 80 krediittiä, saldo 20585 → 20505. Kaksi kolmesta sallitusta mallikutsusta käytetty. Jäljellä vain Colosseum hyväksynnän jälkeen.
 - Paikallinen tekninen muunnos + kuusi tarkistusnäkymää: noin 1,1 s, huippumuisti 95,5 Mt. Ei Blenderiä tai raskasta renderöintiä.
+
+## Saapunut Colosseum-kuva #832
+
+Uusi kuva vastaanotettu Tripo-chatin lähdevarastoon ja SHA256 tarkistettu: 90ea49ecf78a17c6c16483752cbcf74acdf48636df898f978d56aa4638364a7c. Katsoin kuvan: kolme kaarikerrosta ja umpinainen attika sekä puolikas ulkokehä näkyvät. Tämä on oma lähde-QA-kuittaus, ei KK-hyväksyntä. Yhtä jäljellä olevaa Colosseum-kutsua ei ole aloitettu. Odotan PT:n välittämää KK-päätöstä juuri tälle SHA:lle.
