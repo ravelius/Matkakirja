@@ -107,3 +107,10 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   todennettu (W nousu 3,00 → 5,47 km, D kaarto 316° → 59°); oikeat näppäimet Macilla kokeilematta. Samassa haarassa kartan
   galleria-arkki 8 (VS): KeskiLon −45, Stonehengen valli SarjassaPois, ISS-raketti ei maamerkkisoluksi, maamerkit massasäännöllä.
 - 34 ms raskas kohta: vanha; LT 70bb1021c 9,16 ms ja 8d292ac8e juoksu 12,4 ms (raja 14). Seuraa yön lisäysten kasvua.
+- 02.5x–04.2x: uusinnat 209l (99c55e667), 209m (c6e4d5a84), 209n (31f8c23f1) → PT; kärki pelikoodari/nakoisyys-209 = ac2f662f3
+  (avoimet-v11, muurikate-v3, tausta-v13 + palatsi-esto-v7; GPU: esteen kohdalla kamera nousee, ei JUOKSU_SEINA-leikkausta;
+  avointen huoneiden sisustus piiloon > 70 m; portissa ei sivusiirtoa ja asteittainen lasku 6 → 2 m; seinän harjan yllä kamera
+  lähemmäs + 3 m yli; huone 8,5/5 m ilman kallistusta). QA: `ui juoksupeli mika x y`, `ui juoksupeli paikka` (Puyi pohjassa,
+  JuoksuPalatsi.Pohjaan), näkyvyysloki ("näkölinja peitossa"). Skenaario uusimmalle: sk-juoksupeli-kuvapari-209n.txt.
+- AVOIN: läntinen kuja w1/w3 (Puyi seinän/hallin katon takana, Puyi pohja (−156; 528) ja (−168; 520)); 34 s portin julkisivu.
+  LT:n raskas-uusinta rungosta c6e4d5a84 odottaa (raja 13 ms ennen KK:ta; 99c55e667: 13,8 ms).
