@@ -5,6 +5,27 @@ ja ikkunalle natiivissa pelissä (proto-git, Unity UI Toolkit). Laatutaso: A Suu
 ja luvat vain D Tuotannonohjauksessa. Kooste juna 209:n yhteisistä osista ja 1.–21.10. opeista; uusia sääntöjä ei ole. Raamattu
 voittaa ristiriidassa: 2.70 linssien ja 2.201 pelien yhteiset säännöt, 4.1 UI-POHJAT, 4.2 KORTTI, 4.14 liike.)*
 
+## 0. Periaatteet: mitattavat ja näytettävät
+
+*(Omistaja 21.10.2026 klo 18.16: "Kyllä, mutta täytyy määritellä vielä tarkemmin." Jokainen periaate on luku tai ehto, joka
+mitataan koneellisesti tai näytetään kuvalla. Sarake "Päätös": tyylikirjassa jo oleva arvo, tai avoin kysymys K1–K10, jonka KK vie
+omistajalle yksi kerrallaan; avoimen kohdan suositus on voimassa, kunnes omistaja vastaa.)*
+
+| # | Periaate | Mitta | Miten mitataan tai näytetään | Päätös |
+|---|---|---|---|---|
+| P1 | Päätöskortti vai paneeli | Kortti (KORTTI + `ModaaliTaso`, himmennys) vain, kun pelaajan on valittava napilla; tieto ja säätö ilman päätöstä paneelina tai nostona ilman himmennystä | merge-pyynnön rivi "Pohja: …"; kuva kustakin uudesta pinnasta | K1 |
+| P2 | Ohinapautus | Paneeli ja nosto sulkeutuvat ohinapautuksesta; päätöskortti ei sulkeudu, vaan vain sen napeista | skenaario: `tap` kortin ulkopuolelle → lokista auki/kiinni | K2 |
+| P3 | Kortin korkeus | Kortti enintään 86 % turva-alueen korkeudesta; ylimenevä sisältö vierii, napit pysyvät näkyvissä | ui-puu: kortin `worldBound.height` / turva-alueen korkeus ≤ 0,86 iPhone pysty, iPhone vaaka ja iPad | K3 |
+| P4 | Paneelin peitto | Paneeli peittää enintään 45 % ruudun pinta-alasta (`peitto.max`); poikkeus vain nimetylle paneelille 70 % (`peitto.paneeli`) | ui-puu: paneelin pinta-ala / ruudun pinta-ala | K4 |
+| P5 | Avaus- ja sulkuajat | avaus 220 ms, sulku 200 ms, liuku 240 ms, mikään UI-siirtymä yli 250 ms (`liike`) | pohjavahti (USS `transition-duration`), `Tyylikirja.Kesto` koodissa | K5 |
+| P6 | Napin koko | tekstinappi 38 pt (`nappi.korkeus`, omistaja 6.10.), kuvakenappi 40 pt (`nappi.ohjaus`); samassa rivissä yksi koko | ui-puu: rivin nappien korkeudet samat | päätetty |
+| P7 | Kosketusala | jokaisen napautettavan osuma-ala vähintään 44 × 44 pt (`nappi.osuma`), myös pienen kuvakkeen | ui-puu: napautettavien `worldBound` ≥ 44 pt kumpaankin suuntaan | K6 |
+| P8 | Reunaväli | nappi tai teksti vähintään 8 pt (`vali.s`) turva-alueen sisäpuolella | ui-puu: etäisyys turva-alueen reunaan ≥ 8 pt | K7 |
+| P9 | Kelluvat eivät peitä | Pulu, kuplat ja kertojan kaistale eivät koskaan ole napin tai kortin painikkeiden päällä | ui-puu: kelluvan ja napin `worldBound`-leikkaus = 0 | K8 |
+| P10 | Teksti ei leikkaudu | teksti rivittyy tai lista vierii; lyhennys "…" vain kuvarivin nimessä (esim. aikajanan muotokuvat), ei napeissa eikä otsikoissa | ui-puu: tekstin mitattu leveys ≤ elementin leveys; kuva pisimmästä nimestä | K9 |
+| P11 | Sulkeutuminen mukana | kun linssi vaihtuu tai peli loppuu, kaikki sen avaamat ikkunat sulkeutuvat samassa ruudussa ja syötelukko vapautuu | skenaario: avaa ikkuna → `linssi linssi pois` → ui-puussa ei ikkunaa, napautus toimii | K10 |
+| P12 | Poistu | Poistu on aina ☰:n alin rivi; erillistä ✕:ää ei ole | ui-puu: ☰:n viimeinen rivi = Poistu | päätetty (2.70, 2.201) |
+
 ## 1. Mistä aloitat
 
 1. **Tyylikirja on lähde.** `tyylikirja/tyylikirja.json` (pohjat, mitat, kirjasimet, liike, värit) ja selain `tools/tyylikirja.mjs`.
