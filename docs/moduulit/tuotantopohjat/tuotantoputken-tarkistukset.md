@@ -3,6 +3,21 @@
 *(Työkaluseppä 19.10.2026, PT päivitti 20.10.2026 läpikäyntiä varten. Raamattu 7.4 TYÖKALUSEPPÄ, 4.21 TUOTANTOPOHJAT, 4.24
 KAMERALIIKKEET, 9.2, 9.3 ja 9.11. Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa.)*
 
+## Tarkista ennen
+
+Käy nämä läpi ennen ajoa ja ennen kuin kysyt mitään (omistaja 21.10.2026 klo 17.31: "kaikki asiat tarkastetaan ennenkuin tehdään
+tai kysytään minulta"). Kohdan numero = Raamatun kohta.
+
+- **AINA** junaan automaattiset tarkistukset ja käännös; haaroihin ja junan kokoamiseen EI simu-, muisti- eikä todistusajoja (9.1–9.3).
+- **AINA ennen päiväjunaa** KK kysyy omistajalta, ajetaanko tarkistukset; PT EI päätä oletuksella. Yöjunassa ajetaan aina kysymättä laitekierroksineen (9.11).
+- **EI** simua eikä laitetta, paitsi a) selvästi uusi tekniikka, b) omistajan pyytämät kuvat, c) yöjunan laitekierros ja muistiajo (9.11 SIMU HARVOIN).
+- **AINA** jokaiselle käsikirjoitetulle kameraliikkeelle kameratesti CI:ssä ja ruutuaikavahti; yksikin yli 20 ms:n ruutu hylkää (9.1, 4.24).
+- **AINA** vika toistetaan ennen korjausta, ja sama ajo menee korjattuna läpi (9.7); oma tulos tarkistetaan ennen PT:tä (9.5).
+- **EI** omistajaa ensimmäiseksi tarkistajaksi: yöjunan laitekierroksen löydös pysäyttää ulkoisen jaon (9.11).
+- **AINA** lukitus ja TestFlight vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA"), ja auki on yksi juna (10.1–10.2).
+- **EI** raskaita ajoja, kun omistaja käyttää Macia (12.13).
+- **Ennen kysymystä omistajalle:** onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus.
+
 Neljä tarkistusta, yksi ajo. Juna = avoin julkaisuerä, johon valmiit työt kootaan. **Junan lukitus ja TestFlight tehdään
 vain omistajan pyynnöstä** (PT välittää pyynnön sanatarkasti); tämä pohja ei käynnistä kumpaakaan. Työkalut ovat
 proto-repon (`proto-3d/Matkakirja-proto`) masterissa kansiossa `tyokalut/` (tulivat junassa 205); Codex-portti on

@@ -8,6 +8,22 @@ VIDEOSSA (18.29), 2.159 UNI VIDEONA, 9.11 SIMU HARVOIN, 10.1–10.2 julkaisu. T�
 `codex-3d-toimitus.md`. Pohja ei tee uusia sääntöjä. Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Pohjan muutokset
 hyväksyy PT.)*
 
+## Tarkista ennen
+
+Käy nämä läpi ennen työn aloitusta ja ennen kuin kysyt mitään (omistaja 21.10.2026 klo 17.31: "kaikki asiat tarkastetaan ennenkuin
+tehdään tai kysytään minulta"). Kohdan numero = Raamatun kohta.
+
+- **AINA** tämän pohjan mukaan, ja opit viedään pohjaan (4.21 POHJA SITOVA).
+- **AINA** raketti, valas ja uni pelin omasta Unity-kohtauksesta kuva kerrallaan; Codexin Blender **VAIN** aarteen löytöhetkeen (4.21 KUKA TEKEE).
+- **AINA** pysty- (päätapa) ja vaakaversio, HEVC 10-bit kevyellä rakeisuudella (4.21).
+- **EI** tekstiä, tekstitystä, mittareita eikä havainnekuva-merkintää videoon: ne tulevat käyttöliittymästä, puhe ja musiikki ääniraidalla (4.21).
+- **AINA** video ladataan ja puskuroidaan laitteelle ennen kohtauksen alkua (4.21 VIDEO VALMIINA ENNEN HETKEÄ).
+- **AINA** järjestys Kolme veljestä → raketti → uni; raketti vasta, kun aarrevideo toimii pelissä (4.21).
+- **EI** pitkiä renderöintejä päivällä: yöllä ja vain koneen ollessa muuten vapaa; lyhyt liiketarkistusvideo päivälläkin, kun omistaja ei käytä Macia (4.21, 12.13).
+- **EI** omia nappeja eikä tyylejä videon ympärille: tyylikirja ja yhteiset osat (4.1, 2.70).
+- **AINA** omistajalle menevä video äänellisenä, ruutu ruudulta katsottuna ja välähdyshaku ajettuna (9.5, 9.12).
+- **Ennen kysymystä omistajalle:** onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus.
+
 **MUUTOS 19.10.2026 klo 18.25 ja 18.29 (omistaja, Raamattu 4.21 KUKA TEKEE ja 2.105 SAVU VIDEOSSA):** raketti, valas ja uni kuvataan pelin omasta Unity-kohtauksesta kuva kerrallaan täydellä laadulla (Claude: oma video-laatutaso, savun puhelinrajat pois, oma kuva kerrallaan -tallennin). Codexin Blender-kulku koskee enää vain aarteen löytöhetkeä, koska sitä ei ole pelissä 3D-kohtauksena. Codexin rakettikokeilu 665–667/670 on pysäytetty (posti 34f60ff35). Pohja on siksi jaettu kahdeksi kuluksi: **A PELISTÄ KUVATTU** (luku 3) ja **B CODEX BLENDER** (luku 4). Myöhempää päätöstä, joka kumoaisi kulun B, ei ole (loki tarkistettu 20.10.2026 klo 23.5x; 20.10. linja "pelissä jo oleva kohtaus kuvataan pelistä" on sama kuin 18.25).
 
 **Tavoitteen muoto (Raamattu 4.21, omistaja 19.10.2026 klo 15.32):** ennen työtä tavoite määritellään yhtä selvästi kuin grafiikassa havainnekuvalla. KULKU A (raketti, valas, uni): ruutu nykyisestä pelistä samasta kohdasta (Macin Unity-esikatselu iPhonen ruutukoossa), koska video näyttää samalta kuin peli mutta sulavammalta ja tarkemmalta, sekä kuvakäsikirjoitus (luku 5); savulle lyhyt kuvaus (luku 3.2). KULKU B (aarre): hyväksytty mallikuva, jonka valoon ja materiaaleihin videon ruutua verrataan. Molemmissa ÄÄNI mallinäyte ja lyhyt kuvaus, jos videolla on ääniraita (9.11), ja KÄYTTÖLIITTYMÄ kuvakaappaus, johon videon päälle tulevat tekstit, mittarit ja havainnekuva-merkintä on piirretty. Omistajalle tuodaan vain uudet asiat ja makuvalinnat (esim. ensimmäinen kokeilu); muut tavoitteet hyväksyy PT.
