@@ -27,3 +27,7 @@ Havainnekuvat: `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output
 Kokonaiskulutus **820 Tripo-krediittiä**: 6 geometriaa×100 +6 teksturointia×30 +2 riggausta×20. Alku20465 → loppu19645. Yksi hylätty aluekorjaus sekä idle/walk-kirjastoliikkeet: ei havaittua lisäveloitusta. 7 havainnekuvakutsua (euromäärää ei ilmoitettu työkalussa). Ei ostoja. Ei raskasta paikallista renderöintiä; vain pienet CPU-tarkistuskuvat ja GLB-tiedostotarkistukset. Pelin koodiin, R2:een tai henkilötiedostoon ei koskettu.
 
 Aineisto ja väliaineisto T7:llä. Selainlatausten pakolliset käynnistyslevyn välitiedostot siirrettiin T7:lle, luettiin takaisin SHA-256:lla ja poistettiin vasta sen jälkeen siirtokuitin kanssa.
+
+## Vastaanottotila päivitetty 21.10.2026 — PT862
+
+Kuittaan PT862:n vastaanottoilmoituksen (commit `2e585d0fb4653a137464ad452283d992ef253e4b`, blob `ba3b3aa3005594b2d0d577ffd78364e54ea27cb8`). PT on vastaanottanut yllä yksilöidyn delivery-v2-paketin. Mallihyväksyntä on edelleen avoinna: Lavastaja tarkistaa NL2:n penkkikontaktin, NL3:n jalkakontaktin ja kävelynopeuden sekä tekee havainnekuva/pelikuva-parin ja liikevideon ennen kytkentää. Vastaanottokuittaus ei ole hyväksyntä, peli-integraatio tai julkaisu. Krediitit pysyvät 820:ssa; uusia generointeja ei käynnistetä. Sinetöity ZIP ja mallit säilyvät muuttumattomina.
