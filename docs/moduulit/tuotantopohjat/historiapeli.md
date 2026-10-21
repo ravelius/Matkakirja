@@ -1,5 +1,19 @@
 # Tuotantopohja: historiapeli
 
+## Tarkista ennen
+
+*(Omistaja 21.10.2026 klo 17.31: "tehdä kaikista yksinkertaisia tuotantoputkia joista kaikki asiat tarkastetaan ennenkuin tehdään tai kysytään minulta". Lyhyt muistilista Raamatusta; ristiriidassa Raamattu voittaa.)*
+
+- AINA pelaaja liikkuu maan tasalla ja peli alkaa heti arvoituksesta tai aarteesta; tietokerros vasta lopussa tai pyydettäessä (2.173).
+- EI historian esittelyä eikä selostuksia pelin aikana; opastus pienin vihjein, tieto vapaaehtoista (2.174).
+- AINA hetki, tarina ja totta vs. FIKTIO omistajan hyväksymän kortin mukaan; uutta kohdetta ei aloiteta ilman omistajan päätöstä (2.175, 1.11, 1.12).
+- AINA kamera ja liike kuin elokuvassa: pehmeät kiihdytykset, ei äkkikäännöksiä; juoksupelissä drone ylhäällä ja katto pois sisällä (4.23, 2.177).
+- AINA napit, värit ja paneelit olemassa olevista pohjista; EI omaa ratkaisua, puuttuva pohja kysytään PT:ltä (4.1, 4.2).
+- EI uusia ääniä ilman omistajan lupaa; generoinnin määrän päättää omistaja (5.1, 5.2).
+- AINA kuvat Codexilta postilaatikon kautta, generoitu kuva on "havainnekuva", ja kaikki uusi media ämpäriin eikä repoon (11.11, 4.46, 11.3).
+- AINA työ alkaa tästä pohjasta, ja opit kirjataan tänne ennen kuin paketti on valmis (4.21).
+- Ennen kysymystä omistajalle: onko jo päätetty (docs/raamattu-loki, haku `node tools/loki-hae.mjs <hakusana>`), noudattaako pohjaa ja Raamattua, yksi suositus (7.25, 7.27, 7.31).
+
 *(LUONNOS 17.10.2026, Sisältökirjuri, PT:n toimeksianto; järjestetty koko pelin pohjaksi 20.10.2026 PT:n erällä (omistajan kortit
 KK:ssa klo 22.43). Raamattu, TUOTANTOPOHJAT ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu nykyisten ohjeiden ja luovutusten opit
 (Olavinlinna "Aarnivalkea", Kielletyn kaupungin juoksupeli, Kiinan dynastiat -linssin faktatyö); uusia sääntöjä ei ole omistajan
