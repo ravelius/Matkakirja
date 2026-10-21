@@ -2277,3 +2277,13 @@ käytännössä." ja "Mieti asetelma niin, että miten ammattimaiset peliyhtiöt
 reseptit, D tuotannonohjaus (Raamattu 4.21 STUDIOJAKO, tekijät siellä). Ensimmäisenä omistajalle A taide: hyväksytyt ja hylätyt esimerkkikuvat. 2) PT:n päätös Tarkista ennen -PR:istä: #5140, #5141,
 #5142, #5143 ja #5145 suljetaan (luvat ja vaiheet vain D:hen; AINA/EI-rivit PT kokoaa D:n lupataulukkoon), #5150 (musiikki ja äänet) ja #5153 (historiapelin rekvisiittatekstit) käännetään B:hen ja
 C:hen tekijän toimesta. Kartoitus docs/raportit/pohjat-studiojako-kartoitus-20261021.md. 3) Juoksupeli: ei Lyria-kutsuja eikä CC0-näytteitä; tasoille 2+ nykyiset kappaleet (Pelikoodari kytkee).
+
+## TUOTANTO: A SUUNTA (TAIDE, ESIKUVAT, ÄÄNI, KERRONTA); LÄPIKÄYNTI TEKSTINÄ (21.10.2026 klo 18.16)
+
+OMISTAJAN PYYNTÖ klo 18.07 (KK:n välittämänä): "Siis meinaisitko nyt näyttää minulle jotain kuvia? Käydään nämä siis tekstimuodossa vain läpi ja laita kysymyskortit." → ei esimerkkikuvasarjoja
+omistajalle; jako A–D käydään tekstinä ja korteilla. OMISTAJAN PÄÄTÖS klo 18.12 (kortti, A suunta): 1) Taide "Kyllä": kartta 1873-atlaksen akvarelli, maailma nykyaikaa; havainnekuvat ja 3D-maailmat
+todentuntuisia, ei piirrosmaisia; pienoismallit akvarellia karttapaletilla; johtoajatus niukkuus + pehmeä elävä liike. 2) Esikuvat (AC Discovery Tour, MS Flight Simulator, Monument Valley, Applen
+sovellukset): "Periaatteessa ok, mutta näihin pitää vielä myöhemmin palata ja tarkistaa, että ne ovat sopivia." 3) Ääni: "Melkein ainut, että isoisän kertoja ääni on eri, mutta muuten kaikessa
+käytetään tuota William-kertoja-ääntä." (muuten Lyria-musiikki, kartalla vain kaupungin kappale, tausta puheen alla, tehosteet ensin Soundly/Sonniss). 4) Kerronta "Kyllä": Horatio 1873 lämmin,
+utelias, kuivan humoristinen, ei virheetön; Livia nykypuhekieli; pelaaja nimetön eikä puhu; lyhyt, konkreettinen, kova juttu, faktat tarkistettu, 13+. Raamattu 4.21. Seuraavaksi korteilla kamera, UI,
+B-omistajat ja D.
