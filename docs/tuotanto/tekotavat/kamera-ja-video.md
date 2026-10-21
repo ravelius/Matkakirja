@@ -118,3 +118,23 @@ varjon puoli ei saa mustua (pystypinnan täyte ≈ taivaan ja maan heijastuksen 
   Ilman `--set`:iä tulee "Invalid device".
 - Pysäytä nauhoitus `kill -INT`:llä ja odota prosessin loppu; kova lopetus jättää tiedoston vajaaksi (vain alku purkautuu).
 - Simulaattorin video kertoo sisällön, ei laatua: fps ja välke mitataan laitteella.
+
+## 8. Kohtaukset ja välivideot osiin (4.23 eriteltynä)
+
+*(Omistaja 21.10.2026 klo 18.20: kohtauksessa on "useampi asia päällekkäin", joten jokainen osa tehdään ja tarkistetaan
+erikseen ja kootaan yhdelle aikajanalle. Tyyli: `docs/tuotanto/suunta/kamera.md`, rivi "Kohtaukset ja välivideot".)*
+
+| Osa | Mitä tehdään | Tekijä | Työkalu | Tarkistus |
+|---|---|---|---|---|
+| 1. Ohjaajan suunnitelma | mitä katsoja muistaa; kohtauslista (alkutila, lopputila, syy), syytön siirtymä pois | kohtauksen rakentaja | kohtauksen kansio `docs/kohtaukset/<kohtaus>/` (malli `pallokierros/pariisi-nykyintro.md`) | jokaisella otolla syy |
+| 2. Kameran otot | otto = yksi nimetty liike (paikallaan, kisko, orbit, kääntö), kesto ja lopputila | Linssiseppä | Kamerajohtaja (luvut 1–3) | kameratesti ja ruutuaikavahti |
+| 3. Kohteiden liike | hahmot, kappaleet, ilmestymiset pehmeästi | Pelikoodari / Lavastaja | Liikepohja, animaatiot | liikevahti (ei omia käyriä) |
+| 4. Kertoja ja tekstitys | sana-ajat ohjaavat ottojen ajoitusta; ei tyhjiä taukoja eikä päällekkäistä puhetta | Sisältökirjuri + Äänittäjä | ajat-JSON, tekstityskaista | tekstitys tahdissa (`virke`-loki) |
+| 5. Tehosteet ja musiikki | äänet kohtauksen aikajanalla, musiikki kohtauksen mittaan | Äänittäjä | ääniportti | äänitasot ja ajoitus kuvaparilla |
+| 6. Valo | sama valo ja profiili koko kohtauksessa | Valoseppä | luku 7.1–7.3 | välkemittari, kuvapari |
+| 7. Leikkaus | otot kootaan: leikkaa liikkeessä tai levossa, ei kiihdytyksen keskellä; ei akselihyppyä | kohtauksen rakentaja | luku 7.4 | kuva-arkki |
+| 8. Tallennus | pelin omat ruudut kiinteällä askeleella; esirenderöity video tarvittaessa | Linssiseppä / Natiivi-UI | luku 5 | `ruudut.csv`, ei tallennusta ja ruutuvahtia yhtä aikaa |
+| 9. Arvio | kuva-arkki tärkeistä hetkistä ja nopeimmista siirtymistä; kolme suurinta virhettä aikaleimoin, korjaus, uusi kuvaus | kohtauksen rakentaja | `lento-kuva-arkki.py` tai vastaava | arvio ennen PT:tä |
+
+Osat 2–6 tehdään samaan aikajanaan (kohtauksen kansio), mutta jokainen tarkistetaan omalla mittarillaan ennen kokoamista;
+virhe palautetaan sille osalle, ei koko kohtaukselle.
