@@ -1,0 +1,72 @@
+{
+  "family": "memory-bubble-doucai-retry864-20261021",
+  "intakeKey": "memoryBubbleDoucaiRetry864",
+  "taskNumber": 864,
+  "originalBlockedTaskNumber": 839,
+  "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/doucai-retry-864-20261021",
+  "source": {
+    "path": "posti/pt-codex-muistokuplat23-kuittaus-20261021.md",
+    "commit": "09d035de2903c3011b455150d433ebee679810d1",
+    "blob": "7e78d2cd8e2875ad3a47ad806bfac74539d45a37",
+    "sha256": "cd124322c72930d658bde4268ae02df9836cc8ca9c2578d3311030b5fa3f146a",
+    "readInFull": true
+  },
+  "readHead": "09d035de2903c3011b455150d433ebee679810d1",
+  "sources": [
+    {
+      "path": "posti/pt-codex-muistokuplat23-kuittaus-20261021.md",
+      "commit": "09d035de2903c3011b455150d433ebee679810d1",
+      "blob": "7e78d2cd8e2875ad3a47ad806bfac74539d45a37",
+      "sha256": "cd124322c72930d658bde4268ae02df9836cc8ca9c2578d3311030b5fa3f146a",
+      "readInFull": true
+    }
+  ],
+  "mode": "built-in image_gen",
+  "wholeNewGenerationOnly": true,
+  "maxCalls": 1,
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "callsFailed": 0,
+  "imageProduced": true,
+  "productionActive": true,
+  "status": "QA-passed-awaiting-mail-delivery",
+  "previousBlockedAttemptsPreserved": 2,
+  "noRepeatedRetryChain": true,
+  "fallbackIfBlocked": "Notify PT; current game bubble7 image remains until receiver changes it.",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "createdAt": "2026-10-21T16:36:49.717280+00:00",
+  "issuedAt": "2026-10-21T16:37:33.456767+00:00",
+  "updatedAt": "2026-10-21T16:38:39.073282+00:00",
+  "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c9d3c3bd-11e4-4d3a-8f40-ac8a6a45ee54.png",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/doucai-retry-864-20261021/native/doucai-kuppi.png",
+  "nativeSHA256": "c8d2972d11a0f3ddf995cb0dc99d2b26ef852d3872b00faf9760f61975064ac4",
+  "nativeBytes": 1991063,
+  "nativeDimensions": [
+    1086,
+    1448
+  ],
+  "nativeUnedited": true,
+  "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/doucai-retry-864-20261021/delivery/doucai-kuppi.jpg",
+  "deliverySHA256": "e74ee8ab5296328bbd5629fdcbd2792e44d6fd7ae53030ad0fc562c12e099f8f",
+  "deliveryBytes": 342509,
+  "deliveryDimensions": [
+    768,
+    1024
+  ],
+  "exportMethod": "Whole-frame RGB JPEG quality96 subsampling0 downsample; no crop or retouch",
+  "QA": {
+    "at": "2026-10-21T16:38:39.073125+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "nativeSHA256": "c8d2972d11a0f3ddf995cb0dc99d2b26ef852d3872b00faf9760f61975064ac4",
+    "notes": "Pieni kahvaton doucai-kuppi terävänä kivipöydällä, matala pöydänreunan näkökulma. Ilmassa höyhenpallo, höyhenissä kevyttä liikepehmennystä; pihalla kaukana sumeat keltaiset ja tummansiniset hahmot, yksi potkaisee. Ei kasvoja lähikuvassa eikä suuria etualan käsiä. Kupin pieni käyttökoko uskottava, tarkkaa senttimetrimittaa ei kuvasta voi todentaa. Valoisa realistinen värikuva, ei tekstiä tai leivottua ovaalimaskia.",
+    "noAddedCaptionObserved": true,
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "recipientAccepted": false,
+    "gameOvalVisibilityVerified": false
+  }
+}
