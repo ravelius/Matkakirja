@@ -1,0 +1,15 @@
+{
+  "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osamallit-791-posliinisuunnitelma-792-20261021/rakennusosat-791-raw-v1-20261021.zip",
+  "zipSHA256": "7fa4b220f3fa5679bdb01f2edfec1ea4c5e193e3515019a2e4f0a2ab65a54514",
+  "zipBytes": 4797553,
+  "everyZipMemberByteVerified": true,
+  "nativeModelsByteVerified": 4,
+  "functionalDoorAcceptance": false,
+  "gameIntegrationVerified": false,
+  "formatGate": {
+    "result": "KAIKKI OK",
+    "exitCode": 0,
+    "fourGLBsChecked": true,
+    "functionalAcceptanceNotImplied": true
+  }
+}
