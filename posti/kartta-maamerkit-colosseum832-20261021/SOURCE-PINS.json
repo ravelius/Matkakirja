@@ -1,0 +1,30 @@
+[
+  {
+    "path": "posti/paatoimittaja-codex-kartta-maamerkit-3-812-20261021.md",
+    "commit": "e49e463f84d263d20d570f9206050a868ae5ca62",
+    "blob": "a8acb12e329d4b961b5d977387789353428d73ae",
+    "sha256": "8c866427dd9033cb39a97669a150fbdecb40e46a4936d6edb19d623fc4a2b477",
+    "readInFull": true
+  },
+  {
+    "path": "posti/paatoimittaja-codex-812-tarkennus-20261021.md",
+    "commit": "0b689439aafd817dd27ae572603e6890d1860075",
+    "blob": "e6108dc20b0c4c1ffd27f1d424c7be9654928f63",
+    "sha256": "a852b41c255499a5a967f88d5fa9c46f48efb83f2b3debf0dc77620200c5ecfb",
+    "readInFull": true
+  },
+  {
+    "path": "posti/paatoimittaja-codex-812-colosseum-puolikas-20261021.md",
+    "commit": "7fbe53bc40626c4c87c6a6445ef0e69200ee2ac5",
+    "blob": "f65809cdd534e3c309f6c2ac8286d4baff164791",
+    "sha256": "94b42ca9fedc274820f76b1557d78c3319340a233858e6d56c59e13fece49e35",
+    "readInFull": true
+  },
+  {
+    "path": "posti/paatoimittaja-codex-812-kk-paatokset-20261021.md",
+    "commit": "c0dbd508a2d7e4ed03c1ae3b5e05a4fdec0cf84b",
+    "blob": "d6f709c39c6a1817b52acf4df5392fa36e83bdc6",
+    "sha256": "c18770707b8abb39c6a8ed5684c13de319498447408bd3b131510fd39e5b23ae",
+    "readInFull": true
+  }
+]

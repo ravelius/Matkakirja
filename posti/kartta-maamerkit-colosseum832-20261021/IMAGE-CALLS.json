@@ -1,0 +1,12 @@
+{
+  "taskNumber": 832,
+  "callLimit": 1,
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "pendingCalls": 0,
+  "issuedAt": "2026-10-21T14:10:25.806335+00:00",
+  "additionalRetriesAuthorized": false,
+  "completedAt": "2026-10-21T14:11:07.271511+00:00",
+  "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-152559ab-8743-431f-90ba-e1ed9cdb10f9.png",
+  "nativeSHA256": "90ea49ecf78a17c6c16483752cbcf74acdf48636df898f978d56aa4638364a7c"
+}

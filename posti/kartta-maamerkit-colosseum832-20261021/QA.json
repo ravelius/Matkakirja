@@ -1,0 +1,43 @@
+{
+  "taskNumber": 832,
+  "at": "2026-10-21T14:11:54.187153+00:00",
+  "status": "PASS_FOR_KK_REVIEW",
+  "nativeSHA256": "90ea49ecf78a17c6c16483752cbcf74acdf48636df898f978d56aa4638364a7c",
+  "wholeImagePersonallyInspected": true,
+  "centralCropPersonallyInspected": true,
+  "arcadeStoreysObserved": 3,
+  "solidAtticAboveArcadesObserved": true,
+  "centralFacadeVerticalOrderBottomToTop": [
+    "ground round arch row",
+    "second round arch row",
+    "third round arch row",
+    "solid attic with small rectangular windows"
+  ],
+  "halfOuterRingOnly": true,
+  "bothOpenEnds": true,
+  "simplifiedSteppedEndProfiles": true,
+  "sepiaMatteStyleRetained": true,
+  "elevatedThreeQuarterCameraRetained": true,
+  "noArenaFloorOrInnerRingObserved": true,
+  "noGroundBaseOrCastGroundShadowObserved": true,
+  "noTextOrUnrelatedObjectsObserved": true,
+  "nativeBytesUnedited": true,
+  "actualDimensions": [
+    1254,
+    1254
+  ],
+  "promptPreferredDimensions": [
+    1536,
+    1536
+  ],
+  "notUpscaled": true,
+  "limitations": [
+    "Architectural map concept, not a survey or photogrammetric reconstruction.",
+    "End profiles remain simplified broad low-poly steps.",
+    "Tool returned 1254x1254 native pixels; prompt preference 1536x1536 was not met. The source order did not specify a required image pixel size."
+  ],
+  "KKImageAccepted": false,
+  "approvedForTripoStart": false,
+  "runtimeVerified": false,
+  "published": false
+}

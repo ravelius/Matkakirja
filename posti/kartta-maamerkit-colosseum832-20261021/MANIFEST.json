@@ -1,0 +1,43 @@
+{
+  "taskNumber": 832,
+  "sourceTaskNumber": 812,
+  "file": "01-colosseum-v2.png",
+  "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-152559ab-8743-431f-90ba-e1ed9cdb10f9.png",
+  "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-152559ab-8743-431f-90ba-e1ed9cdb10f9.png",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kartta-maamerkit-814816-20261021/colosseum-correction-832-20261021/delivery/01-colosseum-v2.png",
+  "sha256": "90ea49ecf78a17c6c16483752cbcf74acdf48636df898f978d56aa4638364a7c",
+  "bytes": 1291447,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "format": "PNG",
+  "nativeBytesUnedited": true,
+  "backgroundPatchMeans": {
+    "topLeft": [
+      253.67,
+      251.403,
+      235.881
+    ],
+    "topRight": [
+      253.702,
+      251.446,
+      235.945
+    ],
+    "bottomCenter": [
+      253.621,
+      251.255,
+      235.66
+    ]
+  },
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "qaStatus": "PASS_FOR_KK_REVIEW",
+  "recipient": "PT for KK image approval",
+  "KKImageAccepted": false,
+  "approvedForTripoStart": false,
+  "imagePhaseR2Required": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
