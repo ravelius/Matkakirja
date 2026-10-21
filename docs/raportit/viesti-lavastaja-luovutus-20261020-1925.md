@@ -133,3 +133,8 @@ ja vaihdon jälkeen Quaternius-ihmiset (kavijat-v1/v2) pois kokonaan, ei sekaisi
 - **Meridiaaniportin keskiaukko** (omistaja 18.39): säteillä tarkistettu auki läpi asti (lod0/1/2, törmäys, tausta-v6). Ei korjausta.
   PK:lle mitat: keskilinja x = 13,186 − 0,0355·(z + 380,906), z −394,70…−367,12, leveys 6,0, lattia 0, holvi 6,0 → laki 9,0.
   PK otti ne käyttöön (palaute-208 7980a4cb9, drone 4 m:n korkeudella). Skriptiä ei säilytetty (scratchpad).
+
+## 21.10. aamu (Lavastaja)
+- Mac-esikatselu: --batch oletus (proto lavastaja/esikatselu-jumi 335bbfbd4, JU kelaa tyokaluseppa/esikatselu); pelin puoli a5b733c2b (EsikatseluSkaala) NS:llä junaan 209. Museon batch-skenaario tyokalut/natiiviseppa-skriptit/juna209/sk-louvre-hahmot-209-esikatselu.txt (odota nykyintro pois, rivi kahdesti).
+- Muistikevennys: avoimet-v12 (kuvat ≤ 1024 px, GPU 254 → 154 Mt) ämpärissä 06.05; PK 951e747ef lataa huoneet kerran.
+- V3:n seinämosaiikki: laitteella 209q:n w3 puhdas; tarkistetaan seuraavassa laiteajossa kohdasta 827 m (pelin materiaali, PK).
