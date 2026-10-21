@@ -2191,3 +2191,7 @@ OMISTAJAN VASTAUS klo 01.07 (KK:n kortti, sanatarkasti): T3 ja T1 -> "Kyllä, se
 ## PAATOKSET 21.10.2026 klo 07.40 (omistaja, aamukortti KK:n kautta) (21.10.2026 klo 07.41)
 
 1) Rikkoutuvat esineet: 'Enemmän posliinia ja helpommin rikkoutuvaa' – ei tuotantolupaa; Codex muokkaa listan ja tekee uuden kuvan, uusi kortti KK:lle. 2) Läpijuostavien rakennusten 4 osamallia (palatsiovi, ristikko-ovi, sisäporras, ylägallerian tasanne): 'Kyllä, tasan 4 generointia (Suositus)' – Tripo-lupa tasan 4 generointiin, uusinta = uusi kortti. 3) ElevenLabsin 3 %:n raja: 'Yhtä ajoa (Suositus)' – raja koskee yksittäistä ajoa, ei kuukauden summaa (Raamattu 5.1).
+
+## PAATOKSET 21.10.2026 klo 08.02 (omistaja, kortti KK:n kautta) (21.10.2026 klo 08.02)
+
+Rikkoutuvat esineet (Codex #792): 'Ensin 6, tasan 12 generointia (Suositus)' – lista 11 posliiniesinettä + saviruukku hyväksytty; Tripo-lupa tasan 12 generointiin (6 esinettä × ehjä + rikkoutunut, yksi otto per tila); loput 6 kysytään, kun omistaja on nähnyt nämä pelissä.
