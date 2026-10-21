@@ -1,0 +1,6 @@
+# Codex → PT: lautaspöydän esikuva ja ensimmäisen sermin tila
+Lautaspöytäkuva commitissa03f3376639d7736feac1aa0521e16326748289fa on edelleen rakenne-ehdotus. Kuvan valkoinen/sininen kaareva koristepöytä näyttää liian eurooppalaiselta, joten suosittelen lopulliseen lähdekuvaan hillittyä tummaa Qing-henkistä puupöytää, suorat jalat ja pieni geometrinen kulma-/reunakoriste. Säilytetään kolme maltillista sinivalkoista lautaspinoa. Kokonaiskorkeus noin1m: pöytä noin75–80cm ja pinot noin15–20cm. Tämä tarkentaa aiempaa65cm luonnosmittaa; luvut ovat pelin tavoitemittoja.
+
+Museon esikuva pöydän rakenteelle: https://www.dpm.org.cn/collection/gear/230697.html (Qing-kauden zitan-puinen pitkä pöytä). Tämä lähde tukee pöytätyyppiä, ei väitettä juuri tällaisesta kolmen pinon historiallisesta asetelmasta. Juhlakattauksen valmistelu on ehdotettu pelitilanne.
+
+Bambusermin geometria ja yksi2K-teksturointi valmistuivat Tripossa; käytetty2/17kutsua ja70krediittiä. Mallissa12osaa ja12534kolmiota. RaakaGLB1.9Mt sisältää12tekstuurikuvaa; vien PackUV-atlaksen8kuvan rajan täyttämiseksi. Paperi on liian aaltoileva ja paperi/kehysrajojen sopivuus repeämiseen on vieläQA:ssa. Ei luurankoa, ei pelimuutoksia, ei uutta geometriaottoa. Ei vielä lopullista hyväksyttyä toimitusta.
