@@ -277,8 +277,8 @@ seuraavalla vuorollaan ja poistaa merkinnän.
 - **Kopio protoon:** `cmp` mainin ja proton tiedostosta ennen jokaista junapyyntöä; ero = palautus Karttasepälle, ei käsikorjausta.
 
 ### Natiivi-UI
-*(Natiivi-UI 20.10.2026, PT:n toimeksianto (omistaja 20.10. klo 22.38, 22.58 ja 23.17). Kooste Kiinan dynastiat -linssin kehyksestä,
-aikajanojen, oppaan, ISS:n ja museon käyttöliittymätyöstä; uusia sääntöjä ei ole. Napit, ☰, ⚙ ja sisään- ja ulostulo ovat yhteisiä
+*(Natiivi-UI 20.10.2026, päivitetty 21.10.2026 (yhteiset osat ja iPhone vaaka, juna 209), PT:n toimeksianto (omistaja 20.10. klo 22.38,
+22.58, 23.17 ja 23.25). Kooste Kiinan dynastiat -linssin kehyksestä, aikajanojen, oppaan, ISS:n ja museon käyttöliittymätyöstä; uusia sääntöjä ei ole. Napit, ☰, ⚙ ja sisään- ja ulostulo ovat yhteisiä
 (Raamattu 2.70 ja 2.201), eikä linssi tee niistä omia versioita.)*
 
 **Työvaiheet (tässä järjestyksessä):**
@@ -294,6 +294,11 @@ aikajanojen, oppaan, ISS:n ja museon käyttöliittymätyöstä; uusia sääntöj
    KORTTI-, NOSTOKORTTI- tai KUVANÄKYMÄ-pohjalla, paneelit PANEELI (lasi) tai PYSÄYTYSKUVA, säätimet LAITEPÖYTÄ-pohjalla, nimet ja
    otsikot latauskuvan nimipohjalla. Lasipohja vain paneeleihin ja kortteihin, ei koko ruudun sivuille eikä peruskartalle.
    Puuttuva osa: piirretty kuvakaappaus (luku 0) PT:lle ennen koodia; hyväksytty uusi osa tehdään yhteiseksi ja kirjataan tyylikirjaan.
+   **Yhteiset osat koodissa (YHTEISET OSAT ENSIN, omistaja 20.10. klo 23.25; juna 209):** kortti `KorttiRunko` (kapiteeli, otsikko,
+   apuri, teksti, korostus, lisäosa, napit: toissijainen vasemmalla, kultainen oikealla; `vierittyva` pitkälle sisällölle), himmennys,
+   syötelukko ja avaus `ModaaliTaso`, valikon rivit `ValikkoRivit` (komento, kytkin PÄÄLLÄ/POIS, alanäkymä ›, takaisin ‹, viiva,
+   väliotsikko), ⚙:n alaosa `RatasAlaosa`, tauko ▷/⏸ `Ohjausnappi.Tauko`, kytkimen päällä-tila `Ohjausnappi.Kytkin` (läpikuultava
+   oranssi), museon lasikortti `MuseoTaulu.UusiLasikortti`. Linssi ei rakenna näitä käsin.
 4. **Aikaselain, nimikkeet ja leimat** datasta: vuosiluku ja pysäkki aikajanan pohjilla (karuselli, aikaselain), nimet omalle
    alueelleen ja rivitys sanojen väliin (`Tietajagalleria.SovitaSana`), luettavuus kaikilla taustoilla (`Latauskuva.Luettava`).
    Liike tyylikirjan liikepohjalla alle 250 ms (Raamattu 4.14), ei omaa Lerp-liikettä (liikevahti).
@@ -307,7 +312,9 @@ aikajanojen, oppaan, ISS:n ja museon käyttöliittymätyöstä; uusia sääntöj
 
 **Valmis, kun (Natiivi-UI, täydentää lukua 4):**
 - [ ] ☰, ⚙, ▷/⏸, 🔈 ja T yhteisillä osilla; ☰:n alin rivi Poistu; ⚙ yhteisellä rakenteella; ei linssin omia nappeja.
-- [ ] Linssin oma käyttöliittymä vain hyväksytyillä pohjilla; uusi osa tyylikirjassa ennen junaa.
+- [ ] Linssin oma käyttöliittymä vain hyväksytyillä pohjilla ja yhteisillä osilla (kohta 3); uusi osa tyylikirjassa ennen junaa.
+- [ ] Napit kahdessa koossa: tekstinapit tyylikirjan `nappi.korkeus` (38 pt, omistaja 6.10.), kuvakenapit OHJAUSNAPPI (`nappi.ohjaus` 40 pt);
+      samassa rivissä ei eri kokoja.
 - [ ] Nimet ja tekstit mahtuvat iPhonella (pysty ja vaaka) ja iPadilla, luettavia kaikilla taustoilla; tyhjä tila ei riko asettelua.
 - [ ] Liikkeet liikepohjalla, kielivahti, pohjavahti ja liikevahti läpi, `tarkista.sh` 0 virhettä.
 - [ ] Piirretty kuvakaappaus ja pelikuva rinnakkain PT:llä ennen junaa.
@@ -323,6 +330,16 @@ aikajanojen, oppaan, ISS:n ja museon käyttöliittymätyöstä; uusia sääntöj
   napautus vain pysäytti listan. Käytä `Kosketusvieritys.Liita`a.
 - **Simun napautukset:** himmennetyt kehysnapit eivät näy ui-puussa eivätkä ota napautusta, joten skenaarion alkuun `ui kehysnapit 0`.
 - **iPhone vaaka** (asettelutesti 184): valikot ja selitteet ylittivät ruudun; leveys- ja korkeusraja turva-alueeseen ja lista vierittyväksi.
+- **iPhone vaaka 21.10. (yösuunnitelma):** matalalla ruudulla (korkeus noin 400 pt) pystyyn suunniteltu sarake ei mahdu. Ratkaisut olivat
+  yhteisiä: kysymyksen vastaukset kahteen sarakkeeseen (`mk-kysymys--matala`), aikajanan legenda omalle rivilleen palkin alaosaan, kun se
+  ei mahdu kokonaan, lautapelien lauta koko korkeuteen ja opastuskupla korvaa oikean palstan kortin kunnes ohitettu (`PelinAsettelu`).
+  Leikkautuvaa tekstiä ei hyväksytä (PT 21.10.), ei myöskään "suunniteltua ylivuotoa".
+- **Pulu ei peitä painikkeita:** uusi alareunan kortti tai paneeli lisätään Pulun paikkasääntöön (`Pulu.Alareuna`): Pulu kortin yläpuolelle,
+  jos mahtuu, muuten alapuolelle, ei koskaan kortin päälle.
+- **Sulkeutuminen linssin mukana:** jokainen linssin avaama ikkuna (galleria, kortti, valikko) suljetaan linssin vaihtuessa ja vapauttaa
+  syötelukon (21.10.: ISS:n Kuvat-galleria jäi muiden linssien ja pelien päälle ja lukitsi napautukset).
+- **Kuvaparit:** ennen ja jälkeen samasta rungosta (yhdistä juna haaraan ennen kuin käännät), kuvatekstissä haaran SHA; jokainen kuvattava
+  näkymä todella auki (lokista tarkistus: salikortti vain salissa, kylttikortti teoksen tunnuksella), muuten kuvapari ei kelpaa.
 
 ### Sisältökirjuri
 *(Sisältökirjuri 17.10.2026, Kiinan dynastiat -linssin tekstityön pohjalta; ei uusia sääntöjä. Tekstien yleinen tuotanto: `kertojan-teksti-ja-aani.md`,
