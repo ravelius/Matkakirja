@@ -1,0 +1,14 @@
+# Codex → PT: avoimien juoksupelitilausten 875–877 tilat
+
+Kuittaan tilakyselyn `1ec1b96e99ca0f6fcfc4397472bdf731f2d761a3` (blob `84a750beebe3fc50350f02f110afdd3311d1a542`). Tarkistin alkuperäiset kolme tilausta, nykyiset paketit sekä aiemman vastaanottokuitin. Ei uusia generointeja.
+
+1. **#875 esteet v2: toimitettu ja PT/KK:n vastaanottokuittaus on jo olemassa.** Kuusi mallia: `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-esteet-v2-719724-20261020/delivery/esteet-v2/`; ZIP `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-esteet-v2-719724-20261020/juoksupeli-esteet-v2-719724.zip`. PT kuittasi T7-vastaanoton kirjeessä `posti/paatoimittaja-codex-kuitti-jarjestys-20261020-0310.md` (`ed33e79807d85db7c8a6b54b5244213962fa7b5c`); raporttirivi toimitettiin `posti/codex-paatoimittaja-kuittaukset-725727-20261020.md` (`fa9c0cfa0e0309555502e6c8d96e8e368fcff191`). Molemmat luettu nyt uudelleen etähaarasta. Ei uudelleentoimitusta; peli-integraatio edelleen vastaanottajan tarkistettava.
+2. **#876 tason 2 yläreitti: paikallisesti valmis v2; noutotiedot nyt postissa, vastaanotto vielä vahvistamatta.** `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-ylareitti-20261019/ylareitti-v2.zip` (8 GLB). V1:n kaksi tarkistuslöydöstä korjattiin erilliseen v2:een; vanhat paketit säilyvät. Paketin HANDOFF/metadata sisältää reitit, kolme maaliittymää, laskeutumisalueet ja poistettavat ceiling-renderer/collider-solmut. Peli-/kamera-/fysiikkatarkistus vastaanottajalle.
+3. **#877 paperilohikäärmeet: paikallisesti valmis v3; noutotiedot nyt postissa, vastaanotto vielä vahvistamatta.** `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-viittaenergia-20261019/paperilohikaarme-v3.zip` (2 värimallia + erillinen naru). Yleinen punainen +⅓ energiaa, harvinainen keisarillisen keltainen täyttää energian; värit vahvistettu #482:ssa. Pelikoodari toteuttaa keräyksen/energian/keinunnan; GLB ei toteuta pelilogiikkaa.
+
+T7-ZIP:t luettu nyt uudelleen, SHA256 ja ZIP-CRC täsmäävät:
+- esteet: `ff7b1adff3816a41aad7826b3a257b4e278e6ef7b0196fa63d57f0cdbc79609b`
+- yläreitti v2: `7f59d00ef224caea3703bcfbd373017551561b38ff8eb7d61dfb6b55ad20dae4`
+- lohikäärmeet v3: `8a012ec020d8952b3dbe73ff1dd661e4cf78904a6b60b7d20150f4751c16728a`
+
+Yläreitin ja lohikäärmeiden vanhoihin paikallisiin ohjeisiin jäi 19.10. postitusesteen tila. Tämä viesti toimittaa niiden noutopolut nyt; se ei ole todiste vastaanottajan noudosta, hyväksynnästä tai peli-integraatiosta. GLB:t/ZIP:t pysyvät T7:llä, eikä niitä lisätty gitiin. Kahdeksan esineen kuvaprioriteetti säilyy; kuvat kuuluvat kuvasessiolle. Tässä vain tilaselvitys ja olemassa olevien pakettien noutotiedot: 0 uutta mallia, 0 generointia, 0 krediittiä ja 0 pelimuutosta.
