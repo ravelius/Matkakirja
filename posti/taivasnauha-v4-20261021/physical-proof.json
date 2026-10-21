@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-21T07:34:56.934932+00:00",
+  "taskNumber": 802,
+  "zipPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/taivasnauha-v4-802-20261021.zip",
+  "zipSHA256": "418cb10fa8ecef35ff1e211897337aef94341f12129b018085fe8f6e5e1845f0",
+  "zipBytes": 4880470,
+  "everyZipMemberByteVerified": true,
+  "zipMemberCount": 11,
+  "physicalT7Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021",
+  "nativeGenerationCallsIssued": 4,
+  "nativeGenerationCallsCompleted": 4,
+  "nativeGenerationCallsPending": 0,
+  "requiredPNGCount": 4,
+  "allRequiredFilesExist": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

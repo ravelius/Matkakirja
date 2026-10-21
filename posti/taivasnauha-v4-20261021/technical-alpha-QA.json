@@ -1,0 +1,54 @@
+{
+  "panels": [
+    {
+      "file": "nauha-1.png",
+      "dimensions": [
+        1686,
+        932
+      ],
+      "premultipliedInvariantPass": true,
+      "zeroAlphaRGBZero": true,
+      "fullyTransparentFraction": 0.7075963883331042,
+      "bottom32RowsAlphaMax": 0,
+      "alphaMax": 255
+    },
+    {
+      "file": "nauha-2.png",
+      "dimensions": [
+        1686,
+        932
+      ],
+      "premultipliedInvariantPass": true,
+      "zeroAlphaRGBZero": true,
+      "fullyTransparentFraction": 0.7107885438781381,
+      "bottom32RowsAlphaMax": 0,
+      "alphaMax": 255
+    },
+    {
+      "file": "nauha-3.png",
+      "dimensions": [
+        1686,
+        932
+      ],
+      "premultipliedInvariantPass": true,
+      "zeroAlphaRGBZero": true,
+      "fullyTransparentFraction": 0.6730019753689817,
+      "bottom32RowsAlphaMax": 0,
+      "alphaMax": 254
+    },
+    {
+      "file": "nauha-4.png",
+      "dimensions": [
+        1686,
+        932
+      ],
+      "premultipliedInvariantPass": true,
+      "zeroAlphaRGBZero": true,
+      "fullyTransparentFraction": 0.6985691302776208,
+      "bottom32RowsAlphaMax": 0,
+      "alphaMax": 255
+    }
+  ],
+  "exportSemanticQA": "PENDING_ROOT_COMPOSITE_INSPECTION",
+  "gameIntegrationVerified": false
+}

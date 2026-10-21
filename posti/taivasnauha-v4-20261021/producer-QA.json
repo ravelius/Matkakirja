@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-21T07:34:56.934932+00:00",
+  "taskNumber": 802,
+  "rootPersonallyInspectedAllFourNativeImages": true,
+  "rootPersonallyInspectedExportedNeutralComposites": true,
+  "rootPersonallyInspected360PreviewAndFiveJoinCrops": true,
+  "landmarks": {
+    "northFiveJingshanPavilions": true,
+    "yellowRoofsOnlyOnJingshan": true,
+    "northwestWhiteDagoba": true,
+    "northSmallGreyGate": true,
+    "southeastSmallBlueTemple": true,
+    "southSmallGreyZhengyangmen": true
+  },
+  "noRepeatedForbiddenCityOrImperialPalaceSkyline": true,
+  "greyHutongCourtyardCarpet": true,
+  "noPeopleOrTextOrModernBuildingsObserved": true,
+  "softLowerHazeNoStraightGroundBoundary": true,
+  "noVisibleNeonFringeInNormalComposites": true,
+  "noObviousCutLandmarkOrHardJoinInPreview": true,
+  "alphaTechnicalReport": "technical-alpha-QA.json",
+  "technicalExportsRootVerified": true,
+  "nativeOriginalsUnchanged": true,
+  "fourWholeNewGenerations": true,
+  "TripoCallsIssued": 0,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "receiverFogImportBlendAndGameDistanceQA": "PENDING"
+}

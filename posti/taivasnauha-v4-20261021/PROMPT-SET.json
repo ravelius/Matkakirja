@@ -1,0 +1,82 @@
+{
+  "taskNumber": 802,
+  "mode": "builtin-imagegen",
+  "items": [
+    {
+      "id": "north",
+      "file": "nauha-1.png",
+      "centerAzimuthDeg": 0,
+      "azimuthStartDeg": 310,
+      "azimuthEndDeg": 50,
+      "azimuthSpanDeg": 100,
+      "overlapWithEachNeighborDeg": 10,
+      "elevationLowerDeg": -19.7,
+      "elevationUpperDeg": 35.6,
+      "args": {
+        "prompt": "Use case: stylized-concept. Asset: one complete NEW whole painted skyline panel for a 360-degree game background, NOT a collage or a crop. Genuine RGBA transparency. The attached game scene is ONLY a matte game-rendering-style reference: do not copy its palace, foreground or person. The attached sky is ONLY a warm-light/palette reference: do not include sky, clouds, sun, paper, matte, checkerboard or any opaque background in this panel.\nShow the ordinary city surrounding the Forbidden City in Beijing circa 1900, seen looking outward from the palace near Taihemen. The palace itself is outside the picture, behind the viewer. A dense fine-grained carpet of low GREY tiled hutong and siheyuan courtyard houses, grey brick lanes/walls, scattered dark green cedar/acacia tree crowns. Roofs are distinctly cool dark grey, warm sunlight may touch their edges. No second Forbidden City, no duplicated imperial complex, no yellow/orange palace roofs, no giant red palace halls. Yellow glazed roofs are allowed ONLY on the five specified Jingshan hill pavilions in the NORTH panel. No modern architecture, skyscrapers, cars, electricity pylons, people, animals, text, logos, compass symbols or labels. No fantasy mountain panorama or Great Wall.\nOne approximately 2000x1106 landscape canvas, aspect 100:55.3. Equirectangular angular band: exactly100 degrees left-to-right and elevation+35.6 at the top to-19.7 at bottom; geometric horizon at y64.38%. Central90 degrees plus5 degrees on each end for10-degree neighbor overlap. Keep the far-left and far-right10% quiet, low and misty: only tiny grey rooftops/trees, no distinct tall landmark cut by an edge. Consistent common low architectural baseline around y65%, naturally irregular roofline. Most ordinary architecture occupies y49%-68%, northern hill may rise to y37%. Large transparent headroom. Lower roof/tree details must dissolve softly into thin pale atmospheric haze and then true alpha0 by y85%; absolutely no straight hard ground edge, slab, opaque fog rectangle or drop shadow. Empty alpha0 space above skyline and below its feathered haze.\nRestrained, detailed matte painterly game art; readable roof eaves and varied individual courtyard blocks, smooth natural surfaces, no repeated stamped/AI pattern, no canvas-grain overlay, no black outline. Nearby colors clear; distant city becomes pale blue-grey through aerial haze. Late-afternoon sunlight from compass258 degrees (west-southwest), elevation19 degrees, same light across all four panels. Warm golden side highlights, cool soft shadows; do not paint a sun disk. Do not add more landmarks than this direction calls for. Whole scene is distant background artwork, no foreground gameplay buildings.\n\nDIRECTION SPECIFICATION:\nNORTH panel: center azimuth0 (North), coverage310 through0 to50 degrees clockwise. The nearby Jingshan wooded hill is centered exactly x50%, broad enough to see EXACTLY FIVE small separate pavilions on its ridge: one modestly taller central pavilion and two small pavilions on each side. Only these five hill pavilions may have subdued yellow glazed roofs. Below the hill: only GREY ordinary courtyard roofs, no yellow-roof palace or grand imperial gate. At x20% (azimuth330, northwest), a modest distant Beihai WHITE DAGОBA: one white Tibetan stupa body and dark pointed finial on a wooded rise, not a multi-storey pagoda. At x70% (azimuth20) a tiny far Deshengmen city gate tower with DARK GREY roof, partially softened by haze. Keep all three features at different sensible scales; Jingshan is the nearest focal landform. No Temple of Heaven here.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/game-render-style.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/sky005-light-reference.png"
+        ],
+        "transparent_background": true
+      }
+    },
+    {
+      "id": "east",
+      "file": "nauha-2.png",
+      "centerAzimuthDeg": 90,
+      "azimuthStartDeg": 40,
+      "azimuthEndDeg": 140,
+      "azimuthSpanDeg": 100,
+      "overlapWithEachNeighborDeg": 10,
+      "elevationLowerDeg": -19.7,
+      "elevationUpperDeg": 35.6,
+      "args": {
+        "prompt": "Use case: stylized-concept. Asset: one complete NEW whole painted skyline panel for a 360-degree game background, NOT a collage or a crop. Genuine RGBA transparency. The attached game scene is ONLY a matte game-rendering-style reference: do not copy its palace, foreground or person. The attached sky is ONLY a warm-light/palette reference: do not include sky, clouds, sun, paper, matte, checkerboard or any opaque background in this panel.\nShow the ordinary city surrounding the Forbidden City in Beijing circa 1900, seen looking outward from the palace near Taihemen. The palace itself is outside the picture, behind the viewer. A dense fine-grained carpet of low GREY tiled hutong and siheyuan courtyard houses, grey brick lanes/walls, scattered dark green cedar/acacia tree crowns. Roofs are distinctly cool dark grey, warm sunlight may touch their edges. No second Forbidden City, no duplicated imperial complex, no yellow/orange palace roofs, no giant red palace halls. Yellow glazed roofs are allowed ONLY on the five specified Jingshan hill pavilions in the NORTH panel. No modern architecture, skyscrapers, cars, electricity pylons, people, animals, text, logos, compass symbols or labels. No fantasy mountain panorama or Great Wall.\nOne approximately 2000x1106 landscape canvas, aspect 100:55.3. Equirectangular angular band: exactly100 degrees left-to-right and elevation+35.6 at the top to-19.7 at bottom; geometric horizon at y64.38%. Central90 degrees plus5 degrees on each end for10-degree neighbor overlap. Keep the far-left and far-right10% quiet, low and misty: only tiny grey rooftops/trees, no distinct tall landmark cut by an edge. Consistent common low architectural baseline around y65%, naturally irregular roofline. Most ordinary architecture occupies y49%-68%, northern hill may rise to y37%. Large transparent headroom. Lower roof/tree details must dissolve softly into thin pale atmospheric haze and then true alpha0 by y85%; absolutely no straight hard ground edge, slab, opaque fog rectangle or drop shadow. Empty alpha0 space above skyline and below its feathered haze.\nRestrained, detailed matte painterly game art; readable roof eaves and varied individual courtyard blocks, smooth natural surfaces, no repeated stamped/AI pattern, no canvas-grain overlay, no black outline. Nearby colors clear; distant city becomes pale blue-grey through aerial haze. Late-afternoon sunlight from compass258 degrees (west-southwest), elevation19 degrees, same light across all four panels. Warm golden side highlights, cool soft shadows; do not paint a sun disk. Do not add more landmarks than this direction calls for. Whole scene is distant background artwork, no foreground gameplay buildings.\n\nDIRECTION SPECIFICATION:\nEAST panel: center azimuth90, coverage40 to140 degrees clockwise. Ordinary circa1900 Beijing GREY hutong roofs and siheyuan blocks as a dense, low varied urban carpet, occasional dark-green courtyard trees, one modest stretch of grey brick city wall and low grey-roof gate in the far distance. No famous temple or palace focal point, no golden roofs, no Jingshan, no white dagoba, no blue Temple of Heaven. Rooftop band should stay low and quiet, consistent with the other panels.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/game-render-style.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/sky005-light-reference.png"
+        ],
+        "transparent_background": true
+      }
+    },
+    {
+      "id": "south",
+      "file": "nauha-3.png",
+      "centerAzimuthDeg": 180,
+      "azimuthStartDeg": 130,
+      "azimuthEndDeg": 230,
+      "azimuthSpanDeg": 100,
+      "overlapWithEachNeighborDeg": 10,
+      "elevationLowerDeg": -19.7,
+      "elevationUpperDeg": 35.6,
+      "args": {
+        "prompt": "Use case: stylized-concept. Asset: one complete NEW whole painted skyline panel for a 360-degree game background, NOT a collage or a crop. Genuine RGBA transparency. The attached game scene is ONLY a matte game-rendering-style reference: do not copy its palace, foreground or person. The attached sky is ONLY a warm-light/palette reference: do not include sky, clouds, sun, paper, matte, checkerboard or any opaque background in this panel.\nShow the ordinary city surrounding the Forbidden City in Beijing circa 1900, seen looking outward from the palace near Taihemen. The palace itself is outside the picture, behind the viewer. A dense fine-grained carpet of low GREY tiled hutong and siheyuan courtyard houses, grey brick lanes/walls, scattered dark green cedar/acacia tree crowns. Roofs are distinctly cool dark grey, warm sunlight may touch their edges. No second Forbidden City, no duplicated imperial complex, no yellow/orange palace roofs, no giant red palace halls. Yellow glazed roofs are allowed ONLY on the five specified Jingshan hill pavilions in the NORTH panel. No modern architecture, skyscrapers, cars, electricity pylons, people, animals, text, logos, compass symbols or labels. No fantasy mountain panorama or Great Wall.\nOne approximately 2000x1106 landscape canvas, aspect 100:55.3. Equirectangular angular band: exactly100 degrees left-to-right and elevation+35.6 at the top to-19.7 at bottom; geometric horizon at y64.38%. Central90 degrees plus5 degrees on each end for10-degree neighbor overlap. Keep the far-left and far-right10% quiet, low and misty: only tiny grey rooftops/trees, no distinct tall landmark cut by an edge. Consistent common low architectural baseline around y65%, naturally irregular roofline. Most ordinary architecture occupies y49%-68%, northern hill may rise to y37%. Large transparent headroom. Lower roof/tree details must dissolve softly into thin pale atmospheric haze and then true alpha0 by y85%; absolutely no straight hard ground edge, slab, opaque fog rectangle or drop shadow. Empty alpha0 space above skyline and below its feathered haze.\nRestrained, detailed matte painterly game art; readable roof eaves and varied individual courtyard blocks, smooth natural surfaces, no repeated stamped/AI pattern, no canvas-grain overlay, no black outline. Nearby colors clear; distant city becomes pale blue-grey through aerial haze. Late-afternoon sunlight from compass258 degrees (west-southwest), elevation19 degrees, same light across all four panels. Warm golden side highlights, cool soft shadows; do not paint a sun disk. Do not add more landmarks than this direction calls for. Whole scene is distant background artwork, no foreground gameplay buildings.\n\nDIRECTION SPECIFICATION:\nSOUTH panel: center azimuth180, coverage130 to230 degrees clockwise. Ordinary GREY hutong/courtyard rooftops dominate. A small far Zhengyangmen city gate centered around x50%, dark grey tiled tower roof on a grey-brown city wall, much smaller than a palace; no yellow glazed roof. At x15% (azimuth145, southeast) the Temple of Heaven is a TINY distant recognizable three-tier ROUND BLUE roof, seen above haze, not a giant pagoda, and not repeated elsewhere. The temple must be small and subordinate to the city carpet. Sparse dark-green trees. No Jingshan hill or white dagoba.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/game-render-style.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/sky005-light-reference.png"
+        ],
+        "transparent_background": true
+      }
+    },
+    {
+      "id": "west",
+      "file": "nauha-4.png",
+      "centerAzimuthDeg": 270,
+      "azimuthStartDeg": 220,
+      "azimuthEndDeg": 320,
+      "azimuthSpanDeg": 100,
+      "overlapWithEachNeighborDeg": 10,
+      "elevationLowerDeg": -19.7,
+      "elevationUpperDeg": 35.6,
+      "args": {
+        "prompt": "Use case: stylized-concept. Asset: one complete NEW whole painted skyline panel for a 360-degree game background, NOT a collage or a crop. Genuine RGBA transparency. The attached game scene is ONLY a matte game-rendering-style reference: do not copy its palace, foreground or person. The attached sky is ONLY a warm-light/palette reference: do not include sky, clouds, sun, paper, matte, checkerboard or any opaque background in this panel.\nShow the ordinary city surrounding the Forbidden City in Beijing circa 1900, seen looking outward from the palace near Taihemen. The palace itself is outside the picture, behind the viewer. A dense fine-grained carpet of low GREY tiled hutong and siheyuan courtyard houses, grey brick lanes/walls, scattered dark green cedar/acacia tree crowns. Roofs are distinctly cool dark grey, warm sunlight may touch their edges. No second Forbidden City, no duplicated imperial complex, no yellow/orange palace roofs, no giant red palace halls. Yellow glazed roofs are allowed ONLY on the five specified Jingshan hill pavilions in the NORTH panel. No modern architecture, skyscrapers, cars, electricity pylons, people, animals, text, logos, compass symbols or labels. No fantasy mountain panorama or Great Wall.\nOne approximately 2000x1106 landscape canvas, aspect 100:55.3. Equirectangular angular band: exactly100 degrees left-to-right and elevation+35.6 at the top to-19.7 at bottom; geometric horizon at y64.38%. Central90 degrees plus5 degrees on each end for10-degree neighbor overlap. Keep the far-left and far-right10% quiet, low and misty: only tiny grey rooftops/trees, no distinct tall landmark cut by an edge. Consistent common low architectural baseline around y65%, naturally irregular roofline. Most ordinary architecture occupies y49%-68%, northern hill may rise to y37%. Large transparent headroom. Lower roof/tree details must dissolve softly into thin pale atmospheric haze and then true alpha0 by y85%; absolutely no straight hard ground edge, slab, opaque fog rectangle or drop shadow. Empty alpha0 space above skyline and below its feathered haze.\nRestrained, detailed matte painterly game art; readable roof eaves and varied individual courtyard blocks, smooth natural surfaces, no repeated stamped/AI pattern, no canvas-grain overlay, no black outline. Nearby colors clear; distant city becomes pale blue-grey through aerial haze. Late-afternoon sunlight from compass258 degrees (west-southwest), elevation19 degrees, same light across all four panels. Warm golden side highlights, cool soft shadows; do not paint a sun disk. Do not add more landmarks than this direction calls for. Whole scene is distant background artwork, no foreground gameplay buildings.\n\nDIRECTION SPECIFICATION:\nWEST panel: center azimuth270, coverage220 to320 degrees clockwise. Only ordinary circa1900 Beijing grey hutong/siheyuan courtyard rooftops, a far grey brick city wall line with occasional modest dark-grey gate structures, and small groups of dark-green trees. Warm west-southwest light from azimuth258 is toward this view; retain grey roof color, subtle warm rim light and soft dusty haze. No second Forbidden City, no imperial yellow roofs, no gold palace skyline, no Jingshan, no white dagoba or Temple of Heaven in this panel. Quiet low rooftops at both edges for the neighbor join.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/game-render-style.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivasnauha-v4-20261021/references/sky005-light-reference.png"
+        ],
+        "transparent_background": true
+      }
+    }
+  ]
+}
