@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-21T05:42:12.328853+00:00",
+  "ready": true,
+  "taskNumber": 799,
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuvat-8esinetta-osakuvat-20261021.md",
+    "commit": "54e64edb220c54f32aadc1e44ab2aabda0ae2217",
+    "blob": "215532d87c5454d98711536c687dc5fc329460c2",
+    "sha256": "5297194d69c6427f1f9bbf68e800a7801c68a976c27f4f1a2431e629b0df125c",
+    "readInFull": true,
+    "readAt": "2026-10-21T05:42:12.328853+00:00"
+  },
+  "modelPlanReadInFull": true,
+  "approvedImageReferences": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/kuusi-lattiaesinetta.png",
+      "sourcePath": "posti/tripo-kahdeksan-esinetta-20261021/kuusi-lattiaesinetta.png",
+      "sourceCommit": "8071bbe3eb6891d41a12452586ac8aec959e586d",
+      "sha256": "66ee69c1a95acc788f5655d04a58a9bef923ac5ce8d4ef6b303dd337c3497d15"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-osakuvat-799-20261021/references/maisemasermi.png",
+      "sourcePath": "posti/tripo-kahdeksan-esinetta-20261021/maisemasermi.png",
+      "sourceCommit": "8071bbe3eb6891d41a12452586ac8aec959e586d",
+      "sha256": "4a0dfd259a3069f74d0f56cea74b17d8d4cb1d7bda7a672a988baf00b33c3f7f"
+    }
+  ],
+  "scope": "15 individual newly generated part images only",
+  "TripoCallsAllowed": 0,
+  "TripoCallsIssued": 0,
+  "newModelProductionAllowedHere": false,
+  "scope797Preserved": true,
+  "plateTableNotAuthorized": true,
+  "initialDuplicateCheck": "No previous task799 root or completed delivery found in ledger",
+  "imageCallsIssued": 0,
+  "imageCallsCompleted": 0,
+  "imageCallsPending": 0,
+  "sourceImagesPersonallyInspected": true,
+  "sourceAndModelPlanReadInFull": true,
+  "deliverableCount": 15,
+  "plannedInitialImageCalls": 15,
+  "plateTableProduced": false,
+  "deliveryTarget": "posti/tripo-kahdeksan-esinetta-20261021/osakuvat/",
+  "status": "ready-to-generate-15-new-part-images",
+  "targetFolderEmptyAtSourceCommit": true,
+  "duplicateSourceImageDeliveryFound": false
+}
