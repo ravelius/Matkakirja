@@ -80,7 +80,7 @@ tyypilliset virheet. Proton polut ovat proto-repon (`proto-3d/Matkakirja-proto`)
 
 `bash K/ajo-ketju34.sh` (mallina; kopioi ja nimeä kierroksen mukaan) ajaa kaiken peräkkäin yhdestä bash-komennosta:
 
-1. **Konsoli kiinni** (`launch`: vanha konsoli pois, ≥ 8 s, käynnistys `--console` → `kierrosNN/konsoli.txt`).
+1. **Konsolin kiinnitys** (`launch`: vanha konsoli pois, ≥ 8 s, käynnistys `--console` → `kierrosNN/konsoli.txt`).
 2. **Pelikierros** `K/ajo-kierros-yo30.zsh`: uusi peli; latauskuvat pysty ja vaaka (18 + 18 kuvaa); autopilotti reitti 1
    (`palatsi alku keski`, 150 s, iso aukio) ja reitti 2 (`-147.5,420`, 100 s, sisätila); GPU-mittaukset raskaassa kohdassa
    (A, jäädytys `ui juoksupeli valo jaady 1`) ja 25 s juoksussa (J, JA, JB); värinä kolmesta pisteestä (v11, v27, v52).
