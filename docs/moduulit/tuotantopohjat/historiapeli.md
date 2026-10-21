@@ -230,6 +230,12 @@ Tämä osuus etenee harmaan version rinnalla; sen omistaa Sisältökirjuri.
     laskutapa vaihtelee; "Tiibet valtaa Silkkitien ja Tarimin" liian vahva). Muutossarake kertoo, mitä tarkistus vaati.
 12. **Riippumaton tarkistaja ennen PT:tä** (kultainen polku muista pohjista): tarkistaja ei näe kirjoittajan perusteluja, hakee omat
     lähteet ja ajaa tehtävän "oleta että jotain on pielessä". Raportti KORJAA / EPÄVARMA / OK väitteittäin.
+13. **Rekvisiitta- ja kokoelmatekstit (juoksupeli, Rata v4 19.10. ja 21.10.).** Teksti tehdään vasta valmiille, pelissä toimivalle
+    rekvisiitalle (omistaja 21.10. klo 10.18, VAIN VALMIIT PALAT): kysy PK:lta/Lavastajalta ensin lista valmiista paloista ja
+    nimetyistä paikoista, älä kirjoita ennakkoon. Muoto: nimi enintään 24 merkkiä, faktavirke enintään 110, ruutuun tulevat
+    rivit enintään 60 eikä niissä ohjeita (ohjaus kuuluu UI-pohjiin). Avaimet `juoksupeli.<laji>.<id>.nimi` / `.teksti` litteänä
+    tiedostona PK:n muodossa. Jokaisen esineen lähde ja merkintä ([V]/[1L]/FIKTIO) sivutiedostossa; muistelma ainoana lähteenä
+    kirjataan avoimesti. Tieto näkyy juoksun jälkeen kokoelmana, ei juoksun aikana (luku 2, kokoelmakortti).
 
 ### Tyypilliset virheet (tarkistajan lista)
 
@@ -255,6 +261,7 @@ Sisältö-osuus ei ole valmis ennen kuin kaikki kohdat täyttyvät:
 - [ ] Repliikit taulukossa, merkkimäärät laskettu, sävy (13+, ei väkivaltaa ihmisiä vastaan) ja kaanon tarkistettu.
 - [ ] Sukupuoli- ja käännettävyystarkistus tehty (suomi, englanti: Fogg / you / they).
 - [ ] Tietokerroksen kortit (40–70 sanaa, lähteet, varmuus) ja kortti "Mikä oli keksittyä?".
+- [ ] Rekvisiitta- ja kokoelmatekstit vain valmiille palalle; merkkirajat (24 / 110 / 60) täyttyvät.
 - [ ] Riippumaton lähdetarkistus tehty, KORJAA-rivit korjattu, EPÄVARMA pehmennetty tai pois.
 - [ ] PT:n tarkistus; uudet repliikit ja Pulun tekstit Tekstit-osastossa ja hyväksytty.
 - [ ] Puheen merkkimäärä (puhutussa muodossa) ilmoitettu PT:lle; ääniluvat KK:n suoralla rivillä.
