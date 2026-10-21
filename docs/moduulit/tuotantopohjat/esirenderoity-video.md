@@ -23,7 +23,7 @@ tehdään tai kysytään minulta"). Kohdan numero = Raamatun kohta.
 - **EI** omia nappeja eikä tyylejä videon ympärille: tyylikirja ja yhteiset osat (4.1, 2.70).
 - **AINA** puhe tekstitetään pelin yhteisellä tekstityskaistaleella (Tekstitys-kytkin), ei videon omalla tekstillä eikä kaistalla (2.70, 2.201 TEKSTITYS; Natiivi-UI).
 - **AINA** omistajalle menevä video äänellisenä, ruutu ruudulta katsottuna ja välähdyshaku ajettuna (9.5, 9.12).
-- **Ennen kysymystä omistajalle:** onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus.
+- **Ennen kysymystä omistajalle:** onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus; pohja `kysymys-omistajalle.md` (SITOVA, 13.53).
 
 **MUUTOS 19.10.2026 klo 18.25 ja 18.29 (omistaja, Raamattu 4.21 KUKA TEKEE ja 2.105 SAVU VIDEOSSA):** raketti, valas ja uni kuvataan pelin omasta Unity-kohtauksesta kuva kerrallaan täydellä laadulla (Claude: oma video-laatutaso, savun puhelinrajat pois, oma kuva kerrallaan -tallennin). Codexin Blender-kulku koskee enää vain aarteen löytöhetkeä, koska sitä ei ole pelissä 3D-kohtauksena. Codexin rakettikokeilu 665–667/670 on pysäytetty (posti 34f60ff35). Pohja on siksi jaettu kahdeksi kuluksi: **A PELISTÄ KUVATTU** (luku 3) ja **B CODEX BLENDER** (luku 4). Myöhempää päätöstä, joka kumoaisi kulun B, ei ole (loki tarkistettu 20.10.2026 klo 23.5x; 20.10. linja "pelissä jo oleva kohtaus kuvataan pelistä" on sama kuin 18.25).
 

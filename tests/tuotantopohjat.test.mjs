@@ -6,8 +6,9 @@
  *   3) opit- tai retrospektiiviosio (otsikko; paketti on valmis vasta, kun opit on viety pohjaan).
  *   4) ALKUUN "## Tarkista ennen" (omistaja 21.10.2026 klo 17.31: "tehdä kaikista yksinkertaisia tuotantoputkia joista kaikki asiat
  *      tarkastetaan ennenkuin tehdään tai kysytään minulta"): pohjan ensimmäinen ##-otsikko, 5–12 AINA-/EI-riviä Raamatun kohdan
- *      numerolla ja rivi "Ennen kysymystä omistajalle". Pohjat, joista osio vielä puuttuu, ovat listalla TARKISTA_ENNEN_KESKEN; lista
- *      vain lyhenee (testi hylkää listalla olevan pohjan, jossa osio jo on, ja uuden pohjan ilman osiota).
+ *      numerolla ja rivi "Ennen kysymystä omistajalle" (Kysymys omistajalle SITOVA, kysymys-omistajalle.md, omistaja 21.10. 17.36).
+ *      Pohjat, joista osio vielä puuttuu, ovat listalla TARKISTA_ENNEN_KESKEN; uusi pohja ilman osiota hylätään, ja listalla oleva
+ *      valmis pohja tulostaa HUOM-rivin (poista listalta; ei kaada rinnakkaisia PR:iä).
  * Lisäksi Raamatun 4.21:n pohjalista ("Pohjat: …;") on olemassa tiedostoina <tyyppi>.md.
  */
 import test from 'node:test';
@@ -24,20 +25,25 @@ export const TARKISTA_ENNEN_KESKEN = new Set([
   'kuumailmapallokierros.md', 'paakaupungin-avaus.md', 'taidemuseon-maa.md', 'uusi-linssi.md',
 ]);
 const TARKISTA_RIVEJA = [5, 12];
+const KYSYMYSPOHJA = 'kysymys-omistajalle.md';   // SITOVA, omistaja 21.10.2026 klo 17.36 (#5139)
 
-export function tarkistaEnnen(teksti) {
+export function tarkistaEnnen(teksti, nimi = '') {
   const rivit = teksti.split('\n');
   const otsikot = rivit.map((r, i) => [r, i]).filter(([r]) => /^## /.test(r));
-  if (!otsikot.length || !/^## Tarkista ennen\s*$/.test(otsikot[0][0])) return ['"## Tarkista ennen" ei ole pohjan ensimmäinen ##-otsikko'];
+  if (!otsikot.length || !/^## Tarkista ennen\b/.test(otsikot[0][0])) return ['"## Tarkista ennen" ei ole pohjan ensimmäinen ##-otsikko'];
   const loppu = otsikot.length > 1 ? otsikot[1][1] : rivit.length;
   const osio = rivit.slice(otsikot[0][1] + 1, loppu);
   const puutteet = [];
-  const saannot = osio.filter((r) => /^- \*\*(AINA|EI)\b/.test(r));
+  // "- AINA: …", "- AINA …", "- **AINA** …", "- EI: …" (pohjien omistajat kirjoittavat eri tavoin; sisältö ratkaisee)
+  const saannot = osio.filter((r) => /^- (\*\*)?(AINA|EI)\b/.test(r));
   if (saannot.length < TARKISTA_RIVEJA[0] || saannot.length > TARKISTA_RIVEJA[1]) {
     puutteet.push(`"Tarkista ennen": ${saannot.length} AINA-/EI-riviä (pitää olla ${TARKISTA_RIVEJA[0]}–${TARKISTA_RIVEJA[1]})`);
   }
-  for (const r of saannot) if (!/\(\d+\.\d+/.test(r)) puutteet.push(`"Tarkista ennen": rivistä puuttuu Raamatun kohdan numero: ${r.slice(0, 80)}`);
-  if (!osio.some((r) => /^- \*\*Ennen kysymystä omistajalle:\*\*/.test(r))) puutteet.push('"Tarkista ennen": rivi "Ennen kysymystä omistajalle" puuttuu');
+  if (!osio.some((r) => /\(\d+\.\d+/.test(r))) puutteet.push('"Tarkista ennen": yhtään Raamatun kohdan numeroa ei ole (esim. "(9.11)")');
+  // Kysymys omistajalle SITOVA (omistaja 21.10.2026 klo 17.36, #5139): jokainen pohja ohjaa kysyjän ensin tarkistamaan.
+  if (nimi !== KYSYMYSPOHJA && !osio.some((r) => /kysym\S* omistajalle|kysymys-omistajalle\.md/i.test(r))) {
+    puutteet.push(`"Tarkista ennen": rivi "Ennen kysymystä omistajalle" (tai viittaus ${KYSYMYSPOHJA}) puuttuu`);
+  }
   return puutteet;
 }
 
@@ -91,13 +97,19 @@ test('Tarkista ennen -tarkistin tunnistaa puutteet (synteettinen pohja)', () => 
   assert.deepEqual(tarkistaEnnen(hyva), []);
   assert.equal(tarkistaEnnen('# X\n\n## 1. Putki\n\n## Tarkista ennen\n').length, 1, 'osio ei ole ensimmäinen');
   assert.match(tarkistaEnnen(hyva.replace(rivi(5) + '\n', '')).join(), /4 AINA-\/EI-riviä/);
-  assert.match(tarkistaEnnen(hyva.replace('(9.3)', '')).join(), /kohdan numero/);
+  assert.deepEqual(tarkistaEnnen(hyva.replace('- **AINA** sääntö 1', '- AINA: sääntö 1').replace('- **AINA** sääntö 2', '- EI sääntö 2')), [], 'muodot AINA: ja EI hyväksytään');
+  assert.match(tarkistaEnnen(hyva.replace(/\(9\.\d\)/g, '')).join(), /kohdan numeroa/);
+  assert.match(tarkistaEnnen(hyva.replace(/- \*\*Ennen kysymystä.*\n/, '')).join(), /Ennen kysymystä omistajalle/);
+  assert.deepEqual(tarkistaEnnen(hyva.replace(/- \*\*Ennen kysymystä.*\n/, ''), 'kysymys-omistajalle.md'), [], 'kysymyspohja itse');
 });
 
-test('jokaisessa tuotantopohjassa on alussa "Tarkista ennen" (KESKEN-lista vain lyhenee)', () => {
+test('jokaisessa tuotantopohjassa on alussa "Tarkista ennen" (ja kysymys omistajalle -rivi)', () => {
   const viat = pohjat.flatMap((n) => {
-    const p = tarkistaEnnen(lue(n));
-    if (TARKISTA_ENNEN_KESKEN.has(n)) return p.length ? [] : [`${n}: osio on jo kunnossa, poista se listalta TARKISTA_ENNEN_KESKEN`];
+    const p = tarkistaEnnen(lue(n), n);
+    if (TARKISTA_ENNEN_KESKEN.has(n)) {
+      if (!p.length) console.log(`HUOM: ${n} on kunnossa; poista se listalta TARKISTA_ENNEN_KESKEN`);
+      return [];
+    }
     return p.map((x) => `docs/moduulit/tuotantopohjat/${n}: ${x}`);
   });
   for (const n of TARKISTA_ENNEN_KESKEN) if (!pohjat.includes(n)) viat.push(`TARKISTA_ENNEN_KESKEN: ${n} ei ole pohja`);

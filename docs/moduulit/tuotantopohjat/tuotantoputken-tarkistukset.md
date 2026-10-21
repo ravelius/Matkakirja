@@ -18,7 +18,7 @@ tai kysytään minulta"). Kohdan numero = Raamatun kohta.
 - **EI** omistajaa ensimmäiseksi tarkistajaksi: yöjunan laitekierroksen löydös pysäyttää ulkoisen jaon (9.11).
 - **AINA** lukitus ja TestFlight vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA"), ja auki on yksi juna (10.1–10.2).
 - **EI** raskaita ajoja, kun omistaja käyttää Macia (12.13).
-- **Ennen kysymystä omistajalle:** onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus.
+- **Ennen kysymystä omistajalle:** onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus; pohja `kysymys-omistajalle.md` (SITOVA, 13.53).
 
 Neljä tarkistusta, yksi ajo. Juna = avoin julkaisuerä, johon valmiit työt kootaan. **Junan lukitus ja TestFlight tehdään
 vain omistajan pyynnöstä** (PT välittää pyynnön sanatarkasti); tämä pohja ei käynnistä kumpaakaan. Työkalut ovat
