@@ -1,0 +1,257 @@
+[
+  {
+    "order": 2,
+    "taskNumber": 840,
+    "bubbleNumber": 4,
+    "id": "keltalasitteinen-kulho",
+    "filename": "keltalasitteinen-kulho.jpg",
+    "oldFilename": "keltalasitteinen-kulho.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/keltalasitteinen-kulho.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "89d026ca49005e1d320d1bdd0343a50a51337b6cbd01f43d8ee4ac223d7cb922",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:35:49.655878+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Kulhon koko on lapsen käsille luonteva; Puyi yksin pitkän pöydän päässä, kamera korkealta toisesta päästä ja hovipalvelijat seinustalla. Pääaihe jää kuvan yläoikealle: pelin soikiorajaus tarkistettava integraatiossa.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:35:01.075910+00:00",
+    "issuedAt": "2026-10-21T15:35:01.076062+00:00",
+    "completedAt": "2026-10-21T15:35:37.928096+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/keltalasitteinen-kulho.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4496df7b-59ec-4a18-9d81-bee629108954.png",
+    "nativeSHA256": "3ce7f85e55f26b07fd2468e20471a88141c3dc231c008a58c8b98cd69412c334",
+    "nativeBytes": 2290292,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/keltalasitteinen-kulho.jpg",
+    "deliverySHA256": "06adf2c3734cc850c164cbe0459b6f50c889737e67abba712d46eee457644306",
+    "deliveryBytes": 443098,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 3,
+    "taskNumber": 841,
+    "bubbleNumber": 6,
+    "id": "yixing-teekannu",
+    "filename": "yixing-teekannu.jpg",
+    "oldFilename": "yixing-teekannu.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/yixing-teekannu.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "bf97fd873f211c593f7515575c3e0553fd08f09f3b016c233e870e1247074b67",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:36:23.190010+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Juoksu edestä matalalta, naurava lapsi ja perässä teetarjotin sekä päivänvarjo. Teekannu on aikuisen nyrkin kokoluokkaa; esine jää tarkoituksella taustalle ja sen luettavuus pelin pienessä kuplassa tarkistettava.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:35:49.883560+00:00",
+    "issuedAt": "2026-10-21T15:35:49.883704+00:00",
+    "completedAt": "2026-10-21T15:36:12.848774+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/yixing-teekannu.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ada15cee-1621-41b3-9b86-6becc2c4ea46.png",
+    "nativeSHA256": "25794f0067c3a94f0bf32c2f4d00582363c71ce5293f81ba4a0f9a1eff6cbcc4",
+    "nativeBytes": 2494386,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/yixing-teekannu.jpg",
+    "deliverySHA256": "5d6988fea3939c955b4b439f7b9d884a16980a11d7183ccce16e7ef78b6c19c5",
+    "deliveryBytes": 477765,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 4,
+    "taskNumber": 842,
+    "bubbleNumber": 28,
+    "id": "gaiwan-kansikuppi",
+    "filename": "gaiwan-kansikuppi.jpg",
+    "oldFilename": "gaiwan-kansikuppi.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/gaiwan-kansikuppi.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "48d7f1fbdfa67882407ccfb48c061e2a45b5e60148f699b2c1d9469ecdb42314",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:37:14.630664+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Isä siemaisee pienestä käteen mahtuvasta gaiwanista, Puyi vieressä jalat roikkuen. Kuvakulma on hieman viisto sivukuva eikä täysin kohtisuora profiili; kohtaus ja esinekoko toteutuvat.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:36:23.424129+00:00",
+    "issuedAt": "2026-10-21T15:36:23.424277+00:00",
+    "completedAt": "2026-10-21T15:37:04.793065+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/gaiwan-kansikuppi.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-7cc4e0a6-29a0-4d1f-902b-f7b70c5d6795.png",
+    "nativeSHA256": "ba2611a2336136be972525fa2242099b65f8648c2ac20a5f02c3cc5444b781fd",
+    "nativeBytes": 2235630,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/gaiwan-kansikuppi.jpg",
+    "deliverySHA256": "c37cbd5b3fc80902927bd00a528685e13efd8448776c9e68c13a4ec7c2b7b896",
+    "deliveryBytes": 406164,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 5,
+    "taskNumber": 843,
+    "bubbleNumber": 23,
+    "id": "musteliuska",
+    "filename": "musteliuska.jpg",
+    "oldFilename": "musteliuska.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/musteliuska.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "b02e59346ad1f660a5c1ed67ed19caf085adf6313d607890e931ef2bcf343699",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:37:52.487951+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Ylhäältä kuvattu musteen hierominen; tanko sormen mittainen, aikuisen ja lapsen kädet eri kokoiset ja lapsen sormissa mustetta. Pöytä on tumma mutta luonnonvalo ja materiaalit uskottavat.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:37:14.859130+00:00",
+    "issuedAt": "2026-10-21T15:37:14.859268+00:00",
+    "completedAt": "2026-10-21T15:37:39.427025+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/musteliuska.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-98fbeb84-a14f-4694-8274-f5ac52d94cb3.png",
+    "nativeSHA256": "27ea231a0c8033cffd4b2a4fdfbf38e1022ca75ceb673934c2d2558fb8b0079f",
+    "nativeBytes": 2400802,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/musteliuska.jpg",
+    "deliverySHA256": "7d5fbf78bc057b653920c164b7324fa0c360ccc59c766ff3a44ec9820ea28aa9",
+    "deliveryBytes": 423674,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 6,
+    "taskNumber": 844,
+    "bubbleNumber": 18,
+    "id": "duan-mustekivi",
+    "filename": "duan-mustekivi.jpg",
+    "oldFilename": "duan-mustekivi.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/duan-mustekivi.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "7ef6e09c7afc685e0094cc9e6d8edf948a367076cf1cdc0073a584caa996a40b",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:38:53.030911+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Kävely sivulta käytävässä, poika kantaa matalaa Duan-kiveä ja huolestunut hovipalvelija seuraa. Kivi on noin 20 cm kokoluokkaa suhteessa päähän ja käsiin; ei pesuvadin kokoinen.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noReadableTextObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:37:52.718778+00:00",
+    "issuedAt": "2026-10-21T15:37:52.718939+00:00",
+    "completedAt": "2026-10-21T15:38:30.567426+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/duan-mustekivi.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-15a92292-1880-43d7-8acc-57638d970627.png",
+    "nativeSHA256": "77fd8eae2db68af967682b1c65488ee6d5860569e1d6e1d1990d85444c003d35",
+    "nativeBytes": 2275454,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/duan-mustekivi.jpg",
+    "deliverySHA256": "e555831995709cb805f01803e9dbdd75a0a76ef4d1001a27eabca2e76510dc1c",
+    "deliveryBytes": 409648,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  }
+]

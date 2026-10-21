@@ -1,0 +1,67 @@
+[
+  {
+    "id": "keltalasitteinen-kulho",
+    "nativeSHA256": "3ce7f85e55f26b07fd2468e20471a88141c3dc231c008a58c8b98cd69412c334",
+    "at": "2026-10-21T15:35:49.655878+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Kulhon koko on lapsen käsille luonteva; Puyi yksin pitkän pöydän päässä, kamera korkealta toisesta päästä ja hovipalvelijat seinustalla. Pääaihe jää kuvan yläoikealle: pelin soikiorajaus tarkistettava integraatiossa.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "yixing-teekannu",
+    "nativeSHA256": "25794f0067c3a94f0bf32c2f4d00582363c71ce5293f81ba4a0f9a1eff6cbcc4",
+    "at": "2026-10-21T15:36:23.190010+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Juoksu edestä matalalta, naurava lapsi ja perässä teetarjotin sekä päivänvarjo. Teekannu on aikuisen nyrkin kokoluokkaa; esine jää tarkoituksella taustalle ja sen luettavuus pelin pienessä kuplassa tarkistettava.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "gaiwan-kansikuppi",
+    "nativeSHA256": "ba2611a2336136be972525fa2242099b65f8648c2ac20a5f02c3cc5444b781fd",
+    "at": "2026-10-21T15:37:14.630664+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Isä siemaisee pienestä käteen mahtuvasta gaiwanista, Puyi vieressä jalat roikkuen. Kuvakulma on hieman viisto sivukuva eikä täysin kohtisuora profiili; kohtaus ja esinekoko toteutuvat.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "musteliuska",
+    "nativeSHA256": "27ea231a0c8033cffd4b2a4fdfbf38e1022ca75ceb673934c2d2558fb8b0079f",
+    "at": "2026-10-21T15:37:52.487951+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Ylhäältä kuvattu musteen hierominen; tanko sormen mittainen, aikuisen ja lapsen kädet eri kokoiset ja lapsen sormissa mustetta. Pöytä on tumma mutta luonnonvalo ja materiaalit uskottavat.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "duan-mustekivi",
+    "nativeSHA256": "77fd8eae2db68af967682b1c65488ee6d5860569e1d6e1d1990d85444c003d35",
+    "at": "2026-10-21T15:38:53.030911+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Kävely sivulta käytävässä, poika kantaa matalaa Duan-kiveä ja huolestunut hovipalvelija seuraa. Kivi on noin 20 cm kokoluokkaa suhteessa päähän ja käsiin; ei pesuvadin kokoinen.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noReadableTextObserved": true,
+    "recipientAccepted": false
+  }
+]
