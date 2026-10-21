@@ -267,6 +267,9 @@ Taulu on tilikohtainen: toisen tilin taulun tietokantaan ei voi kirjoittaa, jote
 
 `python3 -I TAULU/tarkista-junat.py --kansio TAULU/data/talo` (tai `[junat.json] [eteneminen.json]`). synkka.py ajaa sen ennen jokaista
 vientiä ja jättää virheellisen dokumentin viemättä (`ESTO|<doc>|…`); asemataulu.py ja tilinvaihto-valmis.mjs ajavat sen myös.
+Etenemisen Natiiviseppä ja Julkaisija kirjoittavat suoraan tauluun, joten synkka tarkistaa taulun `talo/eteneminen`-dokumentin listin
+kopiosta ja tulostaa `TARKISTA|eteneminen|<määrä>|<1. virhe>|<kirjoittaja>` (sama sisältö kerran); Asemataulu välittää rivin PT:lle
+(21.10.2026). Muut sessiot lukevat taulun osoitteen ja id:t aina TAULU/nykyinen.json:sta, eivät omasta ohjeestaan.
 Tekstisäännöt (otsikot, johdanto, merkit, ei-pelin asiat) koskevat kolmea näkyvää junariviä; vanhemmista vain varoitus.
 
 | Sääntö | Lähde |
