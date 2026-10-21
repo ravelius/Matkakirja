@@ -2249,3 +2249,7 @@ hommia silti itsenäisesti niin että työ ei pysähdy jos en heti pääse vasta
 hiljaista tuntia), kiintiö ei rajoita (Raamattu 12.21); KK kysyy heti tavallisina viesteinä, kysymys ei pysäytä työtä: odottaessa tehdään muuta, ja kun odotus pysäyttäisi työn, edetään KK:n
 suosituksen mukaan muutettavissa asioissa; luvat (generointimäärät, ostot) odottavat aina omistajan vastausta. PT: saapumislennon pitkät ruudut (vanha vika, sama 94d04c518:ssa) eivät estä TF:ää,
 korjaus junaan 210.
+
+## PAATOKSET 21.10.2026 klo 17.28: musiikki aina generoidaan, kysymyskortit, Codex ja Tripo pysyvällä luvalla (21.10.2026 klo 17.29)
+
+Omistaja 17.28 (sanatarkasti): "musiikit generoidaan aina. tämän pitäisi olla raamatussa / ja tee aina kysymyskortit. ainoastaan pitkät tekstiaiheiset kysymykset kannattaa tehdä ilman kysymyskorttia / saat tehdä codexin kuvia ja tripoja niin paljon kuin tarvitset". 1) Musiikki: Raamattu 5.15 (kaikki uusi musiikki Lyralla, jokainen kutsu omalla luvallaan) on jo voimassa; Sonniss- ja Freesound-haku musiikiksi peruttu. 2) KK kysyy aina kortilla, paitsi pitkät tekstikysymykset (7.27); kysymys ei pysäytä työtä: suositus on oletus muutettavissa asioissa, jos odotus pysäyttäisi työn (korvaa 17.25:n "tavalliset viestit"). 3) Codexin kuvat ja Tripo pysyvällä luvalla tarpeen mukaan; 5.2:n ottomäärä ei koske Tripoa (7.15, 11.6, 11.5, 12.24 päivitetty).
