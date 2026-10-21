@@ -1,0 +1,80 @@
+[
+  {
+    "id": "metallipeili",
+    "nativeSHA256": "22f865fc02ff0e9b626f9812273462be7e2600aece89438b5e1aabe9d9fe84ec",
+    "at": "2026-10-21T15:53:58.616988+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Suorakaiteinen pieni käsipeili, Puyin irvistys ja hovinaisen kasvot näkyvät heijastuksessa. Uusinnan peili on aiempaa pienempi ja käden mittakaava uskottava. Kampa varmennettu erillisestä täysresoluution tarkistusrajauksesta: näkyy etualalla vasemmalla hiusten/niskan luona, tarkoituksella pehmeämmässä tarkennuksessa. Ensimmäinen liian suuren peilin ehdokas säilytetty erillään.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "posliinimaljakko",
+    "nativeSHA256": "3e16d8d6af39c6cd4547ea95fab557d309b6079c2abfdd1f70b15bbd1393c3f6",
+    "at": "2026-10-21T15:49:15.855937+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Jingdezhenin pajassa sinivalkoinen maljakko siirtyy kahden aikuisen välillä työpenkin yllä. Kuva seuraa penkin pituutta, taustalla muita käsityöläisiä; luonnonvalo ja todentuntuinen pinta. Maljakko pysyy aikuisen kahdessa kädessä ja on selvästi vartaloa pienempi. Kädet ja tuenta tarkistettu.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "jadeastia",
+    "nativeSHA256": "274ac86ee16cf79edae2902d6b6f7ed3db6a44a39908c2fc757c27b3bd3b48a8",
+    "at": "2026-10-21T15:50:10.322873+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Muurin päältä katsottu kivipiha. Kaksi kantajaa kuljettaa pientä noin 30 cm jadeastiaa silkkityynyllä paareilla ja virkamies seuraa. Molempien kantajien otteet ja kaksi kantotankoa tarkistettu. Esine on tarkoituksella pieni kaukokuvassa; pelin kuplassa luettavuus tarkistetaan vastaanottajalla.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "kello",
+    "nativeSHA256": "041678772f05ff089acfa69ea5ae3b009726ddc85fa7979ff771832d1b17902c",
+    "at": "2026-10-21T15:51:03.722719+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Kuva oljilla täytetyn kuljetuslaatikon sisältä ylöspäin. Kaksi palvelijaa nostaa noin 50 cm koristekelloa pohjasta tukien; Puyi ja eurooppalainen kauppias katsovat reunalta. Käsien tuenta, kellon kokonaismuoto ja mittakaava tarkistettu. Kellotaulussa pelkistetyt tuntimerkit, ei lisättyjä tekstejä.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "celadon-kulho",
+    "nativeSHA256": "aacf6e24b35ad93eae3745dab5e33f9fee7bf7b55317af264ea259bb8734b2e3",
+    "at": "2026-10-21T15:52:36.077411+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Uusinnan celadon-kulho on pienennetty tavallisen tarjoilukulhon mittakaavaan; käsien ja pienen lootuskukan suhde uskottava. Hovinainen laskee kukkaa veteen, toinen käsi tukee kulhoa. Yläviisto näkökulma, vesiheijastus ja kevyt aaltoilu näkyvät. Tarkkaa senttimetrimittaa ei kuvasta voi todentaa; ensimmäinen selvästi liian suuri versio säilytetty erillään.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  },
+  {
+    "id": "famille-rose-maljakko",
+    "nativeSHA256": "70b28ed0d2cf94ea321596e7ae36cda94fc3dac56a08a681717244e7b2948ed0",
+    "at": "2026-10-21T15:53:31.531858+00:00",
+    "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+    "personallyInspectedNative": true,
+    "notes": "Pihalta ikkunaristikon läpi kuvattu kohtaus: kaksi kasvattiäitiä asettelee pioneja famille rose -maljakkoon, toinen hymyilee ikkunasta kurkistavalle Puyille. Noin 45 cm maljakko on pöydällä uskottavassa suhteessa aikuisiin. Ristikko kehystää toimintaa, valo ja iho-/kangaspinnat luonnolliset. Puyi kuvan alavasemmalla; ovaalin toimivuus jää pelissä tarkistettavaksi.",
+    "artifactScaleChecked": true,
+    "sceneAndAngleChecked": true,
+    "noBakedMask": true,
+    "noAddedCaptionObserved": true,
+    "recipientAccepted": false
+  }
+]

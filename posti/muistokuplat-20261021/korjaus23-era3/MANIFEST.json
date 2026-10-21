@@ -1,0 +1,430 @@
+[
+  {
+    "order": 13,
+    "taskNumber": 851,
+    "bubbleNumber": 32,
+    "id": "metallipeili",
+    "filename": "metallipeili.jpg",
+    "oldFilename": "metallipeili.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/metallipeili.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "6cbbfc3924e3e8e2e842a3146f03a17b25e79a4890daa3a4cb2b1070daea0fd1",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 2,
+    "callsCompleted": 2,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:53:58.616988+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Suorakaiteinen pieni käsipeili, Puyin irvistys ja hovinaisen kasvot näkyvät heijastuksessa. Uusinnan peili on aiempaa pienempi ja käden mittakaava uskottava. Kampa varmennettu erillisestä täysresoluution tarkistusrajauksesta: näkyy etualalla vasemmalla hiusten/niskan luona, tarkoituksella pehmeämmässä tarkennuksessa. Ensimmäinen liian suuren peilin ehdokas säilytetty erillään.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:47:23.512135+00:00",
+    "issuedAt": "2026-10-21T15:47:23.512308+00:00",
+    "completedAt": "2026-10-21T15:48:00.920750+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/metallipeili.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d0977180-f11d-4383-9179-b9a5ebd4fdf1.png",
+    "nativeSHA256": "22f865fc02ff0e9b626f9812273462be7e2600aece89438b5e1aabe9d9fe84ec",
+    "nativeBytes": 1969862,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/metallipeili.jpg",
+    "deliverySHA256": "e636ba7540e5542e01a05b6b10fe621283e5a475511b92515596f468b0bad3e5",
+    "deliveryBytes": 307081,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch",
+    "previousCandidates": [
+      {
+        "order": 13,
+        "taskNumber": 851,
+        "bubbleNumber": 32,
+        "id": "metallipeili",
+        "filename": "metallipeili.jpg",
+        "oldFilename": "metallipeili.jpg",
+        "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/metallipeili.jpg",
+        "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+        "oldSHA256": "6cbbfc3924e3e8e2e842a3146f03a17b25e79a4890daa3a4cb2b1070daea0fd1",
+        "oldDimensions": [
+          768,
+          1024
+        ],
+        "dataContext": {
+          "juoksupeli.rikkoutuva.metallipeili.nimi": "Hovin metallipeili",
+          "juoksupeli.rikkoutuva.metallipeili.teksti": "Qianlongin kauden suorakaiteisen kupariseospeilin takapuoli jäljittelee han-ajan pronssipeilejä.",
+          "juoksupeli.rikkoutuva.metallipeili.ajoitus": "Qing-dynastia, Qianlongin kausi 1736–1795",
+          "juoksupeli.rikkoutuva.metallipeili.dynastia": "Qing",
+          "juoksupeli.rikkoutuva.metallipeili.vuosi": "1700-luku",
+          "juoksupeli.rikkoutuva.metallipeili.kupla": "Hymyilevä hovimestari esittelee ylpeänä kupariseospeiliä ja sen koristeltua takapuolta, valoisa hovihuone, realistinen värivalokuva, valoisa, ilmava, pehmeä päivänvalo, ei tekstiä kuvaan",
+          "juoksupeli.rikkoutuva.metallipeili.kuplatyyppi": "1",
+          "juoksupeli.rikkoutuva.metallipeili.huuto.1": "Peili! Näin itseni nurinpäin!",
+          "juoksupeli.rikkoutuva.metallipeili.huuto.2": "Peili on varmaan tuhat vuotta vanha!",
+          "juoksupeli.rikkoutuva.metallipeili.huuto.3": "Keisarinnaäiti kysyy, kuka rikkoi sen?",
+          "juoksupeli.rikkoutuva.metallipeili.huuto.4": "Kilahdus! Nyt näen itseni sirpaleina!"
+        },
+        "status": "generated-awaiting-personal-QA",
+        "callsIssued": 1,
+        "callsCompleted": 1,
+        "imageProduced": true,
+        "QA": {
+          "status": "REJECTED_SCALE_TOO_LARGE",
+          "notes": "Mirror blade visibly much larger than slightly over palm; preserve scene but regenerate entire image with smaller mirror."
+        },
+        "deliveryVerified": false,
+        "prompt": "Use case: historical-scene. Create ONE entirely NEW realistic COLOR PHOTOGRAPH for a memory scene in a game, portrait3:4,1086x1448 or larger native3:4. Full rectangular opaque photo; no frame, oval, fade, vignette or graphic mask. Natural real-camera detail, believable skin and fabric, soft daylight, airy pale surroundings, mild backlight, controlled natural colors, modest depth of field. No illustration, CGI, painterly surface, repetitive texture, gritty filter, sepia or over-sharpening. Period Qing Chinese settings and clothing. When Puyi is in the specified scene: an approximately8-year-old Chinese boy, small child proportions, yellow silk robe, plain black skullcap with small gold knob, long braid, same appearance across series. Adult palace attendants: adult Qing round-neck robes, black skullcaps, traditional long braids, no Ming cross-collars. Candid actions, never posed people presenting objects to camera. All hands anatomically natural, five fingers, correct scale; utensils genuinely small in relation to people. Keep important faces and artifact away from extreme edges, but follow the specific camera/action below, without repeating a generic central table setup. NO readable writing, captions, watermark, logo, typography, modern objects. No reference image is an edit target.\n\nSCENE AND CAMERA (authoritative correction): A court woman combs her hair holding a small RECTANGULAR metal hand mirror, slightly larger than an adult palm, roughly12x17cm with a modest handle. Camera composition looks into this mirror: realistic coherent reflection shows Puyi making a funny face behind her. Woman near foreground from back/side, one hand mirror and another small comb; her face and small child behind reflected naturally, not duplicate extra faces. Mirror specifically RECTANGLE not circle, dark antique silver metal back/edge, softly reflective front. Airy palace dressing room, period Manchu robe and hair, natural small mirror scale.",
+        "startedAt": "2026-10-21T15:46:07.421403+00:00",
+        "issuedAt": "2026-10-21T15:46:07.421538+00:00",
+        "completedAt": "2026-10-21T15:46:51.498804+00:00",
+        "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/candidates/metallipeili-v1/metallipeili.png",
+        "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2166d8b6-764c-453f-a816-27654385abeb.png",
+        "nativeSHA256": "b3a6a31c6f35ec63394cc8699905f670ec7883bc6f4358bb5de4481c6f73deef",
+        "nativeBytes": 1935595,
+        "nativeDimensions": [
+          1086,
+          1448
+        ],
+        "nativeUnedited": true,
+        "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/candidates/metallipeili-v1/metallipeili.jpg",
+        "deliverySHA256": "b5481387866d2a68ecb9d9155ee004b160bb14ea7a99d593a35c1c4afdbe24e1",
+        "deliveryBytes": 308938,
+        "deliveryDimensions": [
+          768,
+          1024
+        ],
+        "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+      }
+    ],
+    "retryReason": "Whole new image required: first mirror too large relative to hand; standing permission from source."
+  },
+  {
+    "order": 14,
+    "taskNumber": 852,
+    "bubbleNumber": 1,
+    "id": "posliinimaljakko",
+    "filename": "posliinimaljakko.jpg",
+    "oldFilename": "posliinimaljakko.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/posliinimaljakko.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "dcd5d537d3d8a4ab106b71bcce8ec3aae717a1b5673d90ca1abc7f620d22776a",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:49:15.855937+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Jingdezhenin pajassa sinivalkoinen maljakko siirtyy kahden aikuisen välillä työpenkin yllä. Kuva seuraa penkin pituutta, taustalla muita käsityöläisiä; luonnonvalo ja todentuntuinen pinta. Maljakko pysyy aikuisen kahdessa kädessä ja on selvästi vartaloa pienempi. Kädet ja tuenta tarkistettu.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:48:24.744106+00:00",
+    "issuedAt": "2026-10-21T15:48:24.744258+00:00",
+    "completedAt": "2026-10-21T15:49:05.903803+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/posliinimaljakko.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6ed765e7-08d0-40cb-854a-7ec5866c8bfc.png",
+    "nativeSHA256": "3e16d8d6af39c6cd4547ea95fab557d309b6079c2abfdd1f70b15bbd1393c3f6",
+    "nativeBytes": 2128316,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/posliinimaljakko.jpg",
+    "deliverySHA256": "87dc2327162a2ccd27d5ed1c58229fc2d24c892cf4a3b762ca52f288d453a64d",
+    "deliveryBytes": 373660,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 15,
+    "taskNumber": 853,
+    "bubbleNumber": 11,
+    "id": "jadeastia",
+    "filename": "jadeastia.jpg",
+    "oldFilename": "jadeastia.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/jadeastia.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "bdac3f3e45ea839c00662e787d4cca9480213ce0a0980fa0d2e20d3157bac5ec",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:50:10.322873+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Muurin päältä katsottu kivipiha. Kaksi kantajaa kuljettaa pientä noin 30 cm jadeastiaa silkkityynyllä paareilla ja virkamies seuraa. Molempien kantajien otteet ja kaksi kantotankoa tarkistettu. Esine on tarkoituksella pieni kaukokuvassa; pelin kuplassa luettavuus tarkistetaan vastaanottajalla.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:49:16.085131+00:00",
+    "issuedAt": "2026-10-21T15:49:16.085265+00:00",
+    "completedAt": "2026-10-21T15:49:55.686451+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/jadeastia.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d2dcf405-9240-4288-9fbd-586e54d36b14.png",
+    "nativeSHA256": "274ac86ee16cf79edae2902d6b6f7ed3db6a44a39908c2fc757c27b3bd3b48a8",
+    "nativeBytes": 2570009,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/jadeastia.jpg",
+    "deliverySHA256": "abeab157e08951359a32c6c9bd577c77897ff72e99bd51cb3bcde6d163b27e1f",
+    "deliveryBytes": 413332,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 16,
+    "taskNumber": 854,
+    "bubbleNumber": 21,
+    "id": "kello",
+    "filename": "kello.jpg",
+    "oldFilename": "kello.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/kello.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "805832cc23e7a551e4346945c8893c7822de3df2546bf9392cb8316112842d67",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:51:03.722719+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Kuva oljilla täytetyn kuljetuslaatikon sisältä ylöspäin. Kaksi palvelijaa nostaa noin 50 cm koristekelloa pohjasta tukien; Puyi ja eurooppalainen kauppias katsovat reunalta. Käsien tuenta, kellon kokonaismuoto ja mittakaava tarkistettu. Kellotaulussa pelkistetyt tuntimerkit, ei lisättyjä tekstejä.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:50:10.549924+00:00",
+    "issuedAt": "2026-10-21T15:50:10.550042+00:00",
+    "completedAt": "2026-10-21T15:50:50.913730+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/kello.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-099d1fa1-b155-4892-9ac4-359f70b976d6.png",
+    "nativeSHA256": "041678772f05ff089acfa69ea5ae3b009726ddc85fa7979ff771832d1b17902c",
+    "nativeBytes": 2328080,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/kello.jpg",
+    "deliverySHA256": "a285165926f942320496c6c5aa62d91081930ead30388059287713088ec364e4",
+    "deliveryBytes": 426667,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  },
+  {
+    "order": 17,
+    "taskNumber": 855,
+    "bubbleNumber": 5,
+    "id": "celadon-kulho",
+    "filename": "celadon-kulho.jpg",
+    "oldFilename": "celadon-kulho.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/celadon-kulho.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "5450cf0d3a69d14804fb73293407cd2a9a21ecfe4e2832e62a69a787768b0211",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 2,
+    "callsCompleted": 2,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:52:36.077411+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Uusinnan celadon-kulho on pienennetty tavallisen tarjoilukulhon mittakaavaan; käsien ja pienen lootuskukan suhde uskottava. Hovinainen laskee kukkaa veteen, toinen käsi tukee kulhoa. Yläviisto näkökulma, vesiheijastus ja kevyt aaltoilu näkyvät. Tarkkaa senttimetrimittaa ei kuvasta voi todentaa; ensimmäinen selvästi liian suuri versio säilytetty erillään.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:51:58.419214+00:00",
+    "issuedAt": "2026-10-21T15:51:58.419363+00:00",
+    "completedAt": "2026-10-21T15:52:25.512775+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/celadon-kulho.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8f4141d5-d627-4825-9e77-06b1c69ca9cb.png",
+    "nativeSHA256": "aacf6e24b35ad93eae3745dab5e33f9fee7bf7b55317af264ea259bb8734b2e3",
+    "nativeBytes": 2750560,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/celadon-kulho.jpg",
+    "deliverySHA256": "9983fe8d5574297bf49d56caea04b394bd3fd38dc57749c85de80b3f1b1ade1c",
+    "deliveryBytes": 539772,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch",
+    "previousCandidates": [
+      {
+        "order": 17,
+        "taskNumber": 855,
+        "bubbleNumber": 5,
+        "id": "celadon-kulho",
+        "filename": "celadon-kulho.jpg",
+        "oldFilename": "celadon-kulho.jpg",
+        "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/celadon-kulho.jpg",
+        "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+        "oldSHA256": "5450cf0d3a69d14804fb73293407cd2a9a21ecfe4e2832e62a69a787768b0211",
+        "oldDimensions": [
+          768,
+          1024
+        ],
+        "dataContext": {
+          "juoksupeli.rikkoutuva.celadon-kulho.nimi": "Celadon-kulho",
+          "juoksupeli.rikkoutuva.celadon-kulho.teksti": "Celadonin jadenvihreä väri syntyy lasitteen rautaoksidista; Zhejiangin Longquanin uunit ovat kuuluisia siitä.",
+          "juoksupeli.rikkoutuva.celadon-kulho.ajoitus": "Qing-dynastia, tyypillisesti 1700-luku",
+          "juoksupeli.rikkoutuva.celadon-kulho.dynastia": "Qing",
+          "juoksupeli.rikkoutuva.celadon-kulho.vuosi": "1700-luku",
+          "juoksupeli.rikkoutuva.celadon-kulho.kupla": "Jadenvihreä celadon-kulho isona vaalealla jalustalla avarassa kirjastosalissa, ei ihmisiä, valoisa, ilmava, pehmeä päivänvalo ikkunasta, realistinen värivalokuva, ei tekstiä kuvaan",
+          "juoksupeli.rikkoutuva.celadon-kulho.kuplatyyppi": "2",
+          "juoksupeli.rikkoutuva.celadon-kulho.huuto.1": "Vihreä kulho on nyt palasina!",
+          "juoksupeli.rikkoutuva.celadon-kulho.huuto.2": "Tää on varmaan kallein kulho!",
+          "juoksupeli.rikkoutuva.celadon-kulho.huuto.3": "Palvelija hätääntyy, kulho kilahti!",
+          "juoksupeli.rikkoutuva.celadon-kulho.huuto.4": "Voi ei! Kulho kilahti kolinalla!"
+        },
+        "status": "generated-awaiting-personal-QA",
+        "callsIssued": 1,
+        "callsCompleted": 1,
+        "imageProduced": true,
+        "QA": {
+          "status": "REJECTED_SCALE_TOO_LARGE",
+          "notes": "Bowl looks like a large basin, clearly above requested25cm relative to hand."
+        },
+        "deliveryVerified": false,
+        "prompt": "Use case: historical-scene. Create ONE entirely NEW realistic COLOR PHOTOGRAPH for a memory scene in a game, portrait3:4,1086x1448 or larger native3:4. Full rectangular opaque photo; no frame, oval, fade, vignette or graphic mask. Natural real-camera detail, believable skin and fabric, soft daylight, airy pale surroundings, mild backlight, controlled natural colors, modest depth of field. No illustration, CGI, painterly surface, repetitive texture, gritty filter, sepia or over-sharpening. Period Qing Chinese settings and clothing. When Puyi is in the specified scene: an approximately8-year-old Chinese boy, small child proportions, yellow silk robe, plain black skullcap with small gold knob, long braid, same appearance across series. Adult palace attendants: adult Qing round-neck robes, black skullcaps, traditional long braids, no Ming cross-collars. Candid actions, never posed people presenting objects to camera. All hands anatomically natural, five fingers, correct scale; utensils genuinely small in relation to people. Keep important faces and artifact away from extreme edges, but follow the specific camera/action below, without repeating a generic central table setup. NO readable writing, captions, watermark, logo, typography, modern objects. No reference image is an edit target.\n\nSCENE AND CAMERA (authoritative correction): Oblique overhead close photograph into a pale celadon green bowl containing clear water. A court woman gently LOWERS ONE LOTUS BLOSSOM onto the water in a pondside pavilion. Bowl about25cm across, normal large serving-bowl size relative to her hand, not a basin. Water surface catches a soft reflection of pavilion/window and the blossom, subtle ripples where flower touches. Celadon glaze natural pale green, gently carved fluted outside, woman Manchu sleeve and partial upper body visible beyond. Pond and pavilion softly blurred, bright diffuse daylight, no product pedestal.",
+        "startedAt": "2026-10-21T15:51:03.949725+00:00",
+        "issuedAt": "2026-10-21T15:51:03.949850+00:00",
+        "completedAt": "2026-10-21T15:51:27.164666+00:00",
+        "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/candidates/celadon-kulho-v1/celadon-kulho.png",
+        "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-be3770c2-de19-4950-9fd9-dda3746170ad.png",
+        "nativeSHA256": "a9ddaa2c30849a285b70f042a630d008f37b8db13c087122efc6e5a7b646c8f4",
+        "nativeBytes": 2214045,
+        "nativeDimensions": [
+          1086,
+          1448
+        ],
+        "nativeUnedited": true,
+        "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/candidates/celadon-kulho-v1/celadon-kulho.jpg",
+        "deliverySHA256": "56efd0973d898cdf8083208a10ff2e931147049fcfbeab69d0efc7656c36a4d9",
+        "deliveryBytes": 361012,
+        "deliveryDimensions": [
+          768,
+          1024
+        ],
+        "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+      }
+    ],
+    "retryReason": "Whole new generation: first bowl looked basin-sized instead of25cm."
+  },
+  {
+    "order": 18,
+    "taskNumber": 856,
+    "bubbleNumber": 3,
+    "id": "famille-rose-maljakko",
+    "filename": "famille-rose-maljakko.jpg",
+    "oldFilename": "famille-rose-maljakko.jpg",
+    "oldPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/old/famille-rose-maljakko.jpg",
+    "oldOrigin": "natiiviseppa/juna-209@deef122204265a1781be6e4b1e1e9c66a9b839fa",
+    "oldSHA256": "55ce6dbde6dbae6fce5891361349c44d0863a2764e3bed2853fb3a75b4273629",
+    "oldDimensions": [
+      768,
+      1024
+    ],
+    "status": "QA-passed-awaiting-batch-delivery",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "imageProduced": true,
+    "QA": {
+      "at": "2026-10-21T15:53:31.531858+00:00",
+      "status": "PASS_FOR_PT_FULLSIZE_REVIEW",
+      "personallyInspectedNative": true,
+      "notes": "Pihalta ikkunaristikon läpi kuvattu kohtaus: kaksi kasvattiäitiä asettelee pioneja famille rose -maljakkoon, toinen hymyilee ikkunasta kurkistavalle Puyille. Noin 45 cm maljakko on pöydällä uskottavassa suhteessa aikuisiin. Ristikko kehystää toimintaa, valo ja iho-/kangaspinnat luonnolliset. Puyi kuvan alavasemmalla; ovaalin toimivuus jää pelissä tarkistettavaksi.",
+      "artifactScaleChecked": true,
+      "sceneAndAngleChecked": true,
+      "noBakedMask": true,
+      "noAddedCaptionObserved": true,
+      "recipientAccepted": false
+    },
+    "deliveryVerified": false,
+    "startedAt": "2026-10-21T15:52:36.303560+00:00",
+    "issuedAt": "2026-10-21T15:52:36.303681+00:00",
+    "completedAt": "2026-10-21T15:53:16.850980+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/native/famille-rose-maljakko.png",
+    "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-47bcfa6c-d944-4aa7-a506-5c669ad84b82.png",
+    "nativeSHA256": "70b28ed0d2cf94ea321596e7ae36cda94fc3dac56a08a681717244e7b2948ed0",
+    "nativeBytes": 2009125,
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "nativeUnedited": true,
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-korjaus-23-20261021/delivery/famille-rose-maljakko.jpg",
+    "deliverySHA256": "708cbe6304aa6139e29c7522bbd51985f2187732b8016ff017bbbd2027f6cd92",
+    "deliveryBytes": 335351,
+    "deliveryDimensions": [
+      768,
+      1024
+    ],
+    "exportMethod": "whole-frame RGB JPEG quality96 subsampling0; Lanczos downsample to current game768x1024; no crop or retouch"
+  }
+]
