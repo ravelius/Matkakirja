@@ -67,10 +67,13 @@ Session local_f8fe7e20-4700-42e5-91a0-f1227310dc0f, checkout /Users/Shared/Claud
 - Raati/Testaajat-harvennus vahvistettu 22.40 ja roolien nollausraja 35 % vahvistettu 22.50 (ks. yllä ja Hälytysrajat). EI vielä vahvistettu: wt/-siivousrivi rooleille.
 
 ## Asemataulun BOOST (omistaja 14.10. 23.39, PT:n välittämä)
-Joka kierroksella lue tämän tilin taulun (Rq5ajPU4SraE2XKd7BYAix) `talo/boost` (ArtifactData get). Jos `paalla:true` ja `paattyy` > nyt eikä Asemataulua ole herätetty tämän boostin aikana, herätä Asemataulu-sessio (local_7347d54e-c22d-4c7f-8c51-e13c6ba91c05) send_messagella: "BOOST päällä klo HH.MM–HH.MM". Kirjaa herätys muistiin (boostin `paattyy`), ettei herätä kahdesti. Muulloin Asemataulua ei herätetä mittareita varten.
+Joka kierroksella lue tämän tilin taulun (osoite: kenttä `taulu` tiedostossa /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/nykyinen.json; speksi docs/moduulit/asemataulu.md luku 1) `talo/boost` (ArtifactData get). Jos `paalla:true` ja `paattyy` > nyt eikä Asemataulua ole herätetty tämän boostin aikana, herätä Asemataulu-sessio (id: kenttä `idt.asemataulu` samassa nykyinen.json-tiedostossa) send_messagella: "BOOST päällä klo HH.MM–HH.MM". Kirjaa herätys muistiin (boostin `paattyy`), ettei herätä kahdesti. Muulloin Asemataulua ei herätetä mittareita varten.
 
 ## ASEMATAULUTAUKO PÄÄTTYI (omistaja 15.10. 08.11: "käynnistä taulu"; viennit, juna-edistys, talon tilan taulukirjaus ja BOOST-herätys jatkuvat normaalisti). Vanha tauko-ohje historiana (omistaja 15.10. 01.32: "lopeta asemataulun päivitys. menen nukkumaan")
 Ei vientejä Asemataululle (syke.py/artefaktivienti, talon-tilan taulukirjaus, juna-edistyksen ArtifactData-kirjaus) eikä viestejä Asemataulu-sessiolle (BOOST-herätys mukaan lukien), ennen kuin Keskustelukanava välittää omistajan käskyn jatkaa. Muu kierros ennallaan.
 
 ## Yöajo: simujen taustakuvavälimuisti (PT 17.10. 10.1x, JU:n ehdotus)
 Kerran vuorokaudessa yökierroksella (klo 02–05, ei hiljaisella tunnilla): `zsh /Users/Shared/Claude/julkaisija-tyokalut/poster-tyhjennys.zsh`. Skripti ohittaa käynnissä olevat simut ja tyhjentää vain sammutettujen T7-simujen PRBPosterExtensionDataStore-kansion. Tuloksen viimeinen rivi (T7 vapaa) PT:lle vain, jos skripti epäonnistuu.
+
+## Ohjetarkistus (PT 20.10. 22.2x, omistajan päätös 22.24 C1)
+Kun PR #5072 on mainissa (tools/tarkista-ohjeet.sh löytyy origin/mainista): kerran tunnissa `git fetch origin` ja aja `bash tools/tarkista-ohjeet.sh` origin/mainin versiosta. Uudet löydökset yhtenä rivinä PT:lle; sama löydös vain kerran. Viestit varakanavalla (mcp__ccd_session_mgmt__send_message), jos SendMessage-raja on täynnä.

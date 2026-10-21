@@ -27,3 +27,6 @@ Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksess
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
 ```
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
+
+## Kotikansioiden päivitys ennen nollausta (omistajan päätös 22.24 B3, PT:n välittämä 20.10.)
+Ennen jokaista roolin nollausta (kulun kohta 2 ja 3 välissä): `bash tools/paivita-kotikansiot.sh --aja --uusi-haara <roolin kansio>`. Kunnes `--uusi-haara` on mainissa, pelkkä `--aja`. Kansio, jota ei voi päivittää → rivi PT:lle.
