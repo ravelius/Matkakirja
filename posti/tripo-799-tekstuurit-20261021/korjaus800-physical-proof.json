@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-21T06:58:21.489955+00:00",
+  "taskNumber": 800,
+  "threePNGValid": true,
+  "dimensions": [
+    2048,
+    2048
+  ],
+  "originalTextureAndModelHashesUnchanged": true,
+  "UVAtlasCoordinatesNotModified": true,
+  "paidGenerationsIssued": 0,
+  "imageGenerationCallsIssued": 0,
+  "TripoCallsIssued": 0,
+  "modelFilesWritten": 0,
+  "receiverFitQA": "PENDING",
+  "gameDistanceQA": "PENDING",
+  "localZIP": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-tekstuurikorjaus-800-20261021/tekstuurikorjaus800-v2-20261021.zip",
+  "zipSHA256": "33db57f20748ec0a20e9335d7d57860ce85c4dd5112df1f8913d0117d282d47a",
+  "zipBytes": 18173406,
+  "zipMembers": 9,
+  "everyZipMemberByteVerified": true
+}

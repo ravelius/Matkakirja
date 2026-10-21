@@ -1,0 +1,159 @@
+{
+  "at": "2026-10-21T06:56:18.622492+00:00",
+  "taskNumber": 800,
+  "method": "deterministic 2D UV transfer and colour correction",
+  "noImageGeneration": true,
+  "noPaidGeneration": true,
+  "noModelWrite": true,
+  "items": [
+    {
+      "part": "01-sinivalkoinen-maljakko",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-tekstuurikorjaus-800-20261021/delivery/01-sinivalkoinen-maljakko-basecolor-v2.png",
+      "sha256": "9059ff236790aa90ae18079d0dec1d83d782555e21ed70539830b1f995ad6f5c",
+      "bytes": 4475629,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "colourMode": "RGB",
+      "sourceBasecolorSHA256": "e8f84fff74cd5083ec2fd6af56cce6c210ecb2ceb920b647d2c840e83c4d6cf9",
+      "sourceModelSHA256": "e175d3a68ba31b0b0bb6f9990cb5f3676f82d725a2e2d533afca086a56cfbcd7",
+      "sourceUVWireSHA256": "2f928ac7fc1a7557b0b13d57cf4b3917df50671309a656462f1a3ee7addf77d5",
+      "originalTexturePreserved": true,
+      "sourceModelBytesUnchanged": true,
+      "sourceUVWireBytesUnchanged": true,
+      "atlasCoordinatesUnchanged": true,
+      "changedPixelCount": 3436660,
+      "method": {
+        "method": "source799 clear cobalt flower photograph transferred to existing front and rear UV surfaces; mild pigment curve at side transition only",
+        "camera": {
+          "yaw": 180.0,
+          "pitch": 5.0,
+          "referenceSilhouetteBox": [
+            381,
+            64,
+            867,
+            1189
+          ],
+          "projection": "orthographic source-image registration to existing UV pixel positions"
+        },
+        "frontAndRearUseSameApprovedMotif": true,
+        "sourceIsNotNewGeneration": true,
+        "atlasCoordinatesUnchanged": true,
+        "receiverRegistrationCheckRequired": true
+      },
+      "diagnostic2DMapProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-tekstuurikorjaus-800-20261021/qa/01-sinivalkoinen-maljakko-corrected-map-proof.png",
+      "producerVisualQA": "TARGETED_2D_CORRECTION_CHECKED_RECEIVER_FIT_PENDING",
+      "receiverFitQA": "PENDING",
+      "gameDistanceQA": "PENDING",
+      "paidGenerationsIssued": 0,
+      "TripoCallsIssued": 0,
+      "producerPersonallyInspectedAtlas": true,
+      "producerPersonallyInspectedUVSamplingProof": true,
+      "runtimeOrGameAcceptanceClaimed": false,
+      "qaNotes": "Clear source cobalt flowers restored on front/rear; sparse white porcelain and border designs visible. Side registration and mip/lighting checks remain at receiver."
+    },
+    {
+      "part": "02-keltainen-kurpitsamaljakko",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-tekstuurikorjaus-800-20261021/delivery/02-keltainen-kurpitsamaljakko-basecolor-v2.png",
+      "sha256": "3e35271aace2971564643aeb77fe26c736fd58ee3df30b146f19ef5c6a408388",
+      "bytes": 5059217,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "colourMode": "RGB",
+      "sourceBasecolorSHA256": "909a6cfc46750b749b40778ab3faf4e65402e900626a40bebe9603ef867d5041",
+      "sourceModelSHA256": "fb8478047c9bd3d646e53c079757323560b67bd79f16b5f079b84529aab2ae50",
+      "sourceUVWireSHA256": "a8eb1d2e06833e9e99b538a7762c4b2e40f4b8106a44c0372ec0a4209074e666",
+      "originalTexturePreserved": true,
+      "sourceModelBytesUnchanged": true,
+      "sourceUVWireBytesUnchanged": true,
+      "atlasCoordinatesUnchanged": true,
+      "changedPixelCount": 949925,
+      "method": {
+        "method": "approved front-source peony motifs reused as a rear-only deterministic photo transfer, existing front and loop handles retained",
+        "camera": {
+          "yaw": 180.0,
+          "pitch": 6.000000000000001,
+          "referenceSilhouetteBox": [
+            313,
+            72,
+            924,
+            1142
+          ],
+          "projection": "orthographic source-image registration to existing UV pixel positions"
+        },
+        "changedFacingAxis": "-Z",
+        "frontPreserved": true,
+        "handleZonePreserved": true,
+        "undersidePreserved": true,
+        "receiverRegistrationCheckRequired": true
+      },
+      "diagnostic2DMapProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-tekstuurikorjaus-800-20261021/qa/02-keltainen-kurpitsamaljakko-corrected-map-proof.png",
+      "producerVisualQA": "TARGETED_2D_CORRECTION_CHECKED_RECEIVER_FIT_PENDING",
+      "receiverFitQA": "PENDING",
+      "gameDistanceQA": "PENDING",
+      "paidGenerationsIssued": 0,
+      "TripoCallsIssued": 0,
+      "producerPersonallyInspectedAtlas": true,
+      "producerPersonallyInspectedUVSamplingProof": true,
+      "runtimeOrGameAcceptanceClaimed": false,
+      "qaNotes": "Existing front retained; formerly blurred rear now has clear source peonies. Handle/body masks revised to remove rectangular cutouts. Final receiver fit/side transition pending."
+    },
+    {
+      "part": "03-turkoosi-ruukku-runko",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-tekstuurikorjaus-800-20261021/delivery/03-turkoosi-ruukku-runko-basecolor-v2.png",
+      "sha256": "22ff0153082d36e532c6e8b64b53b6b8754a3e87720d31cef55f8498db7ce5a6",
+      "bytes": 5402458,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "format": "PNG",
+      "colourMode": "RGB",
+      "sourceBasecolorSHA256": "afde501581630e198be73f8e8471ef011d3279eda3d9c49edec02b771d70e004",
+      "sourceModelSHA256": "e54f09073cef50eb90f9325ed15603c74088d27a34339d1041ff565ccf6e2177",
+      "sourceUVWireSHA256": "a6589e93afff5adaac1383b81e8a3138ed162b070367576464294486c3ecd67a",
+      "originalTexturePreserved": true,
+      "sourceModelBytesUnchanged": true,
+      "sourceUVWireBytesUnchanged": true,
+      "atlasCoordinatesUnchanged": true,
+      "changedPixelCount": 1139702,
+      "method": {
+        "method": "source799 large bird medallion photo transferred across the existing front-facing UV triangles; selective turquoise pigment correction elsewhere",
+        "camera": {
+          "yaw": 0.0,
+          "pitch": 8.0,
+          "referenceSilhouetteBox": [
+            153,
+            139,
+            1101,
+            1129
+          ],
+          "projection": "orthographic source-image registration to existing UV pixel positions"
+        },
+        "frontAxis": "+Z",
+        "medallionSource": "03-turkoosi-ruukku-runko.png",
+        "noNewPaintedSubject": true,
+        "oldBlueGoldBandsPreservedOutsideFrontTransfer": true,
+        "receiverRegistrationCheckRequired": true
+      },
+      "diagnostic2DMapProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-tekstuurikorjaus-800-20261021/qa/03-turkoosi-ruukku-runko-corrected-map-proof.png",
+      "producerVisualQA": "TARGETED_2D_CORRECTION_CHECKED_RECEIVER_FIT_PENDING",
+      "receiverFitQA": "PENDING",
+      "gameDistanceQA": "PENDING",
+      "paidGenerationsIssued": 0,
+      "TripoCallsIssued": 0,
+      "selectionNote": "Choose bounded front bird-medallion and turquoise-colour restoration. Later rear repaint candidates rejected; original reverse floral design retained. No invented reverse painting or pasted rear decal delivered.",
+      "reverseDetailQuality": "Original low-detail reverse floral painting retained; receiver must assess it. No clean rear reference was supplied.",
+      "producerPersonallyInspectedAtlas": true,
+      "producerPersonallyInspectedUVSamplingProof": true,
+      "runtimeOrGameAcceptanceClaimed": false,
+      "qaNotes": "Large source bird medallion restored on +Z front, full turquoise/floral front and bands visible. Reverse retains the original low-detail floral design with selective turquoise correction; do not treat it as a newly approved reverse painting."
+    }
+  ],
+  "updatedAt": "2026-10-21T06:57:26.553165+00:00"
+}
