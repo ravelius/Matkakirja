@@ -22,3 +22,9 @@ Osoitekirja /Users/Shared/Claude/osoitekirja.md; viestit `mcp__ccd_session_mgmt_
 
 ## 2. Tilin viikkoraja (omistaja 21.53)
 78 % → luovutus (tämä), 80 % → pysähdy. Työ jatkuu pe 24.10. aamuna toisella tilillä.
+
+## LISÄYS 23.52 (viikkoraja 78 %: LUOVUTA NYT)
+
+- 21.55 jälkeen vain NUI:n kolme L2-käännöstä + iPhone 17 -simua (84b7a79bd, d2b23f5b0, 6f8455f1a P10-vaaka); kaikki SIMU VAPAA, viimeisin 22.43.
+- L1 ja L2 vapaat, simut vapaat, ei jonoa. Valosepän vahti hiljaa (viimeinen tila 19.46 VIKA AJO rijks-paivanvalo-210, haara poissuljettu).
+- TF 209 ketju valmis; juna 210 auki, TF vasta OMISTAJA PYYSI JULKAISUA. Seuraava tili jatkaa pe 24.10. aamulla tästä.
