@@ -139,3 +139,20 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   Odottaa: maali kulmatorni vs pääportti (KK), huudot 03/06 → puyi-rikkoutuminen-v4 omistajan hyväksynnän jälkeen.
 - Kartta (lento-wasd 7b6e90bc3): Erikoismalli.Sarja kaikille riveille 2–3 + arkkityypit, kategoriasymbolit, Lontoo, Ateena, Rijks;
   Stonehengen irtopalat; VS ajaa arkit 10–11.
+- 10.1x–21.5x (21.10.): JUNA 209 (haara nakoisyys-209, wt/proto-pelikoodari-kerattavat-206): yhtenäinen drone 9,5 m / 22° (omistaja
+  16.03), käännös kaarena (JuoksuV4.PisteKaarella, lyhyillä ja profiiliosilla jänne ±2,5 m), drone vakiojousella (DroneNosto.KameranKaanto),
+  RajaaKatse pehmeä polvi, palatsin katot paloina + näkölinjan katot pois sisällä + kamera räystään yli, näkyvyysnosto (pito + jousi,
+  tavoitteeseen; suoraan kameraan = regressio 66533c06e, peruttu a9c5520d8), #791-profiilin sivuliuku sivusiirron mittaiseksi
+  (JuoksuPalatsiVerkko.Profiili), sivu- ja korkeushypyn liu'ut, latauskuva contain + "karkuteillä" + kehittäjäpaneeli pois, silmukat
+  ja UI lämpimiksi latauskuvan alla, WarmupAllShaders pois (kaatui), mittarin rivit (KÄÄNNÖSNYKÄYS, ALKUNYKÄYS, KÄÄNTYILY, PELAAJA
+  PIILOSSA + syy, KATTO/SEINÄ KATOSI, MUSIIKKI KATKESI, LATAUSKUVA RAJAUS, hyppysuojan vianetsintä), paikkatekstit NUI:n pohjille,
+  maalin näköala esteiden yli + rivit 2,8 s, aanet-v7 ja 5.27-poikkeamat pois, avausmusiikki silmukkana, botin porraskuvio pois.
+  Lukitus: PT/NS päättävät a9c5520d8 (kierros 34) vs 02f6ab095. Pysyvä tunnettu: #791-siiven suulla mahd. jäänteitä, piilossa-jaksot.
+- JUNA 210 (haara pelikoodari/rikottavat-210, wt/proto-pelikoodari-rikottavat-210, kärki da5883ffb ⊃ a9c5520d8): RikkoMallit (5 + 7,
+  maisemasermi pitkittäin), arvonta vain mallillisista, oma jalusta y = 0, isot palat kaatuvat, aarteet799-v2, #5170-tekstit, pöly
+  pienempi (21a943287), QA ui juoksupeli vaistot. Lavastajan pelikuvapari v3 hyväksytty (PT). Valmis junaan 210.
+- KARTTA (lento-wasd, haara sarja-pysty c19d4a826): Colosseum puolikas eteläpuolella, Kinderdijk napa, galleria piilottaa muut
+  objektit; purjelaiva = pohjakartan piirros → ui galleria nyt|yhtenainen <lat> <lon>, VS valitsee oletuksen. Ei junaan ennen omistajaa.
+- PR #5059 tuotantoputki (wt/pelikoodari-tuotantoputki, f875a1de2): rekisteri 21.10. erillä, koottujen nimien tunnistus, korvatut
+  viennit, suljetut syineen, seuratut ja vastaanotetut (yläreitti v2 ja lohikäärme v3 noudettu T7:ltä → proto-3d/_tyo/pelikoodari/
+  codex-noudot-20261021/). Mergeä kaavan mukaan, kun CI vihreä. Odottaa kytkentää: yläreitti v2, lohikäärmeet v3 (taso 2).
