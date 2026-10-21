@@ -1,0 +1,170 @@
+{
+  "at": "2026-10-21T10:22:33.944065+00:00",
+  "purpose": "Receiver review index, not final game-ready delivery",
+  "paths_relative_to": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kahdeksan-esinetta-20261021",
+  "groups": [
+    {
+      "id": "sinivalkoinen-maljakko",
+      "recipe": "vase-groups-v1/PLACEMENTS.json",
+      "recipe_sha256": "20d712f258e056bd769a318e0e13a33f1cf9644292de28f35b7890299c7de5da",
+      "height_m": 0.9468611478805542,
+      "drawn_triangles": 11668,
+      "status": "STATIC_REVIEW_ASSEMBLED",
+      "visual_qa": "vase-groups-v1/visual-qa.json",
+      "game_accepted": false,
+      "physics_tested": false
+    },
+    {
+      "id": "keltainen-maljakko",
+      "recipe": "vase-groups-v1/PLACEMENTS.json",
+      "recipe_sha256": "20d712f258e056bd769a318e0e13a33f1cf9644292de28f35b7890299c7de5da",
+      "height_m": 0.897437334060669,
+      "drawn_triangles": 11366,
+      "status": "STATIC_REVIEW_ASSEMBLED",
+      "visual_qa": "vase-groups-v1/visual-qa.json",
+      "game_accepted": false,
+      "physics_tested": false
+    },
+    {
+      "id": "turkoosi-kannellinen-ruukku",
+      "recipe": "vase-groups-v1/PLACEMENTS.json",
+      "recipe_sha256": "20d712f258e056bd769a318e0e13a33f1cf9644292de28f35b7890299c7de5da",
+      "height_m": 0.9523942470550537,
+      "drawn_triangles": 15150,
+      "status": "STATIC_REVIEW_ASSEMBLED",
+      "visual_qa": "vase-groups-v1/visual-qa.json",
+      "game_accepted": false,
+      "physics_tested": false
+    },
+    {
+      "id": "teeastiaryhma",
+      "recipe": "display-groups-v1/PLACEMENTS.json",
+      "recipe_sha256": "5a6cc5e6d3f0cd49d572904b842228ed74941132922d678214b5393047853ff2",
+      "height_m": 1.0556529101433285,
+      "drawn_triangles": 23409,
+      "status": "STATIC_REVIEW_ASSEMBLED",
+      "visual_qa": "display-groups-v1/visual-qa.json",
+      "game_accepted": false,
+      "physics_tested": false
+    },
+    {
+      "id": "punainen-lasiryhma",
+      "recipe": "display-groups-v1/PLACEMENTS.json",
+      "recipe_sha256": "5a6cc5e6d3f0cd49d572904b842228ed74941132922d678214b5393047853ff2",
+      "height_m": 0.9761366941081167,
+      "drawn_triangles": 19128,
+      "status": "STATIC_REVIEW_ASSEMBLED",
+      "visual_qa": "display-groups-v1/visual-qa.json",
+      "game_accepted": false,
+      "physics_tested": false
+    },
+    {
+      "id": "bambusermi",
+      "file": "review-v1/bambusermi/bambusermi.glb",
+      "sha256": "08b30ed83aedfd2f50a93767a402aee8973e9eb74c831263b34a1229caf90871",
+      "drawn_triangles": 12534,
+      "height_m": 1.55,
+      "status": "STATIC_REVIEW_CANDIDATE",
+      "game_accepted": false,
+      "physics_tested": false,
+      "known_limits": "Paper and frame share mesh; do not remove entire mesh for tearing. Paper wavy."
+    },
+    {
+      "id": "maisemasermi",
+      "file": "landscape-assembly-v3/maisemasermi-kuusi-lehtea.glb",
+      "sha256": "3b9222cdfd4b830fd577040a4d53a2a2099542ed7d2f3f0c1a553330c247e1a8",
+      "drawn_triangles": 34788,
+      "height_m": 1.65,
+      "status": "STATIC_REVIEW_CANDIDATE",
+      "game_accepted": false,
+      "physics_tested": false,
+      "known_limits": "Individual hinges available; paper/frame share mesh. Runtime tearing and hinges untested."
+    },
+    {
+      "id": "lautaspoyta",
+      "status": "HOLD_NOT_GENERATED",
+      "reserved_calls": 2,
+      "action": "Do not consume reserved calls or regenerate without current release."
+    }
+  ],
+  "referenced_files": {
+    "parts-review-v1/05-matala-puujalusta/05-matala-puujalusta.glb": {
+      "sha256": "1dfbf89f4fe32246990f1ce532226b155dab8179d9f2cec1bd564fcee8212d6f",
+      "bytes": 2412360
+    },
+    "parts-texture-v2/01-sinivalkoinen-maljakko/01-sinivalkoinen-maljakko.glb": {
+      "sha256": "bde86268c4448cfdc7589dfeea443921983886cec280e11014df2d1060a61c90",
+      "bytes": 6953356
+    },
+    "vase-groups-v1/jalusta-keltainen.glb": {
+      "sha256": "da3153b827fc5d03a07e7e249b9c0962db1aefc00c54868f68f5d8b232852677",
+      "bytes": 2412492
+    },
+    "parts-texture-v2/02-keltainen-kurpitsamaljakko/02-keltainen-kurpitsamaljakko.glb": {
+      "sha256": "7b34d2d229cc966b55791eeacfec1e33948e7a8979a4fd6f6fd6cf101bd00de8",
+      "bytes": 7395348
+    },
+    "vase-groups-v1/jalusta-turkoosi-v2.glb": {
+      "sha256": "6910b1dd6944257f1744b1a222771f3b95967719696b59e3f8214473c7f1099b",
+      "bytes": 2412492
+    },
+    "parts-texture-v3/03-turkoosi-ruukku-runko/03-turkoosi-ruukku-runko.glb": {
+      "sha256": "7d9fe35ccc6d4ed26d0f52ffffffa2ab08447a631abcc37f3d55f5d3512d78ab",
+      "bytes": 7537808
+    },
+    "parts-review-v1/04-turkoosi-ruukku-kansi/04-turkoosi-ruukku-kansi.glb": {
+      "sha256": "7f4e30300716ca951e4bb2e41d5524af6fa7b002310067ca33f0358601c527bd",
+      "bytes": 3398596
+    },
+    "parts-review-v1/10-kaksitasoinen-puuteline/10-kaksitasoinen-puuteline.glb": {
+      "sha256": "96fdc46a68311f8c5237b6e4237d5015d998380c6180368031f1e3a4b3742825",
+      "bytes": 3010692
+    },
+    "parts-review-v1/07-teekannu-runko/07-teekannu-runko.glb": {
+      "sha256": "965b60fab3d781b0f0dd16005ec4021a614ce5c177c7701d9969443a9eed410d",
+      "bytes": 3082480
+    },
+    "parts-review-v1/08-teekannu-kansi/08-teekannu-kansi.glb": {
+      "sha256": "7ae2281ed3436a2054a48d45c2332834dbcab8b3b584a2d5fcb7dad51d80983c",
+      "bytes": 3134520
+    },
+    "parts-review-v1/09-teekuppi/09-teekuppi.glb": {
+      "sha256": "59363b6c04502f9d6a51949df650e2ab240ee90729d6fcff3748b2fd25630c5a",
+      "bytes": 2493060
+    },
+    "display-groups-v1/teline-rubiini.glb": {
+      "sha256": "674ab2a6e49f22141a8e836591b1780c1847fe660420becf0356713d5729c0bb",
+      "bytes": 4029592
+    },
+    "parts-review-v1/11-punainen-lasilootuskulho/11-punainen-lasilootuskulho.glb": {
+      "sha256": "1e606500b59f1dcbfe32b3d1a097455ce6139a0536329605cebe411ac361723e",
+      "bytes": 1949384
+    },
+    "parts-review-v1/12-punainen-lasimaljakko/12-punainen-lasimaljakko.glb": {
+      "sha256": "826eccbdbc05517fd1392c8b7fe7cda508695bf223abd98a5af795a1b5ca4c7d",
+      "bytes": 2733812
+    },
+    "parts-review-v1/13-punainen-lasikuppi/13-punainen-lasikuppi.glb": {
+      "sha256": "411905a3fb44f891039353692e567723f9b32216f0e82152eef2af028ba4f86f",
+      "bytes": 2528476
+    },
+    "review-v1/bambusermi/bambusermi.glb": {
+      "sha256": "08b30ed83aedfd2f50a93767a402aee8973e9eb74c831263b34a1229caf90871",
+      "bytes": 1660200
+    },
+    "landscape-assembly-v3/maisemasermi-kuusi-lehtea.glb": {
+      "sha256": "3b9222cdfd4b830fd577040a4d53a2a2099542ed7d2f3f0c1a553330c247e1a8",
+      "bytes": 8434748
+    }
+  },
+  "generated_group_candidates": 7,
+  "authorized_group_count": 8,
+  "all_required_group_models_complete": false,
+  "all_eight_integrated": false,
+  "part_bank_format_confirmed": false,
+  "new_calls_this_heartbeat": 0,
+  "calls_used": 15,
+  "call_limit": 17,
+  "credits_spent": 655,
+  "last_observed_credit_balance": 20855
+}
