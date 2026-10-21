@@ -1,4 +1,4 @@
-"""Siirtää yli 48 h koskemattomat kansiot T7:lle ja jättää linkin vanhaan paikkaan.
+"""Siirtää yli 12 h koskemattomat kansiot T7:lle ja jättää linkin vanhaan paikkaan.
 Omistajan kortti KK:ssa 19.10.2026 klo 18.5x: "Kyllä, nyt ja joka yö (Suositus)".
 Käyttö: python3 -I siirra_t7.py --koe | --aja
 Ei koske linkkeihin (rmtree ei koskaan linkin läpi), muiden käyttäjien kansioihin, venveihin,
@@ -9,7 +9,7 @@ TAALLA = '/Users/Shared/Claude/_levy'; os.makedirs(TAALLA, exist_ok=True)
 KARTOITUS = '/Users/Shared/Claude/_levy/ika_kartoitus.json'
 T7 = '/Volumes/T7 4TB/koodaus'
 P = '/Users/Shared/Claude/proto-3d'
-RAJA_S = 48 * 3600
+RAJA_S = 12 * 3600
 BOTTI_RAJA_S = 2 * 3600          # linnan botin ajot (linna tauolla 17.05): koskematon 2 h
 MIN_TAVUT = 5 * 2**20            # alle 5 Mt jää paikalleen
 EI_KOSKAAN = ('venv-', 'kaannospalvelu', '/tyokalut', 'Matkakirja-proto', 'natiiviseppa-tyokalut',
@@ -64,7 +64,7 @@ def valitse():
             continue
         if r == 'checkout' and not p.endswith('Matkakirja-mallinseppa'):
             continue
-        if not botti and (x['ika_h'] or 0) <= 48:
+        if not botti and (x['ika_h'] or 0) <= RAJA_S / 3600:
             continue
         yield p, r, botti
 
