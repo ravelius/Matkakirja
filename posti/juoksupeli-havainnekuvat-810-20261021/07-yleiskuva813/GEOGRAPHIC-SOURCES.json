@@ -1,0 +1,25 @@
+{
+  "purpose": "Broad layout facts for a stylized concept, not surveyed geometry or a calibrated300-500m camera",
+  "references": [
+    {
+      "title": "The Palace Museum: About",
+      "url": "https://intl.dpm.org.cn/about_us/126.html",
+      "supports": "Rectangular enclosure, south Meridian Gate, north-south central sequence, southern Outer Court and northern Inner Court/garden",
+      "access": "Official contents obtained via web search and open"
+    },
+    {
+      "title": "The Palace Museum: Visit",
+      "url": "https://intl.dpm.org.cn/visit.html",
+      "supports": "Approach from south and Jingshan immediately north",
+      "access": "Official indexed page contents"
+    },
+    {
+      "title": "The Palace Museum: Buildings",
+      "url": "https://www.dpm.org.cn/explore/buildings.html",
+      "supports": "A corner tower at each of the four wall corners",
+      "access": "Official indexed page contents; direct page open timed out"
+    }
+  ],
+  "externalImageDownloads": 0,
+  "generatedImageNotASurvey": true
+}

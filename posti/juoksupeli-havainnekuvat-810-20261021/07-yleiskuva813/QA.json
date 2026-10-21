@@ -1,0 +1,45 @@
+{
+  "taskNumber": 813,
+  "sourceTaskNumber": 811,
+  "at": "2026-10-21T10:42:13.869644+00:00",
+  "personallyViewed": true,
+  "approvedForDelivery": true,
+  "approvedForGameUse": false,
+  "overall": "PASS_FOR_PT_OWNER_REVIEW_AS_CONCEPT_OVERVIEW",
+  "deliverySHA256": "72d3fbb405ced7dacd5186eeabb2b439421c89f52f5521380d75bc4b471e180f",
+  "dimensions": [
+    1448,
+    1086
+  ],
+  "nativeBytesUnedited": true,
+  "imageCallsIssued": 1,
+  "imageCallsCompleted": 1,
+  "imageCallLimit": 1,
+  "retriesAuthorized": false,
+  "new3DCalls": 0,
+  "sceneChecks": {
+    "wholeEnclosureFromSouthTowardNorth": "PASS at illustrative scale",
+    "WumenForegroundUApproach": "PASS visually; not an architectural survey",
+    "successiveCentralHallsAndSideCompounds": "PASS as a simplified illustrated layout",
+    "redWallsGrayStoneLowerCoursesGoldRoofs": "PASS",
+    "moatAndFourCornerTowersInFrame": "PASS",
+    "JingshanBeyondNorthWall": "PASS",
+    "sunny807810StyleNoMotionBlur": "PASS",
+    "noCharactersPeopleModernBuildings": "PASS by personal visual inspection",
+    "noVisibleTextOrPlaqueGlyphs": "PASS by personal full-image and native-crop inspection; no exhaustive subpixel/OCR guarantee",
+    "landscape4to3": "PASS"
+  },
+  "qaNativeDetailsPersonallyViewed": true,
+  "limitations": [
+    "Notionally300-500m aerial viewpoint only; no world-unit camera calibration.",
+    "Stylized composition rather than surveyed site geometry. Exact hall sizes/locations and foreground water/gate arrangement are not certified for terrain or collision modelling.",
+    "No current game integration, model output or actual opening-flight camera/path verification is asserted."
+  ],
+  "reference807SHA256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+  "ownerGate": "PT review and owner preview before using this new seventh image in the loop",
+  "ownerAccepted": false,
+  "recipientAccepted": false,
+  "gameModificationLoopStarted": false,
+  "gameIntegrated": false,
+  "published": false
+}

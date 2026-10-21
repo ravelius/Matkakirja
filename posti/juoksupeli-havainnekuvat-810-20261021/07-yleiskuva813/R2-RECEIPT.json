@@ -1,0 +1,22 @@
+{
+  "taskNumber": 813,
+  "at": "2026-10-21T10:42:16.260116+00:00",
+  "file": "07-yleiskuva-ylhaalta.png",
+  "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-yleiskuva-813-20261021/delivery/07-yleiskuva-ylhaalta.png",
+  "r2Key": "juoksupeli/havainnekuvat-810-20261021/07-yleiskuva-ylhaalta.png",
+  "canonicalUrl": "https://media.matkakirja.app/juoksupeli/havainnekuvat-810-20261021/07-yleiskuva-ylhaalta.png",
+  "verificationUrl": "https://media.matkakirja.app/juoksupeli/havainnekuvat-810-20261021/07-yleiskuva-ylhaalta.png?sha256=72d3fbb405ced7dacd5186eeabb2b439421c89f52f5521380d75bc4b471e180f",
+  "sha256": "72d3fbb405ced7dacd5186eeabb2b439421c89f52f5521380d75bc4b471e180f",
+  "bytes": 3262857,
+  "http": 200,
+  "mime": "image/png",
+  "cors": "https://matkakirja.app",
+  "preflightHttp": 404,
+  "uploadedThisAttempt": true,
+  "byteExactReadback": true,
+  "immutableKey": true,
+  "gameIntegrated": false,
+  "published": false,
+  "ownerAccepted": false,
+  "recipientAccepted": false
+}
