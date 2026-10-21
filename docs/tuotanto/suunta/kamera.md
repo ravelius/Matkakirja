@@ -63,6 +63,7 @@ pehmeästi juuri siihen, mistä seuraava asia näkyy parhaiten. Katsoja muistaa 
 
 Kortit KAMERA-1–4 suljettiin 21.10. klo 19.2x vastaamatta; kaikki odottavat omistajan paluuta ma 26.10.2026 (PT). Siihen asti
 noudatetaan suositusta vain siinä, mikä on helposti muutettavissa; peliin ei lukita mitään.
+Selitykset pelaajan näkökulmasta (missä, mitä ruudulla, nyt, vertailukohta): `docs/tuotanto/suunta/kamera-selitykset.md`.
 
 | Kysymys | Suositus, odottaa omistajaa |
 |---|---|
