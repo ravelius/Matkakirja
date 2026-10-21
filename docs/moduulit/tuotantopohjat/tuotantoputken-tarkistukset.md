@@ -12,6 +12,8 @@ tai kysytään minulta"). Kohdan numero = Raamatun kohta.
 - **AINA ennen päiväjunaa** KK kysyy omistajalta, ajetaanko tarkistukset; PT EI päätä oletuksella. Yöjunassa ajetaan aina kysymättä laitekierroksineen (9.11).
 - **EI** simua eikä laitetta, paitsi a) selvästi uusi tekniikka, b) omistajan pyytämät kuvat, c) yöjunan laitekierros ja muistiajo (9.11 SIMU HARVOIN).
 - **AINA** jokaiselle käsikirjoitetulle kameraliikkeelle kameratesti CI:ssä ja ruutuaikavahti; yksikin yli 20 ms:n ruutu hylkää (9.1, 4.24).
+  Aloitusverhon (logo) alla ruutuja ei lasketa (proto 3698ec71e). PT voi hyväksyä vanhan, toistetusti todetun vian poikkeamaksi, joka
+  kirjataan JUNATARKISTUKSEEN (21.10.2026 saapumislento, Natiiviseppä).
 - **AINA** vika toistetaan ennen korjausta, ja sama ajo menee korjattuna läpi (9.7); oma tulos tarkistetaan ennen PT:tä (9.5).
 - **EI** omistajaa ensimmäiseksi tarkistajaksi: yöjunan laitekierroksen löydös pysäyttää ulkoisen jaon (9.11).
 - **AINA** lukitus ja TestFlight vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA"), ja auki on yksi juna (10.1–10.2).

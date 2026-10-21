@@ -21,6 +21,7 @@ tehdään tai kysytään minulta"). Kohdan numero = Raamatun kohta.
 - **AINA** järjestys Kolme veljestä → raketti → uni; raketti vasta, kun aarrevideo toimii pelissä (4.21).
 - **EI** pitkiä renderöintejä päivällä: yöllä ja vain koneen ollessa muuten vapaa; lyhyt liiketarkistusvideo päivälläkin, kun omistaja ei käytä Macia (4.21, 12.13).
 - **EI** omia nappeja eikä tyylejä videon ympärille: tyylikirja ja yhteiset osat (4.1, 2.70).
+- **AINA** puhe tekstitetään pelin yhteisellä tekstityskaistaleella (Tekstitys-kytkin), ei videon omalla tekstillä eikä kaistalla (2.70, 2.201 TEKSTITYS; Natiivi-UI).
 - **AINA** omistajalle menevä video äänellisenä, ruutu ruudulta katsottuna ja välähdyshaku ajettuna (9.5, 9.12).
 - **Ennen kysymystä omistajalle:** onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus.
 
