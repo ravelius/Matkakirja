@@ -88,6 +88,11 @@ Edellinen: `viesti-lavastaja-luovutus-20261020-1750.md` (70c46e621). Työkalut, 
    (renderöity) → PK tunnistaa pelissä. **Louvre delivery-v3:** media louvre-ihmiset-v2 (b56c1e7e5f75, JU 02.32; `glb_tekstuurit_1024.py`),
    proto `lavastaja/louvre-k4-vartija-209` d7121d8ce (k4 rf-2511:n vieressä, vartija Daru-oven vieressä) → NS; simuarkki pyydetty.
    Nike: toleranssit postissa (07a2b31e3), koe2-sijoitus −0,25 m OK (museo-kalusteet/nike-koe2-sijoitus.jpg) → Codex teksturoi.
+   **Nike valmis peliin:** delivery-v1 + `museo-kalusteet/nike_jalusta_tummat.py` (musta kiila = tekstuuria) → media louvre-ihmiset-v3
+   (3b26d59e3d7e, JU 02.55); proto `lavastaja/louvre-nike-jalusta-209` 0ab06b9ae (Jalusta.Malli, sali.json jalusta.malli = henkilot.json-tunnus;
+   MuseoKaideTestit-raja 44°) → NS runkoon 28064d13f. **Penkit + Rodin:** proto `lavastaja/louvre-penkit-rodin-209` 3fa65b78b
+   (henkilot.json "malli"-kenttä; Linssit 2205/2205) → NS. Simuarkki (sk-louvre-hahmot-209.txt, H1–H6) odottaa NS:n polkua → JU:n vuoro.
+   Testit ajetaan yksi kerrallaan (rinnakkain → Bus error).
    Niken keulan sovitustiedot Codexille: posti/lavastaja-codex-nike-sovitus-20261021.md (postilaatikko 5f25d26cc).
    **K3-kävelijä (kun Codex toimittaa):** LS:n kävelijätesti 0beee9946 (`sh Linssit-testit/kaanna.sh KavelijatEivat`, ≥ 0,8 m kamerasta;
    k1 nyt 1,20 m) ottaa henkilot.json:n kavelee:true-hahmot automaattisesti; aja ennen NS:lle lähettämistä.
