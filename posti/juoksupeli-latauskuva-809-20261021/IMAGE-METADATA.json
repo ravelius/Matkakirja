@@ -1,0 +1,30 @@
+{
+  "dimensions": [
+    941,
+    1672
+  ],
+  "format": "PNG",
+  "mode": "RGB",
+  "aspectRatio": 0.562799043062201,
+  "matches9to16Within1Percent": true,
+  "matches9to19_5Within1Percent": false,
+  "centered3to4ProofCropPixels": [
+    1,
+    210,
+    940,
+    1462
+  ],
+  "centered3to4ProofDimensions": [
+    939,
+    1252
+  ],
+  "taskNumber": 809,
+  "at": "2026-10-21T09:16:41.075161+00:00",
+  "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6f0b2c04-6181-4a01-9562-b50c812dde28.png",
+  "physicalNativeSourcePath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6f0b2c04-6181-4a01-9562-b50c812dde28.png",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-809-20261021/delivery/juoksupeli-latauskuva-pysty-v1.png",
+  "sha256": "e5f2dfc5c84a03df9ac25b936527dfa0d6f67ef4733989a3fa098ac0ae8d028f",
+  "bytes": 2183322,
+  "nativeBytesUnedited": true,
+  "newImageCount": 1
+}

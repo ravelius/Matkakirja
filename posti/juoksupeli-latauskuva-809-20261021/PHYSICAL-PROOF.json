@@ -1,0 +1,13 @@
+{
+  "taskNumber": 809,
+  "at": "2026-10-21T09:18:45.270928+00:00",
+  "allTaskFilesOnT7": true,
+  "nativeOriginalOnNAS": true,
+  "nativeFileCopiedUnchangedToT7": true,
+  "internalFilesDeleted": 0,
+  "newImageCount": 1,
+  "imageCallsIssued": 1,
+  "retakes": 0,
+  "new3DCalls": 0,
+  "qa3to4CropIsNotAnotherGeneration": true
+}

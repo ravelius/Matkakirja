@@ -1,0 +1,22 @@
+{
+  "taskNumber": 809,
+  "at": "2026-10-21T09:17:53.283605+00:00",
+  "file": "juoksupeli-latauskuva-pysty-v1.png",
+  "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-809-20261021/delivery/juoksupeli-latauskuva-pysty-v1.png",
+  "r2Key": "juoksupeli/latauskuva-809-20261021/juoksupeli-latauskuva-pysty-v1.png",
+  "canonicalUrl": "https://media.matkakirja.app/juoksupeli/latauskuva-809-20261021/juoksupeli-latauskuva-pysty-v1.png",
+  "verificationUrl": "https://media.matkakirja.app/juoksupeli/latauskuva-809-20261021/juoksupeli-latauskuva-pysty-v1.png?sha256=e5f2dfc5c84a03df9ac25b936527dfa0d6f67ef4733989a3fa098ac0ae8d028f",
+  "sha256": "e5f2dfc5c84a03df9ac25b936527dfa0d6f67ef4733989a3fa098ac0ae8d028f",
+  "bytes": 2183322,
+  "http": 200,
+  "mime": "image/png",
+  "cors": "https://matkakirja.app",
+  "preflightHttp": 404,
+  "uploadedThisAttempt": true,
+  "byteExactReadback": true,
+  "immutableKey": true,
+  "gameIntegrated": false,
+  "published": false,
+  "ownerAccepted": false,
+  "recipientAccepted": false
+}
