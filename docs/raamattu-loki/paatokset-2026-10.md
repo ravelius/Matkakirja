@@ -2227,3 +2227,15 @@ Omistaja sanatarkasti: "Anteeksi, ymmärsin tuon dronen väärin. Dronen pitää
 ## NAYTOKSET SUORAAN ISOLLA IPADILLA (omistaja 21.10. klo 09.44, KK:n valitys) (21.10.2026 klo 09.46)
 
 Omistaja sanatarkasti: "Etkö voi näyttää aina suoraan tuossa isossa iPadissa? Olen nyt siis töissä ja voin katsoa siitä. Ei tarvitse nauhoittaa. Olisiko se nopeampi tapa?" Käytäntö: kun omistaja on iPadin ääressä, näytökset ajetaan suoraan isolla iPadilla (kehitysversio + peli-komento.txt devicectlillä), ei nauhoitusta; poissa ollessa (matka 22.–26.10.) nauhoitetaan. Valmiista näytöksestä ilmoitetaan KK:lle.
+
+## JUOKSUPELIN LAHTO JA MAALI (omistaja 21.10. klo 09.58 ja 10.13, KK:n kortit) (21.10.2026 klo 10.14)
+
+09.58: lähtö "Keskeltä pienistä huoneista (Suositus)": keisari lähtee palatsin keskiosan pienten huoneiden kujilta kohti pääporttia, avauslento pääportin suunnasta; aukion laatat tasaisiksi ("aukion omat laatat nousevat hieman joissain kohtaa vaikka pitäisi olla tasaista"). 10.13: maaliksi pääportti kulmatornin tilalle ("Pääportti maaliksi (Suositus)"; nuoli ja maalin näköala portille). Valmiin juoksupelin määritelmän kohta 5: maali on pääportti. Toteutus Pelikoodari.
+
+## JUOKSUPELI: VAIN VALMIIT PALAT JA 1900-LUVUN PEKING TAUSTALLE (omistaja 21.10. klo 10.18, KK:n valitys) (21.10.2026 klo 10.19)
+
+Omistaja sanatarkasti (iso iPad, runko 168ebac1f): "simu ei osaa rimpuilla irti / dronessa taustalla näkyy kielletty kaupunki maisemassa uudestaan. maisema pitää tehdä uusiksi niin että ympärillä näkyy muuta kaupunkia 1900 luvun alun mukaisessa asussa / drone ei osaa lentää lopussa keisarin luo vaan siinä tulee hyppäys. / keisari juoksee nyt joidenkin esteiden läpi. tämä ehkä johtuu siitä että niille ei ole tehty vielä rikkoutuvia osia. ota kuitenkin kaikki keskeneräiset pois pelistä kunnes valmistuvat. ota myös ilmassa leijuvat keltasiniset lippunauhat ja vastaavat pois.käytetään vain oikeasti valmiita palasia tästä eteenpäin. ei haittaa jos niitä on vähän. parempi rakentaa yksi kerrallaan peliin toimivia rekvisiittoja ja miettiä jokaiselle niiden funktio myös sekä mihin paikkoihin niitä kannattaa laittaa. tee korjaukset ja näytä uusi simu". Työtapa Raamattuun (juoksupelin kohta, VAIN VALMIIT PALAT). Toteutus: PK rimpuilu, avauslennon loppu, keskeneräisten poisto; VS taustamaisema.
+
+## JUOKSUPELIN DRONE YLHAALLA JA KATOT (omistaja 21.10. klo 10.43, KK:n valitys) (21.10.2026 klo 10.44)
+
+Omistaja sanatarkasti ("Tronity" = drone): "Näytän jatkossa kaikissa rakennuksissa katon, mutta kun pelaaja menee jonkun talon sisälle, niin samalla hetkellä ota katto pois näkyvistä. Ja muutetaan Tronity sillä tavalla kuin ehdotit, eli se pysyy koko ajan ylhäällä eikä lennä oviaukkojen alta. Ainoa poikkeus on pelin alkulennossa, kun drone menee pääportista sisään. Näin saadaan dronelle yksinkertainen malli, mutta pidetään se edelleen, että drone huojuu koko ajan hieman vasemmalle ja oikealle sekä lähemmäs ja kauemmas, ja kallistelee myös, jotta kamera näyttää mahdollisimman elävälle." Korvaa 09.40:n (sukellus oviaukoista) ja 19.10. klo 18.02:n. Raamattuun juoksupelin kohtaan (DRONE JA KATOT). Toteutus Pelikoodari.
