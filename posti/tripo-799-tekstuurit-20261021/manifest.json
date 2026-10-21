@@ -1,0 +1,38 @@
+[
+  {
+    "part": "01-sinivalkoinen-maljakko",
+    "source_model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kahdeksan-esinetta-20261021/parts/01-sinivalkoinen-maljakko/raw/tripo-original.glb",
+    "source_sha256": "e175d3a68ba31b0b0bb6f9990cb5f3676f82d725a2e2d533afca086a56cfbcd7",
+    "basecolor_file": "01-sinivalkoinen-maljakko/basecolor-original.jpg",
+    "basecolor_sha256": "e8f84fff74cd5083ec2fd6af56cce6c210ecb2ceb920b647d2c840e83c4d6cf9",
+    "uv_wire": "01-sinivalkoinen-maljakko/uv-wire.svg",
+    "uv_count": 5036,
+    "triangles": 7980,
+    "geometry_modified": false,
+    "texture_modified": false
+  },
+  {
+    "part": "02-keltainen-kurpitsamaljakko",
+    "source_model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kahdeksan-esinetta-20261021/parts/02-keltainen-kurpitsamaljakko/raw/tripo-original.glb",
+    "source_sha256": "fb8478047c9bd3d646e53c079757323560b67bd79f16b5f079b84529aab2ae50",
+    "basecolor_file": "02-keltainen-kurpitsamaljakko/basecolor-original.jpg",
+    "basecolor_sha256": "909a6cfc46750b749b40778ab3faf4e65402e900626a40bebe9603ef867d5041",
+    "uv_wire": "02-keltainen-kurpitsamaljakko/uv-wire.svg",
+    "uv_count": 4671,
+    "triangles": 7678,
+    "geometry_modified": false,
+    "texture_modified": false
+  },
+  {
+    "part": "03-turkoosi-ruukku-runko",
+    "source_model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kahdeksan-esinetta-20261021/parts/03-turkoosi-ruukku-runko/raw/tripo-original.glb",
+    "source_sha256": "e54f09073cef50eb90f9325ed15603c74088d27a34339d1041ff565ccf6e2177",
+    "basecolor_file": "03-turkoosi-ruukku-runko/basecolor-original.jpg",
+    "basecolor_sha256": "afde501581630e198be73f8e8471ef011d3279eda3d9c49edec02b771d70e004",
+    "uv_wire": "03-turkoosi-ruukku-runko/uv-wire.svg",
+    "uv_count": 5051,
+    "triangles": 7562,
+    "geometry_modified": false,
+    "texture_modified": false
+  }
+]
