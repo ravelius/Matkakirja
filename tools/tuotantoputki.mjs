@@ -204,7 +204,8 @@ async function main() {
       postit.push({ nimi, aika: a, teksti });
       if (onMallitilaus(nimi, teksti)) tilaukset.push({ nimi, sha: s, aika: a });
     }
-    const suljetut = new Set(existsSync(rekisteri) ? JSON.parse(readFileSync(rekisteri, 'utf8')).suljetut_tilaukset || [] : []);
+    // Rivi on tiedostonimi tai { tiedosto, syy } (PT 21.10.: sopimus, peruminen, tauko, kokeilun lopetus tai kuittaus ilman mallia).
+    const suljetut = new Set((rek.suljetut_tilaukset || []).map(x => typeof x === 'string' ? x : x.tiedosto));
     for (const t of avoimetTilaukset(tilaukset.filter(x => !suljetut.has(x.nimi)), postit, Date.now()))
       halytykset.push(`posti/${t.nimi}: 3D-tilaus ${t.ikaH} h ilman toimitusta tai perumista`);
     huomiot.push(`postilaatikko: ${tilaukset.length} 3D-tilausta, ${postit.length} viestiä`);

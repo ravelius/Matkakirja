@@ -1,5 +1,5 @@
 {
- "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota).",
+ "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi tai { tiedosto, syy }), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota).",
  "mallit": [
   {
    "id": "louvre-mies-vartija",
@@ -52,7 +52,59 @@
   }
  ],
  "suljetut_tilaukset": [
-  "valoseppa-codex-peking46-vesi-ja-valoputki-20261015.md"
+  "valoseppa-codex-peking46-vesi-ja-valoputki-20261015.md",
+  {
+   "tiedosto": "fable-codex-juoksupeli-kamerapaatos-20261019.md",
+   "syy": "kuittaus ilman mallia (paketti vastaanotettu, kamerapäätös)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-rakettikokeilu-pois-20261019.md",
+   "syy": "kokeilun lopetus (rakettivideo pois, omistaja 18.25)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-rakettivideo-kokeilu-20261019.md",
+   "syy": "kokeilun lopetus (rakettikokeilu-pois 18.3x)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-paja-taustat-ja-andoya-20261019.md",
+   "syy": "kuittaus ilman mallia (pajan taustat hyväksytty; Andøya rakettivideoon peruttu)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-smaragdi-unikuva-645-hyvaksytty-20261019.md",
+   "syy": "kuittaus ilman mallia (unikuva hyväksytty)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-olavinlinna-tauolle-20261019.md",
+   "syy": "tauolla (Olavinlinna, omistaja 17.05 / 10.10.)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-olavinlinna-6-10-geometria-20261019.md",
+   "syy": "tauolla (Olavinlinna)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-olavinlinna-tripo-pilotti-20261019.md",
+   "syy": "tauolla (Olavinlinna)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-kaaretaulu-sopimus-20261019.md",
+   "syy": "sopimus (kääretaulun mallisopimus)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-estemallit-sopimus-20261019.md",
+   "syy": "sopimus (esteiden mallisopimus; tilaus juoksupeli-esteet erikseen)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-3d-toimitusmuoto-20261019.md",
+   "syy": "sopimus (3D-toimitusmuoto ja tuontiportti)"
+  },
+  {
+   "tiedosto": "keskustelukanava-codex-juoksupeli-viestinta-20261019.md",
+   "syy": "kuittaus ilman mallia (viestintälinja)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-juoksupeli-viittaenergia-20261019.md",
+   "syy": "kuittaus ilman mallia (tiedoksi, ei muutospyyntöjä)"
+  }
  ],
  "korvatut_viennit": [
   "juoksupeli-aarteet799-v1-vienti-20261021"
