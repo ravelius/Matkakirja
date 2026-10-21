@@ -1,5 +1,21 @@
 # Tuotantopohja: uusi linssi
 
+## Tarkista ennen
+
+Lue nämä ennen kuin teet tai kysyt mitään (omistaja 21.10.2026 klo 17.31: yksinkertainen putki, jossa kaikki tarkistetaan ennen tekemistä tai kysymistä). Suluissa Raamatun kohta.
+
+**Tavoitteen muoto ensin:** AINA omistajan päätös, sitten havainnekuva, kuvakäsikirjoitus ja piirretty kuvakaappaus ennen aineistoa ja koodia (4.21, luku 0).
+
+- AINA koko maailma; linssiä EI rajata Eurooppaan (2.60).
+- AINA avaus Linssit-napista tai laukun Varusteista, EI kartan ☰:stä (2.62); keskeneräinen Linssit › Keskeneräiset, EI Kehittäjä › Kokeet (2.74).
+- AINA yhteinen kehys: OHJAUSNAPPI-ryhmä, ☰:n alin rivi Poistu ja ⚙ sama kaikissa linsseissä; EI erillistä ✕:ää (2.70).
+- AINA olemassa olevat UI-pohjat ja tyylikirja, yhteinen osa ensin; puuttuva osa kysytään PT:ltä, EI omaa ratkaisua (4.1, 2.201).
+- AINA kamera Kamerajohtajan liikkeillä (paikallaan, kisko, orbit, kääntö), ease in/out, kameratesti ja ruutuvahti; EI kameran suoraa siirtoa (4.24).
+- AINA kuvat, tekstuurit ja 3D Codexilta, Claude koodaa (7.15); kuvat vain PD/CC, tekijä ja lisenssi näkyvissä (11.1).
+- AINA omistajalle vain pelaajan näkymä, kuvateksti kuvan ulkopuolella (7.32, 4.48).
+- EI junaan ilman merkintää "OMISTAJA PYYSI JULKAISUA" (10.1); valmis vasta, kun luvun 4 lista täyttyy ja opit on viety tähän pohjaan (8.1).
+- Ennen kysymystä omistajalle: onko jo päätetty (grep docs/raamattu-loki), noudattaako pohjaa ja Raamattua, yksi suositus. Kysymys vain KK:lle muodossa "KYSYMYS <tunnus>" (7.27).
+
 *(LUONNOS 17.10.2026, päivitetty 19.10.2026, Linssiseppä, PT:n toimeksianto. Raamattu 4.21 TUOTANTOPOHJAT, 8.1 VALMIIN
 MÄÄRITELMÄ ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu vain nykyisten ohjeiden, lokin ja luovutusten opit (Kiinan dynastiat
 -linssi 16.–17.10., taidemuseo-linssin kamerajohtaja ja Kööpenhaminan kippi 18.–19.10.2026); uusia sääntöjä ei ole. Jos tämä ja
