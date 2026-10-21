@@ -124,3 +124,8 @@ Proto-worktree /Users/Shared/Claude/wt/proto-pelikoodari-kerattavat-206 (paikall
   rakennetaan uudelleen LOD1:stä (LOD2:n räystäät 1–2 m kapeampia → w1 kamera räystäässä), portiksi vain läpikulku (massaa
   molemmilla sivuilla), kallistus kujilla 35 %, kujilla kääntyminen 4/s, huoneessa tele-kenttä (palkin lähellä suoraan ylhäältä).
   209t: w1/w2/w3/e3/h1/h2 ✓; AVOIN: 40 s kulmassa muurin harmaa kansi oikeassa alakulmassa. Muisti NS f8a35626c 3436 Mt ✓.
+- 07.1x–08.2x: 209u–209w → PT. Kärki pelikoodari/nakoisyys-209 = da88a6640: + kulmissa ulkokaarre (tele 0,06 m/°, ≤ 2,5 m),
+  kääntyminen 5/s, puomin matala ehdokas ei muurin kannen viereen, portiksi vain tunneli (katto/muuri 2 m sivuilla), porttiloki,
+  muurikate-v4 (Lavastaja: portin jalustan marmorikaide). Perutut: kameran "ei nouse kannen läpi" (PT: ei temppuja), harjavara 3 m
+  (vinot palat ovat kaukana, w1 taantui). 209w: w1 kattoa + häivytysympyrä (kuvahetki? 209v puhdas), vinot palat aukion pohjoisreunalla
+  (muurikate risteää katon kanssa) → Lavastaja. Selvitysskenaario sk-juoksupeli-kuvapari-209w-mika.txt (mika r05:n kohdista).
