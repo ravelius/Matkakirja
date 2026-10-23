@@ -2372,3 +2372,7 @@ Omistaja (KK:n kortti, 5 paria TF 209 vs. 12a7e15e8): Hyväksytäänkö uusi gra
 ## PAATOKSET 24.10.2026 klo 00.37: RAKETTIKOHTAUS SÄVYTETÄÄN CODEXIN MUKAAN (24.10.2026 klo 00.38)
 
 Omistaja (KK:n kortti, näyte 2d9b73aa3): liian värikäs maasto ja taivas, horisontissa näkyy maaston raja. -> Sävytetäänkö kuva Codexin kuvan mukaan näin? Kyllä. Koko kuvaan (peli ja video) värisuodatin (LUT) Codexin havainne-r3/r4:n väreistä ja tummuudesta; horisonttiin tumma usva peittämään tarkan ja karkean maaston sauman; jokainen näyte verrataan koneellisesti Codexin kuvaan (värit ja tummuus), ja omistaja näkee sen vasta, kun ero on pieni. Välitetty Valosepälle.
+
+## PAATOKSET 24.10.2026 klo 01.11: KOKO RAKETTI VIDEONA (24.10.2026 klo 01.12)
+
+Omistaja: miksi ihmeessä koko rakettia ei tehdä videoksi? vasta cupolassa siirrytään pelin piirtoon. -> Koko raketin osuus videona, myös avauslento alustalle; peli piirtää vasta Cupolan (häivytys elävään Cupolaan). Jos alustalla on pelaajan oma laukaisuhetki, video jaetaan siinä kahteen osaan saumattomasti. iPad-mittaus vain Cupolasta ja videon toistosta. Raamattu 2.105 laajennettu.
