@@ -10,6 +10,21 @@ Periaate on sama kuin ammattimaisessa peliyhtiössä: tavoite sovitaan ensin, si
 sitten viimeistellään, tarkistetaan itse ja vasta lopuksi näytetään omistajalle. Kysymättä tehdään kaikki, mihin on
 pysyvä lupa; omistajalle tuodaan vain uudet asiat, makuvalinnat ja maksulliset generoinnit.
 
+## 0. Periaatteet (lue kokonaan joka aloituksessa)
+
+*(Omistaja hyväksyi 24.10.2026 klo 02.17: "Kootaanko periaatesivu, kun kohta 7 on korjattu?" → "Kyllä (Suositus)"; kohta 7 omistajan 02.12 sanoin. Jokainen sessio lukee tämän osion kokonaan joka aloituksessa, nollauksen ja tilinvaihdon jälkeen ennen oman roolin lukulistaa (Raamattu 7.47): `git show origin/main:docs/tuotanto/tuotannonohjaus.md`. Teksti on kirjoitettu omistajalle; "sinä" = omistaja.)*
+
+1. **Sinun sanasi ovat mittari.** Alkuperäiset sanasi kulkevat työn mukana sellaisinaan työlistan rivissä, tilauksessa ja tarkistuksessa. Kuva tai video näytetään sinulle vasta, kun sen jokainen kohta on verrattu sanoihisi.
+2. **Et ole ensimmäinen tarkistaja.** Tekijä katsoo työnsä pelistä, ja Päätoimittaja tarkistaa sen täysikokoisena ennen kuin se tulee sinulle. Jos työssä on vika, se palaa tekijälle.
+3. **Ennen junaa ajetaan vain automaattiset testit.** iPadia käytetään vain uuteen tekniikkaan, pyytämiisi kuviin ja videoihin sekä yöjunan tarkistuskierrokseen, jossa kaikki tarkistetaan kerralla. Muut muutokset menevät suoraan avoimeen junaan, ja näet ne pelistä.
+4. **Yksi juna kerrallaan.** Kaikki valmis kerätään avoimeen junaan. Testiversio julkaistaan vain pyynnöstäsi ja kokonaisena.
+5. **Sinulle tuodaan vain sinun asiasi.** Niitä ovat päätökset, toimet ja valmiit asiat, suomeksi ja ilman ammattikieltä. Saat yhden suosituksen ja tavoitellun kokemuksen etkä numerovaihtoehtoja. Kysymykset tulevat kortilla Keskustelukanavan kautta.
+6. **Ennen kuin kysyt tai lupaat, tarkista.** Raamatusta, päätöslokista ja tuotantoputkesta katsotaan, onko asia jo päätetty ja millä tavalla se tehdään. Jo päätettyä ei kysytä uudelleen.
+7. **Luvat katsotaan lupataulukosta.** Kysymättä saa tehdä sen, mihin on pysyvä lupa: Codexin kuvat, kertojaäänet jo hyväksytyllä lukijaäänellä, kun ajo vie alle 3 % kuukauden kiintiöstä, ja tehosteäänet ammattikirjastoista, ensin Soundly Prosta ja Sonnissista. Lupa kysytään aina musiikkiin, uuteen ääneen, yli 3 %:n ajoon ja tekoälyllä tehtyyn tehosteeseen, ja lupa koskee vain pyydettyä määrää. Uusia ostoja ei tehdä eikä ehdoteta ennen kuin otat asian itse esille.
+8. **Olemassa olevat pohjat ensin.** Jokainen ikkuna, nappi ja tuote tehdään valmiilla pohjalla tai reseptillä. Jos pohja puuttuu, kysytään Päätoimittajan kautta eikä tehdä omaa ratkaisua.
+9. **Väliaikaisia poikkeamia ei tehdä.** Jos osa poikkeaa päätöksestäsi, se poistetaan, ja julkaisu odottaa, kunnes se on tehty päätöksesi mukaan.
+10. **Virheestä opitaan periaatteen kautta.** Kun virhe sattuu, katsotaan ensin, mitä tämän sivun kohtaa rikottiin. Oppi kirjataan heti Raamattuun tai tuotantoputkeen eikä vain muistiin. Uusi tarkka sääntö kirjoitetaan vain, jos periaate ei riitä.
+
 ## 1. Vaiheet: yksi putki kaikille tuotteille
 
 Jokainen tuote (linssi, historiapeli, museo, avaus, pallokierros, 3D-maamerkki, video) kulkee samat seitsemän vaihetta
@@ -83,7 +98,7 @@ lupa KK:n kautta ennen työtä: muut asiat kortilla, äänet ja tekstit tekstin�
 | Codexin kuvat ja havainnekuvat | tarpeen mukaan, ei määrä- eikä ottokorttia | – | 7.15, 12.24 |
 | Tripo-mallit | Codex tekee tarpeen mukaan; hyväksytyt mallit saa ladata omistajan tililtä | tilin muut tiedostot; Clauden roolit eivät aja Tripoa itse | 7.15, 11.6, 12.24 |
 | Musiikki (Lyria) | – | jokainen Lyria-kutsu; valmis tai vapaa kappale musiikiksi. Juoksupeliin ei nyt lisää musiikkia, nykyiset raidat myös muille tasoille (omistaja 21.10. klo 18.02) | 5.15 |
-| Kertojaääni (ElevenLabs) | PT:n hyväksymät käsikirjoitukset, noin enintään 10 000 merkkiä per kokonaisuus, yksi otto per teksti | yli tämän | 5.1 |
+| Kertojaääni (ElevenLabs) | PT:n hyväksymät käsikirjoitukset jo hyväksytyllä lukijaäänellä, alle 3 % kuukauden kiintiöstä per ajo, yksi otto per teksti (omistaja 24.10. klo 02.12) | uusi lukijaääni tai yli 3 % | 5.1 |
 | Hahmo- ja muut puheäänet (ElevenLabs) | jo hyväksytyllä äänellä, kun yksi ajo jää alle 3 %:n kuukauden krediiteistä; kulutus KK:lle jälkikäteen | yli 3 %:n ajo; uusi henkilö tai uusi ääni aina | 5.1, 5.2 |
 | Ääni- ja tehosteet, äänimaisemat | Soundly Pro ja Sonniss ensin, Freesound alkuperäisinä aukkoihin | tekoälyllä tehty uusi ääni | 5.27, 5.20, 12.24 |
 | Generointien ottomäärä | – (Tripo ja Codexin kuvat eivät kuulu tähän) | luvan ottomäärä sitoo kuten merkkimäärä; uusinta = uusi otto = uusi lupa, vaikka merkkejä jäisi | 5.2, 7.15 |
