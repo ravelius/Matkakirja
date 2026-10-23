@@ -2360,3 +2360,7 @@ uusi iso näyttötyyli EB Garamond SemiBoldilla juoksupelin alkulennon teksteill
 ## PAATOKSET 23.10.2026 klo 17.46: JUNA 210 ODOTTAA SÄVYJÄ (23.10.2026 klo 17.47)
 
 Omistaja (KK:n kortti, kuva pari-03-aukio.png): Julkaistaanko testiversio tasaisemmilla laatoilla? -> Odota sävyjä. Juna 210 TF:ään vasta, kun aukio näyttää hyväksytyltä kierrokselta 2 (laattakohtaiset sävyt, tummat saumat, kattojen tiilirivit) ja pyörii iPadilla nykimättä. Versiota tiilet 0 ei julkaista. Välitetty Julkaisijalle ja Valosepälle 17.4x.
+
+## PAATOKSET 23.10.2026 klo 18.14: RAKETTIVIDEO JATKUU (23.10.2026 klo 18.14)
+
+Omistaja (KK:n kortti, video f2a690238 + vertailut): Jatketaanko rakettivideota tällä ilmeellä? -> Kyllä, jatka. Viimeistelyyn savupilvi korkeammaksi ja oranssimmaksi sekä selvempi heijastus vedessä kuten NASA KSC-06pp2751 ja KSC-00pp1803. Ääni vasta valmiiseen versioon. Välitetty Valosepälle.
