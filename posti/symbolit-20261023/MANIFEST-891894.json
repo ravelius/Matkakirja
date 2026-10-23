@@ -1,0 +1,144 @@
+{
+  "family": "catalogue-symbols-891894-20261023",
+  "sources": [
+    {
+      "path": "posti/symbolit-20261023/paatoimittaja-codex-symbolit-20261023.md",
+      "commit": "639321784a2a65406967dff6633672a02ee79d71",
+      "blob": "f0e1b0c7c35129b9cb5f1b04aa4b87138f13aec9",
+      "sha256": "30920018617ad6ca044721435c7e165dc487a9d3082ac2d1d8c276e07c49d997",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/sources/paatoimittaja-codex-symbolit-20261023.md",
+      "readInFull": true
+    }
+  ],
+  "imageCallsIssued": 2,
+  "sourceImageCount": 2,
+  "deliveryImageCount": 4,
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "taskNumber": 891,
+      "id": "kiinan-dynastiat",
+      "kind": "mini",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/delivery/kiinan-dynastiat-foto-mini.jpg",
+      "mailboxPath": "posti/symbolit-20261023/kiinan-dynastiat-foto-mini.jpg",
+      "sha256": "f88fb0c830df1d5f2a79e13a3c1c8d510ca94b7d3d80d5f547f6fdc3576e9e62",
+      "bytes": 174981,
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "sRGB": true,
+      "jpegQuality": 95,
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/native/kiinan-dynastiat-source-v1.png",
+      "nativeSHA256": "399e33a91f33f824156e579d5d79e2600e7198b1965b28353da82f08a0034f62",
+      "cropBoxNativePixels": [
+        366,
+        0,
+        1306,
+        940
+      ],
+      "method": "technical center crop, Lanczos downsize and JPEG encoding; no image retouching",
+      "sharedSourceCalls": 1,
+      "generationAccountingTask": 891
+    },
+    {
+      "taskNumber": 892,
+      "id": "kiinan-dynastiat",
+      "kind": "iso",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/delivery/kiinan-dynastiat-foto-iso.jpg",
+      "mailboxPath": "posti/symbolit-20261023/kiinan-dynastiat-foto-iso.jpg",
+      "sha256": "804b10cb1fb1182de8b846e0cf0c0e6163a7fd1af30f5d38d86e3b6f12ff3f87",
+      "bytes": 744439,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "sRGB": true,
+      "jpegQuality": 95,
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/native/kiinan-dynastiat-source-v1.png",
+      "nativeSHA256": "399e33a91f33f824156e579d5d79e2600e7198b1965b28353da82f08a0034f62",
+      "cropBoxNativePixels": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "method": "technical center crop, Lanczos downsize and JPEG encoding; no image retouching",
+      "sharedSourceCalls": 1,
+      "generationAccountingTask": 891
+    },
+    {
+      "taskNumber": 893,
+      "id": "shakki",
+      "kind": "mini",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/delivery/shakki-foto-mini.jpg",
+      "mailboxPath": "posti/symbolit-20261023/shakki-foto-mini.jpg",
+      "sha256": "08bc0d6440ca68b857377b0dd254d57ce42a7179f6d233c2e1c617f41446f46f",
+      "bytes": 124015,
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "sRGB": true,
+      "jpegQuality": 95,
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/native/shakki-source-v1.png",
+      "nativeSHA256": "609e019f9c1a14c62403e2c3c5e836b1a1ef42cd97ca8c0a6cc79190f96a7aae",
+      "cropBoxNativePixels": [
+        366,
+        0,
+        1306,
+        940
+      ],
+      "method": "technical center crop, Lanczos downsize and JPEG encoding; no image retouching",
+      "sharedSourceCalls": 1,
+      "generationAccountingTask": 893
+    },
+    {
+      "taskNumber": 894,
+      "id": "shakki",
+      "kind": "iso",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/delivery/shakki-foto-iso.jpg",
+      "mailboxPath": "posti/symbolit-20261023/shakki-foto-iso.jpg",
+      "sha256": "285679360d4a950bdb16482028f6472fa61d12823dcb8cfbca65893ce43c95ba",
+      "bytes": 507939,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "sRGB": true,
+      "jpegQuality": 95,
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/native/shakki-source-v1.png",
+      "nativeSHA256": "609e019f9c1a14c62403e2c3c5e836b1a1ef42cd97ca8c0a6cc79190f96a7aae",
+      "cropBoxNativePixels": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "method": "technical center crop, Lanczos downsize and JPEG encoding; no image retouching",
+      "sharedSourceCalls": 1,
+      "generationAccountingTask": 893
+    }
+  ],
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/qa/QA.json",
+  "captions": {
+    "kiinan-dynastiat": "Keltainen tiilikatto ja punainen porttijulkisivu Kiinan keisarillisen arkkitehtuurin aiheena. Havainnekuva.",
+    "shakki": "Puiset shakkinappulat laudalla vanhanaikaisen wieniläisen kahvilan tunnelmassa. Havainnekuva."
+  }
+}

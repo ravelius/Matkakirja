@@ -1,0 +1,104 @@
+{
+  "checkedAt": "2026-10-23T10:38:04.899461+00:00",
+  "status": "PASS_FOR_DELIVERY_TO_PT",
+  "sourceImageCount": 2,
+  "deliveryImageCount": 4,
+  "imageCallsIssued": 2,
+  "retries": 0,
+  "personallyInspectedNativeImages": true,
+  "personallyInspectedBoth512Squares": true,
+  "personallyInspected96And64PixelCircularPreviews": true,
+  "proofPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/symbolit-891894-20261023/qa/kokoversiot-ja-pyorearajaus.png",
+  "items": [
+    {
+      "id": "kiinan-dynastiat",
+      "status": "PASS_FOR_DELIVERY_TO_PT",
+      "nativeSHA256": "399e33a91f33f824156e579d5d79e2600e7198b1965b28353da82f08a0034f62",
+      "visualNotes": "Keltainen kaareva kattomuoto ja punainen julkisivu/muuri erottuvat neliössä sekä 96 ja 64 pikselin ympyrärajoissa. Pienessä kuvassa rajaus on arkkitehtuurin yksityiskohtaan: sivuräystäiden kärjet jäävät rajauksen ulkopuolelle, mutta keskeinen katto ja punainen porttijulkisivu säilyvät. Isossa kuvassa koko keskeinen rakennus näkyy. Ei väitettä tietyn historiallisen rakennuksen tarkasta dokumentoinnista.",
+      "noVisibleTextOrWatermark": true,
+      "noIdentifiablePeople": true,
+      "photographicStyleObserved": true,
+      "sameSourceAndLightInBothSizes": true,
+      "technicalChecks": [
+        {
+          "taskNumber": 891,
+          "file": "kiinan-dynastiat-foto-mini.jpg",
+          "sha256": "f88fb0c830df1d5f2a79e13a3c1c8d510ca94b7d3d80d5f547f6fdc3576e9e62",
+          "dimensionsExact": true,
+          "opaqueRGBJPEG": true,
+          "sRGBEmbedded": true,
+          "metadataDescriptionAndSourcePresent": true,
+          "nativeCropBox": [
+            366,
+            0,
+            1306,
+            940
+          ]
+        },
+        {
+          "taskNumber": 892,
+          "file": "kiinan-dynastiat-foto-iso.jpg",
+          "sha256": "804b10cb1fb1182de8b846e0cf0c0e6163a7fd1af30f5d38d86e3b6f12ff3f87",
+          "dimensionsExact": true,
+          "opaqueRGBJPEG": true,
+          "sRGBEmbedded": true,
+          "metadataDescriptionAndSourcePresent": true,
+          "nativeCropBox": [
+            0,
+            0,
+            1672,
+            940
+          ]
+        }
+      ],
+      "nativeUnmodified": true
+    },
+    {
+      "id": "shakki",
+      "status": "PASS_FOR_DELIVERY_TO_PT",
+      "nativeSHA256": "609e019f9c1a14c62403e2c3c5e836b1a1ef42cd97ca8c0a6cc79190f96a7aae",
+      "visualNotes": "Kolme erillistä tunnistettavaa shakkinappulaa: vaalea kuningas, tumma ratsu ja sotilas, puisella vuororuutuisella laudalla. Kaikki kolme säilyvät 96 ja 64 pikselin ympyrärajoissa. Luonnollinen ikkunavalo, vanhan wieniläisen kahvilan kalustus ja pehmeä tausta. Modernin värivalokuvan ilme vanhanaikaisesta sisustuksesta; ei väitettä tietystä historiallisesta pelistä tai kahvilasta.",
+      "noVisibleTextOrWatermark": true,
+      "noIdentifiablePeople": true,
+      "photographicStyleObserved": true,
+      "sameSourceAndLightInBothSizes": true,
+      "technicalChecks": [
+        {
+          "taskNumber": 893,
+          "file": "shakki-foto-mini.jpg",
+          "sha256": "08bc0d6440ca68b857377b0dd254d57ce42a7179f6d233c2e1c617f41446f46f",
+          "dimensionsExact": true,
+          "opaqueRGBJPEG": true,
+          "sRGBEmbedded": true,
+          "metadataDescriptionAndSourcePresent": true,
+          "nativeCropBox": [
+            366,
+            0,
+            1306,
+            940
+          ]
+        },
+        {
+          "taskNumber": 894,
+          "file": "shakki-foto-iso.jpg",
+          "sha256": "285679360d4a950bdb16482028f6472fa61d12823dcb8cfbca65893ce43c95ba",
+          "dimensionsExact": true,
+          "opaqueRGBJPEG": true,
+          "sRGBEmbedded": true,
+          "metadataDescriptionAndSourcePresent": true,
+          "nativeCropBox": [
+            0,
+            0,
+            1672,
+            940
+          ]
+        }
+      ],
+      "nativeUnmodified": true
+    }
+  ],
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

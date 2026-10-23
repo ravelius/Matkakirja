@@ -1,0 +1,20 @@
+[
+  {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-katalogikuvat-20261008/production/lontoo/lontoo.jpg",
+    "sha256": "f048e6138c7c1e154df11adce39f6fc3fbe5d7180f9869697c571f0c2d5ac22b",
+    "role": "natural architecture photography style; dynasties generation reference",
+    "personallyViewed": true
+  },
+  {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/mylly-iso-v2/mylly-foto-iso-v2.jpg",
+    "sha256": "507749da5712cf87ca472f32148d71086d9c14347a3b4ce6fb3f8ac9f84d19e6",
+    "role": "natural wood and tabletop photographic style; chess generation reference",
+    "personallyViewed": true
+  },
+  {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/varustekuvat-foto-laajennus-20261009/production/opas-mini/opas-foto-mini.jpg",
+    "sha256": "38d971578a97a62053fa16cc2f74a92c7c8711e53c0a6ac41f91e5c7285554bf",
+    "role": "existing circular-safe catalogue composition inspected; not used as generation input",
+    "personallyViewed": true
+  }
+]
