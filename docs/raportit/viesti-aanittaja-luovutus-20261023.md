@@ -11,3 +11,7 @@
 ## Alkulento (PT 16.02, juoksupeli/Kielletty kaupunki, juna 210) – viety
 Paketti `_valmiit/juoksupeli-alkulento-v1-vienti-20261023` → ämpäri `aanet/juoksupeli-alkulento-v1/`: `suhahdus.mp3` (Sonniss Whoosh_Hydraulic bomb-01, −29 LUFS, 3 tekstiriviä), `tikitys.mp3` + `tikitys-viim.mp3` (Sonniss CLOCKTick single, viimeinen +2 puolisävelaskelta; numerot 3-2-1), `lahto-gong.mp3` (Soundly Large Gong Soft Mallet Medium SND144817, alku 4,5 s + 2 s häivytys; **poikkeaa "ei leikkausta" -tavasta**, koska alkup. 110 s: yksi isku + pitkä sointu; PT hyväksyy tai pyytää uuden haun). Ääniportti läpi, sokko-Gemini hyväksyi. Työt `proto-3d/_tyo/alkulento-aanet-20261023/`.
 Viestit NUI:lle (local_2cd29bc1) ja PT:lle eivät menneet läpi (20 s) → tämä rivi on posti; kytkentäpolut yllä.
+
+## Alkulento v2 (omistaja 16.17: puukalikat 3-2-1 + gongin kumahdus lähtöön) – osittain
+- **Gong → viety:** `aanet/juoksupeli-alkulento-v2/gong.mp3` (Soundly Kung Fu Gong Hit 01 SND44411, alku 6 s + 3 s häivytys, −20,5 LUFS; sokko-Gemini OK). Korvaa v1:n `lahto-gong.mp3`. Samalla `suhahdus.mp3` (sama kuin v1).
+- **Puukalikka (3-2-1) → EI löytynyt:** 3 Soundly-kierrosta + Sonniss; valmiit puuklaksahdukset olivat sarjoja/korkeita soivia ("sähköinen/lasi") eikä Gemini hyväksynyt (myös kootut parit). Väliaikaisesti jää v1:n `tikitys.mp3` / `tikitys-viim.mp3`. Jatkoehdotus: toinen Soundly-lähtökohta (esim. "temple block", "bangzi") tai PT päättää tikityksestä.
