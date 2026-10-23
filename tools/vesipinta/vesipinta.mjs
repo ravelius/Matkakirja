@@ -145,6 +145,52 @@ const esaK = (lon, lat) => { for (const t of esa) { const c = Math.floor((lon - 
   loki('ESA-täydennys', kompLkm, 'aluetta', (lisatty * C * C / 1e6).toFixed(3), 'km² (ehdokkaita', (n * C * C / 1e6).toFixed(2), 'km²)');
 }
 
+// --- pienet erilliset vedet: merkintä (--pienet-pois <ha> [--pienet-pituus <m> 200] [--pienet-silta <m> 15]; LS2 9.10.: Tuileries'n altaat leijuvina, siirtyneinä kiekkoina) ---
+// Komponentti = vesiruudut (peitto ≥ 8), jotka yhdistyvät yli ≤ silta-m:n välien (sulkuportit, kävelysillat). Lasketaan ennen katettujen vesien poistoa,
+// joten järven puiden alle jäävät reunat eivät pilko sitä. Komponentin ruudut poistetaan, jos ala < ha ja pidempi sivu < pituus ja komponentti ei:
+// sisällä meri- tai jokitasoa, koske ruudukon reunaan eikä osu OSM-vesiväylälinjaan (river, canal; Geofabrik gis_osm_waterways_free_1).
+let PIENET = null, POISTA = null; const POISTETUT = [];
+if (opt('pienet-pois')) {
+  const AMAX = +opt('pienet-pois') * 1e4, LMAX = +opt('pienet-pituus', 200), RB = Math.max(1, Math.round(+opt('pienet-silta', 15) / C));
+  // vesiväylälinjat → ruutumaski
+  const vayla = new Uint8Array(W * H), wwPolku = sisaPolku && sisaPolku.replace('water_a_free', 'waterways_free');
+  if (wwPolku && fs.existsSync(wwPolku)) {
+    const fclW = lueDbfKentta(wwPolku.replace(/\.shp$/, '.dbf'), 'fclass'), OKW = new Set(['river', 'canal']);
+    const fd = fs.openSync(wwPolku, 'r'), koko = fs.fstatSync(fd).size, h = Buffer.alloc(52); let p = 100, nro = 0, nL = 0;
+    while (p < koko) { fs.readSync(fd, h, 0, 52, p); const pit = h.readInt32BE(4) * 2, tyyppi = h.readInt32LE(8); nro++;
+      if (tyyppi === 3 || tyyppi === 13) { const x0 = h.readDoubleLE(12), y0 = h.readDoubleLE(20), x1 = h.readDoubleLE(28), y1 = h.readDoubleLE(36);
+        if (x1 >= bbLon[0] && x0 <= bbLon[1] && y1 >= bbLat[0] && y0 <= bbLat[1] && OKW.has(fclW(nro - 1))) { nL++;
+          const b = Buffer.alloc(pit); fs.readSync(fd, b, 0, pit, p + 8); const np = b.readInt32LE(36), nP = b.readInt32LE(40), osat = [], o = 44 + 4 * np;
+          for (let k = 0; k < np; k++) osat.push(b.readInt32LE(44 + 4 * k)); osat.push(nP);
+          for (let k = 0; k < np; k++) for (let q = osat[k]; q + 1 < osat[k + 1]; q++) {
+            const ea = eLon(b.readDoubleLE(o + q * 16)), na = nLat(b.readDoubleLE(o + q * 16 + 8)), eb = eLon(b.readDoubleLE(o + q * 16 + 16)), nb = nLat(b.readDoubleLE(o + q * 16 + 24));
+            const n = Math.max(1, Math.ceil(Math.hypot(eb - ea, nb - na) / (C / 2)));
+            for (let t = 0; t <= n; t++) { const ii = Math.floor((ea + (eb - ea) * t / n - X0) / C), jj = Math.floor((na + (nb - na) * t / n - Y0) / C); if (ii >= 0 && jj >= 0 && ii < W && jj < H) vayla[jj * W + ii] = 1; } } } }
+      p += 8 + pit; }
+    fs.closeSync(fd); loki('vesiväyliä (river, canal)', nL);
+  } else loki('ei vesiväyläshp:tä', wwPolku);
+  const nahty = new Uint8Array(W * H), pino = new Int32Array(W * H), komp = [], tSet = new Set(), PIDETYT = new Set(); POISTA = new Uint8Array(W * H);
+  let pois = 0, poisAla = 0, pidetty = 0;
+  for (let s0 = 0; s0 < W * H; s0++) {
+    if (nahty[s0] || peitto[s0] < 8) continue; let top = 0; pino[top++] = s0; nahty[s0] = 1; komp.length = 0; tSet.clear();
+    let i0 = W, i1 = -1, j0 = H, j1 = -1, suoja = false;
+    while (top) { const c = pino[--top]; komp.push(c); const i = c % W, j = (c / W) | 0; i0 = Math.min(i0, i); i1 = Math.max(i1, i); j0 = Math.min(j0, j); j1 = Math.max(j1, j);
+      const t = taso[c]; if (t >= 0) tSet.add(t);
+      if (t >= 0 && (tasot[t].lahde === 'meri' || tasot[t].lahde === 'osm-river' || tasot[t].lahde === 'osm-river-shp' || tasot[t].lahde === 'osm-relaatio') || vayla[c]) suoja = true;
+      if (i === 0 || j === 0 || i === W - 1 || j === H - 1) suoja = true;
+      for (let dj = -RB; dj <= RB; dj++) for (let di = -RB; di <= RB; di++) { const ii = i + di, jj = j + dj; if (ii < 0 || jj < 0 || ii >= W || jj >= H) continue; const q = jj * W + ii; if (!nahty[q] && peitto[q] >= 8) { nahty[q] = 1; pino[top++] = q; } } }
+    const ala = komp.length * C * C, pit = Math.max(i1 - i0 + 1, j1 - j0 + 1) * C;
+    if (suoja || ala >= AMAX || pit >= LMAX) { pidetty++; for (const t of tSet) PIDETYT.add(t); continue; }
+    for (const c of komp) POISTA[c] = 1; pois++; poisAla += ala;
+    let si = 0, sj = 0; for (const c of komp) { si += c % W; sj += (c / W) | 0; } const la = latN(Y0 + (sj / komp.length + 0.5) * C);
+    POISTETUT.push({ lat: +la.toFixed(6), lon: +lonE(X0 + (si / komp.length + 0.5) * C, la).toFixed(6), ala_m2: ala, pituus_m: pit, nimet: [...tSet].map((t) => tasot[t].nimi || tasot[t].lahde) });
+  }
+  // poisto ruuduittain: sama taso (Mälaren) voi olla sekä pidetyssä että poistetussa komponentissa
+  fs.mkdirSync(ULOS, { recursive: true }); fs.writeFileSync(path.join(ULOS, `vesi-${NIMI}-poistetut.json`), JSON.stringify(POISTETUT));
+  loki('pieniä erillisiä vesiä merkitty', pois, '(' + (poisAla / 1e4).toFixed(2) + ' ha), komponentteja jäi', pidetty);
+  PIENET = { pois_ha_alle: +opt('pienet-pois'), pituus_alle_m: LMAX, silta_m: RB * C, poistettu: pois, poistettu_ha: +(poisAla / 1e4).toFixed(2), suojaus: 'meri, joki, OSM-vesiväylä (river, canal), ruudukon reuna' };
+}
+
 // --- geoidi EGM2008 (N) ---
 const gim = await (await fromFile(opt('geoidi'))).getImage(), [gx0, gy0, gx1, gy1] = gim.getBoundingBox(), gw = gim.getWidth(), gh = gim.getHeight(), grx = (gx1 - gx0) / gw, gry = (gy1 - gy0) / gh;
 const gc0 = Math.floor((bbLon[0] - gx0) / grx) - 2, gc1 = Math.ceil((bbLon[1] - gx0) / grx) + 2, gr0 = Math.floor((gy1 - bbLat[1]) / gry) - 2, gr1 = Math.ceil((gy1 - bbLat[0]) / gry) + 2;
@@ -243,6 +289,16 @@ const jokiTaso = (e, n, t) => { // lohkokeskusten bilineaarinen interpolointi, p
   for (const [a2, b3, w] of [[x0, y0, (1 - (x - x0)) * (1 - (y - y0))], [x0 + 1, y0, (x - x0) * (1 - (y - y0))], [x0, y0 + 1, (1 - (x - x0)) * (y - y0)], [x0 + 1, y0 + 1, (x - x0) * (y - y0)]]) {
     if (a2 < 0 || b3 < 0 || a2 >= LW || b3 >= LW) continue; const v = lohkoTaso[b3 * LW + a2]; if (Number.isNaN(v) || w <= 0) continue; s2 += v * w; w2 += w; }
   return w2 > 0 ? s2 / w2 : tasot[t].H; };
+// --- pienet erilliset vedet pois, soveltaminen (ruudut merkittiin ennen katettujen poistoa, ks. POISTA) ---
+if (POISTA) {
+  let pois = 0;
+  for (let c = 0; c < W * H; c++) if (POISTA[c] && peitto[c] > 0) { peitto[c] = 0; taso[c] = -1; pois++; }
+  // reunaruudut (peitto 1–7) ilman vesinaapuria (≥ 8) → nolla, ettei marching squares tee suikaleita
+  for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) { const c = j * W + i; if (peitto[c] === 0 || peitto[c] >= 8) continue; let nv = false;
+    for (let dj = -1; dj <= 1 && !nv; dj++) for (let di = -1; di <= 1; di++) { const ii = i + di, jj = j + dj; if (ii >= 0 && jj >= 0 && ii < W && jj < H && peitto[jj * W + ii] >= 8) { nv = true; break; } }
+    if (!nv) { peitto[c] = 0; taso[c] = -1; } }
+  loki('pieniä erillisiä vesiä pois (ruutuja)', pois);
+}
 // --- kulmat: peitto 0–1 (4 ruudun keskiarvo), etäisyys (4 ruudun keskiarvo) ---
 const CW = W + 1;
 const kulmaP = (i, j) => { let s = 0, n = 0; for (const [a, b] of [[i - 1, j - 1], [i, j - 1], [i - 1, j], [i, j]]) { if (a < 0 || b < 0 || a >= W || b >= H) continue; s += peitto[b * W + a]; n++; } return n ? s / (16 * n) : 0; };
@@ -338,6 +394,7 @@ fs.writeFileSync(path.join(ULOS, `vesi-${NIMI}.json`), JSON.stringify({
   ranta: 'alfa = smoothstep(0, 3, d) pehmentää rannan; d = 0 rantaviivalla',
   tasot: tasot.map((t, i) => ({ id: i, lahde: t.lahde, ...(t.nimi ? { nimi: t.nimi } : {}), ...(t.geoidi2 ? { H_kansallinen_m: t.H, geoidi: 'kansallinen (--geoidi2)' } : { H_egm2008_m: t.H }), naytteita: t.n })).filter((t) => t.id === 0 || t.naytteita > 0 || t.lahde === 'esa'),
   geoidi_keskusta_m: +geoidi(lon0, lat0).toFixed(3),
+  ...(PIENET ? { pienet_erilliset_vedet_pois: PIENET } : {}),
   tasolahde: tasoNimi, tasopersentiili: tasoP, jokitaso: { lohko_m: LB, lohkoja: Array.from(lohkoTaso).filter((v) => !Number.isNaN(v)).length, selitys: 'joet (OSM river, ESA) liukuvalla tasolla: 10 %:n persentiili 1 km:n lohkoissa, tasoitus 3 × 3, bilineaarinen' },
   krediitti: 'Vesi: © OpenStreetMap contributors (ODbL), ESA WorldCover 2021 (CC BY 4.0)',
   lahteet: ['OSM water-polygons-split-4326 (osmdata.openstreetmap.de)', 'Geofabrik gis_osm_water_a_free_1', 'ESA WorldCover 2021 v200', 'Copernicus GLO-30 (vesitasot)', 'NGA EGM2008 2,5′ (PROJ us_nga_egm08_25)'],
