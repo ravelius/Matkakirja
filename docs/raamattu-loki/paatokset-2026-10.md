@@ -2356,3 +2356,7 @@ Omistaja (KK:n välittämät): 13.15 käynnistyksen latauksen aikana näkyvä Ma
 tekstit Kielletty kaupunki / Beijing / 1914 rivi kerrallaan (vuosi: juoksupelin Puyi = lapsi noin 1914, päätös 16.10.); energiamittari vasta 3-2-1:n jälkeen. 13.39 JULKAISUPYYNTÖ junalle 210
 grafiikkaparannusten kanssa; grafiikan kuvat ja lennon video omistajalle ennen TF:ää. 13.5x rakettivideoon kaikki viisi parannusta, alku hämärässä, vertailu oikeisiin laukaisukuviin. 14.59 UI-POHJAT:
 uusi iso näyttötyyli EB Garamond SemiBoldilla juoksupelin alkulennon teksteille (2 ×) ja lähtölaskennalle (3 ×).
+
+## PAATOKSET 23.10.2026 klo 17.46: JUNA 210 ODOTTAA SÄVYJÄ (23.10.2026 klo 17.47)
+
+Omistaja (KK:n kortti, kuva pari-03-aukio.png): Julkaistaanko testiversio tasaisemmilla laatoilla? -> Odota sävyjä. Juna 210 TF:ään vasta, kun aukio näyttää hyväksytyltä kierrokselta 2 (laattakohtaiset sävyt, tummat saumat, kattojen tiilirivit) ja pyörii iPadilla nykimättä. Versiota tiilet 0 ei julkaista. Välitetty Julkaisijalle ja Valosepälle 17.4x.
