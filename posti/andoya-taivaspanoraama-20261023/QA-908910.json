@@ -1,0 +1,76 @@
+{
+  "at": "2026-10-23T17:31:40.136256+00:00",
+  "result": "TECHNICAL_PASS_CONTENT_REVIEW_REQUIRED",
+  "dimensionAndHashChecks": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/taivas-8192x4096.png",
+      "dimensionsVerified": true,
+      "pngDecodeVerified": true,
+      "sha256Verified": true,
+      "upscaled": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/taivas-4096x2048.png",
+      "dimensionsVerified": true,
+      "pngDecodeVerified": true,
+      "sha256Verified": true,
+      "upscaled": true
+    }
+  ],
+  "nativePreserved": true,
+  "sourceNativeResolution": [
+    1774,
+    887
+  ],
+  "callsIssued": 1,
+  "callsCompleted": 1,
+  "automaticExtraRetries": 0,
+  "noCreativeContentEdits": true,
+  "visualReview": {
+    "nativeAndExportsPersonallyViewed": true,
+    "wrapAndSixRectilinearDirectionsViewed": true,
+    "visibleHardWrapSeam": false,
+    "lowerHemisphereHasNoLandOrSeaOrObjects": true,
+    "noMoonOrText": true,
+    "noVisibleSunDisk": true,
+    "zenithHasNoClouds": true,
+    "rectilinearZenithShowsSomeRadiallyStretchedStarPoints": true,
+    "naturalPinpointStarsEverywhereRequirementFullyMet": false,
+    "cloudsStrictlyUnder15Deg": false,
+    "highestFaintCloudWispEstimateDeg": 20,
+    "milkyWayMoreVisibleThanVeryFaintRequest": true
+  },
+  "receiverReviewRequiredForDeviations": [
+    "A few faint high ends of near-horizon wisps visually reach about20degrees elevation; the order suggested below about15degrees.",
+    "Milky Way is visible more clearly than an extremely faint impression, though no colorful nebulae are present.",
+    "Rectilinear zenith view shows some radially stretched star points; strict pinpoint-star requirement is not fully satisfied. Receiver review is required for the rocket upward-camera view.",
+    "Solar elevation cannot be measured from an image without a visible solar disk; -4.8deg is the source target, not a verified image measurement.",
+    "8192x4096 and4096x2048 are upscaled exports from1774x887, not native high-resolution detail."
+  ],
+  "wrapPixelMetric": {
+    "yRange": [
+      0,
+      2048
+    ],
+    "seamMeanAbsRGBDifference": 1.3489583730697632,
+    "seamMaximumChannelDifference": 19.0,
+    "seamP95ChannelDifference": 4.0,
+    "medianOf64InternalAdjacentStepMAE": 0.5374348759651184,
+    "maxOf64InternalAdjacentStepMAE": 1.12841796875,
+    "seamToMedianInternalStepRatio": 2.509994109792971,
+    "metricOnlyNotVisualOrRenderCertification": true
+  },
+  "noClaimOfPixelPerfectWrap": true,
+  "projectionIsSoftwarePreviewNotGameRuntime": true,
+  "solarElevationImageMeasurement": null,
+  "solarElevationSourceTarget": -4.8,
+  "warmGlowCenterMappedAzimuthDeg": 249.6,
+  "nativeResolutionNot8192": true,
+  "strictSourceAppearanceFullySatisfied": false,
+  "readyForReceiverReview": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "r2Uploaded": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

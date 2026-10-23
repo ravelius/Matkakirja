@@ -1,0 +1,116 @@
+{
+  "at": "2026-10-23T17:33:24.241611+00:00",
+  "family": "andoya-night-sky-908910-20261023",
+  "taskNumbers": [
+    908,
+    909,
+    910
+  ],
+  "callsIssued": 1,
+  "nativeImageCount": 1,
+  "exportPNGCount": 2,
+  "previewCount": 1,
+  "technicalQaPassed": true,
+  "appearanceDecisionPending": true,
+  "strictSourceAppearanceFullySatisfied": false,
+  "files": [
+    {
+      "filename": "taivas-8192x4096.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/taivas-8192x4096.png",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/taivas-8192x4096.png",
+      "bytes": 10084063,
+      "sha256": "ea188ff50eb0eaf4cf6d5e170cb7c4b8486cd7f2bf7d47a9b186e51806f56dc9"
+    },
+    {
+      "filename": "taivas-4096x2048.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/taivas-4096x2048.png",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/taivas-4096x2048.png",
+      "bytes": 4429502,
+      "sha256": "d4ac4e4be860aa7c26ff0cd8e3cb88fa0ce296ef84624f4d021162c6d93b5010"
+    },
+    {
+      "filename": "esikatselu.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/esikatselu.png",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/esikatselu.png",
+      "bytes": 1699414,
+      "sha256": "9b31ff84025ecc8eb15522f4d546a704a587155815dad2593adc0998d83618a1"
+    },
+    {
+      "filename": "metadata.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/metadata.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/metadata.json",
+      "bytes": 7349,
+      "sha256": "721a0fd90a187d0183e9f5428767e9fcb9ccaa3b32167f37f3549a877cb22503"
+    },
+    {
+      "filename": "codex-valoseppa-andoya-taivas-toimitus-20261023.md",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/handoff/codex-valoseppa-andoya-taivas-toimitus-20261023.md",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/codex-valoseppa-andoya-taivas-toimitus-20261023.md",
+      "bytes": 4083,
+      "sha256": "ffbc42d6ac77c85f97af87d53796f5968ac6375d0d3a257b1885482b9cb1ad69"
+    },
+    {
+      "filename": "SOURCE-PIN.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/SOURCE-PIN.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/SOURCE-PIN.json",
+      "bytes": 469,
+      "sha256": "6ddcef040cefc726d36c14a5a274d4814aa834b1f695f593b6d5a3c90a56c59f"
+    },
+    {
+      "filename": "REFERENCES.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/REFERENCES.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/REFERENCES.json",
+      "bytes": 1932,
+      "sha256": "01a451f81f872c0ece332847ee5210b40698e08d331db563275525f0943a223f"
+    },
+    {
+      "filename": "PROMPT.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/PROMPT.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/PROMPT.json",
+      "bytes": 3327,
+      "sha256": "2ebfe8383be9fc1a8eb9d41c1c94cad7fc67bfc7790aed6e1e956e867390928b"
+    },
+    {
+      "filename": "NATIVE-METADATA.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/NATIVE-METADATA.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/NATIVE-METADATA.json",
+      "bytes": 645,
+      "sha256": "6b7f1536636099c217d1cc791ad05228c80aff1935ccaf4491611bf787176c58"
+    },
+    {
+      "filename": "QA-908910.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/QA-908910.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/QA-908910.json",
+      "bytes": 3054,
+      "sha256": "15a0cdc92f1ca0a0998ef3863ce116068f1e60910d6955274569c220e75558da"
+    },
+    {
+      "filename": "direction-measurement.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/direction-measurement.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/direction-measurement.json",
+      "bytes": 758,
+      "sha256": "d2e2b4797507ed99d9b69d6be0dcb830f387aab55f03c5e5178eb6e5691973bd"
+    },
+    {
+      "filename": "agent-andoya-mobile-final-sphere-projections.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/agent-andoya-mobile-final-sphere-projections.png",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/agent-andoya-mobile-final-sphere-projections.png",
+      "bytes": 1292552,
+      "sha256": "3b8482111ab5e75730fe93b4cf2612da54364cf61cc6990edda00a595d4fe35e"
+    },
+    {
+      "filename": "agent-andoya-mobile-final-wrap-strip.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/agent-andoya-mobile-final-wrap-strip.png",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/agent-andoya-mobile-final-wrap-strip.png",
+      "bytes": 989120,
+      "sha256": "ebad2103f77c8b3448c1afed11a98e194173a831940f7f6e5045a0600553df12"
+    },
+    {
+      "filename": "agent-andoya-mobile-final-metrics.json",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/agent-andoya-mobile-final-metrics.json",
+      "mailboxPath": "posti/andoya-taivaspanoraama-20261023/agent-andoya-mobile-final-metrics.json",
+      "bytes": 4064,
+      "sha256": "447959454e1740e904693a25a6dde034e4bd53c039e6b3927f05827374e88007"
+    }
+  ]
+}

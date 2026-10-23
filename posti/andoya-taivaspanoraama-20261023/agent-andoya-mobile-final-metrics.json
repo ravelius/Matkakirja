@@ -1,0 +1,128 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/taivas-4096x2048.png",
+  "sourceSHA256": "d4ac4e4be860aa7c26ff0cd8e3cb88fa0ce296ef84624f4d021162c6d93b5010",
+  "bytes": 4429502,
+  "dimensions": [
+    4096,
+    2048
+  ],
+  "mode": "RGB",
+  "format": "PNG",
+  "alphaExtrema": [
+    255,
+    255
+  ],
+  "aspectRatio": 2.0,
+  "relativeErrorFrom2to1": 0.0,
+  "checkedAt": "2026-10-23T17:30:55.618223+00:00",
+  "convention": {
+    "horizonY": 1024.0,
+    "x0Azimuth": 76.47823617139926,
+    "quarterWidthAzimuth": 166.47823617139926,
+    "halfWidthAzimuth": 256.47823617139926,
+    "threeQuarterWidthAzimuth": 346.47823617139926,
+    "zenithY": 0,
+    "nadirY": 2048
+  },
+  "bands": {
+    "all": {
+      "yRange": [
+        0,
+        2048
+      ],
+      "seamMeanAbsRGBDifference": 1.3489583730697632,
+      "seamMaximumChannelDifference": 19.0,
+      "seamP95ChannelDifference": 4.0,
+      "medianOf64InternalAdjacentStepMAE": 0.5374348759651184,
+      "maxOf64InternalAdjacentStepMAE": 1.12841796875,
+      "seamToMedianInternalStepRatio": 2.509994109792971,
+      "metricOnlyNotVisualOrRenderCertification": true
+    },
+    "sky": {
+      "yRange": [
+        0,
+        819
+      ],
+      "seamMeanAbsRGBDifference": 1.5677655935287476,
+      "seamMaximumChannelDifference": 19.0,
+      "seamP95ChannelDifference": 5.0,
+      "medianOf64InternalAdjacentStepMAE": 0.8821733891963959,
+      "maxOf64InternalAdjacentStepMAE": 1.9023199081420898,
+      "seamToMedianInternalStepRatio": 1.777162644813944,
+      "metricOnlyNotVisualOrRenderCertification": true
+    },
+    "horizon": {
+      "yRange": [
+        819,
+        1269
+      ],
+      "seamMeanAbsRGBDifference": 1.8103703260421753,
+      "seamMaximumChannelDifference": 10.0,
+      "seamP95ChannelDifference": 5.0,
+      "medianOf64InternalAdjacentStepMAE": 0.3800000101327896,
+      "maxOf64InternalAdjacentStepMAE": 1.0348148345947266,
+      "seamToMedianInternalStepRatio": 4.7641323099163815,
+      "metricOnlyNotVisualOrRenderCertification": true
+    },
+    "below": {
+      "yRange": [
+        1269,
+        2048
+      ],
+      "seamMeanAbsRGBDifference": 0.8523748517036438,
+      "seamMaximumChannelDifference": 3.0,
+      "seamP95ChannelDifference": 2.0,
+      "medianOf64InternalAdjacentStepMAE": 0.1863500252366066,
+      "maxOf64InternalAdjacentStepMAE": 0.6730851531028748,
+      "seamToMedianInternalStepRatio": 4.574052783847991,
+      "metricOnlyNotVisualOrRenderCertification": true
+    }
+  },
+  "polarRows": {
+    "zenithFirstRow": {
+      "y": 0,
+      "rgbStdAcrossLongitude": [
+        1.2021723985671997,
+        1.5690652132034302,
+        2.5447559356689453
+      ],
+      "rgbChannelRangeAcrossLongitude": [
+        10.0,
+        11.0,
+        14.0
+      ]
+    },
+    "nadirLastRow": {
+      "y": 2047,
+      "rgbStdAcrossLongitude": [
+        0.6240912079811096,
+        0.7347924113273621,
+        0.9239288568496704
+      ],
+      "rgbChannelRangeAcrossLongitude": [
+        4.0,
+        4.0,
+        5.0
+      ]
+    }
+  },
+  "sourceChanged": false,
+  "actualSunCenter": "not auto-certified; requires personal visual identification",
+  "renderTestPerformed": false,
+  "seamlessCertified": false,
+  "diagnosticOnly": true,
+  "outputs": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/agent-andoya-mobile-final-sphere-projections.png",
+      "sha256": "3b8482111ab5e75730fe93b4cf2612da54364cf61cc6990edda00a595d4fe35e"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/agent-andoya-mobile-final-wrap-strip.png",
+      "sha256": "ebad2103f77c8b3448c1afed11a98e194173a831940f7f6e5045a0600553df12"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/agent-andoya-mobile-final-seam-native-strips.png",
+      "sha256": "24cddd18ef8fab5a0537fb9c7284044ce5efb7570f4b9e4758b3b0a6c5885ed2"
+    }
+  ]
+}

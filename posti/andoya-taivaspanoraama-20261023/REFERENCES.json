@@ -1,0 +1,45 @@
+{
+  "styleReferences": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/delivery-packet/havainne-r3.png",
+      "sha256": "07d61e228d799a58b592dfd71f557b1fbf77da4704a6f4bf5ec5500bd457a07b",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "role": "night sky tone reference only; ignore foreground and rocket",
+      "sourceCaveats": "Laaja takaa-ajokamera ja pieni raketti säilyvät. Maiseman yleisvalo, tähtien yhtäaikainen näkyvyys ja pitkän savuvanan valaistus ovat elokuvamaisia, eivät varmennettua fysiikkaa.",
+      "personallyViewed": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/delivery-packet/havainne-r4.png",
+      "sha256": "178f8dbb43d6968cbdf0e2ffa5718c7eaad152816882961b75be77a555e23488",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "role": "night sky tone reference only; ignore foreground and rocket",
+      "sourceCaveats": "Pitkä liekki ja savuvana ovat pääosassa; raketti on hieman suurempi/ylempänä kuin lähteessä. Etäisen savun laaja oranssi hehku on valotusvaraus.",
+      "personallyViewed": true
+    }
+  ],
+  "projectionReferenceMetadata": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/v2/metadata.json",
+  "projectionReferenceSHA256": "0433c8185f4d26d0ce8ef30c8e80e460f46e76d154be2c2f9207bc3143fb65c0",
+  "referenceSkySHA256": "a1967021cb6059a133df1ae61fdfa9e1cc2fbf077bfacb89559dbb85ac2eb02f",
+  "referenceSkyNativeDimensions": [
+    1774,
+    887
+  ],
+  "referenceSkyUpscaled": true,
+  "projectionUsed": {
+    "azimuthFormula": "(78+360*u)mod360",
+    "elevationFormula": "90-180*v",
+    "northU": 0.7833333333333333,
+    "horizonFraction": 0.5,
+    "axes": {
+      "+Y": "up",
+      "+Z": "north",
+      "+X": "east"
+    }
+  }
+}

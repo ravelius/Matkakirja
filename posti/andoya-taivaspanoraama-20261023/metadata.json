@@ -1,0 +1,183 @@
+{
+  "at": "2026-10-23T17:30:19.391562+00:00",
+  "family": "andoya-night-sky-908910-20261023",
+  "taskNumbers": [
+    908,
+    909,
+    910
+  ],
+  "status": "exports-prepared-awaiting-recipient-review",
+  "source": {
+    "path": "posti/valoseppa-codex-andoya-taivaspanoraama-pyynto-20261023.md",
+    "commit": "2f6f79e3252ab5db311d75735728baee57b7979f",
+    "blob": "bdab94ed119e9dd033e8acbe086f5f58f0468e74",
+    "sha256": "c67328f7654e94c8a3630feefb91796b8e3a9b80c89ff6927fbb34df4386ec53",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/sources/valoseppa-codex-andoya-taivaspanoraama-pyynto-20261023.md",
+    "readInFull": true
+  },
+  "native": {
+    "at": "2026-10-23T17:26:48.703162+00:00",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/native/andoya-night-sky-attempt001.png",
+    "generatedSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a115c5ae-79d7-4e41-a189-bd3ed6f9cb83.png",
+    "sha256": "9b31ff84025ecc8eb15522f4d546a704a587155815dad2593adc0998d83618a1",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "mode": "RGB",
+    "bytes": 1699414,
+    "nativeBytesUnchanged": true,
+    "callsIssued": 1,
+    "callsCompleted": 1
+  },
+  "exports": [
+    {
+      "filename": "taivas-8192x4096.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/taivas-8192x4096.png",
+      "dimensions": [
+        8192,
+        4096
+      ],
+      "mode": "RGB",
+      "bytes": 10084063,
+      "sha256": "ea188ff50eb0eaf4cf6d5e170cb7c4b8486cd7f2bf7d47a9b186e51806f56dc9",
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "upscaled": true,
+      "scaleFactor": 4.617812852311161,
+      "method": "Whole-frame Lanczos resize directly from unchanged native, no content edit or seam retouch",
+      "horizonY": 2048.0,
+      "horizonYFraction": 0.5,
+      "northX": 6451.695248010826
+    },
+    {
+      "filename": "taivas-4096x2048.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/taivas-4096x2048.png",
+      "dimensions": [
+        4096,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 4429502,
+      "sha256": "d4ac4e4be860aa7c26ff0cd8e3cb88fa0ce296ef84624f4d021162c6d93b5010",
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "upscaled": true,
+      "scaleFactor": 2.3089064261555805,
+      "method": "Whole-frame Lanczos resize directly from unchanged native, no content edit or seam retouch",
+      "horizonY": 1024.0,
+      "horizonYFraction": 0.5,
+      "northX": 3225.847624005413
+    }
+  ],
+  "preview": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/esikatselu.png",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "nativeByteExact": true,
+    "sha256": "9b31ff84025ecc8eb15522f4d546a704a587155815dad2593adc0998d83618a1"
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "callsFailed": 0,
+    "additionalRetries": 0,
+    "nativeIsNot8192Or4096": true,
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/PROMPT.json"
+  },
+  "projection": {
+    "type": "full-sphere equirectangular 2:1",
+    "colorSpace": "sRGB LDR, not an HDR lighting measurement",
+    "northU": 0.7875604550794465,
+    "leftAndRightAzimuthDeg": 76.47823617139926,
+    "azimuthFormula": "(76.478236171399+360*u)mod360",
+    "elevationFormula": "90-180*v",
+    "horizonYFraction": 0.5,
+    "horizonY8192x4096": 2048,
+    "horizonY4096x2048": 1024,
+    "azimuthIncreasing": "clockwise from north toward east",
+    "worldAxes": {
+      "up": "+Y",
+      "north": "+Z",
+      "east": "+X"
+    },
+    "originMatchesJuoksupeliV2": false,
+    "axesMatchJuoksupeliV2": true,
+    "originDifferenceReason": "Each sky uses its own measured content origin. This origin places the warm afterglow center at requested249.6deg. Receiver must use this northU, not the earlier daytime sky northU.",
+    "gameMappingVerified": false
+  },
+  "sun": {
+    "requestedAzimuthDeg": 249.6,
+    "requestedElevationDeg": -4.8,
+    "artDirection": "below-horizon civil twilight",
+    "visibleSolarDisk": false,
+    "actualDiskAzimuthMeasuredDeg": null,
+    "actualDiskElevationMeasuredDeg": null,
+    "realizedGlowCenterAzimuthDeg": 249.6,
+    "glowCenterNativeU": 0.4808937884127798,
+    "sourceElevationIsArtTargetNotImageMeasurement": true,
+    "renderLightDirectionToSunFromSourceTarget": [
+      -0.9339948096318388,
+      -0.08367784333231548,
+      -0.34734955609016943
+    ],
+    "incomingLightRayDirectionIsNegative": true,
+    "measurement": {
+      "method": "Circular centroid of positive warm chroma in native rows445/1000..505/1000 of height, weighting max(R-B-10,0)*max(R-G,0). Measures color emphasis, not solar disk.",
+      "nativeRowRange": [
+        394,
+        447
+      ],
+      "nativeGlowCenterU": 0.4808937884127798,
+      "nativeGlowCenterX": 853.1055806442714,
+      "coordinateOriginChosenToPlaceGlowAtAzimuthDeg": 249.6,
+      "chosenOriginAzimuthDeg": 76.47823617139926,
+      "northU": 0.7875604550794465,
+      "sunElevationMeasuredFromImage": null,
+      "sunInvisibleBelowHorizon": true,
+      "sourceRequestedSolarAzimuthDeg": 249.6,
+      "sourceRequestedSolarElevationDeg": -4.8,
+      "sourceDateTimeUTC": "2026-10-23T15:30:00Z",
+      "ephemerisNotIndependentlyVerified": true,
+      "starsAreIllustrativeNotAstrometricCatalogue": true
+    }
+  },
+  "location": {
+    "name": "Andoya Space, Oksebasen",
+    "latitudeDeg": 69.29,
+    "longitudeDeg": 16.02,
+    "sourceProvided": true
+  },
+  "qa": {
+    "technicalProjectionAndExportChecks": "PASS",
+    "nativeBytesUnchanged": true,
+    "contentEdits": false,
+    "fullFrameResizeOnly": true,
+    "knownCaveats": [
+      "A few faint high ends of near-horizon wisps visually reach about20degrees elevation; the order suggested below about15degrees.",
+      "Milky Way is visible more clearly than an extremely faint impression, though no colorful nebulae are present.",
+      "Rectilinear zenith view shows some radially stretched star points; strict pinpoint-star requirement is not fully satisfied. Receiver review is required for the rocket upward-camera view.",
+      "Solar elevation cannot be measured from an image without a visible solar disk; -4.8deg is the source target, not a verified image measurement.",
+      "8192x4096 and4096x2048 are upscaled exports from1774x887, not native high-resolution detail."
+    ],
+    "appearanceReview": "RECEIVER_REVIEW_REQUIRED",
+    "strictSourceAppearanceFullySatisfied": false,
+    "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/andoya-taivaspanoraama-20261023/qa/QA-908910.json",
+    "wrapPixelMAE255": 1.3489583730697632,
+    "visibleHardWrapSeam": false,
+    "rectilinearZenithShowsSomeRadiallyStretchedStarPoints": true
+  },
+  "recipient": "Valoseppa (Claude), copy PT via mailbox",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "r2Uploaded": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

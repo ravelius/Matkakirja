@@ -1,0 +1,19 @@
+{
+  "method": "Circular centroid of positive warm chroma in native rows445/1000..505/1000 of height, weighting max(R-B-10,0)*max(R-G,0). Measures color emphasis, not solar disk.",
+  "nativeRowRange": [
+    394,
+    447
+  ],
+  "nativeGlowCenterU": 0.4808937884127798,
+  "nativeGlowCenterX": 853.1055806442714,
+  "coordinateOriginChosenToPlaceGlowAtAzimuthDeg": 249.6,
+  "chosenOriginAzimuthDeg": 76.47823617139926,
+  "northU": 0.7875604550794465,
+  "sunElevationMeasuredFromImage": null,
+  "sunInvisibleBelowHorizon": true,
+  "sourceRequestedSolarAzimuthDeg": 249.6,
+  "sourceRequestedSolarElevationDeg": -4.8,
+  "sourceDateTimeUTC": "2026-10-23T15:30:00Z",
+  "ephemerisNotIndependentlyVerified": true,
+  "starsAreIllustrativeNotAstrometricCatalogue": true
+}

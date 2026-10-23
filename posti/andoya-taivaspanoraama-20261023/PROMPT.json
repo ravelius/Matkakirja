@@ -1,0 +1,23 @@
+{
+  "mode": "built-in image_gen reference-guided generation",
+  "prompt": "Create one brand-new PHOTOREALISTIC SKY-ONLY 360-degree FULL-SPHERE EQUIRECTANGULAR ENVIRONMENT MAP, exact 2:1 aspect ratio, requested master8192x4096. This is a texture viewed from inside a sphere, not a perspective landscape photograph. No scene, terrain or objects anywhere.\nCRITICAL PROJECTION: horizontal u=0..1 wraps360 degrees seamlessly. Vertical v=0 is zenith +90degrees, v=0.5 is the flat astronomical horizon0degrees, v=1 is nadir -90degrees. The horizon is EXACTLY HALFWAY DOWN THE IMAGE. The ENTIRE LOWER HALF is smooth, featureless dark blue-gray atmospheric color, gently merging with the horizon above, without a sharp line, without clouds, stars, reflections or texture. Top edge and bottom edge have spatially uniform colors suitable for spherical poles. Left and right edges match naturally in color and cloud continuity; put no bright distinct stars or structures right on the wrap seam.\nUPPER HALF ONLY: late civil twilight approaching night at Andoya Space, Oksebasen, northern Norway69.29N16.02E. Sun is BELOW the horizon at elevation about -4.8degrees; NO visible solar disc. Center the subtle west-southwest afterglow at u=0.477 (approximately250degrees under mapping azimuth=78+360u). A narrow, restrained orange then rose-pink then muted turquoise atmospheric glow just ABOVE the horizon, concentrated around that direction and fading gradually to the sides. The opposite direction, wrapping through the left and right edges, has a dark blue Earth-shadow band. Overall a rich deep midnight-blue sky, with a nearly black-blue zenith. Realistic low-light camera exposure, not a bright sunset, not daylight.\nSparse natural pinprick stars only in the darker upper sky, varied realistic brightness, no giant starbursts. An extremely faint Milky Way impression, no spectacular nebulae, no aurora, no colorful space clouds. Above15degrees elevation the sky is CLOUDLESS. A few thin wispy cloud streaks confined to0..15degrees ABOVE the horizon (v=0.417..0.5), lit subtly along their edges on the twilight side and dark on the opposite side. No thick clouds, no high clouds.\nImages1 and2 are NIGHT-SKY TONE AND PHOTOGRAPHIC REALISM REFERENCES ONLY. Ignore all their rockets, fire, ground, mountains, water and artificial lights. The new image contains ONLY the sky and featureless dark atmospheric lower half. No mountains, ground, land, sea, water, buildings, horizon silhouette, city lights, rocket, moon, sun disc, text, compass marks, diagrams, borders, labels or grids. Smooth photographic gradients, physically understated, believable real-camera sky. This is one seamless2:1 spherical map, not a collage or cubemap cross.",
+  "referenced_image_paths": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/delivery-packet/havainne-r3.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/iss-kohtausten-havainnekuvat-20261016/delivery-packet/havainne-r4.png"
+  ],
+  "transparent_background": false,
+  "sourceNumericalCallLimit": null,
+  "plannedCalls": 1,
+  "automaticExtraAttempts": false,
+  "exportsRequested": [
+    [
+      8192,
+      4096
+    ],
+    [
+      4096,
+      2048
+    ]
+  ],
+  "nativeResolutionWillBeReportedTruthfully": true
+}
