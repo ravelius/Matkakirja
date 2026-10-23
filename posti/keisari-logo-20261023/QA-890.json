@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-23T10:26:39.747265+00:00",
+  "taskNumber": 890,
+  "status": "PASS_FOR_PT_REVIEW",
+  "logoSHA256": "ae17d6ce790211ecd235b16bc7bb40d6402837085641d5e10cce36a6bd0207f6",
+  "previewSHA256": "ba6fc110f14b425008e3d683220cb3dfb8f81416a5679ada29f664675aaa4319",
+  "technicalChecks": {
+    "dimensions": [
+      2048,
+      768
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alphaZeroPixels": 746410,
+    "alphaOpaquePixels": 0,
+    "alphaPartialPixels": 826454,
+    "alphaZeroFraction": 0.47455469767252606,
+    "alphaBBox": [
+      29,
+      27,
+      2040,
+      752
+    ],
+    "borderAlphaMax": 0
+  },
+  "nativeBytesUnchanged": true,
+  "textQA": {
+    "expectedLines": [
+      "Viimeinen keisari",
+      "karkuteillä"
+    ],
+    "personallyInspectedWhiteProof": true,
+    "personallyInspectedPhone390Preview": true,
+    "fullNamePresent": true,
+    "capitalizationCorrect": true,
+    "letterSequenceCorrect": true,
+    "twoDotsOverFinalAVisible": true,
+    "phoneLegibilityObserved": true,
+    "ocrPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/qa/OCR.json",
+    "ocrExactPass": false,
+    "ocrLimitation": "Available recognition language en-US misreads the final ä and some adjacent tread marks; exact spelling was checked visually, not asserted from OCR."
+  },
+  "styleQA": {
+    "sameDarkMudPrintFamily": true,
+    "shoeContourAndTreadRemnantsVisible": true,
+    "splashesVisible": true,
+    "oneUnifiedTwoLineLogo": true
+  },
+  "previewQA": {
+    "wholeCharacterUnobscured": true,
+    "logoBelowFeet": true,
+    "originalCleanLoadingImage809Used": true,
+    "placementPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/preview/PREVIEW-PLACEMENT.json",
+    "renderMethod": "HTML/CSS layout screenshot in isolated headless Chromium; source image and logo pixels not retouched",
+    "gameIntegration": false
+  },
+  "imageCallsIssued": 1,
+  "imageCallsCompleted": 1,
+  "retries": 0,
+  "ownerAccepted": false,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

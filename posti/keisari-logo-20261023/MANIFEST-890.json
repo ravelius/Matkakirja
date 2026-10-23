@@ -1,0 +1,51 @@
+{
+  "taskNumber": 890,
+  "sourceCommit": "1ac58230d05bdeb605a6e6a468bc9bcde19f64c4",
+  "sourceBlob": "0a2ac28d56b44c673bf4e94f8bfab576ce27ee50",
+  "mode": "built-in image_gen",
+  "imageCalls": 1,
+  "wholeNewImage": true,
+  "nativePreserved": true,
+  "assets": [
+    {
+      "kind": "logo",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/delivery/viimeinen-keisari-karkuteilla-logo-v1.png",
+      "mailboxPath": "posti/keisari-logo-20261023/viimeinen-keisari-karkuteilla-logo-v1.png",
+      "sha256": "ae17d6ce790211ecd235b16bc7bb40d6402837085641d5e10cce36a6bd0207f6",
+      "bytes": 2636499,
+      "dimensions": [
+        2048,
+        768
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "kind": "loading-preview",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/delivery/latauspreview-v1.png",
+      "mailboxPath": "posti/keisari-logo-20261023/latauspreview-v1.png",
+      "sha256": "ba6fc110f14b425008e3d683220cb3dfb8f81416a5679ada29f664675aaa4319",
+      "bytes": 3067738,
+      "dimensions": [
+        1184,
+        2576
+      ],
+      "mode": "RGB"
+    },
+    {
+      "kind": "phone-preview",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/qa/latauspreview-phone-390.png",
+      "mailboxPath": "posti/keisari-logo-20261023/latauspreview-phone-390.png",
+      "sha256": "604efd26cc1bd6474929be3b62968848b1b0c6895cdf1039a36895e699c2a25e",
+      "bytes": 456216,
+      "dimensions": [
+        390,
+        849
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/PROMPT.json",
+  "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/qa/QA.json",
+  "gameIntegrationVerified": false,
+  "published": false
+}

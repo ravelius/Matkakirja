@@ -1,0 +1,25 @@
+{
+  "viewport": [
+    1184,
+    2576
+  ],
+  "background": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/references/809.png",
+    "box": [
+      0,
+      236,
+      1184,
+      2104
+    ]
+  },
+  "logo": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/keisari-logo-890-20261023/native/viimeinen-keisari-karkuteilla-logo-v1.png",
+    "box": [
+      74,
+      1910,
+      1036,
+      388.5
+    ]
+  },
+  "purpose": "Static HTML/CSS layout proof on original clean loading image809. The owner screenshot is reference only; no game integration or image retouching."
+}
