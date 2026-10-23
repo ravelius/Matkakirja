@@ -649,6 +649,13 @@ export const RAAMATTU = {
         '13.69 docs/tuotanto/reseptit/linssi-taidemuseo.md — C resepti: taidemuseolinssi (Linssiseppä).',
         '13.70 docs/tuotanto/tekotavat/testaus.md — B testaus (Projektiseppä ja Laitetestaaja): oma tarkistus, sokkotarkistukset, automaatit, laitemittaukset ja tyypilliset virheet.',
         '13.71 docs/tuotanto/tekotavat/julkaisu.md — B julkaisu (Julkaisija ja Natiiviseppä): työkalut, PR ja merge, juna, TF-vienti, ämpäri ja tyypilliset virheet.',
+        '13.72 docs/tuotanto/suunta/taide.md — A taide (Valoseppä; esimerkkikuvat kokoaa Projektiseppä): akvarellikartta, todentuntuiset 3D-maailmat, niukkuus ja pehmeä liike, laatutaso esimerkein.',
+        '13.73 docs/tuotanto/tekotavat/3d-ja-kuvat.md — B 3D ja kuvat (Lavastaja): Codex- ja Tripo-mallien vastaanotto, kokoaminen, budjetit ja tyypilliset virheet.',
+        '13.74 docs/tuotanto/tekotavat/koodi.md — B koodi (Pelikoodari): rakenne, testit, kytkennät ja tyypilliset virheet.',
+        '13.75 docs/tuotanto/reseptit/museo.md — C resepti: museo (Lavastaja).',
+        '13.76 docs/tuotanto/reseptit/3d-maamerkki.md — C resepti: 3D-maamerkki (Lavastaja).',
+        '13.77 docs/tuotanto/reseptit/historiapeli.md — C resepti: historiapeli (Pelikoodari).',
+        '13.78 docs/tuotanto/reseptit/minipeli.md — C resepti: minipeli (Pelikoodari).',
       ],
     },
     {
