@@ -2364,3 +2364,7 @@ Omistaja (KK:n kortti, kuva pari-03-aukio.png): Julkaistaanko testiversio tasais
 ## PAATOKSET 23.10.2026 klo 18.14: RAKETTIVIDEO JATKUU (23.10.2026 klo 18.14)
 
 Omistaja (KK:n kortti, video f2a690238 + vertailut): Jatketaanko rakettivideota tällä ilmeellä? -> Kyllä, jatka. Viimeistelyyn savupilvi korkeammaksi ja oranssimmaksi sekä selvempi heijastus vedessä kuten NASA KSC-06pp2751 ja KSC-00pp1803. Ääni vasta valmiiseen versioon. Välitetty Valosepälle.
+
+## PAATOKSET 23.10.2026 klo 19.02: JUNAN 210 GRAFIIKKA HYVÄKSYTTY (23.10.2026 klo 19.02)
+
+Omistaja (KK:n kortti, 5 paria TF 209 vs. 12a7e15e8): Hyväksytäänkö uusi grafiikka testiversioon? -> Kyllä. TF 210 julkaistaan, kun omistaja on nähnyt vielä alkulennon videon ja vaakalatauskuvan.
