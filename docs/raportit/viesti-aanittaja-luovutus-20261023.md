@@ -15,3 +15,6 @@ Viestit NUI:lle (local_2cd29bc1) ja PT:lle eivät menneet läpi (20 s) → täm�
 ## Alkulento v2 (omistaja 16.17: puukalikat 3-2-1 + gongin kumahdus lähtöön) – osittain
 - **Gong → viety:** `aanet/juoksupeli-alkulento-v2/gong.mp3` (Soundly Kung Fu Gong Hit 01 SND44411, alku 6 s + 3 s häivytys, −20,5 LUFS; sokko-Gemini OK). Korvaa v1:n `lahto-gong.mp3`. Samalla `suhahdus.mp3` (sama kuin v1).
 - **Puukalikka (3-2-1) → EI löytynyt:** 3 Soundly-kierrosta + Sonniss; valmiit puuklaksahdukset olivat sarjoja/korkeita soivia ("sähköinen/lasi") eikä Gemini hyväksynyt (myös kootut parit). Väliaikaisesti jää v1:n `tikitys.mp3` / `tikitys-viim.mp3`. Jatkoehdotus: toinen Soundly-lähtökohta (esim. "temple block", "bangzi") tai PT päättää tikityksestä.
+
+## Alkulento v3 (PT 19.1x, TF 210) – puukalikat löytyivät, viety
+`aanet/juoksupeli-alkulento-v3/`: `puukalikka.mp3` (Soundly Temple Blocks Low 02 SND44496, 2 iskua väli 0,4 s; numerot 3-2), `puukalikka-viim.mp3` (+2 puolisävelaskelta; numero 1), `puukalikka-b.mp3` (vaihtoehto SND45801, väli 0,75 s), `gong.mp3` (Kung Fu Gong, 6 s), `suhahdus.mp3`. Kaksi iskua leikattu fraasista; sokko-Gemini OK, ääniportti läpi. Hakusanat PT:n lista (bangzi…hyoshigi) ajettu; temple block/woodblock toimi, clave/hyoshigi/bangzi eivät tuottaneet puhdasta paria.
