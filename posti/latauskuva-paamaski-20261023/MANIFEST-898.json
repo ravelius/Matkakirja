@@ -1,0 +1,73 @@
+{
+  "at": "2026-10-23T12:25:31.617348+00:00",
+  "taskNumber": 898,
+  "source": {
+    "path": "posti/pelikoodari-codex-latauskuva-paamaski-20261023.md",
+    "commit": "2cc7d9aca013fbc11e50f5601d1ca9feb9865208",
+    "blob": "f1cdeb97a408cc25917e9c61fb73b6261d2ea553",
+    "sha256": "f95efd86117c1781599e3b7714f36d272f4550bb120b5b6482b6b958053c2740",
+    "readInFull": true,
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-paamaski-898-20261023/sources/pelikoodari-codex-latauskuva-paamaski-20261023.md"
+  },
+  "sourceImage": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/references/807.png",
+    "sha256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+    "dimensions": [
+      1448,
+      1086
+    ]
+  },
+  "title824SHA256": "67268c35c8879097d6db1e82c44d9ebd254287eb6098974039ff6331081b8ebe",
+  "assets": [
+    {
+      "file": "puyi-head-hat-braid-807.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-paamaski-898-20261023/delivery/puyi-head-hat-braid-807.png",
+      "mailboxPath": "posti/latauskuva-paamaski-20261023/puyi-head-hat-braid-807.png",
+      "sha256": "90a6379ee899d2c6d48a44eca4c918cfc16cde5ba6218e7f465994fa365a0929",
+      "bytes": 108976,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "kind": "source-pixel RGBA cutout, source-aligned"
+    },
+    {
+      "file": "latauskuva-807-title824-head-proof.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-paamaski-898-20261023/delivery/latauskuva-807-title824-head-proof.png",
+      "mailboxPath": "posti/latauskuva-paamaski-20261023/latauskuva-807-title824-head-proof.png",
+      "sha256": "d0d804cc2f07c0b1591ab7e941860b34621e73ea13269004d8c880f5a4dee05e",
+      "bytes": 2162475,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "kind": "layout proof only"
+    }
+  ],
+  "derivedImageCount": 2,
+  "newGenerativeCalls": 0,
+  "newR2Uploads": 0,
+  "sourceRGBPixelsPreserved": true,
+  "cutoutNativePosition": [
+    0,
+    0
+  ],
+  "previewTitleBox": [
+    100,
+    10,
+    690,
+    230
+  ],
+  "previewLayerOrder": [
+    "807 background",
+    "original824 gold title",
+    "898 cutout"
+  ],
+  "previewOnly": true,
+  "gameIntegrationOwner": "Pelikoodari",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "publicationGate": "PT shows portrait+landscape to owner; no game publication before owner acknowledgement"
+}
