@@ -28,6 +28,9 @@ Omistaja 12.26 (PT:n kautta): juoksupelin painopiste on grafiikassa, ei pelattav
   on sen päällä, joten NS voi ottaa molemmat kerralla). Testejä (tarkista.sh, Linssit) EI ole ajettu tälle haaralle: aja ennen pyyntöä.
 - Esikatselun opit: komennot ui-komento.txt:hen vähintään 3 s välein (muuten edellinen korvautuu), peli auki ensin `ui juoksupeli v4 7`
   ja palatsin lataus, 25 s odotus juoksun alusta (latauskuva); ajo noin 6–13 min.
+  **Kadonneiden komentojen oikea syy (VS 23.10.):** Mac-esikatselu ja muut Mac-Matkakirja-appit jakavat saman komentokansion
+  (~/Library/Application Support/Matkakirja/Matkakirja 3D), ja 12.2x komennot menivät VS:n rakettiappiin. Aja esikatselu vain,
+  kun `pgrep -f "Matkakirja.app/Contents/MacOS"` ei palauta mitään. VS:n k3 (6352a7adc = k1b + k3) käyttää k1b-skenaarion paikkoja.
 - **Tiedostojako VS:n kanssa (23.10.):** VS = varjostimet, valo, katot, pinnat (JuoksuLattia/Maailma.shader, JuoksuValo.hlsl, Valo/Taivas/Pinnat.cs);
   Lavastaja = glb:t + LattiaLaji/SokkelonPinta-rivit + Palatsi/Osamallit.cs:n kansiovakiot.
 - **VS:n pyyntö:** pääharjan korotus geometriana omalla materiaalilla `V4_harja` (VS kytkee lajiin 13). Chiwen-päätteet ja
