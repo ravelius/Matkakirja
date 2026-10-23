@@ -35,3 +35,5 @@ Ennen TF:ää grafiikan kuvapari + juoksupelin alkulennon video KK:lle → omist
 ## 3. Opit tältä päivältä
 - Tarkista kuvaparista, MIKÄ ruutu on kyseessä, ennen kuittausta (väärä logo meni läpi). Vuosiluvut ja faktat lokista, ei Raamatun
   yleiskuvauksesta (1923 vs 1914). Blender-kuva ei todista pelin väreilyä.
+
+- LISÄ 15.0x: omistaja 14.59 "Ota musta tausta pois" → alkulennon tekstien ja 3-2-1:n tumma läikkä pois, kirjaimiin kevyt varjo (NUI:lla, KK välitti).
