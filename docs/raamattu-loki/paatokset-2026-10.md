@@ -2368,3 +2368,7 @@ Omistaja (KK:n kortti, video f2a690238 + vertailut): Jatketaanko rakettivideota 
 ## PAATOKSET 23.10.2026 klo 19.02: JUNAN 210 GRAFIIKKA HYVÄKSYTTY (23.10.2026 klo 19.02)
 
 Omistaja (KK:n kortti, 5 paria TF 209 vs. 12a7e15e8): Hyväksytäänkö uusi grafiikka testiversioon? -> Kyllä. TF 210 julkaistaan, kun omistaja on nähnyt vielä alkulennon videon ja vaakalatauskuvan.
+
+## PAATOKSET 24.10.2026 klo 00.37: RAKETTIKOHTAUS SÄVYTETÄÄN CODEXIN MUKAAN (24.10.2026 klo 00.38)
+
+Omistaja (KK:n kortti, näyte 2d9b73aa3): liian värikäs maasto ja taivas, horisontissa näkyy maaston raja. -> Sävytetäänkö kuva Codexin kuvan mukaan näin? Kyllä. Koko kuvaan (peli ja video) värisuodatin (LUT) Codexin havainne-r3/r4:n väreistä ja tummuudesta; horisonttiin tumma usva peittämään tarkan ja karkean maaston sauman; jokainen näyte verrataan koneellisesti Codexin kuvaan (värit ja tummuus), ja omistaja näkee sen vasta, kun ero on pieni. Välitetty Valosepälle.
