@@ -2347,3 +2347,12 @@ Omistaja KK:ssa 11.36: "Kirjoita mahdollisimman paljon ennen korttia tekstiksi j
 ## RENDERÖINNIT MYÖS PÄIVÄLLÄ (omistaja 23.10. klo 11.43) (23.10.2026 klo 11.43)
 
 Kortti "Tehdäänkö rakettivideo ensi yönä?" → "Nyt voi tehdä myös päivällä kun kone ei ole minulla käytössä. Saat itse päättää järjestyksen". PT: rakettivideo (meri ja valas) Valosepälle heti junan 210 korjausten jälkeen; renderöinti ei osu junan käännökseen eikä mittaukseen; näyte KK:lle. Raamattu 4.21 päivitetty.
+
+## PAATOKSET 23.10.2026 ILTAPAIVA: JUNA 210 JA JUOKSUPELIN ALKU (23.10.2026 klo 14.59)
+
+Omistaja (KK:n välittämät): 13.15 käynnistyksen latauksen aikana näkyvä Matkakirja-logo isommaksi (14.54 korjaus: ei aloitusportin logo; aloitusportin logo palautetaan). 13.16 Linssit/Pelit-paneelista
+‹ Takaisin -nappi pois. 13.17 puuttuviin Linssit/Pelit-kohtiin pyöreät kuvasymbolit (Codex). 13.18 juoksupelin latauskuvaan nimi; 14.5x: ei kokonimilogoa #890, vaan Codexin #824 Viimeinen keisari
+(kulta, Cormorant Garamond Italic) + #825 karkuteillä. 13.32 juoksupelin alkulento: lyhyempi, pehmeä kaartelu, kiihdytys portin läpi ja raju kiihdytys pienten rakennusten kohdalla, ohitus lähempää;
+tekstit Kielletty kaupunki / Beijing / 1914 rivi kerrallaan (vuosi: juoksupelin Puyi = lapsi noin 1914, päätös 16.10.); energiamittari vasta 3-2-1:n jälkeen. 13.39 JULKAISUPYYNTÖ junalle 210
+grafiikkaparannusten kanssa; grafiikan kuvat ja lennon video omistajalle ennen TF:ää. 13.5x rakettivideoon kaikki viisi parannusta, alku hämärässä, vertailu oikeisiin laukaisukuviin. 14.59 UI-POHJAT:
+uusi iso näyttötyyli EB Garamond SemiBoldilla juoksupelin alkulennon teksteille (2 ×) ja lähtölaskennalle (3 ×).
