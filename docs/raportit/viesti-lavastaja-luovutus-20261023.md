@@ -23,6 +23,17 @@ Omistaja 12.26 (PT:n kautta): juoksupelin painopiste on grafiikassa, ei pelattav
    - VS:lle "mittaa uudelleen" lähetetty 12.5x.
    - Ei tehty: läntisen kujan muuriaukkojen päätypilarit (kuori-lantinen-kuja.glb) ilman sokkelia.
 
+## ENSIN (uusi Lavastaja): PT:n erä 23.10. 13.3x (omistaja 13.32), kuvapari PT:lle → juna 210
+Kuvat: /Users/Shared/Claude/Matkakirja-fable/docs/raportit/kaappaukset/omistaja-20261023/juoksupeli-drone-alkuportti-1322.png ja juoksupeli-kuja-1322.png.
+1. **Alkuportin punaisessa pinnassa rikkoutuneita, väreileviä kohtia avauslennon aikana** (drone-kuva: Meridiaaniportin U-muuri ja aukot).
+   Todennäköisesti päällekkäiset pinnat: tausta-v18:n Pekingin portti vs. Lavastajan tarkka malli (kielletty-rakennukset-v12) tai muurikate-v6,
+   tai v18:n sokkelikasvo 6 cm seinän edessä osuu toiseen seinäkerrokseen. Etsi samassa tasossa (< 2 cm) olevat punaiset kasvot portin
+   alueelta (x −40…70, z −400…−360) ja poista taustasta tai siirrä; vertaa v16 (ei sokkelia) → jos väreily on jo v16:ssa, syy ei ole sokkeli.
+2. **Kattojen reunoissa irrallisia keltaisia suikaleita** (kuja-kuva, KK): räystäiden kohdalla erilliset keltaiset nauhat. Epäillyt:
+   avoimet-v13:n katto_raystas-solmut (avoimet_katot.py) tai muurikate-v6:n kate muureilla, joiden vieressä on katto (v3-sääntö).
+   Tarkista Blender-esikatselulla kuja-75:ltä, kumpi kappale piirtää suikaleen, ennen korjausta.
+Testit (tarkista.sh) ennen NS-pyyntöä; Mac-esikatselu vain, kun muuta Matkakirja-appia ei ole auki (ks. alla).
+
 ## Kesken / seuraavalle
 - Odottaa PT:n kuittausta k1b-kuvaparista → sitten NS:lle merge-pyyntö (lavastaja/sokkeli-k1b-210 4ea7fec01 → juna 210; VS:n k2 6a95e2973
   on sen päällä, joten NS voi ottaa molemmat kerralla). Testejä (tarkista.sh, Linssit) EI ole ajettu tälle haaralle: aja ennen pyyntöä.
