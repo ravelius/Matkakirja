@@ -85,8 +85,57 @@ Järjestys on aina sama; TF 209 (21.10.2026) on malli.
 
 ## 3. Natiivikäännös ja muistiajo (Natiiviseppä)
 
-*(Natiiviseppä täydentää: junan rungon käännös linjalla 1, `kopioi-juna-app.sh`, Release-laitekäännös, muistiajo isolla
-iPadilla ja `muistiajo-<N>.txt`, lukitus ja BUILD-merge, Mac-TF.)*
+*`NS/` = `/Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/`; junan skriptit `NS/juna<N>/` (kopio edellisestä
+junasta, numerot ja `juna/b<M>` vaihdettu). Proto-repo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, runko worktreessa
+`/Users/Shared/Claude/wt/proto-natiiviseppa-ehdokas`, peili `natiivi-backup` (`peili/proto/…`). Malli: juna 209 → TF 209.*
+
+### 3.1 Työkalut
+
+| Osa | Missä | Mihin |
+|---|---|---|
+| Runko | haara `natiiviseppa/juna-<N>` = edellinen BUILD + kuitatut haarat `git merge --no-ff` | Junan ainoa kokoamispaikka; peiliin jokaisen yhdistyksen jälkeen |
+| Mittausyhdistelmä | `NS/juna<N>/yhdista.sh <nimi> <pohja> <commit>…` | merge-tree + commit-tree ilman checkoutia → `peili/proto/natiiviseppa/<nimi>` (LT:n kierrokset) |
+| Rungon testit | `NS/juna<N>/testit<N>-odota.sh` → `testit<N>-rinn.sh` | Linssit (6 osaa rinnakkain), Peli, Kartta + `tyokalut/tarkista.sh` (~2 min); odottaa simunauhoitukset ja load1 < 40 |
+| Ketju | `NS/juna<N>/ketju<N>.sh <sha9>` | Lukee testilokin; kaikki läpi + `tarkista rc=0` → `laite<N>.sh`; punainen → ei käännöstä |
+| Release-laitekäännös | `NS/juna<N>/laite<N>.sh <sha> <nimi>` (`NS/laite-sha.sh`, linja 1) | Unity-kopio T7:llä (`/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity-b5`) → `lokit/natiiviseppa-app-<N>-<nimi>-laite/Matkakirja3D.app` |
+| Asennus | `NS/juna<N>/asenna<N>.sh <sha9>` (`U=<udid>`), `asenna<N>-kaikki.sh` | iPad Pro 13 (oletus); ei sulje käynnissä olevaa kehityspeliä ilman `PAKOTA=1` |
+| Junan app-kopio | `NS/kopioi-juna-app.sh <versio> <käännös-SHA>` | Kopio `lokit/juna-<versio>-<SHA>/` vain, kun `Data/Raw/kaannos.txt` = SHA |
+| Tarkistusajo | ehdokas-wt:ssä `zsh tyokalut/ennen-junaa.sh [--loki]` | `lokit/ennen-junaa-*/JUNATARKISTUS.md`: Codex-toimitukset, kameratesti, nykäysvahti, läpipeluubotti |
+| Muistiajo | `NS/juna<N>/muisti<N>.sh <BUILD-SHA> [ODOTUS_s]` (`OHITA_KAANNOS=1` = valmis app) | iPad Pro 13: juoksupeli botilla 300 s, `muisti-tarkka` 100 ms → `MUISTI<N> fp huippu … vapaa min … varoituksia … kuoli …` |
+| Lukitus | `NS/juna<N>/lukitse<N>-ajo.sh <runko>` (vaihe A), `lukitse<N>-b.sh <runko> "<käännös>" "<muisti>" "<testit>"` | A: lukituskäännös ensimmäisellä vapaalla linjalla; B: `juna/b<M>`, BUILD-merge masteriin, `juna.log`, peilit |
+| Mac-TF | `NS/juna<N>/mac<N>.sh <runko>` | Mac-käännös (linja 2) → `proto3d-mac-testflight.yml` (`versio=1.1`, `build=<N>`) |
+| Jono | `NS/juna<N>/jono-<N>.txt` | Jokainen kuittaus, kierros, käännös ja päätös aikaleimalla (loppu = uusin) |
+
+### 3.2 Vaiheet
+
+1. **Avaus:** `natiiviseppa/juna-<N>` edellisestä BUILD-masterista; PT:n kuittaamat haarat yhdistetään yksi kerrallaan.
+   Ristiriita → haaran tekijä korjaa omassa haarassaan, NS ei ratkaise toisen koodia. Rivi jonoon ja PT:lle.
+2. **Testit + laitekäännös:** `testit<N>-odota.sh > lokit/natiiviseppa-testit<N>-<sha9>.log &` ja `ketju<N>.sh <sha9>`
+   rinnalla. Yksi kierros kerrallaan: älä aja samaa SHA:ta kahdesti rinnakkain (loki ylikirjoittuu → ketju lukee tyhjää).
+   Uusi käännös vain, jos muutos koskee mitattavaa.
+3. **Laitteelle:** isolle iPadille vain LT:n VAPAA:lla (`asenna<N>.sh`); omistajan laitteille vain PT:n tai KK:n luvalla.
+4. **Ennen lukitusta:** `ennen-junaa.sh` lukittavasta rungosta; HYLÄTTY-vaihe joko korjataan tai PT kirjaa sen hyväksytyksi
+   poikkeamaksi `JUNATARKISTUS.md`:hen (TF 209: kartan saapumislennon pitkät ruudut).
+5. **Muutosloki:** NS kirjoittaa `NS/juna<N>/muutosloki-<N>.txt` (≤ 280 merkkiä, ≤ 3 lausetta) heti, kun lukittava runko on
+   tiedossa; PT kuittaa, Julkaisija tekee PR:n (2.3 kohta 2).
+6. **Lukitus (vain PT:n "LUKITSE <N>" omistajan julkaisupyynnöstä):** `lukitse<N>-ajo.sh <runko>` → `KÄÄNNETTY`, sitten
+   `lukitse<N>-b.sh` → `BUILD <N> = <master-SHA>` PT:lle ja Julkaisijalle. Puu identtinen `juna/b<M>`:n kanssa.
+7. **Muistiportti:** `muisti<N>.sh <BUILD-SHA>` isolla iPadilla (myös päiväjunassa, omistaja 21.10.) → kirjoita
+   `JT/muistiajo-<N>.txt` 1. rivi `OK <BUILD-SHA> <vapaa Gt> natiiviseppa (<laite, runko, huippu, vapaa min, varoitukset, loki>)`.
+   Mittaus A/B-parina edellisen TF-appin kanssa, ei absoluuttirajaa (laitteen vapaa muisti vaihtelee ±150 Mt). Jos runkoon tulee
+   muistia lisäävä muutos mittauksen jälkeen, päivitä sama tiedosto.
+8. **Mac-TF** Julkaisijan `TF NYT` -viestin jälkeen: `mac<N>.sh <runko>`; TF-ajon id jonoon ja Julkaisijalle.
+9. **Siivous TF:n jälkeen:** välikäännökset `lokit/natiiviseppa-app-<N>-runko-*` pois; BUILD-käännös, lukitus-sim, Mac-TF,
+   muistiajo ja JUNATARKISTUS säilyvät.
+
+### 3.3 Tyypilliset virheet (natiivi)
+
+- **Kuollut käännöslukko** tapetun laitekäännöksen jälkeen (21.10.: 20 min seisokki) → tarkista `/tmp/matkakirja-kaannospalvelu*.lukko/kuka`
+  ja poista vain oma, kuollut lukko.
+- **Muistiajo väärästä SHA:sta** → JU:n odottaja ei käynnistä (exit 3); aja uudelleen BUILD-SHA:lla (`OHITA_KAANNOS=1`, jos app on jo se).
+- **iPadin `--console`-käynnistys** epäonnistuu irrotetusta ketjusta (CoreDeviceError 10002) → laitemittaukset Bash-taustatehtävänä.
+- **Nykäysvahti aloitusverhon alla:** käynnistyslataukset eivät ole pelaajan nykäyksiä (korjattu 3698ec71e); pitkien ruutujen
+  syy näkyy juna 210:stä rivin `| syyt:`-osassa (`Kartta/Ruutusyy.cs`).
 
 ## 4. Tyypilliset virheet
 
@@ -112,3 +161,4 @@ iPadilla ja `muistiajo-<N>.txt`, lukitus ja BUILD-merge, Mac-TF.)*
 ## 5. Opit
 
 - 23.10.2026: ensimmäinen versio (web, PR:t ja merget, juna, TF-vienti TF 209:n mallilla, ämpärivienti). Luku 3 Natiivisepältä.
+- 23.10.2026: luku 3 (Natiiviseppä): rungon kokoaminen, testit, laitekäännös, lukitus, muistiportti ja Mac-TF juna 209:n mallilla.
