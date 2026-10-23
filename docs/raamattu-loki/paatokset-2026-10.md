@@ -2327,3 +2327,7 @@ ammattikirjastoista (Soundly, Sonniss). Perutaanko lupa, jotta kuumailmapallonki
 ## PAATOKSET 21.10.2026 klo 21.53: VIIKKORAJA 80 % TÄLLÄ VIIKOLLA (21.10.2026 klo 21.54)
 
 Omistaja (KK:n välittämä): "saat käyttää 80% asti viikkolimitin. pysähdy sen jälkeen. perjantai aamuna aukeaa toisen tilin limit. mutta tarvitsen coworkin puolella loput 20%". Toteutus: Raamattu 12.21 tämän viikon poikkeus; Postivahti välittää kaikille, 78 % luovutus, 80 % pysäytys; ei uusia isoja eriä eikä agentteja.
+
+## TILINVAIHTO 23.10.2026 (vvi@vvi.fi) (23.10.2026 klo 11.27)
+
+PT local_5df52e10 23.10. klo 11.2x–11.5x: tili vvi@vvi.fi (koodaustili, raja 99 %, viikko nollautuu pe 7.59). Uudet sessiot KK + 10 roolia (Postivahti, Asemataulu, Natiiviseppä, Pelikoodari, Lavastaja, Valoseppä, Natiivi-UI, Äänittäjä, Julkaisija, Laitetestaaja); levossa Linssiseppä, Karttaseppä, Projektiseppä, Työkaluseppä, Sisältökirjuri (id:t vanhalla tilillä). Taulu Qo5w6Wk4JSYRwYbyf2fJrm. Studiojaon puuttuvat osat jaettu: A taide Valoseppä, B 3D ja kuvat + C museo ja 3D-maamerkki Lavastaja, B koodi + C historiapeli ja minipeli Pelikoodari, B julkaisu Julkaisija + Natiiviseppä.
