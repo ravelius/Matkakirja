@@ -38,3 +38,4 @@ Ennen TF:ää grafiikan kuvapari + juoksupelin alkulennon video KK:lle → omist
 
 - LISÄ 15.0x: omistaja 14.59 "Ota musta tausta pois" → alkulennon tekstien ja 3-2-1:n tumma läikkä pois, kirjaimiin kevyt varjo (NUI:lla, KK välitti).
 - LISÄ 15.1x: NUI portin logo ennalleen be778b1bc (NS runko eb2dea5e7); latauslogo natiivi-ui/latauslogo-210 624f3c006 (LogoOsuus 0.3 → 0.8), kylmäkäynnistyskuvat tulossa → KK:lle omistajan kuittaukseen. Logon lähde vain 720 px: iPadille terävä n. 1600 px versio Codexilta, tilaa kun omistaja on kuitannut koon.
+- LISÄ 15.1x: omistaja 15.0x "Ei mitään varjoa. Valitse tekstin väri niin että erottuu" KORVAA varjon: alkulennon teksteissä ja 3-2-1:ssä ei taustaa eikä varjoa, erottuvuus pelkällä värillä (NUI:lla, KK välitti).
