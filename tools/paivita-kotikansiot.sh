@@ -54,10 +54,36 @@ for k in /Users/Shared/Claude/Matkakirja-*(/); do
   if (( omat > 0 )) && [[ "$haara" == "koti/$n" ]]; then print -r -- "JÄLJESSÄ|$n|$jalj committia|koti/$n:ssa $omat omaa tiedostoa – ei ylikirjoiteta"; continue; fi
   if [[ "$haara" == main ]] && (( omat == 0 )); then toimi="main fast-forward"
   else toimi="haara koti/$n = origin/main (vanha ${haara:-irrotettu} säilyy$( (( omat > 0 )) && print -n ", siinä $omat mainista puuttuvaa tiedostoa"))"; fi
+  # Seuraamattomat tiedostot, jotka mainissa ovat seurattuja: identtinen sisältö saa jäädä (main korvaa samalla sisällöllä),
+  # eri sisältöinen SIIRRETÄÄN (mv, ei rm) kansioon /Users/Shared/Claude/arkisto/kotikansiot/<kansio>-<päivä>/<polku>.
+  siirrettavat=(); identtiset=(); jaavat=0
+  for f in ${(f)"$(git -C $k ls-files --others --exclude-standard)"}; do
+    git -C $k cat-file -e "origin/main:$f" 2>/dev/null || continue
+    if [[ "$(git -C $k hash-object -- "$k/$f")" == "$(git -C $k rev-parse "origin/main:$f")" ]]; then (( jaavat++ )); identtiset+=("$f"); else siirrettavat+=("$f"); fi
+  done
+  (( ${#siirrettavat} > 0 )) && toimi="$toimi; seuraamattomia siirretään arkistoon: ${#siirrettavat}"
+  (( jaavat > 0 )) && toimi="$toimi; identtisiä seuraamattomia jää: $jaavat"
   if (( AJA )); then
-    if [[ "$haara" == main ]] && (( omat == 0 )); then git -C $k merge -q --ff-only origin/main || { print -r -- "JÄLJESSÄ|$n|$jalj committia|fast-forward epäonnistui"; continue; }
-    else git -C $k switch -q -C "koti/$n" origin/main || { print -r -- "JÄLJESSÄ|$n|$jalj committia|haaran vaihto epäonnistui"; continue; }
+    arkisto=/Users/Shared/Claude/arkisto/kotikansiot/$n-$(date +%Y%m%d); siirretyt=0
+    for f in $siirrettavat; do
+      mkdir -p "$arkisto/${f:h}" && mv -n -- "$k/$f" "$arkisto/$f" && [[ ! -e "$k/$f" ]] && (( siirretyt++ ))
+    done
+    (( siirretyt > 0 )) && toimi="$toimi [siirretty $siirretyt tiedostoa: $arkisto]"
+    # Asetustiedosto: nykyinen sisältö talteen, seurattu versio takaisin, vaihto, sisältö tavu tavulta takaisin (myös vaihdon epäonnistuessa).
+    talteen=""
+    if git -C $k ls-files --error-unmatch -- $SALLITTU >/dev/null 2>&1 && ! git -C $k diff --quiet HEAD -- $SALLITTU; then
+      talteen=$(mktemp) && cp -p "$k/$SALLITTU" "$talteen" && git -C $k checkout -- $SALLITTU || { print -r -- "JÄLJESSÄ|$n|$jalj committia|asetustiedoston talteenotto epäonnistui"; continue; }
     fi
+    # Identtiset seuraamattomat lisätään indeksiin, jotta git ei pidä niitä ylikirjoitettavina; vaihdon jälkeen indeksi on mainin.
+    (( ${#identtiset} > 0 )) && git -C $k add -f -- $identtiset
+    if [[ "$haara" == main ]] && (( omat == 0 )); then virhe=$(git -C $k merge -q --ff-only origin/main 2>&1); else virhe=$(git -C $k switch -q -C "koti/$n" origin/main 2>&1); fi
+    vaihto=$?
+    (( vaihto != 0 && ${#identtiset} > 0 )) && git -C $k reset -q -- $identtiset   # peru indeksilisäys, tiedostot jäävät paikalleen
+    if [[ -n $talteen ]]; then
+      cp -p "$talteen" "$k/$SALLITTU" || print -r -- "VAROITUS|$n|asetustiedoston palautus epäonnistui, sisältö talteen: $talteen"
+      toimi="$toimi; $SALLITTU palautettu ennalleen"
+    fi
+    if (( vaihto != 0 )); then print -r -- "JÄLJESSÄ|$n|$jalj committia|päivitys epäonnistui (haara ${haara:-irrotettu}): ${${(f)virhe}[1]}"; continue; fi
     print -r -- "PÄIVITETTY|$n|$jalj committia|$toimi"
   else
     print -r -- "PÄIVITETTÄISIIN|$n|$jalj committia|$toimi"
