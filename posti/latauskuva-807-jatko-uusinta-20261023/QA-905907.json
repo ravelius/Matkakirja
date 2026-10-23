@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-23T16:17:19.201442+00:00",
+  "result": "PASS",
+  "taskNumbers": [
+    905,
+    906,
+    907
+  ],
+  "dimensions": [
+    1448,
+    1386
+  ],
+  "originalSourceSHA256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+  "originalHashMatchesPin": true,
+  "allRows380AndBelowIdenticalTo807": true,
+  "changedRGBValuesAtOrBelow380": 0,
+  "allMask903NonzeroAlphaPixelsOriginal": true,
+  "changedProtectedPixels": 0,
+  "changedPixelsOutsideAuthorizedRegion": 0,
+  "blendBandChangedBackgroundPixels": 97559,
+  "mask903ByteIdentical": true,
+  "mask903SHA256": "346539c7a000abc67a4df11e518a8977b173eb0b5e3cc01256dcd6fbc600a271",
+  "mask903RGBAFormat": "RGBA",
+  "maskAlphaBBox": [
+    563,
+    327,
+    913,
+    751
+  ],
+  "finialFirstNontransparentY": 327,
+  "finialClearanceBelowNewTop300Px": 27,
+  "nativeCopySHA256": "a9952ae0dded6171edc9f845341f7d21352173dc1d1840dc58a912e14ba78ca2",
+  "nativeCopyUnchanged": true,
+  "title824OriginalReused": true,
+  "opaqueTitleOcclusionPixels": 4224,
+  "proofRestoresBackgroundUnderOpaqueOcclusion": true,
+  "visualReview": {
+    "full1448x1386": "PASS",
+    "phone390px": "PASS",
+    "roofLinesAndOrnaments": "Continuous after registration and permitted protected blend; no horizontal cutoff or doubled edge seen",
+    "cloudJoin": "No abrupt horizontal edge seen",
+    "noExtraCharactersOrTextInBackground": true,
+    "protectedHeadFinialBraid": "Original pixels verified; no double head or finial seen",
+    "personallyInspectedFiles": [
+      "delivery/latauskuva-807-top300-blended-v2.png",
+      "qa/protected-blend-seam.png",
+      "qa/protected-blend-phone390.png",
+      "delivery/latauskuva-807-title824-head-proof-v2.png",
+      "qa/proof-phone390.png"
+    ]
+  },
+  "generationCallsThisNewOrder": 1,
+  "prior902CallsSeparate": 1,
+  "totalAcrossOriginalAndNewOrders": 2,
+  "automaticExtraRetries": 0,
+  "producerQaPassed": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "r2Uploaded": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

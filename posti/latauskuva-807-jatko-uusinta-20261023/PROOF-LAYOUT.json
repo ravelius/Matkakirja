@@ -1,0 +1,22 @@
+{
+  "canvas": [
+    1448,
+    1386
+  ],
+  "title824Box": [
+    520,
+    145,
+    850,
+    283
+  ],
+  "titleSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/delivery/01-viimeinen-keisari.png",
+  "titleSourceSHA256": "67268c35c8879097d6db1e82c44d9ebd254287eb6098974039ff6331081b8ebe",
+  "titleIsExisting824NoNewGeneration": true,
+  "layers": [
+    "source-preserved extended background905",
+    "existing gold824 scaled only in proof",
+    "unchanged903 head mask"
+  ],
+  "opaqueTitleOcclusionPixels": 4224,
+  "proofRestoresBackgroundUnderOpaqueOcclusion": true
+}

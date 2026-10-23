@@ -1,0 +1,70 @@
+{
+  "nativeDimensions": [
+    1282,
+    1227
+  ],
+  "normalizedDimensions": [
+    1448,
+    1386
+  ],
+  "registration": "Piecewise affine background-only alignment; roof reference windows give left source offset(-2,+118), right(-2,+76), central sky(0,+100). Generated pixels only, original unmodified",
+  "registrationAnchors": [
+    [
+      0,
+      0,
+      118
+    ],
+    [
+      470,
+      -2,
+      118
+    ],
+    [
+      740,
+      -2,
+      118
+    ],
+    [
+      780,
+      0,
+      100
+    ],
+    [
+      950,
+      0,
+      100
+    ],
+    [
+      1140,
+      -2,
+      76
+    ],
+    [
+      1380,
+      -2,
+      76
+    ],
+    [
+      1448,
+      0,
+      76
+    ]
+  ],
+  "generatedNewRows": [
+    0,
+    299
+  ],
+  "transitionRows": [
+    300,
+    379
+  ],
+  "transition": "smoothstep 1 to0 only on alpha903=0; enlarged head protection with soft outer edge",
+  "lockedOriginalRows": [
+    380,
+    1385
+  ],
+  "headMaskProtectedWhere": "all alpha903>0 are original807 RGB, without blending",
+  "newGenerativeCalls": 1,
+  "prior902CallsPreservedSeparately": 1,
+  "automaticRetries": 0
+}

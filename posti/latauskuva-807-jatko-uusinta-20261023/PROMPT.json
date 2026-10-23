@@ -1,0 +1,11 @@
+{
+  "mode": "built-in image_gen edit",
+  "prompt": "Edit target: the attached 1448x1386 canvas. The empty top strip (300 pixels high) is missing. Complete the palace illustration UPWARD while preserving the existing composition, scale, position and perspective. The existing boy must remain the same size and at exactly the same position, hat finial at y327 and feet at the bottom. Do not zoom out, widen the view, shrink the subject, shift the roof lines or recenter anything.\nFill the missing top with a natural continuation of the same blue sky and clouds and the EXISTING red palace walls and golden roofs at the left and right. Match every diagonal eave edge and roof decoration at the boundary, continuing the precise existing perspective upward. Make an unbroken scene, especially the diagonal golden roof on the left and the soft white clouds. Do not invent extra roof corners or any new objects near the join. Preserve plenty of open blue sky above the hat for a later title, with no text now.\nThere is a permitted narrow blend region: rows300-379 of BACKGROUND ONLY may be adjusted gently to make the roof details and clouds continuous. All pixels from y380 down are locked original. The boy, face, head, hat with gold finial, hair and braid are locked, including those intersecting the blend region. Do not repaint them. This is upward outpainting of this exact image, not a new interpretation or recreated scene. Return one complete opaque 1448x1386 image, keeping the original lower1086-pixel image at its original scale and offset y300. No text, no logo, no border, no new people, no new buildings; no reflection or repeated strip.",
+  "referenced_image_paths": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/references/807-target-top300-transparent.png"
+  ],
+  "transparent_background": false,
+  "callLimit": 1,
+  "prior902CallPreservedInHistory": 1,
+  "newCallsAuthorized": 1
+}

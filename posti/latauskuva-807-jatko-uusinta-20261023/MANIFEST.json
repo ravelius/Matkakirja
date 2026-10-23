@@ -1,0 +1,79 @@
+{
+  "family": "loading807-upward-extension-retry-905907-20261023",
+  "at": "2026-10-23T16:17:19.201442+00:00",
+  "source": {
+    "path": "posti/pelikoodari-codex-latauskuva-807-jatko-uusinta-20261023.md",
+    "commit": "304e3c845e77aca4ecafac5e6d8b6dbcc69ec516",
+    "blob": "bab19650e1a1f1854079a2daa67761c7c8e02d69",
+    "sha256": "72df5e2de62a25baddb77a7ff7e359a8848c51ad17d33afcfd98a06d898c39c9",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/sources/pelikoodari-codex-latauskuva-807-jatko-uusinta-20261023.md",
+    "readInFull": true
+  },
+  "generationCallsThisOrder": 1,
+  "prior902CallsPreservedSeparately": 1,
+  "totalHistoricalCalls": 2,
+  "nativeImageCountThisOrder": 1,
+  "deliveredPNGs": 3,
+  "mask903ReusedByteForByte": true,
+  "producerQaPassed": true,
+  "files": [
+    {
+      "taskNumber": 905,
+      "filename": "latauskuva-807-top300-blended-v2.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/delivery/latauskuva-807-top300-blended-v2.png",
+      "mailboxPath": "posti/latauskuva-807-jatko-uusinta-20261023/latauskuva-807-top300-blended-v2.png",
+      "sha256": "5e5ab9e350c9386be074aab42241a3602bb87886339875448f99f6879e1b4406",
+      "bytes": 2607658,
+      "dimensions": [
+        1448,
+        1386
+      ],
+      "mode": "RGB"
+    },
+    {
+      "taskNumber": 906,
+      "filename": "puyi-head-hat-braid-807-y300.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/delivery/puyi-head-hat-braid-807-y300.png",
+      "mailboxPath": "posti/latauskuva-807-jatko-uusinta-20261023/puyi-head-hat-braid-807-y300.png",
+      "sha256": "346539c7a000abc67a4df11e518a8977b173eb0b5e3cc01256dcd6fbc600a271",
+      "bytes": 111650,
+      "dimensions": [
+        1448,
+        1386
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "taskNumber": 907,
+      "filename": "latauskuva-807-title824-head-proof-v2.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/delivery/latauskuva-807-title824-head-proof-v2.png",
+      "mailboxPath": "posti/latauskuva-807-jatko-uusinta-20261023/latauskuva-807-title824-head-proof-v2.png",
+      "sha256": "564047d19c2fb90085f37f6c96b9d16ccf92d3e55f46cd295592675cc06e39d1",
+      "bytes": 2666548,
+      "dimensions": [
+        1448,
+        1386
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "nativeMetadata": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/native/outpaint-v1.png",
+    "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d6c8232b-5255-469c-941c-6cb76d34f613.png",
+    "sha256": "a9952ae0dded6171edc9f845341f7d21352173dc1d1840dc58a912e14ba78ca2",
+    "dimensions": [
+      1282,
+      1227
+    ],
+    "mode": "RGB",
+    "callsIssued": 1,
+    "callsCompleted": 1,
+    "prior902CallsIssued": 1
+  },
+  "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/qa/QA-905907.json",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "r2Uploaded": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
