@@ -48,7 +48,7 @@ voitosta tulee palkkio. Ei sisällä videopelejä (resepti historiapeli).
   korkeuteen ja palsta oikealle (B UI luku 5).
 - **Satunnaisuus ensin, animaatio sitten:** nopan tulos `Satunnainen`-lähteestä ennen vieritystä, jotta testi ja botti toistavat.
 - **Testikomento** jokaiselle tilalle: `ui <peli> [valinta | peli helppo|normaali|vaikea|kaveri | asema … | tila | sulje]`.
-- **Lautapeliopas** testataan (`LautapeliopasTestit`): sääntöteksti vastaa koodin sääntöjä.
+- **Lautapeliopas** testataan (`LautapeliopasTestit`): oppaan sääntökuvat ovat laillisia asemia, ja jokaisella vinkillä on teksti ja puhe.
 
 ## Valmis kun
 
