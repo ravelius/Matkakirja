@@ -2380,3 +2380,12 @@ Omistaja: miksi ihmeessä koko rakettia ei tehdä videoksi? vasta cupolassa siir
 ## PAATOKSET 24.10.2026 klo 01.29: VAAKALATAUSKUVA JA KUVAT ILMAN SELITETTÄ (24.10.2026 klo 01.30)
 
 Omistaja (KK:n kortti Kelpaako vaakalatauskuva testiversioon?): Älä laita selite tekstiä kuvan päälle. Ylhäällä liikaa tilaa. Otsikko piti mennä pään taakse. -> Vaakakuva korjataan: otsikko osin keisarin pään ja hatun taakse, yläreunaan ei tyhjää taivasta, pysty ennallaan (PK). Työtapa: yksittäinen kuva omistajalle raakana ilman selitetekstiä ja -kaistaa, selitys KK:n viestiin (Raamattu 4.48 tarkennettu).
+
+## PT 24.10.2026: MIKSI TESTAUSSÄÄNNÖT UNOHTUIVAT – LUE ALOITTAESSA RAAMATTUUN (7.47) (24.10.2026 klo 01.46)
+
+Omistaja 24.10. klo 01.36 (KK:n kautta, sanatarkasti): "Mutta tärkein kysymys on että miksi näin kävi? Mikä on pielessä ja miten saadaan korjattua jotta tämä ei toistu taas seuraavassa tilin
+vaihdossa?" Syyt: 1) PT:n lukulistassa (vastuukartta) ei ollut lukua 9, joten nollattu PT ei lukenut 9.2/9.3:a; luku 9 oli vain tilinvaihdon listan kohdassa 17. 2) 20.10. klo 22.24 päätöksestä
+(karsinta) työkalut tehtiin, mutta LUE ALOITTAESSA -rivit puuttuivat Raamatusta, ohjeiden koetta ei ajettu ja kotikansioiden päivitystä ei kytketty nollaukseen (12/17 kansiota 500–2200 committia
+jäljessä, vanha CLAUDE.md). 3) Omistajan sanat välitettiin tulkintoina. Korjaus: Raamattu 7.47 LUE ALOITTAESSA (kaikille 9.1–9.3 ja 9.5, PT:lle luku 9), 12.23 kohdat 17–18 (tilinvaihto valmis vasta
+ohjeiden kokeen jälkeen), vastuukartan PT-rivi; kotikansiot mainiin (Sisältökirjuri, Työkaluseppä tehty, muut työkalukorjauksen jälkeen) ja Postivahdin nollaukseen; ohjeiden koe Sonnetilla.
+Sanatarkkojen sanojen sääntö odottaa omistajan korttia KK:ssa.
