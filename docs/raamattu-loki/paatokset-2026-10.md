@@ -2343,3 +2343,7 @@ Omistaja KK:ssa 11.34: "laita jatkossa kysymyskortit, niin huomaan ne puhelimell
 ## KORTTI LYHYENÄ (omistaja 23.10. klo 11.36) (23.10.2026 klo 11.37)
 
 Omistaja KK:ssa 11.36: "Kirjoita mahdollisimman paljon ennen korttia tekstiksi ja sitten itse korttiin lyhyemmin. Kortissa on niin iso fontti eikä siinä ole kappalejakoa niin sitä on vaikea lukea jos on yhtään pidempi teksti". Selitys, perustelut ja suositus kappaleina tekstinä ennen korttia; kortissa vain lyhyt kysymys ja lyhyet vaihtoehdot. Tarkentaa 11.34; Raamattu 7.27.
+
+## RENDERÖINNIT MYÖS PÄIVÄLLÄ (omistaja 23.10. klo 11.43) (23.10.2026 klo 11.43)
+
+Kortti "Tehdäänkö rakettivideo ensi yönä?" → "Nyt voi tehdä myös päivällä kun kone ei ole minulla käytössä. Saat itse päättää järjestyksen". PT: rakettivideo (meri ja valas) Valosepälle heti junan 210 korjausten jälkeen; renderöinti ei osu junan käännökseen eikä mittaukseen; näyte KK:lle. Raamattu 4.21 päivitetty.
