@@ -2376,3 +2376,7 @@ Omistaja (KK:n kortti, näyte 2d9b73aa3): liian värikäs maasto ja taivas, hori
 ## PAATOKSET 24.10.2026 klo 01.11: KOKO RAKETTI VIDEONA (24.10.2026 klo 01.12)
 
 Omistaja: miksi ihmeessä koko rakettia ei tehdä videoksi? vasta cupolassa siirrytään pelin piirtoon. -> Koko raketin osuus videona, myös avauslento alustalle; peli piirtää vasta Cupolan (häivytys elävään Cupolaan). Jos alustalla on pelaajan oma laukaisuhetki, video jaetaan siinä kahteen osaan saumattomasti. iPad-mittaus vain Cupolasta ja videon toistosta. Raamattu 2.105 laajennettu.
+
+## PAATOKSET 24.10.2026 klo 01.29: VAAKALATAUSKUVA JA KUVAT ILMAN SELITETTÄ (24.10.2026 klo 01.30)
+
+Omistaja (KK:n kortti Kelpaako vaakalatauskuva testiversioon?): Älä laita selite tekstiä kuvan päälle. Ylhäällä liikaa tilaa. Otsikko piti mennä pään taakse. -> Vaakakuva korjataan: otsikko osin keisarin pään ja hatun taakse, yläreunaan ei tyhjää taivasta, pysty ennallaan (PK). Työtapa: yksittäinen kuva omistajalle raakana ilman selitetekstiä ja -kaistaa, selitys KK:n viestiin (Raamattu 4.48 tarkennettu).
