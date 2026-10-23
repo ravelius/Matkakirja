@@ -1,0 +1,10 @@
+# Ennen junaa: tyokaluseppa/tarkistukset-204 3116866f0 (19.10.2026 15.05)
+
+| Vaihe | Tila | Tulos |
+|---|---|---|
+| 1 Codex-toimitukset | **HYLÄTTY** | 19 hylättyä riviä: == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/juoksupeli-muistokuplat-51-v4-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/koopenhamina-kierros-havainnekuvat-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/juoksupeli-muistokuplat-pysty-v4-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/juoksupeli-muistokuplat-pysty-v3-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/juoksupeli-muistokuplat-lisatyypit-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/juoksupeli-muistokuplat-valokuva-v2-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/juoksupeli-muistokuplat-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/iss-nostot-havainnekuvat-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/valoseppa-iss-nostot-pelikulmat == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/natiivi-ui-iss-ympyraikkuna-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/tripo-hahmot-20261019 == /var/folders/wt/zx9vp62d74jgmdhdpr__vxth0000gp/T/ennen-junaa-posti.ZjjsA0PWq4/posti/juoksupeli-hahmot-20261018 (1-codex.txt) |
+| 2 Kameratesti | **OK** | Linssit-testit: 23/23 läpi Kartta-testit: 3/3 läpi (2-kameratesti.txt) |
+| 3 Nykäysvahti | **EI AJETTU** | simuajo puuttuu (--loki <todistuskansio> tai --udid) |
+| 4 Läpipeluubotti | **EI AJETTU** | logiikka 14/14 läpi; simun läpipeluu puuttuu (botti-osat.txt-simuajo) |
+
+ENNEN JUNAA: HYLÄTTY (vaiheet 1)
