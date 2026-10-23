@@ -2331,3 +2331,7 @@ Omistaja (KK:n välittämä): "saat käyttää 80% asti viikkolimitin. pysähdy 
 ## TILINVAIHTO 23.10.2026 (vvi@vvi.fi) (23.10.2026 klo 11.27)
 
 PT local_5df52e10 23.10. klo 11.2x–11.5x: tili vvi@vvi.fi (koodaustili, raja 99 %, viikko nollautuu pe 7.59). Uudet sessiot KK + 10 roolia (Postivahti, Asemataulu, Natiiviseppä, Pelikoodari, Lavastaja, Valoseppä, Natiivi-UI, Äänittäjä, Julkaisija, Laitetestaaja); levossa Linssiseppä, Karttaseppä, Projektiseppä, Työkaluseppä, Sisältökirjuri (id:t vanhalla tilillä). Taulu Qo5w6Wk4JSYRwYbyf2fJrm. Studiojaon puuttuvat osat jaettu: A taide Valoseppä, B 3D ja kuvat + C museo ja 3D-maamerkki Lavastaja, B koodi + C historiapeli ja minipeli Pelikoodari, B julkaisu Julkaisija + Natiiviseppä.
+
+## VIIKKORAJA vvi@vvi.fi 99 % (omistaja 23.10. klo 11.28) (23.10.2026 klo 11.30)
+
+Omistajan kortti KK:ssa 11.28: "Saako uutta tiliä käyttää koko viikon kiintiön loppuun asti?" → "Kyllä, loppuun asti (Suositus)". Tilin vvi@vvi.fi raja tällä viikolla 99 % (koodaustilin VOIMASSA OLEVA ARVO). Samalla 11.28 omistaja salli KK-id:n vaihdon koneen yhteiseen CLAUDE.md:hen (KK teki 11.29: local_6088bfc8).
