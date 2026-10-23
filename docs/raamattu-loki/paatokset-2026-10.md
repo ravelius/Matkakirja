@@ -2393,3 +2393,7 @@ Sanatarkkojen sanojen sääntö odottaa omistajan korttia KK:ssa.
 ## PT 24.10.2026: OHJEIDEN KOE 1. KIERROS 9/10 – 9.11 ISO IPAD VAPAASTI TÄSMENNETTY (24.10.2026 klo 02.05)
 
 Ohjeiden koe (7.47) tuoreella Sonnetilla PT:n lukulistalla: 9/10 oikein. Kysymys 1 (saako avoimen junan rungosta mitata iPadilla ennen lukitusta) vastattiin "kyllä" kohdan 9.11 ISO IPAD VAPAASTI ("mittaavat isolla iPadilla aina kysymättä") perusteella; sama sanamuoto johti PT:n 23.–24.10. välimittauksiin. Korjaus: lupa koskee laitetta, ei ajon tarvetta; mitata saa vain yöjunan laitekierroksessa, omistajan pyytämiin kuviin ja uuteen tekniikkaan (9.2, 9.3; omistaja 24.10. klo 01.31).
+
+## PAATOS 24.10.2026 klo 02.12: KERTOJAÄÄNTEN RAJA 3 % JA HYVÄKSYTTY LUKIJAÄÄNI (24.10.2026 klo 02.12)
+
+Omistaja klo 02.12 KK:n kautta (sanatarkasti): "Kertoja ääniä sai tehdä jos se vie alle 3% kuukausi kiintiöstä ja jos lukijaääni on jo hyväksytty". Korvaa kertojaäänten pysyvän luvan rajan "noin enintään 10 000 merkkiä per kokonaisuus". Muutettu: Raamattu 5.1, docs/tuotanto/tuotannonohjaus.md (lupataulukon Kertojaääni-rivi), tuotantopohja kertojan-teksti-ja-aani.md. Periaatesivun päätös tulee erikseen.
