@@ -2339,3 +2339,7 @@ Omistajan kortti KK:ssa 11.28: "Saako uutta tiliä käyttää koko viikon kiinti
 ## VASTAUS AINA KORTILLA (omistaja 23.10. klo 11.34) (23.10.2026 klo 11.34)
 
 Omistaja KK:ssa 11.34: "laita jatkossa kysymyskortit, niin huomaan ne puhelimella parhaiten". Jokainen omistajalta odotettava vastaus kortilla, myös kuvien ok, tekstien hyväksyntä ja äänten generointilupa; tekstit, kuvat ja otot lähetetään ensin, kortin selitteet riittävät yksinään; itse tekstit eivät mene korttiin (21.10. 08.34 voimassa). Raamattu 7.27 päivitetty.
+
+## KORTTI LYHYENÄ (omistaja 23.10. klo 11.36) (23.10.2026 klo 11.37)
+
+Omistaja KK:ssa 11.36: "Kirjoita mahdollisimman paljon ennen korttia tekstiksi ja sitten itse korttiin lyhyemmin. Kortissa on niin iso fontti eikä siinä ole kappalejakoa niin sitä on vaikea lukea jos on yhtään pidempi teksti". Selitys, perustelut ja suositus kappaleina tekstinä ennen korttia; kortissa vain lyhyt kysymys ja lyhyet vaihtoehdot. Tarkentaa 11.34; Raamattu 7.27.
