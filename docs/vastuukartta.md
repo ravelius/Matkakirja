@@ -27,6 +27,8 @@ Tila 14.10.2026 klo 11.0x: roolien omat vastaukset ("ALUEET <rooli>: …"); Ää
 
 ## Lukulistat ja työkalut (omistaja 14.10.2026 klo 22.4x, kortit "Aloitus" ja lukulistat)
 
+SITOVA LUKULISTA ON RAAMATUN KOHTA 7.47 LUE ALOITTAESSA (myös kaikille yhteiset 9.1–9.3 ja 9.5); alla oleva sarake on vain tiivistelmä, ristiriidassa 7.47 voittaa.
+
 Jokaisen roolin aloitus: LUE ALUSSA enintään 5 kohtaa (oma luovutus, omat Raamatun osiot otsikoittain, oma
 pääohje), ÄLÄ LUE koko Raamattua, muiden luovutuksia eikä kokonaisia lokeja. Kaikille yhteistä Raamatusta on
 luvun 7 ROOLIT (oma roolirivi) ja viestintä (VIESTIT, VIESTINTÄ FABLELLE, JUMI) sekä luvun 12 KOMENTOSÄÄNNÖT; taulukko kertoo
@@ -41,7 +43,7 @@ Keskustelukanava saa vain avata taulun (Artifact open). Äänittäjällä on Art
 
 | Rooli | Lukulista (Raamattu + oma pääohje) | Tarvittavat työkalut (muut pois) |
 |---|---|---|
-| Päätoimittaja | luvut 7, 8, 12 ja 14 kokonaan, luvun 4 UI-POHJAT; muut luvut kohdennetusti; docs/tilinvaihto.md | kaikki (session_mgmt, Artifact, ArtifactData, Cron, Monitor, gh, Agent) |
+| Päätoimittaja | luvut 7, 8, 9, 12 ja 14 kokonaan, luvun 4 UI-POHJAT; muut luvut kohdennetusti; docs/tilinvaihto.md | kaikki (session_mgmt, Artifact, ArtifactData, Cron, Monitor, gh, Agent) |
 | Keskustelukanava | luku 7: OMISTAJAN KANAVAT, KYSYMYKSET ja NOLLAUSRAJAT ROOLEITTAIN; docs/aloitusviestit/keskustelukanava.md | AskUserQuestion, session_mgmt, Artifact (vain open), Agent; ei simu-, selain- eikä tietokonetyökaluja |
 | Julkaisija | luvut 9 ja 10 (myös JAKELU JA IOS-KUORI), luvun 12 simulaattorit ja levy; viesti-julkaisija-aloitus.md | Bash, gh, session_mgmt (send_message, list_events), iOS-simu, ArtifactData (talo/eteneminen vaihe 5); ei selain-, tietokone- eikä dokumenttityökaluja |
 | Natiiviseppä | luvut 6, 9 ja 10, luvun 12 simulaattorit ja levy; viesti-natiiviseppa-aloitus.md | Bash, iOS-simu, send_message, Agent, ArtifactData (talo/eteneminen vaiheet 1–4); ei selain- eikä tietokonetyökaluja |

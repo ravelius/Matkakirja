@@ -2356,3 +2356,36 @@ Omistaja (KK:n välittämät): 13.15 käynnistyksen latauksen aikana näkyvä Ma
 tekstit Kielletty kaupunki / Beijing / 1914 rivi kerrallaan (vuosi: juoksupelin Puyi = lapsi noin 1914, päätös 16.10.); energiamittari vasta 3-2-1:n jälkeen. 13.39 JULKAISUPYYNTÖ junalle 210
 grafiikkaparannusten kanssa; grafiikan kuvat ja lennon video omistajalle ennen TF:ää. 13.5x rakettivideoon kaikki viisi parannusta, alku hämärässä, vertailu oikeisiin laukaisukuviin. 14.59 UI-POHJAT:
 uusi iso näyttötyyli EB Garamond SemiBoldilla juoksupelin alkulennon teksteille (2 ×) ja lähtölaskennalle (3 ×).
+
+## PAATOKSET 23.10.2026 klo 17.46: JUNA 210 ODOTTAA SÄVYJÄ (23.10.2026 klo 17.47)
+
+Omistaja (KK:n kortti, kuva pari-03-aukio.png): Julkaistaanko testiversio tasaisemmilla laatoilla? -> Odota sävyjä. Juna 210 TF:ään vasta, kun aukio näyttää hyväksytyltä kierrokselta 2 (laattakohtaiset sävyt, tummat saumat, kattojen tiilirivit) ja pyörii iPadilla nykimättä. Versiota tiilet 0 ei julkaista. Välitetty Julkaisijalle ja Valosepälle 17.4x.
+
+## PAATOKSET 23.10.2026 klo 18.14: RAKETTIVIDEO JATKUU (23.10.2026 klo 18.14)
+
+Omistaja (KK:n kortti, video f2a690238 + vertailut): Jatketaanko rakettivideota tällä ilmeellä? -> Kyllä, jatka. Viimeistelyyn savupilvi korkeammaksi ja oranssimmaksi sekä selvempi heijastus vedessä kuten NASA KSC-06pp2751 ja KSC-00pp1803. Ääni vasta valmiiseen versioon. Välitetty Valosepälle.
+
+## PAATOKSET 23.10.2026 klo 19.02: JUNAN 210 GRAFIIKKA HYVÄKSYTTY (23.10.2026 klo 19.02)
+
+Omistaja (KK:n kortti, 5 paria TF 209 vs. 12a7e15e8): Hyväksytäänkö uusi grafiikka testiversioon? -> Kyllä. TF 210 julkaistaan, kun omistaja on nähnyt vielä alkulennon videon ja vaakalatauskuvan.
+
+## PAATOKSET 24.10.2026 klo 00.37: RAKETTIKOHTAUS SÄVYTETÄÄN CODEXIN MUKAAN (24.10.2026 klo 00.38)
+
+Omistaja (KK:n kortti, näyte 2d9b73aa3): liian värikäs maasto ja taivas, horisontissa näkyy maaston raja. -> Sävytetäänkö kuva Codexin kuvan mukaan näin? Kyllä. Koko kuvaan (peli ja video) värisuodatin (LUT) Codexin havainne-r3/r4:n väreistä ja tummuudesta; horisonttiin tumma usva peittämään tarkan ja karkean maaston sauman; jokainen näyte verrataan koneellisesti Codexin kuvaan (värit ja tummuus), ja omistaja näkee sen vasta, kun ero on pieni. Välitetty Valosepälle.
+
+## PAATOKSET 24.10.2026 klo 01.11: KOKO RAKETTI VIDEONA (24.10.2026 klo 01.12)
+
+Omistaja: miksi ihmeessä koko rakettia ei tehdä videoksi? vasta cupolassa siirrytään pelin piirtoon. -> Koko raketin osuus videona, myös avauslento alustalle; peli piirtää vasta Cupolan (häivytys elävään Cupolaan). Jos alustalla on pelaajan oma laukaisuhetki, video jaetaan siinä kahteen osaan saumattomasti. iPad-mittaus vain Cupolasta ja videon toistosta. Raamattu 2.105 laajennettu.
+
+## PAATOKSET 24.10.2026 klo 01.29: VAAKALATAUSKUVA JA KUVAT ILMAN SELITETTÄ (24.10.2026 klo 01.30)
+
+Omistaja (KK:n kortti Kelpaako vaakalatauskuva testiversioon?): Älä laita selite tekstiä kuvan päälle. Ylhäällä liikaa tilaa. Otsikko piti mennä pään taakse. -> Vaakakuva korjataan: otsikko osin keisarin pään ja hatun taakse, yläreunaan ei tyhjää taivasta, pysty ennallaan (PK). Työtapa: yksittäinen kuva omistajalle raakana ilman selitetekstiä ja -kaistaa, selitys KK:n viestiin (Raamattu 4.48 tarkennettu).
+
+## PT 24.10.2026: MIKSI TESTAUSSÄÄNNÖT UNOHTUIVAT – LUE ALOITTAESSA RAAMATTUUN (7.47) (24.10.2026 klo 01.46)
+
+Omistaja 24.10. klo 01.36 (KK:n kautta, sanatarkasti): "Mutta tärkein kysymys on että miksi näin kävi? Mikä on pielessä ja miten saadaan korjattua jotta tämä ei toistu taas seuraavassa tilin
+vaihdossa?" Syyt: 1) PT:n lukulistassa (vastuukartta) ei ollut lukua 9, joten nollattu PT ei lukenut 9.2/9.3:a; luku 9 oli vain tilinvaihdon listan kohdassa 17. 2) 20.10. klo 22.24 päätöksestä
+(karsinta) työkalut tehtiin, mutta LUE ALOITTAESSA -rivit puuttuivat Raamatusta, ohjeiden koetta ei ajettu ja kotikansioiden päivitystä ei kytketty nollaukseen (12/17 kansiota 500–2200 committia
+jäljessä, vanha CLAUDE.md). 3) Omistajan sanat välitettiin tulkintoina. Korjaus: Raamattu 7.47 LUE ALOITTAESSA (kaikille 9.1–9.3 ja 9.5, PT:lle luku 9), 12.23 kohdat 17–18 (tilinvaihto valmis vasta
+ohjeiden kokeen jälkeen), vastuukartan PT-rivi; kotikansiot mainiin (Sisältökirjuri, Työkaluseppä tehty, muut työkalukorjauksen jälkeen) ja Postivahdin nollaukseen; ohjeiden koe Sonnetilla.
+Sanatarkkojen sanojen sääntö odottaa omistajan korttia KK:ssa.
