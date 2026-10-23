@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-23T12:03:00.310960+00:00",
+  "taskNumber": 824,
+  "verificationUrl": "https://media.matkakirja.app/juoksupeli/otsikko-814-20261021/01-viimeinen-keisari.png?sha256=67268c35c8879097d6db1e82c44d9ebd254287eb6098974039ff6331081b8ebe",
+  "canonicalUrl": "https://media.matkakirja.app/juoksupeli/otsikko-814-20261021/01-viimeinen-keisari.png",
+  "http": "200",
+  "curlExit": 0,
+  "bytes": 595622,
+  "sha256": "67268c35c8879097d6db1e82c44d9ebd254287eb6098974039ff6331081b8ebe",
+  "expectedSHA256": "67268c35c8879097d6db1e82c44d9ebd254287eb6098974039ff6331081b8ebe",
+  "newUploads": 0,
+  "historicalReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/delivery/R2-RECEIPTS.json",
+  "byteExactReadback": true
+}

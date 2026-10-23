@@ -1,0 +1,21 @@
+{
+  "taskNumber": 824,
+  "method": "whole-title rendering from an OFL font, authorized source fallback",
+  "sourceText": "Viimeinen\nkeisari",
+  "normalizedReading": "Viimeinen keisari",
+  "font": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/fonts/CormorantGaramond-Italic[wght].ttf",
+  "fontSHA256": "0f48ea6abb2084537854f7174c470991a463b13036309e3b50a81511611c530d",
+  "license": "SIL OFL1.1",
+  "licensePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/fonts/CormorantGaramond-OFL.txt",
+  "fontFileUnmodified": true,
+  "fontWeight": 700,
+  "reason": "Native decorative rendering not unambiguous for i/letter case in OCR; use exact Unicode font composition",
+  "glyphNames": null,
+  "dimensions": [
+    2400,
+    800
+  ],
+  "newGenerativeCalls": 0,
+  "partialNativeImageEdit": false,
+  "nativeCandidatePreserved": true
+}
