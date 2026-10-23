@@ -1,0 +1,96 @@
+{
+  "files": [
+    {
+      "task": 884,
+      "id": "chiwen",
+      "path": "chiwen.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/raw/pt884-chiwen.glb",
+      "source_sha256": "7c029464ef4eb0c9391485c56214a8a4896a6187b1dbc4bbf48a21636c7ec9d9",
+      "sha256": "e4c6d37e47f410d7d7f3311360a3c3f2dbca723141eb4ede2b22a5487ac29fb1",
+      "bytes": 1502084,
+      "triangles": 2918,
+      "texture": [
+        1024,
+        1024
+      ],
+      "texture_mime": "image/png",
+      "texture_path": "chiwen-basecolor.png",
+      "materials": 1,
+      "primitives": 1,
+      "skins": 0,
+      "animations": 0,
+      "dimensions_xyz_m": [
+        0.47348360301282255,
+        1.4,
+        1.472723878840233
+      ],
+      "minimum_y": 0.0,
+      "uniform_scale": 1.5025284946940913,
+      "baked_rotation_y_degrees": 90,
+      "units": "meters",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "topology_uv_preserved": true,
+      "visual_QA": "PASS_FOR_RECEIVER_REVIEW",
+      "game_integrated": false,
+      "preview": "esikatselu/chiwen-nelja-suuntaa.png",
+      "forward": "+Z",
+      "up": "+Y",
+      "credit_cost": 40,
+      "job_id": "1d3b37e1-71d7-4e3f-bb91-67778f2f76f6",
+      "description": "staattinen kattokoriste"
+    },
+    {
+      "task": 885,
+      "id": "harjaelaimet",
+      "path": "harjaelaimet.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/raw/pt885-harjaelaimet.glb",
+      "source_sha256": "d8cba5799a01a61b12ea8bd299339b6beb16692c7f0e87b527091c7f74d26aa9",
+      "sha256": "f5818288109dd00452ff80c8effd9c47a8563accc9a8b4d244acc2e516d45576",
+      "bytes": 1496444,
+      "triangles": 2838,
+      "texture": [
+        1024,
+        1024
+      ],
+      "texture_mime": "image/png",
+      "texture_path": "harjaelaimet-basecolor.png",
+      "materials": 1,
+      "primitives": 1,
+      "skins": 0,
+      "animations": 0,
+      "dimensions_xyz_m": [
+        0.1623554029131718,
+        0.35,
+        1.187673681866586
+      ],
+      "minimum_y": 0.0,
+      "uniform_scale": 1.2062263357172907,
+      "baked_rotation_y_degrees": 90,
+      "units": "meters",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "topology_uv_preserved": true,
+      "visual_QA": "PASS_FOR_RECEIVER_REVIEW",
+      "game_integrated": false,
+      "preview": "esikatselu/harjaelaimet-nelja-suuntaa.png",
+      "forward": "+Z",
+      "up": "+Y",
+      "credit_cost": 40,
+      "job_id": "1a3a6d37-be50-45ff-afd0-21a800b8e1b9",
+      "description": "staattinen kattokoriste"
+    }
+  ]
+}

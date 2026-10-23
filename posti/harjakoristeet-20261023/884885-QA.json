@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-23T14:27:30.514215+00:00",
+  "status": "PASS_FOR_RECEIVER_REVIEW",
+  "personally_inspected_original_size": true,
+  "chiwen": {
+    "height_m": 1.4,
+    "triangles": 2918,
+    "open_mouth": true,
+    "upward_tail": true,
+    "small_mounting_base": true,
+    "orientation_verified": "+Z mouth direction",
+    "floating_parts_observed": false
+  },
+  "harjaelaimet": {
+    "triangles_total": 2838,
+    "groups_visually_verified": 6,
+    "rider_on_chicken": 1,
+    "seated_animals": 5,
+    "body_gaps_visible": true,
+    "same_direction": true,
+    "group_heights_m": [
+      0.35,
+      0.271657,
+      0.29286,
+      0.273985,
+      0.292188,
+      0.286151
+    ]
+  },
+  "known_limits": [
+    "Small decorative features are simplified at the commissioned 3000-triangle budget.",
+    "Local previews show unlit texture and silhouette; ceramic gloss, roof seating, target-distance readability and lighting require receiver game QA.",
+    "Recess shading remains in generated base color; no large cast shadow or obvious opposite-side seam observed in four inspected views.",
+    "Animal species sequence is not asserted to be a historical exact replica."
+  ],
+  "receiver_received": false,
+  "pt_approved": false,
+  "game_integrated": false
+}

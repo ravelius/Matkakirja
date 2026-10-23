@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-23T14:28:09.390046+00:00",
+  "exit_code": 0,
+  "result": "KAIKKI OK",
+  "checker": "/Users/Shared/Claude/Matkakirja-sisaltokirjuri/tools/codex-3d-tarkistus.mjs",
+  "models": {
+    "chiwen.glb": {
+      "type": "esine",
+      "triangles": 2918,
+      "draws": 1,
+      "materials": 1
+    },
+    "harjaelaimet.glb": {
+      "type": "esine",
+      "triangles": 2838,
+      "draws": 1,
+      "materials": 1
+    }
+  },
+  "receiver_acceptance": false
+}

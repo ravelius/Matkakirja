@@ -1,0 +1,105 @@
+{
+  "task_ids": [
+    884,
+    885
+  ],
+  "jobs": [
+    {
+      "model": "chiwen",
+      "task": 884,
+      "status": "EXPORTED",
+      "intent_at": "2026-10-23T14:19:55.967633+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/native/chiwen-lahde-v1.png",
+      "source_sha256": "63e659441317e59ebf55d5c65af49be71c4c2fb3178af024ac15da3232e4cbf2",
+      "settings": {
+        "model": "H3.1 – Best Quality",
+        "input": "image",
+        "geometry_and_texture": true,
+        "generate_in_parts": false,
+        "8k": false,
+        "ultra_mesh_quality": true,
+        "ai_complete": false,
+        "texture_quality": "2K",
+        "remove_lighting": true,
+        "pbr": false,
+        "topology": "Triangle",
+        "polycount": 3000,
+        "advanced_settings_verified_after_generation": true
+      },
+      "displayed_cost": 40,
+      "balance_before": 19645,
+      "supplemental_text_submitted": false,
+      "job_id": "1d3b37e1-71d7-4e3f-bb91-67778f2f76f6",
+      "confirmed_at": "2026-10-23T14:20:39.856567+00:00",
+      "balance_after": 19605,
+      "credits": 40,
+      "visible_progress": 29,
+      "ui_remaining_seconds": 64,
+      "export_completed_at": "2026-10-23T14:27:30.514215+00:00",
+      "raw_receipt": "qa/receipt-chiwen.json",
+      "output_texture_ui": "1k",
+      "url": "https://studio.tripo3d.ai/workspace/generate/1d3b37e1-71d7-4e3f-bb91-67778f2f76f6"
+    },
+    {
+      "model": "harjaelaimet",
+      "task": 885,
+      "status": "EXPORTED",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/native/harjaelaimet-lahde-v1.png",
+      "source_sha256": "cdaf4a979f52d9dfc12544d45baadc5dd3f323bf8b68524fd766daaf0774f6bf",
+      "settings": {
+        "model": "H3.1 – Best Quality",
+        "input": "image",
+        "geometry_and_texture": true,
+        "generate_in_parts": false,
+        "8k": false,
+        "ultra_mesh_quality": true,
+        "ai_complete": false,
+        "texture_quality": "2K",
+        "remove_lighting": true,
+        "pbr": false,
+        "topology": "Triangle",
+        "polycount": 3000,
+        "advanced_settings_verified_after_generation": true
+      },
+      "balance_before": 19605,
+      "displayed_cost": 40,
+      "supplemental_text_submitted": false,
+      "intent_at": "2026-10-23T14:21:13.461119+00:00",
+      "job_id": "1a3a6d37-be50-45ff-afd0-21a800b8e1b9",
+      "confirmed_at": "2026-10-23T14:21:48.164720+00:00",
+      "balance_after": 19565,
+      "credits": 40,
+      "visible_progress": 16,
+      "ui_remaining_seconds": 103,
+      "export_completed_at": "2026-10-23T14:27:30.514215+00:00",
+      "raw_receipt": "qa/receipt-harjaelaimet.json",
+      "output_texture_ui": "1k",
+      "url": "https://studio.tripo3d.ai/workspace/generate/1a3a6d37-be50-45ff-afd0-21a800b8e1b9"
+    }
+  ],
+  "credit_events": [
+    {
+      "at": "2026-10-23T14:20:39.856567+00:00",
+      "job_id": "1d3b37e1-71d7-4e3f-bb91-67778f2f76f6",
+      "before": 19645,
+      "after": 19605,
+      "cost": 40
+    },
+    {
+      "at": "2026-10-23T14:21:48.164720+00:00",
+      "job_id": "1a3a6d37-be50-45ff-afd0-21a800b8e1b9",
+      "before": 19605,
+      "after": 19565,
+      "cost": 40
+    }
+  ],
+  "image_calls": 0,
+  "external_source_images": {
+    "producer_tasks": [
+      886,
+      887
+    ],
+    "image_calls": 2,
+    "receipt": "qa/source-images-886887-received.json"
+  }
+}
