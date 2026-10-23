@@ -1,0 +1,142 @@
+[
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-linja2/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo.png",
+    "sha256": "4ca90313553594e1020bd1d5880e2f6d46224486b0a0846adb4c7a6d170b11fd",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 37038
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-linja2/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo-valkoinen.png",
+    "sha256": "225b427093f9fd66dcef9171c233dc9d39c75fe07b88f3ee148fa725f279f733",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 36886
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-linja2/Assets/Matkakirja/Kartta/Aloitusruutu-logo-ios.png",
+    "sha256": "47c170c321d3dbafb06a149a22a6ea66ec349de09c20e6375054edd3e4dade3a",
+    "size": [
+      720,
+      720
+    ],
+    "mode": "RGBA",
+    "bytes": 39583
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-kaannos-linja1/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo.png",
+    "sha256": "4ca90313553594e1020bd1d5880e2f6d46224486b0a0846adb4c7a6d170b11fd",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 37038
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-kaannos-linja1/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo-valkoinen.png",
+    "sha256": "225b427093f9fd66dcef9171c233dc9d39c75fe07b88f3ee148fa725f279f733",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 36886
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-kaannos-linja1/Assets/Matkakirja/Kartta/Aloitusruutu-logo-ios.png",
+    "sha256": "47c170c321d3dbafb06a149a22a6ea66ec349de09c20e6375054edd3e4dade3a",
+    "size": [
+      720,
+      720
+    ],
+    "mode": "RGBA",
+    "bytes": 39583
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-mac-kopio/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo.png",
+    "sha256": "4ca90313553594e1020bd1d5880e2f6d46224486b0a0846adb4c7a6d170b11fd",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 37038
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-mac-kopio/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo-valkoinen.png",
+    "sha256": "225b427093f9fd66dcef9171c233dc9d39c75fe07b88f3ee148fa725f279f733",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 36886
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-mac-kopio/Assets/Matkakirja/Kartta/Aloitusruutu-logo-ios.png",
+    "sha256": "47c170c321d3dbafb06a149a22a6ea66ec349de09c20e6375054edd3e4dade3a",
+    "size": [
+      720,
+      720
+    ],
+    "mode": "RGBA",
+    "bytes": 39583
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity-b5/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo.png",
+    "sha256": "4ca90313553594e1020bd1d5880e2f6d46224486b0a0846adb4c7a6d170b11fd",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 37038
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity-b5/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo-valkoinen.png",
+    "sha256": "225b427093f9fd66dcef9171c233dc9d39c75fe07b88f3ee148fa725f279f733",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 36886
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity-b5/Assets/Matkakirja/Kartta/Aloitusruutu-logo-ios.png",
+    "sha256": "47c170c321d3dbafb06a149a22a6ea66ec349de09c20e6375054edd3e4dade3a",
+    "size": [
+      720,
+      720
+    ],
+    "mode": "RGBA",
+    "bytes": 39583
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity67/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo.png",
+    "sha256": "4ca90313553594e1020bd1d5880e2f6d46224486b0a0846adb4c7a6d170b11fd",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 37038
+  },
+  {
+    "path": "/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity67/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo-valkoinen.png",
+    "sha256": "225b427093f9fd66dcef9171c233dc9d39c75fe07b88f3ee148fa725f279f733",
+    "size": [
+      720,
+      176
+    ],
+    "mode": "RGBA",
+    "bytes": 36886
+  }
+]

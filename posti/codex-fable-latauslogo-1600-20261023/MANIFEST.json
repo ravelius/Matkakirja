@@ -1,0 +1,243 @@
+{
+  "at": "2026-10-23T12:59:02.524755+00:00",
+  "taskNumbers": [
+    899,
+    900,
+    901
+  ],
+  "source": {
+    "path": "posti/fable-codex-latauslogo-1600-20261023.md",
+    "commit": "f1cb132fa41711cb6ba632cb600fdad0080ef49d",
+    "blob": "b3a264d588624edde9063c7184c898ff5dee19c1",
+    "sha256": "b02692549fbe25ca4a3f3eb1ddf694663bb7893d08b0a2dd6c14992a1ba81507",
+    "readInFull": true,
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauslogo-899901-20261023/sources/fable-codex-latauslogo-1600-20261023.md"
+  },
+  "assets": [
+    {
+      "taskNumber": 899,
+      "sourceFile": "Aloitusruutu-logo.png",
+      "sourceSHA256": "4ca90313553594e1020bd1d5880e2f6d46224486b0a0846adb4c7a6d170b11fd",
+      "file": "aloitusruutu-logo-1600.png",
+      "sha256": "1327e0fb3c52ec6a05ea284b59bc282ac172061fd852f0bebd1470bc22c7778d",
+      "bytes": 53975,
+      "dimensions": [
+        1600,
+        391
+      ],
+      "mode": "RGBA",
+      "svg": "aloitusruutu-logo-1600.svg",
+      "svgSHA256": "d470af520f99291749b47c95b5a17a45ecaed49718cd68548ba5dd4427c4d743",
+      "sourceRGB": [
+        70,
+        51,
+        31
+      ],
+      "renderedVisibleRGBExact": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        1,
+        1600,
+        391
+      ],
+      "alphaLevels": 255,
+      "sourceResolutionSilhouetteIoU": 0.9894908862350723,
+      "sourceAlphaMeanAbsoluteError": 2.430681818181818,
+      "originalTopology": {
+        "components": 25,
+        "significantComponentsOver3px": 25,
+        "smallComponents": []
+      },
+      "renderedTopologyAtSourceSize": {
+        "components": 25,
+        "significantComponentsOver3px": 25,
+        "smallComponents": []
+      },
+      "transparentBackground": true,
+      "newGenerativeCalls": 0,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauslogo-899901-20261023/delivery/aloitusruutu-logo-1600.png",
+      "mailboxPath": "posti/codex-fable-latauslogo-1600-20261023/aloitusruutu-logo-1600.png",
+      "sourceLocalPath": "/Volumes/T7 4TB/koodaus/proto-linja2/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo.png",
+      "sourceRequestedRepoPath": "proto-3d/Matkakirja-proto/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo.png"
+    },
+    {
+      "taskNumber": 900,
+      "sourceFile": "Aloitusruutu-logo-valkoinen.png",
+      "sourceSHA256": "225b427093f9fd66dcef9171c233dc9d39c75fe07b88f3ee148fa725f279f733",
+      "file": "aloitusruutu-logo-valkoinen-1600.png",
+      "sha256": "073b7e333431ce90b91ee212d4f9ae9f6c38e3d3f148935f4c3f03163338a2bd",
+      "bytes": 52574,
+      "dimensions": [
+        1600,
+        391
+      ],
+      "mode": "RGBA",
+      "svg": "aloitusruutu-logo-valkoinen-1600.svg",
+      "svgSHA256": "e16770d2f841cf7575fd2e9b28e12a278ffeb4694fe53f0068028d74b231963c",
+      "sourceRGB": [
+        255,
+        255,
+        255
+      ],
+      "renderedVisibleRGBExact": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        1,
+        1600,
+        391
+      ],
+      "alphaLevels": 255,
+      "sourceResolutionSilhouetteIoU": 0.9894908862350723,
+      "sourceAlphaMeanAbsoluteError": 2.430681818181818,
+      "originalTopology": {
+        "components": 25,
+        "significantComponentsOver3px": 25,
+        "smallComponents": []
+      },
+      "renderedTopologyAtSourceSize": {
+        "components": 25,
+        "significantComponentsOver3px": 25,
+        "smallComponents": []
+      },
+      "transparentBackground": true,
+      "newGenerativeCalls": 0,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauslogo-899901-20261023/delivery/aloitusruutu-logo-valkoinen-1600.png",
+      "mailboxPath": "posti/codex-fable-latauslogo-1600-20261023/aloitusruutu-logo-valkoinen-1600.png",
+      "sourceLocalPath": "/Volumes/T7 4TB/koodaus/proto-linja2/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo-valkoinen.png",
+      "sourceRequestedRepoPath": "proto-3d/Matkakirja-proto/Assets/Matkakirja/Kartta/Resources/Aloitusruutu-logo-valkoinen.png"
+    },
+    {
+      "taskNumber": 901,
+      "sourceFile": "Aloitusruutu-logo-ios.png",
+      "sourceSHA256": "47c170c321d3dbafb06a149a22a6ea66ec349de09c20e6375054edd3e4dade3a",
+      "file": "aloitusruutu-logo-ios-1600.png",
+      "sha256": "d312274e016c9723320d6c39161315683fc6447b4495b4267cfa11a249f93050",
+      "bytes": 63302,
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "svg": "aloitusruutu-logo-ios-1600.svg",
+      "svgSHA256": "aee702b0dd59520fdbf8c5920dd5ee3dc92aab9cd04c3dc1b2b97645cc9d2cfa",
+      "sourceRGB": [
+        201,
+        180,
+        143
+      ],
+      "renderedVisibleRGBExact": true,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBBox": [
+        0,
+        605,
+        1600,
+        996
+      ],
+      "alphaLevels": 255,
+      "sourceResolutionSilhouetteIoU": 0.9894908862350723,
+      "sourceAlphaMeanAbsoluteError": 0.6033217592592592,
+      "originalTopology": {
+        "components": 25,
+        "significantComponentsOver3px": 25,
+        "smallComponents": []
+      },
+      "renderedTopologyAtSourceSize": {
+        "components": 25,
+        "significantComponentsOver3px": 25,
+        "smallComponents": []
+      },
+      "transparentBackground": true,
+      "newGenerativeCalls": 0,
+      "iosVerticalCenter": 800,
+      "sameOriginalCenteredComposition": true,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauslogo-899901-20261023/delivery/aloitusruutu-logo-ios-1600.png",
+      "mailboxPath": "posti/codex-fable-latauslogo-1600-20261023/aloitusruutu-logo-ios-1600.png",
+      "sourceLocalPath": "/Volumes/T7 4TB/koodaus/proto-linja2/Assets/Matkakirja/Kartta/Aloitusruutu-logo-ios.png",
+      "sourceRequestedRepoPath": "proto-3d/Matkakirja-proto/Assets/Matkakirja/Kartta/Aloitusruutu-logo-ios.png"
+    }
+  ],
+  "sourceInventoryPath": "SOURCE-CANDIDATE-INVENTORY.json",
+  "method": {
+    "method": "Subpixel alpha-contour reconstruction into cubic Bezier SVG paths, then fresh rasterization at delivery resolution",
+    "vtracerVersion": "0.6.15",
+    "parameters": {
+      "colormode": "binary",
+      "hierarchical": "cutout",
+      "mode": "spline",
+      "filter_speckle": 0,
+      "corner_threshold": 60,
+      "length_threshold": 3.5,
+      "max_iterations": 10,
+      "splice_threshold": 45,
+      "path_precision": 3
+    },
+    "sourceAlphaThreshold": 127,
+    "contourCoordinateScale": 4,
+    "pathCount": 25,
+    "sourceMaxAlpha": 254,
+    "originalColors": {
+      "aloitusruutu-logo-1600": [
+        70,
+        51,
+        31
+      ],
+      "aloitusruutu-logo-valkoinen-1600": [
+        255,
+        255,
+        255
+      ],
+      "aloitusruutu-logo-ios-1600": [
+        201,
+        180,
+        143
+      ]
+    },
+    "transparentBackground": true,
+    "goldAndWhiteAlphaIdentical": true,
+    "iosIsExactSameAlphaAtY272": true,
+    "iosOriginalPadding": [
+      0,
+      272,
+      0,
+      272
+    ],
+    "targetSizes": {
+      "wide": [
+        1600,
+        391
+      ],
+      "ios": [
+        1600,
+        1600
+      ]
+    },
+    "roundedWideAspectDifferencePercent": -0.028409090909087276,
+    "embeddedBitmapCount": 0,
+    "newGenerativeCalls": 0,
+    "fontSubstitution": false,
+    "sourceVectorFound": false,
+    "originalsUnchanged": true
+  },
+  "qaPassed": true,
+  "newGenerativeCalls": 0,
+  "rasterOutputCount": 3,
+  "svgOutputCount": 3,
+  "noGameCodeChanges": true,
+  "ownerApprovedRequestedSize": true,
+  "recipientAccepted": false,
+  "ownerAcceptedFinalAssets": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "colorClarification": "Order calls the wide original beige/gold, but all five checked installed game copies use RGB70,51,31. Exact source colors retained: wide brown, white variant white, iOS beige201,180,143."
+}

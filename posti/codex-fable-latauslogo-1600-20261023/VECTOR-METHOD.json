@@ -1,0 +1,61 @@
+{
+  "method": "Subpixel alpha-contour reconstruction into cubic Bezier SVG paths, then fresh rasterization at delivery resolution",
+  "vtracerVersion": "0.6.15",
+  "parameters": {
+    "colormode": "binary",
+    "hierarchical": "cutout",
+    "mode": "spline",
+    "filter_speckle": 0,
+    "corner_threshold": 60,
+    "length_threshold": 3.5,
+    "max_iterations": 10,
+    "splice_threshold": 45,
+    "path_precision": 3
+  },
+  "sourceAlphaThreshold": 127,
+  "contourCoordinateScale": 4,
+  "pathCount": 25,
+  "sourceMaxAlpha": 254,
+  "originalColors": {
+    "aloitusruutu-logo-1600": [
+      70,
+      51,
+      31
+    ],
+    "aloitusruutu-logo-valkoinen-1600": [
+      255,
+      255,
+      255
+    ],
+    "aloitusruutu-logo-ios-1600": [
+      201,
+      180,
+      143
+    ]
+  },
+  "transparentBackground": true,
+  "goldAndWhiteAlphaIdentical": true,
+  "iosIsExactSameAlphaAtY272": true,
+  "iosOriginalPadding": [
+    0,
+    272,
+    0,
+    272
+  ],
+  "targetSizes": {
+    "wide": [
+      1600,
+      391
+    ],
+    "ios": [
+      1600,
+      1600
+    ]
+  },
+  "roundedWideAspectDifferencePercent": -0.028409090909087276,
+  "embeddedBitmapCount": 0,
+  "newGenerativeCalls": 0,
+  "fontSubstitution": false,
+  "sourceVectorFound": false,
+  "originalsUnchanged": true
+}
