@@ -2335,3 +2335,7 @@ PT local_5df52e10 23.10. klo 11.2x–11.5x: tili vvi@vvi.fi (koodaustili, raja 9
 ## VIIKKORAJA vvi@vvi.fi 99 % (omistaja 23.10. klo 11.28) (23.10.2026 klo 11.30)
 
 Omistajan kortti KK:ssa 11.28: "Saako uutta tiliä käyttää koko viikon kiintiön loppuun asti?" → "Kyllä, loppuun asti (Suositus)". Tilin vvi@vvi.fi raja tällä viikolla 99 % (koodaustilin VOIMASSA OLEVA ARVO). Samalla 11.28 omistaja salli KK-id:n vaihdon koneen yhteiseen CLAUDE.md:hen (KK teki 11.29: local_6088bfc8).
+
+## VASTAUS AINA KORTILLA (omistaja 23.10. klo 11.34) (23.10.2026 klo 11.34)
+
+Omistaja KK:ssa 11.34: "laita jatkossa kysymyskortit, niin huomaan ne puhelimella parhaiten". Jokainen omistajalta odotettava vastaus kortilla, myös kuvien ok, tekstien hyväksyntä ja äänten generointilupa; tekstit, kuvat ja otot lähetetään ensin, kortin selitteet riittävät yksinään; itse tekstit eivät mene korttiin (21.10. 08.34 voimassa). Raamattu 7.27 päivitetty.
