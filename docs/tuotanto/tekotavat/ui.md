@@ -16,7 +16,7 @@ korttivastaus (K2, K3, K6, K7 ja K9: omistaja 21.10.2026 klo 19.43–19.45, kaik
 | P1 | Taustan tummennus kertoo panoksesta | aste 0 selailu: ei tummennusta (kohdekortti, minipopup, paneelit); aste 1 harkinta: kevyt tummennus ja sumennus (varmistukset, `ModaaliTaso`); aste 2 panos: reunoilta kuultava tumma sumennus (tehtäväkortti, aarrepaljastus, kysymys) | merge-pyynnön rivi "Pohja: …, aste n"; kuva kustakin uudesta pinnasta | päätetty (4.9) |
 | P2 | Ohinapautus | paneeli ja nosto sulkeutuvat ohinapautuksesta; valintaa vaativa kortti ei sulkeudu, vaan vain sen napeista | skenaario: `tap` kortin ulkopuolelle → lokista auki/kiinni | päätetty (K2, omistaja 21.10. 19.43; 4.10) |
 | P3 | Kortin korkeus | kortti enintään 86 % turva-alueen korkeudesta; ylimenevä sisältö vierii, napit pysyvät näkyvissä | ui-puu: kortin `worldBound.height` / turva-alueen korkeus ≤ 0,86 iPhone pysty, iPhone vaaka ja iPad | päätetty (K3, omistaja 21.10. 19.43) |
-| P4 | Peitto | kortti tai paneeli peittää enintään 45 % ruudusta (`mitat.peitto.max`) ja on kohteen vieressä, ei koko leveyden arkkina; poikkeus ISS-kohdevalikko (PYSÄYTYSKUVA) | ui-puu: pinta-ala / ruudun pinta-ala | päätetty (4.4) |
+| P4 | Peitto | asteen 0 selailupinta (kohdekortti, minipopup, paneelit) peittää enintään 45 % ruudusta (`mitat.peitto.max`) ja on kohteen vieressä; modaali (aste 1–2) mitataan P3:lla (PT 23.10., 4.4:n ja K3:n tulkinta), ei koko leveyden arkkina; poikkeus ISS-kohdevalikko (PYSÄYTYSKUVA) | ui-puu: pinta-ala / ruudun pinta-ala | päätetty (4.4) |
 | P5 | Avaus- ja sulkuajat | avaus 220 ms, sulku 200 ms (avaajan suunnasta kasvaen ja häivyttäen, sulku samaa reittiä), ease-in-out, mikään UI-siirtymä ei yli 250 ms; vähennetty liike = pelkkä häivytys | pohjavahti (USS `transition-duration`), `Tyylikirja.Kesto` koodissa | päätetty (4.14, 4.15) |
 | P6 | Napin koko | tekstinappi 38 pt (`mitat.nappi.korkeus`, omistaja 6.10.), kuvakenappi 40 pt (`mitat.nappi.ohjaus`); samassa rivissä yksi koko | ui-puu: rivin nappien korkeudet samat | päätetty |
 | P7 | Kosketusala | jokaisen napautettavan osuma-ala vähintään 44 × 44 pt (`mitat.nappi.osuma`), myös pienen kuvakkeen | ui-puu: napautettavien `worldBound` ≥ 44 pt kumpaankin suuntaan | päätetty (K6, omistaja 21.10. 19.43) |
@@ -50,8 +50,9 @@ korttivastaus (K2, K3, K6, K7 ja K9: omistaja 21.10.2026 klo 19.43–19.45, kaik
   (`mitat.leveys.sivukortti`), minipopup 320 pt (`mitat.leveys.minipopup`); aina enintään turva-alueen leveys − 2 × 8 pt.
 - Korkeus ja peitto: kortti ≤ 86 % turva-alueen korkeudesta (P3); kortti tai paneeli ≤ 45 % (`mitat.peitto.max`) ruudun alasta
   (P4); paneeli erikseen sovituissa ≤ 70 % (`mitat.peitto.paneeli`).
-  AVOIN (kysytty PT:ltä 23.10.): kumpi raja koskee modaalia korttia (aste 1–2), 86 % korkeus (P3) vai 45 % ala (P4)? iPhone pystyssä
-  ne eroavat (420 pt:n kortti on koko leveys). P4:n automaattinen mittaus odottaa vastausta.
+  Rajaus (PT 23.10.2026, 4.4:n ja K3:n tulkinta, ei uusi linjaus): modaaliin (aste 1–2) sovelletaan P3:a; P4 koskee vain asteen 0
+  selailupintoja (kohdekortti, minipopup, paneelit), koska niiden takana kartan pitää näkyä. Modaali tummentaa taustan, joten peitto ei
+  ole sen mittari.
 - Kirjasinkoot: kapiteeli 12 pt (`typografia.kapiteeli.koko`), apuri 14 pt (`typografia.apuri.koko`), leipä 16 pt
   (`typografia.leipa.koko`), väliotsikko 18 pt (`typografia.valiotsikko.koko`), otsikko 21 pt (`typografia.otsikko.koko`), arkki
   26 pt (`typografia.arkki.koko`). Muu koko vain `/* fonttipoikkeus: syy */` -merkinnällä (pohjavahti).
@@ -83,7 +84,7 @@ pysty, iPhone vaaka ja iPad; "skenaario" = todistusajon `oleta`-rivi lokista.
 | P1 | merge-pyynnön rivi "Pohja: …, aste n" + kuva uudesta pinnasta | – | mittariin: himmennyksen väri = `himmennys.*` asteen mukaan |
 | P2 | skenaario: `tap-kohta` kortin ulkopuolelle → lokissa kortti yhä auki (valintakortti) tai kiinni (paneeli) | – | todistusajon skenaarioon |
 | P3 | mittari `ui periaatteet`: "P3 … (yli 86 % 0)" | mittari (`UiPeriaatteet.cs`, juna 210) | – |
-| P4 | ui-puu: pinnan ala / ruudun ala ≤ 0,45 | – | mittariin samaan silmukkaan (`worldBound`-ala) |
+| P4 | ui-puu: asteen 0 pinnan ala / ruudun ala ≤ 0,45; modaalit (`ModaaliTaso`, aste 1–2) rajataan pois (ne P3:ssa) | – | mittariin samaan silmukkaan (`worldBound`-ala, vain aste 0) |
 | P5 | pohjavahti: `transition-duration` > 250 ms = virhe; tyylikirjatesti: liike ≤ maksimi | pohjavahti, `tests/tyylikirja.test.mjs` | mittariin: `resolvedStyle.transitionDuration` näkyvistä |
 | P6 | ui-puu: saman rivin nappien korkeudet samat (ero 0 pt) | – | mittariin: sisarnappien `worldBound.height` |
 | P7 | mittari: "P7 … (alle 44 pt 0)" | mittari | – |
