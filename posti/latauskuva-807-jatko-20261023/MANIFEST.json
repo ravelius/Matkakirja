@@ -1,0 +1,73 @@
+{
+  "family": "loading807-upward-extension-902904-20261023",
+  "at": "2026-10-23T13:49:11.244605+00:00",
+  "generationCalls": 1,
+  "nativeImageCount": 1,
+  "derivativeImageCount": 3,
+  "usableBackgroundCount": 0,
+  "usableMaskCount": 1,
+  "allRequestedResultsAccepted": false,
+  "gameReady": false,
+  "files": [
+    {
+      "filename": "latauskuva-807-extended-top300-QA-NOT-ACCEPTED.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-902904-20261023/delivery/latauskuva-807-extended-top300-QA-NOT-ACCEPTED.png",
+      "mailboxPath": "posti/latauskuva-807-jatko-20261023/latauskuva-807-extended-top300-QA-NOT-ACCEPTED.png",
+      "sha256": "96cb64bc764e3dc54a102b4691306002007d004850dafb792d446e9f0a3b668c",
+      "bytes": 2642566,
+      "dimensions": [
+        1448,
+        1386
+      ],
+      "mode": "RGB",
+      "qa": "NOT_ACCEPTED_FOR_GAME"
+    },
+    {
+      "filename": "puyi-head-hat-braid-807-y300.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-902904-20261023/delivery/puyi-head-hat-braid-807-y300.png",
+      "mailboxPath": "posti/latauskuva-807-jatko-20261023/puyi-head-hat-braid-807-y300.png",
+      "sha256": "346539c7a000abc67a4df11e518a8977b173eb0b5e3cc01256dcd6fbc600a271",
+      "bytes": 111650,
+      "dimensions": [
+        1448,
+        1386
+      ],
+      "mode": "RGBA",
+      "qa": "PASS_MASK_ONLY"
+    },
+    {
+      "filename": "latauskuva-807-title824-head-proof-QA-NOT-ACCEPTED.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-902904-20261023/delivery/latauskuva-807-title824-head-proof-QA-NOT-ACCEPTED.png",
+      "mailboxPath": "posti/latauskuva-807-jatko-20261023/latauskuva-807-title824-head-proof-QA-NOT-ACCEPTED.png",
+      "sha256": "285e99f68a75d2ae6a5766182e35f7e50a8399b69d84616635f6ab3e74fa02a3",
+      "bytes": 2699288,
+      "dimensions": [
+        1448,
+        1386
+      ],
+      "mode": "RGB",
+      "qa": "NOT_ACCEPTED_FOR_GAME"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/references/807.png",
+      "sha256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-paamaski-898-20261023/delivery/puyi-head-hat-braid-807.png",
+      "sha256": "90a6379ee899d2c6d48a44eca4c918cfc16cde5ba6218e7f465994fa365a0929"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/delivery/01-viimeinen-keisari.png",
+      "sha256": "67268c35c8879097d6db1e82c44d9ebd254287eb6098974039ff6331081b8ebe"
+    }
+  ],
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-902904-20261023/native/outpaint-v1.png",
+  "nativeSHA256": "665c36d1bfb19ece0496caecac952e9c1128fcf1599d39f5d9cffd11f55639c9",
+  "qaPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-902904-20261023/qa/QA-902904.json",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

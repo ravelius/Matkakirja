@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen edit",
+  "prompt": "Use case: compositing / precise upward outpainting. Asset: stylized game loading illustration.\nImage 1 is the EDIT TARGET, a 1448 x 1386 RGBA canvas. Only its top 300 pixel rows are transparent and missing. The lower rectangle at x=0..1447, y=300..1385 is the locked original illustration. Fill ONLY the blank top strip. Return one complete opaque image at exactly1448 x1386 if supported, keeping all the existing lower image at its current position and scale.\nContinue the same blue sky and soft white clouds upward. Naturally extend the existing red palace walls and golden tiled roof/eaves visible on the far left and far right edges, continuing their precise vanishing lines and warm sunlight. The upward extension must leave spacious blue sky directly above the boy's hat for a later title overlay. Match the original stylized3D illustration, perspective, daylight, colors and gentle motion blur at the sides. The horizontal join at y300 must be invisible: every wall/roof edge and sky color should continue smoothly across it.\nPreserve the boy, face, hat with gold finial, braid, outfit, limbs, pose, all objects and the entire original lower rectangle exactly. Do not move, rescale, crop or redraw the existing scene. Add no text, logos, borders, characters, objects or extra towers. Do not fill the top with a solid band or reflected/duplicated scenery. This is one authorized outpaint, not a new composition. Only the missing top300px is new.",
+  "referenced_image_paths": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-902904-20261023/references/807-edit-target-top300-transparent.png"
+  ],
+  "transparent_background": false,
+  "callLimit": 1,
+  "noRetries": true
+}

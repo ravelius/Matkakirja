@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-23T13:49:11.244605+00:00",
+  "dimensions": [
+    1448,
+    1386
+  ],
+  "originalSourceSHA256": "56737efea9c50406f883d3c7a3bc58ab8ba145771234d5b037a64d091d2affc3",
+  "originalSourceMatchesPinnedHash": true,
+  "originalLowerPixelsIdentical": true,
+  "changedLowerRGBValues": 0,
+  "maskOriginalRGBAIdenticalAtY300": true,
+  "maskTop300RGBAAllZero": true,
+  "shiftedMaskAlphaBBox": [
+    563,
+    327,
+    913,
+    751
+  ],
+  "finialAboveSeam": false,
+  "firstNontransparentMaskY": 327,
+  "finialClearanceBelowSeamPx": 27,
+  "opaqueTitleOcclusionPixels": 431,
+  "proofRestoresSourceUnderOpaqueOcclusion": true,
+  "nativeCopyUnchanged": true,
+  "generationCallsIssued": 1,
+  "generationCallsCompleted": 1,
+  "retries": 0,
+  "visualReview": {
+    "performed": true,
+    "seamInvisible": false,
+    "result": "FAIL",
+    "reason": "At y300 the left roof ornament/detail and adjacent clouds have a visible horizontal break. Harmonic color registration improved color continuity but did not remove the geometric/detail seam. Original807 lower image is exact.",
+    "nativeAndFinalPersonallyInspected": true
+  },
+  "task902": "QA_REJECTED_DO_NOT_INTEGRATE",
+  "task903": "PASS_EXACT_SHIFTED_MASK",
+  "task904": "PLACEMENT_PROOF_ONLY_BACKGROUND_QA_FAILED",
+  "gameReady": false,
+  "r2Uploaded": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

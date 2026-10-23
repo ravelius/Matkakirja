@@ -1,0 +1,88 @@
+{
+  "sourcePreservation": "Only generated top300 rows are used. Original807 pasted byte-equivalent RGB at0,300 with no resize or retouch.",
+  "nativeGeneratedSize": [
+    1282,
+    1227
+  ],
+  "targetSize": [
+    1448,
+    1386
+  ],
+  "registration": "Piecewise affine mesh in generated upper band only, matching left roof and sky join; no original pixel altered",
+  "outputColumnAnchors": [
+    0,
+    200,
+    494,
+    704,
+    1000,
+    1275,
+    1448
+  ],
+  "generatedSourceTopAnchors": [
+    [
+      0,
+      180
+    ],
+    [
+      0,
+      30
+    ],
+    [
+      278,
+      0
+    ],
+    [
+      704,
+      0
+    ],
+    [
+      1000,
+      0
+    ],
+    [
+      1275,
+      0
+    ],
+    [
+      1448,
+      0
+    ]
+  ],
+  "generatedSourceBottomAnchors": [
+    [
+      0,
+      300
+    ],
+    [
+      140,
+      300
+    ],
+    [
+      350,
+      300
+    ],
+    [
+      572,
+      300
+    ],
+    [
+      980,
+      300
+    ],
+    [
+      1275,
+      300
+    ],
+    [
+      1448,
+      300
+    ]
+  ],
+  "seamColorCalibration": "Harmonic boundary registration confined to NEW top300 rows, frequency-dependent fade; exact source RGB pasted at0,300",
+  "newGenerativeCalls": 1,
+  "retries": 0,
+  "implementedBy": [
+    "compose_extension.py (geometric registration only)",
+    "compose_seam_v2.py (selected seam)"
+  ]
+}
