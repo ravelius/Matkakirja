@@ -30,3 +30,14 @@
 ## Kesken (PT 23.10. 14.1x)
 - PT hyväksyi junaan; JU vie paketit ämpäriin. Todistus pelistä: kun junan 210 runko on koottu, alkulennon porttikohdasta lyhyt video
   tai 3 peräkkäistä ruutua (väreily näkyy vain liikkeessä) → PT:lle. Mac-esikatselu vain, kun `pgrep -f "Matkakirja.app/Contents/MacOS"` on tyhjä.
+
+## 3. Juhlasalin kellertävät porraslaikut (PT 23.10. 14.1x, omistaja 13.32 "outoja varjoja maassa")
+- Syy: avoimet-v15:n huoneiden (juhlasali, tyohuone, puutarha, varasto) lattialaattojen yläpinta y = 0 = palatsin kiveys (tausta y = 0,
+  korvausalueen −0,02-laatta). Laatat (Floor tile 0–9, kellertävät) ja kiveys väreilivät läpi toisistaan → porrasreunaiset laikut; ei varjo.
+- Korjaus avoimet-v16 (avoimet_nosto.py): lattiasolmut ja matot +0,04 m (laatta 0,04, alla oleva lämmin kivi +0,01, matot 1,2 cm laatan yllä).
+  Huonekalut jäävät y = 0 (uppoavat 4 cm laattaan, ei näy). Paketti _valmiit/juoksupeli-avoimet-v16-vienti-20261023 (10 glb, 17efd3a898dd).
+- Proto 45a33c41a (fa138c5e5:n päällä): AvoimetKansio v16; tarkista.sh 0 virhettä.
+- Kuvapari (Blender, kaksipuolinen): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/juhlasali-lattia-v15-v16-kuvapari.jpg
+- Aukioiden toistuvat tummat läiskät (pari-06): eivät mallista vaan JuoksuLattia.shader:n PIHA-pinnan "tahra"-kohinasta (rivi ~283,
+  smoothstep(0.66, 0.92, Kohina(p * 0.9 + 11) …), ~1 m:n välein toistuva) → VS:n tiedosto, ei muutettu.
+- Tarkistettava myöhemmin: osamallit791:n kuorien lattiat samalla tavalla (ei tässä erässä).
