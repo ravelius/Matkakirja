@@ -26,3 +26,7 @@
 - Tarvitsee: JU vie kaksi pakettia ämpäriin; sitten pelikuvapari (ei ajettu: kuvapari Blenderillä Workbench, kaksipuolinen kuten peli).
 - Kuvapari: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/alkuportti-v13-v19-kuvapari.jpg
   (vasen ennen v18+v12, oikea jälkeen v19+v13; ylhäällä etelästä, alhaalla tornin julkisivu: väreilevät ovet ja oikean räystään suikale poissa).
+
+## Kesken (PT 23.10. 14.1x)
+- PT hyväksyi junaan; JU vie paketit ämpäriin. Todistus pelistä: kun junan 210 runko on koottu, alkulennon porttikohdasta lyhyt video
+  tai 3 peräkkäistä ruutua (väreily näkyy vain liikkeessä) → PT:lle. Mac-esikatselu vain, kun `pgrep -f "Matkakirja.app/Contents/MacOS"` on tyhjä.
