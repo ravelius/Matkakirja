@@ -2397,3 +2397,7 @@ Ohjeiden koe (7.47) tuoreella Sonnetilla PT:n lukulistalla: 9/10 oikein. Kysymys
 ## PAATOS 24.10.2026 klo 02.12: KERTOJAÄÄNTEN RAJA 3 % JA HYVÄKSYTTY LUKIJAÄÄNI (24.10.2026 klo 02.12)
 
 Omistaja klo 02.12 KK:n kautta (sanatarkasti): "Kertoja ääniä sai tehdä jos se vie alle 3% kuukausi kiintiöstä ja jos lukijaääni on jo hyväksytty". Korvaa kertojaäänten pysyvän luvan rajan "noin enintään 10 000 merkkiä per kokonaisuus". Muutettu: Raamattu 5.1, docs/tuotanto/tuotannonohjaus.md (lupataulukon Kertojaääni-rivi), tuotantopohja kertojan-teksti-ja-aani.md. Periaatesivun päätös tulee erikseen.
+
+## PAATOKSET 24.10.2026 klo 02.17: PERIAATESIVU, VAAKAKUVA JA ALKULENTO (24.10.2026 klo 02.19)
+
+Omistajan vastaukset KK:n korteille klo 02.17 (sanatarkasti). 1) Vaakakuva 210e: "Olisiko piirtää olla keskellä. Ylös vähän lisää tilaa. Kengän kuva isommalla ja se pitää tulla ääni efektin kanssa vasta 2sek päästä. Mieti onko kuva hyvä itse ennen kuin laitat minulle uuden version" → Pelikoodari (sommittelu keskelle, leima isommaksi, ilmestyy 2 s kuluttua tehosteäänen kanssa, 5.27). 2) Alkulento: "Drone vaappuu liikaa. Kaarrokset pitää olla Kauniita eikä hätäisiä kuin nyt. Pitää näyttää ammattilaisen ohjaamalta. Itse pelissä drone on aivan liian kaukana pelaajasta" → NUI (yksi pehmeä kaari, 2.202, kulmanopeus mitataan) ja Pelikoodari (pelikamera lähemmäs). 3) "Kootaanko periaatesivu, kun kohta 7 on korjattu?" → "Kyllä (Suositus)": 10 periaatetta tuotannonohjauksen osioksi 0; jokainen sessio lukee sen kokonaan ennen lukulistaa (Raamattu 7.47).
