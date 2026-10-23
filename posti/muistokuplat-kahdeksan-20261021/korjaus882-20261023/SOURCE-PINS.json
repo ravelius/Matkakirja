@@ -1,0 +1,26 @@
+[
+  {
+    "path": "posti/paatoimittaja-codex-muistokupla-02-uusinta-20261023.md",
+    "commit": "b3a667d2a5f70f49b39b69e98f23b2239011295c",
+    "blob": "6f20a1474dc2b60545965c57b17ca62e00efdc02",
+    "sha256": "b41211502742232d4d7d4ca7bd22d148c7e9865d9de646d05b4cf09badc35540",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/yellow-vase-retry-882-20261023/sources/paatoimittaja-codex-muistokupla-02-uusinta-20261023.md",
+    "readInFull": true
+  },
+  {
+    "path": "posti/paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "90dbccd29eee8f809816149252ade6e71037b5ed",
+    "sha256": "d464d6e6e1453178ceac1e5ef4414d7e3fb71e426591bd7b159aeac4619ca3ba",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/yellow-vase-retry-882-20261023/sources/paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md",
+    "readInFull": true
+  },
+  {
+    "path": "posti/tripo-kahdeksan-esinetta-20261021/kuusi-lattiaesinetta.png",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "e2de4069beefdfcf50e33651ef123f7b96976def",
+    "sha256": "66ee69c1a95acc788f5655d04a58a9bef923ac5ce8d4ef6b303dd337c3497d15",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat-kahdeksan-20261021/yellow-vase-retry-882-20261023/sources/kuusi-lattiaesinetta.png",
+    "readInFull": true
+  }
+]
