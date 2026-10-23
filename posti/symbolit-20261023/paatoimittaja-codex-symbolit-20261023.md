@@ -10,3 +10,8 @@ Natiivi-UI:n inventaario: kuva puuttuu kahdelta pelaajille näkyvältä riviltä
 Tyyli samaan sarjaan kuin olemassa olevat linssikatalogin kuvat (pyöreänä rajattava ruutu, kohde keskellä,
 selkeä pienenäkin). Kustakin rivistä kaksi tiedostoa: `<id>-foto-mini.jpg` 512×512 ja `<id>-foto-iso.jpg` 1600×900.
 Yksi otto per kuva (pysyvä lupa). Toimitus tähän kansioon, polut ja SHA256; Natiivi-UI kytkee.
+
+## Lisä 13.55 (Natiivi-UI:n inventaario)
+Olemassa olevat mallit: media.matkakirja.app/linssikatalogi/<id>-foto-mini.jpg / -foto-iso.jpg (Codexin linssifotot).
+Aihe-ehdotukset: kiinan-dynastiat = Kielletyn kaupungin keltakattoinen porttirakennus tai keisarillinen jadesinetti vanhan
+kartan päällä; shakki = puinen shakkilauta nappuloineen wieniläisen kahvilan marmoripöydällä.
