@@ -7,3 +7,7 @@
 
 **Opit:** Gemini-sokkoarvio kaatuu (HTTP 400) Sonnissin wav-tiedostoihin, joissa on upotettu kansikuva (mjpeg) → muunna ensin `ffmpeg -vn`. Soundly-ajo (`soundly-erat/aja.zsh`) pysähtyy vartijaan, kun muu sovellus (Safari) on etualalla; jatkuu `tehty.txt`:stä. LAHTEET.md:ssä ei sanaa ElevenLabs, jos paketti ei ole puhetta (muuten kielipakko hylkää).
 **Auki:** ei omia ajoja; Posliini 2/5 ja manifestit↔ämpäri kuten -20261021.md.
+
+## Alkulento (PT 16.02, juoksupeli/Kielletty kaupunki, juna 210) – viety
+Paketti `_valmiit/juoksupeli-alkulento-v1-vienti-20261023` → ämpäri `aanet/juoksupeli-alkulento-v1/`: `suhahdus.mp3` (Sonniss Whoosh_Hydraulic bomb-01, −29 LUFS, 3 tekstiriviä), `tikitys.mp3` + `tikitys-viim.mp3` (Sonniss CLOCKTick single, viimeinen +2 puolisävelaskelta; numerot 3-2-1), `lahto-gong.mp3` (Soundly Large Gong Soft Mallet Medium SND144817, alku 4,5 s + 2 s häivytys; **poikkeaa "ei leikkausta" -tavasta**, koska alkup. 110 s: yksi isku + pitkä sointu; PT hyväksyy tai pyytää uuden haun). Ääniportti läpi, sokko-Gemini hyväksyi. Työt `proto-3d/_tyo/alkulento-aanet-20261023/`.
+Viestit NUI:lle (local_2cd29bc1) ja PT:lle eivät menneet läpi (20 s) → tämä rivi on posti; kytkentäpolut yllä.
