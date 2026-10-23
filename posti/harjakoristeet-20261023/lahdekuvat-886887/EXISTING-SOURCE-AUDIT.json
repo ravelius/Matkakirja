@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-23T10:00:14.140027+00:00",
+  "searched": [
+    "T7 output image filenames and production logs",
+    "NAS Matkakirja-arkisto/kuvatuotanto image filenames",
+    "mailbox paths through bbd8c32a",
+    "current 884885 generation ledger and production plan"
+  ],
+  "existingCandidate": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-ymparisto-kokeilu-20261018/sources/harjalohikaarme.png",
+    "sha256": "321e4a7d22b5ed647bc2d8f37cdaf2fb3e140efa6c1b91ee2a08d19ebc02532d",
+    "personallyInspected": true,
+    "suitable": false,
+    "reason": "Four-legged seated dragon with long neck and rectangular plinth; not requested compact dragon-fish ridge end with horizontal gripping mouth and upward fish tail. Cannot supply one full six-group procession."
+  },
+  "existing884885ImageCalls": 0,
+  "existing884885ModelJobs": 0,
+  "chiwenSourceFound": false,
+  "sixGroupRowSourceFound": false,
+  "newSourceImagesNeeded": 2
+}

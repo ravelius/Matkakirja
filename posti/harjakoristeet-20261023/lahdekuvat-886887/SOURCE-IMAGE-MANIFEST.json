@@ -1,0 +1,114 @@
+{
+  "family": "roof-ornament-source-images-886887-20261023",
+  "sourceVersion": [
+    {
+      "path": "posti/harjakoristeet-20261023/codex-884885-yhteys-ja-pohjakuvat.md",
+      "commit": "bbd8c32a1fba10dbea0d684d67f74d763c9c9570",
+      "blob": "4484feef0cab072af274b28e708b0fd8278772a1",
+      "sha256": "d327f94b94fb0c1d9e7cbab6dc3688a141458c04a63d15765025e303932bc66f",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/sources/codex-884885-yhteys-ja-pohjakuvat.md",
+      "readInFull": true
+    },
+    {
+      "path": "posti/paatoimittaja-codex-harjakoristeet-tripo-20261023.md",
+      "commit": "cca459c3ab1db40ad3178f9f4e22c49ec64edecc",
+      "blob": "b8b0dceafce287b93fb499eb7f2c84b5a47418a3",
+      "sha256": "98e94634da6e92142b5f2fc1c973c3bb4ac68319f22e5c1c4190b81a085de92e",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/sources/paatoimittaja-codex-harjakoristeet-tripo-20261023.md",
+      "readInFull": true
+    }
+  ],
+  "targetOriginalSHA256": "52039dce9593bea2af42958e344bf9c8ec7de1c7da2504daa074b2e7540c52a4",
+  "mode": "built-in image_gen",
+  "existingSourceAuditPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/EXISTING-SOURCE-AUDIT.json",
+  "imageCallsIssued": 2,
+  "imageCallsCompleted": 2,
+  "imageCallsFailed": 0,
+  "wholeNewGenerations": true,
+  "nativeImagesUnedited": true,
+  "tripoCallsByThisImageChat": 0,
+  "modelDeliveryClaimed": false,
+  "images": [
+    {
+      "taskNumber": 886,
+      "id": "chiwen",
+      "referencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/sources/target-left-top-reference.png",
+      "referenceSHA256": "f398c9e020634ed8382d6b2c129af3414711aa28ab381ddeefc6999693f28838",
+      "referenceRole": "target left column material/color only",
+      "status": "QA-passed-awaiting-source-delivery",
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "callsFailed": 0,
+      "imageProduced": true,
+      "deliveryVerified": false,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "preGenerationMailboxHead": "5c6bfda53f18bf5a165fc4d98af515bba1f28654",
+      "startedAt": "2026-10-23T10:01:14.642530+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/native/chiwen-lahde-v1.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5b1530c6-54b8-4df6-a373-09bce258e18b.png",
+      "nativeSHA256": "63e659441317e59ebf55d5c65af49be71c4c2fb3178af024ac15da3232e4cbf2",
+      "nativeBytes": 2267312,
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeUnedited": true,
+      "completedAt": "2026-10-23T10:01:42.462953+00:00",
+      "QA": {
+        "at": "2026-10-23T10:02:06.395479+00:00",
+        "status": "PASS_AS_SOURCE_IMAGE",
+        "personallyInspectedNative": true,
+        "notes": "Yksi ehjä lohikäärmekala; selkeä sivuviisto, vaakasuoraan vasemmalle avautuva harjaa vastaanottava suu, yksi ylöspäin kaartuva kalanpyrstö. Pieni alusta ja sen sovituslovi näkyvät. Koko esine kuvassa, ei kattoa tai rakennusta. Lämmin keltainen lasite ja tummemmat painanteet, harmaa tausta, ei tekstiä tai kulmamerkkejä. Ei väitettä tarkan historiallisen esineen toisinnosta.",
+        "referenceRoleChecked": "target left-column warm yellow glazed material only",
+        "threeDGeometryVerified": false,
+        "recipientAccepted": false
+      }
+    },
+    {
+      "taskNumber": 887,
+      "id": "harjaelaimet",
+      "referencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/sources/target-left-top-reference.png",
+      "referenceSHA256": "f398c9e020634ed8382d6b2c129af3414711aa28ab381ddeefc6999693f28838",
+      "referenceRole": "target left column material/color only",
+      "status": "QA-passed-awaiting-source-delivery",
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "callsFailed": 0,
+      "imageProduced": true,
+      "deliveryVerified": false,
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "preGenerationMailboxHead": "5c6bfda53f18bf5a165fc4d98af515bba1f28654",
+      "startedAt": "2026-10-23T10:02:31.203904+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-harjakoristeet-884885-20261023/image-sources-886887-20261023/native/harjaelaimet-lahde-v1.png",
+      "nativeSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e81f1030-5e36-4110-ba12-505e3d1dcbc2.png",
+      "nativeSHA256": "cdaf4a979f52d9dfc12544d45baadc5dd3f323bf8b68524fd766daaf0774f6bf",
+      "nativeBytes": 1975571,
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "nativeUnedited": true,
+      "completedAt": "2026-10-23T10:02:50.285082+00:00",
+      "QA": {
+        "at": "2026-10-23T10:03:59.742255+00:00",
+        "status": "PASS_AS_SOURCE_IMAGE",
+        "personallyInspectedNative": true,
+        "groupCount": 6,
+        "riderOnChickenGroups": 1,
+        "seatedAnimalGroupsBehind": 5,
+        "sameDirectionObserved": true,
+        "singleStraightRowObserved": true,
+        "visibleGapsBetweenBodies": true,
+        "wholeObjectVisible": true,
+        "notes": "Vasemmalta oikealle yksi ratsastaja kanalla ja tasan viisi istuvaa eläinhahmoa. Kaikki kuusi erottuvat, kasvot samaan vasempaan suuntaan, sivuviisto kuvakulma. Pienet matalat kiinnitysjalat ja kapea yhteinen lista; ei kattoa tai rakennusta. Lämmin keltainen keraaminen lasite, tummemmat painanteet, neutraali harmaa tausta. Ei havaittua tekstiä tai kulmamerkkejä.",
+        "historicalSpeciesSequenceClaimed": false,
+        "threeDGeometryVerified": false,
+        "recipientAccepted": false
+      }
+    }
+  ]
+}
