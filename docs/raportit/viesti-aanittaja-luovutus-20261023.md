@@ -18,3 +18,6 @@ Viestit NUI:lle (local_2cd29bc1) ja PT:lle eivät menneet läpi (20 s) → täm�
 
 ## Alkulento v3 (PT 19.1x, TF 210) – puukalikat löytyivät, viety
 `aanet/juoksupeli-alkulento-v3/`: `puukalikka.mp3` (Soundly Temple Blocks Low 02 SND44496, 2 iskua väli 0,4 s; numerot 3-2), `puukalikka-viim.mp3` (+2 puolisävelaskelta; numero 1), `puukalikka-b.mp3` (vaihtoehto SND45801, väli 0,75 s), `gong.mp3` (Kung Fu Gong, 6 s), `suhahdus.mp3`. Kaksi iskua leikattu fraasista; sokko-Gemini OK, ääniportti läpi. Hakusanat PT:n lista (bangzi…hyoshigi) ajettu; temple block/woodblock toimi, clave/hyoshigi/bangzi eivät tuottaneet puhdasta paria.
+
+## Latauskuvan kenkäleima (PK 24.10. 02.17, TF 210) – viety
+`juoksupeli/aanet/latauskuva-leima-v1.mp3` (0,8 s, kuiva, huippu −5 dBFS): Soundly Wet Swamp Mud Stomps SND160077, yksi askel sarjasta (leikattu; yksittäisiä mutaisia askelia ei löytynyt). Sokko-Gemini OK, ääniportti läpi. Työt `proto-3d/_tyo/latauskuva-leima-20261024/`.
