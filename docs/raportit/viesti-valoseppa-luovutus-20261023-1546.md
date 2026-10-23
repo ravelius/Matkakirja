@@ -48,3 +48,7 @@ JU: local_d8cad7de-3ff8-4f4b-8787-baa80836e175. Päiväkirja `/Users/Shared/Clau
 - `odota-sha.zsh`: pgrep-kuvio `aja-k[0-9][a-z]*.zsh` (korjattu; aiempi ei tunnistanut aja-k8b:tä). `pkill` ei pysäytä jo
   käynnistynyttä `todistusajo.sh`-lasta, eikä exec-korvattua `aja-mac.zsh`:ta (nimi muuttuu).
 - Mac-videoajo ei tarvitse iPadia/simua: sen voi ajaa simuajon rinnalla (offline-piirto), kun PT pyytää kiireellä.
+
+## Lisäys 15.47 (PT)
+
+- Peli vs. video -pari on välitetty KK:lle omistajan päätettäväksi (PT suosittaa pelin omaa laukaisua). **Seuraaja odottaa valintaa; ei uusia rakettiajoja ennen sitä.** Jonon kohta 1 on siis odotustilassa.
