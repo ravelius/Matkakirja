@@ -2405,3 +2405,7 @@ Omistajan vastaukset KK:n korteille klo 02.17 (sanatarkasti). 1) Vaakakuva 210e:
 ## PAATOS 24.10.2026 klo 02.38–02.39: JUOKSUPELIN KUUSI GRAFIIKKAPARANNUSTA JA LÄHIKAMERAN HAVAINNEKUVAT (24.10.2026 klo 02.40)
 
 Omistajan kortti klo 02.38 (KK vertasi Codexin 810-havainnekuvia peliin): "Otetaanko nämä kuusi parannusta työn alle tässä järjestyksessä?" → "Kyllä (Suositus)": 1) matala lämmin iltapäivän aurinko, pitkät terävät varjot, muurit puoliksi varjossa; 2) koko kuvan sävytys havainnekuvista kuten rakettivideossa; 3) lasitetut tiilirivit, harjakoristeet, sinivihreä räystäsvyö; 4) kivetykseen vaihtelua, kulumaa ja reunakivet; 5) syvyys: portti usvan läpi, puita muurien takana; 6) todentuntuiset pilvet; iPadin rajoissa, valo ja värit ensin → Valoseppä (juna 211). Omistaja klo 02.39 (sanatarkasti): "Pyydä codexilta kuvia lähempää keisaria havainne kuviksi" → tilaus posti/paatoimittaja-codex-kuvat-juoksupeli-lahikamera-havainnekuvat-20261024.md (18e5ec45a): samat kuusi paikkaa, Puyi 35–45 % korkeudesta takaa yläviistosta; pelikameran ja grafiikan tavoite.
+
+## OMISTAJA 24.10.2026 klo 02.40: KK NOLLAUTUU YÖLLÄ KYSYMÄTTÄ (24.10.2026 klo 02.43)
+
+Omistaja (sanatarkasti): "Tiesitkö että voit nollata itsesi yöllä kysymättä lupaa". Raamattu 7.37 YÖLLÄ AUTOMAATTISESTI tarkennettu: yö alkaa, kun omistaja on sanonut menevänsä nukkumaan (02.31), eikä tunnin ehtoa omistajan viimeisestä viestistä ole.
