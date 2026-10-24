@@ -14,6 +14,7 @@ Mittarit (osuudet kuvan korkeudesta ylhäältä, 0 = yläreuna, 1 = alareuna):
   kylläisyys  värikylläisyyden keskiarvo ja p90 (0–1)
   varjo       varjossa olevan lattian osuus (kirkkaus < 0,6 · lattian p90)
   punainen    punaisten pintojen kylläisyys ja kirkkaus
+  katto       yläpinnan osuus (kulta / (kulta + sinivihreä alapinta) kuvan yläosassa) ja kattojen väli yläreunassa (osuus leveydestä)
 """
 import sys
 from PIL import Image
@@ -45,14 +46,27 @@ def mittaa(kuva):
     hor = [y for y in range(int(H * 0.5)) if sum(taivas(x, y) for x in range(int(W * 0.45), int(W * 0.55))) > 0.5 * int(W * 0.10)]
     tulos['horisontti (taivaan alaraja)'] = (max(hor) / H) if hor else 0.0
     for nimi, (a, b) in (('räystäs vasen', (0.0, 0.25)), ('räystäs oikea', (0.75, 1.0))):
-        # ylhäältä alkava yhtenäinen kattokaista (aukot ≤ 3 riviä): sen alin rivi = räystäslinja (lattia ja viitta eivät kuulu kaistaan)
-        viim, aukko = None, 0
-        for y in range(int(H * 0.75)):
-            if sum(kulta(x, y) for x in range(int(W * a), int(W * b))) > 0.15 * W * (b - a): viim, aukko = y, 0
-            elif viim is not None:
+        # ensimmäinen vähintään 0,04 H paksu yhtenäinen kattokaista ylhäältä (alkaa yläpuoliskossa; aukot ≤ 3 riviä): sen alin rivi = räystäslinja
+        rivit = [sum(kulta(x, y) for x in range(int(W * a), int(W * b))) > 0.15 * W * (b - a) for y in range(int(H * 0.75))]
+        kaistat, alku, viim, aukko = [], None, None, 0
+        for y, on in enumerate(rivit + [False] * 5):
+            if on:
+                if alku is None: alku = y
+                viim, aukko = y, 0
+            elif alku is not None:
                 aukko += 1
-                if aukko > 3: break
+                if aukko > 3: kaistat.append((alku, viim)); alku, aukko = None, 0
+        kaistat = [k for k in kaistat if k[1] - k[0] >= 0.04 * H and k[0] < 0.5 * H]
+        viim = kaistat[0][1] if kaistat else None
         tulos[nimi] = (viim / H) if viim is not None else 0.0
+    # katon yläpinta / alapinta: kuvan yläosassa (y < 0,45) kultaisen yläpinnan osuus kulta + sinivihreä alapinta -pikseleistä (PT 24.10.:
+    # katot näkyvät päältä kuten 810:ssä); kattojen väli yläreunassa = rivien y 0,02–0,06 osuus, joka ei ole kattoa (taivas ja kujan pää)
+    def alapinta(x, y):
+        h, s, v = hsv[x, y]; return 100 <= h <= 135 and s > 70 and v > 50   # sinivihreä alapinta / kannatinvyöhyke
+    ku = sum(kulta(x, y) for y in range(int(H * 0.45)) for x in range(W)); al = sum(alapinta(x, y) for y in range(int(H * 0.45)) for x in range(W))
+    tulos['katon yläpinta osuus'] = ku / max(1, ku + al)
+    yr = [1 - sum(kulta(x, y) for x in range(W)) / W for y in range(int(H * 0.02), int(H * 0.06) + 1)]
+    tulos['kattojen väli yläreunassa'] = sum(yr) / len(yr)
     lattia = [luma(x, y) for y in range(int(H * 0.85), H) for x in range(int(W * 0.25), int(W * 0.75)) if not keltainen(x, y)]
     tulos['lattia mediaani'] = osuudet(lattia, [50])[0]
     kaikki = [luma(x, y) for y in range(H) for x in range(W)]
