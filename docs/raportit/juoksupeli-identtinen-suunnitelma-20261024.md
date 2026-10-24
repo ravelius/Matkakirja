@@ -86,3 +86,8 @@ Järjestys:
   Paketti juoksupeli-kielletty-rakennukset-v18-vienti-20261024 (6aad2f72cb16; korvaa v17:n vientiin). Kohta 5 (PT hyväksyi): tiilipäät
   geometriana taustan LOD0:ssa (V4_gold), kourut VS:n KattoTiilet-varjostimella; instansointi jätetty (vaatisi pelikoodia, ulkoasu sama).
   Avoimet: leivonta myöhemmin JSON-tasolla (VS: ei kiireellinen). Jäljellä LR: 6 ja 10 Codexin toimituksesta.
+- 24.10. 16.2x: 6 osittain ja 13 tehty Codexin toimituksista: avoimet-v24 (huoneiden katoille chiwen #928 harjan päihin ja harjaeläimet #929
+  kulmaharjoille, katto-solmun lapsina), rakennukset-v19 (keskiluiskien kaiverrettu laatta #934; F ja G-jalusta leivottu uudelleen).
+  Proto lavastaja/muoto-210 0d311faab (tarkista.sh 0). Paketit juoksupeli-avoimet-v24-vienti-20261024 (e43d0117a2de),
+  juoksupeli-kielletty-rakennukset-v19-vienti-20261024 (0f099e84be34). Kuvat tavoiteluuppi-k1/harjakoristeet-avoimet-v24.png, keskiluiska-v19.png.
+  Jatkossa 6: chiwen/eläimet myös tarkkojen mallien halleihin (nyt laatikkopäätteet) ja taustan halleihin; 10 puut odottavat uutta Tripo-koetta.
