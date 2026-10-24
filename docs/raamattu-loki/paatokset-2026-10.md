@@ -2509,3 +2509,7 @@ Omistaja KK:n kautta sanatarkasti: "tee vain kaikki mahdollinen 210 junaan. sano
 ## 9.5 VÄLÄHDYSHAKU TYÖKALUKSI (PT 24.10.2026) (24.10.2026 klo 19.03)
 
 Raamatun 9.5:n vanhentunut viite valahdys.py (skriptiä ei ollut) korvattu työkalulla tools/valahdys-yavg.py (Valosepän valahdys-yavg.zsh:n pohjalta, ffmpeg signalstats YAVG, yhden ruudun väläys > 4/255; ilman stdin-heredocia 12.9:n mukaan). Koeajo omistaja-vaaka.mp4 (210q): 5741 ruutua, 1 väläys 38,3 s (vanha versio).
+
+## PT 24.10. ILTA: JUOKSUPELI 810 (juna 210) (24.10.2026 klo 21.30)
+
+810-kulma PK 8d7a6b881 kuitattu (keisari 0,51/0,52, koko täsmää); KK löysi horisontin 0,18 vs 0,15 ja räystäät kameran tasolla → PK nostaa kameraa ~2,75 keisaria (omistajan sanat: kamera voi olla korkeammalla), LR talot 3,2 m räystäät, muurikujat 6 m, kujat 4,79 m (v42/v30/v12). OPPI (periaate 2): kulmatarkistukseen myös horisontti ja räystäslinja. VS aurinko 45°/170° (lattia 196/229 vs 206/203). 942b väri hyväksytty, normaali+karheus hylätty. Lähipuut ja harjakoristeet 3D lähellä, kortit kaukana häivyttäen; lehvästö möhkäle → korjaus. NS saapumislento: iPad-ajot sallittu per korjausaskel, kunnes vahti 0.
