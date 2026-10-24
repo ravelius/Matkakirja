@@ -1,0 +1,14 @@
+Use case: photorealistic-natural.
+Asset type: one game billboard texture atlas of THREE ENTIRE TREES, for a ground-level running-game camera. Create a completely new image. Wide 2:1 landscape composition, requested 2048 x 1024 pixels, RGBA with a genuinely transparent background.
+
+Camera and framing are critical: a SIDE ELEVATION of full standing trees, as seen from near ground level along an alley; only about five degrees elevation relative to a perfectly horizontal side view. Show the FRONTS of the crowns and the exposed trunks all the way down to their root collars. No aerial, overhead, bird's-eye, top-down, or canopy-only views. Photograph-like long-lens perspective, natural tree proportions. Every tree is completely inside the frame, from its highest leaf to the bottom of its trunk. All three trunk bases align on one invisible baseline, with a clear transparent margin beneath. Leave transparent gaps between silhouettes and padding on all four canvas edges. The trees must not overlap or touch the frame.
+
+Exactly three individual, mature, healthy deciduous trees side by side, ordered left to right:
+1. Japanese pagoda tree, Styphnolobium japonicum (Sophora japonica), approximately 10 m: broad rounded slightly irregular crown, fine compound pinnate green foliage, visible naturally branching gray-brown trunk.
+2. Siberian elm, Ulmus pumila, approximately 9 m: broad rounded slightly irregular crown, small serrated oval green leaves, visible naturally branching gray-brown trunk.
+3. Mature ginkgo, Ginkgo biloba, approximately 12 m: broad rounded mature crown with fan-shaped summer-green leaves, visible naturally branching gray-brown trunk. Not a young narrow conical tree, and no yellow autumn leaves.
+Keep the three trees at the same photographic scale with modest relative height differences; tall ginkgo still fits completely. Crown shapes should read as full rounded crowns with natural irregularity, not perfect spheres or topiary.
+
+Real-camera surface quality: natural detailed leaves and bark, varied organic branching, no decorative repeating pattern, stippling, painted brushwork, waxy CGI foliage or plastic texture. Even diffuse overcast illumination with no pronounced side lighting, no hard shadows or highlights. Fully opaque trunk and leaf interiors; antialiasing and partial alpha only at genuine fine edges. True alpha between branches and outside each tree. Clean matte edges with no green background contamination or green halo.
+
+Absolutely no ground, grass, soil mound, planter, pedestal, background scenery, sky, checkerboard, backdrop, cast shadow or contact-shadow patch under the trunks. No labels, writing, borders, logos, captions or watermark. Deliver only the single transparent three-tree atlas.

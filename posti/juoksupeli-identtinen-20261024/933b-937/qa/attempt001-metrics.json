@@ -1,0 +1,34 @@
+{
+  "dimensions": [
+    1774,
+    887
+  ],
+  "mode": "RGBA",
+  "foregroundBoundingBox": [
+    9,
+    22,
+    1769,
+    856
+  ],
+  "borderMaxAlpha": {
+    "top": 1,
+    "bottom": 1,
+    "left": 12,
+    "right": 12
+  },
+  "borderOpaquePixels": {
+    "left": 0,
+    "right": 0
+  },
+  "foregroundAlphaPercentiles": [
+    128.0,
+    138.0,
+    173.0,
+    237.0,
+    248.0,
+    250.0,
+    251.0,
+    252.0,
+    255.0
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "taskNumber": 936,
+  "imageScopeOnly": true,
+  "at": "2026-10-24T12:58:39.613704+00:00",
+  "source": {
+    "path": "posti/paatoimittaja-codex-juoksupeli-identtinen-kuittaus-20261024.md",
+    "commit": "5ac2612a0fc24aa5ebc595ff13db462c1cf18bca",
+    "blob": "66ee78e0e6d7fc9f063df6a29a5d61f5a2d874c9",
+    "sha256": "b7abc9c528ec9d0ae78530b411edd40255486b85a682c7c5fd920f648126e1f2",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-933b-maantason-puut-937-20261024/sources/order-and-receipt.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "5ac2612a0fc24aa5ebc595ff13db462c1cf18bca"
+  },
+  "priorDeliveryCommit": "8d554e5bd45d039519f1f9d125b7bab58e318a9e",
+  "acceptedForGameUse": [
+    934
+  ],
+  "acceptedWithImportChecks": [
+    "normalize sampled normals",
+    "verify green-channel direction at import"
+  ],
+  "scope933": "Preserve prior top-view crowns for opening aerial flight; not a ground-level card",
+  "groundLevel933Authorized": false,
+  "newSeparateOrder": {
+    "taskNumber": 937,
+    "sourceAssetId": "933b",
+    "firstCalls": 1,
+    "clearFailureRetries": 1
+  },
+  "tripoTasks928to932OwnedElsewhere": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

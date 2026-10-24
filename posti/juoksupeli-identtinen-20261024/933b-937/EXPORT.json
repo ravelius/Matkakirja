@@ -1,0 +1,20 @@
+{
+  "taskNumber": 937,
+  "sourceAssetId": "933b",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-933b-maantason-puut-937-20261024/delivery/kaukolehvasto-933b-maantaso-kokonaiset-puut.png",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "mode": "RGBA",
+  "bytes": 3148350,
+  "sha256": "3e68560ca92f99cea904f1fb93412a511183e1a040ccc88808c9bdf3ec88d097",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-933b-maantason-puut-937-20261024/native/937-attempt001.png",
+  "nativeSHA256": "e95bcf75b91453c6f55c9dbffd7d1a27cdd83aa5d8e9308be5b853239506f7fa",
+  "nativeDimensions": [
+    1774,
+    887
+  ],
+  "nativeBytesUnchanged": true,
+  "method": "Whole-frame LANCZOS resize only; no crop, repaint, background reconstruction, recoloring or alpha thresholding"
+}

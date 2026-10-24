@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-24T13:00:22.437377+00:00",
+  "taskNumber": 937,
+  "sourceAssetId": "933b",
+  "selectedAttempt": 1,
+  "producerQAPassed": true,
+  "qaDisposition": "visual-pass-side-view-card-PT-review-and-engine-alpha-validation-pending",
+  "visualChecks": {
+    "exactlyThreeWholeTrees": true,
+    "sideViewNotAerial": true,
+    "allTrunkBasesVisible": true,
+    "roundedSummerCrowns": true,
+    "speciesOrderMatchesContract": true,
+    "genuineRGBA": true,
+    "noVisibleGroundOrGroundShadow": true,
+    "noObviousGreenHaloOnLightOrDarkComposite": true,
+    "lightAndDarkCompositesPersonallyViewed": true,
+    "noTextLabelsOrWatermarks": true,
+    "noOpaqueTreePixelsTouchFrame": true
+  },
+  "limitations": [
+    "Native image is 1774 x 887; delivery 2048 x 1024 is a technical whole-frame enlargement.",
+    "Foreground alpha median is 248/255; soft semitransparent leaf edges and low-opacity values extend to the frame (left/right max 12/255). No alpha thresholding or manual edge repair was performed. Test alpha blending or alpha clipping and mipmaps in the actual game.",
+    "Side view is visually verified; the requested approximately five-degree camera elevation is a prompting instruction, not a calibrated camera measurement.",
+    "Species selection matches the common contract; detailed botanical identity and final Tripo GLB silhouette/color correspondence are not independently verified."
+  ],
+  "actualGeneratedGLBMatchVerified": false,
+  "firstAttemptClearFailure": false,
+  "callsIssued": 1,
+  "clearFailureRetryUsed": false,
+  "unusedConditionalRetryAllowance": 1,
+  "noAutomaticRetry": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
