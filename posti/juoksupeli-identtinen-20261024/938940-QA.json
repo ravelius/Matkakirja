@@ -1,0 +1,232 @@
+{
+  "at": "2026-10-24T13:14:44.616151+00:00",
+  "status": "THREE_PRODUCER_PASSES_PT_REVIEW_PENDING",
+  "models": [
+    {
+      "task": 938,
+      "id": "pagodipuu",
+      "attempt": 1,
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "visual_findings": [
+        "Rounded thick crown masses remain coherent in all four inspected directions.",
+        "Complete branching trunk, connected canopy composition, no exploded foliage sheets.",
+        "1894 triangles and 10m height."
+      ],
+      "limitations": [
+        "Faceted outer silhouette at 2000-triangle budget.",
+        "Stylized rounded crown architecture, not botanical reconstruction.",
+        "No broad directional cast shadow observed; residual generated color variation requires recipient lighting check."
+      ],
+      "technical": [
+        {
+          "nimi": "pagodipuu.glb",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "nimi": "pagodipuu.glb",
+            "tyyppi": "esine",
+            "kolmiot": 1894,
+            "piirrot": 1,
+            "materiaalit": 1,
+            "solmut": 1,
+            "kuvat": [
+              "1024×1024 png",
+              "1024×1024 png",
+              "1024×1024 png"
+            ],
+            "rajat": {
+              "min": [
+                -5.421,
+                0,
+                -4.765
+              ],
+              "max": [
+                4.685,
+                10,
+                3.039
+              ],
+              "koko": [
+                10.106,
+                10,
+                7.804
+              ]
+            }
+          }
+        }
+      ],
+      "boundary_diagnostic": null,
+      "sha256": "7cbf2f686fbf9bba6cb502a4756e2a7d1b03157f42fb0354f464d2a16921d30a",
+      "topology_uv_preserved": true
+    },
+    {
+      "task": 939,
+      "id": "jalava",
+      "attempt": 1,
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "visual_findings": [
+        "Wide branching trunk and solid rounded canopy masses preserved in four views.",
+        "Darker leaf and bark texture, broader front than side profile, distinct from pagoda."
+      ],
+      "limitations": [
+        "Faceted silhouette; intentionally stylized solid canopy.",
+        "Tripo auto-caption says oak; production identity is based on the supplied Ulmus pumila source/935 contract. Botanical species detail is not independently certified.",
+        "PBR/light response and material color remain receiver QA.",
+        "Adjacency diagnostic: one boundary edge and two nonmanifold edges; no visible canopy opening, watertightness not certified."
+      ],
+      "technical": [
+        {
+          "nimi": "jalava.glb",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "nimi": "jalava.glb",
+            "tyyppi": "esine",
+            "kolmiot": 1893,
+            "piirrot": 1,
+            "materiaalit": 1,
+            "solmut": 1,
+            "kuvat": [
+              "1024×1024 png",
+              "1024×1024 png",
+              "1024×1024 png"
+            ],
+            "rajat": {
+              "min": [
+                -4.909,
+                0,
+                -2.843
+              ],
+              "max": [
+                4.958,
+                9,
+                2.98
+              ],
+              "koko": [
+                9.868,
+                9,
+                5.824
+              ]
+            }
+          }
+        }
+      ],
+      "boundary_diagnostic": {
+        "positional_weld_tolerance_m": 1e-05,
+        "boundary_edges": 1,
+        "nonmanifold_edges": 2,
+        "collapsed_faces_at_tolerance": 0,
+        "boundary_edges_excluding_collapsed_faces": 1,
+        "nonmanifold_edges_excluding_collapsed_faces": 2,
+        "mesh_changed": false,
+        "interpretation": "One boundary edge and two nonmanifold edges in positional adjacency diagnostic; cause not established. Original mesh preserved. No canopy hole visible in four views. Not certified watertight."
+      },
+      "sha256": "cc25a99cbc970e94409528de215012595ccf35f036d3800a94952982a1b1b3f8",
+      "topology_uv_preserved": true
+    },
+    {
+      "task": 940,
+      "id": "neidonhiuspuu",
+      "attempt": 2,
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "visual_findings": [
+        "Whole upright trunk and thick rounded canopy masses in all four preview directions.",
+        "Thin wing-like shapes from first attempt resolved; summer-green fan-leaf pattern visible on closed canopy lobes."
+      ],
+      "limitations": [
+        "Stylized solid crown with faceted edges at close distance.",
+        "Foliage is brighter than elm and pagoda; receiver should compare scene color and 933b.",
+        "PBR light response and exact botanical species detail are not independently certified."
+      ],
+      "technical": [
+        {
+          "nimi": "neidonhiuspuu.glb",
+          "virheet": [],
+          "huomiot": [],
+          "tiedot": {
+            "nimi": "neidonhiuspuu.glb",
+            "tyyppi": "esine",
+            "kolmiot": 1942,
+            "piirrot": 1,
+            "materiaalit": 1,
+            "solmut": 1,
+            "kuvat": [
+              "1024×1024 png",
+              "1024×1024 png",
+              "1024×1024 png"
+            ],
+            "rajat": {
+              "min": [
+                -6.171,
+                0,
+                -4.494
+              ],
+              "max": [
+                5.607,
+                12,
+                3.541
+              ],
+              "koko": [
+                11.778,
+                12,
+                8.036
+              ]
+            }
+          }
+        }
+      ],
+      "boundary_diagnostic": {
+        "positional_weld_tolerance_m": 1e-05,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "collapsed_faces_at_tolerance": 0,
+        "mesh_changed": false
+      },
+      "sha256": "75fb9af3fbd23fb1b901c75e36084e6ebc8411f4933661c7ee4a8b760c654d02",
+      "topology_uv_preserved": true
+    }
+  ],
+  "method_gate": "Pagoda passed all four views before elm and ginkgo submitted",
+  "first_ginkgo_rejected": true,
+  "all_raw_models_preserved": true,
+  "model_or_source_regeneration_after_bound": false,
+  "source_image_calls": 4,
+  "tripo_calls": 4,
+  "tripo_credits": 180,
+  "balance_before": 19205,
+  "balance_after": 19025,
+  "source_image_cost": null,
+  "receiver_qa_pending": [
+    "Scene PBR light response",
+    "Normals and texture color convention",
+    "Root ground contact",
+    "Color/species matching with image producer 933b",
+    "Actual mobile runtime view"
+  ],
+  "pt_approved": false,
+  "game_integrated": false,
+  "resources": {
+    "at": "2026-10-24T13:13:24.163082+00:00",
+    "physical": {
+      "at": "2026-10-24T13:13:24.161128+00:00",
+      "total_footprint_mib": 10070.2534866333,
+      "errors": [],
+      "source": "output/juoksupeli-puut-938940-20261024/qa/resource-final-job/footprint-0000.json",
+      "baseline_at": "2026-10-23T14:20:58.379702+00:00",
+      "growth_since_baseline_mib": 4709.624313354492
+    },
+    "system_memory": {
+      "at": "2026-10-24T13:13:24.185881+00:00",
+      "os_reported_memory_free_percent": 80.0,
+      "compressor_occupied_mib": 5963.03125,
+      "compressed_logical_mib": 27973.25,
+      "swap_usage": "vm.swapusage: total = 10240.00M  used = 9041.38M  free = 1198.62M  (encrypted)"
+    },
+    "loadavg": [
+      35.78173828125,
+      23.5166015625,
+      28.146484375
+    ],
+    "heavy_local_work_started": false,
+    "own_qa_peak_mib": 81
+  }
+}

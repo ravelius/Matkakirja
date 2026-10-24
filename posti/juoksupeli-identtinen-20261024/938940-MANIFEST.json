@@ -1,0 +1,280 @@
+{
+  "created_at": "2026-10-24T13:14:44.810475+00:00",
+  "status": "THREE_TREES_PRODUCER_QA_PASSED_PT_REVIEW_PENDING",
+  "models": [
+    {
+      "task": 938,
+      "id": "pagodipuu",
+      "path": "pagodipuu/pagodipuu.glb",
+      "sha256": "7cbf2f686fbf9bba6cb502a4756e2a7d1b03157f42fb0354f464d2a16921d30a",
+      "source_sha256": "40a37a1456aa85c63470f1db2bd34ea58fc815ad4700788f2e702be6a8070637",
+      "bytes": 3800932,
+      "triangles": 1894,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        10.106180945986157,
+        10.0,
+        7.80405421939111
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 10.263413411845773,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "pagodipuu/pagodipuu-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "3313b135cf9352e80b008927943864a71c749bddbe3a40a86401f7cc9839b534",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "pagodipuu/pagodipuu-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "6ad712871ae99a473c4c1c212b39d57f2eac70f4f067302290b3747c31d62464",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "pagodipuu/pagodipuu-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "50e0c08f2c47da11a9fceb6e9a1787ea5ecca2bdecb53bde4830181071a7cbc3",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/pagodipuu-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "game_integrated": false,
+      "peak_rss_mib": 79.78125,
+      "canopy_method_pass": true,
+      "visual_findings": [
+        "Rounded thick crown masses remain coherent in all four inspected directions.",
+        "Complete branching trunk, connected canopy composition, no exploded foliage sheets.",
+        "1894 triangles and 10m height."
+      ],
+      "limitations": [
+        "Faceted outer silhouette at 2000-triangle budget.",
+        "Stylized rounded crown architecture, not botanical reconstruction.",
+        "No broad directional cast shadow observed; residual generated color variation requires recipient lighting check."
+      ],
+      "original_task": 930
+    },
+    {
+      "task": 939,
+      "id": "jalava",
+      "path": "jalava/jalava.glb",
+      "sha256": "cc25a99cbc970e94409528de215012595ccf35f036d3800a94952982a1b1b3f8",
+      "source_sha256": "4ab06252552e7b0f85b9fc5392aa2fbda924f263d9ce22a2f5408009094d857f",
+      "bytes": 4481652,
+      "triangles": 1893,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        9.867615594991967,
+        9.0,
+        5.823566195472952
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 10.077982435157024,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "jalava/jalava-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "dfb7c9fe6232ccbcfec587336262612919eb9d8819858492c8e3d0aa81e3cb06",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "jalava/jalava-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "fa4f33a21f443eee7c81956e7499099baa35ad84568820607c49855c0159196a",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "jalava/jalava-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "9f275ed6196914eb93d536c3c0a5631d9568e33d295802394cfc27a68d26f751",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/jalava-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "game_integrated": false,
+      "peak_rss_mib": 80.6875,
+      "canopy_method_pass": true,
+      "visual_findings": [
+        "Wide branching trunk and solid rounded canopy masses preserved in four views.",
+        "Darker leaf and bark texture, broader front than side profile, distinct from pagoda."
+      ],
+      "limitations": [
+        "Faceted silhouette; intentionally stylized solid canopy.",
+        "Tripo auto-caption says oak; production identity is based on the supplied Ulmus pumila source/935 contract. Botanical species detail is not independently certified.",
+        "PBR/light response and material color remain receiver QA.",
+        "Adjacency diagnostic: one boundary edge and two nonmanifold edges; no visible canopy opening, watertightness not certified."
+      ],
+      "boundary_diagnostic": {
+        "positional_weld_tolerance_m": 1e-05,
+        "boundary_edges": 1,
+        "nonmanifold_edges": 2,
+        "collapsed_faces_at_tolerance": 0,
+        "boundary_edges_excluding_collapsed_faces": 1,
+        "nonmanifold_edges_excluding_collapsed_faces": 2,
+        "mesh_changed": false,
+        "interpretation": "One boundary edge and two nonmanifold edges in positional adjacency diagnostic; cause not established. Original mesh preserved. No canopy hole visible in four views. Not certified watertight."
+      },
+      "original_task": 931
+    },
+    {
+      "task": 940,
+      "id": "neidonhiuspuu",
+      "path": "neidonhiuspuu/neidonhiuspuu.glb",
+      "sha256": "75fb9af3fbd23fb1b901c75e36084e6ebc8411f4933661c7ee4a8b760c654d02",
+      "source_sha256": "76a0c61db442a940595ddb26313435b3c4f4cbd196ce3255d647ee5584a916e1",
+      "bytes": 3257360,
+      "triangles": 1942,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        11.778175436332928,
+        12.0,
+        8.035657314441213
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 12.299146101154172,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "neidonhiuspuu/neidonhiuspuu-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "f329a61b2f3c9d167d3b3f6726e3f667ca4169e30e141ab7f93256727272753b",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "neidonhiuspuu/neidonhiuspuu-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "b1cd4ae0123e8d674872a9f079d013bf8cd54b013aa85a1128a4590ee46d3ff9",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "neidonhiuspuu/neidonhiuspuu-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "29a81f92c071c57fa5e70da1b5b6cd5e4f53f5934558df248af242d2c2849198",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/neidonhiuspuu-attempt2-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "game_integrated": false,
+      "peak_rss_mib": 76.65625,
+      "canopy_method_pass": true,
+      "visual_findings": [
+        "Whole upright trunk and thick rounded canopy masses in all four preview directions.",
+        "Thin wing-like shapes from first attempt resolved; summer-green fan-leaf pattern visible on closed canopy lobes."
+      ],
+      "limitations": [
+        "Stylized solid crown with faceted edges at close distance.",
+        "Foliage is brighter than elm and pagoda; receiver should compare scene color and 933b.",
+        "PBR light response and exact botanical species detail are not independently certified."
+      ],
+      "boundary_diagnostic": {
+        "positional_weld_tolerance_m": 1e-05,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "collapsed_faces_at_tolerance": 0,
+        "mesh_changed": false
+      },
+      "original_task": 932
+    }
+  ],
+  "calls": 4,
+  "credits": 180,
+  "balance_before": 19205,
+  "balance_after": 19025,
+  "source_image_calls": 4,
+  "source_image_cost": null,
+  "pt_approved": false,
+  "game_integrated": false,
+  "previous_candidates_preserved": true
+}

@@ -1,0 +1,153 @@
+{
+  "jobs": [
+    {
+      "task": 938,
+      "original_task": 930,
+      "id": "pagodipuu",
+      "attempt": 1,
+      "state": "EXPORTED_NORMALIZED_VISUAL_PASSED",
+      "at": "2026-10-24T12:59:27.788726+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-938940-20261024/sources/pagodipuu-solid-source-v1.png",
+      "source_sha256": "544d956d703b87e84b2d216514cf4ed8a4cca2e7815c27459a9623651e7df63c",
+      "settings": {
+        "model": "H3.1",
+        "ultra_mesh": true,
+        "texture": "2K",
+        "remove_lighting": true,
+        "pbr": true,
+        "triangles": 2000,
+        "ai_complete": false
+      },
+      "balance_before": 19205,
+      "displayed_cost": 45,
+      "job_id": "a168e170-2980-457e-8035-f38ef048467f",
+      "confirmed_at": "2026-10-24T13:00:09.295905+00:00",
+      "balance_after": 19160,
+      "credits": 45,
+      "ui_remaining_seconds": 134,
+      "estimated_finish_at_confirmation": "2026-10-24T13:02:23.295905+00:00",
+      "raw_receipt": "qa/pt938-receipt.json",
+      "triangles": 1894,
+      "manifest": "work/normalized-v1/pagodipuu/MANIFEST.json"
+    },
+    {
+      "task": 939,
+      "original_task": 931,
+      "id": "jalava",
+      "attempt": 1,
+      "state": "EXPORTED_NORMALIZED_VISUAL_PASSED",
+      "at": "2026-10-24T13:04:10.167589+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-938940-20261024/sources/jalava-solid-source-v1.png",
+      "source_sha256": "4ec02add7781abcd85463b9c240cea4badb3b19427538ddf4f371908538847f7",
+      "settings": {
+        "model": "H3.1",
+        "ultra_mesh": true,
+        "texture": "2K",
+        "remove_lighting": true,
+        "pbr": true,
+        "triangles": 2000,
+        "ai_complete": false
+      },
+      "balance_before": 19160,
+      "displayed_cost": 45,
+      "job_id": "431a703c-72ed-4c12-9fa2-4e3ade1ae724",
+      "credits": 45,
+      "balance_after": 19115,
+      "confirmed_at": "2026-10-24T13:04:57.660089+00:00",
+      "ui_remaining_seconds": 144,
+      "estimated_finish_at_confirmation": "2026-10-24T13:07:21.660089+00:00",
+      "raw_receipt": "qa/pt939-receipt.json",
+      "triangles": 1893,
+      "manifest": "work/normalized-v1/jalava/MANIFEST.json"
+    },
+    {
+      "task": 940,
+      "original_task": 932,
+      "id": "neidonhiuspuu",
+      "attempt": 1,
+      "state": "REJECTED_CANOPY_SHAPE",
+      "at": "2026-10-24T13:04:57.660089+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-938940-20261024/sources/neidonhiuspuu-solid-source-v1.png",
+      "source_sha256": "6bed64ba1bc041750f4f453125ac1bd204dd55ac563757b4ac3df2f2327a1124",
+      "settings": {
+        "model": "H3.1",
+        "ultra_mesh": true,
+        "texture": "2K",
+        "remove_lighting": true,
+        "pbr": true,
+        "triangles": 2000,
+        "ai_complete": false
+      },
+      "balance_before": 19115,
+      "displayed_cost": 45,
+      "job_id": "329a25a0-1b2a-4858-a6d1-0126ad491b54",
+      "credits": 45,
+      "balance_after": 19070,
+      "confirmed_at": "2026-10-24T13:05:58.045532+00:00",
+      "ui_remaining_seconds": 49,
+      "estimated_finish_at_confirmation": "2026-10-24T13:06:47.045532+00:00",
+      "raw_receipt": "qa/pt940-receipt.json",
+      "triangles": 1878,
+      "failure": "Thin wing-like lower and side foliage masses; authorized clear shape-failure retry eligible."
+    },
+    {
+      "task": 940,
+      "original_task": 932,
+      "id": "neidonhiuspuu",
+      "attempt": 2,
+      "state": "EXPORTED_NORMALIZED_VISUAL_PASSED",
+      "at": "2026-10-24T13:11:24.315693+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-938940-20261024/sources/neidonhiuspuu-solid-source-v2.png",
+      "source_sha256": "e22918bbc6948b26fc936a58e5de07b0631abf50016109193f8b42bcbc9c4c93",
+      "settings": {
+        "model": "H3.1",
+        "ultra_mesh": true,
+        "texture": "2K",
+        "remove_lighting": true,
+        "pbr": true,
+        "triangles": 2000,
+        "ai_complete": false
+      },
+      "balance_before": 19070,
+      "displayed_cost": 45,
+      "retry_reason": "Clear thin wing-like lower and side canopy failure in first attempt.",
+      "submitted_at": "2026-10-24T13:11:59.104989+00:00",
+      "job_id": "2863e836-53ae-42ca-ab32-36f55eff8518",
+      "credits": 45,
+      "balance_after": 19025,
+      "confirmed_at": "2026-10-24T13:12:05.752303+00:00",
+      "ui_remaining_seconds": 107,
+      "estimated_finish_at_confirmation": "2026-10-24T13:13:52.752303+00:00",
+      "raw_receipt": "qa/pt940-attempt2-receipt.json",
+      "triangles": 1942,
+      "manifest": "work/normalized-v2/neidonhiuspuu/MANIFEST.json",
+      "qa_passed_at": "2026-10-24T13:14:44.616151+00:00"
+    }
+  ],
+  "credit_events": [
+    {
+      "job_id": "a168e170-2980-457e-8035-f38ef048467f",
+      "before": 19205,
+      "after": 19160,
+      "cost": 45
+    },
+    {
+      "job_id": "431a703c-72ed-4c12-9fa2-4e3ade1ae724",
+      "before": 19160,
+      "after": 19115,
+      "cost": 45
+    },
+    {
+      "job_id": "329a25a0-1b2a-4858-a6d1-0126ad491b54",
+      "before": 19115,
+      "after": 19070,
+      "cost": 45
+    },
+    {
+      "job_id": "2863e836-53ae-42ca-ab32-36f55eff8518",
+      "before": 19070,
+      "after": 19025,
+      "cost": 45
+    }
+  ]
+}
