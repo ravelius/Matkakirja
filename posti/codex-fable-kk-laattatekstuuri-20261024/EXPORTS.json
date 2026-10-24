@@ -1,0 +1,122 @@
+[
+  {
+    "map": "vari",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-vari.png",
+    "sha256": "a8832252f53fe58b4731872bae517005859471462ae25e33a96df81ec5a9d233",
+    "bytes": 4987694,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "PILMode": "RGB",
+    "pngBitDepth": 8,
+    "pngColorType": 2,
+    "nativeAtlasDimensions": [
+      1254,
+      1254
+    ],
+    "nativePanelBox": [
+      0,
+      0,
+      627,
+      627
+    ],
+    "nativePanelDimensions": [
+      627,
+      627
+    ],
+    "nativeAtlasSHA256": "608b678f8d43f027714cff7a0da50d33ef606dfce69430c6d92c7e7b3b662cf5",
+    "nativeSampleBitDepth": 8,
+    "technicalMethod": "Exact quadrant extraction; whole-panel LANCZOS resize. Scalar maps converted to luminance. Height stores 8-bit interpolated scalar values as uint16 multiplied by 257; no additional native height precision, no painted fixes."
+  },
+  {
+    "map": "normaali",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-normaali.png",
+    "sha256": "42afe862814f3fd066aa3d245bd3c83787c80c257bd6c9adbe7bd38ad3cef66a",
+    "bytes": 4553412,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "PILMode": "RGB",
+    "pngBitDepth": 8,
+    "pngColorType": 2,
+    "nativeAtlasDimensions": [
+      1254,
+      1254
+    ],
+    "nativePanelBox": [
+      627,
+      0,
+      1254,
+      627
+    ],
+    "nativePanelDimensions": [
+      627,
+      627
+    ],
+    "nativeAtlasSHA256": "608b678f8d43f027714cff7a0da50d33ef606dfce69430c6d92c7e7b3b662cf5",
+    "nativeSampleBitDepth": 8,
+    "technicalMethod": "Exact quadrant extraction; whole-panel LANCZOS resize. Scalar maps converted to luminance. Height stores 8-bit interpolated scalar values as uint16 multiplied by 257; no additional native height precision, no painted fixes."
+  },
+  {
+    "map": "korkeus",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-korkeus.png",
+    "sha256": "c4729632c75463ba429d5808fed4e79b76ecd64162dd9e002c0b4ccd5d3b955e",
+    "bytes": 1925078,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "PILMode": "I;16",
+    "pngBitDepth": 16,
+    "pngColorType": 0,
+    "nativeAtlasDimensions": [
+      1254,
+      1254
+    ],
+    "nativePanelBox": [
+      0,
+      627,
+      627,
+      1254
+    ],
+    "nativePanelDimensions": [
+      627,
+      627
+    ],
+    "nativeAtlasSHA256": "608b678f8d43f027714cff7a0da50d33ef606dfce69430c6d92c7e7b3b662cf5",
+    "nativeSampleBitDepth": 8,
+    "technicalMethod": "Exact quadrant extraction; whole-panel LANCZOS resize. Scalar maps converted to luminance. Height stores 8-bit interpolated scalar values as uint16 multiplied by 257; no additional native height precision, no painted fixes."
+  },
+  {
+    "map": "karheus",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-karheus.png",
+    "sha256": "6c694d4145b64131a296c957c1b19c2d3f8ce341138d0ca6f1b2acec1ff4fec7",
+    "bytes": 1986565,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "PILMode": "L",
+    "pngBitDepth": 8,
+    "pngColorType": 0,
+    "nativeAtlasDimensions": [
+      1254,
+      1254
+    ],
+    "nativePanelBox": [
+      627,
+      627,
+      1254,
+      1254
+    ],
+    "nativePanelDimensions": [
+      627,
+      627
+    ],
+    "nativeAtlasSHA256": "608b678f8d43f027714cff7a0da50d33ef606dfce69430c6d92c7e7b3b662cf5",
+    "nativeSampleBitDepth": 8,
+    "technicalMethod": "Exact quadrant extraction; whole-panel LANCZOS resize. Scalar maps converted to luminance. Height stores 8-bit interpolated scalar values as uint16 multiplied by 257; no additional native height precision, no painted fixes."
+  }
+]

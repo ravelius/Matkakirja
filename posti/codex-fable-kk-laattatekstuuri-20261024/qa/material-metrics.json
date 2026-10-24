@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-24T15:51:04.078623+00:00",
+  "atlasDimensions": [
+    1254,
+    1254
+  ],
+  "nativePanelDimensions": [
+    627,
+    627
+  ],
+  "seams": {
+    "vari": {
+      "leftRightEdgeMAE_8bit": 13.15311004784689,
+      "topBottomEdgeMAE_8bit": 38.81552365762892,
+      "medianInternalColumnDifference": 8.771132376395535,
+      "medianInternalRowDifference": 8.328017012227539,
+      "leftRightToMedianRatio": 1.499590871897445,
+      "topBottomToMedianRatio": 4.6608362591765085,
+      "note": "Edge difference is diagnostic, not a seam certification; inspect row geometry and repeated preview."
+    },
+    "normaali": {
+      "leftRightEdgeMAE_8bit": 14.055821371610845,
+      "topBottomEdgeMAE_8bit": 30.694843168527377,
+      "medianInternalColumnDifference": 5.020999468367889,
+      "medianInternalRowDifference": 5.352206273258905,
+      "leftRightToMedianRatio": 2.7994070623113982,
+      "topBottomToMedianRatio": 5.734988825428358,
+      "note": "Edge difference is diagnostic, not a seam certification; inspect row geometry and repeated preview."
+    },
+    "korkeus": {
+      "leftRightEdgeMAE_8bit": 13.57097288676236,
+      "topBottomEdgeMAE_8bit": 99.64593301435407,
+      "medianInternalColumnDifference": 7.396331738437001,
+      "medianInternalRowDifference": 7.219298245614035,
+      "leftRightToMedianRatio": 1.8348247978436658,
+      "topBottomToMedianRatio": 13.802717331271403,
+      "note": "Edge difference is diagnostic, not a seam certification; inspect row geometry and repeated preview."
+    },
+    "karheus": {
+      "leftRightEdgeMAE_8bit": 14.819776714513557,
+      "topBottomEdgeMAE_8bit": 68.72886762360447,
+      "medianInternalColumnDifference": 11.83732057416268,
+      "medianInternalRowDifference": 10.955342902711324,
+      "leftRightToMedianRatio": 1.2519536513069254,
+      "topBottomToMedianRatio": 6.273547823555103,
+      "note": "Edge difference is diagnostic, not a seam certification; inspect row geometry and repeated preview."
+    }
+  },
+  "normal": {
+    "decodedLengthPercentiles": [
+      0.22983871783674661,
+      0.6866553565098042,
+      0.8305860134392323,
+      0.9652079038102902,
+      0.9967498123346105,
+      1.0627016849536768,
+      1.3651283997727852
+    ],
+    "negativeZPixels": 0,
+    "zeroLengthPixels": 0,
+    "heightSlopeNormalXCorrelation": 0.4971189101110617,
+    "heightSlopeOpenGLNormalYCorrelation": 0.6318630586005476,
+    "testedConvention": "u points image-right; v points image-up; compare Nx=-dH/dcolumn, Ny=+dH/drow",
+    "note": "Generated normal and height are not geometry-baked or pixel-registered; correlation does not certify a normal convention."
+  },
+  "heightPrecision": {
+    "storedBitDepth": 16,
+    "storedColorType": 0,
+    "storedValues": 226,
+    "allStoredSamplesMultiplesOf257": true,
+    "nativeScalarPrecisionBits": 8,
+    "addsIndependentNativeDetail": false
+  }
+}

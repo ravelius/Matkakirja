@@ -1,0 +1,67 @@
+[
+  {
+    "file": "esikatselu.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/esikatselu.png",
+    "sha256": "32b431ae01af609dcef19c75751b9346266370053b8f6130121b7b8e6f00fa0f",
+    "bytes": 16753454,
+    "dimensions": [
+      6144,
+      6144
+    ],
+    "mode": "RGB",
+    "pngBitDepth": 8,
+    "pngColorType": 2
+  },
+  {
+    "file": "kk-laatat-karheus.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-karheus.png",
+    "sha256": "6c694d4145b64131a296c957c1b19c2d3f8ce341138d0ca6f1b2acec1ff4fec7",
+    "bytes": 1986565,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "L",
+    "pngBitDepth": 8,
+    "pngColorType": 0
+  },
+  {
+    "file": "kk-laatat-korkeus.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-korkeus.png",
+    "sha256": "c4729632c75463ba429d5808fed4e79b76ecd64162dd9e002c0b4ccd5d3b955e",
+    "bytes": 1925078,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "I;16",
+    "pngBitDepth": 16,
+    "pngColorType": 0
+  },
+  {
+    "file": "kk-laatat-normaali.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-normaali.png",
+    "sha256": "42afe862814f3fd066aa3d245bd3c83787c80c257bd6c9adbe7bd38ad3cef66a",
+    "bytes": 4553412,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "pngBitDepth": 8,
+    "pngColorType": 2
+  },
+  {
+    "file": "kk-laatat-vari.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/delivery/kk-laatat-vari.png",
+    "sha256": "a8832252f53fe58b4731872bae517005859471462ae25e33a96df81ec5a9d233",
+    "bytes": 4987694,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "pngBitDepth": 8,
+    "pngColorType": 2
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T15:45:40.973701+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/prompts/942-attempt001.txt",
+    "reason": null,
+    "completedAt": "2026-10-24T15:46:57.635036+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c79bf631-e253-41f2-bd1f-b2e75407b072.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/native/942-attempt001.png",
+    "sha256": "a6a3652f865f0fa40b09d9a62358b74c34c684e467418d818b732638c821ed0e",
+    "bytes": 3152733,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true,
+    "deliveredSelectedNative": false
+  },
+  {
+    "attempt": 2,
+    "status": "completed",
+    "issuedAt": "2026-10-24T15:46:58.810625+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/prompts/942-attempt002.txt",
+    "reason": "About five courses and fewer than three slabs across a four-meter patch imply slabs materially larger than the requested 0.6–1.2m by 0.4–0.6m range. Albedo also has visible bright directional bevels; retry enforces eight courses and four nominal slab widths plus unlit base color.",
+    "completedAt": "2026-10-24T15:48:50.226878+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5da549da-ec6b-4c7e-802b-981c56a92fb5.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/native/942-attempt002.png",
+    "sha256": "da7ec0c0d5026e92f538b0677bea2e623607796f2b98b14df0fd43389418c26d",
+    "bytes": 3141958,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true,
+    "deliveredSelectedNative": false
+  },
+  {
+    "attempt": 3,
+    "status": "completed",
+    "issuedAt": "2026-10-24T15:50:03.717487+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/prompts/942-attempt003.txt",
+    "reason": "Top/bottom edge MAE is 62/255 for albedo and 68/255 for height; truncated last course and visible repeated boundary. Generated normal contains 325 negative-Z samples.",
+    "completedAt": "2026-10-24T15:51:00.433127+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2bf6a27e-0cdc-414f-97d2-93e19d463003.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-laattatekstuuri-942-20261024/native/942-attempt003.png",
+    "sha256": "608b678f8d43f027714cff7a0da50d33ef606dfce69430c6d92c7e7b3b662cf5",
+    "bytes": 3452490,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true,
+    "deliveredSelectedNative": true
+  }
+]
