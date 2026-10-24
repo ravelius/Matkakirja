@@ -110,3 +110,5 @@ Järjestys:
   taustassa (avoimet puutarha/varasto); odottaa PK:n osumakolmiota.
 - 24.10. 17.2x: taustan koristeiden karkeus (PT): tausta-v35 – kevennetyt chiwenit ja eläinrivit kuperina osakuorina (piikit pois),
   valo kuten v34; 82c5fbfe6d90, proto muoto-210 46fbd299c. Kuva tavoiteluuppi-k1/harjakoristeet-tausta-v34-v35.png.
+- 24.10. 17.4x: PT hylkäsi v35:n (kuoret kuin kiviä) → tausta-v36: harjakoristeet siluettikortteina Codexin lähimalleista (#928/#929 sivulta,
+  alfa MASK, mittakaava lähimallin mukaan); 725744632089, proto muoto-210 85c242d76. Kuva tavoiteluuppi-k1/harjakoristeet-tausta-v34-v36.png.
