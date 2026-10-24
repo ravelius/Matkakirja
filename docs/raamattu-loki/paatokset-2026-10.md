@@ -2529,3 +2529,7 @@ Omistajan kortti 24.10.2026 klo 23.28 (KK:n välitys, sanatarkasti): "Lopetetaan
 ## JUOKSUPELIN ALKULENNON ELOKUVATEKSTI: KIELLETTY KAUPUNKI 1914 (24.10.2026 klo 23.54)
 
 Omistajan pyyntö 24.10.2026 klo 23.52 (KK:n välitys, sanatarkasti): "pyydä codexia tekemään pelin lennon alkuun elokuvalliset tekstit (kielletty kaupunki - 1914) jätetään beijing pois ja korjaa vuosiluku oikeaksi." Omistajan päätös 23.53 (kortti): "Mikä vuosiluku tulee tekstiin?" → "1914 (Suositus)" (Puyi noin 8-vuotiaana, päätös 16.10.). Toteutus: Codexin kuvatilaus 77e616e68 (rivit KIELLETTY KAUPUNKI ja 1914 läpinäkyvinä, elokuvamainen ja keisarillinen sävy, ohut tumma ääriviiva, ylin kolmannes, noin 7 s, rivi kerrallaan, omistaja 10.46); Natiivi-UI kytkee ja poistaa Beijingin; omistaja näkee pelikuvan ennen junaa 210.
+
+## MUISTOKUPLA 4: LAUTASPINO TUMMALLE PUUPOYDALLE (25.10.2026 klo 00.31)
+
+Omistajan päätös 25.10.2026 klo 00.30 (kortti KK:ssa, sanatarkasti; omistaja pyysi kysymyksen itse 00.2x): "Tehdäänkö lautaspinosta tumma puupöytä ja kolme matalaa pinoa?" → "Pöytä ja kolme pinoa (Suositus)". Vaihtoehto "Sovin Codexin kanssa" ei valittu. Toteutus Codexin 21.10. tarkennuksen mukaan: tumma Qing-henkinen puupöytä (suorat jalat, 75–80 cm, esikuva dpm.org.cn 230697), päällä kolme 15–20 cm:n sinivalkoista pinoa, kokonaiskorkeus noin 1 m; muistokupla 4 saa uuden kuvan samasta pöydästä. Codexin lautaspöytä-HOLD purettu postilla 7cfe234d6 (ei enää estä #806:ta).
