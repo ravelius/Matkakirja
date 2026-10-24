@@ -1,0 +1,144 @@
+{
+  "row1": {
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/native/title-attempt001.png",
+    "nativeCanvasDimensions": [
+      2146,
+      733
+    ],
+    "inputRegion": [
+      0,
+      190,
+      2146,
+      410
+    ],
+    "visibleBoundThresholdAlpha": 2,
+    "cropBoundsWithinRegion": [
+      47,
+      29,
+      2101,
+      205
+    ],
+    "cropDimensions": [
+      2054,
+      176
+    ],
+    "cropOnlyNoRepainting": true,
+    "smallOuterAlpha1NoiseOutsideVisibleCropNotRetained": true,
+    "exportDimensions": [
+      3000,
+      264
+    ],
+    "resampling": "premultiplied-alpha Lanczos, proportional; 4px transparent outer margin",
+    "exportScaleFromCrop": 1.4566699123661149,
+    "native3000pxClaimed": false
+  },
+  "row2": {
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/native/year-attempt001.png",
+    "nativeCanvasDimensions": [
+      2070,
+      760
+    ],
+    "inputRegion": [
+      0,
+      0,
+      2070,
+      760
+    ],
+    "visibleBoundThresholdAlpha": 2,
+    "cropBoundsWithinRegion": [
+      72,
+      56,
+      2016,
+      720
+    ],
+    "cropDimensions": [
+      1944,
+      664
+    ],
+    "cropOnlyNoRepainting": true,
+    "smallOuterAlpha1NoiseOutsideVisibleCropNotRetained": true,
+    "exportDimensions": [
+      3000,
+      1030
+    ],
+    "resampling": "premultiplied-alpha Lanczos, proportional; 4px transparent outer margin",
+    "exportScaleFromCrop": 1.5390946502057614,
+    "native3000pxClaimed": false
+  },
+  "combined": {
+    "dimensions": [
+      3000,
+      476
+    ],
+    "row1Rect": [
+      0,
+      0,
+      3000,
+      264
+    ],
+    "row2Rect": [
+      1290,
+      328,
+      420,
+      144
+    ],
+    "yearWidthRelativeToTitle": 0.14,
+    "gapPixels": 64
+  },
+  "previews": {
+    "vaaka": {
+      "dimensions": [
+        2732,
+        2048
+      ],
+      "titleRect": [
+        191,
+        195,
+        2350,
+        373
+      ],
+      "titleAlphaBounds": [
+        197,
+        200,
+        2535,
+        566
+      ],
+      "topThirdLimit": 682.6666666666666,
+      "backgroundMethod": "proportional center-crop fit; no scene regeneration or geometry edits",
+      "referenceNativeDimensions": [
+        1448,
+        1086
+      ]
+    },
+    "pysty": {
+      "dimensions": [
+        2048,
+        2732
+      ],
+      "titleRect": [
+        112,
+        273,
+        1823,
+        289
+      ],
+      "titleAlphaBounds": [
+        117,
+        277,
+        1930,
+        561
+      ],
+      "topThirdLimit": 910.6666666666666,
+      "backgroundMethod": "proportional center-crop fit; no scene regeneration or geometry edits",
+      "referenceNativeDimensions": [
+        1448,
+        1086
+      ]
+    }
+  },
+  "timing": {
+    "sourceDurationSeconds": 7,
+    "independentRowFadeAssetsProvided": true,
+    "animationImplemented": false,
+    "integrationOwner": "Natiivi-UI / juna 210"
+  }
+}

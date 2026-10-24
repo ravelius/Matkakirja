@@ -1,0 +1,45 @@
+[
+  {
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T20:58:56.229924+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/title-prompt.txt",
+    "inputReferencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/references/01-lahtokuja.png"
+    ],
+    "transparentBackgroundRequested": true,
+    "completedAt": "2026-10-24T20:59:34.821034+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ad121245-46e3-45e7-a482-ba8b6bcb219d.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/native/title-attempt001.png",
+    "dimensions": [
+      2146,
+      733
+    ],
+    "mode": "RGBA",
+    "bytes": 468134,
+    "sha256": "5039f7681cc698d5c1ba941d05d8bcd18081bd67699db65d4ea4e9ea85cd2bfe",
+    "asset": "whole-title-and-main-row"
+  },
+  {
+    "asset": "year-row",
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T21:00:09.821525+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/year-prompt.txt",
+    "inputReferencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/native/title-attempt001.png"
+    ],
+    "transparentBackgroundRequested": true,
+    "purpose": "Full-size native year for independent 3000px export rather than magnifying tiny year from title layout",
+    "completedAt": "2026-10-24T21:01:13.044352+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-754740db-ef85-4b70-a590-c5d0c9726589.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/alkulento-elokuvateksti-947-20261024/native/year-attempt001.png",
+    "dimensions": [
+      2070,
+      760
+    ],
+    "mode": "RGBA",
+    "bytes": 704048,
+    "sha256": "a50deb361b0719352ecbba4cc7eed54ea08daa6fd71c5d40ee6dfe44855d8171"
+  }
+]

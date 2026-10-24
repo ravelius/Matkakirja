@@ -1,0 +1,119 @@
+{
+  "at": "2026-10-24T21:01:13.745594+00:00",
+  "taskNumber": 947,
+  "exactText": [
+    "KIELLETTY KAUPUNKI",
+    "1914"
+  ],
+  "generationCalls": 2,
+  "pngs": {
+    "alkulento-otsikko-rivi1.png": {
+      "dimensions": [
+        3000,
+        264
+      ],
+      "mode": "RGBA",
+      "sha256": "ee087d3d9e83e04233179c3a2c77e0f6b76c663018a0e101285fd00338044c27",
+      "bytes": 663210,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaLevels": 256,
+      "transparentEdgeVerified": true,
+      "nontransparentBounds": [
+        8,
+        7,
+        2992,
+        258
+      ],
+      "native3000": false
+    },
+    "alkulento-otsikko-rivi2.png": {
+      "dimensions": [
+        3000,
+        1030
+      ],
+      "mode": "RGBA",
+      "sha256": "b0926fa4ced78d3a9dbb14cb7b5e6b1645193315ef1330749c0bce44154ab17e",
+      "bytes": 1128068,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaLevels": 256,
+      "transparentEdgeVerified": true,
+      "nontransparentBounds": [
+        9,
+        4,
+        2990,
+        1026
+      ],
+      "native3000": false
+    },
+    "alkulento-otsikko-koko.png": {
+      "dimensions": [
+        3000,
+        476
+      ],
+      "mode": "RGBA",
+      "sha256": "799bc2baa5eed3919c5ce1cdf69069d0619e9d0cb39b8210bf2356529e91a8f1",
+      "bytes": 723548,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaLevels": 256,
+      "transparentEdgeVerified": true,
+      "nontransparentBounds": [
+        8,
+        7,
+        2992,
+        472
+      ],
+      "native3000": false
+    }
+  },
+  "previewChecks": {
+    "vaaka": {
+      "dimensions": [
+        2732,
+        2048
+      ],
+      "allTitlePixelsInTopThird": true,
+      "backgroundOutsideTitleEqualsFittedReference": true,
+      "sha256": "1e5a589a8de9a0063ecfa5db33c0e9b3f22c27976a0bedc376a720c1f6694dc9"
+    },
+    "pysty": {
+      "dimensions": [
+        2048,
+        2732
+      ],
+      "allTitlePixelsInTopThird": true,
+      "backgroundOutsideTitleEqualsFittedReference": true,
+      "sha256": "140d721c320389467e84eff8b68a530abf9383e017f43d7f921397ba1c163329"
+    }
+  },
+  "visualReviewComplete": true,
+  "producerQAPassed": true,
+  "visualReviewAt": "2026-10-24T21:02:39.460339+00:00",
+  "manuallyVerifiedText": [
+    "KIELLETTY KAUPUNKI",
+    "1914"
+  ],
+  "extraWordsOrSymbolsObserved": false,
+  "warmPaleFillAndThinDarkOutlineObserved": true,
+  "yearVisuallySmallerInComposition": true,
+  "titleWithinTopThirdBothOrientations": true,
+  "lightAndDarkAlphaCompositesViewedAtNativeResolution": true,
+  "noVisibleColorHaloOnComposites": true,
+  "wholeImageGenerationsOnly": true,
+  "exportedRowWidth3000": true,
+  "native3000pxClaimed": false,
+  "disclosure": "3000px PNGs are proportional premultiplied-alpha resampled exports. Source title canvas 2146x733, separate year canvas 2070x760. Technical crop/row separation/composition only; no glyph repainting.",
+  "actualGameScreenshot": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "alkulento-otsikko-koko.png",
+    "bytes": 723548,
+    "sha256": "799bc2baa5eed3919c5ce1cdf69069d0619e9d0cb39b8210bf2356529e91a8f1",
+    "dimensions": [
+      3000,
+      476
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "name": "alkulento-otsikko-rivi1.png",
+    "bytes": 663210,
+    "sha256": "ee087d3d9e83e04233179c3a2c77e0f6b76c663018a0e101285fd00338044c27",
+    "dimensions": [
+      3000,
+      264
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "name": "alkulento-otsikko-rivi2.png",
+    "bytes": 1128068,
+    "sha256": "b0926fa4ced78d3a9dbb14cb7b5e6b1645193315ef1330749c0bce44154ab17e",
+    "dimensions": [
+      3000,
+      1030
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "name": "esikatselu-pysty.png",
+    "bytes": 6203151,
+    "sha256": "140d721c320389467e84eff8b68a530abf9383e017f43d7f921397ba1c163329",
+    "dimensions": [
+      2048,
+      2732
+    ],
+    "mode": "RGB"
+  },
+  {
+    "name": "esikatselu-vaaka.png",
+    "bytes": 7083418,
+    "sha256": "1e5a589a8de9a0063ecfa5db33c0e9b3f22c27976a0bedc376a720c1f6694dc9",
+    "dimensions": [
+      2732,
+      2048
+    ],
+    "mode": "RGB"
+  }
+]
