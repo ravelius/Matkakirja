@@ -103,7 +103,7 @@ Järjestys:
 - 24.10. 17.0x: 10 tehty kuvakortteina: tausta-v34 (LOD1/2 lehvästö → ristikkäiset kuvakortit, Codexin 933b, V4_puukortti MASK, kuva
   LOD1 512 px / LOD2 256 px; LOD0 ja valo kuten v33). Proto lavastaja/muoto-210 6504c0cd0 (tarkista.sh 0). Paketti
   juoksupeli-kk-tausta-peking-v34-vienti-20261024 (062a37e9d87f). Kuva tavoiteluuppi-k1/kaukopuut-933b-v34.png. 3D-puut myöhemmin Tripolta.
-- 24.10. 17.2x: muuripari 3 (VS/PT): rakennukset-v21 (Meridiaaniportin eteläsuut havainteen 810/05 mukaan: kivijalkapilarit, paksut punaiset
+- 24.10. 17.1x: muuripari 3 (VS/PT): rakennukset-v21 (Meridiaaniportin eteläsuut havainteen 810/05 mukaan: kivijalkapilarit, paksut punaiset
   pielet ja ylipalkki, sinivihreä vyö, 2 m räystäs, kynnyspalkki; d6be1b849821) ja avoimet-v26 (huoneiden räystäs 1,14 → 2 m, 810/01;
   f22109db7f88). Tausta-v34 korjattu (puukorttien normaalit puun keskeltä ulos, 131c06caf27d). Proto muoto-210 38885fbd7 (tarkista 0).
   Kuvat tavoiteluuppi-k1/meridiaaniportti-v21-810-05.jpg, raystas-avoimet-v25-v26.png. Kattokolmiot 210: PK:n piste (−136, 322) ei ole
