@@ -2505,3 +2505,7 @@ Omistaja KK:n kautta sanatarkasti: "katsoin päätoimittajan viimeisiä kuvia ja
 ## JUNA 211 YHDISTYY JUNAAN 210 (omistaja 24.10.2026 klo 18.45) (24.10.2026 klo 18.45)
 
 Omistaja KK:n kautta sanatarkasti: "tee vain kaikki mahdollinen 210 junaan. sanon sitten kun julkaistaan" (vastaus KK:n tietoon, että laattojen paksuus ja Unity b6 menevät junaan 211). Korvaa 14.55-päätöksen junajaon: kaikki junalle 211 merkityt työt (identtinen ulkoasu 14 kohtaa, laattojen paksuus, Unity b6, vaakan lataus, kartan saapumislento, muistokuplat valmistuessaan) junaan 210; TF vasta omistajan sanasta. PT: NS:n juna-211-runko (6908d7ec6, sis. 210-kärjen ja v37:n räystäskorjauksen) on junan 210 uusi kärki.
+
+## 9.5 VÄLÄHDYSHAKU TYÖKALUKSI (PT 24.10.2026) (24.10.2026 klo 19.03)
+
+Raamatun 9.5:n vanhentunut viite valahdys.py (skriptiä ei ollut) korvattu työkalulla tools/valahdys-yavg.py (Valosepän valahdys-yavg.zsh:n pohjalta, ffmpeg signalstats YAVG, yhden ruudun väläys > 4/255; ilman stdin-heredocia 12.9:n mukaan). Koeajo omistaja-vaaka.mp4 (210q): 5741 ruutua, 1 väläys 38,3 s (vanha versio).
