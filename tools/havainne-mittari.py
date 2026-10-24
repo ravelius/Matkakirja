@@ -31,9 +31,9 @@ def mittaa(kuva):
     def keltainen(x, y):
         h, s, v = hsv[x, y]; return 24 <= h <= 46 and s > 110 and v > 120   # h 0–255 (≈ 34–65°): viitta ja keisarimerkki
     def kulta(x, y):
-        h, s, v = hsv[x, y]; return 18 <= h <= 38 and s > 110 and v > 90
+        h, s, v = hsv[x, y]; return 15 <= h <= 40 and s > 60 and v > 100   # myös renderöinnin vaaleat kultakatot
     def taivas(x, y):
-        h, s, v = hsv[x, y]; r, g, b = rgb[x, y]; return (130 <= h <= 175 and s > 40 and v > 120) or (b > r + 20 and b > 150)
+        h, s, v = hsv[x, y]; return 125 <= h <= 180 and s > 60 and v > 150   # sininen taivas (ei sinertävää lattiaa tai varjoa)
     tulos = {}
     # keisari: keltaiset pikselit alueella x 0,30–0,70, y 0,40–1,0; rivit, joilla ≥ 3 pikseliä
     rivit = [y for y in range(int(H * 0.40), H) if sum(keltainen(x, y) for x in range(int(W * 0.30), int(W * 0.70))) >= 3]
@@ -42,11 +42,17 @@ def mittaa(kuva):
         tulos['keisari yläreuna'] = y0 / H; tulos['keisari alareuna'] = y1 / H; tulos['keisari korkeus'] = (y1 - y0) / H
         tulos['keisari keskikohta x'] = sum(xs) / len(xs) / W
     # horisontti: keskikaistan (x 0,45–0,55) alin rivi, jolla yli puolet taivasta
-    hor = [y for y in range(H) if sum(taivas(x, y) for x in range(int(W * 0.45), int(W * 0.55))) > 0.5 * int(W * 0.10)]
+    hor = [y for y in range(int(H * 0.5)) if sum(taivas(x, y) for x in range(int(W * 0.45), int(W * 0.55))) > 0.5 * int(W * 0.10)]
     tulos['horisontti (taivaan alaraja)'] = (max(hor) / H) if hor else 0.0
     for nimi, (a, b) in (('räystäs vasen', (0.0, 0.25)), ('räystäs oikea', (0.75, 1.0))):
-        rv = [y for y in range(int(H * 0.75)) if sum(kulta(x, y) for x in range(int(W * a), int(W * b))) > 0.15 * W * (b - a)]
-        tulos[nimi] = (max(rv) / H) if rv else 0.0
+        # ylhäältä alkava yhtenäinen kattokaista (aukot ≤ 3 riviä): sen alin rivi = räystäslinja (lattia ja viitta eivät kuulu kaistaan)
+        viim, aukko = None, 0
+        for y in range(int(H * 0.75)):
+            if sum(kulta(x, y) for x in range(int(W * a), int(W * b))) > 0.15 * W * (b - a): viim, aukko = y, 0
+            elif viim is not None:
+                aukko += 1
+                if aukko > 3: break
+        tulos[nimi] = (viim / H) if viim is not None else 0.0
     lattia = [luma(x, y) for y in range(int(H * 0.85), H) for x in range(int(W * 0.25), int(W * 0.75)) if not keltainen(x, y)]
     tulos['lattia mediaani'] = osuudet(lattia, [50])[0]
     kaikki = [luma(x, y) for y in range(H) for x in range(W)]
