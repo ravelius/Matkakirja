@@ -2473,3 +2473,23 @@ Omistaja klo 11.54 (KK:n välittämä, sanatarkasti): "Oliko se aiemmin lähetet
 ## PAATOS 24.10.2026 klo 13.27: JUOKSUPELIN KUVAKULMA KUVIEN 1 JA 2 VÄLISTÄ, VÄHÄN KORKEAMMALTA (24.10.2026 klo 13.27)
 
 Omistaja klo 13.27 (KK:n välittämä, sanatarkasti, kuvakulmastillien 1–5 jälkeen): "1  ja 2 välistä olisi  paras etäisyyden suhteen mutta kamera saisi olla vähän korkeammalla". KK:n tavoitekuvaus: pelikamera keisarin takana kuvien 1 (2,6 m) ja 2 (4,3 m) puolivälissä, vähän korkeammalla, niin että keisari näkyy isona hieman ylhäältä ja kuja avautuu hänen ylitseen. PT → Pelikoodari: stillit 3,45 m:stä kolmella korkeudella (2,0 / 2,6 / 3,2 m) samoista kolmesta paikasta → KK; kuvakulmanapin poisto kysytään samalla.
+
+## PAATOS 24.10.2026 klo 14.36: JUOKSUPELIN AINOA KUVAKULMA B, KUVAKULMANAPPI POIS (24.10.2026 klo 14.36)
+
+Omistajan kortti klo 14.36 (KK:n välittämä, sanatarkasti): "Mikä korkeus valitaan?" → "B (Suositus)" (kuja avautuu keisarin yli, muurit ja taivas näkyvät); "Poistetaanko kuvakulmanappi?" → "Poista (Suositus)" (valittu kulma on pelin ainoa kulma). B = omistaja-kuvakulmat-210-v3: taakse 3,2 m, korkeus 2,6 m, alas 23,4°, fov 84,75 (iPhone pysty). Junaan 210 porttitunnelin kamerakorjauksen kanssa; juna lähtee vasta näiden kanssa. Raamattu 2.177 KUVAKULMA. PT → Pelikoodari.
+
+## PAATOS 24.10.2026 klo 14.39: MUURIEN SUUNTA OIKEA, KOLME KOHTAA JUNAAN 211 (24.10.2026 klo 14.39)
+
+Omistajan kortti klo 14.39 (KK:n välittämä, sanatarkasti): "Onko muurien suunta oikea?" → "Kyllä, jatketaan (Suositus)" (kolme kohtaa tehdään valmiiksi junaan 211). Näytetty muurit-20261024b-parit (VS build 85dab09d7, LR v24). Kolme kohtaa: 1) lähtökujan ovet kiinni kuten havainnekuvassa (talot läpijuostavia: ovilehdet kiinni, aukeavat keisarin tullessa reitillä – LR + PK); 2) kivijalka varjossa vaaleammaksi (VS); 3) porttikäytävän nastaovet näkyviin tunnelin suulla (LR). KK:n sääntö: omistajalle menevissä kuvapareissa ei teknistä tekstikaistaa.
+
+## PAATOS 24.10.2026 klo 14.41: OMISTAJAN KUVISSA EI TEKSTIÄ KUVAN PÄÄLLÄ (24.10.2026 klo 14.41)
+
+Omistaja klo 14.41 (KK:n välittämä, sanatarkasti): "Teksti kaistoja ei saa poistaa jälkikäteen koska silloin osa kuvasta häviää. Kuvat pitää tehdä alkujaankin ilman tekstiä  tai lisätä teksti kuvan ulkopuolelle". Tausta: KK rajasi 14.37 muuripareista VS:n mustan teknisen kaistan, jolloin pelikuvan alaosa hävisi. Raamattu 7.32 EI TEKSTIÄ KUVAN PÄÄLLÄ ja docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 7; tieto omistajalle kuvia tekeville rooleille (VS, LR, PK, NUI, NS, JU, Codex-tilaukset).
+
+## PYYNTÖ 24.10.2026 klo 14.51: JUOKSUPELI IDENTTISEKSI HAVAINNEKUVIEN KANSSA, OPTIMOIDUSTI (24.10.2026 klo 14.52)
+
+Omistaja klo 14.51 (KK:n välittämä, sanatarkasti, muuriparien jälkeen): "Saako kaiken tehtyä identtiseksi? Pienemmät laatat, kivi korotukset yms? Ja miten sen saa tehtyä kuitenkin fiksusti optimoidusti niin että ulkoasu pysyy kuitenkin identtisenä mallin kanssa?". KK:n tavoitekuvaus: näkymä samannäköinen kuin havainnekuvat 01–07 kaikissa yksityiskohdissa (pienet vaaleat laatat limittäin, korotetut kivireunat ja portaat, kivijalat, kultaiset kattotiilet ja harjakoristeet, koristevyöt, nuppiovet, ikkunaristikot, puut muurien takana, lämmin matala valo ja lehvästön varjot); pohjakartta oikean palatsin mukaisena (20.10.). Tekotapa: pintakuvio + syvyysvarjostus, instanssit, valmiiksi laskettu valo + elävä keisarin varjo, LOD. PT → Lavastaja (vetää) + Valoseppä: suunnitelma docs/raportit/juoksupeli-identtinen-suunnitelma-20261024.md (kohdat, tekotapa, tekijä, arvio) → KK:lle omistajaa varten.
+
+## JUNA 211 ODOTTAA KOKO UUDEN ULKOASUN (omistaja 14.55) (24.10.2026 klo 14.57)
+
+OMISTAJAN PÄÄTÖS klo 14.55 (kortti KK:n kautta): "Odottaako juna 211 koko uuden ulkoasun?" → "Kyllä, odottaa (Suositus)" (koko ulkoasu valmis noin 2–3 päivässä). Suunnitelman 779817484 kaikki 14 kohtaa junaan 211 (myös harjakoristeet, puut, valon leivonta, aukiot, Meridiaaniportin edusta), ei mitään 212:een. Codex-tilaus b2b8d8eac (chiwen + eläinrivi, 2–3 puuta + kaukolehvästö, keskiportaan laatta) heti. Jos arvio venyy, KK:lle heti uusi arvio.
