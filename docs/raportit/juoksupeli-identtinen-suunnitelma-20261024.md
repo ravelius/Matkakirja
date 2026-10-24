@@ -91,3 +91,9 @@ Järjestys:
   Proto lavastaja/muoto-210 0d311faab (tarkista.sh 0). Paketit juoksupeli-avoimet-v24-vienti-20261024 (e43d0117a2de),
   juoksupeli-kielletty-rakennukset-v19-vienti-20261024 (0f099e84be34). Kuvat tavoiteluuppi-k1/harjakoristeet-avoimet-v24.png, keskiluiska-v19.png.
   Jatkossa 6: chiwen/eläimet myös tarkkojen mallien halleihin (nyt laatikkopäätteet) ja taustan halleihin; 10 puut odottavat uutta Tripo-koetta.
+- 24.10. 16.4x: 6 valmis: rakennukset-v20 (tarkkojen mallien hallit: Codexin chiwen ja eläinrivit, 10 mallia leivottu uudelleen; c44ebdedb2c5)
+  ja tausta-v31 (897 hallia, kevennetyt 79/57 kolmiota; valo leivottu uudelleen; 291fa8d30d49). Proto lavastaja/muoto-210 8dd7ee006
+  (tarkista.sh 0). Kuvat harjakoristeet-rakennukset-v20.png ja harjakoristeet-tausta-v30-vertailu.jpg (taustan kevennetyt koristeet
+  ovat karkeita lähellä – tarkistettava pelikuvasta). Huom.: kuvassa näkyvä rikkinäinen katto oikeassa alakulmassa on jo v28:ssa (eri vika).
+- 24.10. 16.3x KIIRE (juna 210, kattokolmiot kuja-75): huoneiden lappeille alapinta – avoimet-v16b (haara lavastaja/kattoalapinta-210
+  600f21ffd) ja v25 (muoto-210 56747f469). Jäljellä LR: 10 puut (Codexin uusi koe 5ac2612a0), avoimet-leivonta (ei kiireellinen).
