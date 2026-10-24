@@ -97,3 +97,6 @@ Järjestys:
   ovat karkeita lähellä – tarkistettava pelikuvasta). Huom.: kuvassa näkyvä rikkinäinen katto oikeassa alakulmassa on jo v28:ssa (eri vika).
 - 24.10. 16.3x KIIRE (juna 210, kattokolmiot kuja-75): huoneiden lappeille alapinta – avoimet-v16b (haara lavastaja/kattoalapinta-210
   600f21ffd) ja v25 (muoto-210 56747f469). Jäljellä LR: 10 puut (Codexin uusi koe 5ac2612a0), avoimet-leivonta (ei kiireellinen).
+- 24.10. 17.0x: porttirakennelmien rikkinäiset katot (madallus v11b:stä lähtien): 211 tausta-v33 (0bfec106cece; proto muoto-210 ab0a08a92)
+  ja 210 tausta-v19b (d317ae29945b; haara lavastaja/kattoalapinta-210 cc4f70f78, NS:lle merge-pyyntö). Kuvat porttirakennelmat-v32.jpg,
+  porttirakennelmat-210-v19-v19b.jpg. Seuraavaksi 10: kaukaiset puut kuvakorttina (Codex 933b).
