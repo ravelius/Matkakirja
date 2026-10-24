@@ -112,3 +112,6 @@ Järjestys:
   valo kuten v34; 82c5fbfe6d90, proto muoto-210 46fbd299c. Kuva tavoiteluuppi-k1/harjakoristeet-tausta-v34-v35.png.
 - 24.10. 17.3x: PT hylkäsi v35:n (kuoret kuin kiviä) → tausta-v36: harjakoristeet siluettikortteina Codexin lähimalleista (#928/#929 sivulta,
   alfa MASK, mittakaava lähimallin mukaan); 725744632089, proto muoto-210 85c242d76. Kuva tavoiteluuppi-k1/harjakoristeet-tausta-v34-v36.png.
+- 24.10. 18.0x: kattokolmiot 210 (PK:n kamera, Blender-säteet): kk-tausta-1-3:n lähtökujan eteläpuolen hallin räystäs oli muurien madalluksessa
+  puoliksi litistetty (4,5 m / 4,7–5,9 m) → v36b-sääntö: muurivyöhykkeelle ulottuvat hallien kattokasvot ehjinä. Juna 210: tausta-v19c
+  (02e3e1f1bc1a, proto kattoalapinta-210 e5cf49bfd); juna 211: tausta-v37 ajossa (v36 + v36b, valo leivotaan uudelleen).
