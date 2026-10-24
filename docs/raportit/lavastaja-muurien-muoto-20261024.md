@@ -68,3 +68,10 @@ V4_ristikko = mallin tasavärit (laji 0), kunnes VS lisää lajit. Muurikate ja 
 - Proto lavastaja/muoto-210 77b01e3a9 (kaikki neljä vakiota); tarkista.sh 0. VS yhdisti testihaaraan simua varten.
 - Kuvapari (Blender, tekstuurit; kamera Puyin takaa ~4,4 m): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/muoto-v22-kuvapari.jpg
 - Omistajan kuvapari: VS ajaa pelissä (paikat −135,0,320 / −245,8,300 / 13,2,−385 ja −420).
+
+## Vaihe 5: kivijalka (PT 24.10. 12.1x "harmaata 1,5 m:n kivijalkaa ei näy")
+- Kivijalka (V4_sokkeli → VS:n laji 11, #918) oli mukana kummallakin pitkällä muurilla, mutta v22:ssa korkeus 0,3 × seinän korkeus = 1,35 m
+  4,5 m:n muureilla → punainen rako listakiven (1,5 m) alle; ylhäältä katsottuna kapea. v23: min(1,5 m, 0,4 × korkeus).
+- Paketti _valmiit/juoksupeli-kk-tausta-peking-v23-vienti-20261024 (01341948cddc), korvaa v22:n. Proto lavastaja/muoto-210 f6a13ab7b; tarkista.sh 0.
+- Kuva (lähi | Puyin kamera): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/kivijalka-v23.jpg. Blenderin Workbench-
+  valossa varjopuolen kivijalka on tumma; pelissä harmaus tulee VS:n kivikuvasta.
