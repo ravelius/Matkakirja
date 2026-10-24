@@ -1,0 +1,110 @@
+[
+  {
+    "map": "vari",
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T16:00:58.570593+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/prompts/vari-attempt001.txt",
+    "inputReferencePaths": [],
+    "reason": null,
+    "completedAt": "2026-10-24T16:01:51.135423+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-970a0f0c-537d-4f35-b70a-9c4b59334197.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/vari-attempt001.png",
+    "sha256": "f1caa168fc1898db31a65271653c74fbcc118a063751f69b19cbac366382f17b",
+    "bytes": 3882927,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true
+  },
+  {
+    "map": "normaali",
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T16:02:36.833988+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/prompts/normaali-attempt001.txt",
+    "inputReferencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/vari-attempt001.png"
+    ],
+    "reason": null,
+    "completedAt": "2026-10-24T16:05:16.570790+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-57cb2de0-a145-4376-a4f2-cf1b647ff05f.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/normaali-attempt001.png",
+    "sha256": "4da46a52c2d06e3e6054f39d20c6ac51dd9d2237cedbdf2d6edc29f31cd75042",
+    "bytes": 3095365,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true
+  },
+  {
+    "map": "karheus",
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T16:02:37.161673+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/prompts/karheus-attempt001.txt",
+    "inputReferencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/vari-attempt001.png"
+    ],
+    "reason": null,
+    "completedAt": "2026-10-24T16:05:16.935694+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1898dcf9-2932-4d71-8c89-33e084c07968.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/karheus-attempt001.png",
+    "sha256": "a01c47083efa882d9d1a31193bae9344656b1bdcf58dac3dccf68be80547c7e7",
+    "bytes": 3082093,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true
+  },
+  {
+    "map": "normaali",
+    "attempt": 2,
+    "status": "completed",
+    "issuedAt": "2026-10-24T16:05:49.560547+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/prompts/normaali-attempt002.txt",
+    "inputReferencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/vari-attempt001.png"
+    ],
+    "reason": "Correct the measured 24 negative-Z pixels and excess directional bias with complete low-amplitude normal regeneration.",
+    "completedAt": "2026-10-24T16:06:52.952556+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-841084fa-fb6e-483b-8da2-dba348aa625c.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/normaali-attempt002.png",
+    "sha256": "b05caa3def8280a5720015070affb238bb2a1724fbc4bd83158dc3d8cc4cb259",
+    "bytes": 2939785,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true
+  },
+  {
+    "map": "karheus",
+    "attempt": 2,
+    "status": "completed",
+    "issuedAt": "2026-10-24T16:05:49.889538+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/prompts/karheus-attempt002.txt",
+    "inputReferencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/vari-attempt001.png"
+    ],
+    "reason": "Replace the shaded grayscale-photo-like candidate with a complete true low-contrast roughness-data generation.",
+    "completedAt": "2026-10-24T16:06:53.344530+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-913495ff-306d-48ae-9980-3f397e30b1a2.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/native/karheus-attempt002.png",
+    "sha256": "589bc687469df8dd0472a39ede669c1edfb6e6808ce6fcaa684a310a3bb0af3b",
+    "bytes": 2903638,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true
+  }
+]

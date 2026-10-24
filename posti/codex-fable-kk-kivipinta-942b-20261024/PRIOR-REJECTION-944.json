@@ -1,0 +1,30 @@
+{
+  "receiptTaskNumber": 944,
+  "rejectedTaskNumber": 942,
+  "recordedAt": "2026-10-24T16:00:57.935987+00:00",
+  "source": {
+    "path": "posti/fable-codex-kuvat-kk-laattatekstuuri-942-vastaus-20261024.md",
+    "commit": "e8ab75c186e242f72e80560e3579b397a8332ab8",
+    "blob": "452a8edf575cf5c9e9c81f1eb67336adab5bb649",
+    "sha256": "867b66b0670896a1ab951c56eda02b0f03c89bcba7a7512f7746d1204d22ae99",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/sources/order-and-rejection.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "e8ab75c186e242f72e80560e3579b397a8332ab8"
+  },
+  "priorDeliveryCommit": "c8c229af5b8a4a121b64da24484e0d3825e02410",
+  "ptRejected": true,
+  "reasons": [
+    "visible horizontal repeat boundary",
+    "slabs appear brick-sized rather than reference large paving",
+    "native panel resolution 627 pixels"
+  ],
+  "gameUseAuthorized": false,
+  "productionOrderClosed": true,
+  "newSeparateOrderTask": 945,
+  "newSeparateOrderSourceId": "942b",
+  "newImageCallsForOldOrder": 0,
+  "originalAssetsPreserved": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

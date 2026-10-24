@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-24T16:08:12.319438+00:00",
+  "taskNumber": 945,
+  "sourceAssetId": "942b",
+  "selectedAttempts": {
+    "vari": 1,
+    "normaali": 2,
+    "karheus": 2
+  },
+  "nativeSizeRequirementPassed": true,
+  "allSelectedNativeDimensions": [
+    1254,
+    1254
+  ],
+  "resized": false,
+  "upscaled": false,
+  "atlasUsed": false,
+  "nativeBytesUnchanged": true,
+  "source": {
+    "path": "posti/fable-codex-kuvat-kk-laattatekstuuri-942-vastaus-20261024.md",
+    "commit": "e8ab75c186e242f72e80560e3579b397a8332ab8",
+    "blob": "452a8edf575cf5c9e9c81f1eb67336adab5bb649",
+    "sha256": "867b66b0670896a1ab951c56eda02b0f03c89bcba7a7512f7746d1204d22ae99",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kk-kivipinta-942b-945-20261024/sources/order-and-rejection.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "e8ab75c186e242f72e80560e3579b397a8332ab8"
+  },
+  "generationCalls": 5,
+  "selectedMapCount": 3,
+  "visual": {
+    "singleContinuousStoneSurface": true,
+    "jointsOrSlabEdges": false,
+    "colorHasNoStrongDirectionalLighting": true,
+    "colorOffset50VisualPassed": true,
+    "colorRepeat4x4VisualPassed": true,
+    "normalAndRoughnessSelectedOffsetReviewed": true,
+    "registration": "Same framing and recognizable pore clusters; not calibrated pixel-exact PBR correspondence.",
+    "normalOffsetObservation": "A narrow central vertical join is perceptible under close inspection; do not certify normal seamlessness.",
+    "roughnessOffsetObservation": "No strong brightness cross; photographic pore shading remains the principal QA failure.",
+    "sameUVCropsPersonallyViewed": true,
+    "reviewedAt": "2026-10-24T16:08:36.493985+00:00"
+  },
+  "producerQAPassed": false,
+  "allRequirementsFulfilled": false,
+  "mapDisposition": {
+    "vari": "visual candidate passes native size, continuous stone, offset and repeat checks; recipient review pending",
+    "normaali": "technical QA reservation: 2 negative-Z pixels, nonunit lengths and global XY bias; not a certified production normal map",
+    "karheus": "QA reservation: still shows photographic dark pores and rim contrast; RGB is not neutral scalar data"
+  },
+  "limitations": [
+    "Second normal candidate contains 2 pixels with negative decoded Z. Normalizing vectors alone does not correct their sign.",
+    "Second normal mean decoded direction is about [0.09335,0.11805,0.96737]; 1st/50th/99th vector-length percentiles are 0.8628/0.9937/1.1109.",
+    "OpenGL Y+ was requested; no physical measured-height reference exists to certify handedness or exact displacement.",
+    "Second roughness candidate has RGB channel spread up to 10/255; R-channel 1st/50th/99th percentiles are 0.6000/0.7020/0.7686. Dark pore outliers reach 0.3020.",
+    "Roughness still resembles a shaded stone photograph. This is a producer QA issue, not receiver acceptance.",
+    "Opposite edge pixels are not bit-identical. Visual offset/repeat inspection is separate from mathematical periodicity.",
+    "All maps remain untouched generated candidates. No clamping, channel replacement, repainting, edge blending or upscaling was applied.",
+    "Selected normal 50/50 offset has a perceptible narrow vertical join at the wrapped boundary; normal seamlessness is not certified."
+  ],
+  "deliveryScope": "recipient review with explicit unresolved normal/roughness QA; not an accepted complete PBR set",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "prior942": "Rejected and closed separately; its prior native size/atlas limitations are not reused in 942b."
+}

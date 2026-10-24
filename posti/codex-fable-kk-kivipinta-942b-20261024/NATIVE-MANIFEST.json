@@ -1,0 +1,46 @@
+[
+  {
+    "name": "esikatselu-4x4.png",
+    "sha256": "088df5ed616edfd1f62caf425cc653a1feba30da6ed8293ead37d9e8e1787020",
+    "bytes": 14352145,
+    "dimensions": [
+      5016,
+      5016
+    ],
+    "mode": "RGB",
+    "kind": "repeated QA preview"
+  },
+  {
+    "name": "karheus.png",
+    "sha256": "589bc687469df8dd0472a39ede669c1edfb6e6808ce6fcaa684a310a3bb0af3b",
+    "bytes": 2903638,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "kind": "unchanged selected native candidate"
+  },
+  {
+    "name": "normaali.png",
+    "sha256": "b05caa3def8280a5720015070affb238bb2a1724fbc4bd83158dc3d8cc4cb259",
+    "bytes": 2939785,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "kind": "unchanged selected native candidate"
+  },
+  {
+    "name": "vari.png",
+    "sha256": "f1caa168fc1898db31a65271653c74fbcc118a063751f69b19cbac366382f17b",
+    "bytes": 3882927,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "kind": "unchanged selected native candidate"
+  }
+]
