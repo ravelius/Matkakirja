@@ -2477,3 +2477,7 @@ Omistaja klo 13.27 (KK:n välittämä, sanatarkasti, kuvakulmastillien 1–5 jä
 ## PAATOS 24.10.2026 klo 14.36: JUOKSUPELIN AINOA KUVAKULMA B, KUVAKULMANAPPI POIS (24.10.2026 klo 14.36)
 
 Omistajan kortti klo 14.36 (KK:n välittämä, sanatarkasti): "Mikä korkeus valitaan?" → "B (Suositus)" (kuja avautuu keisarin yli, muurit ja taivas näkyvät); "Poistetaanko kuvakulmanappi?" → "Poista (Suositus)" (valittu kulma on pelin ainoa kulma). B = omistaja-kuvakulmat-210-v3: taakse 3,2 m, korkeus 2,6 m, alas 23,4°, fov 84,75 (iPhone pysty). Junaan 210 porttitunnelin kamerakorjauksen kanssa; juna lähtee vasta näiden kanssa. Raamattu 2.177 KUVAKULMA. PT → Pelikoodari.
+
+## PAATOS 24.10.2026 klo 14.39: MUURIEN SUUNTA OIKEA, KOLME KOHTAA JUNAAN 211 (24.10.2026 klo 14.39)
+
+Omistajan kortti klo 14.39 (KK:n välittämä, sanatarkasti): "Onko muurien suunta oikea?" → "Kyllä, jatketaan (Suositus)" (kolme kohtaa tehdään valmiiksi junaan 211). Näytetty muurit-20261024b-parit (VS build 85dab09d7, LR v24). Kolme kohtaa: 1) lähtökujan ovet kiinni kuten havainnekuvassa (talot läpijuostavia: ovilehdet kiinni, aukeavat keisarin tullessa reitillä – LR + PK); 2) kivijalka varjossa vaaleammaksi (VS); 3) porttikäytävän nastaovet näkyviin tunnelin suulla (LR). KK:n sääntö: omistajalle menevissä kuvapareissa ei teknistä tekstikaistaa.
