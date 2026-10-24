@@ -1,0 +1,31 @@
+{
+  "taskNumber": 950,
+  "at": "2026-10-24T21:48:13.169149+00:00",
+  "producerQAPassed": true,
+  "imageViewedAtFullSize": true,
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "nativeMode": "RGB",
+  "sha256": "f07edb8b1034eed44768c40490cf83acc7ecafb0154d37cc0acaa5f07aa1c373",
+  "checks": {
+    "exactlyOneEmptyTable": true,
+    "noPlatesOrPeople": true,
+    "fourStraightLegsFullyVisible": true,
+    "unclippedWholeObject": true,
+    "threeQuarterView": true,
+    "darkZitanTonedWood": true,
+    "restrainedGeometricCornerRelief": true,
+    "plainLightBackground": true,
+    "noTextOrWatermark": true
+  },
+  "limitations": [
+    "Photographic concept reference; 0.78 m height and 1.20 x 0.55 m top are modeling targets, not measurable dimensions verified from this picture.",
+    "Museum page timed out; this is based on the approved written design, not claimed to reproduce the exact museum item."
+  ],
+  "recipientAccepted": false,
+  "ownerImageAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

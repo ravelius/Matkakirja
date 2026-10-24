@@ -1,0 +1,42 @@
+[
+  {
+    "role": "decision",
+    "path": "posti/fable-codex-lautaspoyta-paatos-20261025.md",
+    "commit": "7cfe234d6807cbc65d6645d199dfeab9616f19f2",
+    "blob": "9b2925639abebb440992d07632ff7d89aab4734c",
+    "sha256": "48ce94c0cf572eca77878f87ea034dea42047a0c3908108f200ea569186f77f3",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/sources/decision.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "b157bc1cc7975ce11166e92da92799a1fe638182"
+  },
+  {
+    "role": "table-request",
+    "path": "posti/codex-paatoimittaja-lautaspoyta948-aloitus-20261025.md",
+    "commit": "0becb9d89096a65e5bb1730bfa10734ee2a2e689",
+    "blob": "42d08e13e9f22d24525643cb8954cb391c374b47",
+    "sha256": "e5ee6f63fa0b3757e13da12c2ea5a21385e28039c25babeb6e86f7b803ace7d9",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/sources/table-request.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "b157bc1cc7975ce11166e92da92799a1fe638182"
+  },
+  {
+    "role": "dependency",
+    "path": "posti/lautaspoyta948-20261025/codex-lautanen-ja-poydan-lahde.md",
+    "commit": "b157bc1cc7975ce11166e92da92799a1fe638182",
+    "blob": "226f5f9587c82b591fc89df2839c3460e8a49e30",
+    "sha256": "628341b0ecae279a2f36b91e3a741654827db01ff38a8510edf6af2b16ee8e19",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/sources/dependency.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "b157bc1cc7975ce11166e92da92799a1fe638182"
+  },
+  {
+    "role": "original-eight",
+    "path": "posti/paatoimittaja-codex-muistokuplat-kahdeksan-esinetta-20261021.md",
+    "commit": "ca0d73622a5faa648b3ec208efd842199c6d648f",
+    "blob": "90dbccd29eee8f809816149252ade6e71037b5ed",
+    "sha256": "d464d6e6e1453178ceac1e5ef4414d7e3fb71e426591bd7b159aeac4619ca3ba",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/sources/original-eight.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "b157bc1cc7975ce11166e92da92799a1fe638182"
+  }
+]

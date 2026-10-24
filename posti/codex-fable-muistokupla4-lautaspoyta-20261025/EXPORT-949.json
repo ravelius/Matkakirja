@@ -1,0 +1,15 @@
+{
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/native/949-memory-bubble-attempt001.png",
+  "nativeSHA256": "72bc7799a66b6d6af0e0b084119e39d2b42bdd7c42284347ec391024b91bf97b",
+  "nativeDimensions": [
+    1086,
+    1448
+  ],
+  "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/delivery/04-lautaspino.jpg",
+  "exportSHA256": "42ec0ee5756fa45a4d4a24a987d3c70306f4f9a9f2eb33bcef2c8905b6a4bbef",
+  "exportDimensions": [
+    768,
+    1024
+  ],
+  "method": "Whole-frame proportional Lanczos downscale to source-specified size and JPEG quality96/subsampling0; no cropping, retouching, inpainting or partial edits."
+}

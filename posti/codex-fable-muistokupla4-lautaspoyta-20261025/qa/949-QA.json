@@ -1,0 +1,26 @@
+{
+  "taskNumber": 949,
+  "at": "2026-10-24T21:50:24.310886+00:00",
+  "producerQAPassed": true,
+  "nativeAndDeliveryViewed": true,
+  "checks": {
+    "exactlyThreeLowPlateStacks": true,
+    "darkStraightLegTableMatches950Reference": true,
+    "smallGeometricCornerBracketsPreserved": true,
+    "noFloorTowerOrCurvedWhiteTable": true,
+    "adultRelativeTableHeightPlausible": true,
+    "blueWhiteDragonFloralPlatesGoldRims": true,
+    "attendantsStackingAfterBanquet": true,
+    "naturalHandsAndTraditionalFootwear": true,
+    "fullFigureHallScene": true,
+    "brightRealisticColorPhotoMatchesSeries": true,
+    "portrait768x1024": true,
+    "noTextWatermarkOrLogos": true
+  },
+  "compositionNote": "Full figures and surrounding hall are visible; table fills most of frame width. Exact camera distance is not measurable from the image and final framing remains for PT full-size review.",
+  "sourceMuseumVisuallyVerified": false,
+  "recipientAccepted": false,
+  "ownerImageAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
