@@ -108,3 +108,5 @@ Järjestys:
   f22109db7f88). Tausta-v34 korjattu (puukorttien normaalit puun keskeltä ulos, 131c06caf27d). Proto muoto-210 38885fbd7 (tarkista 0).
   Kuvat tavoiteluuppi-k1/meridiaaniportti-v21-810-05.jpg, raystas-avoimet-v25-v26.png. Kattokolmiot 210: PK:n piste (−136, 322) ei ole
   taustassa (avoimet puutarha/varasto); odottaa PK:n osumakolmiota.
+- 24.10. 17.2x: taustan koristeiden karkeus (PT): tausta-v35 – kevennetyt chiwenit ja eläinrivit kuperina osakuorina (piikit pois),
+  valo kuten v34; 82c5fbfe6d90, proto muoto-210 46fbd299c. Kuva tavoiteluuppi-k1/harjakoristeet-tausta-v34-v35.png.
