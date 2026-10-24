@@ -19,3 +19,10 @@ Yksi generointi per tekstuuri (3); selvästi epäonnistunut (sauma näkyy, valo 
 
 ## Toimitus
 posti/juoksupeli-muurit-tekstuurit-20261024/ + kuittaus postiin. PT tarkistaa täysikokoisina ja toistettuina (2 × 2) ennen Valosepälle.
+
+## TÄYDENNYS 24.10. klo 11.0x (sama tilaus; omistaja 10.53: "myös taivaassa saisi näkyä saävyt paremmin. Nyt näyttää puhkipalaneelle", "vihreä boordi")
+4. paivataivas-panoraama: 4096 × 2048 ekvirektangulaarinen (kuten taivas-codex-v3); aurinko atsimuutti 235°, korkeus 24°;
+   syvän sininen zeniitti, joka vaalenee horisonttia kohti; hajanaisia kumpupilviä, joiden alapinnoissa on varjoa ja sävyjä;
+   ei maata eikä siluetteja horisontin (0°) alapuolella.
+5. palkkimaalaus (sinivihreä räystäsvyö): saumaton vaakanauha 2048 × 512; sininen ja vihreä perinteinen palkkimaalaus
+   (kuusikulmaiset kuviot) kultaisin reunuksin, ilman leivottua valoa. Havainnekuvat #810 01, 02 ja 05 ovat mallina.
