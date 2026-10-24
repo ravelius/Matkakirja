@@ -54,3 +54,17 @@ V4_ristikko = mallin tasavärit (laji 0), kunnes VS lisää lajit. Muurikate ja 
 - Proto lavastaja/muoto-210 e39681f0c: TaustaKansio v21; tarkista.sh 0 virhettä.
 - Esikatselu: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/muoto-v21-yksityiskohdat.jpg
 - iPadin ruutuaika: mitattava pelikuvaparin ajossa (raskain pala 143 k LOD0 + muurikate 109 k aina).
+
+## Vaihe 4 (PT 24.10. 12.0x + VS:n Codex-kuvat #923–#926)
+- muurikate-v8: pilasterit vain jaksojen päihin (pitkä muurikuja sileä, havainne 02), kivijalka 1,5 m, koristevyöhön palkkimaalaus
+  kuvatekstuurina (UV 3:1, alareunan vaalea kaista rajattu). Porttiaukkoja muureissa ei löytynyt läpikuljettavina (raot = risteyksiä) →
+  ei ovia muureihin. 85 332 kolmiota. Paketti juoksupeli-kk-muurikate-v8-vienti-20261024 (6b91f544f5fa).
+- avoimet-v18: palkkimaalaus, 菱花-ikkunaristikko alfa-maskina (MASK, korvaa rimat), huoneen puuovi ovilehtiin. ~3 000 kolmiota/huone.
+  Paketti juoksupeli-avoimet-v18-vienti-20261024 (e7959e5c4175).
+- rakennukset-v14: Meridiaaniportin kolmen tunnelin pohjoissuulle avatut nastaovet (#925) + kynnyspuu (havainne 05 = keskiaukko).
+  Vain a-meridiaaniportti-lod0 muuttui (UV vain sille). Paketti juoksupeli-kielletty-rakennukset-v14-vienti-20261024 (a30e1d8b905d).
+- tausta-v22: kivijalka 1,5 m kaikkialla, ei syvennyspaneeleja muureissa, yksityiskohdat muurikate-v8:n jaksoista. LOD0 1 442 512,
+  raskain pala 137 109. Paketti juoksupeli-kk-tausta-peking-v22-vienti-20261024 (d6799c7a5546).
+- Proto lavastaja/muoto-210 77b01e3a9 (kaikki neljä vakiota); tarkista.sh 0. VS yhdisti testihaaraan simua varten.
+- Kuvapari (Blender, tekstuurit; kamera Puyin takaa ~4,4 m): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/muoto-v22-kuvapari.jpg
+- Omistajan kuvapari: VS ajaa pelissä (paikat −135,0,320 / −245,8,300 / 13,2,−385 ja −420).
