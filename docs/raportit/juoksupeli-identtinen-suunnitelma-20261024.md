@@ -117,3 +117,7 @@ Järjestys:
   (02e3e1f1bc1a, proto kattoalapinta-210 e5cf49bfd); juna 211: tausta-v37 ajossa (v36 + v36b, valo leivotaan uudelleen).
 - 24.10. 18.2x: rakennukset-v22 (VS, 810/05: Meridiaaniportin nastaovet suulle 60° auki; 5964af590085, proto c88e8067e) ja tausta-v37
   (211: v36 + räystäskorjaus, valo uudelleen; 6cc85cf22e88, proto muoto-210 d110918a0). Kuva tavoiteluuppi-k1/meridiaaniportti-v22-810-05.png.
+- 24.10. 19.2x (OMISTAJA 18.45: kaikki junaan 210): rakennukset-v23 porraskaiteet F/G (2b5c05df6383), v24 kujaportti punamuurikujan päähän
+  (929fbd0abf2d), v25 toinen kujaportti z 345 (1c505ee69289); avoimet-v27 kivireunus 0,30 m V4_kivireunus (ed45258ff4f0); tausta-v39
+  LOD0-lehvästö 933b-korteiksi + kivireunus (c3118234918f); lähipuut 938–940 + puut.json PK:n instansseille (kielletty-lahipuut-v1,
+  bcdafe75cdf5). Proto muoto-210 60e90134f. Kuvat tavoiteluuppi-k1/porraskaiteet-v23.png, kujaportit-v25-810-02.png.
