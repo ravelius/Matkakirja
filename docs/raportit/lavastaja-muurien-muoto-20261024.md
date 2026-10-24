@@ -75,3 +75,11 @@ V4_ristikko = mallin tasavärit (laji 0), kunnes VS lisää lajit. Muurikate ja 
 - Paketti _valmiit/juoksupeli-kk-tausta-peking-v23-vienti-20261024 (01341948cddc), korvaa v22:n. Proto lavastaja/muoto-210 f6a13ab7b; tarkista.sh 0.
 - Kuva (lähi | Puyin kamera): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/kivijalka-v23.jpg. Blenderin Workbench-
   valossa varjopuolen kivijalka on tumma; pelissä harmaus tulee VS:n kivikuvasta.
+
+## Vaihe 6 (PT 24.10. 12.4x–12.5x, VS:n pelikuva 1-lahtokuja)
+- avoimet-v20: talojen etuseinät kiinni – ovipaneelien 3,26 m:n aukot kavennettu 2,4 m:iin (= juoksureitin kaista AvoinLeveys, kaikki ovet
+  läpijuostavia, Pelikoodarille tiedoksi), sivuille umpiseinä rappauksin ja kivijalan kansin, oven yläpuoli umpeen, ovilehdet sisäpinnalla.
+  Kivijalka 0,95 + 0,05 m. Paketti juoksupeli-avoimet-v20-vienti-20261024 (03fe566b7b87).
+- muurikate-v9 + tausta-v24: kivijalka ~1/4 muurin korkeudesta = 1,1 m. Paketit juoksupeli-kk-muurikate-v9-vienti-20261024 (daf72a0457c4),
+  juoksupeli-kk-tausta-peking-v24-vienti-20261024 (8a33611c23c5). Vaaleus = VS (V4_sokkeli × 1,28).
+- Proto lavastaja/muoto-210 53573be4b; tarkista.sh 0. Kuva: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/lahtokuja-v20-etuseinat.png
