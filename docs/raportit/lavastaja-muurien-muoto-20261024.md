@@ -83,3 +83,11 @@ V4_ristikko = mallin tasavärit (laji 0), kunnes VS lisää lajit. Muurikate ja 
 - muurikate-v9 + tausta-v24: kivijalka ~1/4 muurin korkeudesta = 1,1 m. Paketit juoksupeli-kk-muurikate-v9-vienti-20261024 (daf72a0457c4),
   juoksupeli-kk-tausta-peking-v24-vienti-20261024 (8a33611c23c5). Vaaleus = VS (V4_sokkeli × 1,28).
 - Proto lavastaja/muoto-210 53573be4b; tarkista.sh 0. Kuva: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/lahtokuja-v20-etuseinat.png
+
+## Vaihe 7 (OMISTAJA 14.39 PT:n kautta: muurien suunta oikea; ovet kiinni, portin nastaovet näkyviin)
+- avoimet-v21: ovilehdet (#926) kiinni 2,4 m:n aukoissa omina solmuinaan "<paneeli>_ovilehti_V|O_avaus±90" (origo = sarana; kulma glTF:n
+  paikallisen Y:n ympäri, lehti huoneen sisään). Avausmekanismi = Pelikoodari (spesifikaatio lähetetty). Paketti juoksupeli-avoimet-v21-vienti-20261024 (b5264b9cdd40).
+- rakennukset-v15: Meridiaaniportin nastaovet (#925) tunnelien eteläsuulle avattuina julkisivua vasten, nastapuoli juoksijaan päin (havainne 05);
+  pohjoissuun lehdet pois. Paketti juoksupeli-kielletty-rakennukset-v15-vienti-20261024 (b4b7ddfdc51f).
+- Proto lavastaja/muoto-210 36fc011eb; tarkista.sh 0.
+- Kuvat (ilman tekstikaistaa): /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/lahtokuja-v21-ovet-kiinni.png ja porttikaytava-v15-nastaovet.png
