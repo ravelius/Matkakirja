@@ -121,3 +121,8 @@ Järjestys:
   (929fbd0abf2d), v25 toinen kujaportti z 345 (1c505ee69289); avoimet-v27 kivireunus 0,30 m V4_kivireunus (ed45258ff4f0); tausta-v39
   LOD0-lehvästö 933b-korteiksi + kivireunus (c3118234918f); lähipuut 938–940 + puut.json PK:n instansseille (kielletty-lahipuut-v1,
   bcdafe75cdf5). Proto muoto-210 60e90134f. Kuvat tavoiteluuppi-k1/porraskaiteet-v23.png, kujaportit-v25-810-02.png.
+- 24.10. ilta (PT muotoerälista + muuripari 6 + pari 02, VS k20b): rakennukset-v26–v30 (kujaportti lähtökujalle, porttien chiwenit,
+  valo uudelleen, Taihemenin porttisiivet 03, kujaportit 6,6/4,2 m; v30 kaikki leivottu 170°/45°; 365448df50d2), avoimet-v28–v30
+  (jyrkemmät lappeet, talojen väliset pilarit, talot räystäs 3,2 m; 682118b12e40), tausta-v42 (muurikujat 6 m, kujat pohjan levyisiksi
+  4,79 m, friisi 0,45 m, porrastukset, lehvästöjäänteet pois, valo 170°/45°; 0d95964766f3), muurikate-v12 (b6e42eb97f71), lähipuut-v2
+  (+ koristeet.json; e0ae13c1620b). Proto muoto-210 e432dfcb1. Erolista: _tyo/linnanrakentaja/identtisyys-erot/muotoerot-810.md.
