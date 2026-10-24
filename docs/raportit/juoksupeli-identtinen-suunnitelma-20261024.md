@@ -100,3 +100,6 @@ Järjestys:
 - 24.10. 17.0x: porttirakennelmien rikkinäiset katot (madallus v11b:stä lähtien): 211 tausta-v33 (0bfec106cece; proto muoto-210 ab0a08a92)
   ja 210 tausta-v19b (d317ae29945b; haara lavastaja/kattoalapinta-210 cc4f70f78, NS:lle merge-pyyntö). Kuvat porttirakennelmat-v32.jpg,
   porttirakennelmat-210-v19-v19b.jpg. Seuraavaksi 10: kaukaiset puut kuvakorttina (Codex 933b).
+- 24.10. 17.3x: 10 tehty kuvakortteina: tausta-v34 (LOD1/2 lehvästö → ristikkäiset kuvakortit, Codexin 933b, V4_puukortti MASK, kuva
+  LOD1 512 px / LOD2 256 px; LOD0 ja valo kuten v33). Proto lavastaja/muoto-210 6504c0cd0 (tarkista.sh 0). Paketti
+  juoksupeli-kk-tausta-peking-v34-vienti-20261024 (062a37e9d87f). Kuva tavoiteluuppi-k1/kaukopuut-933b-v34.png. 3D-puut myöhemmin Tripolta.
