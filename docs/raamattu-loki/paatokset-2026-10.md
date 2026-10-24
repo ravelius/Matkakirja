@@ -2441,3 +2441,23 @@ Omistaja klo 11.22 (KK:n välittämä, sanatarkasti, jatkoa 10.53:n yksityiskoht
 ## PAATOS 24.10.2026 klo 10.53: JUOKSUPELIN YKSITYISKOHDAT JA TAIVAS HAVAINNEKUVIEN TASOLLE (24.10.2026 klo 11.26)
 
 Omistaja klo 10.53 (KK:n välittämä uudelleen klo 11.26, sanatarkasti, kuvaparien jälkeen): "Vertaa myös muita yksityiskohtia ja paranna niitä myös (vihreä boordi, enemmän syvennyksiä, ikkunat, yms) myös taivaassa saisi näkyä saävyt paremmin. Nyt näyttää puhkipalaneelle". KK:n tavoitekuvaus: näkymä vastaa havainnekuvia yksityiskohdissa, ei vain värissä: leveä sinivihreä kuvioitu koristevyö räystään alla, seinissä syvennyksiä, pylväitä, ovia ja ikkunaristikoita, kivijalka ja räystäät havainnekuvan tasolla; taivas syvän sininen ja horisonttia kohti vaaleneva, pilvissä sävyjä ja varjoja, ei ylivalottunutta vaaleutta. Vertailu kohta kohdalta havainnekuvia 01–07 vastaan (wt/fable-posti-0945/posti/juoksupeli-havainnekuvat-810-20261021/), kuvaparit omistajalle. Laajentaa 02.38-listan kohdat 3 (räystäsvyö) ja 6 (pilvet) sekä 10.51:n seinäpäätöstä (10.51 ei ole PT:n lokissa; pyydetty seuraavalta KK:lta). Raamattu 2.177 GRAFIIKAN TASO; juna 211:n työlistaan (Valoseppä).
+
+## PAATOKSET 24.10.2026 klo 10.15–11.25: JUNA 210, MUURIT JA TAIVAS, AJOITUSOPPI (24.10.2026 klo 11.21)
+
+- 24.10. 10.15 JUNA 210: c3bed52dc palaa (VS: v11 0,79 ilman / 0,23–0,29 kanssa; aamun poisto väärällä syyllä) ehdolla tiilirivit näkyvät lähellä (kuvapari PT:lle). Portti-kuja8 korjataan peittokartan
+lähteestä junaan 211, ei kamerasääntöä (PK kysyi). Keskitys 69797250e kuitattu, ehdokas 4bbdc3e89 LT:lle 10.14. Saapumislento yhä 25/26 > 20 ms → NS selvittää.
+- 24.10. 10.20 OMISTAJAN PÄÄTÖS (KK): "Sen korjauksen voi jättää junasta pois" → saapumislento junaan 211 (NS), juna 210 lähtee videoiden hyväksynnän ja pyynnön jälkeen.
+- 24.10. 10.3x Videot 7bf10120d PT:n tarkistamina KK:lle; valkoinen lähtömerkki (ei omistajan pyytämä) → poisto valmiina NUI 9d420ace4 (natiivi-ui/lahtomerkki-210), junaan vain omistajan sanalla.
+Vaakalatauskuva ~33 s → 211.
+- 24.10. 10.4x OPPI (periaate 2 rikottu: PT luotti tekijän mittaukseen): vaakan leima 1,1 s / ääni 2,0 s ohi PT:n tarkistuksen, KK löysi. PT:n videotarkistukseen pakollinen oma ruutumittaus (10 r/s +
+äänitaso 50 ms) jokaisesta omistajan ajoitusehdosta – kirjataan 9.5 PT:N KUVATARKISTUS -kohtaan.
+- 24.10. 10.46 OMISTAJAN VASTAUKSET (KK): alkulennon nimitekstit vahvempi fontti, ohut tumma ääriviiva, ylin kolmannes, rivi kerrallaan, ~7 s → NUI junaan 210; valkoinen välähdys Poista (9d420ace4);
+vaakan lataus seuraavaan junaan; muurit muodottomat ja liian räikeän punaiset → kuvaparit havainnekuva|peli omistajan kanssa (KK).
+- 24.10. 10.51 OMISTAJAN PÄÄTÖS: punaiset seinät heti → LR muoto, VS väri/pinta.
+- 24.10. 10.53 OMISTAJAN PYYNTÖ: yksityiskohdat (vihreä boordi, syvennykset, ikkunat) + taivas sävyt, ei puhkipalanut → LR vertailulista 01–07 + muoto, VS taivas ja valotus; Codex-tilaus 9ba05e91b
+(muurien tekstuurit).
+- 24.10. 11.1x JUNA 210: LT 4bbdc3e89 VIHREÄ, v11 0,29 ilman c3bed52dc:tä → 10.15 päätös peruttu, c3bed52dc pois (vaihtelu ei johtunut siitä). Juna 210 = 4bbdc3e89 + NUI 9d420ace4 + PK 8d9844b61,
+b83e63e78 + NUI nimitekstit.
+- 24.10. 11.13 Codex #917 rappaus, #918 kivijalka, #920 taivas HYVÄKSYTTY (PT valtuutuksella), #919/#921 uusintaan (a3c3edd34); #922–924 ikkunaristikko, portin ovilehti, huoneen ovi tilattu
+(e9f1c2f8a). Lavastaja muoto vaihe 1 luonnos 1ffe66f99.
+- RAAMATTU 9.5: AJOITUKSET MITATAAN ITSE (PT:n oma ruutu- ja äänimittaus jokaisesta omistajan ajoitusehdosta).
