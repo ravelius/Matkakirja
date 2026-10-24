@@ -2461,3 +2461,7 @@ b83e63e78 + NUI nimitekstit.
 - 24.10. 11.13 Codex #917 rappaus, #918 kivijalka, #920 taivas HYVÄKSYTTY (PT valtuutuksella), #919/#921 uusintaan (a3c3edd34); #922–924 ikkunaristikko, portin ovilehti, huoneen ovi tilattu
 (e9f1c2f8a). Lavastaja muoto vaihe 1 luonnos 1ffe66f99.
 - RAAMATTU 9.5: AJOITUKSET MITATAAN ITSE (PT:n oma ruutu- ja äänimittaus jokaisesta omistajan ajoitusehdosta).
+
+## PAATOS 24.10.2026 klo 10.51: PUNAISTEN SEINIEN PINTA JA MUOTO TYÖN ALLE HETI (24.10.2026 klo 11.30)
+
+Omistajan kortti klo 10.51 (KK:n välittämä uudelleen klo 11.3x, sanatarkasti): "Otetaanko punaisten seinien pinta ja muoto työn alle heti?" → "Kyllä, heti (Suositus)" (tehdään värisävytyksen rinnalla). Tausta omistaja 10.46: "suurin ongelma: miksi punaisissa seinissä ei ole minkäänlaista muotoa. lisäksi ne ovat liian räikeän punaisia". Kuvaparit: scratchpad/keskustelukanava/kuvat-20261024/v2-pari-*.jpg (havainnekuvat 02, 01, 05 | juna 210 iPhone-video). KK:n tavoitekuvaus: seinät havainnekuvien tavoin eläviä rapattuja muureja: lämmin, hieman haalistunut punainen (ei kirkas kylläinen), rappauksen sävyvaihtelua ja varjoja, ovet, ikkunaristikot, pylväät ja syvennykset rytmittävät seinää, räystäs ja kivijalka havainnekuvan tasolla. 7. kohta 02.38:n grafiikkalistaan. Jako 10.51: muoto Lavastaja (vaihe 2 valmis 524e59015, viennit juna 211), väri ja pinta Valoseppä. Sivuhuomio VS:lle: k10:n a-01-lahtokuja (kuja-68) näyttää testikamerasta avoimelta aukiolta, ei kapealta kujalta.
