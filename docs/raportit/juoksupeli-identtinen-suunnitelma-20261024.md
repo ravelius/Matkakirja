@@ -115,3 +115,5 @@ Järjestys:
 - 24.10. 18.0x: kattokolmiot 210 (PK:n kamera, Blender-säteet): kk-tausta-1-3:n lähtökujan eteläpuolen hallin räystäs oli muurien madalluksessa
   puoliksi litistetty (4,5 m / 4,7–5,9 m) → v36b-sääntö: muurivyöhykkeelle ulottuvat hallien kattokasvot ehjinä. Juna 210: tausta-v19c
   (02e3e1f1bc1a, proto kattoalapinta-210 e5cf49bfd); juna 211: tausta-v37 ajossa (v36 + v36b, valo leivotaan uudelleen).
+- 24.10. 18.2x: rakennukset-v22 (VS, 810/05: Meridiaaniportin nastaovet suulle 60° auki; 5964af590085, proto c88e8067e) ja tausta-v37
+  (211: v36 + räystäskorjaus, valo uudelleen; 6cc85cf22e88, proto muoto-210 d110918a0). Kuva tavoiteluuppi-k1/meridiaaniportti-v22-810-05.png.
