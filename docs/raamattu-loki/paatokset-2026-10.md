@@ -2481,3 +2481,7 @@ Omistajan kortti klo 14.36 (KK:n välittämä, sanatarkasti): "Mikä korkeus val
 ## PAATOS 24.10.2026 klo 14.39: MUURIEN SUUNTA OIKEA, KOLME KOHTAA JUNAAN 211 (24.10.2026 klo 14.39)
 
 Omistajan kortti klo 14.39 (KK:n välittämä, sanatarkasti): "Onko muurien suunta oikea?" → "Kyllä, jatketaan (Suositus)" (kolme kohtaa tehdään valmiiksi junaan 211). Näytetty muurit-20261024b-parit (VS build 85dab09d7, LR v24). Kolme kohtaa: 1) lähtökujan ovet kiinni kuten havainnekuvassa (talot läpijuostavia: ovilehdet kiinni, aukeavat keisarin tullessa reitillä – LR + PK); 2) kivijalka varjossa vaaleammaksi (VS); 3) porttikäytävän nastaovet näkyviin tunnelin suulla (LR). KK:n sääntö: omistajalle menevissä kuvapareissa ei teknistä tekstikaistaa.
+
+## PAATOS 24.10.2026 klo 14.41: OMISTAJAN KUVISSA EI TEKSTIÄ KUVAN PÄÄLLÄ (24.10.2026 klo 14.41)
+
+Omistaja klo 14.41 (KK:n välittämä, sanatarkasti): "Teksti kaistoja ei saa poistaa jälkikäteen koska silloin osa kuvasta häviää. Kuvat pitää tehdä alkujaankin ilman tekstiä  tai lisätä teksti kuvan ulkopuolelle". Tausta: KK rajasi 14.37 muuripareista VS:n mustan teknisen kaistan, jolloin pelikuvan alaosa hävisi. Raamattu 7.32 EI TEKSTIÄ KUVAN PÄÄLLÄ ja docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 7; tieto omistajalle kuvia tekeville rooleille (VS, LR, PK, NUI, NS, JU, Codex-tilaukset).

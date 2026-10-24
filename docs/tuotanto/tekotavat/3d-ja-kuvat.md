@@ -101,6 +101,9 @@ Hahmon pivot jalkojen välissä (y = 0 ± 3 cm); esineen pohjan keskellä; maail
   Salimallissa ei ole tauluja: kerro se kuvatekstissä.
 - **Kuvapari:** tavoite (havainnekuva) ja pelikuva samasta kulmasta, täysikokoisina; kuvateksti omalla raidallaan kuvan ylä- tai
   alapuolella, ei kuvan päällä; haaran SHA ja versio tekstissä.
+- **Ei tekstiä kuvan päällä (omistaja 24.10. 14.41, Raamattu 7.32):** omistajalle menevässä kuvassa ei ole tekstiä, kaistaa eikä
+  merkintää pelikuvan päällä – myös testikameran selite raidalle kuvan ulkopuolelle. Kuvaa ei rajata jälkikäteen (osa kuvasta
+  häviäisi); tekstillinen kuva uusitaan.
 - **Itse katsottu ensin:** avaa kuva täysikokoisena ja käy läpi pyynnön jokainen sana (materiaali, väri, koko, varjo,
   päällekkäisyydet). Pieni esikatselu ei riitä (pyramidi 17.10.).
 - **Tavoiteluupin arkki:** `kierros.py` → `ero/arkki-kN.jpg`, luvut (IoU, korkeusero, dE) ja rivi `VERTAILU.md`:hen; arvion tekee
