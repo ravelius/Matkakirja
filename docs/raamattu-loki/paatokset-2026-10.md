@@ -2433,3 +2433,7 @@ bf05235d4 kuitattu.
 ## OPPI: ROOLIN OMA TARKISTUS ENNEN SHA:TA KOSKEE MYÖS TEKSTIÄ PELIKUVASSA (PT 24.10.) (24.10.2026 klo 09.56)
 
 NUI lähetti 8db6e8d70:n 'tarkistettuna', mutta nimiteksti näkyi pelissä kahtena siirtyneenä kerroksena; PT löysi sen omistajan videosta. Periaate 2 (et ole ensimmäinen tarkistaja) ja 9.5: rooli katsoo muutoksensa pelikuvasta 2× suurennoksella molemmissa suunnissa ennen SHA:ta, ei vain testeillä. Uutta sääntöä ei tarvita; PT muistuttaa tilauksessa.
+
+## PAATOS 24.10.2026 klo 11.22: JUOKSUPELIN GRAFIIKKA HAVAINNEKUVIEN TASOLLE ILMAN IPAD-KARSINTAA (24.10.2026 klo 11.24)
+
+Omistaja klo 11.22 (KK:n välittämä, sanatarkasti, jatkoa 10.53:n yksityiskohta- ja taivaspyyntöön): "Jos joku ei pyöri ipadilla niin ei haittaa. Unityn tulevat päivitykset tod näk korjaavat tilanteen kun v7 moottori tulee". KK:n tavoitekuvaus: juoksupelin grafiikka tehdään havainnekuvien tasolle (seinät, syvennykset, ikkunat, koristevyö, taivas) karsimatta iPadin suorituskyvyn takia; jos jokin ei pyöri iPadilla sulavasti, se hyväksytään. Korvaa 02.38:n kuuden parannuksen listan ehdon "iPadin rajoissa". Raamattu 2.177 GRAFIIKAN TASO; juna 211:n työlistaan (Valoseppä). 10.53:n pyyntö ei näkynyt PT:n sessiossa; pyydetty KK:lta uudelleen.
