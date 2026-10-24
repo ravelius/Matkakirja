@@ -45,3 +45,12 @@ V4_ristikko = mallin tasavärit (laji 0), kunnes VS lisää lajit. Muurikate ja 
 - Kuvapari: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/muoto-v7b-kuvapari.jpg
 - Seuraavaksi: kohta 7 (kivijalan listakivi), 8 (kate: räystäslista), 6 (portin nastaovet, odottaa Codex #923 tai geometria), sitten pelikuvapari.
 - iPadin ruutuaika mitataan pelikuvaparin ajossa (runko + ämpäri).
+
+## Vaihe 3 (OMISTAJA 10.53/11.22, Raamattu 2.177: taso karsimatta) – tausta-v21
+- LOD0:aan muurikate-v7:n jaksoista (muurikate/muuri-ajot-v7.json, kk_muurikate.py MUURI_AJOT_JSON; v7-glb tavulleen ennallaan):
+  21 005 konsolia räystään alle, 6 054 vyön kultarimaa, 1 873 syvennyspaneelia, kivijalan listakivi, räystäslista + 40 010 tiilipäätä;
+  hallien ikkunoissa 5 + 5 rimaa. LOD0 yhteensä 1 483 986 kolmiota (v20 807 892), raskain pala kk-tausta-0-3 143 511. LOD1/2 kuten v20.
+- Paketti _valmiit/juoksupeli-kk-tausta-peking-v21-vienti-20261024 (66 riviä, 6d4e730ffd03) – korvaa v20:n (v20 voi jäädä vientiin).
+- Proto lavastaja/muoto-210 e39681f0c: TaustaKansio v21; tarkista.sh 0 virhettä.
+- Esikatselu: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/muoto-v21-yksityiskohdat.jpg
+- iPadin ruutuaika: mitattava pelikuvaparin ajossa (raskain pala 143 k LOD0 + muurikate 109 k aina).
