@@ -38,6 +38,12 @@ def mittaa(kuva):
     tulos = {}
     # keisari: keltaiset pikselit alueella x 0,30–0,70, y 0,40–1,0; rivit, joilla ≥ 3 pikseliä
     rivit = [y for y in range(int(H * 0.40), H) if sum(keltainen(x, y) for x in range(int(W * 0.30), int(W * 0.70))) >= 3]
+    if rivit:   # vain alimman keltaisen rivin yhtenäinen ryhmä (aukot ≤ 4 riviä): ei portin kultanastoja tai kattoja keisarin yllä
+        ryhma = [rivit[-1]]
+        for y in reversed(rivit[:-1]):
+            if ryhma[-1] - y <= 5: ryhma.append(y)
+            else: break
+        rivit = sorted(ryhma)
     if rivit:
         y0, y1 = min(rivit), max(rivit); xs = [x for y in rivit for x in range(int(W * 0.30), int(W * 0.70)) if keltainen(x, y)]
         tulos['keisari yläreuna'] = y0 / H; tulos['keisari alareuna'] = y1 / H; tulos['keisari korkeus'] = (y1 - y0) / H
