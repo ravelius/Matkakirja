@@ -1,0 +1,110 @@
+{
+  "mode": "built-in image_gen",
+  "callsIssued": 6,
+  "callsCompleted": 6,
+  "remainingAuthorizedCalls": 0,
+  "calls": [
+    {
+      "taskNumber": 924,
+      "sourceItem": "922",
+      "attempt": 1,
+      "selectedPrimary": true,
+      "includedNativeInPacket": true,
+      "status": "completed",
+      "nativeSHA256": "f24457827f2a9663603a4fa9f8493e93ac2e4c12317036af951023fb644f0d36",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "issuedAt": "2026-10-24T08:21:35.900091+00:00",
+      "completedAt": "2026-10-24T08:22:55.672431+00:00",
+      "retryReason": null,
+      "promptFile": "prompts/924-attempt001.txt"
+    },
+    {
+      "taskNumber": 924,
+      "sourceItem": "922",
+      "attempt": 2,
+      "selectedPrimary": false,
+      "includedNativeInPacket": true,
+      "status": "completed",
+      "nativeSHA256": "7d3ab2c30cc52c7a48251a8f6e9407360d038e56f6fda877339a985e230ef6cd",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "issuedAt": "2026-10-24T08:23:55.987869+00:00",
+      "completedAt": "2026-10-24T08:25:19.054832+00:00",
+      "retryReason": "Visible top-bottom grain cut and slight lattice bar alignment mismatch in centered-wrap diagnostic.",
+      "promptFile": "prompts/924-attempt002.txt"
+    },
+    {
+      "taskNumber": 925,
+      "sourceItem": "923",
+      "attempt": 1,
+      "selectedPrimary": false,
+      "includedNativeInPacket": false,
+      "status": "completed",
+      "nativeSHA256": "8c7fb02886736e3d14e8a7b233abcfb5c2ba95ee790b4047ba8482d67335b0ca",
+      "nativeDimensions": [
+        887,
+        1774
+      ],
+      "issuedAt": "2026-10-24T08:21:36.235092+00:00",
+      "completedAt": "2026-10-24T08:22:56.071026+00:00",
+      "retryReason": null,
+      "promptFile": "prompts/925-attempt001.txt"
+    },
+    {
+      "taskNumber": 925,
+      "sourceItem": "923",
+      "attempt": 2,
+      "selectedPrimary": true,
+      "includedNativeInPacket": true,
+      "status": "completed",
+      "nativeSHA256": "e6b7ddd0b04ed3a23eb03bb0000159f608c4c20161d555038e3cefe305fe1e5b",
+      "nativeDimensions": [
+        887,
+        1774
+      ],
+      "issuedAt": "2026-10-24T08:23:56.342741+00:00",
+      "completedAt": "2026-10-24T08:25:19.481232+00:00",
+      "retryReason": "Exact count failed:72 studs in8rows of9, plus baked directional highlights and shadows on studs.",
+      "promptFile": "prompts/925-attempt002.txt"
+    },
+    {
+      "taskNumber": 926,
+      "sourceItem": "924",
+      "attempt": 1,
+      "selectedPrimary": false,
+      "includedNativeInPacket": false,
+      "status": "completed",
+      "nativeSHA256": "0e6951448922c65d17d2e5b6e5ea0bee0b832159e0f8c118cf8685e20cb20403",
+      "nativeDimensions": [
+        887,
+        1774
+      ],
+      "issuedAt": "2026-10-24T08:21:36.563107+00:00",
+      "completedAt": "2026-10-24T08:22:56.459323+00:00",
+      "retryReason": null,
+      "promptFile": "prompts/926-attempt001.txt"
+    },
+    {
+      "taskNumber": 926,
+      "sourceItem": "924",
+      "attempt": 2,
+      "selectedPrimary": true,
+      "includedNativeInPacket": true,
+      "status": "completed",
+      "nativeSHA256": "59024aca157c2ece816cac1e5fb71ad3c430e26e92476b4fd3943725fb81d696",
+      "nativeDimensions": [
+        887,
+        1774
+      ],
+      "issuedAt": "2026-10-24T08:23:56.727825+00:00",
+      "completedAt": "2026-10-24T08:25:19.869997+00:00",
+      "retryReason": "Clear baked shadows beneath ring handles and directional metallic highlights.",
+      "promptFile": "prompts/926-attempt002.txt"
+    }
+  ]
+}

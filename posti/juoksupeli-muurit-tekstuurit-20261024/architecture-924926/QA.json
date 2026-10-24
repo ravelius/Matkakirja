@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-10-24T08:26:42.538445+00:00",
+  "producerVisualPassedTasks": [
+    925
+  ],
+  "producerVisualNotPassedTasks": [
+    924,
+    926
+  ],
+  "allRequirementsFulfilled": false,
+  "callsIssued": 6,
+  "callsCompleted": 6,
+  "remainingAuthorizedCalls": 0,
+  "selectedPrimaryCandidates": 3,
+  "additionalRejectedAlternative": 1,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "r2Uploaded": false,
+  "assets": {
+    "924": {
+      "name": "ikkunaristikko",
+      "sourceItem": "922",
+      "selectedAttempt": 1,
+      "nativeFile": "native/ikkunaristikko-attempt001.png",
+      "exportFile": "delivery/ikkunaristikko.png",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "exportSize": [
+        512,
+        512
+      ],
+      "producerVisualPassed": false,
+      "positiveFindings": "Tumma punaruskea kukkaristikko, aidosti läpinäkyvät aukot ja hyvä vaakasuuntainen jatkuvuus.",
+      "issues": [
+        "Pystysuunnassa on pieni raidan ja ristikkokappaleiden liittymäero. Molempiin suuntiin täysin saumatonta tulosta ei varmennettu.",
+        "Toinen yritys rikkoi pystysuuntaisen kuvion selvästi; ensiyritys on parempi arvioehdokas."
+      ]
+    },
+    "925": {
+      "name": "portin-ovilehti",
+      "sourceItem": "923",
+      "selectedAttempt": 2,
+      "nativeFile": "native/portin-ovilehti-attempt002.png",
+      "exportFile": "delivery/portin-ovilehti.png",
+      "nativeSize": [
+        887,
+        1774
+      ],
+      "exportSize": [
+        1024,
+        2048
+      ],
+      "producerVisualPassed": true,
+      "positiveFindings": "Suoraan edestä kuvattu punainen ovilehti, tarkistettu 9 × 9 eli 81 kultaista nastakohtaa; nastojen voimakas valo-/varjoreliefi poistui.",
+      "issues": []
+    },
+    "926": {
+      "name": "huoneen-puuovi",
+      "sourceItem": "924",
+      "selectedAttempt": 2,
+      "nativeFile": "native/huoneen-puuovi-attempt002.png",
+      "exportFile": "delivery/huoneen-puuovi.png",
+      "nativeSize": [
+        887,
+        1774
+      ],
+      "exportSize": [
+        512,
+        1024
+      ],
+      "producerVisualPassed": false,
+      "positiveFindings": "Punaruskea puupinta, suora etukuva ja kaksi kahvarengasta toteutuvat.",
+      "issues": [
+        "Kahvarenkaissa ja kiinnikkeissä on edelleen valmiiksi piirtyneitä vaaleita reunoja ja tummia alapuolia. Täysin valoton albedo-ehto ei täyty."
+      ]
+    }
+  }
+}

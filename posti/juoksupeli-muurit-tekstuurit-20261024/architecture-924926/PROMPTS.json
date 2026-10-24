@@ -1,0 +1,42 @@
+{
+  "mode": "built-in image_gen",
+  "wholeNewCandidates": true,
+  "prompts": [
+    {
+      "taskNumber": 924,
+      "attempt": 1,
+      "prompt": "Create one new seamless game texture of traditional Chinese linghua (菱花) floral wooden window lattice. Square 512 x 512 target. Dark reddish-brown fine-grained wood bars forming an elegant repeating network of diamond lozenges and small floral-petal junctions. Both horizontal AND vertical tiling must be seamless: lattice bars, their widths, colors and cutout shapes continue at exactly corresponding positions across opposite edges. No outer window frame; this image is a repeatable section of the lattice itself, extending through all four borders. Orthographic straight-on view, purely flat unlit base-color texture: no bevel shading, no highlights, no cast shadows, no ambient occlusion, no light gradient. Fine natural wood pigment, no raised relief. CRITICAL: genuine transparent alpha background, every hole between bars is completely transparent, not white, black, gray, frosted glass or a painted checkerboard. Only the wooden lattice is opaque, softly antialiased edge pixels allowed. No wall, scenery, backing board, curtain, perspective, labels or text. One complete raster PNG asset with real alpha holes, not a preview/mockup.",
+      "transparentBackgroundRequested": true
+    },
+    {
+      "taskNumber": 924,
+      "attempt": 2,
+      "prompt": "Generate a NEW square seamless 512x512 Chinese floral wooden lattice texture with REAL TRANSPARENT ALPHA HOLES. Dark reddish brown matte wood, fine natural pigment grain. This is a flat albedo mask texture, not illuminated 3D. A repeating geometric network of diamond lozenges whose corners meet four small petal loops. Strict two-axis periodic tiling: exactly four identical full repeat periods across and down. Opposite border bar centerlines, widths, petal arcs, alpha holes, wood tones and grain must align exactly. Top/bottom continuation is especially important: the previous candidate had a visible straight horizontal cut in the grain and slight offset of bars. Make the vertical continuation truly continuous, with no sudden material-color change at the edge. No surrounding frame or border, bars extend naturally through canvas edges. Wood must be opaque except antialiased edge pixels; all holes transparent alpha0. No glass or black backing and no painted checkerboard. Absolutely no raised bevel effects, dark rim shading, cast shadows, highlights, light gradients or ambient occlusion. Flat dark red-brown wood colors only. One new complete edge-to-edge tile.",
+      "transparentBackgroundRequested": true
+    },
+    {
+      "taskNumber": 925,
+      "attempt": 1,
+      "prompt": "Create a NEW single Chinese imperial gate DOOR LEAF texture, portrait 1:2 canvas, 1024 x 2048 target. The supplied reference is ONLY for red lacquer and gold material palette. Do not copy its incorrect stud count or its angled open gateway, sunlight or scene. Show ONE rectangular CLOSED door leaf, exactly orthographic front-on with parallel vertical sides and zero perspective. The complete door leaf fills the entire image; no walls, exterior frame, floor, courtyard, sky, text or plaques. Muted deep red lacquered wood with subtle fine grain, thin simple red perimeter rails. EXACTLY EIGHTY-ONE small round gold studs, arranged as EXACTLY NINE vertical columns and EXACTLY NINE horizontal rows. Every row has nine visible identical studs and there are nine equally spaced rows: 9x9 =81. No missing, doubled, hidden, oversized or extra studs. Place all81 comfortably inside the perimeter with equal side margins; no handles or other hardware obscuring the grid. Studs are small relative to the red spaces between them. This is an unlit diffuse BASE-COLOR map, not a lighting render. Flat red lacquer color and gold pigment, fine material detail only; no specular highlights, no spherical light gradients on studs, no cast shadows, no ambient occlusion, no vignette. Let runtime geometry and lights provide depth later. No numbers or grid lines visible. Count81 visible gold studs before finishing.",
+      "transparentBackgroundRequested": false
+    },
+    {
+      "taskNumber": 925,
+      "attempt": 2,
+      "prompt": "Create a NEW red lacquered Chinese imperial gate-leaf BASE-COLOR TEXTURE, portrait 1:2, target1024x2048. Exactly ONE closed rectangular leaf viewed perfectly frontally. Full frame occupied by the red door, no scene, frame surround, text, handles, shadows or lighting. Palette reference only: red lacquer with small dull-gold round studs. CRITICAL correct count: EXACTLY81 studs arranged9 rows x9 columns. Row centers at y10%,20%,30%,40%,50%,60%,70%,80%,90%. Column centers at x10%,20%,30%,40%,50%,60%,70%,80%,90%. Place ONE identical small GOLD CIRCLE at every one of these81 intersections. ALL NINE ROWS must exist, each has NINE circles. Previous candidate erroneously had only8 rows; this one must have the missing ninth row. Small diameter~4% of width. No numbering or visible grid lines. Gold circles are flat uniform diffuse ochre-gold pigment with very fine material texture, NO SPHERICAL SHADING, NO bright upper halves, NO dark lower halves, NO white highlights, NO black outlines, NO drop shadows. Red lacquer also has even diffuse color with tiny natural pigment grain but ZERO cast shadows, vignette or light gradient. Thin flat red border rails allowed without relief shading. This is the unlit RGB material map; runtime geometry will shade the actual studs. One whole newly generated image; do not add one row to the rejected image.",
+      "transparentBackgroundRequested": false
+    },
+    {
+      "taskNumber": 926,
+      "attempt": 1,
+      "prompt": "Create a NEW traditional Chinese courtyard room-door texture. Portrait1:2, target512x1024. The supplied scene is only a reference for the reddish-brown wood palette and simple paired ring handles of the room doors. Isolate the DOOR SURFACE itself: perfectly orthographic straight front-on, complete closed wooden door filling the frame, vertical parallel sides, no perspective. Two narrow closed leaves with a fine central vertical seam, restrained straight vertical planks and simple flat wooden rails. Dark reddish-brown warm wood pigment, subtle believable fine wood grain, gently worn but well maintained. Exactly TWO modest dark bronze circular ring handles, one on each leaf at matching middle height near the center seam, simple round mounting plates. No lion faces, ornate carvings, added text, plaques, gold stud grid, surrounding wall, doorway recess, threshold, floor, sky or background. The entire canvas is occupied by the door. This is a flat unlit diffuse base-color game texture: even pigment color, no baked lighting, no cast shadows, no edge bevel highlights, no specular shine, no ambient occlusion, no vignette. Rings represented clearly in dark bronze pigment without dramatic lighting. Natural photographic material detail, not painterly brushstrokes.",
+      "transparentBackgroundRequested": false
+    },
+    {
+      "taskNumber": 926,
+      "attempt": 2,
+      "prompt": "Create one NEW orthographic front-view unlit base-color texture of a traditional Chinese room door, portrait1:2, target512x1024. Entire canvas is a closed dark reddish-brown wooden door with paired narrow leaves, straight vertical planks, a thin central join and simple flat top/bottom rails. Fine natural wood pigment detail matching the reference palette. Exactly two circular dark bronze ring handles on small round plates near the middle, one each side of the center join. Crucial correction: the previous version had dark cast shadows below the handles and bright rim highlights. Remove all lighting from this new full generation: ring and plate shapes must be drawn using flat DARK BRONZE material color only, no black shadow underneath or beside them, no bright white rim, no metallic glint, no bevel lighting. Wood seams are thin material boundaries, never broad black recess shadows. The wood color is evenly lit throughout with no brighter center or darker sides. Treat the image as an orthographic ALBEDO TEXTURE MAP with lighting disabled, not a photo of an illuminated3D door. Retain realistic fine wood-grain color variation. No surrounding wall, perspective, threshold, floor, sky, cast shadows, ambient occlusion, text, lion carvings or stud grid. Full door surface fills the frame.",
+      "transparentBackgroundRequested": false
+    }
+  ]
+}

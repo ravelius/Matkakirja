@@ -1,0 +1,18 @@
+{
+  "sourceNativeSHA256": "f24457827f2a9663603a4fa9f8493e93ac2e4c12317036af951023fb644f0d36",
+  "RGBAExportSHA256": "41248d02a2548de73f6cffb414e4cf6c546cbd329fb75e92265f9d190e658a01",
+  "alphaFileSHA256": "de5739dbbfc3c76b7110ba8d0f4cb2adb7e42b7de28cb52a735e4ca037f32361",
+  "alphaChannelMatchesExactly": true,
+  "alphaMin": 0,
+  "alphaMax": 255,
+  "fullyTransparentFraction": 0.5530166625976562,
+  "woodAlphaPercentiles": [
+    128.0,
+    205.0,
+    252.0,
+    255.0,
+    255.0
+  ],
+  "nativeWoodNotEntirelyOpaque": true,
+  "noAlphaRepainting": true
+}

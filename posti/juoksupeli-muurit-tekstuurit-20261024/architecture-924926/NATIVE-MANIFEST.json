@@ -1,0 +1,58 @@
+[
+  {
+    "taskNumber": 924,
+    "attempt": 1,
+    "selectedPrimary": true,
+    "file": "native/ikkunaristikko-attempt001.png",
+    "sha256": "f24457827f2a9663603a4fa9f8493e93ac2e4c12317036af951023fb644f0d36",
+    "bytes": 1546756,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "nativeBytesUnchanged": true
+  },
+  {
+    "taskNumber": 924,
+    "attempt": 2,
+    "selectedPrimary": false,
+    "file": "native/ikkunaristikko-attempt002.png",
+    "sha256": "7d3ab2c30cc52c7a48251a8f6e9407360d038e56f6fda877339a985e230ef6cd",
+    "bytes": 1921195,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "nativeBytesUnchanged": true
+  },
+  {
+    "taskNumber": 925,
+    "attempt": 2,
+    "selectedPrimary": true,
+    "file": "native/portin-ovilehti-attempt002.png",
+    "sha256": "e6b7ddd0b04ed3a23eb03bb0000159f608c4c20161d555038e3cefe305fe1e5b",
+    "bytes": 2059417,
+    "dimensions": [
+      887,
+      1774
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true
+  },
+  {
+    "taskNumber": 926,
+    "attempt": 2,
+    "selectedPrimary": true,
+    "file": "native/huoneen-puuovi-attempt002.png",
+    "sha256": "59024aca157c2ece816cac1e5fb71ad3c430e26e92476b4fd3943725fb81d696",
+    "bytes": 2055296,
+    "dimensions": [
+      887,
+      1774
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true
+  }
+]

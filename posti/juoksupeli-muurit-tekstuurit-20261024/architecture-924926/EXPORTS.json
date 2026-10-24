@@ -1,0 +1,68 @@
+[
+  {
+    "taskNumber": 924,
+    "file": "delivery/ikkunaristikko.png",
+    "sha256": "41248d02a2548de73f6cffb414e4cf6c546cbd329fb75e92265f9d190e658a01",
+    "bytes": 310359,
+    "mode": "RGBA",
+    "dimensions": [
+      512,
+      512
+    ],
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "nativeSHA256": "f24457827f2a9663603a4fa9f8493e93ac2e4c12317036af951023fb644f0d36",
+    "method": "Whole-frame LANCZOS resize; native alpha retained; no repainting, relighting, seam repair or cropping",
+    "producerVisualPassed": false
+  },
+  {
+    "taskNumber": 924,
+    "file": "delivery/ikkunaristikko-alpha.png",
+    "sha256": "de5739dbbfc3c76b7110ba8d0f4cb2adb7e42b7de28cb52a735e4ca037f32361",
+    "bytes": 68527,
+    "dimensions": [
+      512,
+      512
+    ],
+    "mode": "L",
+    "method": "Exact alpha-channel extraction from resized RGBA; no thresholding or repainting"
+  },
+  {
+    "taskNumber": 925,
+    "file": "delivery/portin-ovilehti.png",
+    "sha256": "3d5eff1543e97d80b46d520e81e5a720a133dea256f5ad3a0e77cf283f6c4dc3",
+    "bytes": 2517123,
+    "mode": "RGB",
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "nativeDimensions": [
+      887,
+      1774
+    ],
+    "nativeSHA256": "e6b7ddd0b04ed3a23eb03bb0000159f608c4c20161d555038e3cefe305fe1e5b",
+    "method": "Whole-frame LANCZOS resize; native alpha retained; no repainting, relighting, seam repair or cropping",
+    "producerVisualPassed": true
+  },
+  {
+    "taskNumber": 926,
+    "file": "delivery/huoneen-puuovi.png",
+    "sha256": "409992c0b99be8ae483ea8de5948dfceebd0ca26d8dbf87e27ed98298ff7f225",
+    "bytes": 664181,
+    "mode": "RGB",
+    "dimensions": [
+      512,
+      1024
+    ],
+    "nativeDimensions": [
+      887,
+      1774
+    ],
+    "nativeSHA256": "59024aca157c2ece816cac1e5fb71ad3c430e26e92476b4fd3943725fb81d696",
+    "method": "Whole-frame LANCZOS resize; native alpha retained; no repainting, relighting, seam repair or cropping",
+    "producerVisualPassed": false
+  }
+]
