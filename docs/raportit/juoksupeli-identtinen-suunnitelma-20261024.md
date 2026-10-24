@@ -81,3 +81,8 @@ Järjestys:
 - 24.10. 16.1x: kohta 14 tehty (rakennukset-v17: Meridiaaniportin kivijalka 2,4 m, eteläaukot suorakaiteina, harjalle marmorikaide);
   proto lavastaja/muoto-210 2d52792bc, paketti juoksupeli-kielletty-rakennukset-v17-vienti-20261024 (82cbd4384b38).
   Kuva tavoiteluuppi-k1/meridiaaniportti-v17.png. Jäljellä LR: 6 harjakoristeet ja 10 puut Codexin toimituksesta (b2b8d8eac).
+- 24.10. 16.4x: 14 korjattu PT:n tarkistuksen mukaan (v17b: suorakaideaukot syvennetyin kehyksin, kivijalka 3 m, ovet aukkojen sisään) ja
+  11 jatkettu malleihin: rakennukset-v18 (kaikki 12 mallia leivottuna, valo_rgbm TEXCOORD_1). Proto lavastaja/muoto-210 13536f62e (tarkista.sh 0).
+  Paketti juoksupeli-kielletty-rakennukset-v18-vienti-20261024 (6aad2f72cb16; korvaa v17:n vientiin). Kohta 5 (PT hyväksyi): tiilipäät
+  geometriana taustan LOD0:ssa (V4_gold), kourut VS:n KattoTiilet-varjostimella; instansointi jätetty (vaatisi pelikoodia, ulkoasu sama).
+  Avoimet: leivonta myöhemmin JSON-tasolla (VS: ei kiireellinen). Jäljellä LR: 6 ja 10 Codexin toimituksesta.
