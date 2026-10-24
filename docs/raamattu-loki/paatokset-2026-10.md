@@ -2473,3 +2473,7 @@ Omistaja klo 11.54 (KK:n välittämä, sanatarkasti): "Oliko se aiemmin lähetet
 ## PAATOS 24.10.2026 klo 13.27: JUOKSUPELIN KUVAKULMA KUVIEN 1 JA 2 VÄLISTÄ, VÄHÄN KORKEAMMALTA (24.10.2026 klo 13.27)
 
 Omistaja klo 13.27 (KK:n välittämä, sanatarkasti, kuvakulmastillien 1–5 jälkeen): "1  ja 2 välistä olisi  paras etäisyyden suhteen mutta kamera saisi olla vähän korkeammalla". KK:n tavoitekuvaus: pelikamera keisarin takana kuvien 1 (2,6 m) ja 2 (4,3 m) puolivälissä, vähän korkeammalla, niin että keisari näkyy isona hieman ylhäältä ja kuja avautuu hänen ylitseen. PT → Pelikoodari: stillit 3,45 m:stä kolmella korkeudella (2,0 / 2,6 / 3,2 m) samoista kolmesta paikasta → KK; kuvakulmanapin poisto kysytään samalla.
+
+## PAATOS 24.10.2026 klo 14.36: JUOKSUPELIN AINOA KUVAKULMA B, KUVAKULMANAPPI POIS (24.10.2026 klo 14.36)
+
+Omistajan kortti klo 14.36 (KK:n välittämä, sanatarkasti): "Mikä korkeus valitaan?" → "B (Suositus)" (kuja avautuu keisarin yli, muurit ja taivas näkyvät); "Poistetaanko kuvakulmanappi?" → "Poista (Suositus)" (valittu kulma on pelin ainoa kulma). B = omistaja-kuvakulmat-210-v3: taakse 3,2 m, korkeus 2,6 m, alas 23,4°, fov 84,75 (iPhone pysty). Junaan 210 porttitunnelin kamerakorjauksen kanssa; juna lähtee vasta näiden kanssa. Raamattu 2.177 KUVAKULMA. PT → Pelikoodari.
