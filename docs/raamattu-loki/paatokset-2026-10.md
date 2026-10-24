@@ -2493,3 +2493,19 @@ Omistaja klo 14.51 (KK:n välittämä, sanatarkasti, muuriparien jälkeen): "Saa
 ## JUNA 211 ODOTTAA KOKO UUDEN ULKOASUN (omistaja 14.55) (24.10.2026 klo 14.57)
 
 OMISTAJAN PÄÄTÖS klo 14.55 (kortti KK:n kautta): "Odottaako juna 211 koko uuden ulkoasun?" → "Kyllä, odottaa (Suositus)" (koko ulkoasu valmis noin 2–3 päivässä). Suunnitelman 779817484 kaikki 14 kohtaa junaan 211 (myös harjakoristeet, puut, valon leivonta, aukiot, Meridiaaniportin edusta), ei mitään 212:een. Codex-tilaus b2b8d8eac (chiwen + eläinrivi, 2–3 puuta + kaukolehvästö, keskiportaan laatta) heti. Jos arvio venyy, KK:lle heti uusi arvio.
+
+## HAVAINNEKUVASTA IDENTTISEKSI KAIKKIIN PELEIHIN (omistaja 24.10.2026 klo 18.18) (24.10.2026 klo 18.19)
+
+Omistaja 14.51: "Saako kaiken tehtyä identtiseksi? Pienemmät laatat, kivi korotukset yms? Ja miten sen saa tehtyä kuitenkin fiksusti optimoidusti niin että ulkoasu pysyy kuitenkin identtisenä mallin kanssa?" PT:n suositus 14.59 KK:n kautta; kortti klo 18.18: "Kirjataanko tämä säännöksi kaikkiin tuleviin peleihin?" -> "Kyllä, kirjataan (Suositus)". Kirjattu: B docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 11 (purku kohta kohdalta -taulukko, kuviot syvyysvarjostuksella, instanssit ja siluettikortit, leivottu valo, yksityiskohdat vain lähellä, pelikuvaparitarkistus), C reseptit/historiapeli.md Tavoite- ja Valmis kun -rivit, Raamattu 7.20 HAVAINNEKUVASTA IDENTTISEKSI. Esimerkki docs/raportit/juoksupeli-identtinen-suunnitelma-20261024.md.
+
+## JUOKSUPELIN KUVAKULMA 810, LAATAT JA VÄRIT (omistaja 24.10.2026 klo 18.26) (24.10.2026 klo 18.33)
+
+Omistaja KK:n kautta sanatarkasti: "katsoin päätoimittajan viimeisiä kuvia ja huomasin seuraavaa: muuta kuvakulma samaksi kuin havainnekuvassa. siinä pelaajan taakse ei jää niin paljon tyhjää, jolloin kamera voi olla korkeammalla ja keisari näyttää silti yhtä isolle kuin pelin nykyisessä kuvakulmassa. lattian laatat ovat myös vielä kaksiulotteisen näköisiä verrattuna havainenkuvaan. musta menee liian mustaksi, esim. keisarissa ja värit ovat liian voimakkaat. väri korjaatuu ehkä itsestään kun pudotetaan vain kokonaiskontrasti enemmän havainnekuvan tasolle eikä päästetä mustia liian tummiksi. kaikki värit pitää saada mahd. lähelle havainnekuvia." Korvaa 14.36 kulman B (Raamattu 2.177 KUVAKULMA JA VÄRIT). PT: kuvakulma Pelikoodari ja värit Valoseppä junaan 210 (periaate 9), laattojen paksuus junaan 211; KK:n mittaus scratchpad/keskustelukanava/omistajan-pyynto-20261024-1826-kuvakulma-laatat-varit.md.
+
+## JUNA 211 YHDISTYY JUNAAN 210 (omistaja 24.10.2026 klo 18.45) (24.10.2026 klo 18.45)
+
+Omistaja KK:n kautta sanatarkasti: "tee vain kaikki mahdollinen 210 junaan. sanon sitten kun julkaistaan" (vastaus KK:n tietoon, että laattojen paksuus ja Unity b6 menevät junaan 211). Korvaa 14.55-päätöksen junajaon: kaikki junalle 211 merkityt työt (identtinen ulkoasu 14 kohtaa, laattojen paksuus, Unity b6, vaakan lataus, kartan saapumislento, muistokuplat valmistuessaan) junaan 210; TF vasta omistajan sanasta. PT: NS:n juna-211-runko (6908d7ec6, sis. 210-kärjen ja v37:n räystäskorjauksen) on junan 210 uusi kärki.
+
+## 9.5 VÄLÄHDYSHAKU TYÖKALUKSI (PT 24.10.2026) (24.10.2026 klo 19.03)
+
+Raamatun 9.5:n vanhentunut viite valahdys.py (skriptiä ei ollut) korvattu työkalulla tools/valahdys-yavg.py (Valosepän valahdys-yavg.zsh:n pohjalta, ffmpeg signalstats YAVG, yhden ruudun väläys > 4/255; ilman stdin-heredocia 12.9:n mukaan). Koeajo omistaja-vaaka.mp4 (210q): 5741 ruutua, 1 väläys 38,3 s (vanha versio).

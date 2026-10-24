@@ -140,3 +140,37 @@ Kytkijälle kerrotaan, mikä versio on käytössä (peli osoittaa uuteen kansioo
 - Luuppikierros vietiin junassa olevan `glb/`:n päälle: kierrokset `_tyo/<rooli>/<kohde>/luuppi-vienti/`:iin.
 - Pieni aukko putosi leikkauksesta pinta-alarajan takia: pidä aukot koosta riippumatta.
 - Emojit ja merkit kuvateksteissä renderöityvät laatikoiksi: kirjoita sana.
+
+## 11. Havainnekuvasta identtiseksi
+
+*(Omistaja 24.10.2026: kysymys klo 14.51 "Saako kaiken tehtyä identtiseksi? Pienemmät laatat, kivi korotukset yms? Ja miten sen
+saa tehtyä kuitenkin fiksusti optimoidusti niin että ulkoasu pysyy kuitenkin identtisenä mallin kanssa?"; klo 18.18 "Kirjataanko
+tämä säännöksi kaikkiin tuleviin peleihin?" → "Kyllä, kirjataan". Raamattu 7.20. Esimerkki: juoksupelin suunnitelma
+docs/raportit/juoksupeli-identtinen-suunnitelma-20261024.md, 14 kohtaa, juna 211.)*
+
+Jokainen pelattava 3D-kohtaus tehdään havainnekuvan näköiseksi ennen ensimmäistä junaa. Työ alkaa purulla, ei rakentamisella.
+
+**1. Purku kohta kohdalta.** Tekijä (Lavastaja, valon ja pintojen osalta Valoseppä) käy jokaisen hyväksytyn havainnekuvan läpi ja
+kirjaa taulukkoon jokaisen näkyvän piirteen: laatat, reunukset, portaat, kivijalat, katot ja tiilet, koristeet, vyöt, ovet,
+ikkunat, puut, valo ja varjot, taivas, aukiot. Taulukko on reseptin (C) osa ja kulkee työn mukana; PT hyväksyy sen ennen työtä.
+
+| # | Havainnekuvassa | Peli nyt | Tekotapa (optimoitu) | Tekijä | Tunnit |
+|---|---|---|---|---|---|
+| 1 | piirre ja missä kuvissa se näkyy (mitat arvioituina) | mitä pelissä on nyt | jokin tavoista 2–5 | rooli | arvio |
+
+**2. Toistuvat pinnat kuviona syvyysvarjostuksella.** Laatat, saumat, kourutiilet, lohkokivi ja palkkimaalaus tehdään
+varjostimessa maailman koordinaateissa (kohokuvio syvyysvarjostuksella, sävyhajonta per pala), ei kolmioina.
+
+**3. Toistuvat osat instansseina.** Saman muotoiset osat (tiilipäät, konsolit, harjakoristeet, ovet, ikkunat, puut) yhtenä verkkona
+GPU-instansseina; sijainnit luodataan pohjasta. Kaukana sama osa siluettikorttina hyväksytystä lähimallista (kaukopuut, harjakoristeet).
+Kolmioita vain siluettiin vaikuttaviin osiin (reunukset, portaat, pylväät, räystäät).
+
+**4. Valmiiksi laskettu valo.** Kun aurinko on kiinteä, staattisten osien varjot ja nurkkavarjostus leivotaan valokarttaan;
+reaaliaikainen varjo vain hahmoille ja liikkuville osille. Lehvästön varjo kuviona.
+
+**5. Yksityiskohdat vain lähellä.** Kuviot ja instanssit vain lähimmässä tasossa (LOD0, noin 150 m) ja häivytetään etäisyyden mukaan;
+kaukaiset tasot pysyvät kevyinä. Budjetit kohdan 3 mukaan, ruutuaika alle 20 ms (NS mittaa).
+
+**Tarkistus.** Jokaisesta havainnekuvan kulmasta pelikuvapari (havainnekuva | peli, pelikamera, ei tekstiä kuvan päällä) ja
+taulukon jokainen rivi ok tai vika (Raamattu 9.5). Kun pelin kuvakulma on omistajan valitsema ja poikkeaa havainnekuvan kulmasta,
+kuvan ulkopuolelle jäävää ei venytetä näkyviin. Blender-kuva ei riitä: kattovirheet löytyivät 24.10. vasta pelivideosta.
