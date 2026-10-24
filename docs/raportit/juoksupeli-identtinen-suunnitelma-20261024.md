@@ -56,3 +56,11 @@ kaiverrettu keskiportaan laatta (kuva 2048 × 1024).
 
 **Riippuvuudet:** VS:n laatta- ja kattokuvio eivät tarvitse LR:ää; LR:n reunukset ja portaat vaativat PK:lta reitin korkeuden tarkistuksen
 (askelma 12 cm). Pelikuvaparit kaikista kolmesta kulmasta jokaisen junan jälkeen (sääntö 7.32: selite omalla raidalla).
+
+## Tila (Lavastaja)
+- 24.10. 15.1x: kohdat 9, 2, 3 tehty – tausta-v26 (ristikot alfakuvana MASK, LOD0 1,45 M → ~1,15 M kolmiota; kivireunus muurien ja
+  hallien vierellä), avoimet-v22 (kivireunus + ovien askelmat). Proto lavastaja/muoto-210 9759132af (tarkista.sh 0). Paketit
+  _valmiit/juoksupeli-kk-tausta-peking-v26-vienti-20261024 (9196a1055309), juoksupeli-avoimet-v22-vienti-20261024 (e4322cf65806).
+  Kuva: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/identtisyys-2-3-9.jpg. PK: reunus ja askelmat ovat vain kuvaa
+  (ei törmäystä), juoksija voi astua niiden päälle näkyvästi.
+- Seuraavaksi: 8 hallien ovikuvat, 5 muurien tiilipäät instansseiksi.
