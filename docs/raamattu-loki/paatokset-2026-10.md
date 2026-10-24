@@ -2493,3 +2493,7 @@ Omistaja klo 14.51 (KK:n välittämä, sanatarkasti, muuriparien jälkeen): "Saa
 ## JUNA 211 ODOTTAA KOKO UUDEN ULKOASUN (omistaja 14.55) (24.10.2026 klo 14.57)
 
 OMISTAJAN PÄÄTÖS klo 14.55 (kortti KK:n kautta): "Odottaako juna 211 koko uuden ulkoasun?" → "Kyllä, odottaa (Suositus)" (koko ulkoasu valmis noin 2–3 päivässä). Suunnitelman 779817484 kaikki 14 kohtaa junaan 211 (myös harjakoristeet, puut, valon leivonta, aukiot, Meridiaaniportin edusta), ei mitään 212:een. Codex-tilaus b2b8d8eac (chiwen + eläinrivi, 2–3 puuta + kaukolehvästö, keskiportaan laatta) heti. Jos arvio venyy, KK:lle heti uusi arvio.
+
+## HAVAINNEKUVASTA IDENTTISEKSI KAIKKIIN PELEIHIN (omistaja 24.10.2026 klo 18.18) (24.10.2026 klo 18.19)
+
+Omistaja 14.51: "Saako kaiken tehtyä identtiseksi? Pienemmät laatat, kivi korotukset yms? Ja miten sen saa tehtyä kuitenkin fiksusti optimoidusti niin että ulkoasu pysyy kuitenkin identtisenä mallin kanssa?" PT:n suositus 14.59 KK:n kautta; kortti klo 18.18: "Kirjataanko tämä säännöksi kaikkiin tuleviin peleihin?" -> "Kyllä, kirjataan (Suositus)". Kirjattu: B docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 11 (purku kohta kohdalta -taulukko, kuviot syvyysvarjostuksella, instanssit ja siluettikortit, leivottu valo, yksityiskohdat vain lähellä, pelikuvaparitarkistus), C reseptit/historiapeli.md Tavoite- ja Valmis kun -rivit, Raamattu 7.20 HAVAINNEKUVASTA IDENTTISEKSI. Esimerkki docs/raportit/juoksupeli-identtinen-suunnitelma-20261024.md.
