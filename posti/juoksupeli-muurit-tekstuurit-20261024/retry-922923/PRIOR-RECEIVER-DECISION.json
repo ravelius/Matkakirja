@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-24T08:16:03.444361+00:00",
+  "source": {
+    "path": "posti/paatoimittaja-codex-kuvat-juoksupeli-muurit-hyvaksynta-20261024.md",
+    "commit": "a3c3edd3469329456ec09e344af1b647a9fd2e99",
+    "blob": "fd26bd1687053d0fa176d0e71740eefcc136f170",
+    "sha256": "3e4090665cc4dee066b1a68a9fbc764f61109b0c34ac66cb2b4b3242b273011b",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/retry-922923/sources/order.md",
+    "readInFull": true
+  },
+  "acceptedBy": "PT acting on stated owner delegation",
+  "acceptedTasks": [
+    917,
+    918,
+    920
+  ],
+  "rejectedTasks": [
+    919,
+    921
+  ],
+  "conditions": {
+    "917": "Color to be adjusted in material to approved concept red",
+    "920": "21.2 degree elevation accepted instead of24; azimuth via SKY-PROJECTION UV alignment"
+  },
+  "gameIntegrationVerified": false,
+  "published": false
+}

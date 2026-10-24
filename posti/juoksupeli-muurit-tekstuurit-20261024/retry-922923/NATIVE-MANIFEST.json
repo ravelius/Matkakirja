@@ -1,0 +1,26 @@
+[
+  {
+    "taskNumber": 922,
+    "file": "native/rappaus-ala-b-attempt002.png",
+    "sha256": "e9aaf4afe22d5ecac31de3b9ff153c0ad3717a2369f888990cda1899c14dec1b",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 3167353,
+    "nativeBytesUnchanged": true,
+    "producerQAPassed": false
+  },
+  {
+    "taskNumber": 923,
+    "file": "native/palkkimaalaus-b-attempt002.png",
+    "sha256": "fecdfd5f1ab9777de1cee6ed2c7772e48a5f4dc514abdb0f77c98b825f4adee4",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "bytes": 2138723,
+    "nativeBytesUnchanged": true,
+    "producerQAPassed": false
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "mode": "built-in image_gen",
+  "callsIssued": 4,
+  "callsCompleted": 4,
+  "remainingAuthorizedCalls": 0,
+  "calls": [
+    {
+      "taskNumber": 922,
+      "attempt": 1,
+      "status": "completed",
+      "nativeSHA256": "dcc149d0dc9e00b36a8a195f193d00754853b118dac790101931b51e080e56bf",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "selectedForReview": false,
+      "issuedAt": "2026-10-24T08:16:26.168672+00:00",
+      "completedAt": "2026-10-24T08:17:30.102808+00:00",
+      "retryReason": null,
+      "promptFile": "prompts/922-attempt001.txt"
+    },
+    {
+      "taskNumber": 922,
+      "attempt": 2,
+      "status": "completed",
+      "nativeSHA256": "e9aaf4afe22d5ecac31de3b9ff153c0ad3717a2369f888990cda1899c14dec1b",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "selectedForReview": true,
+      "issuedAt": "2026-10-24T08:17:55.889785+00:00",
+      "completedAt": "2026-10-24T08:19:00.561755+00:00",
+      "retryReason": "Visible material grain mismatch at direct join: coarser embossed texture; top edge not preserved.",
+      "promptFile": "prompts/922-attempt002.txt"
+    },
+    {
+      "taskNumber": 923,
+      "attempt": 1,
+      "status": "completed",
+      "nativeSHA256": "86894c3d991e792ab1de69f41681d64fba7a547ded03a0c2527ba0df22eaf540",
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "selectedForReview": false,
+      "issuedAt": "2026-10-24T08:16:26.475396+00:00",
+      "completedAt": "2026-10-24T08:17:30.456403+00:00",
+      "retryReason": null,
+      "promptFile": "prompts/923-attempt001.txt"
+    },
+    {
+      "taskNumber": 923,
+      "attempt": 2,
+      "status": "completed",
+      "nativeSHA256": "fecdfd5f1ab9777de1cee6ed2c7772e48a5f4dc514abdb0f77c98b825f4adee4",
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "selectedForReview": true,
+      "issuedAt": "2026-10-24T08:17:56.196038+00:00",
+      "completedAt": "2026-10-24T08:19:01.029729+00:00",
+      "retryReason": "Native2172x724 is3:1 instead of4:1 and white padding borders; horizontal ornament join imperfect.",
+      "promptFile": "prompts/923-attempt002.txt"
+    }
+  ]
+}

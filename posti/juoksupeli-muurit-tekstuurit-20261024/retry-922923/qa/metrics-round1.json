@@ -1,0 +1,58 @@
+[
+  {
+    "taskNumber": 922,
+    "attempt": 1,
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "nativeAspect": 1.0,
+    "leftRightMeanAbsDelta255": 10.076555023923445,
+    "internalXMeanAbsDelta255": 6.773547632412672,
+    "top24RowsMeanRGB": [
+      160.00847288676235,
+      97.0340909090909,
+      81.02106592238171
+    ],
+    "bottom24RowsMeanRGB": [
+      133.49421850079744,
+      77.99717570441254,
+      61.922381711855394
+    ],
+    "topEdgeMatchesReferenceExactly": false,
+    "referenceBottom24RowsMeanRGB": [
+      158.27066719829878,
+      101.01701222753854,
+      86.66387559808612
+    ],
+    "joinRowMeanAbsDelta255": 7.1924508240297715,
+    "joinComparedAtNativeCandidateWidth": 1254,
+    "referenceResizedForJoinDiagnostic": true
+  },
+  {
+    "taskNumber": 923,
+    "attempt": 1,
+    "nativeDimensions": [
+      2172,
+      724
+    ],
+    "nativeAspect": 3.0,
+    "leftRightMeanAbsDelta255": 14.023480662983426,
+    "internalXMeanAbsDelta255": 3.499203675097743,
+    "top24RowsMeanRGB": [
+      253.86364333947208,
+      253.65093615715162,
+      253.73766497851443
+    ],
+    "bottom24RowsMeanRGB": [
+      253.97621240024554,
+      253.7283801411909,
+      253.7809046961326
+    ],
+    "requiredNativeAspectMet": false,
+    "topAndBottomNearlyWhiteFractions": [
+      1.0,
+      1.0
+    ]
+  }
+]

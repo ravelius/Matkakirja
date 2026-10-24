@@ -1,0 +1,34 @@
+[
+  {
+    "taskNumber": 922,
+    "file": "delivery/rappaus-ala-b-2048-candidate.png",
+    "sha256": "baa4017bc4d4aedca9ed6f4e3949d9f060ae7008eb45b0cc79325c3f48d6fcf9",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "bytes": 6174876,
+    "method": "Whole-frame LANCZOS1254x1254to2048x2048; no cropping, repainting, color correction, seam replacement or blending",
+    "requirementPassed": false,
+    "nativeResolution": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "taskNumber": 923,
+    "file": "delivery/palkkimaalaus-b-native-3x1-candidate.png",
+    "sha256": "fecdfd5f1ab9777de1cee6ed2c7772e48a5f4dc514abdb0f77c98b825f4adee4",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "bytes": 2138723,
+    "method": "Exact unchanged native2172x724; no claimed4:1 export and no padding crop",
+    "requirementPassed": false,
+    "nativeResolution": [
+      2172,
+      724
+    ]
+  }
+]

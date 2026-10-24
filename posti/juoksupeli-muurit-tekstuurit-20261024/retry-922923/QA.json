@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T08:20:04.316236+00:00",
+  "producerQAPassed": false,
+  "allRequirementsFulfilled": false,
+  "nativeImagesGenerated": 4,
+  "selectedCandidates": 2,
+  "sourceLimitedCallsSpent": 4,
+  "remainingAuthorizedCalls": 0,
+  "assets": {
+    "922": {
+      "name": "rappaus-ala-b",
+      "sourceItem": "919b",
+      "issues": [
+        "Yläreuna ei säilytä #917:n alareunaa sellaisenaan: raekoko ja sävy vaihtuvat suorassa liittymässä.",
+        "Native on1254×1254;2048×2048 on tekninen suurennos."
+      ],
+      "selectedAttempt": 2,
+      "nativeFile": "native/rappaus-ala-b-attempt002.png",
+      "exportFile": "delivery/rappaus-ala-b-2048-candidate.png",
+      "producerQAPassed": false,
+      "imageScope": "failure-evidence-review-candidate-only",
+      "positiveFinding": "Tummuus lisääntyy alaspäin, vaakatoisto silmämääräisesti tasainen. Pystysuuntaista toistoa ei lähteessä vaadita."
+    },
+    "923": {
+      "name": "palkkimaalaus-b",
+      "sourceItem": "921b",
+      "issues": [
+        "Native on2172×724 eli3:1; vaadittu natiivi4:1 ei toteutunut kummallakaan yrityksellä.",
+        "Alareunassa on valkoinen tyhjä kaista.",
+        "Vaakaliittymässä koristeen puoliskot, kulumat ja sävy eivät jatku täsmälleen; sauma jää näkyviin."
+      ],
+      "selectedAttempt": 2,
+      "nativeFile": "native/palkkimaalaus-b-attempt002.png",
+      "exportFile": "delivery/palkkimaalaus-b-native-3x1-candidate.png",
+      "producerQAPassed": false,
+      "imageScope": "failure-evidence-review-candidate-only",
+      "positiveFinding": "Reliefivarjot on poistettu pääosin; sininen-vihreä-kulta ja neljän kuusikulmion aihe säilyvät."
+    }
+  },
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "r2Uploaded": false
+}
