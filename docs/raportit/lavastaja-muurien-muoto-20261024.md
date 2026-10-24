@@ -33,3 +33,15 @@ V4_ristikko = mallin tasavärit (laji 0), kunnes VS lisää lajit. Muurikate ja 
 ## Puuttuu vielä
 - Porttikäytävän nastaovet (tekstuuri 3) ja porrasaskelmat huoneiden oville.
 - Pelikuvapari kaikista kolmesta (tarvitsee JU:n ämpärin + rungon).
+
+## Vaihe 2 (vertailulista 810 kohdat 1–5, OMISTAJA 10.53) – paketit JU:lle
+- muurikate-v7: koristevyö 0,9 m kultalistoin (V4_kultalista), pilasterit 6 m välein (PT: tiheämmät); normaalit ulos. 108 692 kolmiota.
+  _valmiit/juoksupeli-kk-muurikate-v7-vienti-20261024 (SHA256SUMS 7759f31a4bae).
+- avoimet-v17: koristevyö 3,2–4,0 m kultalistoin, 8-kulmaiset puolipylväät jalkakivin ja konsolipäin, ikkunat 12 cm:n syvennyksessä 5 × 5 rimoin,
+  ovilehdet avattuina sisäpinnalle renkaineen, kynnys. ~4 900 kolmiota/huone. _valmiit/juoksupeli-avoimet-v17-vienti-20261024 (99d8ac5aa318).
+- tausta-v20: LOD0 pilastereille konsolipäät, ikkunasyvennys 12 cm; normaalit ulos. LOD0 yhteensä 807 892 (v19 531 461); raskain pala
+  kk-tausta-1-3 36 k → 72 k. LOD1/2 kuten v19. _valmiit/juoksupeli-kk-tausta-peking-v20-vienti-20261024 (66 riviä, 0c921d64f7c6).
+- Proto lavastaja/muoto-210 524e59015 (45a33c41a:n päällä); tarkista.sh 0 virhettä (sama diff).
+- Kuvapari: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/muoto-v7b-kuvapari.jpg
+- Seuraavaksi: kohta 7 (kivijalan listakivi), 8 (kate: räystäslista), 6 (portin nastaovet, odottaa Codex #923 tai geometria), sitten pelikuvapari.
+- iPadin ruutuaika mitataan pelikuvaparin ajossa (runko + ämpäri).
