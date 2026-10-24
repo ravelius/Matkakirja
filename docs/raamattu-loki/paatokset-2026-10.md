@@ -2409,3 +2409,12 @@ Omistajan kortti klo 02.38 (KK vertasi Codexin 810-havainnekuvia peliin): "Oteta
 ## OMISTAJA 24.10.2026 klo 02.40: KK NOLLAUTUU YÖLLÄ KYSYMÄTTÄ (24.10.2026 klo 02.43)
 
 Omistaja (sanatarkasti): "Tiesitkö että voit nollata itsesi yöllä kysymättä lupaa". Raamattu 7.37 YÖLLÄ AUTOMAATTISESTI tarkennettu: yö alkaa, kun omistaja on sanonut menevänsä nukkumaan (02.31), eikä tunnin ehtoa omistajan viimeisestä viestistä ole.
+
+## PT YÖ 24.10. 03.10–06.20: JUNA 210 JUOKSUPELIN ALKU (24.10.2026 klo 06.19)
+
+Latauskuva: vaakan ääniviive oli kokoamisvirhe, vaakassa soi lisäksi kartan Maisema B latauskuvan alla (pelin vika, PK b7f1c4f39: kartan äänet katki latauskuvan näkyessä); leima ja ääni 2,0 s kuvasta
+molemmissa. Äänittäjän leima-ääni SND160077 leikkauksena hyväksytty poikkeuksena (yksittäistä mutaista askelta ei kirjastossa). Alkulento (omistaja 02.17 'Drone vaappuu liikaa...'): NUI 07a6ff6f1 yksi
+pehmeä kaari, kujaan sukellus keskilinjaa pitkin, ei seinien läpi, 3-2-1 keisarin yllä; NUI:n ehdotus siirtää drone pihalle hylätty (omistajan hyväksymä lavastus ja huudon paikka). Pelikamera: PT
+purki oman ehtonsa 'kamera 1,5 m muurien yllä' (ei omistajan sana; pakotti kuvan ylhäältä); matala kamera Puyin takana sallittu ehdoin ei leikkautumista, näkölinja vapaa, pehmeä nousu; PK lahikulma
+0cc52062e, Puyi ~0,25–0,3 kuvan korkeudesta iPad+iPhone pysty+vaaka. Oppi: PT:n oma välivaihe-ehto voi estää omistajan tavoitteen; ehdot merkitään lähteineen (omistaja/PT), ja PT:n ehto puretaan heti,
+kun se on ristiriidassa omistajan sanojen kanssa.
