@@ -126,3 +126,5 @@ Järjestys:
   (jyrkemmät lappeet, talojen väliset pilarit, talot räystäs 3,2 m; 682118b12e40), tausta-v42 (muurikujat 6 m, kujat pohjan levyisiksi
   4,79 m, friisi 0,45 m, porrastukset, lehvästöjäänteet pois, valo 170°/45°; 0d95964766f3), muurikate-v12 (b6e42eb97f71), lähipuut-v2
   (+ koristeet.json; e0ae13c1620b). Proto muoto-210 e432dfcb1. Erolista: _tyo/linnanrakentaja/identtisyys-erot/muotoerot-810.md.
+- 24.10. ilta: muotoerot 4 ja 7 – avoimet-v31 (kaarevat räystäät, sinivihreä alapinta; aa1d0a732224) ja rakennukset-v31 (kujaporttien
+  kaarto, Meridiaaniportin aukot ilman räystäitä; 79a145c5398a), PT hyväksyi; proto muoto-210 89af86c12, JU:lle vientiin.
