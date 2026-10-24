@@ -1,6 +1,6 @@
 # Havainnekuvan pelikamera Blenderiin (OMISTAJAN PÄÄTÖS 24.10.2026 22.42: tekijät sovittavat työn havainnekuvaan itse ennen tarkistusta).
 # Kamera kuten pelin kulma 810 (Pelikoodari, DroneNosto.cs): 6,77 m keisarin takana ja 3,88 m ylhäällä, vaakakuvan pystykenttä 38,8°,
-# horisontti 0,15 kuvan korkeudesta ylhäältä (katse alas atan(0,7 · tan 19,4°) ≈ 13,9°). Keisari mittakaavana: keltainen merkki
+# katse alas niin, että keisarin rinta (1,0 m) on 0,332 puolikorkeutta kuvan keskikohdan alla (16,4°; PK pelikoodari/havainne-210). Keisari mittakaavana: keltainen merkki
 # 0,45 × 0,30 × 1,35 m (PuyiKorkeus) keisarin paikalla. Havainnekuva läpikuultavana: kameran taustakuvana (Blender-ikkunassa) ja
 # renderöinnin jälkeen <ulos>-paallekkain.png (50 %) ja <ulos>-rinnakkain.png (havainne | oma).
 #
@@ -67,7 +67,7 @@ cd = bpy.data.cameras.new('pelikamera'); cd.sensor_fit = 'VERTICAL'; cd.lens_uni
 cam = bpy.data.objects.new('pelikamera', cd); sc.collection.objects.link(cam); sc.camera = cam
 dx, dz = math.sin(SUUNTA), math.cos(SUUNTA)
 cam.location = bl(PX - dx * TAAKSE, PZ - dz * TAAKSE, YLOS)
-alas = math.atan((0.5 - HORISONTTI) * 2 * math.tan(math.radians(KENTTA) / 2))
+alas = math.atan2(YLOS - 1.0, TAAKSE) - math.atan(0.332 * math.tan(math.radians(KENTTA) / 2))   # PK: rinta (1,0 m) 0,332 puolikorkeutta keskikohdan alla → 16,4°
 eteen = bl(dx, dz) - bl(0, 0); suunta = Vector((eteen.x * math.cos(alas), eteen.y * math.cos(alas), -math.sin(alas)))
 cam.rotation_euler = suunta.to_track_quat('-Z', 'Y').to_euler()
 if HAV and os.path.exists(HAV):
