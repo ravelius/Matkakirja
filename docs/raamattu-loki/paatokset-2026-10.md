@@ -2418,3 +2418,18 @@ pehmeä kaari, kujaan sukellus keskilinjaa pitkin, ei seinien läpi, 3-2-1 keisa
 purki oman ehtonsa 'kamera 1,5 m muurien yllä' (ei omistajan sana; pakotti kuvan ylhäältä); matala kamera Puyin takana sallittu ehdoin ei leikkautumista, näkölinja vapaa, pehmeä nousu; PK lahikulma
 0cc52062e, Puyi ~0,25–0,3 kuvan korkeudesta iPad+iPhone pysty+vaaka. Oppi: PT:n oma välivaihe-ehto voi estää omistajan tavoitteen; ehdot merkitään lähteineen (omistaja/PT), ja PT:n ehto puretaan heti,
 kun se on ristiriidassa omistajan sanojen kanssa.
+
+## JUNA 210 AAMU 24.10. (PT 06.24–09.55) (24.10.2026 klo 09.56)
+
+Omistaja hereillä 06.38 (KK), yön oletuspäätökset päättyivät. LT:n yökierros 589289c59: GPU vihreä, KAMERA PUNAINEN (käännösnykäykset 45/84, raja 8). PK:n juurisyy: katseen kohta haettiin 0,5 m:n
+askelin ilman pehmennystä, ja lähikamerassa (omistaja 02.17 'drone aivan liian kaukana') se näkyi → a618637b7 + 6fceeb6c2 (jatkuva kohta, jouset 0,3 s / 0,08 s); LT 04dedfd2e 0/0. VÄRINÄ kasvoi
+matalan kameran vuoksi (kaukaiset katot, reunat ja puut aliasoituvat): PT päätti, että kamera pysyy ennallaan ja korjaus tehdään renderöinnissä → MSAA 4 juoksuun myös iPadilla (NS 989ad7ca7; LT:
+värinä 0,23/0,13/0,25 %, A 9,22 / J 9,76 ms, vapaa muisti min 1513 Mt, jetsam 0); aniso 8 hylätty (J 17,45 ms), kuviohaalistus c3bed52dc ei mukaan. Latauskuva: iPhonen pysty täyttää ruudun
+(f27ae21a8), iPad jää sellaiseksi kuin omistajalle näytettiin (sivupalkit, kerrotaan omistajalle yhdellä rivillä videoiden kanssa); esilataus kartalla junaan 210 (11 s → 0,05 s); kartan musiikki
+mykistetään latauskuvassa paikallisesti (21f3d5dfc), yhteinen LinssiPito (~1 s vs dokumentoitu 200 ms) junaan 211. PT palautti omistajan videot kolmesti täysikokoisen tarkistuksen jälkeen: musta ruutu
+kartan ja latauskuvan välissä, pystyalkulennon kattojen viistäminen ('ammattilaisen ohjaamalta'), kaksikerroksinen nimiteksti rivittyi väärin (NUI 8db6e8d70 → 8eaed64b4). Latauslogo terävämpi NUI
+bf05235d4 kuitattu.
+
+## OPPI: ROOLIN OMA TARKISTUS ENNEN SHA:TA KOSKEE MYÖS TEKSTIÄ PELIKUVASSA (PT 24.10.) (24.10.2026 klo 09.56)
+
+NUI lähetti 8db6e8d70:n 'tarkistettuna', mutta nimiteksti näkyi pelissä kahtena siirtyneenä kerroksena; PT löysi sen omistajan videosta. Periaate 2 (et ole ensimmäinen tarkistaja) ja 9.5: rooli katsoo muutoksensa pelikuvasta 2× suurennoksella molemmissa suunnissa ennen SHA:ta, ei vain testeillä. Uutta sääntöä ei tarvita; PT muistuttaa tilauksessa.
