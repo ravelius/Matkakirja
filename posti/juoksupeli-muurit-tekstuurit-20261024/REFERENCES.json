@@ -1,0 +1,31 @@
+[
+  {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/delivery/01-lahtokuja.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/references/01-lahtokuja.png",
+    "sha256": "7a4a14b1dc6b457778155efb5a7e4db5571621b95886ad6ad8c9fe124104b955",
+    "role": "Material/color reference only; omit lighting, scene, objects and glyphs",
+    "personallyViewed": true
+  },
+  {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/delivery/02-punamuuri-kuja.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/references/02-punamuuri-kuja.png",
+    "sha256": "ade56ecc3ccdf05a4ac50494b3cfad38a300552397d6812c8f511c42b0bfd8a2",
+    "role": "Material/color reference only; omit lighting, scene, objects and glyphs",
+    "personallyViewed": true
+  },
+  {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-havainnekuvat-810-20261021/delivery/05-porttikaytava.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/references/05-porttikaytava.png",
+    "sha256": "c88e64a66447ad0a6340d082d8eb1ff4f2374841e8ecca839ea7da3a99efc5f2",
+    "role": "Material/color reference only; omit lighting, scene, objects and glyphs",
+    "personallyViewed": true
+  },
+  {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivaspanoraama-20261019/native/juoksupeli-taivas-only-attempt005.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/references/previous-sky005.png",
+    "sha256": "24413224c06310b7a38387ecf39120f544ca9dec54afd97b77c68dd23709d0c8",
+    "role": "Previous verified full-sphere format reference only; new target sun235/24 and richer blue/cloud tonal detail supersede its old light/palette",
+    "personallyViewed": true,
+    "taivasCodexV3ExactAliasNotFound": true
+  }
+]

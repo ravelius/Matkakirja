@@ -1,0 +1,62 @@
+[
+  {
+    "taskNumber": 917,
+    "file": "native/rappaus-v2-attempt002.png",
+    "sha256": "4aea16321fc56c3b77fd230a5045f9317a361e1f981398183dfdccf32d652b64",
+    "bytes": 3222194,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "nativeBytesUnchanged": true,
+    "producerVisualPassed": true
+  },
+  {
+    "taskNumber": 918,
+    "file": "native/kivijalka-attempt002.png",
+    "sha256": "eeaa6a3d1732ed0eebe47238988b83c5dfab2c7964b5247e83122b4acd723f8b",
+    "bytes": 4138847,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "nativeBytesUnchanged": true,
+    "producerVisualPassed": true
+  },
+  {
+    "taskNumber": 919,
+    "file": "native/rappaus-ala-attempt002.png",
+    "sha256": "547172e483394ee49d54dffab9267d4ac4e082b16483dd3e00e4bfd7da278ee6",
+    "bytes": 2947031,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "nativeBytesUnchanged": true,
+    "producerVisualPassed": false
+  },
+  {
+    "taskNumber": 920,
+    "file": "native/paivataivas-panoraama-attempt001.png",
+    "sha256": "780349d9229c69d1c4be100d0f14f83f16e93d185968ed91a362e2475778999a",
+    "bytes": 1783901,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "nativeBytesUnchanged": true,
+    "producerVisualPassed": false
+  },
+  {
+    "taskNumber": 921,
+    "file": "native/palkkimaalaus-attempt001.png",
+    "sha256": "c758703a6efb693daeb84857ca4296edb0e42eec8e2701478c1ffcd77880be4f",
+    "bytes": 2745250,
+    "dimensions": [
+      2172,
+      724
+    ],
+    "nativeBytesUnchanged": true,
+    "producerVisualPassed": false
+  }
+]

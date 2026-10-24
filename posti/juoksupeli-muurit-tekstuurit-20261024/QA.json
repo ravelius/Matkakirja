@@ -1,0 +1,146 @@
+{
+  "checkedAt": "2026-10-24T08:11:15.568420+00:00",
+  "scope": "Producer visual QA of all five selected natives, exported 2x2 repeats, direct unblended plaster join, spherical sky projections and sun centroid. Receiver QA still pending.",
+  "producerVisualPassedTasks": [
+    917,
+    918
+  ],
+  "producerVisualNotPassedTasks": [
+    919,
+    920,
+    921
+  ],
+  "allRequirementsFulfilled": false,
+  "nativeResolutionRequirementFulfilled": false,
+  "nativePreserved": true,
+  "creativePixelEdits": false,
+  "optionalNormalRoughnessMapsProvided": false,
+  "r2Uploaded": false,
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "remainingAuthorizedGenerationCalls": 0,
+  "assets": {
+    "917": {
+      "name": "rappaus-v2",
+      "producerVisualPassed": true,
+      "disposition": "pass-producer-visual-QA-awaiting-PT",
+      "positiveFindings": "Hillitty haalistunut lämmin punainen, hieno laikutus ja heikot pystyvalumat. 2 × 2 -toistossa ei selvää katkoviivaa tai voimakasta suunnattua valaistusta.",
+      "issues": [],
+      "selectedAttempt": 2,
+      "nativeFile": "native/rappaus-v2-attempt002.png",
+      "nativeSHA256": "4aea16321fc56c3b77fd230a5045f9317a361e1f981398183dfdccf32d652b64",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "exportFile": "delivery/rappaus-v2.png",
+      "exportSHA256": "199e3b0ba459eb1bab92abf4c38e38ad3d08f492de21baf1573130ca75cd274a",
+      "exportDimensions": [
+        2048,
+        2048
+      ],
+      "aspectRatioChanged": false,
+      "receiverAccepted": false
+    },
+    "918": {
+      "name": "kivijalka",
+      "producerVisualPassed": true,
+      "disposition": "pass-producer-visual-QA-awaiting-PT",
+      "positiveFindings": "Harmaat sävyltään vaihtelevat kivirivit, kapeat saumat ja noin 2:1 kivisuhde. Neljä kivijaksoa leveyteen ja kahdeksan riviä; 2,8 × 2,8 m UV-ala vastaa noin 70 × 35 cm kiviä. Pelin mittakaavaa ei ole testattu.",
+      "issues": [],
+      "selectedAttempt": 2,
+      "nativeFile": "native/kivijalka-attempt002.png",
+      "nativeSHA256": "eeaa6a3d1732ed0eebe47238988b83c5dfab2c7964b5247e83122b4acd723f8b",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "exportFile": "delivery/kivijalka.png",
+      "exportSHA256": "d615e467f2d8e956c6e2df26dc8c1d7b4e83f3b7f390b8dd1264432543c5d3a3",
+      "exportDimensions": [
+        2048,
+        2048
+      ],
+      "aspectRatioChanged": false,
+      "receiverAccepted": false
+    },
+    "919": {
+      "name": "rappaus-ala",
+      "producerVisualPassed": false,
+      "disposition": "not-passed-candidate-for-PT-only",
+      "positiveFindings": "Alempi punainen pinta on tummempi ja kuluneempi, yksittäisen tekstuurin oma toisto on käyttökelpoinen arvioitavaksi.",
+      "issues": [
+        "Yläliittymässä rappaus-v2:een näkyy edelleen sävyn ja pintarakenteen vaihtuminen; saumattoman liittymän ehto ei täyty."
+      ],
+      "selectedAttempt": 2,
+      "nativeFile": "native/rappaus-ala-attempt002.png",
+      "nativeSHA256": "547172e483394ee49d54dffab9267d4ac4e082b16483dd3e00e4bfd7da278ee6",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "exportFile": "delivery/rappaus-ala.png",
+      "exportSHA256": "49386214f8319cb2a5c97bfa33f4bb4793cc7f06143c1ff185a69ab21271853e",
+      "exportDimensions": [
+        2048,
+        2048
+      ],
+      "aspectRatioChanged": false,
+      "receiverAccepted": false
+    },
+    "920": {
+      "name": "paivataivas-panoraama",
+      "producerVisualPassed": false,
+      "disposition": "not-passed-candidate-for-PT-only",
+      "positiveFindings": "Sininen taivas ja kumpupilvien alapinnat sävyttyvät. Maata tai siluetteja ei näy alapuoliskolla. Kokonainen 2:1 equirectangular-kuva, ei kuuden kuvan kuutio.",
+      "issues": [
+        "Aurinkokeskuksen korkeus noin 21.17°, tavoite 24°.",
+        "Vaakaliittymässä on hieno pystysuora sävyraja ja pallon navoissa säteittäistä sävyvaihtelua.",
+        "Atsimuutti 235° edellyttää dokumentoitua UV-suunnan kohdistusta; pelissä sitä ei ole varmennettu."
+      ],
+      "selectedAttempt": 1,
+      "nativeFile": "native/paivataivas-panoraama-attempt001.png",
+      "nativeSHA256": "780349d9229c69d1c4be100d0f14f83f16e93d185968ed91a362e2475778999a",
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "exportFile": "delivery/paivataivas-panoraama.png",
+      "exportSHA256": "59f166dbc7368f5908724444ea998acea7bf688f0d5867a1f784d1f9e2b7f087",
+      "exportDimensions": [
+        4096,
+        2048
+      ],
+      "aspectRatioChanged": false,
+      "receiverAccepted": false
+    },
+    "921": {
+      "name": "palkkimaalaus",
+      "producerVisualPassed": false,
+      "disposition": "not-passed-candidate-for-PT-only",
+      "positiveFindings": "Sininen ja vihreä perinteinen kuusikulmainen ornamentti kultareunuksin; visuaalinen aihe on oikea.",
+      "issues": [
+        "Kultareunuksissa ja vaakalistoissa on valmiiksi piirtynyttä valo-/varjoreliefiä.",
+        "Vasen/oikea reunakuvio ja kulumat eivät jatku täysin saumattomasti.",
+        "Native on 2172 × 724 (3:1); 2048 × 512 vienti muuttaa kuvasuhteen 4:1:een ja litistää kuvioita."
+      ],
+      "selectedAttempt": 1,
+      "nativeFile": "native/palkkimaalaus-attempt001.png",
+      "nativeSHA256": "c758703a6efb693daeb84857ca4296edb0e42eec8e2701478c1ffcd77880be4f",
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "exportFile": "delivery/palkkimaalaus.png",
+      "exportSHA256": "797737b94adcf92cac4717f00a54deba86b88053bfe031abef13ef6bd13cd5c6",
+      "exportDimensions": [
+        2048,
+        512
+      ],
+      "aspectRatioChanged": true,
+      "receiverAccepted": false
+    }
+  }
+}

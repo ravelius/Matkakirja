@@ -1,0 +1,14 @@
+{
+  "rowToRowMeanAbsDelta255": 6.531366294524189,
+  "mainLast24RowsMeanRGB": [
+    158.27711323763955,
+    101.02628256246678,
+    86.67098617756513
+  ],
+  "lowerFirst24RowsMeanRGB": [
+    159.21786948431685,
+    95.56040669856459,
+    81.37373737373737
+  ],
+  "pixelExactJoin": false
+}

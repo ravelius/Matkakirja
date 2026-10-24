@@ -1,0 +1,112 @@
+[
+  {
+    "taskNumber": 917,
+    "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/native/rappaus-v2-attempt002.png",
+    "nativeSHA256": "4aea16321fc56c3b77fd230a5045f9317a361e1f981398183dfdccf32d652b64",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "file": "rappaus-v2.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/delivery/rappaus-v2.png",
+    "sha256": "199e3b0ba459eb1bab92abf4c38e38ad3d08f492de21baf1573130ca75cd274a",
+    "bytes": 6349389,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "method": "Whole-frame LANCZOS technical resize; no painting, color correction, seam repair or cropping",
+    "scaleX": 1.6331738437001595,
+    "scaleY": 1.6331738437001595,
+    "nativeClaimedAtDeliveryResolution": false,
+    "aspectRatioChanged": false
+  },
+  {
+    "taskNumber": 918,
+    "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/native/kivijalka-attempt002.png",
+    "nativeSHA256": "eeaa6a3d1732ed0eebe47238988b83c5dfab2c7964b5247e83122b4acd723f8b",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "file": "kivijalka.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/delivery/kivijalka.png",
+    "sha256": "d615e467f2d8e956c6e2df26dc8c1d7b4e83f3b7f390b8dd1264432543c5d3a3",
+    "bytes": 7702580,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "method": "Whole-frame LANCZOS technical resize; no painting, color correction, seam repair or cropping",
+    "scaleX": 1.6331738437001595,
+    "scaleY": 1.6331738437001595,
+    "nativeClaimedAtDeliveryResolution": false,
+    "aspectRatioChanged": false
+  },
+  {
+    "taskNumber": 919,
+    "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/native/rappaus-ala-attempt002.png",
+    "nativeSHA256": "547172e483394ee49d54dffab9267d4ac4e082b16483dd3e00e4bfd7da278ee6",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "file": "rappaus-ala.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/delivery/rappaus-ala.png",
+    "sha256": "49386214f8319cb2a5c97bfa33f4bb4793cc7f06143c1ff185a69ab21271853e",
+    "bytes": 5784151,
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "method": "Whole-frame LANCZOS technical resize; no painting, color correction, seam repair or cropping",
+    "scaleX": 1.6331738437001595,
+    "scaleY": 1.6331738437001595,
+    "nativeClaimedAtDeliveryResolution": false,
+    "aspectRatioChanged": false
+  },
+  {
+    "taskNumber": 920,
+    "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/native/paivataivas-panoraama-attempt001.png",
+    "nativeSHA256": "780349d9229c69d1c4be100d0f14f83f16e93d185968ed91a362e2475778999a",
+    "nativeDimensions": [
+      1774,
+      887
+    ],
+    "file": "paivataivas-panoraama.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/delivery/paivataivas-panoraama.png",
+    "sha256": "59f166dbc7368f5908724444ea998acea7bf688f0d5867a1f784d1f9e2b7f087",
+    "bytes": 4933672,
+    "dimensions": [
+      4096,
+      2048
+    ],
+    "method": "Whole-frame LANCZOS technical resize; no painting, color correction, seam repair or cropping",
+    "scaleX": 2.3089064261555805,
+    "scaleY": 2.3089064261555805,
+    "nativeClaimedAtDeliveryResolution": false,
+    "aspectRatioChanged": false
+  },
+  {
+    "taskNumber": 921,
+    "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/native/palkkimaalaus-attempt001.png",
+    "nativeSHA256": "c758703a6efb693daeb84857ca4296edb0e42eec8e2701478c1ffcd77880be4f",
+    "nativeDimensions": [
+      2172,
+      724
+    ],
+    "file": "palkkimaalaus.png",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/delivery/palkkimaalaus.png",
+    "sha256": "797737b94adcf92cac4717f00a54deba86b88053bfe031abef13ef6bd13cd5c6",
+    "bytes": 1835294,
+    "dimensions": [
+      2048,
+      512
+    ],
+    "method": "Whole-frame LANCZOS technical resize; no painting, color correction, seam repair or cropping",
+    "scaleX": 0.9429097605893186,
+    "scaleY": 0.7071823204419889,
+    "nativeClaimedAtDeliveryResolution": false,
+    "aspectRatioChanged": true
+  }
+]

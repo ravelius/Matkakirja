@@ -1,0 +1,82 @@
+{
+  "917": {
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "leftRightMeanAbsDelta255": 6.940191387559809,
+    "topBottomMeanAbsDelta255": 6.655502392344498,
+    "internalXMeanAbsDelta255": 5.913323388036708,
+    "internalYMeanAbsDelta255": 6.649790211095709,
+    "meanRGB": [
+      158.75788290866356,
+      101.63260977948714,
+      87.2646853831694
+    ],
+    "metricsDoNotReplaceVisualQA": true
+  },
+  "918": {
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "leftRightMeanAbsDelta255": 14.93939393939394,
+    "topBottomMeanAbsDelta255": 17.232323232323232,
+    "internalXMeanAbsDelta255": 13.580479045930383,
+    "internalYMeanAbsDelta255": 14.573908531274013,
+    "meanRGB": [
+      148.099469894106,
+      145.24381246359337,
+      141.50398978452367
+    ],
+    "metricsDoNotReplaceVisualQA": true
+  },
+  "919": {
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "leftRightMeanAbsDelta255": 7.849282296650718,
+    "topBottomMeanAbsDelta255": 5.81658692185008,
+    "internalXMeanAbsDelta255": 4.902721718805224,
+    "internalYMeanAbsDelta255": 5.179788390902769,
+    "meanRGB": [
+      158.0655153906224,
+      94.22826731174754,
+      79.82985928283082
+    ],
+    "metricsDoNotReplaceVisualQA": true
+  },
+  "920": {
+    "nativeSize": [
+      1774,
+      887
+    ],
+    "leftRightMeanAbsDelta255": 2.223975948891394,
+    "topBottomMeanAbsDelta255": 88.68977827884254,
+    "internalXMeanAbsDelta255": 1.5340449555135458,
+    "internalYMeanAbsDelta255": 2.008691932546277,
+    "meanRGB": [
+      93.94934917364563,
+      140.47361932155437,
+      195.35876985493837
+    ],
+    "metricsDoNotReplaceVisualQA": true
+  },
+  "921": {
+    "nativeSize": [
+      2172,
+      724
+    ],
+    "leftRightMeanAbsDelta255": 17.674033149171272,
+    "topBottomMeanAbsDelta255": 30.769337016574585,
+    "internalXMeanAbsDelta255": 5.004619744785821,
+    "internalYMeanAbsDelta255": 6.044337929318787,
+    "meanRGB": [
+      104.67905245566375,
+      108.51738347425292,
+      89.35561020217128
+    ],
+    "metricsDoNotReplaceVisualQA": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "method": "Mean centroid of visually identified connected sun-disk components at thresholds 240,245,250; components under 100 pixels excluded as highlight fragments; image-based estimate, not ephemeris",
+  "measurements": [
+    {
+      "threshold": 240,
+      "count": 255,
+      "centerX": 878.7607843137255,
+      "centerY": 339.2313725490196,
+      "usedForCentroid": true
+    },
+    {
+      "threshold": 245,
+      "count": 241,
+      "centerX": 878.701244813278,
+      "centerY": 339.12033195020746,
+      "usedForCentroid": true
+    },
+    {
+      "threshold": 250,
+      "count": 224,
+      "centerX": 878.6830357142857,
+      "centerY": 339.1696428571429,
+      "usedForCentroid": true
+    },
+    {
+      "threshold": 253,
+      "count": 19,
+      "centerX": 880.0526315789474,
+      "centerY": 345.6842105263158,
+      "usedForCentroid": false
+    }
+  ],
+  "nativeCenterPx": [
+    878.715021613763,
+    339.1737824521233
+  ],
+  "targetAzimuth": 235,
+  "targetElevation": 24,
+  "measuredElevation": 21.171047529445104,
+  "elevationErrorDeg": -2.8289524705548956,
+  "azimuthUnderNominal55DegOrigin": 233.31871915499136,
+  "assignedAzimuthWithDocumentedRotation": 235,
+  "leftAzimuthAfterAlignment": 56.681280845008644,
+  "northU": 0.8425519976527538,
+  "nominalTargetMetExactly": false,
+  "lowerHemisphereHasNoGround": true
+}
