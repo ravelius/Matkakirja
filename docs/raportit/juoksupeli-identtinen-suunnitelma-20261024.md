@@ -78,3 +78,6 @@ Järjestys:
   valoatlas-kk-tausta-1-3-esikatselu.png. Kohta 8: hallien julkisivut koko korkeuden puupaneeleja → ei ovikuvaa (portti + kujan ovet valmiit).
   Kohta 5 tiilipäät: geometriana LOD0:ssa (V4_gold), instansointi vaatisi pelikoodia – jätetty, kolmiot LOD0:ssa ok.
 - Jäljellä LR: 14 (Meridiaaniportin edusta: harjakoristeet Codexilta), 6 harjakoristeet ja 10 puut Codexin toimituksesta; leivonta rakennuksille/avoimille (jos VS haluaa).
+- 24.10. 16.1x: kohta 14 tehty (rakennukset-v17: Meridiaaniportin kivijalka 2,4 m, eteläaukot suorakaiteina, harjalle marmorikaide);
+  proto lavastaja/muoto-210 2d52792bc, paketti juoksupeli-kielletty-rakennukset-v17-vienti-20261024 (82cbd4384b38).
+  Kuva tavoiteluuppi-k1/meridiaaniportti-v17.png. Jäljellä LR: 6 harjakoristeet ja 10 puut Codexin toimituksesta (b2b8d8eac).
