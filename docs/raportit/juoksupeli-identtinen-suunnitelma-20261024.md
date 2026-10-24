@@ -70,3 +70,11 @@ Järjestys:
   Kuva: /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/tavoiteluuppi-k1/identtisyys-2-3-9.jpg. PK: reunus ja askelmat ovat vain kuvaa
   (ei törmäystä), juoksija voi astua niiden päälle näkyvästi.
 - Seuraavaksi: 8 hallien ovikuvat, 5 muurien tiilipäät instansseiksi.
+
+- 24.10. 16.0x: kohdat 4 (listakivi), 7 (palkkimaalaus halleissa ja tarkoissa malleissa, sinivihreä), 11 (valon leivonta, LR:n osa),
+  13 (Taihemenin sivuportaat) tehty; VS:n palaute: muurin kate V4_gold, kivireunus seinään. Proto lavastaja/muoto-210 66eefd9ae
+  (tarkista.sh 0). Paketit _valmiit/: tausta-v29 (a465bc355be5; LOD0 + valo_rgbm, yhteensä 200 Mt, v28 140 Mt), rakennukset-v16
+  (ccb981cfe37d), muurikate-v10 (8972900ac9eb), avoimet-v23 (2f8ea1c1312e). Kuvat tavoiteluuppi-k1/taihemen-v16-portaat.png,
+  valoatlas-kk-tausta-1-3-esikatselu.png. Kohta 8: hallien julkisivut koko korkeuden puupaneeleja → ei ovikuvaa (portti + kujan ovet valmiit).
+  Kohta 5 tiilipäät: geometriana LOD0:ssa (V4_gold), instansointi vaatisi pelikoodia – jätetty, kolmiot LOD0:ssa ok.
+- Jäljellä LR: 14 (Meridiaaniportin edusta: harjakoristeet Codexilta), 6 harjakoristeet ja 10 puut Codexin toimituksesta; leivonta rakennuksille/avoimille (jos VS haluaa).
