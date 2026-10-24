@@ -1,0 +1,29 @@
+{
+  "nativeSize": [
+    1774,
+    887
+  ],
+  "exportSize": [
+    2048,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaMin": 0,
+  "alphaMax": 255,
+  "transparentPixelsPercent": 38.11550785554591,
+  "opaquePixelsPercent": 0.001842980595320863,
+  "partiallyTransparentPixelsPercent": 61.88264916385877,
+  "opaqueBoundingBox": [
+    9,
+    85,
+    1767,
+    817
+  ],
+  "borderAlphaMax": [
+    5,
+    11,
+    1,
+    1
+  ],
+  "actualGeneratedGLBMatchVerified": false
+}

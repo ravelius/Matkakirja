@@ -1,0 +1,78 @@
+[
+  {
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T12:07:37.247566+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/prompts/933-attempt001.txt",
+    "reason": null,
+    "completedAt": "2026-10-24T12:08:39.917628+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4f00dc0c-a847-4b42-808c-75ae8852f7b1.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/native/933-attempt001.png",
+    "sha256": "ddd9e26e7c12da0850252b5bb71084bf6423b3abe45410ad1dd0890b26f57ba7",
+    "bytes": 2792594,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "nativeBytesUnchanged": true,
+    "taskNumber": 933
+  },
+  {
+    "attempt": 2,
+    "status": "completed",
+    "issuedAt": "2026-10-24T12:10:13.428534+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/prompts/933-attempt002.txt",
+    "reason": "Clear first-call failure: visible pre-shaded crown interiors and exterior lighting. Retry with no sunlit concept input and explicit unlit albedo-pass treatment.",
+    "completedAt": "2026-10-24T12:11:12.152494+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-03f7842b-7036-4ad9-8df4-51229b95eaa6.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/native/933-attempt002.png",
+    "sha256": "03c103867aad0f122dcfea38359b2d5a4d9919f7fd7171b71a9c2f910ff8fd9b",
+    "bytes": 2408494,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "nativeBytesUnchanged": true,
+    "taskNumber": 933
+  },
+  {
+    "attempt": 1,
+    "status": "completed",
+    "issuedAt": "2026-10-24T12:04:47.221490+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/prompts/934-attempt001.txt",
+    "reason": null,
+    "completedAt": "2026-10-24T12:05:36.534873+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c0ce6c9f-c981-4a09-af4c-21332b1b8b1e.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/native/934-attempt001.png",
+    "sha256": "830ab9d53b8a0068a0240eafb1160a8203e74914dfa28e006957cc6352217a14",
+    "bytes": 2942898,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true,
+    "taskNumber": 934
+  },
+  {
+    "attempt": 2,
+    "status": "completed",
+    "issuedAt": "2026-10-24T12:06:28.409193+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/prompts/934-attempt002.txt",
+    "reason": "Clear first-call failure: baked relief lighting in albedo and roughness. Retry focuses on channel separation; carving only in normal map.",
+    "completedAt": "2026-10-24T12:07:36.149836+00:00",
+    "toolSourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-f0750e13-58b5-4b76-a7c0-35187514f196.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/native/934-attempt002.png",
+    "sha256": "d0b3f508e7bdcf44655652c68059d897b145803662456defdc529e98b65535c8",
+    "bytes": 2748012,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "nativeBytesUnchanged": true,
+    "taskNumber": 934
+  }
+]

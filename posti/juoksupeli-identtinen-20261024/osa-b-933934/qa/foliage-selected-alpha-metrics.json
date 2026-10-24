@@ -1,0 +1,41 @@
+{
+  "selectedAttempt": 2,
+  "nativeSize": [
+    1774,
+    887
+  ],
+  "exportSize": [
+    2048,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaMin": 0,
+  "alphaMax": 255,
+  "transparentPixelsPercent": 42.12189346555342,
+  "opaquePixelsPercent": 0.0010803679351880922,
+  "partialPixelsPercent": 57.87702616651139,
+  "foregroundAlphaPercentiles": {
+    "min": 128.0,
+    "p1": 141.0,
+    "p5": 184.0,
+    "p25": 240.0,
+    "p50": 249.0,
+    "p75": 251.0,
+    "p95": 252.0,
+    "p99": 252.0,
+    "max": 255.0
+  },
+  "opaqueBoundingBox": [
+    18,
+    106,
+    1764,
+    791
+  ],
+  "borderAlphaMax": [
+    1,
+    2,
+    1,
+    2
+  ],
+  "actualGeneratedGLBMatchVerified": false
+}

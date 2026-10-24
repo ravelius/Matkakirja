@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-24T12:12:35.902378+00:00",
+  "taskNumbers": [
+    933,
+    934
+  ],
+  "perTask": {
+    "933": {
+      "selectedAttempt": 2,
+      "producerQAPassed": false,
+      "qaDisposition": "review-candidate-residual-self-shading-and-alpha-caveat",
+      "visualChecks": {
+        "threeCrowns": true,
+        "roundedMatureSummerCanopies": true,
+        "trueRGBA": true,
+        "speciesOrderMatchesAgreedContract": true,
+        "noText": true,
+        "noGroundOrTrunksBelow": true,
+        "noObviousPatternedSyntheticSurface": true,
+        "lightAndDarkCompositeViewed": true
+      },
+      "qaIssues": [
+        "Uusinta on ensiversiota tasaisempi, mutta latvojen sisällä on edelleen tummempaa lehtien omaa varjostusta. Täysin valotonta albedoa ei voi kuitata hyväksytyksi.",
+        "Lehvästön sisäosien alfa ei ole kauttaaltaan255: etualan mediaani249. Reunapikseleissä on myös1–2/255alfaa. Alkuperäiseen alfaan ei tehty kynnystystä tai maalausta.",
+        "Yhteinen lajivalinta on varmennettu Tripo-tuottajan ehdotuksesta. Valmiiden GLB-puiden ja tämän kortin siluetti-/värivastaavuutta ei vielä ole varmennettu."
+      ],
+      "nativeResolution": [
+        1774,
+        887
+      ],
+      "exportResolution": [
+        2048,
+        1024
+      ]
+    },
+    "934": {
+      "selectedAttempt": 2,
+      "producerQAPassed": true,
+      "qaDisposition": "visual-pass-material-review-and-game-import-pending",
+      "visualChecks": {
+        "twoDragonsAndCloudRelief": true,
+        "topDownNoPerspective": true,
+        "whiteMarbleBasecolor": true,
+        "reliefLightingNotBakedInSelectedBasecolor": true,
+        "threeSeparateMaps": true,
+        "noText": true,
+        "normalResponseChangesWithOppositeLights": true,
+        "normalNegativeZPixels": 0,
+        "normalZeroLengthPixels": 0
+      },
+      "qaIssues": [],
+      "limitations": [
+        "Normaalikartta on generoidusta atlasrivistä, ei mitatusta3D-geometriasta leivottu. OpenGL+Y pyydettiin, mutta pelimoottorin import-suunnan ja vahvuuden kalibrointi jää vastaanottajalle. Normalisoi näytteistetyt vektorit varjostimessa.",
+        "Karheus on generoitu materiaaliehdotus, ei fysikaalinen mittaus. Käytä R-kanavaa lineaarisena datana; ei smoothness-/metallic-pakkausta.",
+        "Native-atlas1024×1536; kanavat1024×509,1024×513 ja1024×512. Toimituksen2048×1024kartat ovat teknisiä suurennoksia. Kaksi kanavien siirtymäriviä jätettiin erottelussa pois; kuvia ei maalattu tai valaistu uudelleen."
+      ],
+      "nativeAtlasResolution": [
+        1024,
+        1536
+      ],
+      "exportResolutionPerMap": [
+        2048,
+        1024
+      ]
+    }
+  },
+  "callsIssued": 4,
+  "maximumCallsIncludingClearFailureRetries": 4,
+  "remainingAuthorizedGenerationCalls": 0,
+  "noAutomaticRetry": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

@@ -1,0 +1,14 @@
+{
+  "originalPath": "/Users/Shared/Claude/Matkakirja-linnanrakentaja/docs/raportit/juoksupeli-identtinen-suunnitelma-20261024.md",
+  "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/sources/identtinen-suunnitelma.md",
+  "sha256": "cdf17bc831abe2fd2e391f8a3b8e00971934e0368f7f1bbd715205dfd205b08a",
+  "readInFull": true,
+  "relevantRows": [
+    6,
+    10,
+    13
+  ],
+  "missingAtMailboxSourceCommit": true,
+  "foundInExistingWorkspace": true,
+  "newerSourceOrderOverridesOlderTrainAndPolygonStatements": true
+}

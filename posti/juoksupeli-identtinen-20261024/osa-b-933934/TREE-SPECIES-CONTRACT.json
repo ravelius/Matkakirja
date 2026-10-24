@@ -1,0 +1,43 @@
+{
+  "agreedByImageProducerAt": "2026-10-24T12:06:27.999455+00:00",
+  "selectionBasis": "Accept Tripo producer proposal503152cb58740ca979a29b66a70b4fbd7190d60053ca5a9b3200c6816b988060, exact-readback mailcd517f0f049998d678ecfee8074c4e127704baa2",
+  "tripoProposalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-928932-20261024/handoff/codex-928932-aloitus-ja-puulajit.md",
+  "tripoProposalSHA256": "503152cb58740ca979a29b66a70b4fbd7190d60053ca5a9b3200c6816b988060",
+  "conceptSpeciesIdentificationClaimed": false,
+  "historicPlantingAccuracyClaimed": false,
+  "cardLayout": "Three rounded summer crowns, left-to-right species930,931,932; no trunks or ground; genuine transparency",
+  "species": [
+    {
+      "task": 930,
+      "name": "pagodipuu",
+      "scientificName": "Styphnolobium japonicum",
+      "synonym": "Sophora japonica",
+      "heightMeters": 10,
+      "crown": "Broad rounded slightly irregular crown; fine pinnate foliage"
+    },
+    {
+      "task": 931,
+      "name": "siperialainen jalava",
+      "scientificName": "Ulmus pumila",
+      "heightMeters": 9,
+      "crown": "Rounded irregular crown; small serrated oval leaves"
+    },
+    {
+      "task": 932,
+      "name": "neidonhiuspuu",
+      "scientificName": "Ginkgo biloba",
+      "heightMeters": 12,
+      "crown": "Broad mature rounded crown; fan leaves; summer green, not autumn yellow"
+    }
+  ],
+  "speciesSelectionMatchedToPartAProposal": true,
+  "actualGeneratedGLBMatchVerified": false,
+  "reference07": {
+    "mailPath": "posti/juoksupeli-havainnekuvat-810-20261021/07-yleiskuva-ylhaalta.png",
+    "mailboxCommit": "b2b8d8eac58ee7cf807ed44179f3d666bafbc426",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/references/07-yleiskuva-ylhaalta.png",
+    "sha256": "72d3fbb405ced7dacd5186eeabb2b439421c89f52f5521380d75bc4b471e180f",
+    "originTask": 813
+  },
+  "pending": "PartA producer consumes common species selection; verify final silhouettes against actual GLBs separately"
+}

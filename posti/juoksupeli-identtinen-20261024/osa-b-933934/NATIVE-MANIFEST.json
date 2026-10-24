@@ -1,0 +1,58 @@
+[
+  {
+    "taskNumber": 933,
+    "attempt": 1,
+    "path": "native/933-attempt001.png",
+    "sha256": "ddd9e26e7c12da0850252b5bb71084bf6423b3abe45410ad1dd0890b26f57ba7",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "bytes": 2792594,
+    "selected": false,
+    "deliveredAsNative": false
+  },
+  {
+    "taskNumber": 933,
+    "attempt": 2,
+    "path": "native/933-attempt002.png",
+    "sha256": "03c103867aad0f122dcfea38359b2d5a4d9919f7fd7171b71a9c2f910ff8fd9b",
+    "dimensions": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "bytes": 2408494,
+    "selected": true,
+    "deliveredAsNative": true
+  },
+  {
+    "taskNumber": 934,
+    "attempt": 1,
+    "path": "native/934-attempt001.png",
+    "sha256": "830ab9d53b8a0068a0240eafb1160a8203e74914dfa28e006957cc6352217a14",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "bytes": 2942898,
+    "selected": false,
+    "deliveredAsNative": false
+  },
+  {
+    "taskNumber": 934,
+    "attempt": 2,
+    "path": "native/934-attempt002.png",
+    "sha256": "d0b3f508e7bdcf44655652c68059d897b145803662456defdc529e98b65535c8",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "bytes": 2748012,
+    "selected": true,
+    "deliveredAsNative": true
+  }
+]

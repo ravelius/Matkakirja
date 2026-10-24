@@ -1,0 +1,104 @@
+[
+  {
+    "taskNumber": 934,
+    "map": "basecolor",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/delivery/keskiportaan-laatta-basecolor.png",
+    "sha256": "c9a06029aa5e4f118b5db1d120c31d21d3a32fa25dd631dcf74991132e9b3511",
+    "bytes": 1913032,
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "mode": "RGB",
+    "nativeAtlasSHA256": "d0b3f508e7bdcf44655652c68059d897b145803662456defdc529e98b65535c8",
+    "nativeAtlasDimensions": [
+      1024,
+      1536
+    ],
+    "nativeChannelBox": [
+      0,
+      0,
+      1024,
+      509
+    ],
+    "nativeChannelDimensions": [
+      1024,
+      509
+    ],
+    "method": "Technical channel-panel extraction; exclude2generated separator transition rows; whole-map LANCZOS resize. No painting, relighting, channel synthesis, normal reconstruction, or roughness inference."
+  },
+  {
+    "taskNumber": 934,
+    "map": "normal-opengl-raw",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/delivery/keskiportaan-laatta-normal-opengl-raw.png",
+    "sha256": "eac644b723a4d8073bdb5a4de906259b2861c0c4d074e8fb4f1e99557d508f31",
+    "bytes": 3096430,
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "mode": "RGB",
+    "nativeAtlasSHA256": "d0b3f508e7bdcf44655652c68059d897b145803662456defdc529e98b65535c8",
+    "nativeAtlasDimensions": [
+      1024,
+      1536
+    ],
+    "nativeChannelBox": [
+      0,
+      510,
+      1024,
+      1023
+    ],
+    "nativeChannelDimensions": [
+      1024,
+      513
+    ],
+    "method": "Technical channel-panel extraction; exclude2generated separator transition rows; whole-map LANCZOS resize. No painting, relighting, channel synthesis, normal reconstruction, or roughness inference."
+  },
+  {
+    "taskNumber": 934,
+    "map": "roughness",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/delivery/keskiportaan-laatta-roughness.png",
+    "sha256": "138037b06b65910c47a68f83d5474d37223c3d80d89e63117be3ae6a987099d8",
+    "bytes": 2562679,
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "mode": "RGB",
+    "nativeAtlasSHA256": "d0b3f508e7bdcf44655652c68059d897b145803662456defdc529e98b65535c8",
+    "nativeAtlasDimensions": [
+      1024,
+      1536
+    ],
+    "nativeChannelBox": [
+      0,
+      1024,
+      1024,
+      1536
+    ],
+    "nativeChannelDimensions": [
+      1024,
+      512
+    ],
+    "method": "Technical channel-panel extraction; exclude2generated separator transition rows; whole-map LANCZOS resize. No painting, relighting, channel synthesis, normal reconstruction, or roughness inference."
+  },
+  {
+    "taskNumber": 933,
+    "map": "foliage-rgba",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/delivery/kaukolehvasto-lajit930-932-v2.png",
+    "sha256": "1615203a4027c0bd7708f683227f8bc6eb57743bab29097f40a0be3bba9ca14d",
+    "bytes": 2963917,
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "mode": "RGBA",
+    "nativeSHA256": "03c103867aad0f122dcfea38359b2d5a4d9919f7fd7171b71a9c2f910ff8fd9b",
+    "nativeDimensions": [
+      1774,
+      887
+    ],
+    "method": "Whole-frame LANCZOS resize; original alpha retained; no recoloring, cutout editing, opacity thresholding or repainting"
+  }
+]

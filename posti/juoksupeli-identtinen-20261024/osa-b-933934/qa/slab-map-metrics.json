@@ -1,0 +1,75 @@
+{
+  "nativeAtlasDimensions": [
+    1024,
+    1536
+  ],
+  "generatedInOneCallAsThreeChannels": true,
+  "channelBoxes": {
+    "basecolor": [
+      0,
+      0,
+      1024,
+      509
+    ],
+    "normal-opengl-raw": [
+      0,
+      510,
+      1024,
+      1023
+    ],
+    "roughness": [
+      0,
+      1024,
+      1024,
+      1536
+    ]
+  },
+  "excludedSeparatorRows": [
+    509,
+    1023
+  ],
+  "normal": {
+    "encodingRequested": "OpenGL +Y tangent-space",
+    "conventionCalibrationVerified": false,
+    "vectorLengthPercentiles": [
+      0.4071449935436249,
+      0.7922334206104278,
+      0.874386727809906,
+      0.9847667217254639,
+      1.1356785297393799,
+      1.2218825316429145,
+      1.524451494216919
+    ],
+    "negativeZPercent": 0.0,
+    "zeroLengthPixels": 0,
+    "shaderMustNormalizeSampledVectors": true,
+    "normalExportNotRenormalized": true,
+    "physicalSurfaceGroundTruthAvailable": false
+  },
+  "basecolor": {
+    "rgbMean": [
+      221.25159243000982,
+      217.20694683202356,
+      210.0979152597004
+    ],
+    "rgbStd": [
+      4.448402290154978,
+      5.270313452763021,
+      6.446157697043448
+    ],
+    "reliefShadingRemovedComparedToAttempt1ByNewGeneration": true,
+    "measuredAlbedo": false
+  },
+  "roughness": {
+    "rgbMean": [
+      175.13565063476562,
+      174.33994483947754,
+      174.5514621734619
+    ],
+    "meanScalar": 0.6850026897355622,
+    "stdScalar": 0.02338766775347318,
+    "maxRGBSpread": 11,
+    "scalarSampling": "Use R channel; import as linear/non-color data; not a metallic/smoothness packed map",
+    "measuredPhysicalRoughness": false
+  }
+}

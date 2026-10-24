@@ -1,0 +1,14 @@
+{
+  "status": "selection-agreed-with-Tripo-proposal-actual-model-match-pending",
+  "verified": true,
+  "ownerThreadId": "01a14ee0-3e23-72b2-82b1-510228c70b7d",
+  "productionRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-928932-20261024",
+  "required": "Match foliage card species to a source-package-confirmed Tripo courtyard tree species; no identification inferred from distant concepts",
+  "selectedSpecies": [
+    "Styphnolobium japonicum",
+    "Ulmus pumila",
+    "Ginkgo biloba"
+  ],
+  "contractPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/TREE-SPECIES-CONTRACT.json",
+  "actualGeneratedGLBMatchVerified": false
+}

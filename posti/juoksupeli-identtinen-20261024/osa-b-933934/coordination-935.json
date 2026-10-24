@@ -1,0 +1,32 @@
+{
+  "taskNumber": 935,
+  "status": "species-contract-recorded-in-shared-source-package",
+  "sourcePath": "posti/juoksupeli-identtinen-20261024/codex-928932-aloitus-ja-puulajit.md",
+  "sourceCommit": "cd517f0f049998d678ecfee8074c4e127704baa2",
+  "sourceBlobSha": "40bcbd235ab362a1555a9198fa06cfa0b39504d2",
+  "sourceReadInFull": true,
+  "started": true,
+  "handlingComplete": true,
+  "fulfillmentComplete": true,
+  "recordedAt": "2026-10-24T12:07:36.776515+00:00",
+  "sharedContractPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-928932-20261024/sources/kuvasessio-puulajit-vahvistus-935.json",
+  "imageProducerContractPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/TREE-SPECIES-CONTRACT.json",
+  "reference07": {
+    "mailPath": "posti/juoksupeli-havainnekuvat-810-20261021/07-yleiskuva-ylhaalta.png",
+    "mailboxCommit": "b2b8d8eac58ee7cf807ed44179f3d666bafbc426",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-identtinen-933934-20261024/references/07-yleiskuva-ylhaalta.png",
+    "sha256": "72d3fbb405ced7dacd5186eeabb2b439421c89f52f5521380d75bc4b471e180f",
+    "originTask": 813
+  },
+  "agreedSpecies": [
+    "Styphnolobium japonicum",
+    "Ulmus pumila",
+    "Ginkgo biloba"
+  ],
+  "newGenerationAllowance": false,
+  "extraGenerationCalls": 0,
+  "actualGeneratedGLBMatchVerified": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "outgoingMailboxAcknowledgementRound": false
+}
