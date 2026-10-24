@@ -1,0 +1,297 @@
+{
+  "task": 948,
+  "at": "2026-10-24T21:55:24.907318+00:00",
+  "status": "TECHNICAL_PASS_PT_DIMENSION_AND_RECEIVER_REVIEW_REQUIRED",
+  "parts": [
+    {
+      "task": 948,
+      "id": "lautanen",
+      "path": "osat/lautanen.glb",
+      "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+      "source_sha256": "9e1c7cee160dc3f244ec5686e6032438e7eb95139bf4bd5a36396510b76893a5",
+      "bytes": 10597120,
+      "triangles": 1948,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        0.28,
+        0.05596597131765974,
+        0.2789444497654997
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 0.2858534717694762,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/lautanen-normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "8e54d2dbe1ec3da1f82d2dd9e0c494a743b206c440ada895d6dc8a6e053383ab",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/lautanen-basecolor.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "07dd17093e33ba78933212c2e9b2fb68025221f039491114eda20a6bdc110fcd",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/lautanen-metallic-roughness.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "9d3cdc37f43f53e939a7e718b03805d1953bd1a1d2fe41a3ba7e0b569704e95f",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "lautanen-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "PRODUCER_REVIEWED_WITH_DEEPER_PROFILE_NOTE",
+      "game_integrated": false,
+      "peak_rss_mib": 167.765625,
+      "visual_notes": [
+        "Dragon/cobalt floral decoration and gold rim retained. Base is undecorated white.",
+        "Tripo produced a 5.6cm deep dish at28cm diameter, deeper than the source reference; PT must review alongside table.",
+        "Three measured stacks use5plates each, approximately18.1cm high. Vertex/centroid support test is not full runtime collision QA."
+      ],
+      "pt_model_approved": false,
+      "receiver_accepted": false,
+      "source_normalization_manifest": "work/normalized-v1/lautanen/MANIFEST.json"
+    },
+    {
+      "task": 948,
+      "id": "poyta",
+      "path": "osat/poyta.glb",
+      "sha256": "5937d1f3f5478042f54f59796f77b23e3fdb14d9d1533a30cd68777b98bfa59e",
+      "source_sha256": "01d82cc4a00ecade61435dd21f8175ffade5266a7883bbb28b8f76784e55f758",
+      "bytes": 7384516,
+      "triangles": 2455,
+      "limit": 4000,
+      "dimensions_xyz_m": [
+        1.6267083931526183,
+        0.78,
+        0.6493676315821492
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 1.6584932840179094,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/poyta-normal.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "d915632f618f2594c37b71e345f65a75abbcd029715f7e92caba3ccb1d912187",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/poyta-basecolor.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "81d868e50261c1de0d8fa4ef4dd3dcb61ad922d4c38d9241efc4dc8563be78fe",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/poyta-metallic-roughness.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "sha256": "5c05fd9557423aad7d471cca09ce14715c77f2e12a756d47d53040323cb31024",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "poyta-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "PRODUCER_REVIEWED_DIMENSION_EXCEPTION_PT_REVIEW_REQUIRED",
+      "game_integrated": false,
+      "peak_rss_mib": 150.53125,
+      "visual_notes": [
+        "Four legs, tabletop and dark wood/geometric corner character preserved. Small surface waviness and ornament simplification remain.",
+        "Uniform scaling to0.78m height yields1.627x0.649m footprint, larger than1.20x0.55m target; dimensions require explicit PT review. No nonuniform distortion or local reshaping."
+      ],
+      "pt_model_approved": false,
+      "receiver_accepted": false,
+      "source_normalization_manifest": "work/normalized-v1/poyta/MANIFEST.json"
+    }
+  ],
+  "assembly": {
+    "draws": 16,
+    "drawn_triangles": 31675,
+    "table_dimensions_xyz_m": [
+      1.6267083883285522,
+      0.7799999713897705,
+      0.64936763048172
+    ],
+    "total_height_m": 0.9615671874992605,
+    "support_checks": [
+      {
+        "stack": "vasen",
+        "base_y_m": 0.7803085391931291,
+        "vertices": 78,
+        "supported": 78,
+        "min_sampled_gap_m": 0.0004999999999999449,
+        "median_sampled_gap_m": 0.0008589022015201841,
+        "full_mesh_collision_tested": false
+      },
+      {
+        "stack": "keski",
+        "base_y_m": 0.7802616823978562,
+        "vertices": 78,
+        "supported": 78,
+        "min_sampled_gap_m": 0.0004999999999999449,
+        "median_sampled_gap_m": 0.0008387142292901606,
+        "full_mesh_collision_tested": false
+      },
+      {
+        "stack": "oikea",
+        "base_y_m": 0.7802150330972736,
+        "vertices": 78,
+        "supported": 78,
+        "min_sampled_gap_m": 0.0004999999999999449,
+        "median_sampled_gap_m": 0.000835607762840862,
+        "full_mesh_collision_tested": false
+      }
+    ],
+    "peak_rss_mib": 167.796875
+  },
+  "source_receipt": "sources/pt950-table-receipt.json",
+  "new_calls": 2,
+  "new_credits": 90,
+  "original_batch_calls": 17,
+  "original_batch_max": 17,
+  "original_batch_credits": 745,
+  "account_balance_after": 18935,
+  "pt_model_approved": false,
+  "game_integrated": false,
+  "physics_tested": false,
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "bytes": 1826,
+      "sha256": "f5593e9cdb4e20383ef4964d07ae245e5b1ef823a5ad784dc5ce268a32b086c8"
+    },
+    {
+      "path": "LUE-ENSIN.md",
+      "bytes": 2328,
+      "sha256": "18df04f01de9ee7f5bb853b909860f644c18f5fdda84703e8c393024d48da140"
+    },
+    {
+      "path": "PLACEMENTS.json",
+      "bytes": 10575,
+      "sha256": "8b702f124734cc2f9de3cbafea50446dc1a383ffcedfa5182d59ab23f85ecb5f"
+    },
+    {
+      "path": "TECHNICAL-QA.json",
+      "bytes": 3384,
+      "sha256": "74111015c39655b57972b7689b40e9e74d0fa3704448e45795a8fc725ebd4a02"
+    },
+    {
+      "path": "VISUAL-QA.json",
+      "bytes": 731,
+      "sha256": "bd6ba0e4d49b25ab82c6b11f2390a999eaedadd7a654d462d1ee8dda15139ef0"
+    },
+    {
+      "path": "lautanen-nelja-suuntaa.png",
+      "bytes": 761407,
+      "sha256": "92632bcc1cfa612303d20162d4cc0b97e1d30607978ef2d45c4faf76f603dd97"
+    },
+    {
+      "path": "osat/lautanen.glb",
+      "bytes": 10597120,
+      "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89"
+    },
+    {
+      "path": "osat/poyta.glb",
+      "bytes": 7384516,
+      "sha256": "5937d1f3f5478042f54f59796f77b23e3fdb14d9d1533a30cd68777b98bfa59e"
+    },
+    {
+      "path": "poyta-ja-kolme-pinoa.png",
+      "bytes": 416625,
+      "sha256": "8cdea55a45c20257cce90a9521113b01791990d2744b042b3e5ea92cdb681e3f"
+    },
+    {
+      "path": "poyta-nelja-suuntaa.png",
+      "bytes": 336896,
+      "sha256": "271b5f69032d0b0b222baeb43d4eb191b6a06cc8b298211bdd84555183f24086"
+    },
+    {
+      "path": "tekstuurit/lautanen-basecolor.png",
+      "bytes": 3701743,
+      "sha256": "07dd17093e33ba78933212c2e9b2fb68025221f039491114eda20a6bdc110fcd"
+    },
+    {
+      "path": "tekstuurit/lautanen-metallic-roughness.png",
+      "bytes": 952752,
+      "sha256": "9d3cdc37f43f53e939a7e718b03805d1953bd1a1d2fe41a3ba7e0b569704e95f"
+    },
+    {
+      "path": "tekstuurit/lautanen-normal.png",
+      "bytes": 2351397,
+      "sha256": "8e54d2dbe1ec3da1f82d2dd9e0c494a743b206c440ada895d6dc8a6e053383ab"
+    },
+    {
+      "path": "tekstuurit/poyta-basecolor.png",
+      "bytes": 2773056,
+      "sha256": "81d868e50261c1de0d8fa4ef4dd3dcb61ad922d4c38d9241efc4dc8563be78fe"
+    },
+    {
+      "path": "tekstuurit/poyta-metallic-roughness.png",
+      "bytes": 1516841,
+      "sha256": "5c05fd9557423aad7d471cca09ce14715c77f2e12a756d47d53040323cb31024"
+    },
+    {
+      "path": "tekstuurit/poyta-normal.png",
+      "bytes": 1023305,
+      "sha256": "d915632f618f2594c37b71e345f65a75abbcd029715f7e92caba3ccb1d912187"
+    }
+  ],
+  "producer_visual_review_completed": true
+}

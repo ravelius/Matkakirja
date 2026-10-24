@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-24T21:55:45.061909+00:00",
+  "views_reviewed": [
+    "table four directions",
+    "plate top/bottom/side/oblique",
+    "assembled front oblique",
+    "assembled rear upper oblique"
+  ],
+  "table_four_legs_visible": true,
+  "plate_count": 15,
+  "stack_count": 3,
+  "large_visible_overlap": false,
+  "large_visible_float": false,
+  "lighting": "Unlit basecolor software preview; runtime PBR still receiver QA",
+  "known_notes": [
+    "Table footprint1.627x0.649m versus1.20x0.55m requested target at height0.78m",
+    "Plate is5.6cm deep, deeper than source",
+    "Minor table surface/leg waviness and simplified corner joinery"
+  ],
+  "pt_approved": false,
+  "physics_tested": false,
+  "game_integrated": false
+}

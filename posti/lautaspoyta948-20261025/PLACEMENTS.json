@@ -1,0 +1,432 @@
+{
+  "task": 948,
+  "version": 1,
+  "at": "2026-10-24T21:54:30.119509+00:00",
+  "units": "metres",
+  "up_axis": "+Y",
+  "path_base": "delivery root",
+  "space": "glTF scene coordinates; apply importer coordinate conversion consistently",
+  "part_bank_format_accepted": true,
+  "acceptance_source": "PT829",
+  "groups": [
+    {
+      "id": "tumma-lautaspoyta",
+      "instances": [
+        {
+          "name": "poyta",
+          "file": "osat/poyta.glb",
+          "sha256": "5937d1f3f5478042f54f59796f77b23e3fdb14d9d1533a30cd68777b98bfa59e",
+          "translation_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "vasen-lautanen-01",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            -0.36,
+            0.7803085391931291,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "vasen-lautanen-02",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            -0.36,
+            0.8116317084692475,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "vasen-lautanen-03",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            -0.36,
+            0.8429548777453657,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "vasen-lautanen-04",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            -0.36,
+            0.8742780470214839,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "vasen-lautanen-05",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            -0.36,
+            0.9056012162976023,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "keski-lautanen-01",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.0,
+            0.7802616823978562,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "keski-lautanen-02",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.0,
+            0.8115848516739745,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "keski-lautanen-03",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.0,
+            0.8429080209500928,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "keski-lautanen-04",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.0,
+            0.874231190226211,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "keski-lautanen-05",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.0,
+            0.9055543595023293,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "oikea-lautanen-01",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.36,
+            0.7802150330972736,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "oikea-lautanen-02",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.36,
+            0.8115382023733919,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "oikea-lautanen-03",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.36,
+            0.8428613716495101,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "oikea-lautanen-04",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.36,
+            0.8741845409256284,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        },
+        {
+          "name": "oikea-lautanen-05",
+          "file": "osat/lautanen.glb",
+          "sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+          "translation_m": [
+            0.36,
+            0.9055077102017467,
+            0.0
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "parent": null,
+          "separate_rigidbody_candidate": true
+        }
+      ],
+      "fit_checks": [
+        {
+          "stack": "vasen",
+          "base_y_m": 0.7803085391931291,
+          "vertices": 78,
+          "supported": 78,
+          "min_sampled_gap_m": 0.0004999999999999449,
+          "median_sampled_gap_m": 0.0008589022015201841,
+          "full_mesh_collision_tested": false
+        },
+        {
+          "stack": "keski",
+          "base_y_m": 0.7802616823978562,
+          "vertices": 78,
+          "supported": 78,
+          "min_sampled_gap_m": 0.0004999999999999449,
+          "median_sampled_gap_m": 0.0008387142292901606,
+          "full_mesh_collision_tested": false
+        },
+        {
+          "stack": "oikea",
+          "base_y_m": 0.7802150330972736,
+          "vertices": 78,
+          "supported": 78,
+          "min_sampled_gap_m": 0.0004999999999999449,
+          "median_sampled_gap_m": 0.000835607762840862,
+          "full_mesh_collision_tested": false
+        }
+      ],
+      "table_dimensions_xyz_m": [
+        1.6267083883285522,
+        0.7799999713897705,
+        0.64936763048172
+      ],
+      "plate_dimensions_xyz_m": [
+        0.2800000011920929,
+        0.05596597120165825,
+        0.2789444625377655
+      ],
+      "total_height_m": 0.9615671874992605,
+      "drawn_triangles": 31675,
+      "unique_triangles": 4403,
+      "source_topology_preserved": true,
+      "physics_tested": false,
+      "game_accepted": false,
+      "status": "PRODUCER_PREVIEW_PENDING_PT_AND_RECEIVER_QA"
+    }
+  ]
+}
