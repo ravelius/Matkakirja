@@ -1,0 +1,409 @@
+{
+  "created_at": "2026-10-24T12:27:10.990131+00:00",
+  "status": "PARTIAL_TWO_ORNAMENTS_READY_THREE_TREES_NOT_PASSED",
+  "models": [
+    {
+      "task": 928,
+      "id": "chiwen",
+      "path": "ready-for-pt-review/chiwen/chiwen.glb",
+      "sha256": "9b0fff1e54c8afc0b5b01706c14239684825cc17d62763583a9999500fd11870",
+      "source_sha256": "d6084955f691d2a7cce1d72e7d86600bab0c34a6b4bd255956103497cbff0ba2",
+      "bytes": 3396844,
+      "triangles": 1988,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        0.46139329720720795,
+        1.4,
+        1.4676705793379927
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 1.4982592507919918,
+      "rotation_y_degrees": 90,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "ready-for-pt-review/chiwen/chiwen-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "1528fd2bc9c7c83b9dd65ec4383ed7909ae6bcb414add7398182a44270404891",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "ready-for-pt-review/chiwen/chiwen-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "2860543a95861d9806a8b4eda29a4bc682b7be7cc0bd73dc512e4cb7b0cf60e9",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "ready-for-pt-review/chiwen/chiwen-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "1a880db542c86ed1a03ac9f6f70fcd29c275ec4284557565b304e8dd18bbf7a2",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/chiwen-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "game_integrated": false,
+      "peak_rss_mib": 79.390625,
+      "known_limits": [
+        "Faceting and small ornament detail simplified at strict triangle budget.",
+        "Generated base color retains cavity darkening; no broad directional cast shadow observed, but fully shadow-free albedo is not certified. Receiver lighting check required.",
+        "Static ornament; no rig or animation."
+      ]
+    },
+    {
+      "task": 929,
+      "id": "harjaelaimet",
+      "path": "ready-for-pt-review/harjaelaimet/harjaelaimet.glb",
+      "sha256": "c543c1917a124ab1b1ab274866a00bfb312b74c228a1c10940fb5c5de0ee6733",
+      "source_sha256": "00c36ae9720b4d94b079378cb5af1951131b3c8987a57bc860b370a95325c9f7",
+      "bytes": 3188940,
+      "triangles": 950,
+      "limit": 1000,
+      "dimensions_xyz_m": [
+        0.27752236246554335,
+        0.5792121563572475,
+        2.0
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 2.035785041243622,
+      "rotation_y_degrees": 90,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "ready-for-pt-review/harjaelaimet/harjaelaimet-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "70c17e8a919d14b606edb5a8f5b58cd5daef957a0a6a33d14c217f0ab1e1642a",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "ready-for-pt-review/harjaelaimet/harjaelaimet-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "931646ba5e00f1ab0268fba50ebe9c55271019ee4e5a04fe54828b3bcef820c5",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "ready-for-pt-review/harjaelaimet/harjaelaimet-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "0ac1a0e6fc01d4ded9eba0db2c0d18b1f77672c2d7d7deba6ff4af33d082086e",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/harjaelaimet-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "PASS_FOR_PT_REVIEW_WITH_LIMITATIONS",
+      "game_integrated": false,
+      "peak_rss_mib": 76.328125,
+      "known_limits": [
+        "Faceting and small ornament detail simplified at strict triangle budget.",
+        "Generated base color retains cavity darkening; no broad directional cast shadow observed, but fully shadow-free albedo is not certified. Receiver lighting check required.",
+        "Static ornament; no rig or animation."
+      ]
+    },
+    {
+      "task": 930,
+      "id": "pagodipuu",
+      "path": "rejected-tree-review-only/pagodipuu/pagodipuu.glb",
+      "sha256": "875d7c8491a3836cdc54ee96a90cbd17cf83b81e624fc8ce0c911c3e8c7a58d3",
+      "source_sha256": "2ef3fce8e607b6b7ab161362101347ebad2981383e9fd87caca75dc2be4c5a38",
+      "bytes": 4647312,
+      "triangles": 1941,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        10.780046499019543,
+        10.0,
+        9.832492007818733
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 10.890720553044403,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "rejected-tree-review-only/pagodipuu/pagodipuu-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "aae088ce9272bc8ef5e1d6ab182131b846f29955b49279d44e33182888b8fa93",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "rejected-tree-review-only/pagodipuu/pagodipuu-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "f9436d6850d8d2090db1da2e9233447bb242d8d80de77b62a008780948d09560",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "rejected-tree-review-only/pagodipuu/pagodipuu-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "11035e45f8b038d947bba131ce383f86760a2b2c0b888ef138a9aab54f64bf0c",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/pagodipuu-attempt2-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "NOT_PASSED_CANOPY_SHAPE",
+      "game_integrated": false,
+      "peak_rss_mib": 79.96875,
+      "usable_for_game": false,
+      "visual_findings": [
+        "Coherent trunk and branches, but foliage consists of sparse large angular opaque sheets instead of rounded crown volumes or alpha-cut leaf cards.",
+        "Does not visually match the approved rounded courtyard tree reference or Part B 933 crown silhouette."
+      ],
+      "limitations": [
+        "Two authorized attempts used; no third generation.",
+        "Raw GLB itself uses RGB JPEG and no alphaMode; the missing alpha is not caused by local PNG repacking.",
+        "PBR lighting remains receiver QA; no claim of shadow-free albedo."
+      ]
+    },
+    {
+      "task": 931,
+      "id": "jalava",
+      "path": "rejected-tree-review-only/jalava/jalava.glb",
+      "sha256": "1b5e94a27ed2f0f768c6923918babc40639ed7a559ca5c38debd3ad7865466c9",
+      "source_sha256": "d0ff910cf1299e244598c656a38a87b802412d64a4daf65a64ff5c09e8678dd9",
+      "bytes": 5279468,
+      "triangles": 1602,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        9.917870131275889,
+        9.0,
+        10.064420624062635
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 10.531066990429938,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "rejected-tree-review-only/jalava/jalava-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "08043bf6ff99fb8f551f7e333b6f4893703da230d240e31d5c89596c79375ea4",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "rejected-tree-review-only/jalava/jalava-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "d632496e63f15dcba254795f284a3633dbad72834a6ad2a92e8c8c8fa8904996",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "rejected-tree-review-only/jalava/jalava-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "1f9737ec46e42ce61c81c7f2fbf3fe85a76b831bf949af11d948a0e632291033",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/jalava-attempt2-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "NOT_PASSED_CANOPY_SHAPE",
+      "game_integrated": false,
+      "peak_rss_mib": 82.0625,
+      "usable_for_game": false,
+      "visual_findings": [
+        "Coherent trunk and branches, but foliage consists of sparse large angular opaque sheets instead of rounded crown volumes or alpha-cut leaf cards.",
+        "Does not visually match the approved rounded courtyard tree reference or Part B 933 crown silhouette."
+      ],
+      "limitations": [
+        "Two authorized attempts used; no third generation.",
+        "Raw GLB itself uses RGB JPEG and no alphaMode; the missing alpha is not caused by local PNG repacking.",
+        "PBR lighting remains receiver QA; no claim of shadow-free albedo."
+      ]
+    },
+    {
+      "task": 932,
+      "id": "neidonhiuspuu",
+      "path": "rejected-tree-review-only/neidonhiuspuu/neidonhiuspuu.glb",
+      "sha256": "08f44eb7246134551eac314a67d11fc0d5d505f7ca549b4a7aed7d4a7671d44b",
+      "source_sha256": "f36ba5a56e214a15099e64fb31ad760dd8f1ebd1fd21aa74d63bc9945b3e6260",
+      "bytes": 3446704,
+      "triangles": 371,
+      "limit": 2000,
+      "dimensions_xyz_m": [
+        19.144529783611304,
+        12.0,
+        11.22003539443342
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "uniform_scale": 21.087359897034375,
+      "rotation_y_degrees": 0,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "rejected-tree-review-only/neidonhiuspuu/neidonhiuspuu-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "5dde56fe83f1a51ac10124408591991e9846762427a73af0707dbdcfc49def5e",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "rejected-tree-review-only/neidonhiuspuu/neidonhiuspuu-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "38183a09d799333f83cd844046538fc762bfe209dccfc6be384d7353d28d70c5",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "rejected-tree-review-only/neidonhiuspuu/neidonhiuspuu-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "88199797a6c141b7857d9a4079cb71453e3406b72185528daa59122137fc0f6d",
+          "pixels_preserved": true
+        }
+      ],
+      "normal_map_present": true,
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/neidonhiuspuu-attempt2-nelja-suuntaa.png",
+      "preview_lighting": "unlit basecolor; PBR light response remains receiver QA",
+      "visual_qa": "NOT_PASSED_CANOPY_SHAPE",
+      "game_integrated": false,
+      "peak_rss_mib": 83.984375,
+      "usable_for_game": false,
+      "visual_findings": [
+        "Severely malformed broad angular foliage sheets with no coherent visible trunk or rounded crown.",
+        "371 triangles despite 2000 target. Under budget does not mean a usable model.",
+        "Does not match shared tree935 source or PartB933 canopy."
+      ],
+      "limitations": [
+        "Authorized first attempt and one retry used. No third attempt.",
+        "PBR shading and albedo not accepted."
+      ]
+    }
+  ],
+  "credits": 360,
+  "calls": 8,
+  "retries": 3,
+  "source_image_calls": 3,
+  "previous_models_preserved": true,
+  "pt_approved": false,
+  "receiver_received": false,
+  "game_integrated": false
+}

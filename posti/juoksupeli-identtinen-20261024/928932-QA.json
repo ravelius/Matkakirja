@@ -1,0 +1,206 @@
+{
+  "at": "2026-10-24T12:27:10.678243+00:00",
+  "status": "PARTIAL_TWO_ORNAMENTS_READY_THREE_TREES_NOT_PASSED",
+  "technical_checks": [
+    {
+      "nimi": "chiwen.glb",
+      "virheet": [],
+      "huomiot": [],
+      "tiedot": {
+        "nimi": "chiwen.glb",
+        "tyyppi": "esine",
+        "kolmiot": 1988,
+        "piirrot": 1,
+        "materiaalit": 1,
+        "solmut": 1,
+        "kuvat": [
+          "1024×1024 png",
+          "1024×1024 png",
+          "1024×1024 png"
+        ],
+        "rajat": {
+          "min": [
+            -0.231,
+            0,
+            -0.734
+          ],
+          "max": [
+            0.231,
+            1.4,
+            0.734
+          ],
+          "koko": [
+            0.461,
+            1.4,
+            1.468
+          ]
+        }
+      }
+    },
+    {
+      "nimi": "harjaelaimet.glb",
+      "virheet": [],
+      "huomiot": [],
+      "tiedot": {
+        "nimi": "harjaelaimet.glb",
+        "tyyppi": "esine",
+        "kolmiot": 950,
+        "piirrot": 1,
+        "materiaalit": 1,
+        "solmut": 1,
+        "kuvat": [
+          "1024×1024 png",
+          "1024×1024 png",
+          "1024×1024 png"
+        ],
+        "rajat": {
+          "min": [
+            -0.139,
+            0,
+            -1
+          ],
+          "max": [
+            0.139,
+            0.579,
+            1
+          ],
+          "koko": [
+            0.278,
+            0.579,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "nimi": "pagodipuu.glb",
+      "virheet": [],
+      "huomiot": [],
+      "tiedot": {
+        "nimi": "pagodipuu.glb",
+        "tyyppi": "esine",
+        "kolmiot": 1941,
+        "piirrot": 1,
+        "materiaalit": 1,
+        "solmut": 1,
+        "kuvat": [
+          "1024×1024 png",
+          "1024×1024 png",
+          "1024×1024 png"
+        ],
+        "rajat": {
+          "min": [
+            -5.588,
+            0,
+            -4.784
+          ],
+          "max": [
+            5.192,
+            10,
+            5.049
+          ],
+          "koko": [
+            10.78,
+            10,
+            9.832
+          ]
+        }
+      }
+    },
+    {
+      "nimi": "jalava.glb",
+      "virheet": [],
+      "huomiot": [],
+      "tiedot": {
+        "nimi": "jalava.glb",
+        "tyyppi": "esine",
+        "kolmiot": 1602,
+        "piirrot": 1,
+        "materiaalit": 1,
+        "solmut": 1,
+        "kuvat": [
+          "1024×1024 png",
+          "1024×1024 png",
+          "1024×1024 png"
+        ],
+        "rajat": {
+          "min": [
+            -5.18,
+            0,
+            -4.865
+          ],
+          "max": [
+            4.738,
+            9,
+            5.199
+          ],
+          "koko": [
+            9.918,
+            9,
+            10.064
+          ]
+        }
+      }
+    },
+    {
+      "nimi": "neidonhiuspuu.glb",
+      "virheet": [],
+      "huomiot": [],
+      "tiedot": {
+        "nimi": "neidonhiuspuu.glb",
+        "tyyppi": "esine",
+        "kolmiot": 371,
+        "piirrot": 1,
+        "materiaalit": 1,
+        "solmut": 1,
+        "kuvat": [
+          "1024×1024 png",
+          "1024×1024 png",
+          "1024×1024 png"
+        ],
+        "rajat": {
+          "min": [
+            -8.319,
+            0,
+            -3.84
+          ],
+          "max": [
+            10.825,
+            12,
+            7.38
+          ],
+          "koko": [
+            19.145,
+            12,
+            11.22
+          ]
+        }
+      }
+    }
+  ],
+  "producer_visual_passed_tasks": [
+    928,
+    929
+  ],
+  "producer_visual_not_passed_tasks": [
+    930,
+    931,
+    932
+  ],
+  "strict_triangle_limits_pass": true,
+  "normal_map_present_all": true,
+  "textures_max_px": 1024,
+  "visual_checks": "All five actual normalized GLBs inspected from four directions; browser originals also checked.",
+  "source_topology_and_uv_preserved": true,
+  "all_requirements_fulfilled": false,
+  "pt_approved": false,
+  "game_integrated": false,
+  "tree_contract": {
+    "species_matched": true,
+    "part_b_read_in_full": true,
+    "part_b_commit": "8d554e5bd45d039519f1f9d125b7bab58e318a9e",
+    "actual_canopy_match": false,
+    "reason": "3D crowns sparse or broken; PartB rounded silhouettes materially fuller."
+  },
+  "next": "PT: review ornaments now; advise new bounded tree method/order if further production wanted. Do not integrate rejected-tree-review-only."
+}
