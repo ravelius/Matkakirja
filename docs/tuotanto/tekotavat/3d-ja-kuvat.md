@@ -171,6 +171,13 @@ reaaliaikainen varjo vain hahmoille ja liikkuville osille. Lehvästön varjo kuv
 **5. Yksityiskohdat vain lähellä.** Kuviot ja instanssit vain lähimmässä tasossa (LOD0, noin 150 m) ja häivytetään etäisyyden mukaan;
 kaukaiset tasot pysyvät kevyinä. Budjetit kohdan 3 mukaan, ruutuaika alle 20 ms (NS mittaa).
 
+**6. Havainnekuva tekijän työkalussa (omistaja 24.10.2026 klo 22.42: "Otetaanko havainnekuva tekijöiden työkaluihin?" → "Kyllä,
+heti"; "Tekijät sovittavat työn havainnekuvaan itse ennen tarkistusta. Kirjataan kaikille peleille.").** Lavastajan Blenderissä
+sekä Valosepän ja Pelikoodarin Unity-editorissa on sama kamera kuin pelissä (paikka, kulma, kuva-ala), pelihahmo mittakaavana ja
+havainnekuva läpikuultavana päällä. Ennen lähettämistä tekijä ajaa havainnemittarin (tools/havainne-mittari.py; ohje
+docs/tuotanto/tekotavat/havainne-tyokalut.md): hahmon paikka ja koko, horisontti, räystäslinja kameraan nähden, lattian kirkkaus,
+mustien taso, kylläisyys ja varjo-osuus, havainne | oma. PT:lle lähtee vasta pari, jonka luvut ovat havainnekuvan tasolla.
+
 **Tarkistus.** Jokaisesta havainnekuvan kulmasta pelikuvapari (havainnekuva | peli, pelikamera, ei tekstiä kuvan päällä) ja
 taulukon jokainen rivi ok tai vika (Raamattu 9.5). Kun pelin kuvakulma on omistajan valitsema ja poikkeaa havainnekuvan kulmasta,
 kuvan ulkopuolelle jäävää ei venytetä näkyviin. Blender-kuva ei riitä: kattovirheet löytyivät 24.10. vasta pelivideosta.
