@@ -1,0 +1,19 @@
+{
+  "taskNumber": 950,
+  "attempt": 1,
+  "issuedAt": "2026-10-24T21:47:31.388590+00:00",
+  "method": "built-in image_gen",
+  "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/prompts/950-table-attempt001.txt",
+  "wholeNewGeneration": true,
+  "status": "completed",
+  "completedAt": "2026-10-24T21:48:13.166901+00:00",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokupla4-lautaspoyta-949-20261025/native/950-empty-table-attempt001.png",
+  "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d23ba5ee-a3c1-4783-91ab-c19ad0c367c4.png",
+  "sha256": "f07edb8b1034eed44768c40490cf83acc7ecafb0154d37cc0acaa5f07aa1c373",
+  "bytes": 1819378,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGB"
+}
