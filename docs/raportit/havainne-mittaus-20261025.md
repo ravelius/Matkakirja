@@ -16,6 +16,68 @@ todellisuuden rakennukset silti" → "Kyllä, yksi mittakaava"). Varjostimiin ja
   (`ui juoksupeli saannot`), piirto ja kamera jatkuvat. Lisäksi `SKAALA=<k>`: Esikatselu skaalaa juoksumaailman juuren lapset
   k-kertaisiksi keisarin ympäri vain kuvan piirron ajaksi (keisari, takaa-ajaja, vartijat ja kamera ennallaan; peli ei muutu).
 
+## 0. UUSINTA 25.10. klo 11.11 (PT 11.2x): editorin piirtovika korjattu, väri- ja valomittarit 01–05 uudelleen
+
+**Syy 01:n punaiseen lattiaan:** ei pintojen sidonta eikä pelin vika. Diagnoosi (`Esikatselu.Sidonta`, ajo 11.06): samasta
+jäädytetystä hetkestä otetuissa kahdessa kuvassa globaalit pintakuvat (`_JuoksuRappaus` … `_JuoksuLaattaKivi`) ja keisarin
+ympäristön materiaalilajit olivat täsmälleen samat, mutta ensimmäinen `Render()` kuvan kokoon piirsi kivilattian (laji 2) pois ja
+sen alla olevan rappauksen (laji 10) näkyviin, toinen oikein. Laitteella lattia on kiveä (VS raaka-v9-01). Korjaus
+havainne-editoriin (proto `natiivi-ui/havainne-skaala-210`): ensimmäinen piirto hylätään (lämmitysruutu), ja
+`tyokalut/havainne/pinnat.py` hylkää ajon, jos lattia keisarin jalkojen ympäriltä on rappauksen punaista (yli 35 %); lisäksi
+`VIKA sidonta`, jos jokin globaali pintakuva on väärä. Uusinta `proto-3d/lokit/havainne-editori-20261025-111118`: kaikki kohdat
+OK (punaista 0–9 %).
+
+Paikat ovat Lavastajan havainnekameran mukaiset (osa 1). Mittakaavaluvut (metrit, osa 1) eivät muutu.
+
+| kohta | mittari | havainne | nyt (a28+b608) | tila nyt | aiempi (raportti 10.38) | tila aiemmin | muutos |
+|---|---|---:|---:|---|---:|---|---|
+| 01 | lattia mediaani | 205 | 194 | ok | 103 | VIKA | KUMOUTUU |
+| 01 | kylläisyys keskim. | 0.38 | 0.43 | ok | 0.67 | VIKA | KUMOUTUU |
+| 01 | punainen kylläisyys | 0.67 | 0.67 | ok | 0.68 | ok | ennallaan |
+| 01 | punainen kirkkaus | 0.54 | 0.72 | VIKA | 0.73 | VIKA | ennallaan |
+| 01 | varjo-osuus lattiasta % | 36.3 | 7.0 | VIKA | 1.0 | VIKA | ennallaan |
+| 02 | lattia mediaani | 200 | 177 | VIKA | 146 | VIKA | muuttui, tila sama |
+| 02 | kylläisyys keskim. | 0.40 | 0.51 | VIKA | 0.48 | VIKA | ennallaan |
+| 02 | punainen kylläisyys | 0.73 | 0.70 | ok | 0.68 | ok | ennallaan |
+| 02 | punainen kirkkaus | 0.71 | 0.65 | ok | 0.63 | VIKA | KUMOUTUU |
+| 02 | varjo-osuus lattiasta % | 24.2 | 24.3 | ok | 35.7 | VIKA | KUMOUTUU |
+| 03 | lattia mediaani | 193 | 124 | VIKA | 125 | VIKA | ennallaan |
+| 03 | kylläisyys keskim. | 0.25 | 0.23 | ok | 0.23 | ok | ennallaan |
+| 03 | punainen kylläisyys | 0.64 | 0.69 | ok | 0.69 | ok | ennallaan |
+| 03 | punainen kirkkaus | 0.65 | 0.66 | ok | 0.67 | ok | ennallaan |
+| 03 | varjo-osuus lattiasta % | 4.9 | 1.1 | ok | 1.1 | ok | ennallaan |
+| 03b | lattia mediaani | 193 | 127 | VIKA | – | – | uusi paikka |
+| 03b | kylläisyys keskim. | 0.25 | 0.18 | VIKA | – | – | uusi paikka |
+| 03b | punainen kylläisyys | 0.64 | 0.63 | ok | – | – | uusi paikka |
+| 03b | punainen kirkkaus | 0.65 | 0.87 | VIKA | – | – | uusi paikka |
+| 03b | varjo-osuus lattiasta % | 4.9 | 47.6 | VIKA | – | – | uusi paikka |
+| 04 | lattia mediaani | 176 | 233 | VIKA | 233 | VIKA | ennallaan |
+| 04 | kylläisyys keskim. | 0.33 | 0.43 | VIKA | 0.43 | VIKA | ennallaan |
+| 04 | punainen kylläisyys | 0.73 | 0.65 | ok | 0.65 | ok | ennallaan |
+| 04 | punainen kirkkaus | 0.53 | 0.82 | VIKA | 0.82 | VIKA | ennallaan |
+| 04 | varjo-osuus lattiasta % | 1.6 | 7.0 | ok | 7.0 | ok | ennallaan |
+| 05 | lattia mediaani | 204 | 188 | VIKA | – | – | uusi paikka |
+| 05 | kylläisyys keskim. | 0.36 | 0.48 | VIKA | – | – | uusi paikka |
+| 05 | punainen kylläisyys | 0.71 | 0.69 | ok | – | – | uusi paikka |
+| 05 | punainen kirkkaus | 0.60 | 0.61 | ok | – | – | uusi paikka |
+| 05 | varjo-osuus lattiasta % | 14.8 | 17.3 | ok | – | – | uusi paikka |
+
+Kumoutuvat aiemmat luvut: **01 lattia ja kylläisyys** (punainen lattia oli editorin piirtovika; nyt 194 / 0,43 vs havainne
+205 / 0,38 = ok), **02 punaisen kirkkaus ja varjo-osuus** (paikka oli eri; nyt ok). Osan 2 rivi "kujan lattia näkyy ajoittain
+punaisena" kumoutuu: ei pelin eikä mallin vika. Voimassa (VS): 02 lattia tummempi (177 vs 200) ja kylläisempi; 03 lattia
+tummempi (124 vs 193); 04 sali vaaleampi (233 vs 176), kylläisempi ja punaiset kirkkaampia; 05 lattia hieman tummempi (188 vs
+204) ja kylläisempi; 01 punaiset kirkkaampia ja varjoa vähemmän (7 vs 36 %).
+
+![01 uusinta](kaappaukset/havainne-mittaus-20261025/01-vierekkain-uusinta.jpg)
+![02 uusinta](kaappaukset/havainne-mittaus-20261025/02-vierekkain-uusinta.jpg)
+![05 uusinta](kaappaukset/havainne-mittaus-20261025/05-vierekkain-uusinta.jpg)
+
+**03 havainteen etäisyydeltä (03b, PT 11.3x):** keisari 11 m pohjoisempana (6,43, −179,7), jolloin porttimuurit ovat havainteen
+tapaan ~13 m:n päässä. Taihedian ei silti mahdu kuvaan kuten havainteessa: terassi ja halli jatkuvat kuvan yläreunan yli, koska
+havainteessa terassin juuri on ~28 m:n päässä ja pelissä todellisessa paikassaan (~42 m 03b:stä). Havainne | 03 | 03b ilman tekstiä:
+
+![03b](kaappaukset/havainne-mittaus-20261025/03b-etaisyys-kolmikko.jpg)
+
 ## 1. MITTAKAAVA (korjattu 25.10. klo 11.1x, PT 10.4x): korkeus 1,0 ja kujien leveys erikseen
 
 Ensimmäinen ehdotus (1,25) mitattiin vain leveydestä, ja osa kuvista oli otettu väärästä paikasta (editorin 05 oli
@@ -82,7 +144,7 @@ V4_lattia piirtyy lajilla 10: VS/PK); kolmikoissa se ei liity mittakaavaan.
 
 | löydös | kohdat | vastuu |
 |---|---|---|
-| Kujan lattia näkyy ajoittain tasaisen punaisena (punainen pinta samalla korkeudella kuin Lattia, z-taistelu): 01447dbed, 0d60380af ja a28be3c7e punainen, d2f94a515 kivi; samassa ajossa kerroin 1,25 näytti kiven | 01 | LR (taustan/pohjan pinta) + VS (Lattia) |
+| ~~Kujan lattia näkyy ajoittain tasaisen punaisena~~ KUMOTTU 11.11: editorin ensimmäisen piirron vika (osa 0), ei pelissä. (punainen pinta samalla korkeudella kuin Lattia, z-taistelu): 01447dbed, 0d60380af ja a28be3c7e punainen, d2f94a515 kivi; samassa ajossa kerroin 1,25 näytti kiven | 01 | LR (taustan/pohjan pinta) + VS (Lattia) |
 | Räystään alapinta tasaisen sinivihreä laatta (havainteessa maalatut parrut ja konsolit); hajonta 8–16 vs havainne 18–42 | 01, 04, 07 | LR (malli) + VS (alapinnan sävytys) |
 | Kattotiilien päät isoina keltaisina puolikiekkoina räystään reunassa (havainteessa pienet pyöreät päätytiilet); myös PK:n kuva `proto-3d/lokit/lautaspoyta-04-pari-20261025/lp-lahestyy3.png` | 01 (ja lähikujat) | LR (malli) |
 | Lattia tummempi kuin havainteessa 02:ssa (146 vs 200) ja 03:ssa (125 vs 193), sali 04 vaaleampi (233 vs 176); 05 ja 06 ok (07:n lattialuku ei ole vertailukelpoinen yleiskuvassa) | 02, 03, 04 | VS (varjostin, valo) |
