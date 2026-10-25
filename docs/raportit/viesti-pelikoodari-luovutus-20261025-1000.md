@@ -51,3 +51,11 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
 - 11.0x PT PALAUTTI parin 04e: (1) rikkokuvan kamera 3,1 m räystään alla rikkoo Raamatun 2.177:n (drone aina ylhäällä, ainoa kulma 810) → jos peli laskee kameran, pelivika: korjaa ja kuvaa uudestaan 810:llä;
   (2) sirpaleet oikean kokoisiksi (lautanen ø ~25 cm), ei keltaisia ääriviivoja eikä puhki palanutta valkoista; (3) harmaa lattia: onko poikkikujan pala/leivonta (PK) vai lattian laji (VS, laji 10)? → 1 rivi PT:lle;
   (4) räystäs peittää puolet kuvasta → tarkista 810-asento. Mittakaavalista kuitattu, odota kerrointa S.
+- 11.1x pari 04f PT:lle: proto-3d/lokit/lautaspoyta-04f-pari-20261025/ (ajo esikatselu-20261025-1059, haara pelikoodari/lautaspoyta-yksi e34e0fbe6).
+  (1) KORJATTU e34e0fbe6: kujan suun lähennys (muurikujassa && nosto → LahennysMin, nosto pois) laukesi räystäslaatasta (ala 3,0 m) →
+  kamera 3,1 m räystään alla. Nyt peittäjä räystäs (DroneNosto.RaystasPeite: ala ≥ PorttiMinAla) → ei lähennystä, nosto yli. Rikki 4,7 m / 21°.
+  (2) sirpaleet: SirpaleSkaalat paisutti ≥ 2× → huonekalun kokoinen esine (ehjä ≥ 1 m) todellisessa koossa (lautasen palat 14–27 cm).
+  Keltaiset reunat ovat Codexin tekstuurissa lautanen-basecolor (oranssit raidat sirpaleatlaksessa) → Codex/LR.
+  (3) harmaa lattia: ei laji eikä pala; harmaa kun kamera ≥ ~7 m (04c 8,3 / 04e 7,2 / 04f 8,2), laatat kun ≤ 6,9 m (04a, 04d, 04f-rikki);
+  kaikki Lattia-varjostimen pinnat (lattia, portaat, rappaus) samalla, katot (Maailma) ennallaan → Lattia-varjostin (VS).
+  Huom. 04f:ssä rikko ehti ennen jäädytyskomentoa → kuva lp-lahestyy-jaady = rikkohetki 0,12 s.
