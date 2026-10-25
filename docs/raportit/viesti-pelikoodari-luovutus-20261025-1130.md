@@ -55,3 +55,10 @@ Tee räystäskamerahaaran päälle (sama kamera).
   levennys omistajan vastauksen jälkeen.
 - Muurikujat ja kujaportit reitillä: jo junassa 210 (075821f22, 75359c119, d32426118; fe0fdee7a, 48bb1dd70) – PT:lle kerrottu.
 - Codex-pyyntö lautasen basecolorista postissa 179fc34a8 → toteutui task976:na (v4).
+
+## LISÄYS 11.3x: ajon 8991e7626 tulos (esikatselu-20261025-1122)
+
+- EI RIITÄ: 40 s:ssa piilossa 85 ruutua (17 + 42 + 26), kamerahyppyjä 1, kamera yhä 17 m / 74° portin jälkeen (kuva kp0-09). Ylle-ensin ei
+  laskenut korkeutta → ylle-haku ei ilmeisesti löydä alle 8 m:n kohtaa (este 2–3 m keisarin takana, huippu 5,4–7,6) tai nosto tulee muualta;
+  tarkista kameraväli-rivit t 9–12 ja 14–16. Alku −249,4, 340 ei siirtänyt lähtöä (Puyi silti −744,5 → palatsi alku napsahtaa samaan solmuun);
+  ensimmäiset 17 ruutua ovat lähdön artefakti. Seuraavaksi kohdan 1 vaihtoehdot (a)–(c) ja kokeile myös todellista kameraetäisyyttä ennakossa.
