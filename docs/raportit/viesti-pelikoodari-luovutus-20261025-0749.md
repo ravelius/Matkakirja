@@ -57,3 +57,13 @@
   d2f94a515 osoittaa siihen). PT:lle ja JU:lle ilmoitettu; JU vie molemmat PT:n kuittauksella.
 - Korttireunat: `proto-3d/lokit/esikatselu-20261025-0744/puut-jalkeen-c.png` (rajaus `nurmi-v47/kuvat/puut-v6-latvukset-rajaus.png`):
   latvukset tummat ja tiheät, vasemmassa ryhmässä muutama vaalea pystyjuova; arvio VS:lle (PT:lle kerrottu). Ennen-kuvat samaan kansioon.
+
+## Jono luovutuksen jälkeen (PT 25.10. ~08.0x)
+
+1. **Kaukopuut kristalleista puiksi** (PT: lahipuut-v6 kuitattu, NS ja JU jatkavat): yläreunan kaukopuut (Jingshanin rinne, muurin takana)
+   ovat vaaleanvihreitä särmikkäitä monitahokkaita. Kaukopuille lähipuiden lehvästön sävy ja pehmeä ääriviiva (esim. VS:n
+   korttilehvästö puut-962964/kortit.py tai kuvapohjainen puu). Kuvapari samasta kulmasta (−220, 545, testikamera "14 14 24 50",
+   ks. esikatselu-20261025-0744/puut-*-c.png) ennen/jälkeen PT:lle. Kaukopuiden koodi: JuoksuSokkeloMaailma (KaukopuutPaalla, puuData,
+   JUOKSU_KORTTI), d7d85b5d5 (rungot).
+2. **GC e9b3a9875** (pelikoodari/gc-juoksu): editoriajo ja PT-rivi tämän jälkeen.
+- PT:n kysymykseen vastattu: maakolmiot ovat taustassa (tausta-v47), eivät lähipuissa, joten lahipuut-v5 ei palauttaisi niitä.
