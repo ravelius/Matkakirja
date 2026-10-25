@@ -74,3 +74,7 @@ Tee räystäskamerahaaran päälle (sama kamera).
 - PT 11.3x: palatsin kerroin 1,0 → mittakaavalistaa ei toteuteta; kujat 02 ja 05 (kuja-40) levennetään: LR lähettää muurilinjat,
   joiden mukaan päivitän pohjan, reitin ja esteet (omien kolmen tilauksen jälkeen).
 - Siivous 11.4x: 15 omaa viittaamatonta esikatselukansiota pois proto-3d/lokit:sta (~430 Mt; symlinkit jätetty).
+- 12.0x PT: räystäs → (a): LR antaa kujaporttien (−794, −820) katoille katto-solmun ja ilmoittaa minulle → sitten 0/0-ajo
+  (sk-kujaportti-harja.txt). Aukio 03: PT halusi kompromissin (katse ~9–10°, loivennus vasta porttimuurien ohi) → f8d48dc6e +
+  6f536fcbd, kolmikko esikatselu-20261025-1203/aukio03-kolmikko-kompromissi.jpg PT:lle 12.1x (juoksuvauhdissa 810 ≈ 11°, kompromissi
+  ≈ 7,5°). UUSI: Taihemenin katto ei häivy (270 piiloa, kamera 32 m) – kysytty PT:ltä samaan LR-pyyntöön.
