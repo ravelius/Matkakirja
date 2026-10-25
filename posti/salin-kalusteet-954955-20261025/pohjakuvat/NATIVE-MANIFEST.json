@@ -1,0 +1,38 @@
+[
+  {
+    "taskNumber": 956,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/native/salin-penkki-attempt001.png",
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/delivery/salin-penkki.png",
+    "sha256": "f6775634b74bc9c473f07191a9a30a5e5329d4984a49fd377e4122f8d3fd4fad",
+    "bytes": 1675926,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "unchangedNativePNG": true,
+    "modelTargetDimensionsMeters": [
+      1.6,
+      0.45,
+      0.5
+    ]
+  },
+  {
+    "taskNumber": 957,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/native/salin-kaappi-attempt001.png",
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/delivery/salin-kaappi.png",
+    "sha256": "46f0bb37d831ff5e5093f3deff3f417bdc601ed6ae1a35921d4c061f2ed67158",
+    "bytes": 2020656,
+    "dimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "unchangedNativePNG": true,
+    "modelTargetDimensionsMeters": [
+      0.9,
+      0.45,
+      1.2
+    ]
+  }
+]

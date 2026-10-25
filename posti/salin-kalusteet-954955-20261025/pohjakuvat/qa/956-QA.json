@@ -1,0 +1,61 @@
+{
+  "taskNumber": 956,
+  "at": "2026-10-25T00:31:11.810576+00:00",
+  "producerQAPassed": true,
+  "fullImageVisuallyReviewed": true,
+  "technical": {
+    "taskNumber": 956,
+    "nativeDimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "unchangedPNGBytes": true,
+    "noAlphaChannel": true,
+    "cornerRGBRange": [
+      [
+        148,
+        146,
+        147
+      ],
+      [
+        151,
+        151,
+        151
+      ]
+    ],
+    "cornerMaximumChannelSpread": 3,
+    "targetModelDimensionsMeters": [
+      1.6,
+      0.45,
+      0.5
+    ],
+    "metricScaleVerifiedFromImage": false
+  },
+  "visualChecks": {
+    "wholeObjectWithinFrame": true,
+    "threeQuarterView": true,
+    "realisticDarkReddishBrownWood": true,
+    "grayNeutralBackground": true,
+    "noRoomFloorOrOtherObjects": true,
+    "noGroundCastShadow": true,
+    "noTextLabelsWatermarks": true,
+    "originalPNGUnmodified": true,
+    "backlessFlatSeat": true,
+    "fourStraightLegConstruction": true,
+    "carvedFrontApronAndEndPanel": true,
+    "noCushionsOrEuropeanCurves": true
+  },
+  "limitations": [
+    "Physical dimensions are modeling targets, not measurable guarantees from a single generated view.",
+    "Fine details occluded or small in the original hall reference are reconstructed from the written specification; exact unseen geometry is not verified.",
+    "Natural self-shading remains within carved relief; there is no room, floor or environmental cast shadow.",
+    "The far rear leg is partially occluded by the apron in this three-quarter view; the four-leg construction is specified explicitly for modeling."
+  ],
+  "referenceMatchScope": "wood hue, silhouette and carved panel vocabulary",
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "modelProduced": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

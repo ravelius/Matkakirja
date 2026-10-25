@@ -1,0 +1,32 @@
+[
+  {
+    "role": "image-order",
+    "path": "posti/fable-codex-kuvat-salin-kalusteet-pohjakuvat-20261025.md",
+    "commit": "ea8f94ed609ef2a3b0a7d8f10998d2ca2bb1c79b",
+    "blob": "c4de685ba0b8134f64baabe8d0c15c0237b8ece0",
+    "sha256": "b217ba40aad79df1e1aa66afb9bb90a93f5bbabfb8709988b70f81ba6abec760",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/sources/image-order.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "ea8f94ed609ef2a3b0a7d8f10998d2ca2bb1c79b"
+  },
+  {
+    "role": "tripo-request",
+    "path": "posti/salin-kalusteet-954955-20261025/codex-salin-kalusteet-aloitus-ja-pohjakuvat.md",
+    "commit": "7e23269c3d839f7b0b6f2d26052657c69e066e12",
+    "blob": "90a6916af9ebcb85d66a66304ef6592f5b1f4383",
+    "sha256": "cc6b6c0e759e1907740512fb17378f469caa3dedac2c0b21fe0aeaa01b37beaa",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/sources/tripo-request.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "ea8f94ed609ef2a3b0a7d8f10998d2ca2bb1c79b"
+  },
+  {
+    "role": "original-order",
+    "path": "posti/lavastaja-codex-salin-penkit-kaapit-20261025.md",
+    "commit": "1a8148cb1fc87fa342cfb4da8a96bd5a7b3a0b51",
+    "blob": "ad3ddced28560d24028e512b26dc31bfb67deaba",
+    "sha256": "2440480cda963c3721e7beeecf6681d145dcb6514dde662eb4c7ac9bcbea42cf",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/sources/original-order.md",
+    "readInFull": true,
+    "unchangedAtMailboxHead": "ea8f94ed609ef2a3b0a7d8f10998d2ca2bb1c79b"
+  }
+]

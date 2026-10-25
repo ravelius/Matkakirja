@@ -1,0 +1,33 @@
+[
+  {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/references/havainne-810-04-sali.png",
+    "originalPath": "/Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/identtisyys-erot/b11-20261025/havainne-810-04-sali.png",
+    "sha256": "945468d51595728848eed8622a7d5eba02ee40147db3ceedc920cba2ca7bdf0b",
+    "role": "Approved hall target: furniture appearance only, not the room",
+    "personallyViewed": true
+  },
+  {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/references/bench-detail.png",
+    "sha256": "e7c119807eba3fc815b7d8763f0c627d35671ea288f7f63dd2cc9b1a9c0331ae",
+    "cropBox": [
+      90,
+      450,
+      280,
+      705
+    ],
+    "role": "Unretouched detail crop from the hall, some structure occluded; written specification defines hidden structure",
+    "personallyViewed": true
+  },
+  {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-kalusteet-pohjakuvat-956957-20261025/references/cabinet-detail.png",
+    "sha256": "e6d00b4601b6798a3c12fd7cb687378bd24018b870ce465b750ac0f7b5ee1b74",
+    "cropBox": [
+      196,
+      285,
+      282,
+      408
+    ],
+    "role": "Unretouched detail crop from the hall, some structure occluded; written specification defines hidden structure",
+    "personallyViewed": true
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "taskNumber": 957,
+  "nativeDimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "unchangedPNGBytes": true,
+  "noAlphaChannel": true,
+  "cornerRGBRange": [
+    [
+      123,
+      121,
+      122
+    ],
+    [
+      127,
+      127,
+      127
+    ]
+  ],
+  "cornerMaximumChannelSpread": 4,
+  "targetModelDimensionsMeters": [
+    0.9,
+    0.45,
+    1.2
+  ],
+  "metricScaleVerifiedFromImage": false
+}
