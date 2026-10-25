@@ -59,3 +59,8 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
   (3) harmaa lattia: ei laji eikä pala; harmaa kun kamera ≥ ~7 m (04c 8,3 / 04e 7,2 / 04f 8,2), laatat kun ≤ 6,9 m (04a, 04d, 04f-rikki);
   kaikki Lattia-varjostimen pinnat (lattia, portaat, rappaus) samalla, katot (Maailma) ennallaan → Lattia-varjostin (VS).
   Huom. 04f:ssä rikko ehti ennen jäädytyskomentoa → kuva lp-lahestyy-jaady = rikkohetki 0,12 s.
+- 11.2x PT 11.1x: 04f hyväksytty suunnaksi (kamera + sirpaleet), EI vielä omistajalle. ODOTTAA: (a) VS korjaa harmaan lattian (PT ilmoitti VS:lle)
+  → kuvaa lähestymiskuva uudelleen (sk-lautaspoyta-04f.txt, ilman jäädytyskohtaa); (b) Codex: postitettu 179fc34a8
+  posti/pelikoodari-codex-lautaspoyta948-reunat-20261025.md (basecolor-atlaksen oranssit saarireunat pois + valkoinen ~sRGB 235–240)
+  → LR pakkaa aarteet799-v4 → PK kytkee (Aarteet799Kansio) ja kuvaa. Mittakaava: vain mahdollinen kujien levennys omistajan vastauksen jälkeen.
+  Muu jono tyhjä → PT:lle "JONO TYHJÄ".
