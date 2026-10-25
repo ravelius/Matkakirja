@@ -21,7 +21,8 @@ Myöhemmin PK teki lahipuut-v6:n (palatsipuiden lehvästö) ja tausta-v47:n (run
 Kokosin oman nurmikorjaukseni nimellä tausta-v47 kansioon `_valmiit/juoksupeli-kk-tausta-peking-v47-vienti-20261025`, jonka PK oli
 jo luonut 07.44 → PK:n paketin tiedostot ylikirjoittuivat (nyt minun 43e1228cef22; PK:n oli 455b763e82cc). Ämpäri ja runko ennallaan;
 PK:n lähde `_tyo/pelikoodari/nurmi-v47/`. Palautus PK/JU. Osoitinkomentoni muoto-210 daeb1df4b (TaustaKansio v47) on tarpeeton: ei junaan.
-Opetus: tarkista ennen `mkdir -p _valmiit/...`, ettei kansio ole jo olemassa (myös toisen roolin).
+OPPI (PT 25.10.): ennen kirjoitusta _valmiit-kansioon katso `ls`:llä, ettei kansiota ole jo olemassa (myös toisen roolin), ja käytä
+aina uutta versionumeroa (tarkista myös muiden roolien _tyo-kansiot ja ämpäri). JU palauttaa PK:n kansion ämpäristä.
 
 ## Diagnoosit (hyödyllisiä)
 
