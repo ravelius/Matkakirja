@@ -24,10 +24,11 @@ otetussa parissa. Kuvaparit: `proto-3d/_tyo/linnanrakentaja/identtisyys-erot/b11
 | 06 Meridiaaniportti | U-pihan eteläpää 16,4, −474, −2,03° | U-piha, kolme suoraa aukkoa, kaksikerroksiset paviljongit siivillä, valkoiset kaiteet siipien päällä, harmaa kivisokkeli | portin seinä ja kolme aukkoa, aukoissa ovilehdet 60° aukon edessä; siivet ja paviljongit kuvan ulkopuolella (todellinen U-piha 190 m leveä) | ovilehdet aukkojen edessä | Lavastaja | **korjattu rakennukset-v36** (lehdet tunnelin seinien suuntaisesti 88°) |
 | 06 | | siivet ja paviljongit kuvassa | todellisessa leveydessä kuvan ulkopuolella | mitta | – | ei muuteta (mitat) |
 | 07 yleiskuva | kamera 25, −820, 380 m, alas 27°, kenttä 45° | vallihauta, punainen ulkomuuri ja kulmatornit, kultakatot, paljon puita pihoilla, Jingshanin kukkula takana, sillat ja vesi edessä | vallihauta, ulkomuuri, kulmatornit ja kattojen määrä vastaavat; pihat paljaan harmaat; Jingshan tasainen viheralue | puut pihoilla (pelissä puut.json-instanssit vain lähellä) | PK/VS (puiden instanssit kauas) | PK/VS |
-| 07 | | Jingshan noin 45 m korkea kukkula paviljonkeineen | ulkorenkaassa tasainen maa | todellinen maasto puuttuu | Lavastaja + Karttaseppä (maaston korkeus) | ehdotus erilliseksi eräksi, PT päättää |
+| 07 | | Jingshan noin 45 m korkea kukkula paviljonkeineen | ulkorenkaassa tasainen maa | todellinen maasto puuttui | Lavastaja | **korjattu rakennukset-v37 (u-jingshan) + ulkorengas-v3**: kukkula 45,7 m, viisi huippua ja paviljonkia, puustoiset rinteet. Mitat ovat kirjallisuuden likiarvoja (ei korkeusmallia; ETOPO1 1′ liian karkea), Wanchun-paviljongin paikka OSM:stä |
 | 07 | | kirkas vesi ja vihreät rannat | vesi ja maa tasavärejä (editori) | materiaali ja valo | VS | VS |
 ## Korjattu tässä erässä (Lavastaja)
 
+- rakennukset-v37 + ulkorengas-v3 (07): Jingshanin kukkula todellisessa koossa; mitat kirjallisuuden likiarvoja. Paketit aa5ec43267f3 ja 3da49cdb4260, proto 0b465e7c5.
 - rakennukset-v36 (06): Meridiaaniportin tunnelien ovilehdet seinien suuntaisiksi; paketti `juoksupeli-kielletty-rakennukset-v36-vienti-20261025`, SHA256SUMS 0136afce1d9c, proto 67b6f879e.
 - avoimet-v36…v42 (04): salin sisustus, pylväät, seinät ja kalusteet havainteen mukaan (v42 julki).
 
@@ -42,4 +43,3 @@ otetussa parissa. Kuvaparit: `proto-3d/_tyo/linnanrakentaja/identtisyys-erot/b11
 - PK: kameran 810 rajaus muurikatteen näkymiseen 02:ssa ja 05:ssä (muuria ei madalleta), 05:n kuvauspaikka kujaportilla.
 - Omistaja: 03:n sommitelma todellisissa mitoissa (aamulla PT:n kautta).
 - PK/VS: 07:n puut pihoilla kauas (puut.json-instanssit), vesi ja maa.
-- PT: Jingshanin kukkula (todellinen maasto puuttuu ulkorenkaasta), erillinen erä.
