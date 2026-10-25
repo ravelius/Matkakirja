@@ -54,3 +54,9 @@ reitti-katot.json. Palatsin kerroin pysyy 1,0 (mittakaavalistaa ei toteuteta).
 - Siivous 11.4x: 15 omaa viittaamatonta esikatselukansiota pois (~430 Mt).
 - Havainto: juoksuvauhdissa drone on 12–13 m keisarin takana (nimellinen 7,1 m; DroneViive) → todelliset katseet loivempia
   (810 ≈ 11°). Ei tilausta; mainittu PT:lle.
+
+## LISÄYS 12.3x: v40-ajon tulos (esikatselu-20261025-1225, c42db4c9e ilman 50fc50623:a)
+
+0 kamerahyppyä; piilot: alun artefakti 25 (−742,8 kujaportti-2), −794 21 (este 239,4, 6,7 – kujaportin katon reuna sivussa),
+−820 25 (t-portti-424, häipyi vasta 1,2 m sisällä), Taihemen 28 (sama syy); kamera enintään ~15 m (Taihemen). Nämä kolme
+porttikohtaa ovat juuri se, mitä 50fc50623 korjaa → aja sk-katto-v39.txt 50fc50623:lla seuraavaksi.
