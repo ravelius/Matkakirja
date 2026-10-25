@@ -79,3 +79,6 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
 - JONOSSA räystäskameran jälkeen (PT 11.5x): aukio 03 – kamera loivenee aukiolle tultaessa niin, että Taihedian terasseineen näkyy kokonaan
   (havainne 03), keisari samankokoisena alaosassa; mittarit 0/0; kolmikko havainne | nyt | uusi. Lähde: main 94b2da26b
   docs/raportit/kaappaukset/havainne-mittaus-20261025/03b-etaisyys-kolmikko.jpg (NUI).
+- 11.5x PT: harmaa lattia EI VS:n vika vaan editorin ensimmäisen Render()-kutsun vika (kuten NUI:n 01; PK:n korkeusteoria väärä). Lautaspöydän pari
+  uudelleen VASTA kun (1) räystäskameran pehmennys valmis ja (2) aarteet799-v4 ämpärissä (JU ilmoittaa), NUI:n lämmitysruudulla
+  (proto natiivi-ui/havainne-skaala-210 86c645bd1). Järjestys: räystäskamera → aukio 03 → lautaspöytä (v4:n jälkeen).
