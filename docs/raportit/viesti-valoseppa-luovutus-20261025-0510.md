@@ -25,7 +25,8 @@ PK: local_4b3286ad-3ff4-4ca0-9d8f-feab0680bef6. Päiväkirja `/Users/Shared/Clau
 
 ## 2. AVOIN: RUUTUAIKA half → float ISOLLA iPADILLA (PT 05.0x, ehto: yli 20 ms:n ruutu = vika)
 
-- Odottaa NS:n asennusta (~05.20, runko 029bb8aa1). Kysyin NS:ltä LT:n mittaustavan polun (23.10. "J 17,13 ms sisäpihalla"),
+- **05.1x: LT (local_88cfd2dd-bbf9-406c-8f11-4f9740508e26) mittaa** samalla tavalla kuin 23.10. (sisäpiha, punamuurikuja, aukio), tulos PT:lle.
+  Odottaa NS:n asennusta (~05.20, runko 029bb8aa1). Kysyin NS:ltä LT:n mittaustavan polun (23.10. "J 17,13 ms sisäpihalla"),
   jotta luku on vertailukelpoinen; vastaus tulee NS:ltä. Mittaa sisäpiha + kujat; ilmoita PT:lle J p50/p95 ja yli 20 ms -ruudut.
 - Jos punainen: ensimmäinen epäilty on Lattian float-rekisteripaine (half → float) – kevennys vain Lattiaan (esim. half takaisin
   vain värilaskuun ilman booleja/vertailuja), varmistus aina `metal-tarkistus.sh`:lla ennen simua.
