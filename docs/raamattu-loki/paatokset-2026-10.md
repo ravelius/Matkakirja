@@ -2533,3 +2533,12 @@ Omistajan pyyntö 24.10.2026 klo 23.52 (KK:n välitys, sanatarkasti): "pyydä co
 ## MUISTOKUPLA 4: LAUTASPINO TUMMALLE PUUPOYDALLE (25.10.2026 klo 00.31)
 
 Omistajan päätös 25.10.2026 klo 00.30 (kortti KK:ssa, sanatarkasti; omistaja pyysi kysymyksen itse 00.2x): "Tehdäänkö lautaspinosta tumma puupöytä ja kolme matalaa pinoa?" → "Pöytä ja kolme pinoa (Suositus)". Vaihtoehto "Sovin Codexin kanssa" ei valittu. Toteutus Codexin 21.10. tarkennuksen mukaan: tumma Qing-henkinen puupöytä (suorat jalat, 75–80 cm, esikuva dpm.org.cn 230697), päällä kolme 15–20 cm:n sinivalkoista pinoa, kokonaiskorkeus noin 1 m; muistokupla 4 saa uuden kuvan samasta pöydästä. Codexin lautaspöytä-HOLD purettu postilla 7cfe234d6 (ei enää estä #806:ta).
+
+## PT:N YÖPÄÄTÖKSET 25.10.2026 klo 02.10–03.50 (omistaja nukkuu, oletuksilla) (25.10.2026 klo 03.50)
+
+Codex #947 alkulennon nimiteksti hyväksytty omistajan puolesta (valtuutus 13.10., Raamattu 7.15; posti 4c9837b09), NUI kytki 36faff8f6. PK: 03B kallistus 7° (PT:n oma 4° ehto purettu, 9.5).
+Muurikujissa kamera 5,0 m / 8,3 m taakse / ~18° jousisiirtymällä, jotta muurikate näkyy kuten havainteessa 02 ja 05 (omistajan identtiseksi koskee kameraa); 01 ja 03 ennallaan. Lautaspöytä palatsin
+lähtökujalle juhlasalin eteen (omistaja 21.10. 10.18: valmiit palat yksi kerrallaan, funktio ja paikka). Salit havainteen 810/04 mukaan: matot, sermit, maljakot, lyhdyt, kasvit ja arkut pois
+(matot/sermit oli PT:n linja, ei omistajan), pylväät räystään korkeuteen 2,9 m levenevillä jalustoilla, palkisto ohut kehä; Codex-kaappi #955 käyttöön, penkki #954 hylätty (ristikko revennyt) ja
+uusittu umpinaisilla paneeleilla (#958–959). PK:n uusi simu/iPad-toimintatesti kielletty (9.2, 9.3, 9.11). Vakava vika: juoksupelin lattiavarjostin ei kääntynyt Metalissa (as_type cast from int to
+half), korjaus VS 2d67df7dc + testi EiIntTernaariaMetalille.
