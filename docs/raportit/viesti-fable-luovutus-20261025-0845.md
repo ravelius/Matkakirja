@@ -11,7 +11,7 @@ Omistaja MATKALLA (KK 08.27): ei toimia häneltä; kone roolien käytössä (7.4
 - Salit: matot ja sermit pois, tummat penkit ja kaapit (24.10.). Musiikki: nykyiset kappaleet riittävät (21.10. 18.02).
 
 ## 1. TEHTY 06.40–08.45 (kuitattu junaan 210)
-- NS runko d2f94a515 VIHREÄ (Metal 440/0), iPadissa; LT reitit vihreät. Alkulennon kamerahyppy = LT:n skriptin artefakti (korjattu 4b34ee0d6).
+- NS runko d2f94a515 VIHREÄ (Metal 440/0), iPadissa; LT reitit vihreät. Alkulennon kamerahyppy = LT:n skriptin artefakti (korjattu 60e92b7a7).
 - PK: ensiruutu korjattu, venynyt-ruutu-loki e597ffa6d (syy: 5/7 GC), nurmi-v47 928ebc35b (tausta-v47 455b763e82cc + lahipuut-v6 2da9c503ac6e, ämpärissä),
   kaukopuut-kortit b96bb39c9 (kuitattu NS:lle, ei vielä rungossa).
 - VS: B12 59d2153ab (terassi ei pala, isot laatat, vaaleat saumat) kuitattu NS:lle. Lehvästö v1 viety PK:n v6:ssa.
