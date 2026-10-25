@@ -1,0 +1,62 @@
+[
+  {
+    "taskNumber": 965,
+    "relatedTripoTask": 962,
+    "slug": "idantuija",
+    "species": "Platycladus orientalis",
+    "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8174cf74-5c22-4248-93f3-7620fa0bdb18.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/native/idantuija-attempt001.png",
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/delivery/idantuija.png",
+    "sha256": "ef94b150129204d0c639346b776c8e1ac97e12d000f6c5cecd70fc828c17e5ec",
+    "bytes": 2038768,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "hasAlphaChannel": false,
+    "background": "neutral gray, intentionally opaque source photograph",
+    "unchangedNativePNG": true,
+    "newGenerationCalls": 1
+  },
+  {
+    "taskNumber": 966,
+    "relatedTripoTask": 963,
+    "slug": "kiinankataja",
+    "species": "Juniperus chinensis",
+    "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-7ad5a926-5ba8-4ee3-be0a-162bcaa0143d.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/native/kiinankataja-attempt001.png",
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/delivery/kiinankataja.png",
+    "sha256": "4168fe46bee57066f939eeb5e4f5bbd4b2854b84fd3a5c463848d0d3cc741c5f",
+    "bytes": 2234450,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "hasAlphaChannel": false,
+    "background": "neutral gray, intentionally opaque source photograph",
+    "unchangedNativePNG": true,
+    "newGenerationCalls": 1
+  },
+  {
+    "taskNumber": 967,
+    "relatedTripoTask": 964,
+    "slug": "japaninsofora",
+    "species": "Styphnolobium japonicum",
+    "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-77b26852-5729-4673-ad38-f6f82888ec9b.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/native/japaninsofora-attempt001.png",
+    "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/delivery/japaninsofora.png",
+    "sha256": "18545380822ea2cab854a5b57c2f59a8841c2a7c235d50a99d538bad15a6deca",
+    "bytes": 2839357,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "hasAlphaChannel": false,
+    "background": "neutral gray, intentionally opaque source photograph",
+    "unchangedNativePNG": true,
+    "newGenerationCalls": 1
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "posti/juoksupeli-havainnekuvat-810-20261021/01-lahtokuja.png",
+    "commit": "e4e51cbf2d729c34ff534b24435ace32ff25091b",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/references/01-lahtokuja.png",
+    "sha256": "7a4a14b1dc6b457778155efb5a7e4db5571621b95886ad6ad8c9fe124104b955",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "role": "composition and foliage appearance reference only",
+    "viewedAtFullNativeResolution": true
+  },
+  {
+    "path": "posti/juoksupeli-havainnekuvat-810-20261021/07-yleiskuva-ylhaalta.png",
+    "commit": "e4e51cbf2d729c34ff534b24435ace32ff25091b",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/pohjakuvat-965967/references/07-yleiskuva-ylhaalta.png",
+    "sha256": "72d3fbb405ced7dacd5186eeabb2b439421c89f52f5521380d75bc4b471e180f",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "role": "composition and foliage appearance reference only",
+    "viewedAtFullNativeResolution": true
+  }
+]

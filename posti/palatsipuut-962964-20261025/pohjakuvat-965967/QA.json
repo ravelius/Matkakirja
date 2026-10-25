@@ -1,0 +1,68 @@
+{
+  "reviewedAt": "2026-10-25T04:18:58.133360+00:00",
+  "scope": "2D source images only; no 3D model or runtime approval",
+  "items": [
+    {
+      "taskNumber": 965,
+      "verdict": "PASS_AS_SOURCE_WITH_MODEL_DIMENSIONS_UNVERIFIED",
+      "producerQAPassed": true,
+      "viewedAtFullNativeResolution": true,
+      "visualObservations": [
+        "Kokonainen yksittäinen puu, latva ja tyvi näkyvät, neutraali harmaa tausta.",
+        "Kiertynyt kapea vanha runko, kapea ylöspäin kapeneva latvus ja selviä aukkoja oksien välissä.",
+        "Ei juurakkopattia, pintajuuria tai maalaattaa; runko päättyy kapeana alhaalla.",
+        "Latvuksen leveys ja alaoksien tarkka korkeus ovat kuvassa vain suhteellisia; vastaanottajan on sovitettava mallin 12 m / 4–5 m / 3–4 m mitat."
+      ],
+      "noTextOrPeopleOrBuildings": true,
+      "noRootBallSurfaceRootsOrGroundSlab": true,
+      "noPostGenerationImageEdits": true,
+      "metricDimensionsVerified": false,
+      "modelAlphaVerified": false,
+      "modelGeometryVerified": false,
+      "recipientAccepted": false,
+      "nativeSha256": "ef94b150129204d0c639346b776c8e1ac97e12d000f6c5cecd70fc828c17e5ec"
+    },
+    {
+      "taskNumber": 966,
+      "verdict": "PASS_AS_SOURCE_WITH_MODEL_DIMENSIONS_UNVERIFIED",
+      "producerQAPassed": true,
+      "viewedAtFullNativeResolution": true,
+      "visualObservations": [
+        "Kokonainen yksittäinen puu edestä, epäsäännöllinen pystysuuntainen latvus, näkyviä oksavälejä.",
+        "Kapea runko näkyy alas asti ilman leveää pintajuuristoa; ei sivuobjekteja.",
+        "Latvus on paikoitellen tavoitesiluettia leveämpi; Tripo-mallin leveys on tarkistettava ja sovitettava 4 m:iin, korkeus 10 m ja alaoksat 2,5–3 m."
+      ],
+      "noTextOrPeopleOrBuildings": true,
+      "noRootBallSurfaceRootsOrGroundSlab": true,
+      "noPostGenerationImageEdits": true,
+      "metricDimensionsVerified": false,
+      "modelAlphaVerified": false,
+      "modelGeometryVerified": false,
+      "recipientAccepted": false,
+      "nativeSha256": "4168fe46bee57066f939eeb5e4f5bbd4b2854b84fd3a5c463848d0d3cc741c5f"
+    },
+    {
+      "taskNumber": 967,
+      "verdict": "PASS_AS_SOURCE_WITH_MODEL_DIMENSIONS_UNVERIFIED",
+      "producerQAPassed": true,
+      "viewedAtFullNativeResolution": true,
+      "visualObservations": [
+        "Kokonainen yksittäinen lehtipuu, korkea pyöreähkö kupulatvus ja avoimia oksavälejä.",
+        "Selvästi kapea runko latvukseen nähden, ei tammimaista paksua tyveä eikä juurilevitystä.",
+        "Lehvästössä erottuu pieniä lehdyköitä ja luonnollista vihreän vaihtelua.",
+        "Mallin 14 m korkeus, 9 m latvusleveys, 0,7 m runko ja 4–5 m alaoksakorkeus ovat vastaanottajan mittatarkistuksia."
+      ],
+      "noTextOrPeopleOrBuildings": true,
+      "noRootBallSurfaceRootsOrGroundSlab": true,
+      "noPostGenerationImageEdits": true,
+      "metricDimensionsVerified": false,
+      "modelAlphaVerified": false,
+      "modelGeometryVerified": false,
+      "recipientAccepted": false,
+      "nativeSha256": "18545380822ea2cab854a5b57c2f59a8841c2a7c235d50a99d538bad15a6deca"
+    }
+  ],
+  "allSourceImagesPassed": true,
+  "recipientApprovalPending": true,
+  "latestAlphaInstruction": "PT clarification c176f4f9: opaque model crowns allowed for this batch; alpha requirement must explicitly remain OPEN, not fulfilled. Receiver solution later. All trunk bases maximum0.9m."
+}

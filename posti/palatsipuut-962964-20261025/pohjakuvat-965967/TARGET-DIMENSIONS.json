@@ -1,0 +1,61 @@
+{
+  "scope": "3D model targets from order, not measurements validated from PNG",
+  "targets": [
+    {
+      "sourceTask": 965,
+      "modelTask": 962,
+      "species": "Platycladus orientalis",
+      "heightM": 12,
+      "trunkDiameterM": 0.6,
+      "maximumBaseDiameterM": 0.9,
+      "lowestBranchHeightM": [
+        3,
+        4
+      ],
+      "crownWidthM": [
+        4,
+        5
+      ],
+      "shape": "narrow cone or column"
+    },
+    {
+      "sourceTask": 966,
+      "modelTask": 963,
+      "species": "Juniperus chinensis",
+      "heightM": 10,
+      "trunkDiameterM": 0.5,
+      "lowestBranchHeightM": [
+        2.5,
+        3
+      ],
+      "crownWidthM": 4,
+      "shape": "irregular relatively narrow column"
+    },
+    {
+      "sourceTask": 967,
+      "modelTask": 964,
+      "species": "Styphnolobium japonicum",
+      "heightM": 14,
+      "trunkDiameterM": 0.7,
+      "lowestBranchHeightM": [
+        4,
+        5
+      ],
+      "crownWidthM": 9,
+      "shape": "high rounded dome, no root flare"
+    }
+  ],
+  "all": {
+    "noSurfaceRoots": true,
+    "yUp": true,
+    "pivot": "trunk base at ground level",
+    "maxTriangles": 2000,
+    "materials": 1,
+    "textureSizePx": 1024,
+    "latestRoutingAllowsOpaqueCrown": true,
+    "actualModelAlphaMustBeDeclared": true,
+    "maximumBaseDiameterM": 0.9,
+    "modelAlphaRequirementStatus": "OPEN",
+    "receiverAlphaMethodLater": true
+  }
+}
