@@ -2542,3 +2542,11 @@ lähtökujalle juhlasalin eteen (omistaja 21.10. 10.18: valmiit palat yksi kerra
 (matot/sermit oli PT:n linja, ei omistajan), pylväät räystään korkeuteen 2,9 m levenevillä jalustoilla, palkisto ohut kehä; Codex-kaappi #955 käyttöön, penkki #954 hylätty (ristikko revennyt) ja
 uusittu umpinaisilla paneeleilla (#958–959). PK:n uusi simu/iPad-toimintatesti kielletty (9.2, 9.3, 9.11). Vakava vika: juoksupelin lattiavarjostin ei kääntynyt Metalissa (as_type cast from int to
 half), korjaus VS 2d67df7dc + testi EiIntTernaariaMetalille.
+
+## JUOKSUPELI: JINGSHAN JA RAKENNUKSET-V36 (PT 25.10. 03.19 talviaikaa, yö oletuksella) (25.10.2026 klo 03.19)
+
+Havainne 810/06–07 kohdittain (LR 5e98ff8dc). Rakennukset-v36 kuitattu (Meridiaaniportin tunnelien ovilehdet seinien suuntaisiksi, aukot auki). Jingshanin kukkula (~45 m, paviljongit) puuttuu ulkorenkaasta: tehdään todellisilla mitoilla (7.15 maasto paras tapa ilman kysymystä), Lavastaja. 07:n pihojen puut kauas Pelikoodarille. 06:n siivet kuvan ulkopuolella todellisen U-pihan vuoksi: ei muuteta (mitat oikeat, omistaja 20.10. 07.30).
+
+## METAL-VARIANTTITARKISTUS RUNKOON (PT 25.10. 04.5x) (25.10.2026 klo 05.05)
+
+Juoksupelin lattiavarjostin näytti pihan taivaana iPadilla: as_type<half>(int) ja Applen GPU-kääntäjän kaatuminen kaskadivarjo+clip-varianteissa näkyivät vasta ajossa, eikä NS:n laitekäännös nähnyt niitä (kolme runkoa vihreänä viallisena). VS: juurikorjaus kaikki half → float juoksupelin 7 varjostimessa (grafiikka-211 2923706a4, testi EiHalfJuoksupelissa), sim A9/B5 puhtaat. Periaate 10: oppi Raamattuun 9.1 METAL-VARIANTTITARKISTUS; työkalu tyokalut/metal-tarkistus.sh NS:n runkotarkistukseen. Ruutuaika half → float mitataan M1-iPadilla (uusi tekniikka, 9.11 a).
