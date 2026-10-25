@@ -56,3 +56,8 @@ LR:n muurilinjat → _tyo/pelikoodari/kk-pohja-v1d-pk3/pohja_pk3.py (vaihda LR- 
 `PALATSI_SISAAN=… TAUSTA=<tausta-kansio> RAKENNUKSET=<symlinkkikansio ilman u-jingshan-tormays.glb:tä (tyhjä)> ESTO_ULOS=…
 bash Peli-testit/kaanna.sh PalatsiEstoLeivonta`, paketti _valmiit/juoksupeli-palatsi-esto-vNN-pohja-pkN-vienti-<pvm> (SHA256SUMS
 kuten pk2), PT kuittaa → JU vie. Verkkokorjaus 99b26bec3 kannattaa pitää (poistaa 31 kaksoissolmua muualta palatsista).
+
+## LISÄYS 13.4x (JU)
+
+rakennukset-v43 ämpärissä 13.45 (PT kuittasi), LR:n osoitin **d9fd89ba0** (NS:llä). Kohta 2: tee testihaara räystäskameran
+(4b4864d28) päälle ottamalla d9fd89ba0:n osoitinrivi (yhdistämiscommit → `git diff d9fd89ba0^1 d9fd89ba0`), aja sk-raystas-0-0.txt ja kokoa kolmikko.
