@@ -2584,3 +2584,28 @@ havainnekuvan kaltaiselta."). Peruste (PT): NUI:n mittaus (main 94b2da26b) - kor
 havainteessa 02 ~7,7 m ja 05 ~10,7 m. Toteutus: LR siirtää muureja, PK pohja/reitti/esteet. Faktakorjauksia ei tehty: kuja 02 on jo lähteen leveydellä; salin 04 pylväät 0,60 m jäävät (v48 0,28 m
 hylätty, sali on keksitty talo ja 0,60 vastaa havainnetta 0,56). Halli 03 ei mahdu kuvaan todellisessa paikassaan; ratkaisu on 2.177:n voimassa oleva 'avarassa loivenee pehmeästi' (PK, aukiokamera).
 OPPI (PT, periaate 6): tilasin faktakorjauksen mittaluvusta tarkistamatta, mitä se mittasi (0,92 m sisälsi jalustan); mittaluvun kohde tarkistetaan ennen tilausta.
+
+## SALIN OMA AURINKO ILMAN KATON VARJOA (PT 25.10.2026 klo 13.1x) (25.10.2026 klo 13.04)
+
+Valosepän mittaus 249525784: räystään ja naapurin väliin jää vain 25–38° kaista, ja juovia on enintään 3 % lattiasta (havainne 04 noin 25 %). PT päätti: salin oma aurinko 45°/70° ilman katon varjoa vain salin sisällä; ulkoaurinko ja muut valot pitävät katon varjon (P25 kumottu tältä osin). Peruste: katto on pelissä häivytetty, ja omistaja pyysi 11.34: "Saako pylväisiin ja seiniin samanlaisen valon kuin havainnekuvissa?". Valon suhde 1,55/1,45 + suunnattu ympäristö 0,5 vakioiksi. Ehto: 05:n lattia vähintään 193, 04 kohti 176, ei mustia.
+
+## PYLVÄÄT JA SEINÄT VALMIIKSI VALAISTUINA (omistaja 25.10.2026 klo 13.10, KK:n kautta) (25.10.2026 klo 13.12)
+
+Omistaja sanatarkasti: 1) "Kannattaisiko pylväät ja seinät piirtää valmiiksi ja tehdä niistä versiot eri ilman suuntiin. Näin saataisiin pyöreys ja seinään struktuuri poltettuna kiinni. Vai onko tämä
+tarkoituskin? Ja samalla saisi värin suoraan oikein koska väri tulee enne kaikkia siitä kun pinnassa on valo varjo vaihtelua jolloin riittää pienempi saturaatio ja värit näyttävät silti herkullisilta"
+2) "Ainoa varjo niitä pitää piirtää on maahan pelaajasta sekä rakennuksista koska ne muuttuvat mutta pylväät ja seinät voisi piirtää valmiiksi muotoinen ja valoineen". KK vastasi kyllä (VS + LR).
+LINJAUS: juoksupelin pylväät ja seinät tehdään tekotavalla 4 (3d-ja-kuvat.md): muoto, pinnan struktuuri ja valo-varjo leivotaan kiinteällä auringolla kunkin pinnan ilmansuunnan mukaan; pelin aikana
+reaaliaikaiset varjot vain pelaajasta ja rakennuksista maahan. Kylläisyys alas (taide.md 4), väri tulee valon vaihtelusta. VS: leivontaputki ja JuoksuValo (leivotuille pinnoille ei
+hemisfääriambienttia eikä kääreLambertia); LR: mallien UV2 ja staattiset osat. Pilotti: salin 04 pylväät ja kujan 02 seinä, kolmikko havainne | nyt | leivottu PT:lle; LT:n reittiajo ennen junaa.
+
+## PINNAT CODEXILTA ILMAN VALOA, VALO POLTETAAN BLENDERISSÄ (omistaja 25.10.2026 klo 13.12, KK:n kautta) (25.10.2026 klo 13.12)
+
+Omistaja sanatarkasti: "Codexilla voisi periaatteessa teettää kaikki pinnat valmiina moduuleina neljälle ilman suunnalle. Mitä olet mieltä?" KK vastasi: Codex piirtää pinnat ilman valoa (väri, struktuuri, maalaus), LR polttaa valon Blenderissä pelin omalla auringolla neljään ilmansuuntaan, jolloin valon suunta vastaa pelin varjoja, versiot ovat yhtenäisiä ja valotus on yhdessä paikassa. VS antaa auringon suunnan ja valotuksen sekä tekee JuoksuValon leivotuille pinnoille. Pilotti nykyisillä pinnoilla ennen Codex-tilausta; este (muisti, kapasiteetti) → KYSYMYS KK:lle ennen tilausta.
+
+## OPPI: KUVAN TARKISTUS ULKOASUA VASTEN, EI VAIN MITTOJA (PT 25.10.2026 klo 13.3x) (25.10.2026 klo 13.27)
+
+PT lähetti kujat 02 ja 05 KK:lle, koska leveys täsmäsi metreissä. KK palautti ne omistajan sanalla "Kuja näyttää havainnekuvan kaltaiselta": 02 oli vino suppilo (keisari muurin vieressä, väliosa hyppää 4,8 m:iin), ja 05 näytti aukiolta (sivumuurit eivät yhdy porttipylväisiin, aukko 3,2 vs 4,2 m). Rikottu periaate 1: jokainen kuvan kohta verrataan omistajan sanoihin, ei vain tilattuun lukuun. Käytäntö: kujien ja näkymien tarkistus havainne-editorin päällekkäiskuvalla (muurien kuvapaikat, symmetria, keisarin paikka), ja mittaluku on vain yksi kohta.
+
+## JUNA 210 JULKAISTAAN NYT ILMAN TESTEJÄ (omistaja 25.10.2026 klo 13.56, KK:n kautta) (25.10.2026 klo 13.58)
+
+Omistaja sanatarkasti: "Julkaise juna nyt ilman testejä ja siirrä keskeneräiset seuraavaan junaan." Kumoaa 24.10. klo 18.45 linjan "juna 210 = kaikki". Tulkinta (14.10. ja juna 189): ei laitetestejä, simukierrosta eikä muistiajoa; käännöksen automaattiset tarkistukset ajetaan. Runko: be6cf0048 (räystäskamera 4b4864d28, kujien levennys omistajan 11.32-päätöksen mukaan, LR:n katoserä v50/v42) + LR rakennukset-v43 (kujaporttien ovet, PT-kuittaus). Junaan 211: VS:n valo ja leivonta, kujien 02/05 uudet leveydet (havainteen mittausvirhe korjattu, kysymys omistajalle tulossa), PK kuja40-pk3, aukion viillot, lautaspöydän pari, Jingshan, salit.
