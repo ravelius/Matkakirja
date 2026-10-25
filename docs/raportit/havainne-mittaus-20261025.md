@@ -80,6 +80,30 @@ havainteessa terassin juuri on ~28 m:n päässä ja pelissä todellisessa paikas
 
 ## 1. MITTAKAAVA (korjattu 25.10. klo 11.1x, PT 10.4x): korkeus 1,0 ja kujien leveys erikseen
 
+> **KORJAUS 25.10. klo 13.1x (PT 13.0x, Lavastajan laskelma): kujien 02 ja 05 havainneleveydet tässä osassa olivat virheellisiä**
+> (7,71 ja 10,70 m), ja niiden pohjalta omistaja päätti 11.32 levennyksen (02 → ~7,7 m, 05 → ~10,7 m). Virheen syyt:
+> 1. havainnekuvaan sovellettiin pelin kapean kujan nostettua kameraa (5,0 m / 17,9°), vaikka havainteet on piirretty pelikameran
+>    perusasennosta (3,8 m / 14,2°): leveydet ja korkeudet +17 %;
+> 2. mittauskohta oli muurin juuri sivukäytävien (02) ja portaiden (05) takana, ei kulkuväylä;
+> 3. 05:n muurit jatkettiin kuvan ulkopuolelle (x −0,12 / 1,10).
+>
+> Oikeat luvut (perusasento, `tyokalut/havainne/leveys.py`, keisarin rivi 0,838):
+>
+> | kohta | piirre | havainne | peli ennen (b2ff2ff99) | peli jälkeen (719cefaaa) |
+> |---|---|---:|---:|---:|
+> | 02 | kulkuväylä reunakivien välissä (0,18 / 0,81) | 4,7 m | – | – |
+> | 02 | muurista muuriin (sokkelin juuret 0,04 / 0,92) | 6,6 m | 4,1 m | 7,3 m |
+> | 02 | muuri (räystään alle) | 3,5 m | 4,4 m | – |
+> | 05 | portaiden reunat (0,03 / 0,97); muurit kuvan ulkopuolella → alaraja | ≥ 7,0 m | 4,6 m | 6,1 m |
+> | 05 | muuri | 3,6 m | 4,2 m | – |
+>
+> Johtopäätös: 02 on levennyksen jälkeen ~0,7 m havainnetta leveämpi (muurista muuriin), 05 lähellä havainteen alarajaa. Keisarin
+> korkeus perusasennolla: havainne/peli 1,15 (01) ja 0,89 (02) → keskimäärin ~1,0 (aiempi jako 1,1:llä poistuu). Korkeuskerroin 1,0
+> pysyy. Leveyskerroin 02 ≈ 1,6, 05 ≥ 1,5 (aiemmin 1,73 ja 2,12). Mittari korjattu: `tyokalut/havainne/leveys.py` (havainne aina
+> perusasennolla, mittauskohta pakollinen, kuvan ulkopuolinen piste hylätään) + `leveys_testi.py`, proto `natiivi-ui/havainne-skaala-210`
+> 00e40f06a. Alla olevan taulukon 02- ja 05-rivit ovat kumottuja.
+
+
 Ensimmäinen ehdotus (1,25) mitattiin vain leveydestä, ja osa kuvista oli otettu väärästä paikasta (editorin 05 oli
 Meridiaaniportin tunnelissa eikä kujaportilla; 01, 02 ja 06 poikkesivat Lavastajan havainnekameran paikoista). Nyt paikat ovat
 Lavastajan raportin mukaiset (`docs/raportit/havainne-810-kohdittain-20261025.md`, Lavastajan checkout) ja mitat on laskettu
