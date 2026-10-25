@@ -35,3 +35,7 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
 - 10.0x: JU antoi ESIKATSELU NYT ajolle 04c (L2 vapautui 10.00; esikatselu.sh käyttää linjan 1 lukkoa ja odottaa sitä itse, NUI L1:llä).
   Ajoa EI käynnistetty ennen nollausta (nollaus katkaisi edellisen taustaajon 09.04). Aloita heti ja kerro JU:lle.
 - 10.0x KORJAUS: JU perui vuoron (VS ehti L2:lle). Odota JU:n seuraavaa ESIKATSELU NYT -viestiä ennen 04c:tä.
+- 10.11 JONOSSA lautaspöydän jälkeen (PT 10.1x, Raamattu 2.177 PALATSIN MITTAKAAVA): palatsi skaalataan yhdellä kertoimella (NUI hakee).
+  Valmistele lista: mitkä PK:n osat seuraavat kerrointa (pk2-reitit, rasteri, kameran etäisyydet, taustan leivonta/atlas, esteiden paikat)
+  ja miten skaalataan kerralla. EI toteutusta ennen kerrointa.
+- 10.1x LR tiedoksi: räystäät/tiilenpäät korjattu avoimet-v46 df879721a (muoto-210 2890d422f).
