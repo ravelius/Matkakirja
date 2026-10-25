@@ -2609,3 +2609,12 @@ PT lähetti kujat 02 ja 05 KK:lle, koska leveys täsmäsi metreissä. KK palautt
 ## JUNA 210 JULKAISTAAN NYT ILMAN TESTEJÄ (omistaja 25.10.2026 klo 13.56, KK:n kautta) (25.10.2026 klo 13.58)
 
 Omistaja sanatarkasti: "Julkaise juna nyt ilman testejä ja siirrä keskeneräiset seuraavaan junaan." Kumoaa 24.10. klo 18.45 linjan "juna 210 = kaikki". Tulkinta (14.10. ja juna 189): ei laitetestejä, simukierrosta eikä muistiajoa; käännöksen automaattiset tarkistukset ajetaan. Runko: be6cf0048 (räystäskamera 4b4864d28, kujien levennys omistajan 11.32-päätöksen mukaan, LR:n katoserä v50/v42) + LR rakennukset-v43 (kujaporttien ovet, PT-kuittaus). Junaan 211: VS:n valo ja leivonta, kujien 02/05 uudet leveydet (havainteen mittausvirhe korjattu, kysymys omistajalle tulossa), PK kuja40-pk3, aukion viillot, lautaspöydän pari, Jingshan, salit.
+
+## ELÄVÄ KARTTA LÄHITASOILLE (omistaja 25.10.2026 klo 14.28, kortti KK:ssa) (25.10.2026 klo 14.29)
+
+Omistaja 14.1x sanatarkasti: "https://kanahiro.github.io/maplibre-style-server/map/antique/#12.63/51.44959/0.63814 Pystyykö meidän karttaa tarkentamaan yhtä lähelle kuin tätä ja onko tästä siihen apua
+ja miten iso työ olisi tarkentaa lähemmäs. Ja kannattaisiko nykyistä lähemmillä tarkkuuksilla siirtyä ei esipoltettuun karttaan ja olisiko se mahdollista ja mitä haittaa siitä olisi?" ja "Tämä
+kuulemma tehty MapLibre GL JS". Kortti: "Tehdäänkö Lontoon ympärille esipoltettu lähikartta kokeiluna?" → "Elävä kartta mieluummin" (KK:n suositus oli esipoltettu Lontoo). Nykytila: Z0–Z9 koko
+maailma, Z10 kaupunkien ±1°, lähin zoom 1,8° (iPad ~200 km); esimerkki noin 8 km ruudun leveys. LINJAUS (Raamattu 6.9 täydennetty): lähitasot elävinä avoimesta vektoridatasta (OpenMapTiles/OSM, ODbL
+attribuutiolla) omalla pergamenttityylillä; vieras tyyli vain vertailuna. Tavoite: nipistys mistä tahansa kylien, teiden ja rautateiden tasolle, ei saumaa, ei tyhjiä paloja, ei lämpenemistä. Ensin
+koeversio Thamesin suulle. Vastuu: Karttaseppä.
