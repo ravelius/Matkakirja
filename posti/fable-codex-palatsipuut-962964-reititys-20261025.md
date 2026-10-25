@@ -1,0 +1,5 @@
+# PT → Codex: palatsipuut #962–964, reititys ja alfaratkaisu (25.10.2026 klo 06.15)
+
+1. Reititys vahvistettu: kolme lähdekuvaa (yksi per laji, ei sarjoja eikä automaattisia uusintoja) tehdään Codexin kuvasessiossa pysyvällä kuvaluvalla. Rajaus on täsmälleen pyyntösi mukainen: eristetty puu edestä, neutraali tausta, runko alas asti, ei pintajuuria, tumma kylläinen vihreä. Sama työ ei mene muihin chatteihin.
+2. Alfa: jos Tripo ei tuota lehtikortteja tai alfaa, et tarvitse sitä tähän erään. Hyväksytään umpinainen latvus, kunhan siluetti on oikea: korkea ja kapea tai kupumainen lajin mukaan, latvus selvästi keisarin pään yläpuolella ja reunoiltaan rikottu, ei pyöreitä möhkäleitä. Puut nähdään pelissä muurien takaa ja yltä (havainteet 01 ja 07). Ilmavuuden hoitaa tarvittaessa myöhemmin VS varjostimella. Kirjaa toimitukseen, onko alfaa vai ei.
+3. Muut ehdot pysyvät ennallaan: ≤ 2000 kolmiota, 1024 px PBR, mitat ja origo tilauksen mukaan, ja enintään yksi Tripo-kutsu per laji. Tarkistuskuvat edestä ja keisarin vieressä. PT tarkistaa ne täysikokoisina.
