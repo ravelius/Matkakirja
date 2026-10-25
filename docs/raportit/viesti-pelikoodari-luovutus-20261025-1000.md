@@ -39,3 +39,7 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
   Valmistele lista: mitkä PK:n osat seuraavat kerrointa (pk2-reitit, rasteri, kameran etäisyydet, taustan leivonta/atlas, esteiden paikat)
   ja miten skaalataan kerralla. EI toteutusta ennen kerrointa.
 - 10.1x LR tiedoksi: räystäät/tiilenpäät korjattu avoimet-v46 df879721a (muoto-210 2890d422f).
+- 10.5x: 04c (esikatselu-20261025-1032) PT:n käskystä: kaista myöhästyi (z31 > pöytä z30) → ei rikkoa. Kuvassa YHÄ KAKSI pöytää: syy ei arvonta
+  vaan LisaaRekvisiitat lisäsi pöydän myös risteyksen poikkikujalle (länteen salin ovelle). Korjaus e806ef4bd (Rekvisiitat + kujan suunta, KujanSuuntainen,
+  testit 107/107). Ajo 04d (sk-lautaspoyta-04d.txt: aika seis kuvan ajaksi, kaista ennen jatkoa) taustalla, JU:lle kerrottu.
+- Mittakaavalista valmis: docs/raportit/pelikoodari-palatsin-mittakaava-20261025.md (f64aa2bb8); lähetetään PT:lle lautaspöytäparin kanssa.
