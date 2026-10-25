@@ -1,0 +1,46 @@
+{
+  "rejected_v1": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-salin-penkit-kaapit-20261025/delivery-v1/mallit/salin-penkki.glb",
+    "weld_tolerance_m": 1e-06,
+    "components": [
+      {
+        "triangles": 2380,
+        "min_xyz_m": [
+          -0.800000011920929,
+          0.0,
+          -0.22499999403953552
+        ],
+        "max_xyz_m": [
+          0.800000011920929,
+          0.5,
+          0.22499999403953552
+        ]
+      }
+    ],
+    "boundary_edges": 9,
+    "nonmanifold_edges": 19,
+    "note": "Connectivity is supporting geometry evidence, not proof of appearance or source identity. Open edges may be intentional."
+  },
+  "replacement_v2": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-salin-penkit-kaapit-20261025/correction-959/work/sized-v1/salin-penkki/salin-penkki.glb",
+    "weld_tolerance_m": 1e-06,
+    "components": [
+      {
+        "triangles": 2560,
+        "min_xyz_m": [
+          -0.800000011920929,
+          0.0,
+          -0.22499999403953552
+        ],
+        "max_xyz_m": [
+          0.800000011920929,
+          0.5,
+          0.22499999403953552
+        ]
+      }
+    ],
+    "boundary_edges": 3,
+    "nonmanifold_edges": 4,
+    "note": "Connectivity is supporting geometry evidence, not proof of appearance or source identity. Open edges may be intentional."
+  }
+}
