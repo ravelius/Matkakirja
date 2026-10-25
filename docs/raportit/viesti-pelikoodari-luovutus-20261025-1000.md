@@ -1,0 +1,34 @@
+# Pelikoodarin luovutus 25.10.2026 klo 10.00 (Postivahdin kova raja 35 %)
+
+Edellinen: viesti-pelikoodari-luovutus-20261025-0901.md (lisäykset 09.45 asti). Tausta-v48, hyppysuoja ja GC kuitattu junaan 210;
+varjokoe peruttu (Valoseppä); salikamera ja sisäkattoehdotus HYLÄTTY (PT 10.2x), haarat pelikoodari/sali-kamera 05ae0f8c6 ja
+pelikoodari/sali-sisakatto-ehdotus 95f3ac452 talteen, ei junaan.
+
+## KESKEN: lautaspöydän pelikuva omistajalle (PT 10.3x, palautettu 11.1x)
+
+PT:n tilaus: kuvapari kupla #949 | pelin pöytä länsiväylällä keisarin lähestyessä + yksi kuva rikkoutumisesta, rungosta a28be3c7e,
+iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontakti, sirpaleet. Pari PT:lle → PT vie omistajalle.
+
+- Kupla #949: /Users/Shared/Claude/wt/fable-posti-0945/posti/codex-fable-muistokupla4-lautaspoyta-20261025/04-lautaspino.jpg
+- Ensimmäinen pari (04b, a28be3c7e): proto-3d/lokit/lautaspoyta-04-pari-20261025/ (pari-kupla949-lahestyy.jpg, -rikki.jpg;
+  koostaja scratchpadissa: PIL, korkeus 1200, kupla vasemmalle, 16 px musta väli). PT 11.1x HYLKÄSI:
+  1) pöydällä "yksi korkea pino" → kolme matalaa (syy: pöytä on pitkittäin, takaa matalalta pinot osuvat päällekkäin; 04a lp-6
+     ylempää näyttää kolme pinoa), 2) toinen pöytä seinän vieressä = tupla, 3) kuva pelin kameralla (810), ei matalalta.
+- Tupla: lautaspoyta on RikkoMallit-arvonnassa → arvottu väistöeste lähtökujan kääntöön. Korjaus proto-haarassa
+  pelikoodari/lautaspoyta-yksi dda5bdcc6 (a28be3c7e + ArvoVaistot pois-lista, sokkelossa JuoksuV4Reitti.RekvisiittaIdt; testi
+  JuoksuArvontaTestit läpi). Worktree /Users/Shared/Claude/wt/proto-pelikoodari-sali-kamera on nyt tällä haaralla.
+- Kamera: kuvat OVAT pelikamerasta (JuoksupeliV4Kamera); länsiväylällä seinän räystään alla kamera laskee ~2,4 m:iin. Siksi 04c:
+  lähestymiskuva itäväylältä (z26, kamera ylempänä), sitten `ui juoksupeli kaista` → törmäys länsiväylän pöytään (v0 z30).
+- SEURAAVA ASKEL: JU:lta pyydetty ESIKATSELU NYT (jonossa 10.00, molemmat linjat varattuina):
+  `zsh /Users/Shared/Claude/wt/proto-pelikoodari-sali-kamera/tyokalut/esikatselu.sh pelikoodari/lautaspoyta-yksi
+  /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/lautaspoyta-04/skenaariot/sk-lautaspoyta-04c.txt` (taustalle, ~3 min).
+  Tarkista: lokissa "rikkoi kulttuuriaarteen lautaspoyta … v0 z30", vain YKSI pöytä kuvassa, kolme pinoa erottuvat, kamera ylhäällä.
+  Jos z26-kuvassa kamera on matala, ota kuvat ilman väylänvaihtoa ennen pöytää (04a lp-6:n hetki s ≈ 29, kamera 6,5 m / 34°).
+  Kokoa parit samoin, vie PT:lle 3 rivillä (polut), vapauta linja JU:lle.
+- Skenaariot: proto-3d/_tyo/pelikoodari/lautaspoyta-04/skenaariot/sk-lautaspoyta-04{a,b,c}.txt. Ajot: esikatselu-20261025-0948 (04a),
+  -0953 (04b). Reitti: `palatsi alku -147.5,420` + `maali -139,480`, siemen 11 → etelään, itään, käännös vasen z20 lähtökujalle
+  pohjoiseen (x ≈ −138,5), pöytä z30. Botti ei vaihda väylää kujan solmuissa (KaantoIkkunassa) → kaista käsin.
+- NUI:lle ja LR:lle välitetty PT:n huomio (räystäiden vihreä alapinta, tiilenpäät kiekkoina lähikujalla) 10.00.
+
+## Avoimet
+- Tuplapöytäkorjaus dda5bdcc6 tarvitsee junaan pääsyn PT:n kuittauksella (pari ensin).
