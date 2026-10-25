@@ -32,3 +32,5 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
 
 ## Avoimet
 - Tuplapöytäkorjaus dda5bdcc6 tarvitsee junaan pääsyn PT:n kuittauksella (pari ensin).
+- 10.0x: JU antoi ESIKATSELU NYT ajolle 04c (L2 vapautui 10.00; esikatselu.sh käyttää linjan 1 lukkoa ja odottaa sitä itse, NUI L1:llä).
+  Ajoa EI käynnistetty ennen nollausta (nollaus katkaisi edellisen taustaajon 09.04). Aloita heti ja kerro JU:lle.
