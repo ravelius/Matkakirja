@@ -73,3 +73,13 @@ Kaikki pohjautuvat natiiviseppa/juna-210:een (kaukopuut d2f94a515, muut 9d548981
 
 - Kuvaparit PT:lle ennen junaa: tausta-v48 (+ varjokokeen tulos) ja salikamera (kun ajo on vihreä).
 - Worktreet: edellisten lisäksi proto-pelikoodari-{kaukopuut-kortit, tausta-v48, sali-kamera}.
+
+## Lisäys 25.10. 09.45 (nollauksen jälkeen)
+
+- Varjokoe peruttu (PT 09.2x: 03A:n elävä varjo Valosepälle). Tausta-v48, hyppysuoja ja GC kuitattu junaan 210; v48 ämpärissä 09.05.
+- Salikamera: syy = salin häivytetty katto on peittokartassa massaa (ala −0,1) → porttitunneli esti salikameran. Korjaukset
+  pelikoodari/sali-kamera 05ae0f8c6 (salikamera ennen porttitunnelia avoimessa huoneessa, kulma räystäästä, katse ≥ 22° alas;
+  QA `valo katot` raportoi salin tilan). PT 09.5x: 093208 ei kelpaa (keisari liian iso) → EI junaan.
+- Ehdotus omistajalle: pelikoodari/sali-sisakatto-ehdotus 95f3ac452 (salin katto jää sisäkatoksi salikameran ajan = poikkeus
+  omistajan kattosääntöön 21.10. 10.43; kamera 3 m, niin kauas kuin sali sallii, seinävara 3 m). Pari PT:lle 09.44:
+  havainne-editori-20261025-061905/04 → -094217/04. Odottaa PT:n KK-kysymystä omistajalle; junaan ei mitään ennen päätöstä.
