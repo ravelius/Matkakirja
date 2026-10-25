@@ -48,3 +48,6 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
   (itäväylä, kaista z26). Huomiot: lähestymiskuvassa lattia tasaisen harmaa (ei laattoja; 04c sama, 04d/04a laatat) — selvitettävä, jos PT haluaa;
   rikki: kontakti ja sirpaleet näkyvät, mutta kamera matala 3,1 m / 13° (pelikamera länsiväylän räystään alla) ja sirpaleet näyttävät suurilta
   (SirpaleSkaalat paisuttaa pieniä paloja). 04d (jäädytys ennen kuvaa) zoomasi kameran → hylätty.
+- 11.0x PT PALAUTTI parin 04e: (1) rikkokuvan kamera 3,1 m räystään alla rikkoo Raamatun 2.177:n (drone aina ylhäällä, ainoa kulma 810) → jos peli laskee kameran, pelivika: korjaa ja kuvaa uudestaan 810:llä;
+  (2) sirpaleet oikean kokoisiksi (lautanen ø ~25 cm), ei keltaisia ääriviivoja eikä puhki palanutta valkoista; (3) harmaa lattia: onko poikkikujan pala/leivonta (PK) vai lattian laji (VS, laji 10)? → 1 rivi PT:lle;
+  (4) räystäs peittää puolet kuvasta → tarkista 810-asento. Mittakaavalista kuitattu, odota kerrointa S.
