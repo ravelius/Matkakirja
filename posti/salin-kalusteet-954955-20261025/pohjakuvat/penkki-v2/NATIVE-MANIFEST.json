@@ -1,0 +1,24 @@
+{
+  "taskNumber": 958,
+  "attempt": 1,
+  "status": "completed",
+  "issuedAt": "2026-10-25T00:44:19.387880+00:00",
+  "method": "built-in image_gen",
+  "wholeNewGeneration": true,
+  "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-penkki-v2-958-20261025/prompts/958-attempt001.txt",
+  "referencePaths": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-penkki-v2-958-20261025/references/salin-penkki-v1.png"
+  ],
+  "completedAt": "2026-10-25T00:45:08.845434+00:00",
+  "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-871ce8e0-d55f-40e9-8574-41edb5c45d2f.png",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-penkki-v2-958-20261025/native/salin-penkki-v2-attempt001.png",
+  "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/salin-penkki-v2-958-20261025/delivery/salin-penkki-v2.png",
+  "sha256": "c43f25501ae9e68676c4a8d70782c360fef09399be6a1982c460663c398bb22e",
+  "bytes": 1856647,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "unchangedNativePNG": true
+}

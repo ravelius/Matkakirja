@@ -1,0 +1,39 @@
+{
+  "taskNumber": 958,
+  "at": "2026-10-25T00:45:08.847946+00:00",
+  "producerQAPassed": true,
+  "fullImageViewed": true,
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "nativeMode": "RGB",
+  "nativePNGUnmodified": true,
+  "sha256": "c43f25501ae9e68676c4a8d70782c360fef09399be6a1982c460663c398bb22e",
+  "visualChecks": {
+    "solidContinuousFrontAndEndPanelBacking": true,
+    "shallowReliefOnOpaqueWoodSurface": true,
+    "noLatticeOpenworkOrPerforations": true,
+    "noVisibleDetachedOrHangingFragments": true,
+    "sameLowBacklessBenchSilhouette": true,
+    "fourStraightLegConstruction": true,
+    "sameDarkReddishBrownWood": true,
+    "wholeObjectThreeQuarterFraming": true,
+    "neutralGrayBackground": true,
+    "noRoomFloorOrCastShadow": true,
+    "noTextOrWatermark": true
+  },
+  "limitations": [
+    "Only visible surfaces are judged from this one source photograph; unseen rear-side geometry and final mesh continuity require Tripo/model QA.",
+    "Model target dimensions 1.60 x 0.45 x 0.50 m must be set during model production; a generated photo does not prove metric scale.",
+    "Far rear leg is partly occluded by the front apron, as in the reference."
+  ],
+  "callsIssued": 1,
+  "maxCalls": 1,
+  "automaticRetries": false,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "modelProduced": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
