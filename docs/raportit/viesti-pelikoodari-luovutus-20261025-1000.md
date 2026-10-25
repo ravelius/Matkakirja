@@ -74,3 +74,8 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
   esikatselu-20261025-1110, ruudukot proto-3d/lokit/raystas-kamera-210-20261025/: uusi = keisari näkyy kaikissa, portin jälkeen nousu 17 m / 73° ~1 s;
   vanha = kamera muurin sisällä 2/12 kuvassa. Mittari 20 s: uusi piilossa 18 ruutua + kamerahyppy 1, vanha 0/0 (mittari ei näe muurin sisällä oloa).
   ODOTTAA PT:n päätöstä junaan. Lautaspöydän e34e0fbe6 RaystasPeite korvautuu tällä (lähennys pois kokonaan).
+- 11.4x PT palautti räystäskameran: pehmennä (0 hyppyä, 0 piiloruutua, nousu ennen porttia, harja + vara, 2–3 s). Syy: portin runko Puyin takana
+  uloskäynnin jälkeen → nosto 8 + ylle. Tehty 4cac5fe5f ennakoiva jyrkkeneminen (DroneNosto.Ennakko*); ajo sk-kujaportti-ennakko.txt käynnissä.
+- JONOSSA räystäskameran jälkeen (PT 11.5x): aukio 03 – kamera loivenee aukiolle tultaessa niin, että Taihedian terasseineen näkyy kokonaan
+  (havainne 03), keisari samankokoisena alaosassa; mittarit 0/0; kolmikko havainne | nyt | uusi. Lähde: main 94b2da26b
+  docs/raportit/kaappaukset/havainne-mittaus-20261025/03b-etaisyys-kolmikko.jpg (NUI).
