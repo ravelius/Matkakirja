@@ -19,9 +19,14 @@ Viestiraja: kun SendMessage pysähtyy, mcp__ccd_session_mgmt__send_message sessi
 - RATKAISU epävakauteen: maailma ja pelikamera syntyvät ~35 s peittokartan jälkeen → uusi Esikatselu-komento `odota-maailma <s> <min>`
   (näkyvät piirtäjät ≥ min, vakaa 3 s, ei JUOKSU_HAIVYTYS) + `kuva3d` (ilman UI:ta) + diagnoosirivi "näkyvät N/M piirtäjää".
 - Ajo 1 (05.21, REF=029bb8aa1): OK kaikki 5, oikea maailma ja lattia (proto-3d/lokit/havainne-editori-20261025-052118/).
-- JÄLJELLÄ: ajot 2 ja 3 käynnistetty 05.30 (taustalla) → vertaa kolmen ajon peli.png:t pikseleittäin (sama kohta, sama kuva?);
-  jos samat → PT:lle komento + esimerkkipari 01 (vierekkain.png); PK ja VS ottavat käyttöön. Kohdan 06 paikka (13.3, -445, 0) on arvio,
-  kuvassa eri portti → PK tarkentaa. Laattapalvelimen satunnainen kaatuminen (24.10. 22.54) → editori.sh voisi uusia ajon kerran.
+- TOISTO EI VIELÄ SAMA (ajot 052118 ja 052545 vertailtu; 052948 kesken): keskiero 8–36/255, pikseleitä yli 24 eroa 7–63 % (02 pahin).
+  SYY: botti juoksuttaa keisaria odota-maailman ajan (sijoita → … → jaady), joten jäädytyshetken paikka vaihtelee (kuvapari
+  proto-3d/lokit/havainne-editori-20261025-052545/02 vs -052118/02: sama kuja, keisari eri kohdassa).
+- SEURAAVA ASKEL: editori.sh:n skenaariossa odota-maailman jälkeen uudelleen `ui juoksupeli valo sijoita <paikka>` ja heti
+  `ui juoksupeli valo jaady 1`, sitten 2–3 s (kamera asettuu jousella; tarkista, liikkuuko kamera jäädytettynä) ja kuva3d; tai kokeile
+  `ui juoksupeli botti 0`. Sitten 3 ajoa peräkkäin ja vertailu (python: keskiero < 2, pikselit > 24 < 1 %) → PT:lle komento + 01-pari.
+- Kohdan 06 paikka (13.3, -445, 0) on arvio, kuvassa eri portti → PK tarkentaa. Laattapalvelimen satunnainen kaatuminen (24.10. 22.54)
+  → editori.sh voisi uusia ajon kerran. 04 ei pelikameran näkymä, 07 puuttuu havainnekansiosta.
 
 ## KESKEN 2: nimitekstin 4 kuvaa (PT: vasta havainnenäkymän jälkeen)
 - Ota rungosta 029bb8aa1 (VS:n Metal-korjaus 00d7bc984 mukana, NS vihreä): käännös valmis kansiossa proto-3d/_tyo/nui-alkulento-fontti/jalkeen
