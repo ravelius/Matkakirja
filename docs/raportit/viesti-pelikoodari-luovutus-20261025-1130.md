@@ -62,3 +62,15 @@ Tee räystäskamerahaaran päälle (sama kamera).
   laskenut korkeutta → ylle-haku ei ilmeisesti löydä alle 8 m:n kohtaa (este 2–3 m keisarin takana, huippu 5,4–7,6) tai nosto tulee muualta;
   tarkista kameraväli-rivit t 9–12 ja 14–16. Alku −249,4, 340 ei siirtänyt lähtöä (Puyi silti −744,5 → palatsi alku napsahtaa samaan solmuun);
   ensimmäiset 17 ruutua ovat lähdön artefakti. Seuraavaksi kohdan 1 vaihtoehdot (a)–(c) ja kokeile myös todellista kameraetäisyyttä ennakossa.
+
+## LISÄYS 11.5x (uusi sessio 11.32)
+
+- 8314941bb harjapaikka (peitossa lähemmäs portin harjan ylle matalimmalla nostolla): ajo esikatselu-20261025-1137 → 88 piiloa, 0 hyppyä,
+  yhä 17 m. SYY: reitin kujaporttien (236,7, −794 ja 237,5, −820) katot eivät ole katonhäivytyksessä (`ui juoksupeli valo katot`: ei
+  yhtään kattoa 20 m:n säteellä) ja kynnys + katto = umpipylväs peittokartassa → keisari aidosti piilossa portin alla. PT:lle kysymys
+  11.5x: (a) katto-solmu LR/Lavastajalta vai (b) ei nostoa portin alla. Raportti proto-3d/_tyo/pelikoodari/raystas-210/raportti-20261025-1155.md.
+- AUKIO 03 VALMIS 8e883bee8 (aukiokamera 22°, katse 4° alas, AukioPaino), testit 739/739; kolmikko
+  proto-3d/lokit/esikatselu-20261025-1144/aukio03-kolmikko.jpg PT:lle 11.5x.
+- PT 11.3x: palatsin kerroin 1,0 → mittakaavalistaa ei toteuteta; kujat 02 ja 05 (kuja-40) levennetään: LR lähettää muurilinjat,
+  joiden mukaan päivitän pohjan, reitin ja esteet (omien kolmen tilauksen jälkeen).
+- Siivous 11.4x: 15 omaa viittaamatonta esikatselukansiota pois proto-3d/lokit:sta (~430 Mt; symlinkit jätetty).
