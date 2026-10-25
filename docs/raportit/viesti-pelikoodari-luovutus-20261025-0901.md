@@ -11,7 +11,7 @@ Jäljellä minulle: **salikamera (kesken), tausta-v48 (paketti valmis, PT:n diag
 | Erä | Haara (worktree) | Kärki | Tila |
 |---|---|---|---|
 | Kaukopuut kristalleista puiksi | pelikoodari/kaukopuut-kortit (proto-pelikoodari-kaukopuut-kortit) | b96bb39c9 | VALMIS, PT:lle ilmoitettu 08.5x |
-| Tausta-v48 osoitin | pelikoodari/tausta-v48 (proto-pelikoodari-tausta-v48) | 3d4785f26 | paketti valmis, katso diagnoosi |
+| Tausta-v48 osoitin | pelikoodari/tausta-v48 (proto-pelikoodari-tausta-v48) | 3d4785f26 | ÄMPÄRISSÄ 25.10. 09.05 (JU, PT:n kuittaus; NS:lle kerrottu); diagnoosi ja varjokoe yhä auki |
 | Salikamera + hyppysuoja | pelikoodari/sali-kamera (proto-pelikoodari-sali-kamera) | 3df605934 | hyppysuoja valmis, salikamera KESKEN |
 | GC-varaukset | pelikoodari/gc-juoksu (proto-pelikoodari-gc-juoksu) | e9b3a9875 | editoriajo puhdas, PT-rivi lähettämättä |
 
