@@ -43,3 +43,8 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
   vaan LisaaRekvisiitat lisäsi pöydän myös risteyksen poikkikujalle (länteen salin ovelle). Korjaus e806ef4bd (Rekvisiitat + kujan suunta, KujanSuuntainen,
   testit 107/107). Ajo 04d (sk-lautaspoyta-04d.txt: aika seis kuvan ajaksi, kaista ennen jatkoa) taustalla, JU:lle kerrottu.
 - Mittakaavalista valmis: docs/raportit/pelikoodari-palatsin-mittakaava-20261025.md (f64aa2bb8); lähetetään PT:lle lautaspöytäparin kanssa.
+- 10.5x VALMIS PT:lle: pari 04e proto-3d/lokit/lautaspoyta-04e-pari-20261025/ (pari-kupla949-lahestyy.jpg, -rikki.jpg), ajo esikatselu-20261025-1046,
+  haara pelikoodari/lautaspoyta-yksi e806ef4bd (paikallinen proto-haara). Lähestyy: YKSI pöytä, tumma puu, kolme matalaa pinoa pitkittäin, kamera 7,2 m / 41°
+  (itäväylä, kaista z26). Huomiot: lähestymiskuvassa lattia tasaisen harmaa (ei laattoja; 04c sama, 04d/04a laatat) — selvitettävä, jos PT haluaa;
+  rikki: kontakti ja sirpaleet näkyvät, mutta kamera matala 3,1 m / 13° (pelikamera länsiväylän räystään alla) ja sirpaleet näyttävät suurilta
+  (SirpaleSkaalat paisuttaa pieniä paloja). 04d (jäädytys ennen kuvaa) zoomasi kameran → hylätty.
