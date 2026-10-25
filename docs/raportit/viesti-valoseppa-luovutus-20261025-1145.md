@@ -25,6 +25,12 @@ ikkunan yläreunaan sivuaa räystästä (1,99 + 1,7 · tan 30° = 2,97). Matalam
 epäile lisäksi varjon pehmennystä/biasta (3 × 3 -teltta) tai varjopassin vertex-temppua. Seuraavaksi: salin aurinko 15–20° +
 kattovarjo 1 vs 0 (juovat?), tai kattovarjo vain ulkoauringolle (salin aurinko ilman katon varjoa, katto varjostaa yhä ulkoa) – PT päättää.
 
+**PT:N PÄÄTÖS P25:stä (11.5x): MATALAMPI SALIN AURINKO.** Valo tulee itäikkunoista (avoimet-v44+) räystään alta kuten fysiikassa;
+piilotetun katon varjo PYSYY kaikille valoille (PT-linja: ei varjoa ilman aiheuttajaa, aiheuttaja saa olla piilotettu katto). EI
+poikkeusta "vain ulkoauringolle". Kulma valitaan niin, että ikkunoiden valojuovat osuvat lattiaan havainteen 04 tapaan. Seuraavaksi:
+salin aurinko 8 / 12 / 15 / 18 / 22° (atsimuutti 90, ja 70/110) kattovarjo 1 -tilassa → missä juovat näkyvät lattialla; jos ei millään,
+tarkista varjon pehmennys/bias räystään reunassa (varjon pehmeys teksleinä, JuoksuVarjoPiste). Valittu kulma → ValoKohteet.JuoksuSaliAurinkoKorkeus.
+
 ## 1. TÄNÄÄN (10.58–11.45)
 
 - **avoimet-v44–v46 puuttuivat ämpäristä (404)** → P19/P20/P21:n sali ilman avoimia huoneita (mitättömät 04-kuvat). JU vei v47:n
