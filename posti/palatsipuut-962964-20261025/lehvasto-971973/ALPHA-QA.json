@@ -1,0 +1,252 @@
+{
+  "checkedAt": "2026-10-25T04:35:01.186769+00:00",
+  "scope": "actual exported PNG channels and layout, not model integration",
+  "items": [
+    {
+      "taskNumber": 971,
+      "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-kortit/idantuija-lehvasto-2x2.png",
+      "sha256": "d4960dba9bdecf6a0bdc1471ca9a668ec056c93b80978d69bbb6614d1ae6c9be",
+      "bytes": 1724519,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "realAlphaChannel": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaDistinctValues": 256,
+      "fullyTransparentPixels": 408527,
+      "partialAlphaPixels": 640003,
+      "fullyOpaquePixels": 46,
+      "alphaNonzeroPercentiles": [
+        1.0,
+        1.0,
+        244.0,
+        252.0,
+        253.0
+      ],
+      "edgeMaxAlpha": 1,
+      "centerColumnMaxAlpha": 1,
+      "centerRowMaxAlpha": 3,
+      "quadrants": [
+        {
+          "row": 0,
+          "column": 0,
+          "visiblePixelsAbove127": 116908,
+          "cellBboxAbove127": [
+            36,
+            40,
+            504,
+            499
+          ],
+          "transparentPixels": 96040
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "visiblePixelsAbove127": 108416,
+          "cellBboxAbove127": [
+            33,
+            40,
+            487,
+            510
+          ],
+          "transparentPixels": 105682
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "visiblePixelsAbove127": 112008,
+          "cellBboxAbove127": [
+            33,
+            5,
+            499,
+            472
+          ],
+          "transparentPixels": 102875
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "visiblePixelsAbove127": 112479,
+          "cellBboxAbove127": [
+            21,
+            30,
+            490,
+            481
+          ],
+          "transparentPixels": 103930
+        }
+      ],
+      "maskBakedForVS": false,
+      "alphaThresholdModified": false,
+      "modelAlphaOrVSIntegrationVerified": false,
+      "internalExportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-971973/delivery/idantuija-lehvasto-2x2.png"
+    },
+    {
+      "taskNumber": 972,
+      "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-kortit/kiinankataja-lehvasto-2x2.png",
+      "sha256": "982b70fc5e6af6007ab880f0ff96413c359337987edfda40acd3595b0814d4a3",
+      "bytes": 1847399,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "realAlphaChannel": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaDistinctValues": 256,
+      "fullyTransparentPixels": 392881,
+      "partialAlphaPixels": 655683,
+      "fullyOpaquePixels": 12,
+      "alphaNonzeroPercentiles": [
+        1.0,
+        2.0,
+        247.0,
+        252.0,
+        253.0
+      ],
+      "edgeMaxAlpha": 1,
+      "centerColumnMaxAlpha": 1,
+      "centerRowMaxAlpha": 1,
+      "quadrants": [
+        {
+          "row": 0,
+          "column": 0,
+          "visiblePixelsAbove127": 122396,
+          "cellBboxAbove127": [
+            37,
+            56,
+            507,
+            502
+          ],
+          "transparentPixels": 92971
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "visiblePixelsAbove127": 114943,
+          "cellBboxAbove127": [
+            25,
+            37,
+            485,
+            497
+          ],
+          "transparentPixels": 104376
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "visiblePixelsAbove127": 117967,
+          "cellBboxAbove127": [
+            21,
+            21,
+            498,
+            478
+          ],
+          "transparentPixels": 101065
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "visiblePixelsAbove127": 123557,
+          "cellBboxAbove127": [
+            15,
+            25,
+            495,
+            485
+          ],
+          "transparentPixels": 94469
+        }
+      ],
+      "maskBakedForVS": false,
+      "alphaThresholdModified": false,
+      "modelAlphaOrVSIntegrationVerified": false,
+      "internalExportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-971973/delivery/kiinankataja-lehvasto-2x2.png"
+    },
+    {
+      "taskNumber": 973,
+      "deliveryPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-kortit/japaninsofora-lehvasto-2x2.png",
+      "sha256": "f42b23a109480e37172d67052db3143c514a4700c9a2ba324c4fc7f2522b7b0e",
+      "bytes": 1490948,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "realAlphaChannel": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "alphaDistinctValues": 256,
+      "fullyTransparentPixels": 470962,
+      "partialAlphaPixels": 574149,
+      "fullyOpaquePixels": 3465,
+      "alphaNonzeroPercentiles": [
+        1.0,
+        2.0,
+        250.0,
+        252.0,
+        253.0
+      ],
+      "edgeMaxAlpha": 1,
+      "centerColumnMaxAlpha": 1,
+      "centerRowMaxAlpha": 1,
+      "quadrants": [
+        {
+          "row": 0,
+          "column": 0,
+          "visiblePixelsAbove127": 119971,
+          "cellBboxAbove127": [
+            36,
+            44,
+            493,
+            493
+          ],
+          "transparentPixels": 114762
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "visiblePixelsAbove127": 113747,
+          "cellBboxAbove127": [
+            27,
+            39,
+            490,
+            502
+          ],
+          "transparentPixels": 117055
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "visiblePixelsAbove127": 114867,
+          "cellBboxAbove127": [
+            32,
+            28,
+            496,
+            463
+          ],
+          "transparentPixels": 118702
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "visiblePixelsAbove127": 112876,
+          "cellBboxAbove127": [
+            27,
+            28,
+            486,
+            471
+          ],
+          "transparentPixels": 120443
+        }
+      ],
+      "maskBakedForVS": false,
+      "alphaThresholdModified": false,
+      "modelAlphaOrVSIntegrationVerified": false,
+      "internalExportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-971973/delivery/japaninsofora-lehvasto-2x2.png"
+    }
+  ]
+}

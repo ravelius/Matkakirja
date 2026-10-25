@@ -1,0 +1,50 @@
+[
+  {
+    "taskNumber": 971,
+    "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-863958e7-e552-4eb0-8ce5-a7a99c308b94.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-971973/native/idantuija-lehvasto-attempt001.png",
+    "nativeSha256": "fd702017b6ed50e49fc7027c724dc70c257fa73b0ccfda1e3433d43f95a43401",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "hasAlphaChannel": true,
+    "alphaMin": 0,
+    "alphaMax": 255,
+    "fullyTransparentPixels": 612033,
+    "fullyOpaquePixels": 99
+  },
+  {
+    "taskNumber": 972,
+    "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1f59ddf8-bc1e-4087-a9a6-b7f7ace08409.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-971973/native/kiinankataja-lehvasto-attempt001.png",
+    "nativeSha256": "8401a3377303f0165b3f364071c17c300f48d171366e31cd4e13c83ed80f9e18",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "hasAlphaChannel": true,
+    "alphaMin": 0,
+    "alphaMax": 255,
+    "fullyTransparentPixels": 589362,
+    "fullyOpaquePixels": 35
+  },
+  {
+    "taskNumber": 973,
+    "toolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-202235e7-b687-48e3-b1f2-7f31849002a2.png",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puut-v2-962964-20261025/lehvasto-971973/native/japaninsofora-lehvasto-attempt001.png",
+    "nativeSha256": "6df235104b7c8e123204dfe5ba4eada9280b2255ff8d4ac50d132b18c59ea259",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "hasAlphaChannel": true,
+    "alphaMin": 0,
+    "alphaMax": 255,
+    "fullyTransparentPixels": 704837,
+    "fullyOpaquePixels": 2245
+  }
+]
