@@ -50,3 +50,10 @@
 - d7d85b5d5:n rungot alkulennossa: vahvistus seuraavasta alkulentokuvasta.
 - worktreet jäljellä: proto-pelikoodari-{havainne-210, juoksupeli-kamera-204, kuvaruudut-210, lahikulma-210, lento-wasd, nappainlento-204,
   raketti-video-211, juoksuverkko-211*, juna210-testi*, nurmi-v47, gc-juoksu} (* mergetty, seuraamattomia tiedostoja).
+
+## Lisäys 07.5x (luovutuksen jälkeen)
+
+- Lähipuut-v6 paketti TEHTY: `_valmiit/juoksupeli-kielletty-lahipuut-v6-vienti-20261025` tunniste **2da9c503ac6e** (JU kysyi; NS:n runko
+  d2f94a515 osoittaa siihen). PT:lle ja JU:lle ilmoitettu; JU vie molemmat PT:n kuittauksella.
+- Korttireunat: `proto-3d/lokit/esikatselu-20261025-0744/puut-jalkeen-c.png` (rajaus `nurmi-v47/kuvat/puut-v6-latvukset-rajaus.png`):
+  latvukset tummat ja tiheät, vasemmassa ryhmässä muutama vaalea pystyjuova; arvio VS:lle (PT:lle kerrottu). Ennen-kuvat samaan kansioon.
