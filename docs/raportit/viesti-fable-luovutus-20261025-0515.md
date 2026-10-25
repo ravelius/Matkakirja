@@ -41,3 +41,8 @@ Kellot siirtyivät talviaikaan 25.10. klo 04 → 03 (EET). Omistaja nukkuu (00.4
 - Laitekäännöksen "0 Shader erroria" ei todista Metal-varjostimia: ajonaikaiset variantit käännetään vasta pelissä (nyt 9.1).
 - Sama vikaluokka neljästi → vaihda tapaa (juurikorjaus + nopea paikallinen silmukka) eikä kohta kohdalta.
 - .app-kopiot jakavat levylohkoja: du-luku ei kerro vapautuvaa tilaa.
+
+## 5. LISÄYS 05.2x: OMISTAJA HEREILLÄ?
+- KK välitti omistajan kysymyksen 05.14 "Onhan kaikki nopeutukset käytössä?": NUI:lle ETUSIJA havainnenäkymä (proto tyokalut/havainne/editori.sh)
+  toimintakuntoon (810/01–07 editorissa ilman simua, 3 toistoa samat) → PK ja VS käyttöön, vertailuparit ilman simujonoa; sitten nimitekstin kuvat.
+  Seuraa ja kuittaa KK:lle, kun käytössä.
