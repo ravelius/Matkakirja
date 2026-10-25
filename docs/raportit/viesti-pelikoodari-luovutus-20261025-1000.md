@@ -67,3 +67,10 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
 - 11.3x PT 11.2x kysyi: reitti muurikujiin (02) ja kujaporttien (05) läpi? → JO TEHTY ja junassa 210: 075821f22 + 75359c119 (d32426118),
   kujaporttien kamera fe0fdee7a, 48bb1dd70; ajossa esikatselu-20261025-1026 kujakamera 4× / 2 min. PT:lle kysytty: fe0fdee7a laskee kameran
   kujaportin räystään (3,6 m) alle → ristiriita Raamatun 2.177:n kanssa; korjataanko samoin kuin lautaspöytä? Odottaa PT:tä. Jono muuten tyhjä.
+- 11.2x RÄYSTÄSKAMERA (PT 11.3x "korjaa samoin", Raamattu 2.177): haara pelikoodari/raystas-kamera-210 dccaef28a junan 210 rungon 0ef01ab91 päällä
+  (worktree /Users/Shared/Claude/wt/proto-pelikoodari-raystas-210). DroneNosto.AlitusPelissa = false: alitus/lähennys vain AvausT:ssä (HkKentta, Hk, porttitunneli,
+  porttilähennys, kujan suun lähennys, lapiAla-rajat, räystään alle painuminen fe0fdee7a, puyiLapi, kattonosto katon alla). QA drone alitus 0|1. Testit 737/737 +
+  AlitusPelissaOletuksenaPois, unity-tarkistus 0. Muut laskut grepattu: vain v1-kamera (!YhtenainenDrone) ja ei-sokkelo (oviaukko). Vertailuajo
+  esikatselu-20261025-1110, ruudukot proto-3d/lokit/raystas-kamera-210-20261025/: uusi = keisari näkyy kaikissa, portin jälkeen nousu 17 m / 73° ~1 s;
+  vanha = kamera muurin sisällä 2/12 kuvassa. Mittari 20 s: uusi piilossa 18 ruutua + kamerahyppy 1, vanha 0/0 (mittari ei näe muurin sisällä oloa).
+  ODOTTAA PT:n päätöstä junaan. Lautaspöydän e34e0fbe6 RaystasPeite korvautuu tällä (lähennys pois kokonaan).
