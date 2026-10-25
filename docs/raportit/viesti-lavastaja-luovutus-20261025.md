@@ -30,7 +30,7 @@ Proto: `wt/proto-lavastaja-muoto`, haara `lavastaja/muoto-210`, viimeisin 0b465e
   `proto-3d/_tyo/linnanrakentaja/identtisyys-erot/b11-20261025/`.
 - Havainnetyökalut PR https://github.com/ravelius/Matkakirja/pull/5211 (worktree `wt/lavastaja-havainnetyokalut`): kamera `--osumat`
   (`--osumaalue`, `--osumat-materiaali`), `--katot-pois`, `--ulkorengas`, `--vapaa`; mittari: harja, taivas keskellä, hallin alareuna,
-  julkisivu. Viimeiset kamera-lisäykset (--katot-pois, --vapaa, --osumat-materiaali) ovat kommitoimatta worktreessa.
+  julkisivu. Kaikki kommitoitu (d641cff30).
 - Leivonta: `leivo_malli.py`/`leivo_valo.py` ympäristömuuttujat TAIVAS 1,8, TAIVAS_VARI 0,45,0,46,0,50, KIMPOAMISET 4 (VS).
 - Tuotantoskriptit `proto-3d/_tyo/linnanrakentaja/kielletty-rakennukset/tyokalut/`: avoimet_tiilikate, avoimet_lattia_harmaa,
   avoimet_sisustus_pois, avoimet_kalusteet (kaappi + penkki), avoimet_sali_havainne (pylväät, kehä, seinät), vie.py (u-jingshan,
@@ -41,4 +41,4 @@ Proto: `wt/proto-lavastaja-muoto`, haara `lavastaja/muoto-210`, viimeisin 0b465e
 - PT: lepo, kunnes PK:n pelikuvat rungosta tulevat; niistä muotoerot Lavastajalle.
 - Avoinna muilla: 03:n sommitelma oikeissa mitoissa (omistaja aamulla PT:n kautta), PK kameran 810 rajaus muurikatteelle (02, 05)
   ja 05:n kuvaus kujaportilta (−249,4, 382), VS täyttö ja terassin marmorin sävy pelissä, 07:n pihojen puut kauas (PK/VS).
-- Ensimmäinen askel: lue tämä ja PT:n viimeisin viesti; kommitoi havainnetyökalujen kamera-lisäykset PR #5211:een.
+- Ensimmäinen askel: lue tämä ja PT:n viimeisin viesti; seuraa PR #5211:n CI:tä.
