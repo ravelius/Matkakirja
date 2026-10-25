@@ -6,5 +6,5 @@ NS asensi 09.17 (VS B12 + B14 laatat, PK korttipuut, tausta-v48, hyppysuoja, GC-
 - Aukio 180 s: käännösnykäykset 3, alkunykäykset 0, pysähdyksiä 0, kamerahyppyjä 0, nykäyksiä 0 (suurin 17 ms).
 - Sisätila 120 s: käännösnykäykset 2, alkunykäykset 0, pysähdyksiä 0, kamerahyppyjä 0, nykäyksiä 0 (suurin 17 ms).
 - Alkulennon kamerahyppy: EI toistunut. KAMERAHYPPY + hyppysuoja-rivejä 0 (J/A-vaihe ja reitit); skriptikorjaus toimii.
-- VENYNYT RUUTU: 3 merkintää (20,0 / 24,8 / 29,5 ms), kaikki "ei nykäys". 29,5 ms (t 149,0 s, sisätilan 2. aukio-ajon reitti 1ja:ssa/aukiolla): "ulkona" 26 ms, Update 2 ms, ei GC:tä eikä soluja → ruutu venyy pelin ulkopuolella (GPU/OS), ei pelikoodista. 24,8 ms: solu esiin + GC edeltävissä ruuduissa; 20,0 ms: GC 1×. Aiemman 406d/d2f9:n 6–7 merkinnästä 3:een.
+- VENYNYT RUUTU: 3 merkintää (20,0 / 24,8 / 29,5 ms), kaikki "ei nykäys". 29,5 ms (t 149,0 s, J/A-vaihe ra28-1ja): "ulkona" 26 ms, Update 2 ms, ei GC:tä eikä soluja → ruutu venyy pelin ulkopuolella (GPU/OS), ei pelikoodista. 24,8 ms (t 92,3 s, ra28-1ja): solu esiin + GC edeltävissä ruuduissa; 20,0 ms (t 124,4 s, ra28-2reitit): GC 1×. Aiemman 406d/d2f9:n 6–7 merkinnästä 3:een.
 - Verrattuna d2f94a515: J 10,08 → 10,00, A 11,03 → 12,08, käännösnykäykset 3/3 → 3/2.

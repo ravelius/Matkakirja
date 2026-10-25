@@ -15,18 +15,6 @@
       "SearchPlugins",
       "ReportFindings",
       "SendUserFile",
-      "mcp__Claude_Browser",
-      "mcp__Claude_Code_iOS_Simulator",
-      "mcp__terminal",
-      "mcp__visualize",
-      "mcp__6f616b42-0ed8-571e-823f-ee4aca6b7ce9",
-      "mcp__1a59c906-04da-521d-bda7-7f71b9f9e01c",
-      "mcp__claude-in-chrome",
-      "mcp__computer-use",
-      "mcp__ccd_sidebar",
-      "mcp__ccd_window",
-      "mcp__ccd_view",
-      "mcp__ccd_settings",
       "AskUserQuestion",
       "Artifact"
     ]
