@@ -2554,3 +2554,24 @@ Juoksupelin lattiavarjostin näytti pihan taivaana iPadilla: as_type<half>(int) 
 ## _VALMIIT-KANSIOON EI KIRJOITETA OLEMASSA OLEVAN PAALLE (PT 25.10.2026) (25.10.2026 klo 08.35)
 
 LR kirjoitti klo 08.34 PK:n kuitatun paketin _valmiit/juoksupeli-kk-tausta-peking-v47-vienti-20261025 päälle omalla samannimisellä v47:llä (rinnakkainen työ lupakyselyjumin aikana; ämpäri ja runko ennallaan, JU palauttaa kansion ämpäristä). Oppi: ennen kirjoitusta _valmiit-kansioon tarkistetaan ls:llä, ettei kansiota ole, ja käytetään aina uutta versionumeroa; jumista vapautuva rooli lukee ensin PT:n uusimmat viestit ennen jonossa olevia töitä. PK teki saman nurmikorjauksen LR:n jumin aikana PT:n käskystä.
+
+## PIILOTETTU KATTO HEITTÄÄ VARJON (PT 25.10.2026) (25.10.2026 klo 08.59)
+
+VS kysyi 04:n valkoisesta lattiasta (syy: piilotettu katto ei heitä varjoa, VS:n mukaan omistajan linjaus 21.10. 11.17 'näkymättömästä ei varjoa'). Lokista ei löytynyt tällaista omistajan sanaa; omistajan sanat 21.10. klo 10.43 'ota katto pois näkyvistä' koskevat näkymistä. PT:n päätös: piilotettu katto heittää varjon (vain varjo, ei piirtoa) kaikissa saleissa, jotta lattia ja valojuovat vastaavat havainnekuvaa (omistaja 24.10. identtiseksi). Toteutus Valoseppä, kuvapari 03A + 04 PT:lle.
+
+## SALIKAMERA EI JUNAAN (PT 25.10.2026) (25.10.2026 klo 09.44)
+
+PK teki salikameran (05ae0f8c6: matala kamera, keisari liian iso) ja sisäkattoehdotuksen (95f3ac452, kamera katon alla 3 m / 8,2 m, yläkolmannes katon alapintaa). Havainteen 04 kuva vaatisi isomman salin; omistajan päätös 20.10. 07.30 mitat oikeat ja 21.10. 10.43 drone ylhäällä + katto pois. PT hylkäsi molemmat, ei omistajan kysymystä (kuva ei kelpaa näytettäväksi); juna-210:n nykyinen kamera jää.
+
+## PERIAATETARKISTUS 25.10. (omistaja 09.57) (25.10.2026 klo 10.05)
+
+Omistaja: 'Tehdäänkö korjauksia järkevillä tavoilla ja periaatteilla?' KK löysi kaksi poikkeamaa. 1) LR: avoimet × 0,70 lähteen mukainen (Qing 工程做法则例 1734, pylväsväli 2,88 m); lappe 0,75 ilman lähdettä korvattu 举架 0,5/0,65/0,85 (harja 4,9 → 7,5 m), avoimet-v45 1015e8dd03b4. 2) VS: lattia tummui kahdesti (albedo × 0,78 + valoleikkaus t3) vastoin tekotapa B r. 90 → t3 kumottu e8ca2484e, lattia vain albedolla; lisäksi _JuoksuLaattaSavy/_JuoksuRappausSavy w=2 tuplasi sävypoikkeaman (laatat korjattu, rappaus 05:n kanssa). OPPI (periaate 10, rikottu periaate 6 ja B r. 90): jokainen kerroin vaatii mittauksen tai lähteen taulukkoon ennen junaa; valotus säädetään yhdessä paikassa.
+
+## PALATSIN MITTAKAAVA: YKSI YHTEINEN KERROIN (omistaja 25.10.2026 klo 10.09) (25.10.2026 klo 10.10)
+
+Omistaja ennen korttia (sanatarkasti): "Voisi miettiä kuitenkin pelin kannalta että onko parempi madaltaa rakennuksia jos se näyttäisi ja toimisi paremmin. Myös kujia voi kaventaa tarvittaessa. Tosin
+silloin kaikki kannattaa varmaan tehdä mittakaavassa jotta kokonaisuus säilyy. Eli voidaan joustaa totuudesta kunhan pelaaja tunnistaa todellisuuden rakennukset silti. Mitä olet mieltä". Kortti
+KK:ssa: "Joustetaanko palatsin koosta yhdellä yhteisellä mittakaavalla?" → "Kyllä, yksi mittakaava (Suositus)" (selite: "Rakennukset ja välimatkat pienenevät samassa suhteessa, ovet ja portaat pysyvät
+ihmisen kokoisina. Rakennusten muoto ja paikka säilyvät."). Korvaa 20.10. klo 07.30 kokolinjan (mitat oikeat). Säilyvät: paikat, järjestys, keskiakseli, suunnat, rakennusten muoto ja mittasuhteet.
+Koko palatsi skaalataan yhdellä kertoimella; ovet, portaat ja kaiteet ihmisen kokoisina; kujia kavennetaan erikseen vain pelattavuuden vuoksi; rakennuskohtaiset tai suuntakohtaiset skaalaukset (esim.
+yön Taihedian × 0,17/0,16) kielletty. Kerroin haetaan havainnekuvavertailulla (NUI:n havainnenäkymä), KK näyttää vertailukuvat omistajalle ennen lukitusta. 03-kysymys (Taihedianin mitat) poistuu.
