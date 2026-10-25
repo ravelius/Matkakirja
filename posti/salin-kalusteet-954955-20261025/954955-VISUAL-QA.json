@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-25T00:37:39.217116+00:00",
+  "personally_viewed_all_directions": true,
+  "views": [
+    "front +Z",
+    "side +X",
+    "back -Z",
+    "three-quarter"
+  ],
+  "source_raw_opposite_side_also_viewed": true,
+  "method": "Actual GLB basecolor orthographic renders on gray; not game captures. Tripo viewport PBR observed for cabinet.",
+  "models": {
+    "salin-penkki": {
+      "task": 954,
+      "result": "VISUAL_EXCEPTION_PT_GAME_VIEW_REVIEW_REQUIRED",
+      "accepted_for_game": false,
+      "observations": [
+        "Suora istuin, tumma punaruskea puu ja neljä jalkaa näkyvät.",
+        "Helman ristikkokuvio on paikoin katkennut ja keskipaneelissa on lähdekuvaa suurempi epäsäännöllinen aukko.",
+        "Takapuolen helman alareuna on epätasainen ja sivukoristeet yksinkertaistuneet.",
+        "Lähikuva ei vastaa pohjakuvan ehjää koristeverkkoa. Penkkiä ei merkitä ulkoasultaan hyväksytyksi."
+      ],
+      "receiver_action": "PT ja Lavastaja arvioivat näkyvyyden oikeassa pelin kamerassa ennen käyttöönottoa. Ei uutta ottoa tässä erässä."
+    },
+    "salin-kaappi": {
+      "task": 955,
+      "result": "PRODUCER_VISUAL_PASS_WITH_MINOR_NOTES_RECEIVER_QA_PENDING",
+      "accepted_for_game": false,
+      "observations": [
+        "Kaksi suljettua kaiverrettua ovea, vetimet ja saranalevyt ovat näkyvissä +Z-puolella.",
+        "Sivupaneelit, umpinainen takaseinä ja tyhjä kansi ovat kunnossa esineen käyttötarkoitukseen.",
+        "Vetimet ovat hieman epäsymmetriset ja jalkojen alareunat paikoin rosoiset. Ei erillistä lähikuvaviimeistelyä.",
+        "Ei riggausta, avautuvia ovia tai animaatioita."
+      ],
+      "receiver_action": "Lavastajan peliin sijoitus ja havainne/pelikuva-pari PT:lle; puun ja messingin PBR-vaste pelivalossa tarkistettava."
+    }
+  },
+  "dimension_policy": "Static meshes fitted to ordered XYZ size. Original Tripo geometry and source images preserved. UV/indices unchanged; normals inverse-transpose transformed and renormalized. No manual redesign.",
+  "pt_approved": false,
+  "game_integrated": false
+}

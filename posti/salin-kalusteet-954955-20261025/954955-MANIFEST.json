@@ -1,0 +1,399 @@
+{
+  "tasks": [
+    954,
+    955
+  ],
+  "at": "2026-10-25T00:37:39.315134+00:00",
+  "status": "TECHNICAL_PASS_BENCH_VISUAL_EXCEPTION_RECEIVER_AND_PT_QA_PENDING",
+  "parts": [
+    {
+      "task": 954,
+      "id": "salin-penkki",
+      "at": "2026-10-25T00:36:52.911406+00:00",
+      "path": "mallit/salin-penkki.glb",
+      "sha256": "603dc530f86343147db991a31479d9dbd3338945a92285096a6fe7e8a16d0a5d",
+      "source_sha256": "d4d31f4a8fd2e31bfcec429388415b3bbfd3393de7b237f96f06652c888d383d",
+      "bytes": 2431520,
+      "triangles": 2380,
+      "limit": 3000,
+      "dimensions_xyz_m": [
+        1.6,
+        0.5,
+        0.45
+      ],
+      "target_xyz_m": [
+        1.6,
+        0.5,
+        0.45
+      ],
+      "dimension_deviation_percent": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "baked_scale_xyz": [
+        1.6396295219914054,
+        2.1904475416959124,
+        2.1050843672176365
+      ],
+      "size_fitted": true,
+      "rotation_y_degrees": 0,
+      "source_translation": [
+        0.001220703125,
+        0.0,
+        0.000690460205078125
+      ],
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/salin-penkki-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "73ddcd38ed9fe331eb16e09a4a1b7681497a26d033b67a73f48250cab29529d5",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/salin-penkki-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "3f653b6dc0af1c4732e0d3da927e42c0b0741a604e2c2f4f404f7b684a945198",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/salin-penkki-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "8fdc563fa3832c6b0f89ee44d5482076e1fb1b156d911e407e1f594e1cf647d3",
+          "pixels_preserved": false
+        }
+      ],
+      "roughness": {
+        "source_factor": 1,
+        "source_effective_min": 0.027450980392156862,
+        "clamped_texels": 468,
+        "output_factor": 1,
+        "output_effective_min": 0.30196078431372547,
+        "red_and_blue_preserved": true
+      },
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/salin-penkki-sized-nelja-suuntaa.png",
+      "frames": [
+        {
+          "path": "esikatselu/salin-penkki-sized-1.png",
+          "yaw": 0,
+          "pitch": 10
+        },
+        {
+          "path": "esikatselu/salin-penkki-sized-2.png",
+          "yaw": 90,
+          "pitch": 10
+        },
+        {
+          "path": "esikatselu/salin-penkki-sized-3.png",
+          "yaw": 180,
+          "pitch": 10
+        },
+        {
+          "path": "esikatselu/salin-penkki-sized-4.png",
+          "yaw": 38,
+          "pitch": 24
+        }
+      ],
+      "preview_lighting": "Unlit basecolor on gray; actual GLB geometry, no shadow bake added. PBR response remains receiver QA.",
+      "visual_qa": "VISUAL_EXCEPTION_PT_GAME_VIEW_REVIEW_REQUIRED",
+      "game_integrated": false,
+      "peak_rss_mib": 196.734375,
+      "visual_notes": [
+        "Suora istuin, tumma punaruskea puu ja neljä jalkaa näkyvät.",
+        "Helman ristikkokuvio on paikoin katkennut ja keskipaneelissa on lähdekuvaa suurempi epäsäännöllinen aukko.",
+        "Takapuolen helman alareuna on epätasainen ja sivukoristeet yksinkertaistuneet.",
+        "Lähikuva ei vastaa pohjakuvan ehjää koristeverkkoa. Penkkiä ei merkitä ulkoasultaan hyväksytyksi."
+      ],
+      "receiver_action": "PT ja Lavastaja arvioivat näkyvyyden oikeassa pelin kamerassa ennen käyttöönottoa. Ei uutta ottoa tässä erässä.",
+      "appearance_accepted": false
+    },
+    {
+      "task": 955,
+      "id": "salin-kaappi",
+      "at": "2026-10-25T00:36:55.932361+00:00",
+      "path": "mallit/salin-kaappi.glb",
+      "sha256": "e4e8284a80ccedf12ac93dcc6f66cd8688d0845f08dc1af733e9178a76762979",
+      "source_sha256": "b0ebdee172d66464ec977c892a93baed7a9fe9a598329153d9833828b2f22c41",
+      "bytes": 2181528,
+      "triangles": 2058,
+      "limit": 3000,
+      "dimensions_xyz_m": [
+        0.9,
+        1.2,
+        0.45
+      ],
+      "target_xyz_m": [
+        0.9,
+        1.2,
+        0.45
+      ],
+      "dimension_deviation_percent": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "units": "meters",
+      "up": "+Y",
+      "forward": "+Z",
+      "pivot": "bottom center",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "baked_scale_xyz": [
+        1.1986341780944254,
+        1.225200972144326,
+        0.8789697524156178
+      ],
+      "size_fitted": true,
+      "rotation_y_degrees": 0,
+      "source_translation": [
+        -0.00021360814571380615,
+        0.0,
+        -0.0001526176929473877
+      ],
+      "maps": [
+        {
+          "role": "normal",
+          "path": "tekstuurit/salin-kaappi-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "e74232927bbf7fd67645dd8becacb7f659348c1381308f0ef994297e64d5a206",
+          "pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "tekstuurit/salin-kaappi-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "0c4e4bad29778137d0b04bce12487b82ea65c2ee2eeef56223b7ed05b485d65e",
+          "pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "tekstuurit/salin-kaappi-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "b43714b4fa13f1bbdcf242f9a2ff3cb1274a8631c19fb730ede65998c3a52057",
+          "pixels_preserved": false
+        }
+      ],
+      "roughness": {
+        "source_factor": 1,
+        "source_effective_min": 0.023529411764705882,
+        "clamped_texels": 962,
+        "output_factor": 1,
+        "output_effective_min": 0.30196078431372547,
+        "red_and_blue_preserved": true
+      },
+      "materials": 1,
+      "primitives": 1,
+      "animations": 0,
+      "skins": 0,
+      "tyyppi": "esine",
+      "liike": "ei liikettä",
+      "topology_uv_preserved": true,
+      "preview": "esikatselu/salin-kaappi-sized-nelja-suuntaa.png",
+      "frames": [
+        {
+          "path": "esikatselu/salin-kaappi-sized-1.png",
+          "yaw": 0,
+          "pitch": 10
+        },
+        {
+          "path": "esikatselu/salin-kaappi-sized-2.png",
+          "yaw": 90,
+          "pitch": 10
+        },
+        {
+          "path": "esikatselu/salin-kaappi-sized-3.png",
+          "yaw": 180,
+          "pitch": 10
+        },
+        {
+          "path": "esikatselu/salin-kaappi-sized-4.png",
+          "yaw": 38,
+          "pitch": 24
+        }
+      ],
+      "preview_lighting": "Unlit basecolor on gray; actual GLB geometry, no shadow bake added. PBR response remains receiver QA.",
+      "visual_qa": "PRODUCER_VISUAL_PASS_WITH_MINOR_NOTES_RECEIVER_QA_PENDING",
+      "game_integrated": false,
+      "peak_rss_mib": 253.0,
+      "visual_notes": [
+        "Kaksi suljettua kaiverrettua ovea, vetimet ja saranalevyt ovat näkyvissä +Z-puolella.",
+        "Sivupaneelit, umpinainen takaseinä ja tyhjä kansi ovat kunnossa esineen käyttötarkoitukseen.",
+        "Vetimet ovat hieman epäsymmetriset ja jalkojen alareunat paikoin rosoiset. Ei erillistä lähikuvaviimeistelyä.",
+        "Ei riggausta, avautuvia ovia tai animaatioita."
+      ],
+      "receiver_action": "Lavastajan peliin sijoitus ja havainne/pelikuva-pari PT:lle; puun ja messingin PBR-vaste pelivalossa tarkistettava.",
+      "appearance_accepted": false
+    }
+  ],
+  "new_calls": 2,
+  "new_credits": 90,
+  "account_balance_after": 18845,
+  "generation_jobs": [
+    {
+      "task": 954,
+      "job_id": "eeb90dfc-912a-4c7d-a077-788f445b30b3",
+      "credits": 45
+    },
+    {
+      "task": 955,
+      "job_id": "cbbb9a21-4626-449f-b106-b967624fd229",
+      "credits": 45
+    }
+  ],
+  "placements_included": false,
+  "pt_model_approved": false,
+  "receiver_accepted": false,
+  "game_integrated": false,
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "bytes": 2640,
+      "sha256": "bc7492a96ebb017d6f69fb1c4c3271effe3669f39d8e0f5c7e0578793a19f1e9"
+    },
+    {
+      "path": "LUE-ENSIN.md",
+      "bytes": 2654,
+      "sha256": "b99a4f57053f74719cb38058a5a223ba2776e0998139e40a88f165d0fc0baaee"
+    },
+    {
+      "path": "esikatselu/salin-kaappi-sized-1.png",
+      "bytes": 274112,
+      "sha256": "5a11b389ba35b73af8c475aea28c57048965e189013c1d36c88779af72b47a92"
+    },
+    {
+      "path": "esikatselu/salin-kaappi-sized-2.png",
+      "bytes": 125411,
+      "sha256": "6a070cccf899351ab2b2401f61d0257925df6d48043d1adfb4d5fe421c8ee379"
+    },
+    {
+      "path": "esikatselu/salin-kaappi-sized-3.png",
+      "bytes": 152338,
+      "sha256": "1efac67e5c36a28ebdb7ebf7fb5770c02e943118462a2130a29ecc4aa0b0a550"
+    },
+    {
+      "path": "esikatselu/salin-kaappi-sized-4.png",
+      "bytes": 262522,
+      "sha256": "97c72e56df73c09cb1c663baf7011180e255bb972e841687f856df996d79e33e"
+    },
+    {
+      "path": "esikatselu/salin-kaappi-sized-nelja-suuntaa.png",
+      "bytes": 846509,
+      "sha256": "5da71f0419f8fbb1c465e0c5703a7985bef1c753784bebf7797204fd0f525d7e"
+    },
+    {
+      "path": "esikatselu/salin-penkki-sized-1.png",
+      "bytes": 143291,
+      "sha256": "f3b7cbfea5d4caac4093f3d69352af9339d641f2de64d013b9c15d50185c4b29"
+    },
+    {
+      "path": "esikatselu/salin-penkki-sized-2.png",
+      "bytes": 179963,
+      "sha256": "f7f49539fd091c4681e04c4ac4ff4172a0fc19aec68cd14a5c7a42fedcee0d80"
+    },
+    {
+      "path": "esikatselu/salin-penkki-sized-3.png",
+      "bytes": 123385,
+      "sha256": "40d0e48901ae6487b971621b4cd475e77d6bc7ee6cc7404cb110cd0f57b94629"
+    },
+    {
+      "path": "esikatselu/salin-penkki-sized-4.png",
+      "bytes": 212065,
+      "sha256": "9221b97f60e4125bd2c78543519167efe89fbeae8cca2b16cacab72bbf100bfe"
+    },
+    {
+      "path": "esikatselu/salin-penkki-sized-nelja-suuntaa.png",
+      "bytes": 676655,
+      "sha256": "531ff4dbd7f196e51f0e93487d8daa35c90fdc76d7c0642a11ee0bc7e59a4246"
+    },
+    {
+      "path": "mallit/salin-kaappi.glb",
+      "bytes": 2181528,
+      "sha256": "e4e8284a80ccedf12ac93dcc6f66cd8688d0845f08dc1af733e9178a76762979"
+    },
+    {
+      "path": "mallit/salin-penkki.glb",
+      "bytes": 2431520,
+      "sha256": "603dc530f86343147db991a31479d9dbd3338945a92285096a6fe7e8a16d0a5d"
+    },
+    {
+      "path": "qa/TECHNICAL-QA.json",
+      "bytes": 673,
+      "sha256": "7fafc74b69bfcf6256e73284c7da0ce145ed46049881cd29440a70616ea07b8a"
+    },
+    {
+      "path": "qa/VISUAL-QA.json",
+      "bytes": 2090,
+      "sha256": "1b74ee88beff01f2174f3009fa826b4a6796e9d93d5bd794f3aa9d9cde001b6c"
+    },
+    {
+      "path": "tekstuurit/salin-kaappi-basecolor.png",
+      "bytes": 907480,
+      "sha256": "0c4e4bad29778137d0b04bce12487b82ea65c2ee2eeef56223b7ed05b485d65e"
+    },
+    {
+      "path": "tekstuurit/salin-kaappi-metallic-roughness.png",
+      "bytes": 474240,
+      "sha256": "b43714b4fa13f1bbdcf242f9a2ff3cb1274a8631c19fb730ede65998c3a52057"
+    },
+    {
+      "path": "tekstuurit/salin-kaappi-normal.png",
+      "bytes": 349156,
+      "sha256": "e74232927bbf7fd67645dd8becacb7f659348c1381308f0ef994297e64d5a206"
+    },
+    {
+      "path": "tekstuurit/salin-penkki-basecolor.png",
+      "bytes": 892213,
+      "sha256": "3f653b6dc0af1c4732e0d3da927e42c0b0741a604e2c2f4f404f7b684a945198"
+    },
+    {
+      "path": "tekstuurit/salin-penkki-metallic-roughness.png",
+      "bytes": 674471,
+      "sha256": "8fdc563fa3832c6b0f89ee44d5482076e1fb1b156d911e407e1f594e1cf647d3"
+    },
+    {
+      "path": "tekstuurit/salin-penkki-normal.png",
+      "bytes": 350996,
+      "sha256": "73ddcd38ed9fe331eb16e09a4a1b7681497a26d033b67a73f48250cab29529d5"
+    }
+  ]
+}

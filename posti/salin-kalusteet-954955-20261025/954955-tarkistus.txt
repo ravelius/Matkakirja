@@ -1,0 +1,21 @@
+== /Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-salin-penkit-kaapit-20261025/delivery-v1
+OK       mallit/salin-kaappi.glb  esine 2058 kolm, 1 piirtoa, 1 mat, koko 0.9 × 1.2 × 0.45 m
+OK       mallit/salin-penkki.glb  esine 2380 kolm, 1 piirtoa, 1 mat, koko 1.6 × 0.5 × 0.45 m
+OK       esikatselu/salin-kaappi-sized-1.png  kuva png 720 × 660 px
+OK       esikatselu/salin-kaappi-sized-2.png  kuva png 720 × 660 px
+OK       esikatselu/salin-kaappi-sized-3.png  kuva png 720 × 660 px
+OK       esikatselu/salin-kaappi-sized-4.png  kuva png 720 × 660 px
+OK       esikatselu/salin-kaappi-sized-nelja-suuntaa.png  kuva png 1440 × 1450 px
+OK       esikatselu/salin-penkki-sized-1.png  kuva png 720 × 660 px
+OK       esikatselu/salin-penkki-sized-2.png  kuva png 720 × 660 px
+OK       esikatselu/salin-penkki-sized-3.png  kuva png 720 × 660 px
+OK       esikatselu/salin-penkki-sized-4.png  kuva png 720 × 660 px
+OK       esikatselu/salin-penkki-sized-nelja-suuntaa.png  kuva png 1440 × 1450 px
+OK       tekstuurit/salin-kaappi-basecolor.png  tekstuuri png 1024 × 1024 px
+OK       tekstuurit/salin-kaappi-metallic-roughness.png  tekstuuri png 1024 × 1024 px
+OK       tekstuurit/salin-kaappi-normal.png  tekstuuri png 1024 × 1024 px
+OK       tekstuurit/salin-penkki-basecolor.png  tekstuuri png 1024 × 1024 px
+OK       tekstuurit/salin-penkki-metallic-roughness.png  tekstuuri png 1024 × 1024 px
+OK       tekstuurit/salin-penkki-normal.png  tekstuuri png 1024 × 1024 px
+KAIKKI OK
+
