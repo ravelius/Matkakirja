@@ -78,3 +78,9 @@ Tee räystäskamerahaaran päälle (sama kamera).
   (sk-kujaportti-harja.txt). Aukio 03: PT halusi kompromissin (katse ~9–10°, loivennus vasta porttimuurien ohi) → f8d48dc6e +
   6f536fcbd, kolmikko esikatselu-20261025-1203/aukio03-kolmikko-kompromissi.jpg PT:lle 12.1x (juoksuvauhdissa 810 ≈ 11°, kompromissi
   ≈ 7,5°). UUSI: Taihemenin katto ei häivy (270 piiloa, kamera 32 m) – kysytty PT:ltä samaan LR-pyyntöön.
+- 12.2x PT: AUKIO 03 KOMPROMISSI HYVÄKSYTTY → junaan räystäskameran kanssa, kun LR:n katto-solmut (kujaportit + Taihemen) valmiit.
+  Kun runko valmis: kolmikot PT:lle (aukio + yksi kujaportin läpikulku) → KK → omistaja.
+- Lautaspöydän kuvausrunko valmiina (ei ajettu, PT: vasta räystäskameran jälkeen): proto `pelikoodari/lautaspoyta-kuvaus-210`
+  994427971 (worktree /Users/Shared/Claude/wt/proto-pelikoodari-lautaspoyta-kuvaus) = raystas-kamera-210 + ebe698506 + e806ef4bd +
+  e34e0fbe6:n sirpaleosa; testit 740/740. NUI:n lämmitysruutu 86c645bd1 on jo natiiviseppa/juna-210:ssä → aja esikatselu.sh
+  tuoreen junarungon worktreestä tai rebeisaa. Skenaario lautaspoyta-04/skenaariot/sk-lautaspoyta-04g.txt (ei jäädytyskohtaa).
