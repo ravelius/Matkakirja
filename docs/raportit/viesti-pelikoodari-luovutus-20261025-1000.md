@@ -64,3 +64,6 @@ iPadin ruutu, ei tekstiä. Tarkista itse: tumma puu, kolme matalaa pinoa, kontak
   posti/pelikoodari-codex-lautaspoyta948-reunat-20261025.md (basecolor-atlaksen oranssit saarireunat pois + valkoinen ~sRGB 235–240)
   → LR pakkaa aarteet799-v4 → PK kytkee (Aarteet799Kansio) ja kuvaa. Mittakaava: vain mahdollinen kujien levennys omistajan vastauksen jälkeen.
   Muu jono tyhjä → PT:lle "JONO TYHJÄ".
+- 11.3x PT 11.2x kysyi: reitti muurikujiin (02) ja kujaporttien (05) läpi? → JO TEHTY ja junassa 210: 075821f22 + 75359c119 (d32426118),
+  kujaporttien kamera fe0fdee7a, 48bb1dd70; ajossa esikatselu-20261025-1026 kujakamera 4× / 2 min. PT:lle kysytty: fe0fdee7a laskee kameran
+  kujaportin räystään (3,6 m) alle → ristiriita Raamatun 2.177:n kanssa; korjataanko samoin kuin lautaspöytä? Odottaa PT:tä. Jono muuten tyhjä.
