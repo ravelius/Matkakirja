@@ -16,38 +16,67 @@ todellisuuden rakennukset silti" → "Kyllä, yksi mittakaava"). Varjostimiin ja
   (`ui juoksupeli saannot`), piirto ja kamera jatkuvat. Lisäksi `SKAALA=<k>`: Esikatselu skaalaa juoksumaailman juuren lapset
   k-kertaisiksi keisarin ympäri vain kuvan piirron ajaksi (keisari, takaa-ajaja, vartijat ja kamera ennallaan; peli ei muutu).
 
-## 1. YKSI MITTAKAAVA: ehdotus 1,25
+## 1. MITTAKAAVA (korjattu 25.10. klo 11.1x, PT 10.4x): korkeus 1,0 ja kujien leveys erikseen
 
-Palatsi (rakennukset, muurit, lattia, tausta) 1,25-kertaiseksi keisariin ja pelikameraan nähden. Mitattu keisarin kohdalta kujan tai
-salin leveys havainteessa ja pelissä (keisari on molemmissa samankokoinen, 0,12–0,15 kuvan korkeudesta, joten kamera vastaa):
+Ensimmäinen ehdotus (1,25) mitattiin vain leveydestä, ja osa kuvista oli otettu väärästä paikasta (editorin 05 oli
+Meridiaaniportin tunnelissa eikä kujaportilla; 01, 02 ja 06 poikkesivat Lavastajan havainnekameran paikoista). Nyt paikat ovat
+Lavastajan raportin mukaiset (`docs/raportit/havainne-810-kohdittain-20261025.md`, Lavastajan checkout) ja mitat on laskettu
+metreinä kunkin kohdan omasta pelikamerasta (lokin kamerarivi: 01, 03, 04 korkeus 3,8 m ja katse 14,2° alas; 02 ja 05 kujalla
+5,0 m ja 17,9°; pystykenttä 38,8°): rivistä maan etäisyys, pystypiirteen ala- ja yläpäästä korkeus. Keisari mitattiin
+havainteessa 1,07–1,15 × pelin keisari, joten suhteet on jaettu 1,1:llä (suhde keisariin). Havainnekuvat ovat tekoälyn
+kuvia, joiden syvyys ei ole kaikkialla johdonmukainen; pisteiden poiminnan virhe ±10–15 %. Ajo
+`proto-3d/lokit/havainne-editori-20261025-105354` (a28be3c7e + b608eb98c), 06 jätetty pois (PT).
 
-| kohta | havainne / peli (leveys keisarin kohdalla) | 1,25:llä | perustelu |
-|---|---:|---|---|
-| 01 lähtökuja | ≈ 1,0 | kuja 25 % havainnetta leveämpi | ainoa kohta, jossa nykyinen jo vastaa; leveämpi kuja ei peitä keisaria eikä räystäät kujaa |
-| 02 punamuurikuja | ≈ 1,57 | yhä kapeampi kuin havainteessa | kujan muoto: havainteen muuri on kujaan nähden puolet matalampi; tätä yksi kerroin ei muuta (LR: muurin korkeus / kujan leveys) |
-| 03 aukio | ≈ 1,2 | vastaa | porttimuurit ja aukio havainteen kokoisia; Taihedian on jo nyt kuvassa havainnetta suurempi, kerroin kasvattaa sitä vähän |
-| 04 sali | ≈ 1,14 | vastaa (pylväsväli) | pylväsrivit siirtyvät kuvan reunoille kuten havainteessa; pylväät ovat pelissä paksumpia (LR) |
-| 05 porttikäytävä | ≈ 1,5 | lähempänä | käytävä levenee; portti jää yhä kapeammaksi kuin havainteessa |
-| 06 Meridiaaniportti | – | – | kuvauspaikka on arvio (eri portti kuvassa), ei luotettavaa mittaa |
-| 07 yleiskuva | – | sama kuva, kun kamera siirtyy 1,25 × kauemmas | yleiskuvan kamera ei ole keisariin sidottu, joten mittakaava ei näy siinä |
+| kohta | piirre | havainne (m) | peli (m) | havainne/peli | suhde keisariin |
+|---|---|---:|---:|---:|---:|
+| 01 | ovi (oikea) (korkeus) | 2.52 | 2.13 | 1.19 | 1.08 |
+| 01 | ovi (vasen) (korkeus) | 2.81 | 2.26 | 1.24 | 1.13 |
+| 01 | kulkuväylä keisarin kohdalla (leveys) | 4.55 | 6.06 | 0.75 | 0.68 |
+| 02 | muuri (räystään alle) (korkeus) | 3.83 | 4.41 | 0.87 | 0.79 |
+| 02 | kuja muurista muuriin keisarin kohdalla (leveys) | 7.71 | 4.07 | 1.90 | 1.73 |
+| 03 | porttimuuri (vas) (korkeus) | 3.57 | 3.57 | 1.00 | 0.91 |
+| 03 | porttimuuri (oik) (korkeus) | 3.72 | 3.56 | 1.04 | 0.95 |
+| 03 | käytävän suu (leveys) | 9.71 | 13.78 | 0.70 | 0.64 |
+| 04 | ovi (pohjoinen) (korkeus) | 9.43 | 1.95 | 4.84 | ei käytetty (havainteessa ovi 81 m:n päässä: syvyys epäjohdonmukainen) |
+| 04 | pylväsväli lähellä (leveys) | 8.28 | 5.97 | 1.39 | 1.26 |
+| 04 | pylväsväli keskellä (leveys) | 9.90 | 5.84 | 1.70 | 1.55 |
+| 04 | pylvään paksuus (leveys) | 0.56 | 0.92 | 0.61 | 0.55 |
+| 05 | portin ovilehti (korkeus) | 5.29 | 3.21 | 1.65 | 1.50 |
+| 05 | porttiaukko (leveys) | 4.23 | 3.20 | 1.32 | 1.20 |
+| 05 | muuri (korkeus) | 3.80 | 4.23 | 0.90 | 0.82 |
+| 05 | kuja keisarin kohdalla (leveys) | 10.70 | 4.58 | 2.33 | 2.12 |
 
-Mediaani 1,2, keskiarvo 1,28 (01–05). 1,25 on kompromissi: kujat ja salit leviävät havainteen leveyteen (01–05), keisari näkyy kaikissa
-kuvissa, eivätkä katot peitä kujia (kujat leviävät enemmän kuin räystäät). Hinta: hallit ovat 25 % isompia, joten iso halli mahtuu
-kuvaan hieman heikommin (03), ja ovet ja portaat kasvavat 1,25-kertaisiksi. Ihmisen kokoiset osat (portaan askelma, ovenkahvat,
-penkit ja kalusteet) kannattaa pitää ennallaan mallissa (LR), jolloin "ovet ja portaat ihmisen kokoisina" säilyy.
+Kohdittain (suhde keisariin; yli 15 %:n ero leveys- ja korkeuskertoimen välillä = ei yhdellä kertoimella):
 
-Kuvat ilman tekstiä kuvan päällä (havainne | nykyinen | kertoimella 1,25), KK:lle omistajalle näytettäviksi:
+| kohta | leveyskerroin | korkeuskerroin | ero | johtopäätös |
+|---|---:|---:|---|---|
+| 01 lähtökuja | 0,68 (kulkuväylä) | 1,08–1,13 (ovet) | > 15 % | pelin kuja jo havainnetta leveämpi; ovet havainteessa 10 % korkeampia |
+| 02 punamuurikuja | 1,73 (muurista muuriin) | 0,79 (muuri) | > 15 % | kuja liian kapea (4,1 m vs havainteen ~7 m); muuri ei ole liian korkea |
+| 03 aukio | 0,64 (käytävän suu, eri syvyys 13 / 24 m) | 0,91–0,95 (porttimuurit) | – | korkeus vastaa; leveysluku ei vertailukelpoinen (havainteessa aukio lähempänä) |
+| 04 sali | 1,26–1,55 (pylväsväli) | – (pylväät kuvan yli) | – | pylväsväli kapea, pylväät paksuja (0,92 vs 0,56 m) |
+| 05 kujaportti | 2,12 (kuja), 1,20 (porttiaukko) | 0,82 (muuri), 1,50 (portin ovilehti) | > 15 % | kuja portin edessä liian kapea; muuri ei liian korkea |
 
-![01](kaappaukset/havainne-mittaus-20261025/01-kolmikko.jpg)
-![02](kaappaukset/havainne-mittaus-20261025/02-kolmikko.jpg)
-![03](kaappaukset/havainne-mittaus-20261025/03-kolmikko.jpg)
-![04](kaappaukset/havainne-mittaus-20261025/04-kolmikko.jpg)
-![05](kaappaukset/havainne-mittaus-20261025/05-kolmikko.jpg)
-![06](kaappaukset/havainne-mittaus-20261025/06-kolmikko.jpg)
-![07](kaappaukset/havainne-mittaus-20261025/07-kolmikko.jpg)
+EHDOTUS PT:lle (yksi asia kerrallaan omistajalle):
+1. **Korkeuskerroin 1,0 (ei muutosta).** Muurit ovat havainteeseen nähden 0,79–0,95 ja ovet 1,08–1,13: pelin muurit hieman
+   korkeampia ja ovet hieman matalampia, mutta pienempi kerroin madaltaisi myös ovia ja portaita (Raamattu 2.177: ihmisen
+   kokoisina keisariin ja eunukkeihin nähden). Yksi yhteinen kerroin ei siis paranna korkeuksia.
+2. **Kujien leveys erikseen (asettelu, ei rakennusten skaalaus; Lavastaja: rakennuskohtaiset kertoimet kielletty):** kapeat
+   kujat 02 (×~1,7: 4,1 → ~7 m) ja 05 portin edustalla (×~2) levennetään siirtämällä muureja; salin 04 pylväsväli ×~1,4 ja
+   pylväät ohuemmiksi (~0,6 m, Lavastajan oma mitta). 01 ja 03 ennallaan. Tämä poistaa PT:n huomion "02:ssa räystäs ja
+   horisontti kuvan ulkopuolella": kapealla kujalla kamera nousee (5,0 m, 17,9°) ja muuri täyttää kuvan.
 
-Huom. 07:n kolmas kuva on skaalattu keisarin ympäri, joten palatsi ei mahdu siihen; pelissä yleiskuvan kamera siirtyisi samassa
-suhteessa, ja kuva olisi sama kuin keskimmäinen.
+Kolmikot ilman tekstiä kuvan päällä (havainne | nykyinen | leveyskorjaus havainnollistettuna vaakavenytyksenä keisarin
+ympäri: 02 ×1,7, 04 ×1,4, 05 ×2,0; 01 ja 03 ei muutosta, kolmas kuva = nykyinen). Venytys levittää myös rakennuksia, joten
+kuva näyttää kujan leveyden vaikutuksen, ei lopullista asettelua:
+
+![01](kaappaukset/havainne-mittaus-20261025/01-mittakaava-kolmikko.jpg)
+![02](kaappaukset/havainne-mittaus-20261025/02-mittakaava-kolmikko.jpg)
+![03](kaappaukset/havainne-mittaus-20261025/03-mittakaava-kolmikko.jpg)
+![04](kaappaukset/havainne-mittaus-20261025/04-mittakaava-kolmikko.jpg)
+![05](kaappaukset/havainne-mittaus-20261025/05-mittakaava-kolmikko.jpg)
+
+Huom. kohdan 01 lattia näkyy samassa ajossa joko punaisena tai kivenä (z-taistelu / rappauskuva, Lavastajan mukaan
+V4_lattia piirtyy lajilla 10: VS/PK); kolmikoissa se ei liity mittakaavaan.
 
 ## 2. Löydökset vastuittain
 
@@ -71,6 +100,8 @@ Kohdan 01 lattia eri runkoversioilla (01447dbed, 406d88bb6 [botti maalissa, ei v
 ![01 lattia](kaappaukset/havainne-mittaus-20261025/01-lattia-ajoittain.jpg)
 
 ## 3. Kohdittain (havainne | a28+b608 | ero | a28)
+
+Huom. tämän osan kuvat ja luvut ovat ajosta 10.09, jossa 05 ja 06 oli kuvattu väärästä paikasta (ks. osa 1); 01–04:n luvut pätevät.
 
 
 ### 01 lähtökuja
