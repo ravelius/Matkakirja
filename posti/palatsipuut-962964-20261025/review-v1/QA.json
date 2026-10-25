@@ -1,0 +1,486 @@
+{
+  "at": "2026-10-25T04:28:23.603544+00:00",
+  "status": "TECHNICAL_PASS_VISUAL_FAIL_PT_REVIEW_REQUIRED",
+  "structural_check": "PASS",
+  "models": [
+    {
+      "task": 962,
+      "id": "idantuija",
+      "at": "2026-10-25T04:25:06.623468+00:00",
+      "path": "work/normalized-v1/idantuija/idantuija.glb",
+      "sha256": "a8670c5c33212a8f4ff1535d5a0a9613f1b33b47adba6f6f24f5a89ddb4fa377",
+      "source_sha256": "526338bab428f29534d3878b67359ec1e3a2bd020df65f051bda9d1392273161",
+      "bytes": 4637324,
+      "triangles": 1952,
+      "max_triangles": 2000,
+      "dimensions_xyz_m": [
+        4.277748443631587,
+        12.0,
+        4.5
+      ],
+      "target_height_m": 12,
+      "target_max_horizontal_width_m": 4.5,
+      "base_diameter_lowest15cm_m": 0.642857656277033,
+      "base_limit_m": 0.9,
+      "base_limit_pass": true,
+      "cross_sections": [
+        {
+          "height_m": 0.15,
+          "diameter_m": 0.6336678514278861,
+          "extent_xz_m": [
+            0.6312217758486127,
+            0.6332765090034498
+          ]
+        },
+        {
+          "height_m": 1.3,
+          "diameter_m": 0.5906764875737014,
+          "extent_xz_m": [
+            0.5415110057819388,
+            0.575809246453816
+          ]
+        },
+        {
+          "height_m": 1.35,
+          "diameter_m": 0.5871845625215328,
+          "extent_xz_m": [
+            0.5426494034908023,
+            0.5711016493518575
+          ]
+        },
+        {
+          "height_m": 2.5,
+          "diameter_m": 0.5096867781304033,
+          "extent_xz_m": [
+            0.492193935729075,
+            0.472844158584651
+          ]
+        },
+        {
+          "height_m": 3,
+          "diameter_m": 0.5176586502464982,
+          "extent_xz_m": [
+            0.5176262807444529,
+            0.4878095896599458
+          ]
+        },
+        {
+          "height_m": 3.5,
+          "diameter_m": 0.46116682044065116,
+          "extent_xz_m": [
+            0.45566304928889145,
+            0.45106056368125325
+          ]
+        },
+        {
+          "height_m": 4,
+          "diameter_m": 1.9280346418398389,
+          "extent_xz_m": [
+            1.778130831794217,
+            0.9051969187210265
+          ]
+        },
+        {
+          "height_m": 4.5,
+          "diameter_m": 3.512912374638,
+          "extent_xz_m": [
+            3.1862100265102113,
+            1.7293954246939875
+          ]
+        },
+        {
+          "height_m": 5,
+          "diameter_m": 4.054208663968531,
+          "extent_xz_m": [
+            3.969957016193529,
+            2.720687189628959
+          ]
+        }
+      ],
+      "pivot": "trunk-base XZ bbox center; minimum Y at ground",
+      "units": "meters",
+      "up": "+Y",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "baked_scale_xyz": [
+        11.256182366994993,
+        12.726672492474998,
+        11.256182366994993
+      ],
+      "topology_uv_preserved": true,
+      "new_local_geometry": false,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "idantuija-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "7c78f5277e550a515b8f22d90d62b4297130cba1836b48c6d86d036710227001",
+          "decoded_pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "idantuija-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "b718389341088d84dc3404e17806e9db91101e34e0bb6d1afb1f6a30f7c2ed84",
+          "decoded_pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "idantuija-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "d3a8b4609c275ca952c0cf0dd7d6b4f089289b5a89cea2140d732b927cdf2a39",
+          "decoded_pixels_preserved": true
+        }
+      ],
+      "materials": 1,
+      "primitives": 1,
+      "alpha_condition": "OPEN_DEFERRED_TO_RECEIVER_BY_PT",
+      "alpha_mode": "OPAQUE",
+      "visual_qa": "FAIL_SOURCE_FOLIAGE_FIDELITY",
+      "lowest_branch_height_manual_qa": "Ensimmäiset sivuoksat noin 3,7–4,0 m, silmämääräinen arvio; tasoleikkaus laajenee selvästi 4 metrissä.",
+      "pt_approved": false,
+      "game_integrated": false,
+      "visual_notes": "Kapea kartiomainen kokonaismuoto säilyy, mutta lehvästö on lähdekuvaa huomattavasti harvempi ja koostuu suurista kulmikkaista levyistä. Ei täytä lähdekuvan tiheää vanhaa tuijaa.",
+      "trunk_diameter_at_1_3m_m": 0.5906764875737014,
+      "trunk_diameter_target_m": 0.6,
+      "trunk_diameter_review": "APPROX_TARGET",
+      "final_use_approved": false,
+      "review_only": true
+    },
+    {
+      "task": 963,
+      "id": "kiinankataja",
+      "at": "2026-10-25T04:25:36.733350+00:00",
+      "path": "work/normalized-v1/kiinankataja/kiinankataja.glb",
+      "sha256": "ac7d787625a5b5062716c2736ce18b4eb0c0c12c5df8ab95e4af98911f6318f0",
+      "source_sha256": "a7076b94456d0c36c58ea456d2a89011bc5cc808841dc34101a46c77005c5d1e",
+      "bytes": 4221788,
+      "triangles": 1911,
+      "max_triangles": 2000,
+      "dimensions_xyz_m": [
+        4.0,
+        10.0,
+        3.386266031299714
+      ],
+      "target_height_m": 10,
+      "target_max_horizontal_width_m": 4.0,
+      "base_diameter_lowest15cm_m": 0.40315991501631765,
+      "base_limit_m": 0.9,
+      "base_limit_pass": true,
+      "cross_sections": [
+        {
+          "height_m": 0.15,
+          "diameter_m": 0.39270761852048397,
+          "extent_xz_m": [
+            0.3654461767894385,
+            0.1593848967276691
+          ]
+        },
+        {
+          "height_m": 1.3,
+          "diameter_m": 0.307869254897518,
+          "extent_xz_m": [
+            0.2735947010793333,
+            0.2765443204085146
+          ]
+        },
+        {
+          "height_m": 1.35,
+          "diameter_m": 0.30427352721719747,
+          "extent_xz_m": [
+            0.26960115865715484,
+            0.28163820839463827
+          ]
+        },
+        {
+          "height_m": 2.5,
+          "diameter_m": 1.4550926828703763,
+          "extent_xz_m": [
+            1.247802077533127,
+            0.8822642619927046
+          ]
+        },
+        {
+          "height_m": 3,
+          "diameter_m": 1.7390435725600966,
+          "extent_xz_m": [
+            1.6795590752828418,
+            1.2253115694470913
+          ]
+        },
+        {
+          "height_m": 3.5,
+          "diameter_m": 2.6088247671272646,
+          "extent_xz_m": [
+            2.104808401835087,
+            2.4362859245064397
+          ]
+        },
+        {
+          "height_m": 4,
+          "diameter_m": 2.87628365808769,
+          "extent_xz_m": [
+            2.3118074167102063,
+            2.4969112598229932
+          ]
+        },
+        {
+          "height_m": 4.5,
+          "diameter_m": 3.2628788838703606,
+          "extent_xz_m": [
+            2.3302195213017214,
+            2.7556879316946103
+          ]
+        },
+        {
+          "height_m": 5,
+          "diameter_m": 3.8125435432040238,
+          "extent_xz_m": [
+            3.8116072062826802,
+            2.362956110197852
+          ]
+        }
+      ],
+      "pivot": "trunk-base XZ bbox center; minimum Y at ground",
+      "units": "meters",
+      "up": "+Y",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "baked_scale_xyz": [
+        8.734347312213234,
+        10.327460682656245,
+        8.734347312213234
+      ],
+      "topology_uv_preserved": true,
+      "new_local_geometry": false,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "kiinankataja-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "1e5d60eb2522a89916fee489e8be1c23f88b199a47d14057ce6685079afaa7e5",
+          "decoded_pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "kiinankataja-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "1bc71426f75b76f37dee65b6364a56862435620e8a516621d391b290d6207806",
+          "decoded_pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "kiinankataja-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "c658069c22eb347664ce2369430b26ecad8406036713178941a08732a0f9b12a",
+          "decoded_pixels_preserved": true
+        }
+      ],
+      "materials": 1,
+      "primitives": 1,
+      "alpha_condition": "OPEN_DEFERRED_TO_RECEIVER_BY_PT",
+      "alpha_mode": "OPAQUE",
+      "visual_qa": "FAIL_SOURCE_FOLIAGE_FIDELITY",
+      "lowest_branch_height_manual_qa": "Haarautuminen noin 2,2–2,5 m, silmämääräinen arvio; 2,5 m tasossa leikkaus ø1,46 m. Tavoitteen alaraja 2,5 m jää epävarmaksi.",
+      "pt_approved": false,
+      "game_integrated": false,
+      "visual_notes": "Epäsäännöllinen pilarimainen runko/oksisto, mutta lehvästö harva ja kulmikas; sivusta latvus on kapeampi kuin edestä. Lajin tunnistettavuus ei riitä lähdekuvaa vastaavaksi.",
+      "trunk_diameter_at_1_3m_m": 0.307869254897518,
+      "trunk_diameter_target_m": 0.5,
+      "trunk_diameter_review": "THINNER_THAN_TARGET",
+      "final_use_approved": false,
+      "review_only": true
+    },
+    {
+      "task": 964,
+      "id": "pagodipuu",
+      "at": "2026-10-25T04:26:21.261527+00:00",
+      "path": "work/normalized-v1/pagodipuu/pagodipuu.glb",
+      "sha256": "70c2f7e0c6539f8cac58f6ab1598d50f9ad87dde0d58ad8b91f2cac04f19276a",
+      "source_sha256": "47825fc8471ed2668b35785757473877d8e881b74dcc5c0a9b982ad50dede67d",
+      "bytes": 4277620,
+      "triangles": 1812,
+      "max_triangles": 2000,
+      "dimensions_xyz_m": [
+        9.0,
+        14.0,
+        8.638567474999903
+      ],
+      "target_height_m": 14,
+      "target_max_horizontal_width_m": 9.0,
+      "base_diameter_lowest15cm_m": 0.5553153432091268,
+      "base_limit_m": 0.9,
+      "base_limit_pass": true,
+      "cross_sections": [
+        {
+          "height_m": 0.15,
+          "diameter_m": 0.5302606606884899,
+          "extent_xz_m": [
+            0.5150359131260759,
+            0.48656519993747654
+          ]
+        },
+        {
+          "height_m": 1.3,
+          "diameter_m": 0.43547598663006293,
+          "extent_xz_m": [
+            0.4287002547404639,
+            0.4152084276551873
+          ]
+        },
+        {
+          "height_m": 1.35,
+          "diameter_m": 0.43486160848583016,
+          "extent_xz_m": [
+            0.42700699684994786,
+            0.41719601001699635
+          ]
+        },
+        {
+          "height_m": 2.5,
+          "diameter_m": 0.47629768515549126,
+          "extent_xz_m": [
+            0.4186053204569209,
+            0.44702597686911394
+          ]
+        },
+        {
+          "height_m": 3,
+          "diameter_m": 0.43860204955903276,
+          "extent_xz_m": [
+            0.4222919622794701,
+            0.401385650070339
+          ]
+        },
+        {
+          "height_m": 3.5,
+          "diameter_m": 0.44726132371638466,
+          "extent_xz_m": [
+            0.4337243827239041,
+            0.40063309311487316
+          ]
+        },
+        {
+          "height_m": 4,
+          "diameter_m": 0.4165482189729138,
+          "extent_xz_m": [
+            0.40129610162727225,
+            0.38484843718292017
+          ]
+        },
+        {
+          "height_m": 4.5,
+          "diameter_m": 0.47078009872536786,
+          "extent_xz_m": [
+            0.42387810722297076,
+            0.39701030423556727
+          ]
+        },
+        {
+          "height_m": 5,
+          "diameter_m": 0.8506802039327044,
+          "extent_xz_m": [
+            0.8100290717965258,
+            0.49572228153295284
+          ]
+        }
+      ],
+      "pivot": "trunk-base XZ bbox center; minimum Y at ground",
+      "units": "meters",
+      "up": "+Y",
+      "root_scale": [
+        1,
+        1,
+        1
+      ],
+      "baked_scale_xyz": [
+        13.489089953534336,
+        14.433425622954946,
+        13.489089953534336
+      ],
+      "topology_uv_preserved": true,
+      "new_local_geometry": false,
+      "maps": [
+        {
+          "role": "normal",
+          "path": "pagodipuu-normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "ab85e785b1fc9978d808554e8fbe069c8f21b66baf8393d0bbf11642429501a6",
+          "decoded_pixels_preserved": true
+        },
+        {
+          "role": "basecolor",
+          "path": "pagodipuu-basecolor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "53d4c346a32d9fcbb0f323ea32abd1a7462156855520bed50511d9aee4064217",
+          "decoded_pixels_preserved": true
+        },
+        {
+          "role": "metallic-roughness",
+          "path": "pagodipuu-metallic-roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "a3b3c44ca5d93a4bd2f9b8cc6ef1cca47fb8418b2a42b32c1f615abeac0fecf9",
+          "decoded_pixels_preserved": true
+        }
+      ],
+      "materials": 1,
+      "primitives": 1,
+      "alpha_condition": "OPEN_DEFERRED_TO_RECEIVER_BY_PT",
+      "alpha_mode": "OPAQUE",
+      "visual_qa": "FAIL_SOURCE_FOLIAGE_FIDELITY",
+      "lowest_branch_height_manual_qa": "Päähaarautuminen noin 4,5–5,0 m, silmämääräinen arvio; 4,5 m leikkaus on vielä runkomittainen.",
+      "pt_approved": false,
+      "game_integrated": false,
+      "visual_notes": "Leveä oksisto, mutta pyöreä yhtenäinen kupulatvus puuttuu. Harvat erilliset kulmikkaat lehtilevyt poikkeavat selvästi lähdekuvasta.",
+      "trunk_diameter_at_1_3m_m": 0.43547598663006293,
+      "trunk_diameter_target_m": 0.7,
+      "trunk_diameter_review": "THINNER_THAN_TARGET",
+      "final_use_approved": false,
+      "review_only": true
+    }
+  ],
+  "alpha_status": "OPEN_DEFERRED_TO_RECEIVER_BY_PT",
+  "source_images_received": true,
+  "new_calls": 3,
+  "credits": 135,
+  "credit_balance": 18665,
+  "automatic_retries": false,
+  "pt_approved": false,
+  "game_integrated": false,
+  "reason": "All three crowns are too sparse/angular compared with source images. Two trunks are materially thinner than ordered. Root flare problem is fixed and numeric height/width/triangle/map gates pass.",
+  "recommendation": "Do not accept as final trees. PT should decide whether receiver-owned leaf cards/foliage work on these Tripo trunks is appropriate, including correction of trunk diameters; otherwise new method and a separately bounded retry are needed. No more Tripo calls executed.",
+  "structural_check_evidence": "../qa/package-check.json"
+}

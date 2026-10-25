@@ -1,0 +1,169 @@
+{
+  "at": "2026-10-25T04:28:23.603544+00:00",
+  "status": "TECHNICAL_PASS_VISUAL_FAIL_PT_REVIEW_REQUIRED",
+  "review_only": true,
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "bytes": 1787,
+      "sha256": "0af92f1e3e2ea9b192312ca7c01a350a531d80bc65fe09713497873ed9210eaa"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 14656,
+      "sha256": "60d57ef790e0eda7dc19a3b307a6ce38ce47dd1459300cccf22186513b47279b"
+    },
+    {
+      "path": "generation-ledger.json",
+      "bytes": 3845,
+      "sha256": "495c9129dfb32c7a376bb0ec4757e3d19f5a99ae6d4f17f0c93464648cd006f9"
+    },
+    {
+      "path": "idantuija/MANIFEST.json",
+      "bytes": 3938,
+      "sha256": "0cc76841ab1a038934c824888bcb05fbbb744107525d88eceec7126eeb0a292d"
+    },
+    {
+      "path": "idantuija/idantuija-basecolor.png",
+      "bytes": 1461740,
+      "sha256": "b718389341088d84dc3404e17806e9db91101e34e0bb6d1afb1f6a30f7c2ed84"
+    },
+    {
+      "path": "idantuija/idantuija-metallic-roughness.png",
+      "bytes": 1068481,
+      "sha256": "d3a8b4609c275ca952c0cf0dd7d6b4f089289b5a89cea2140d732b927cdf2a39"
+    },
+    {
+      "path": "idantuija/idantuija-normal.png",
+      "bytes": 1170983,
+      "sha256": "7c78f5277e550a515b8f22d90d62b4297130cba1836b48c6d86d036710227001"
+    },
+    {
+      "path": "idantuija/idantuija.glb",
+      "bytes": 4637324,
+      "sha256": "a8670c5c33212a8f4ff1535d5a0a9613f1b33b47adba6f6f24f5a89ddb4fa377"
+    },
+    {
+      "path": "kiinankataja/MANIFEST.json",
+      "bytes": 3985,
+      "sha256": "1ed54f2dffd88c7367e2d67396898f6dec6530c6ac6f3aea4a4f7f546d17b3ca"
+    },
+    {
+      "path": "kiinankataja/kiinankataja-basecolor.png",
+      "bytes": 1417369,
+      "sha256": "1bc71426f75b76f37dee65b6364a56862435620e8a516621d391b290d6207806"
+    },
+    {
+      "path": "kiinankataja/kiinankataja-metallic-roughness.png",
+      "bytes": 830746,
+      "sha256": "c658069c22eb347664ce2369430b26ecad8406036713178941a08732a0f9b12a"
+    },
+    {
+      "path": "kiinankataja/kiinankataja-normal.png",
+      "bytes": 1116349,
+      "sha256": "1e5d60eb2522a89916fee489e8be1c23f88b199a47d14057ce6685079afaa7e5"
+    },
+    {
+      "path": "kiinankataja/kiinankataja.glb",
+      "bytes": 4221788,
+      "sha256": "ac7d787625a5b5062716c2736ce18b4eb0c0c12c5df8ab95e4af98911f6318f0"
+    },
+    {
+      "path": "pagodipuu/MANIFEST.json",
+      "bytes": 3911,
+      "sha256": "1faa40fad0d8c15d885204bcf1a3c9393af0683304a7e3584203115edcc1f085"
+    },
+    {
+      "path": "pagodipuu/pagodipuu-basecolor.png",
+      "bytes": 1472272,
+      "sha256": "53d4c346a32d9fcbb0f323ea32abd1a7462156855520bed50511d9aee4064217"
+    },
+    {
+      "path": "pagodipuu/pagodipuu-metallic-roughness.png",
+      "bytes": 855349,
+      "sha256": "a3b3c44ca5d93a4bd2f9b8cc6ef1cca47fb8418b2a42b32c1f615abeac0fecf9"
+    },
+    {
+      "path": "pagodipuu/pagodipuu-normal.png",
+      "bytes": 1103531,
+      "sha256": "ab85e785b1fc9978d808554e8fbe069c8f21b66baf8393d0bbf11642429501a6"
+    },
+    {
+      "path": "pagodipuu/pagodipuu.glb",
+      "bytes": 4277620,
+      "sha256": "70c2f7e0c6539f8cac58f6ab1598d50f9ad87dde0d58ad8b91f2cac04f19276a"
+    },
+    {
+      "path": "qa/idantuija-material.json",
+      "bytes": 1994,
+      "sha256": "9f7d54ccc91318d06b8a851aec562e2bab4f7e07c1c43344277e2b6bb1d81ea7"
+    },
+    {
+      "path": "qa/idantuija-mittakaava.json",
+      "bytes": 1085,
+      "sha256": "4c4e36c9b4a7ed107348878d7ce75bbf267fb6d430b8b974c9a8adea18880032"
+    },
+    {
+      "path": "qa/idantuija-mittakaava.png",
+      "bytes": 336225,
+      "sha256": "4f0710c3c50dc0648d5572adac987d1c35509e2ded41ce310a9cee2b5aa71979"
+    },
+    {
+      "path": "qa/kiinankataja-material.json",
+      "bytes": 1996,
+      "sha256": "7aa1186fa8cb40b6a1355b9631fb00d36f74ce9a7d64678a0eda44aac8a7b35f"
+    },
+    {
+      "path": "qa/kiinankataja-mittakaava.json",
+      "bytes": 1085,
+      "sha256": "6c45aaf86c455137169f4ac48e2a4abdef22c362a3e2fa98ed354349a01b5b8a"
+    },
+    {
+      "path": "qa/kiinankataja-mittakaava.png",
+      "bytes": 328159,
+      "sha256": "90b4f93716b734b8a45340a02d38a83f849f9c52730739de72478976b437b0b8"
+    },
+    {
+      "path": "qa/pagodipuu-material.json",
+      "bytes": 1943,
+      "sha256": "9e45fb9b8961d911e305ea1ed13cdbc5917b03bfa3b97cc63b6e8d7295e3642a"
+    },
+    {
+      "path": "qa/pagodipuu-mittakaava.json",
+      "bytes": 1035,
+      "sha256": "608d4da8ba7e9fcdcc12154d29200c2aaf20c517e8abedc4060620ba52f37dc8"
+    },
+    {
+      "path": "qa/pagodipuu-mittakaava.png",
+      "bytes": 357662,
+      "sha256": "b8dc03f96ddab9f6c59e4723f7cfb3073698fa642941e4d1663364e1f0b5518d"
+    },
+    {
+      "path": "specification.json",
+      "bytes": 2165,
+      "sha256": "a4fe379bdf09e9a8e283cbba540bec681cd44ee29952b9e9e16011bdc7edf431"
+    }
+  ],
+  "models": [
+    {
+      "task": 962,
+      "id": "idantuija",
+      "path": "idantuija/idantuija.glb",
+      "sha256": "a8670c5c33212a8f4ff1535d5a0a9613f1b33b47adba6f6f24f5a89ddb4fa377"
+    },
+    {
+      "task": 963,
+      "id": "kiinankataja",
+      "path": "kiinankataja/kiinankataja.glb",
+      "sha256": "ac7d787625a5b5062716c2736ce18b4eb0c0c12c5df8ab95e4af98911f6318f0"
+    },
+    {
+      "task": 964,
+      "id": "pagodipuu",
+      "path": "pagodipuu/pagodipuu.glb",
+      "sha256": "70c2f7e0c6539f8cac58f6ab1598d50f9ad87dde0d58ad8b91f2cac04f19276a"
+    }
+  ],
+  "pt_approved": false,
+  "game_integrated": false
+}
