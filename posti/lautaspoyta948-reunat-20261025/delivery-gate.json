@@ -1,0 +1,104 @@
+[
+ {
+  "kansio": "output/juoksupeli-lautaspoyta-948-reunat-976-20261025/delivery-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "lautanen.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "lautanen.glb",
+     "tyyppi": "esine",
+     "kolmiot": 1948,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 png",
+      "2048×2048 png"
+     ],
+     "rajat": {
+      "min": [
+       -0.14,
+       0,
+       -0.139
+      ],
+      "max": [
+       0.14,
+       0.056,
+       0.139
+      ],
+      "koko": [
+       0.28,
+       0.056,
+       0.279
+      ]
+     }
+    },
+    "polku": "osat/lautanen.glb"
+   },
+   {
+    "nimi": "ennen-jalkeen.png",
+    "polku": "qa/ennen-jalkeen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1440,
+     "h": 1190
+    }
+   },
+   {
+    "nimi": "ylhaalta-ennen-jalkeen.png",
+    "polku": "qa/ylhaalta-ennen-jalkeen.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1400,
+     "h": 756
+    }
+   },
+   {
+    "nimi": "lautanen-basecolor.png",
+    "polku": "tekstuurit/lautanen-basecolor.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "lautanen-metallic-roughness.png",
+    "polku": "tekstuurit/lautanen-metallic-roughness.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "lautanen-normal.png",
+    "polku": "tekstuurit/lautanen-normal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "tekstuuri",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ]
+ }
+]

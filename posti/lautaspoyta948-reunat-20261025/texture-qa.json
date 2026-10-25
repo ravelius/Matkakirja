@@ -1,0 +1,253 @@
+{
+  "task": 976,
+  "created_at": "2026-10-25T09:16:25.633738+00:00",
+  "method": "Existing-map same-UV-component 8-neighbour color dilation, 2px mask guard, neutral-only ivory highlight compression with 8px inward feather; no generation.",
+  "size": [
+    2048,
+    2048
+  ],
+  "mode": "RGB",
+  "alpha_added": false,
+  "new_tripo_calls": 0,
+  "new_image_calls": 0,
+  "new_credits": 0,
+  "source_texture_sha256": "07dd17093e33ba78933212c2e9b2fb68025221f039491114eda20a6bdc110fcd",
+  "corrected_texture_sha256": "6e8b6f10e4bf10f02a3339c67fba032fff010d7f7ba7a06f6dda5346642a7860",
+  "source_glb_sha256": "81a556aca695c51d08ec59440f58a0ee7da42cea86c84c776afe0d3630f82a89",
+  "corrected_glb_sha256": "d35788f84df4a3a0bc863aface384840abf2f716fa95e23526b7bb201f4a3060",
+  "gold_mask_pixels": 258452,
+  "repaired_pixels": 292341,
+  "inside_uv_repaired_pixels": 171427,
+  "gutter_repaired_pixels": 120914,
+  "gutter_iterations": 57,
+  "uv_island_checks": [
+    {
+      "uv_island": 3,
+      "corrected_pixels": 3,
+      "iterations": 3,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 8,
+      "corrected_pixels": 3524,
+      "iterations": 19,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 12,
+      "corrected_pixels": 3298,
+      "iterations": 22,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 13,
+      "corrected_pixels": 6543,
+      "iterations": 43,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 14,
+      "corrected_pixels": 6988,
+      "iterations": 63,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 16,
+      "corrected_pixels": 5185,
+      "iterations": 25,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 17,
+      "corrected_pixels": 13159,
+      "iterations": 62,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 18,
+      "corrected_pixels": 7536,
+      "iterations": 34,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 23,
+      "corrected_pixels": 9141,
+      "iterations": 20,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 26,
+      "corrected_pixels": 10623,
+      "iterations": 24,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 27,
+      "corrected_pixels": 3731,
+      "iterations": 19,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 28,
+      "corrected_pixels": 8369,
+      "iterations": 23,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 29,
+      "corrected_pixels": 12536,
+      "iterations": 22,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 30,
+      "corrected_pixels": 4767,
+      "iterations": 58,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 31,
+      "corrected_pixels": 3,
+      "iterations": 1,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 33,
+      "corrected_pixels": 13314,
+      "iterations": 26,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 34,
+      "corrected_pixels": 8775,
+      "iterations": 25,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 37,
+      "corrected_pixels": 7357,
+      "iterations": 18,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 39,
+      "corrected_pixels": 10882,
+      "iterations": 21,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 40,
+      "corrected_pixels": 9304,
+      "iterations": 19,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 44,
+      "corrected_pixels": 15532,
+      "iterations": 53,
+      "same_island_donors_verified": true
+    },
+    {
+      "uv_island": 46,
+      "corrected_pixels": 10857,
+      "iterations": 22,
+      "same_island_donors_verified": true
+    }
+  ],
+  "remaining_gold_mask_pixels": 0,
+  "original_blue_pixels": 1831026,
+  "original_blue_pixels_changed": 0,
+  "neutral_white_pixels_toned": 2095240,
+  "flat_white_core_channel_min": [
+    235,
+    235,
+    234
+  ],
+  "flat_white_core_channel_max": [
+    240,
+    239,
+    237
+  ],
+  "blue_boundary_feather_pixels": 739138,
+  "outside_edit_masks_changed": 0,
+  "geometry_uv_normals_indices_bit_identical": true,
+  "material_nodes_transforms_unchanged": true,
+  "non_basecolor_buffer_views_byte_identical": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+  ],
+  "normal_map_unchanged": true,
+  "metallic_roughness_map_unchanged": true,
+  "triangles": 1948,
+  "mesh_count": 1,
+  "material_count": 1,
+  "runtime_fragment_repack_and_sunlight_check_pending": true,
+  "orange_mipmap_check": [
+    {
+      "size": 2048,
+      "orange_gold_pixels": 0,
+      "loose_warm_mask_pixels": 0,
+      "loose_warm_colors": []
+    },
+    {
+      "size": 1024,
+      "orange_gold_pixels": 0,
+      "loose_warm_mask_pixels": 36,
+      "loose_warm_colors": [
+        [
+          241,
+          237,
+          232
+        ]
+      ]
+    },
+    {
+      "size": 512,
+      "orange_gold_pixels": 0,
+      "loose_warm_mask_pixels": 7,
+      "loose_warm_colors": [
+        [
+          241,
+          237,
+          232
+        ]
+      ]
+    },
+    {
+      "size": 256,
+      "orange_gold_pixels": 0,
+      "loose_warm_mask_pixels": 0,
+      "loose_warm_colors": []
+    },
+    {
+      "size": 128,
+      "orange_gold_pixels": 0,
+      "loose_warm_mask_pixels": 0,
+      "loose_warm_colors": []
+    },
+    {
+      "size": 64,
+      "orange_gold_pixels": 0,
+      "loose_warm_mask_pixels": 0,
+      "loose_warm_colors": []
+    },
+    {
+      "size": 32,
+      "orange_gold_pixels": 0,
+      "loose_warm_mask_pixels": 0,
+      "loose_warm_colors": []
+    }
+  ],
+  "mipmap_threshold_note": "No original orange-gold signature at any checked mip (R-B>15,G-B>8,R>=G). Loose warm mask captures 36/7 ivory pixels at1024/512 due BOX rounding, RGB241/237/232, not the original saturated orange band.",
+  "visual_atlas_and_two_geometry_views_reviewed": true,
+  "visual_review_scope": "Color-only CPU projection of original plate geometry; no lighting, game runtime or fragment geometry acceptance.",
+  "source_package_preserved": true,
+  "white_feather_note": "Flat neutral-white core capped to R235-240/G235-239/B234-237. Anti-alias transitions beside blue deliberately feather to preserve every original blue pixel."
+}
