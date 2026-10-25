@@ -83,3 +83,5 @@ Kaikki pohjautuvat natiiviseppa/juna-210:een (kaukopuut d2f94a515, muut 9d548981
 - Ehdotus omistajalle: pelikoodari/sali-sisakatto-ehdotus 95f3ac452 (salin katto jää sisäkatoksi salikameran ajan = poikkeus
   omistajan kattosääntöön 21.10. 10.43; kamera 3 m, niin kauas kuin sali sallii, seinävara 3 m). Pari PT:lle 09.44:
   havainne-editori-20261025-061905/04 → -094217/04. Odottaa PT:n KK-kysymystä omistajalle; junaan ei mitään ennen päätöstä.
+- PT 10.2x: sisäkattoehdotus 094217 HYLÄTTY (ei omistajan kysymystä); 05ae0f8c6 ei junaan. Haarat sali-kamera ja
+  sali-sisakatto-ehdotus talteen. Jono tyhjä.
