@@ -2575,3 +2575,12 @@ KK:ssa: "Joustetaanko palatsin koosta yhdellä yhteisellä mittakaavalla?" → "
 ihmisen kokoisina. Rakennusten muoto ja paikka säilyvät."). Korvaa 20.10. klo 07.30 kokolinjan (mitat oikeat). Säilyvät: paikat, järjestys, keskiakseli, suunnat, rakennusten muoto ja mittasuhteet.
 Koko palatsi skaalataan yhdellä kertoimella; ovet, portaat ja kaiteet ihmisen kokoisina; kujia kavennetaan erikseen vain pelattavuuden vuoksi; rakennuskohtaiset tai suuntakohtaiset skaalaukset (esim.
 yön Taihedian × 0,17/0,16) kielletty. Kerroin haetaan havainnekuvavertailulla (NUI:n havainnenäkymä), KK näyttää vertailukuvat omistajalle ennen lukitusta. 03-kysymys (Taihedianin mitat) poistuu.
+
+## PALATSIN MITTAKAAVA LUKITTU JA KUJIEN LEVENNYS (25.10.2026 klo 11.33)
+
+Omistaja 25.10.2026 klo 11.31 (KK:n kortti, kuvat 01-05 kolmikot): "Pidetäänkö palatsin koko ennallaan?" -> "Kyllä, koko pysyy (Suositus)" (selite: "Muurit ja ovet ovat jo havainnekuvien kokoisia.
+Kujista kysytään seuraavaksi."). Klo 11.32: "Levennetäänkö kaksi kapeaa kujaa havainnekuvien leveyteen?" -> "Kyllä, levennetään (Suositus)" (selite: "Rakennukset pysyvät ennallaan. Kuja näyttää
+havainnekuvan kaltaiselta."). Peruste (PT): NUI:n mittaus (main 94b2da26b) - korkeudet 0,79-1,13 keisariin nähden, leveydet 0,64-2,12; LR:n lähdemitat: kuja-40 4,2-5,3 m (pohja.json, OSM),
+havainteessa 02 ~7,7 m ja 05 ~10,7 m. Toteutus: LR siirtää muureja, PK pohja/reitti/esteet. Faktakorjauksia ei tehty: kuja 02 on jo lähteen leveydellä; salin 04 pylväät 0,60 m jäävät (v48 0,28 m
+hylätty, sali on keksitty talo ja 0,60 vastaa havainnetta 0,56). Halli 03 ei mahdu kuvaan todellisessa paikassaan; ratkaisu on 2.177:n voimassa oleva 'avarassa loivenee pehmeästi' (PK, aukiokamera).
+OPPI (PT, periaate 6): tilasin faktakorjauksen mittaluvusta tarkistamatta, mitä se mittasi (0,92 m sisälsi jalustan); mittaluvun kohde tarkistetaan ennen tilausta.
