@@ -2550,3 +2550,7 @@ Havainne 810/06–07 kohdittain (LR 5e98ff8dc). Rakennukset-v36 kuitattu (Meridi
 ## METAL-VARIANTTITARKISTUS RUNKOON (PT 25.10. 04.5x) (25.10.2026 klo 05.05)
 
 Juoksupelin lattiavarjostin näytti pihan taivaana iPadilla: as_type<half>(int) ja Applen GPU-kääntäjän kaatuminen kaskadivarjo+clip-varianteissa näkyivät vasta ajossa, eikä NS:n laitekäännös nähnyt niitä (kolme runkoa vihreänä viallisena). VS: juurikorjaus kaikki half → float juoksupelin 7 varjostimessa (grafiikka-211 2923706a4, testi EiHalfJuoksupelissa), sim A9/B5 puhtaat. Periaate 10: oppi Raamattuun 9.1 METAL-VARIANTTITARKISTUS; työkalu tyokalut/metal-tarkistus.sh NS:n runkotarkistukseen. Ruutuaika half → float mitataan M1-iPadilla (uusi tekniikka, 9.11 a).
+
+## _VALMIIT-KANSIOON EI KIRJOITETA OLEMASSA OLEVAN PAALLE (PT 25.10.2026) (25.10.2026 klo 08.35)
+
+LR kirjoitti klo 08.34 PK:n kuitatun paketin _valmiit/juoksupeli-kk-tausta-peking-v47-vienti-20261025 päälle omalla samannimisellä v47:llä (rinnakkainen työ lupakyselyjumin aikana; ämpäri ja runko ennallaan, JU palauttaa kansion ämpäristä). Oppi: ennen kirjoitusta _valmiit-kansioon tarkistetaan ls:llä, ettei kansiota ole, ja käytetään aina uutta versionumeroa; jumista vapautuva rooli lukee ensin PT:n uusimmat viestit ennen jonossa olevia töitä. PK teki saman nurmikorjauksen LR:n jumin aikana PT:n käskystä.
