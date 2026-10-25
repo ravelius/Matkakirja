@@ -15,6 +15,16 @@ Kansio `_tyo/linssiseppa2/kierros2/`. Jokaisessa: `grep KÄÄNNETTY kaanna-app2-
 - **P26 84dddcf3f, ketju-56** (sk-omistaja40, P25:n jälkeen; metal + käännös ensin): 01–05 × n nyt / a kääre 0 / b + ympäristö
   suunnattu 0,5 / c + aurinko 1,55, ympäristö 1,45 (`k17 1 x x x 1.45` + `aurinkovoima 1.55`) / d + suunta 0,8. Tulos `omistaja50-84dddcf3f/`.
 
+## 0b. P25 DIAGNOOSI (valmis 11.45, todistus-omistajapari-20261025-1141, lattian med/p90 alueella x 0,2–0,8, y 0,68–0,92)
+
+w1 saliaurinko 30/90: 142/157 | w2 kattovarjo 0: 147/187 | w3 kattovarjo 0 + 60/90: 189/213 | w4 kattovarjo 0 + ulkoaurinko: 186/208 |
+w5 kattovarjo 1 + ulkoaurinko: 143/159 | w6 varjot 0: 186/208 | w7 varjot 0 + 30/90: 177/196.
+→ **PIILOTETUN KATON VARJO (4e2587791) estää kaiken auringon salissa**, myös 30° ikkunoista. Katon solmut (avoimet-v47 juhlasali):
+katto_raystas y 2,98–3,52, katto y 3,11–7,53, molemmat x ±7,7 (räystäs ~1,7 m seinän yli); ikkunan yläreuna 1,99 m → 30°:n säde
+ikkunan yläreunaan sivuaa räystästä (1,99 + 1,7 · tan 30° = 2,97). Matalampi aurinko (18–22°) ei P22:ssa myöskään tuonut juovia →
+epäile lisäksi varjon pehmennystä/biasta (3 × 3 -teltta) tai varjopassin vertex-temppua. Seuraavaksi: salin aurinko 15–20° +
+kattovarjo 1 vs 0 (juovat?), tai kattovarjo vain ulkoauringolle (salin aurinko ilman katon varjoa, katto varjostaa yhä ulkoa) – PT päättää.
+
 ## 1. TÄNÄÄN (10.58–11.45)
 
 - **avoimet-v44–v46 puuttuivat ämpäristä (404)** → P19/P20/P21:n sali ilman avoimia huoneita (mitättömät 04-kuvat). JU vei v47:n
