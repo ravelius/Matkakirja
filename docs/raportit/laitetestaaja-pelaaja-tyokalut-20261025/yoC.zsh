@@ -46,7 +46,7 @@ ui "ui juoksupeli botti 1"
 ui "ui juoksupeli pois"; sleep 3
 ui "ui juoksupeli avaus 1"
 ui "ui juoksupeli palatsi alku keski"
-ui "ui juoksupeli v4"; sleep 50
+ui "ui juoksupeli v4"; t=0; until grep -a -q "avaus: OhjausPelaajalle" $L || (( t > 120 )); do sleep 2; (( t+=2 )); done; sleep 3  # aika vapautetaan vasta alkulennon jälkeen
 ui "ui juoksupeli valo jaady 0"; ui "ui juoksupeli uudestaan 777"; sleep 40
 ui "ui juoksupeli valo jaady 1"; sleep 2
 mittaa A 10
