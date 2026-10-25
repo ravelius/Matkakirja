@@ -7,7 +7,7 @@
 # Ajo: Blender [-b] --factory-startup -P tools/havainne-kamera.py -- --puyi X Z [SUUNTA] [--havainne kuva.png] [--ulos polku/etuliite]
 #        [--mallit kansio] [--tausta kielletty-tausta-v42] [--rakennukset kielletty-rakennukset-v31] [--avoimet avoimet-v31]
 #        [--muurikate kielletty-muurikate-v12/kk-muurikate-v12.glb] [--ulkorengas kielletty-ulkorengas-v1] [--kulmatorni kielletty-kulmatorni-v1b]
-#        [--sade 150] [--leveys 1448]
+#        [--katot-pois] [--vapaa X Z KORKEUS ALAS [KENTTÄ]] [--sade 150] [--leveys 1448]
 #   X Z = keisarin paikka pohja.json-kehyksessä (x itä, z pohjoinen), SUUNTA = katseen atsimuutti asteina (0 = pohjoinen, 90 = itä).
 #   Ilman -b:tä Blender jää auki kameranäkymään (Numpad 0), havainnekuva taustakuvana 50 %.
 #   Mallit luetaan vientipakettien kansioista (oletus: esikatselu-mallit, jossa on linkit _valmiit-paketteihin).
@@ -54,6 +54,10 @@ if os.path.exists(sij):
         e.location = bl(tx, tz); e.rotation_euler = (0, 0, 2 * math.atan2(h['rotation'][1], h['rotation'][3]))
         for o in uudet:
             if o.parent is None: o.parent = e
+if '--katot-pois' in A:   # havainne 810/04 (sali katto avattuna): avointen huoneiden katot ja harjakoristeet pois
+    for o in list(bpy.data.objects):
+        if o.type == 'MESH' and any(k in o.name for k in ('katto', 'harjakoriste', 'chiwen', 'elaimet')) and str(o.get('lahde', '')) in {h['glb'].split('/')[-1] for h in json.load(open(sij))['huoneet']}:
+            bpy.data.objects.remove(o)
 if os.path.exists(MK): tuo(MK)
 # pelin muut kerrokset (PT 24.10.: taivas keskellä): ulkorengas (lod2-palat, maailman koordinaatit) ja kulmatornit, jos annettu
 for _k in filter(None, [arg('--ulkorengas'), arg('--kulmatorni')]):
@@ -77,6 +81,11 @@ cam.location = bl(PX - dx * TAAKSE, PZ - dz * TAAKSE, YLOS)
 alas = math.atan2(YLOS - 1.0, TAAKSE) - math.atan(0.332 * math.tan(math.radians(KENTTA) / 2))   # PK: rinta (1,0 m) 0,332 puolikorkeutta keskikohdan alla → 16,4°
 eteen = bl(dx, dz) - bl(0, 0); suunta = Vector((eteen.x * math.cos(alas), eteen.y * math.cos(alas), -math.sin(alas)))
 cam.rotation_euler = suunta.to_track_quat('-Z', 'Y').to_euler()
+V = arg('--vapaa')   # yleiskuvat (havainne 810/07): --vapaa X Z KORKEUS ALAS_ASTEET [PYSTYKENTTÄ]; kamera paikassa (X, Z), katse SUUNTA
+if V and not isinstance(V, str):
+    cam.location = bl(float(V[0]), float(V[1]), float(V[2])); a_ = math.radians(float(V[3]))
+    if len(V) > 4: cd.angle = math.radians(float(V[4]))
+    suunta = Vector((eteen.x * math.cos(a_), eteen.y * math.cos(a_), -math.sin(a_))); cam.rotation_euler = suunta.to_track_quat('-Z', 'Y').to_euler()
 if HAV and os.path.exists(HAV):
     cd.show_background_images = True; tk = cd.background_images.new(); tk.image = bpy.data.images.load(HAV); tk.alpha = 0.5; tk.display_depth = 'FRONT'
 # valo kuten pelin leivonta (VS k20b: 170°/45°) ja taivas
@@ -95,7 +104,7 @@ if '--osumat' in A:   # mitkä kappaleet täyttävät keskikaistan (x 0,35–0,6
             u, v = OA[0] + (OA[1] - OA[0]) * (ix + 0.5) / 24, OA[2] + (OA[3] - OA[2]) * (iy + 0.5) / 12
             p_ = fr[3] + (fr[0] - fr[3]) * u + (fr[2] - fr[3]) * v   # view_frame: [ylä-oikea, ala-oikea, ala-vasen, ylä-vasen]
             d_ = (R @ p_).normalized(); hit, loc, n_, i_, ob, m_ = sc.ray_cast(dg, cam.location, d_)
-            k_ = 'taivas' if not hit else ob.get('lahde', ob.name)
+            k_ = 'taivas' if not hit else ob.get('lahde', ob.name) + (' / ' + ob.data.materials[ob.data.polygons[i_].material_index].name if '--osumat-materiaali' in A and ob.type == 'MESH' and ob.data.materials else '')
             e = osu.setdefault(k_, [0, 0.0, 0.0]); e[0] += 1
             if hit: e[1] += (loc - cam.location).length; e[2] = max(e[2], loc.z)
     for k_, (c_, dsum, zmax) in sorted(osu.items(), key=lambda t: -t[1][0]):
