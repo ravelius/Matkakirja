@@ -52,3 +52,9 @@ kuvata (PK: `ui juoksupeli palatsi alku 6.4,-232` + `maali 6.4,-120` + `v4 11`, 
 
 hallit_jalusta_sokkeli.py, kaiverrus_marmoriksi.py, aja_hallit_v56.zsh, sali_uv1_nimet.py (ei käytössä), leivo_malli.py (SUODATA);
 `_tyo/linnanrakentaja/sali-uv1/` (salin UV1-analyysi).
+
+## Lisäys 14.4x (luovutuksen jälkeen): b6-vertailu valmis
+
+Ajot `lokit/havainne-editori-20261026-142325` (v47) ja `-142922` (v48), pari `kielletty-rakennukset/hallit-v56/porttipari-b6-v47-v48.png`,
+lähetetty PT:lle: (1) kivikerrat ✓, (2) p216 portaat tasaisemmat, (3) seinäkiilat samat v47:ssä ja v48:ssa → ympäristön varjot,
+ei malli. Seuraavaksi: PT:n kuittaus → pakkaa rakennukset-v48 (pohja `pakkaa_v56_v47_v16.zsh`, vain rakennukset) → SHA:t PT:lle.
