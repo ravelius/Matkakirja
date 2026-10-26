@@ -2651,3 +2651,7 @@ Periaatteet 2 ja 6. KK kertoi omistajalle 13.3x, että kartan 3D-sarja on pidoss
 ## OPPI: ISON IPADIN AJOT YKSI KERRALLAAN (PT 26.10.) (26.10.2026 klo 14.09)
 
 LT:n b6-reittiajo 13.53–14.07 meni hukkaan: PK ajoi Isolla iPadilla pelikuvien A/B-ajon (valo heitto/jalki) 13.46–13.53 LT:n ajon päälle, ja laite kuumeni (thermalState 2). Rikottu periaate 2 ja 9.11 (iso iPad vapaasti koskee laitetta, ei rinnakkaisia ajoja). Korjaus: ennen jokaista iPad-ajoa ps-tarkistus (ipad.sh, esikatselu.sh, todistusajo) ja vuorolukko /tmp/matkakirja-ipad.lukko (mkdir, tiedosto kuka); NS lisää lukon ipad.sh:hon. Uusinta vasta kun thermalState 0.
+
+## OPPI: OMISTAJALLE VAIN ASENNETUSTA VERSIOSTA TODENNETTU (PT 26.10.) (26.10.2026 klo 15.26)
+
+PT kertoi KK:lle klo 15.3x, että iPad Pro 11:een asennetussa junan 211 rungossa af94882a9 on kartan yhtenäinen 3D-sarja, mutta Symbolimallit.Nollaa asetti sarjan pois päältä käynnistyksessä (KS:n simu 15.18: näkyvissä 0 mallia; korjaus 6922da400). Rikottu periaate 2: väite perustui roolin muutoslistaan, ei asennetusta versiosta otettuun kuvaan. Korjaus: ennen KK:n 'mitä versiossa on' -riviä jokainen omistajalle uutena mainittu näkyvä asia on todennettu juuri siitä käännöksestä (simu- tai laitekuva); muuten se jätetään rivistä pois. KK:lle lähti oikaisu heti.
