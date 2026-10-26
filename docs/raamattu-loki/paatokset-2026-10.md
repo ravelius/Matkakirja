@@ -2735,3 +2735,7 @@ KK:n päätös omistajan valtuutuksella klo 23.3x (sanatarkasti): juoksupelin l�
 ## KOHDEKORTTIPOHJA: TIETOKORTTI POHJALLA SELLAISENAAN, PUUTTEET NUI:N POHJATYÖKSI (KK omistajan valtuutuksella) (26.10.2026 klo 23.53)
 
 KK:n päätös omistajan valtuutuksella klo 23.53 (sanatarkasti): hyväksytty. Tietokortti menee junaan 211 nykyisellä kohdekorttipohjalla. NUI tekee puuttuvat a) vierityksen vihjeen laajennettuun korttiin, c) ☰-napin selkeän merkityksen ja d) "Näytä vähemmän" -napin "Lue lisää" -napin jälkeen omana pohjatyönään junan 211 jälkeen olemassa olevilla UI-pohjilla. Toteutustapa tulee kuvina KK:lle ennen mergeä, koska omistaja ei ole aiemmin päättänyt näistä (lokissa ei osumia).
+
+## KOHDEKORTTIPOHJA: NUI:N A/C/D HYVÄKSYTTY (KK omistajan valtuutuksella) (27.10.2026 klo 00.05)
+
+KK:n päätös omistajan valtuutuksella klo 00.1x (sanatarkasti): NUI:n kohdekorttipohjan a/c/d (1ceb1ddff, kuvat proto-3d/_tyo/natiivi-ui/kohdekortti/kuvat-1ceb1ddff/) hyväksytty, merge junan 211 jälkeen. Lisäksi KK tietokortin vedokseen: Pulun ohjeeseen 'älä toista samaa faktaa' (Etonin tekstissä hallintopiiri ja vastakkainen ranta kahdesti); KK tarkistaa vedoksesta.
