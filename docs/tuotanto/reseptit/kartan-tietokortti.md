@@ -23,7 +23,7 @@ ja Pulun kehote kokonaan.
 3. **Kaikki tulee Wikidatasta.** Ei arvauksia, ei laskentaa kentistä (ei tiheyttä, ei ikää), ei yhdistämistä muista lähteistä.
 4. **Nimi:** Wikidatan suomenkielinen label (`labels.fi`); jos sitä ei ole, englanninkielinen (`labels.en`); jos sitäkään ei ole,
    kohteen alkukielinen nimi (P1448 tai OSM:n `name`). Nimeä ei käännetä itse.
-5. **Lähderivi aina näkyvissä:** `Lähde: Wikidata, Wikipedia`. Kuvasta tekijä ja lisenssi Commonsista rajapinnasta
+5. **Lähderivi aina näkyvissä:** `Lähde: Wikidata, Wikipedia` (suomenkielisen tyngän ja englanninkielisen artikkelin kanssa `Lähde: Wikidata, Wikipedia (fi, en)`). Kuvasta tekijä ja lisenssi Commonsista rajapinnasta
    (Raamattu 11.1: kuvat PD/CC; BY-SA tekijän nimellä).
 6. **Enintään viisi faktariviä.** Jos rivejä on enemmän, otetaan ensimmäiset viisi taulukon (1.4) järjestyksessä.
 
@@ -328,6 +328,8 @@ LÄHDE. Käytät VAIN alla annettua lähdettä (Wikidatan tiedot ja Wikipedian t
 mitään, mitä lähteessä ei lue, et arvaa etkä täydennä. Jos lähde ei kerro jotakin, jätät sen kertomatta. Jos lähteen
 tiedot ovat keskenään ristiriidassa, jätät ristiriitaisen asian pois. Jos lähteessä ei ole kahden virkkeen verran
 kerrottavaa tai se ei kerro paikasta mitään olennaista, vastaat pelkällä rivillä ###EI-LÄHDETTÄ### ja et mitään muuta.
+Jos lähteessä on suomenkielisen tekstin perässä englanninkielinen artikkeli, kirjoitat sen nimet suomeksi vain, kun
+suomenkielinen teksti tai faktat käyttävät vakiintunutta suomenkielistä muotoa (esimerkiksi Thamesjoki); muuten nimi jää alkuperäiseksi.
 
 LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
 (ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Kaikki luvut ja vuodet kirjoitat

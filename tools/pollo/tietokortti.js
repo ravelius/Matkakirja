@@ -211,7 +211,7 @@ export async function wikiLahde(haku, wiki, pitka) {
   };
   const fi = await hae('fi', wiki?.fi);
   const en = !fi || (pitka && fi.teksti.length < TYNKA) ? await hae('en', wiki?.en) : null;
-  if (fi && en) return { ...fi, teksti: `${fi.teksti}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
+  if (fi && en) return { ...fi, kielet: ['fi', 'en'], teksti: `${fi.teksti}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
   const l = fi ?? en;
   return l ? { ...l, teksti: l.teksti.slice(0, 4000) } : null;
 }
@@ -233,6 +233,8 @@ LÄHDE. Käytät VAIN alla annettua lähdettä (Wikidatan tiedot ja Wikipedian t
 mitään, mitä lähteessä ei lue, et arvaa etkä täydennä. Jos lähde ei kerro jotakin, jätät sen kertomatta. Jos lähteen
 tiedot ovat keskenään ristiriidassa, jätät ristiriitaisen asian pois. Jos lähteessä ei ole kahden virkkeen verran
 kerrottavaa tai se ei kerro paikasta mitään olennaista, vastaat pelkällä rivillä ###EI-LÄHDETTÄ### ja et mitään muuta.
+Jos lähteessä on suomenkielisen tekstin perässä englanninkielinen artikkeli, kirjoitat sen nimet suomeksi vain, kun
+suomenkielinen teksti tai faktat käyttävät vakiintunutta suomenkielistä muotoa (esimerkiksi Thamesjoki); muuten nimi jää alkuperäiseksi.
 
 LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
 (ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Kaikki luvut ja vuodet kirjoitat
