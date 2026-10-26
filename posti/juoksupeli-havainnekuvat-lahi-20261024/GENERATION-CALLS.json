@@ -1,0 +1,264 @@
+{
+  "method": "built-in image_gen",
+  "callsIssued": 12,
+  "callsCompleted": 12,
+  "pendingCalls": 0,
+  "initialCalls": 6,
+  "retries": 6,
+  "maximumPerPlace": 2,
+  "reason": "First attempts had clearly incorrect camera framing, 50-61 percent child height. One explicitly authorized camera retry used at each place. No further retries.",
+  "calls": {
+    "01-1": {
+      "taskNumber": 911,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/01-lahtokuja-attempt001.png",
+      "sha256": "a57dd61c3cdeaeef5e8a125e6085f14e7aaac2326e68c5d996e6ffeec81126ee",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": false,
+      "estimatedHatToSoleBoundsY": [
+        384,
+        1048
+      ],
+      "heightFraction": 0.6114,
+      "reason": "Clear camera framing failure: child substantially exceeds requested 35-45 percent height; camera too low. One source-authorized camera retry."
+    },
+    "02-1": {
+      "taskNumber": 912,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/02-punamuuri-kuja-attempt001.png",
+      "sha256": "27a9e11710a87f81a3b61dfe56aa286a3301f202eb3f2927ebeba1d7391a4eb9",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": false,
+      "estimatedHatToSoleBoundsY": [
+        428,
+        1010
+      ],
+      "heightFraction": 0.5359,
+      "reason": "Clear camera framing failure: child substantially exceeds requested 35-45 percent height; camera too low. One source-authorized camera retry."
+    },
+    "03-1": {
+      "taskNumber": 913,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/03-aukio-attempt001.png",
+      "sha256": "45b7d2b674e8ab5be72934c43dcf95458521d7ac6088c4f18f3eaa553e0d6ce1",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": false,
+      "estimatedHatToSoleBoundsY": [
+        375,
+        1043
+      ],
+      "heightFraction": 0.6145,
+      "reason": "Clear camera framing failure: child substantially exceeds requested 35-45 percent height; camera too low. One source-authorized camera retry."
+    },
+    "04-1": {
+      "taskNumber": 914,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/04-sali-katto-avattu-attempt001.png",
+      "sha256": "08c8d5a7d51d032d01e183ff03607987140509a4c432092cea760115eadf24a0",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": false,
+      "estimatedHatToSoleBoundsY": [
+        367,
+        984
+      ],
+      "heightFraction": 0.5681,
+      "reason": "Clear camera framing failure: child substantially exceeds requested 35-45 percent height; camera too low. One source-authorized camera retry."
+    },
+    "05-1": {
+      "taskNumber": 915,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/05-porttikaytava-attempt001.png",
+      "sha256": "8718d28120952e8c78ae744310b56c81fcdd7e7b3778a8d736141589500207ce",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": false,
+      "estimatedHatToSoleBoundsY": [
+        429,
+        1001
+      ],
+      "heightFraction": 0.5267,
+      "reason": "Clear camera framing failure: child substantially exceeds requested 35-45 percent height; camera too low. One source-authorized camera retry."
+    },
+    "06-1": {
+      "taskNumber": 916,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/06-meridiaaniportti-attempt001.png",
+      "sha256": "bf18586e1090df270ea2fed7ec2266512ca5ee861b157108fea5ad2eb0118fef",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "approvedForDelivery": false,
+      "estimatedHatToSoleBoundsY": [
+        508,
+        1052
+      ],
+      "heightFraction": 0.5009,
+      "reason": "Clear camera framing failure: child substantially exceeds requested 35-45 percent height; camera too low. One source-authorized camera retry."
+    },
+    "01-2": {
+      "taskNumber": 911,
+      "id": "01",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/01-lahtokuja.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/01-lahtokuja-attempt002.png",
+      "sha256": "2d46992671208cde306d452eaf3caa48f5469128ab1ad9e9fc0f9f389ff860b1",
+      "deliverySHA256": "2d46992671208cde306d452eaf3caa48f5469128ab1ad9e9fc0f9f389ff860b1",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        635,
+        1019
+      ],
+      "heightFraction": 0.3536,
+      "approvedForDelivery": true,
+      "strictNumericRangeMet": true,
+      "framingNote": "Approximately 35 percent, near requested lower bound; elevated rear following view.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "02-2": {
+      "taskNumber": 912,
+      "id": "02",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/02-punamuuri-kuja.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/02-punamuuri-kuja-attempt002.png",
+      "sha256": "53573d3b274d99aa5d04a4c712def732c4e46fe45abc01b38903a465faa06a09",
+      "deliverySHA256": "53573d3b274d99aa5d04a4c712def732c4e46fe45abc01b38903a465faa06a09",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        643,
+        1020
+      ],
+      "heightFraction": 0.3471,
+      "approvedForDelivery": true,
+      "strictNumericRangeMet": false,
+      "framingNote": "Approximately 35 percent, near requested lower bound; elevated rear following view.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "03-2": {
+      "taskNumber": 913,
+      "id": "03",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/03-aukio.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/03-aukio-attempt002.png",
+      "sha256": "c95ef346d27caf1982bc926953ff6c6b216abbb5cafc5964631e5c497d57ac0b",
+      "deliverySHA256": "c95ef346d27caf1982bc926953ff6c6b216abbb5cafc5964631e5c497d57ac0b",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        658,
+        1019
+      ],
+      "heightFraction": 0.3324,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "04-2": {
+      "taskNumber": 914,
+      "id": "04",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/04-sali-katto-avattu.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/04-sali-katto-avattu-attempt002.png",
+      "sha256": "04154a3cc117946de21abc3c1a92aed4f9a2a64455f42906bf29e27574a274bf",
+      "deliverySHA256": "04154a3cc117946de21abc3c1a92aed4f9a2a64455f42906bf29e27574a274bf",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        663,
+        1018
+      ],
+      "heightFraction": 0.3269,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "05-2": {
+      "taskNumber": 915,
+      "id": "05",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/05-porttikaytava.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/05-porttikaytava-attempt002.png",
+      "sha256": "804142cbb3970c8892c26ac182d79046a77b65e2c0408db87be23ef104fac107",
+      "deliverySHA256": "804142cbb3970c8892c26ac182d79046a77b65e2c0408db87be23ef104fac107",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        690,
+        1015
+      ],
+      "heightFraction": 0.2993,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "06-2": {
+      "taskNumber": 916,
+      "id": "06",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/06-meridiaaniportti.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/06-meridiaaniportti-attempt002.png",
+      "sha256": "ed229fe1224f4cf522b68dc121ace5d9c5169ec2e6834b026ab8c5a7de591fea",
+      "deliverySHA256": "ed229fe1224f4cf522b68dc121ace5d9c5169ec2e6834b026ab8c5a7de591fea",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        705,
+        1020
+      ],
+      "heightFraction": 0.2901,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    }
+  }
+}

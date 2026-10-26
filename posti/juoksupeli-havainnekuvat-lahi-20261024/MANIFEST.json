@@ -1,0 +1,163 @@
+{
+  "taskNumbers": [
+    911,
+    912,
+    913,
+    914,
+    915,
+    916
+  ],
+  "approvedImageCount": 2,
+  "rejectedPlaceCount": 4,
+  "assets": {
+    "01": {
+      "taskNumber": 911,
+      "id": "01",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/01-lahtokuja.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/01-lahtokuja-attempt002.png",
+      "sha256": "2d46992671208cde306d452eaf3caa48f5469128ab1ad9e9fc0f9f389ff860b1",
+      "deliverySHA256": "2d46992671208cde306d452eaf3caa48f5469128ab1ad9e9fc0f9f389ff860b1",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        635,
+        1019
+      ],
+      "heightFraction": 0.3536,
+      "approvedForDelivery": true,
+      "strictNumericRangeMet": true,
+      "framingNote": "Approximately 35 percent, near requested lower bound; elevated rear following view.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "02": {
+      "taskNumber": 912,
+      "id": "02",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/02-punamuuri-kuja.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/02-punamuuri-kuja-attempt002.png",
+      "sha256": "53573d3b274d99aa5d04a4c712def732c4e46fe45abc01b38903a465faa06a09",
+      "deliverySHA256": "53573d3b274d99aa5d04a4c712def732c4e46fe45abc01b38903a465faa06a09",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        643,
+        1020
+      ],
+      "heightFraction": 0.3471,
+      "approvedForDelivery": true,
+      "strictNumericRangeMet": false,
+      "framingNote": "Approximately 35 percent, near requested lower bound; elevated rear following view.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "03": {
+      "taskNumber": 913,
+      "id": "03",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/03-aukio.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/03-aukio-attempt002.png",
+      "sha256": "c95ef346d27caf1982bc926953ff6c6b216abbb5cafc5964631e5c497d57ac0b",
+      "deliverySHA256": "c95ef346d27caf1982bc926953ff6c6b216abbb5cafc5964631e5c497d57ac0b",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        658,
+        1019
+      ],
+      "heightFraction": 0.3324,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "04": {
+      "taskNumber": 914,
+      "id": "04",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/04-sali-katto-avattu.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/04-sali-katto-avattu-attempt002.png",
+      "sha256": "04154a3cc117946de21abc3c1a92aed4f9a2a64455f42906bf29e27574a274bf",
+      "deliverySHA256": "04154a3cc117946de21abc3c1a92aed4f9a2a64455f42906bf29e27574a274bf",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        663,
+        1018
+      ],
+      "heightFraction": 0.3269,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "05": {
+      "taskNumber": 915,
+      "id": "05",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/05-porttikaytava.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/05-porttikaytava-attempt002.png",
+      "sha256": "804142cbb3970c8892c26ac182d79046a77b65e2c0408db87be23ef104fac107",
+      "deliverySHA256": "804142cbb3970c8892c26ac182d79046a77b65e2c0408db87be23ef104fac107",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        690,
+        1015
+      ],
+      "heightFraction": 0.2993,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    },
+    "06": {
+      "taskNumber": 916,
+      "id": "06",
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/delivery/rejected/06-meridiaaniportti.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-911916-20261026/native/06-meridiaaniportti-attempt002.png",
+      "sha256": "ed229fe1224f4cf522b68dc121ace5d9c5169ec2e6834b026ab8c5a7de591fea",
+      "deliverySHA256": "ed229fe1224f4cf522b68dc121ace5d9c5169ec2e6834b026ab8c5a7de591fea",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedHatToSoleBoundsY": [
+        705,
+        1020
+      ],
+      "heightFraction": 0.2901,
+      "approvedForDelivery": false,
+      "strictNumericRangeMet": false,
+      "framingNote": "Still below requested approximately 35-45 percent height after one camera retry. Not approved as final close-camera target.",
+      "gameUseApproved": false,
+      "ownerAccepted": false
+    }
+  },
+  "allSixFulfilled": false,
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

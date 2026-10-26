@@ -1,0 +1,55 @@
+{
+  "taskNumbers": [
+    911,
+    912
+  ],
+  "assets": [
+    {
+      "taskNumber": 911,
+      "id": "01",
+      "file": "01-lahtokuja.png",
+      "at": "2026-10-26T19:17:42.801424+00:00",
+      "r2Key": "juoksupeli/havainnekuvat-lahi-20261026/01-lahtokuja.png",
+      "canonicalUrl": "https://media.matkakirja.app/juoksupeli/havainnekuvat-lahi-20261026/01-lahtokuja.png",
+      "verificationUrl": "https://media.matkakirja.app/juoksupeli/havainnekuvat-lahi-20261026/01-lahtokuja.png?sha256=2d46992671208cde306d452eaf3caa48f5469128ab1ad9e9fc0f9f389ff860b1",
+      "sha256": "2d46992671208cde306d452eaf3caa48f5469128ab1ad9e9fc0f9f389ff860b1",
+      "bytes": 3034987,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "preflightHttp": 404,
+      "uploadedThisAttempt": true,
+      "byteExactReadback": true,
+      "immutableKey": true,
+      "ownerAccepted": false,
+      "gameModificationLoopStarted": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "taskNumber": 912,
+      "id": "02",
+      "file": "02-punamuuri-kuja.png",
+      "at": "2026-10-26T19:17:45.099212+00:00",
+      "r2Key": "juoksupeli/havainnekuvat-lahi-20261026/02-punamuuri-kuja.png",
+      "canonicalUrl": "https://media.matkakirja.app/juoksupeli/havainnekuvat-lahi-20261026/02-punamuuri-kuja.png",
+      "verificationUrl": "https://media.matkakirja.app/juoksupeli/havainnekuvat-lahi-20261026/02-punamuuri-kuja.png?sha256=53573d3b274d99aa5d04a4c712def732c4e46fe45abc01b38903a465faa06a09",
+      "sha256": "53573d3b274d99aa5d04a4c712def732c4e46fe45abc01b38903a465faa06a09",
+      "bytes": 3033881,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "preflightHttp": 404,
+      "uploadedThisAttempt": true,
+      "byteExactReadback": true,
+      "immutableKey": true,
+      "ownerAccepted": false,
+      "gameModificationLoopStarted": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "verifiedCount": 2,
+  "allSelectedVerified": true,
+  "allSixVerified": false
+}
